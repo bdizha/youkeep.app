@@ -20,7 +20,6 @@
     "fourstacks/nova-checkboxes": "^0.1.2",
     "laravel/nova": "*",
     "rcknr/nova-multiselect-filter": "^1.1",
-    "ripenfresh/nova-theme": "*",
     "silvanite/novafieldcheckboxes": "^1.1",
     "weidner/goutte": "^1.1"
 
