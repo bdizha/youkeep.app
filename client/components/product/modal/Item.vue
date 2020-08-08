@@ -1,0 +1,66 @@
+<template>
+    <r-modal-template :css-class="'r-modal-product'"
+             :mask-closable="true"
+             :closable="true"
+             current="product"
+             style="position: relative;">
+        <a-card v-if="hasCategories" class="r-product" :bordered="true">
+            <a-row class="r-product-modal" :gutter="36" type="flex"
+                   justify="center" align="middle">
+                <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+                    <r-product-credit :is-showing="true" :product="product"></r-product-credit>
+                    <r-product-photos :product="product" :size="400"></r-product-photos>
+                </a-col>
+                <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+                    <r-product-header :is-showing="true" :product="product"></r-product-header>
+                    <r-product-rate :product="product"></r-product-rate>
+                    <r-product-price :is-showing="true" :product="product"></r-product-price>
+                    <r-product-types :is-showing="true" :product="product"></r-product-types>
+                    <r-product-actions :is-showing="true" :size="'large'" :product="product"></r-product-actions>
+                </a-col>
+            </a-row>
+        </a-card>
+        <r-product-info v-if="false" :product="product"></r-product-info>
+        <a-row class="r-margin-top-48 r-margin-bottom-24" type="flex" justify="center">
+            <a-col class="gutter-row" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+                <h3 class="r-heading r-text-primary">
+                    <a-icon type="bulb"/>
+                    <span class="r-text-tip-primary">Related products</span>
+                </h3>
+            </a-col>
+        </a-row>
+        <r-category-item :columns="4" :has-product="true" :category="category"></r-category-item>
+<!--        <a-row class="r-margin-top-48 r-margin-bottom-24" type="flex" justify="center">-->
+<!--            <a-col class="gutter-row" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">-->
+<!--                <h3 class="r-heading r-text-secondary">-->
+<!--                    <a-icon type="bulb"/>-->
+<!--                    <span class="r-text-tip-secondary">Recommended for you</span>-->
+<!--                </h3>-->
+<!--            </a-col>-->
+<!--        </a-row>-->
+<!--        <r-category-item :columns="4" :has-product="true" :category="category"></r-category-item>-->
+    </r-modal-template>
+</template>
+<script>
+    import {mapGetters} from "vuex";
+
+    export default {
+        props: {},
+        data() {
+            return {};
+        },
+        created() {
+            this.payload();
+        },
+        computed: mapGetters({
+            modal: 'base/modal',
+            category: 'shop/category',
+            hasCategories: 'shop/hasCategories',
+            product: 'shop/product',
+        }),
+        methods: {
+            async payload() {
+            },
+        },
+    };
+</script>
