@@ -10,12 +10,12 @@
                        :to="store.route">
             <a-card hoverable class="r-store-slider-item"
                     :style="{backgroundImage: 'url(/storage/store/' + store.photo_cover + ')'}">
-              <a-avatar slot="cover" shape="square"
+              <r-avatar slot="cover" shape="square"
                         :size="160"
-                        :src="'/storage/store/' + store.photo"
+                        :src="'/storage/store/' + store.photo_url"
                         src-placeholder="~/assets/icon.svg">
                 <div class="r-store-frame"></div>
-              </a-avatar>
+              </r-avatar>
               <a-card-meta>
                 <template slot="title">
                   <a-button @click="onModal('register')"
@@ -31,6 +31,16 @@
               </a-card-meta>
             </a-card>
           </router-link>
+          <template #prevArrow="arrowOption">
+            <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
+              <a-icon type="left"/>
+            </div>
+          </template>
+          <template #nextArrow="arrowOption">
+            <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
+              <a-icon type="right"/>
+            </div>
+          </template>
         </VueSlickCarousel>
       </div>
     </a-col>
@@ -48,7 +58,7 @@ export default {
     return {
       settings: {
         "slidesToShow": 4,
-        "slidesToScroll": 3,
+        "slidesToScroll": 6,
         "infinite": true,
         "dots": false,
         "variableWidth": true,
@@ -56,7 +66,7 @@ export default {
           {
             "breakpoint": 1024,
             "settings": {
-              "slidesToShow": 4,
+              "slidesToShow": 6,
               "slidesToScroll": 3,
               "infinite": true,
               "dots": false,

@@ -10,14 +10,14 @@
 import {mapGetters} from "vuex";
 
 export default {
+  name: 'r-logo',
   data() {
     return {};
   },
   created() {
   },
   computed: mapGetters({
-    isDark: 'base/isDark',
-    isRaised: 'base/isRaised'
+    isDark: 'base/isDark'
   }),
   methods: {},
 };

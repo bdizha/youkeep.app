@@ -17,6 +17,7 @@
 import {mapGetters} from "vuex";
 
 export default {
+  layout: 'simple',
   components: {
     name: 'r-store'
   },

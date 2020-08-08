@@ -9,8 +9,7 @@ class ProductMTGSeeder extends Seeder
     private $domain = "https://www.archivestore.co.za";
     private $storeId = null;
 
-//    private $storesIds = [69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
-    private $storesIds = [68, 67, 65];
+    private $storesIds = [69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
     private $categories = [];
     private $level = 0;
 
