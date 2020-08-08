@@ -118,21 +118,24 @@ a.r-text-link {
     background: #FFFFFF;
 }
 
-.r-store-header {
-    background: #FFFFFF;
-    height: 60px !important;
-    padding: 12px !important;
-    margin-bottom: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1001;
-    transition: background 0.25s ease;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
-    flex: 0 0 auto;
-    display: flex;
-    line-height: 1 !important;
+.ant-layout-header {
+    &.r-header {
+        background: #FFFFFF;
+        height: 60px !important;
+        padding: 12px !important;
+        margin-bottom: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1001;
+        transition: background 0.25s ease;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
+        flex: 0 0 auto;
+        display: flex;
+        line-height: 1 !important;
+
+    }
 
     &.r-store-header {
         height: 60px !important;
@@ -4684,7 +4687,7 @@ h4.r-heading-light {
 
 .r-slider {
 
-    &.r-slider__60{
+    &.r-slider__60 {
 
         background: #F9F9F9;
         height: 60px;
@@ -4702,8 +4705,17 @@ h4.r-heading-light {
     }
 }
 
+.r-text-slider {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 36px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .r-store-slider {
     padding: 24px;
+
     .r-store-slider-item {
         padding: 0px;
         display: block;
@@ -4734,12 +4746,6 @@ h4.r-heading-light {
         }
 
         .ant-avatar-cover {
-        }
-
-        .r-text-slider {
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 36px;
         }
 
         .ant-avatar {
@@ -4788,7 +4794,7 @@ h4.r-heading-light {
 }
 
 .r-slider-item {
-    padding: 0 6px 0 36px;
+    padding: 0 6px 0 48px;
     margin: 6px 12px;
     display: block;
     text-align: center;
@@ -4797,12 +4803,6 @@ h4.r-heading-light {
     border-radius: 6px;
     position: relative;
     height: 36px;
-
-    .r-text-slider {
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 36px;
-    }
 
     .ant-avatar {
         position: absolute;
@@ -4874,12 +4874,6 @@ h4.r-heading-light {
     border-radius: 6px;
     position: relative;
     height: 75px;
-
-    .r-text-slider {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 63px;
-    }
 
     .ant-avatar {
         position: absolute;

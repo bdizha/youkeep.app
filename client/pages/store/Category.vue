@@ -9,7 +9,7 @@ export default {
   name: 'r-store-category',
   components: {},
   props: {},
-  async asyncData({store, params, query}) {
+  async asyncData({store, params}) {
     let route = `/store/${params.store_slug}/category/${params.category_slug}`;
     await store.dispatch('shop/onCategory', route);
   },

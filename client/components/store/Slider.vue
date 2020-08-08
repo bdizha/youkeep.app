@@ -1,5 +1,5 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
+  <a-row class="r-slider" type="flex" justify="center" align="middle">
     <a-col class="r-store-slider gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <div v-if="hasStores" :class="padding">
         <VueSlickCarousel v-bind="settings">

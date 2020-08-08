@@ -18,9 +18,19 @@
 <script>
 export default {
   data: () => ({}),
-  mounted() {
+  created() {
+    this.onStores();
   },
   computed: {},
-  methods: {}
+  methods: {
+    async onStores() {
+      let params = {
+        category_id: null,
+        limit: 24
+      };
+
+      await this.$store.dispatch('base/onStores', params);
+    }
+  }
 }
 </script>

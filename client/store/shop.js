@@ -33,36 +33,6 @@ const state = () => ({
     isSlider: false,
     isSearching: false,
     isProduct: true
-  },
-  images: () => {
-    // let lazyImages = [].slice.call(document.querySelectorAll(".r-lazy img"));
-    let active = false;
-    // if (active === false) {
-    //     active = true;
-    //     setTimeout(() => {
-    //         lazyImages.forEach(function (lazyImage) {
-    //             setTimeout(() => {
-    //                 if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
-    //                     let lazyElement = lazyImage.parentNode;
-    //
-    //                     if (lazyImage !== undefined && lazyImage != null) {
-    //                         lazyImage.src = lazyElement.dataset.src;
-    //                         // lazyElement.classList.remove("r-lazy");
-    //                         lazyImages = lazyImages.filter(function (image) {
-    //                             return image !== lazyImage;
-    //                         });
-    //                     }
-    //
-    //                     if (lazyImages.length === 0) {
-    //                         // window.removeEventListener("scroll", lazyLoad);
-    //                     }
-    //                 }
-    //             }, 600);
-    //         });
-    //         active = false;
-    //     }, 200)
-    //
-    // }
   }
 })
 
@@ -137,10 +107,6 @@ const mutations = {
   },
   setProcess(state, process) {
     state.processes[process.key] = process.value;
-  },
-  setImages(state, time) {
-    setTimeout(() => {
-    }, time);
   }
 }
 
@@ -293,8 +259,6 @@ const actions = {
     setTimeout(() => {
       // commit('setHasNotice', false);
     }, 1200);
-  },
-  onImages({dispatch, commit}, time) {
   },
   async onSearch({dispatch, commit}, payload) {
 

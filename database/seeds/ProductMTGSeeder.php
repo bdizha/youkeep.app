@@ -154,7 +154,7 @@ class ProductMTGSeeder extends Seeder
                         }
 
                         // set the main photo
-                        $productPhotoUrl = $productData['brandImageURL'];
+                        $productPhotoUrl = !empty($productData['images'][0]['large']) ? $productData['images'][0]['large'] : $productThumb;
                         echo __LINE__ . " <> \n";
 
                         $productPhoto = sha1($productPhotoUrl) . ".jpeg";

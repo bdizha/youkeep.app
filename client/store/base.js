@@ -131,7 +131,6 @@ const mutations = {
   setStores(state, stores) {
     console.log('stores...', stores);
     state.stores = stores;
-
     console.log('hasStores...', state.hasStores);
   },
   setCategory(state, category) {
@@ -165,12 +164,6 @@ const mutations = {
   setHasOverlay(state, hasOverlay) {
     console.log('setHasOverlay', hasOverlay);
     state.hasOverlay = hasOverlay;
-
-    if (hasOverlay) {
-      $('body').addClass('r-hide-body');
-    } else {
-      $('body').removeClass('r-hide-body');
-    }
   },
   setFilters(state, filters) {
     state.filters = filters;
@@ -287,7 +280,7 @@ const actions = {
 
     await axios.post('/shops', payload).then(({data}) => {
       let stores = data;
-      // console.log('before onStores: ', stores);
+      console.log('before onStores: ', stores);
 
       commit('setStores', stores);
       commit('setFilter', {key: 'stores', value: stores});
