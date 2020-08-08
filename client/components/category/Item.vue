@@ -1,11 +1,14 @@
 <template>
-  <a-row :class="{'r-is-empty': false}" type="flex" justify="start" class="r-margin-top-24">
+  <a-row class="r-margin-top-24" :class="{'r-is-empty': false}" type="flex" justify="start" >
     <a-col class="r-spin-holder" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-category-header :category="category" :is-showing="isShowing" :has-product="hasProduct"
                          :store="store"></r-category-header>
-      <a-row type="flex" justify="start" class="r-product-cards">
+      <a-row class="r-slider r-product-cards" type="flex" justify="start">
         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-          <r-product-slider :columns="columns" :category="category"></r-product-slider>
+          <r-product-slider
+            v-if="category.products.length > 0"
+            :columns="columns"
+            :category="category"></r-product-slider>
         </a-col>
       </a-row>
     </a-col>

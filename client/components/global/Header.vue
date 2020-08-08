@@ -1,6 +1,6 @@
 <template>
   <a-layout-header :class="{'r-switch-primary': isDark}" class="r-header">
-    <r-layout-menu v-if="!modal.isVisible && !isRaised && !hasShop" class="r-layout-menu">
+    <r-layout-menu v-if="!modal.isVisible && !isRaised && !hasShop">
       <r-menu-item @click="onDrawer('store-left')" class="__menu">
         <a-icon style="font-size: 18px;" type="menu"/>
       </r-menu-item>

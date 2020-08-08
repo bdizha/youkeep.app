@@ -1,6 +1,21 @@
 <template>
   <a-row class="r-account-list" type="flex" justify="center">
     <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <a-card v-if="hasTitle" class="r-margin-bottom-24" title="PAYMENT METHODS" style="width: 100%;">
+        <a-row type="flex" justify="start" align="middle">
+          <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
+                 :sm="{ span: 24 }" :lg="{ span: 12 }">
+            <div class="r-text-sm">
+              <template v-if="hasCards">
+                Here you can manage all your payment cards.
+              </template>
+              <template v-if="!hasCards">
+                Your payment card is currently not set.
+              </template>
+            </div>
+          </a-col>
+        </a-row>
+      </a-card>
       <div class="r-account-item"
            v-for="card in cards"
            :class="{'r-account-item__active': card.is_default}"
@@ -32,16 +47,11 @@
           </a-col>
           <a-col class="r-text-right" :xs="{ span: 4 }"
                  :sm="{ span: 4 }" :lg="{ span: 4 }">
-            <a-switch v-model="isDefault" size="large" :default-checked="card.is_default"/>
+            <a-switch size="small" :default-checked="Boolean(card.is_default)"/>
           </a-col>
           <a-col class="r-text-right" :xs="{ span: 4 }"
                  :sm="{ span: 4 }" :lg="{ span: 4 }">
-            <a-button block
-                      size="small"
-                      v-on:click="onModal('account-card', card)"
-                      class="r-btn-red-bordered" type="primary">
-              Change
-            </a-button>
+            <a-avatar shape="square" icon="edit"/>
           </a-col>
         </a-row>
       </div>
@@ -49,33 +59,39 @@
   </a-row>
 </template>
 <script>
-  import {mapGetters} from "vuex";
+import {mapGetters} from "vuex";
 
-  export default {
-    name: 'r-account-card-list',
-    props: {},
-    data() {
-      return {
-        isDefault: false,
-      };
+export default {
+  props: {
+    hasTitle: {type: Boolean, required: false, default: true},
+  },
+  data() {
+    return {};
+  },
+  computed: mapGetters({
+    modal: 'base/modal',
+    cards: 'account/cards',
+    hasCards: 'account/hasCards',
+  }),
+  created() {
+    this.payload();
+  },
+  methods: {
+    payload() {
+      this.onCards();
     },
-    computed: mapGetters({
-      cards: 'account/cards'
-    }),
-    mounted() {
-      this.payload();
+    async onCards() {
+      await this.$store.dispatch('account/onCards');
     },
-    methods: {
-      onModal(current, card) {
-        let modal = {};
-        modal.isVisible = true;
-        modal.current = current;
-        modal.card = card;
-        this.$store.dispatch('app/onModal', modal);
-      },
-      payload() {
-        // this.$store.dispatch('account/fetchCards');
-      },
-    }
-  };
+    onModal(current, card) {
+      let modal = {};
+      modal.isVisible = true;
+modal.isClosable = true;
+      modal.current = current;
+
+      this.$store.dispatch('card/onCard', card);
+      this.$store.dispatch('base/onModal', modal);
+    },
+  }
+};
 </script>

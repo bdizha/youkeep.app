@@ -28,8 +28,8 @@
         </router-link>
         <template v-for="(cat) in categories">
           <r-category-menu-item
-              v-if="cat.has_categories"
-              :category="cat">
+            v-if="cat.has_categories"
+            :category="cat">
           </r-category-menu-item>
         </template>
       </a-collapse-panel>
@@ -37,6 +37,8 @@
   </div>
 </template>
 <script>
+import axios from 'axios'
+
 export default {
   name: 'r-category-menu-item',
   props: {
@@ -55,7 +57,7 @@ export default {
   methods: {
     async payload() {
       if (this.category.categories == undefined ||
-          this.category.categories.length == 0) {
+        this.category.categories.length == 0) {
         let path = `/categories`;
         let params = {
           category_id: this.category.id,
@@ -70,15 +72,13 @@ export default {
         let $this = this;
 
         await axios.post(path, params)
-            .then(response => {
-              $this.categories = response.data.categories;
-              $this.hasData = true;
-
-              // this.$store.dispatch('shop/onImages', 300);
-            })
-            .catch(e => {
-              console.log(e);
-            });
+          .then(response => {
+            $this.categories = response.data.categories;
+            $this.hasData = true;
+          })
+          .catch(e => {
+            console.log(e);
+          });
       } else {
         this.hasData = true;
         this.categories = this.category.categories;

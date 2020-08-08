@@ -12,12 +12,20 @@
 import {mapGetters} from "vuex";
 
 export default {
-  layout: 'simple',
+  layout: 'shop',
   components: {},
   props: {},
   async asyncData({store, params, query}) {
     let route = `/store/${params.slug}`;
     await store.dispatch('shop/onStore', route);
+
+    let payload = {
+      store_slug: params.slug,
+      level: 1,
+      limit: 12,
+      with: ['breadcrumbs', 'photos', 'products']
+    };
+    await store.dispatch('shop/onCategories', payload);
   },
   data() {
     return {
@@ -28,8 +36,7 @@ export default {
   computed: mapGetters({
     store: 'shop/store',
     processes: 'base/processes',
-    hasCategories: 'shop/hasCategories',
-    categories: 'shop/categories',
+    hasCategories: 'shop/hasCategories'
   }),
   created() {
     this.payload();

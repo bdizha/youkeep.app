@@ -47,6 +47,8 @@ module.exports = {
     '~components/modal',
     '~components/checkout',
     '~components/store',
+    '~components/cart',
+    '~components/account',
     '~plugins/i18n',
     '~plugins/vform',
     '~plugins/axios',

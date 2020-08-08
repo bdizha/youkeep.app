@@ -6,7 +6,7 @@
       <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
       <r-category-slider></r-category-slider>
       <r-product-flush :columns="3"></r-product-flush>
-<!--      <r-product-list :columns="columns"></r-product-list>-->
+      <r-product-list :columns="columns"></r-product-list>
     </a-col>
   </a-row>
 </template>

@@ -9,18 +9,17 @@
                        :key="store.id"
                        :to="store.route">
             <a-card hoverable class="r-store-slider-item"
-                    :style="{backgroundImage: 'url(/storage/store/' + store.photo_cover + ')'}">
-              <r-avatar slot="cover" shape="square"
-                        :size="160"
-                        :src="'/storage/store/' + store.photo_url"
-                        src-placeholder="~/assets/icon.svg">
+                    :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}">
+              <r-avatar slot="cover"
+                        shape="square"
+                        size="160"
+                        :src="store.photo_url">
                 <div class="r-store-frame"></div>
               </r-avatar>
               <a-card-meta>
                 <template slot="title">
-                  <a-button @click="onModal('register')"
-                            block
-                            class="r-btn-bordered-primary"
+                  <a-button block
+                            class="r-btn-bordered-grey"
                             type="primary">
                     {{ store.name }}
                   </a-button>
@@ -58,7 +57,7 @@ export default {
     return {
       settings: {
         "slidesToShow": 4,
-        "slidesToScroll": 6,
+        "slidesToScroll": 1,
         "infinite": true,
         "dots": false,
         "variableWidth": true,
@@ -67,7 +66,7 @@ export default {
             "breakpoint": 1024,
             "settings": {
               "slidesToShow": 6,
-              "slidesToScroll": 3,
+              "slidesToScroll": 1,
               "infinite": true,
               "dots": false,
               "gap": 24
@@ -78,7 +77,6 @@ export default {
             "settings": {
               "slidesToShow": 3,
               "slidesToScroll": 1,
-              "initialSlide": 2,
               "gap": 24
             }
           },

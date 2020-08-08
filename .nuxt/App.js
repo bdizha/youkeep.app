@@ -9,9 +9,10 @@ import '../client/assets/less/app.less'
 
 import _1a3ae26b from '../client/layouts/app.vue'
 import _6f6c098b from '../client/layouts/default.vue'
-import _ee7125b0 from '../client/layouts/simple.vue'
+import _2d297bec from '../client/layouts/shop.vue'
+import _ecea1aac from '../client/layouts/switch.vue'
 
-const layouts = { "_app": sanitizeComponent(_1a3ae26b),"_default": sanitizeComponent(_6f6c098b),"_simple": sanitizeComponent(_ee7125b0) }
+const layouts = { "_app": sanitizeComponent(_1a3ae26b),"_default": sanitizeComponent(_6f6c098b),"_shop": sanitizeComponent(_2d297bec),"_switch": sanitizeComponent(_ecea1aac) }
 
 export default {
   render (h, props) {

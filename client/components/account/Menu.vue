@@ -2,126 +2,119 @@
   <a-row :gutter="16" type="flex" justify="start">
     <a-col class="gutter-row" :span="24">
       <a-list :data-source="links">
-        <a-list-item slot="renderItem" slot-scope="item, index">
-          <router-link class="r-text-grey" :to="item.link">
-            <a-icon :type="item.icon"/>
+        <a-list-item class="r-list-item" slot="renderItem" slot-scope="item, index">
+          <router-link v-if="item.link" class="r-text-link" :to="item.link">
+            <a-avatar shape="square" :icon="item.icon"/>
+            {{ item.label }}
+          </router-link>
+          <router-link v-else-if="!item.link" @click.native="onLogout" class="r-text-normal" to="/">
+            <a-avatar shape="square" :icon="item.icon"/>
             {{ item.label }}
           </router-link>
         </a-list-item>
-        <div slot="header">
-        </div>
         <template slot="footer">
-          <router-link @click.native.prevent="logout" class="r-text-grey" to="/">
-            <a-icon type="logout"/>
-            Logout
-          </router-link>
+          <div class="r-list-item ant-list-item">
+          </div>
         </template>
       </a-list>
-      <r-spinner v-if="isProcessing" :is-absolute="true"></r-spinner>
+      <r-spinner :is-absolute="true"
+                 v-if="(processes.isRunning)"></r-spinner>
     </a-col>
   </a-row>
 </template>
 <script>
-  const LINKS = [
-    {
-      label: 'Your account',
-      icon: 'profile',
-      link: '/account/profile'
+import {mapGetters} from "vuex";
+
+const LINKS = [
+  {
+    label: 'Your account',
+    icon: 'profile',
+    link: '/account/profile'
+  },
+  {
+    label: 'Your orders',
+    icon: 'clock-circle',
+    link: '/account/orders'
+  },
+  {
+    label: 'Your transactions',
+    icon: 'credit-card',
+    link: '/account/credit'
+  },
+  // {
+  //     label: 'Invite friends',
+  //     icon: 'user-add',
+  //     link: '/account/invite'
+  // },
+  {
+    label: 'Your addresses',
+    icon: 'environment',
+    link: '/account/location'
+  },
+  {
+    label: 'Payment methods',
+    icon: 'wallet',
+    link: '/account/payment'
+  },
+  {
+    label: 'Notifications',
+    icon: 'bell',
+    link: '/account/notifications'
+  },
+  {
+    label: 'Your stores',
+    icon: 'shop',
+    link: '/account/stores'
+  },
+  {
+    label: 'Your products',
+    icon: 'profile',
+    link: '/account/products'
+  },
+  {
+    label: 'How it works',
+    icon: 'bulb',
+    link: '/hiw'
+  },
+  {
+    label: 'Your help',
+    icon: 'question-circle',
+    link: '/help'
+  },
+  {
+    label: 'Logout',
+    icon: 'logout',
+    link: null
+  },
+];
+export default {
+  data() {
+    return {
+      links: LINKS,
+      store: null,
+      placement: 'right',
+      redirectTo: '/'
+    };
+  },
+  computed: mapGetters({
+    processes: "base/processes",
+  }),
+  created() {
+    this.payload();
+  },
+  methods: {
+    payload() {
     },
-    {
-      label: 'Invite friends',
-      icon: 'user-add',
-      link: '/account/invite'
-    },
-    {
-      label: 'Your addresses',
-      icon: 'environment',
-      link: '/account/location'
-    },
-    {
-      label: 'Your orders',
-      icon: 'clock-circle',
-      link: '/account/orders'
-    },
-    {
-      label: 'Your credit',
-      icon: 'credit-card',
-      link: '/account/credit'
-    },
-    {
-      label: 'Payment options',
-      icon: 'wallet',
-      link: '/account/payment'
-    },
-    {
-      label: 'Notifications',
-      icon: 'bell',
-      link: '/account/notifications'
-    },
-    {
-      label: 'Your products',
-      icon: 'profile',
-      link: '/account/product/list'
-    },
-    {
-      label: 'Your stores',
-      icon: 'shop',
-      link: '/account/store/list'
-    },
-    {
-      label: 'How it works',
-      icon: 'bulb',
-      link: '/hiw'
-    },
-    {
-      label: 'Your help',
-      icon: 'question-circle',
-      link: '/help'
-    },
-  ];
-  export default {
-    name: 'r-account-menu',
-    data() {
-      return {
-        links: LINKS,
-        user: null,
-        hasData: false,
-        collapsed: false,
-        store: null,
-        placement: 'right',
-        hasDrawer: true,
-        isLoggedIn: false,
-        isProcessing: false,
-        redirectTo: '/'
+    onLogout() {
+      let payload = {
+        redirectTo: this.redirectTo,
+        params: {}
       };
-    },
-    computed: {},
-    mounted() {
-      this.payload();
-    },
-    methods: {
-      payload() {
-      },
-      logout() {
-        this.isProcessing = true;
 
-        let $this = this;
-        let path = '/logout';
-        let params = {};
+      this.$message.success('Your browsing session has been successfully closed off. Good bye!');
 
-        HTTP.post(path, params)
-          .then(response => {
-            setTimeout(function () {
-              $this.isProcessing = false;
-              window.location.href = $this.redirectTo;
-            }, 3600);
-          })
-          .catch(error => {
-            console.log('error', error);
-            $this.isProcessing = false;
-            console.log('Errors', error);
-          });
-      }
-    },
-  }
+      this.$store.dispatch('auth/onLogout', payload);
+    }
+  },
+}
 </script>

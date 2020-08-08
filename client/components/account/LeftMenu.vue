@@ -10,7 +10,6 @@
 </template>
 <script>
     export default {
-      name: 'r-account-left-menu',
         components: {},
         data() {
             return {};

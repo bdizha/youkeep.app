@@ -3,7 +3,6 @@
        :class="{'ant-avatar-square': true}"
        :style="style()">
     <img :src="dataSrc" />
-    <div>{{ dataSrc }}</div>
   </div>
 </template>
 <script>

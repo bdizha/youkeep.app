@@ -3,6 +3,16 @@
     <a-col class="gutter-row r-spin-holder" :span="24">
       <VueSlickCarousel v-bind="settings">
         <r-product-item v-for="(product, index) in category.products" :key="index" :product="product"></r-product-item>
+        <template #prevArrow="arrowOption">
+          <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
+            <a-icon type="left"/>
+          </div>
+        </template>
+        <template #nextArrow="arrowOption">
+          <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
+            <a-icon type="right"/>
+          </div>
+        </template>
       </VueSlickCarousel>
       <r-spinner :is-absolute="true" v-if="processes.isCategory"></r-spinner>
     </a-col>

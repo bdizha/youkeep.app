@@ -1,18 +1,18 @@
 <template>
-    <r-modal :mask-closable="maskClosable"
+    <r-modal-template :mask-closable="maskClosable"
              :closable="closable"
-             :current="current"
+             :current="formName"
              style="position: relative;">
-        <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
+        <a-form v-show="hasForm"
                 class="ant-form ant-form-vertical"
-                @submit="onSave"
+                @submit="onPost"
                 :form="formCredit">
             <a-form-item>
                 <a-row type="flex" justify="center">
                     <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
-                        <h2 class="r-heading">
+                        <h3 class="r-heading">
                             Add credit to your account
-                        </h2>
+                        </h3>
                         <p class="r-text-normal">
                             Your credit balance is always communicated to you with each transaction.
                         </p>
@@ -23,7 +23,7 @@
                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
                     <a-form-item label="Amount">
                         <a-input type="text"
-                                 size="large"
+                                size="default"
                                  placeholder="Amount"
                                  v-decorator="['amount', { rules: [{ required: true, message: 'Please enter amount' }] }]">
                             <a-icon slot="prefix" type="lock"/>
@@ -31,96 +31,82 @@
                     </a-form-item>
                 </a-col>
             </a-row>
-            <a-row class="r-margin-top-24" gutter="12" type="flex" justify="end">
+            <a-row class="r-margin-top-24" :gutter="12" type="flex" justify="end">
                 <a-col class="gutter-row" :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
                     <a-form-item :wrapper-col="{ span: 24 }">
-                        <a-button block @click="onCancel"
-                                  size="large"
+                        <a-button block @click="onReturn"
+                                 size="default"
                                   type="secondary"
                                   html-type="button"
-                                  class="r-btn-bordered-red">
-                            Cancel
+                                  class="r-btn-bordered-grey">
+                            Back
                         </a-button>
                     </a-form-item>
                 </a-col>
                 <a-col class="gutter-row" :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
                     <a-form-item :wrapper-col="{ span: 24 }">
-                        <a-button block @click="onSave"
-                                  size="large"
+                        <a-button block @click="onPost"
+                                 size="default"
                                   type="primary"
                                   html-type="submit"
-                                  class="ant-btn-secondary r-btn-red">
+                                  class="ant-btn-secondary r-btn-primary">
                             Top up
                         </a-button>
                     </a-form-item>
                 </a-col>
             </a-row>
         </a-form>
-        <r-notice v-if="isSuccessful" :message="message"></r-notice>
-        <r-spinner v-if="isProcessing" :is-absolute="true"></r-spinner>
-    </r-modal>
+        <r-notice  process="isSuccess"></r-notice>
+        <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+    </r-modal-template>
 </template>
 <script>
+    import {mapGetters} from "vuex";
+
     export default {
-      name: 'r-account-modal-credit',
+        name: 'r-account-credit',
         props: {
             maskClosable: {type: Boolean, required: false, default: false},
             closable: {type: Boolean, required: false, default: false},
         },
         data() {
             return {
-                formCredit: this.$form.createForm(this, {name: 'form_account_credit'}),
-                isSuccessful: false,
-                isProcessing: false,
-                current: 'account-credit',
-                modal: {
-                    isVisible: false,
-                    current: null
-                },
-                hasError: false,
-                errors: []
+                formName: 'account-credit',
+                formCredit: this.$form.createForm(this, {name: 'form_account_credit'})
             };
         },
-        mounted() {
-        },
+        computed: mapGetters({
+            modal: 'base/modal',
+            user: 'auth/user',
+            processes: 'base/processes',
+            hasForm: 'base/hasForm',
+            isValid: "form/isValid",
+        }),
         methods: {
-            onSave(event) {
+            onPost(event) {
                 event.preventDefault();
 
-                this.hasError = false;
-
-                this.formCredit.validateFields((err, values) => {
-                    if (!err) {
-                        console.log('Making request...', values);
-
+                this.form.validateFields((errors, values) => {
+                    if (!errors) {
                         let params = Object.assign({}, values);
-                        let $this = this;
+                        let payload = {
+                            params: params,
+                            route: '/account/credit',
+                            current: this.formName,
+                            message: this.message,
+                            hasUser: true,
+                        };
 
-                        let path = '/account/credit';
-                        HTTP.post(path, params)
-                            .then(response => {
-                                console.log('Response');
-                                $this.isSuccessful = true;
-
-                                setTimeout(function () {
-                                    $this.isProcessing = false;
-                                }, 2400);
-                            })
-                            .catch(e => {
-                                $this.isProcessing = false;
-                                $this.hasError = true;
-                                console.log('Errors', e);
-                            });
-                    } else {
-                        this.hasError = true;
-                        console.error(err);
+                        this.$store.dispatch('auth/onPost', payload);
                     }
                 });
             },
-            onCancel() {
-                this.modal.isVisible = false;
-                this.modal.current = null;
-                this.$store.dispatch('app/onModal', modal);
+            onReturn() {
+                let modal = {};
+                modal.isVisible = false;
+                modal.current = null;
+
+                this.$store.dispatch('base/onModal', modal);
             }
         },
     };

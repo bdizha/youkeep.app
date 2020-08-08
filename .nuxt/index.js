@@ -22,6 +22,8 @@ import nuxt_plugin_drawer_059ad7c2 from 'nuxt_plugin_drawer_059ad7c2' // Source:
 import nuxt_plugin_modal_5b827dbc from 'nuxt_plugin_modal_5b827dbc' // Source: ../client/components/modal (mode: 'all')
 import nuxt_plugin_checkout_d1be8852 from 'nuxt_plugin_checkout_d1be8852' // Source: ../client/components/checkout (mode: 'all')
 import nuxt_plugin_store_5bd97bf0 from 'nuxt_plugin_store_5bd97bf0' // Source: ../client/components/store (mode: 'all')
+import nuxt_plugin_cart_768bda31 from 'nuxt_plugin_cart_768bda31' // Source: ../client/components/cart (mode: 'all')
+import nuxt_plugin_account_14e4f508 from 'nuxt_plugin_account_14e4f508' // Source: ../client/components/account (mode: 'all')
 import nuxt_plugin_i18n_56ca5e75 from 'nuxt_plugin_i18n_56ca5e75' // Source: ../client/plugins/i18n (mode: 'all')
 import nuxt_plugin_vform_f95cee7a from 'nuxt_plugin_vform_f95cee7a' // Source: ../client/plugins/vform (mode: 'all')
 import nuxt_plugin_axios_fb9c9a02 from 'nuxt_plugin_axios_fb9c9a02' // Source: ../client/plugins/axios (mode: 'all')
@@ -241,6 +243,14 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_store_5bd97bf0 === 'function') {
     await nuxt_plugin_store_5bd97bf0(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_cart_768bda31 === 'function') {
+    await nuxt_plugin_cart_768bda31(app.context, inject)
+  }
+
+  if (typeof nuxt_plugin_account_14e4f508 === 'function') {
+    await nuxt_plugin_account_14e4f508(app.context, inject)
   }
 
   if (typeof nuxt_plugin_i18n_56ca5e75 === 'function') {

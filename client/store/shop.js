@@ -193,16 +193,6 @@ const actions = {
         commit('setStore', store);
 
         console.log('setStore', store);
-
-        let params = {
-          store_id: store.id,
-          level: 1,
-          limit: 12,
-          with: ['breadcrumbs', 'photos']
-        };
-
-        // dispatch('onFlush', params);
-        dispatch('onCategories', params);
       });
 
     } catch (e) {
@@ -219,6 +209,8 @@ const actions = {
       let categories = data.categories;
 
       commit('setCategories', categories);
+
+      console.log(categories, 'setCategories');
 
       setTimeout(() => {
         dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
