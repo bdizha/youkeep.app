@@ -11,7 +11,7 @@
     import {mapGetters} from "vuex";
 
     export default {
-      name: 'r-checkout-coupon'
+      name: 'r-checkout-coupon',
         props: {
         },
         data() {

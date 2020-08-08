@@ -4,18 +4,17 @@
       <div :class="padding" class="r-slider">
         <VueSlickCarousel v-if="hasData" v-bind="settings">
           <nuxt-link class="r-slider-item r-text-view-more"
-                       v-for="(category, index) in categories"
-                       :key="category.id"
-                       :to="category.route">
-            <a-avatar class="r-lazy"
-                      shape="circle"
-                      :size="36"
-                      :data-src="'~/storage/product/' + category.photo"
+                     v-for="(category, index) in categories"
+                     :key="category.id"
+                     :to="category.route">
+            <r-avatar shape="circle"
+                      size="36"
+                      :data-src="category.photo"
                       src="~/assets/icon_default.png"
-                      :style="'background-image: url(/storage/product/' + category.photo + ');'"
-                      src-placeholder="~/assets/icon_default.png"/>
+                      :style="'background-image: url(/storage/product/' + category.photo + ');'">
+            </r-avatar>
             <div class="r-text-slider">
-              {{ category.name }} fdafdafdsa
+              {{ category.name }}
             </div>
           </nuxt-link>
           <template #prevArrow="arrowOption">

@@ -45,7 +45,7 @@ module.exports = {
     '~components/delivery',
     '~components/drawer',
     '~components/modal',
-    // '~components/checkout',
+    '~components/checkout',
     '~components/store',
     '~plugins/i18n',
     '~plugins/vform',

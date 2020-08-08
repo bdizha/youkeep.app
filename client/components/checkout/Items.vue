@@ -30,7 +30,7 @@ const columns = [
 ];
 
 export default {
-  name: 'r-checkout-items'
+  name: 'r-checkout-items',
   props: {
   },
   data() {

@@ -1,30 +1,30 @@
 <template>
   <a-layout-header :class="{'r-switch-primary': isDark}" class="r-header">
     <r-layout-menu v-if="!modal.isVisible && !isRaised && !hasShop" class="r-layout-menu">
-      <r-menu-item @click="onDrawer('store-left')" class="r-menu-item r-menu-item__menu">
+      <r-menu-item @click="onDrawer('store-left')" class="__menu">
         <a-icon style="font-size: 18px;" type="menu"/>
       </r-menu-item>
-      <r-menu-item class="r-menu-item r-menu-item__logo">
+      <r-menu-item class="__logo">
         <r-logo></r-logo>
       </r-menu-item>
-      <r-menu-item class="r-hide-sm r-menu-item r-menu-item__store-switch">
+      <r-menu-item class="r-hide-sm r-menu-item__store-switch">
         <r-store-switch></r-store-switch>
       </r-menu-item>
-      <r-menu-item class="r-hide-sm r-menu-item r-menu-item__search">
+      <r-menu-item class="r-hide-sm r-menu-item__search">
         <r-search></r-search>
       </r-menu-item>
-      <r-menu-item class="r-hide-sm r-menu-item">
+      <r-menu-item class="r-hide-sm">
         <r-menu></r-menu>
       </r-menu-item>
-      <r-menu-item class="r-menu-item">
+      <r-menu-item class="">
         <r-cart-count></r-cart-count>
       </r-menu-item>
     </r-layout-menu>
     <r-layout-menu v-if="modal.isVisible || isRaised" class="r-layout-menu r-layout-menu-modal">
-      <r-menu-item v-on:click="onModalClose" class="r-menu-item r-menu-item__menu">
+      <r-menu-item v-on:click="onModalClose" class="__menu">
         <a-icon style="font-size: 21px;" type="left"/>
       </r-menu-item>
-      <r-menu-item class="r-menu-item r-menu-item__logo">
+      <r-menu-item class="__logo">
         <div v-on:click="onModalClose" class="r-logo">
           <img :src="'/assets/' + (isDark ? 'icon_white': 'icon_primary') + '.svg'"
                alt="Kshopit - It's Shopping Time!"/>

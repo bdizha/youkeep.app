@@ -24,7 +24,7 @@
     import {mapGetters} from "vuex";
 
     export default {
-      name: 'r-checkout-delivery'
+      name: 'r-checkout-delivery',
         props: {
         },
         data() {
