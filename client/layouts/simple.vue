@@ -6,7 +6,6 @@
                       :trigger="null"
                       collapsible>
         <r-store-menu v-show="!isCategory"></r-store-menu>
-        <r-category-filters v-show="isCategory"></r-category-filters>
       </a-layout-sider>
       <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
         <a-layout>
