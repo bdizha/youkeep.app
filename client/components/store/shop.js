@@ -142,8 +142,6 @@ const actions = {
 
           console.log('onCategory products >>>>> ', products);
           commit('setProducts', products);
-
-          commit('setImages', 600);
         }
 
         if (category.categories != undefined) {
@@ -250,13 +248,11 @@ const actions = {
 
       let products = data;
       commit('setProducts', products);
-      commit('setImages', 200);
 
       dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
 
       setTimeout(() => {
         dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
-        commit('setImages', 600);
       }, 600);
     });
   },
@@ -279,7 +275,6 @@ const actions = {
     }, 1200);
   },
   onImages({dispatch, commit}, time) {
-    commit('setImages', time);
   },
   async onSearch({dispatch, commit}, payload) {
 

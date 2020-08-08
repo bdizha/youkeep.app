@@ -34,10 +34,6 @@ module.exports = {
     middleware: ['locale', 'check-auth']
   },
 
-  css: [
-    {src: '~assets/less/app.less', lang: 'less'}
-  ],
-
   plugins: [
     '~components/global',
     '~components/product',
@@ -53,6 +49,10 @@ module.exports = {
     '~plugins/vue-slick-carousel'
     // '~plugins/nuxt-client-init', // Comment this for SSR
     // {src: '~plugins/bootstrap', mode: 'client'}
+  ],
+
+  css: [
+    {src: '~assets/less/app.less', lang: 'less'}
   ],
 
   modules: [

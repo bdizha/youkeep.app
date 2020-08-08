@@ -175,8 +175,6 @@ const actions = {
 
           console.log('onCategory products >>>>> ', products);
           commit('setProducts', products);
-
-          commit('setImages', 600);
         }
 
         if (category.categories != undefined) {
@@ -200,8 +198,6 @@ const actions = {
           // fire off the product modal
           dispatch('base/onModal', modal, {root: true});
         }
-
-        commit('setImages', 2400);
 
         setTimeout(() => {
           dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
@@ -264,7 +260,6 @@ const actions = {
 
       dispatch('base/onProcess', {key: 'isCategory', value: false}, {root: true});
       dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
-      commit('setImages', 300);
     });
   },
   async onProducts({dispatch, commit}, payload) {
@@ -275,20 +270,16 @@ const actions = {
 
       let products = data;
       commit('setProducts', products);
-      commit('setImages', 200);
 
       dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
 
       setTimeout(() => {
         dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
-        commit('setImages', 600);
       }, 600);
     });
   },
   onProduct({dispatch, commit}, payload) {
     commit('setProduct', payload);
-
-    commit('setImages', 300);
   },
   onFilters({dispatch, commit}, payload) {
     commit('setFilters', payload)
@@ -304,7 +295,6 @@ const actions = {
     }, 1200);
   },
   onImages({dispatch, commit}, time) {
-    commit('setImages', time);
   },
   async onSearch({dispatch, commit}, payload) {
 
@@ -318,7 +308,6 @@ const actions = {
       console.log('response: onSearch: ', search);
 
       setTimeout(() => {
-        commit('setImages', 300);
         commit('setProcess', {key: 'isSearching', value: false});
       }, 600);
     });

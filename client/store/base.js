@@ -243,9 +243,7 @@ const actions = {
       let categories = data.categories;
       commit('setCategories', categories);
 
-      dispatch('onProcess', {key: 'isCategories', value: false})
-
-      commit('setImages', 3000);
+      dispatch('onProcess', {key: 'isCategories', value: false});
     });
   },
   async onFlushCategory({dispatch, commit}, payload) {
@@ -282,8 +280,6 @@ const actions = {
       let products = data.products;
 
       commit('setFlushProducts', products);
-
-      // dispatch('shop/onImages', 300);
     });
   },
   async onStores({dispatch, commit}, payload) {
