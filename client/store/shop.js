@@ -174,7 +174,7 @@ const actions = {
 
       setTimeout(() => {
         dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
-      }, 1200);
+      }, 300);
 
       // set the store object
       // force the store to change
@@ -230,7 +230,7 @@ const actions = {
 
       setTimeout(() => {
         dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
-      }, 600);
+      }, 300);
 
       dispatch('base/onProcess', {key: 'isCategory', value: false}, {root: true});
       dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
@@ -281,7 +281,7 @@ const actions = {
 
       setTimeout(() => {
         commit('setProcess', {key: 'isSearching', value: false});
-      }, 600);
+      }, 300);
     });
   },
   async onInit({dispatch, commit, state}, payload) {
