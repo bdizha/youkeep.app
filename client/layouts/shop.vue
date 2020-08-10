@@ -5,7 +5,7 @@
       <a-layout-sider v-model="collapsed"
                       :trigger="null"
                       collapsible>
-        <r-category-menu></r-category-menu>
+        <r-store-menu></r-store-menu>
       </a-layout-sider>
       <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
         <nuxt/>
@@ -17,7 +17,7 @@
 <script>
 export default {
   data: () => ({
-    collapsed: false,
+    collapsed: true,
   }),
   computed: {
     isCategory() {

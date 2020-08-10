@@ -5,7 +5,7 @@
 import {mapGetters} from "vuex";
 
 export default {
-  layout: 'shop',
+  layout: 'category',
   name: 'r-store-category',
   components: {},
   props: {},

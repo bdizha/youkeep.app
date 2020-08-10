@@ -199,6 +199,15 @@ const actions = {
         let store = data.store;
         commit('setStore', store);
 
+        if (store.categories != undefined) {
+          let categories = store.categories;
+
+          console.log('onStore categories data >>>>> ', categories);
+
+          commit('setCategories', categories);
+          dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
+        }
+
         console.log('setStore', store);
       });
 

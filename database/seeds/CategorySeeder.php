@@ -13,9 +13,9 @@ class CategorySeeder extends Seeder
     public function run()
     {
         $category = Category::orderBy('created_at', 'DESC')
-            ->with('products')
-            ->where('id', 4141)
-            ->first();
+//            ->with('products')
+            ->where('id', 3572)
+            ->get();
 
         dd($category);
     }

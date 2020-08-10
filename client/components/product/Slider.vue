@@ -1,8 +1,12 @@
 <template>
   <a-row class="r-slider" type="flex" justify="start" style="margin-bottom: 24px;">
     <a-col class="gutter-row r-spin-holder" :span="24">
-      <VueSlickCarousel v-bind="settings">
-        <r-product-item v-for="(product, index) in category.products" :key="index" :product="product"></r-product-item>
+      <VueSlickCarousel
+        v-bind="settings"
+        v-if="products.length > 0">
+        <r-product-item v-for="(product, index) in products"
+                        :key="index"
+                        :product="product"></r-product-item>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
             <a-icon type="left"/>
@@ -75,20 +79,31 @@ export default {
     processes: "base/processes",
   }),
   created() {
-    // this.payload();
+    this.payload();
   },
   methods: {
     payload() {
+      console.log('do you have category: ', this.category.name);
+      console.log('do you have products: ', this.category.products);
+
+      if (this.category.products.length > 0) {
+        this.products = this.category.products;
+        return;
+      }
+
       this.hasData = false;
       this.isProcessing = true;
 
       let params = {
         category_id: this.category.id,
+        limit: 9,
         filters: this.filters
       };
 
       let path = `/products`;
       let $this = this;
+
+      console.log('do you have path: ', path);
 
       axios.post(path, params)
         .then(({data}) => {

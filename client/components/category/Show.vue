@@ -3,6 +3,7 @@
     <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
+      <r-category-actions></r-category-actions>
       <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
       <r-category-slider></r-category-slider>
       <r-product-flush :columns="3"></r-product-flush>

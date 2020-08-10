@@ -106,8 +106,10 @@ class CategoryController extends Controller
         $this->item = [];
         if (!empty($this->categories)) {
             $this->category = $this->categories[0];
-            $products = $this->setProducts($this->category['id']);
-            $this->category['products'] = $products;
+            $this->categoryId = $this->category['id'];
+
+            $this->setProducts();
+            $this->category['products'] = $this->products;
         }
 
         return response()->json([

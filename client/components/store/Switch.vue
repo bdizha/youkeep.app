@@ -8,7 +8,7 @@
     import {mapGetters} from "vuex";
 
     export default {
-      name: 'r-switch',
+      name: 'r-store-switch',
         props: {
             css: {type: String, required: false, default: ''}
         },

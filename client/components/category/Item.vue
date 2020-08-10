@@ -6,7 +6,6 @@
       <a-row class="r-slider r-product-cards" type="flex" justify="start">
         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <r-product-slider
-            v-if="category.products.length > 0"
             :columns="columns"
             :category="category"></r-product-slider>
         </a-col>
@@ -21,7 +20,7 @@ export default {
   name: 'r-category-item',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 4},
+    columns: {type: Number, required: false, default: 6},
     isShowing: {type: Boolean, required: false, default: false},
     category: {type: Object, required: false, default: {}},
     hasProduct: {type: Boolean, required: false, default: false},

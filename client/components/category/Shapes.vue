@@ -42,11 +42,10 @@ export default {
     return {
       hasData: false,
       settings: {
-        slidesToShow: this.columns,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: false,
-        variableWidth: true,
+        "slidesToShow": this.columns,
+        "slidesToScroll": 1,
+        "infinite": false,
+        "dots": false,
         responsive: [
           {
             "breakpoint": 1024,

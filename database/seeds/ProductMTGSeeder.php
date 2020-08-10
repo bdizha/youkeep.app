@@ -7,12 +7,12 @@ use App\Store;
 
 class ProductMTGSeeder extends Seeder
 {
-    private $domain = "https://www.archivestore.co.za";
-    private $storeId = null;
+    protected $domain = "https://www.archivestore.co.za";
+    protected $storeId = null;
 
-    private $storesIds = [12, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
-    private $categories = [];
-    private $level = 0;
+    protected $storesIds = [12, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
+    protected $categories = [];
+    protected $level = 0;
 
     /**
      * Run the database seeds.
@@ -37,7 +37,7 @@ class ProductMTGSeeder extends Seeder
                 ->get();
 
             echo ">>>>>> Decoding store > categories: " . $store->name . "\n";
-//            $this->decodeCategories();
+            $this->decodeCategories($this->storeId);
 
 //            die('done');
 
@@ -128,6 +128,9 @@ class ProductMTGSeeder extends Seeder
                 echo __LINE__ . "page($page) >= totalPages ($totalPages) > >>>>>>>>cool\n";
             }
 
+            // set the search/lookup data
+            $this->setSearchLookup($category);
+
         } catch (Exception $ex) {
 //            dd($ex);
         }
@@ -135,7 +138,7 @@ class ProductMTGSeeder extends Seeder
 //        dd([$category->name]);
     }
 
-    function setProduct($category, $values)
+    protected function setProduct($category, $values)
     {
 //        echo "Product external url: " . $values['external_url'] . "\n===================================>>\n";
 
@@ -159,49 +162,6 @@ class ProductMTGSeeder extends Seeder
 //        dd([$product, $category]);
 
         return $product;
-    }
-
-    function decodeCategories()
-    {
-        foreach ($this->categories as $key => $category) {
-            $this->parentCategory = null;
-
-            echo "{$key} >>>\n";
-
-            $url = $category->url;
-
-            $urlParts = $this->setParentCategory($url);
-
-            $attributes = [
-                'url' => $category->url
-            ];
-
-            echo 'Processing category ::::' . $category->url . "\n<<===================================\n";
-
-            if (!empty($this->parentCategory) && $this->parentCategory->id != $category->id) {
-                $values = [
-                    'level' => count($urlParts),
-                    'category_id' => $this->parentCategory->id,
-                    'store_id' => $this->storeId
-                ];
-
-                $category = \App\Category::updateOrCreate($attributes, $values);
-
-                echo "Updated category: " . $category->name . str_pad('*', $category->level * 2, '=', STR_PAD_LEFT) . "\n";
-
-//                dd($this->parentCategory);
-            } elseif (empty($this->parentCategory->id)) {
-                $values = [
-                    'level' => 1,
-                    'category_id' => null,
-                    'store_id' => $this->storeId
-                ];
-
-                \App\Category::updateOrCreate($attributes, $values);
-            } else {
-                echo 'Skipped category ::::' . $category->level . ' <> ' . $url . "\n<<===================================\n";
-            }
-        }
     }
 
     /**
@@ -245,41 +205,6 @@ class ProductMTGSeeder extends Seeder
     }
 
     protected $parentCategory = null;
-
-    /**
-     * @param $url
-     * @return array
-     */
-    private function setParentCategory($url)
-    {
-        $urlParts = explode('/', $url);
-
-        $urlParts = array_slice($urlParts, 4, count($urlParts) - 7);
-
-        $slug = '';
-        foreach ($urlParts as $part) {
-            $slug .= '/' . $part;
-
-            $slug = str_replace('plp/', '', $slug);
-            $slug = str_replace('rclp/', '', $slug);
-
-            $parentCategory = Category::where('url', 'like', "%plp{$slug}/_/%")
-                ->where('store_id', $this->storeId)
-                ->first();
-            if (empty($parentCategory)) {
-                $parentCategory = Category::where('url', 'like', "%rclp{$slug}/_/%")
-                    ->where('store_id', $this->storeId)
-                    ->first();
-            }
-
-            if (!empty($parentCategory)) {
-                $this->parentCategory = $parentCategory;
-            }
-        }
-
-//        dd([$slug, $this->parentCategory]);
-        return $urlParts;
-    }
 
     /**
      * @param $productData

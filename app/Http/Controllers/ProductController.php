@@ -11,6 +11,7 @@ class ProductController extends Controller
     protected $without = ['categories', 'products', 'category', 'breadcrumbs', 'photos', 'store'],
         $relations = ['categories', 'products', 'category', 'store'],
         $with = [],
+        $categoryId = null,
         $limit = [],
         $level = [],
         $items = [],
@@ -24,10 +25,12 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $categoryId = $request->category_id;
-        $products = $this->setProducts($categoryId);
+        $this->limit = $request->get('limit', 18);
+        $this->categoryId = $request->get('category_id', null);
 
-        return response()->json($products, 200);
+        $this->setProducts();
+
+        return response()->json($this->products, 200);
     }
 
     /**

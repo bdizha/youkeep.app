@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 
 class CategoryUpdateSeeder extends Seeder
 {
-    private $storesIds = [12, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
+    protected $storesIds = [12, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
 
     /**
      * Run the database seeds.
@@ -16,23 +16,32 @@ class CategoryUpdateSeeder extends Seeder
     public function run()
     {
         $this->setHighlights();
-        echo "Highlights set successfully >>>>> \n";
-
         $this->setCategoryProducts();
 
-        $categories = Category::orderBy('created_at', 'DESC')
-            ->whereIn('store_id', $this->storesIds)
-            ->get();
+        foreach ($this->storesIds as $storesId) {
+            $this->storeId = $storesId;
 
-        foreach ($categories as $category) {
-            echo "Updated category filter : {$category->slug} >>>>> \n";
-            $this->setFilters($category);
-            $this->setFilters($category, true);
+            $this->categories = Category::orderBy('created_at', 'DESC')
+                ->where('store_id', $this->storeId)
+//                ->whereIn('id', [3732])
+                ->get();
+//        dd($categories);
+
+            $this->decodeCategories($this->storeId);
+
+            foreach ($this->categories as $category) {
+                $this->setFilters($category);
+                $this->setFilters($category, true);
+            }
         }
     }
 
     public function setFilters($category = null, $hasProducts = false)
     {
+        echo "Updated category filter : {$category->slug} >>>>> \n";
+
+        $this->setParentCategory($category);
+
         $hasItemField = 'has_categories';
         $query = Category::orderBy('created_at', 'DESC')
             ->with('products')
@@ -55,7 +64,8 @@ class CategoryUpdateSeeder extends Seeder
 
         if (!empty($category->id)) {
             $categoryValues = [
-                $hasItemField => $hasItems
+                $hasItemField => $hasItems,
+                'name' => ucwords(strtolower($category->name))
             ];
 
             $categoryAttributes = [
@@ -110,6 +120,7 @@ class CategoryUpdateSeeder extends Seeder
 
             Category::updateOrCreate($categoryAttributes, $categoryValues);
         }
+        echo "Highlights set successfully >>>>> \n";
     }
 
     public function setCategoryProducts()
