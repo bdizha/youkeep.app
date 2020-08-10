@@ -129,7 +129,7 @@ class ProductMTGSeeder extends Seeder
             }
 
         } catch (Exception $ex) {
-            dd($ex);
+//            dd($ex);
         }
 
 //        dd([$category->name]);

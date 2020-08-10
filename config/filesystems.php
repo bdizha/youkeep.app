@@ -51,17 +51,65 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
 
+        'testimonial' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/testimonial'),
+            'url' => env('APP_URL') . '/storage/testimonial',
+            'visibility' => 'public',
+        ],
+
+        'product' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/product'),
+            'url' => env('APP_URL') . '/storage/product',
+            'visibility' => 'public',
+        ],
+
+        'profile' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/profile'),
+            'where' => storage_path('app/public/profile'),
+            'url' => env('APP_URL') . '/storage/profile',
+            'visibility' => 'public',
+        ],
+        'store' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/store'),
+            'where' => storage_path('app/public/store'),
+            'url' => env('APP_URL') . '/storage/store',
+            'visibility' => 'public',
+        ],
+        'category' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/category'),
+            'where' => storage_path('app/public/category'),
+            'url' => env('APP_URL') . '/storage/category',
+            'visibility' => 'public',
+        ],
+        'ingredient' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/ingredient'),
+            'where' => storage_path('app/public/ingredient'),
+            'url' => env('APP_URL') . '/storage/ingredient',
+            'visibility' => 'public',
+        ],
+        'position' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/position'),
+            'where' => storage_path('app/public/position'),
+            'url' => env('APP_URL') . '/storage/position',
+            'visibility' => 'public',
+        ],
         's3' => [
             'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('AWS_DEFAULT_REGION'),
+            'key' => env('AWS_KEY'),
+            'secret' => env('AWS_SECRET'),
+            'region' => env('AWS_REGION'),
             'bucket' => env('AWS_BUCKET'),
-            'url' => env('AWS_URL'),
         ],
 
     ],
