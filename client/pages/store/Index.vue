@@ -2,6 +2,7 @@
   <a-row type="flex" justify="center" align="middle">
     <a-col class="gutter-row" :span="24">
       <r-store-slider></r-store-slider>
+      <r-store-slider></r-store-slider>
       <a-empty v-show="!hasStores"
                image="/assets/icon_grey.svg"
                description="This store is coming soon. Please try other available stores."/>

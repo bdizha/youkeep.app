@@ -1,6 +1,6 @@
 <template>
   <div class="site">
-    <a-layout>
+    <a-layout class="r-layout__store">
       <r-header></r-header>
       <a-layout-content :class="{'r-has-data': true}">
         <a-layout>

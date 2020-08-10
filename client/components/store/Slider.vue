@@ -1,46 +1,56 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
     <a-col class="r-store-slider gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <div v-if="hasStores" :class="padding">
-        <VueSlickCarousel v-bind="settings">
-          <nuxt-link class="r-text-view-more"
-                     v-for="(store, index) in stores.data"
-                     :key="store.id"
-                     :to="store.route">
-            <a-card hoverable class="r-store-slider-item"
-                    :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}">
-              <r-avatar slot="cover"
-                        shape="square"
-                        size="160"
-                        :src="store.photo_url">
-                <div class="r-store-frame"></div>
-              </r-avatar>
-              <a-card-meta>
-                <template slot="title">
-                  <a-button block
-                            class="r-btn-bordered-grey"
-                            type="primary">
-                    {{ store.name }}
-                  </a-button>
-                  <div class="r-slider-item-tag">
-                    {{ store.description }}
-                  </div>
-                </template>
-              </a-card-meta>
-            </a-card>
-          </nuxt-link>
-          <template #prevArrow="arrowOption">
-            <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-              <a-icon type="left"/>
-            </div>
-          </template>
-          <template #nextArrow="arrowOption">
-            <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-              <a-icon type="right"/>
-            </div>
-          </template>
-        </VueSlickCarousel>
-      </div>
+      <a-row class="r-margin-bottom-24" type="flex" justify="start">
+        <a-col class="gutter-row" :xs="{ span: 20 }" :sm="{ span: 20 }" :md="{ span: 20 }"
+               :lg="{ span: 20 }">
+          <h3 class="r-heading">
+            It's shopping time!
+          </h3>
+        </a-col>
+        <a-col class="gutter-row" :xs="{ span: 4 }" :sm="{ span: 4 }" :md="{ span: 4 }"
+               :lg="{ span: 4 }">
+          <r-store-shop-now :category="category" justify="end"></r-store-shop-now>
+        </a-col>
+      </a-row>
+      <VueSlickCarousel v-if="hasStores" v-bind="settings">
+        <nuxt-link class="r-text-view-more"
+                   v-for="(store, index) in stores.data"
+                   :key="store.id"
+                   :to="store.route">
+          <a-card hoverable class="r-store-slider-item"
+                  :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}">
+            <r-avatar slot="cover"
+                      shape="circle"
+                      size="160"
+                      :src="store.photo_url">
+              <div class="r-store-frame"></div>
+            </r-avatar>
+            <a-card-meta>
+              <template slot="title">
+                <a-button block
+                          class="r-btn-bordered-grey"
+                          type="primary">
+                  {{ store.name }}
+                </a-button>
+                <div class="r-slider-item-tag">
+                  {{ store.description }}
+                </div>
+              </template>
+            </a-card-meta>
+          </a-card>
+        </nuxt-link>
+        <template #prevArrow="arrowOption">
+          <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
+            <a-icon type="left"/>
+          </div>
+        </template>
+        <template #nextArrow="arrowOption">
+          <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
+            <a-icon type="right"/>
+          </div>
+        </template>
+      </VueSlickCarousel>
     </a-col>
   </a-row>
 </template>

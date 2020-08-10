@@ -1,8 +1,8 @@
 <template>
   <div class="ant-avatar ant-avatar-image"
-       :class="{'ant-avatar-square': true}"
+       :class="shapeClass()"
        :style="style()">
-    <img :src="dataSrc" />
+    <img :src="dataSrc"/>
   </div>
 </template>
 <script>
@@ -25,6 +25,9 @@ export default {
       } else {
         return {}
       }
+    },
+    shapeClass() {
+      return 'ant-avatar-' + this.shape;
     }
   },
 };

@@ -2,6 +2,7 @@
 
 use App\Category;
 use App\Lookup;
+use App\Product;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

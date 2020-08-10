@@ -30,7 +30,7 @@ module.exports = {
 
   loading: {
     color: '#fb0028',
-    height: '6px'
+    height: '3px'
   },
 
   router: {

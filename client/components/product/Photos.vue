@@ -1,7 +1,7 @@
 <template>
   <a-carousel dots-class="slick-dots slick-thumb">
     <a slot="customPaging" slot-scope="props">
-      <a-avatar shape="square" :size="64" :src="'/storage/product/' + getPhoto(props.i)"/>
+      <r-avatar shape="square" :size="64" :src="'/storage/product/' + getPhoto(props.i)"/>
     </a>
     <div v-for="photo in product.photos">
       <div class="ant-avatar ant-avatar-square ant-avatar-image"

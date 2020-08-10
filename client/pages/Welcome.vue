@@ -46,7 +46,7 @@
       <r-steps></r-steps>
       <r-store-slider></r-store-slider>
       <r-category-slider></r-category-slider>
-      <r-category-list :columns="8" :limit="3"></r-category-list>
+      <r-category-list :columns="8" :limit="1"></r-category-list>
       <a-row type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{  span: 12 }"
@@ -69,7 +69,7 @@ export default {
   async asyncData({store, params, query}) {
     let payload = {
       category_id: 1,
-      limit: 24,
+      limit: 12,
       with: ['photos', 'breadcrumbs', 'products']
     };
 

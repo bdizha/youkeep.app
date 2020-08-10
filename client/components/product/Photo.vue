@@ -1,6 +1,6 @@
 <template>
   <r-avatar v-on:click="onProduct"
-            shape="circle"
+            shape="square"
             :src="product.thumbnail_url"/>
 </template>
 <script>
