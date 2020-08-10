@@ -5,7 +5,7 @@ use Illuminate\Database\Seeder;
 use App\Category;
 use App\Store;
 
-class ProductMTGSeeder extends Seeder
+class ProductMTGSeeder extends DatabaseSeeder
 {
     protected $domain = "https://www.archivestore.co.za";
     protected $storeId = null;

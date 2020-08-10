@@ -4,7 +4,7 @@ use App\Category;
 use App\Product;
 use Illuminate\Database\Seeder;
 
-class CategoryUpdateSeeder extends Seeder
+class CategoryUpdateSeeder extends DatabaseSeeder
 {
     protected $storesIds = [12, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
 
@@ -30,6 +30,10 @@ class CategoryUpdateSeeder extends Seeder
             $this->decodeCategories($this->storeId);
 
             foreach ($this->categories as $category) {
+                $category->name = trim($category->name);
+                $category->save();
+
+
                 $this->setFilters($category);
                 $this->setFilters($category, true);
             }

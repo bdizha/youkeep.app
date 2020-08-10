@@ -24,11 +24,14 @@ module.exports = {
       {hid: 'description', name: 'description', content: 'Nuxt.js project'}
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+      {rel: 'icon', type: 'image/x-icon', href: '/assets.icon'}
     ]
   },
 
-  loading: {color: '#007bff'},
+  loading: {
+    color: '#fb0028',
+    height: '9px'
+  },
 
   router: {
     middleware: ['locale', 'check-auth']
