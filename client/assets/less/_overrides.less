@@ -156,8 +156,7 @@ a.r-text-link {
     font-weight: 500;
 }
 
-.ant-layout-bottom {
-
+.r-layout-bottom {
     background: #F5F5F6;
     height: 63px !important;
     padding: 12px !important;
@@ -543,10 +542,20 @@ x {
         padding: 12px;
         background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
 
+        @media (max-width: 900px) {
+            line-height: 90px;
+            width: 90px !important;
+            height: 90px !important;
+        }
         @media (max-width: 768px) {
             line-height: 81px;
             width: 81px !important;
             height: 81px !important;
+        }
+        @media (max-width: 360px) {
+            line-height: 69px;
+            width: 69px !important;
+            height: 69px !important;
         }
     }
 }
@@ -2586,7 +2595,7 @@ h4.r-heading-light {
 
     &:hover {
         border: 1px solid #3C3C3C;
-        color: #1199F8;
+        color: #3C3C3C;
         background: #FFFFFF !important;
     }
 }
@@ -4162,12 +4171,7 @@ h4.r-heading-light {
     margin-bottom: 12px;
 }
 
-.r-bg-secondary {
-    background: #FFF4DD;
-}
-
 .r-art-grey {
-    background-image: url(/images/art-grey.svg);
     background-color: #F5F5F6;
     background-repeat: repeat;
     padding: 0 24px 24px;
@@ -4259,7 +4263,7 @@ h4.r-heading-light {
 }
 
 .r-subscribe {
-    background: #FFEFEF url(/assets/icon_pattern_white.svg) repeat;
+    background: transparent url(/assets/icon_pattern_white.svg) repeat;
     padding: 48px;
 
     .r-subscribe-title {
@@ -4502,6 +4506,15 @@ h4.r-heading-light {
     }
 }
 
+.r-steps {
+    .ant-card-cover {
+        .ant-avatar-image {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+}
+
 .r-shopper-steps {
     .ant-card {
         .r-shopper-icon {
@@ -4628,11 +4641,11 @@ h4.r-heading-light {
 }
 
 .r-bg-primary-light {
-    background: #FFEFEF url(/assets/icon_pattern_white.svg) repeat;
+    background-image: linear-gradient(to right, #FFEFEF, #EBF6FE);
 }
 
 .r-bg-secondary-light {
-    background: #EBF6FE url(/assets/icon_pattern_white.svg) repeat;
+    background-image: linear-gradient(to right, #EBF6FE, #FFEFEF);
 }
 
 .r-bg-grey {
@@ -4712,7 +4725,6 @@ h4.r-heading-light {
         width: 240px;
         overflow: hidden;
         background: url(/assets/icon_default.png) no-repeat;
-        background-size: auto;
         background-size: cover;
 
         .ant-card-body {
@@ -4730,9 +4742,6 @@ h4.r-heading-light {
             }
         }
 
-        .ant-avatar-cover {
-        }
-
         .ant-avatar {
             border: 6px solid #F5F5F6;
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.21);
@@ -4742,11 +4751,11 @@ h4.r-heading-light {
             img {
                 display: block;
                 position: absolute;
-                left: 12px;
+                left: 24px;
                 bottom: 0;
-                right: 12px;
+                right: 24px;
                 top: 0;
-                width: calc(100% - 24px);
+                width: calc(100% - 48px);
                 margin: auto;
                 height: auto;
                 border-radius: 0;
@@ -4779,7 +4788,7 @@ h4.r-heading-light {
 }
 
 .r-slider-item {
-    padding: 0 6px 0 48px;
+    padding: 0 6px 0 42px;
     margin: 6px 12px;
     display: block;
     text-align: center;

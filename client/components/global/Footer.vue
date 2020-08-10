@@ -117,7 +117,7 @@
                 <a-row :gutter="[24,24]" type="flex" justify="start">
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 8 }">
                     <router-link class="r-same-height r-footer-link" to="/shopper">
-                      <a-button block class="r-btn-bordered-white" size="default">
+                      <a-button block class="r-btn-bordered-white" size="large">
                         Become a shopper
                       </a-button>
                     </router-link>

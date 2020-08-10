@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row class="r-art-red">
+    <a-row class="r-art-primary">
       <a-col :span="24">
         <a-row type="flex" justify="center" align="middle">
           <a-col :xs="{span: 24}" :sm="{span: 18}" :lg="{span: 18}" class="r-page-padding r-text-center">
@@ -18,7 +18,7 @@
           <a-col class="gutter-row" :span="24">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
-                <router-link class="r-text-red r-text-view-more"
+                <router-link class="r-text-primary r-text-view-more"
                              :to="'/help'">
                   Help center
                 </router-link>

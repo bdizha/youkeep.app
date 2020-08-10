@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row class="r-art-red">
+    <a-row class="r-art-primary">
       <a-col :span="24">
         <a-row type="flex" justify="center" align="middle">
           <a-col :xs="{span: 24}" :lg="{span: 18}" class="r-page-padding r-text-center">
@@ -42,7 +42,7 @@
                     </a>
                   </a-col>
                   <a-col class="gutter-row" :span="6" style="text-align: right">
-                    <a class="r-same-height r-text-red" href="/hiw">
+                    <a class="r-same-height r-text-primary" href="/hiw">
                       <a-icon style="font-size: 14px;" type="right"/>
                     </a>
                   </a-col>

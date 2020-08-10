@@ -5,7 +5,7 @@
                  class="r-category-menu-link"
                  :to="category.route">
       <a-avatar class="r-lazy" shape="circle" :size="30"
-                :data-src="(category == null ? '/assets/icon_default.png' : '/storage/product/' + category.photo)"
+                :data-src="(category == null ? '/assets/icon_default.png' : '/' + category.photo)"
                 src="/assets/icon_default.png"
                 src-placeholder="~/assets/icon_default.png"/>
       {{ category.name}}
@@ -21,7 +21,7 @@
         <router-link @click.native="onCategory(category)" class="r-category-menu-link"
                      :to="category.route">
           <a-avatar class="r-lazy" shape="circle" :size="30"
-                    :data-src="'/storage/product/' + category.photo"
+                    :data-src="'/' + category.photo"
                     src="/assets/icon_default.png"
                     src-placeholder="~/assets/icon_default.png"/>
           {{ 'Browse All' }}

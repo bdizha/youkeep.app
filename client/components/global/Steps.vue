@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center" class="r-margin-vertical-24">
-    <a-col class="r-padding-24 gutter-row" :xs="{ span: 24 }" :lg="{ span: 18 }">
+    <a-col class="r-padding-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 18 }">
       <a-row :gutter="[24,24]" type="flex" justify="center">
         <a-col class="gutter-row" :xs="{ span: 20 }" :sm="{ span: 20 }" :lg="{ span: 20 }">
           <h2 class="r-heading r-same-height">
@@ -21,23 +21,23 @@
           </router-link>
         </a-col>
       </a-row>
-      <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+      <a-row class="r-steps" :gutter="[24,24]" type="flex" justify="center" align="middle">
         <a-col class="gutter-row r-padding-vertical-48" :xs="{ span: 24 }"
-               :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+               :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
           <a-card v-for="(step, index) in [1,2,3,4]"
                   v-show="index === currentStep"
                   :key="index"
                   :bordered='false'>
             <div slot="cover">
-              <a-avatar shape="square"
-                        :size="450"
-                        :src="'~/assets/Step_' + step + '.svg'"
+              <r-avatar shape="square"
+                        size="450"
+                        :src="'/assets/Step_' + step + '.svg'"
                         src-placeholder="/assets/icon_default.png"/>
             </div>
           </a-card>
         </a-col>
-        <a-col class="gutter-row" :xs="{ span: 12 }"
-               :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+        <a-col class="gutter-row" :xs="{ span: 24 }"
+               :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
           <a-steps v-model="currentStep" direction="vertical" :current="currentStep">
             <a-step v-for="(step, index) in steps"
                     :key="index">

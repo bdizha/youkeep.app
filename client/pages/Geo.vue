@@ -24,7 +24,7 @@
         </a-form-item>
         <a-form-item :wrapper-col="{ span: 24 }">
             <a-button type="primary" html-type="submit"
-                      class="ant-btn-secondary r-btn-red">
+                      class="ant-btn-secondary r-btn-primary">
                 Proceed
             </a-button>
         </a-form-item>

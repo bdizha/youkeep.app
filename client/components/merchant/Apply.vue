@@ -178,7 +178,7 @@
                                :lg="{ span: 12 }">
                             <a-button block @click="onApply" :size="'large'" type="primary"
                                       html-type="submit"
-                                      class="ant-btn-secondary r-btn-red">
+                                      class="ant-btn-secondary r-btn-primary">
                                 Submit
                             </a-button>
                         </a-col>

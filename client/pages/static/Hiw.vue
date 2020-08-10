@@ -2,7 +2,7 @@
   <r-page>
     <a-row type="flex" justify="center">
       <a-col class="gutter-row" :span="24">
-        <div class="r-page-welcome r-bg-red">
+        <div class="r-bg-primary-light">
           <a-row type="flex" justify="center">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
               <a-row type="flex" justify="start">
@@ -15,7 +15,7 @@
                            :lg="{ span: 24 }"
                            style="text-align: left;">
                       <h1 class="r-heading">
-                        <span class="r-text-red">How does Kshop work?</span>
+                        <span class="r-text-primary">How does Kshop work?</span>
                       </h1>
                       <p class="r-text-normal">
                         It doesn’t matter when or where you shop, as long as
@@ -36,7 +36,7 @@
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }">
-                          <a-button @click="onModal('register')" class="r-btn-red"
+                          <a-button @click="onModal('register')" class="r-btn-primary"
                                     block
                                     type="secondary"
                                     size='large'>
@@ -59,7 +59,7 @@
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                   <div class="r-page-header-photo">
-                    <div class="r-page-red"
+                    <div class="r-page-primary"
                          style="background-image: url('/images/welcome-03.jpg')">
                     </div>
                   </div>

@@ -6,7 +6,7 @@
                     <h1>Help</h1>
                 </a-col>
                 <a-col :span="16">
-                    <div class="r-page-header-photo r-page-art-red"
+                    <div class="r-page-header-photo r-page-art-primary"
                          style="background-image: url(https://www.picnic.app/static/amsterdam_city-91274d6b3d80a4960533a108ac070a89.jpg);">
                     </div>
                 </a-col>

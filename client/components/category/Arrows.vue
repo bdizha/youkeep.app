@@ -8,9 +8,8 @@
                    :to="category.route">
           <r-avatar shape="circle"
                     size="36"
-                    :data-src="category.photo"
-                    src="~/assets/icon_default.png"
-                    :style="'background-image: url(/storage/product/' + category.photo + ');'">
+                    :src="category.photo"
+                    :style="'background-image: url(' + category.photo + ');'">
           </r-avatar>
           <div class="r-text-slider">
             {{ category.name }}
@@ -51,7 +50,15 @@ export default {
           {
             "breakpoint": 1024,
             "settings": {
-              "slidesToShow": 9,
+              "slidesToShow": this.columns,
+              "slidesToScroll": 1,
+              "dots": false
+            }
+          },
+          {
+            "breakpoint": 900,
+            "settings": {
+              "slidesToShow": 5,
               "slidesToScroll": 1,
               "dots": false
             }
@@ -59,7 +66,7 @@ export default {
           {
             "breakpoint": 700,
             "settings": {
-              "slidesToShow": 6,
+              "slidesToShow": 4,
               "slidesToScroll": 1,
               "dots": false
             }
@@ -67,7 +74,7 @@ export default {
           {
             "breakpoint": 560,
             "settings": {
-              "slidesToShow": 3,
+              "slidesToShow": 2,
               "slidesToScroll": 1,
               "dots": false
             }

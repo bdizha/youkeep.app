@@ -2,7 +2,7 @@
   <r-page>
     <a-row type="flex" justify="center">
       <a-col class="gutter-row" :span="24">
-        <div class="r-page-welcome r-bg-red">
+        <div class="r-bg-primary-light">
           <a-row type="flex" justify="center">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
               <a-row type="flex" justify="start">
@@ -18,7 +18,7 @@
                         How does Kpaise work?
                       </h4>
                       <h1 class="r-heading r-text-uppercase">
-                        <span class="r-text-red">Shop more,</span><br>
+                        <span class="r-text-primary">Shop more,</span><br>
                         <span class="r-text-purple">Pay less.</span>
                       </h1>
                     </a-col>
@@ -40,7 +40,7 @@
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }">
-                          <a-button class="r-btn-red"
+                          <a-button class="r-btn-primary"
                                     block
                                     type="secondary"
                                     size='large'>
@@ -64,7 +64,7 @@
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                   <div class="r-page-header-photo">
-                    <div class="r-page-red"
+                    <div class="r-page-primary"
                          style="background-image: url('/images/welcome-02.jpg')">
                     </div>
                   </div>

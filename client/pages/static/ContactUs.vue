@@ -4,7 +4,7 @@
       <a-col :span="24">
         <a-row type="flex" justify="space-around" align="middle">
           <a-col :lg="{span: 9 , offset: 3}" class="r-page-padding r-padding-right-24">
-            <h1 class="r-heading r-text-red">
+            <h1 class="r-heading r-text-primary">
               Talk to us
             </h1>
             <p class="r-text-normal">
@@ -36,7 +36,7 @@
             </div>
           </a-col>
           <a-col :xs="{span: 24}" :lg="{span: 12}" style="position: relative;">
-            <div class="r-page-header-photo r-page-art-red">
+            <div class="r-page-header-photo r-page-art-primary">
               <img alt="Kshop - Contact Us" src="/images/kshop/icon_cart_contact.svg"/>
             </div>
           </a-col>
@@ -125,7 +125,7 @@
                          :lg="{ span: 12 }">
                     <a-button block @click="onSend" :size="'large'" type="primary"
                               html-type="submit"
-                              class="ant-btn-secondary r-btn-red">
+                              class="ant-btn-secondary r-btn-primary">
                       Save
                     </a-button>
                   </a-col>

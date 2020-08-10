@@ -14,7 +14,7 @@
           <router-link class="r-text-link" :to="item.route">
             <div class="r-search-item-avatar">
               <a-avatar class="r-lazy" shape="circle" :size="36"
-                        :src="'/storage/product/' + item.photo"
+                        :src="item.photo"
                         src-placeholder="~/assets/icon_default.png"/>
             </div>
             {{ item.title }}

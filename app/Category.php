@@ -147,20 +147,12 @@ class Category extends Model
      */
     public function getPhotoAttribute()
     {
-        $photos = [];
-        foreach ($this->products as $product) {
-            $photo = $product->thumbnail;
-            if (!in_array($photo, $this->ignoredPhotos)) {
-                $photos[] = url('/storage/product/' . $photo);
-            }
-        }
+        $photos = $this->getPhotosAttribute();
 
         if (empty($photos)) {
             return null;
         }
-
-        $photo = $photos[rand(0, count($photos) - 1)];
-        return $photo;
+        return $photos[rand(0, count($photos) - 1)];;
     }
 
     /**

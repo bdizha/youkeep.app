@@ -2,7 +2,7 @@
   <r-page>
     <a-row v-if="position" type="flex" justify="center" align="middle">
       <a-col :span="24">
-        <a-row type="flex" justify="center" align="middle" class="r-art-red">
+        <a-row type="flex" justify="center" align="middle" class="r-art-primary">
           <a-col :xs="{span: 24}" :sm="{span: 24}" :lg="{span: 12}"
                  class="r-margin-vertical-48 r-text-center">
             <a-row type="flex" justify="center" align="middle">
@@ -41,13 +41,13 @@
           <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
-                <router-link class="r-text-red r-text-view-more"
+                <router-link class="r-text-primary r-text-view-more"
                              :to="'/career/openings'">
                   Jop openings
                 </router-link>
               </a-breadcrumb-item>
               <a-breadcrumb-item>
-                <router-link class="r-text-red r-text-view-more"
+                <router-link class="r-text-primary r-text-view-more"
                              :to="'/career/' + position.slug">
                   {{ position.title }}
                 </router-link>
@@ -177,7 +177,7 @@
                              :lg="{ span: 12 }">
                         <a-button block @click="onSend" :size="'large'" type="primary"
                                   html-type="submit"
-                                  class="ant-btn-secondary r-btn-red">
+                                  class="ant-btn-secondary r-btn-primary">
                           Submit application
                         </a-button>
                       </a-col>

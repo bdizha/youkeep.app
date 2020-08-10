@@ -2,7 +2,7 @@
   <r-page>
     <a-row type="flex" justify="center">
       <a-col class="gutter-row" :span="24">
-        <div class="r-page-welcome r-bg-red">
+        <div class="r-bg-primary-light">
           <a-row type="flex" justify="center">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
               <a-row type="flex" justify="start" align="middle">
@@ -17,7 +17,7 @@
                       <h4 class="r-heading r-text-uppercase">
                         Get paid to shop with Kshop.
                       </h4>
-                      <h1 class="r-heading r-text-uppercase r-text-red">
+                      <h1 class="r-heading r-text-uppercase r-text-primary">
                         A better way to your shopping.
                       </h1>
                     </a-col>
@@ -31,7 +31,7 @@
                         Deliver things people love, from the stores they trust.
                       </p>
                       <a-button @click="onApply" type="primary"
-                                class="ant-btn r-btn-red r-margin-top-24"
+                                class="ant-btn r-btn-primary r-margin-top-24"
                                 size="large"
                                 html-type="button">
                         Apply now
@@ -42,7 +42,7 @@
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                   <div class="r-page-header-photo">
-                    <div class="r-page-red"
+                    <div class="r-page-primary"
                          style="background-image: url('/images/shopper.jpg')">
                     </div>
                   </div>

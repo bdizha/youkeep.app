@@ -81,7 +81,7 @@
                 </a-row>
               </a-form>
               <r-notice process="isSuccess"></r-notice>
-              <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+              <r-spinner v-if="false" process="isRunning" :is-absolute="true"></r-spinner>
             </a-col>
           </a-row>
         </a-col>

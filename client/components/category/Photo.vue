@@ -6,8 +6,8 @@
            :xs="{span:8}" :sm="{span:8}" :md="{span:8}" :lg="{span:8}">
       <r-avatar shape="square"
                 size="150"
-                :data-src="photo"
-                src-placeholder="~/assets/icon_default.png"/>
+                :src="photo"
+                src-placeholder="/assets/icon_default.png"/>
     </a-col>
   </a-row>
 </template>

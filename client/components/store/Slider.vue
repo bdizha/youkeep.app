@@ -2,15 +2,15 @@
   <a-row class="r-slider" type="flex" justify="center" align="middle">
     <a-col class="r-store-slider gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-margin-bottom-24" type="flex" justify="start">
-        <a-col class="gutter-row" :xs="{ span: 20 }" :sm="{ span: 20 }" :md="{ span: 20 }"
+        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
                :lg="{ span: 20 }">
           <h3 class="r-heading">
             It's shopping time!
           </h3>
         </a-col>
-        <a-col class="gutter-row" :xs="{ span: 4 }" :sm="{ span: 4 }" :md="{ span: 4 }"
+        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
                :lg="{ span: 4 }">
-          <r-store-shop-now :category="category" justify="end"></r-store-shop-now>
+          <r-store-shop-now justify="end"></r-store-shop-now>
         </a-col>
       </a-row>
       <VueSlickCarousel v-if="hasStores" v-bind="settings">

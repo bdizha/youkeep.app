@@ -2,7 +2,7 @@
     <r-page>
         <a-row type="flex" justify="center">
             <a-col class="gutter-row" :span="24">
-                <div class="r-page-welcome r-bg-red">
+                <div class="r-bg-primary-light">
                     <a-row type="flex" justify="center">
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
                             <a-row type="flex" justify="start">
@@ -36,7 +36,7 @@
                                                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                                        :md="{ span: 12 }"
                                                        :lg="{ span: 12 }">
-                                                    <a-button @click="onApply" class="r-btn-red"
+                                                    <a-button @click="onApply" class="r-btn-primary"
                                                               block
                                                               type="secondary"
                                                               size='large'>
@@ -60,7 +60,7 @@
                                 </a-col>
                                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                                     <div class="r-page-header-photo">
-                                        <div class="r-page-red"
+                                        <div class="r-page-primary"
                                              style="background-image: url('/images/merchant-02.jpg')">
                                         </div>
                                     </div>

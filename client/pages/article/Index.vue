@@ -8,7 +8,7 @@
                         <h4 class="r-heading r-text-uppercase">
                             A better way to shop.
                         </h4>
-                        <h1 class="r-heading r-text-uppercase r-text-red">
+                        <h1 class="r-heading r-text-uppercase r-text-primary">
                             KShop blog
                         </h1>
                     </a-col>

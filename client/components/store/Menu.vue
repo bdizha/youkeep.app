@@ -42,12 +42,12 @@ const LINKS = [
   {
     label: 'Explore',
     icon: 'compass',
-    link: '/stores',
+    link: '/stores/all',
   },
   {
-    label: 'Highlights',
+    label: 'Top Stores',
     icon: 'fire',
-    link: '/store/athome/category/highlights',
+    link: '/stores/hot',
     modal: null
   },
   {

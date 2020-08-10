@@ -17,7 +17,7 @@
                       <h4 class="r-heading r-text-uppercase">
                         It's about you
                       </h4>
-                      <h1 class="r-heading r-text-uppercase r-text-red">
+                      <h1 class="r-heading r-text-uppercase r-text-primary">
                         A better way to shop.
                       </h1>
                     </a-col>
@@ -37,7 +37,7 @@
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                   <div class="r-page-header-photo">
-                    <div class="r-page-red"
+                    <div class="r-page-primary"
                          style="background-image: url('/images/welcome.jpg')">
                     </div>
                   </div>
@@ -59,7 +59,7 @@
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" s="r" :md="{ span: 24 }"
                      :lg="{ span: 24 }"
                      style="text-align: left;">
-                <h2 class="r-heading r-text-uppercase r-text-red">
+                <h2 class="r-heading r-text-uppercase r-text-primary">
                   Take care of you
                 </h2>
                 <p class="r-text-normal">
@@ -94,7 +94,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <h2 class="r-heading r-text-uppercase r-text-red">
+            <h2 class="r-heading r-text-uppercase r-text-primary">
               Our mission
             </h2>
             <p class="r-text-normal">
@@ -114,7 +114,7 @@
             <a-row :gutter="[48,48]" type="flex" justify="center">
               <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                      style="text-align: left;">
-                <h2 class="r-heading r-text-uppercase r-text-red">
+                <h2 class="r-heading r-text-uppercase r-text-primary">
                   We deliver upon your demand
                 </h2>
                 <p class="r-text-normal"> We do not store bread, vegetables and fruit in the shop
@@ -138,7 +138,7 @@
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                      style="text-align: left;">
-                <h2 class="r-heading r-text-uppercase r-text-red">
+                <h2 class="r-heading r-text-uppercase r-text-primary">
                   It's shopping time.
                 </h2>
                 <p class="r-text-normal">
@@ -159,7 +159,7 @@
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                      style="text-align: left;">
-                <h2 class="r-heading r-text-uppercase r-text-red">
+                <h2 class="r-heading r-text-uppercase r-text-primary">
                   Making sense, making value
                 </h2>
                 <p class="r-text-normal">
@@ -181,7 +181,7 @@
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                      style="text-align: left;">
-                <h2 class="r-heading r-text-uppercase r-text-red">
+                <h2 class="r-heading r-text-uppercase r-text-primary">
                   We believe in quality
                 </h2>
                 <p class="r-text-normal">

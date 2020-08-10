@@ -10,7 +10,7 @@
               shape="square"
               size="large"
               slot="avatar"
-              :src="'/storage/product/' + item.thumbnail">
+              :src="item.thumbnail">
             </a-avatar>
           </div>
         </a-col>

@@ -5,11 +5,11 @@
         <a-row type="flex" justify="start">
           <a-col :lg="{span: 9, offset: 3}" class="r-page-padding">
             <h1 class="r-heading">
-              <span class="r-text-red">About Us</span>
+              <span class="r-text-primary">About Us</span>
             </h1>
           </a-col>
           <a-col :xs="{span: 24}" :lg="{span: 12}" class="r-padding-lg-48" style="position: relative;">
-            <div class="r-page-header-photo r-page-art-red">
+            <div class="r-page-header-photo r-page-art-primary">
               <img alt="About Kshop" src="/images/kshop/about-us-01.jpg">
             </div>
           </a-col>
@@ -21,7 +21,7 @@
         <a-row class="r-radius-right-white" type="flex"
                justify="space-around" align="middle">
           <a-col :lg="{span: 18 , offset: 6}" class="r-page-padding">
-            <h2 class="r-heading r-text-red">
+            <h2 class="r-heading r-text-primary">
               Who we are
             </h2>
             <p class="r-text-normal">
@@ -52,7 +52,7 @@
       <a-col :lg="{span: 12}" class="r-radius-right-white">
         <a-row type="flex" justify="space-around" align="middle">
           <a-col :lg="{span: 18 , offset: 6}" class="r-page-padding">
-            <h2 class="r-heading r-text-red">
+            <h2 class="r-heading r-text-primary">
               We believe in our customers
             </h2>
             <p class="r-text-normal">
@@ -74,7 +74,7 @@
               within a few minutes. So toilet paper, fresh, chips and ice cream, but also organic
               eggs, tender
               steak and fresh vegetables.</p>
-            <h2 class="r-heading r-text-red">
+            <h2 class="r-heading r-text-primary">
               It's always shopping time!
             </h2>
             <p class="r-text-normal">

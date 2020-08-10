@@ -4,7 +4,7 @@
             <a-col :span="24">
                 <a-row type="flex" justify="space-around" align="middle">
                     <a-col :lg="{span: 9 , offset: 3}" class="r-page-padding">
-                        <h1 class="r-heading r-text-red">
+                        <h1 class="r-heading r-text-primary">
                             Where does Kshop deliver?
                         </h1>
                         <p class="r-text-normal">
@@ -16,7 +16,7 @@
                         </p>
                     </a-col>
                     <a-col :xs="{span: 24}" :lg="{span: 12}" style="position: relative;">
-                        <div class="r-page-header-photo r-page-art-red">
+                        <div class="r-page-header-photo r-page-art-primary">
                             <img alt="Kshop - Carrers" src="/images/steps/red/step-032.svg">
                         </div>
                     </a-col>

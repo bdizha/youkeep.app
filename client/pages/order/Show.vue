@@ -31,7 +31,7 @@
             <a-col :xs="{ span: 24 }">
                 <div style="text-align: right; width: 100%; margin-bottom: 20px;">
                     <a-button @click="toggleDirection" type="primary" html-type="submit"
-                              class="ant-btn-secondary r-btn-red">
+                              class="ant-btn-secondary r-btn-primary">
                         {{ isVertical ? 'Less' : 'Detailed' }} Timeline
                     </a-button>
                 </div>

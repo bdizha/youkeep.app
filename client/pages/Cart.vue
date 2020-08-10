@@ -87,7 +87,7 @@
                             <a-popconfirm
                                     @confirm="reset"
                                     title="Are you sure you would like to clear your cart?">
-                                <a-icon slot="icon" type="question-circle-o" class="r-text-red"/>
+                                <a-icon slot="icon" type="question-circle-o" class="r-text-primary"/>
                                 <a-button block size="small" class="r-btn-bordered-black">
                                     <a-icon type="delete"/>
                                     Clear cart

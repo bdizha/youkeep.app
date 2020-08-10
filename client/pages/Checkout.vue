@@ -19,7 +19,7 @@
                       <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
                              :md="{ span: 6 }" :lg="{ span: 6 }">
                         <a-button block type="primary" html-type="button"
-                                  class="ant-btn-secondary r-btn-red">
+                                  class="ant-btn-secondary r-btn-primary">
                           Proceed
                         </a-button>
                       </a-col>
@@ -59,7 +59,7 @@
                                :sm="{ span: 12 }"
                                :md="{ span: 6 }" :lg="{ span: 6 }">
                           <a-button block type="primary" html-type="submit"
-                                    class="ant-btn-secondary r-btn-red">
+                                    class="ant-btn-secondary r-btn-primary">
                             Proceed
                           </a-button>
                         </a-col>
@@ -98,7 +98,7 @@
                                :sm="{ span: 12 }"
                                :md="{ span: 6 }" :lg="{ span: 6 }">
                           <a-button block type="primary" html-type="button"
-                                    class="ant-btn-secondary r-btn-red">
+                                    class="ant-btn-secondary r-btn-primary">
                             Proceed
                           </a-button>
                         </a-col>
@@ -118,7 +118,7 @@
                       <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
                              :md="{ span: 6 }" :lg="{ span: 6 }">
                         <a-button block type="primary" html-type="button"
-                                  class="ant-btn-secondary r-btn-red">
+                                  class="ant-btn-secondary r-btn-primary">
                           Place order
                         </a-button>
                       </a-col>

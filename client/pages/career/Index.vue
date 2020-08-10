@@ -4,7 +4,7 @@
       <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48 r-margin-vertical-48">
         <a-row type="flex" justify="space-around" align="middle">
           <a-col class="gutter-row r-text-center" :span="24">
-            <h1 class="r-heading r-text-red">
+            <h1 class="r-heading r-text-primary">
               Current job openings at Kshop
             </h1>
           </a-col>
@@ -63,7 +63,7 @@
                           <a class="r-same-height"
                              :href="'/career/' + position.slug + '/apply'">
                             <a-button type="primary"
-                                      class="r-btn-red" size="default">
+                                      class="r-btn-primary" size="default">
                               Apply
                             </a-button>
                           </a>

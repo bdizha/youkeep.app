@@ -2,7 +2,7 @@
   <r-page>
     <a-row type="flex" justify="center" align="middle">
       <a-col :span="24">
-        <a-row type="flex" justify="center" align="middle" class="r-art-red">
+        <a-row type="flex" justify="center" align="middle" class="r-art-primary">
           <a-col :xs="{span: 24}" :sm="{span: 24}" :lg="{span: 12}"
                  class="r-margin-vertical-48 r-text-center">
             <a-row type="flex" justify="center" align="middle">
@@ -41,7 +41,7 @@
           <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
-                <router-link class="r-text-red r-text-view-more"
+                <router-link class="r-text-primary r-text-view-more"
                              :to="'/career/openings'">
                   Jop openings
                 </router-link>
