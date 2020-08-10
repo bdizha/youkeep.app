@@ -1,7 +1,6 @@
 <template>
   <a-card class="r-card-category r-spin-holder" hoverable>
-    <router-link @click.native="onCategory(category)" class="r-text-primary r-text-view-more"
-                 :to="category.route">
+    <nuxt-link class="r-text-primary r-text-view-more" :to="category.route">
       <r-category-photo :category="category" :start="0"></r-category-photo>
       <a-card-meta>
         <template slot="description">
@@ -15,7 +14,7 @@
         </template>
       </a-card-meta>
       <r-category-photo :category="category" :start="3"></r-category-photo>
-    </router-link>
+    </nuxt-link>
     <r-spinner process="isCategories" :is-absolute="true"></r-spinner>
   </a-card>
 </template>

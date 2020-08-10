@@ -43,6 +43,7 @@ class Category extends Model
         'breadcrumbs',
         'photos',
         'photo',
+        'filters',
     ];
 
     /**
@@ -76,6 +77,38 @@ class Category extends Model
         $breadcrumbs = [];
         $breadcrumbs = $this->getBreadcrumbs($this, $breadcrumbs);
         return array_reverse($breadcrumbs);
+    }
+
+    /**
+     * Get all the types for this product.
+     */
+    public function getFiltersAttribute()
+    {
+        $filters = [];
+
+        foreach (ProductType::$types as $type => $name) {
+            $productTypes = ProductType::whereHas('variants', function ($query) {
+                $query->whereHas('product', function ($query) {
+                    $query->whereHas('categories', function ($query) {
+                        $query->where('category_products.category_id', $this->id);
+                    });
+                });
+            })
+                ->where('is_active', false)
+                ->where('type', $type)
+                ->get();
+
+            if ($productTypes->toArray()) {
+                $filters[] = [
+                    'name' => $name,
+                    'type' => $type,
+                    'items' => $productTypes->toArray()
+                ];
+            }
+
+        }
+
+        return $filters;
     }
 
     /**

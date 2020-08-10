@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-product-flush r-slider" type="flex" justify="start" style="margin-bottom: 24px;">
+  <a-row v-if="hasProducts" class="r-product-flush r-slider" type="flex" justify="start" style="margin-bottom: 24px;">
     <a-col class="gutter-row r-spin-holder r-padding-24" :span="24"
            :class="{'r-product-spinner--active': processes.isProduct}">
       <VueSlickCarousel v-bind="settings">

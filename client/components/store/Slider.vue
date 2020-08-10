@@ -3,11 +3,10 @@
     <a-col class="r-store-slider gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <div v-if="hasStores" :class="padding">
         <VueSlickCarousel v-bind="settings">
-          <router-link @click.native="onStore(store)"
-                       class="r-text-view-more"
-                       v-for="(store, index) in stores.data"
-                       :key="store.id"
-                       :to="store.route">
+          <nuxt-link class="r-text-view-more"
+                     v-for="(store, index) in stores.data"
+                     :key="store.id"
+                     :to="store.route">
             <a-card hoverable class="r-store-slider-item"
                     :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}">
               <r-avatar slot="cover"
@@ -29,7 +28,7 @@
                 </template>
               </a-card-meta>
             </a-card>
-          </router-link>
+          </nuxt-link>
           <template #prevArrow="arrowOption">
             <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
               <a-icon type="left"/>

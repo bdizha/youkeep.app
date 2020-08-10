@@ -245,10 +245,6 @@ a.r-text-link {
     font-weight: 600;
     font-size: 16px;
     line-height: 36px;
-
-    h4.r-heading {
-        margin: 0;
-    }
 }
 
 .r-store-selector {
@@ -1362,9 +1358,7 @@ h4.r-heading {
     font-size: 18px;
     font-weight: 600;
     line-height: 30px;
-
-    &.r-same-height {
-    }
+    margin: 0;
 
     @media (max-width: 768px) {
         font-weight: 400;
@@ -1549,7 +1543,7 @@ h4.r-heading-light {
                     .r-product-cart-text {
                         //font-size: 16px;
                         //font-weight: 700;
-                        //color: #FFFFFF;
+                        //filter: #FFFFFF;
                     }
 
                     .r-product-qnty {
@@ -1561,7 +1555,7 @@ h4.r-heading-light {
                         //margin-left: -45px;
                         //left: 50%;
                         //top: 25%;
-                        //color: #FFFFFF;
+                        //filter: #FFFFFF;
                         //@media (max-width: 768px) {
                         //  width: 60px;
                         //  margin-left: -30px;
@@ -1997,7 +1991,9 @@ h4.r-heading-light {
 }
 
 .r-category-menu-panel {
-    /* include only if it's child of itself */
+    .ant-checkbox-group {
+        width: 100%;
+    }
 
     > .ant-collapse-content {
         > .ant-collapse-content-box {
@@ -2224,14 +2220,6 @@ h4.r-heading-light {
 
 .r-text-underline {
     width: 100%;
-}
-
-.r-filter-item {
-    border-bottom: 1px solid #ECECEC;
-    line-height: 30px;
-    padding: 12px 0;
-    margin-top: 24px;
-    margin-bottom: 12px;
 }
 
 .ant-checkbox-wrapper {
@@ -5162,26 +5150,67 @@ h4.r-heading-light {
     }
 }
 
-/* The emerging W3C standard
-   that is currently Firefox-only */
+.r-filter-item {
+    text-align: center;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 6px;
+    background: #F7F8F9;
+    display: block;
+    opacity: 0.6;
+    position: relative;
+    transition: opacity .5s linear, -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
+    transition: opacity .5s linear, transform 2s cubic-bezier(.19, 1, .22, 1);
+    transition: opacity .5s linear, transform 2s cubic-bezier(.19, 1, .22, 1), -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
 
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #969696 #F5F5F6;
+    .r-filter-item-text {
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 36px;
+    }
 }
 
-/* Works on Chrome/Edge/Safari */
+.r-filter-color {
+    &:hover,
+    &.r-filter-item__active {
+        opacity: 1;
 
-*::-webkit-scrollbar {
-    width: 12px;
+        &:before {
+            content: "";
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            border-radius: 5px;
+        }
+    }
+
+    .anticon {
+        font-size: 18px;
+        line-height: 18px;
+        color: #FFFFFF;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -9px;
+        margin-left: -9px;
+    }
 }
 
-*::-webkit-scrollbar-track {
-    background: #F5F5F6;
+.r-filter-size {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    opacity: 1;
+
+    &:hover,
+    &.r-filter-item__active {
+        background-color: #FB0028;
+        color: #FFFFFF;
+    }
 }
 
-*::-webkit-scrollbar-thumb {
-    background-color: #969696;
-    border-radius: 18px;
-    border: 3px solid #F5F5F6;
-}

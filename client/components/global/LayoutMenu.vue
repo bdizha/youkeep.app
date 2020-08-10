@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-menu">
+  <div class="r-layout-menu">
     <slot/>
   </div>
 </template>

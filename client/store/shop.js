@@ -16,10 +16,9 @@ const state = () => ({
   hasSearched: false,
   filters: {
     stores: [],
-    categories: [],
-    products: [],
-    discounts: [],
-    brands: [],
+    size: [],
+    color: [],
+    brand: [],
     sort: null
   },
   sort: null,
@@ -115,69 +114,77 @@ const actions = {
   async onCategory({dispatch, commit, state}, toRoute) {
     // console.log('response: route category', toRoute);
 
-    try {
-      dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
-      dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
-      dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
+    // try {
+    dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
+    dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
+    dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
 
-      console.log('toRoute: ', toRoute);
-      let params = {
-        with: ['categories', 'products']
-      };
-      dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
+    console.log('toRoute: ', toRoute);
+    let params = {
+      with: ['categories', 'products']
+    };
+    dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
-      await axios.post(toRoute, params).then(({data}) => {
-        let category = data.category;
-        commit('setCategory', category);
+    await axios.post(toRoute, params).then(({data}) => {
+      let category = data.category;
+      commit('setCategory', category);
 
-        console.log('setCategory data >>>>> ', category);
+      console.log('setCategory data >>>>> ', category);
 
-        if (category.products != undefined) {
-          let products = category.products;
-
-          setTimeout(() => {
-            dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
-          }, 300);
-
-          console.log('onCategory products >>>>> ', products);
-          commit('setProducts', products);
-        }
-
-        if (category.categories != undefined) {
-          let categories = category.categories;
-
-          console.log('onCategory categories data >>>>> ', categories);
-
-          commit('setCategories', categories);
-          dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
-        }
-
-        if (data.product != undefined) {
-          let product = data.product;
-          commit('setProduct', product);
-
-          let modal = {};
-          modal.isVisible = true;
-          modal.isClosable = true;
-          modal.current = 'product';
-
-          // fire off the product modal
-          dispatch('base/onModal', modal, {root: true});
-        }
+      if (category.products != undefined) {
+        let products = category.products;
 
         setTimeout(() => {
-          dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
-        }, 1200);
+          dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
+        }, 300);
 
-        // set the store object
-        // force the store to change
-        commit('setStore', category.store);
-      });
+        console.log('onCategory products >>>>> ', products);
+        commit('setProducts', products);
+      }
 
-    } catch (e) {
-      console.error('onStore errors');
-      console.log(e);
-    }
+      if (category.categories != undefined) {
+        let categories = category.categories;
+
+        console.log('onCategory categories data >>>>> ', categories);
+
+        commit('setCategories', categories);
+        dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
+      }
+
+      if (category.filters != undefined) {
+        let filters = category.filters;
+
+        console.log('onCategory filters data >>>>> ', filters);
+
+        commit('setFilters', filters);
+      }
+
+      if (data.product != undefined) {
+        let product = data.product;
+        commit('setProduct', product);
+
+        let modal = {};
+        modal.isVisible = true;
+        modal.isClosable = true;
+        modal.current = 'product';
+
+        // fire off the product modal
+        dispatch('base/onModal', modal, {root: true});
+      }
+
+      setTimeout(() => {
+        dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
+      }, 1200);
+
+      // set the store object
+      // force the store to change
+      commit('setStore', category.store);
+    });
+
+    // } catch (e) {
+    //   console.error('onStore errors');
+    //   console.log(e);
+    // }
   },
   async onStore({dispatch, commit}, toRoute) {
     console.log('response: route store', toRoute);

@@ -8,7 +8,7 @@
                 :data-src="(category == null ? '/assets/icon_default.png' : '/storage/product/' + category.photo)"
                 src="/assets/icon_default.png"
                 src-placeholder="~/assets/icon_default.png"/>
-      {{ category.name }}
+      {{ category.name}}
     </router-link>
     <a-collapse v-if="category.has_categories"
                 default-active-key="null"
@@ -65,9 +65,7 @@ export default {
           store_id: this.category.store_id
         };
 
-        if (this.category.level < 2) {
-          params.with = ['categories'];
-        }
+        params.with = ['categories'];
 
         let $this = this;
 

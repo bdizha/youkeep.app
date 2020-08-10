@@ -202,7 +202,7 @@ class ProductWoolworthsSeeder extends Seeder
 
                                 foreach ($productTypes as $productType) {
                                     $hasSize = !empty($productType['size']);
-                                    $hasColor = !empty($productType['color']);
+                                    $hasColor = !empty($productType['filter']);
 
                                     $types = [];
                                     if ($hasSize) {
@@ -215,7 +215,7 @@ class ProductWoolworthsSeeder extends Seeder
                                     if ($hasColor) {
                                         $types[] = [
                                             'type' => 2,
-                                            'name' => $productType['color']
+                                            'name' => $productType['filter']
                                         ];
                                     }
                                     echo __LINE__ . " <> \n";

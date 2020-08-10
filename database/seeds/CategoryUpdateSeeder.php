@@ -6,7 +6,7 @@ use Illuminate\Database\Seeder;
 
 class CategoryUpdateSeeder extends Seeder
 {
-    private $storesIds = [69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
+    private $storesIds = [12, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
 
     /**
      * Run the database seeds.
@@ -15,10 +15,10 @@ class CategoryUpdateSeeder extends Seeder
      */
     public function run()
     {
-//        $this->setHighlights();
+        $this->setHighlights();
         echo "Highlights set successfully >>>>> \n";
 
-//        $this->setCategoryProducts();
+        $this->setCategoryProducts();
 
         $categories = Category::orderBy('created_at', 'DESC')
             ->whereIn('store_id', $this->storesIds)

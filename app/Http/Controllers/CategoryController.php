@@ -43,7 +43,7 @@ class CategoryController extends Controller
 
         if (!is_null($storeId)) {
             $query->where('store_id', $storeId);
-            $this->store = Store::where('id', $storeId)->first();
+            $store = Store::where('id', $storeId)->first();
         }
 
         if (!is_null($storeSlug)) {
@@ -77,33 +77,6 @@ class CategoryController extends Controller
         $response['categories'] = $this->_pruneRelations($this->items);
 
         return response()->json($response, 200);
-    }
-
-    /**
-     * Return category values
-     *
-     * @param String $store
-     * @return \Illuminate\Http\Response
-     */
-    public function flush(Request $request)
-    {
-        $categoryId = $request->get('category_id', null);
-        $this->items = Category::where('category_id', $categoryId)
-            ->limit(1)
-            ->get()
-            ->toArray();
-
-        $this->items = $this->_pruneRelations($this->items);
-
-        $this->item = [];
-        if (!empty($this->items)) {
-            $this->item = $this->items[0];
-        }
-
-        return response()->json([
-            'category' => $this->item,
-            'status' => 'success'
-        ], 200);
     }
 
     /**

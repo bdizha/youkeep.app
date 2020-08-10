@@ -44,9 +44,9 @@
       </a-row>
       <r-category-actions></r-category-actions>
       <r-steps></r-steps>
-<!--      <r-store-slider></r-store-slider>-->
-<!--      <r-category-slider></r-category-slider>-->
-<!--      <r-category-list :columns="8" :limit="3"></r-category-list>-->
+      <r-store-slider></r-store-slider>
+      <r-category-slider></r-category-slider>
+      <r-category-list :columns="8" :limit="3"></r-category-list>
       <a-row type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{  span: 12 }"

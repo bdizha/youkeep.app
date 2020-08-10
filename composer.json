@@ -17,10 +17,6 @@
     "laravel/tinker": "~1.0",
     "spatie/laravel-cors": "1.6.*",
     "tymon/jwt-auth": "^1.0.0-rc.5",
-    "fourstacks/nova-checkboxes": "^0.1.2",
-    "laravel/nova": "*",
-    "rcknr/nova-multiselect-filter": "^1.1",
-    "silvanite/novafieldcheckboxes": "^1.1",
     "weidner/goutte": "^1.1"
 
   },

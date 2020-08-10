@@ -14,6 +14,7 @@ class ProductType extends Model
         2 => 'Color',
         3 => 'Volume',
         4 => 'Kg',
+        5 => 'Brand',
     ];
 
     /**
