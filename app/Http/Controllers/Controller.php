@@ -19,6 +19,8 @@ class Controller extends BaseController
     protected $without = [],
         $relations = [],
         $with = [],
+        $categoryId = null,
+        $products = [],
         $limit = [],
         $level = [],
         $items = [],
@@ -97,20 +99,19 @@ class Controller extends BaseController
      * @param String $categoryId
      * @return mixed
      */
-    protected function setProducts($categoryId)
+    protected function setProducts()
     {
         $sort = request()->get('sort', 0);
         $sortOptions = Product::$sortOptions;
 
         $sort = $sortOptions[$sort];
 
-        $products = Product::whereHas('categories', function ($query) use ($categoryId) {
-            $query->where('category_products.category_id', $categoryId);
+        $this->products = Product::whereHas('categories', function ($query) {
+            $query->where('category_products.category_id', $this->categoryId);
         })
             ->where('is_active', true)
             ->orderBy($sort['column'], $sort['dir'])
-            ->paginate(18);
-        return $products;
+            ->paginate($this->limit);
     }
 
     /**

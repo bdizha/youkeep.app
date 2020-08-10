@@ -12,6 +12,8 @@ class CategoryController extends Controller
     protected $without = ['categories', 'products', 'category', 'breadcrumbs', 'store'],
         $relations = ['categories', 'products', 'category', 'store'],
         $with = [],
+        $categoryId = null,
+        $products = [],
         $limit = [],
         $level = [],
         $items = [],

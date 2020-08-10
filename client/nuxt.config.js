@@ -24,13 +24,13 @@ module.exports = {
       {hid: 'description', name: 'description', content: 'Nuxt.js project'}
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/assets.icon'}
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
     ]
   },
 
   loading: {
-    color: '#fb0028',
-    height: '9px'
+    color: 'blue',
+    height: '6px'
   },
 
   router: {
