@@ -8,7 +8,7 @@
                 :data-src="(category == null ? '/assets/icon_default.png' : '/' + category.photo)"
                 src="/assets/icon_default.png"
                 src-placeholder="~/assets/icon_default.png"/>
-      {{ category.name}}
+      {{ category.name }}
     </router-link>
     <a-collapse v-if="category.has_categories"
                 default-active-key="null"

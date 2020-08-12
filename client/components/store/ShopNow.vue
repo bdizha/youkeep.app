@@ -1,12 +1,12 @@
 <template>
     <a-row type="flex" :justify="justify" align="middle">
-        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: span}">
+        <a-col class="r-padding-horizontal-24" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: span}">
             <a-button @click="onStoreTray" class="r-btn-bordered-secondary"
                       block
                       type="secondary"
                       :size="size">
                 <a-icon type="shop"></a-icon>
-                Shop directory
+                Shop now
             </a-button>
         </a-col>
     </a-row>

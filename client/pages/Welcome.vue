@@ -44,9 +44,9 @@
       </a-row>
       <r-category-actions></r-category-actions>
       <r-steps></r-steps>
-      <r-store-slider></r-store-slider>
+      <r-store-slider :title="title" :columns="6"></r-store-slider>
       <r-category-slider></r-category-slider>
-      <r-category-list :columns="8" :limit="1"></r-category-list>
+      <r-category-list :columns="8" :limit="3"></r-category-list>
       <a-row type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{  span: 12 }"
@@ -77,6 +77,7 @@ export default {
   },
   data() {
     return {
+      title: "It's shopping time!",
       isProcessing: true,
       testimonials: [],
       modal: {

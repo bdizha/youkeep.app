@@ -9,6 +9,8 @@
 body,
 html {
     font-size: 16px;
+    background-image: #FFFFFF url(/assets/icon_pattern_white.svg);
+    background-repeat: repeat;
 }
 
 a {
@@ -157,7 +159,7 @@ a.r-text-link {
 }
 
 .r-layout-bottom {
-    background: #F5F5F6;
+    background: #FAFBFC;
     height: 63px !important;
     padding: 12px !important;
     margin-bottom: 0;
@@ -231,7 +233,6 @@ a.r-text-link {
 }
 
 .ant-layout-sider {
-    background: transparent !important;
     padding: 0px;
 }
 
@@ -283,7 +284,7 @@ x {
     font-weight: 500;
     border-radius: 6px;
     padding: 0 24px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.21);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
     text-transform: uppercase;
     font-size: 14px;
 
@@ -515,7 +516,7 @@ x {
         display: flex;
         flex: 0 0 auto;
         flex-direction: column;
-        padding: 24px;
+        padding: 24px 0;
     }
 
     .r-store-scroll {
@@ -556,6 +557,18 @@ x {
             line-height: 69px;
             width: 69px !important;
             height: 69px !important;
+        }
+    }
+}
+
+.r-layout__store {
+    .r-card-category {
+        .ant-avatar-image {
+            @media (min-width: 900px) {
+                line-height: 99px;
+                width: 99px !important;
+                height: 99px !important;
+            }
         }
     }
 }
@@ -791,7 +804,7 @@ x {
 }
 
 .r-product-actions {
-    background: #F5F5F6;
+    background: #FAFBFC;
     border-radius: 6px;
     overflow: hidden;
 }
@@ -983,7 +996,7 @@ x {
             border-bottom: 1px solid transparent !important;
 
             &.ant-collapse-item-active {
-                background: #F5F5F6;
+                background: #FAFBFC;
             }
         }
     }
@@ -1116,7 +1129,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .ant-drawer-close {
-    background: #F5F5F6;
+    background: #FAFBFC;
     color: #3C3C3C;
     width: 60px;
     height: 60px;
@@ -1365,8 +1378,7 @@ h3.r-heading {
 
 h4.r-heading {
     font-size: 18px;
-    font-weight: 600;
-    line-height: 30px;
+    font-weight: 700;
     margin: 0;
 
     @media (max-width: 768px) {
@@ -1386,7 +1398,6 @@ label {
 h4.r-heading-light {
     font-size: 18px;
     font-weight: 300;
-    line-height: 30px;
 }
 
 .r-text-tip-primary {
@@ -2029,7 +2040,7 @@ h4.r-heading-light {
 
     &.router-link-exact-active,
     &:hover {
-        background: #F5F5F6;
+        background: #FAFBFC;
         color: #FB0028;
 
         .ant-avatar-icon {
@@ -2823,7 +2834,7 @@ h4.r-heading-light {
                 right: 0 !important;
                 left: auto;
                 font-size: 16px !important;
-                background: #F5F5F6;
+                background: #FAFBFC;
                 height: 30px;
                 width: 30px;
                 line-height: 32px;
@@ -2868,7 +2879,7 @@ h4.r-heading-light {
             left: 0;
             background-repeat: no-repeat;
             background-position: center;
-            background-color: #F5F5F6;
+            background-color: #FAFBFC;
             height: 30px;
             width: 30px;
             line-height: 32px;
@@ -3540,54 +3551,59 @@ h4.r-heading-light {
     background: #FFFFFF;
 }
 
-.r-store-item-line {
-    border-bottom: 1px solid #e8e8e8;
-    padding: 12px 0;
+.ant-avatar-icon {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.18);
+    background: #FFFFFF url(/assets/icon_pattern_white.svg) repeat;
 
-    .r-store-slogan {
-        display: block;
-        text-align: center;
-        font-size: 24px;
+    &.r-avatar-primary {
+        border-bottom: 1px solid #FAAEBB;
+        fill: #FB0028;
+        color: #FB0028;
+        background-color: #FFEFEF;
+        margin-right: 12px;
 
-        .ant-avatar {
-            background: #FFEFEF;
-            border-radius: 6px;
-
-            &.r-avatar-primary {
-                background: #FFEFEF;
-                border: 1px solid #FDBAC4;
-                color: #F80028;
-            }
-
-            &.r-avatar-secondary {
-                background: #EBF6FE;
-                border: 1px solid #1199F8;
-                color: #1199F8;
-            }
+        &:hover {
+            border-bottom: 1px solid #FB0028;
+            fill: #FFFFFF;
+            color: #FFFFFF;
+            background-color: #FB0028;
         }
     }
 
-    &:hover {
-        .r-store-slogan {
-            .ant-avatar {
+    &.r-avatar-secondary {
+        border-bottom: 1px solid #B3DDFA;
+        fill: #1199F8;
+        color: #1199F8;
+        background-color: #EBF6FE;
 
-                &.r-avatar-primary {
-                    background: #F80028;
-                    border: 1px solid #F80028;
-                    color: #FFFFFF;
-                }
-
-                &.r-avatar-secondary {
-                    background: #1199F8;
-                    border: 1px solid #1199F8;
-                    color: #FFFFFF;
-                }
-            }
+        &:hover {
+            border-bottom: 1px solid #1199F8;
+            fill: #FFFFFF;
+            color: #FFFFFF;
+            background-color: #1199F8;
         }
     }
 }
 
-.r-store-left {
+.r-store-item-line {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 12px 0;
+
+    .r-store-actions {
+        .ant-avatar {
+            > img {
+                border-radius: 6px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    h4.r-heading {
+        display: inline-block;
+    }
+}
+
+.r-store-menu {
     .r-status-update {
         border-radius: 0px;
     }
@@ -3786,7 +3802,7 @@ h4.r-heading-light {
     border-radius: 6px;
     overflow: hidden;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.21);
-    background-color: #F5F5F6;
+    background-color: #FAFBFC;
 }
 
 .r-store-cover {
@@ -3846,15 +3862,11 @@ h4.r-heading-light {
 }
 
 .ant-avatar {
-    background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
+    background: #FFFFFF url(/assets/icon_pattern_white.svg) repeat;
 
     > img {
         border-radius: 6px;
         overflow: hidden;
-    }
-
-    &:nth-child(2) {
-        background-color: #1199F8;
     }
 }
 
@@ -4172,7 +4184,7 @@ h4.r-heading-light {
 }
 
 .r-art-grey {
-    background-color: #F5F5F6;
+    background-color: #FAFBFC;
     background-repeat: repeat;
     padding: 0 24px 24px;
     @media (max-width: 768px) {
@@ -4313,7 +4325,7 @@ h4.r-heading-light {
     padding: 0;
 
     a {
-        padding: 12px 0;
+        padding: 12px 24px;
         display: block;
         width: 100%;
 
@@ -4329,17 +4341,18 @@ h4.r-heading-light {
     padding: 12px;
 
     &:hover {
-        background: #F5F5F6;
+        background: #FAFBFC;
         color: #FB0028;
     }
 }
 
 .ant-layout {
-    &.r-layout__store {
+    &.r-layout__store,
+    &.r-layout__default {
         margin-top: 60px;
 
         .ant-layout-sider {
-            background: transparent;
+            background: #FFFFFF;
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
             z-index: 1000;
             flex: 0 0 25% !important;
@@ -4360,7 +4373,8 @@ h4.r-heading-light {
             }
         }
 
-        .r-layout-content__store {
+        .r-layout-content__store,
+        .r-layout-content__default {
             @media (min-width: 768px) {
                 margin-left: 25%;
             }
@@ -4497,20 +4511,25 @@ h4.r-heading-light {
     text-transform: uppercase;
 }
 
-.ant-steps-vertical {
-    .ant-steps-item-content {
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.21);
-        padding: 12px;
-        margin-top: 24px;
-        border-radius: 6px;
-    }
+.ant-steps-item-content {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.21);
+    padding: 12px;
+    margin-top: 24px;
+    border-radius: 6px;
+    background: #FFFFFF;
 }
 
 .r-steps {
     .ant-card-cover {
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.21);
+        padding: 12px;
+        border-radius: 6px;
+        background: #FFFFFF;
+
         .ant-avatar-image {
-            width: 100% !important;
             height: auto !important;
+            margin: auto;
+            display: block;
         }
     }
 }
@@ -4722,7 +4741,6 @@ h4.r-heading-light {
         z-index: 99;
         border-radius: 6px;
         position: relative;
-        width: 240px;
         overflow: hidden;
         background: url(/assets/icon_default.png) no-repeat;
         background-size: cover;
@@ -4743,7 +4761,7 @@ h4.r-heading-light {
         }
 
         .ant-avatar {
-            border: 6px solid #F5F5F6;
+            border: 6px solid #FAFBFC;
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.21);
             margin: 24px auto 0;
             background-color: #FFFFFF;
@@ -4859,7 +4877,7 @@ h4.r-heading-light {
 }
 
 .r-store-item {
-    padding: 6px 0px 6px 90px;
+    padding: 0 24px 6px 123px;
     margin: 0px;
     display: block;
     text-align: left;
@@ -4868,10 +4886,11 @@ h4.r-heading-light {
     border-radius: 6px;
     position: relative;
     height: 75px;
+    line-height: 75px;
 
-    .ant-avatar {
+    .ant-avatar-circle {
         position: absolute;
-        left: 0;
+        left: 24px;
         top: 0;
         border-radius: 6px;
         padding: 6px;
@@ -4969,7 +4988,7 @@ h4.r-heading-light {
 .ant-select-auto-complete {
     &.ant-select {
         .ant-input {
-            background: #F5F5F6;
+            background: #FAFBFC;
         }
     }
 }
@@ -4992,7 +5011,7 @@ h4.r-heading-light {
 }
 
 .ant-input {
-    background: #F5F5F6;
+    background: #FAFBFC;
 }
 
 
@@ -5035,7 +5054,7 @@ h4.r-heading-light {
     }
 
     .r-search-item-avatar {
-        background: #F5F5F6;
+        background: #FAFBFC;
         border-radius: 6px;
         overflow: hidden;
         position: absolute;
@@ -5085,7 +5104,7 @@ h4.r-heading-light {
 .ant-avatar-icon {
     font-size: 16px;
     color: #1199F8;
-    background: #F5F5F6;
+    background: #FAFBFC;
     border: 1px solid #ECECEC;
 }
 
@@ -5099,7 +5118,7 @@ h4.r-heading-light {
     .ant-avatar-icon {
         color: #3C3C3C;
         margin-right: 6px;
-        background: #F5F5F6;
+        background: #FAFBFC;
         border: 1px solid #ECECEC;
     }
 

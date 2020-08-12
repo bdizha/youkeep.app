@@ -1,7 +1,7 @@
 <template>
   <a-layout-header :class="{'r-switch-primary': isDark}" class="r-header">
     <r-layout-menu v-if="!modal.isVisible && !isRaised && !hasShop">
-      <r-menu-item @click="onDrawer('store-left')" class="__menu">
+      <r-menu-item @click="onDrawer('store-menu')" class="__menu">
         <a-icon style="font-size: 18px;" type="menu"/>
       </r-menu-item>
       <r-menu-item class="__logo">
@@ -67,6 +67,7 @@ export default {
     console.log('How many stores have we got?', this.stores.length);
 
     this.onStores();
+    this.onStoreCategories();
   },
   methods: {
     onModalClose() {
@@ -90,33 +91,30 @@ export default {
       drawer.current = current;
       drawer.placement = 'left';
       drawer.isVisible = true;
+
+      console.log('current', current);
+
       this.$store.dispatch('base/onDrawer', drawer);
     },
     onSearch() {
       let isSearching = !this.isSearching;
       this.$store.dispatch('onSearch', isSearching);
     },
-    async onFlushCategory() {
-      let fetchBy = {
-        id: 1
+    async onStoreCategories() {
+      let payload = {
+        category_id: null,
+        store_id: 0,
+        limit: 24
       };
-      await this.$store.dispatch('base/onFlushCategory', fetchBy);
-    },
-    async onFlushCategories() {
-      let fetchBy = {
-        category_id: 1,
-        limit: 24,
-        with: ['photos']
-      };
-      await this.$store.dispatch('base/onFlushCategories', fetchBy);
+      await this.$store.dispatch('base/onCategories', payload);
     },
     async onStores() {
-      let params = {
+      let payload = {
         category_id: null,
         limit: 24
       };
 
-      await this.$store.dispatch('base/onStores', params);
+      await this.$store.dispatch('base/onStores', payload);
     }
   },
 };

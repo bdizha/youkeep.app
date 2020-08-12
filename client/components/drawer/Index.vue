@@ -26,18 +26,16 @@
       </a-row>
     </div>
     <r-auth-actions v-if="drawer.current !== 'cart'"></r-auth-actions>
-    <transition-group name="fade" tag="div">
-      <r-category-drawer v-if="isCurrent('category')"
-                         v-bind:key="'category'" class="fade-item"></r-category-drawer>
-      <r-cart-drawer v-if="isCurrent('cart')"
-                     v-bind:key="'category'" class="fade-item"></r-cart-drawer>
-      <r-store-drawer-menu v-if="isCurrent('store-menu')"
-                           v-bind:key="'store'" class="fade-item"></r-store-drawer-menu>
-      <r-account-drawer v-if="isCurrent('account')"
-                        v-bind:key="'category'" class="fade-item"></r-account-drawer>
-      <r-drawer-menu v-if="isCurrent('menu')"
-                     v-bind:key="'menu'" class="fade-item"></r-drawer-menu>
-    </transition-group>
+    <r-category-drawer v-if="isCurrent('category')"
+                       v-bind:key="'category'" class="fade-item"></r-category-drawer>
+    <r-cart-drawer v-if="isCurrent('cart')"
+                   v-bind:key="'category'" class="fade-item"></r-cart-drawer>
+    <r-store-drawer-menu v-if="isCurrent('store-menu')"
+                         v-bind:key="'store'" class="fade-item"></r-store-drawer-menu>
+    <r-account-drawer v-if="isCurrent('account')"
+                      v-bind:key="'category'" class="fade-item"></r-account-drawer>
+    <r-drawer-menu v-if="isCurrent('menu')"
+                   v-bind:key="'menu'" class="fade-item"></r-drawer-menu>
   </a-drawer>
 </template>
 <script>

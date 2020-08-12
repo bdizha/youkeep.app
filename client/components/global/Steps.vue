@@ -14,8 +14,8 @@
                       block
                       type="secondary"
                       :size="'default'">
-              <a-icon type="right"/>
               Read more
+              <a-icon type="right"/>
             </a-button>
             <a-avatar class="r-hide-lg" shape="square" icon="right"/>
           </router-link>
@@ -30,7 +30,7 @@
                   :bordered='false'>
             <div slot="cover">
               <r-avatar shape="square"
-                        size="450"
+                        size="481"
                         :src="'/assets/Step_' + step + '.svg'"
                         src-placeholder="/assets/icon_default.png"/>
             </div>

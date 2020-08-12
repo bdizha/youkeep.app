@@ -26,11 +26,11 @@
       }
 
       .cls-7 {
-        fill: #f3c094;
+        fill: #70C2FB;opacity: 0.99;
       }
 
       .cls-8 {
-        fill: #ead7b5;
+        fill: #70C2FB;opacity: 0.69;
       }
 
       .cls-9 {
@@ -50,11 +50,11 @@
       }
 
       .cls-14 {
-        fill: #ba8454;
+        fill: #70C2FB;opacity: 0.69;
       }
 
       .cls-15 {
-        fill: #d6a173;
+        fill: #70C2FB;opacity: 0.99;
       }
 
       .cls-16 {
@@ -82,7 +82,7 @@
       }
 
       .cls-22 {
-        fill: #f6d0af;
+        fill: #B7E0FD;opacity: 0.99;
       }
 
       .cls-23 {

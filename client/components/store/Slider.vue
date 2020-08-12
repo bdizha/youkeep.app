@@ -1,11 +1,11 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
     <a-col class="r-store-slider gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row class="r-margin-bottom-24" type="flex" justify="start">
+      <a-row :gutter="[24,24]" class="r-margin-bottom-24" type="flex" justify="start">
         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
                :lg="{ span: 20 }">
           <h3 class="r-heading">
-            It's shopping time!
+            {{ title }}
           </h3>
         </a-col>
         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
@@ -22,17 +22,19 @@
                   :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}">
             <r-avatar slot="cover"
                       shape="circle"
-                      size="160"
+                      size="120"
                       :src="store.photo_url">
               <div class="r-store-frame"></div>
             </r-avatar>
             <a-card-meta>
               <template slot="title">
-                <a-button block
-                          class="r-btn-bordered-grey"
-                          type="primary">
-                  {{ store.name }}
-                </a-button>
+                <div class="r-store-actions">
+                  <a-button block
+                            class="r-btn-bordered-grey"
+                            type="primary">
+                    {{ store.name }}
+                  </a-button>
+                </div>
                 <div class="r-slider-item-tag">
                   {{ store.description }}
                 </div>
@@ -60,21 +62,21 @@ import {mapGetters} from "vuex";
 export default {
   name: 'r-store-slider',
   props: {
-    padding: {type: String, required: false, default: null}
+    columns: {type: Number, required: false, default: 6},
+    title: {type: String, required: false, default: null},
   },
   data() {
     return {
       settings: {
-        "slidesToShow": 4,
+        "slidesToShow": this.columns,
         "slidesToScroll": 1,
         "infinite": true,
         "dots": false,
-        "variableWidth": true,
         responsive: [
           {
             "breakpoint": 1024,
             "settings": {
-              "slidesToShow": 6,
+              "slidesToShow": this.columns,
               "slidesToScroll": 1,
               "infinite": true,
               "dots": false,
@@ -86,7 +88,8 @@ export default {
             "settings": {
               "slidesToShow": 3,
               "slidesToScroll": 1,
-              "gap": 24
+              "initialSlide": 1,
+              "gap": 12
             }
           },
           {
@@ -94,7 +97,7 @@ export default {
             "settings": {
               "slidesToShow": 1,
               "slidesToScroll": 1,
-              "gap": 24
+              "gap": 12
             }
           }
         ]

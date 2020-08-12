@@ -60,8 +60,7 @@ import {mapGetters} from "vuex";
 export default {
   name: 'r-category-slider',
   props: {
-    size: {type: Number, required: false, default: 24},
-    isShowing: {type: Boolean, required: false, default: false},
+    size: {type: Number, required: false, default: 150}
   },
   data() {
     return {

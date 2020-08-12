@@ -1,6 +1,7 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
     <a-col class="gutter-row r-filter-cards" :span="24">
+      <r-store-item :store="store"></r-store-item>
       <r-category-prev v-if="category"></r-category-prev>
       <a-collapse default-active-key="1" expandIconPosition="right">
         <a-collapse-panel v-for="(filter, index) in filters"

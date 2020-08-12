@@ -2,8 +2,8 @@
   <div :class="{'r-store-flex__has-notice': hasNotice}" class="r-store-flex">
     <div class="r-store-fixed">
       <r-store-notice v-if="hasNotice"></r-store-notice>
-      <r-store-shop-now css-class="r-padding-vertical-24" :span="11"></r-store-shop-now>
-      <a-list :data-source="links">
+      <r-store-shop-now css-class="r-padding-24" :span="12"></r-store-shop-now>
+      <a-list class="r-margin-vertical-12" :data-source="links">
         <a-list-item class="r-list-item" slot="renderItem"
                      slot-scope="item, index">
           <template v-if="!item.modal">
@@ -45,7 +45,7 @@ const LINKS = [
     link: '/stores/all',
   },
   {
-    label: 'Top Stores',
+    label: 'Highlights',
     icon: 'fire',
     link: '/stores/hot',
     modal: null
@@ -78,10 +78,19 @@ export default {
     hasNotice: 'base/hasNotice',
   }),
   created() {
-    this.payload();
+    this.onStores();
+    this.onStoreCategories();
   },
   methods: {
     async payload() {
+    },
+    async onStoreCategories() {
+      let payload = {
+        category_id: null,
+        store_id: 0,
+        limit: 24
+      };
+      await this.$store.dispatch('base/onCategories', payload);
     },
     async onModal(current) {
       let modal = {};
@@ -90,6 +99,15 @@ export default {
       modal.current = current;
 
       this.$store.dispatch('base/onModal', modal);
+    },
+
+    async onStores() {
+      let params = {
+        category_id: null,
+        limit: 24
+      };
+
+      await this.$store.dispatch('base/onStores', params);
     }
   },
 }

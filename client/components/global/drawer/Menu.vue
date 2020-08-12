@@ -1,6 +1,6 @@
 <template>
   <r-drawer-template placement="left"
-                     current="store-left">
+                     current="store-menu">
     <div :class="{'r-store-flex__has-notice': hasNotice}" class="r-store-flex">
       <div class="r-store-fixed">
         <r-store-notice v-if="hasNotice"></r-store-notice>

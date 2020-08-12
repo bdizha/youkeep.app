@@ -1,7 +1,8 @@
 <template>
   <a-row :class="{'r-store-item-line': isStore}" type="flex" justify="center"
          align="middle">
-    <a-col @click="onModal" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+    <a-col class="r-padding-horizontal-24"
+           @click="onModal" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-row v-if="hasModal" type="flex" justify="center">
         <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
           <h3 class="r-heading">

@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="gutter-row r-padding-horizontal-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <VueSlickCarousel v-if="hasData" v-bind="settings">
         <nuxt-link class="r-slider-item r-text-view-more"
                    v-for="(category, index) in categories"
@@ -41,7 +41,6 @@ export default {
     return {
       hasData: false,
       settings: {
-        slidesToShow: this.columns,
         slidesToScroll: 1,
         infinite: false,
         dots: false,

@@ -23,7 +23,7 @@ const routes = [
   {
     path: '/store/:slug', name: 'store.show', component: page('store/Show.vue'),
   },
-  {path: '/stores', name: 'stores', component: page('store/Index.vue')},
+  {path: '/stores/:slug', name: 'stores', component: page('store/Index.vue')},
   {path: '/home', name: 'home', component: page('home.vue')},
   {path: '/about-us', name: 'about-us', component: page('static/AboutUs.vue')},
   {path: '/contact-us', name: 'contact-us', component: page('static/ContactUs.vue')},
