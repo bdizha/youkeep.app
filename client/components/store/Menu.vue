@@ -2,7 +2,9 @@
   <div :class="{'r-store-flex__has-notice': hasNotice}" class="r-store-flex">
     <div class="r-store-fixed">
       <r-store-notice v-if="hasNotice"></r-store-notice>
-      <r-store-shop-now css-class="r-padding-24" :span="12"></r-store-shop-now>
+      <r-delivery-form size="default"
+                       :is-store="true"
+                       :has-submit="false"></r-delivery-form>
       <a-list class="r-margin-vertical-12" :data-source="links">
         <a-list-item class="r-list-item" slot="renderItem"
                      slot-scope="item, index">
@@ -22,9 +24,6 @@
           </template>
         </a-list-item>
       </a-list>
-      <r-delivery-form size="default"
-                       :is-store="true"
-                       :has-submit="false"></r-delivery-form>
       <r-store-list></r-store-list>
     </div>
   </div>
@@ -43,6 +42,11 @@ const LINKS = [
     label: 'Explore',
     icon: 'compass',
     link: '/stores/all',
+  },
+  {
+    label: 'What\'s new',
+    icon: 'gift',
+    link: '/stores/new',
   },
   {
     label: 'Highlights',

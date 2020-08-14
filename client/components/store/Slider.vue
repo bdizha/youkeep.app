@@ -22,7 +22,7 @@
                   :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}">
             <r-avatar slot="cover"
                       shape="circle"
-                      size="120"
+                      :size="120"
                       :src="store.photo_url">
               <div class="r-store-frame"></div>
             </r-avatar>

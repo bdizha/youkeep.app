@@ -9,7 +9,7 @@
 export default {
   name: 'r-avatar',
   props: {
-    size: {type: String, required: false, default: null},
+    size: {type: Number, required: false, default: null},
     shape: {type: String, required: false, default: 'square'},
     dataSrc: {type: String, required: false, default: null},
   },

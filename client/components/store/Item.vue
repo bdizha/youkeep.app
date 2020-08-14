@@ -3,10 +3,9 @@
     <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
       <a-col :xs="{span: 16}" :sm="{span: 18}" :md="{span: 18}" :lg="{span: 18}">
         <div class="r-store-item">
-          <a-avatar class="r-lazy" shape="circle" :size="75"
-                    :data-src="'/storage/store/' + store.photo"
-                    src="/assets/icon_default.png"
-                    src-placeholder="~/assets/icon_default.png"/>
+          <r-avatar shape="circle" :size="75"
+                    :src="store.photo_url"
+                    src-placeholder="/assets/icon_default.png"/>
           <a-button block
                     class="r-btn-bordered-grey"
                     type="primary">

@@ -1,5 +1,5 @@
 <template>
-  <a-layout-header v-show="!modal.isVisible" class="r-header r-store-header">
+  <a-layout-header class="r-header r-store-header">
     <a-row style="width: 100%;" type="flex" justify="start">
       <a-col type="flex" class="gutter-row" :span="24">
         <a-row type="flex" justify="center" align="middle">
@@ -15,13 +15,11 @@
                  :lg="{ span: 18 }">
             <div class="r-layout-menu">
               <div v-if="hasStore" class="r-menu-item r-menu-item__logo">
-                <div class="r-store-frame"></div>
-                <router-link @click.native="onRight"
-                             class="r-logo"
-                             :to="store.route">
-                  <img :src="store.photo_url"
-                       alt="Kshopit - It's Shopping Time!"/>
-                </router-link>
+                <a-button block
+                          class="r-btn-bordered-grey"
+                          type="primary">
+                  {{ store.name }}
+                </a-button>
               </div>
               <div class="r-hide-sm r-menu-item r-menu-item__search">
                 <r-search></r-search>

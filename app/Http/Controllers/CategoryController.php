@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     protected $without = ['categories', 'products', 'category', 'breadcrumbs', 'store'],
-        $relations = ['categories', 'products', 'category', 'store'],
+        $relations = ['categories', 'category', 'store'],
         $with = [],
         $categoryId = null,
         $products = [],
@@ -39,8 +39,6 @@ class CategoryController extends Controller
         $storeSlug = $request->get('store_slug', null);
 
         $query = Category::limit($this->limit)
-            ->has('products', '>=', 1)
-            ->has('products.photos', '>=', 1)
             ->where('store_id', '!=', 1);
 
         if (!is_null($storeId)) {

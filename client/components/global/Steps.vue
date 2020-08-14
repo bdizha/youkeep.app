@@ -30,7 +30,7 @@
                   :bordered='false'>
             <div slot="cover">
               <r-avatar shape="square"
-                        size="481"
+                        :size="380"
                         :src="'/assets/Step_' + step + '.svg'"
                         src-placeholder="/assets/icon_default.png"/>
             </div>

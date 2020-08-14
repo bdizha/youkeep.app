@@ -14,6 +14,8 @@ class Category extends Model
 {
     use Sluggable;
 
+    protected $products = [];
+
     /**
      * @var string[]
      */
@@ -44,6 +46,7 @@ class Category extends Model
         'photos',
         'photo',
         'filters',
+        'products',
     ];
 
     /**
@@ -77,6 +80,22 @@ class Category extends Model
         $breadcrumbs = [];
         $breadcrumbs = $this->getBreadcrumbs($this, $breadcrumbs);
         return array_reverse($breadcrumbs);
+    }
+
+    /**
+     * Get the products
+     */
+    public function getProductsAttribute()
+    {
+        $this->products = Product::whereHas('categories', function ($query) {
+            $query->where('category_products.category_id', $this->id);
+        })
+            ->where('is_active', true)
+            ->orderBy('created_at', 'desc')
+            ->take(12)
+            ->get();
+
+        return $this->products;
     }
 
     /**
@@ -117,14 +136,12 @@ class Category extends Model
     public function getPhotosAttribute()
     {
         $photos = [];
-        $products = Product::whereHas('categories', function ($query) {
-            $query->where('category_products.category_id', $this->id);
-        })
-            ->where('is_active', true)
-            ->get();
 
-        foreach ($products as $product) {
+        if (empty($this->products)) {
+            $this->products = $this->getProductsAttribute();
+        }
 
+        foreach ($this->products as $product) {
             if (count($photos) > 5) break;
 
             $photo = $product->thumbnail;
@@ -186,14 +203,6 @@ class Category extends Model
     public function category()
     {
         return $this->belongsTo('App\Category', 'category_id', 'id');
-    }
-
-    /**
-     * Get the products
-     */
-    public function products()
-    {
-        return $this->belongsToMany('App\Product', 'category_products', 'category_id', 'product_id')->take(12);
     }
 
     /**
