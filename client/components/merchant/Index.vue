@@ -6,11 +6,11 @@
                     <a-row type="flex" justify="center">
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
                             <a-row type="flex" justify="start">
-                                <a-col class="r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                        :md="{ offset: 3, span: 9 }"
                                        :lg="{ offset: 3, span: 9 }">
                                     <a-row type="flex" justify="start">
-                                        <a-col class="r-padding-vertical-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                        <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                                :md="{ span: 24 }"
                                                :lg="{ span: 24 }"
                                                style="text-align: left;">
@@ -71,13 +71,13 @@
                 </div>
             </a-col>
         </a-row>
-        <a-row class="r-margin-vertical-48" type="flex">
+        <a-row class="r-mv-48" type="flex">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
                 <a-row type="flex" justify="start"
                        class="r-radius-right-white r-text-center">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
-                           :lg="{span: 18, offset:6}" class="r-padding-48">
-                        <a-row class="r-margin-vertical-24" type="flex" justify="start">
+                           :lg="{span: 18, offset:6}" class="r-p-48">
+                        <a-row class="r-mv-24" type="flex" justify="start">
                             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                                    :lg="{ span: 24 }"
                                    style="text-align: left;">
@@ -92,7 +92,7 @@
                                class="r-radius-right-white">
                             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                                    :lg="{span: 8}">
-                                <div class="r-icon">
+                                <div class="r-icon r-icon-primary">
                                     <a-icon type="line-chart"/>
                                 </div>
                                 <h4 class="r-heading r-text-uppercase">
@@ -101,7 +101,7 @@
                             </a-col>
                             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                                    :lg="{span: 8}">
-                                <div class="r-icon">
+                                <div class="r-icon r-icon-primary">
                                     <a-icon type="pie-chart"/>
                                 </div>
                                 <h4 class="r-heading r-text-uppercase">
@@ -110,7 +110,7 @@
                             </a-col>
                             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                                    :lg="{span: 8}">
-                                <div class="r-icon">
+                                <div class="r-icon r-icon-primary">
                                     <a-icon type="dot-chart"/>
                                 </div>
                                 <h4 class="r-heading r-text-uppercase">
@@ -124,10 +124,10 @@
         </a-row>
         <r-steps :has-wave="false" :has-title="true" heading="Kpay shopping experience"></r-steps>
         <a-row class="r-text-center" type="flex" justify="center" :gutter="24">
-            <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :md="{ span: 24 }"
+            <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :md="{ span: 24 }"
                    :lg="{ span: 24 }">
                 <a-row type="flex" justify="center">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-padding-vertical-48">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-pv-48">
                         <h2 class="r-heading r-text-uppercase">
                             Become a verified merchant today
                         </h2>
@@ -138,7 +138,7 @@
                     </a-col>
                 </a-row>
                 <a-row type="flex" justify="center" align="middle">
-                    <a-col class="r-padding-bottom-48" :xs="{ span: 24 }" :md="{ span: 12 }"
+                    <a-col class="r-pb-48" :xs="{ span: 24 }" :md="{ span: 12 }"
                            :lg="{ span: 12 }">
                         <a-button @click="onApply" size="large" type="primary">
                             Become a merchant

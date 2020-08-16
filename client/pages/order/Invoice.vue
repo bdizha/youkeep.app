@@ -1,7 +1,7 @@
 <template>
     <r-account>
         <a-row type="flex" justify="center" align="middle">
-            <a-col class="gutter-row r-margin-vertical-24" :xs="{ span: 24 }"
+            <a-col class="gutter-row r-mv-24" :xs="{ span: 24 }"
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
                 <h2 class="r-heading">
                     ORDER #202511935 placed on 27 July 2019 12:59

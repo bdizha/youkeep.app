@@ -6,7 +6,7 @@
           <a-row type="flex" justify="center">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
               <a-row type="flex" justify="start" align="middle">
-                <a-col class="r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ offset: 3, span: 9 }"
                        :lg="{ offset: 3, span: 9 }">
                   <r-space></r-space>
@@ -50,7 +50,7 @@
     </a-row>
     <a-row type="flex" justify="center">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{ span: 18 }"
-             class="r-padding-48">
+             class="r-p-48">
         <a-row type="flex" justify="start">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
@@ -87,7 +87,7 @@
             </a-row>
           </a-col>
         </a-row>
-        <a-row :gutter="[48,48]" type="flex" justify="end" class="r-margin-vertical-48">
+        <a-row :gutter="[48,48]" type="flex" justify="end" class="r-mv-48">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             &nbsp;
@@ -109,7 +109,7 @@
             </p>
           </a-col>
         </a-row>
-        <a-row class="r-margin-vertical-48" type="flex" justify="center">
+        <a-row class="r-mv-48" type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
             <a-row :gutter="[48,48]" type="flex" justify="center">
               <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"

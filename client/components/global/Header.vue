@@ -14,7 +14,7 @@
         <r-search></r-search>
       </r-nav-item>
       <r-nav-item class="r-hide-sm">
-        <r-menu></r-menu>
+        <r-nav></r-nav>
       </r-nav-item>
       <r-nav-item class="">
         <r-cart-count></r-cart-count>

@@ -12,7 +12,7 @@
       </a-col>
     </a-row>
     <a-row v-if="hasData" type="flex" justify="center" align="middle">
-      <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48"
+      <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48"
              style="background: #FFFFFF;">
         <a-row :gutter="0" class="r-help-breadcrumbs">
           <a-col class="gutter-row" :span="24">

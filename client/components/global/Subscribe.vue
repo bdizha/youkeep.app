@@ -1,10 +1,10 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="r-subscribe gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+    <a-col class="r-bg-primary-light r-subscribe gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <a-row :gutter="24" type="flex" justify="center" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 15 }" :lg="{ span: 24 }" class="r-text-center">
-          <a-row class="r-margin-vertical-24" type="flex" justify="start" :gutter="[24,24]">
+          <a-row class="r-mv-24" type="flex" justify="start" :gutter="[24,24]">
             <a-col :xs="{ span: 24 }" :sm="{ span: 10 }" :lg="{ span: 10 }" class="r-text-left">
               <div class="r-subscribe-title">
                 <a-icon class="r-subscribe-icon" theme="filled" type="notification"/>
@@ -30,7 +30,7 @@
                       @submit="onPost">
                 <a-row type="flex" justify="start" :gutter="[24,24]">
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }" class="r-text-left">
-                    <a-row class="r-margin-top-24" :gutter="24" type="flex" justify="start">
+                    <a-row class="r-mt-24" :gutter="24" type="flex" justify="start">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
                         <a-form-item label="First name">
                           <a-input size="large"

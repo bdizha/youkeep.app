@@ -34,7 +34,7 @@
            size="default"
             v-decorator="['suburb', { rules: [{ required: true, message: 'Please enter your suburb' }] }]"/>
       </a-form-item>
-      <a-row class="r-margin-top-24" :gutter="24" type="flex" justify="start">
+      <a-row class="r-mt-24" :gutter="24" type="flex" justify="start">
         <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 16 }">
           <a-form-item label="City">
             <a-input
@@ -50,7 +50,7 @@
           </a-form-item>
         </a-col>
       </a-row>
-      <a-row class="r-margin-top-24" type="flex" justify="center" align="middle">
+      <a-row class="r-mt-24" type="flex" justify="center" align="middle">
         <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 12 }"
                :md="{ span: 12 }"
                :lg="{ span: 12 }">
@@ -64,7 +64,7 @@
           <a-switch v-model="isDefault" size="small" :default-checked="isDefault"/>
         </a-col>
       </a-row>
-      <a-row class="r-margin-top-24" :gutter="24" type="flex" justify="end">
+      <a-row class="r-mt-24" :gutter="24" type="flex" justify="end">
         <a-col v-if="hasAddress" class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }"
                :lg="{ span: 8 }">
           <a-form-item :wrapper-col="{ span: 24 }">

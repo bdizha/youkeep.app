@@ -1,7 +1,7 @@
 <template>
   <r-drawer-template placement="right"
                      current="store-right">
-    <a-row :gutter="[24,24]" class="r-margin-bottom-24" type="flex" justify="center" align="middle">
+    <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="center" align="middle">
       <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
              :lg="{ span: 24 }">
         <r-store-window :has-actions="false" :store="store"></r-store-window>
@@ -21,12 +21,12 @@
         </p>
       </a-col>
     </a-row>
-    <a-card class="r-margin-bottom-24" title="YOU MIGHT ALSO LIKE" style="width: 100%;">
+    <a-card class="r-mb-24" title="YOU MIGHT ALSO LIKE" style="width: 100%;">
       <p class="r-text-sm">
         Here you can discover shops that you like.
       </p>
     </a-card>
-    <a-card class="r-margin-bottom-24" title="WHAT'S NEW" style="width: 100%;">
+    <a-card class="r-mb-24" title="WHAT'S NEW" style="width: 100%;">
       <p class="r-text-sm">
         Buy your favourite items today.
       </p>

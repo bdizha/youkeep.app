@@ -13,6 +13,9 @@
 import {mapGetters} from "vuex";
 
 export default {
+  layout: 'column',
+  name: 'r-store',
+  props: {},
   async asyncData({store}) {
     let params = {
       category_id: null,
@@ -21,26 +24,17 @@ export default {
 
     await store.dispatch('base/onStores', params);
   },
-  components: {
-    name: 'r-store'
-  },
-  props: {},
   data() {
-    return {
-      isProcessing: true,
-      hasData: false,
-    }
+    return {}
   },
   computed: mapGetters({
     store: 'shop/store',
     stores: 'base/stores',
     processes: 'base/processes',
-    hasStores: 'base/hasStores',
-    category: 'shop/category',
+    hasStores: 'base/hasStores'
   }),
   created() {
   },
-  methods: {
-  }
+  methods: {}
 };
 </script>⏎

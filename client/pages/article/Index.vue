@@ -1,8 +1,8 @@
 <template>
     <r-article-template v-if="hasData" :article="null">
         <a-row :gutter="0">
-            <a-col class="gutter-row r-padding-24">
-                <a-row class="r-margin-vertical-48" type="flex" justify="center" align="middle">
+            <a-col class="gutter-row r-p-24">
+                <a-row class="r-mv-48" type="flex" justify="center" align="middle">
                     <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
                            :lg="{ span: 16 }">
                         <h4 class="r-heading r-text-uppercase">

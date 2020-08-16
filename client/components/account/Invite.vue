@@ -3,7 +3,7 @@
         <a-row type="flex" justify="start" align="middle">
             <a-col class="gutter-row" :xs="{ span: 24 }"
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
-                <a-card class="r-margin-bottom-24" title="INVITE A FRIEND" style="width: 100%;">
+                <a-card class="r-mb-24" title="INVITE A FRIEND" style="width: 100%;">
                     <a-row type="flex" justify="start" align="start">
                         <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
                                :sm="{ span: 24 }" :lg="{ span: 12 }">
@@ -15,7 +15,7 @@
                 </a-card>
             </a-col>
         </a-row>
-        <a-row class="r-margin-top-24" :gutter="24" type="flex" justify="end">
+        <a-row class="r-mt-24" :gutter="24" type="flex" justify="end">
             <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 18 }" :lg="{ span: 18 }">
 
             </a-col>

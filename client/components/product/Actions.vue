@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-padding-top-12" type="flex" justify="center" align="middle">
+  <a-row class="r-pt-12" type="flex" justify="center" align="middle">
     <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-product-actions">
         <a-col class="gutter-row r-btn--minus r-text-left" :xs="{ span: 7 }" :sm="{ span: 6 }"

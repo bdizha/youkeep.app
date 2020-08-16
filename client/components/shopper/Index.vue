@@ -6,7 +6,7 @@
           <a-row type="flex" justify="center">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
               <a-row type="flex" justify="start" align="middle">
-                <a-col class="r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ offset: 3, span: 9 }"
                        :lg="{ offset: 3, span: 9 }">
                   <r-space></r-space>
@@ -31,7 +31,7 @@
                         Deliver things people love, from the stores they trust.
                       </p>
                       <a-button @click="onApply" type="primary"
-                                class="ant-btn r-btn-primary r-margin-top-24"
+                                class="ant-btn r-btn-primary r-mt-24"
                                 size="large"
                                 html-type="button">
                         Apply now
@@ -53,12 +53,12 @@
         </div>
       </a-col>
     </a-row>
-    <a-row :gutter="24" class="r-margin-vertical-48" type="flex">
+    <a-row :gutter="24" class="r-mv-48" type="flex">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
         <a-row type="flex" justify="start"
                class="r-radius-right-white">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
-                 :lg="{span: 18, offset:6}" class="r-padding-48">
+                 :lg="{span: 18, offset:6}" class="r-p-48">
             <h2 class="r-heading">
               Why partner with Kshop?
             </h2>
@@ -75,12 +75,12 @@
         </a-row>
       </a-col>
     </a-row>
-    <a-row :gutter="24" class="r-margin-vertical-48 r-bg-white" justify="center" type="flex">
-      <a-col class="r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{span: 18}">
-        <a-row class="r-margin-vertical-48 r-text-center" type="flex" justify="start">
+    <a-row :gutter="24" class="r-mv-48 r-bg-white" justify="center" type="flex">
+      <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{span: 18}">
+        <a-row class="r-mv-48 r-text-center" type="flex" justify="start">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                  :lg="{span: 8}">
-            <div class="r-icon">
+            <div class="r-icon r-icon-primary">
               <a-icon type="clock-circle"/>
             </div>
             <h4 class="r-heading r-text-uppercase">
@@ -93,7 +93,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                  :lg="{span: 8}">
-            <div class="r-icon">
+            <div class="r-icon r-icon-primary">
               <a-icon type="shopping-cart"/>
             </div>
             <h4 class="r-heading r-text-uppercase">
@@ -106,7 +106,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                  :lg="{span: 8}">
-            <div class="r-icon">
+            <div class="r-icon r-icon-primary">
               <a-icon type="credit-card"/>
             </div>
             <h4 class="r-heading r-text-uppercase">
@@ -122,7 +122,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{span: 18}">
         <a-row type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :lg="{ span: 18 }" style="text-align: left;">
-            <a-row :gutter="16" type="flex" justify="start" class="r-margin-vertical-48 r-padding-24">
+            <a-row :gutter="16" type="flex" justify="start" class="r-mv-48 r-p-24">
               <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 16 }" :lg="{ span: 12 }">
                 <h2 class="r-heading">
                   Requirements:
@@ -139,7 +139,7 @@
       </a-col>
     </a-row>
     <a-row class="r-text-center" type="flex" justify="center" :gutter="24">
-      <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :md="{ span: 24 }"
+      <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :md="{ span: 24 }"
              :lg="{ span: 24 }">
         <a-row type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
@@ -152,7 +152,7 @@
           </a-col>
         </a-row>
         <a-row type="flex" justify="center" align="middle">
-          <a-col class="r-padding-bottom-48" :xs="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-pb-48" :xs="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-button @click="onApply" size="large" type="primary">
               Become a shopper

@@ -1,6 +1,6 @@
 <template>
   <a-row v-if="hasCategories" type="flex" justify="center">
-    <a-col class="gutter-row r-padding-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="gutter-row r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row v-if="hasCategories" class="r-slider">
         <a-col class="gutter-row" :span="24">
           <VueSlickCarousel v-bind="settings">
@@ -23,12 +23,12 @@
           </VueSlickCarousel>
         </a-col>
       </a-row>
-      <a-row v-if="!processes.isCategories && isEmpty" class="r-margin-vertical-24" type="flex"
+      <a-row v-if="!processes.isCategories && isEmpty" class="r-mv-24" type="flex"
              justify="center" align="middle">
         <a-col class="gutter-row r-bg-white" :xs="{ span: 24 }" :sm="{ span: 12 }"
                :md="{ span: 12 }"
                :lg="{ span: 12 }">
-          <a-row :gutter="[24,24]" class="r-margin-vertical-24" type="flex" justify="center"
+          <a-row :gutter="[24,24]" class="r-mv-24" type="flex" justify="center"
                  align="middle">
             <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
                    :md="{ span: 24 }"

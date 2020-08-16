@@ -1,7 +1,7 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
-    <a-col class="gutter-row r-padding-horizontal-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <VueSlickCarousel v-if="hasData" v-bind="settings">
+    <a-col class="gutter-row r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <VueSlickCarousel v-if="hasCategories" v-bind="settings">
         <nuxt-link class="r-slider-item r-text-view-more"
                    v-for="(category, index) in categories"
                    :key="category.id"
@@ -40,12 +40,11 @@ export default {
   },
   data() {
     return {
-      hasData: false,
       settings: {
         slidesToScroll: 1,
-        infinite: false,
+        infinite: true,
         dots: false,
-        variableWidth: true,
+        // variableWidth: true,
         responsive: [
           {
             "breakpoint": 1024,
@@ -84,13 +83,13 @@ export default {
     };
   },
   computed: mapGetters({
-    categories: "shop/categories"
+    categories: "shop/categories",
+    hasCategories: "shop/hasCategories",
   }),
   created() {
     this.payload();
   },
   mounted() {
-    this.hasData = true;
   },
   methods: {
     payload() {

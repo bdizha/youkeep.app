@@ -6,7 +6,7 @@
         <r-delivery-form :has-title="true"></r-delivery-form>
         <a-row v-if="address">
             <a-col :xs="{span: 24}" :lg="{span: 24}">
-                <div class="r-address-line r-margin-vertical-24">
+                <div class="r-address-line r-mv-24">
                     <div class="r-address-icon">
                         <a-icon type="environment"/>
                     </div>

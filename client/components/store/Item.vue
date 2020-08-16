@@ -6,11 +6,13 @@
           <r-avatar shape="circle" :size="75"
                     :src="store.photo_url"
                     src-placeholder="/assets/icon_default.png"/>
-          <a-button block
-                    class="r-btn-bordered-grey"
-                    type="primary">
+          <h4 class="r-heading">{{ store.name }}</h4>
+          <div class="r-store-text">
             {{ store.name }}
-          </a-button>
+          </div>
+          <div class="r-store-slogan">
+            {{ store.description }}
+          </div>
         </div>
       </a-col>
       <a-col class="r-store-actions" :xs="{span: 8}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 6}">

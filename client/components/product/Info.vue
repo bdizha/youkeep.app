@@ -1,5 +1,5 @@
 <template>
-  <a-tabs class="r-margin-vertical-48" type="card" @change="callback">
+  <a-tabs class="r-mv-48" type="card" @change="callback">
     <a-tab-pane key="1" tab="Details">
       <div :data-descrption="product.description">Not set</div>
     </a-tab-pane>

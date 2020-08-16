@@ -3,7 +3,7 @@
     <a-row type="flex" justify="center" align="middle">
       <a-col :span="24">
         <a-row type="flex" justify="space-around" align="middle">
-          <a-col :lg="{span: 9 , offset: 3}" class="r-page-padding r-padding-right-24">
+          <a-col :lg="{span: 9 , offset: 3}" class="r-page-padding r-pr-24">
             <h1 class="r-heading r-text-primary">
               Talk to us
             </h1>
@@ -48,13 +48,13 @@
         <a-row type="flex" justify="start"
                class="r-radius-right-white">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 , offset: 6 }"
-                 :lg="{span: 18 , offset: 6}" class="r-page-padding r-padding-right-24">
+                 :lg="{span: 18 , offset: 6}" class="r-page-padding r-pr-24">
             <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
                     class="ant-form ant-form-vertical"
                     @submit="onSend"
                     :form="formContact">
               <a-form-item>
-                <a-row class="r-margin-top-48" type="flex" justify="center">
+                <a-row class="r-mt-48" type="flex" justify="center">
                   <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
                     <h2 class="r-heading">
                       Get in touch
@@ -114,7 +114,7 @@
                   <a-icon slot="prefix" type="user"/>
                 </a-input>
               </a-form-item>
-              <a-form-item class="r-margin-top-48">
+              <a-form-item class="r-mt-48">
                 <a-row :gutter="24" type="flex" justify="center">
                   <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                          :md="{ span: 12 }"

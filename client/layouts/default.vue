@@ -17,18 +17,8 @@
 export default {
   data: () => ({}),
   created() {
-    this.onStores();
   },
   computed: {},
-  methods: {
-    async onStores() {
-      let params = {
-        category_id: null,
-        limit: 24
-      };
-
-      await this.$store.dispatch('base/onStores', params);
-    }
-  }
+  methods: {}
 }
 </script>

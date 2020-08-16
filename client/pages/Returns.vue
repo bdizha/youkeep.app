@@ -9,7 +9,7 @@
                                 <span class="r-text-primary">Your Returns</span>
                             </h1>
                         </a-col>
-                         <a-col :xs="{span: 24}" :lg="{span: 12}" class="r-padding-lg-48" style="position: relative;">
+                         <a-col :xs="{span: 24}" :lg="{span: 12}" class="r-p-lg-48" style="position: relative;">
                             <div class="r-page-header-photo r-page-art-primary">
                                 <img alt="Couple orders online" src="/images/kshop/about-us.jpg">
                             </div>
@@ -17,7 +17,7 @@
                     </a-row>
                 </a-col>
             </a-row>
-            <a-row class="r-margin-vertical-48">
+            <a-row class="r-mv-48">
                 <a-col :lg="{span: 12}">
                     <a-row class="r-radius-right-white" type="flex"
                            justify="space-around" align="middle">
@@ -50,7 +50,7 @@
                     </a-row>
                 </a-col>
             </a-row>
-            <a-row type="flex" justify="space-around" align="middle" class="r-margin-vertical-48">
+            <a-row type="flex" justify="space-around" align="middle" class="r-mv-48">
                 <a-col :lg="{span: 12}"class="r-radius-right-white">
                     <a-row type="flex" justify="space-around" align="middle">
                         <a-col :lg="{span: 18 , offset: 6}"  class="r-page-padding">

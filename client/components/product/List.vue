@@ -1,8 +1,8 @@
 <template>
     <a-row type="flex" justify="center">
-        <a-col class="gutter-row r-padding-24" :span="24"
+        <a-col class="gutter-row r-p-24" :span="24"
                :class="{'r-product-spinner--active': processes.isProduct}">
-            <a-row :gutter="[24,24]" class="r-margin-bottom-24" type="flex" justify="center">
+            <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="center">
                 <a-col class="gutter-row" :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
                     <a-pagination v-if="hasProducts" class="r-same-height" v-model="products.current_page"
                                   :show-total="(total, range) => `${range[0]}-${range[1]} of ${total} items`"
@@ -38,7 +38,7 @@
             </a-row>
             <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]"
                    class="r-product-cards">
-                <a-col class="gutter-row r-padding-24" v-for="(product, index) in products.data" :key="index"
+                <a-col class="gutter-row r-p-24" v-for="(product, index) in products.data" :key="index"
                        :xs="{span: 12}"
                        :sm="{span: 12}" :md="{span: 6}" :lg="{span: 4}">
                     <r-product-item :product="product"></r-product-item>

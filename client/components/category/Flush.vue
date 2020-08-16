@@ -1,9 +1,9 @@
 <template>
     <a-row type="flex" justify="center">
-        <a-col class="gutter-row r-padding-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <a-col class="gutter-row r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
             <a-row v-if="hasCategories" type="flex" justify="center">
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: size }">
-                    <a-row :gutter="[24,24]" class="r-margin-bottom-24" type="flex" justify="start">
+                    <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="start">
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
                                :lg="{ span: 20 }">
                             <h3 class="r-heading r-same-height">

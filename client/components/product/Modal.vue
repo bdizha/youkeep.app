@@ -4,7 +4,7 @@
            :closable="true"
            current="product"
            style="position: relative;width: 75%">
-    <div class="r-padding-top-24">
+    <div class="r-pt-24">
       <a-card v-if="product" class="r-product">
         <a-row class="r-product-modal" :gutter="36" type="flex"
                justify="center" align="middle">
@@ -22,7 +22,7 @@
       </a-card>
     </div>
     <r-product-info v-if="false" :product="product"></r-product-info>
-    <a-row class="r-margin-top-48" type="flex" justify="center">
+    <a-row class="r-mt-48" type="flex" justify="center">
       <a-col class="gutter-row" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
         <h3 class="r-heading r-text-black">
           You may also like

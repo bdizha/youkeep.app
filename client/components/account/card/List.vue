@@ -1,7 +1,7 @@
 <template>
   <a-row class="r-account-list" type="flex" justify="center">
     <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-card v-if="hasTitle" class="r-margin-bottom-24" title="PAYMENT METHODS" style="width: 100%;">
+      <a-card v-if="hasTitle" class="r-mb-24" title="PAYMENT METHODS" style="width: 100%;">
         <a-row type="flex" justify="start" align="middle">
           <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
                  :sm="{ span: 24 }" :lg="{ span: 12 }">

@@ -15,7 +15,7 @@
       </a-col>
     </a-row>
     <a-row v-if="hasData" type="flex" justify="center" align="middle">
-      <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48"
+      <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48"
              style="background: #FFFFFF;">
         <a-row :gutter="16" type="flex" justify="start">
           <a-col class="gutter-row" :span="24">
@@ -23,7 +23,7 @@
               <a-col v-for="(section, s) in help.sections"
                      :key="'section-' + s" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 12}"
                      :lg="{span: 12}"
-                     class="r-page-padding r-padding-horizontal-24 r-text-left">
+                     class="r-page-padding r-ph-24 r-text-left">
                 <a-row type="flex" justify="center" :gutter="0">
                   <a-col class="gutter-row" :span="24">
                     <h3 class="r-help-header r-heading r-text-capitalize">

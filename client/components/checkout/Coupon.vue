@@ -1,5 +1,5 @@
 <template>
-    <a-form class="ant-form ant-form-vertical r-margin-bottom-24"
+    <a-form class="ant-form ant-form-vertical r-mb-24"
             :form="form">
         <a-input
                 placeholder="Add a coupon code"

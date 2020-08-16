@@ -1,9 +1,9 @@
 <template>
-    <a-card class="r-margin-bottom-24" title="ABOUT THIS SHOP" style="width: 100%;">
+    <a-card class="r-mb-24" title="ABOUT THIS SHOP" style="width: 100%;">
         <a-row class="r-stores-tray" type="flex" justify="center"
                :gutter="24">
             <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                <a-row class="r-margin-top-24" :gutter="24" type="flex" justify="start">
+                <a-row class="r-mt-24" :gutter="24" type="flex" justify="start">
                     <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                            :lg="{ span: 24 }">
                         <strong>Trading hours:</strong>

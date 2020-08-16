@@ -18,7 +18,7 @@
                     order after it has been delivered unattended, including any loss due
                     to theft or damage due to temperature sensitivity.
                 </a-form-item>
-                <a-row class="r-margin-vertical-24" :gutter="24" type="flex"
+                <a-row class="r-mv-24" :gutter="24" type="flex"
                        justify="start">
                     <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
                            :sm="{ span: 12 }"

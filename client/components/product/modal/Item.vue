@@ -21,7 +21,7 @@
             </a-row>
         </a-card>
         <r-product-info v-if="false" :product="product"></r-product-info>
-        <a-row class="r-margin-top-48 r-margin-bottom-24" type="flex" justify="center">
+        <a-row class="r-mt-48 r-mb-24" type="flex" justify="center">
             <a-col class="gutter-row" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
                 <h3 class="r-heading r-text-primary">
                     <a-icon type="bulb"/>
@@ -30,7 +30,7 @@
             </a-col>
         </a-row>
         <r-category-item :columns="4" :has-product="true" :category="category"></r-category-item>
-<!--        <a-row class="r-margin-top-48 r-margin-bottom-24" type="flex" justify="center">-->
+<!--        <a-row class="r-mt-48 r-mb-24" type="flex" justify="center">-->
 <!--            <a-col class="gutter-row" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">-->
 <!--                <h3 class="r-heading r-text-secondary">-->
 <!--                    <a-icon type="bulb"/>-->

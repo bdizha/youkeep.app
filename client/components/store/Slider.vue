@@ -1,7 +1,7 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
     <a-col class="r-store-slider gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row :gutter="[24,24]" class="r-margin-bottom-24" type="flex" justify="start">
+      <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="start">
         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
                :lg="{ span: 20 }">
           <h3 class="r-heading">

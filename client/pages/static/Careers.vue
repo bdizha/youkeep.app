@@ -6,11 +6,11 @@
           <a-row type="flex" justify="center">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
               <a-row type="flex" justify="start">
-                <a-col class="r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ offset: 3, span: 9 }"
                        :lg="{ offset: 3, span: 9 }">
                   <a-row type="flex" justify="start">
-                    <a-col class="r-padding-vertical-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                    <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                            :md="{ span: 24 }"
                            :lg="{ span: 24 }"
                            style="text-align: left;">
@@ -24,7 +24,7 @@
                       </p>
                     </a-col>
                   </a-row>
-                  <a-row class="r-margin-bottom-48" type="flex" justify="start">
+                  <a-row class="r-mb-48" type="flex" justify="start">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
                            :lg="{ span: 18 }">
                       <a-row :gutter="[24,24]" type="flex" justify="start">
@@ -68,17 +68,17 @@
         </div>
       </a-col>
     </a-row>
-    <a-row class="r-margin-vertical-48" type="flex">
+    <a-row class="r-mv-48" type="flex">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
         <a-row type="flex" justify="start"
                class="r-radius-right-white r-text-center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
-                 :lg="{span: 18, offset:6}" class="r-padding-48">
+                 :lg="{span: 18, offset:6}" class="r-p-48">
             <a-row :gutter="[48,48]" type="flex" justify="start"
                    class="r-radius-right-white">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                      :lg="{span: 8}">
-                <div class="r-icon">
+                <div class="r-icon r-icon-primary">
                   <a-icon type="qrcode"/>
                 </div>
                 <h4 class="r-heading r-text-uppercase">
@@ -87,7 +87,7 @@
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                      :lg="{span: 8}">
-                <div class="r-icon">
+                <div class="r-icon r-icon-primary">
                   <a-icon type="usergroup-add"/>
                 </div>
                 <h4 class="r-heading r-text-uppercase">
@@ -96,7 +96,7 @@
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                      :lg="{span: 8}">
-                <div class="r-icon">
+                <div class="r-icon r-icon-primary">
                   <a-icon type="deployment-unit"/>
                 </div>
                 <h4 class="r-heading r-text-uppercase">
@@ -109,10 +109,10 @@
       </a-col>
     </a-row>
     <a-row type="flex" justify="center" :gutter="24">
-      <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :md="{ span: 18 }"
+      <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :md="{ span: 18 }"
              :lg="{ span: 18 }">
         <a-row type="flex" justify="center">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-padding-48">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-p-48">
             <h2 class="r-heading">
               Working at Kshop
             </h2>
@@ -128,11 +128,11 @@
               provide our service as a token of appreciation to the society that serves us.
             </p>
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-padding-48">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-p-48">
             <h2 class="r-heading">
               Why work with Kshop?
             </h2>
-            <a-row class="r-margin-bottom-48" type="flex" justify="start">
+            <a-row class="r-mb-48" type="flex" justify="start">
               <a-col :span="24">
                 <a-checkbox checked='true' :value="1">
                   Unlimited coffee

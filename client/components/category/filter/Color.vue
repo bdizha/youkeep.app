@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-margin-vertical-12" :gutter="[12,12]" type="flex" justify="start">
+  <a-row class="r-mv-12" :gutter="[12,12]" type="flex" justify="start">
     <a-col v-for="(color, index) in color.items"
            :key="index"
            :xs="{span: 6}" :sm="{span: 6}" :md="{span: 4}" :lg="{span: 3}">

@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="start">
-    <a-col class="gutter-row r-padding-24" :xs="{ span: 24 }" :sm="{ span: 20 }" :md="{ span: 24 }"
+    <a-col class="gutter-row r-p-24" :xs="{ span: 24 }" :sm="{ span: 20 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <nuxt-link :to="category.route">
         <h4 class="r-heading">

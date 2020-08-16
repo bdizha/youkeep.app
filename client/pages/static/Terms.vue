@@ -7,7 +7,7 @@
         </h1>
       </a-col>
     </a-row>
-    <a-row class="r-margin-vertical-48" type="flex"
+    <a-row class="r-mv-48" type="flex"
            justify="center" align="left">
       <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}">
         <article class="r-article">

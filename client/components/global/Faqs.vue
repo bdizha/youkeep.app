@@ -15,7 +15,7 @@
                             you.
                         </p>
                     </a-col>
-                    <a-col :lg="{span: 12}" class="r-padding-lg-48" style="position: relative;">
+                    <a-col :lg="{span: 12}" class="r-p-lg-48" style="position: relative;">
                         <div class="r-page-header-photo r-page-art-primary">
                             <img alt="Couple orders online" src="/assets/about-us.jpg">
                         </div>

@@ -4,7 +4,7 @@
       <a-col :span="24">
         <a-row type="flex" justify="center" align="middle" class="r-art-primary">
           <a-col :xs="{span: 24}" :sm="{span: 24}" :lg="{span: 12}"
-                 class="r-margin-vertical-48 r-text-center">
+                 class="r-mv-48 r-text-center">
             <a-row type="flex" justify="center" align="middle">
               <a-col :xs="{span: 24}" :sm="{span: 24}" :lg="{span: 24}">
                 <h1 class="r-heading r-text-white">
@@ -38,7 +38,7 @@
           </a-col>
         </a-row>
         <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48">
+          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
                 <router-link class="r-text-primary r-text-view-more"
@@ -55,13 +55,13 @@
           </a-col>
         </a-row>
         <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-bg-white r-padding-48">
+          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-bg-white r-p-48">
             <a-row class="" type="flex" justify="start" align="middle">
               <a-col :lg="{span: 24}">
                 <article class="r-article" v-html="position.description"></article>
               </a-col>
             </a-row>
-            <a-row class="r-margin-vertical-24" type="flex" justify="start" align="middle">
+            <a-row class="r-mv-24" type="flex" justify="start" align="middle">
               <a-col :lg="{span: 24}" class="">
                 <a :href="'/career/' + position.slug + '/apply'">
                   <a-button size="large" type="primary">

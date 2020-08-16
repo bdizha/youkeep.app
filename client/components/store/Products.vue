@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col v-if="category" class="gutter-row r-padding-24" :span="24">
+    <a-col v-if="category" class="gutter-row r-p-24" :span="24">
       <a-row :gutter="[24,24]" type="flex" justify="center">
         <a-col class="gutter-row" :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
           <h3 class="r-heading r-same-height">

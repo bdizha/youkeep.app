@@ -2,7 +2,7 @@
   <a-row type="flex" justify="center">
     <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-store-item-line" type="flex" justify="start">
-        <a-col class="gutter-row r-padding-horizontal-24"
+        <a-col class="gutter-row r-ph-24"
                :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
                style="text-align: right;">
@@ -43,8 +43,8 @@
         </a-col>
       </a-row>
       <r-spinner :is-absolute="true" v-if="processes.isRunning"></r-spinner>
-      <a-row class="r-margin-vertical-48" type="flex" justify="center">
-        <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <a-row class="r-mv-48" type="flex" justify="center">
+        <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <p class="r-store-text-light">
             Kshopit is an independent shopping service that is not necessarily affiliated with,
             endorsed or sponsored by the stores listed here but it enables you to get the deliveries

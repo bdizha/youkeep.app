@@ -5,7 +5,7 @@
                       current="category"
                       style="position: relative;">
         <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
-        <a-card class="r-margin-top-24" title="Filter By" style="width: 100%;">
+        <a-card class="r-mt-24" title="Filter By" style="width: 100%;">
             <r-category-filters></r-category-filters>
         </a-card>
     </r-modal-template>

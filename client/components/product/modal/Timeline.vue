@@ -10,7 +10,7 @@
             </a-col>
         </a-row>
         <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]" class="r-product-cards" type="flex" justify="start">
-            <a-col class="gutter-row r-padding-24" v-for="(product, index) in products" :key="index"
+            <a-col class="gutter-row r-p-24" v-for="(product, index) in products" :key="index"
                    :xs="{span: 12}"
                    :sm="{span: 12}" :md="{span: 6}" :lg="{span: 4}">
                 <r-product-item :product="product"></r-product-item>

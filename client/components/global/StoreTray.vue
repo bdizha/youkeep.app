@@ -3,7 +3,7 @@
          :gutter="24"
          style="padding: 48px 24px;background: #FFFFFF url(/images/art-grey.svg) repeat scroll 0% 0% !important;">
     <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row class="r-margin-bottom-24" type="flex" justify="start">
+      <a-row class="r-mb-24" type="flex" justify="start">
         <a-col class="gutter-row" :span="12">
           <r-store-delivery-options></r-store-delivery-options>
         </a-col>
@@ -33,7 +33,7 @@
         </a-col>
       </a-row>
       <a-row type="flex" justify="center">
-        <a-col class="gutter-row r-padding-48" :sm="{ span: 24 }" :lg="{ span: 18 }">
+        <a-col class="gutter-row r-p-48" :sm="{ span: 24 }" :lg="{ span: 18 }">
           <p class="r-store-text-light">
             Kshop is an independent shopping service that is not necessarily affiliated with,
             endorsed or sponsored by the stores listed here but it enables you to get the deliveries you

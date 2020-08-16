@@ -1,6 +1,6 @@
 <template>
-  <a-row type="flex" justify="center" class="r-margin-vertical-24">
-    <a-col class="r-padding-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row type="flex" justify="center" class="r-mv-24">
+    <a-col class="r-p-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row :gutter="[24,24]" type="flex" justify="center">
         <a-col class="gutter-row" :xs="{ span: 20 }" :sm="{ span: 20 }" :lg="{ span: 20 }">
           <h2 class="r-heading r-same-height">
@@ -21,22 +21,31 @@
           </nuxt-link>
         </a-col>
       </a-row>
-      <a-row class="r-steps" :gutter="[24,24]" type="flex" justify="center" align="middle">
+      <a-row class="r-steps" :gutter="[48,24]" type="flex" justify="center" align="middle">
         <a-col class="gutter-row" :xs="{ span: 24 }"
                :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-          <a-steps v-model="currentStep" direction="vertical" :current="currentStep">
+          <a-steps class="r-animate" v-model="currentStep" direction="vertical" :current="currentStep">
             <a-step v-for="(step, index) in steps"
                     :key="index">
               <template slot="title">
                 <h3 class="r-text-primary">{{ step.title }}</h3>
               </template>
               <template slot="description">
-                {{ step.description }}
+                <div class="r-step-caption">
+                  {{ step.description }}
+                </div>
+                <div v-show="index === currentStep" class="r-animate r-hide-lg r-step-avatar">
+                  <r-avatar
+                            :key="index" shape="square"
+                            :size="210"
+                            :src="'/assets/Step_' + (index + 1) + '.svg?v=1'"
+                            src-placeholder="/assets/icon_default.png"/>
+                </div>
               </template>
             </a-step>
           </a-steps>
         </a-col>
-        <a-col class="gutter-row r-padding-vertical-48" :xs="{ span: 24 }"
+        <a-col class="r-hide-sm gutter-row r-pv-48" :xs="{ span: 24 }"
                :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
           <r-avatar v-for="(step, index) in [1,2,3,4]"
                     v-show="index === currentStep"

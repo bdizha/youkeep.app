@@ -16,7 +16,7 @@
             </div>
           </r-nav-item>
         </a-col>
-        <a-col class="r-text-right r-padding-horizontal-24"
+        <a-col class="r-text-right r-ph-24"
                :xs="{span: 18}"
                :sm="{span: 18}"
                :md="{span: 12}"

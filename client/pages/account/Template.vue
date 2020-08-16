@@ -5,7 +5,7 @@
             <a-layout>
                 <r-account-left-menu></r-account-left-menu>
                 <a-layout-content class="r-min-height-256 r-layout-column">
-                    <div class="r-padding-horizontal-24">
+                    <div class="r-ph-24">
                         <slot/>
                     </div>
                 </a-layout-content>

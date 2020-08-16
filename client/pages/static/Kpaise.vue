@@ -6,7 +6,7 @@
           <a-row type="flex" justify="center">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
               <a-row type="flex" justify="start">
-                <a-col class="r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ offset: 3, span: 9 }"
                        :lg="{ offset: 3, span: 9 }">
                   <r-space></r-space>

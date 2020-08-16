@@ -42,7 +42,7 @@
                     <a-icon slot="prefix" type="lock"/>
                 </a-input>
             </a-form-item>
-            <a-form-item class="r-margin-top-48">
+            <a-form-item class="r-mt-48">
                 <a-row :gutter="24" type="flex" justify="center">
                     <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                            :lg="{ span: 12 }">

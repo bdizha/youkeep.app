@@ -3,7 +3,7 @@
         <a-row type="flex" justify="center" align="middle">
             <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
-                <a-card class="r-margin-bottom-24" title="ACCOUNT INFORMATION" style="width: 100%;">
+                <a-card class="r-mb-24" title="ACCOUNT INFORMATION" style="width: 100%;">
                     <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
                         <a-col :xs="{ span: 10 }"
                                :sm="{ span: 10 }" :lg="{ span: 10 }">
@@ -43,7 +43,7 @@
         </a-row>
         <a-row type="flex" justify="center" align="middle">
             <a-col :xs="{ span: 24 }">
-                <a-card class="r-margin-bottom-24" title="PERSONAL INFORMATIN" style="width: 100%;">
+                <a-card class="r-mb-24" title="PERSONAL INFORMATIN" style="width: 100%;">
                     <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
                         <a-col :xs="{ span: 10 }"
                                :sm="{ span: 10 }" :lg="{ span: 10 }">

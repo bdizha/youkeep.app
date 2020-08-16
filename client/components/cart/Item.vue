@@ -14,7 +14,7 @@
             </a-avatar>
           </div>
         </a-col>
-        <a-col class="r-hide-sm gutter-row r-padding-top-12" :xs="{ span: 24 }"
+        <a-col class="r-hide-sm gutter-row r-pt-12" :xs="{ span: 24 }"
                :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 18 }">
           <h3 class="r-product-text-cart">
             {{ item.name }}

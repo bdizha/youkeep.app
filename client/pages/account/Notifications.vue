@@ -8,7 +8,7 @@
             <a-row type="flex" justify="center" align="middle">
                 <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
                        :sm="{ span: 24 }" :lg="{ span: 24 }">
-                    <a-card class="r-margin-bottom-24" title="MOBILE NUMBER" style="width: 100%;">
+                    <a-card class="r-mb-24" title="MOBILE NUMBER" style="width: 100%;">
                         <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
                             <a-col :xs="{ span: 20 }"
                                    :sm="{ span: 20 }" :lg="{ span: 20 }">
@@ -30,7 +30,7 @@
             <a-row type="flex" justify="center" align="middle">
                 <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
                        :sm="{ span: 24 }" :lg="{ span: 24 }">
-                    <a-card class="r-margin-bottom-24" title="ORDER NOTIFICATIONS" style="width: 100%;">
+                    <a-card class="r-mb-24" title="ORDER NOTIFICATIONS" style="width: 100%;">
                         <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
                             <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                    :md="{ span: 12 }"
@@ -65,7 +65,7 @@
             <a-row type="flex" justify="center" align="middle">
                 <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
                        :sm="{ span: 24 }" :lg="{ span: 24 }">
-                    <a-card class="r-margin-bottom-24" title="EMAIL NOTIFICATIONS" style="width: 100%;">
+                    <a-card class="r-mb-24" title="EMAIL NOTIFICATIONS" style="width: 100%;">
                         <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
                             <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                    :md="{ span: 12 }"

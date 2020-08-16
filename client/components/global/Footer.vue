@@ -1,17 +1,17 @@
 <template>
   <a-row type="flex" justify="center">
     <a-col class="gutter-row" :span="24">
-      <a-row type="flex" justify="center" class="r-bg-secondary-light">
-        <a-col v-if="hasSubscribe" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+      <a-row type="flex" justify="center">
+        <a-col v-if="hasSubscribe" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <r-subscribe size="24"></r-subscribe>
         </a-col>
-        <a-col v-if="hasDownload" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+        <a-col v-if="hasDownload" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <r-download size="24"></r-download>
         </a-col>
       </a-row>
       <a-layout-footer v-if="hasFooter">
-        <a-row type="flex" justify="center" class="r-bg-white r-margin-vertical-24">
-          <a-col class="r-padding-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <a-row type="flex" justify="center" class="r-bg-white r-mv-24">
+          <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
             <a-row type="flex" justify="start">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 6 }">
                 <a-card title="It's shopping time" :bordered="false" style="width: 100%;">
@@ -27,7 +27,7 @@
                   <a-row type="flex" justify="start">
                     <a-col :xs="{ span: 18 }" :sm="{ span: 16 }" :lg="{ span: 16 }">
                       <nuxt-link :to="$route.path" @click.native="onModal('delivery')"
-                                   class="r-footer-link r-padding-top-24">
+                                   class="r-footer-link r-pt-24">
                         Enter delivery address
                       </nuxt-link>
                     </a-col>
@@ -105,7 +105,7 @@
           </a-col>
         </a-row>
         <a-row type="flex" justify="center" class="r-bg-dark">
-          <a-col class="r-padding-24 r-footer-center-sm" :xs="{ span: 24 }" :sm="{ span: 24 }"
+          <a-col class="r-p-24 r-footer-center-sm" :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :lg="{ span: 18 }">
             <a-row :gutter="[24,24]" type="flex" justify="start">
               <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }">

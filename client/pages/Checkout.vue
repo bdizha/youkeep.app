@@ -11,7 +11,7 @@
                   <a-collapse-panel class="r-checkout-icon r-checkout-icon-address" :key="1"
                                     header="Delivery address">
                     <r-account-address-list></r-account-address-list>
-                    <a-row class="r-margin-vertical-24" :gutter="24" type="flex" justify="start">
+                    <a-row class="r-mv-24" :gutter="24" type="flex" justify="start">
                       <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                              :md="{ span: 18 }" :lg="{ span: 18 }">
                         <r-account-address-add></r-account-address-add>
@@ -43,7 +43,7 @@
                         order after it has been delivered unattended, including any loss due
                         to theft or damage due to temperature sensitivity.
                       </a-form-item>
-                      <a-row class="r-margin-vertical-24" :gutter="24" type="flex"
+                      <a-row class="r-mv-24" :gutter="24" type="flex"
                              justify="start">
                         <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
                                :sm="{ span: 12 }"
@@ -82,7 +82,7 @@
                           v-decorator="['name', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
                         </a-input>
                       </a-form-item>
-                      <a-row class="r-margin-vertical-24" :gutter="24" type="flex"
+                      <a-row class="r-mv-24" :gutter="24" type="flex"
                              justify="start">
                         <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
                                :sm="{ span: 12 }"
@@ -110,7 +110,7 @@
                   <a-collapse-panel class="r-checkout-icon r-checkout-icon-payment" :key="4"
                                     header="Payment">
                     <r-account-card-list></r-account-card-list>
-                    <a-row class="r-margin-vertical-24" :gutter="24" type="flex" justify="end">
+                    <a-row class="r-mv-24" :gutter="24" type="flex" justify="end">
                       <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                              :md="{ span: 18 }" :lg="{ span: 18 }">
                         <r-account-card-add></r-account-card-add>
@@ -130,7 +130,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :lg="{ span: 8 }">
             <a-row class="r-bg-white">
-              <a-col class="r-padding-24" :span="24">
+              <a-col class="r-p-24" :span="24">
                 <a-form class="ant-form ant-form-vertical"
                         :form="formCart">
                   <a-form-item :wrapper-col="{ span: 24 }">

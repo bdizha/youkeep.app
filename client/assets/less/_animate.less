@@ -1,8 +1,3 @@
-
-
-/* The emerging W3C standard
-   that is currently Firefox-only */
-
 * {
     scrollbar-width: thin;
     scrollbar-color: #969696 #FAFBFC;
@@ -22,4 +17,39 @@
     background-color: #969696;
     border-radius: 18px;
     border: 3px solid #FAFBFC;
+}
+
+.r-animate,
+.ant-col,
+.ant-card,
+.ant-avatar,
+img{
+    -webkit-animation: slide-up-fadeIn .8s ease 0s 1 normal forwards;
+    animation: slide-up-fadeIn .8s ease 0s 1 normal forwards;
+}
+
+@-webkit-keyframes slide-up-fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes slide-up-fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
 }

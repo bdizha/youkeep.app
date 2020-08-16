@@ -7,7 +7,7 @@
                     @submit="onApply"
                     :form="formApply">
                 <a-form-item>
-                    <a-row class="r-margin-top-48" type="flex" justify="center">
+                    <a-row class="r-mt-48" type="flex" justify="center">
                         <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
                             <h2 class="r-heading">
                                 Kshop merchant application
@@ -167,7 +167,7 @@
                         <a-icon slot="prefix" type="user"/>
                     </a-input>
                 </a-form-item>
-                <a-form-item class="r-margin-top-48">
+                <a-form-item class="r-mt-48">
                     <a-row :gutter="24" type="flex" justify="center">
                         <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"

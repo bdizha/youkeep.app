@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-breadcrumbs">
-    <a-col class="gutter-row r-padding-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+    <a-col class="gutter-row r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{span: 24}">
       <a-breadcrumb>
         <a-icon slot="separator" type="caret-right"/>

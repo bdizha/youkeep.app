@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="start" :gutter="0">
-    <a-col class="r-padding-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+    <a-col class="r-p-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <h4 class="r-heading-light">
         {{ store.description }}

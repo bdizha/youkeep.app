@@ -1,14 +1,14 @@
 <template>
   <a-row class="r-bg-grey r-reviews" type="flex" justify="center">
-    <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row class="r-margin-top-24" type="flex" justify="center">
+    <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <a-row class="r-mt-24" type="flex" justify="center">
         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <h2 class="r-heading r-text-center">
             What our customers say
           </h2>
         </a-col>
       </a-row>
-      <a-carousel class="r-margin-bottom-48" v-if="testimonials.length > 0" :infinite="true"
+      <a-carousel class="r-mb-48" v-if="testimonials.length > 0" :infinite="true"
                   :arrows="true"
                   :dots="false"
                   :slidesToShow="1"

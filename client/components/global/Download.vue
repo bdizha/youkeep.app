@@ -1,7 +1,7 @@
 <template>
-  <a-row :gutter="24" type="flex" justify="center" align="middle" class="r-download r-padding-48">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }" class="r-text-center">
-      <a-row class="r-margin-bottom-24" type="flex" justify="center" align="middle">
+  <a-row :gutter="24" type="flex" justify="center" align="middle" class="r-download r-p-48">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 16 }" class="r-text-center">
+      <a-row class="r-mb-24" type="flex" justify="center" align="middle">
         <a-col :span="24">
           <h2 class="r-heading">
             Download the Kshopit app

@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-margin-bottom-24" type="flex" justify="start">
+  <a-row class="r-mb-24" type="flex" justify="start">
     <a-col class="gutter-row" :span="24">
       <template v-for="productType in product.types"
                 v-if="productType.has_variants">

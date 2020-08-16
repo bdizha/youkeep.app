@@ -23,7 +23,7 @@
                 </a-row>
             </a-col>
         </a-row>
-        <a-row class="r-margin-vertical-48">
+        <a-row class="r-mv-48">
             <a-col :span="24">
                 <a-row class="r-radius-right-white" type="flex"
                        justify="space-around" align="middle">

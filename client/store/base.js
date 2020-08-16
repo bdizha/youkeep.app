@@ -131,7 +131,6 @@ const mutations = {
   setStores(state, stores) {
     console.log('stores...', stores);
     state.stores = stores;
-    console.log('hasStores...', state.hasStores);
   },
   setCategory(state, category) {
     state.category = category;

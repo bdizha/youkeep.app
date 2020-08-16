@@ -1,5 +1,5 @@
 <template>
-  <div class="r-store-item-line r-padding-horizontal-24">
+  <div class="r-store-item-line r-ph-24">
     <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
       <a-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
         <a-button @click="onDrawer" class="r-btn-bordered-secondary"
