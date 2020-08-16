@@ -3,7 +3,7 @@
     <a-col class="gutter-row r-padding-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{span: 24}">
       <a-breadcrumb>
-        <a-icon slot="separator" type="right"/>
+        <a-icon slot="separator" type="caret-right"/>
         <a-breadcrumb-item v-if="hasStore" :key="0">
           <nuxt-link :to="store.route">
             {{ store.name }}

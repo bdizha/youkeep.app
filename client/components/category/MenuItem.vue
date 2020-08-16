@@ -1,6 +1,6 @@
 <template>
   <div v-if="hasData" class="r-category-filter">
-    <router-link v-if="!category.has_categories"
+    <nuxt-link v-if="!category.has_categories"
                  @click.native="onCategory(category)"
                  class="r-category-menu-link"
                  :to="category.route">
@@ -9,7 +9,7 @@
                 src="/assets/icon_default.png"
                 src-placeholder="~/assets/icon_default.png"/>
       {{ category.name }}
-    </router-link>
+    </nuxt-link>
     <a-collapse v-if="category.has_categories"
                 default-active-key="null"
                 accordion
@@ -18,14 +18,14 @@
         <a-icon :type="props.isActive ? 'minus' : 'plus'"/>
       </template>
       <a-collapse-panel :key="category.id" class="r-category-menu-panel" :header="category.name">
-        <router-link @click.native="onCategory(category)" class="r-category-menu-link"
+        <nuxt-link @click.native="onCategory(category)" class="r-category-menu-link"
                      :to="category.route">
           <a-avatar class="r-lazy" shape="circle" :size="30"
                     :data-src="'/' + category.photo"
                     src="/assets/icon_default.png"
                     src-placeholder="~/assets/icon_default.png"/>
           {{ 'Browse All' }}
-        </router-link>
+        </nuxt-link>
         <template v-for="(cat) in categories">
           <r-category-menu-item
             v-if="cat.has_categories"

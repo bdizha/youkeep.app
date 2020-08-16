@@ -21,10 +21,10 @@
                     </vue-glide-slide>
                     <template slot="control">
                         <button data-glide-dir="<">
-                            <a-icon type="left"/>
+                            <a-icon type="caret-left"/>
                         </button>
                         <button data-glide-dir=">">
-                            <a-icon type="right"/>
+                            <a-icon type="caret-right"/>
                         </button>
                     </template>
                 </vue-glide>

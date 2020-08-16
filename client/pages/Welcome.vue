@@ -46,7 +46,7 @@
       <r-steps></r-steps>
       <r-store-slider :title="title" :columns="6"></r-store-slider>
       <r-category-slider></r-category-slider>
-      <r-category-list :columns="8" :limit="1"></r-category-list>
+      <r-category-list :limit="6"></r-category-list>
       <a-row type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{  span: 12 }"

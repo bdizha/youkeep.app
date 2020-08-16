@@ -1,68 +1,100 @@
 <template>
-  <a-row type="flex" justify="start">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{span: 24}">
-      <a-menu theme="light"
-              mode="horizontal"
-              :defaultSelectedKeys="['2']">
-        <a-sub-menu>
-          <div slot="title">
-            <router-link class="r-text-link" to="/help">
-              <a-icon type="question-circle"/>
-              Help center
-            </router-link>
-          </div>
-        </a-sub-menu>
-        <a-sub-menu>
-          <div v-if="!isLoggedIn" @click="onModal" slot="title">
-            <a-icon type="user"/>
-            Sign in
-          </div>
-          <div v-if="isLoggedIn" @click="onDrawer" slot="title">
-            <a-icon type="user"/>
-            Account
-          </div>
-        </a-sub-menu>
-      </a-menu>
-    </a-col>
-  </a-row>
+  <div :class="{'r-store-flex__has-notice': hasNotice}" class="r-store-flex">
+    <r-store-notice v-if="hasNotice"></r-store-notice>
+    <r-delivery-form size="default"
+                     :is-store="true"
+                     :has-submit="false"></r-delivery-form>
+    <a-list :data-source="links">
+      <a-list-item class="r-list-item" slot="renderItem"
+                   slot-scope="item, index">
+        <template v-if="!item.modal">
+          <nuxt-link class="r-text-link" :to="item.link">
+            <a-avatar shape="square" :icon="item.icon"/>
+            {{ item.label }}
+          </nuxt-link>
+        </template>
+        <template v-if="item.modal">
+          <nuxt-link :to="item.link"
+                     @click.native="onModal(item.modal)"
+                     class="r-text-link">
+            <a-avatar shape="square" :icon="item.icon"/>
+            {{ item.label }}
+          </nuxt-link>
+        </template>
+      </a-list-item>
+    </a-list>
+    <r-store-list></r-store-list>
+  </div>
 </template>
 <script>
 import {mapGetters} from "vuex";
 
+const LINKS = [
+  {
+    label: 'Home',
+    icon: 'home',
+    link: '/',
+    modal: null
+  },
+  {
+    label: 'Explore',
+    icon: 'compass',
+    link: '/stores/all',
+  },
+  {
+    label: 'Highlights',
+    icon: 'fire',
+    link: '/stores/hot',
+    modal: null
+  },
+  {
+    label: 'What\'s new',
+    icon: 'gift',
+    link: '/stores/new',
+    modal: null
+  },
+  {
+    label: 'Wishlist',
+    icon: 'heart',
+    link: '/wishlist',
+    modal: 'wishlist'
+  },
+  {
+    label: 'Timeline',
+    icon: 'clock-circle',
+    link: '/timeline',
+    modal: 'timeline'
+  }
+];
+
 export default {
   name: 'r-menu',
+  props: {},
   data() {
-    return {}
+    return {
+      links: LINKS,
+    };
   },
   computed: mapGetters({
     user: 'auth/user',
-    cart: 'cart/cart',
-    modal: 'base/modal',
-    store: 'shop/store',
-    drawer: 'base/drawer',
-    isRaised: 'base/isRaised',
-    isLoggedIn: 'auth/isLoggedIn'
+    flush: 'base/flush',
+    hasNotice: 'base/hasNotice',
   }),
   created() {
     this.payload();
   },
   methods: {
-    payload() {
+    async payload() {
     },
-    onDrawer() {
-      let drawer = {};
-      drawer.current = 'account';
-      drawer.isVisible = true;
-
-      this.$store.dispatch('base/onDrawer', drawer);
-    },
-    onModal() {
+    async onModal(current) {
       let modal = {};
       modal.isVisible = true;
       modal.isClosable = true;
-      modal.current = 'login';
+      modal.current = current;
+
       this.$store.dispatch('base/onModal', modal);
-    },
-  }
-};
+    }
+  },
+}
 </script>
+

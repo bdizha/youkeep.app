@@ -7,7 +7,7 @@
                    :key="category.id"
                    :to="category.route">
           <r-avatar shape="circle"
-                    :size="36"
+                    :size="size"
                     :src="category.photo"
                     :style="'background-image: url(' + category.photo + ');'">
           </r-avatar>
@@ -17,12 +17,12 @@
         </nuxt-link>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-            <a-icon type="left"/>
+            <a-icon type="caret-left"/>
           </div>
         </template>
         <template #nextArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-            <a-icon type="right"/>
+            <a-icon type="caret-right"/>
           </div>
         </template>
       </VueSlickCarousel>
@@ -36,6 +36,7 @@ export default {
   name: 'r-category-arrows',
   props: {
     columns: {type: Number, required: false, default: 8},
+    size: {type: Number, required: false, default: 75},
   },
   data() {
     return {

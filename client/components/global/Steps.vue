@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center" class="r-margin-vertical-24">
-    <a-col class="r-padding-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 18 }">
+    <a-col class="r-padding-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row :gutter="[24,24]" type="flex" justify="center">
         <a-col class="gutter-row" :xs="{ span: 20 }" :sm="{ span: 20 }" :lg="{ span: 20 }">
           <h2 class="r-heading r-same-height">
@@ -9,33 +9,19 @@
         </a-col>
         <a-col class="gutter-row r-text-right" :xs="{ span: 4 }" :sm="{ span: 4 }" :md="{ span: 4 }"
                :lg="{ span: 4 }">
-          <router-link v-show="hasMore" to="/hiw">
+          <nuxt-link v-show="hasMore" to="/hiw">
             <a-button class="r-hide-sm r-btn-bordered-primary"
                       block
                       type="secondary"
                       :size="'default'">
               Read more
-              <a-icon type="right"/>
+              <a-icon type="caret-right"/>
             </a-button>
             <a-avatar class="r-hide-lg" shape="square" icon="right"/>
-          </router-link>
+          </nuxt-link>
         </a-col>
       </a-row>
       <a-row class="r-steps" :gutter="[24,24]" type="flex" justify="center" align="middle">
-        <a-col class="gutter-row r-padding-vertical-48" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-          <a-card v-for="(step, index) in [1,2,3,4]"
-                  v-show="index === currentStep"
-                  :key="index"
-                  :bordered='false'>
-            <div slot="cover">
-              <r-avatar shape="square"
-                        :size="380"
-                        :src="'/assets/Step_' + step + '.svg'"
-                        src-placeholder="/assets/icon_default.png"/>
-            </div>
-          </a-card>
-        </a-col>
         <a-col class="gutter-row" :xs="{ span: 24 }"
                :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
           <a-steps v-model="currentStep" direction="vertical" :current="currentStep">
@@ -49,6 +35,15 @@
               </template>
             </a-step>
           </a-steps>
+        </a-col>
+        <a-col class="gutter-row r-padding-vertical-48" :xs="{ span: 24 }"
+               :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+          <r-avatar v-for="(step, index) in [1,2,3,4]"
+                    v-show="index === currentStep"
+                    :key="index" shape="square"
+                    :size="380"
+                    :src="'/assets/Step_' + step + '.svg?v=1'"
+                    src-placeholder="/assets/icon_default.png"/>
         </a-col>
       </a-row>
     </a-col>

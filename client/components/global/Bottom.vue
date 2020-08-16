@@ -8,7 +8,7 @@
           <a-col class="gutter-row r-padding-horizontal-24" :xs="{ span: 6 }" :sm="{ span: 6 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
-            <div @click="onDrawer('store-menu')" class="r-menu-item r-menu-item__menu">
+            <div @click="onDrawer('store-menu')" class="r-nav-item r-nav-item__menu">
               <a-icon style="font-size: 18px;" type="compass"/>
               <span class="r-icon-text">
                                 Explore
@@ -19,7 +19,7 @@
                  :sm="{ span: 6 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
-            <div class="r-menu-item r-menu-item__menu">
+            <div class="r-nav-item r-nav-item__menu">
               <a-icon style="font-size: 18px;" type="shop"/>
               <span class="r-icon-text">
                                 Stores
@@ -30,7 +30,7 @@
                  :sm="{ span: 6 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
-            <div class="r-menu-item r-menu-item__menu">
+            <div class="r-nav-item r-nav-item__menu">
               <a-icon style="font-size: 18px;" type="gift"/>
               <span class="r-icon-text">
                                 List
@@ -41,7 +41,7 @@
                  :xs="{ span: 6 }" :sm="{ span: 6 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
-            <div class="r-menu-item r-menu-item__menu">
+            <div class="r-nav-item r-nav-item__menu">
               <a-icon style="font-size: 18px;" type="bars"/>
               <span class="r-icon-text">
                                 More

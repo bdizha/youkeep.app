@@ -246,7 +246,7 @@
                         :size="'large'"
                         type="default"
                         class="ant-btn">
-                <a-icon type="left"/>
+                <a-icon type="caret-left"/>
                 Back
               </a-button>
             </a-col>
@@ -256,7 +256,7 @@
                         type="primary" html-type="button"
                         class="ant-btn ant-btn-secondary r-btn-black">
                 {{ step == 11 ? 'Submit' : 'Continue' }}
-                <a-icon type="right"/>
+                <a-icon type="caret-right"/>
               </a-button>
             </a-col>
           </a-row>

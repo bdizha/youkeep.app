@@ -38,7 +38,7 @@
 import {mapGetters} from "vuex";
 
 export default {
-  name: 'r-store-drawer-menu',
+  name: 'r-store-drawer',
   data() {
     return {
       isToggled: false

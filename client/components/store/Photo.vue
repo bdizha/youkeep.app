@@ -1,26 +1,26 @@
 <template>
-    <div class="r-store-photo-holder">
-        <div v-if="store.photo !== 'undefined'" slot="cover"
-             class="r-store-photo"
-             :style="'background-image: url(/assets/icon_default.png)'">
-        </div>
-    </div>
+  <r-avatar shape="square"
+            :size="300"
+            :src="store.photo_url"/>
 </template>
 <script>
-    export default {
-        props: {
-            store: {type: Object, required: true},
-        },
-        data() {
-            return {};
-        },
-        created() {
-            // console.log('Store photo', this.store);
-        },
-        methods: {},
-        watch: {
-            openKeys(val) {
-            },
-        },
+export default {
+  name: 'r-store-photo',
+  props: {
+    store: {type: Object, required: false, default: null},
+    isShowing: {type: Boolean, required: false, default: false},
+  },
+  data() {
+    return {
+      quantity: 1,
+      styles: null,
+      size: 180,
     };
+  },
+  created() {
+
+
+  },
+  methods: {},
+};
 </script>

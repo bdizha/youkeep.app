@@ -9,8 +9,8 @@
                     :slidesToShow="7"
                     :variable-width="true"
                     :responsive="responsive">
-          <router-link class="r-slider-item r-text-view-more"
-                       v-for="(store, index) in stores"
+          <nuxt-link class="r-slider-item r-text-view-more"
+                       v-for="(store, index) in stores.data"
                        :key="store.id"
                        @click.native="onStore(store)"
                        :to="store.route">
@@ -24,15 +24,15 @@
             <div class="r-text-slider">
               {{ store.name }}
             </div>
-          </router-link>
+          </nuxt-link>
           <div slot="prevArrow"
                slot-scope="props"
                class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-            <a-icon type="left"/>
+            <a-icon type="caret-left"/>
           </div>
           <div slot="nextArrow" slot-scope="props"
                class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-            <a-icon type="right"/>
+            <a-icon type="caret-right"/>
           </div>
         </a-carousel>
       </div>

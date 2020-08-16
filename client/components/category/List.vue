@@ -3,8 +3,8 @@
         <a-col class="gutter-row r-padding-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
             <r-category-item v-if="index < limit" v-for="(category, index) in categories"
                              :key="index + 1"
-                             :category="category">
                              :columns="columns"
+                             :category="category">
             </r-category-item>
         </a-col>
     </a-row>

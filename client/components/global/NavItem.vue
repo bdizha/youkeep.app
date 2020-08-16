@@ -1,12 +1,12 @@
 <template>
-  <div class="r-menu-item">
+  <div class="r-nav-item">
     <slot/>
   </div>
 </template>
 <script>
 
 export default {
-  name: 'r-menu-item',
+  name: 'r-nav-item',
   data() {
     return {}
   },

@@ -17,19 +17,19 @@
                 <a-card title="It's shopping time" :bordered="false" style="width: 100%;">
                   <a-row type="flex" justify="start">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                      <router-link class="r-same-height" to="/">
+                      <nuxt-link class="r-same-height" to="/">
                         <img src="/assets/icon_footer.svg?v=1"
                              alt="Kshopit - Online shop"
                              class="r-footer-logo /">
-                      </router-link>
+                      </nuxt-link>
                     </a-col>
                   </a-row>
                   <a-row type="flex" justify="start">
                     <a-col :xs="{ span: 18 }" :sm="{ span: 16 }" :lg="{ span: 16 }">
-                      <router-link :to="$route.path" @click.native="onModal('delivery')"
+                      <nuxt-link :to="$route.path" @click.native="onModal('delivery')"
                                    class="r-footer-link r-padding-top-24">
                         Enter delivery address
-                      </router-link>
+                      </nuxt-link>
                     </a-col>
                   </a-row>
                 </a-card>
@@ -39,63 +39,63 @@
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Shoppers" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <router-link to="/shopper">Become a shopper</router-link>
+                        <nuxt-link to="/shopper">Become a shopper</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/kpaise">Kpaise - Shopper</router-link>
+                        <nuxt-link to="/kpaise">Kpaise - Shopper</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/help">Help center</router-link>
+                        <nuxt-link to="/help">Help center</nuxt-link>
                       </div>
                     </a-card>
                   </a-col>
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Customers" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <router-link to="/login">Join Kshopit</router-link>
+                        <nuxt-link to="/login">Join Kshopit</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/kpaise">Kpaise - Customer</router-link>
+                        <nuxt-link to="/kpaise">Kpaise - Customer</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/hiw">How it works</router-link>
+                        <nuxt-link to="/hiw">How it works</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/help">Help center</router-link>
+                        <nuxt-link to="/help">Help center</nuxt-link>
                       </div>
                     </a-card>
                   </a-col>
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Merchants" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <router-link to="/merchant">Become a merchant</router-link>
+                        <nuxt-link to="/merchant">Become a merchant</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/kpaise">Kpaise - Business</router-link>
+                        <nuxt-link to="/kpaise">Kpaise - Business</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/resources">Resources</router-link>
+                        <nuxt-link to="/resources">Resources</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/help">Merchant center</router-link>
+                        <nuxt-link to="/help">Merchant center</nuxt-link>
                       </div>
                     </a-card>
                   </a-col>
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Company" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <router-link to="/about-us">About us</router-link>
+                        <nuxt-link to="/about-us">About us</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/" @click.native="onModal('store')">
+                        <nuxt-link to="/" @click.native="onModal('store')">
                           Shop directory
-                        </router-link>
+                        </nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/careers">Careers</router-link>
+                        <nuxt-link to="/careers">Careers</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <router-link to="/contact-us">Contact us</router-link>
+                        <nuxt-link to="/contact-us">Contact us</nuxt-link>
                       </div>
                     </a-card>
                   </a-col>
@@ -116,11 +116,11 @@
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 16 }">
                 <a-row :gutter="[24,24]" type="flex" justify="start">
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 8 }">
-                    <router-link class="r-same-height r-footer-link" to="/shopper">
+                    <nuxt-link class="r-same-height r-footer-link" to="/shopper">
                       <a-button block class="r-btn-bordered-white" size="large">
                         Become a shopper
                       </a-button>
-                    </router-link>
+                    </nuxt-link>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
                     <div class="r-text-white r-same-height r-footer-link">
@@ -128,11 +128,11 @@
                     </div>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
-                    <router-link class="r-text-white r-same-height r-footer-link" to="/privacy">
+                    <nuxt-link class="r-text-white r-same-height r-footer-link" to="/privacy">
                       Privacy
-                    </router-link>
+                    </nuxt-link>
                     <span>|</span>
-                    <router-link class="r-text-white r-same-height" to="/terms">Terms</router-link>
+                    <nuxt-link class="r-text-white r-same-height" to="/terms">Terms</nuxt-link>
                   </a-col>
                 </a-row>
               </a-col>

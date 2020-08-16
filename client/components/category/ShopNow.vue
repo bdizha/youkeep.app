@@ -1,17 +1,17 @@
 <template>
     <a-row type="flex" justify="start">
         <a-col v-if="category" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-            <router-link @click.native="onCategory(category)" class="r-same-height r-text-view-more"
+            <nuxt-link @click.native="onCategory(category)" class="r-same-height r-text-view-more"
                          :to="category.route">
                 <a-button class="r-hide-sm r-btn-bordered-secondary"
                           block
                           type="secondary"
                           :size="size">
                     View all
-                    <a-icon type="right"/>
+                    <a-icon type="caret-right"/>
                 </a-button>
                 <a-avatar class="r-hide-lg" shape="square" icon="right"/>
-            </router-link>
+            </nuxt-link>
         </a-col>
     </a-row>
 </template>

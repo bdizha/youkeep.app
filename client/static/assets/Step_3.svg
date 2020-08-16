@@ -2,7 +2,7 @@
   <defs>
     <style>
       .cls-1, .cls-11 {
-        fill: #fff;
+        fill: #FFEFEF;
       }
 
       .cls-2 {
@@ -78,7 +78,7 @@
       }
 
       .cls-21, .cls-23 {
-        stroke: #FC667E;
+        stroke: #B7E0FD;
       }
 
       .cls-21 {
@@ -94,8 +94,8 @@
       }
 
       .cls-23 {
-        stroke-width: 30px;
-        opacity: 0.98;
+        stroke-width: 24px;
+        opacity: 1;
       }
 
       .cls-24, .cls-25 {
@@ -118,9 +118,9 @@
     </clipPath>
   </defs>
   <g id="Step_3" data-name="Step 3" class="cls-2">
-    <rect class="cls-1" width="1451" height="1451"/>
+    <rect fill="none" width="1451" height="1451"/>
     <g id="Group_2423" data-name="Group 2423" transform="translate(-6407 -1508)">
-      <rect id="Rectangle_510" data-name="Rectangle 510" class="cls-1" width="1451" height="1451" transform="translate(6407 1508)"/>
+      <rect id="Rectangle_510" data-name="Rectangle 510" fill="none" width="1451" height="1451" transform="translate(6407 1508)"/>
       <g id="Group_2322" data-name="Group 2322" transform="translate(6543 1643)">
         <g id="Group_2320" data-name="Group 2320" transform="translate(241.925 129.602)">
           <g id="Path_4327" data-name="Path 4327" class="cls-3" transform="translate(58.146 510.177)">

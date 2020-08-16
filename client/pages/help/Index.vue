@@ -43,7 +43,7 @@
                   </a-col>
                   <a-col class="gutter-row" :span="6" style="text-align: right">
                     <a class="r-same-height r-text-primary" href="/hiw">
-                      <a-icon style="font-size: 14px;" type="right"/>
+                      <a-icon style="font-size: 14px;" type="caret-right"/>
                     </a>
                   </a-col>
                 </a-row>

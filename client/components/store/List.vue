@@ -1,7 +1,7 @@
 <template>
   <a-row type="flex" justify="center">
     <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row class="r-store-row" type="flex" justify="start">
+      <a-row class="r-store-item-line" type="flex" justify="start">
         <a-col class="gutter-row r-padding-horizontal-24"
                :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
@@ -27,15 +27,15 @@
           </a-select>
         </a-col>
       </a-row>
-      <a-row class="r-store-row" v-if="hasStores && !processes.isTray" type="flex" justify="start">
+      <a-row class="r-store-item-line" v-if="hasStores && !processes.isTray" type="flex" justify="start">
         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
                v-for="(store, index) in stores.data"
                :key="index">
-          <router-link @click.native="onStore(store)" :to="store.route"
+          <nuxt-link @click.native="onStore(store)" :to="store.route"
                        style="display: block; width: 100%;">
             <r-store-item :store="store"></r-store-item>
-          </router-link>
+          </nuxt-link>
         </a-col>
         <a-col v-if="!hasStores" class="gutter-row" :span="24">
           <a-empty image="/assets/icon_grey.svg"

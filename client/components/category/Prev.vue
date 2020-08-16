@@ -4,7 +4,7 @@
            :lg="{ span: 24 }">
       <nuxt-link :to="category.route">
         <h4 class="r-heading">
-          <a-icon type="left"/>
+          <a-icon type="caret-left"/>
           {{ category.name }}
         </h4>
       </nuxt-link>

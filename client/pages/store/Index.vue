@@ -13,7 +13,6 @@
 import {mapGetters} from "vuex";
 
 export default {
-  layout: 'shop',
   async asyncData({store}) {
     let params = {
       category_id: null,

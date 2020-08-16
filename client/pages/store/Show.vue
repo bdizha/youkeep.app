@@ -1,7 +1,7 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
     <a-col class="gutter-row" :span="24">
-      <r-category-arrows></r-category-arrows>
+      <r-category-arrows :size="75"></r-category-arrows>
       <r-category-slider></r-category-slider>
       <r-category-list :limit="3"></r-category-list>
       <r-category-shapes></r-category-shapes>

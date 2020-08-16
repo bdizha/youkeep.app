@@ -1,10 +1,10 @@
 <template>
-  <router-link class="r-logo" to="/">
+  <nuxt-link class="r-logo" to="/">
     <img class="r-hide-sm" :src="'/assets/' + (isDark ? 'icon_white': 'logo') + '.svg'"
          alt="Kshopit - It's Shopping Time!"/>
     <img class="r-hide-lg" :src="'/assets/' + (isDark ? 'icon_white': 'icon') + '.svg'"
          alt="Kshopit - It's Shopping Time!"/>
-  </router-link>
+  </nuxt-link>
 </template>
 <script>
 import {mapGetters} from "vuex";

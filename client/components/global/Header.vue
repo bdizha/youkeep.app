@@ -1,35 +1,35 @@
 <template>
   <a-layout-header :class="{'r-switch-primary': isDark}" class="r-header">
     <r-layout-menu v-if="!modal.isVisible && !isRaised && !hasShop">
-      <r-menu-item @click="onDrawer('store-menu')" class="__menu">
-        <a-icon style="font-size: 18px;" type="menu"/>
-      </r-menu-item>
-      <r-menu-item class="__logo">
+      <r-nav-item>
+        <a-icon @click="onDrawer('menu')" style="font-size: 18px;" type="menu"/>
+      </r-nav-item>
+      <r-nav-item class="__logo">
         <r-logo></r-logo>
-      </r-menu-item>
-      <r-menu-item class="r-hide-sm r-menu-item__store-switch">
+      </r-nav-item>
+      <r-nav-item class="r-hide-sm r-nav-item__store-switch">
         <r-store-switch></r-store-switch>
-      </r-menu-item>
-      <r-menu-item class="r-hide-sm r-menu-item__search">
+      </r-nav-item>
+      <r-nav-item class="r-hide-sm r-nav-item__search">
         <r-search></r-search>
-      </r-menu-item>
-      <r-menu-item class="r-hide-sm">
+      </r-nav-item>
+      <r-nav-item class="r-hide-sm">
         <r-menu></r-menu>
-      </r-menu-item>
-      <r-menu-item class="">
+      </r-nav-item>
+      <r-nav-item class="">
         <r-cart-count></r-cart-count>
-      </r-menu-item>
+      </r-nav-item>
     </r-layout-menu>
     <r-layout-menu v-if="modal.isVisible || isRaised" class="r-layout-menu r-layout-menu-modal">
-      <r-menu-item v-on:click="onModalClose" class="__menu">
-        <a-icon style="font-size: 21px;" type="left"/>
-      </r-menu-item>
-      <r-menu-item class="__logo">
+      <r-nav-item class="__menu">
+        <a-icon v-on:click="onModalClose" style="font-size: 21px;" type="caret-left"/>
+      </r-nav-item>
+      <r-nav-item class="r-nav-item__logo">
         <div v-on:click="onModalClose" class="r-logo">
           <img :src="'/assets/' + (isDark ? 'icon_white': 'icon_primary') + '.svg'"
                alt="Kshopit - It's Shopping Time!"/>
         </div>
-      </r-menu-item>
+      </r-nav-item>
     </r-layout-menu>
     <r-drawer></r-drawer>
     <r-modal></r-modal>

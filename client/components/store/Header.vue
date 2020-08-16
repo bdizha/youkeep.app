@@ -6,7 +6,7 @@
           <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
-            <div class="r-menu-item r-menu-item__logo">
+            <div class="r-nav-item r-nav-item__logo">
               <r-logo></r-logo>
             </div>
           </a-col>
@@ -14,20 +14,20 @@
                  :md="{ span: 18 }"
                  :lg="{ span: 18 }">
             <div class="r-layout-menu">
-              <div v-if="hasStore" class="r-menu-item r-menu-item__logo">
+              <div v-if="hasStore" class="r-nav-item">
                 <a-button block
                           class="r-btn-bordered-grey"
                           type="primary">
                   {{ store.name }}
                 </a-button>
               </div>
-              <div class="r-hide-sm r-menu-item r-menu-item__search">
+              <div class="r-hide-sm r-nav-item r-nav-item__search">
                 <r-search></r-search>
               </div>
-              <div class="r-hide-sm r-menu-item">
-                <r-menu></r-menu>
+              <div class="r-hide-sm r-nav-item">
+                <r-nav></r-nav>
               </div>
-              <div class="r-menu-item">
+              <div class="r-nav-item">
                 <r-cart-count></r-cart-count>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default {
     processes: 'base/processes'
   }),
   created() {
-    this.payload();
+    this.onStores();
   },
   methods: {
     payload() {
@@ -66,6 +66,14 @@ export default {
       drawer.current = 'store-right';
       drawer.isVisible = true;
       this.$store.dispatch('base/onDrawer', drawer);
+    },
+    async onStores() {
+      let payload = {
+        category_id: null,
+        limit: 24
+      };
+
+      await this.$store.dispatch('base/onStores', payload);
     }
   },
   watch: {},

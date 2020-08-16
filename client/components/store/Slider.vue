@@ -44,12 +44,12 @@
         </nuxt-link>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-            <a-icon type="left"/>
+            <a-icon type="caret-left"/>
           </div>
         </template>
         <template #nextArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-            <a-icon type="right"/>
+            <a-icon type="caret-right"/>
           </div>
         </template>
       </VueSlickCarousel>

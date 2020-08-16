@@ -25,11 +25,11 @@
                                 <div slot="prevArrow"
                                      slot-scope="props"
                                      class="r-slick-arrow r-slick-arrow-prev">
-                                    <a-icon type="left"/>
+                                    <a-icon type="caret-left"/>
                                 </div>
                                 <div slot="nextArrow" slot-scope="props"
                                      class="r-slick-arrow r-slick-arrow-next">
-                                    <a-icon type="right"/>
+                                    <a-icon type="caret-right"/>
                                 </div>
                                 <r-category-bundle
                                         v-for="(category, index) in flush.categories"

@@ -1,7 +1,7 @@
 <template>
     <a-row type="flex" :justify="justify" align="middle">
-        <a-col class="r-padding-horizontal-24" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: span}">
-            <a-button @click="onStoreTray" class="r-btn-bordered-secondary"
+        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: span}">
+            <a-button @click="onModal" class="r-btn-bordered-secondary"
                       block
                       type="secondary"
                       :size="size">
@@ -34,7 +34,7 @@
         methods: {
             payload() {
             },
-            onStoreTray() {
+            onModal() {
                 let modal = {};
                 modal.isVisible = !this.hasStoreTray;
                 modal.current = 'store';

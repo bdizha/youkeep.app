@@ -6,15 +6,15 @@
     <div style="margin-right: 45px;" slot="title">
       <a-row type="flex" justify="start" align="middle">
         <a-col @click="onClose" :xs="{span: 6}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 6}">
-          <r-menu-item v-if="drawer.current == 'cart'" class="r-menu-item">
+          <r-nav-item v-if="drawer.current == 'cart'" class="r-nav-item">
             <r-cart-count></r-cart-count>
-          </r-menu-item>
-          <r-menu-item v-if="drawer.current != 'cart'" class="r-menu-item">
+          </r-nav-item>
+          <r-nav-item v-if="drawer.current != 'cart'" class="r-nav-item">
             <div class="r-logo">
               <img :src="'/assets/icon.svg'"
                    alt="Kshopit - It's Shopping Time!"/>
             </div>
-          </r-menu-item>
+          </r-nav-item>
         </a-col>
         <a-col class="r-text-right r-padding-horizontal-24"
                :xs="{span: 18}"
@@ -30,8 +30,8 @@
                        v-bind:key="'category'" class="fade-item"></r-category-drawer>
     <r-cart-drawer v-if="isCurrent('cart')"
                    v-bind:key="'category'" class="fade-item"></r-cart-drawer>
-    <r-store-drawer-menu v-if="isCurrent('store-menu')"
-                         v-bind:key="'store'" class="fade-item"></r-store-drawer-menu>
+    <r-store-drawer v-if="isCurrent('store-menu')"
+                         v-bind:key="'store'" class="fade-item"></r-store-drawer>
     <r-account-drawer v-if="isCurrent('account')"
                       v-bind:key="'category'" class="fade-item"></r-account-drawer>
     <r-drawer-menu v-if="isCurrent('menu')"
