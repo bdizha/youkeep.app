@@ -4944,15 +4944,27 @@ h4.r-heading-light {
         font-weight: 600;
         font-size: 18px;
         display: block;
-        margin-bottom: 12px;
+        margin-bottom: 0;
         line-height: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-top: 12px;
+        height: 42px;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 
     .r-store-slogan {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 16px;
-        line-height: 18px;
+        line-height: 24px;
         color: #6c6c6c;
+        display: block;
+        overflow: hidden;
+        height: 24px;
+        text-overflow: ellipsis;
     }
 
     .ant-avatar-circle {

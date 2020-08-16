@@ -6,7 +6,6 @@
           <r-avatar shape="circle" :size="75"
                     :src="store.photo_url"
                     src-placeholder="/assets/icon_default.png"/>
-          <h4 class="r-heading">{{ store.name }}</h4>
           <div class="r-store-text">
             {{ store.name }}
           </div>
