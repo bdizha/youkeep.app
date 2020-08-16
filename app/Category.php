@@ -210,7 +210,9 @@ class Category extends Model
      */
     public function categories()
     {
-        return $this->hasMany('App\Category', 'category_id', 'id')->take(12)->has('products', '>=', 1);
+        return $this->hasMany('App\Category', 'category_id', 'id')
+            ->where('has_products', true)
+            ->take(12);
     }
 
     /**
