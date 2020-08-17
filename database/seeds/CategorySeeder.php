@@ -2,8 +2,9 @@
 
 use Illuminate\Database\Seeder;
 use App\Category;
+use App\Store;
 
-class categorieseeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +13,9 @@ class categorieseeder extends Seeder
      */
     public function run()
     {
+        $this->updateCategories();
+
+        die("updateCategories >>> done");
         $this->categories = [
             [
                 'name' => "It's shopping time!"
@@ -23,6 +27,7 @@ class categorieseeder extends Seeder
                 'name' => "New stores around you"
             ],
         ];
+
         foreach ($this->categories as $category) {
             $this->setCategory($category);
         }
@@ -38,11 +43,51 @@ class categorieseeder extends Seeder
         ];
 
         $values = [
-            "level" => 0
+            "level" => 0,
+            "type" => 1,
+            "description" => 'Not set',
+            "order" => 1,
         ];
 
-        $category = \App\Category::updateOrCreate($attributes, $values);
+        $category = Category::updateOrCreate($attributes, $values);
 
         echo "Updated category :: " . $category['name'] . "\n";
+    }
+
+    /**
+     */
+    private function updateCategories()
+    {
+        $categories = Category::get();
+
+        foreach ($categories as $category) {
+            $name = \Illuminate\Support\Str::slug($category->name, ' ');
+            $name = ucwords(strtolower($name));
+
+            dd($category->stores);
+
+            $category->name = $name;
+            $category->save();
+
+            echo "Updated category :: " . $category['name'] . "\n";
+
+            if ($category->type == 1) {
+                $stores = Store::inRandomOrder()->take(12)->get();
+
+                foreach ($stores as $store) {
+                    $attributes = [
+                        'category_id' => $category->id,
+                        'store_id' => $store->id
+                    ];
+
+                    $values = [
+                        'category_id' => $category->id,
+                        'store_id' => $store->id
+                    ];
+
+                    \App\StoreCategory::updateOrCreate($attributes, $values);
+                }
+            }
+        }
     }
 }

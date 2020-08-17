@@ -14,6 +14,11 @@ class Category extends Model
 {
     use Sluggable;
 
+    public static $types = [
+        1 => 'Store',
+        2 => 'Product'
+    ];
+
     protected $products = [];
 
     /**
@@ -212,6 +217,15 @@ class Category extends Model
     {
         return $this->hasMany('App\Category', 'category_id', 'id')
             ->where('has_products', true)
+            ->take(12);
+    }
+
+    /**
+     * Get the stores
+     */
+    public function stores()
+    {
+        return $this->belongsToMany('App\Store', 'store_categories', 'category_id', 'store_id')
             ->take(12);
     }
 

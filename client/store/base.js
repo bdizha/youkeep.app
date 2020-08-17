@@ -30,11 +30,6 @@ const state = () => ({
   hasDrawer: false,
   hasModal: false,
   hasStoreTray: false,
-  flush: {
-    category: {},
-    categories: [],
-    hasCategories: true,
-  },
   products: [],
   testimonials: [],
   filters: {
@@ -86,7 +81,6 @@ const getters = {
   category: state => state.category,
   categories: state => state.categories,
   hasCategories: state => state.categories.length > 0,
-  flush: state => state.flush,
   drawer: state => state.drawer,
   hasDrawer: state => state.hasDrawer,
   hasOverlay: state => state.hasOverlay,
@@ -137,16 +131,6 @@ const mutations = {
   },
   setCategories(state, categories) {
     state.categories = categories;
-    state.hasCategories = categories.length > 0;
-  },
-  setFlushCategory(state, category) {
-    state.flush.category = category;
-  },
-  setFlushCategories(state, categories) {
-    state.flush.categories = categories;
-  },
-  setFlushProducts(state, products) {
-    state.flush.products = products;
   },
   setDrawer(state, drawer) {
     state.drawer = drawer;
@@ -226,53 +210,48 @@ const actions = {
   onHasShop({dispatch, commit}, payload) {
     commit('setHasShop', payload)
   },
+  async onCategory({dispatch, commit, state}, toRoute) {
+    dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
+    dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
 
-  async onCategories({dispatch, commit, state}, payload) {
+    console.log('toRoute: ', toRoute);
+    let params = {
+      with: ['categories', 'stores']
+    };
+    dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
-    dispatch('onProcess', {key: 'isCategories', value: true});
+    await axios.post(toRoute, params).then(({data}) => {
+      let category = data.category;
+      commit('setCategory', category);
 
-    await axios.post('/categories', payload).then(({data}) => {
-      let categories = data.categories;
+      console.log('setCategory data >>>>> ', category);
+
+      let categories = category.categories;
+
+      console.log('onCategory categories data >>>>> ', categories);
+
       commit('setCategories', categories);
+      dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
 
-      dispatch('onProcess', {key: 'isCategories', value: false});
+      // set the store object
+      // force the store to change
+      commit('setStore', category.store);
     });
   },
-  async onFlushCategory({dispatch, commit}, payload) {
-    try {
-      commit('setProcess', {key: 'isRunning', value: true});
-      const {data} = await axios.post('/category', payload);
-      commit('setFlushCategory', data.category);
-
-      commit('setProcess', {key: 'isRunning', value: false});
-      // console.log('response: onFlushCategory: ', data.category);
-
-    } catch (e) {
-      commit('setErrors', e)
-    }
-  },
-  async onFlushCategories({dispatch, commit}, payload) {
+  async onCategories({dispatch, commit}, payload) {
     try {
       commit('setProcess', {key: 'isRunning', value: true});
       const {data} = await axios.post('/categories', payload);
-      commit('setFlushCategories', data.categories);
+      commit('setCategories', data.categories);
 
       commit('setProcess', {key: 'isRunning', value: false});
-      // console.log('response: onFlushCategories: ', data.categories);
+      // console.log('response: onCategories: ', data.categories);
 
       // dispatch('shop/onImages', 300);
 
     } catch (e) {
       commit('setErrors', e)
     }
-  },
-  async onFlushProducts({dispatch, commit}, payload) {
-    commit('setProcess', {key: 'isRunning', value: true});
-    await axios.post('/products', payload).then(({data}) => {
-      let products = data.products;
-
-      commit('setFlushProducts', products);
-    });
   },
   async onStores({dispatch, commit}, payload) {
     commit('setProcess', {key: 'isTray', value: true});

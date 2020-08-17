@@ -1,5 +1,5 @@
 <template>
-  <a-drawer
+  <a-drawer :class="'r-drawer-' + drawer.current"
     :placement="drawer.placement"
     @close="onClose"
     :visible="drawer.isVisible">
