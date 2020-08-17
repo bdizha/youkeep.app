@@ -13,24 +13,31 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $this->updateCategories();
-
-        die("updateCategories >>> done");
         $this->categories = [
             [
                 'name' => "It's shopping time!"
             ],
             [
+                'name' => "You might also like"
+            ],
+            [
+                'name' => "What's popular for you"
+            ],
+            [
                 'name' => "Recommended for you"
             ],
             [
-                'name' => "New stores around you"
+                'name' => "New stores for you"
             ],
         ];
 
         foreach ($this->categories as $category) {
             $this->setCategory($category);
         }
+
+        $this->updateCategories();
+
+        die("updateCategories >>> done");
     }
 
     /**
@@ -44,13 +51,13 @@ class CategorySeeder extends Seeder
 
         $values = [
             "level" => 0,
+            "store_id" => 0,
             "type" => 1,
             "description" => 'Not set',
             "order" => 1,
         ];
 
         $category = Category::updateOrCreate($attributes, $values);
-
         echo "Updated category :: " . $category['name'] . "\n";
     }
 
@@ -58,13 +65,13 @@ class CategorySeeder extends Seeder
      */
     private function updateCategories()
     {
+        // randomly assign stores to categories
+
         $categories = Category::get();
 
         foreach ($categories as $category) {
             $name = \Illuminate\Support\Str::slug($category->name, ' ');
-            $name = ucwords(strtolower($name));
-
-            dd($category->stores);
+            $name = ucwords($name);
 
             $category->name = $name;
             $category->save();
