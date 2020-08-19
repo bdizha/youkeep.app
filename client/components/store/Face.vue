@@ -1,7 +1,7 @@
 <template>
   <a-row type="flex" justify="start" :gutter="0">
     <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: span }">
-      <a-card hoverable
+      <a-card class="r-store-card" hoverable
               :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}">
         <r-store-photo slot="cover" :store="store"></r-store-photo>
         <a-card-meta>

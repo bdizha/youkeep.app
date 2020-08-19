@@ -5,9 +5,18 @@
         <a-row type="flex" justify="start">
           <a-col class="gutter-row r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                  :lg="{ span: 24 }">
-            <h3 class="r-heading">
-              Catalog
-            </h3>
+            <a-row :gutter="[24,24]" type="flex" justify="start">
+              <a-col class="gutter-row" :xs="{ span: 18 }" :sm="{ span: 18 }" :md="{ span: 12 }"
+                     :lg="{ span: 12 }">
+                <h4 class="r-heading-light r-text-uppercase">
+                  Catalog
+                </h4>
+              </a-col>
+              <a-col class="gutter-row" :xs="{ span: 18 }" :sm="{ span: 18 }" :md="{ span: 12 }"
+                     :lg="{ span: 12 }">
+                <r-category-shop-by justify="end"></r-category-shop-by>
+              </a-col>
+            </a-row>
           </a-col>
         </a-row>
         <a-row type="flex" justify="start">

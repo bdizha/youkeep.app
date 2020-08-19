@@ -5,8 +5,8 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                :lg="{span: 8}">
           <a-card hoverable>
-            <div slot="cover" class="r-icon r-icon-primary">
-              <a-icon type="shop"/>
+            <div slot="cover" class="r-card-cover-secondary">
+              <a-icon class="r-icon r-icon-primary" type="shop"/>
             </div>
             <a-card-meta>
               <template slot="description">
@@ -14,7 +14,8 @@
                   Find the stores that you want
                 </h4>
                 <p class="r-text-normal">
-                  Kshopit helps customers discover stores, purchase products, and more. Whatever your business sells, we help you grow.
+                  Kshopit helps customers discover stores, purchase products, and more. Whatever your business sells, we
+                  help you grow.
                 </p>
               </template>
             </a-card-meta>
@@ -23,8 +24,8 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                :lg="{span: 8}">
           <a-card hoverable>
-            <div slot="cover" class="r-icon r-icon-primary">
-              <a-icon type="shopping"/>
+            <div slot="cover" class="r-card-cover-secondary">
+              <a-icon class="r-icon r-icon-primary" type="shopping"/>
             </div>
             <a-card-meta>
               <template slot="description">
@@ -32,7 +33,8 @@
                   Effortless shopping anywhere
                 </h4>
                 <p class="r-text-normal">
-                  We're changing how shopping is experienced. Get new products served to you based on your liking and shopping preferences.
+                  We're changing how shopping is experienced. Get new products served to you based on your liking and
+                  shopping preferences.
                 </p>
               </template>
             </a-card-meta>
@@ -41,8 +43,8 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                :lg="{span: 8}">
           <a-card hoverable>
-            <div slot="cover" class="r-icon r-icon-primary">
-              <a-icon type="clock-circle"/>
+            <div slot="cover" class="r-card-cover-secondary">
+              <a-icon class="r-icon r-icon-primary" type="clock-circle"/>
             </div>
             <a-card-meta>
               <template slot="description">
@@ -50,7 +52,8 @@
                   Instant checkout process
                 </h4>
                 <p class="r-text-normal">
-                  Easily checkout with a one-click option and complete your order fast. Make sure you get the best shopping experience anytime.
+                  Easily checkout with a one-click option and complete your order fast. Make sure you get the best
+                  shopping experience anytime.
                 </p>
               </template>
             </a-card-meta>

@@ -3,6 +3,7 @@
     <style>
       .cls-1, .cls-11 {
         fill: #FFEFEF;
+        opacity: 0.75;
       }
 
       .cls-2 {
@@ -111,7 +112,7 @@
       <stop offset="1" stop-color="#91624c"/>
     </linearGradient>
     <clipPath id="clip-path">
-      <rect id="Rectangle_504" data-name="Rectangle 504" class="cls-1" width="157.788" height="144.878" transform="translate(0 0)"/>
+      <rect id="Rectangle_504" data-name="Rectangle 504" fill="none" width="157.788" height="144.878" transform="translate(0 0)"/>
     </clipPath>
     <clipPath id="clip-Step_3">
       <rect width="1451" height="1451"/>

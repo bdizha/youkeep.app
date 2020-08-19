@@ -3,6 +3,7 @@
     <a-col class="gutter-row r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <VueSlickCarousel v-if="hasCategories" v-bind="settings">
         <nuxt-link class="r-slider-item r-text-view-more"
+                   :class="'r-slider-item-' + size"
                    v-for="(category, index) in categories"
                    :key="category.id"
                    :to="category.route">
@@ -42,9 +43,10 @@ export default {
     return {
       settings: {
         slidesToScroll: 1,
+        // "slidesToShow": this.columns,
         infinite: true,
         dots: false,
-        // variableWidth: true,
+        variableWidth: true,
         responsive: [
           {
             "breakpoint": 1024,

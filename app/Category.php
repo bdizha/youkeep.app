@@ -97,7 +97,7 @@ class Category extends Model
         })
             ->where('is_active', true)
             ->orderBy('created_at', 'desc')
-            ->take(12)
+            ->take(3)
             ->get();
 
         return $this->products;
@@ -217,7 +217,7 @@ class Category extends Model
     {
         return $this->hasMany('App\Category', 'category_id', 'id')
             ->where('has_products', true)
-            ->take(12);
+            ->take(3);
     }
 
     /**
@@ -226,7 +226,7 @@ class Category extends Model
     public function stores()
     {
         return $this->belongsToMany('App\Store', 'store_categories', 'category_id', 'store_id')
-            ->take(12);
+            ->take(3);
     }
 
     /**

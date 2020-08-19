@@ -2,6 +2,7 @@
   <a-row type="flex" justify="center" align="middle">
     <a-col class="gutter-row" :span="24">
       <r-store-slider></r-store-slider>
+      <r-store-categories></r-store-categories>
       <a-empty v-show="!hasStores"
                image="/assets/icon_grey.svg"
                description="This store is coming soon. Please try other available stores."/>
@@ -17,11 +18,12 @@ export default {
   props: {},
   async asyncData({store}) {
     let params = {
-      category_id: null,
-      limit: 24
+      type: 1,
+      limit: 3,
+      with: ['photos', 'breadcrumbs', 'stores'],
     };
 
-    await store.dispatch('base/onCategory', params);
+    await store.dispatch('base/onCategories', params);
   },
   data() {
     return {}

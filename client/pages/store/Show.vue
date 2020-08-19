@@ -3,8 +3,8 @@
     <a-col class="gutter-row" :span="24">
       <r-category-arrows :size="75"></r-category-arrows>
       <r-category-slider></r-category-slider>
-      <r-category-list :limit="3"></r-category-list>
-      <r-category-shapes></r-category-shapes>
+      <r-category-list :limit="1"></r-category-list>
+      <r-category-arrows :size="36"></r-category-arrows>
       <a-empty v-show="!hasCategories"
                image="/assets/icon_grey.svg"
                description="This store is coming soon. Please try other available stores."/>
@@ -25,7 +25,7 @@ export default {
     let payload = {
       store_slug: params.slug,
       level: 1,
-      limit: 12,
+      limit: 2,
       with: ['breadcrumbs', 'photos', 'products']
     };
     await store.dispatch('shop/onCategories', payload);

@@ -3,6 +3,7 @@
     <style>
       .cls-1, .cls-4 {
         fill: #FFEFEF;
+        opacity: 0.75;
       }
 
       .cls-1, .cls-2 {

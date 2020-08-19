@@ -21,10 +21,10 @@
           </nuxt-link>
         </a-col>
       </a-row>
-      <a-row class="r-steps" :gutter="[48,24]" type="flex" justify="center" align="middle">
+      <a-row :gutter="[48,24]" type="flex" justify="center" align="middle">
         <a-col class="gutter-row" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-          <a-steps class="r-animate" v-model="currentStep" direction="vertical" :current="currentStep">
+               :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+          <a-steps v-model="currentStep" direction="horizontal" :current="currentStep">
             <a-step v-for="(step, index) in steps"
                     :key="index">
               <template slot="title">
@@ -34,7 +34,7 @@
                 <div class="r-step-caption">
                   {{ step.description }}
                 </div>
-                <div v-show="index === currentStep" class="r-animate r-hide-lg r-step-avatar">
+                <div class="r-animate r-step-avatar">
                   <r-avatar
                             :key="index" shape="square"
                             :size="210"
@@ -44,15 +44,6 @@
               </template>
             </a-step>
           </a-steps>
-        </a-col>
-        <a-col class="r-hide-sm gutter-row r-pv-48" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-          <r-avatar v-for="(step, index) in [1,2,3,4]"
-                    v-show="index === currentStep"
-                    :key="index" shape="square"
-                    :size="380"
-                    :src="'/assets/Step_' + step + '.svg?v=1'"
-                    src-placeholder="/assets/icon_default.png"/>
         </a-col>
       </a-row>
     </a-col>
@@ -71,21 +62,20 @@ export default {
       currentStep: 0,
       steps: [
         {
-          title: 'You order',
-          description: 'Shop better at your favorite stores from everywhere, anytime.'
+          title: 'You order.',
+          description: 'Shop better at your favorite stores around the world, anytime.'
         },
         {
-          title: 'We shop',
-          description: 'It\'s shopping time! We handle the rest of your shopping.'
+          title: 'We shop.',
+          description: 'It\'s shopping time! We handle all your shopping experience and more.'
         },
         {
-          title: 'We deliver',
-          description: 'Get your shopping in as little as\n' +
-            '                                an hour, or when you want them.'
+          title: 'We deliver.',
+          description: 'Get your shopping items delivered to your doorstep by our shoppers. '
         },
         {
-          title: 'You enjoy',
-          description: 'Sit back and wait for your delivery.'
+          title: 'You enjoy.',
+          description: 'Checkout fast with Kpaise. Sit back and wait for your delivery to arrive.'
         },
       ]
     };
