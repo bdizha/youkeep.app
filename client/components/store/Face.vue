@@ -1,34 +1,23 @@
 <template>
-  <a-row type="flex" justify="start" :gutter="0">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: span }">
-      <a-card class="r-store-card" hoverable
-              :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}">
-        <r-store-photo slot="cover" :store="store"></r-store-photo>
-        <a-card-meta>
-          <template slot="description">
-            <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
-              <a-col class="gutter-row" :xs="{ span: 24 }"
-                     :sm="{ span: 24 }" :lg="{ span: 24 }">
-                <a-row class="gutter-row">
-                  <a-col class="gutter-row" :xs="{ span: 24 }"
-                         :sm="{ span: 24 }" :lg="{ span: 24 }">
-                    <a-button block
-                              class="r-btn-bordered-grey"
-                              type="primary">
-                      {{ store.name }}
-                    </a-button>
-                  </a-col>
-                  <a-col class="gutter-row" :xs="{ span: 24 }"
-                         :sm="{ span: 24 }" :lg="{ span: 24 }">
-                  </a-col>
-                </a-row>
-              </a-col>
-            </a-row>
-          </template>
-        </a-card-meta>
-      </a-card>
-    </a-col>
-  </a-row>
+  <a-card class="r-store-card"
+          :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}"
+          hoverable>
+    <r-store-photo slot="cover" :store="store"></r-store-photo>
+    <a-card-meta>
+      <template slot="title">
+        <a-button block
+                  class="r-btn-bordered-grey"
+                  type="primary">
+          <span class="r-slider-item-title">
+            {{ store.name }}
+          </span>
+        </a-button>
+        <div class="r-slider-item-tag">
+          {{ store.description }}
+        </div>
+      </template>
+    </a-card-meta>
+  </a-card>
 </template>
 <script>
 import {mapGetters} from "vuex";
@@ -43,9 +32,7 @@ export default {
   data() {
     return {}
   },
-  computed: mapGetters({
-    store: 'shop/store'
-  }),
+  computed: mapGetters({}),
   mounted() {
   },
   methods: {

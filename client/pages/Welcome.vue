@@ -3,7 +3,7 @@
     <a-col class="gutter-row" :span="24">
       <a-row type="flex" justify="center">
         <a-col :xs="{ span: 24 }" :lg="{ span: 24 }">
-          <a-row class="r-bg-primary-light" type="flex" justify="start">
+          <a-row class="r-bg-secondary-light" type="flex" justify="start">
             <a-col :xs="{ span: 24 }"
                    :md="{ span: 12 }"
                    :lg="{ span: 12 }">
@@ -62,11 +62,11 @@ export default {
   async asyncData({store, params, query}) {
     let payload = {
       category_id: 1,
-      limit: 2,
+      limit: 6,
       with: ['photos', 'breadcrumbs', 'products']
     };
 
-    // await store.dispatch('shop/onCategories', payload);
+    await store.dispatch('shop/onCategories', payload);
   },
   data() {
     return {

@@ -1,46 +1,12 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
     <a-col class="r-store-slider gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="start">
-        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
-               :lg="{ span: 20 }">
-          <h3 class="r-heading">
-            {{ title }}
-          </h3>
-        </a-col>
-        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
-               :lg="{ span: 4 }">
-          <r-store-shop-now justify="end"></r-store-shop-now>
-        </a-col>
-      </a-row>
-      <VueSlickCarousel v-if="hasStores" v-bind="settings">
+      <VueSlickCarousel v-if="category.stores != null && category.stores.length > 0" v-bind="settings">
         <nuxt-link class="r-text-view-more"
-                   v-for="(store, index) in stores.data"
+                   v-for="(store, index) in category.stores"
                    :key="store.id"
                    :to="store.route">
-          <a-card hoverable class="r-store-slider-item"
-                  :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}">
-            <r-avatar slot="cover"
-                      shape="circle"
-                      :size="120"
-                      :src="store.photo_url">
-              <div class="r-store-frame"></div>
-            </r-avatar>
-            <a-card-meta>
-              <template slot="title">
-                <div class="r-store-actions">
-                  <a-button block
-                            class="r-btn-bordered-grey"
-                            type="primary">
-                    {{ store.name }}
-                  </a-button>
-                </div>
-                <div class="r-slider-item-tag">
-                  {{ store.description }}
-                </div>
-              </template>
-            </a-card-meta>
-          </a-card>
+          <r-store-face :store="store"></r-store-face>
         </nuxt-link>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
@@ -63,6 +29,7 @@ export default {
   name: 'r-store-slider',
   props: {
     columns: {type: Number, required: false, default: 6},
+    category: {type: Object, required: false, default: {}},
     title: {type: String, required: false, default: null},
   },
   data() {
@@ -104,31 +71,9 @@ export default {
       }
     };
   },
-  computed: mapGetters({
-    stores: 'base/stores',
-    hasStores: 'base/hasStores',
-  }),
+  computed: mapGetters({}),
   created() {
   },
-  methods: {
-    onStoreTray(event) {
-      event.preventDefault();
-
-      let modal = {};
-      modal.isVisible = true;
-      modal.isClosable = true;
-      modal.current = 'store';
-
-      this.$store.dispatch('base/onModal', modal);
-    },
-    onStore(store) {
-      this.$store.dispatch('shop/onStore', store.route);
-    },
-  },
-  watch: {
-    openKeys(val) {
-      console.log('openKeys', val);
-    },
-  },
+  methods: {}
 };
 </script>

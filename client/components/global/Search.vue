@@ -1,12 +1,12 @@
 <template>
   <div class="r-search-wrapper" style="width: 100%">
     <a-auto-complete
-        class="r-search"
-        size="default"
-        style="width: 100%"
-        :placeholder="'Search ' + store.name + ' ...'"
-        option-label-prop="title"
-        @search="handleSearch">
+      class="r-search"
+      size="default"
+      style="width: 100%"
+      :placeholder="placeholder"
+      option-label-prop="title"
+      @search="handleSearch">
       <template slot="dataSource">
         <a-select-option v-for="item in search.data"
                          :key="item.route"
@@ -27,11 +27,11 @@
       </template>
       <a-input>
         <a-button
-            slot="suffix"
-            style="margin-right: -12px"
-            class="search-btn"
-            size="default"
-            type="primary">
+          slot="suffix"
+          style="margin-right: -12px"
+          class="search-btn"
+          size="default"
+          type="primary">
           <a-icon type="search"/>
         </a-button>
       </a-input>
@@ -46,12 +46,18 @@ export default {
   data() {
     return {};
   },
-  computed: mapGetters({
-    store: 'shop/store',
-    search: 'shop/search',
-    hasSearched: 'shop/hasSearched',
-    processes: 'base/processes'
-  }),
+  computed: {
+    placeholder() {
+      return 'Search ' + (this.hasStore ? store.name : '') + '...';
+    },
+    ...mapGetters({
+      store: 'shop/store',
+      search: 'shop/search',
+      hasStore: 'shop/hasStore',
+      hasSearched: 'shop/hasSearched',
+      processes: 'base/processes'
+    })
+  },
   methods: {
     handleSearch(value) {
       this.dataSource = value ? this.onSearch(value) : [];

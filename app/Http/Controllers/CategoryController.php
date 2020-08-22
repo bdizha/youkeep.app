@@ -34,16 +34,27 @@ class CategoryController extends Controller
 
         $this->with = $request->get('with', []);
 
+        $type = $request->get('type', 2);
+        $slug = $request->get('slug', null);
         $categoryId = $request->get('category_id', null);
         $storeId = $request->get('store_id', null);
         $storeSlug = $request->get('store_slug', null);
 
         $query = Category::limit($this->limit)
+            ->where('type', $type)
             ->where('store_id', '!=', 1);
 
         if (!is_null($storeId)) {
             $query->where('store_id', $storeId);
-            $store = Store::where('id', $storeId)->first();
+        }
+
+        if (!is_null($slug)) {
+            $category = Category::where('slug', $slug)
+                ->first();
+
+            if (!empty($category->id)) {
+                $categoryId = $category->id;
+            }
         }
 
         if (!is_null($storeSlug)) {
@@ -64,7 +75,9 @@ class CategoryController extends Controller
             $query->with(array_intersect($this->with, $this->relations));
         }
 
-        $query->where('has_products', true);
+        if ($type !== 1) {
+            $query->where('has_products', true);
+        }
 
         if (!empty($this->limit)) {
             $query->limit($this->limit);
@@ -74,7 +87,19 @@ class CategoryController extends Controller
             ->orderBy('created_at', 'DESC')
             ->get()->toArray();
 
-        $response['categories'] = $this->_pruneRelations($this->items);
+        $categories = $this->_pruneRelations($this->items);
+
+        if (!is_null($slug) && $type === 1) {
+            foreach ($categories as $key => $category) {
+                $storeCategory = Category::with('stores')
+                    ->where('id', $category['id'])
+                    ->first();
+
+                $categories[$key]['stores'] = $storeCategory->stores;
+            }
+        }
+
+        $response['categories'] = $categories;
 
         return response()->json($response, 200);
     }

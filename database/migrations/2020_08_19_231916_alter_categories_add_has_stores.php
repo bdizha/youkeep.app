@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AlterCategories extends Migration
+class AlterCategoriesAddHasStores extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AlterCategories extends Migration
     public function up()
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->smallInteger('type')->index()->default(2);
+            $table->smallInteger('has_stores')->index()->default(false);
         });
     }
 
@@ -26,7 +26,7 @@ class AlterCategories extends Migration
     public function down()
     {
         Schema::table('categories', function (Blueprint $table) {
-            //
+            $table->dropColumn('has_stores');
         });
     }
 }

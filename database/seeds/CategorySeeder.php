@@ -6,6 +6,8 @@ use App\Store;
 
 class CategorySeeder extends Seeder
 {
+    protected $storeCategories = [4784, 4788, 4789];
+
     /**
      * Run the database seeds.
      *
@@ -16,6 +18,9 @@ class CategorySeeder extends Seeder
         $this->categories = [
             [
                 'name' => "It's shopping time!"
+            ],
+            [
+                'name' => "Today's Highlights"
             ],
             [
                 'name' => "You might also like"
@@ -29,7 +34,18 @@ class CategorySeeder extends Seeder
             [
                 'name' => "New stores for you"
             ],
+            [
+                'name' => "Browse our picks"
+            ],
+            [
+                'name' => "Coming soon stores"
+            ],
+            [
+                'name' => "We're loving"
+            ],
         ];
+
+        $this->updateCategories();
 
         foreach ($this->categories as $category) {
             $this->setCategory($category);
@@ -45,8 +61,11 @@ class CategorySeeder extends Seeder
      */
     private function setCategory(array $category)
     {
+        $name = \Illuminate\Support\Str::slug($category['name'], ' ');
+        $name = ucwords($name);
+
         $attributes = [
-            'name' => $category['name']
+            'name' => $name
         ];
 
         $values = [
@@ -55,6 +74,7 @@ class CategorySeeder extends Seeder
             "type" => 1,
             "description" => 'Not set',
             "order" => 1,
+            "has_stores" => true,
         ];
 
         $category = Category::updateOrCreate($attributes, $values);
@@ -67,19 +87,34 @@ class CategorySeeder extends Seeder
     {
         // randomly assign stores to categories
 
-        $categories = Category::get();
+        $categories = Category::where('type', 1)
+            ->get();
+
+        $storeIdKey = 0;
 
         foreach ($categories as $category) {
             $name = \Illuminate\Support\Str::slug($category->name, ' ');
             $name = ucwords($name);
 
             $category->name = $name;
-            $category->save();
 
             echo "Updated category :: " . $category['name'] . "\n";
 
             if ($category->type == 1) {
                 $stores = Store::inRandomOrder()->take(12)->get();
+
+                if (!in_array($category->id, $this->storeCategories)) {
+                    // randomise and get this out
+                    $categoryId = $this->storeCategories[$storeIdKey];
+
+                    if ($storeIdKey == count($this->storeCategories) - 1) {
+                        $storeIdKey = 0;
+                    } else {
+                        $storeIdKey++;
+                    }
+
+                    $category->category_id = $categoryId;
+                }
 
                 foreach ($stores as $store) {
                     $attributes = [
@@ -95,6 +130,7 @@ class CategorySeeder extends Seeder
                     \App\StoreCategory::updateOrCreate($attributes, $values);
                 }
             }
+            $category->save();
         }
     }
 }

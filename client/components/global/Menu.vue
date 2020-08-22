@@ -39,18 +39,18 @@ const LINKS = [
   {
     label: 'Explore',
     icon: 'compass',
-    link: '/stores/all',
+    link: '/stores/its-shopping-time',
   },
   {
     label: 'Highlights',
     icon: 'fire',
-    link: '/stores/hot',
+    link: '/stores/todays-highlights',
     modal: null
   },
   {
     label: 'What\'s new',
     icon: 'gift',
-    link: '/stores/new',
+    link: '/stores/new-stores-for-you',
     modal: null
   },
   {

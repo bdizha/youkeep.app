@@ -1,7 +1,6 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
     <a-col class="gutter-row" :span="24">
-      <r-store-slider></r-store-slider>
       <r-store-categories></r-store-categories>
       <a-empty v-show="!hasStores"
                image="/assets/icon_grey.svg"
@@ -16,12 +15,10 @@ export default {
   layout: 'column',
   name: 'r-store',
   props: {},
-  async asyncData({store}) {
-    let params = {
-      type: 1,
-      limit: 3,
-      with: ['photos', 'breadcrumbs', 'stores'],
-    };
+  async asyncData({store, params}) {
+    params.type = 1;
+    params.limit = 3
+    params.with = ['photos', 'breadcrumbs', 'stores', 'categories'];
 
     await store.dispatch('base/onCategories', params);
   },

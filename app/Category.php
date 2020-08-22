@@ -69,9 +69,10 @@ class Category extends Model
      */
     public function getRouteAttribute()
     {
-        $route = '/';
-        if (!empty($this->store)) {
+        if ($this->type !== 1) {
             $route = '/store/' . $this->store->slug . '/category/' . $this->slug;
+        } else {
+            $route = '/stores/' . $this->slug;
         }
 
         return $route;
@@ -97,7 +98,7 @@ class Category extends Model
         })
             ->where('is_active', true)
             ->orderBy('created_at', 'desc')
-            ->take(3)
+            ->take(12)
             ->get();
 
         return $this->products;
@@ -217,7 +218,7 @@ class Category extends Model
     {
         return $this->hasMany('App\Category', 'category_id', 'id')
             ->where('has_products', true)
-            ->take(3);
+            ->take(12);
     }
 
     /**
@@ -226,7 +227,7 @@ class Category extends Model
     public function stores()
     {
         return $this->belongsToMany('App\Store', 'store_categories', 'category_id', 'store_id')
-            ->take(3);
+            ->take(12);
     }
 
     /**
