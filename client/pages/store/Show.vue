@@ -19,16 +19,22 @@ export default {
   components: {},
   props: {},
   async asyncData({store, params, query}) {
-    let route = `/store/${params.slug}`;
-    await store.dispatch('shop/onStore', route);
+    try {
+      let route = `/store/${params.slug}`;
+      await store.dispatch('shop/onStore', route);
 
-    let payload = {
-      store_slug: params.slug,
-      level: 1,
-      limit: 6,
-      with: ['breadcrumbs', 'photos', 'products']
-    };
-    await store.dispatch('shop/onCategories', payload);
+      let payload = {
+        store_slug: params.slug,
+        level: 1,
+        limit: 6,
+        with: ['breadcrumbs', 'photos', 'products']
+      };
+      await store.dispatch('shop/onCategories', payload);
+
+    } catch (e) {
+      console.error('onStore errors');
+      console.log(e);
+    }
   },
   data() {
     return {
