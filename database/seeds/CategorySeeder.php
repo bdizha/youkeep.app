@@ -43,6 +43,15 @@ class CategorySeeder extends Seeder
             [
                 'name' => "We're loving"
             ],
+            [
+                'name' => "It's that time again"
+            ],
+            [
+                'name' => "Summer bells"
+            ],
+            [
+                'name' => "Yay & oooo deals"
+            ],
         ];
 
         $this->updateCategories();

@@ -6,7 +6,7 @@
           <VueSlickCarousel v-bind="settings">
             <r-category-bundle
               v-if="c.id != category.id"
-              v-for="(c, index) in categories"
+              v-for="(c, index) in categories.reverse()"
               :key="index"
               style="display: block; width: 100%;"
               :category="c"></r-category-bundle>
