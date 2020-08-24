@@ -73,7 +73,7 @@ export default {
   computed: mapGetters({
     store: 'shop/store',
     stores: 'base/stores',
-    categories: 'base/categories',
+    categories: 'base/storeCategories',
     hasStores: 'base/hasStores',
     processes: 'base/processes',
     search: 'base/search',
@@ -83,14 +83,15 @@ export default {
   },
   methods: {
     async payload() {
-      await this.fetchStores();
+      await this.fetchStoreCategories();
     },
     async fetchStores() {
       await this.$store.dispatch('base/onStores', this.params);
     },
     async fetchStoreCategories() {
       let params = {
-        store_id: 0
+        type: 1,
+        store_id: 0,
       };
       await this.$store.dispatch('base/onStoreCategories', params);
     },

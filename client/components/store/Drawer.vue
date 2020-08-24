@@ -1,6 +1,6 @@
 <template>
   <r-drawer-template placement="right"
-                     current="store-right">
+                     current="store">
     <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="center" align="middle">
       <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
              :lg="{ span: 24 }">

@@ -35,6 +35,7 @@
         </a-row>
       </a-col>
     </a-row>
+    <r-drawer></r-drawer>
   </a-layout-header>
 </template>
 <script>

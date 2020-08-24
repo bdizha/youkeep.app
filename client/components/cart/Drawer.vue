@@ -26,15 +26,15 @@
         <a-row :gutter="24" type="flex" justify="start" align="middle">
           <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                  :lg="{ span: 12 }">
-            <nuxt-link to="/checkout">
+            <router-link to="/checkout">
               <h3 class="r-heading r-text-white">
                 {{ 'R' + cart.total }}
               </h3>
-            </nuxt-link>
+            </router-link>
           </a-col>
           <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
                  :lg="{ span: 12 }">
-            <nuxt-link to="/checkout">
+            <router-link to="/checkout">
               <a-button block
                         size="small"
                         type="primary"
@@ -42,7 +42,7 @@
                 <a-icon type="shopping-cart"/>
                 Checkout
               </a-button>
-            </nuxt-link>
+            </router-link>
           </a-col>
         </a-row>
       </div>

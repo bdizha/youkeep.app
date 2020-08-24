@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-catalog" type="flex" justify="start">
-    <a-col v-if="category" class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: span }">
+    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: span }">
       <div class="r-store-item-line">
         <a-row type="flex" justify="start">
           <a-col class="gutter-row r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
@@ -43,7 +43,6 @@ export default {
     columns: {type: Number, required: false, default: 6},
     store: {type: Object, required: false},
     span: {type: Number, required: false, default: 24},
-    category: {type: Object, required: true, default: {}},
   },
   data() {
     return {

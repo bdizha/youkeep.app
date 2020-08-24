@@ -4,7 +4,7 @@
       <a-row class="r-product-actions">
         <a-col class="gutter-row r-btn--minus r-text-left" :xs="{ span: 7 }" :sm="{ span: 6 }"
                :lg="{ span: 6 }">
-          <div class="r-btn-icon" @click="minus">
+          <div class="r-btn-icon" @click="onMinus">
             <a-icon class="r-icon-empty" type="minus"/>
           </div>
         </a-col>
@@ -18,7 +18,7 @@
         </a-col>
         <a-col class="gutter-row r-btn--plus r-text-right" :xs="{ span: 7 }" :sm="{ span: 6 }"
                :lg="{ span: 6 }">
-          <div class="r-btn-icon" @click="plus">
+          <div class="r-btn-icon" @click="onPlus">
             <a-icon class="r-icon-empty" type="plus"/>
           </div>
         </a-col>
@@ -27,7 +27,7 @@
     <a-col v-if="false" class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row>
         <a-col class="gutter-row" :span="24">
-          <a-button class="r-btn-secondary" @click="plus" block type="secondary"
+          <a-button class="r-btn-secondary" @click="onPlus" block type="secondary"
                     :size=size>
             <a-icon type="shopping"/>
             Add to cart
@@ -63,62 +63,38 @@ export default {
     payload() {
       this.quantity = this.product.quantity;
     },
-    plus() {
+    async onPlus() {
       // console.log('Before adding', this.quantity);
       this.quantity++;
-      this.product.quantity = this.quantity;
 
-      this.updateItem();
+      await this.onItem();
     },
-    minus() {
-      if (this.quantity != 0) {
+    async onMinus() {
+      if (this.quantity !== 0) {
         this.quantity--;
       }
-      this.product.quantity = this.quantity;
-      this.updateItem();
+      await this.onItem();
     },
-    updateVariant(key) {
+    onVariant(key) {
       this.product.variant = this.product.variants[key - 1];
     },
-    updateItem() {
-      let cart = this.cart;
-      let items = cart.items;
+    async onItem() {
+      let params = {
+        item: this.product,
+        quantity: this.quantity,
+      };
+      const {status} = await this.$store.dispatch('cart/onItem', params);
 
-      let key = this.findKey(this.product);
+      console.log("status >>>>>", status);
 
-      if (key != null) {
-        console.log(this.product);
-
-        if (parseFloat(items[key].quantity) > parseFloat(this.product.quantity)) {
-          this.$message.success('Item removed from your bag');
-        } else {
-          this.$message.success('Item updated in your bag');
-        }
-
-        items[key] = this.product;
-      } else {
-        items.push(this.product);
-        this.$message.success('Item added to your bag');
+      if (status === 1) {
+        // this.$message.success('Item added to your bag');
+      } else if (status === 2) {
+        // this.$message.success('Item updated in your bag');
+      } else if (status === 3) {
+        // this.$message.success('Item removed from your bag');
       }
-
-      cart.items = items;
-      cart.isVisible = false;
-      this.$store.dispatch('cart/onCart', cart);
     },
-    findKey() {
-      let cart = this.cart;
-      let items = cart.items;
-      let $this = this;
-
-      let key = null;
-      items.forEach(function (item, index) {
-        if (item.id == $this.product.id) {
-          key = index;
-        }
-      });
-
-      return key;
-    }
   },
 };
 </script>

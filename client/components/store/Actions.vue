@@ -32,6 +32,13 @@ export default {
   methods: {
     payload() {
     },
+    onDrawer() {
+      let drawer = {};
+      drawer.isVisible = true;
+      drawer.current = 'store';
+
+      this.$store.dispatch('base/onDrawer', drawer);
+    },
   }
 };
 </script>

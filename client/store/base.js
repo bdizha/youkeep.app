@@ -261,6 +261,8 @@ const actions = {
       const {data} = await axios.post('/categories', payload);
       commit('setStoreCategories', data.categories);
 
+      console.log('setStoreCategories', data.categories);
+
       commit('setProcess', {key: 'isRunning', value: false});
 
     } catch (e) {

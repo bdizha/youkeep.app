@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     placeholder() {
-      return 'Search ' + (this.hasStore ? store.name : '') + '...';
+      return 'Search ' + (this.hasStore ? this.store.name : '') + '...';
     },
     ...mapGetters({
       store: 'shop/store',

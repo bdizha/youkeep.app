@@ -15,43 +15,43 @@
       </a-row>
     </template>
     <r-category-modal v-if="isCurrent('category')"
-                      v-bind:key="'category'" class="fade-item"></r-category-modal>
+                      v-bind:key="'category'" class="r-animate"></r-category-modal>
     <r-store-modal v-if="isCurrent('store')"
-                   v-bind:key="'store'" class="fade-item"></r-store-modal>
+                   v-bind:key="'store'" class="r-animate"></r-store-modal>
     <r-secure v-if="isCurrent('secure')"
-              v-bind:key="'secure'" class="fade-item"></r-secure>
+              v-bind:key="'secure'" class="r-animate"></r-secure>
     <r-login v-if="isCurrent('login')"
-             v-bind:key="'login'" class="fade-item"></r-login>
+             v-bind:key="'login'" class="r-animate"></r-login>
     <r-register v-if="isCurrent('register')"
-                v-bind:key="'register'" class="fade-item"></r-register>
+                v-bind:key="'register'" class="r-animate"></r-register>
     <r-password-request v-if="isCurrent('password-request')"
-                        v-bind:key="'password-request'" class="fade-item"></r-password-request>
+                        v-bind:key="'password-request'" class="r-animate"></r-password-request>
     <r-password-reset v-if="isCurrent('password-reset')"
-                      v-bind:key="'password-reset'" class="fade-item"></r-password-reset>
+                      v-bind:key="'password-reset'" class="r-animate"></r-password-reset>
     <r-product-modal v-if="isCurrent('product')"
-                     v-bind:key="'product'" class="fade-item"></r-product-modal>
+                     v-bind:key="'product'" class="r-animate"></r-product-modal>
     <r-product-modal-wishlist v-if="isCurrent('wishlist')"
-                              v-bind:key="'wish'" class="fade-item"></r-product-modal-wishlist>
+                              v-bind:key="'wish'" class="r-animate"></r-product-modal-wishlist>
     <r-product-modal-timeline v-if="isCurrent('timeline')"
-                              v-bind:key="'timelinme'" class="fade-item"></r-product-modal-timeline>
+                              v-bind:key="'timelinme'" class="r-animate"></r-product-modal-timeline>
     <r-delivery-modal v-if="isCurrent('delivery')"
-                      v-bind:key="'delivery'" class="fade-item"></r-delivery-modal>
+                      v-bind:key="'delivery'" class="r-animate"></r-delivery-modal>
     <r-account-modal-profile v-if="isCurrent('account-profile')"
-                             v-bind:key="'account-profile'" class="fade-item"></r-account-modal-profile>
+                             v-bind:key="'account-profile'" class="r-animate"></r-account-modal-profile>
     <r-account-modal-password v-if="isCurrent('account-password')"
-                              v-bind:key="'account-password'" class="fade-item"></r-account-modal-password>
+                              v-bind:key="'account-password'" class="r-animate"></r-account-modal-password>
     <r-account-modal-card v-if="isCurrent('account-card')"
-                          v-bind:key="'account-card'" class="fade-item"></r-account-modal-card>
+                          v-bind:key="'account-card'" class="r-animate"></r-account-modal-card>
     <r-account-modal-address v-if="isCurrent('account-address')"
-                             v-bind:key="'account-address'" class="fade-item"></r-account-modal-address>
+                             v-bind:key="'account-address'" class="r-animate"></r-account-modal-address>
     <r-account-modal-credit v-if="isCurrent('account-credit')"
-                            v-bind:key="'account-credit'" class="fade-item"></r-account-modal-credit>
+                            v-bind:key="'account-credit'" class="r-animate"></r-account-modal-credit>
     <r-account-modal-promo v-if="isCurrent('account-promo')"
-                           v-bind:key="'account-promo'" class="fade-item"></r-account-modal-promo>
+                           v-bind:key="'account-promo'" class="r-animate"></r-account-modal-promo>
     <r-account-modal-products v-if="isCurrent('account-products')"
-                              v-bind:key="'account-products'" class="fade-item"></r-account-modal-products>
+                              v-bind:key="'account-products'" class="r-animate"></r-account-modal-products>
     <r-account-modal-stores v-if="isCurrent('account-stores')"
-                            v-bind:key="'account-stores'" class="fade-item"></r-account-modal-stores>
+                            v-bind:key="'account-stores'" class="r-animate"></r-account-modal-stores>
   </a-modal>
 </template>
 <script>

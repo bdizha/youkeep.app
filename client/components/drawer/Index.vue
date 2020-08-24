@@ -27,15 +27,15 @@
     </div>
     <r-auth-actions v-if="drawer.current !== 'cart'"></r-auth-actions>
     <r-category-drawer v-if="isCurrent('category')"
-                       v-bind:key="'category'" class="fade-item"></r-category-drawer>
+                       v-bind:key="'category'" class="r-animate"></r-category-drawer>
     <r-cart-drawer v-if="isCurrent('cart')"
-                   v-bind:key="'category'" class="fade-item"></r-cart-drawer>
-    <r-store-drawer v-if="isCurrent('store-menu')"
-                         v-bind:key="'store'" class="fade-item"></r-store-drawer>
+                   v-bind:key="'cart'" class="r-animate"></r-cart-drawer>
+    <r-store-drawer v-if="isCurrent('store')"
+                         v-bind:key="'store'" class="r-animate"></r-store-drawer>
     <r-account-drawer v-if="isCurrent('account')"
-                      v-bind:key="'category'" class="fade-item"></r-account-drawer>
+                      v-bind:key="'category'" class="r-animate"></r-account-drawer>
     <r-drawer-menu v-if="isCurrent('menu')"
-                   v-bind:key="'menu'" class="fade-item"></r-drawer-menu>
+                   v-bind:key="'menu'" class="r-animate"></r-drawer-menu>
   </a-drawer>
 </template>
 <script>

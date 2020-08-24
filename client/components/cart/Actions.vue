@@ -45,7 +45,6 @@ export default {
     onModal(current) {
       let modal = {};
       modal.isVisible = true;
-      modal.isClosable = true;
       modal.current = current;
 
       this.$store.dispatch('base/onModal', modal);

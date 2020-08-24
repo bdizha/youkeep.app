@@ -1,23 +1,23 @@
 <template>
-  <r-drawer
+  <r-drawer-template
     placement="left"
     current="category-menu">
     <r-category-menu></r-category-menu>
-  </r-drawer>
+  </r-drawer-template>
 </template>
 <script>
-  export default {
-    name: 'r-category-drawer',
-    data() {
-      return {};
-    },
-    computed: {},
-    mounted() {
-      this.payload();
-    },
-    methods: {
-      payload() {
-      }
-    },
-  }
+export default {
+  name: 'r-category-drawer',
+  data() {
+    return {};
+  },
+  computed: {},
+  mounted() {
+    this.payload();
+  },
+  methods: {
+    payload() {
+    }
+  },
+}
 </script>
