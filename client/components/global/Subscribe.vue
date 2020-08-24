@@ -79,7 +79,7 @@
                                           size="large"
                                           html-type="submit">
                                   Yes, please
-                                  <a-icon type="caret-right"/>
+                                  <a-icon type="right"/>
                                 </a-button>
                               </a-col>
                             </a-row>

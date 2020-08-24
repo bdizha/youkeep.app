@@ -29,7 +29,7 @@
                                 </div>
                                 <div slot="nextArrow" slot-scope="props"
                                      class="r-slick-arrow r-slick-arrow-next">
-                                    <a-icon type="caret-right"/>
+                                    <a-icon type="right"/>
                                 </div>
                                 <r-category-bundle
                                         v-for="(category, index) in flush.categories"

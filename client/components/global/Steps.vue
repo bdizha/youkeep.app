@@ -15,7 +15,7 @@
                       type="secondary"
                       :size="'default'">
               Read more
-              <a-icon type="caret-right"/>
+              <a-icon type="right"/>
             </a-button>
             <a-avatar class="r-hide-lg" shape="square" icon="right"/>
           </nuxt-link>

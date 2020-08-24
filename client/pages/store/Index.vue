@@ -15,12 +15,8 @@ export default {
   layout: 'column',
   name: 'r-store',
   props: {},
-  async asyncData({store, params}) {
-    params.type = 1;
-    params.limit = 3
-    params.with = ['photos', 'breadcrumbs', 'stores', 'categories'];
-
-    await store.dispatch('base/onCategories', params);
+  async asyncData({store, query}) {
+    await store.dispatch('base/onCategory', query);
   },
   data() {
     return {}

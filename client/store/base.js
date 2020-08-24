@@ -7,6 +7,7 @@ const state = () => ({
   stores: {data: []},
   category: {},
   categories: [],
+  storeCategories: [],
   hasStores: false,
   hasShop: false,
   notice: null,
@@ -80,6 +81,7 @@ const getters = {
   hasStores: state => state.stores.data.length > 0,
   category: state => state.category,
   categories: state => state.categories,
+  storeCategories: state => state.storeCategories,
   hasCategories: state => state.categories.length > 0,
   drawer: state => state.drawer,
   hasDrawer: state => state.hasDrawer,
@@ -131,6 +133,9 @@ const mutations = {
   },
   setCategories(state, categories) {
     state.categories = categories;
+  },
+  setStoreCategories(state, storeCategories) {
+    state.storeCategories = storeCategories;
   },
   setDrawer(state, drawer) {
     state.drawer = drawer;
@@ -245,9 +250,18 @@ const actions = {
       commit('setCategories', data.categories);
 
       commit('setProcess', {key: 'isRunning', value: false});
-      // console.log('response: onCategories: ', data.categories);
 
-      // dispatch('shop/onImages', 300);
+    } catch (e) {
+      commit('setErrors', e)
+    }
+  },
+  async onStoreCategories({dispatch, commit}, payload) {
+    try {
+      commit('setProcess', {key: 'isRunning', value: true});
+      const {data} = await axios.post('/categories', payload);
+      commit('setStoreCategories', data.categories);
+
+      commit('setProcess', {key: 'isRunning', value: false});
 
     } catch (e) {
       commit('setErrors', e)

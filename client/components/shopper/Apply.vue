@@ -256,7 +256,7 @@
                         type="primary" html-type="button"
                         class="ant-btn ant-btn-secondary r-btn-black">
                 {{ step == 11 ? 'Submit' : 'Continue' }}
-                <a-icon type="caret-right"/>
+                <a-icon type="right"/>
               </a-button>
             </a-col>
           </a-row>

@@ -24,7 +24,7 @@
                             <a-icon type="caret-left"/>
                         </button>
                         <button data-glide-dir=">">
-                            <a-icon type="caret-right"/>
+                            <a-icon type="right"/>
                         </button>
                     </template>
                 </vue-glide>

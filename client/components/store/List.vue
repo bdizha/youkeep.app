@@ -13,7 +13,7 @@
             @change="onFilter"
             style="min-width: 100%;">
             <a-select-option :value="defaultCategory.id">
-              <a-icon type="appstore"/>
+              <a-icon type="control"/>
               {{ defaultCategory.label }}
             </a-select-option>
             <a-select-option v-for="(item, index) in categories"
@@ -33,7 +33,7 @@
                v-for="(store, index) in stores.data"
                :key="index">
           <nuxt-link @click.native="onStore(store)" :to="store.route"
-                       style="display: block; width: 100%;">
+                     style="display: block; width: 100%;">
             <r-store-item :store="store"></r-store-item>
           </nuxt-link>
         </a-col>
@@ -79,12 +79,20 @@ export default {
     search: 'base/search',
   }),
   created() {
+    this.payload();
   },
   methods: {
-    payload() {
+    async payload() {
+      await this.fetchStores();
     },
     async fetchStores() {
       await this.$store.dispatch('base/onStores', this.params);
+    },
+    async fetchStoreCategories() {
+      let params = {
+        store_id: 0
+      };
+      await this.$store.dispatch('base/onStoreCategories', params);
     },
     onFilter(option) {
       this.params = this.search.params;

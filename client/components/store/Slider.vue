@@ -15,7 +15,7 @@
         </template>
         <template #nextArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-            <a-icon type="caret-right"/>
+            <a-icon type="right"/>
           </div>
         </template>
       </VueSlickCarousel>

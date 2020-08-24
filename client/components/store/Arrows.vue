@@ -32,7 +32,7 @@
           </div>
           <div slot="nextArrow" slot-scope="props"
                class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-            <a-icon type="caret-right"/>
+            <a-icon type="right"/>
           </div>
         </a-carousel>
       </div>
