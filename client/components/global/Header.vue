@@ -2,7 +2,7 @@
   <a-layout-header :class="{'r-switch-primary': isDark}" class="r-header">
     <r-layout-menu v-if="!modal.isVisible && !isRaised && !hasShop">
       <r-nav-item>
-        <a-icon @click="onDrawer('menu')" style="font-size: 18px;" type="menu"/>
+        <a-icon @click="onDrawer('menu')" type="menu"/>
       </r-nav-item>
       <r-nav-item class="__logo">
         <r-logo></r-logo>
@@ -22,7 +22,7 @@
     </r-layout-menu>
     <r-layout-menu v-if="modal.isVisible || isRaised" class="r-layout-menu r-layout-menu-modal">
       <r-nav-item class="__menu">
-        <a-icon v-on:click="onModalClose" style="font-size: 21px;" type="caret-left"/>
+        <a-icon v-on:click="onModalClose" type="caret-left"/>
       </r-nav-item>
       <r-nav-item class="r-nav-item__logo">
         <div v-on:click="onModalClose" class="r-logo">
@@ -65,9 +65,7 @@ export default {
   }),
   created() {
     console.log('How many stores have we got?', this.stores.length);
-
     this.onStores();
-    this.onStoreCategories();
   },
   methods: {
     onModalClose() {
@@ -99,14 +97,6 @@ export default {
     onSearch() {
       let isSearching = !this.isSearching;
       this.$store.dispatch('onSearch', isSearching);
-    },
-    async onStoreCategories() {
-      let payload = {
-        category_id: null,
-        store_id: 0,
-        limit: 24
-      };
-      await this.$store.dispatch('base/onCategories', payload);
     },
     async onStores() {
       let payload = {

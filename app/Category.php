@@ -14,9 +14,12 @@ class Category extends Model
 {
     use Sluggable;
 
+    public const TYPE_STORE = 1;
+    public const TYPE_PRODUCT = 2;
+
     public static $types = [
-        1 => 'Store',
-        2 => 'Product'
+        self::TYPE_STORE => 'Store',
+        self::TYPE_PRODUCT => 'Product'
     ];
 
     protected $products = [];
@@ -51,7 +54,6 @@ class Category extends Model
         'photos',
         'photo',
         'filters',
-        'products',
     ];
 
     /**
@@ -93,13 +95,17 @@ class Category extends Model
      */
     public function getProductsAttribute()
     {
-        $this->products = Product::whereHas('categories', function ($query) {
-            $query->where('category_products.category_id', $this->id);
-        })
-            ->where('is_active', true)
-            ->orderBy('created_at', 'desc')
-            ->take(12)
-            ->get();
+        $this->products = [];
+
+        if ($this->type !== self::TYPE_STORE) {
+            $this->products = Product::whereHas('categories', function ($query) {
+                $query->where('category_products.category_id', $this->id);
+            })
+                ->where('is_active', true)
+                ->orderBy('created_at', 'desc')
+                ->take(12)
+                ->get();
+        }
 
         return $this->products;
     }
@@ -217,7 +223,6 @@ class Category extends Model
     public function categories()
     {
         return $this->hasMany('App\Category', 'category_id', 'id')
-            ->where('has_products', true)
             ->take(12);
     }
 
@@ -227,6 +232,15 @@ class Category extends Model
     public function stores()
     {
         return $this->belongsToMany('App\Store', 'store_categories', 'category_id', 'store_id')
+            ->take(12);
+    }
+
+    /**
+     * Get the stores
+     */
+    public function products()
+    {
+        return $this->belongsToMany('App\Product', 'category_products')
             ->take(12);
     }
 

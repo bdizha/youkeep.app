@@ -215,44 +215,41 @@ const actions = {
   onHasShop({dispatch, commit}, payload) {
     commit('setHasShop', payload)
   },
-  async onCategory({dispatch, commit, state}, toRoute) {
-    dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
-    dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
+  async onCategory({dispatch, commit, state}, params) {
 
-    console.log('toRoute: ', toRoute);
-    let params = {
-      with: ['categories', 'stores']
-    };
-    dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
+    try {
+      dispatch('onProcess', {key: 'isCategory', value: true});
 
-    await axios.post(toRoute, params).then(({data}) => {
-      let category = data.category;
-      commit('setCategory', category);
+      console.log('route: ', route);
+      dispatch('onProcess', {key: 'isFixed', value: true});
 
-      console.log('setCategory data >>>>> ', category);
+      let route = params.route;
 
-      let categories = category.categories;
+      await axios.post(route, params).then(({data}) => {
+        let category = data.category;
+        commit('setCategory', category);
 
-      console.log('onCategory categories data >>>>> ', categories);
+        console.log('setCategory data >>>>> ', category);
 
-      commit('setCategories', categories);
-      dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
-
-      // set the store object
-      // force the store to change
-      commit('setStore', category.store);
-    });
+        dispatch('onProcess', {key: 'isCategory', value: false});
+        dispatch('onProcess', {key: 'isFixed', value: false});
+      });
+    } catch (e) {
+      console.error('on error: ', e);
+    }
   },
   async onCategories({dispatch, commit}, payload) {
     try {
-      commit('setProcess', {key: 'isRunning', value: true});
+      commit('setProcess', {key: 'isCategories', value: true});
       const {data} = await axios.post('/categories', payload);
       commit('setCategories', data.categories);
 
-      commit('setProcess', {key: 'isRunning', value: false});
+      console.log('setCategories data >>>>> ', data);
+
+      commit('setProcess', {key: 'isCategories', value: false});
 
     } catch (e) {
-      commit('setErrors', e)
+      console.error('on error: ', e);
     }
   },
   async onStoreCategories({dispatch, commit}, payload) {
@@ -266,7 +263,7 @@ const actions = {
       commit('setProcess', {key: 'isRunning', value: false});
 
     } catch (e) {
-      commit('setErrors', e)
+      console.error('on error: ', e);
     }
   },
   async onStores({dispatch, commit}, payload) {
@@ -291,22 +288,20 @@ const actions = {
       commit('setProcess', {key: 'isRunning', value: true});
 
       await axios.post('/testimonials', payload).then(({data}) => {
-        // console.log('response: testimonials', data.testimonials);
+        console.log('response: testimonials', data);
 
         commit('setTestimonials', data.testimonials);
         commit('setProcess', {key: 'isRunning', value: false});
       });
 
     } catch (e) {
-      commit('setErrors', e)
+      console.error('on error: ', e);
     }
   },
   onIsFixed({commit}) {
     commit('setProcess', {key: 'isFixed', value: true});
 
-    setTimeout(() => {
-      commit('setProcess', {key: 'isFixed', value: false});
-    }, 900);
+    commit('setProcess', {key: 'isFixed', value: false});
   },
   async onProcess({dispatch, commit, state}, payload) {
     commit('setProcess', payload);

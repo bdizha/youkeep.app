@@ -29,16 +29,18 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $response = [];
+        $category = null;
+
         $this->limit = $request->get('limit', 6);
         $this->level = $request->get('level', null);
 
         $this->with = $request->get('with', []);
 
         $type = $request->get('type', 2);
-        $slug = $request->get('slug', null);
+        $slug = $request->get('category', null);
         $categoryId = $request->get('category_id', null);
         $storeId = $request->get('store_id', null);
-        $storeSlug = $request->get('store_slug', null);
+        $storeSlug = $request->get('store', null);
 
         $query = Category::limit($this->limit)
             ->where('type', $type)
@@ -89,7 +91,7 @@ class CategoryController extends Controller
 
         $categories = $this->_pruneRelations($this->items);
 
-        if (!is_null($slug) && $type === 1) {
+        if ($type === Category::TYPE_STORE) {
             foreach ($categories as $key => $category) {
                 $storeCategory = Category::with('stores')
                     ->where('id', $category['id'])
@@ -100,6 +102,7 @@ class CategoryController extends Controller
         }
 
         $response['categories'] = $categories;
+        $response['category'] = $category;
 
         return response()->json($response, 200);
     }
@@ -111,37 +114,19 @@ class CategoryController extends Controller
      * @param String $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($store, $slug)
+    public function show(Request $request)
     {
-        $this->with = ['breadcrumbs', 'store', 'categories', 'photos'];
+        $response = [];
 
-        $query = Category::where('slug', $slug);
+        $slug = $request->get('category', null);
 
-        $query->with(array_intersect($this->with, $this->relations));
+        $this->with = $request->get('with', []);
 
-        $this->categories = $query
-            ->limit(1)
-            ->get()
-            ->toArray();
+        $response['category'] = Category::with($this->with)
+            ->where('slug', $slug)
+            ->first();
 
-        $this->categories = $this->_pruneRelations($this->categories);
-
-        $this->store = Store::where('slug', $store)->first();
-
-        $this->item = [];
-        if (!empty($this->categories)) {
-            $this->category = $this->categories[0];
-            $this->categoryId = $this->category['id'];
-
-            $this->setProducts();
-            $this->category['products'] = $this->products;
-        }
-
-        return response()->json([
-            'category' => $this->category,
-            'store' => $this->store,
-            'status' => 'success'
-        ], 200);
+        return response()->json($response, 200);
     }
 
     /**
@@ -150,10 +135,9 @@ class CategoryController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function stores(Request $request)
+    public function stores($slug)
     {
         $response = [];
-        $this->limit = $request->get('limit', 24);
 
         $categoryId = $request->get('category_id', null);
 

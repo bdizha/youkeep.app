@@ -97,11 +97,14 @@ class CategorySeeder extends Seeder
         // randomly assign stores to categories
 
         $categories = Category::where('type', 1)
+            ->with('stores')
+            ->with('categories')
             ->get();
 
         $storeIdKey = 0;
 
         foreach ($categories as $category) {
+
             $name = \Illuminate\Support\Str::slug($category->name, ' ');
             $name = ucwords($name);
 
@@ -124,6 +127,9 @@ class CategorySeeder extends Seeder
 
                     $category->category_id = $categoryId;
                 }
+                else{
+                    $category->category_id = null;
+                }
 
                 foreach ($stores as $store) {
                     $attributes = [
@@ -139,6 +145,9 @@ class CategorySeeder extends Seeder
                     \App\StoreCategory::updateOrCreate($attributes, $values);
                 }
             }
+
+            $category->has_stores = $category->stores->count() > 0;
+            $category->has_categories = $category->categories->count() > 0;
             $category->save();
         }
     }

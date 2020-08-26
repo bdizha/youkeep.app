@@ -113,21 +113,21 @@ const mutations = {
 
 // actions
 const actions = {
-  async onCategory({dispatch, commit, state}, toRoute) {
-    // console.log('response: route category', toRoute);
+  async onCategory({dispatch, commit, state}, route) {
+    // console.log('response: route category', route);
 
     try {
       dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
       dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
       dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
 
-      console.log('toRoute: ', toRoute);
+      console.log('route: ', route);
       let params = {
         with: ['categories', 'products']
       };
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
-      await axios.post(toRoute, params).then(({data}) => {
+      await axios.post(route, params).then(({data}) => {
         let category = data.category;
         commit('setCategory', category);
 
@@ -188,16 +188,16 @@ const actions = {
       console.log(e);
     }
   },
-  async onStore({dispatch, commit}, toRoute) {
-    console.log('response: route store', toRoute);
+  async onStore({dispatch, commit}, route) {
+    console.log('response: route store', route);
     try {
       dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
       dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
 
-      // console.log('toRoute: ', toRoute);
+      // console.log('route: ', route);
       let params = {};
 
-      await axios.post(toRoute, params).then(({data}) => {
+      await axios.post(route, params).then(({data}) => {
         let store = data.store;
         commit('setStore', store);
 

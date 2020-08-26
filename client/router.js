@@ -16,14 +16,14 @@ const routes = [
   {path: '/email/verify/:id', name: 'verification.verify', component: page('auth/verification/verify.vue')},
   {path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue')},
   {
-    path: '/store/:store_slug/category/:category_slug',
+    path: '/store/:store/category/:slug',
     name: 'store.category.show',
     component: page('store/Category.vue')
   },
   {
     path: '/store/:slug', name: 'store.show', component: page('store/Show.vue'),
   },
-  {path: '/stores/:slug', name: 'stores', component: page('store/Index.vue')},
+  {path: '/stores/:category', name: 'stores', component: page('store/Index.vue')},
   {path: '/home', name: 'home', component: page('home.vue')},
   {path: '/about-us', name: 'about-us', component: page('static/AboutUs.vue')},
   {path: '/contact-us', name: 'contact-us', component: page('static/ContactUs.vue')},

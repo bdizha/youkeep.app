@@ -67,6 +67,10 @@ export default {
     };
 
     await store.dispatch('shop/onCategories', payload);
+
+    let router = '/stores/';
+
+    // await store.dispatch('base/onCategory', router);
   },
   data() {
     return {

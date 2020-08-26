@@ -10,7 +10,7 @@ export default {
   components: {},
   props: {},
   async asyncData({store, params}) {
-    let route = `/store/${params.store_slug}/category/${params.category_slug}`;
+    let route = `/store/${params.store}/category/${params.category}`;
     await store.dispatch('shop/onCategory', route);
   },
   data() {
