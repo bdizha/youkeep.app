@@ -220,10 +220,10 @@ const actions = {
     try {
       dispatch('onProcess', {key: 'isCategory', value: true});
 
+      let route = params.route;
+
       console.log('route: ', route);
       dispatch('onProcess', {key: 'isFixed', value: true});
-
-      let route = params.route;
 
       await axios.post(route, params).then(({data}) => {
         let category = data.category;

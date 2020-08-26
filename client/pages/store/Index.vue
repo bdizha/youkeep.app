@@ -1,7 +1,10 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
     <a-col class="gutter-row" :span="24">
-      <pre>{{ category }}</pre>
+      <r-store-category :columns="6"
+                        :category="category">
+      </r-store-category>
+      <r-store-categories></r-store-categories>
       <a-empty v-show="!hasStores"
                image="/assets/icon_grey.svg"
                description="This store is coming soon. Please try other available stores."/>
@@ -21,14 +24,8 @@ export default {
 
     let route = `/store/all/category/${params.category}`;
     params.route = route;
-    params.with = ['categories.stores'];
+    params.with = ['stores'];
     await store.dispatch('base/onCategory', params);
-
-    params.type = 1;
-    params.limit = 3
-    params.with = ['photos', 'breadcrumbs', 'stores', 'categories'];
-
-    await store.dispatch('base/onCategories', params);
 
     console.log(route, 'route');
   },

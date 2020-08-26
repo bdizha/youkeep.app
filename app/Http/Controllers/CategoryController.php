@@ -92,13 +92,7 @@ class CategoryController extends Controller
         $categories = $this->_pruneRelations($this->items);
 
         if ($type === Category::TYPE_STORE) {
-            foreach ($categories as $key => $category) {
-                $storeCategory = Category::with('stores')
-                    ->where('id', $category['id'])
-                    ->first();
-
-                $categories[$key]['stores'] = $storeCategory->stores;
-            }
+            $this->_setCategoryStores($categories);
         }
 
         $response['categories'] = $categories;
@@ -117,14 +111,27 @@ class CategoryController extends Controller
     public function show(Request $request)
     {
         $response = [];
-
         $slug = $request->get('category', null);
-
         $this->with = $request->get('with', []);
 
-        $response['category'] = Category::with($this->with)
-            ->where('slug', $slug)
-            ->first();
+        // lies, sex and money
+
+        $category = Category::with($this->with)
+            ->where('slug', $slug)->first();
+
+        $query = Category::with($this->with);
+        $query->where('category_id', $category->id);
+
+        $categories = $query
+            ->take(12)
+            ->get()->toArray();
+
+        if ($category->type === Category::TYPE_STORE) {
+            $this->_setCategoryStores($categories);
+        }
+
+        $category['categories'] = $categories;
+        $response['category'] = $category;
 
         return response()->json($response, 200);
     }
@@ -160,5 +167,20 @@ class CategoryController extends Controller
         $response['stores'] = $this->_pruneRelations($this->items);
 
         return response()->json($response, 200);
+    }
+
+    /**
+     * @param array $categories
+     * @return array
+     */
+    private function _setCategoryStores(array &$categories)
+    {
+        foreach ($categories as $key => $category) {
+            $storeCategory = Category::with('stores')
+                ->where('id', $category['id'])
+                ->first();
+
+            $categories[$key]['stores'] = $storeCategory->stores;
+        }
     }
 }

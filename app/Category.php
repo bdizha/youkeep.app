@@ -252,37 +252,4 @@ class Category extends Model
         return $this->belongsTo('App\Store', 'store_id', 'id');
     }
 
-    /*
-     *
-     * Calculate category children recursively,
-     * only include products conditionally
-     *
-     * @param array $category
-     * @param bool $hasProducts
-     */
-    public function children($parent = null)
-    {
-        return $parent;
-        $query = self::orderBy('created_at', 'DESC');
-
-        if (empty($parent)) {
-            $parent = $this;
-        }
-
-        if ($parent->level > 2) {
-
-        }
-
-        $query->where('category_id', $parent->id);
-
-        $categories = $query->get();
-
-        if (!empty($categories)) {
-            foreach ($categories as $key => $category) {
-                $parent['catalog'][] = $this->children($category);
-            }
-        }
-        return $parent;
-    }
-
 }

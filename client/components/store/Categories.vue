@@ -1,7 +1,7 @@
 <template>
   <a-row type="flex" justify="start" :gutter="0">
     <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <r-store-category v-for="(category, index) in categories"
+      <r-store-category v-for="(category, index) in category.categories"
                         :key="index + 1"
                         :columns="columns"
                         :category="category">
@@ -22,7 +22,7 @@ export default {
     return {}
   },
   computed: mapGetters({
-    categories: 'base/categories'
+    category: 'base/category'
   }),
   mounted() {
     this.payload();
