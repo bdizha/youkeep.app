@@ -8,9 +8,7 @@
             <a-row :gutter="[24,24]" type="flex" justify="start">
               <a-col class="gutter-row" :xs="{ span: 18 }" :sm="{ span: 18 }" :md="{ span: 12 }"
                      :lg="{ span: 12 }">
-                <h4 class="r-heading-light r-text-uppercase">
-                  Catalog
-                </h4>
+                <r-category-shop-by justify="end"></r-category-shop-by>
               </a-col>
               <a-col class="gutter-row" :xs="{ span: 18 }" :sm="{ span: 18 }" :md="{ span: 12 }"
                      :lg="{ span: 12 }">
@@ -19,16 +17,12 @@
             </a-row>
           </a-col>
         </a-row>
-        <a-row type="flex" justify="start">
-          <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                 :lg="{ span: 24 }">
-            <r-category-arrows :size="75"></r-category-arrows>
-          </a-col>
-          <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                 :lg="{ span: 24 }">
-            <r-category-slider :columns="1"></r-category-slider>
-          </a-col>
-        </a-row>
+      </div>
+      <div class="r-store-item-line">
+        <r-category-arrows :size="75"></r-category-arrows>
+      </div>
+      <div class="r-store-item-line">
+        <r-category-slider :columns="1"></r-category-slider>
       </div>
     </a-col>
   </a-row>

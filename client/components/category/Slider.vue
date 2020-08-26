@@ -1,5 +1,5 @@
 <template>
-  <a-row v-if="hasCategories" type="flex" justify="center">
+  <a-row type="flex" justify="center">
     <a-col class="gutter-row r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row v-if="hasCategories" class="r-slider">
         <a-col class="gutter-row" :span="24">
