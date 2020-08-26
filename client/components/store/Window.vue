@@ -1,53 +1,41 @@
 <template>
-    <a-card hoverable :style="'background-image: url(/storage/store/' + store.photo_cover + ');'"
-            v-if="store" class="r-store r-store-cover">
-        <r-store-photo :store="store"></r-store-photo>
-        <a-card-meta>
-            <template slot="description">
-                <div class="r-store-info">
-                    <div class="r-store-info-title">{{ store.name }}</div>
-                    <div v-if="false" class="r-store-slogan">{{ store.description }}</div>
-                </div>
-                <div class="r-store-slogan">
-                    <a-avatar shape="square" icon="star"/>
-                    <a-avatar shape="square" icon="shop"/>
-                </div>
-                <div class="r-store-tag" v-if="false">
-                    <a-button class="r-btn-orange" size="small">NEW</a-button>
-                </div>
-            </template>
-        </a-card-meta>
-        <r-spinner :is-absolute="true" v-if="hasSpin"></r-spinner>
-    </a-card>
+  <a-row class="r-mt-24" :class="{'r-is-empty': false}" type="flex" justify="start">
+    <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <r-store-category-header :is-last="false" :category="category" justify="end"></r-store-category-header>
+      <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]"
+             class="r-store-cards">
+        <a-col class="gutter-row r-p-24" v-for="(store, index) in category.stores"
+               :key="index + 1"
+               :xs="{span: 12}"
+               :sm="{span: 12}" :md="{span: 6}" :lg="{span: 4}">
+          <r-store-face :store="store"></r-store-face>
+        </a-col>
+      </a-row>
+    </a-col>
+  </a-row>
 </template>
 <script>
-    import {mapGetters} from "vuex";
+import {mapGetters} from "vuex";
 
-    export default {
-        name: 'r-store-window',
-        components: {},
-        props: {
-            store: {type: Object, required: false},
-            hasActions: {type: Boolean, required: false, default: true},
-            isShow: {type: Boolean, required: false, default: false},
-        },
-        data() {
-            return {
-                hasSpin: true,
-            }
-        },
-        computed: mapGetters({}),
-        created() {
-            this.payload();
-        },
-        methods: {
-            payload() {
-                let $this = this;
-                $this.hasSpin = false;
-            },
-            onSearch() {
-                this.isSearching = true;
-            },
-        }
-    };
+export default {
+  name: 'r-store-window',
+  components: {},
+  props: {
+    columns: {type: Number, required: false, default: 6},
+    category: {type: Object, required: false, default: {}}
+  },
+  data() {
+    return {
+      hasData: false
+    }
+  },
+  computed: mapGetters({}),
+  created() {
+    this.payload();
+  },
+  methods: {
+    payload() {
+    }
+  }
+};
 </script>

@@ -1384,6 +1384,25 @@ h3.r-heading {
     }
 }
 
+.r-store-categories {
+    h3.r-heading {
+        font-weight: 700;
+        font-size: 20px;
+
+        @media (min-width: 768px) {
+            line-height: 36px;
+            &.r-same-height {
+                line-height: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            font-weight: 600;
+            font-size: 18px;
+        }
+    }
+}
+
 h4.r-heading {
     font-size: 21px;
     font-weight: 700;
@@ -5077,6 +5096,7 @@ h4.r-heading-light {
 .r-store-item {
     .ant-avatar {
         margin: auto;
+
         img {
             left: 6px;
             right: 6px;

@@ -5,13 +5,9 @@
     <r-store-photo slot="cover" :store="store"></r-store-photo>
     <a-card-meta>
       <template slot="title">
-        <a-button block
-                  class="r-btn-bordered-grey"
-                  type="primary">
-          <span class="r-slider-item-title">
-            {{ store.name }}
-          </span>
-        </a-button>
+        <div class="r-slider-item-title">
+          {{ store.name }}
+        </div>
         <div class="r-slider-item-tag">
           {{ store.description }}
         </div>

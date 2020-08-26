@@ -1,9 +1,9 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
     <a-col class="gutter-row" :span="24">
-      <r-store-category :columns="6"
-                        :category="category">
-      </r-store-category>
+      <r-store-window :columns="6"
+                      :category="category">
+      </r-store-window>
       <r-store-categories></r-store-categories>
       <a-empty v-show="!hasStores"
                image="/assets/icon_grey.svg"

@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-mt-24" :class="{'r-is-empty': false}" type="flex" justify="start">
+  <a-row :class="{'r-is-empty': false}" type="flex" justify="start">
     <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-store-category-header :category="category" justify="end"></r-store-category-header>
       <a-row class="r-slider r-product-cards" type="flex" justify="start">
