@@ -11,7 +11,8 @@ export default {
   props: {},
   async asyncData({store, params}) {
     let route = `/store/${params.store}/category/${params.category}`;
-    await store.dispatch('shop/onCategory', route);
+    params.route = route;
+    await store.dispatch('shop/onCategory', params);
   },
   data() {
     return {}

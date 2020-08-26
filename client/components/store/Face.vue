@@ -1,19 +1,22 @@
 <template>
-  <a-card class="r-store-card"
-          :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}"
-          hoverable>
-    <r-store-photo slot="cover" :store="store"></r-store-photo>
-    <a-card-meta>
-      <template slot="title">
-        <div class="r-slider-item-title">
-          {{ store.name }}
-        </div>
-        <div class="r-slider-item-tag">
-          {{ store.description }}
-        </div>
-      </template>
-    </a-card-meta>
-  </a-card>
+  <nuxt-link :to="store.route"
+             style="display: block; width: 100%;">
+    <a-card class="r-store-card"
+            :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}"
+            hoverable>
+      <r-store-photo slot="cover" :store="store"></r-store-photo>
+      <a-card-meta>
+        <template slot="title">
+          <div class="r-slider-item-title">
+            {{ store.name }}
+          </div>
+          <div class="r-slider-item-tag">
+            {{ store.description }}
+          </div>
+        </template>
+      </a-card-meta>
+    </a-card>
+  </nuxt-link>
 </template>
 <script>
 import {mapGetters} from "vuex";

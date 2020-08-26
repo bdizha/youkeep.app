@@ -14,13 +14,7 @@ const state = () => ({
   notice: null,
   hasCategories: false,
   hasSearched: false,
-  filters: {
-    stores: [],
-    size: [],
-    color: [],
-    brand: [],
-    sort: null
-  },
+  filters: [],
   sort: null,
   isSearching: false,
   search: {
@@ -85,7 +79,7 @@ const mutations = {
   },
   setCategories(state, categories) {
     state.categories = categories;
-    state.hasCategories = categories.length;
+    state.hasCategories = categories.length > 0;
   },
   setProducts(state, products) {
     state.products = products;
@@ -113,7 +107,7 @@ const mutations = {
 
 // actions
 const actions = {
-  async onCategory({dispatch, commit, state}, route) {
+  async onCategory({dispatch, commit, state}, params) {
     // console.log('response: route category', route);
 
     try {
@@ -121,10 +115,11 @@ const actions = {
       dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
       dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
 
+      let route = params.route;
       console.log('route: ', route);
-      let params = {
-        with: ['categories', 'products']
-      };
+
+      params.with = ['categories'];
+
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
       await axios.post(route, params).then(({data}) => {
@@ -152,6 +147,8 @@ const actions = {
           commit('setCategories', categories);
           dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
         }
+
+        console.log('onCategory filters data >>>>> ', category.filters);
 
         if (category.filters != undefined) {
           let filters = category.filters;

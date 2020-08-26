@@ -54,6 +54,7 @@ class Category extends Model
         'photos',
         'photo',
         'filters',
+        'products',
     ];
 
     /**
@@ -103,8 +104,7 @@ class Category extends Model
             })
                 ->where('is_active', true)
                 ->orderBy('created_at', 'desc')
-                ->take(12)
-                ->get();
+                ->paginate(12);
         }
 
         return $this->products;
@@ -232,15 +232,6 @@ class Category extends Model
     public function stores()
     {
         return $this->belongsToMany('App\Store', 'store_categories', 'category_id', 'store_id')
-            ->take(12);
-    }
-
-    /**
-     * Get the stores
-     */
-    public function products()
-    {
-        return $this->belongsToMany('App\Product', 'category_products')
             ->take(12);
     }
 

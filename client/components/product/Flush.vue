@@ -3,7 +3,7 @@
     <a-col class="gutter-row r-spin-holder r-p-24" :span="24"
            :class="{'r-product-spinner--active': processes.isProduct}">
       <VueSlickCarousel v-bind="settings">
-        <r-product-item v-for="(product, index) in products.data.reverse()" :key="index"
+        <r-product-item v-for="(product, index) in products.data" :key="index"
                         :product="product"></r-product-item>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">

@@ -5,7 +5,7 @@
       <r-category-prev v-if="category"></r-category-prev>
       <a-collapse default-active-key="1" expandIconPosition="right">
         <a-collapse-panel v-for="(filter, index) in filters"
-                          :key="filter.id"
+                          :key="index"
                           class="r-category-menu-panel" :header="filter.name">
           <r-category-filter-brand v-if="filter.type === 5"></r-category-filter-brand>
           <r-category-filter-color v-if="filter.type === 2"></r-category-filter-color>

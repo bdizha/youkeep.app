@@ -85,11 +85,9 @@ class CategoryController extends Controller
             $query->limit($this->limit);
         }
 
-        $this->items = $query
+        $categories = $query
             ->orderBy('created_at', 'DESC')
             ->get()->toArray();
-
-        $categories = $this->_pruneRelations($this->items);
 
         if ($type === Category::TYPE_STORE) {
             $this->_setCategoryStores($categories);

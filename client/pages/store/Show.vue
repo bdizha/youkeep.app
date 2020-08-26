@@ -27,7 +27,7 @@ export default {
         store_slug: params.slug,
         level: 1,
         limit: 6,
-        with: ['breadcrumbs', 'photos', 'products']
+        with: ['breadcrumbs', 'photos', 'products', 'categories.products']
       };
       await store.dispatch('shop/onCategories', payload);
 

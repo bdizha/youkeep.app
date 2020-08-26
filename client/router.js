@@ -16,7 +16,7 @@ const routes = [
   {path: '/email/verify/:id', name: 'verification.verify', component: page('auth/verification/verify.vue')},
   {path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue')},
   {
-    path: '/store/:store/category/:slug',
+    path: '/store/:store/category/:category',
     name: 'store.category.show',
     component: page('store/Category.vue')
   },
