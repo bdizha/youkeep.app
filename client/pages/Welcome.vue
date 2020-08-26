@@ -59,18 +59,14 @@ export default {
   layout: 'column',
   name: 'r-welcome',
   props: {},
-  async asyncData({store, params, query}) {
+  async asyncData({store}) {
     let payload = {
       category_id: 1,
-      limit: 2,
+      limit: 12,
       with: ['photos', 'breadcrumbs', 'products']
     };
 
     await store.dispatch('shop/onCategories', payload);
-
-    let router = '/stores/';
-
-    // await store.dispatch('base/onCategory', router);
   },
   data() {
     return {
