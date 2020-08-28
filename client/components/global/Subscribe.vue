@@ -1,23 +1,22 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="r-subscribe gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+    <a-col class="r-subscribe gutter-row"
+           :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <a-row :gutter="24" type="flex" justify="center" align="middle">
-        <a-col class="r-p-48 r-text-center" :xs="{ span: 24 }" :sm="{ span: 15 }" :lg="{ span: 24 }">
-          <a-card hoverable>
+      <a-row type="flex" justify="center" align="middle">
+        <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 15 }" :lg="{ span: 24 }">
+          <a-card class="r-bg-secondary-light" hoverable>
             <a-card-meta>
               <template slot="description">
-                <a-row class="r-mv-24" type="flex" justify="start">
-                  <a-col class="r-p-48 r-text-left" :xs="{ span: 24 }" :sm="{ span: 10 }" :md="{ span: 9 }" :lg="{ span: 8 }">
+                <a-row class="r-m-48" type="flex" justify="start">
+                  <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                         :lg="{ span: 24 }">
                     <div class="r-subscribe-title">
                       <a-icon class="r-subscribe-icon" theme="filled" type="notification"/>
                       <h2 class="r-same-height r-heading">
                         Stay in touch
                       </h2>
                     </div>
-                    <p class="r-text-sm">
-                      Can be cancelled at any time.
-                    </p>
                     <p class="r-text-sm">
                       By clicking on "Subscribe" you declare your consent to
                       the
@@ -26,7 +25,8 @@
                       statement</a>
                     </p>
                   </a-col>
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 14 }" ::md="{ span: 15 }" :lg="{ span: 16 }" class="r-text-left">
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" ::md="{ span: 24 }" :lg="{ span: 24 }"
+                         class="r-text-left">
                     <a-form v-if="!hasForm || true"
                             class="ant-form ant-form-vertical r-form-white"
                             :form="form"
@@ -71,19 +71,17 @@
                               </a-row>
                             </a-radio-group>
                           </a-form-item>
-                          <a-form-item>
-                            <a-row :gutter="[24,24]" type="flex" justify="end">
-                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
-                                <a-button block type="primary"
-                                          class="r-btn-primary"
-                                          size="large"
-                                          html-type="submit">
-                                  Yes, please
-                                  <a-icon type="right"/>
-                                </a-button>
-                              </a-col>
-                            </a-row>
-                          </a-form-item>
+                        </a-col>
+                      </a-row>
+                      <a-row type="flex" justify="end">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+                          <a-button block type="primary"
+                                    class="r-btn-primary"
+                                    size="large"
+                                    html-type="submit">
+                            Yes, please
+                            <a-icon type="right"/>
+                          </a-button>
                         </a-col>
                       </a-row>
                     </a-form>

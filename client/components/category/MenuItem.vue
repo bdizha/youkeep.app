@@ -61,7 +61,7 @@ export default {
         let path = `/categories`;
         let params = {
           category_id: this.category.id,
-          limit: 12,
+          limit: 6,
           store_id: this.category.store_id
         };
 
