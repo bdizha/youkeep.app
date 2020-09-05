@@ -109,8 +109,7 @@
           </a-col>
         </a-row>
         <a-row type="flex" justify="center" class="r-bg-dark">
-          <a-col class="r-p-24 r-footer-center-sm" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                 :lg="{ span: 18 }">
+          <a-col class="r-p-24 r-footer-center-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
             <a-row :gutter="[24,24]" type="flex" justify="start">
               <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }">
                                 <span class="r-same-height r-text-white">

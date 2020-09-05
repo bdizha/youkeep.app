@@ -12,6 +12,7 @@ export default {
   async asyncData({store, params}) {
     let route = `/store/${params.store}/category/${params.category}`;
     params.route = route;
+    params.with = ['category'];
     await store.dispatch('shop/onCategory', params);
   },
   data() {

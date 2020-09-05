@@ -2,12 +2,11 @@
   <a-row type="flex" justify="start">
     <a-col class="gutter-row r-p-24" :xs="{ span: 24 }" :sm="{ span: 20 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <nuxt-link :to="category.route">
-        <h4 class="r-heading">
-          <a-icon type="caret-left"/>
-          {{ category.name }}
-        </h4>
-      </nuxt-link>
+      <a-button @click="onPrev" type="secondary" class="r-btn-bordered-primary"
+                shape="square"
+                icon="left">
+        {{ category.name }}
+      </a-button>
     </a-col>
   </a-row>
 </template>
@@ -32,6 +31,9 @@ export default {
   },
   methods: {
     payload() {
+    },
+    onPrev() {
+      this.$router.go(-1);
     }
   }
 };

@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="gutter-row r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="gutter-row r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row v-if="hasCategories" class="r-slider">
         <a-col class="gutter-row" :span="24">
           <VueSlickCarousel v-bind="settings">
@@ -69,7 +69,6 @@ export default {
       settings: {
         "slidesToShow": this.columns,
         "slidesToScroll": 1,
-        "infinite": true,
         "dots": false,
         responsive: [
           {

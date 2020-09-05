@@ -15,8 +15,18 @@
         </div>
       </a-col>
       <a-col class="r-store-actions" :xs="{span: 8}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 6}">
-        <a-avatar class="r-avatar-primary" shape="square" icon="star"/>
-        <a-avatar class="r-avatar-secondary" shape="square" icon="shop"/>
+        <a-row :gutter="[12,12]" type="flex" justify="center" align="middle">
+          <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+            <a-button type="secondary" class="r-btn-bordered-primary"
+                      icon="star"
+                      :size="'small'">{{ store.rate.toFixed(1) }}
+            </a-button>
+          </a-col>
+          <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+            <a-avatar class="r-avatar-secondary" shape="square" icon="shop"/>
+            <a-avatar class="r-avatar-primary" shape="square" icon="check-circle"/>
+          </a-col>
+        </a-row>
       </a-col>
     </a-row>
   </div>

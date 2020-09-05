@@ -44,6 +44,7 @@ class Store extends Model
     protected $appends = [
         'content_formatted',
         'route',
+        'rate',
         'photo_url',
         'photo_cover_url',
     ];
@@ -55,6 +56,14 @@ class Store extends Model
     {
         $route = '/store/' . $this->slug;
         return $route;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRateAttribute()
+    {
+        return rand(1, 5);
     }
 
     /**

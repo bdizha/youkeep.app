@@ -87,8 +87,8 @@ class Category extends Model
     public function getBreadcrumbsAttribute()
     {
         $breadcrumbs = [];
-        $breadcrumbs = $this->getBreadcrumbs($this, $breadcrumbs);
         return array_reverse($breadcrumbs);
+        $breadcrumbs = $this->getBreadcrumbs($this, $breadcrumbs);
     }
 
     /**

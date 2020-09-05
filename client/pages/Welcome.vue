@@ -46,7 +46,7 @@
       <r-steps></r-steps>
       <r-store-slider :title="title" :columns="6"></r-store-slider>
       <r-category-slider></r-category-slider>
-      <r-category-list :limit="12"></r-category-list>
+      <r-category-list :limit="6"></r-category-list>
       <r-features :span="24"></r-features>
       <!--          <r-testimonials></r-testimonials>-->
     </a-col>
