@@ -246,7 +246,7 @@
                         :size="'large'"
                         type="default"
                         class="ant-btn">
-                <a-icon type="caret-left"/>
+                <a-icon type="left"/>
                 Back
               </a-button>
             </a-col>

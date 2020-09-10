@@ -215,8 +215,13 @@ const actions = {
   onHasShop({dispatch, commit}, payload) {
     commit('setHasShop', payload)
   },
+  onHasDownload({dispatch, commit}, payload) {
+    commit('setHasDownload', payload)
+  },
+  onHasSubscribe({dispatch, commit}, payload) {
+    commit('setHasSubscribe', payload)
+  },
   async onCategory({dispatch, commit, state}, params) {
-
     try {
       dispatch('onProcess', {key: 'isCategory', value: true});
 

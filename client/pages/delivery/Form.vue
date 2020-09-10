@@ -61,12 +61,7 @@
     </div>
 </template>
 <script>
-    import VueGoogleAutocomplete from 'vue-google-autocomplete'
-
     export default {
-        components: {
-            VueGoogleAutocomplete
-        },
         props: {
             store: {type: Object, required: false},
             hasTitle: {type: Boolean, required: false, default: false},

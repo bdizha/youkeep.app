@@ -22,7 +22,7 @@
     </r-layout-menu>
     <r-layout-menu v-if="modal.isVisible || isRaised" class="r-layout-menu r-layout-menu-modal">
       <r-nav-item class="__menu">
-        <a-icon v-on:click="onModalClose" type="caret-left"/>
+        <a-icon v-on:click="onModalClose" type="left"/>
       </r-nav-item>
       <r-nav-item class="r-nav-item__logo">
         <div v-on:click="onModalClose" class="r-logo">

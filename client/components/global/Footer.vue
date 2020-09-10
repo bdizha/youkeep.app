@@ -22,7 +22,7 @@
                   <a-row type="flex" justify="start">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                       <nuxt-link class="r-same-height" to="/">
-                        <img src="/assets/icon_footer.svg?v=1"
+                        <img src="/images/icon_footer.svg?v=1"
                              alt="Kshopit - Online shop"
                              class="r-footer-logo /">
                       </nuxt-link>

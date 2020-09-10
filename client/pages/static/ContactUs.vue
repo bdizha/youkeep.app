@@ -10,34 +10,44 @@
             <p class="r-text-normal">
               We'd love to hear from you! Feel free to reach out with any questions or comments below.
             </p>
-            <div class="r-block">
-              <h4 class="r-heading">Email</h4>
-              <p class="r-text-normal">
-                <a href="mailto:info@kshop.co.za" target="_blank">info@kshop.co.za</a>
-              </p>
-            </div>
-            <div class="r-block">
-              <h4 class="r-heading">
-                Want to join us?
-              </h4>
-              <p class="r-text-normal">
-                <span>Then apply </span>
-                <router-link target="_blank" to="/careers">here</router-link>
-              </p>
-            </div>
-            <div class="r-block">
-              <h4 class="r-heading">
-                Need answers now?
-              </h4>
-              <p class="r-text-normal">
-                <span>Check out the </span>
-                <router-link target="_blank" to="/help">Help center</router-link>
-              </p>
-            </div>
+            <a-row type="flex" justify="start" align="middle">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                     :lg="{ span: 12 }"
+                     style="text-align: left;">
+                <h4 class="r-heading-light r-text-uppercase">
+                  Want to join us?
+                </h4>
+                <p class="r-text-normal">
+                  <span>Then apply </span>
+                  <router-link target="_blank" to="/careers">here</router-link>
+                </p>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                     :lg="{ span: 12 }"
+                     style="text-align: left;">
+                <h4 class="r-heading-light r-text-uppercase">
+                  Need answers now?
+                </h4>
+                <p class="r-text-normal">
+                  <span>Check out the </span>
+                  <router-link target="_blank" to="/help">Help center</router-link>
+                </p>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                     :lg="{ span: 12 }"
+                     style="text-align: left;">
+                <h4 class="r-heading-light r-text-uppercase">
+                  Email
+                </h4>
+                <p class="r-text-normal">
+                  <a href="mailto:info@kshopit.com" target="_blank">info@kshopit.com</a>
+                </p>
+              </a-col>
+            </a-row>
           </a-col>
           <a-col :xs="{span: 24}" :lg="{span: 12}" style="position: relative;">
             <div class="r-page-header-photo r-page-art-primary">
-              <img alt="Kshop - Contact Us" src="/images/kshop/icon_cart_contact.svg"/>
+              <img alt="Kshop - Contact Us" src="/images/home.jpg"/>
             </div>
           </a-col>
         </a-row>

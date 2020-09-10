@@ -43,7 +43,7 @@
         <div slot="prevArrow"
              slot-scope="props"
              class="r-slick-arrow r-slick-arrow-prev">
-          <a-icon type="caret-left"/>
+          <a-icon type="left"/>
         </div>
         <div slot="nextArrow" slot-scope="props"
              class="r-slick-arrow r-slick-arrow-next">

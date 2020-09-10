@@ -14,7 +14,7 @@
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" s="r" :md="{ span: 24 }"
                            :lg="{ span: 16 }"
                            style="text-align: left;">
-                      <h4 class="r-heading r-text-uppercase">
+                      <h4 class="r-heading-light r-text-uppercase">
                         Get paid to shop with Kshop.
                       </h4>
                       <h1 class="r-heading r-text-uppercase r-text-primary">
@@ -83,7 +83,7 @@
             <div class="r-icon r-icon-primary">
               <a-icon type="clock-circle"/>
             </div>
-            <h4 class="r-heading r-text-uppercase">
+            <h4 class="r-heading-light r-text-uppercase">
               Work on your schedule
             </h4>
             <p class="r-text-normal">
@@ -96,7 +96,7 @@
             <div class="r-icon r-icon-primary">
               <a-icon type="shopping-cart"/>
             </div>
-            <h4 class="r-heading r-text-uppercase">
+            <h4 class="r-heading-light r-text-uppercase">
               Choose your wheels
             </h4>
             <p class="r-text-normal">
@@ -109,7 +109,7 @@
             <div class="r-icon r-icon-primary">
               <a-icon type="credit-card"/>
             </div>
-            <h4 class="r-heading r-text-uppercase">
+            <h4 class="r-heading-light r-text-uppercase">
               Earn money as you shop
             </h4>
             <p class="r-text-normal">

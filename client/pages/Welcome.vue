@@ -62,7 +62,7 @@ export default {
   async asyncData({store}) {
     let payload = {
       category_id: 1,
-      limit: 6,
+      limit: 3,
       with: ['photos', 'breadcrumbs', 'products']
     };
 

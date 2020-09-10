@@ -5,62 +5,75 @@
                 <h2 class="r-heading r-text-primary  text-center">
                     What our customers say
                 </h2>
-                <vue-glide v-if="testimonials.length > 0" :options="options">
-                    <vue-glide-slide v-for="(testimonial, index) in testimonials" :key="index">
-                        <div class="r-testimonial">
-                            <img class="r-testimonial-photo"
-                                 :src="'/images/kshop/testimonials/0' + index + '.jpg'"
-                                 style="opacity: 1;">
-                            <h4 class="r-heading">
-                                {{ testimonial.content }}
-                            </h4>
-                            <p class="r-text-light">
-                                {{ testimonial.author }}
-                            </p>
-                        </div>
-                    </vue-glide-slide>
-                    <template slot="control">
-                        <button data-glide-dir="<">
-                            <a-icon type="caret-left"/>
-                        </button>
-                        <button data-glide-dir=">">
-                            <a-icon type="right"/>
-                        </button>
-                    </template>
-                </vue-glide>
+              <VueSlickCarousel v-if="testimonials.length > 0" v-bind="settings">
+                <div class="r-testimonial">
+                  <img class="r-testimonial-photo"
+                       :src="'/images/kshop/testimonials/0' + index + '.jpg'"
+                       style="opacity: 1;">
+                  <h4 class="r-heading">
+                    {{ testimonial.content }}
+                  </h4>
+                  <p class="r-text-light">
+                    {{ testimonial.author }}
+                  </p>
+                </div>
+                <template #prevArrow="arrowOption">
+                  <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
+                    <a-icon type="left"/>
+                  </div>
+                </template>
+                <template #nextArrow="arrowOption">
+                  <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
+                    <a-icon type="right"/>
+                  </div>
+                </template>
+              </VueSlickCarousel>
             </a-col>
         </a-row>
     </div>
 </template>
 <script>
-    import {Glide, GlideSlide} from 'vue-glide-js'
-
     export default {
-        components: {
-            [Glide.name]: Glide,
-            [GlideSlide.name]: GlideSlide
-        },
         props: {
             testimonials: {type: Array, required: true}
         },
         data() {
             return {
-                options: {
-                    type: 'carousel',
-                    perView: 1,
-                    breakpoints: {
-                        1260: {
-                            perView: 1
-                        },
-                        750: {
-                            perView: 1
-                        },
-                        600: {
-                            perView: 1
-                        }
-                    },
-                    gap: 24
-                },
+              settings: {
+                "slidesToShow": this.columns,
+                "slidesToScroll": 1,
+                "infinite": true,
+                "dots": false,
+                responsive: [
+                  {
+                    "breakpoint": 1024,
+                    "settings": {
+                      "slidesToShow": this.columns,
+                      "slidesToScroll": 1,
+                      "infinite": true,
+                      "dots": false,
+                      "gap": 24
+                    }
+                  },
+                  {
+                    "breakpoint": 600,
+                    "settings": {
+                      "slidesToShow": 3,
+                      "slidesToScroll": 1,
+                      "initialSlide": 1,
+                      "gap": 12
+                    }
+                  },
+                  {
+                    "breakpoint": 480,
+                    "settings": {
+                      "slidesToShow": 1,
+                      "slidesToScroll": 1,
+                      "gap": 12
+                    }
+                  }
+                ]
+              }
             }
         },
         mounted() {

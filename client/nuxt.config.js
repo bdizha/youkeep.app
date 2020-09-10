@@ -3,6 +3,8 @@ const {join} = require('path')
 const {copySync, removeSync} = require('fs-extra')
 
 module.exports = {
+  target: 'static', // default is 'server'
+
   // mode: 'spa', // Comment this for SSR
 
   srcDir: __dirname,
@@ -53,13 +55,10 @@ module.exports = {
     '~components/cart',
     '~components/account',
     '~plugins/i18n',
-    '~plugins/vform',
     '~plugins/axios',
     '~plugins/ant-design-vue',
     '~plugins/route',
     '~plugins/vue-slick-carousel'
-    // '~plugins/nuxt-client-init', // Comment this for SSR
-    // {src: '~plugins/bootstrap', mode: 'client'}
   ],
 
   modules: [
@@ -78,7 +77,7 @@ module.exports = {
     generate: {
       done(generator) {
         // Copy dist files to public/_nuxt
-        if (generator.nuxt.options.dev === true /*&& generator.nuxt.options.mode === 'spa'*/) {
+        if (generator.nuxt.options.dev === true && generator.nuxt.options.mode === 'spa') {
           const publicDir = join(generator.nuxt.options.rootDir, 'public', '_nuxt')
           removeSync(publicDir)
           copySync(join(generator.nuxt.options.generate.dir, '_nuxt'), publicDir)

@@ -5,7 +5,7 @@
                 <a-row class="r-mv-48" type="flex" justify="center" align="middle">
                     <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
                            :lg="{ span: 16 }">
-                        <h4 class="r-heading r-text-uppercase">
+                        <h4 class="r-heading-light r-text-uppercase">
                             A better way to shop.
                         </h4>
                         <h1 class="r-heading r-text-uppercase r-text-primary">

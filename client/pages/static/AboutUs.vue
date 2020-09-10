@@ -14,7 +14,7 @@
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" s="r" :md="{ span: 24 }"
                            :lg="{ span: 16 }"
                            style="text-align: left;">
-                      <h4 class="r-heading r-text-uppercase">
+                      <h4 class="r-heading-light r-text-uppercase">
                         It's about you
                       </h4>
                       <h1 class="r-heading r-text-uppercase r-text-primary">
@@ -209,6 +209,7 @@
 </template>
 <script>
   export default {
+    layout: 'page',
     name: 'r-about-us',
     props: {},
     data() {

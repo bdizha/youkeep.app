@@ -13,3 +13,4 @@ yarn-error.log
 *.sql
 storage/
 .nuxt/
+dist

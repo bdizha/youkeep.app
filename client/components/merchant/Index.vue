@@ -14,7 +14,7 @@
                                                :md="{ span: 24 }"
                                                :lg="{ span: 24 }"
                                                style="text-align: left;">
-                                            <h4 class="r-heading r-text-uppercase">
+                                            <h4 class="r-heading-light r-text-uppercase">
                                                 For merchants
                                             </h4>
                                             <h1 class="r-heading r-text-uppercase">
@@ -95,7 +95,7 @@
                                 <div class="r-icon r-icon-primary">
                                     <a-icon type="line-chart"/>
                                 </div>
-                                <h4 class="r-heading r-text-uppercase">
+                                <h4 class="r-heading-light r-text-uppercase">
                                     Increase your conversion rate by 24%
                                 </h4>
                             </a-col>
@@ -104,7 +104,7 @@
                                 <div class="r-icon r-icon-primary">
                                     <a-icon type="pie-chart"/>
                                 </div>
-                                <h4 class="r-heading r-text-uppercase">
+                                <h4 class="r-heading-light r-text-uppercase">
                                     Increase returning orders by 75%
                                 </h4>
                             </a-col>
@@ -113,7 +113,7 @@
                                 <div class="r-icon r-icon-primary">
                                     <a-icon type="dot-chart"/>
                                 </div>
-                                <h4 class="r-heading r-text-uppercase">
+                                <h4 class="r-heading-light r-text-uppercase">
                                     Increase sales volume by at least 36%
                                 </h4>
                             </a-col>

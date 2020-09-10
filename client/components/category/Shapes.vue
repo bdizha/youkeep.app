@@ -18,7 +18,7 @@
         </nuxt-link>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-            <a-icon type="caret-left"/>
+            <a-icon type="left"/>
           </div>
         </template>
         <template #nextArrow="arrowOption">

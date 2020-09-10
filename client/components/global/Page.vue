@@ -1,10 +1,9 @@
 <template>
-  <r-page>
-    <a-row type="flex" justify="center">
-      <a-col class="gutter-row" :span="24">
-      </a-col>
-    </a-row>
-  </r-page>
+  <a-row type="flex" justify="center">
+    <a-col class="gutter-row" :span="24">
+      <slot/>
+    </a-col>
+  </a-row>
 </template>
 <script>
 export default {
@@ -14,6 +13,8 @@ export default {
     return {}
   },
   mounted() {
+    this.$store.dispatch('base/onHasSubscribe', false);
+    this.$store.dispatch('base/onHasDownload', false);
   },
   methods: {},
 };

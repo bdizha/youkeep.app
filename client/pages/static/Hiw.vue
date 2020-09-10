@@ -84,7 +84,7 @@
                   <div class="r-icon r-icon-primary">
                     <a-icon type="shop"/>
                   </div>
-                  <h4 class="r-heading r-text-uppercase">
+                  <h4 class="r-heading-light r-text-uppercase">
                     Online and in-store options
                   </h4>
                 </a-col>
@@ -93,7 +93,7 @@
                   <div class="r-icon r-icon-primary">
                     <a-icon type="shopping"/>
                   </div>
-                  <h4 class="r-heading r-text-uppercase">
+                  <h4 class="r-heading-light r-text-uppercase">
                     One stop shopping platform
                   </h4>
                 </a-col>
@@ -102,7 +102,7 @@
                   <div class="r-icon r-icon-primary">
                     <a-icon type="dollar"/>
                   </div>
-                  <h4 class="r-heading r-text-uppercase">
+                  <h4 class="r-heading-light r-text-uppercase">
                     Instant checkout finance
                   </h4>
                 </a-col>

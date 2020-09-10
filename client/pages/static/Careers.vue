@@ -81,7 +81,7 @@
                 <div class="r-icon r-icon-primary">
                   <a-icon type="qrcode"/>
                 </div>
-                <h4 class="r-heading r-text-uppercase">
+                <h4 class="r-heading-light r-text-uppercase">
                   A diverse team culture
                 </h4>
               </a-col>
@@ -90,7 +90,7 @@
                 <div class="r-icon r-icon-primary">
                   <a-icon type="usergroup-add"/>
                 </div>
-                <h4 class="r-heading r-text-uppercase">
+                <h4 class="r-heading-light r-text-uppercase">
                   A fast growing company
                 </h4>
               </a-col>
@@ -99,7 +99,7 @@
                 <div class="r-icon r-icon-primary">
                   <a-icon type="deployment-unit"/>
                 </div>
-                <h4 class="r-heading r-text-uppercase">
+                <h4 class="r-heading-light r-text-uppercase">
                   A place for any lifestyle
                 </h4>
               </a-col>
