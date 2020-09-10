@@ -1,8 +1,8 @@
 <template>
   <nuxt-link class="r-logo" to="/">
-    <img class="r-hide-sm" :src="'/images/' + (isDark ? 'icon_white': 'logo') + '.svg'"
+    <img class="r-hide-sm" :src="'/images/' + (isDark ? 'icon-01.svg': 'logo-01.svg') + '.svg'"
          alt="Kshopit - It's Shopping Time!"/>
-    <img class="r-hide-lg" :src="'/images/' + (isDark ? 'icon_white': 'icon') + '.svg'"
+    <img class="r-hide-lg" :src="'/images/' + (isDark ? 'icon-01.svg': 'icon-02.svg') + '.svg'"
          alt="Kshopit - It's Shopping Time!"/>
   </nuxt-link>
 </template>
