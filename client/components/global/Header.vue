@@ -4,7 +4,7 @@
       <r-nav-item>
         <a-icon @click="onDrawer('menu')" type="menu"/>
       </r-nav-item>
-      <r-nav-item class="__logo">
+      <r-nav-item class="r-nav-item__logo">
         <r-logo></r-logo>
       </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__store-switch">
