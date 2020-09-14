@@ -1,8 +1,8 @@
 <template>
-  <nuxt-link class="r-logo" to="/">
-    <img class="r-hide-sm" :src="'/images/' + (isDark ? 'icon-01.svg': 'logo-01') + '.svg'"
+  <nuxt-link class="r-logo" :class="{'r-logo__icon': isIcon}" to="/">
+    <img class="r-hide-sm" :src="'/images/' + (isIcon ? 'icon-01': 'logo-01') + '.svg'"
          alt="Owami - It's Shopping Time!"/>
-    <img class="r-hide-lg" :src="'/images/' + (isDark ? 'icon-01.svg': 'icon-02') + '.svg'"
+    <img class="r-hide-lg" :src="'/images/' + (isIcon ? 'icon-01': 'icon-02') + '.svg'"
          alt="Owami - It's Shopping Time!"/>
   </nuxt-link>
 </template>
@@ -10,6 +10,9 @@
 import {mapGetters} from "vuex";
 
 export default {
+  props: {
+    isIcon: {type: Boolean, required: false, default: false}
+  },
   name: 'r-logo',
   data() {
     return {};

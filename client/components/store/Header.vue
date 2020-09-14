@@ -7,7 +7,7 @@
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
             <div class="r-nav-item r-nav-item__logo">
-              <r-logo></r-logo>
+              <r-logo :is-icon="true"></r-logo>
             </div>
           </a-col>
           <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
@@ -15,11 +15,13 @@
                  :lg="{ span: 18 }">
             <div class="r-layout-menu">
               <div v-if="hasStore" class="r-nav-item">
-                <a-button block
-                          class="r-btn-bordered-grey"
-                          type="primary">
-                  {{ store.name }}
-                </a-button>
+                <nuxt-link :to="'/store' + store.slug">
+                  <a-button block
+                            class="r-btn-bordered-grey"
+                            type="primary">
+                    {{ store.name }}
+                  </a-button>
+                </nuxt-link>
               </div>
               <div class="r-hide-sm r-nav-item r-nav-item__search">
                 <r-search></r-search>

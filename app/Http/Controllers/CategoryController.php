@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     protected $without = ['categories', 'products', 'category', 'breadcrumbs', 'store'],
-        $relations = ['categories', 'category', 'store', 'stores'],
+        $relations = ['categories', 'category', 'store', 'stores', 'breadcrumbs'],
         $with = [],
         $categoryId = null,
         $products = [],
@@ -85,7 +85,7 @@ class CategoryController extends Controller
         if (!empty($this->limit)) {
             $query->limit($this->limit);
         }
-        
+
         $categories = $query->orderBy($orderBy, 'DESC')
             ->get()
             ->toArray();
