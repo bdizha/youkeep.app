@@ -9,8 +9,8 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    protected $without = ['categories', 'products', 'category', 'breadcrumbs', 'store'],
-        $relations = ['categories', 'category', 'store', 'stores', 'breadcrumbs'],
+    protected $without = ['categories', 'products', 'store'],
+        $relations = ['categories', 'category', 'store', 'stores'],
         $with = [],
         $categoryId = null,
         $products = [],

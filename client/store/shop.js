@@ -181,7 +181,7 @@ const actions = {
       });
 
     } catch (e) {
-      console.error('onStore errors');
+      console.error('onCategory errors');
       console.log(e);
     }
   },
@@ -207,7 +207,7 @@ const actions = {
           dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
         }
 
-        console.log('setStore', store);
+        console.log('onStore', store);
       });
 
     } catch (e) {
@@ -217,39 +217,51 @@ const actions = {
   },
   async onCategories({dispatch, commit, state}, payload) {
 
-    dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
-    dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
+    try {
+      dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
+      dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
-    await axios.post('/categories', payload).then(({data}) => {
-      let categories = data.categories;
+      await axios.post('/categories', payload).then(({data}) => {
+        let categories = data.categories;
 
-      commit('setCategories', categories);
+        commit('setCategories', categories);
 
-      console.log(categories, 'setCategories');
+        console.log(categories, 'setCategories');
 
-      setTimeout(() => {
-        dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
-      }, 300);
+        setTimeout(() => {
+          dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
+        }, 300);
 
-      dispatch('base/onProcess', {key: 'isCategory', value: false}, {root: true});
-      dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
-    });
+        dispatch('base/onProcess', {key: 'isCategory', value: false}, {root: true});
+        dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
+      });
+
+    } catch (e) {
+      console.error('onCategories errors');
+      console.log(e);
+    }
   },
   async onProducts({dispatch, commit}, payload) {
     dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
 
-    await axios.post('/products', payload).then(({data}) => {
-      // console.log('response: onProducts data: ', data);
+    try {
+      await axios.post('/products', payload).then(({data}) => {
+        // console.log('response: onProducts data: ', data);
 
-      let products = data;
-      commit('setProducts', products);
+        let products = data;
+        commit('setProducts', products);
 
-      dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
+        dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
 
-      setTimeout(() => {
-        dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
-      }, 600);
-    });
+        setTimeout(() => {
+          dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
+        }, 600);
+      });
+
+    } catch (e) {
+      console.error('onProducts errors');
+      console.log(e);
+    }
   },
   onProduct({dispatch, commit}, payload) {
     commit('setProduct', payload);
@@ -269,19 +281,25 @@ const actions = {
   },
   async onSearch({dispatch, commit}, payload) {
 
-    commit('setProcess', {key: 'isSearching', value: true});
+    try {
+      commit('setProcess', {key: 'isSearching', value: true});
 
-    await axios.post('/search', payload).then(({data}) => {
-      // console.log('response: onSearch data: ', data);
+      await axios.post('/search', payload).then(({data}) => {
+        // console.log('response: onSearch data: ', data);
 
-      let search = data;
-      commit('setSearch', search);
-      console.log('response: onSearch: ', search);
+        let search = data;
+        commit('setSearch', search);
+        console.log('response: onSearch: ', search);
 
-      setTimeout(() => {
-        commit('setProcess', {key: 'isSearching', value: false});
-      }, 300);
-    });
+        setTimeout(() => {
+          commit('setProcess', {key: 'isSearching', value: false});
+        }, 300);
+      });
+
+    } catch (e) {
+      console.error('onSearch errors');
+      console.log(e);
+    }
   },
   async onInit({dispatch, commit, state}, payload) {
     const store = Cookies.get('store');

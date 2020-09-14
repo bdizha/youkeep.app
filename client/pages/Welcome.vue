@@ -61,8 +61,9 @@ export default {
   props: {},
   async asyncData({store}) {
     let payload = {
+      category_id: 1,
       limit: 6,
-      randomized_at: 1,
+      order_by: 'randomized_at',
       with: ['photos', 'breadcrumbs', 'products']
     };
 
