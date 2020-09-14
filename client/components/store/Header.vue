@@ -15,7 +15,7 @@
                  :lg="{ span: 18 }">
             <div class="r-layout-menu">
               <div v-if="hasStore" class="r-nav-item">
-                <nuxt-link :to="'/store' + store.slug">
+                <nuxt-link :to="'/store/' + store.slug">
                   <a-button block
                             class="r-btn-bordered-grey"
                             type="primary">
