@@ -40,7 +40,7 @@
                   Email
                 </h4>
                 <p class="r-text-normal">
-                  <a href="mailto:info@kshopit.com" target="_blank">info@kshopit.com</a>
+                  <a href="mailto:info@Owami.com" target="_blank">info@Owami.com</a>
                 </p>
               </a-col>
             </a-row>

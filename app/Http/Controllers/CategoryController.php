@@ -33,6 +33,7 @@ class CategoryController extends Controller
 
         $this->limit = $request->get('limit', 6);
         $this->level = $request->get('level', null);
+        $orderBy = $request->get('order_by', 'created_at');
 
         $this->with = $request->get('with', []);
 
@@ -84,10 +85,10 @@ class CategoryController extends Controller
         if (!empty($this->limit)) {
             $query->limit($this->limit);
         }
-
-        $categories = $query
-            ->orderBy('created_at', 'DESC')
-            ->get()->toArray();
+        
+        $categories = $query->orderBy($orderBy, 'DESC')
+            ->get()
+            ->toArray();
 
         if ($type === Category::TYPE_STORE) {
             $this->_setCategoryStores($categories);

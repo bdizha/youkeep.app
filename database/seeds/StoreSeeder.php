@@ -297,7 +297,7 @@ class StoreSeeder extends Seeder
      */
     private function _setStoreData()
     {
-        $crawler = Goutte::request('GET', 'http://Kshopit.local/import-base-stores');
+        $crawler = Goutte::request('GET', 'http://Owami.local/import-base-stores');
 
         $crawler->filter('.filterall')->each(function ($node) {
             $store = [];

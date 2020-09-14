@@ -11,10 +11,10 @@
                 <a-row class="r-m-48" type="flex" justify="center">
                   <a-col :span="24">
                     <h2 class="r-heading">
-                      Download the Kshopit app
+                      Download the Owami app
                     </h2>
                     <p class="r-text-normal">
-                      The free Kshopit app is available for Android and iOS. Download it soon!
+                      The free Owami app is available for Android and iOS. Download it soon!
                     </p>
                   </a-col>
                 </a-row>

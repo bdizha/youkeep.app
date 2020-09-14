@@ -14,7 +14,7 @@
                             Reset password
                         </h3>
                         <p class="r-text-sm">
-                            Enter the email address associated with your Kshopit Account and we will send you
+                            Enter the email address associated with your Owami Account and we will send you
                             instructions to reset your password.
                         </p>
                     </a-col>
@@ -96,7 +96,7 @@
                 }).then(response => {
                     setTimeout(() => {
                         if ($this.isValid) {
-                            $this.$message.success('Thank you. Enjoy your shopping with Kshopit.');
+                            $this.$message.success('Thank you. Enjoy your shopping with Owami.');
                         } else {
                             $this.$message.error('Oops, the submitted form was invalid.');
                         }

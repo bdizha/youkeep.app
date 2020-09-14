@@ -2,7 +2,7 @@
   <defs>
     <style>
       .cls-1 {
-      clip-path: url(#clip-Kshopit_180px_1);
+      clip-path: url(#clip-Owami_180px_1);
       }
 
       .cls-2 {
@@ -21,11 +21,11 @@
       fill: #fff;
       }
     </style>
-    <clipPath id="clip-Kshopit_180px_1">
+    <clipPath id="clip-Owami_180px_1">
       <rect width="456" height="210"/>
     </clipPath>
   </defs>
-  <g id="Kshopit_180px_1" class="cls-1">
+  <g id="Owami_180px_1" class="cls-1">
     <path id="Path_69" data-name="Path 69" class="cls-2" d="M92.095,80.012c.008-1.722-11.214-.428-11.214-.428S92.088,81.707,92.095,80.012Z" transform="translate(213.647 0.882)"/>
     <g id="Group_1893" data-name="Group 1893" transform="translate(-23)">
       <g id="Group_1892" data-name="Group 1892" transform="translate(3048 -6130)">

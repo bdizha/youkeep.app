@@ -1,9 +1,9 @@
 <template>
   <nuxt-link class="r-logo" to="/">
     <img class="r-hide-sm" :src="'/images/' + (isDark ? 'icon-01.svg': 'logo-01') + '.svg'"
-         alt="Kshopit - It's Shopping Time!"/>
+         alt="Owami - It's Shopping Time!"/>
     <img class="r-hide-lg" :src="'/images/' + (isDark ? 'icon-01.svg': 'icon-02') + '.svg'"
-         alt="Kshopit - It's Shopping Time!"/>
+         alt="Owami - It's Shopping Time!"/>
   </nuxt-link>
 </template>
 <script>

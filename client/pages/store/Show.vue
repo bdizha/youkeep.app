@@ -24,9 +24,9 @@ export default {
       await store.dispatch('shop/onStore', route);
 
       let payload = {
-        store_slug: params.slug,
+        store: params.slug,
         level: 1,
-        limit: 2,
+        limit: 12,
         with: ['breadcrumbs', 'photos', 'products', 'categories.products']
       };
       await store.dispatch('shop/onCategories', payload);

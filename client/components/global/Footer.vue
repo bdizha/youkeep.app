@@ -23,7 +23,7 @@
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                       <nuxt-link class="r-same-height" to="/">
                         <img src="/images/icon-03.svg?v=1"
-                             alt="Kshopit - Online shop"
+                             alt="Owami - Online shop"
                              class="r-footer-logo /">
                       </nuxt-link>
                     </a-col>
@@ -56,7 +56,7 @@
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Customers" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <nuxt-link to="/login">Join Kshopit</nuxt-link>
+                        <nuxt-link to="/login">Join Owami</nuxt-link>
                       </div>
                       <div class="r-footer-link">
                         <nuxt-link to="/kpaise">Kpaise - Customer</nuxt-link>
@@ -127,7 +127,7 @@
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
                     <div class="r-text-white r-same-height r-footer-link">
-                      &copy; Kshopit 2020 All Rights Reserved
+                      &copy; Owami 2020 All Rights Reserved
                     </div>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">

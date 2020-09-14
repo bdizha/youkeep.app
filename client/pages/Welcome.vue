@@ -9,22 +9,22 @@
                    :lg="{ span: 12 }">
               <a-row type="flex" justify="start">
                 <a-col class="r-p-48 r-bg-welcome" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ offset: 3, span: 21 }"
-                       :lg="{ offset: 3, span: 21 }">
+                       :md="{ span: 24 }"
+                       :lg="{ span: 24 }">
                   <a-row type="flex" justify="start">
                     <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                            :md="{ span: 24 }"
                            :lg="{ span: 24 }"
                            style="text-align: left;">
                       <h1 class="r-heading">
-                        Shop online with Kshopit
+                        Shop online with Owami
                       </h1>
                       <h2 class="r-heading">
                         <span class="r-heading r-text-primary">Shop more,</span>
                         <span class="r-text-secondary">Pay less</span>
                       </h2>
                       <p class="r-text-normal">
-                        Yes, as long as you shop it with Kshopit, you are fully in control.
+                        Yes, as long as you shop it with Owami, you are fully in control.
                       </p>
                     </a-col>
                   </a-row>
@@ -42,7 +42,7 @@
           </a-row>
         </a-col>
       </a-row>
-      <r-category-actions></r-category-actions>
+      <r-category-arrows :size="36"></r-category-arrows>
       <r-steps></r-steps>
       <r-store-slider :title="title" :columns="6"></r-store-slider>
       <r-category-slider></r-category-slider>
@@ -61,8 +61,8 @@ export default {
   props: {},
   async asyncData({store}) {
     let payload = {
-      category_id: 1,
-      limit: 3,
+      limit: 6,
+      randomized_at: 1,
       with: ['photos', 'breadcrumbs', 'products']
     };
 

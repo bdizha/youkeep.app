@@ -70,12 +70,8 @@ export default {
           description: 'It\'s shopping time! We handle all your shopping experience and more.'
         },
         {
-          title: 'We deliver.',
-          description: 'Get your shopping items delivered to your doorstep by our shoppers. '
-        },
-        {
           title: 'You enjoy.',
-          description: 'Checkout fast with Kpaise. Sit back and wait for your delivery to arrive.'
+          description: 'Sit back and wait for your delivery to arrive at your doorstep.'
         },
       ]
     };

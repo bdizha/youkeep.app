@@ -14,7 +14,7 @@
                   Find the stores that you want
                 </h4>
                 <p class="r-text-normal">
-                  Kshopit helps customers discover stores, purchase products, and more. Whatever your business sells, we
+                  Owami helps customers discover stores, purchase products, and more. Whatever your business sells, we
                   help you grow.
                 </p>
               </template>
