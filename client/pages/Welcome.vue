@@ -1,6 +1,8 @@
 <template>
-  <a-row type="flex" justify="center">
-    <a-col class="gutter-row" :span="24">
+  <a-row type="flex" justify="center" align="middle">
+    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 18 }"
+           :lg="{ span: 18 }">
       <a-row type="flex" justify="center">
         <a-col :xs="{ span: 24 }" :lg="{ span: 24 }">
           <a-row class="r-bg-secondary-light" type="flex" justify="start">
@@ -56,15 +58,15 @@
 import {mapGetters} from "vuex";
 
 export default {
-  layout: 'column',
+  layout: 'default',
   name: 'r-welcome',
   props: {},
   async asyncData({store}) {
     let payload = {
       category_id: 1,
-      limit: 6,
+      limit: 3,
       order_by: 'randomized_at',
-      with: ['photos', 'breadcrumbs', 'products']
+      with: ['photos', 'breadcrumbs']
     };
 
     await store.dispatch('shop/onCategories', payload);
