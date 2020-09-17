@@ -3,7 +3,7 @@
     block
     type="secondary" class="r-btn-bordered-primary"
     icon="star"
-    :size="'small'">{{ store.rate.toFixed(1) + ' review' }}
+    :size="'small'">{{ store.rate.toFixed(1) + ' rate' }}
   </a-button>
 </template>
 <script>
