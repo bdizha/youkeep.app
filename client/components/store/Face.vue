@@ -7,12 +7,12 @@
       <r-store-photo slot="cover" :store="store"></r-store-photo>
       <a-card-meta>
         <template slot="title">
-          <div class="r-slider-item-title">
-            {{ store.name }}
-          </div>
-          <div class="r-slider-item-tag">
-            {{ store.description }}
-          </div>
+          <r-store-meta :store="store"></r-store-meta>
+          <a-row class="r-mt-24" type="flex" justify="center" align="middle">
+            <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+              <r-store-actions :store="store"></r-store-actions>
+            </a-col>
+          </a-row>
         </template>
       </a-card-meta>
     </a-card>

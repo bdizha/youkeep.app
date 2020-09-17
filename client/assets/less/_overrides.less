@@ -3624,7 +3624,7 @@ h4.r-heading-light {
 
 .r-store-item-line {
     border-bottom: 1px solid #e8e8e8;
-    padding: 24px 0;
+    padding: 24px;
 
     .r-store-actions {
         padding: 12px 0;
@@ -4979,7 +4979,7 @@ h4.r-heading-light {
 }
 
 .r-store-item {
-    padding: 0 24px 0 123px;
+    padding: 0 0 0 99px;
     margin: 0px;
     display: block;
     text-align: left;
@@ -4991,56 +4991,28 @@ h4.r-heading-light {
     line-height: 75px;
 }
 
-.r-store-card,
-.r-store-item {
+.r-store-item,
+.r-store-card{
     .r-store-text {
         font-weight: 600;
-        font-size: 18px;
+        font-size: 16px;
         display: block;
         margin-bottom: 0;
-        line-height: 18px;
         overflow: hidden;
         text-overflow: ellipsis;
-        padding-top: 12px;
-        height: 39px;
-
-        @media (max-width: 768px) {
-            font-size: 16px;
-        }
+        height: 24px;
+        line-height: 24px;
     }
 
     .r-store-slogan {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 24px;
         color: #9c9c9c;
         display: block;
         overflow: hidden;
         height: 24px;
         text-overflow: ellipsis;
-    }
-
-    .ant-avatar-circle {
-        position: absolute;
-        left: 24px;
-        top: 0;
-        border-radius: 3px;
-        padding: 6px;
-        border: 6px solid #FFFFFF;
-        box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
-
-        img {
-            display: block;
-            position: absolute;
-            left: 6px;
-            bottom: 0;
-            right: 6px;
-            top: 0;
-            width: calc(100% - 12px);
-            margin: auto;
-            height: auto;
-            border-radius: 3px;
-        }
     }
 
     .ant-avatar {
@@ -5067,16 +5039,6 @@ h4.r-heading-light {
         margin-top: 24px;
         background: #FFF;
 
-        .ant-btn {
-            span {
-                overflow: hidden;
-                position: relative;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                display: block;
-            }
-        }
-
         .r-slider-item-title {
             cursor: default;
             font-size: 18px;
@@ -5098,6 +5060,55 @@ h4.r-heading-light {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
+        }
+    }
+}
+
+.r-store-item{
+    .ant-avatar-square{
+        position: absolute;
+        left: 0px;
+        top: 0;
+        padding: 6px;
+        border: 6px solid #FFFFFF;
+        box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
+
+        img {
+            display: block;
+            position: absolute;
+            left: 6px;
+            bottom: 0;
+            right: 6px;
+            top: 0;
+            width: calc(100% - 12px);
+            margin: auto;
+            height: auto;
+            border-radius: 3px;
+        }
+    }
+
+    .ant-avatar-square{
+        border-radius: 3px;
+    }
+}
+
+.r-store-card{
+    .ant-avatar-circle{
+        padding: 6px;
+        border: 6px solid #FFFFFF;
+        box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
+
+        img {
+            display: block;
+            position: absolute;
+            left: 6px;
+            bottom: 0;
+            right: 6px;
+            top: 0;
+            width: calc(100% - 12px);
+            margin: auto;
+            height: auto;
+            border-radius: 3px;
         }
     }
 }

@@ -27,7 +27,7 @@
           </a-select>
         </a-col>
       </a-row>
-      <a-row class="r-store-item-line" v-if="hasStores && !processes.isTray" type="flex" justify="start">
+      <a-row v-if="hasStores && !processes.isTray" type="flex" justify="start">
         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
                v-for="(store, index) in stores.data"

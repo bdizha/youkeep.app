@@ -15,11 +15,11 @@ class Category extends Model
     use Sluggable;
 
     public const TYPE_STORE = 1;
-    public const TYPE_PRODUCT = 2;
+    public const TYPE_CATALOG = 2;
 
     public static $types = [
         self::TYPE_STORE => 'Store',
-        self::TYPE_PRODUCT => 'Product'
+        self::TYPE_CATALOG => 'Category'
     ];
 
     protected $products = [];

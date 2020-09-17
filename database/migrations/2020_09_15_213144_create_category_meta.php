@@ -15,7 +15,24 @@ class CreateCategoryMeta extends Migration
     {
         Schema::create('category_meta', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->smallInteger('level')->index()->default(0);
+            $table->smallInteger('type')->index()->default(0);
+            $table->smallInteger('external_url')->index()->nullable();
+            $table->unsignedInteger('parent_id')->index();
+            $table->unsignedInteger('child_id')->index();
+
+            $table->foreign('parent_id')->references('id')->on('categories');
+            $table->foreign('child_id')->references('id')->on('categories');
             $table->timestamps();
+        });
+
+        Schema::table('categories', function (Blueprint $table) {
+//            $table->bigIncrements('order');
+//            $table->bigIncrements('level');
+//            $table->bigIncrements('url');
+//            $table->bigIncrements('category_id');
+//            $table->bigIncrements('store_id');
+//            $table->timestamps();
         });
     }
 
