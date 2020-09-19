@@ -11,7 +11,7 @@
            justify="center" align="left">
       <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}">
         <article class="r-article">
-          <p>Thank you for using Kshop! This privacy policy has been compiled to better serve those
+          <p>Thank you for using Owami! This privacy policy has been compiled to better serve those
             who are concerned with how their information is being used online. Please read our
             privacy policy carefully to get a clear understanding of how we collect, use, protect or
             otherwise handle any information that we may collect from you or that you may provide
@@ -19,7 +19,7 @@
           <h2>What information do we collect?</h2>
           <h4>Information That You Give Us</h4>
           <p>We receive, store and process information, including personally identifiable information,
-            that you make available to us when accessing or using the Kshop Platform and Services.
+            that you make available to us when accessing or using the Owami Platform and Services.
             Examples include information you provide when you:</p>
           <ul>
             <li>fill in any form on the Platform, such as when you register or update the details of
@@ -28,7 +28,7 @@
             <li>access or use the Platform, such as to place grocery orders, search for products,
               pay for your order, place special orders; and
             </li>
-            <li>communicate with Kshop.</li>
+            <li>communicate with Owami.</li>
           </ul>
           <h4>Information we get from your Use of our Platform</h4>
           <p>Cookies, Pixels, and Other Tracking Technologies: We and our partners use various
@@ -39,7 +39,7 @@
             browser), pixels, and other identifiers to collect information from your browser or
             device that helps us do things such as understand how you use our services, personalize
             your experience, measure advertising performance, and remember that you are logged in to
-            Kshop.</p>
+            Owami.</p>
           <p>Mobile Data: When you use certain features of the Platform, in particular our mobile
             applications we may receive, store and process different types of information about your
             location, including general information (e.g. IP address, zip code) and more specific
@@ -49,16 +49,16 @@
             you can disable the GPS or other location-tracking functions on your device, provided
             your device allows you to do this. See your device manufacturer’s instructions for
             further details.</p>
-          <p>We employ some third-party services to help us understand the usage of Kshop, and these
+          <p>We employ some third-party services to help us understand the usage of Owami, and these
             third-parties may also deploy cookies or pixels on our site or collect information
             through our mobile applications. For example, we use Google Analytics to understand how
             users interact with various portions of our site.</p>
-          <p>Log information: When you use Kshop, our servers will record information about your usage
+          <p>Log information: When you use Owami, our servers will record information about your usage
             of the service and information that is sent by your browser or device. Logs information
             can include things like the IP address of your device, information about the browser,
             operating system and/or app you are using, unique device identifiers, pages that you
-            navigate to and links that you click, searches that you run on Kshop, and other ways you
-            interact with the service. When you are logged into the Kshop service, this information
+            navigate to and links that you click, searches that you run on Owami, and other ways you
+            interact with the service. When you are logged into the Owami service, this information
             is stored with your account information.</p>
           <h2>What do we do with your information?</h2>
           <p>We use, store and process information about you for the following general purposes:</p>
@@ -77,7 +77,7 @@
               third party, without any restriction, including through the use of cookies and other
               automated technologies.
             </li>
-            <li>To operate, protect, improve and optimize the Platform, Kshop’s business and our
+            <li>To operate, protect, improve and optimize the Platform, Owami’s business and our
               users’ experience, such as to perform analytics, conduct research, personalize or
               otherwise customize your experience, and to provide customer service;
             </li>
@@ -85,11 +85,11 @@
               notices, updates, security alerts, and information requested by you;
             </li>
             <li>To send you marketing, advertising, and promotional messages and other information
-              that may be of interest to you, including information about Kshop, our services, or
+              that may be of interest to you, including information about Owami, our services, or
               general promotions for partner campaigns and services;
             </li>
             <li>To administer referral programs, rewards, surveys, sweepstakes, contests, or other
-              promotional activities or events sponsored or managed by Kshop or our Third Party
+              promotional activities or events sponsored or managed by Owami or our Third Party
               business partners.
             </li>
           </ul>
@@ -134,7 +134,7 @@
           <h2>Your California privacy rights</h2>
           <p>Residents of the State of California, under the California Civil Code, have the right to
             request from companies conducting business in California a list of all third parties to
-            which Kshop has disclosed personal information during the preceding year for direct
+            which Owami has disclosed personal information during the preceding year for direct
             marketing purposes and a disclosure of the shared information. Alternatively, the law
             provides that if a company has a privacy policy that provides you with an “opt-out”
             choice for use of your personal information by third parties for marketing purposes, the
@@ -147,7 +147,7 @@
             preceding year for marketing purposes.</p>
           <p>If you are a California resident and request information about how to exercise your third
             party disclosure choices, send a request to the following email address: <em><a
-              href="https://web.archive.org/web/20181025162848/mailto:info@Kshop.com">info@Kshop.com</a></em>.
+              href="https://web.archive.org/web/20181025162848/mailto:info@Owami.com">info@Owami.com</a></em>.
           </p>
           <h2>Children online privacy protection act</h2>
           <p>The site is not intended for children under 13 years of age. No one under age 13 may
@@ -163,14 +163,14 @@
             on the website. If we make material changes to this policy, we will notify you here that
             it has been updated, so that you are aware of what information we collect, how we use
             it, and under what circumstances, if any, we use and/or disclose it.</p>
-          <p>If Kshop is acquired or merged with another company, your information may be transferred
+          <p>If Owami is acquired or merged with another company, your information may be transferred
             to the new owners so that we may continue to sell products to you.</p>
           <h2>Questions and contact information</h2>
           <p>If you would like to access, correct, amend or delete any personal information we have
             about you, register a complaint, or simply want more information about our privacy
-            practices, please contact our Privacy Compliance Officer at info@Kshop.com or by mail
+            practices, please contact our Privacy Compliance Officer at info@Owami.com or by mail
             at:</p>
-          <p><span class="text-bold">Kshop</span><br>
+          <p><span class="text-bold">Owami</span><br>
             Attn: Compliance<br>
             17 20th St. N Unit 100<br>
             Birmingham, AL, 35203, United States</p>

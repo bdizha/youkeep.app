@@ -1,11 +1,11 @@
 <template>
-  <r-page class="r-bg-white">
+  <r-page class="r-bg-primary-light">
     <a-row type="flex" justify="center" align="middle">
       <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48 r-mv-48">
         <a-row type="flex" justify="space-around" align="middle">
           <a-col class="gutter-row r-text-center" :span="24">
             <h1 class="r-heading r-text-primary">
-              Current job openings at Kshop
+              Current job openings at Owami
             </h1>
           </a-col>
         </a-row>
@@ -79,7 +79,7 @@
         <a-row v-if="careers.departments.length == 0" type="flex" justify="center">
           <a-col class="gutter-row r-text-center" :span="24">
             <a-empty
-              image="/images/kshop/icon_grey.svg"
+              image="/images/Owami/icon_grey.svg"
               :imageStyle="{ height: '81px',}">
               <span slot="description">Sorry. There aren't any job openings currently.</span>
               <a-button size="large" class="ant-btn-primary r-btn-black">Shop now</a-button>

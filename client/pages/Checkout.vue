@@ -4,7 +4,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{ span: 18 }">
         <a-row>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 16 }">
-            <a-row class="r-bg-white" style="margin-right: 20px; padding: 20px;">
+            <a-row class="r-bg-primary-light" style="margin-right: 20px; padding: 20px;">
               <a-col :span="24">
                 <a-collapse accordion="true" bordered="true" expandIconPosition="right"
                             :defaultActiveKey="1">
@@ -129,7 +129,7 @@
             </a-row>
           </a-col>
           <a-col :xs="{ span: 24 }" :lg="{ span: 8 }">
-            <a-row class="r-bg-white">
+            <a-row class="r-bg-primary-light">
               <a-col class="r-p-24" :span="24">
                 <a-form class="ant-form ant-form-vertical"
                         :form="formCart">
@@ -165,7 +165,7 @@
             <a-row>
               <a-col class="r-checkout-footer" :span="24">
                 <p class="r-text-normal">
-                  By placing your order, you agree to be bound by the Kshop Terms of
+                  By placing your order, you agree to be bound by the Owami Terms of
                   <router-link target="_blank" to="/service">Service</router-link>
                   and
                   <router-link to="_blank" href="/privacy">Privacy Policy</router-link>

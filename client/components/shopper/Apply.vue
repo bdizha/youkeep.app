@@ -9,7 +9,7 @@
           <a-row type="flex" justify="start">
             <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
               <h2 class="r-heading">
-                Kshop shopper application
+                Owami shopper application
               </h2>
               <p v-if="false" class="r-text-normal">
                 Sign in to your account with your email address.
@@ -19,12 +19,12 @@
           <a-row type="flex" justify="start">
             <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
               <h3 class="r-heading">
-                What is Kshop?
+                What is Owami?
               </h3>
               <p class="r-text-normal">
-                Kshop is a fast growing startup that is improving lives by giving people more time to
+                Owami is a fast growing startup that is improving lives by giving people more time to
                 spend
-                with their families! Our Kshop members order shopping via the Kshop app and can have
+                with their families! Our Owami members order shopping via the Owami app and can have
                 them
                 delivered on-demand as soon as 1 hour later.
               </p>
@@ -33,10 +33,10 @@
           <a-row type="flex" justify="start">
             <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
               <h3 class="r-heading">
-                What is a Kshop shopper?
+                What is a Owami shopper?
               </h3>
               <p class="r-text-normal">
-                Our Kshop Shoppers carefully select member's shopping using the Kshop app and deliver
+                Our Owami Shoppers carefully select member's shopping using the Owami app and deliver
                 them
                 during a specified, delivery window. Our shoppers enjoy an interactive and fun culture
                 all
@@ -73,7 +73,7 @@
             What are your contact details?
           </h2>
           <p class="r-text-normal">
-            By entering your email addrress and mobile number you are opting in to receive automated Kshop
+            By entering your email addrress and mobile number you are opting in to receive automated Owami
             Application
             Notifications. Message and data rates may apply.
           </p>

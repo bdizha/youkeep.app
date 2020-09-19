@@ -47,7 +47,7 @@
           </a-col>
           <a-col :xs="{span: 24}" :lg="{span: 12}" style="position: relative;">
             <div class="r-page-header-photo r-page-art-primary">
-              <img alt="Kshop - Contact Us" src="/images/home.jpg"/>
+              <img alt="Owami - Contact Us" src="/images/home.jpg"/>
             </div>
           </a-col>
         </a-row>

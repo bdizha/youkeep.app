@@ -16,11 +16,11 @@
                              :lg="{ span: 24 }"
                              style="text-align: left;">
                         <h1 class="r-heading">
-                          <span class="r-text-primary">How does Kshop work?</span>
+                          <span class="r-text-primary">How does Owami work?</span>
                         </h1>
                         <p class="r-text-normal">
                           It doesn’t matter when or where you shop, as long as
-                          you do it with Kshop, you are fully in control.
+                          you do it with Owami, you are fully in control.
                         </p>
                         <p class="r-text-normal">
                           In our mobile app you can do all the shopping you need within a few
@@ -118,10 +118,10 @@
           <a-row type="flex" justify="center">
             <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-pv-48">
               <h2 class="r-heading r-text-uppercase">
-                Shop online with Kshop
+                Shop online with Owami
               </h2>
               <p class="r-text-normal">
-                Join the Kshop online experience and get better deals in-store and online today.
+                Join the Owami online experience and get better deals in-store and online today.
               </p>
             </a-col>
           </a-row>

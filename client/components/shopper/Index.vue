@@ -15,7 +15,7 @@
                            :lg="{ span: 16 }"
                            style="text-align: left;">
                       <h4 class="r-heading-light r-text-uppercase">
-                        Get paid to shop with Kshop.
+                        Get paid to shop with Owami.
                       </h4>
                       <h1 class="r-heading r-text-uppercase r-text-primary">
                         A better way to your shopping.
@@ -27,7 +27,7 @@
                            :lg="{ span: 24 }"
                            style="text-align: left;">
                       <p class="r-text-normal">
-                        Earn up to R55/hr or more shopping for Kshop members.
+                        Earn up to R55/hr or more shopping for Owami members.
                         Deliver things people love, from the stores they trust.
                       </p>
                       <a-button @click="onApply" type="primary"
@@ -60,16 +60,16 @@
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
                  :lg="{span: 18, offset:6}" class="r-p-48">
             <h2 class="r-heading">
-              Why partner with Kshop?
+              Why partner with Owami?
             </h2>
             <p class="r-text-normal">
-              Kshop is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
+              Owami is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
               hot food and
               household essentials.
             </p>
             <p class="r-text-normal">
-              Kshop is about more than online shopping. Whether you're looking to pay bills or fund
-              dreams, Kshop will get you there.
+              Owami is about more than online shopping. Whether you're looking to pay bills or fund
+              dreams, Owami will get you there.
             </p>
           </a-col>
         </a-row>
@@ -100,7 +100,7 @@
               Choose your wheels
             </h4>
             <p class="r-text-normal">
-              Get tips from other shoppers, attend launch parties, and get a free Kshop
+              Get tips from other shoppers, attend launch parties, and get a free Owami
               membership.
             </p>
           </a-col>
@@ -144,10 +144,10 @@
         <a-row type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
             <h2 class="r-heading r-text-uppercase">
-              Want to start making money shopping with Kshop?
+              Want to start making money shopping with Owami?
             </h2>
             <p class="r-text-normal">
-              Apply to be a Kshop Shopper today and start achieving your goals.
+              Apply to be a Owami Shopper today and start achieving your goals.
             </p>
           </a-col>
         </a-row>

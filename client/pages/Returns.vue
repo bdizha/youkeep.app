@@ -11,7 +11,7 @@
                         </a-col>
                          <a-col :xs="{span: 24}" :lg="{span: 12}" class="r-p-lg-48" style="position: relative;">
                             <div class="r-page-header-photo r-page-art-primary">
-                                <img alt="Couple orders online" src="/images/kshop/about-us.jpg">
+                                <img alt="Couple orders online" src="/images/Owami/about-us.jpg">
                             </div>
                         </a-col>
                     </a-row>
@@ -26,7 +26,7 @@
                                 Who we are
                             </h2>
                             <p class="r-text-normal">
-                                Nice to know, we are Kshop, an online supermakert service. We are the
+                                Nice to know, we are Owami, an online supermakert service. We are the
                                 only store in South Africa that is only online, which means that our customers are at the
                                 center of our business, in fact, we focus on our customers and how best we can serve them.
 
@@ -68,10 +68,10 @@
                                 cash register.
                             </p>
                             <p class="r-text-normal">
-                                Kshop thinks it can be done differently: faster, easier and cheaper. The idea is
+                                Owami thinks it can be done differently: faster, easier and cheaper. The idea is
                                 simple. We
                                 arrange
-                                the shopping, so that you have more time for fun things. At Kshop you can order all
+                                the shopping, so that you have more time for fun things. At Owami you can order all
                                 shopping
                                 within a few minutes. So toilet paper, fresh, chips and ice cream, but also organic
                                 eggs, tender

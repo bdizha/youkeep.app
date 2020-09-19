@@ -15,10 +15,10 @@
                            :lg="{ span: 24 }"
                            style="text-align: left;">
                       <h1 class="r-heading">
-                        <span class="r-text-primary">Kshop careers</span>
+                        <span class="r-text-primary">Owami careers</span>
                       </h1>
                       <p class="r-text-normal">
-                        Kshop is a consumer centric shopping platform that exists to transform
+                        Owami is a consumer centric shopping platform that exists to transform
                         the way shoppers find and make purchases by offering simple and
                         convenient shopping and payment methods.
                       </p>
@@ -114,23 +114,23 @@
         <a-row type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-p-48">
             <h2 class="r-heading">
-              Working at Kshop
+              Working at Owami
             </h2>
             <p class="r-text-normal">
               Work with people who are tech-savvys, font-fanatics, word-wizards, data enthusiasts and
               of course, beer experts (yes, we're an online shop with big dreams). We work hard, think
               big, and play well.
-              And we do it together, because at the Mother Kshop, we’re family.
+              And we do it together, because at the Mother Owami, we’re family.
             </p>
             <p class="r-text-normal">
               Nothing great has ever been built in a day, and it definitely wasn’t built in a flash.
-              At Kshop, we’re building something great, something unimaginable at this juncture. We
+              At Owami, we’re building something great, something unimaginable at this juncture. We
               provide our service as a token of appreciation to the society that serves us.
             </p>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-p-48">
             <h2 class="r-heading">
-              Why work with Kshop?
+              Why work with Owami?
             </h2>
             <a-row class="r-mb-48" type="flex" justify="start">
               <a-col :span="24">
