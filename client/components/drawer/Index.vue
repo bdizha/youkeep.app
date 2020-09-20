@@ -9,9 +9,9 @@
           <r-nav-item v-if="drawer.current == 'cart'" class="r-nav-item">
             <r-cart-count></r-cart-count>
           </r-nav-item>
-          <r-nav-item v-if="drawer.current != 'cart'" class="r-nav-item">
+          <r-nav-item v-if="drawer.current != 'cart'">
             <div class="r-logo">
-              <img :src="'/images/icon-03.svg'"
+              <img :src="'/images/icon_white.svg'"
                    alt="Owami - It's Shopping Time!"/>
             </div>
           </r-nav-item>

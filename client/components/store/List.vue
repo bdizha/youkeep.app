@@ -2,7 +2,7 @@
   <a-row type="flex" justify="center">
     <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-store-item-line" type="flex" justify="start">
-        <a-col class="gutter-row r-ph-24"
+        <a-col class="gutter-row"
                :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
                style="text-align: right;">

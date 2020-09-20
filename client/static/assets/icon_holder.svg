@@ -10,11 +10,11 @@
       }
 
       .cls-3 {
-      fill: #ECECEC;
+      fill: rgb(236, 236, 236, 0.75);
       }
 
       .cls-4 {
-      fill: #ECECEC;
+      fill: rgb(236, 236, 236, 0.75);
       }
 
       .cls-5 {
@@ -26,7 +26,7 @@
       }
 
       .cls-7 {
-      fill: #ECECEC;
+      fill: rgb(236, 236, 236, 0.75);
       }
     </style>
     <clipPath id="clip-Kpaise_Icon_1">
