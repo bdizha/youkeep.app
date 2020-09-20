@@ -46,9 +46,9 @@ class PositionSeeder extends Seeder
                 'type' => 1,
             ];
 
-            $description = str_replace('Shipt', 'Owami', $description);
-            $description = str_replace('SHIPT', 'Owami', $description);
-            $description = str_replace('shipt', 'Owami', $description);
+            $description = str_replace('Shipt', 'Shopple', $description);
+            $description = str_replace('SHIPT', 'Shopple', $description);
+            $description = str_replace('shipt', 'Shopple', $description);
 
             $positionValues = [
                 'title' => $title,

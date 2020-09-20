@@ -11,9 +11,9 @@
            justify="center" align="left">
       <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}">
         <article class="r-article">
-          <p>Thank you for using Owami!</p>
+          <p>Thank you for using Shopple!</p>
           <p><strong>PLEASE READ THE FOLLOWING TERMS AND CONDITIONS (THE “TERMS”) CAREFULLY BEFORE
-            USING OUR WEBSITE, www.Owami.com, OR OUR MOBILE APPLICATIONS (COLLECTIVELY, THE
+            USING OUR WEBSITE, www.Shopple.com, OR OUR MOBILE APPLICATIONS (COLLECTIVELY, THE
             “SITE”).</strong></p>
           <p><strong>YOU AGREE THAT BY USING THE SITE, YOU ACCEPT AND AGREE TO BE BOUND BY THESE TERMS
             AND OUR PRIVACY POLICY, INCORPORATED HEREIN BY REFERENCED. IF YOU DO NOT AGREE TO THESE
@@ -63,8 +63,8 @@
             the use of cookies and other automatic means of collecting information about you, your
             use of the Site or your device. By using the Site you consent to the use of cookies and
             other automatic means of collection in accordance with our Privacy Policy.</p>
-          <p>To cancel your membership, please contact Owami HQ via <a class="text-bold"
-                                                                       href="https://web.archive.org/web/20181025162846/mailto:support@Owami.com">support@Owami.com</a>
+          <p>To cancel your membership, please contact Shopple HQ via <a class="text-bold"
+                                                                       href="https://web.archive.org/web/20181025162846/mailto:support@Shopple.com">support@Shopple.com</a>
             or <a class="text-bold hide-for-medium"
                   href="https://web.archive.org/web/20181025162846/tel:1-205-502-2500">(205)
               502-2500</a><span class="text-bold hide-for-small">072 522 3792</span>.</p>
@@ -103,19 +103,19 @@
             credit card account in the amount of the cancelled charge.</p>
           <h4>Transactions involving Certain Products</h4>
           <p>You may have the option to order delivery of alcohol products in some locations and from
-            certain retailers. You will not use Owami to order alcohol products unless you are 21
-            years of age or older and you will not furnish alcohol products obtained through Owami
+            certain retailers. You will not use Shopple to order alcohol products unless you are 21
+            years of age or older and you will not furnish alcohol products obtained through Shopple
             to any person who is not a lawful consumer. You agree that you will comply with all
-            applicable laws related thereto and not cause Owami, your Shopper, or any retailer to
-            contravene or violate any applicable law. Owami may offer information and a method to
+            applicable laws related thereto and not cause Shopple, your Shopper, or any retailer to
+            contravene or violate any applicable law. Shopple may offer information and a method to
             connect duly licensed, participating retailers to you to purchase alcohol beverages.
-            Owami does not, and does not intend to, make sales of alcohol beverages. Each
+            Shopple does not, and does not intend to, make sales of alcohol beverages. Each
             participating retailer is the seller of record for the particular products it promotes
-            on Owami and sells to you. Owami HAS NO RESPONSIBILITY OR LIABILITY FOR (I) ANY SALE OF
+            on Shopple and sells to you. Shopple HAS NO RESPONSIBILITY OR LIABILITY FOR (I) ANY SALE OF
             ALCOHOL PRODUCTS OR DELIVERY OF SUCH PRODUCTS SOLD AND DELIVERED BY RETAILERS TO YOU OR
             ANY OTHER CUSTOMER OR THIRD PARTY AND/OR (II) ANY ACTIONS OR OMISSIONS OF YOU OR ANY
             THIRD PARTY THAT MAY RESULT, DIRECTLY OR INDIRECTLY, FROM THE PURCHASE AND/OR
-            CONSUMPTION OF ALCOHOL PRODUCTS PROMOTED OR ACQUIRED THROUGH Owami.</p>
+            CONSUMPTION OF ALCOHOL PRODUCTS PROMOTED OR ACQUIRED THROUGH Shopple.</p>
           <p>We reserve the right, in our sole discretion, to refuse to offer the delivery of certain
             items. In the event we choose to refuse to offer certain products after you have placed
             your order but before the product is delivered to you, we may cancel the portion of your
@@ -123,11 +123,11 @@
             the amount of your cancelled charge.</p>
           <h4>Intellectual Property Rights</h4>
           <p>The Site and the content of the Site including, but not limited to, text, graphics,
-            images, audio clips, digital downloads, data compilation or code is owned by Owami, its
+            images, audio clips, digital downloads, data compilation or code is owned by Shopple, its
             licensors or other providers of such material and are protected by United States and
             international intellectual property or proprietary rights laws.</p>
           <p>These Terms permit you to use the Site for your personal, non-commercial use only.
-            Subject to these Terms, Owami grants you a limited, non-exclusive, non-transferable
+            Subject to these Terms, Shopple grants you a limited, non-exclusive, non-transferable
             license to download, install and use the Site for your personal, non-commercial use on a
             mobile device or computer owned or otherwise controlled by you. You may not:</p>
           <ol>
@@ -141,7 +141,7 @@
             </li>
             <li>Create frames around our web pages or use other techniques that alter in any way the
               visual presentation or appearance of the Site (without prior written approval by
-              Owami);
+              Shopple);
             </li>
             <li>Remove, disable, circumvent or otherwise create or implement any workaround to any
               copy protection, rights management or security features in or protecting the Site;
@@ -157,23 +157,23 @@
               prior written consent, including any junk mail, chain letter, or spam; or
             </li>
             <li>Engage in any other conduct that restricts or inhibits anyone’s use or enjoyment of
-              the Site, or which, as determined by us, may harm Owami or users of the Site or
+              the Site, or which, as determined by us, may harm Shopple or users of the Site or
               expose them to liability.
             </li>
           </ol>
-          <p>All trademarks, service marks and trade names of Owami on the Site are trademarks or
-            registered trademarks of Owami or their respective owners. You may not use such marks
-            without Owami’s or the respective owner’s prior written consent or as provided below in
+          <p>All trademarks, service marks and trade names of Shopple on the Site are trademarks or
+            registered trademarks of Shopple or their respective owners. You may not use such marks
+            without Shopple’s or the respective owner’s prior written consent or as provided below in
             “Third Party Links and Sites”.</p>
           <p>You acknowledge and agree that the Site is provided under a license, and not sold, to
             you. You do not acquire any ownership interest in the Site under these Terms or any
-            other rights thereto other than to use the Site in accordance with these Terms. Owami
+            other rights thereto other than to use the Site in accordance with these Terms. Shopple
             and its licensors reserve and retain their entire right, title and interest in and to
             the Site, except as expressly granted to you in these Terms.</p>
           <p>Through your use of the Site, you may be able to submit, upload, publish or otherwise
-            make available to Owami textual, audio and/or visual content, including commentary and
-            feedback (the “Content”). As between you and Owami, any Content that you provide remains
-            your property. However, by providing Content to Owami, you grant Owami and all of its
+            make available to Shopple textual, audio and/or visual content, including commentary and
+            feedback (the “Content”). As between you and Shopple, any Content that you provide remains
+            your property. However, by providing Content to Shopple, you grant Shopple and all of its
             subsidiaries, affiliates, successors and assigns a worldwide, perpetual, royalty-free,
             irrevocable, sublicensable, non-exclusive and transferable right to use, publish,
             reproduce, modify, adapt, publicly display and otherwise use your Content, without
@@ -183,7 +183,7 @@
           <h4>Third-Party Links and Sites</h4>
           <p>The Site may link to other websites operated by third parties. We have no control over
             these linked sites, each of which has a separate privacy and data collection practices
-            independent of Owami. We are not responsible for, do not endorse and do not accept any
+            independent of Shopple. We are not responsible for, do not endorse and do not accept any
             responsibility for the availability, contents, products, services or use of any third
             party site, any website accessed from a third party site or any changes or updates to
             such sites. These linked sites are provided to you only for your convenience and you
@@ -211,21 +211,21 @@
           <h4>Text Messaging</h4>
           <p>By registering to become a member, you agree that we may send you text (SMS) messages in
             order to provide you with the services and products offered through the Site. You may
-            opt-out of receiving text (SMS) messages from Company at any time by contacting Owami HQ
-            via support@Owami.com, provided however that opting out of text (SMS) messages may
+            opt-out of receiving text (SMS) messages from Company at any time by contacting Shopple HQ
+            via support@Shopple.com, provided however that opting out of text (SMS) messages may
             affect your use of the Site and the services and products offered through the Site. You
             may continue to receive text messages for a short period while we de-activate your
             account, and you may also receive text messages confirming the receipt of your
             de-activation request.</p>
           <h4>Copyright Policy</h4>
-          <p>Owami respects the intellectual property rights of others and has implemented a copyright
+          <p>Shopple respects the intellectual property rights of others and has implemented a copyright
             policy in accordance with the Digital Millennium Copyright Act (“DMCA”). If you believe
-            that any content on the Site violates your copyright, please send Owami a written notice
+            that any content on the Site violates your copyright, please send Shopple a written notice
             of infringement to our Copyright Agent (identified below), using the contact information
             listed below, containing the following information:</p>
           <ol>
             <li>A description of the claimed infringing material as well as identification of the
-              claimed infringing material, including the location of such material on the Owami
+              claimed infringing material, including the location of such material on the Shopple
               Services (e.g., the URL of the claimed infringing material if applicable or other
               means by which we may locate the material);
             </li>
@@ -251,7 +251,7 @@
           <p>Please be aware that if you knowingly materially misrepresent that material or activity
             on our Site is infringing your copyright, you may be held liable for damages (including
             costs and attorney’s fees) under Section 512(f) of the DMCA.</p>
-          <p><span class="text-bold">Owami</span><br>
+          <p><span class="text-bold">Shopple</span><br>
             Attn: Compliance<br>
             17 20th St. N Unit 100<br>
             Birmingham, AL, 35203, United States</p>
@@ -260,49 +260,49 @@
             discretion to request that you remove all links or any particular link to our Web site.
             You agree to immediately remove all links to our Web site upon such request.</p>
           <p>We may terminate your use of the Site and the services offered on the Site at any time,
-            for any reason and Owami may prohibit your use of the Site and services offered on the
+            for any reason and Shopple may prohibit your use of the Site and services offered on the
             Site at any time in our sole discretion. The terms of these Terms shall remain in effect
             at all times after the termination of your use of the Site and the services offered on
             the Site.</p>
           <h4>Credits</h4>
           <p>
-            <a href="https://web.archive.org/web/20181025162846/http://credits.Owami.com/">credits.Owami.com</a>
+            <a href="https://web.archive.org/web/20181025162846/http://credits.Shopple.com/">credits.Shopple.com</a>
           </p>
           <h4>Warranty Disclaimer</h4>
           <p>EXCEPT AS OTHERWISE SPECIFICALLY PROVIDED HEREIN, THE SITE AND THE PRODUCTS AND SERVICES
             OFFERED THROUGH THE SITE ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS AND WITHOUT
-            WARRANTIES OF ANY KIND. TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, Owami
+            WARRANTIES OF ANY KIND. TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, Shopple
             DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
             IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-            NON-INFRINGEMENT. Owami DOES NOT REPRESENT OR WARRANT THAT THE SITE AND FEATURES AND
+            NON-INFRINGEMENT. Shopple DOES NOT REPRESENT OR WARRANT THAT THE SITE AND FEATURES AND
             FUNCTIONS CONTAINED ON THE SITE WILL BE UNINTERRUPTED OR ERROR-FREE, THAT ANY DEFECTS
             WILL BE CORRECTED OR THAT THE SITE, OR THE SERVER THAT MAKES THE SITE AVAILABLE, ARE
-            FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. Owami DOES NOT MAKE ANY WARRANTIES OR
+            FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. Shopple DOES NOT MAKE ANY WARRANTIES OR
             REPRESENTATIONS REGARDING THE USE OF MATERIALS ON THE SITE IN TERMS OF THEIR
             CORRECTNESS, ACCURACY, ADEQUACY, USEFULNESS, TIMELINESS, RELIABILITY OR OTHERWISE.
             APPLICABLE LAW MAY NOT ALLOW LIMITATIONS OR EXCLUSIONS ON WARRANTIES SO THE ABOVE
             LIMITATIONS MAY NOT APPLY TO YOU.</p>
           <h4>Limitation of Liability</h4>
-          <p>Owami SHALL NOT BE LIABLE TO ANYONE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR
+          <p>Shopple SHALL NOT BE LIABLE TO ANYONE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR
             CONSEQUENTIAL DAMAGES (INCLUDING PERSONAL INJURY, LOSS OF DATA, REVENUE, PROFITS, USE OR
             OTHER ECONOMIC ADVANTAGE) THAT RESULT FROM YOUR USE OF OR YOUR INABILITY TO USE, THE
-            SITE OR MATERIALS ON THE SITE, EVEN IF Owami HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
-            DAMAGES. Owami WILL NOT BE LIABLE FOR ANY LOSS, DAMAGE OR INJURY WHICH MAY BE INCURRED
+            SITE OR MATERIALS ON THE SITE, EVEN IF Shopple HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+            DAMAGES. Shopple WILL NOT BE LIABLE FOR ANY LOSS, DAMAGE OR INJURY WHICH MAY BE INCURRED
             BY YOU, INCLUDING BUT NOT LIMITED TO LOSS, DAMAGE OR INJURY ARISING OUT OF, OR IN ANY
-            WAY CONNECTED WITH THE SITE OR Owami’S SERVICES, ANY RELIANCE PLACED BY YOU ON THE
+            WAY CONNECTED WITH THE SITE OR Shopple’S SERVICES, ANY RELIANCE PLACED BY YOU ON THE
             COMPLETENESS, ACCURACY OR EXISTENCE OF ANY ADVERTISING, OR AS A RESULT OF ANY
             RELATIONSHIP OR TRANSACTION BETWEEN YOU AND ANY THIRD PARTY SERVICE PROVIDER, ADVERTISER
-            OR SPONSOR. IN NO EVENT SHALL Owami’S AGGREGATE LIABILITY TO YOU OR ANY THIRD PARTY
+            OR SPONSOR. IN NO EVENT SHALL Shopple’S AGGREGATE LIABILITY TO YOU OR ANY THIRD PARTY
             EXCEED THE AMOUNTS ACTUALLY PAID BY AND/OR DUE FROM YOU IN THE SIX (6) MONTH PERIOD
             IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO SUCH CLAIM.</p>
-          <p>Owami MAY INTRODUCE YOU TO SHOPPERS FOR THE PURPOSES OF PROVIDING COURIER SERVICES. YOU
-            EXPRESSLY WAIVE AND RELEASE Owami FROM ANY AND ALL LIABILITY, CLAIMS OR DAMAGES ARISING
-            FROM OR IN ANY WAY RELATED TO THE SHOPPERS. Owami WILL NOT BE A PARTY TO DISPUTES
+          <p>Shopple MAY INTRODUCE YOU TO SHOPPERS FOR THE PURPOSES OF PROVIDING COURIER SERVICES. YOU
+            EXPRESSLY WAIVE AND RELEASE Shopple FROM ANY AND ALL LIABILITY, CLAIMS OR DAMAGES ARISING
+            FROM OR IN ANY WAY RELATED TO THE SHOPPERS. Shopple WILL NOT BE A PARTY TO DISPUTES
             BETWEEN YOU AND SUCH SHOPPERS. APPLICABLE LAW MAY NOT ALLOW THE LIMITATION OR EXCLUSION
             OF LIABILITY OR INCIDENTAL OR CONSEQUENTIAL DAMAGES SO THE ABOVE LIMITATION OR EXCLUSION
             MAY NOT APPLY TO YOU.</p>
           <h4>Indemnification</h4>
-          <p>You agree to indemnify, defend and hold harmless Owami, its officers, directors,
+          <p>You agree to indemnify, defend and hold harmless Shopple, its officers, directors,
             employees, agents, licensors and suppliers from and against all losses, liabilities,
             expenses, damages and costs, including reasonable attorneys’ fees, resulting from (i)
             your violation of these Terms or any applicable law or regulation, whether or not
@@ -312,7 +312,7 @@
             accessing the Site using your Internet account.</p>
           <h4>General</h4>
           <p>These Terms, along with any rules, guidelines or policies published in the Site
-            constitute the entire agreement between Owami and you with respect to your use of the
+            constitute the entire agreement between Shopple and you with respect to your use of the
             Site and the services and products offered through the Site. If there is any conflict
             between the Terms and other rules or instructions posted, the Terms shall control. We
             shall not be liable for damages for any delay or failure of delivery arising out of
@@ -324,12 +324,12 @@
             action accrues, or such action will be permanently barred. These Terms shall be governed
             by, and construed in accordance with, the laws of the state of Georgia, without
             reference to its choice and conflict of law rules. You may not assign your rights or
-            obligation under these Terms without the prior consent of Owami. Owami’s failure to
+            obligation under these Terms without the prior consent of Shopple. Shopple’s failure to
             insist upon or enforce any provision of these Terms shall not be construed as a waiver
             of any provision or right. All headings included in these Terms are included for
             convenience only, and shall not be considered in interpreting these Terms. These Terms
-            do not limit any rights that Owami may have pursuant to any intellectual property laws
-            or other laws. All rights and remedies available to Owami, pursuant to these Terms or
+            do not limit any rights that Shopple may have pursuant to any intellectual property laws
+            or other laws. All rights and remedies available to Shopple, pursuant to these Terms or
             otherwise, at law or in equity, are cumulative and not exclusive of any other rights or
             remedies that may be available. No independent contractor relationship, partnership,
             joint venture, employer-employee or franchise relationship is created by these

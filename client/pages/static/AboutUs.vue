@@ -27,7 +27,7 @@
                            :lg="{ span: 24 }"
                            style="text-align: left;">
                       <p class="r-text-normal">
-                        We set out to build Owami to give everyone the power to take back
+                        We set out to build Shopple to give everyone the power to take back
                         control
                         of their day-to-day shopping experience.
                       </p>
@@ -63,7 +63,7 @@
                   It's shopping time!
                 </h2>
                 <p class="r-text-normal">
-                  Nice to know, we are Owami, an online shopping service. We are the
+                  Nice to know, we are Shopple, an online shopping service. We are the
                   only store in South Africa that is only online and entirely about other brands,
                   which means that our customers are at the
                   center of our business, in fact, we put the first on our customers and how best we can serve
@@ -142,7 +142,7 @@
                   An additional advantage is that we do not energy resources. When
                   cash
                   register
-                  closes at 00:00am, shopper Owami knows exactly how many orders to prepare for the
+                  closes at 00:00am, shopper Shopple knows exactly how many orders to prepare for the
                   next
                   day. That way
                   we never have to waste time delivering your order. In this way we contribute to the environment
@@ -154,17 +154,17 @@
                   Making sense, making value
                 </h2>
                 <p class="r-text-normal">
-                  In September 2015, Owami was started in with 18 shoppers and 12 delivery vehicles.
+                  In September 2015, Shopple was started in with 18 shoppers and 12 delivery vehicles.
                   There are
                   now about
                   2000 shoppers driving around in more than 20 South African areas. With hundreds of
                   thousands
                   of
                   customers
-                  and a monthly expansion to new cities, Owami was named the fastest growing retail platform
+                  and a monthly expansion to new cities, Shopple was named the fastest growing retail platform
                   company in
                   South Africa in 2020.
-                  Owami thinks it can be done differently: faster, easier and cheaper. The idea is
+                  Shopple thinks it can be done differently: faster, easier and cheaper. The idea is
                   simple. We
                   arrange
                   the shopping, so that you have more time for fun things. </p>

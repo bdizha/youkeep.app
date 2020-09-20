@@ -16,11 +16,11 @@
                              :lg="{ span: 24 }"
                              style="text-align: left;">
                         <h1 class="r-heading">
-                          <span class="r-text-primary">How does Owami work?</span>
+                          <span class="r-text-primary">How does Shopple work?</span>
                         </h1>
                         <p class="r-text-normal">
                           It doesn’t matter when or where you shop, as long as
-                          you do it with Owami, you are fully in control.
+                          you do it with Shopple, you are fully in control.
                         </p>
                         <p class="r-text-normal">
                           In our mobile app you can do all the shopping you need within a few
@@ -112,29 +112,6 @@
         </a-col>
       </a-row>
       <r-steps :has-wave="false" :has-title="true" heading="Kpay shopping experience"></r-steps>
-      <a-row class="r-text-center" type="flex" justify="center" :gutter="24">
-        <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }">
-          <a-row type="flex" justify="center">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-pv-48">
-              <h2 class="r-heading r-text-uppercase">
-                Shop online with Owami
-              </h2>
-              <p class="r-text-normal">
-                Join the Owami online experience and get better deals in-store and online today.
-              </p>
-            </a-col>
-          </a-row>
-          <a-row type="flex" justify="center" align="middle">
-            <a-col class="r-pb-48" :xs="{ span: 24 }" :md="{ span: 12 }"
-                   :lg="{ span: 12 }">
-              <a-button @click="onModal('login')" size="large" type="primary">
-                Let's go
-              </a-button>
-            </a-col>
-          </a-row>
-        </a-col>
-      </a-row>
     </a-col>
   </a-row>
 </template>
@@ -155,11 +132,6 @@ export default {
     this.modal = this.$store.state.modal;
   },
   methods: {
-    onModal(current) {
-      this.modal.isVisible = true;
-      this.modal.current = current;
-      this.$store.dispatch('app/onModal', modal);
-    },
     onStoreTray() {
       this.$store.dispatch('app/onStoreTray', true);
     },

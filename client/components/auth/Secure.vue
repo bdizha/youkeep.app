@@ -16,7 +16,7 @@
                                     <span class="r-text-secondary">Welcome, </span>{{ user.name }}!
                                 </h3>
                                 <p class="r-text-sm">
-                                    Enter and confirm new credentials to secure your Owami account.
+                                    Enter and confirm new credentials to secure your Shopple account.
                                 </p>
                             </a-col>
                         </a-row>
@@ -65,7 +65,7 @@
                 formName: 'secure',
                 fields: ['password', 'password_confirmation'],
                 form: this.$form.createForm(this, {name: 'form_secure'}),
-                message: "Thank you for successfully securing your Owami account! Please wait while we setup your account.",
+                message: "Thank you for successfully securing your Shopple account! Please wait while we setup your account.",
                 userType: 1,
             };
         },
@@ -124,7 +124,7 @@
                 }).then(response => {
                     setTimeout(() => {
                         if ($this.isValid) {
-                            $this.$message.success('Thank you, your account is now secured. Enjoy your shopping with Owami.');
+                            $this.$message.success('Thank you, your account is now secured. Enjoy your shopping with Shopple.');
                         } else {
                             $this.$message.error('Oops, the submitted form was invalid.');
                         }

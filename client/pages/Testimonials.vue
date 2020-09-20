@@ -8,7 +8,7 @@
               <VueSlickCarousel v-if="testimonials.length > 0" v-bind="settings">
                 <div class="r-testimonial">
                   <img class="r-testimonial-photo"
-                       :src="'/images/Owami/testimonials/0' + index + '.jpg'"
+                       :src="'/images/Shopple/testimonials/0' + index + '.jpg'"
                        style="opacity: 1;">
                   <h4 class="r-heading">
                     {{ testimonial.content }}

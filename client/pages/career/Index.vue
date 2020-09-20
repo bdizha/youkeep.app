@@ -5,7 +5,7 @@
         <a-row type="flex" justify="space-around" align="middle">
           <a-col class="gutter-row r-text-center" :span="24">
             <h1 class="r-heading r-text-primary">
-              Current job openings at Owami
+              Current job openings at Shopple
             </h1>
           </a-col>
         </a-row>
@@ -79,7 +79,7 @@
         <a-row v-if="careers.departments.length == 0" type="flex" justify="center">
           <a-col class="gutter-row r-text-center" :span="24">
             <a-empty
-              image="/images/Owami/icon_grey.svg"
+              image="/images/Shopple/icon_grey.svg"
               :imageStyle="{ height: '81px',}">
               <span slot="description">Sorry. There aren't any job openings currently.</span>
               <a-button size="large" class="ant-btn-primary r-btn-black">Shop now</a-button>

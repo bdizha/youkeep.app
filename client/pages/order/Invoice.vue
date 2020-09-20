@@ -73,7 +73,7 @@
             </a-col>
             <a-col :xs="{ span: 12 }">
                 <a-card title="DELIVERY METHOD" style="width: 100%; margin-bottom: 20px;">
-                    <p class="r-text-normal">Owami </p>
+                    <p class="r-text-normal">Shopple </p>
                 </a-card>
             </a-col>
         </a-row>

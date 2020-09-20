@@ -77,7 +77,7 @@ export default {
       errors: [],
       process: 'isSuccess',
       redirectTo: '',
-      message: "Thank you for successfully confirming your credentials! Please wait a little more, and pay less with Owami",
+      message: "Thank you for successfully confirming your credentials! Please wait a little more, and pay less with Shopple",
     };
   },
   computed: mapGetters({
@@ -128,7 +128,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your shopping with Owami.');
+            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your shopping with Shopple.');
           } else {
             $this.$message.error('Oops, the submitted form was invalid.');
           }

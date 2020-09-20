@@ -57,7 +57,7 @@
                     <a-row v-if='!hasItems' type="flex" justify="middle">
                         <a-col class="gutter-row r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                :lg="{ span: 18 }">
-                            <a-empty image="/images/Owami/icon_black_light.svg"
+                            <a-empty image="/images/Shopple/icon_black_light.svg"
                                      :image-style="{
                                       height: '60px',
                                     }">

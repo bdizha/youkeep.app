@@ -19,14 +19,14 @@
                            :lg="{ span: 24 }"
                            style="text-align: left;">
                       <h1 class="r-heading">
-                        Shop online with Owami
+                        Shop online with Shopple
                       </h1>
                       <h2 class="r-heading">
                         <span class="r-heading r-text-primary">Shop more,</span>
                         <span class="r-text-secondary">Pay less</span>
                       </h2>
                       <p class="r-text-normal">
-                        Yes, as long as you shop it with Owami, you are fully in control.
+                        Yes, as long as you shop it with Shopple, you are fully in control.
                       </p>
                     </a-col>
                   </a-row>

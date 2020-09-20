@@ -13,7 +13,7 @@
             <a-row type="flex" justify="center">
               <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
                 <h3 class="r-heading">
-                  Request a Owami account
+                  Request a Shopple account
                 </h3>
                 <h3 v-show="hasAddress" class="r-heading">
                   <a-icon slot="prefix" type="environment"/>
@@ -106,7 +106,7 @@ export default {
       formName: 'register',
       fields: ['name', 'mobile', 'email'],
       form: this.$form.createForm(this, {name: 'form_register'}),
-      message: "Thank you for successfully signing up with Owami. Enjoy your shopping!",
+      message: "Thank you for successfully signing up with Shopple. Enjoy your shopping!",
       userType: 1,
     };
   },
@@ -163,7 +163,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Owami.');
+            $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Shopple.');
           } else {
             $this.$message.error('Oops, the submitted form was invalid.');
           }

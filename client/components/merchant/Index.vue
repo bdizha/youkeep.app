@@ -18,14 +18,14 @@
                                                 For merchants
                                             </h4>
                                             <h1 class="r-heading r-text-uppercase">
-                                                <span class="r-text-black">Enable more buying customers and increase recurring orders with Owami.</span>
+                                                <span class="r-text-black">Enable more buying customers and increase recurring orders with Shopple.</span>
                                             </h1>
                                             <p class="r-text-normal">
-                                                Maximize in-store impact with Owami signage and online training for
+                                                Maximize in-store impact with Shopple signage and online training for
                                                 retail associates.
                                             </p>
                                             <p class="r-text-normal">
-                                                We’ll ship you an activation kit to promote Owami in-store.
+                                                We’ll ship you an activation kit to promote Shopple in-store.
                                             </p>
                                         </a-col>
                                     </a-row>
@@ -132,7 +132,7 @@
                             Become a verified merchant today
                         </h2>
                         <p class="r-text-normal">
-                            Join the Owami Merchant Program and start promoting Owami in-store today and watch your
+                            Join the Shopple Merchant Program and start promoting Shopple in-store today and watch your
                             sales run wild!
                         </p>
                     </a-col>

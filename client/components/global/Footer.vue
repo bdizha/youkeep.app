@@ -3,12 +3,13 @@
     <a-col class="gutter-row" :span="24">
       <a-row type="flex" justify="center">
         <a-col class="r-p-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 18 }" :lg="{ span: 18 }">
-          <a-row :gutter="[24,24]" type="flex" justify="center">
+          <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
             <a-col class="gutter-row" v-if="hasSubscribe" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <r-subscribe size="24"></r-subscribe>
             </a-col>
             <a-col class="gutter-row" v-if="hasDownload" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <r-download size="24"></r-download>
+              <r-shop-now></r-shop-now>
             </a-col>
           </a-row>
         </a-col>
@@ -23,7 +24,7 @@
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                       <nuxt-link class="r-same-height" to="/">
                         <img src="/images/icon-03.svg?v=1"
-                             alt="Owami - Online shop"
+                             alt="Shopple - Online shop"
                              class="r-footer-logo /">
                       </nuxt-link>
                     </a-col>
@@ -56,7 +57,7 @@
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Customers" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <nuxt-link to="/login">Join Owami</nuxt-link>
+                        <nuxt-link to="/login">Join Shopple</nuxt-link>
                       </div>
                       <div class="r-footer-link">
                         <nuxt-link to="/kpaise">Kpaise - Customer</nuxt-link>
@@ -127,7 +128,7 @@
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
                     <div class="r-text-white r-same-height r-footer-link">
-                      &copy; Owami 2020 All Rights Reserved
+                      &copy; Shopple 2020 All Rights Reserved
                     </div>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">

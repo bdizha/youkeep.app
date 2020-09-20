@@ -165,7 +165,7 @@
             <a-row>
               <a-col class="r-checkout-footer" :span="24">
                 <p class="r-text-normal">
-                  By placing your order, you agree to be bound by the Owami Terms of
+                  By placing your order, you agree to be bound by the Shopple Terms of
                   <router-link target="_blank" to="/service">Service</router-link>
                   and
                   <router-link to="_blank" href="/privacy">Privacy Policy</router-link>

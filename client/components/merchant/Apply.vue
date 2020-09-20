@@ -10,10 +10,10 @@
                     <a-row class="r-mt-48" type="flex" justify="center">
                         <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
                             <h2 class="r-heading">
-                                Owami merchant application
+                                Shopple merchant application
                             </h2>
                             <p class="r-text-normal">
-                                Contact us to learn more about Owami and checkout financing
+                                Contact us to learn more about Shopple and checkout financing
                             </p>
                         </a-col>
                     </a-row>

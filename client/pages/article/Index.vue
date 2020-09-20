@@ -9,7 +9,7 @@
                             A better way to shop.
                         </h4>
                         <h1 class="r-heading r-text-uppercase r-text-primary">
-                            Owami blog
+                            Shopple blog
                         </h1>
                     </a-col>
                 </a-row>

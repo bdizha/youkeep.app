@@ -40,14 +40,14 @@
                   Email
                 </h4>
                 <p class="r-text-normal">
-                  <a href="mailto:info@Owami.com" target="_blank">info@Owami.com</a>
+                  <a href="mailto:info@Shopple.com" target="_blank">info@Shopple.com</a>
                 </p>
               </a-col>
             </a-row>
           </a-col>
           <a-col :xs="{span: 24}" :lg="{span: 12}" style="position: relative;">
             <div class="r-page-header-photo r-page-art-primary">
-              <img alt="Owami - Contact Us" src="/images/home.jpg"/>
+              <img alt="Shopple - Contact Us" src="/images/home.jpg"/>
             </div>
           </a-col>
         </a-row>

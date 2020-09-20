@@ -12,7 +12,7 @@
           <r-nav-item v-if="drawer.current != 'cart'">
             <div class="r-logo">
               <img :src="'/images/icon_white.svg'"
-                   alt="Owami - It's Shopping Time!"/>
+                   alt="Shopple - It's Shopping Time!"/>
             </div>
           </r-nav-item>
         </a-col>

@@ -35,7 +35,7 @@
       <a-row type="flex" justify="center">
         <a-col class="gutter-row r-p-48" :sm="{ span: 24 }" :lg="{ span: 18 }">
           <p class="r-store-text-light">
-            Owami is an independent shopping service that is not necessarily affiliated with,
+            Shopple is an independent shopping service that is not necessarily affiliated with,
             endorsed or sponsored by the stores listed here but it enables you to get the deliveries you
             want.
           </p>
