@@ -122,7 +122,7 @@
                 </a-row>
             </a-col>
         </a-row>
-        <r-steps :has-wave="false" :has-title="true" heading="Kpay shopping experience"></r-steps>
+        <r-steps :has-wave="false" :has-title="true" heading="Shopple shopping experience"></r-steps>
         <a-row class="r-text-center" type="flex" justify="center" :gutter="24">
             <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :md="{ span: 24 }"
                    :lg="{ span: 24 }">

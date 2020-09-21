@@ -71,47 +71,71 @@
           </div>
         </a-col>
       </a-row>
-      <a-row class="r-mv-48" type="flex">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
-          <a-row type="flex" justify="start"
-                 class="r-radius-right-white r-text-center">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
-                   :lg="{span: 18, offset:6}" class="r-p-48">
-              <a-row :gutter="[48,48]" type="flex" justify="start"
-                     class="r-radius-right-white">
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                       :lg="{span: 8}">
-                  <div class="r-icon r-icon-primary">
-                    <a-icon type="shop"/>
-                  </div>
-                  <h4 class="r-heading-light r-text-uppercase">
-                    Online and in-store options
-                  </h4>
-                </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                       :lg="{span: 8}">
-                  <div class="r-icon r-icon-primary">
-                    <a-icon type="shopping"/>
-                  </div>
-                  <h4 class="r-heading-light r-text-uppercase">
-                    One stop shopping platform
-                  </h4>
-                </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                       :lg="{span: 8}">
-                  <div class="r-icon r-icon-primary">
-                    <a-icon type="dollar"/>
-                  </div>
-                  <h4 class="r-heading-light r-text-uppercase">
-                    Instant checkout finance
-                  </h4>
-                </a-col>
-              </a-row>
+      <a-row class="r-mv-48" type="flex" justify="center">
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{span: 18}">
+          <r-steps></r-steps>
+          <a-row :gutter="[24,24]" type="flex" justify="center"
+                 class="r-text-center">
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
+                   :lg="{span: 8}">
+              <a-card hoverable>
+                <div slot="cover" class="r-card-cover-secondary">
+                  <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shop"/>
+                </div>
+                <a-card-meta>
+                  <template slot="description">
+                    <h4 class="r-heading">
+                      Online and in-store options
+                    </h4>
+                    <p class="r-text-normal">
+                      We're changing how shopping is experienced. Get new products served to you based on your liking and
+                      shopping preferences.
+                    </p>
+                  </template>
+                </a-card-meta>
+              </a-card>
+            </a-col>
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
+                   :lg="{span: 8}">
+              <a-card hoverable>
+                <div slot="cover" class="r-card-cover-secondary">
+                  <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shopping"/>
+                </div>
+                <a-card-meta>
+                  <template slot="description">
+                    <h4 class="r-heading">
+                      One stop shopping platform
+                    </h4>
+                    <p class="r-text-normal">
+                      We're changing how shopping is experienced. Get new products served to you based on your liking and
+                      shopping preferences.
+                    </p>
+                  </template>
+                </a-card-meta>
+              </a-card>
+            </a-col>
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
+                   :lg="{span: 8}">
+              <a-card hoverable>
+                <div slot="cover" class="r-card-cover-secondary">
+                  <a-icon class="r-icon r-icon-stroke r-icon-primary" type="dollar"/>
+                </div>
+                <a-card-meta>
+                  <template slot="description">
+                    <h4 class="r-heading">
+                      Instant checkout finance
+                    </h4>
+                    <p class="r-text-normal">
+                      We're changing how shopping is experienced. Get new products served to you based on your liking and
+                      shopping preferences.
+                    </p>
+                  </template>
+                </a-card-meta>
+              </a-card>
             </a-col>
           </a-row>
         </a-col>
       </a-row>
-      <r-steps :has-wave="false" :has-title="true" heading="Kpay shopping experience"></r-steps>
     </a-col>
   </a-row>
 </template>

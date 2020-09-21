@@ -74,7 +74,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('/contact/send', 'ContactController@send')->name('contact.send');
     Route::get('/returns', 'PageController@returns')->name('page.returns');
     Route::get('/kkredit', 'PageController@kkredit')->name('page.kkredit');
-    Route::get('/kpay', 'PageController@kpay')->name('page.kpay');
+    Route::get('/shopple', 'PageController@shopple')->name('page.shopple');
     Route::get('/kkapital', 'PageController@kkapital')->name('page.kkapital');
     Route::get('/kbill', 'PageController@kbill')->name('page.kbill');
     Route::get('/careers', 'CareerController@index')->name('page.careers');

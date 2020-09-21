@@ -237,6 +237,8 @@ a.r-text-link {
 }
 
 .ant-drawer-header {
+    background: rgba(60, 68, 76);
+    border-bottom: 1px solid rgb(236, 236, 236, 0.75);
     padding: 12px;
 }
 
@@ -1141,6 +1143,8 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .ant-drawer-close {
+    background: rgba(60, 68, 76);
+    color: #FFFFFF;
     width: 60px;
     height: 60px;
     font-size: 21px;
@@ -1184,6 +1188,41 @@ xxl	≥1600px, could be a span value or an object containing above props
         width: 390px !important;
 
         .ant-drawer-content {
+            overflow: hidden;
+            color: #FFFFFF;
+
+            .r-store-item-line {
+                border-bottom: 1px solid rgb(236, 236, 236, 0.75);
+            }
+
+            .r-list-item,
+            .r-account-item {
+                .r-text-link{
+                    color: #FFFFFF;
+                    opacity: 0.81;
+                }
+                .router-link-exact-active,
+                a:hover {
+                    color: rgba(251, 0, 40, 1);
+                }
+
+                .ant-avatar-icon {
+                    opacity: 0.81;
+                    color: #FFFFFF;
+                    margin-right: 6px;
+                    background: rgba(60, 68, 76);
+                    border: 1px solid #FFFFFF;
+                }
+
+                &:hover {
+                    opacity: 0.96;
+                    .ant-avatar-icon {
+                        background: rgba(251, 0, 40, 1);
+                        border-color: #fb002833;
+                        color: #FFFFFF;
+                    }
+                }
+            }
         }
 
         .ant-drawer-wrapper-body {
@@ -4357,7 +4396,7 @@ h4.r-heading-light {
 
 .r-subscribe {
     background: transparent url(/assets/icon_pattern_light.svg) repeat;
-    padding: 24px 0;
+    padding: 48px 0;
 
     .r-subscribe-title {
         padding-left: 60px;

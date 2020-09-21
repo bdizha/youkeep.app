@@ -6,7 +6,7 @@
                :lg="{span: 8}">
           <a-card hoverable>
             <div slot="cover" class="r-card-cover-secondary">
-              <a-icon class="r-icon r-icon-primary" type="shop"/>
+              <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shop"/>
             </div>
             <a-card-meta>
               <template slot="description">
@@ -25,7 +25,7 @@
                :lg="{span: 8}">
           <a-card hoverable>
             <div slot="cover" class="r-card-cover-secondary">
-              <a-icon class="r-icon r-icon-primary" type="shopping"/>
+              <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shopping"/>
             </div>
             <a-card-meta>
               <template slot="description">
@@ -44,7 +44,7 @@
                :lg="{span: 8}">
           <a-card hoverable>
             <div slot="cover" class="r-card-cover-secondary">
-              <a-icon class="r-icon r-icon-primary" type="clock-circle"/>
+              <a-icon class="r-icon r-icon-stroke r-icon-primary" type="clock-circle"/>
             </div>
             <a-card-meta>
               <template slot="description">

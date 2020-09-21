@@ -103,13 +103,13 @@ class PageController extends Controller
     }
 
     /**
-     * Show the kpay page
+     * Show the shopple page
      *
      * @return \Illuminate\Http\Response
      */
     public function kpaise()
     {
-        return view('page.index', ['component' => 'kpay']);
+        return view('page.index', ['component' => 'shopple']);
     }
 
     /**
