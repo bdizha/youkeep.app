@@ -1,20 +1,19 @@
 <template>
-  <a-row type="flex" justify="center">
-    <a-col class="gutter-row" :span="24">
-      <a-row type="flex" justify="center">
-        <a-col class="gutter-row" :span="24">
-          <div class="r-bg-primary-light">
-            <a-row type="flex" justify="center">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-                <a-row type="flex" justify="start">
-                  <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                         :md="{ offset: 3, span: 9 }"
-                         :lg="{ offset: 3, span: 9 }">
-                    <a-row type="flex" justify="start">
-                      <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                             :md="{ span: 24 }"
-                             :lg="{ span: 24 }"
-                             style="text-align: left;">
+  <r-page>
+    <a-row type="flex" justify="center">
+      <a-col class="gutter-row" :span="24">
+        <div class="r-page-welcome r-bg-blue">
+          <a-row type="flex" justify="start" align="middle">
+            <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                   :md="{ span: 12 }"
+                   :lg="{ span: 12 }">
+              <a-row type="flex" justify="start" align="middle">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" s="r" :md="{ span: 24 }"
+                       :lg="{ span: 24 }"
+                       style="text-align: left;">
+                  <a-card hoverable>
+                    <a-card-meta>
+                      <template slot="description">
                         <h1 class="r-heading">
                           <span class="r-text-primary">How does Shopple work?</span>
                         </h1>
@@ -28,11 +27,6 @@
                           take
                           some getting used to. That is why we are happy to explain how it works.
                         </p>
-                      </a-col>
-                    </a-row>
-                    <a-row class="r-mb-48" type="flex" justify="start">
-                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
-                             :lg="{ span: 18 }">
                         <a-row :gutter="[24,24]" type="flex" justify="start">
                           <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                  :md="{ span: 12 }"
@@ -55,89 +49,104 @@
                             </a-button>
                           </a-col>
                         </a-row>
-                      </a-col>
-                    </a-row>
-                  </a-col>
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-                    <div class="r-page-header-photo">
-                      <div class="r-page-primary"
-                           style="background-image: url('/images/welcome-03.jpg')">
-                      </div>
-                    </div>
-                  </a-col>
-                </a-row>
-              </a-col>
-            </a-row>
-          </div>
-        </a-col>
-      </a-row>
-      <a-row class="r-mv-48" type="flex" justify="center">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{span: 18}">
-          <r-steps></r-steps>
-          <a-row :gutter="[24,24]" type="flex" justify="center"
-                 class="r-text-center">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                   :lg="{span: 8}">
-              <a-card hoverable>
-                <div slot="cover" class="r-card-cover-secondary">
-                  <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shop"/>
-                </div>
-                <a-card-meta>
-                  <template slot="description">
-                    <h4 class="r-heading">
-                      Online and in-store options
-                    </h4>
-                    <p class="r-text-normal">
-                      We're changing how shopping is experienced. Get new products served to you based on your liking and
-                      shopping preferences.
-                    </p>
-                  </template>
-                </a-card-meta>
-              </a-card>
+                      </template>
+                    </a-card-meta>
+                  </a-card>
+                </a-col>
+              </a-row>
             </a-col>
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                   :lg="{span: 8}">
-              <a-card hoverable>
-                <div slot="cover" class="r-card-cover-secondary">
-                  <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shopping"/>
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+              <div class="r-page-header-photo">
+                <div class="r-page-primary"
+                     style="background-image: url('/images/welcome-03.jpg')">
                 </div>
-                <a-card-meta>
-                  <template slot="description">
-                    <h4 class="r-heading">
-                      One stop shopping platform
-                    </h4>
-                    <p class="r-text-normal">
-                      We're changing how shopping is experienced. Get new products served to you based on your liking and
-                      shopping preferences.
-                    </p>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                   :lg="{span: 8}">
-              <a-card hoverable>
-                <div slot="cover" class="r-card-cover-secondary">
-                  <a-icon class="r-icon r-icon-stroke r-icon-primary" type="dollar"/>
-                </div>
-                <a-card-meta>
-                  <template slot="description">
-                    <h4 class="r-heading">
-                      Instant checkout finance
-                    </h4>
-                    <p class="r-text-normal">
-                      We're changing how shopping is experienced. Get new products served to you based on your liking and
-                      shopping preferences.
-                    </p>
-                  </template>
-                </a-card-meta>
-              </a-card>
+              </div>
             </a-col>
           </a-row>
-        </a-col>
-      </a-row>
-    </a-col>
-  </a-row>
+        </div>
+      </a-col>
+    </a-row>
+    <a-row type="flex" justify="center">
+      <a-col class="gutter-row" :span="24">
+        <r-steps></r-steps>
+        <a-row type="flex" justify="center">
+          <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+            <a-row :gutter="[48,48]" type="flex" justify="justify">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                     :lg="{ span: 12 }"
+                     style="text-align: left;">
+                <a-card hoverable>
+                  <div slot="cover" class="r-card-cover-secondary">
+                    <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shop"/>
+                  </div>
+                  <a-card-meta>
+                    <template slot="description">
+                      <h4 class="r-heading-light">
+                        Online and in-store options
+                      </h4>
+                      <p class="r-text-normal">
+                        We're changing how shopping is experienced. Get new products served to you based on your liking
+                        and
+                        shopping preferences.
+                      </p>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                &nbsp;
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                &nbsp;
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                <a-card hoverable>
+                  <div slot="cover" class="r-card-cover-secondary">
+                    <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shopping"/>
+                  </div>
+                  <a-card-meta>
+                    <template slot="description">
+                      <h4 class="r-heading-light">
+                        One stop shopping platform
+                      </h4>
+                      <p class="r-text-normal">
+                        We're changing how shopping is experienced. Get new products served to you based on your liking
+                        and
+                        shopping preferences.
+                      </p>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                <a-card hoverable>
+                  <div slot="cover" class="r-card-cover-secondary">
+                    <a-icon class="r-icon r-icon-stroke r-icon-primary" type="dollar"/>
+                  </div>
+                  <a-card-meta>
+                    <template slot="description">
+                      <h4 class="r-heading-light">
+                        Instant checkout finance
+                      </h4>
+                      <p class="r-text-normal">
+                        We're changing how shopping is experienced. Get new products served to you based on your liking
+                        and
+                        shopping preferences.
+                      </p>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
+            </a-row>
+          </a-col>
+        </a-row>
+      </a-col>
+    </a-row>
+  </r-page>
 </template>
 <script>
 export default {

@@ -1,7 +1,7 @@
 <template>
     <r-account>
         <a-row type="flex" justify="center" align="middle">
-            <a-col class="gutter-row r-mv-24" :xs="{ span: 24 }"
+            <a-col class="gutter-row r-margin-vertical-24" :xs="{ span: 24 }"
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
                 <h2 class="r-heading">
                     ORDER #202511935 placed on 27 July 2019 12:59
@@ -13,7 +13,7 @@
         </a-row>
         <a-row type="flex" justify="center" align="middle">
             <a-col :xs="{ span: 24 }">
-                <a-card title="ORDER TIMELINE" style="width: 100%; margin-bottom: 20px;">
+                <a-card title="ORDER TIMELINE" style="width: 100%;">
                     <a-steps :direction="isVertical ? 'vertical' : 'horizontal'" size="large">
                         <a-step title="Order received"
                                 :description="isVertical ? 'We are awaiting payment for your order' : ''"/>
@@ -39,7 +39,7 @@
         </a-row>
         <a-row type="flex" justify="center" align="middle">
             <a-col :xs="{ span: 12 }">
-                <a-card title="DELIVERY ADDRESS" style="width: 100%; margin-bottom: 20px;">
+                <a-card title="DELIVERY ADDRESS" style="width: 100%;">
                     <p class="r-text-normal">Batanayi Matuku</p>
                     <p class="r-text-normal">Respublica</p>
                     <p class="r-text-normal">10 Muswel Road Bryastan, Johannesburg, South</p>
@@ -52,7 +52,7 @@
                 </a-card>
             </a-col>
             <a-col :xs="{ span: 12 }">
-                <a-card title="BILLING ADDRESS" style="width: 100%; margin-bottom: 20px;">
+                <a-card title="BILLING ADDRESS" style="width: 100%;">
                     <p class="r-text-normal">Batanayi Matuku</p>
                     <p class="r-text-normal">Respublica</p>
                     <p class="r-text-normal">10 Muswel Road Bryastan, Johannesburg, South</p>
@@ -67,13 +67,13 @@
         </a-row>
         <a-row type="flex" justify="center" align="middle">
             <a-col :xs="{ span: 12 }">
-                <a-card title="PAYMENT METHOD" style="width: 100%; margin-bottom: 20px;">
+                <a-card title="PAYMENT METHOD" style="width: 100%;">
                     <p class="r-text-normal">Credit & Debit Card</p>
                 </a-card>
             </a-col>
             <a-col :xs="{ span: 12 }">
-                <a-card title="DELIVERY METHOD" style="width: 100%; margin-bottom: 20px;">
-                    <p class="r-text-normal">Shopple </p>
+                <a-card title="DELIVERY METHOD" style="width: 100%;">
+                    <p class="r-text-normal">Kshopit </p>
                 </a-card>
             </a-col>
         </a-row>

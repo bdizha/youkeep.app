@@ -4,12 +4,12 @@
       <a-col :span="24">
         <a-row type="flex" justify="center" align="middle" class="r-art-primary">
           <a-col :xs="{span: 24}" :sm="{span: 24}" :lg="{span: 12}"
-                 class="r-mv-48 r-text-center">
+                 class="r-margin-vertical-48 r-text-center">
             <a-row type="flex" justify="center" align="middle">
               <a-col :xs="{span: 24}" :sm="{span: 24}" :lg="{span: 24}">
-                <h1 class="r-heading r-text-white">
+                <h2 class="r-heading r-text-white">
                   {{ position.title }}
-                </h1>
+                </h2>
               </a-col>
             </a-row>
             <a-row type="flex" justify="center" align="middle">
@@ -38,7 +38,7 @@
           </a-col>
         </a-row>
         <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48">
+          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
                 <router-link class="r-text-primary r-text-view-more"
@@ -61,7 +61,7 @@
           </a-col>
         </a-row>
         <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-bg-white r-p-48">
+          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-bg-white r-padding-48">
             <a-row class="" type="flex" justify="space-around" align="middle">
               <a-col :lg="{span: 24}" class="">
                 <a-form v-if="!isSuccessful" :layout="'horizontal'"
@@ -164,7 +164,7 @@
                                 v-decorator="['cover_letter', { rules: [{ required: true, message: 'Please enter your cover letter' }] }]">
                     </a-textarea>
                   </a-form-item>
-                  <a-form-item class="r-mt-48">
+                  <a-form-item class="r-margin-top-48">
                     <a-row :gutter="24" type="flex" justify="center">
                       <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
                              :sm="{ span: 12 }"
@@ -184,7 +184,7 @@
                     </a-row>
                   </a-form-item>
                 </a-form>
-                <r-spinner v-if="isProcessing" :is-absolute="true"></r-spinner>
+                <r-spinner v-if="isProcessing"></r-spinner>
                 <r-notice v-if="isSuccessful" :message="message"></r-notice>
               </a-col>
             </a-row>
@@ -195,86 +195,82 @@
   </r-page>
 </template>
 <script>
-  export default {
-    name: 'r-career-apply',
-    props: {},
-    data() {
-      return {
-        accept: null,
-        formApply: this.$form.createForm(this, {name: 'form_apply'}),
-        modal: {
-          current: null,
-          message: null,
-        },
-        hasData: false,
-        position: {
-          city: {name: null}
-        },
-        errors: [],
-        isSuccessful: false,
-        isProcessing: false,
-        store: {
-          slug: 'all'
-        },
-        redirectTo: ''
-      }
-    },
-    mounted() {
-      this.modal = this.$store.state.modal;
-      this.accept = this.$store.state.accept;
+import {mapGetters} from "vuex";
 
-      this.modal.isVisible = true;
-      this.$store.dispatch('app/onModal', modal);
-      this.payload();
-    },
-    methods: {
-      payload() {
-        this.store = this.$store.state.store;
-
-        let params = {};
-        let path = this.$route.path;
-        let $this = this;
-
-        axios.get(path, params)
-          .then(response => {
-            $this.position = response.data.position;
-            $this.hasData = true;
-          })
-          .catch(e => {
-            console.log(e);
-          });
+export default {
+  name: 'r-career-apply',
+  props: {},
+  data() {
+    return {
+      accept: null,
+      formApply: this.$form.createForm(this, {name: 'form_apply'}),
+      hasData: false,
+      position: {
+        city: {name: null}
       },
-      onSend(event) {
-        event.preventDefault();
-
-        this.formApply.validateFields((err, values) => {
-          if (!err) {
-            console.log('Submitting the application...', values);
-
-            this.isProcessing = true;
-
-            let params = Object.assign({}, values);
-            let $this = this;
-
-            params.resume = params.resume.file.response.page;
-            params.position_id = $this.position.id;
-
-            let path = this.$route.path;
-            HTTP.post(path, params)
-              .then(response => {
-                console.log('Sending the application');
-                $this.isSuccessful = true;
-                $this.modal.message = 'Thank you. Your application has been successfully forwarded to our HR department. We will be in touch with you';
-              })
-              .catch(e => {
-                $this.isSuccessful = false;
-              });
-          } else {
-            this.isSuccessful = false;
-            console.error(err);
-          }
-        });
-      },
+      errors: [],
+      isSuccessful: false,
+      isProcessing: false,
+      redirectTo: ''
     }
-  };
+  },
+  computed: mapGetters({
+    modal: 'base/modal',
+  }),
+  created() {
+    this.accept = this.$store.state.accept;
+
+    let modal = {};
+    modal.isVisible = false;
+    this.$store.dispatch('base/onModal', modal);
+    this.payload();
+  },
+  methods: {
+    payload() {
+      let params = {};
+      let path = this.$route.path;
+      let $this = this;
+
+      axios.get(path, params)
+        .then(response => {
+          $this.position = response.data.position;
+          $this.hasData = true;
+        })
+        .catch(e => {
+          console.log(e);
+        });
+    },
+    onSend(event) {
+      event.preventDefault();
+
+      this.formApply.validateFields((err, values) => {
+        if (!err) {
+          console.log('Submitting the application...', values);
+
+          this.isProcessing = true;
+
+          let params = Object.assign({}, values);
+          let $this = this;
+
+          params.resume = params.resume.file.response.page;
+          params.position_id = $this.position.id;
+
+          let path = this.$route.path;
+          HTTP.post(path, params)
+            .then(response => {
+              console.log('Sending the application');
+              $this.isSuccessful = true;
+              $this.modal.message = 'Thank you. Your application has been successfully forwarded to our HR department. We will be in touch with you';
+            })
+            .catch(e => {
+              $this.isSuccessful = false;
+            });
+        } else {
+          this.isSuccessful = false;
+          console.error(err);
+        }
+      });
+    },
+  }
+};
 </script>

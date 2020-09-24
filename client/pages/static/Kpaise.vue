@@ -15,7 +15,7 @@
                            :lg="{ span: 16 }"
                            style="text-align: left;">
                       <h4 class="r-heading-light r-text-uppercase">
-                        How does Kpaise work?
+                        How does Paise work?
                       </h4>
                       <h1 class="r-heading r-text-uppercase">
                         <span class="r-text-primary">Shop more,</span><br>
@@ -80,7 +80,7 @@
 </template>
 <script>
   export default {
-    name: 'r-kpaise',
+    name: 'r-paise',
     props: {},
     data() {
       return {

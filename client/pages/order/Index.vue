@@ -3,31 +3,31 @@
         <a-row type="flex" justify="center" align="middle">
             <a-col class="gutter-row" :xs="{ span: 24 }"
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
-                <a-card title="YOUR ORDERS" style="width: 100%; margin-bottom: 20px;">
-                    <h4 class="r-heading-light">
+                <a-card title="YOUR ORDERS" style="width: 100%;">
+                    <span class="r-text-sm">
                         Here you can manage all your orders.
-                    </h4>
-                    <a-table bordered :dataSource="data" :columns="columns">
-                        <template slot="action" slot-scope="text, record">
-                            <a-row :gutter="24" type="flex" justify="center" align="middle">
-                                <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-                                    <router-link to="/account/order/A-52062240">
-                                        <a-button block size="small" class="r-btn-bordered-primary" type="primary">
-                                            Order
-                                        </a-button>
-                                    </router-link>
-                                </a-col>
-                                <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-                                    <router-link to="/account/order/A-52062240/invoice">
-                                        <a-button block size="small" type="secondary" class="r-btn-bordered-black">
-                                            Invoice
-                                        </a-button>
-                                    </router-link>
-                                </a-col>
-                            </a-row>
-                        </template>
-                    </a-table>
+                    </span>
                 </a-card>
+                <a-table bordered :dataSource="data" :columns="columns">
+                    <template slot="action" slot-scope="text, record">
+                        <a-row :gutter="24" type="flex" justify="center" align="middle">
+                            <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
+                                <router-link to="/account/order/A-52062240">
+                                    <a-button block size="small" class="r-btn-bordered-primary" type="primary">
+                                        Order
+                                    </a-button>
+                                </router-link>
+                            </a-col>
+                            <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
+                                <router-link to="/account/order/A-52062240/invoice">
+                                    <a-button block size="small" type="secondary" class="r-btn-bordered-secondary">
+                                        Invoice
+                                    </a-button>
+                                </router-link>
+                            </a-col>
+                        </a-row>
+                    </template>
+                </a-table>
             </a-col>
         </a-row>
     </r-account>

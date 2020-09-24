@@ -8,22 +8,21 @@
               <r-subscribe size="24"></r-subscribe>
             </a-col>
             <a-col class="gutter-row" v-if="hasDownload" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
-              <r-download size="24"></r-download>
               <r-shop-now></r-shop-now>
             </a-col>
           </a-row>
         </a-col>
       </a-row>
       <a-layout-footer v-if="hasFooter">
-        <a-row type="flex" justify="center" class="r-bg-white r-mv-24">
-          <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <a-row class="r-bg-white r-mv-24" type="flex" justify="center">
+          <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
             <a-row type="flex" justify="start">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 6 }">
                 <a-card title="It's shopping time" :bordered="false" style="width: 100%;">
                   <a-row type="flex" justify="start">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                       <nuxt-link class="r-same-height" to="/">
-                        <img src="/images/icon-03.svg?v=1"
+                        <img src="/images/icon-06.svg?v=1"
                              alt="Shopple - Online shop"
                              class="r-footer-logo /">
                       </nuxt-link>
@@ -47,7 +46,7 @@
                         <nuxt-link to="/shopper">Become a shopper</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/kpaise">Kpaise - Shopper</nuxt-link>
+                        <nuxt-link to="/shopper/paise">Paise for shoppers</nuxt-link>
                       </div>
                       <div class="r-footer-link">
                         <nuxt-link to="/help">Help center</nuxt-link>
@@ -60,7 +59,7 @@
                         <nuxt-link to="/login">Join Shopple</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/kpaise">Kpaise - Customer</nuxt-link>
+                        <nuxt-link to="/customer/paise">Paise for customers</nuxt-link>
                       </div>
                       <div class="r-footer-link">
                         <nuxt-link to="/hiw">How it works</nuxt-link>
@@ -76,7 +75,7 @@
                         <nuxt-link to="/merchant">Become a merchant</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/kpaise">Kpaise - Business</nuxt-link>
+                        <nuxt-link to="/merchant/paise">Paise for businesses</nuxt-link>
                       </div>
                       <div class="r-footer-link">
                         <nuxt-link to="/resources">Resources</nuxt-link>
@@ -121,7 +120,7 @@
                 <a-row :gutter="[24,24]" type="flex" justify="start">
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 8 }">
                     <nuxt-link class="r-same-height r-footer-link" to="/shopper">
-                      <a-button block class="r-btn-bordered-white" size="large">
+                      <a-button block class="r-btn-bordered-white" size="default">
                         Become a shopper
                       </a-button>
                     </nuxt-link>
@@ -131,7 +130,7 @@
                       &copy; Shopple 2020 All Rights Reserved
                     </div>
                   </a-col>
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
+                  <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
                     <nuxt-link class="r-text-white r-same-height r-footer-link" to="/privacy">
                       Privacy
                     </nuxt-link>

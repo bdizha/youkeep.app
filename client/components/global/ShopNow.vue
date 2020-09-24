@@ -13,8 +13,32 @@
                 <p class="r-text-normal">
                   Join the Shopple online experience and get better deals online today.
                 </p>
-                <a-button @click="onModal" size="large" type="primary">
+                <a-button size="large" type="primary" class="r-btn-secondary">
                   Let's go
+                </a-button>
+              </a-col>
+            </a-row>
+            <a-row class="r-mt-24 r-m-48" type="flex" justify="center">
+              <a-col :span="24">
+                <h2 class="r-heading">
+                  Download the Shopple app
+                </h2>
+                <p class="r-text-normal">
+                  The free Shopple app will be available for Android and iOS. Download it soon!
+                </p>
+              </a-col>
+            </a-row>
+            <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+              <a-col class="r-text-right" :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
+                <a-button size="large" type="primary" class="r-btn-secondary">
+                  <a-icon type="apple"/>
+                  Coming soon
+                </a-button>
+              </a-col>
+              <a-col class="r-text-left" :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
+                <a-button size="large" type="primary" class="r-btn-secondary">
+                  <a-icon type="android"/>
+                  Coming soon
                 </a-button>
               </a-col>
             </a-row>

@@ -102,7 +102,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::get('/help/{group}/{slug}', 'HelpController@show')->name('help.show');
 
 
-    Route::get('/resources/{type}/{slug}', 'ArticleResourceController@show')->name('resource.show');
+    Route::get('/resource/{type}/{slug}', 'ArticleResourceController@show')->name('resource.show');
     Route::get('/shopper/apply', 'ShopperController@apply')->name('shopper.apply');
     Route::post('/shopper/store', 'ShopperController@store')->name('shopper.store');
     Route::get('/account/profile', 'AccountController@show')->name('account.profile');

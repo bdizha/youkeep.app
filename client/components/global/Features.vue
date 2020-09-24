@@ -10,7 +10,7 @@
             </div>
             <a-card-meta>
               <template slot="description">
-                <h4 class="r-heading">
+                <h4 class="r-heading-light">
                   Find the stores that you want
                 </h4>
                 <p class="r-text-normal">
@@ -29,7 +29,7 @@
             </div>
             <a-card-meta>
               <template slot="description">
-                <h4 class="r-heading">
+                <h4 class="r-heading-light">
                   Effortless shopping anywhere
                 </h4>
                 <p class="r-text-normal">
@@ -48,7 +48,7 @@
             </div>
             <a-card-meta>
               <template slot="description">
-                <h4 class="r-heading">
+                <h4 class="r-heading-light">
                   Instant checkout process
                 </h4>
                 <p class="r-text-normal">

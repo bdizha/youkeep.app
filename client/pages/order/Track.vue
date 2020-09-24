@@ -42,7 +42,7 @@
                 formAddress: this.$form.createForm(this, {name: 'form_address'})
             };
         },
-        mounted() {
+        created() {
             this.cart = this.$store.state.cart;
             console.log('Cart data : ', this.cart);
         },

@@ -10,7 +10,7 @@
                     Shop at your favourite store
                 </h3>
                 <p class="r-text-sm">
-                    Simply choose Kpaise at checkout
+                    Simply choose Paise at checkout
                 </p>
             </a-col>
         </a-row>

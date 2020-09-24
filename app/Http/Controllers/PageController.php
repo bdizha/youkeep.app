@@ -107,7 +107,7 @@ class PageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function kpaise()
+    public function paise()
     {
         return view('page.index', ['component' => 'shopple']);
     }
