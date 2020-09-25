@@ -18,14 +18,14 @@
                         For merchants
                       </h4>
                       <h1 class="r-heading">
-                        <span class="r-text-primary">Enable more buying customers and increase recurring orders with Kshopit.</span>
+                        <span class="r-text-primary">Enable more buying customers and increase recurring orders with Shopple.</span>
                       </h1>
                       <p class="r-text-normal">
-                        Maximize in-store impact with Kshopit signage and online training for
+                        Maximize in-store impact with Shopple signage and online training for
                         retail associates.
                       </p>
                       <p class="r-text-normal">
-                        We’ll ship you an activation kit to promote Kshopit in-store.
+                        We’ll ship you an activation kit to promote Shopple in-store.
                       </p>
                     </a-col>
                   </a-row>
@@ -84,7 +84,7 @@
                 <h4 class="r-heading-light">
                   Customers want to buy more of your products. And now they've a more
                   flexible
-                  shopping option with Kshopit
+                  shopping option with Shopple
                 </h4>
               </a-col>
             </a-row>
@@ -132,7 +132,7 @@
               Become a verified merchant today
             </h2>
             <p class="r-text-normal">
-              Join the Kshopit Merchant Program and start promoting Kshopit in-store today and watch your
+              Join the Shopple Merchant Program and start promoting Shopple in-store today and watch your
               sales run wild!
             </p>
           </a-col>

@@ -65,12 +65,12 @@
                                     Your shopping cart is
                                     empty.
                                 </h4>
-                                <router-link :to="'/store/' + store.slug">
+                                <nuxt-link :to="'/store/' + store.slug">
                                     <a-button size="large" class="ant-btn-primary r-btn-black">
                                         <a-icon type="shopping"/>
                                         Shop now
                                     </a-button>
-                                </router-link>
+                                </nuxt-link>
                             </a-empty>
                         </a-col>
                     </a-row>
@@ -101,20 +101,20 @@
                 <a-row :gutter="24" type="flex" justify="start" align="middle">
                     <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                            :lg="{ span: 12 }">
-                        <router-link to="/checkout">
+                        <nuxt-link to="/checkout">
                             <h3 class="r-heading r-text-white">
                                 {{ 'R' + cart.total }}
                             </h3>
-                        </router-link>
+                        </nuxt-link>
                     </a-col>
                     <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
                            :lg="{ span: 12 }">
-                        <router-link to="/checkout">
+                        <nuxt-link to="/checkout">
                             <a-button block size="small" type="primary" class="r-btn-bordered-white">
                                 <a-icon type="shopping-cart"/>
                                 Checkout
                             </a-button>
-                        </router-link>
+                        </nuxt-link>
                     </a-col>
                 </a-row>
             </div>

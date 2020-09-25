@@ -15,7 +15,7 @@
                            :lg="{ span: 16 }"
                            style="text-align: left;">
                       <h4 class="r-heading">
-                        Get paid to shop with Kshopit.
+                        Get paid to shop with Shopple.
                       </h4>
                       <h1 class="r-heading r-text-primary">
                         A better way to your shopping.
@@ -27,7 +27,7 @@
                            :lg="{ span: 24 }"
                            style="text-align: left;">
                       <p class="r-text-normal">
-                        Earn up to R55/hr or more shopping for Kshopit members.
+                        Earn up to R55/hr or more shopping for Shopple members.
                         Deliver things people love, from the stores they trust.
                       </p>
                       <a-button @click="onModal" type="primary"
@@ -60,16 +60,10 @@
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
                  :lg="{span: 18, offset:6}" class="r-padding-48">
             <h2 class="r-heading">
-              Why partner with Kshopit?
+              Shop with us
             </h2>
             <p class="r-text-normal">
-              Kshopit is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
-              hot food and
-              household essentials.
-            </p>
-            <p class="r-text-normal">
-              Kshopit is about more than online shopping. Whether you're looking to pay bills or fund
-              dreams, Kshopit will get you there.
+              Instantly find and watch 1000's of fast streaming videos.
             </p>
           </a-col>
         </a-row>
@@ -80,41 +74,20 @@
         <a-row class="r-margin-vertical-48 r-text-center" type="flex" justify="start">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                  :lg="{span: 8}">
-            <div class="r-icon">
-              <a-icon type="clock-circle"/>
-            </div>
-            <h4 class="r-heading">
-              Work on your schedule
-            </h4>
+            <h2 class="r-heading">
+              Shop with us
+            </h2>
             <p class="r-text-normal">
-              Work part time or full time – any time.<br>Set your own hours for a completely
-              flexible schedule.
+              Instantly find and watch 1000's of fast streaming videos.
             </p>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                  :lg="{span: 8}">
-            <div class="r-icon">
-              <a-icon type="shopping-cart"/>
-            </div>
-            <h4 class="r-heading">
-              Choose your wheels
-            </h4>
+            <h2 class="r-heading">
+              Shop with us
+            </h2>
             <p class="r-text-normal">
-              Get tips from other shoppers, attend launch parties, and get a free Kshopit
-              membership.
-            </p>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                 :lg="{span: 8}">
-            <div class="r-icon">
-              <a-icon type="credit-card"/>
-            </div>
-            <h4 class="r-heading">
-              Earn money as you shop
-            </h4>
-            <p class="r-text-normal">
-              Experienced shoppers make an average of R50/hr.<br>
-              * Paychecks are delivered every week.
+              Instantly find and watch 1000's of fast streaming videos.
             </p>
           </a-col>
         </a-row>
@@ -144,10 +117,10 @@
         <a-row type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
             <h2 class="r-heading">
-              Want to start making money shopping with Kshopit?
+              Want to start making money shopping with Shopple?
             </h2>
             <p class="r-text-normal">
-              Apply to be a Kshopit Shopper today and start achieving your goals.
+              Apply to be a Shopple Shopper today and start achieving your goals.
             </p>
           </a-col>
         </a-row>

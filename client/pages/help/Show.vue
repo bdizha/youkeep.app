@@ -18,10 +18,10 @@
           <a-col class="gutter-row" :span="24">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
-                <router-link class="r-text-primary r-text-view-more"
+                <nuxt-link class="r-text-primary r-text-view-more"
                              :to="'/help'">
                   Help center
-                </router-link>
+                </nuxt-link>
               </a-breadcrumb-item>
               <a-breadcrumb-item>
                                  <span class="r-text-view-more">

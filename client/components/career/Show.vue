@@ -41,10 +41,10 @@
                     <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48">
                         <a-breadcrumb class="r-same-height">
                             <a-breadcrumb-item>
-                                <router-link class="r-text-primary r-text-view-more"
+                                <nuxt-link class="r-text-primary r-text-view-more"
                                              :to="'/career/openings'">
                                     Jop openings
-                                </router-link>
+                                </nuxt-link>
                             </a-breadcrumb-item>
                             <a-breadcrumb-item>
                                 <span class="r-text-view-more">

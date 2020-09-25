@@ -10,10 +10,10 @@
           <a-row class="r-margin-top-48" type="flex" justify="center">
             <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
               <h2 class="r-heading">
-                Kshopit merchant application
+                Shopple merchant application
               </h2>
               <p class="r-text-normal">
-                Contact us to learn more about Kshopit and checkout financing
+                Contact us to learn more about Shopple and checkout financing
               </p>
             </a-col>
           </a-row>

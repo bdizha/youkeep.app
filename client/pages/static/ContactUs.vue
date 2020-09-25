@@ -29,7 +29,7 @@
                             </h4>
                             <p class="r-text-normal">
                               <span>Then apply </span>
-                              <router-link target="_blank" to="/careers">here</router-link>
+                              <nuxt-link target="_blank" to="/careers">here</nuxt-link>
                             </p>
                           </a-col>
                           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
@@ -40,7 +40,7 @@
                             </h4>
                             <p class="r-text-normal">
                               <span>Check out the </span>
-                              <router-link target="_blank" to="/help">Help center</router-link>
+                              <nuxt-link target="_blank" to="/help">Help center</nuxt-link>
                             </p>
                           </a-col>
                           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
@@ -88,7 +88,7 @@
                       </h2>
                       <p class="r-text-normal">
                         How can we help? Just a quick note: try visiting our
-                        <router-link to="/help">Help center</router-link>
+                        <nuxt-link to="/help">Help center</nuxt-link>
                         that maybe of help only for general queries that we frequently recieve from
                         our customers.
                       </p>

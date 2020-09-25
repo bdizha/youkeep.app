@@ -2,136 +2,168 @@
   <r-page>
     <a-row type="flex" justify="center">
       <a-col class="gutter-row" :span="24">
-        <div class="r-page-welcome r-bg-primary">
-          <a-row type="flex" justify="center">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-              <a-row type="flex" justify="start" align="middle">
-                <a-col class="r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ offset: 3, span: 9 }"
-                       :lg="{ offset: 3, span: 9 }">
-                  <r-space></r-space>
-                  <a-row type="flex" justify="start" align="middle">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" s="r" :md="{ span: 24 }"
-                           :lg="{ span: 16 }"
-                           style="text-align: left;">
-                      <h4 class="r-heading">
-                        Get paid to shop with Kshopit.
-                      </h4>
-                      <h1 class="r-heading r-text-primary">
-                        A better way to your shopping.
-                      </h1>
-                    </a-col>
-                  </a-row>
-                  <a-row type="flex" justify="start">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                           :lg="{ span: 24 }"
-                           style="text-align: left;">
-                      <p class="r-text-normal">
-                        Earn up to R55/hr or more shopping for Kshopit members.
-                        Deliver things people love, from the stores they trust.
-                      </p>
-                      <a-button @click="onModal" type="primary"
-                                class="ant-btn r-btn-primary r-margin-top-24"
-                                size="large"
-                                html-type="button">
-                        Apply now
-                      </a-button>
-                    </a-col>
-                  </a-row>
-                  <r-space></r-space>
-                </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-                  <div class="r-page-header-photo">
-                    <div class="r-page-primary"
-                         style="background-image: url('/images/shopper.jpg')">
-                    </div>
-                  </div>
-                </a-col>
-              </a-row>
+        <div class="r-page-welcome r-bg-blue">
+          <a-row type="flex" justify="start" align="middle">
+            <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                   :md="{ span: 12 }"
+                   :lg="{ span: 12 }">
+              <a-card hoverable>
+                <a-card-meta>
+                  <template slot="description">
+                    <h4 class="r-heading-light r-text-uppercase">
+                      Get paid to shop with Shopple.
+                    </h4>
+                    <h1 class="r-heading r-text-uppercase">
+                      A better way to shopping.
+                    </h1>
+                    <a-row type="flex" justify="start">
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                             :lg="{ span: 24 }"
+                             style="text-align: left;">
+                        <p class="r-text-normal">
+                          Earn up to R55/hr or more shopping for Shopple members.
+                          Deliver things people love, from the stores they trust.
+                        </p>
+                        <a-button @click="onModal" type="primary"
+                                  class="ant-btn r-btn-primary r-margin-top-24"
+                                  size="large"
+                                  html-type="button">
+                          Apply now
+                        </a-button>
+                      </a-col>
+                    </a-row>
+                  </template>
+                </a-card-meta>
+              </a-card>
+            </a-col>
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+              <div class="r-page-header-photo">
+                <div class="r-page-primary"
+                     style="background-image: url('/images/shopper.jpg')">
+                </div>
+              </div>
             </a-col>
           </a-row>
         </div>
       </a-col>
     </a-row>
-    <a-row :gutter="24" class="r-margin-vertical-48" type="flex">
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
-        <a-row type="flex" justify="start"
-               class="r-radius-right-white">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
-                 :lg="{span: 18, offset:6}" class="r-padding-48">
-            <h2 class="r-heading">
-              Why partner with Kshopit?
-            </h2>
-            <p class="r-text-normal">
-              Kshopit is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
-              hot food and
-              household essentials.
-            </p>
-            <p class="r-text-normal">
-              Kshopit is about more than online shopping. Whether you're looking to pay bills or fund
-              dreams, Kshopit will get you there.
-            </p>
-          </a-col>
-        </a-row>
-      </a-col>
-    </a-row>
-    <a-row :gutter="24" class="r-margin-vertical-48 r-bg-white" justify="center" type="flex">
-      <a-col class="r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{span: 18}">
-        <a-row class="r-margin-vertical-48 r-text-center" type="flex" justify="start">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                 :lg="{span: 8}">
-            <div class="r-icon">
-              <a-icon type="clock-circle"/>
-            </div>
-            <h4 class="r-heading">
-              Work on your schedule
-            </h4>
-            <p class="r-text-normal">
-              Work part time or full time – any time.<br>Set your own hours for a completely
-              flexible schedule.
-            </p>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                 :lg="{span: 8}">
-            <div class="r-icon">
-              <a-icon type="shopping-cart"/>
-            </div>
-            <h4 class="r-heading">
-              Choose your wheels
-            </h4>
-            <p class="r-text-normal">
-              Get tips from other shoppers, attend launch parties, and get a free Kshopit
-              membership.
-            </p>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                 :lg="{span: 8}">
-            <div class="r-icon">
-              <a-icon type="credit-card"/>
-            </div>
-            <h4 class="r-heading">
-              Earn money as you shop
-            </h4>
-            <p class="r-text-normal">
-              Experienced shoppers make an average of R50/hr.<br>
-              * Paychecks are delivered every week.
-            </p>
-          </a-col>
-        </a-row>
-      </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{span: 18}">
+    <a-row type="flex" justify="start">
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
+             class="r-p-48">
         <a-row type="flex" justify="center">
-          <a-col :xs="{ span: 24 }" :lg="{ span: 18 }" style="text-align: left;">
-            <a-row :gutter="16" type="flex" justify="start" class="r-margin-vertical-48 r-padding-24">
-              <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 16 }" :lg="{ span: 12 }">
-                <h2 class="r-heading">
-                  Requirements:
-                </h2>
-                <p v-for="requirement in requirements" class="r-text-normal">
-                  <a-checkbox :checked="true">
-                    {{ requirement }}
-                  </a-checkbox>
-                </p>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+            <a-row :gutter="[48,48]" type="flex" justify="space-between">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                     :lg="{ span: 24 }"
+                     style="text-align: left;">
+                <a-card hoverable>
+                  <a-card-meta>
+                    <template slot="description">
+                      <h2 class="r-heading">
+                        Why partner with Shopple?
+                      </h2>
+                      <p class="r-text-normal">
+                        Shopple is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
+                        hot food and
+                        household essentials.
+                      </p>
+                      <p class="r-text-normal">
+                        Shopple is about more than online shopping. Whether you're looking to pay bills or fund
+                        dreams, Shopple will get you there.
+                      </p>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                &nbsp;
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                <a-card hoverable>
+                  <a-card-meta>
+                    <template slot="description">
+                      <div class="r-icon">
+                        <a-icon type="clock-circle"/>
+                      </div>
+                      <h4 class="r-heading">
+                        Work on your schedule
+                      </h4>
+                      <p class="r-text-normal">
+                        Work part time or full time – any time.<br>Set your own hours for a completely
+                        flexible schedule.
+                      </p>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                <a-card hoverable>
+                  <a-card-meta>
+                    <template slot="description">
+                      <div class="r-icon">
+                        <a-icon type="shopping-cart"/>
+                      </div>
+                      <h4 class="r-heading">
+                        Choose your wheels
+                      </h4>
+                      <p class="r-text-normal">
+                        Get tips from other shoppers, attend launch parties, and get a free Shopple
+                        membership.
+                      </p>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                &nbsp;
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                &nbsp;
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                <a-card hoverable>
+                  <a-card-meta>
+                    <template slot="description">
+                      <div class="r-icon">
+                        <a-icon type="credit-card"/>
+                      </div>
+                      <h4 class="r-heading">
+                        Earn money as you shop
+                      </h4>
+                      <p class="r-text-normal">
+                        Experienced shoppers make an average of R50/hr.<br>
+                        * Paychecks are delivered every week.
+                      </p>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                &nbsp;
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                     style="text-align: left;">
+                <a-card hoverable>
+                  <a-card-meta>
+                    <template slot="description">
+                      <h4 class="r-heading">
+                        Requirements:
+                      </h4>
+                      <p v-for="requirement in requirements" class="r-text-normal">
+                        <a-checkbox :checked="true">
+                          {{ requirement }}
+                        </a-checkbox>
+                      </p>
+                    </template>
+                  </a-card-meta>
+                </a-card>
               </a-col>
             </a-row>
           </a-col>
@@ -141,24 +173,30 @@
     <a-row class="r-text-center" type="flex" justify="center" :gutter="24">
       <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :md="{ span: 24 }"
              :lg="{ span: 24 }">
-        <a-row type="flex" justify="center">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
-            <h2 class="r-heading">
-              Want to start making money shopping with Kshopit?
-            </h2>
-            <p class="r-text-normal">
-              Apply to be a Kshopit Shopper today and start achieving your goals.
-            </p>
-          </a-col>
-        </a-row>
-        <a-row type="flex" justify="center" align="middle">
-          <a-col class="r-padding-bottom-48" :xs="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
-            <a-button @click="onModal" size="large" type="primary">
-              Become a shopper
-            </a-button>
-          </a-col>
-        </a-row>
+        <a-card hoverable>
+          <a-card-meta>
+            <template slot="description">
+              <a-row type="flex" justify="center">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
+                  <h2 class="r-heading">
+                    Want to start making money shopping with Shopple?
+                  </h2>
+                  <p class="r-text-normal">
+                    Apply to be a Shopple Shopper today and start achieving your goals.
+                  </p>
+                </a-col>
+              </a-row>
+              <a-row type="flex" justify="center" align="middle">
+                <a-col class="r-padding-bottom-48" :xs="{ span: 24 }" :md="{ span: 12 }"
+                       :lg="{ span: 12 }">
+                  <a-button @click="onModal" size="large" type="primary">
+                    Become a shopper
+                  </a-button>
+                </a-col>
+              </a-row>
+            </template>
+          </a-card-meta>
+        </a-card>
       </a-col>
     </a-row>
     <r-shopper-modal></r-shopper-modal>

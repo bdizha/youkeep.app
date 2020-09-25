@@ -31,25 +31,25 @@
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }">
-                          <router-link class="r-inline-block" to="/career/openings">
+                          <nuxt-link class="r-inline-block" to="/career/openings">
                             <a-button type="primary"
                                       class="ant-btn ant-btn-secondary r-btn-black"
                                       size="large">
                               See openings
                             </a-button>
-                          </router-link>
+                          </nuxt-link>
                         </a-col>
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }">
-                          <router-link class="r-inline-block" to="/contact-us">
+                          <nuxt-link class="r-inline-block" to="/contact-us">
                             <a-button class="r-btn-bordered-black"
                                       block
                                       type="secondary"
                                       size='large'>
                               Contact us
                             </a-button>
-                          </router-link>
+                          </nuxt-link>
                         </a-col>
                       </a-row>
                     </a-col>
@@ -169,12 +169,12 @@
                 </a-checkbox>
               </a-col>
             </a-row>
-            <router-link class="r-inline-block" to="/career/openings">
+            <nuxt-link class="r-inline-block" to="/career/openings">
               <a-button type="primary"
                         class="ant-btn r-btn-primary" size="large">
                 See openings
               </a-button>
-            </router-link>
+            </nuxt-link>
           </a-col>
         </a-row>
       </a-col>

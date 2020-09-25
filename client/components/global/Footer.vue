@@ -56,7 +56,7 @@
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Customers" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <nuxt-link to="/login">Join Shopple</nuxt-link>
+                        <nuxt-link to="/customer">Join Shopple</nuxt-link>
                       </div>
                       <div class="r-footer-link">
                         <nuxt-link to="/customer/paise">Paise for customers</nuxt-link>
@@ -78,10 +78,10 @@
                         <nuxt-link to="/merchant/paise">Paise for businesses</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/resources">Resources</nuxt-link>
+                        <nuxt-link to="/merchant/resources">Resources</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/help">Merchant center</nuxt-link>
+                        <nuxt-link to="/merchant/help">Merchant center</nuxt-link>
                       </div>
                     </a-card>
                   </a-col>
