@@ -87,9 +87,9 @@
                 <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 6 }" :lg="{ span: 6 }">
                     <a-button block @click="onPost"
                              size="default"
-                              type="primary"
+                              type="secondary"
                               html-type="submit"
-                              class="r-btn-primary">
+                              class="r-btn-secondary">
                         Save
                     </a-button>
                 </a-col>

@@ -6,9 +6,9 @@
     <div class="ant-spin-spinning">
       <svg height="100%" viewBox="0 0 32 32" width="100%">
         <circle cx="16" cy="16" fill="none" r="14" stroke-width="4"
-                style="stroke: #fb0028; opacity: 0.2;"></circle>
+                style="stroke: #f50a2b; opacity: 0.2;"></circle>
         <circle cx="16" cy="16" fill="none" r="14" stroke-width="4"
-                style="stroke: #fb0028; stroke-dasharray: 80px; stroke-dashoffset: 60px;"></circle>
+                style="stroke: #f50a2b; stroke-dasharray: 80px; stroke-dashoffset: 60px;"></circle>
       </svg>
     </div>
   </div>

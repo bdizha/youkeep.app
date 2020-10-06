@@ -23,7 +23,7 @@
         <r-product-info v-if="false" :product="product"></r-product-info>
         <a-row class="r-mt-48 r-mb-24" type="flex" justify="center">
             <a-col class="gutter-row" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-                <h3 class="r-heading r-text-primary">
+                <h3 class="r-heading r-text-secondary">
                     <a-icon type="bulb"/>
                     <span class="r-text-tip-primary">Related products</span>
                 </h3>

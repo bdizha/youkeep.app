@@ -34,7 +34,7 @@
             <a-col :xs="{ span: 4 }"
                    :sm="{ span: 4 }" :lg="{ span: 4 }">
               <a-button v-on:click="onModal('account-credit', $event)" block size="small"
-                        type="secondary" class="r-btn-bordered-black">
+                        type="secondary" class="r-btn-bordered-grey">
                 Add credit
               </a-button>
             </a-col>
@@ -73,7 +73,7 @@
             <a-col :xs="{ span: 4 }"
                    :sm="{ span: 4 }" :lg="{ span: 4 }">
               <a-button v-on:click="onModal('account-promo', $event)" block size="small"
-                        type="secondary" class="r-btn-bordered-black">
+                        type="secondary" class="r-btn-bordered-grey">
                 Add promo
               </a-button>
             </a-col>

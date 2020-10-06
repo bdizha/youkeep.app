@@ -10,18 +10,22 @@
               <h4 class="r-heading-light r-text-uppercase">
                 Paise for Merchants
               </h4>
-              <h1 class="r-heading r-text-uppercase">
-                <span class="r-text-primary">Sell more,</span><br>
-                <span class="r-text-secondary">pay less.</span>
+              <h1 class="r-heading r-text-secondary">
+                <span class="r-text-secondary">Sell more,</span><br>
+                <span class="r-text-secondary">Pay less</span>
               </h1>
               <p class="r-text-normal">
                 Paise lets your customers pay for products in 3 installments with existing credit at zero interest.
+              </p>
+              <p class="r-text-normal">
+                Unlike other buy-now-pay-later plans, Shopple lets shoppers use their existing credit card for
+                the easiest most intuitive checkout.
               </p>
               <a-row :gutter="[24,24]" type="flex" justify="start">
                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }">
-                  <a-button class="r-btn-primary"
+                  <a-button class="r-btn-secondary"
                             block
                             type="secondary"
                             size='large'>
@@ -44,37 +48,22 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <div class="r-page-header-photo">
-          <div class="r-page-primary"
-               style="background-image: url('/images/welcome-02.jpg')">
-          </div>
-        </div>
+        <a-card hoverable>
+          <a-card-meta>
+            <template slot="description">
+              <div class="r-page-header-photo">
+                <div class="r-page-primary"
+                     style="background-image: url('/images/welcome-02.jpg')">
+                </div>
+              </div>
+            </template>
+          </a-card-meta>
+        </a-card>
       </a-col>
     </a-row>
     <a-row class="r-mt-48" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
         <a-row :gutter="[48,48]" type="flex" justify="center">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                 :lg="{ span: 24 }"
-                 style="text-align: left;">
-            <a-card hoverable>
-              <a-card-meta>
-                <template slot="description">
-                  <h2 class="r-heading">
-                    How it Works
-                  </h2>
-                  <p class="r-text-normal">
-                    Unlike other buy-now-pay-later plans, Shopple lets shoppers use their existing credit card for
-                    the easiest most intuitive checkout.
-                  </p>
-                </template>
-              </a-card-meta>
-            </a-card>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             <a-card hoverable>

@@ -14,8 +14,8 @@
                   <a-card hoverable>
                     <a-card-meta>
                       <template slot="description">
-                        <h1 class="r-heading r-text-primary">
-                          Talk to us
+                        <h1 class="r-heading r-text-secondary">
+                          How can we help?
                         </h1>
                         <p class="r-text-normal">
                           We'd love to hear from you! Feel free to reach out with any questions or comments below.
@@ -24,7 +24,7 @@
                           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                                  :lg="{ span: 12 }"
                                  style="text-align: left;">
-                            <h4 class="r-heading-light">
+                            <h4 class="r-heading">
                               Want to join us?
                             </h4>
                             <p class="r-text-normal">
@@ -35,7 +35,7 @@
                           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                                  :lg="{ span: 12 }"
                                  style="text-align: left;">
-                            <h4 class="r-heading-light">
+                            <h4 class="r-heading">
                               Need answers now?
                             </h4>
                             <p class="r-text-normal">
@@ -46,11 +46,11 @@
                           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                                  :lg="{ span: 12 }"
                                  style="text-align: left;">
-                            <h4 class="r-heading-light">
+                            <h4 class="r-heading">
                               Email
                             </h4>
                             <p class="r-text-normal">
-                              <a href="mailto:info@Shopple.com" target="_blank">info@Shopple.com</a>
+                              <a href="mailto:info@shopple.app" target="_blank">info@shopple.app</a>
                             </p>
                           </a-col>
                         </a-row>
@@ -61,11 +61,17 @@
               </a-row>
             </a-col>
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-              <div class="r-page-header-photo">
-                <div class="r-page-primary"
-                     style="background-image: url('/images/welcome.jpg')">
-                </div>
-              </div>
+              <a-card hoverable>
+                <a-card-meta>
+                  <template slot="description">
+                    <div class="r-page-header-photo">
+                      <div class="r-page-primary"
+                           style="background-image: url('/images/welcome.jpg')">
+                      </div>
+                    </div>
+                  </template>
+                </a-card-meta>
+              </a-card>
             </a-col>
           </a-row>
         </div>
@@ -89,7 +95,7 @@
                       <p class="r-text-normal">
                         How can we help? Just a quick note: try visiting our
                         <nuxt-link to="/help">Help center</nuxt-link>
-                        that maybe of help only for general queries that we frequently recieve from
+                        that maybe of help only for general queries that we frequently receive from
                         our customers.
                       </p>
                     </a-col>
@@ -149,9 +155,10 @@
                   <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                          :md="{ span: 12 }"
                          :lg="{ span: 12 }">
-                    <a-button block @click="onSend" :size="'large'" type="primary"
+                    <a-button block @click="onSend" :size="'large'"
+                              type="secondary"
                               html-type="submit"
-                              class="ant-btn-secondary r-btn-primary">
+                              class="r-btn-secondary">
                       Save
                     </a-button>
                   </a-col>

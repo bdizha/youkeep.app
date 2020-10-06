@@ -1,22 +1,25 @@
 <template>
   <r-page>
-    <a-row class="r-art-primary">
-      <a-col :span="24">
-        <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :lg="{span: 18}" class="r-page-padding r-text-center">
-            <h1 class="r-heading r-text-white">
-              Help center
-            </h1>
-            <h3 class="r-heading r-text-white">
-              How can we help?
-            </h3>
-          </a-col>
-        </a-row>
+    <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+             :md="{ span: 24 }"
+             :lg="{ span: 24 }">
+        <a-card hoverable>
+          <a-card-meta>
+            <template slot="description">
+              <h1 class="r-heading">
+                Help center
+              </h1>
+              <h3 class="r-heading">
+                How can we help?
+              </h3>
+            </template>
+          </a-card-meta>
+        </a-card>
       </a-col>
     </a-row>
     <a-row v-if="hasData" type="flex" justify="center" align="middle">
-      <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48"
-             style="background: #FFFFFF;">
+      <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}">
         <a-row :gutter="16" type="flex" justify="start">
           <a-col class="gutter-row" :span="24">
             <a-row :gutter="36" type="flex" justify="start">
@@ -56,30 +59,30 @@
   </r-page>
 </template>
 <script>
-  import {mapGetters} from "vuex";
-  import axios from "axios";
+import {mapGetters} from "vuex";
+import axios from "axios";
 
-  export default {
-    name: 'r-help',
-    props: {},
-    data() {
-      return {
-        hasData: true
-      }
-    },
-    computed: mapGetters({
-      help: 'page/help'
-    }),
-    async fetch({store, params}) {
-      let { data } = await axios.get('/help')
-      store.commit('page/FETCH_HELP_SUCCESS', data)
-    },
-    mounted() {
-      this.payload();
-    },
-    methods: {
-      payload() {
-      }
-    },
-  };
+export default {
+  name: 'r-help',
+  props: {},
+  data() {
+    return {
+      hasData: true
+    }
+  },
+  computed: mapGetters({
+    help: 'page/help'
+  }),
+  async fetch({store, params}) {
+    // let { data } = await axios.get('/help')
+    // store.commit('page/FETCH_HELP_SUCCESS', data)
+  },
+  mounted() {
+    this.payload();
+  },
+  methods: {
+    payload() {
+    }
+  },
+};
 </script>

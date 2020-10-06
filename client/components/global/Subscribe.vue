@@ -21,7 +21,7 @@
                       By clicking on "Subscribe" you declare your consent to
                       the
                       advertising
-                      emails. <a class="r-text-primary" target="_blank" href="/privacy">Privacy
+                      emails. <a class="r-text-secondary" target="_blank" href="/privacy">Privacy
                       statement</a>
                     </p>
                   </a-col>
@@ -75,8 +75,8 @@
                       </a-row>
                       <a-row type="flex" justify="end">
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
-                          <a-button block type="primary"
-                                    class="r-btn-primary"
+                          <a-button block type="secondary"
+                                    class="r-btn-secondary"
                                     size="large"
                                     html-type="submit">
                             Yes, please

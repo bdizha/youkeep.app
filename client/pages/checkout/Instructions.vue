@@ -24,7 +24,7 @@
                            :sm="{ span: 12 }"
                            :md="{ span: 18 }" :lg="{ span: 18 }">
                         <a-button size="default"
-                                  type="primary"
+                                  type="secondary"
                                   html-type="button"
                                   class="r-btn-bordered-secondary">
                             Skip
@@ -33,8 +33,8 @@
                     <a-col class="gutter-row r-text-right" :xs="{ span: 12 }"
                            :sm="{ span: 12 }"
                            :md="{ span: 6 }" :lg="{ span: 6 }">
-                        <a-button block type="primary" html-type="submit"
-                                  class="ant-btn-secondary r-btn-primary">
+                        <a-button block type="secondary" html-type="submit"
+                                  class="r-btn-secondary">
                             Proceed
                         </a-button>
                     </a-col>

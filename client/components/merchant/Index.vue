@@ -2,73 +2,67 @@
     <r-page>
         <a-row type="flex" justify="center">
             <a-col class="gutter-row" :span="24">
-                <div class="r-bg-primary-light">
-                    <a-row type="flex" justify="center">
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-                            <a-row type="flex" justify="start">
-                                <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                       :md="{ offset: 3, span: 9 }"
-                                       :lg="{ offset: 3, span: 9 }">
-                                    <a-row type="flex" justify="start">
-                                        <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                               :md="{ span: 24 }"
-                                               :lg="{ span: 24 }"
-                                               style="text-align: left;">
-                                            <h4 class="r-heading-light r-text-uppercase">
-                                                For merchants
-                                            </h4>
-                                            <h1 class="r-heading r-text-uppercase">
-                                                <span class="r-text-black">Enable more buying customers and increase recurring orders with Shopple.</span>
-                                            </h1>
-                                            <p class="r-text-normal">
-                                                Maximize in-store impact with Shopple signage and online training for
-                                                retail associates.
-                                            </p>
-                                            <p class="r-text-normal">
-                                                We’ll ship you an activation kit to promote Shopple in-store.
-                                            </p>
-                                        </a-col>
-                                    </a-row>
-                                    <a-row type="flex" justify="start">
-                                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
-                                               :lg="{ span: 18 }">
-                                            <a-row :gutter="[24,24]" type="flex" justify="start">
-                                                <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                                                       :md="{ span: 12 }"
-                                                       :lg="{ span: 12 }">
-                                                    <a-button @click="onApply" class="r-btn-primary"
-                                                              block
-                                                              type="secondary"
-                                                              size='large'>
-                                                        Apply now
-                                                    </a-button>
-                                                </a-col>
-                                                <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                                                       :md="{ span: 12 }"
-                                                       :lg="{ span: 12 }">
-                                                    <a-button @click="onStoreTray" class="r-btn-bordered-black"
-                                                              block
-                                                              type="secondary"
-                                                              size='large'>
-                                                        Shop directory
-                                                    </a-button>
-                                                </a-col>
-                                            </a-row>
-                                        </a-col>
-                                    </a-row>
-                                    <r-space size="24"></r-space>
-                                </a-col>
-                                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-                                    <div class="r-page-header-photo">
-                                        <div class="r-page-primary"
-                                             style="background-image: url('/images/merchant-02.jpg')">
-                                        </div>
-                                    </div>
-                                </a-col>
-                            </a-row>
+              <a-row type="flex" justify="start">
+                <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                       :md="{ offset: 3, span: 9 }"
+                       :lg="{ offset: 3, span: 9 }">
+                  <a-row type="flex" justify="start">
+                    <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                           :md="{ span: 24 }"
+                           :lg="{ span: 24 }"
+                           style="text-align: left;">
+                      <h4 class="r-heading-light r-text-uppercase">
+                        For merchants
+                      </h4>
+                      <h1 class="r-heading r-text-secondary">
+                        <span class="r-text-black">Enable more buying customers and increase recurring orders with Shopple.</span>
+                      </h1>
+                      <p class="r-text-normal">
+                        Maximize in-store impact with Shopple signage and online training for
+                        retail associates.
+                      </p>
+                      <p class="r-text-normal">
+                        We’ll ship you an activation kit to promote Shopple in-store.
+                      </p>
+                    </a-col>
+                  </a-row>
+                  <a-row type="flex" justify="start">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
+                           :lg="{ span: 18 }">
+                      <a-row :gutter="[24,24]" type="flex" justify="start">
+                        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
+                               :md="{ span: 12 }"
+                               :lg="{ span: 12 }">
+                          <a-button @click="onApply" class="r-btn-secondary"
+                                    block
+                                    type="secondary"
+                                    size='large'>
+                            Apply now
+                          </a-button>
                         </a-col>
-                    </a-row>
-                </div>
+                        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
+                               :md="{ span: 12 }"
+                               :lg="{ span: 12 }">
+                          <a-button @click="onStoreTray" class="r-btn-bordered-grey"
+                                    block
+                                    type="secondary"
+                                    size='large'>
+                            Shop directory
+                          </a-button>
+                        </a-col>
+                      </a-row>
+                    </a-col>
+                  </a-row>
+                  <r-space size="24"></r-space>
+                </a-col>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+                  <div class="r-page-header-photo">
+                    <div class="r-page-primary"
+                         style="background-image: url('/images/merchant-02.jpg')">
+                    </div>
+                  </div>
+                </a-col>
+              </a-row>
             </a-col>
         </a-row>
         <a-row class="r-mv-48" type="flex">
@@ -128,7 +122,7 @@
                    :lg="{ span: 24 }">
                 <a-row type="flex" justify="center">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-pv-48">
-                        <h2 class="r-heading r-text-uppercase">
+                        <h2 class="r-heading r-text-secondary">
                             Become a verified merchant today
                         </h2>
                         <p class="r-text-normal">
@@ -140,7 +134,7 @@
                 <a-row type="flex" justify="center" align="middle">
                     <a-col class="r-pb-48" :xs="{ span: 24 }" :md="{ span: 12 }"
                            :lg="{ span: 12 }">
-                        <a-button @click="onApply" size="large" type="primary">
+                        <a-button @click="onApply" size="large" type="secondary">
                             Become a merchant
                         </a-button>
                     </a-col>

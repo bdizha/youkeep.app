@@ -17,9 +17,9 @@
                       <h4 class="r-heading-light r-text-uppercase">
                         How does Paise work?
                       </h4>
-                      <h1 class="r-heading r-text-uppercase">
-                        <span class="r-text-primary">Shop more,</span><br>
-                        <span class="r-text-purple">Pay less.</span>
+                      <h1 class="r-heading r-text-secondary">
+                        <span class="r-text-secondary">Shop more,</span><br>
+                        <span class="r-text-secondary">Pay less</span>
                       </h1>
                     </a-col>
                   </a-row>
@@ -40,7 +40,7 @@
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }">
-                          <a-button class="r-btn-primary"
+                          <a-button class="r-btn-secondary"
                                     block
                                     type="secondary"
                                     size='large'>

@@ -38,8 +38,8 @@
                         </a-input>
                     </a-form-item>
                     <a-form-item :wrapper-col="{ span: 24 }">
-                        <a-button block :size="'large'" type="primary" html-type="submit"
-                                  class="ant-btn-secondary r-btn-primary">
+                        <a-button block :size="'large'" type="secondary" html-type="submit"
+                                  class="r-btn-secondary">
                             Secure me
                         </a-button>
                     </a-form-item>

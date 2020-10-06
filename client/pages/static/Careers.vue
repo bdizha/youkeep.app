@@ -15,7 +15,7 @@
                            :lg="{ span: 24 }"
                            style="text-align: left;">
                       <h1 class="r-heading">
-                        <span class="r-text-primary">Shopple careers</span>
+                        <span class="r-text-secondary">Shopple careers</span>
                       </h1>
                       <p class="r-text-normal">
                         Shopple is a consumer centric shopping platform that exists to transform
@@ -32,7 +32,7 @@
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }">
                           <nuxt-link class="r-inline-block" to="/career/openings">
-                            <a-button type="primary"
+                            <a-button type="secondary"
                                       class="ant-btn ant-btn-secondary r-btn-black"
                                       size="large">
                               See openings
@@ -43,7 +43,7 @@
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }">
                           <nuxt-link class="r-inline-block" to="/contact-us">
-                            <a-button class="r-btn-bordered-black"
+                            <a-button class="r-btn-bordered-grey"
                                       block
                                       type="secondary"
                                       size='large'>
@@ -170,8 +170,8 @@
               </a-col>
             </a-row>
             <nuxt-link class="r-inline-block" to="/career/openings">
-              <a-button type="primary"
-                        class="ant-btn r-btn-primary" size="large">
+              <a-button type="secondary"
+                        class="r-btn-secondary" size="large">
                 See openings
               </a-button>
             </nuxt-link>

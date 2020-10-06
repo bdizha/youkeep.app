@@ -81,7 +81,7 @@
                         <nuxt-link to="/merchant/resources">Resources</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/merchant/help">Merchant center</nuxt-link>
+                        <nuxt-link to="/help">Merchant center</nuxt-link>
                       </div>
                     </a-card>
                   </a-col>

@@ -4,7 +4,7 @@
             <a-col :span="24">
                 <a-row type="flex" justify="space-around" align="middle">
                     <a-col :lg="{span: 9 , offset: 3}" class="r-page-padding">
-                        <h1 class="r-heading r-text-primary">
+                        <h1 class="r-heading r-text-secondary">
                             Where does Shopple deliver?
                         </h1>
                         <p class="r-text-normal">

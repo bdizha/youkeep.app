@@ -31,7 +31,7 @@ module.exports = {
   },
 
   loading: {
-    color: '#fb0028',
+    color: '#f50a2b',
     height: '3px'
   },
 

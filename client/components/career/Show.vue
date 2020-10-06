@@ -64,7 +64,7 @@
                         <a-row class="r-margin-vertical-24" type="flex" justify="start" align="middle">
                             <a-col :lg="{span: 24}" class="">
                                 <a :href="'/career/' + position.slug + '/apply'">
-                                    <a-button size="large" type="primary">
+                                    <a-button size="large" type="secondary">
                                         Apply for this job
                                     </a-button>
                                 </a>

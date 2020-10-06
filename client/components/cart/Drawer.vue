@@ -37,7 +37,7 @@
             <nuxt-link to="/checkout">
               <a-button block
                         size="small"
-                        type="primary"
+                        type="secondary"
                         class="r-btn-bordered-accent">
                 <a-icon type="shopping-cart"/>
                 Checkout

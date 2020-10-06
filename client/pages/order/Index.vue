@@ -13,7 +13,7 @@
                         <a-row :gutter="24" type="flex" justify="center" align="middle">
                             <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
                                 <nuxt-link to="/account/order/A-52062240">
-                                    <a-button block size="small" class="r-btn-bordered-primary" type="primary">
+                                    <a-button block size="small" class="r-btn-bordered-primary" type="secondary">
                                         Order
                                     </a-button>
                                 </nuxt-link>

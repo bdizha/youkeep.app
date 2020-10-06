@@ -23,8 +23,8 @@
             </a-row>
         </a-form-item>
         <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button type="primary" html-type="submit"
-                      class="ant-btn-secondary r-btn-primary">
+            <a-button type="secondary" html-type="submit"
+                      class="r-btn-secondary">
                 Proceed
             </a-button>
         </a-form-item>

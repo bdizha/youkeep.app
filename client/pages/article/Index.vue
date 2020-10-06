@@ -8,7 +8,7 @@
                         <h4 class="r-heading-light r-text-uppercase">
                             A better way to shop.
                         </h4>
-                        <h1 class="r-heading r-text-uppercase r-text-primary">
+                        <h1 class="r-heading r-text-secondary">
                             Shopple blog
                         </h1>
                     </a-col>

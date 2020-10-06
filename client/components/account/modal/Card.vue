@@ -61,8 +61,8 @@
                     </a-col>
                     <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                            :lg="{ span: 12 }">
-                        <a-button block @click="onPost" size="default" type="primary" html-type="submit"
-                                  class="ant-btn-secondary r-btn-primary">
+                        <a-button block @click="onPost" size="default" type="secondary" html-type="submit"
+                                  class="r-btn-secondary">
                             Save
                         </a-button>
                     </a-col>

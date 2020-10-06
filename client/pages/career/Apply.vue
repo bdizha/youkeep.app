@@ -175,9 +175,9 @@
                              :sm="{ span: 12 }"
                              :md="{ span: 12 }"
                              :lg="{ span: 12 }">
-                        <a-button block @click="onSend" :size="'large'" type="primary"
+                        <a-button block @click="onSend" :size="'large'" type="secondary"
                                   html-type="submit"
-                                  class="ant-btn-secondary r-btn-primary">
+                                  class="r-btn-secondary">
                           Submit application
                         </a-button>
                       </a-col>

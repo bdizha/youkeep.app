@@ -4,7 +4,7 @@
             <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48 r-margin-vertical-48">
                 <a-row type="flex" justify="space-around" align="middle">
                     <a-col class="gutter-row" :span="24">
-                        <h1 class="r-heading r-text-primary">
+                        <h1 class="r-heading r-text-secondary">
                             Current job openings at Shopple
                         </h1>
                     </a-col>
@@ -63,8 +63,8 @@
                                                        :lg="{ span: 6 }">
                                                     <a class="r-same-height"
                                                        :href="'/career/' + position.slug + '/apply'">
-                                                        <a-button type="primary"
-                                                                  class="r-btn-primary" size="default">
+                                                        <a-button type="secondary"
+                                                                  class="r-btn-secondary" size="default">
                                                             Apply
                                                         </a-button>
                                                     </a>

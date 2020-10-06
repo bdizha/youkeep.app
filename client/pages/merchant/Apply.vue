@@ -176,9 +176,9 @@
             <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                    :md="{ span: 12 }"
                    :lg="{ span: 12 }">
-              <a-button block @click="onApply" :size="'large'" type="primary"
+              <a-button block @click="onApply" :size="'large'" type="secondary"
                         html-type="submit"
-                        class="ant-btn-secondary r-btn-primary">
+                        class="r-btn-secondary">
                 Submit
               </a-button>
             </a-col>

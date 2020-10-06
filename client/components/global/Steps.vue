@@ -1,6 +1,6 @@
 <template>
-  <a-row type="flex" justify="center" class="r-mv-24">
-    <a-col class="r-p-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row type="flex" justify="center" class="r-mv-48">
+    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row :gutter="[24,24]" type="flex" justify="center">
         <a-col class="gutter-row" :xs="{ span: 20 }" :sm="{ span: 20 }" :lg="{ span: 20 }">
           <h2 class="r-heading r-same-height">
@@ -28,7 +28,7 @@
             <a-step v-for="(step, index) in steps"
                     :key="index">
               <template slot="title">
-                <h3 class="r-text-primary">{{ step.title }}</h3>
+                <h3 class="r-text-secondary">{{ step.title }}</h3>
               </template>
               <template slot="description">
                 <div class="r-step-caption">

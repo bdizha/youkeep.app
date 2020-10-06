@@ -8,8 +8,8 @@
                       v-on:click="onModal"
                       block
                       :size="size"
-                      type="primary"
-                      class="r-btn-primary">
+                      type="secondary"
+                      class="r-btn-secondary">
                 <a-icon type="user"/>
                 Sign in
             </a-button>

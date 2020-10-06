@@ -1,152 +1,194 @@
 <template>
   <r-page>
-    <a-row type="flex" justify="center">
-      <a-col class="gutter-row" :span="24">
-        <div class="r-page-welcome r-bg-primary">
-          <a-row type="flex" justify="center">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+    <a-row type="flex" justify="center" align="middle">
+      <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+             :md="{ span: 12 }"
+             :lg="{ span: 12 }">
+        <a-card hoverable>
+          <a-card-meta>
+            <template slot="description">
+              <h2 class="r-heading">
+                Become a verified merchant today
+              </h2>
+              <p class="r-text-normal">
+                Join the Shopple Merchant Program and start promoting Shopple in-store today and watch your
+                sales run wild!
+              </p>
               <a-row type="flex" justify="start">
-                <a-col class="r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ offset: 3, span: 9 }"
-                       :lg="{ offset: 3, span: 9 }">
-                  <a-row type="flex" justify="start">
-                    <a-col class="r-padding-vertical-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 24 }"
-                           :lg="{ span: 24 }"
-                           style="text-align: left;">
-                      <h4 class="r-heading">
-                        For merchants
-                      </h4>
-                      <h1 class="r-heading">
-                        <span class="r-text-primary">Enable more buying customers and increase recurring orders with Shopple.</span>
-                      </h1>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                       :lg="{ span: 24 }"
+                       style="text-align: left;">
+                  <a-button @click="onModal('merchant')"
+                            class="r-btn-secondary r-margin-top-24"
+                            size="large" type="secondary">
+                    Become a merchant
+                  </a-button>
+                </a-col>
+              </a-row>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+        <a-card hoverable>
+          <a-card-meta>
+            <template slot="description">
+              <div class="r-page-header-photo">
+                <div class="r-page-primary"
+                     style="background-image: url('/images/shopper.jpg')">
+                </div>
+              </div>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+    </a-row>
+    <a-row type="flex" justify="start">
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
+             class="r-p-48">
+        <a-row :gutter="[48,48]" type="flex" justify="space-between">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                 :lg="{ span: 24 }"
+                 style="text-align: left;">
+            <a-card hoverable>
+              <a-card-meta>
+                <template slot="description">
+                  <div class="r-icon">
+                    <a-icon type="line-chart"/>
+                  </div>
+                  <h4 class="r-heading">
+                    Increase your conversion rate by 24%
+                  </h4>
+                </template>
+              </a-card-meta>
+            </a-card>
+          </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            <a-card hoverable>
+              <a-card-meta>
+                <template slot="description">
+                  <div class="r-icon">
+                    <a-icon type="pie-chart"/>
+                  </div>
+                  <h4 class="r-heading">
+                    Increase returning orders by 75%
+                  </h4>
+                </template>
+              </a-card-meta>
+            </a-card>
+          </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            <a-card hoverable>
+              <a-card-meta>
+                <template slot="description">
+                  <div class="r-icon">
+                    <a-icon type="dot-chart"/>
+                  </div>
+                  <h4 class="r-heading">
+                    Increase sales volume by at least 36%
+                  </h4>
+                </template>
+              </a-card-meta>
+            </a-card>
+          </a-col>
+        </a-row>
+        <a-row :gutter="[48,48]" type="flex" justify="space-between">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                 :lg="{ span: 24 }"
+                 style="text-align: left;">
+            <a-card hoverable>
+              <a-card-meta>
+                <template slot="description">
+                  <h4 class="r-heading">
+                    Benefits for merchant
+                  </h4>
+                  <h1 class="r-heading">
+                    <span class="r-text-secondary"></span>
+                  </h1>
+                  <ul>
+                    <li>
+                      <p class="r-text-normal">
+                        Enable more buying customers and increase recurring orders with Shopple.
+                      </p>
+                    </li>
+                    <li>
+                      <p class="r-text-normal">
+                        Enable more buying customers and increase recurring orders with Shopple.
+                      </p>
+                    </li>
+                    <li>
                       <p class="r-text-normal">
                         Maximize in-store impact with Shopple signage and online training for
                         retail associates.
                       </p>
+                    </li>
+                    <li>
                       <p class="r-text-normal">
                         We’ll ship you an activation kit to promote Shopple in-store.
                       </p>
+                    </li>
+                  </ul>
+                </template>
+              </a-card-meta>
+            </a-card>
+          </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            <a-card hoverable>
+              <a-card-meta>
+                <template slot="description">
+                  <h4 class="r-heading">
+                    Want to start making more sells with Shopple?
+                  </h4>
+                  <p class="r-text-normal">
+                    Apply to be a Shopple Merchant today and start achieving your goals.
+                  </p>
+                  <a-row type="flex" justify="center" align="middle">
+                    <a-col :xs="{ span: 24 }" :md="{ span: 12 }"
+                           :lg="{ span: 12 }">
+                      <a-button @click="onModal" size="large" type="secondary">
+                        Become a merchant
+                      </a-button>
                     </a-col>
                   </a-row>
-                  <a-row type="flex" justify="start">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
-                           :lg="{ span: 18 }">
-                      <a-row :gutter="[24,24]" type="flex" justify="start">
-                        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                               :md="{ span: 12 }"
-                               :lg="{ span: 12 }">
-                          <a-button @click="onModal('merchant')" class="r-btn-primary"
-                                    block
-                                    type="secondary"
-                                    size='large'>
-                            Apply now
-                          </a-button>
-                        </a-col>
-                        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                               :md="{ span: 12 }"
-                               :lg="{ span: 12 }">
-                          <a-button @click="onModal('store')" class="r-btn-bordered-secondary"
-                                    block
-                                    type="secondary"
-                                    size='large'>
-                            Shop directory
-                          </a-button>
-                        </a-col>
-                      </a-row>
-                    </a-col>
-                  </a-row>
-                  <r-space size="24"></r-space>
-                </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-                  <div class="r-page-header-photo">
-                    <div class="r-page-primary"
-                         style="background-image: url('/images/merchant-02.jpg')">
-                    </div>
+                </template>
+              </a-card-meta>
+            </a-card>
+          </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            <a-card hoverable>
+              <a-card-meta>
+                <template slot="description">
+                  <div class="r-icon">
+                    <a-icon type="dot-chart"/>
                   </div>
-                </a-col>
-              </a-row>
-            </a-col>
-          </a-row>
-        </div>
-      </a-col>
-    </a-row>
-    <a-row class="r-margin-vertical-48" type="flex">
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
-        <a-row type="flex" justify="start"
-               class="r-radius-right-white r-text-center">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
-                 :lg="{span: 18, offset:6}" class="r-padding-48">
-            <a-row class="r-margin-vertical-24" type="flex" justify="start">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                     :lg="{ span: 24 }"
-                     style="text-align: left;">
-                <h4 class="r-heading-light">
-                  Customers want to buy more of your products. And now they've a more
-                  flexible
-                  shopping option with Shopple
-                </h4>
-              </a-col>
-            </a-row>
-            <a-row :gutter="[48,48]" type="flex" justify="start"
-                   class="r-radius-right-white">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                     :lg="{span: 8}">
-                <div class="r-icon">
-                  <a-icon type="line-chart"/>
-                </div>
-                <h4 class="r-heading">
-                  Increase your conversion rate by 24%
-                </h4>
-              </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                     :lg="{span: 8}">
-                <div class="r-icon">
-                  <a-icon type="pie-chart"/>
-                </div>
-                <h4 class="r-heading">
-                  Increase returning orders by 75%
-                </h4>
-              </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                     :lg="{span: 8}">
-                <div class="r-icon">
-                  <a-icon type="dot-chart"/>
-                </div>
-                <h4 class="r-heading">
-                  Increase sales volume by at least 36%
-                </h4>
-              </a-col>
-            </a-row>
+                  <h4 class="r-heading">
+                    Making sense, making value
+                  </h4>
+                  <p class="r-text-normal">
+                    Customers want to buy more of your products. And now they've a more
+                    flexible
+                    shopping option with Shopple
+                  </p>
+                </template>
+              </a-card-meta>
+            </a-card>
           </a-col>
         </a-row>
       </a-col>
     </a-row>
-    <r-steps :has-wave="false" :has-title="true" heading="Kpay shopping experience"></r-steps>
-    <a-row class="r-text-center" type="flex" justify="center">
-      <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :md="{ span: 24 }"
-             :lg="{ span: 24 }">
-        <a-row type="flex" justify="center">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-padding-vertical-48">
-            <h2 class="r-heading">
-              Become a verified merchant today
-            </h2>
-            <p class="r-text-normal">
-              Join the Shopple Merchant Program and start promoting Shopple in-store today and watch your
-              sales run wild!
-            </p>
-          </a-col>
-        </a-row>
-        <a-row type="flex" justify="center" align="middle">
-          <a-col class="r-padding-bottom-48" :xs="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
-            <a-button @click="onModal('merchant')" size="large" type="primary">
-              Become a merchant
-            </a-button>
-          </a-col>
-        </a-row>
-      </a-col>
-    </a-row>
+    <r-steps :has-wave="false" :has-title="true" heading="Shopple shopping experience"></r-steps>
     <r-merchant-modal></r-merchant-modal>
   </r-page>
 </template>

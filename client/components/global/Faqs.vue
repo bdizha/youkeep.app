@@ -6,7 +6,7 @@
                 <a-row type="flex" justify="space-around" align="middle">
                     <a-col :lg="{span: 10, offset: 2}" class="r-page-padding">
                         <h1 class="r-heading">
-                            <span class="r-text-primary">Frequently Asked Questions</span>
+                            <span class="r-text-secondary">Frequently Asked Questions</span>
                         </h1>
                         <p class="r-text-normal">
                             Below you will find the most frequently asked questions about delivery for your

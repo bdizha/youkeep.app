@@ -7,7 +7,7 @@
             <a-button id="r-user-register" v-on:click="onModal"
                       block
                       :size="size"
-                      type="primary"
+                      type="secondary"
                       class="r-btn-bordered-primary">
                 <a-icon type="user"/>
                 Sign up

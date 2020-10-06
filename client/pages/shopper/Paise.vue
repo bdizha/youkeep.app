@@ -10,14 +10,18 @@
               <h4 class="r-heading-light r-text-uppercase">
                 Paise for Shoppers
               </h4>
-              <h1 class="r-heading r-text-uppercase">
-                <span class="r-text-primary">Shop more,</span><br>
-                <span class="r-text-purple">Earn more.</span>
+              <h1 class="r-heading r-text-secondary">
+                <span class="r-text-secondary">Shop more,</span><br>
+                <span class="r-text-secondary">Earn more.</span>
               </h1>
               <h4 class="r-heading-light">
                 All your earnings are automatically added into your Paise wallet. You're able to transfer any amount in
                 your account to any bank account instantly, some inter-transfer charges may apply.
               </h4>
+              <p class="r-text-normal">
+                Unlike other buy-now-pay-later plans, Shopple lets shoppers use their existing credit card for
+                the easiest most intuitive checkout.
+              </p>
             </template>
           </a-card-meta>
         </a-card>
@@ -33,27 +37,6 @@
     <a-row class="r-mt-48" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
         <a-row :gutter="[48,48]" type="flex" justify="center">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                 :lg="{ span: 24 }"
-                 style="text-align: left;">
-            <a-card hoverable>
-              <a-card-meta>
-                <template slot="description">
-                  <h2 class="r-heading">
-                    How it Works
-                  </h2>
-                  <p class="r-text-normal">
-                    Unlike other buy-now-pay-later plans, Shopple lets shoppers use their existing credit card for
-                    the easiest most intuitive checkout.
-                  </p>
-                </template>
-              </a-card-meta>
-            </a-card>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             <a-card hoverable>

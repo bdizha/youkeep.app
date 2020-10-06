@@ -33,8 +33,7 @@
                   Effortless shopping anywhere
                 </h4>
                 <p class="r-text-normal">
-                  We're changing how shopping is experienced. Get new products served to you based on your liking and
-                  shopping preferences.
+                  We're changing how shopping is experienced. Get new products served to you based on your liking and preferences.
                 </p>
               </template>
             </a-card-meta>

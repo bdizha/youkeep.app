@@ -245,7 +245,7 @@
               <a-button @click="onBack"
                         :size="'large'"
                         type="default"
-                        class="r-btn-primary">
+                        class="r-btn-secondary">
                 <a-icon type="left"/>
                 Back
               </a-button>
@@ -253,8 +253,8 @@
             <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onStep"
                         :size="'large'"
-                        type="primary" html-type="button"
-                        class="ant-btn ant-btn-secondary r-btn-secondary">
+                        type="secondary" html-type="button"
+                        class="ant-btn r-btn-secondary">
                 {{ step == 11 ? 'Submit' : 'Continue' }}
                 <a-icon type="right"/>
               </a-button>

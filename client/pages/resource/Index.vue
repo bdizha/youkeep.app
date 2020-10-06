@@ -18,7 +18,7 @@
                         For merchants
                       </h4>
                       <h1 class="r-heading">
-                        <span class="r-text-primary">Enable more buying customers and increase recurring orders with Shopple.</span>
+                        <span class="r-text-secondary">Enable more buying customers and increase recurring orders with Shopple.</span>
                       </h1>
                       <p class="r-text-normal">
                         Maximize in-store impact with Shopple signage and online training for
@@ -36,7 +36,7 @@
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }">
-                          <a-button @click="onModal('merchant')" class="r-btn-primary"
+                          <a-button @click="onModal('merchant')" class="r-btn-secondary"
                                     block
                                     type="secondary"
                                     size='large'>
@@ -122,7 +122,7 @@
         </a-row>
       </a-col>
     </a-row>
-    <r-steps :has-wave="false" :has-title="true" heading="Kpay shopping experience"></r-steps>
+    <r-steps :has-wave="false" :has-title="true" heading="Shopple shopping experience"></r-steps>
     <a-row class="r-text-center" type="flex" justify="center">
       <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :md="{ span: 24 }"
              :lg="{ span: 24 }">
@@ -140,7 +140,7 @@
         <a-row type="flex" justify="center" align="middle">
           <a-col class="r-padding-bottom-48" :xs="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
-            <a-button @click="onModal('merchant')" size="large" type="primary">
+            <a-button @click="onModal('merchant')" size="large" type="secondary">
               Become a merchant
             </a-button>
           </a-col>

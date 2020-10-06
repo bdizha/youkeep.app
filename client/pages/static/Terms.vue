@@ -13,7 +13,7 @@
         <article class="r-article">
           <p>Thank you for using Shopple!</p>
           <p><strong>PLEASE READ THE FOLLOWING TERMS AND CONDITIONS (THE “TERMS”) CAREFULLY BEFORE
-            USING OUR WEBSITE, www.Shopple.com, OR OUR MOBILE APPLICATIONS (COLLECTIVELY, THE
+            USING OUR WEBSITE, www.shopple.app, OR OUR MOBILE APPLICATIONS (COLLECTIVELY, THE
             “SITE”).</strong></p>
           <p><strong>YOU AGREE THAT BY USING THE SITE, YOU ACCEPT AND AGREE TO BE BOUND BY THESE TERMS
             AND OUR PRIVACY POLICY, INCORPORATED HEREIN BY REFERENCED. IF YOU DO NOT AGREE TO THESE
@@ -64,7 +64,7 @@
             use of the Site or your device. By using the Site you consent to the use of cookies and
             other automatic means of collection in accordance with our Privacy Policy.</p>
           <p>To cancel your membership, please contact Shopple HQ via <a class="text-bold"
-                                                                       href="https://web.archive.org/web/20181025162846/mailto:support@Shopple.com">support@Shopple.com</a>
+                                                                       href="https://web.archive.org/web/20181025162846/mailto:support@shopple.app">support@shopple.app</a>
             or <a class="text-bold hide-for-medium"
                   href="https://web.archive.org/web/20181025162846/tel:1-205-502-2500">(205)
               502-2500</a><span class="text-bold hide-for-small">072 522 3792</span>.</p>
@@ -212,7 +212,7 @@
           <p>By registering to become a member, you agree that we may send you text (SMS) messages in
             order to provide you with the services and products offered through the Site. You may
             opt-out of receiving text (SMS) messages from Company at any time by contacting Shopple HQ
-            via support@Shopple.com, provided however that opting out of text (SMS) messages may
+            via support@shopple.app, provided however that opting out of text (SMS) messages may
             affect your use of the Site and the services and products offered through the Site. You
             may continue to receive text messages for a short period while we de-activate your
             account, and you may also receive text messages confirming the receipt of your
@@ -266,7 +266,7 @@
             the Site.</p>
           <h4>Credits</h4>
           <p>
-            <a href="https://web.archive.org/web/20181025162846/http://credits.Shopple.com/">credits.Shopple.com</a>
+            <a href="https://web.archive.org/web/20181025162846/http://credits.shopple.app/">credits.shopple.app</a>
           </p>
           <h4>Warranty Disclaimer</h4>
           <p>EXCEPT AS OTHERWISE SPECIFICALLY PROVIDED HEREIN, THE SITE AND THE PRODUCTS AND SERVICES

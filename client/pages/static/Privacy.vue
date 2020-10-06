@@ -147,7 +147,7 @@
             preceding year for marketing purposes.</p>
           <p>If you are a California resident and request information about how to exercise your third
             party disclosure choices, send a request to the following email address: <em><a
-              href="https://web.archive.org/web/20181025162848/mailto:info@Shopple.com">info@Shopple.com</a></em>.
+              href="https://web.archive.org/web/20181025162848/mailto:info@shopple.app">info@shopple.app</a></em>.
           </p>
           <h2>Children online privacy protection act</h2>
           <p>The site is not intended for children under 13 years of age. No one under age 13 may
@@ -168,7 +168,7 @@
           <h2>Questions and contact information</h2>
           <p>If you would like to access, correct, amend or delete any personal information we have
             about you, register a complaint, or simply want more information about our privacy
-            practices, please contact our Privacy Compliance Officer at info@Shopple.com or by mail
+            practices, please contact our Privacy Compliance Officer at info@shopple.app or by mail
             at:</p>
           <p><span class="text-bold">Shopple</span><br>
             Attn: Compliance<br>

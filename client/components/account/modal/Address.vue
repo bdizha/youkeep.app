@@ -92,7 +92,7 @@
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onPost"
                      size="default"
-                      type="primary"
+                      type="secondary"
                       html-type="submit"
                       class=" r-btn-secondary">
               Save

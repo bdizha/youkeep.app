@@ -17,7 +17,7 @@
                 </h3>
                 <h3 v-show="hasAddress" class="r-heading">
                   <a-icon slot="prefix" type="environment"/>
-                  Available in <span class="r-text-primary">{{ address.city }}</span>!
+                  Available in <span class="r-text-secondary">{{ address.city }}</span>!
                 </h3>
                 <p class="r-text-sm">
                   This will just take a few steps to complete. First, please help us set up your
@@ -69,8 +69,8 @@
             </a-radio-group>
           </a-form-item>
           <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button block :size="'large'" type="primary" html-type="submit"
-                      class="ant-btn-secondary r-btn-primary">
+            <a-button block :size="'large'" type="secondary" html-type="submit"
+                      class="r-btn-secondary">
               Request an invite
             </a-button>
           </a-form-item>

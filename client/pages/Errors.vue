@@ -2,7 +2,7 @@
     <a-form-item v-if="errors.length > 0">
         <a-row type="flex" justify="center">
             <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
-                <h4 class="r-heading r-text-primary">
+                <h4 class="r-heading r-text-secondary">
                     Oops! Please correct the following errors:
                 </h4>
                 <div v-for="error in errors" class="r-text-normal r-text-primary">

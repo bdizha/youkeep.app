@@ -30,8 +30,8 @@
         <a-row :gutter="16" type="flex" justify="right">
             <a-col :xs="{ span: 24 }">
                 <div style="text-align: right; width: 100%; margin-bottom: 20px;">
-                    <a-button @click="toggleDirection" type="primary" html-type="submit"
-                              class="ant-btn-secondary r-btn-primary">
+                    <a-button @click="toggleDirection" type="secondary" html-type="submit"
+                              class="r-btn-secondary">
                         {{ isVertical ? 'Less' : 'Detailed' }} Timeline
                     </a-button>
                 </div>

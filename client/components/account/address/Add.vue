@@ -4,7 +4,7 @@
             <a-button v-on:click="onModal"
                       block
                      size="default"
-                      type="primary"
+                      type="secondary"
                       html-type="button"
                       class="r-btn-bordered-secondary">
                 Add new

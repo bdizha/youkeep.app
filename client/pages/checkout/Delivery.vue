@@ -11,8 +11,8 @@
                 </a-col>
                 <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
                        :md="{ span: 6 }" :lg="{ span: 6 }">
-                    <a-button block type="primary" html-type="button"
-                              class="ant-btn-secondary r-btn-primary">
+                    <a-button block type="secondary" html-type="button"
+                              class="r-btn-secondary">
                         Proceed
                     </a-button>
                 </a-col>

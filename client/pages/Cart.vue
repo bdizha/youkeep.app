@@ -77,7 +77,7 @@
                     <a-row :gutter="24" class="r-cart-bottom-actions" v-if='hasItems' type="flex" justify="center">
                         <a-col class="gutter-row r-text-center" :xs="{ span: 12 }" :sm="{ span: 12 }"
                                :lg="{ span: 12 }">
-                            <a-button block v-on:click="save()" size="small" class="r-btn-bordered-black">
+                            <a-button block v-on:click="save()" size="small" class="r-btn-bordered-grey">
                                 <a-icon type="file-done"/>
                                 Save cart
                             </a-button>
@@ -87,8 +87,8 @@
                             <a-popconfirm
                                     @confirm="reset"
                                     title="Are you sure you would like to clear your cart?">
-                                <a-icon slot="icon" type="question-circle-o" class="r-text-primary"/>
-                                <a-button block size="small" class="r-btn-bordered-black">
+                                <a-icon slot="icon" type="question-circle-o" class="r-text-secondary"/>
+                                <a-button block size="small" class="r-btn-bordered-grey">
                                     <a-icon type="delete"/>
                                     Clear cart
                                 </a-button>
@@ -110,7 +110,7 @@
                     <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
                            :lg="{ span: 12 }">
                         <nuxt-link to="/checkout">
-                            <a-button block size="small" type="primary" class="r-btn-bordered-white">
+                            <a-button block size="small" type="secondary" class="r-btn-bordered-white">
                                 <a-icon type="shopping-cart"/>
                                 Checkout
                             </a-button>

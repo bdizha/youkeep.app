@@ -5,7 +5,7 @@
         <a-row type="flex" justify="space-around" align="middle">
           <a-col :lg="{span: 9 , offset: 3}" class="r-page-padding">
             <h1 class="r-heading">
-              <span class="r-text-primary">Shop</span>
+              <span class="r-text-secondary">Shop</span>
               <span class="">Rules</span>
             </h1>
           </a-col>
@@ -22,7 +22,7 @@
         <a-row class="r-radius-right-white" type="flex"
                justify="space-around" align="middle">
           <a-col :lg="{span: 18 , offset: 6}" class="r-page-padding">
-            <h2 class="r-heading r-text-primary">
+            <h2 class="r-heading r-text-secondary">
               Who we are
             </h2>
             <p class="r-text-normal">
@@ -54,7 +54,7 @@
       <a-col :lg="{span: 12}" class="r-radius-right-white">
         <a-row type="flex" justify="space-around" align="middle">
           <a-col :lg="{span: 18 , offset: 6}" class="r-page-padding">
-            <h2 class="r-heading r-text-primary">
+            <h2 class="r-heading r-text-secondary">
               We believe in our customers
             </h2>
             <p class="r-text-normal">
@@ -76,7 +76,7 @@
               within a few minutes. So toilet paper, fresh, chips and ice cream, but also organic
               eggs, tender
               steak and fresh vegetables.</p>
-            <h2 class="r-heading r-text-primary">
+            <h2 class="r-heading r-text-secondary">
               It's always shopping time!
             </h2>
             <p class="r-text-normal">

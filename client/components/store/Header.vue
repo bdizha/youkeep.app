@@ -18,7 +18,7 @@
                 <nuxt-link :to="'/store/' + store.slug">
                   <a-button block
                             class="r-btn-bordered-grey"
-                            type="primary">
+                            type="secondary">
                     {{ store.name }}
                   </a-button>
                 </nuxt-link>

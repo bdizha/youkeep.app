@@ -31,7 +31,7 @@
             style="margin-right: -12px"
             class="search-btn"
             size="default"
-            type="primary">
+            type="secondary">
           <a-icon type="search"/>
         </a-button>
       </a-input>

@@ -20,7 +20,7 @@
 
             </a-col>
             <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
-                <a-button block type="primary"
+                <a-button block type="secondary"
                           :class="'r-btn-secondary'"
                          size="default"
                           html-type="button">

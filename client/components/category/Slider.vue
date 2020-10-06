@@ -42,8 +42,8 @@
                    :lg="{ span: 12 }">
               <a-button block
                         size="large"
-                        type="primary"
-                        class="r-btn-primary">
+                        type="secondary"
+                        class="r-btn-secondary">
                 <a-icon type="clock-circle"/>
                 Coming soon
               </a-button>

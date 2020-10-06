@@ -17,7 +17,7 @@
                       <h4 class="r-heading-light r-text-uppercase">
                         Get paid to shop with Shopple.
                       </h4>
-                      <h1 class="r-heading r-text-uppercase r-text-primary">
+                      <h1 class="r-heading r-text-secondary">
                         A better way to your shopping.
                       </h1>
                     </a-col>
@@ -30,8 +30,8 @@
                         Earn up to R55/hr or more shopping for Shopple members.
                         Deliver things people love, from the stores they trust.
                       </p>
-                      <a-button @click="onApply" type="primary"
-                                class="ant-btn r-btn-primary r-mt-24"
+                      <a-button @click="onApply" type="secondary"
+                                class="r-btn-secondary r-mt-24"
                                 size="large"
                                 html-type="button">
                         Apply now
@@ -88,7 +88,7 @@
             </h4>
             <p class="r-text-normal">
               Work part time or full time – any time.<br>Set your own hours for a completely
-              flexible schedule.
+              flexible paying schedule.
             </p>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
@@ -143,18 +143,18 @@
              :lg="{ span: 24 }">
         <a-row type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
-            <h2 class="r-heading r-text-uppercase">
-              Want to start making money shopping with Shopple?
+            <h2 class="r-heading r-text-secondary">
+              Want to start making money shopping as paid shopper?
             </h2>
             <p class="r-text-normal">
-              Apply to be a Shopple Shopper today and start achieving your goals.
+              Apply to be a Shopper today and start achieving your goals with Shopple.
             </p>
           </a-col>
         </a-row>
         <a-row type="flex" justify="center" align="middle">
           <a-col class="r-pb-48" :xs="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
-            <a-button @click="onApply" size="large" type="primary">
+            <a-button @click="onApply" size="large" type="secondary">
               Become a shopper
             </a-button>
           </a-col>

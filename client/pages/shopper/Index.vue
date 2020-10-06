@@ -1,50 +1,50 @@
 <template>
   <r-page>
-    <a-row type="flex" justify="center">
-      <a-col class="gutter-row" :span="24">
-        <div class="r-page-welcome r-bg-blue">
-          <a-row type="flex" justify="start" align="middle">
-            <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                   :md="{ span: 12 }"
-                   :lg="{ span: 12 }">
-              <a-card hoverable>
-                <a-card-meta>
-                  <template slot="description">
-                    <h4 class="r-heading-light r-text-uppercase">
-                      Get paid to shop with Shopple.
-                    </h4>
-                    <h1 class="r-heading r-text-uppercase">
-                      A better way to shopping.
-                    </h1>
-                    <a-row type="flex" justify="start">
-                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                             :lg="{ span: 24 }"
-                             style="text-align: left;">
-                        <p class="r-text-normal">
-                          Earn up to R55/hr or more shopping for Shopple members.
-                          Deliver things people love, from the stores they trust.
-                        </p>
-                        <a-button @click="onModal" type="primary"
-                                  class="ant-btn r-btn-primary r-margin-top-24"
-                                  size="large"
-                                  html-type="button">
-                          Apply now
-                        </a-button>
-                      </a-col>
-                    </a-row>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+    <a-row type="flex" justify="center" align="middle">
+      <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+             :md="{ span: 12 }"
+             :lg="{ span: 12 }">
+        <a-card hoverable>
+          <a-card-meta>
+            <template slot="description">
+              <h4 class="r-heading-light r-text-uppercase">
+                Get paid to shop with Shopple.
+              </h4>
+              <h1 class="r-heading r-text-secondary">
+                A better way to shopping.
+              </h1>
+              <a-row type="flex" justify="start">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                       :lg="{ span: 24 }"
+                       style="text-align: left;">
+                  <p class="r-text-normal">
+                    Earn up to R55/hr or more shopping for Shopple members.
+                    Deliver things people love, from the stores they trust.
+                  </p>
+                  <a-button @click="onModal" type="secondary"
+                            class="r-btn-secondary r-margin-top-24"
+                            size="large"
+                            html-type="button">
+                    Apply now
+                  </a-button>
+                </a-col>
+              </a-row>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+        <a-card hoverable>
+          <a-card-meta>
+            <template slot="description">
               <div class="r-page-header-photo">
                 <div class="r-page-primary"
                      style="background-image: url('/images/shopper.jpg')">
                 </div>
               </div>
-            </a-col>
-          </a-row>
-        </div>
+            </template>
+          </a-card-meta>
+        </a-card>
       </a-col>
     </a-row>
     <a-row type="flex" justify="start">
@@ -189,7 +189,7 @@
               <a-row type="flex" justify="center" align="middle">
                 <a-col class="r-padding-bottom-48" :xs="{ span: 24 }" :md="{ span: 12 }"
                        :lg="{ span: 12 }">
-                  <a-button @click="onModal" size="large" type="primary">
+                  <a-button @click="onModal" size="large" type="secondary">
                     Become a shopper
                   </a-button>
                 </a-col>
