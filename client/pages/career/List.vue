@@ -1,140 +1,143 @@
 <template>
-  <r-page style="background: #FFFFFF;overflow: hidden;">
-    <a-row type="flex" justify="center" align="middle">
-      <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48 r-margin-vertical-48">
-        <a-row type="flex" justify="space-around" align="middle">
+  <r-page>
+    <a-row :gutter="[48,48]" type="flex" justify="start" align="top">
+      <a-col :xs="{ span: 24 }"
+             :sm="{ span: 24 }"
+             :md="{ span: 24 }"
+             :lg="{ span: 24 }">
+        <a-card class="r-p-24">
+          <a-card-meta>
+            <template slot="description">
+              <h2 class="r-heading">
+                <span v-if="!department">Current job openings at Shopple</span>
+                <span v-if="department" v-on:click="onDepartment(null)">
+                  <a-icon type="left"/>
+                  {{ department.name }}
+                </span>
+              </h2>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col :xs="{ span: 24 }"
+             :sm="{ span: 24 }"
+             :md="{ span: 10 }"
+             :lg="{ span: 8 }">
+        <a-card class="r-p-24">
+          <a-list :data-source="departments">
+            <a-list-item slot="renderItem"
+                         slot-scope="item, index">
+              <template>
+                <span v-on:click="onDepartment(item)">
+                  {{ item.name }}
+                </span>
+              </template>
+            </a-list-item>
+          </a-list>
+        </a-card>
+      </a-col>
+      <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 14 }" :lg="{ span: 16 }">
+        <a-row v-if="departments.length == 0" type="flex" justify="center">
           <a-col class="gutter-row" :span="24">
-            <h1 class="r-heading r-text-secondary">
-              Current job openings at Shopple
-            </h1>
+            <a-card class="r-p-24">
+              <a-card-meta>
+                <a-empty
+                  image="/assets/icon_grey.svg"
+                  :imageStyle="{ height: '81px',}">
+                  <span slot="description">Sorry. There aren't any job openings currently.</span>
+                  <a-button size="large" class="ant-btn-primary r-btn-secondary">Shop now</a-button>
+                </a-empty>
+              </a-card-meta>
+            </a-card>
           </a-col>
         </a-row>
-        <a-row class="r-margin-vertical-24" v-if="hasData" type="flex" justify="center" align="left">
-          <a-col class="r-career r-text-left" v-for="(department, d) in departments" :key="d"
-                 :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-            <a-row class="r-margin-top-24">
-              <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
-                <h3 class="r-heading r-text-capitalize r-text-secondary">{{ department.name }}</h3>
-              </a-col>
-            </a-row>
-            <a-row class="r-margin-vertical-12" v-for="(position, p) in department.positions" :key="p">
-              <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                <a-card :hoverable="true">
-                  <a-row type="flex" justify="start" align="middle">
-                    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :lg="{ span: 24 }">
-                      <a-row>
-                        <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                          <a :href="'/career/' + position.slug">
-                            <h4 class="r-heading">{{ position.title }}</h4>
-                          </a>
-                        </a-col>
-                      </a-row>
-                      <a-row>
-                        <a-col class="gutter-row" :xs="{ span: 14 }" :sm="{ span: 16 }"
-                               :lg="{ span: 18 }">
-                          <a :href="'/career/' + position.slug">
-                            <a-row>
-                              <a-col class="gutter-row" :xs="{ span: 24 }"
-                                     :sm="{ span: 12 }"
-                                     :lg="{ span: 24 }">
-                                <h4 class="r-text-normal">{{
-                                    position.city.name
-                                  }}
-                                </h4>
-                              </a-col>
-                              <a-col class="gutter-row" :xs="{ span: 24 }"
-                                     :sm="{ span: 12 }"
-                                     :lg="{ span: 24 }">
-                                <h4 class="r-text-primary r-text-capitalize">
-                                  {{ position.type_formatted }}
-                                </h4>
-                              </a-col>
-                              <a-col class="gutter-row r-text-secondary r-text-capitalize"
-                                     :xs="{ span: 24 }"
-                                     :sm="{ span: 12 }"
-                                     :lg="{ span: 24 }">
-                                {{ position.department }}
-                              </a-col>
-                            </a-row>
-                          </a>
-                        </a-col>
-                        <a-col class="r-padding-24 gutter-row r-text-right" :xs="{ span: 10 }"
-                               :sm="{ span: 8 }"
-                               :lg="{ span: 6 }">
-                          <a class="r-same-height"
-                             :href="'/career/' + position.slug + '/apply'">
-                            <a-button type="secondary"
-                                      class="r-btn-secondary" size="default">
-                              Apply
-                            </a-button>
-                          </a>
-                        </a-col>
-                      </a-row>
-                    </a-col>
-                  </a-row>
-                </a-card>
-              </a-col>
-            </a-row>
-          </a-col>
-        </a-row>
-        <a-row v-if="hasData && departments.length == 0" type="flex" justify="center">
-          <a-col class="gutter-row" :span="24">
-            <a-empty
-              image="/assets/icon_grey.svg"
-              :imageStyle="{ height: '81px',}">
-              <span slot="description">Sorry. There aren't any job openings currently.</span>
-              <a-button size="large" class="ant-btn-primary r-btn-secondary">Shop now</a-button>
-            </a-empty>
-          </a-col>
-        </a-row>
+        <a-card :hoverable="true"
+                class="r-p-24 r-mb-48"
+                v-for="(position, index) in positions"
+                v-if="!department || position.department_type === department.id"
+                :key="index">
+          <a-row>
+            <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
+              <a :href="'/career/' + position.slug">
+                <h4 class="r-heading">{{ position.title }}</h4>
+              </a>
+            </a-col>
+          </a-row>
+          <a-row>
+            <a-col class="gutter-row" :xs="{ span: 14 }" :sm="{ span: 16 }"
+                   :lg="{ span: 18 }">
+              <a :href="'/career/' + position.slug">
+                <a-row>
+                  <a-col class="gutter-row" :xs="{ span: 24 }"
+                         :sm="{ span: 12 }"
+                         :lg="{ span: 24 }">
+                    <h4 class="r-text-normal">{{
+                        position.city.name
+                      }}
+                    </h4>
+                  </a-col>
+                  <a-col class="gutter-row" :xs="{ span: 24 }"
+                         :sm="{ span: 12 }"
+                         :lg="{ span: 24 }">
+                    <h4 class="r-text-primary r-text-capitalize">
+                      {{ position.type_formatted }}
+                    </h4>
+                  </a-col>
+                  <a-col v-on:click="onDepartment(department)" class="gutter-row r-text-secondary r-text-capitalize"
+                         :xs="{ span: 24 }"
+                         :sm="{ span: 12 }"
+                         :lg="{ span: 24 }">
+                    {{ position.department }}
+                  </a-col>
+                </a-row>
+              </a>
+            </a-col>
+            <a-col class="r-padding-24 gutter-row r-text-right" :xs="{ span: 10 }"
+                   :sm="{ span: 8 }"
+                   :lg="{ span: 6 }">
+              <a class="r-same-height"
+                 :href="'/career/' + position.slug + '/apply'">
+                <a-button type="secondary"
+                          class="r-btn-secondary" size="default">
+                  Apply
+                </a-button>
+              </a>
+            </a-col>
+          </a-row>
+        </a-card>
       </a-col>
     </a-row>
   </r-page>
 </template>
 <script>
 import {mapGetters} from "vuex";
-import axios from 'axios'
 
 export default {
   name: 'r-career-list',
   props: {},
   data() {
     return {
-      departments: [],
-      modal: {
-        isVisible: null,
-        current: null,
-        message: null,
-      },
-      hasData: true
+      department: null
     }
   },
   computed: mapGetters({
+    departments: 'base/departments',
+    positions: 'base/positions',
     modal: 'base/modal'
   }),
   created() {
+  },
+  mounted() {
     this.payload();
   },
   methods: {
-    payload() {
-      let params = {};
-      let path = this.$route.path;
-      let $this = this;
+    async payload() {
+      const {data} = await this.$store.dispatch('base/onCareers', {});
+    },
+    onDepartment(department) {
+      this.department = department;
 
-      axios.get(path, params)
-        .then(response => {
-          console.log("setting positions >> before");
-          console.log(response.data);
-
-          $this.departments = response.data.departments;
-          $this.hasData = true;
-
-          console.log("setting positions >> after");
-        })
-        .catch(e => {
-          console.log(e);
-        });
+      console.log('department', department)
     }
   }
 };

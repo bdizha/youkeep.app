@@ -33,23 +33,21 @@ class CareerController extends Controller
         $departments = [];
         foreach ($positions as $key => $position) {
             if (!isset($departments[$position->department_type])) {
-                $departments[$position->department_type] = ['name' => $position->department, 'positions' => []];
+                $departments[$position->department_type] = [
+                    'id' => $position->department_type,
+                    'name' => $position->department,
+                    'positions' => []
+                ];
             }
 
             $departments[$position->department_type]['positions'][] = $position;
         }
 
-        if ($request->ajax()) {
-            return response()->json([
-                'departments' => $departments,
-                'status' => 'success'
-            ], 200);
-        }
-
-        return view('career.index', [
-            'component' => 'career-openings',
-            'departments' => $departments,
-        ]);
+        return response()->json([
+            'departments' => array_values($departments),
+            'positions' => $positions,
+            'status' => 'success'
+        ], 200);
     }
 
     /**
@@ -64,17 +62,10 @@ class CareerController extends Controller
             ->where('slug', $slug)
             ->first();
 
-        if (request()->ajax()) {
-            return response()->json([
-                'position' => $position,
-                'status' => 'success'
-            ], 200);
-        }
-
-        return view('career.show', [
-            'component' => 'career-item',
-            'position' => $position
-        ]);
+        return response()->json([
+            'position' => $position,
+            'status' => 'success'
+        ], 200);
     }
 
     /**
@@ -89,17 +80,10 @@ class CareerController extends Controller
             ->where('slug', $slug)
             ->first();
 
-        if (request()->ajax()) {
-            return response()->json([
-                'position' => $position,
-                'status' => 'success'
-            ], 200);
-        }
-
-        return view('career.show', [
-            'component' => 'career-apply',
-            'position' => $position
-        ]);
+        return response()->json([
+            'position' => $position,
+            'status' => 'success'
+        ], 200);
     }
 
     /**

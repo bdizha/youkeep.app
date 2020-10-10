@@ -1,193 +1,172 @@
 <template>
   <r-page>
-    <a-row v-if="position" type="flex" justify="center" align="middle">
-      <a-col :span="24">
-        <a-row type="flex" justify="center" align="middle" class="r-art-primary">
-          <a-col :xs="{span: 24}" :sm="{span: 24}" :lg="{span: 12}"
-                 class="r-margin-vertical-48 r-text-center">
-            <a-row type="flex" justify="center" align="middle">
-              <a-col :xs="{span: 24}" :sm="{span: 24}" :lg="{span: 24}">
-                <h2 class="r-heading r-text-white">
-                  {{ position.title }}
-                </h2>
-              </a-col>
-            </a-row>
-            <a-row type="flex" justify="center" align="middle">
-              <a-col :xs="{span: 8}" :sm="{span: 8}" :lg="{span: 6}">
-                <h3 class="r-heading r-text-white">
-                  <a-icon type="environment"/>
-                  <br>
-                  {{ position.city.name }}
-                </h3>
-              </a-col>
-              <a-col :xs="{span: 8}" :sm="{span: 8}" :lg="{span: 6}">
-                <h3 class="r-heading r-text-white">
-                  <a-icon type="solution"/>
-                  <br>
-                  {{ position.type_formatted }}
-                </h3>
-              </a-col>
-              <a-col :xs="{span: 8}" :sm="{span: 8}" :lg="{span: 6}">
-                <h3 class="r-heading r-text-white">
-                  <a-icon type="bank"/>
-                  <br>
-                  {{ position.department }}
-                </h3>
-              </a-col>
-            </a-row>
-          </a-col>
-        </a-row>
+    <a-row :gutter="[48,48]" type="flex" justify="start" align="top">
+      <a-col :xs="{ span: 24 }"
+             :sm="{ span: 24 }"
+             :md="{ span: 12 }"
+             :lg="{ span: 12 }">
+        <a-card class="r-p-24">
+          <nuxt-link :to="'/career/' + position.slug">
+            <h3 class="r-heading">
+              <a-icon type="left"/>
+              Back to position
+            </h3>
+          </nuxt-link>
+          <h4 class="r-heading">
+            <a-icon type="solution"/>
+            {{ position.type_formatted }}
+          </h4>
+          <h4 class="r-heading-light">
+            <a-icon type="bank"/>
+            {{ position.department }}
+          </h4>
+        </a-card>
+      </a-col>
+      <a-col :xs="{ span: 24 }"
+             :sm="{ span: 24 }"
+             :md="{ span: 12 }"
+             :lg="{ span: 12 }">
         <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48">
-            <a-breadcrumb class="r-same-height">
+          <a-col :xs="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+            <a-breadcrumb class="r-mb-24">
               <a-breadcrumb-item>
                 <nuxt-link class="r-text-primary r-text-view-more"
-                             :to="'/career/openings'">
+                           :to="'/career/openings'">
                   Jop openings
                 </nuxt-link>
               </a-breadcrumb-item>
               <a-breadcrumb-item>
                 <nuxt-link class="r-text-primary r-text-view-more"
-                             :to="'/career/' + position.slug">
+                           :to="'/career/' + position.slug">
                   {{ position.title }}
                 </nuxt-link>
               </a-breadcrumb-item>
               <a-breadcrumb-item>
-                                <span class="r-text-view-more">
-                                    Apply
-                                </span>
+                <span class="r-text-view-more">
+                    Apply
+                </span>
               </a-breadcrumb-item>
             </a-breadcrumb>
           </a-col>
-        </a-row>
-        <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-bg-white r-padding-48">
-            <a-row class="" type="flex" justify="space-around" align="middle">
-              <a-col :lg="{span: 24}" class="">
-                <a-form v-if="!isSuccessful" :layout="'horizontal'"
-                        @submit="apply"
-                        :form="formApply">
-                  <a-form-item>
-                    <a-row type="flex" justify="center">
-                      <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
-                        <h2 class="r-heading">
-                          Submit your application
-                        </h2>
-                      </a-col>
-                    </a-row>
-                  </a-form-item>
-                  <a-form-item label="Resume/CV">
-                    <a-upload
-                      name="resume"
-                      :multiple="true"
-                      :accept="accept"
-                      action="/career/resume"
-                      v-decorator="['resume', { rules: [{ required: true, message: 'Please upload your resume/CV' }] }]">
-                      <a-button size="large">
-                        <a-icon type="paper-clip"/>
-                        Attach resume/CV
+          <a-col :xs="{span: 24}" :md="{span: 24}" :lg="{span: 24}" class="r-padding-48">
+            <a-card class="r-p-24">
+              <a-form v-if="!isSuccessful"
+                      @submit="onSend"
+                      :form="formApply">
+                <a-form-item>
+                  <h2 class="r-heading">
+                    Submit your application
+                  </h2>
+                </a-form-item>
+                <a-form-item label="Resume/CV">
+                  <a-upload
+                    name="resume"
+                    :multiple="true"
+                    :accept="accept"
+                    action="/career/resume"
+                    v-decorator="['resume', { rules: [{ required: true, message: 'Please upload your resume/CV' }] }]">
+                    <a-button size="large">
+                      <a-icon type="paper-clip"/>
+                      Attach resume/CV
+                    </a-button>
+                  </a-upload>
+                </a-form-item>
+                <a-row :gutter="24" type="flex" justify="start">
+                  <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 12 }"
+                         :lg="{ span: 12 }">
+                    <a-form-item label="Full name">
+                      <a-input
+                        size="large"
+                        placeholder="Your full name"
+                        v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
+                      </a-input>
+                    </a-form-item>
+                  </a-col>
+                  <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 12 }"
+                         :lg="{ span: 12 }">
+                    <a-form-item label="Your mobile">
+                      <a-input
+                        size="large"
+                        placeholder="Your mobile"
+                        v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile' }] }]">
+                      </a-input>
+                    </a-form-item>
+                  </a-col>
+                  <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 12 }"
+                         :lg="{ span: 12 }">
+                    <a-form-item label="Email address">
+                      <a-input type="email"
+                               size="large"
+                               placeholder="Your email address"
+                               v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
+                      </a-input>
+                    </a-form-item>
+                  </a-col>
+                  <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 12 }"
+                         :lg="{ span: 12 }">
+                    <a-form-item label="Current company">
+                      <a-input
+                        size="large"
+                        placeholder="Your current company"
+                        v-decorator="['company', { rules: [{ required: true, message: 'Please enter your current company' }] }]">
+                      </a-input>
+                    </a-form-item>
+                  </a-col>
+                  <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 12 }"
+                         :lg="{ span: 12 }">
+                    <a-form-item label="Linkedin URL">
+                      <a-input
+                        size="large"
+                        placeholder="Your Linkedin URL"
+                        v-decorator="['public_url', { rules: [{ required: false, message: 'Please enter your public URL' }] }]">
+                      </a-input>
+                    </a-form-item>
+                  </a-col>
+                  <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 12 }"
+                         :lg="{ span: 12 }">
+                    <a-form-item label="Other URL">
+                      <a-input
+                        size="large"
+                        placeholder="Your other URL"
+                        v-decorator="['url_url', { rules: [{ required: false, message: 'Please enter your other URL' }] }]">
+                      </a-input>
+                    </a-form-item>
+                  </a-col>
+                </a-row>
+                <a-form-item label="Cover letter">
+                  <a-textarea type="textarea"
+                              :auto-size="{ minRows: 2, maxRows: 6 }"
+                              placeholder="Your cover letter"
+                              v-decorator="['cover_letter', { rules: [{ required: true, message: 'Please enter your cover letter' }] }]">
+                  </a-textarea>
+                </a-form-item>
+                <a-form-item class="r-margin-top-48">
+                  <a-row :gutter="24" type="flex" justify="center">
+                    <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
+                           :sm="{ span: 12 }"
+                           :md="{ span: 12 }"
+                           :lg="{ span: 12 }">
+                    </a-col>
+                    <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
+                           :sm="{ span: 12 }"
+                           :md="{ span: 12 }"
+                           :lg="{ span: 12 }">
+                      <a-button block @click="onSend" :size="'large'" type="secondary"
+                                html-type="submit"
+                                class="r-btn-secondary">
+                        Submit application
                       </a-button>
-                    </a-upload>
-                  </a-form-item>
-                  <a-row :gutter="24" type="flex" justify="start">
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 12 }"
-                           :lg="{ span: 12 }">
-                      <a-form-item label="Full name">
-                        <a-input
-                          size="large"
-                          placeholder="Your full name"
-                          v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
-                        </a-input>
-                      </a-form-item>
-                    </a-col>
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 12 }"
-                           :lg="{ span: 12 }">
-                      <a-form-item label="Your mobile">
-                        <a-input
-                          size="large"
-                          placeholder="Your mobile"
-                          v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile' }] }]">
-                        </a-input>
-                      </a-form-item>
-                    </a-col>
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 12 }"
-                           :lg="{ span: 12 }">
-                      <a-form-item label="Email address">
-                        <a-input type="email"
-                                 size="large"
-                                 placeholder="Your email address"
-                                 v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
-                        </a-input>
-                      </a-form-item>
-                    </a-col>
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 12 }"
-                           :lg="{ span: 12 }">
-                      <a-form-item label="Current company">
-                        <a-input
-                          size="large"
-                          placeholder="Your current company"
-                          v-decorator="['company', { rules: [{ required: true, message: 'Please enter your current company' }] }]">
-                        </a-input>
-                      </a-form-item>
-                    </a-col>
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 12 }"
-                           :lg="{ span: 12 }">
-                      <a-form-item label="Linkedin URL">
-                        <a-input
-                          size="large"
-                          placeholder="Your Linkedin URL"
-                          v-decorator="['public_url', { rules: [{ required: false, message: 'Please enter your public URL' }] }]">
-                        </a-input>
-                      </a-form-item>
-                    </a-col>
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 12 }"
-                           :lg="{ span: 12 }">
-                      <a-form-item label="Other URL">
-                        <a-input
-                          size="large"
-                          placeholder="Your other URL"
-                          v-decorator="['url_url', { rules: [{ required: false, message: 'Please enter your other URL' }] }]">
-                        </a-input>
-                      </a-form-item>
                     </a-col>
                   </a-row>
-                  <a-form-item label="Cover letter">
-                    <a-textarea type="textarea"
-                                :auto-size="{ minRows: 2, maxRows: 6 }"
-                                placeholder="Your cover letter"
-                                v-decorator="['cover_letter', { rules: [{ required: true, message: 'Please enter your cover letter' }] }]">
-                    </a-textarea>
-                  </a-form-item>
-                  <a-form-item class="r-margin-top-48">
-                    <a-row :gutter="24" type="flex" justify="center">
-                      <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
-                             :sm="{ span: 12 }"
-                             :md="{ span: 12 }"
-                             :lg="{ span: 12 }">
-                      </a-col>
-                      <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
-                             :sm="{ span: 12 }"
-                             :md="{ span: 12 }"
-                             :lg="{ span: 12 }">
-                        <a-button block @click="onSend" :size="'large'" type="secondary"
-                                  html-type="submit"
-                                  class="r-btn-secondary">
-                          Submit application
-                        </a-button>
-                      </a-col>
-                    </a-row>
-                  </a-form-item>
-                </a-form>
-                <r-spinner v-if="isProcessing"></r-spinner>
-                <r-notice v-if="isSuccessful" :message="message"></r-notice>
-              </a-col>
-            </a-row>
+                </a-form-item>
+              </a-form>
+            </a-card>
           </a-col>
         </a-row>
       </a-col>
@@ -206,40 +185,33 @@ export default {
       accept: null,
       formApply: this.$form.createForm(this, {name: 'form_apply'}),
       hasData: false,
-      position: {
-        city: {name: null}
-      },
       errors: [],
       isSuccessful: false,
       isProcessing: false,
       redirectTo: ''
     }
   },
+  async asyncData({store, params, query}) {
+    try {
+      let path = `/career/${params.slug}`;
+      await store.dispatch('base/onPosition', {'route': path});
+
+    } catch (e) {
+      console.error('onStore errors');
+      console.log(e);
+    }
+  },
   computed: mapGetters({
-    modal: 'base/modal',
+    position: 'base/position',
+    modal: 'base/modal'
   }),
   created() {
     this.accept = this.$store.state.accept;
-
-    let modal = {};
-    modal.isVisible = false;
-    this.$store.dispatch('base/onModal', modal);
-    this.payload();
   },
   methods: {
-    payload() {
-      let params = {};
+    async payload() {
       let path = this.$route.path;
-      let $this = this;
-
-      axios.get(path, params)
-        .then(response => {
-          $this.position = response.data.position;
-          $this.hasData = true;
-        })
-        .catch(e => {
-          console.log(e);
-        });
+      await this.$store.dispatch('base/onPosition', {'route': path});
     },
     onSend(event) {
       event.preventDefault();

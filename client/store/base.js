@@ -7,6 +7,9 @@ const state = () => ({
   stores: {data: []},
   category: {},
   categories: [],
+  departments: [],
+  positions: [],
+  position: {},
   storeCategories: [],
   hasStores: false,
   hasShop: false,
@@ -57,6 +60,7 @@ const state = () => ({
     isTray: false,
     isSuccess: false,
     isCategory: false,
+    isCareers: false,
     isProduct: false,
     isCategories: false,
     isProducts: false,
@@ -80,6 +84,9 @@ const getters = {
   stores: state => state.stores,
   hasStores: state => state.stores.data.length > 0,
   category: state => state.category,
+  departments: state => state.departments,
+  positions: state => state.positions,
+  position: state => state.position,
   categories: state => state.categories,
   storeCategories: state => state.storeCategories,
   hasCategories: state => state.categories.length > 0,
@@ -133,6 +140,15 @@ const mutations = {
   },
   setCategories(state, categories) {
     state.categories = categories;
+  },
+  setPositions(state, positions) {
+    state.positions = positions;
+  },
+  setPosition(state, position) {
+    state.position = position;
+  },
+  setDepartments(state, departments) {
+    state.departments = departments;
   },
   setStoreCategories(state, storeCategories) {
     state.storeCategories = storeCategories;
@@ -252,6 +268,35 @@ const actions = {
       console.log('setCategories data >>>>> ', data);
 
       commit('setProcess', {key: 'isCategories', value: false});
+
+    } catch (e) {
+      console.error('on error: ', e);
+    }
+  },
+  async onPosition({dispatch, commit}, payload) {
+    try {
+      commit('setProcess', {key: 'isCareers', value: true});
+      const {data} = await axios.get(payload.route, {});
+      commit('setPosition', data.position);
+
+      console.log('setPosition data >>>>> ', data);
+
+      commit('setProcess', {key: 'isCareers', value: false});
+
+    } catch (e) {
+      console.error('on error: ', e);
+    }
+  },
+  async onCareers({dispatch, commit}, payload) {
+    try {
+      commit('setProcess', {key: 'isCareers', value: true});
+      const {data} = await axios.post('/careers', payload);
+      commit('setDepartments', data.departments);
+      commit('setPositions', data.positions);
+
+      console.log('setPositions data >>>>> ', data);
+
+      commit('setProcess', {key: 'isCareers', value: false});
 
     } catch (e) {
       console.error('on error: ', e);

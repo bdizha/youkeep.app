@@ -29,7 +29,7 @@
       }
     },
     computed: mapGetters({
-      store: 'store/store',
+      store: 'base/store',
     }),
     mounted() {
       this.payload();

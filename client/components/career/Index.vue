@@ -1,7 +1,7 @@
 <template>
-    <r-page style="background: #FFFFFF;overflow: hidden;">
+    <r-page>
         <a-row type="flex" justify="center" align="middle">
-            <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-padding-48 r-margin-vertical-48">
+            <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48 r-mv-48">
                 <a-row type="flex" justify="space-around" align="middle">
                     <a-col class="gutter-row" :span="24">
                         <h1 class="r-heading r-text-secondary">
@@ -9,7 +9,7 @@
                         </h1>
                     </a-col>
                 </a-row>
-                <a-row class="r-margin-vertical-24" v-if="hasData" type="flex" justify="center" align="left">
+                <a-row class="r-mt-48" v-if="hasData" type="flex" justify="center" align="left">
                     <a-col class="r-career r-text-left" v-for="(department, d) in departments" :key="d"
                            :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                         <a-row class="r-margin-top-24">
@@ -17,7 +17,7 @@
                                 <h3 class="r-heading r-text-capitalize r-text-secondary">{{ department.name }}</h3>
                             </a-col>
                         </a-row>
-                        <a-row class="r-margin-vertical-12" v-for="(position, p) in department.positions" :key="p">
+                        <a-row class="r-mv-12" v-for="(position, p) in department.positions" :key="p">
                             <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                                 <a-card class="r-p-24">
                                     <a-row type="flex" justify="start" align="middle">

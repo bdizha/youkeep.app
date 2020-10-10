@@ -1,70 +1,60 @@
 <template>
   <r-page>
-    <a-row type="flex" justify="center">
-      <a-col class="gutter-row" :span="24">
-        <div class="r-bg-primary-light">
-          <a-row type="flex" justify="center">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-              <a-row type="flex" justify="start">
-                <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ offset: 3, span: 9 }"
-                       :lg="{ offset: 3, span: 9 }">
-                  <a-row type="flex" justify="start">
-                    <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 24 }"
-                           :lg="{ span: 24 }"
-                           style="text-align: left;">
-                      <h1 class="r-heading">
-                        <span class="r-text-secondary">Shopple careers</span>
-                      </h1>
-                      <p class="r-text-normal">
-                        Shopple is a consumer centric shopping platform that exists to transform
-                        the way shoppers find and make purchases by offering simple and
-                        convenient shopping and payment methods.
-                      </p>
-                    </a-col>
-                  </a-row>
-                  <a-row class="r-mb-48" type="flex" justify="start">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
-                           :lg="{ span: 18 }">
-                      <a-row :gutter="[24,24]" type="flex" justify="start">
-                        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                               :md="{ span: 12 }"
-                               :lg="{ span: 12 }">
-                          <nuxt-link class="r-inline-block" to="/career/openings">
-                            <a-button type="secondary"
-                                      class="ant-btn ant-btn-secondary r-btn-black"
-                                      size="large">
-                              See openings
-                            </a-button>
-                          </nuxt-link>
-                        </a-col>
-                        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                               :md="{ span: 12 }"
-                               :lg="{ span: 12 }">
-                          <nuxt-link class="r-inline-block" to="/contact-us">
-                            <a-button class="r-btn-bordered-grey"
-                                      block
-                                      type="secondary"
-                                      size='large'>
-                              Contact us
-                            </a-button>
-                          </nuxt-link>
-                        </a-col>
-                      </a-row>
-                    </a-col>
-                  </a-row>
-                </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-                  <div class="r-page-header-photo">
-                    <div class="r-page-primary"
-                         style="background-image: url('/images/hiw.jpg')">
-                    </div>
-                  </div>
-                </a-col>
-              </a-row>
-            </a-col>
-          </a-row>
+    <a-row type="flex" justify="start">
+      <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+             :md="{ offset: 3, span: 9 }"
+             :lg="{ offset: 3, span: 9 }">
+        <a-row type="flex" justify="start">
+          <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                 :md="{ span: 24 }"
+                 :lg="{ span: 24 }"
+                 style="text-align: left;">
+            <h1 class="r-heading">
+              <span class="r-text-secondary">Shopple careers</span>
+            </h1>
+            <p class="r-text-normal">
+              Shopple is a consumer centric shopping platform that exists to transform
+              the way shoppers find and make purchases by offering simple and
+              convenient shopping and payment methods.
+            </p>
+          </a-col>
+        </a-row>
+        <a-row class="r-mb-48" type="flex" justify="start">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
+                 :lg="{ span: 18 }">
+            <a-row :gutter="[24,24]" type="flex" justify="start">
+              <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
+                     :md="{ span: 12 }"
+                     :lg="{ span: 12 }">
+                <nuxt-link class="r-inline-block" to="/career/openings">
+                  <a-button type="secondary"
+                            class="ant-btn ant-btn-secondary r-btn-black"
+                            size="large">
+                    See openings
+                  </a-button>
+                </nuxt-link>
+              </a-col>
+              <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
+                     :md="{ span: 12 }"
+                     :lg="{ span: 12 }">
+                <nuxt-link class="r-inline-block" to="/contact-us">
+                  <a-button class="r-btn-bordered-grey"
+                            block
+                            type="secondary"
+                            size='large'>
+                    Contact us
+                  </a-button>
+                </nuxt-link>
+              </a-col>
+            </a-row>
+          </a-col>
+        </a-row>
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+        <div class="r-page-header-photo">
+          <div class="r-page-primary"
+               style="background-image: url('/images/hiw.jpg')">
+          </div>
         </div>
       </a-col>
     </a-row>

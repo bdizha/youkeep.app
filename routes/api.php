@@ -28,8 +28,6 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     Route::patch('settings/profile', 'Settings\ProfileController@update');
     Route::patch('settings/password', 'Settings\PasswordController@update');
-
-
     Route::get('/checkout', 'OrderController@checkout')->name('order.checkout');
     Route::post('/cart', 'OrderController@cart')->name('order.cart');
     Route::get('/profile/{slug}', 'AccountController@show')->name('profile');
@@ -78,7 +76,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::get('/kkapital', 'PageController@kkapital')->name('page.kkapital');
     Route::get('/kbill', 'PageController@kbill')->name('page.kbill');
     Route::get('/careers', 'CareerController@index')->name('page.careers');
-    Route::get('/career/openings', 'CareerController@openings')->name('page.openings');
+    Route::post('/careers', 'CareerController@openings')->name('page.openings');
     Route::post('/career/resume', 'CareerController@resume')->name('career.resume');
     Route::get('/career/{slug}', 'CareerController@show')->name('career.show');
     Route::get('/career/{slug}/apply', 'CareerController@apply')->name('career.apply');
@@ -100,8 +98,6 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('/search/suggest', 'SearchController@suggest')->name('search.suggest');
     Route::get('/help', 'HelpController@index')->name('help.index');
     Route::get('/help/{group}/{slug}', 'HelpController@show')->name('help.show');
-
-
     Route::get('/resource/{type}/{slug}', 'ArticleResourceController@show')->name('resource.show');
     Route::get('/shopper/apply', 'ShopperController@apply')->name('shopper.apply');
     Route::post('/shopper/store', 'ShopperController@store')->name('shopper.store');

@@ -15,7 +15,7 @@
                 <span>Less conventional</span>
               </h1>
               <p class="r-text-normal">
-                Shopple introduces a new way to shopping.
+                Shopple introduces a new way to shopping
               </p>
             </template>
           </a-card-meta>
@@ -44,7 +44,7 @@
               </h1>
               <p class="r-text-normal">
                 Shopple is a consumer centric platform that transforms
-                the way shoppers experience shopping.
+                the way shoppers experience their shopping.
               </p>
               <p class="r-text-normal">
                 If you take innovation seriously and methodically, you're in the right place with unlimited possibilities.
@@ -71,38 +71,10 @@
                 Reasons for our actions
               </h1>
               <p class="r-text-normal">
-                At Shopple, we are building a shopping experience that helps millions of people be effortlessly in control of their shopping. It's all about giving everyone the power to take back control of their shopping.
+                At Shopple, we are building a shopping experience that helps millions of people be effortlessly in control of their shopping experience.
               </p>
               <p class="r-text-normal">
-                We wrap all this up in a genuinely enjoyable experience so everyone can worry less and enjoy life's best moments.
-              </p>
-            </template>
-          </a-card-meta>
-        </a-card>
-      </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-             style="text-align: left;">
-        &nbsp;
-      </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-             style="text-align: left;">
-        &nbsp;
-      </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :md="{ span: 12 }"
-             :lg="{ span: 12 }">
-        <a-card class="r-p-24">
-          <a-card-meta>
-            <template slot="description">
-              <h1 class="r-heading">
-                A place to embrace new challenges
-              </h1>
-              <p class="r-text-normal">
-                Best Workplace environment. You will get to work in a dynamic and fast paced environment.
-              </p>
-              <p class="r-text-normal">
-                Use the latest technologies to solve problems (AI, Graphical Data Tools).
-                Customer satisfaction comes first, create products which users love.
+                It's all about giving back our customers the control of their shopping capacity.
               </p>
             </template>
           </a-card-meta>
@@ -123,14 +95,40 @@
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">
-                Shopple is a community
+                Function with new challenges
               </h1>
               <p class="r-text-normal">
-                We work together as set of teams within teams of different specialities.
-                Fast growing company with great colleagues
+                Simple environment. You will get to work in a dynamic and collaborative atmosphere.
               </p>
               <p class="r-text-normal">
-                We incentives making mistakes and this helps to foster the spirit of innovation with as minimum frictions as possible.
+                We use the latest technologies to solve problems (AI, Graphical Data Tool Sets). Customer satisfaction comes first, create products which users love.
+              </p>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        &nbsp;
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        &nbsp;
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+             :md="{ span: 12 }"
+             :lg="{ span: 12 }">
+        <a-card class="r-p-24">
+          <a-card-meta>
+            <template slot="description">
+              <h1 class="r-heading">
+                Shopple as a specialist company
+              </h1>
+              <p class="r-text-normal">
+                We work together as set of teams within teams of different specialities. Great work mates are at the core of the work we do, here.
+              </p>
+              <p class="r-text-normal">
+                We incentives making mistakes and this helps to foster the spirit of innovation with as minimum friction and costs as possible.
               </p>
             </template>
           </a-card-meta>
@@ -154,7 +152,7 @@
                 Yes, we're hiring now
               </h1>
               <p class="r-text-normal">
-                Bring your animal friend to keep you super focused
+                Bring your animal friend (a bird, or a dog, and even a cat/doll) to keep you super focused if necessary.
               </p>
               <a-row :gutter="[24,24]" type="flex" justify="start">
                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"

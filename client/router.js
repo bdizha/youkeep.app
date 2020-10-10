@@ -42,7 +42,7 @@ const routes = [
   {path: '/help/:id/:slug', name: 'help.show', component: page('help/Category.vue')},
   {path: '/careers', name: 'careers', component: page('career/Index.vue')},
   {path: '/career/openings', name: 'career-list', component: page('career/List.vue')},
-  {path: '/career/:slug', name: 'career-show', component: page('career/Category.vue')},
+  {path: '/career/:slug', name: 'career-show', component: page('career/Show.vue')},
   {path: '/career/:slug/apply', name: 'caree-apply', component: page('career/Apply.vue')},
   {
     path: '/settings',
