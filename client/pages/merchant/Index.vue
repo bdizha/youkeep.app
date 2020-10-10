@@ -1,10 +1,10 @@
 <template>
   <r-page>
-    <a-row type="flex" justify="center" align="middle">
-      <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h2 class="r-heading">
@@ -30,7 +30,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
@@ -43,22 +43,26 @@
         </a-card>
       </a-col>
     </a-row>
-    <a-row type="flex" justify="start">
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
-             class="r-p-48">
-        <a-row :gutter="[48,48]" type="flex" justify="space-between">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                 :lg="{ span: 24 }"
+    <a-row class="r-mt-48" type="flex" justify="start">
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+        <a-row :gutter="[48,48]" type="flex" justify="start">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
-                  <div class="r-icon">
-                    <a-icon type="line-chart"/>
-                  </div>
-                  <h4 class="r-heading">
-                    Increase your conversion rate by 24%
-                  </h4>
+                  <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
+                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                      <div class="r-icon">
+                        <a-icon type="line-chart"/>
+                      </div>
+                    </a-col>
+                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                      <h4 class="r-heading">
+                        Increase your conversion rate by 24%
+                      </h4>
+                    </a-col>
+                  </a-row>
                 </template>
               </a-card-meta>
             </a-card>
@@ -67,73 +71,48 @@
                  style="text-align: left;">
             &nbsp;
           </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
-                  <div class="r-icon">
-                    <a-icon type="pie-chart"/>
-                  </div>
-                  <h4 class="r-heading">
-                    Increase returning orders by 75%
-                  </h4>
+                  <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
+                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                      <div class="r-icon">
+                        <a-icon type="pie-chart"/>
+                      </div>
+                    </a-col>
+                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                      <h4 class="r-heading">
+                        Increase returning orders by 75%
+                      </h4>
+                    </a-col>
+                  </a-row>
                 </template>
               </a-card-meta>
             </a-card>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
-                  <div class="r-icon">
-                    <a-icon type="dot-chart"/>
-                  </div>
-                  <h4 class="r-heading">
-                    Increase sales volume by at least 36%
-                  </h4>
-                </template>
-              </a-card-meta>
-            </a-card>
-          </a-col>
-        </a-row>
-        <a-row :gutter="[48,48]" type="flex" justify="space-between">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                 :lg="{ span: 24 }"
-                 style="text-align: left;">
-            <a-card hoverable>
-              <a-card-meta>
-                <template slot="description">
-                  <h4 class="r-heading">
-                    Benefits for merchant
-                  </h4>
-                  <h1 class="r-heading">
-                    <span class="r-text-secondary"></span>
-                  </h1>
-                  <ul>
-                    <li>
-                      <p class="r-text-normal">
-                        Enable more buying customers and increase recurring orders with Shopple.
-                      </p>
-                    </li>
-                    <li>
-                      <p class="r-text-normal">
-                        Enable more buying customers and increase recurring orders with Shopple.
-                      </p>
-                    </li>
-                    <li>
-                      <p class="r-text-normal">
-                        Maximize in-store impact with Shopple signage and online training for
-                        retail associates.
-                      </p>
-                    </li>
-                    <li>
-                      <p class="r-text-normal">
-                        We’ll ship you an activation kit to promote Shopple in-store.
-                      </p>
-                    </li>
-                  </ul>
+                  <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
+                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                      <div class="r-icon">
+                        <a-icon type="dot-chart"/>
+                      </div>
+                    </a-col>
+                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                      <h4 class="r-heading">
+                        Increase sales volume by at least 36%
+                      </h4>
+                    </a-col>
+                  </a-row>
                 </template>
               </a-card-meta>
             </a-card>
@@ -142,9 +121,13 @@
                  style="text-align: left;">
             &nbsp;
           </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
                   <h4 class="r-heading">
@@ -156,7 +139,9 @@
                   <a-row type="flex" justify="center" align="middle">
                     <a-col :xs="{ span: 24 }" :md="{ span: 12 }"
                            :lg="{ span: 12 }">
-                      <a-button @click="onModal" size="large" type="secondary">
+                      <a-button @click="onModal" class="r-btn-secondary"
+                                size="large"
+                                type="secondary">
                         Become a merchant
                       </a-button>
                     </a-col>
@@ -165,21 +150,27 @@
               </a-card-meta>
             </a-card>
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
-                  <div class="r-icon">
-                    <a-icon type="dot-chart"/>
-                  </div>
-                  <h4 class="r-heading">
-                    Making sense, making value
-                  </h4>
+                  <h3 class="r-heading">
+                    Benefits for merchant
+                  </h3>
                   <p class="r-text-normal">
-                    Customers want to buy more of your products. And now they've a more
-                    flexible
-                    shopping option with Shopple
+                    <a-icon type="check-circle"/> Enable more buying customers and increase recurring orders with Shopple.
+                  </p>
+                  <p class="r-text-normal">
+                    <a-icon type="check-circle"/> Enable more buying customers and increase recurring orders with Shopple.
+                  </p>
+                  <p class="r-text-normal">
+                    <a-icon type="check-circle"/> Maximize in-store impact with Shopple signage and online training for
+                    retail associates.
+                  </p>
+                  <p class="r-text-normal">
+                    <a-icon type="check-circle"/> We’ll ship you an activation kit to promote Shopple in-store.
                   </p>
                 </template>
               </a-card-meta>

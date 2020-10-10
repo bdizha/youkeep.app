@@ -4,7 +4,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading">
@@ -18,7 +18,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
@@ -36,7 +36,7 @@
         <a-row :gutter="[48,48]" type="flex" justify="space-between">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
                   <h4 class="r-heading">
@@ -60,7 +60,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
                   <h4 class="r-heading">
@@ -82,7 +82,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
                   <h4 class="r-heading">

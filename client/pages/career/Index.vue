@@ -4,15 +4,15 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
                 Careers at Shopple
               </h4>
-              <h1 class="r-heading r-text-secondary">
+              <h1 class="r-heading">
                 <span class="r-text-secondary">More dynamic,</span><br>
-                <span class="r-text-secondary">Less boring</span>
+                <span>Less conventional</span>
               </h1>
               <p class="r-text-normal">
                 Shopple introduces a new way to shopping.
@@ -22,12 +22,12 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
                 <div class="r-page-primary"
-                     style="background-image: url('/images/welcome-02.jpg')">
+                     style="background-image: url('/images/bird-small.jpg')">
                 </div>
               </div>
             </template>
@@ -37,7 +37,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">Innovative space
@@ -64,7 +64,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">
@@ -91,7 +91,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">
@@ -119,7 +119,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">
@@ -147,7 +147,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">

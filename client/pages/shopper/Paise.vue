@@ -4,15 +4,15 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
                 Paise for Shoppers
               </h4>
-              <h1 class="r-heading r-text-secondary">
+              <h1 class="r-heading">
                 <span class="r-text-secondary">Shop more,</span><br>
-                <span class="r-text-secondary">Earn more.</span>
+                <span>Earn more</span>
               </h1>
               <h4 class="r-heading-light">
                 All your earnings are automatically added into your Paise wallet. You're able to transfer any amount in
@@ -27,23 +27,33 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <div class="r-page-header-photo">
-          <div class="r-page-primary"
-               style="background-image: url('/images/welcome-02.jpg')">
-          </div>
-        </div>
+        <a-card class="r-p-24">
+          <a-card-meta>
+            <template slot="description">
+              <div class="r-page-header-photo">
+                <div class="r-page-primary"
+                     style="background-image: url('/images/welcome-02.jpg')">
+                </div>
+              </div>
+            </template>
+          </a-card-meta>
+        </a-card>
       </a-col>
     </a-row>
     <a-row class="r-mt-48" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-        <a-row :gutter="[48,48]" type="flex" justify="center">
+        <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
                   <h2 class="r-heading">
-                    Increase Conversion
+                    Zero interest payments
                   </h2>
                   <p class="r-text-normal">
                     50% of shoppers are more likely to make a purchase if offered the ability to pay in
@@ -55,11 +65,11 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
                   <h2 class="r-heading">
-                    No Applications. Higher conversion
+                    Higher conversion rate
                   </h2>
                   <p class="r-text-normal">
                     Because shoppers pay over time using their existing credit, they don’t need to fill out an
@@ -80,11 +90,11 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
                   <h2 class="r-heading">
-                    No Interest. Up to +20% higher average order value
+                    Higher average order rate
                   </h2>
                   <p class="r-text-normal">
                     Shopple is the only buy-now-pay-later plan that lets shoppers set up payment plans with their
@@ -97,7 +107,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
                   <h2 class="r-heading">
@@ -122,7 +132,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
                   <h2 class="r-heading">

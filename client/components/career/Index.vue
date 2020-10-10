@@ -19,7 +19,7 @@
                         </a-row>
                         <a-row class="r-margin-vertical-12" v-for="(position, p) in department.positions" :key="p">
                             <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                                <a-card :hoverable="true">
+                                <a-card class="r-p-24">
                                     <a-row type="flex" justify="start" align="middle">
                                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                                :lg="{ span: 24 }">

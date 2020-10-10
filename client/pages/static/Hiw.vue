@@ -4,7 +4,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">
@@ -47,7 +47,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
@@ -65,7 +65,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
              :lg="{ span: 12 }"
              style="text-align: left;">
-        <a-card hoverable>
+        <a-card>
           <div slot="cover" class="r-card-cover-secondary">
             <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shop"/>
           </div>
@@ -93,7 +93,7 @@
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
-        <a-card hoverable>
+        <a-card>
           <div slot="cover" class="r-card-cover-secondary">
             <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shopping"/>
           </div>
@@ -113,7 +113,7 @@
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
-        <a-card hoverable>
+        <a-card>
           <div slot="cover" class="r-card-cover-secondary">
             <a-icon class="r-icon r-icon-stroke r-icon-primary" type="dollar"/>
           </div>

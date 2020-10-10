@@ -4,7 +4,7 @@
       <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
@@ -34,7 +34,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
@@ -56,7 +56,7 @@
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                      :lg="{ span: 24 }"
                      style="text-align: left;">
-                <a-card hoverable>
+                <a-card class="r-p-24">
                   <a-card-meta>
                     <template slot="description">
                       <h2 class="r-heading">
@@ -81,7 +81,7 @@
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                      style="text-align: left;">
-                <a-card hoverable>
+                <a-card class="r-p-24">
                   <a-card-meta>
                     <template slot="description">
                       <div class="r-icon">
@@ -100,7 +100,7 @@
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                      style="text-align: left;">
-                <a-card hoverable>
+                <a-card class="r-p-24">
                   <a-card-meta>
                     <template slot="description">
                       <div class="r-icon">
@@ -127,7 +127,7 @@
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                      style="text-align: left;">
-                <a-card hoverable>
+                <a-card class="r-p-24">
                   <a-card-meta>
                     <template slot="description">
                       <div class="r-icon">
@@ -150,7 +150,7 @@
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                      style="text-align: left;">
-                <a-card hoverable>
+                <a-card class="r-p-24">
                   <a-card-meta>
                     <template slot="description">
                       <h4 class="r-heading">
@@ -173,7 +173,7 @@
     <a-row class="r-text-center" type="flex" justify="center" :gutter="24">
       <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :md="{ span: 24 }"
              :lg="{ span: 24 }">
-        <a-card hoverable>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <a-row type="flex" justify="center">
