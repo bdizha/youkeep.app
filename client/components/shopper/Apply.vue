@@ -9,7 +9,7 @@
           <a-row type="flex" justify="start">
             <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
               <h2 class="r-heading">
-                Shopple shopper application
+                Shopper application
               </h2>
               <p v-if="false" class="r-text-normal">
                 Sign in to your account with your email address.
@@ -24,7 +24,7 @@
               <p class="r-text-normal">
                 Shopple is a fast growing startup that is improving lives by giving people more time to
                 spend
-                with their families! Our Shopple members order shopping via the Shopple app and can have
+                with their families! Shopple members order shopping via the Shopple app and can have
                 them
                 delivered on-demand as soon as 1 hour later.
               </p>
@@ -36,7 +36,7 @@
                 What is a Shopple shopper?
               </h3>
               <p class="r-text-normal">
-                Our Shopple Shoppers carefully select member's shopping using the Shopple app and deliver
+                Shopple Shoppers carefully select member's shopping using the Shopple app and deliver
                 them
                 during a specified, delivery window. Our shoppers enjoy an interactive and fun culture
                 all
@@ -244,8 +244,7 @@
             <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onBack"
                         :size="'large'"
-                        type="default"
-                        class="r-btn-secondary">
+                        type="default">
                 <a-icon type="left"/>
                 Back
               </a-button>
@@ -253,8 +252,9 @@
             <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onStep"
                         :size="'large'"
-                        type="secondary" html-type="button"
-                        class="ant-btn ant-btn-secondary r-btn-black">
+                        type="secondary"
+                        html-type="button"
+                        class="r-btn-secondary">
                 {{ step == 11 ? 'Submit' : 'Continue' }}
                 <a-icon type="right"/>
               </a-button>

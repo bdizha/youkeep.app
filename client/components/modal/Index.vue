@@ -18,6 +18,8 @@
                       v-bind:key="'category'" class="r-animate"></r-category-modal>
     <r-store-modal v-if="isCurrent('store')"
                    v-bind:key="'store'" class="r-animate"></r-store-modal>
+    <r-shopper-modal v-if="isCurrent('shopper')"
+                     v-bind:key="'shopper'" class="r-animate"></r-shopper-modal>
     <r-secure v-if="isCurrent('secure')"
               v-bind:key="'secure'" class="r-animate"></r-secure>
     <r-login v-if="isCurrent('login')"

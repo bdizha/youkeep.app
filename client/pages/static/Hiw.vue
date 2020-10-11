@@ -47,7 +47,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
@@ -65,20 +65,26 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
              :lg="{ span: 12 }"
              style="text-align: left;">
-        <a-card>
-          <div slot="cover" class="r-card-cover-secondary">
-            <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shop"/>
-          </div>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
-              <h4 class="r-heading-light">
-                Online and in-store options
-              </h4>
-              <p class="r-text-normal">
-                We're changing how shopping is experienced. Get new products served to you based on your liking
-                and
-                shopping preferences.
-              </p>
+              <a-row :gutter="[24,24]" type="flex" justify="start">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 10 }">
+                  <div class="r-icon">
+                    <a-icon type="shop"/>
+                  </div>
+                </a-col>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }">
+                  <h4 class="r-heading-light">
+                    Online and in-store options
+                  </h4>
+                  <p class="r-text-normal">
+                    We're changing how shopping is experienced. Get new products served to you based on your liking
+                    and
+                    shopping preferences.
+                  </p>
+                </a-col>
+              </a-row>
             </template>
           </a-card-meta>
         </a-card>
@@ -93,40 +99,52 @@
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
-        <a-card>
-          <div slot="cover" class="r-card-cover-secondary">
-            <a-icon class="r-icon r-icon-stroke r-icon-primary" type="shopping"/>
-          </div>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
-              <h4 class="r-heading-light">
-                One stop shopping platform
-              </h4>
-              <p class="r-text-normal">
-                We're changing how shopping is experienced. Get new products served to you based on your liking
-                and
-                shopping preferences.
-              </p>
+              <a-row :gutter="[24,24]" type="flex" justify="start">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 10 }">
+                  <div class="r-icon">
+                    <a-icon type="shopping"/>
+                  </div>
+                </a-col>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }">
+                  <h4 class="r-heading-light">
+                    One stop shopping platform
+                  </h4>
+                  <p class="r-text-normal">
+                    We're changing how shopping is experienced. Get new products served to you based on your liking
+                    and
+                    shopping preferences.
+                  </p>
+                </a-col>
+              </a-row>
             </template>
           </a-card-meta>
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
-        <a-card>
-          <div slot="cover" class="r-card-cover-secondary">
-            <a-icon class="r-icon r-icon-stroke r-icon-primary" type="dollar"/>
-          </div>
+        <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
-              <h4 class="r-heading-light">
-                Instant checkout finance
-              </h4>
-              <p class="r-text-normal">
-                We're changing how shopping is experienced. Get new products served to you based on your liking
-                and
-                shopping preferences.
-              </p>
+              <a-row :gutter="[24,24]" type="flex" justify="start">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 10 }">
+                  <div class="r-icon">
+                    <a-icon type="dollar"/>
+                  </div>
+                </a-col>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }">
+                  <h4 class="r-heading-light">
+                    Instant checkout finance
+                  </h4>
+                  <p class="r-text-normal">
+                    We're changing how shopping is experienced. Get new products served to you based on your liking
+                    and
+                    shopping preferences.
+                  </p>
+                </a-col>
+              </a-row>
             </template>
           </a-card-meta>
         </a-card>

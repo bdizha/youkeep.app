@@ -156,21 +156,25 @@
             <a-card class="r-p-24">
               <a-card-meta>
                 <template slot="description">
-                  <h3 class="r-heading">
+                  <h2 class="r-heading">
                     Benefits for merchant
-                  </h3>
+                  </h2>
                   <p class="r-text-normal">
-                    <a-icon type="check-circle"/> Enable more buying customers and increase recurring orders with Shopple.
+                    <a-icon type="check-circle" class="r-text-secondary"/>
+                    Enable more buying customers and increase recurring orders with Shopple.
                   </p>
                   <p class="r-text-normal">
-                    <a-icon type="check-circle"/> Enable more buying customers and increase recurring orders with Shopple.
+                    <a-icon type="check-circle" class="r-text-secondary"/>
+                    Enable more buying customers and increase recurring orders with Shopple.
                   </p>
                   <p class="r-text-normal">
-                    <a-icon type="check-circle"/> Maximize in-store impact with Shopple signage and online training for
+                    <a-icon type="check-circle" class="r-text-secondary"/>
+                    Maximize in-store impact with Shopple signage and online training for
                     retail associates.
                   </p>
                   <p class="r-text-normal">
-                    <a-icon type="check-circle"/> We’ll ship you an activation kit to promote Shopple in-store.
+                    <a-icon type="check-circle" class="r-text-secondary"/>
+                    We’ll ship you an activation kit to promote Shopple in-store.
                   </p>
                 </template>
               </a-card-meta>

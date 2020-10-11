@@ -54,6 +54,7 @@ module.exports = {
     '~components/store',
     '~components/cart',
     '~components/account',
+    '~components/shopper',
     '~plugins/i18n',
     '~plugins/axios',
     '~plugins/ant-design-vue',
