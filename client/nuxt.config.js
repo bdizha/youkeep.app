@@ -44,6 +44,7 @@ module.exports = {
   ],
 
   plugins: [
+    '~components/auth',
     '~components/global',
     '~components/product',
     '~components/category',

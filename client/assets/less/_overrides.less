@@ -1710,8 +1710,13 @@ h4.r-heading-light {
 }
 
 .ant-modal-body {
+    padding: 48px;
     font-size: 16px;
     position: relative;
+
+    @media (max-width: 768px) {
+        padding: 24px;
+    }
 
     .r-notice {
         position: relative;
@@ -3665,7 +3670,7 @@ h4.r-heading-light {
 
 .r-store-item-line {
     border-bottom: 1px solid rgb(236, 236, 236, 1);
-    padding: 24px;
+    padding: 24px 0;
 
     .r-store-actions {
         padding: 12px 0;
@@ -4066,6 +4071,9 @@ h4.r-heading-light {
     line-height: 36px;
     position: relative;
     display: inline-block;
+    &.r-nav-item__text {
+        cursor: pointer;
+    }
 
     &.r-nav-item__menu {
         cursor: pointer;

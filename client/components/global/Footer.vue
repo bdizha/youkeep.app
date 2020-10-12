@@ -91,7 +91,7 @@
                         <nuxt-link to="/about-us">About us</nuxt-link>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/" @click.native="onModal('store')">
+                        <nuxt-link to="/stores/its-shopping-time" @click.native="onModal('store')">
                           Shop directory
                         </nuxt-link>
                       </div>

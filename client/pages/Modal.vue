@@ -49,23 +49,6 @@
             payload() {
                 let $this = this;
                 $this.setSpinning(false);
-
-                this.$store.subscribe((mutation, state) => {
-                    if (mutation.type == 'onModal') {
-                        $this.modal = mutation.payload;
-                        $this.setHasModal();
-                        $this.setHasProduct();
-                        $this.isSpinning = true;
-
-                        $this.setSpinning(false);
-
-                        if ($this.hasModal) {
-                            $('body').addClass('r-hide-body');
-                        } else {
-                            $('body').removeClass('r-hide-body');
-                        }
-                    }
-                });
             },
             setSpinning(isSpinning) {
                 let $this = this;
@@ -74,18 +57,9 @@
                 }, 1500);
             },
             setHasModal() {
-                this.hasModal = this.modal.isVisible &&
-                    this.modal.current == this.current;
             },
             setHasProduct() {
                 this.hasProduct = this.modal.product != null;
-            },
-            onClose(event) {
-                this.hasModal = false;
-
-                this.modal.isVisible = false;
-                this.modal.current = null;
-                $('body').removeClass('r-hide-body');
             }
         },
     };

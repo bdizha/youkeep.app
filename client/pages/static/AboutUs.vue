@@ -1,7 +1,7 @@
 <template>
   <r-page>
-    <a-row type="flex" justify="start" align="middle">
-      <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
         <a-card hoverable>
@@ -36,8 +36,6 @@
           </a-card-meta>
         </a-card>
       </a-col>
-    </a-row>
-    <a-row type="flex" justify="start" class="r-mv-48">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
         &nbsp;
@@ -57,8 +55,6 @@
           </a-card-meta>
         </a-card>
       </a-col>
-    </a-row>
-    <a-row type="flex" justify="center">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
         <a-row :gutter="[48,48]" type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"

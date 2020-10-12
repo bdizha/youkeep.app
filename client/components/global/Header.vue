@@ -21,12 +21,17 @@
       </r-nav-item>
     </r-layout-menu>
     <r-layout-menu v-if="modal.isVisible || isRaised" class="r-layout-menu r-layout-menu-modal">
-      <r-nav-item class="__menu">
-        <a-icon v-on:click="onModalClose" type="left"/>
+      <r-nav-item class="r-nav-item__text">
+        <a-button v-on:click="onModalClose"
+                  size="default"
+                  type="secondary" html-type="button">
+          <a-icon type="left"/>
+          Back
+        </a-button>
       </r-nav-item>
       <r-nav-item class="r-nav-item__logo">
         <div v-on:click="onModalClose" class="r-logo">
-          <img :src="'/assets/' + (isDark ? 'icon_white': 'icon_primary') + '.svg'"
+          <img :src="'/assets/' + (isDark ? 'icon_white': 'icon_secondary') + '.svg'"
                alt="Shopple - It's Shopping Time!"/>
         </div>
       </r-nav-item>

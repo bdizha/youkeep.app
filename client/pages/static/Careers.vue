@@ -22,7 +22,7 @@
         <a-row class="r-mb-48" type="flex" justify="start">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
                  :lg="{ span: 18 }">
-            <a-row :gutter="[24,24]" type="flex" justify="start">
+            <a-row class="r-mt-24" :gutter="[24,24]" type="flex" justify="start">
               <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                      :md="{ span: 12 }"
                      :lg="{ span: 12 }">

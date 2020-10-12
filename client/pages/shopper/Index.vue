@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row type="flex" justify="center" align="middle">
+    <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
       <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -40,159 +40,149 @@
             <template slot="description">
               <div class="r-page-header-photo">
                 <div class="r-page-primary"
-                     style="background-image: url('/images/shopper.jpg')">
+                     style="background-image: url('/images/shopper-01.jpg')">
                 </div>
               </div>
             </template>
           </a-card-meta>
         </a-card>
       </a-col>
-    </a-row>
-    <a-row type="flex" justify="start">
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
-             class="r-p-48">
-
-        <a-row :gutter="[48,48]" type="flex" justify="space-between">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            <a-card class="r-p-24">
-              <a-card-meta>
-                <template slot="description">
-                  <h2 class="r-heading">
-                    Why partner with Shopple?
-                  </h2>
-                  <p class="r-text-normal">
-                    Shopple is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
-                    hot food and
-                    household essentials.
-                  </p>
-                  <p class="r-text-normal">
-                    Shopple is about more than online shopping. Whether you're looking to pay bills or fund
-                    dreams, Shopple will get you there.
-                  </p>
-                </template>
-              </a-card-meta>
-            </a-card>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            <a-card class="r-p-24">
-              <a-card-meta>
-                <template slot="description">
-                  <a-row :gutter="[24,24]" type="flex" justify="start">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 10 }">
-                      <div class="r-icon">
-                        <a-icon type="clock-circle"/>
-                      </div>
-                    </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }">
-                      <h4 class="r-heading">
-                        Work on your schedule
-                      </h4>
-                      <p class="r-text-normal">
-                        Work part time or full time – any time.<br>Set your own hours for a completely
-                        flexible schedule.
-                      </p>
-                    </a-col>
-                  </a-row>
-                </template>
-              </a-card-meta>
-            </a-card>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            <a-card class="r-p-24">
-              <a-card-meta>
-                <template slot="description">
-                  <a-row :gutter="[24,24]" type="flex" justify="start">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 10 }">
-                      <div class="r-icon">
-                        <a-icon type="shopping-cart"/>
-                      </div>
-                    </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }">
-                      <h4 class="r-heading">
-                        Choose your wheels
-                      </h4>
-                      <p class="r-text-normal">
-                        Get tips from other shoppers, attend launch parties, and get a free Shopple
-                        membership.
-                      </p>
-                    </a-col>
-                  </a-row>
-                </template>
-              </a-card-meta>
-            </a-card>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            <a-card class="r-p-24">
-              <a-card-meta>
-                <template slot="description">
-                  <a-row :gutter="[24,24]" type="flex" justify="start">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 10 }">
-                      <div class="r-icon">
-                        <a-icon type="credit-card"/>
-                      </div>
-                    </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }"
-                           style="text-align: left;">
-                      <h4 class="r-heading">
-                        Earn money as you shop
-                      </h4>
-                      <p class="r-text-normal">
-                        Experienced shoppers make an average of R50/hr.<br>
-                        * Paychecks are delivered every week.
-                      </p>
-                    </a-col>
-                  </a-row>
-                </template>
-              </a-card-meta>
-            </a-card>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            <a-card class="r-p-24">
-              <a-card-meta>
-                <template slot="description">
-                  <h2 class="r-heading">
-                    Requirements:
-                  </h2>
-                  <p v-for="requirement in requirements" class="r-text-normal">
-                    <a-icon type="check-circle" class="r-text-secondary"></a-icon>
-                    {{ requirement }}
-                  </p>
-                </template>
-              </a-card-meta>
-            </a-card>
-          </a-col>
-        </a-row>
-      </a-col>
-    </a-row>
-    <a-row class="r-text-center" type="flex" justify="center" :gutter="24">
-      <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :md="{ span: 24 }"
-             :lg="{ span: 24 }">
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
         <a-card class="r-p-24">
+          <a-card-meta>
+            <template slot="description">
+              <h2 class="r-heading">
+                Why partner with Shopple?
+              </h2>
+              <p class="r-text-normal">
+                Shopple is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
+                hot food and
+                household essentials.
+              </p>
+              <p class="r-text-normal">
+                Shopple is about more than online shopping. Whether you're looking to pay bills or fund
+                dreams, Shopple will get you there.
+              </p>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        &nbsp;
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        &nbsp;
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        <a-card class="r-p-24">
+          <a-card-meta>
+            <template slot="description">
+              <a-row :gutter="[24,24]" type="flex" justify="start">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 10 }">
+                  <div class="r-icon">
+                    <a-icon type="clock-circle"/>
+                  </div>
+                </a-col>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }">
+                  <h4 class="r-heading">
+                    Work on your schedule
+                  </h4>
+                  <p class="r-text-normal">
+                    Work part time or full time – any time.<br>Set your own hours for a completely
+                    flexible schedule.
+                  </p>
+                </a-col>
+              </a-row>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        <a-card class="r-p-24">
+          <a-card-meta>
+            <template slot="description">
+              <a-row :gutter="[24,24]" type="flex" justify="start">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 10 }">
+                  <div class="r-icon">
+                    <a-icon type="shopping-cart"/>
+                  </div>
+                </a-col>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }">
+                  <h4 class="r-heading">
+                    Choose your wheels
+                  </h4>
+                  <p class="r-text-normal">
+                    Get tips from other shoppers, attend launch parties, and get a free Shopple
+                    membership.
+                  </p>
+                </a-col>
+              </a-row>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        &nbsp;
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        &nbsp;
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        <a-card class="r-p-24">
+          <a-card-meta>
+            <template slot="description">
+              <a-row :gutter="[24,24]" type="flex" justify="start">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 10 }">
+                  <div class="r-icon">
+                    <a-icon type="credit-card"/>
+                  </div>
+                </a-col>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }"
+                       style="text-align: left;">
+                  <h4 class="r-heading">
+                    Earn money as you shop
+                  </h4>
+                  <p class="r-text-normal">
+                    Experienced shoppers make an average of R50/hr.<br>
+                    * Paychecks are delivered every week.
+                  </p>
+                </a-col>
+              </a-row>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        &nbsp;
+      </a-col>
+      <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+             style="text-align: left;">
+        <a-card class="r-p-24">
+          <a-card-meta>
+            <template slot="description">
+              <h2 class="r-heading">
+                Requirements:
+              </h2>
+              <p v-for="requirement in requirements" class="r-text-normal">
+                <a-icon type="check-circle" class="r-text-secondary"></a-icon>
+                {{ requirement }}
+              </p>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col :xs="{ span: 24 }" :md="{ span: 24 }"
+             :lg="{ span: 24 }">
+        <a-card class="r-p-24 r-text-center">
           <a-card-meta>
             <template slot="description">
               <a-row type="flex" justify="center">

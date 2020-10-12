@@ -10,7 +10,7 @@
             <a-form-item>
                 <a-row type="flex" justify="center">
                     <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
-                        <h3 class="r-heading">
+                        <h3 class="r-heading r-text-secondary">
                             Reset password
                         </h3>
                         <p class="r-text-sm">
@@ -41,6 +41,7 @@
     import {mapGetters} from "vuex";
 
     export default {
+      name: 'r-password-request',
         props: {
             maskClosable: {type: Boolean, required: false, default: false},
             closable: {type: Boolean, required: false, default: false},

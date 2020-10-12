@@ -10,9 +10,9 @@
       <a-form-item>
         <a-row type="flex" justify="center">
           <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
-            <h3 class="r-heading">
+            <h2 class="r-heading r-text-secondary">
               Sign in
-            </h3>
+            </h2>
             <div class="r-text-sm">
               Sign in to your account with your email address.
             </div>
@@ -65,6 +65,7 @@
 import {mapGetters} from "vuex";
 
 export default {
+  name: 'r-login',
   props: {
     maskClosable: {type: Boolean, required: false, default: false},
     closable: {type: Boolean, required: false, default: false},

@@ -29,7 +29,7 @@
         <a-button
           slot="suffix"
           style="margin-right: -12px"
-          class="search-btn"
+          class="r-btn-secondary"
           size="default"
           type="secondary">
           <a-icon type="search"/>

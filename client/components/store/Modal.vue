@@ -6,10 +6,10 @@
                       style="position: relative;">
         <a-row type="flex" justify="center">
             <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
-                <h3 class="r-heading">
+                <h2 class="r-heading">
                     Shop at your favourite store
-                </h3>
-                <p class="r-text-sm">
+                </h2>
+                <p class="r-text-normal">
                     Simply choose Paise at checkout
                 </p>
             </a-col>

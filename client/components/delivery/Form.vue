@@ -25,7 +25,7 @@
             <a-button v-if="hasSubmit"
                       slot="suffix"
                       style="margin-right: -12px"
-                      class="r-search-btn r-btn-secondary"
+                      class="r-btn-secondary"
                       size="large"
                       type="secondary">
               Let's go

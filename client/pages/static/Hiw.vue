@@ -20,7 +20,7 @@
                 take
                 some getting used to. That is why we are happy to explain how it works.
               </p>
-              <a-row :gutter="[24,24]" type="flex" justify="start">
+              <a-row :gutter="[24]" class="r-mt-24" type="flex" justify="start">
                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }">
@@ -52,7 +52,7 @@
             <template slot="description">
               <div class="r-page-header-photo">
                 <div class="r-page-primary"
-                     style="background-image: url('/images/welcome-03.jpg')">
+                     style="background-image: url('/images/hiw-01.png')">
                 </div>
               </div>
             </template>

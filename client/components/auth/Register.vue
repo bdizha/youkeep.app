@@ -12,9 +12,9 @@
           <a-form-item>
             <a-row type="flex" justify="center">
               <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
-                <h3 class="r-heading">
+                <h2 class="r-heading r-text-secondary">
                   Request a Shopple account
-                </h3>
+                </h2>
                 <h3 v-show="hasAddress" class="r-heading">
                   <a-icon slot="prefix" type="environment"/>
                   Available in <span class="r-text-secondary">{{ address.city }}</span>!
@@ -28,17 +28,17 @@
           </a-form-item>
           <a-form-item label="Name">
             <a-input
-                size="large"
-                placeholder="Your full name"
-                v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
+              size="large"
+              placeholder="Your full name"
+              v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
               <a-icon slot="prefix" type="user"/>
             </a-input>
           </a-form-item>
           <a-form-item label="Your mobile number">
             <a-input
-                size="large"
-                placeholder="Your mobile number"
-                v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
+              size="large"
+              placeholder="Your mobile number"
+              v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
               <a-icon slot="prefix" type="mobile"/>
             </a-input>
           </a-form-item>
@@ -96,6 +96,7 @@
 import {mapGetters} from "vuex";
 
 export default {
+  name: 'r-register',
   props: {
     maskClosable: {type: Boolean, required: false, default: false},
     closable: {type: Boolean, required: false, default: false},

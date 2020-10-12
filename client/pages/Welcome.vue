@@ -8,7 +8,7 @@
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">
-                Shop online with Shopple
+                It's shopping time!
               </h1>
               <h2 class="r-heading">
                 <span class="r-heading r-text-secondary">Shop more,</span>
@@ -17,18 +17,10 @@
               <p class="r-text-normal">
                 Yes, as long as you shop it with Shopple, you are fully in control.
               </p>
-              <a-row type="flex" justify="start">
-                <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+              <a-row class="r-mt-24" type="flex" justify="start">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ span: 24 }"
                        :lg="{ span: 24 }">
-                  <a-row type="flex" justify="start">
-                    <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 24 }"
-                           :lg="{ span: 24 }"
-                           style="text-align: left;">
-
-                    </a-col>
-                  </a-row>
                   <r-delivery-form></r-delivery-form>
                 </a-col>
               </a-row>

@@ -2,173 +2,163 @@
   <r-page>
     <a-row type="flex" justify="center">
       <a-col class="gutter-row" :span="24">
-        <div class="r-page-welcome r-bg-blue">
-          <a-row type="flex" justify="start" align="middle">
-            <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                   :md="{ span: 12 }"
-                   :lg="{ span: 12 }">
-              <a-row type="flex" justify="start" align="middle">
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" s="r" :md="{ span: 24 }"
-                       :lg="{ span: 24 }"
-                       style="text-align: left;">
-                  <a-card class="r-p-24">
-                    <a-card-meta>
-                      <template slot="description">
-                        <h1 class="r-heading r-text-secondary">
-                          How can we help?
-                        </h1>
-                        <p class="r-text-normal">
-                          We'd love to hear from you! Feel free to reach out with any questions or comments below.
-                        </p>
-                        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                                 :lg="{ span: 12 }"
-                                 style="text-align: left;">
-                            <h4 class="r-heading">
-                              Want to join us?
-                            </h4>
-                            <p class="r-text-normal">
-                              <span>Then apply </span>
-                              <nuxt-link target="_blank" to="/careers">here</nuxt-link>
-                            </p>
-                          </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                                 :lg="{ span: 12 }"
-                                 style="text-align: left;">
-                            <h4 class="r-heading">
-                              Need answers now?
-                            </h4>
-                            <p class="r-text-normal">
-                              <span>Check out the </span>
-                              <nuxt-link target="_blank" to="/help">Help center</nuxt-link>
-                            </p>
-                          </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                                 :lg="{ span: 12 }"
-                                 style="text-align: left;">
-                            <h4 class="r-heading">
-                              Email
-                            </h4>
-                            <p class="r-text-normal">
-                              <a href="mailto:info@shopple.app" target="_blank">info@shopple.app</a>
-                            </p>
-                          </a-col>
-                        </a-row>
-                      </template>
-                    </a-card-meta>
-                  </a-card>
-                </a-col>
-              </a-row>
-            </a-col>
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-              <a-card class="r-p-24">
-                <a-card-meta>
-                  <template slot="description">
-                    <div class="r-page-header-photo">
-                      <div class="r-page-primary"
-                           style="background-image: url('/images/welcome.jpg')">
-                      </div>
-                    </div>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-          </a-row>
-        </div>
-      </a-col>
-    </a-row>
-    <a-row type="flex" justify="start">
-      <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
-        <a-card class="r-p-24">
-          <a-card-meta>
-            <template slot="description">
-              <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
-                      class="ant-form ant-form-vertical"
-                      @submit="onSend"
-                      :form="formContact">
-                <a-form-item>
-                  <a-row type="flex" justify="center">
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
-                      <h2 class="r-heading">
-                        Get in touch
-                      </h2>
+        <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                 :md="{ span: 12 }"
+                 :lg="{ span: 12 }">
+            <a-card class="r-p-24">
+              <a-card-meta>
+                <template slot="description">
+                  <h1 class="r-heading r-text-secondary">
+                    How can we help?
+                  </h1>
+                  <p class="r-text-normal">
+                    We'd love to hear from you! Feel free to reach out with any questions or comments below.
+                  </p>
+                  <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                           style="text-align: left;">
+                      <h4 class="r-heading">
+                        Want to join us?
+                      </h4>
                       <p class="r-text-normal">
-                        How can we help? Just a quick note: try visiting our
-                        <nuxt-link to="/help">Help center</nuxt-link>
-                        that maybe of help only for general queries that we frequently receive from
-                        our customers.
+                        <span>Then apply </span>
+                        <nuxt-link target="_blank" to="/careers">here</nuxt-link>
+                      </p>
+                    </a-col>
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                           style="text-align: left;">
+                      <h4 class="r-heading">
+                        Need answers?
+                      </h4>
+                      <p class="r-text-normal">
+                        <span>Check out the </span>
+                        <nuxt-link target="_blank" to="/help">Help center</nuxt-link>
+                      </p>
+                    </a-col>
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                           style="text-align: left;">
+                      <h4 class="r-heading">
+                        Email
+                      </h4>
+                      <p class="r-text-normal">
+                        <a href="mailto:info@shopple.app" target="_blank">info@shopple.app</a>
                       </p>
                     </a-col>
                   </a-row>
-                </a-form-item>
-                <a-form-item label="Select a department">
-                  <a-select
-                    labelInValue
-                    :defaultValue="categories[0]"
-                    size="large"
-                    @change="onCategory"
-                    style="min-width: 100%;">
-                    <a-select-option v-for="(option, index) in categories"
-                                     :key="index"
-                                     :value="option.key">
-                      <span class="r-sort-value">{{ option.label }}</span>
-                    </a-select-option>
-                  </a-select>
-                </a-form-item>
-                <a-form-item label="Name">
-                  <a-input
-                    size="large"
-                    placeholder="Your full name"
-                    v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
-                    <a-icon slot="prefix" type="mail"/>
-                  </a-input>
-                </a-form-item>
-                <a-form-item label="Mobile">
-                  <a-input
-                    size="large"
-                    placeholder="Your mobile number"
-                    v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
-                    <a-icon slot="prefix" type="mobile"/>
-                  </a-input>
-                </a-form-item>
-                <a-form-item label="Email address">
-                  <a-input type="email"
-                           size="large"
-                           placeholder="Your email address"
-                           v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
-                    <a-icon slot="prefix" type="user"/>
-                  </a-input>
-                </a-form-item>
-                <a-form-item label="Notes">
-                  <a-input type="textarea"
-                           size="large"
-                           placeholder="Your message"
-                           v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]">
-                    <a-icon slot="prefix" type="user"/>
-                  </a-input>
-                </a-form-item>
-                <a-row type="flex" justify="center">
-                  <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                         :md="{ span: 12 }"
-                         :lg="{ span: 12 }">
-                  </a-col>
-                  <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                         :md="{ span: 12 }"
-                         :lg="{ span: 12 }">
-                    <a-button block @click="onSend" :size="'large'"
-                              type="secondary"
-                              html-type="submit"
-                              class="r-btn-secondary">
-                      Save
-                    </a-button>
-                  </a-col>
-                </a-row>
-              </a-form>
-              <r-spinner v-if="isProcessing" :is-absolute="true"></r-spinner>
-              <r-notice v-if="isSuccessful" :message="message"></r-notice>
-            </template>
-          </a-card-meta>
-        </a-card>
+                </template>
+              </a-card-meta>
+            </a-card>
+          </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+            <a-card class="r-p-24">
+              <a-card-meta>
+                <template slot="description">
+                  <div class="r-page-header-photo">
+                    <div class="r-page-primary"
+                         style="background-image: url('/images/welcome.jpg')">
+                    </div>
+                  </div>
+                </template>
+              </a-card-meta>
+            </a-card>
+          </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
+            <a-card class="r-p-24">
+              <a-card-meta>
+                <template slot="description">
+                  <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
+                          class="ant-form ant-form-vertical"
+                          @submit="onSend"
+                          :form="formContact">
+                    <a-form-item>
+                      <a-row type="flex" justify="center">
+                        <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+                          <h2 class="r-heading">
+                            Get in touch
+                          </h2>
+                          <p class="r-text-normal">
+                            How can we help? Just a quick note: try visiting our
+                            <nuxt-link to="/help">Help center</nuxt-link>
+                            that maybe of help only for general queries that we frequently receive from
+                            our customers.
+                          </p>
+                        </a-col>
+                      </a-row>
+                    </a-form-item>
+                    <a-form-item label="Select a department">
+                      <a-select
+                        labelInValue
+                        :defaultValue="categories[0]"
+                        size="large"
+                        @change="onCategory"
+                        style="min-width: 100%;">
+                        <a-select-option v-for="(option, index) in categories"
+                                         :key="index"
+                                         :value="option.key">
+                          <span class="r-sort-value">{{ option.label }}</span>
+                        </a-select-option>
+                      </a-select>
+                    </a-form-item>
+                    <a-form-item label="Name">
+                      <a-input
+                        size="large"
+                        placeholder="Your full name"
+                        v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
+                        <a-icon slot="prefix" type="mail"/>
+                      </a-input>
+                    </a-form-item>
+                    <a-form-item label="Mobile">
+                      <a-input
+                        size="large"
+                        placeholder="Your mobile number"
+                        v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
+                        <a-icon slot="prefix" type="mobile"/>
+                      </a-input>
+                    </a-form-item>
+                    <a-form-item label="Email address">
+                      <a-input type="email"
+                               size="large"
+                               placeholder="Your email address"
+                               v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
+                        <a-icon slot="prefix" type="user"/>
+                      </a-input>
+                    </a-form-item>
+                    <a-form-item label="Notes">
+                      <a-input type="textarea"
+                               size="large"
+                               placeholder="Your message"
+                               v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]">
+                        <a-icon slot="prefix" type="user"/>
+                      </a-input>
+                    </a-form-item>
+                    <a-row type="flex" justify="center">
+                      <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                             :md="{ span: 12 }"
+                             :lg="{ span: 12 }">
+                      </a-col>
+                      <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                             :md="{ span: 12 }"
+                             :lg="{ span: 12 }">
+                        <a-button block @click="onSend" :size="'large'"
+                                  type="secondary"
+                                  html-type="submit"
+                                  class="r-btn-secondary">
+                          Save
+                        </a-button>
+                      </a-col>
+                    </a-row>
+                  </a-form>
+                  <r-spinner v-if="isProcessing" :is-absolute="true"></r-spinner>
+                  <r-notice v-if="isSuccessful" :message="message"></r-notice>
+                </template>
+              </a-card-meta>
+            </a-card>
+          </a-col>
+        </a-row>
       </a-col>
     </a-row>
   </r-page>

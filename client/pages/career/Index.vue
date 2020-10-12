@@ -27,7 +27,7 @@
             <template slot="description">
               <div class="r-page-header-photo">
                 <div class="r-page-primary"
-                     style="background-image: url('/images/bird-small.jpg')">
+                     style="background-image: url('/images/careers-03.jpg')">
                 </div>
               </div>
             </template>
@@ -40,14 +40,20 @@
         <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
-              <h1 class="r-heading">Innovative space
-              </h1>
+              <h4 class="r-heading-light r-text-secondary">
+                Innovative
+              </h4>
+              <h2 class="r-heading">
+                Transforming
+                the way shopping is experienced
+              </h2>
               <p class="r-text-normal">
                 Shopple is a consumer centric platform that transforms
                 the way shoppers experience their shopping.
               </p>
               <p class="r-text-normal">
-                If you take innovation seriously and methodically, you're in the right place with unlimited possibilities.
+                If you take innovation intelligently and methodically, you're in the right place with unlimited
+                possibilities.
               </p>
             </template>
           </a-card-meta>
@@ -67,11 +73,15 @@
         <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
-              <h1 class="r-heading">
-                Reasons for our actions
-              </h1>
+              <h4 class="r-heading-light r-text-secondary">
+                Dynamic
+              </h4>
+              <h3 class="r-heading">
+                Why we do what we do
+              </h3>
               <p class="r-text-normal">
-                At Shopple, we are building a shopping experience that helps millions of people be effortlessly in control of their shopping experience.
+                At Shopple, we are building a shopping experience that helps millions of people be effortlessly in
+                control of their shopping experience.
               </p>
               <p class="r-text-normal">
                 It's all about giving back our customers the control of their shopping capacity.
@@ -94,14 +104,18 @@
         <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
-              <h1 class="r-heading">
-                Function with new challenges
-              </h1>
+              <h4 class="r-heading-light r-text-secondary">
+                Progressive
+              </h4>
+              <h2 class="r-heading">
+                Function with new tools
+              </h2>
               <p class="r-text-normal">
-                Simple environment. You will get to work in a dynamic and collaborative atmosphere.
+                You want to create bright ideas, achieve great work & cash out.
               </p>
               <p class="r-text-normal">
-                We use the latest technologies to solve problems (AI, Graphical Data Tool Sets). Customer satisfaction comes first, create products which users love.
+                We use the latest technologies to solve problems (AI, Graphical Data Tool Sets). Customer satisfaction
+                comes first, create products which users love.
               </p>
             </template>
           </a-card-meta>
@@ -121,14 +135,19 @@
         <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
-              <h1 class="r-heading">
-                Shopple as a specialist company
-              </h1>
+              <h4 class="r-heading-light r-text-secondary">
+                Collaborative
+              </h4>
+              <h2 class="r-heading">
+                Shopple as a specialist house
+              </h2>
               <p class="r-text-normal">
-                We work together as set of teams within teams of different specialities. Great work mates are at the core of the work we do, here.
+                We work together as set of teams within teams of different specialities. Great work mates are at the
+                core of the work we do, here.
               </p>
               <p class="r-text-normal">
-                We incentives making mistakes and this helps to foster the spirit of innovation with as minimum friction and costs as possible.
+                We incentives making mistakes and this helps to foster the spirit of innovation with as minimum friction
+                and costs as possible.
               </p>
             </template>
           </a-card-meta>
@@ -154,7 +173,7 @@
               <p class="r-text-normal">
                 Bring your animal friend (a bird, or a dog, and even a cat/doll) to keep you super focused if necessary.
               </p>
-              <a-row :gutter="[24,24]" type="flex" justify="start">
+              <a-row class="r-mt-24" :gutter="[24]" type="flex" justify="start">
                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }">

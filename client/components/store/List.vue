@@ -44,7 +44,7 @@
       </a-row>
       <r-spinner :is-absolute="true" v-if="processes.isRunning"></r-spinner>
       <a-row class="r-mv-48" type="flex" justify="center">
-        <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <p class="r-store-text-light">
             Shopple is an independent shopping service that is not necessarily affiliated with,
             endorsed or sponsored by the stores listed here but it enables you to get the deliveries

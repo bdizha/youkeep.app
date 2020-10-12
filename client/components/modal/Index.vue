@@ -1,6 +1,6 @@
 <template>
   <a-modal :class="'r-modal-' + modal.current"
-           :mask-closable="modal.isClosable"
+           :mask-closable="false"
            :after-close="onClose"
            :closable="modal.isClosable"
            v-model="modal.isVisible">
@@ -20,8 +20,8 @@
                    v-bind:key="'store'" class="r-animate"></r-store-modal>
     <r-shopper-modal v-if="isCurrent('shopper')"
                      v-bind:key="'shopper'" class="r-animate"></r-shopper-modal>
-    <r-secure v-if="isCurrent('secure')"
-              v-bind:key="'secure'" class="r-animate"></r-secure>
+    <r-seprimarycure v-if="isCurrent('secure')"
+              v-bind:key="'secure'" class="r-animate"></r-seprimarycure>
     <r-login v-if="isCurrent('login')"
              v-bind:key="'login'" class="r-animate"></r-login>
     <r-register v-if="isCurrent('register')"
@@ -85,12 +85,15 @@ export default {
     payload() {
       let $this = this;
     },
-    async onClose(event) {
+    onClose() {
       let modal = {};
       modal.isVisible = false;
+      modal.isClosable = false;
       modal.current = null;
 
-      await this.$store.dispatch('base/onModal', modal);
+      console.log('closing off this modal');
+
+      this.$store.dispatch('base/onModal', modal);
     }
   },
 };

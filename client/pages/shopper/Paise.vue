@@ -32,7 +32,7 @@
             <template slot="description">
               <div class="r-page-header-photo">
                 <div class="r-page-primary"
-                     style="background-image: url('/images/welcome-02.jpg')">
+                     style="background-image: url('/images/paise-01.jpg')">
                 </div>
               </div>
             </template>
