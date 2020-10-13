@@ -11,6 +11,6 @@ export default ({app}) => {
 
       console.log('after each router...');
       app.store.dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
-    }, 600);
+    }, 300);
   });
 }

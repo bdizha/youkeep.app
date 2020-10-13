@@ -14,11 +14,15 @@
   </a-layout>
 </template>
 <script>
+import {mapGetters} from 'vuex'
+
 export default {
   data: () => ({}),
   created() {
   },
-  computed: {},
+  computed: mapGetters({
+    processes: 'base/processes'
+  }),
   methods: {}
 }
 </script>

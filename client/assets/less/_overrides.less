@@ -5435,15 +5435,11 @@ h4.r-heading-light {
 
 .ant-layout-content {
     opacity: 0;
-    transition: opacity .3s linear, -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
-    transition: opacity .3s linear, transform 2s cubic-bezier(.19, 1, .22, 1);
-    transition: opacity .3s linear, transform 2s cubic-bezier(.19, 1, .22, 1), -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
 
     .ant-row-flex {
         opacity: 0;
-        transition: opacity .5s linear, -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
-        transition: opacity .5s linear, transform 2s cubic-bezier(.19, 1, .22, 1);
-        transition: opacity .5s linear, transform 2s cubic-bezier(.19, 1, .22, 1), -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
+        -webkit-animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
+        animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
 
         &.r-has-data {
             opacity: 1;

@@ -43,7 +43,7 @@ const routes = [
   {path: '/careers', name: 'careers', component: page('career/Index.vue')},
   {path: '/career/openings', name: 'career-list', component: page('career/List.vue')},
   {path: '/career/:slug', name: 'career-show', component: page('career/Show.vue')},
-  {path: '/career/:slug/apply', name: 'caree-apply', component: page('career/Apply.vue')},
+  {path: '/career/:slug/apply', name: 'career-apply', component: page('career/Apply.vue')},
   {
     path: '/settings',
     component: page('settings/index.vue'),
