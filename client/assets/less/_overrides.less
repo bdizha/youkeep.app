@@ -9,7 +9,7 @@
 body,
 html {
     font-size: 16px;
-    background: #FAFBFC url(/assets/icon_pattern_white.svg);
+    background: #FAFBFC url(/images/icon_pattern_bg.svg);
     background-repeat: repeat;
 }
 
@@ -5265,7 +5265,7 @@ h4.r-heading-light {
     border-color: #0069cd;
 
     .anticon {
-        opacity: 0.6;
+        opacity: 0.45;
     }
 }
 
@@ -5424,9 +5424,8 @@ h4.r-heading-light {
 }
 
 .fade-item-enter-active, .fade-item-leave-active {
-    transition: opacity .3s linear, -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
-    transition: opacity .3s linear, transform 2s cubic-bezier(.19, 1, .22, 1);
-    transition: opacity .3s linear, transform 2s cubic-bezier(.19, 1, .22, 1), -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
+    -webkit-animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
+    animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
 }
 
 .fade-item-enter, .fade-item-leave-to /* .fade-leave-active below version 2.1.8 */ {
@@ -5435,11 +5434,11 @@ h4.r-heading-light {
 
 .ant-layout-content {
     opacity: 0;
+    -webkit-animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
+    animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
 
     .ant-row-flex {
         opacity: 0;
-        -webkit-animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
-        animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
 
         &.r-has-data {
             opacity: 1;
@@ -5471,7 +5470,7 @@ h4.r-heading-light {
     border-radius: 3px;
     background: #F7F8F9;
     display: block;
-    opacity: 0.6;
+    opacity: 0.45;
     position: relative;
     transition: opacity .5s linear, -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
     transition: opacity .5s linear, transform 2s cubic-bezier(.19, 1, .22, 1);
