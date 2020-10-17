@@ -13,7 +13,7 @@
               <p class="r-text-normal">
                 Join the Shopple Merchant Program and start promoting Shopple in-store today and watch your
                 sales run wild!
-              </p>
+              </p><br />
               <a-row type="flex" justify="start">
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                        :lg="{ span: 24 }"
@@ -33,11 +33,7 @@
         <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
-              <div class="r-page-header-photo">
-                <div class="r-page-primary"
-                     style="background-image: url('/images/shopper.jpg')">
-                </div>
-              </div>
+              <r-slider :images="images"></r-slider>
             </template>
           </a-card-meta>
         </a-card>
@@ -52,12 +48,12 @@
               <a-card-meta>
                 <template slot="description">
                   <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
-                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
                       <div class="r-icon">
                         <a-icon type="line-chart"/>
                       </div>
                     </a-col>
-                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
                       <h4 class="r-heading">
                         Increase your conversion rate by 24%
                       </h4>
@@ -67,11 +63,11 @@
               </a-card-meta>
             </a-card>
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             &nbsp;
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             &nbsp;
           </a-col>
@@ -81,12 +77,12 @@
               <a-card-meta>
                 <template slot="description">
                   <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
-                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
                       <div class="r-icon">
                         <a-icon type="pie-chart"/>
                       </div>
                     </a-col>
-                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
                       <h4 class="r-heading">
                         Increase returning orders by 75%
                       </h4>
@@ -102,12 +98,12 @@
               <a-card-meta>
                 <template slot="description">
                   <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
-                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
                       <div class="r-icon">
                         <a-icon type="dot-chart"/>
                       </div>
                     </a-col>
-                    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
                       <h4 class="r-heading">
                         Increase sales volume by at least 36%
                       </h4>
@@ -117,11 +113,11 @@
               </a-card-meta>
             </a-card>
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             &nbsp;
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             &nbsp;
           </a-col>
@@ -135,8 +131,8 @@
                   </h4>
                   <p class="r-text-normal">
                     Apply to be a Shopple Merchant today and start achieving your goals.
-                  </p>
-                  <a-row type="flex" justify="center" align="middle">
+                  </p><br />
+              <a-row type="flex" justify="center" align="middle">
                     <a-col :xs="{ span: 24 }" :md="{ span: 12 }"
                            :lg="{ span: 12 }">
                       <a-button @click="onModal" class="r-btn-secondary"
@@ -184,7 +180,6 @@
       </a-col>
     </a-row>
     <r-steps :has-wave="false" :has-title="true" heading="Shopple shopping experience"></r-steps>
-    <r-merchant-modal></r-merchant-modal>
   </r-page>
 </template>
 <script>
@@ -194,7 +189,14 @@ export default {
   name: 'r-merchant',
   props: {},
   data() {
-    return {}
+    return {
+      images: [
+        'merchant-01.jpg',
+        'merchant-02.jpg',
+        'merchant-03.jpg',
+        'merchant-04.jpg',
+      ],
+    }
   },
   computed: mapGetters({
     modal: 'base/modal'

@@ -402,7 +402,7 @@ const actions = {
 
     setTimeout(() => {
       commit('setHasNotice', false);
-    }, 3000);
+    }, 24000);
   },
   async onInit({dispatch, commit, state}, payload) {
     const search = Cookies.get('search');

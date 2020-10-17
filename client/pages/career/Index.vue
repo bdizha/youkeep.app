@@ -59,14 +59,14 @@
           </a-card-meta>
         </a-card>
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-             style="text-align: left;">
-        &nbsp;
-      </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-             style="text-align: left;">
-        &nbsp;
-      </a-col>
+      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -90,14 +90,14 @@
           </a-card-meta>
         </a-card>
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-             style="text-align: left;">
-        &nbsp;
-      </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-             style="text-align: left;">
-        &nbsp;
-      </a-col>
+      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -121,14 +121,14 @@
           </a-card-meta>
         </a-card>
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-             style="text-align: left;">
-        &nbsp;
-      </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-             style="text-align: left;">
-        &nbsp;
-      </a-col>
+      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -153,14 +153,14 @@
           </a-card-meta>
         </a-card>
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-             style="text-align: left;">
-        &nbsp;
-      </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-             style="text-align: left;">
-        &nbsp;
-      </a-col>
+      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+                 style="text-align: left;">
+            &nbsp;
+          </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -172,8 +172,8 @@
               </h1>
               <p class="r-text-normal">
                 Bring your animal friend (a bird, or a dog, and even a cat/doll) to keep you super focused if necessary.
-              </p>
-              <a-row class="r-mt-24" :gutter="[24]" type="flex" justify="start">
+              </p><br />
+              <a-row :gutter="[24,24]" type="flex" justify="start">
                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }">

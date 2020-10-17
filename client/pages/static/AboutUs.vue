@@ -4,7 +4,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
@@ -24,7 +24,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
@@ -42,7 +42,7 @@
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
-        <a-card hoverable>
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <h2 class="r-heading r-text-secondary">
@@ -60,11 +60,14 @@
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card>
               <a-card-meta>
                 <template slot="description">
-                  <h2 class="r-heading r-text-secondary">
+                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                     It's shopping time!
+                  </h4>
+                  <h2 class="r-heading">
+                    Shopping
                   </h2>
                   <p class="r-text-normal">
                     We offer an advanced online shopping platform that collects and supplies through private
@@ -77,20 +80,23 @@
               </a-card-meta>
             </a-card>
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             &nbsp;
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             &nbsp;
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card>
               <a-card-meta>
                 <template slot="description">
-                  <h2 class="r-heading r-text-secondary">
+                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                    Smarter way to shop
+                  </h4>
+                  <h2 class="r-heading">
                     Quality
                   </h2>
                   <p class="r-text-normal">
@@ -110,10 +116,13 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card>
               <a-card-meta>
                 <template slot="description">
-                  <h2 class="r-heading r-text-secondary">
+                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                    Delivery on demand
+                  </h4>
+                  <h2 class="r-heading">
                     Craftsmanship
                   </h2>
                   <p class="r-text-normal">
@@ -123,67 +132,44 @@
 
                     We do not warehouse any product that we sell on our platforms. We use an on demand supply
                     mechanism
-                    such trhat everything goes
-                    directly from the store or restaurant to your doorstep. That is why you always get a better
-                    service on
-                    our shopping experience.</p>
+                    such that everything goes directly from the store or restaurant to your doorstep. That is why you always get a better
+                    service on our shopping experience.</p>
                 </template>
               </a-card-meta>
             </a-card>
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             &nbsp;
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             &nbsp;
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card hoverable>
+            <a-card>
               <a-card-meta>
                 <template slot="description">
-                  <h2 class="r-heading r-text-secondary">
+                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                     Making sense
+                  </h4>
+                  <h2 class="r-heading">
+                    Value
                   </h2>
                   <p class="r-text-normal">
                     We promise to deliver on demand at your home comfort. We're only able to achieve this great
                     service because of the great people that make this possible. We've shoppers in every city where
-                    we're partnered with local retailers. We're constantly expanding and if we aren't in your area
+                    we're partnered with local retailers.
+                    Shopple thinks it can be done differently: faster, easier and cheaper. The idea is
+                    simple. We
+                    arrange
+                    the shopping, so that you have more time for fun things.
+                    We're constantly expanding and if we aren't in your area
                     yet, chances are high that will be there soon.</p>
                 </template>
               </a-card-meta>
             </a-card>
-          </a-col>
-        </a-row>
-        <a-row :gutter="[48,48]" type="flex" justify="center">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            <a-card hoverable>
-              <a-card-meta>
-                <template slot="description">
-                  <h2 class="r-heading r-text-secondary">
-                    Making value
-                  </h2>
-                  <p class="r-text-normal">With hundreds of
-                    thousands
-                    of
-                    customers
-                    and a monthly expansion to new cities, Shopple was named the fastest growing retail platform
-                    company in
-                    South Africa in 2020.
-                    Shopple thinks it can be done differently: faster, easier and cheaper. The idea is
-                    simple. We
-                    arrange
-                    the shopping, so that you have more time for fun things.</p>
-                </template>
-              </a-card-meta>
-            </a-card>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
           </a-col>
         </a-row>
       </a-col>

@@ -67,96 +67,90 @@
             </a-card>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
-            <a-card class="r-p-24">
-              <a-card-meta>
-                <template slot="description">
-                  <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
-                          class="ant-form ant-form-vertical"
-                          @submit="onSend"
-                          :form="formContact">
-                    <a-form-item>
-                      <a-row type="flex" justify="center">
-                        <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
-                          <h2 class="r-heading">
-                            Get in touch
-                          </h2>
-                          <p class="r-text-normal">
-                            How can we help? Just a quick note: try visiting our
-                            <nuxt-link to="/help">Help center</nuxt-link>
-                            that maybe of help only for general queries that we frequently receive from
-                            our customers.
-                          </p>
-                        </a-col>
-                      </a-row>
-                    </a-form-item>
-                    <a-form-item label="Select a department">
-                      <a-select
-                        labelInValue
-                        :defaultValue="categories[0]"
-                        size="large"
-                        @change="onCategory"
-                        style="min-width: 100%;">
-                        <a-select-option v-for="(option, index) in categories"
-                                         :key="index"
-                                         :value="option.key">
-                          <span class="r-sort-value">{{ option.label }}</span>
-                        </a-select-option>
-                      </a-select>
-                    </a-form-item>
-                    <a-form-item label="Name">
-                      <a-input
-                        size="large"
-                        placeholder="Your full name"
-                        v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
-                        <a-icon slot="prefix" type="mail"/>
-                      </a-input>
-                    </a-form-item>
-                    <a-form-item label="Mobile">
-                      <a-input
-                        size="large"
-                        placeholder="Your mobile number"
-                        v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
-                        <a-icon slot="prefix" type="mobile"/>
-                      </a-input>
-                    </a-form-item>
-                    <a-form-item label="Email address">
-                      <a-input type="email"
-                               size="large"
-                               placeholder="Your email address"
-                               v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
-                        <a-icon slot="prefix" type="user"/>
-                      </a-input>
-                    </a-form-item>
-                    <a-form-item label="Notes">
-                      <a-input type="textarea"
-                               size="large"
-                               placeholder="Your message"
-                               v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]">
-                        <a-icon slot="prefix" type="user"/>
-                      </a-input>
-                    </a-form-item>
-                    <a-row type="flex" justify="center">
-                      <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                             :md="{ span: 12 }"
-                             :lg="{ span: 12 }">
-                      </a-col>
-                      <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                             :md="{ span: 12 }"
-                             :lg="{ span: 12 }">
-                        <a-button block @click="onSend" :size="'large'"
-                                  type="secondary"
-                                  html-type="submit"
-                                  class="r-btn-secondary">
-                          Save
-                        </a-button>
-                      </a-col>
-                    </a-row>
-                  </a-form>
-                  <r-spinner v-if="isProcessing" :is-absolute="true"></r-spinner>
-                  <r-notice v-if="isSuccessful" :message="message"></r-notice>
-                </template>
-              </a-card-meta>
-            </a-card>
+            <a-form v-if="hasForm"
+                    class="ant-form ant-form-vertical"
+                    @submit="onSubmit"
+                    :form="form">
+              <a-form-item>
+                <a-row type="flex" justify="center">
+                  <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+                    <h2 class="r-heading">
+                      Get in touch
+                    </h2>
+                    <p class="r-text-normal">
+                      How can we help? Just a quick note: try visiting our
+                      <nuxt-link to="/help">Help center</nuxt-link>
+                      that maybe of help only for general queries that we frequently receive from
+                      our customers.
+                    </p>
+                  </a-col>
+                </a-row>
+              </a-form-item>
+              <a-form-item label="Select a department">
+                <a-select
+                  labelInValue
+                  :defaultValue="categories[0]"
+                  size="large"
+                  @change="onCategory"
+                  style="min-width: 100%;">
+                  <a-select-option v-for="(option, index) in categories"
+                                   :key="index"
+                                   :value="option.key">
+                    <span class="r-sort-value">{{ option.label }}</span>
+                  </a-select-option>
+                </a-select>
+              </a-form-item>
+              <a-form-item label="Name">
+                <a-input
+                  size="large"
+                  placeholder="Your full name"
+                  v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
+                  <a-icon slot="prefix" type="mail"/>
+                </a-input>
+              </a-form-item>
+              <a-form-item label="Mobile">
+                <a-input
+                  size="large"
+                  placeholder="Your mobile number"
+                  v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
+                  <a-icon slot="prefix" type="mobile"/>
+                </a-input>
+              </a-form-item>
+              <a-form-item label="Email address">
+                <a-input type="email"
+                         size="large"
+                         placeholder="Your email address"
+                         v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
+                  <a-icon slot="prefix" type="user"/>
+                </a-input>
+              </a-form-item>
+              <a-form-item label="Notes">
+                <a-input type="textarea"
+                         size="large"
+                         placeholder="Your message"
+                         v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]">
+                  <a-icon slot="prefix" type="user"/>
+                </a-input>
+              </a-form-item>
+              <a-row type="flex" justify="center">
+                <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                       :md="{ span: 12 }"
+                       :lg="{ span: 12 }">
+                </a-col>
+                <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                       :md="{ span: 12 }"
+                       :lg="{ span: 12 }">
+                  <a-button block @click="onSubmit" :size="'large'"
+                            type="secondary"
+                            html-type="submit"
+                            class="r-btn-secondary">
+                    Save
+                  </a-button>
+                </a-col>
+              </a-row>
+            </a-form>
+            <r-notice :process="current"></r-notice>
+            <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
           </a-col>
         </a-row>
       </a-col>
@@ -164,6 +158,8 @@
   </r-page>
 </template>
 <script>
+import {mapGetters} from "vuex";
+
 const CATEGORIES = [
   {
     label: 'I would like to say thank you',
@@ -184,98 +180,51 @@ const CATEGORIES = [
 ];
 
 export default {
-  name: 'r-contact-us',
+  layout: 'page',
+  name: 'r-about-us',
   props: {},
   data() {
     return {
+      current: 'contact-us',
       fields: ['name', 'mobile', 'email', 'notes'],
-      formContact: this.$form.createForm(this, {name: 'form_contact'}),
-      category: 1,
-      message: 'Thank you for contacting us and we should be responding to your contact request soon. Thanks for vising us.',
-      isSuccessful: false,
-      isProcessing: false,
+      form: this.$form.createForm(this, {name: 'form_contact'}),
+      category_id: 1,
+      message: 'Thank you for contacting us and we should be responding to your contact request soon.',
       categories: CATEGORIES,
       hasError: false,
       errors: []
     };
   },
-  mounted() {
-  },
+  computed: mapGetters({
+    current: "form/current",
+    processes: "base/processes",
+    hasForm: "base/hasForm",
+  }),
   methods: {
-    onSend(event) {
+    onSubmit(event) {
       event.preventDefault();
 
       this.hasError = false;
-
-      this.formContact.validateFields((error, values) => {
+      this.form.validateFields((error, values) => {
         if (!error) {
-          this.isProcessing = true;
-
-          console.log('Making request...', values);
-
-          values['category'] = this.category;
-
           let params = Object.assign({}, values);
-          let $this = this;
 
-          console.log('Request params...', params);
+          params.category_id = this.category_id;
+          params.is_active = true;
 
-          let path = '/contact/send';
-          HTTP.post(path, params)
-            .then(response => {
-              if (response.status = 422 && response.data.errors != undefined) {
-                $this.onError(response, $this);
-              } else {
-                $this.onResponse(response, $this);
-              }
-            })
-            .catch(e => {
-              $this.isProcessing = false;
-              $this.hasError = true;
-              console.log('Errors', e);
-            });
-        } else {
-          this.hasError = true;
-          console.error(error);
-        }
-      });
-    },
-    onResponse(response, $this) {
-      $this.isSuccessful = true;
-      $this.formContact.resetFields();
-
-      setTimeout(function () {
-        $this.isProcessing = false;
-      }, 3000);
-    },
-    onError(response, $this) {
-      let errors = response.data.errors;
-
-      this.fields.forEach(function (field) {
-        if (errors[field] != undefined) {
-          let value = $this.formContact.getFieldValue(field);
-          let fields = {};
-          fields[field] = {
-            'value': value,
-            "errors": [
-              {
-                "notes": errors[field][0],
-                "field": field
-              }
-            ]
+          let payload = {
+            params: params,
+            route: '/contact-us',
+            current: this.current,
+            message: this.message
           };
-          $this.formContact.setFields(fields);
-          console.log('what is this :: ' + field, errors[field][0]);
+
+          this.$store.dispatch('form/onPost', payload);
         }
       });
-
-      setTimeout(function () {
-        this.isProcessing = false;
-        this.isSuccessful = false;
-      }, 3000);
     },
     onCategory(category) {
-      this.category = category.key;
+      this.category_id = category.key;
     }
   },
 };

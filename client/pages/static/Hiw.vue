@@ -19,8 +19,8 @@
                 minutes. However, shopping online can
                 take
                 some getting used to. That is why we are happy to explain how it works.
-              </p>
-              <a-row :gutter="[24]" class="r-mt-24" type="flex" justify="start">
+              </p><br/>
+              <a-row :gutter="[24, 24]" type="flex" justify="start">
                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }">
@@ -89,11 +89,11 @@
           </a-card-meta>
         </a-card>
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
         &nbsp;
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
         &nbsp;
       </a-col>

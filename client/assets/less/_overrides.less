@@ -1380,6 +1380,7 @@ h2.r-heading {
     @media (max-width: 768px) {
         font-weight: 700;
         font-size: 24px;
+        line-height: 27px;
     }
 }
 
@@ -1447,11 +1448,7 @@ h3.r-heading {
 
 h4.r-heading {
     font-size: 18px;
-    font-weight: 600;
-
-    @media (max-width: 768px) {
-        font-size: 16px;
-    }
+    font-weight: 700;
 }
 
 label {
@@ -2733,9 +2730,14 @@ h4.r-heading-light {
     text-align: left;
     padding: 24px;
     line-height: 30px;
-    background: #E8F5FE url(/assets/icon_pattern_light.svg) repeat;
+    background: #E8F5FE url(/assets/icon_pattern_secondary.svg) repeat;
     border-radius: 3px;
     margin-bottom: 24px;
+
+    h4 {
+        font-size: 24px;
+        font-weight: 600;
+    }
 
     @media (max-width: 768px) {
         font-size: 16px;
@@ -3431,7 +3433,6 @@ h4.r-heading-light {
         &:hover {
             .ant-card-body {
                 height: auto;
-                padding: 24px;
                 background: #FFF;
                 visibility: visible;
                 overflow: visible;
@@ -3543,6 +3544,12 @@ h4.r-heading-light {
 
 .ant-card {
     background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
+
+    h4 {
+        &.r-heading {
+            margin-bottom: 24px;
+        }
+    }
 }
 
 .r-store-items {
@@ -4071,6 +4078,7 @@ h4.r-heading-light {
     line-height: 36px;
     position: relative;
     display: inline-block;
+
     &.r-nav-item__text {
         cursor: pointer;
     }
@@ -4649,12 +4657,12 @@ h4.r-heading-light {
 }
 
 .ant-steps-horizontal {
+    margin: -12px;
     .ant-steps-item-icon {
-        margin-top: 0px;
+        margin: 0px;
         top: 24px;
         position: absolute;
         left: 24px;
-
     }
 
     .ant-steps-item-tail {
@@ -4665,7 +4673,7 @@ h4.r-heading-light {
 
     &:not(.ant-steps-label-vertical) {
         .ant-steps-item {
-            margin-right: 24px;
+            margin: 24px 12px;
 
             &:last-child {
                 flex: 1;
@@ -4675,7 +4683,7 @@ h4.r-heading-light {
 
     .ant-steps-item {
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
-        margin-top: 24px;
+        margin: 24px 0;
         border-radius: 3px;
         background: #FFFFFF;
 
@@ -4903,6 +4911,10 @@ h4.r-heading-light {
 .r-slider {
     .slick-list {
         padding: 0;
+
+        .slick-track {
+            margin: -12px;
+        }
 
         .slick-slide {
             padding: 12px;
@@ -5263,6 +5275,11 @@ h4.r-heading-light {
     color: #0069cd;
     background: #EBF6FE url(/images/icon_pattern_secondary.svg) repeat;
     border-color: #0069cd;
+    text-align: center;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 
     .anticon {
         opacity: 0.45;
@@ -5303,7 +5320,7 @@ h4.r-heading-light {
 }
 
 .ant-input {
-    background: #FAFBFC;
+    background: #FFFFFF;
 }
 
 
@@ -5524,4 +5541,77 @@ h4.r-heading-light {
         background-color: rgba(251, 0, 40, 1);
         color: #FFFFFF;
     }
+}
+
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 36px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    margin: 0 6px;
+    padding: 0
+}
+
+.slick-dots li,
+.slick-dots li button {
+    width: 36px;
+    height: 36px;
+    cursor: pointer
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    padding: 0;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent
+}
+
+.slick-dots li button:focus,
+.slick-dots li button:hover {
+    outline: none
+}
+
+.slick-dots li button:focus:before,
+.slick-dots li button:hover:before {
+    opacity: 1
+}
+
+.slick-dots li button:before {
+    font-family: slick;
+    font-size: 54px;
+    line-height: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    content: "•";
+    text-align: center;
+    opacity: 0.6;
+    color: #0069cd;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .96;
+    color: #f50a2b
 }

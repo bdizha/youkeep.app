@@ -51,11 +51,7 @@
         <a-card class="r-p-24">
           <a-card-meta>
             <template slot="description">
-              <div class="r-page-header-photo">
-                <div class="r-page-primary"
-                     style="background-image: url('/images/paise-01.jpg')">
-                </div>
-              </div>
+              <r-slider :images="images"></r-slider>
             </template>
           </a-card-meta>
         </a-card>
@@ -97,11 +93,11 @@
           </a-card-meta>
         </a-card>
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
         &nbsp;
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
         &nbsp;
       </a-col>
@@ -139,11 +135,11 @@
           </a-card-meta>
         </a-card>
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
         &nbsp;
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
+      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
         &nbsp;
       </a-col>
@@ -183,6 +179,11 @@ export default {
   props: {},
   data() {
     return {
+      images: [
+        'paise-01.jpg',
+        'paise-02.jpg',
+        'paise-03.jpg',
+      ],
       modal: {
         current: null,
         message: null,

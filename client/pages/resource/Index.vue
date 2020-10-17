@@ -147,7 +147,6 @@
         </a-row>
       </a-col>
     </a-row>
-    <r-merchant-modal></r-merchant-modal>
   </r-page>
 </template>
 <script>

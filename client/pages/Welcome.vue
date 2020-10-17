@@ -4,7 +4,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">
@@ -16,8 +16,8 @@
               </h2>
               <p class="r-text-normal">
                 Yes, as long as you shop it with Shopple, you are fully in control.
-              </p>
-              <a-row class="r-mt-24" type="flex" justify="start">
+              </p><br/>
+              <a-row type="flex" justify="start">
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ span: 24 }"
                        :lg="{ span: 24 }">
@@ -29,14 +29,10 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card hoverable>
+        <a-card>
           <a-card-meta>
             <template slot="description">
-              <div class="r-page-header-photo">
-                <div class="r-page-primary"
-                     style="background-image: url('/assets/welcome-01.jpg')">
-                </div>
-              </div>
+              <r-slider :images="images"></r-slider>
             </template>
           </a-card-meta>
         </a-card>
@@ -46,9 +42,9 @@
     <r-steps></r-steps>
     <r-store-slider :title="title" :columns="6"></r-store-slider>
     <r-category-slider></r-category-slider>
-    <!--      <r-category-list :limit="6"></r-category-list>-->
+    <r-category-list :limit="6"></r-category-list>
     <r-features :span="24"></r-features>
-    <!--          <r-testimonials></r-testimonials>-->
+    <r-testimonials></r-testimonials>
   </r-page>
 </template>
 <script>
@@ -61,7 +57,7 @@ export default {
   async asyncData({store}) {
     let payload = {
       category_id: 1,
-      limit: 3,
+      limit: 9,
       order_by: 'randomized_at',
       with: ['photos', 'breadcrumbs']
     };
@@ -70,6 +66,11 @@ export default {
   },
   data() {
     return {
+      images: [
+        'welcome-01.jpg',
+        'welcome-02.jpg',
+        'welcome-03.jpg',
+      ],
       title: "It's shopping time!",
       isProcessing: true,
       testimonials: [],

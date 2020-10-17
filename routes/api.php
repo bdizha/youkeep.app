@@ -69,7 +69,7 @@ Route::group(['middleware' => 'guest:api'], function () {
 
     Route::get('/about-us', 'PageController@aboutUs')->name('about-us');
     Route::get('/contact-us', 'ContactController@index')->name('contact');
-    Route::post('/contact/send', 'ContactController@send')->name('contact.send');
+    Route::post('/contact-us', 'ContactController@send')->name('contact.send');
     Route::get('/returns', 'PageController@returns')->name('page.returns');
     Route::get('/kkredit', 'PageController@kkredit')->name('page.kkredit');
     Route::get('/shopple', 'PageController@shopple')->name('page.shopple');
