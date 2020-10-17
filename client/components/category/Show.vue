@@ -5,10 +5,10 @@
            :lg="{ span: 24 }">
       <r-category-actions></r-category-actions>
       <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
-<!--      <r-category-slider :category="category"></r-category-slider>-->
-<!--      <r-product-flush :columns="3"></r-product-flush>-->
-<!--      <r-product-list :columns="columns"></r-product-list>-->
-<!--      <r-category-list :limit="6"></r-category-list>-->
+      <r-category-slider :category="category"></r-category-slider>
+      <r-product-flush :columns="3"></r-product-flush>
+      <r-product-list :columns="columns"></r-product-list>
+      <r-category-list :limit="6"></r-category-list>
     </a-col>
   </a-row>
 </template>
