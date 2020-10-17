@@ -20,7 +20,7 @@ export default {
   name: 'r-category-item',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 6},
+    columns: {type: Number, required: false, default: 3},
     isShowing: {type: Boolean, required: false, default: false},
     category: {type: Object, required: false, default: {}},
     hasProduct: {type: Boolean, required: false, default: false},

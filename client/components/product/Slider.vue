@@ -30,7 +30,7 @@ export default {
   name: 'r-product-slider',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 6},
+    columns: {type: Number, required: false, default: 3},
     category: {type: Object, required: false},
   },
   data() {
