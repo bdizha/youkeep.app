@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="r-p-12" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <div class="r-store-text">
         {{ store.name }}
       </div>

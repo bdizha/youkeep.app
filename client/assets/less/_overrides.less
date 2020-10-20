@@ -3164,9 +3164,7 @@ h4.r-heading-light {
 }
 
 .r-hide-body {
-    .site {
-        overflow: hidden !important;
-    }
+    overflow: hidden !important;
 }
 
 .r-bg-dark {
@@ -3677,7 +3675,7 @@ h4.r-heading-light {
 
 .r-store-item-line {
     border-bottom: 1px solid rgb(236, 236, 236, 1);
-    padding: 24px 0;
+    padding: 24px;
 
     .r-store-actions {
         padding: 12px 0;
@@ -4248,6 +4246,10 @@ h4.r-heading-light {
     padding: 24px;
     @media (max-width: 768px) {
     }
+}
+
+.r-p-12 {
+    padding: 12px;
 }
 
 .r-pr-24 {
@@ -4912,10 +4914,6 @@ h4.r-heading-light {
     .slick-list {
         padding: 0;
 
-        .slick-track {
-            margin: -12px;
-        }
-
         .slick-slide {
             padding: 12px;
             pointer-events: auto;
@@ -5051,7 +5049,7 @@ h4.r-heading-light {
 }
 
 .r-store-item {
-    padding: 0 0 0 99px;
+    padding: 0 0 0 87px;
     margin: 0px;
     display: block;
     text-align: left;
@@ -5455,11 +5453,8 @@ h4.r-heading-light {
     animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
 
     .ant-row-flex {
-        opacity: 0;
-
-        &.r-has-data {
-            opacity: 1;
-        }
+        opacity: 1;
+        overflow: hidden;
 
         &.r-is-empty {
             opacity: 0;
@@ -5475,6 +5470,7 @@ h4.r-heading-light {
 
         .ant-row-flex {
             opacity: 1;
+            overflow: visible;
         }
     }
 }

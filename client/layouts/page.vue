@@ -1,7 +1,7 @@
 <template>
   <a-layout class="r-layout__default">
     <r-header></r-header>
-    <a-layout-content :class="{'r-has-data': true}">
+    <a-layout-content :class="{'r-has-data': !processes['isFixed']}">
       <a-layout>
         <a-layout-content>
           <nuxt/>
@@ -13,11 +13,15 @@
   </a-layout>
 </template>
 <script>
+import {mapGetters} from 'vuex'
+
 export default {
   data: () => ({}),
   created() {
   },
-  computed: {},
+  computed: mapGetters({
+    processes: 'base/processes'
+  }),
   methods: {}
 }
 </script>

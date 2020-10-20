@@ -6,7 +6,7 @@
                     collapsible>
       <r-menu></r-menu>
     </a-layout-sider>
-    <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
+    <a-layout-content class="r-layout-content__store" :class="{'r-has-data': !processes['isFixed']}">
       <a-layout>
         <a-layout-content>
           <nuxt/>
@@ -19,6 +19,7 @@
   </a-layout>
 </template>
 <script>
+import {mapGetters} from 'vuex'
 export default {
   data: () => ({
     collapsed: true,
@@ -26,7 +27,9 @@ export default {
   created() {
     this.onStores();
   },
-  computed: {},
+  computed: mapGetters({
+    processes: 'base/processes'
+  }),
   methods: {
     async onStores() {
       let params = {

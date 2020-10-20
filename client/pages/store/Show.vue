@@ -1,13 +1,23 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
-    <a-col class="gutter-row" :span="24">
-      <r-category-arrows :size="36"></r-category-arrows>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }">
+      <r-category-actions></r-category-actions>
+    </a-col>
+    <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }">
       <r-category-slider></r-category-slider>
       <r-category-list :limit="3"></r-category-list>
-      <r-category-arrows :size="75"></r-category-arrows>
       <a-empty v-show="!hasCategories"
                image="/assets/icon_grey.svg"
                description="This store is coming soon. Please try other available stores."/>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }">
+      <r-category-actions></r-category-actions>
     </a-col>
   </a-row>
 </template>
@@ -26,7 +36,7 @@ export default {
       let payload = {
         store: params.slug,
         level: 1,
-        limit: 12,
+        limit: 2,
         with: ['breadcrumbs', 'photos', 'products', 'categories.products']
       };
       await store.dispatch('shop/onCategories', payload);

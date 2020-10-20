@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
-    <a-col class="gutter-row r-filter-cards" :span="24">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-store-item :store="store"></r-store-item>
       <r-category-prev v-if="category"></r-category-prev>
       <a-collapse default-active-key="1" expandIconPosition="right">

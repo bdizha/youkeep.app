@@ -110,15 +110,18 @@ class CategoryController extends Controller
     public function show(Request $request)
     {
         $response = [];
-        $slug = $request->get('category', null);
+        $this->slug = $request->get('category', null);
+        $this->limit = $request->get('limit', 2);
         $this->with = $request->get('with', []);
 
-        // lies, sex and money
-
         $category = Category::with($this->with)
-            ->where('slug', $slug)->first();
+            ->where('slug', $this->slug)->first();
 
         $query = Category::with($this->with);
+
+        if (!empty($this->limit)) {
+            $query->limit($this->limit);
+        }
         $query->where('category_id', $category->id);
 
         $categories = $query

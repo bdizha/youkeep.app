@@ -6,22 +6,22 @@
                     collapsible>
       <r-category-menu></r-category-menu>
     </a-layout-sider>
-    <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
+    <a-layout-content class="r-layout-content__store" :class="{'r-has-data': !processes['isFixed']}">
       <nuxt/>
       <r-spinner process="isFixed" :is-absolute="false"></r-spinner>
     </a-layout-content>
   </a-layout>
 </template>
 <script>
+import {mapGetters} from 'vuex'
+
 export default {
   data: () => ({
     collapsed: false,
   }),
-  computed: {
-    isCategory() {
-      return false;
-    }
-  },
+  computed: mapGetters({
+    processes: 'base/processes'
+  }),
   mounted() {
   },
   methods: {}

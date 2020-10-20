@@ -3,6 +3,7 @@ export default ({app}) => {
   app.router.beforeEach((to, from, next) => {
     console.log('before each router...');
     app.store.dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
+
     next();
   });
 
@@ -11,6 +12,7 @@ export default ({app}) => {
 
       console.log('after each router...');
       app.store.dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
+
     }, 300);
   });
 }
