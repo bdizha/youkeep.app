@@ -1,13 +1,12 @@
 <template>
   <a-row justify="center" type="flex">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: span }" :lg="{span: span}">
+    <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: span }" :lg="{span: span}">
       <a-row :gutter="[24,24]" type="flex" justify="center">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                :lg="{span: 8}">
           <a-card>
             <div slot="cover" class="r-card-cover-secondary ">
               <a-icon class="r-icon r-icon-stroke r-icon-primary"
-                      theme="filled"
                       type="shop"/>
             </div>
             <a-card-meta>
@@ -28,7 +27,6 @@
           <a-card>
             <div slot="cover" class="r-card-cover-secondary">
               <a-icon class="r-icon r-icon-stroke r-icon-primary"
-                      theme="filled"
                       type="shopping"/>
             </div>
             <a-card-meta>
@@ -49,7 +47,6 @@
           <a-card>
             <div slot="cover" class="r-card-cover-secondary">
               <a-icon class="r-icon r-icon-stroke r-icon-primary"
-                      theme="filled"
                       type="clock-circle"/>
             </div>
             <a-card-meta>

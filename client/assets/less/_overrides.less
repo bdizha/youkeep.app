@@ -2073,6 +2073,10 @@ h4.r-heading-light {
     border-bottom: 1px solid rgb(236, 236, 236, 1);
 }
 
+.r-welcome{
+
+}
+
 .r-product-text {
     font-weight: 400;
     line-height: 18px;
@@ -2080,7 +2084,7 @@ h4.r-heading-light {
     display: block;
     height: 36px;
     overflow: hidden;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
     text-overflow: ellipsis;
 
     @media (max-width: 768px) {
@@ -3408,6 +3412,7 @@ h4.r-heading-light {
 .r-product-flush {
     .ant-card {
         overflow: hidden;
+        background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
 
         .ant-card-body {
             overflow: hidden;
@@ -3418,13 +3423,17 @@ h4.r-heading-light {
             left: 0;
             right: 0;
             visibility: hidden;
-            padding: 0px;
+            padding: 24px;
             transition: all .3s linear, -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
             transition: all .3s linear, transform 2s cubic-bezier(.19, 1, .22, 1);
             transition: all .3s linear, transform 2s cubic-bezier(.19, 1, .22, 1), -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
 
             .ant-rate {
                 display: none;
+            }
+
+            .r-product-text{
+                margin-bottom: 0;
             }
         }
 
@@ -4112,6 +4121,8 @@ h4.r-heading-light {
 }
 
 .r-reviews {
+    background: red;
+
     .r-card-review {
 
         .r-review-quote {

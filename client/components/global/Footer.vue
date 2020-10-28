@@ -1,9 +1,9 @@
 <template>
   <a-row type="flex" justify="center">
     <a-col class="gutter-row" :span="24">
-      <a-row type="flex" justify="center">
+      <a-row class="r-mb-48" type="flex" justify="center">
         <a-col class="r-p-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 18 }" :lg="{ span: 18 }">
-          <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+          <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
             <a-col class="gutter-row" v-if="hasSubscribe" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <r-subscribe size="24"></r-subscribe>
             </a-col>

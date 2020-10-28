@@ -31,7 +31,7 @@ class CategoryController extends Controller
         $response = [];
         $category = null;
 
-        $this->limit = $request->get('limit', 6);
+        $this->limit = $request->get('limit', 1); // 6
         $this->level = $request->get('level', null);
         $orderBy = $request->get('order_by', 'created_at');
 
@@ -144,7 +144,7 @@ class CategoryController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function stores($slug)
+    public function stores($request)
     {
         $response = [];
 

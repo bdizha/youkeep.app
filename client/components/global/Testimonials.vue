@@ -1,6 +1,6 @@
 <template>
-  <a-row class="r-bg-grey r-reviews" type="flex" justify="center">
-    <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row class="r-reviews" type="flex" justify="center">
+    <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-mt-24" type="flex" justify="center">
         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <h2 class="r-heading r-text-center">

@@ -1,6 +1,6 @@
 <template>
   <a-row v-on:click="onProduct">
-    <a-col class="gutter-row r-pt-lg" :span="24" :style="isShowing ? '' : 'padding: 24px 0 0;'">
+    <a-col class="gutter-row r-pt-12" :span="24">
       <a-row type="flex" justify="start">
         <a-col :style="'min-height: ' + isShowing ? '36px;': '72px;'" class="gutter-row" :span="24">
           <div class="r-text-normal r-product-text">
