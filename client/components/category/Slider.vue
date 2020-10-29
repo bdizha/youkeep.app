@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row :gutter="[24,24]" v-if="hasCategories" class="r-slider">
         <a-col :span="24">
           <VueSlickCarousel v-bind="settings">
