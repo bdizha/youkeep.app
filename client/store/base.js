@@ -35,7 +35,7 @@ const state = () => ({
   hasModal: false,
   hasStoreTray: false,
   products: [],
-  testimonials: [],
+  reviews: [],
   filters: {
     stores: [],
     categories: [],
@@ -97,7 +97,8 @@ const getters = {
   hasModal: state => state.hasModal,
   hasStoreTray: state => state.hasStoreTray,
   products: state => state.products,
-  testimonials: state => state.testimonials,
+  reviews: state => state.reviews,
+  hasReviews: state => state.reviews.length > 0,
   filters: state => state.filters,
   sort: state => state.sort,
   isSearching: state => state.isSearching,
@@ -175,8 +176,8 @@ const mutations = {
   setFilter(state, filter) {
     state.filters[filter.key] = filter.value;
   },
-  setTestimonials(state, testimonials) {
-    state.testimonials = testimonials;
+  setReviews(state, reviews) {
+    state.reviews = reviews;
   },
   setSort(state, sort) {
     state.sort = sort;
@@ -333,14 +334,14 @@ const actions = {
       console.log('after onStores: ', stores);
     });
   },
-  async onTestimonials({dispatch, commit, state}, payload) {
+  async onReviews({dispatch, commit, state}, payload) {
     try {
       commit('setProcess', {key: 'isRunning', value: true});
 
-      await axios.post('/testimonials', payload).then(({data}) => {
-        console.log('response: testimonials', data);
+      await axios.get('/testimonials', payload).then(({data}) => {
+        console.log('response: reviews', data);
 
-        commit('setTestimonials', data.testimonials);
+        commit('setReviews', data.testimonials);
         commit('setProcess', {key: 'isRunning', value: false});
       });
 

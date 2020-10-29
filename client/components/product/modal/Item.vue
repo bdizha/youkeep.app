@@ -13,7 +13,7 @@
                 </a-col>
                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
                     <r-product-header :is-showing="true" :product="product"></r-product-header>
-                    <r-product-rate :product="product"></r-product-rate>
+                    <r-rate :rating="product.rating"></r-rate>
                     <r-product-price :is-showing="true" :product="product"></r-product-price>
                     <r-product-types :is-showing="true" :product="product"></r-product-types>
                     <r-product-actions :is-showing="true" :size="'large'" :product="product"></r-product-actions>

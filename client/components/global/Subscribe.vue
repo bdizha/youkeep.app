@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-secondary-light r-p-48">
+  <a-card class="r-bg-secondary-light r-p-24">
     <a-card-meta>
       <template slot="description">
         <a-row class="r-m-48" type="flex" justify="start">

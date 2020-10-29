@@ -85,6 +85,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::get('/terms', 'PageController@terms')->name('page.terms');
     Route::get('/hiw', 'PageController@hiw')->name('page.hiw');
     Route::get('/faqs', 'PageController@faqs')->name('page.faqs');
+    Route::get('/testimonials', 'TestimonialController@index')->name('testimonials');
     Route::get('/locations', 'LocationController@index')->name('modal.index');
     Route::get('/locations/{search}', 'LocationController@lookup')->name('modal.lookup');
     Route::post('/locations/address', 'LocationController@address')->name('modal.address');

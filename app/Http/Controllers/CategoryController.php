@@ -31,7 +31,7 @@ class CategoryController extends Controller
         $response = [];
         $category = null;
 
-        $this->limit = $request->get('limit', 1); // 6
+        $this->limit = $request->get('limit', 12); // 6
         $this->level = $request->get('level', null);
         $orderBy = $request->get('order_by', 'created_at');
 
@@ -111,7 +111,7 @@ class CategoryController extends Controller
     {
         $response = [];
         $this->slug = $request->get('category', null);
-        $this->limit = $request->get('limit', 2);
+        $this->limit = $request->get('limit', 12);
         $this->with = $request->get('with', []);
 
         $category = Category::with($this->with)

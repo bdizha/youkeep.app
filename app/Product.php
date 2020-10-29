@@ -76,6 +76,7 @@ class Product extends KModel
         'discount_super',
         'discount_percent',
         'thumbnail_url',
+        'rating'
     ];
 
     /**
@@ -95,6 +96,11 @@ class Product extends KModel
     public function getQuantityAttribute()
     {
         return 0;
+    }
+
+    public function getRatingAttribute()
+    {
+        return rand(1, 5);
     }
 
     public function getIsGreatValueAttribute()

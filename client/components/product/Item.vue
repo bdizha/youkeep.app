@@ -9,7 +9,7 @@
             <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
               <a-col class="gutter-row" :xs="{ span: 24 }"
                      :sm="{ span: 24 }" :lg="{ span: 24 }">
-                <r-product-rate :product="product"></r-product-rate>
+                <r-rate :rating="product.rating"></r-rate>
               </a-col>
               <a-col class="gutter-row" :xs="{ span: 24 }"
                      :sm="{ span: 24 }" :lg="{ span: 24 }">

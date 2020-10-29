@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
-    <a-col class="r-store-slider gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="r-store-slider " :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <VueSlickCarousel v-if="category != null && category.stores.length > 0" v-bind="settings">
         <nuxt-link class="r-text-view-more"
                    v-for="(store, index) in category.stores"
