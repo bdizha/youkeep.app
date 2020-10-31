@@ -6,6 +6,7 @@ use App\Address;
 use App\Product;
 use App\UserAddress;
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -121,5 +122,22 @@ class Controller extends BaseController
     {
         $route = $record['route'];
         $record['route'] = '/store/' . $this->store->slug + $route;
+    }
+
+    /**
+     * @param Request $request
+     * @return string
+     */
+    protected function _setCacheKey(Request $request): string
+    {
+        $fields = $request->all();
+        $value = "category";
+
+        foreach ($fields as $field) {
+            $value .= "_" . (is_array($field) ? implode("_", $field) : $field);
+        }
+
+        $key = md5($value);
+        return $key;
     }
 }

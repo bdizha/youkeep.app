@@ -6,6 +6,7 @@ use App\Category;
 use App\Product;
 use App\Store;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class CategoryController extends Controller
 {
@@ -31,7 +32,7 @@ class CategoryController extends Controller
         $response = [];
         $category = null;
 
-        $this->limit = $request->get('limit', 12); // 6
+        $this->limit = $request->get('limit', 4);
         $this->level = $request->get('level', null);
         $orderBy = $request->get('order_by', 'created_at');
 
@@ -43,59 +44,67 @@ class CategoryController extends Controller
         $storeId = $request->get('store_id', null);
         $storeSlug = $request->get('store', null);
 
-        $query = Category::limit($this->limit)
-            ->where('type', $type)
-            ->where('store_id', '!=', 1);
+        $key = $this->_setCacheKey($request);
 
-        if (!is_null($storeId)) {
-            $query->where('store_id', $storeId);
-        }
+        if (Cache::has($key)) {
+            $response = Cache::get($key, []);
+        } else {
+            $query = Category::limit($this->limit)
+                ->where('type', $type)
+                ->where('store_id', '!=', 1);
 
-        if (!is_null($slug)) {
-            $category = Category::where('slug', $slug)
-                ->first();
-
-            if (!empty($category->id)) {
-                $categoryId = $category->id;
+            if (!is_null($storeId)) {
+                $query->where('store_id', $storeId);
             }
+
+            if (!is_null($slug)) {
+                $category = Category::where('slug', $slug)
+                    ->first();
+
+                if (!empty($category->id)) {
+                    $categoryId = $category->id;
+                }
+            }
+
+            if (!is_null($storeSlug)) {
+                $query->whereHas('store', function ($query) use ($storeSlug) {
+                    $query->where('stores.slug', $storeSlug);
+                });
+            }
+
+            if (!is_null($categoryId)) {
+                $query->where('category_id', $categoryId);
+            }
+
+            if (!is_null($this->level)) {
+                $query->where('level', $this->level);
+            }
+
+            if (!empty($this->with)) {
+                $query->with(array_intersect($this->with, $this->relations));
+            }
+
+            if ($type !== 1) {
+                $query->where('has_products', true);
+            }
+
+            if (!empty($this->limit)) {
+                $query->limit($this->limit);
+            }
+
+            $categories = $query->orderBy($orderBy, 'DESC')
+                ->get()
+                ->toArray();
+
+            if ($type === Category::TYPE_STORE) {
+                $this->_setCategoryStores($categories);
+            }
+
+            $response['categories'] = $categories;
+            $response['category'] = $category;
+
+            Cache::put($key, $response, now()->addMinutes(1200));
         }
-
-        if (!is_null($storeSlug)) {
-            $query->whereHas('store', function ($query) use ($storeSlug) {
-                $query->where('stores.slug', $storeSlug);
-            });
-        }
-
-        if (!is_null($categoryId)) {
-            $query->where('category_id', $categoryId);
-        }
-
-        if (!is_null($this->level)) {
-            $query->where('level', $this->level);
-        }
-
-        if (!empty($this->with)) {
-            $query->with(array_intersect($this->with, $this->relations));
-        }
-
-        if ($type !== 1) {
-            $query->where('has_products', true);
-        }
-
-        if (!empty($this->limit)) {
-            $query->limit($this->limit);
-        }
-
-        $categories = $query->orderBy($orderBy, 'DESC')
-            ->get()
-            ->toArray();
-
-        if ($type === Category::TYPE_STORE) {
-            $this->_setCategoryStores($categories);
-        }
-
-        $response['categories'] = $categories;
-        $response['category'] = $category;
 
         return response()->json($response, 200);
     }
@@ -111,29 +120,38 @@ class CategoryController extends Controller
     {
         $response = [];
         $this->slug = $request->get('category', null);
-        $this->limit = $request->get('limit', 12);
+        $this->limit = $request->get('limit', 4);
         $this->with = $request->get('with', []);
 
-        $category = Category::with($this->with)
-            ->where('slug', $this->slug)->first();
+        $key = $this->_setCacheKey($request);
 
-        $query = Category::with($this->with);
+        if (Cache::has($key)) {
+            $response = Cache::get($key, []);
+        } else {
 
-        if (!empty($this->limit)) {
-            $query->limit($this->limit);
+            $category = Category::with($this->with)
+                ->where('slug', $this->slug)->first();
+
+            $query = Category::with($this->with);
+
+            if (!empty($this->limit)) {
+                $query->limit($this->limit);
+            }
+            $query->where('category_id', $category->id);
+
+            $categories = $query
+                ->take($this->limit)
+                ->get()->toArray();
+
+            if ($category->type === Category::TYPE_STORE) {
+                $this->_setCategoryStores($categories);
+            }
+
+            $category['categories'] = $categories;
+            $response['category'] = $category;
+
+            Cache::put($key, $response, now()->addMinutes(1200));
         }
-        $query->where('category_id', $category->id);
-
-        $categories = $query
-            ->take(12)
-            ->get()->toArray();
-
-        if ($category->type === Category::TYPE_STORE) {
-            $this->_setCategoryStores($categories);
-        }
-
-        $category['categories'] = $categories;
-        $response['category'] = $category;
 
         return response()->json($response, 200);
     }
@@ -147,26 +165,33 @@ class CategoryController extends Controller
     public function stores($request)
     {
         $response = [];
-
         $categoryId = $request->get('category_id', null);
 
-        $query = Store::where('is_active', true);
+        $key = $this->_setCacheKey($request);
 
-        $this->without = ['categories'];
+        if (Cache::has($key)) {
+            $response = Cache::get($key, []);
+        } else {
+            $query = Store::where('is_active', true);
 
-        if (!is_null($categoryId)) {
-            $query->where('category_id', $categoryId);
+            $this->without = ['categories'];
+
+            if (!is_null($categoryId)) {
+                $query->where('category_id', $categoryId);
+            }
+
+            if (!empty($this->limit)) {
+                $query->limit($this->limit);
+            }
+
+            $this->items = $query
+                ->orderBy('created_at', 'DESC')
+                ->get()->toArray();
+
+            $response['stores'] = $this->_pruneRelations($this->items);
+
+            Cache::put($key, $response, now()->addMinutes(1200));
         }
-
-        if (!empty($this->limit)) {
-            $query->limit($this->limit);
-        }
-
-        $this->items = $query
-            ->orderBy('created_at', 'DESC')
-            ->get()->toArray();
-
-        $response['stores'] = $this->_pruneRelations($this->items);
 
         return response()->json($response, 200);
     }

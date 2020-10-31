@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Store;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class StoreController extends Controller
 {
@@ -24,25 +25,34 @@ class StoreController extends Controller
 
         $categoryId = $request->get('category_id', null);
 
-        $query = Store::where('is_active', true);
+        $key = $this->_setCacheKey($request);
 
-        $this->without = ['categories'];
+        if (Cache::has($key)) {
+            $response = Cache::get($key, []);
+        } else {
 
-        if (!empty($this->term)) {
-            $query->where('name', 'like', '%' . $this->term . '%');
+            $query = Store::where('is_active', true);
+
+            $this->without = ['categories'];
+
+            if (!empty($this->term)) {
+                $query->where('name', 'like', '%' . $this->term . '%');
+            }
+
+            if (!empty($categoryId)) {
+                $query->where('category_id', $categoryId);
+            }
+
+            if (!empty($this->limit)) {
+                $query->limit($this->limit);
+            }
+
+            $response = $query
+                ->orderBy('created_at', 'DESC')
+                ->paginate(18);
+
+            Cache::put($key, $response, now()->addMinutes(1200));
         }
-
-        if (!empty($categoryId)) {
-            $query->where('category_id', $categoryId);
-        }
-
-        if (!empty($this->limit)) {
-            $query->limit($this->limit);
-        }
-
-        $response = $query
-            ->orderBy('created_at', 'DESC')
-            ->paginate(18);
 
         return response()->json($response, 200);
     }
