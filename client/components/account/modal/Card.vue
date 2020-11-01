@@ -21,7 +21,7 @@
                 @submit="onPost"
                 :form="form">
             <a-row :gutter="24" type="flex" justify="center">
-                <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
                     <a-form-item label="Card number">
                         <a-input type="text"
                                 size="default"
@@ -31,7 +31,7 @@
                         </a-input>
                     </a-form-item>
                 </a-col>
-                <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+                <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                     <a-form-item label="Expiration">
                         <a-input type="text"
                                 size="default"
@@ -41,7 +41,7 @@
                         </a-input>
                     </a-form-item>
                 </a-col>
-                <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+                <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                     <a-form-item label="CVC">
                         <a-input type="text"
                                 size="default"

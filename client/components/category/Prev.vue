@@ -1,10 +1,10 @@
 <template>
   <a-row type="flex" justify="start">
-    <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 20 }" :md="{ span: 24 }"
+    <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 20 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <a-button @click="onPrev" type="secondary" class="r-btn-bordered-primary"
+      <a-button @click="onPrev" type="secondary" class="r-btn-bordered-grey"
                 icon="left">
-        {{ category.name }}
+        Back
       </a-button>
     </a-col>
   </a-row>

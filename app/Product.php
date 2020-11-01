@@ -76,7 +76,9 @@ class Product extends KModel
         'discount_super',
         'discount_percent',
         'thumbnail_url',
-        'rating'
+        'photo_url',
+        'rating',
+        'route'
     ];
 
     /**
@@ -135,6 +137,11 @@ class Product extends KModel
     public function getThumbnailUrlAttribute()
     {
         return url('/storage/product/' . $this->thumbnail);
+    }
+
+    public function getPhotoUrlAttribute()
+    {
+        return url('/storage/product/' . $this->photo);
     }
 
     public function getPhotosAttribute()
@@ -250,6 +257,15 @@ class Product extends KModel
         }
 
         return $discountPercent;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRouteAttribute()
+    {
+        $route = '/product/' . $this->slug;
+        return $route;
     }
 
     /**

@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-account-list" type="flex" justify="center">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-card v-if="hasTitle" class="r-mb-24" title="PAYMENT METHODS" style="width: 100%;">
         <a-row type="flex" justify="start" align="middle">
           <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
@@ -22,24 +22,24 @@
            :key="'address-' + card.id"
            v-on:click="onModal('account-card', card)">
         <a-row type="flex" justify="center" align="middle" :gutter="[12,12]">
-          <a-col class="gutter-row" :xs="{ span: 16 }" :sm="{ span: 16 }" :md="{ span: 16 }"
+          <a-col :xs="{ span: 16 }" :sm="{ span: 16 }" :md="{ span: 16 }"
                  :lg="{ span: 16 }">
             <a-row :gutter="24" type="flex" justify="start">
-              <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+              <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                      :lg="{ span: 12 }">
                 Card number
               </a-col>
-              <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+              <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                      :lg="{ span: 12 }">
                 {{ card.card_number }}
               </a-col>
             </a-row>
             <a-row :gutter="24" type="flex" justify="start">
-              <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+              <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                      :lg="{ span: 12 }">
                 Expiration
               </a-col>
-              <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+              <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                      :lg="{ span: 12 }">
                 {{ card.expire_at }}
               </a-col>

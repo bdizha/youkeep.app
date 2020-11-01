@@ -616,7 +616,7 @@ x {
         line-height: 30px;
         font-weight: 600;
         background: #FFFFFF;
-        color: rgba(251, 0, 40, 1);
+        color: #0069cd;
         border: 1px solid rgb(236, 236, 236, 1);
         overflow: hidden;
         border-radius: 3px 0 0 6px;
@@ -635,13 +635,13 @@ x {
         width: 50%;
         height: 24px;
         line-height: 30px;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 12px;
         text-align: center;
         padding: 0 12px;
         color: #FFFFFF;
-        background: rgba(251, 0, 40, 1);
-        border: 1px solid #FDBAC4;
+        background: #0069cd;
+        border: 1px solid #0069cd;
         border-radius: 0 6px 6px 0;
         @media (max-width: 768px) {
             padding: 0px 10px;
@@ -655,6 +655,7 @@ x {
 .r-product-actions {
     font-size: 16px;
     font-weight: 500;
+    box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
 
     @media (max-width: 768px) {
         font-size: 16px;
@@ -824,6 +825,7 @@ x {
     padding: 0 12px;
     display: block;
     border: 1px solid rgb(236, 236, 236, 1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
     border-radius: 3px;
     text-align: center;
     cursor: pointer;
@@ -1505,185 +1507,6 @@ h4.r-heading-light {
         width: 50% !important;
     }
 
-    &.r-modal-product {
-        width: 50% !important;
-
-        .ant-rate {
-            font-size: 30px;
-        }
-
-        @media (max-width: 768px) {
-            width: 100% !important;
-
-            .ant-rate {
-                font-size: 24px;
-            }
-        }
-
-        .r-product-cards {
-            .ant-rate {
-                font-size: 18px;
-            }
-
-            @media (max-width: 768px) {
-                .ant-rate {
-                    font-size: 16px;
-                }
-
-                .ant-card-cover {
-                    margin-top: 0px;
-                }
-            }
-        }
-
-        .ant-carousel {
-            padding-top: 24px;
-
-            .slick-dots {
-                margin-top: 24px;
-                position: relative;
-            }
-        }
-
-        .ant-card {
-            .r-product-modal {
-                .r-credit {
-                    top: -45px;
-                    left: 50%;
-                    margin-left: -60px;
-                    width: 150px;
-                    height: 36px;
-
-                    .r-credit-text {
-                        width: 50%;
-                        font-size: 16px;
-                        height: 36px;
-                        line-height: 36px;
-                    }
-
-                    .r-credit-discount {
-                        width: 50%;
-                        height: 36px;
-                        line-height: 36px;
-                        font-weight: 600;
-                        font-size: 16px;
-                    }
-                }
-
-                .r-superscript {
-                    font-size: 16px;
-                    top: -18px;
-                    left: -6px;
-                }
-
-                .r-product-text-promo {
-                    font-size: 18px;
-                    height: auto;
-                    margin-bottom: 12px;
-                }
-
-                .r-product-text {
-                    font-size: 30px;
-                    line-height: 42px;
-                    height: auto;
-
-                    @media (max-width: 768px) {
-                        font-size: 24px;
-                        line-height: 30px;
-                    }
-                }
-
-                .r-product-price {
-                    font-size: 30px;
-                    line-height: 36px;
-                    font-weight: 600;
-                    display: inline-block;
-                    width: auto;
-                    margin: 24px 0;
-
-                    @media (max-width: 768px) {
-                        font-size: 27px;
-                        line-height: 30px;
-                        margin: 12px 0;
-                    }
-
-                    @media (max-width: 390px) {
-                        font-size: 24px;
-                        line-height: 27px;
-                    }
-                }
-
-                .r-btn--shopping {
-                    width: 180px;
-                    height: 120px;
-                    top: 24px;
-                    left: -50%;
-                    margin-left: -90px;
-                    @media (max-width: 768px) {
-                        width: 90px;
-                        height: 90px;
-                        margin-left: -45px;
-                    }
-
-                    .r-product-cart-text {
-                        //font-size: 16px;
-                        //font-weight: 700;
-                        //filter: #FFFFFF;
-                    }
-
-                    .r-product-qnty {
-                        //display: block;
-                        //width: 90px;
-                        //text-align: center;
-                        //font-weight: 600;
-                        //position: absolute;
-                        //margin-left: -45px;
-                        //left: 50%;
-                        //top: 25%;
-                        //filter: #FFFFFF;
-                        //@media (max-width: 768px) {
-                        //  width: 60px;
-                        //  margin-left: -30px;
-                        //}
-                    }
-                }
-
-                .r-product-actions {
-                    font-size: 24px;
-
-                    .r-action-height {
-                        height: 45px;
-                        line-height: 45px;
-                    }
-
-                    .r-product-cart {
-                        height: 45px;
-                        width: 45px;
-
-                        .r-shopping-cart {
-                            height: 45px;
-                            width: 45px;
-                        }
-
-                        .r-product-cart-count {
-                            font-size: 24px;
-                            width: 45px;
-                            height: 45px;
-                            line-height: 45px;
-                            margin-right: -22.5px;
-                        }
-                    }
-
-                    .r-btn-icon {
-                        height: 45px;
-                        line-height: 45px;
-                        width: 45px;
-                    }
-                }
-            }
-        }
-    }
-
     @media (max-width: 768px) {
         margin: 0;
         padding: 0;
@@ -1703,6 +1526,171 @@ h4.r-heading-light {
         padding: 0px;
         margin-left: -6px;
         margin-right: -6px;
+    }
+}
+
+.r-product-show {
+    .ant-rate {
+        font-size: 30px;
+    }
+
+    @media (max-width: 768px) {
+        width: 100% !important;
+
+        .ant-rate {
+            font-size: 24px;
+        }
+    }
+
+    .r-product-cards {
+        .ant-rate {
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .ant-rate {
+                font-size: 16px;
+            }
+
+            .ant-card-cover {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    .r-credit {
+        height: 36px;
+        position: relative;
+        margin-left: 0px;
+        width: auto;
+        top: auto;
+        left: auto;
+
+        .r-credit-text {
+            width: 50%;
+            font-size: 16px;
+            height: 36px;
+            line-height: 36px;
+        }
+
+        .r-credit-discount {
+            width: 50%;
+            height: 36px;
+            line-height: 36px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+
+    .r-superscript {
+        font-size: 16px;
+        top: -18px;
+        left: -6px;
+    }
+
+    .r-product-text-promo {
+        font-size: 18px;
+        height: auto;
+        margin-bottom: 12px;
+    }
+
+    .r-product-text {
+        font-size: 27px;
+        line-height: 40px;
+        height: auto;
+
+        @media (max-width: 768px) {
+            font-size: 21px;
+            line-height: 24px;
+        }
+    }
+
+    .r-product-price {
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 600;
+        display: inline-block;
+        width: auto;
+        margin: 24px 0;
+
+        @media (max-width: 768px) {
+            font-size: 27px;
+            line-height: 30px;
+            margin: 12px 0;
+        }
+
+        @media (max-width: 390px) {
+            font-size: 24px;
+            line-height: 27px;
+        }
+    }
+
+    .r-btn--shopping {
+        width: 180px;
+        height: 120px;
+        top: 24px;
+        left: -50%;
+        margin-left: -90px;
+        @media (max-width: 768px) {
+            width: 90px;
+            height: 90px;
+            margin-left: -45px;
+        }
+
+        .r-product-cart-text {
+            //font-size: 16px;
+            //font-weight: 700;
+            //filter: #FFFFFF;
+        }
+
+        .r-product-qnty {
+            //display: block;
+            //width: 90px;
+            //text-align: center;
+            //font-weight: 600;
+            //position: absolute;
+            //margin-left: -45px;
+            //left: 50%;
+            //top: 25%;
+            //filter: #FFFFFF;
+            //@media (max-width: 768px) {
+            //  width: 60px;
+            //  margin-left: -30px;
+            //}
+        }
+    }
+
+    .r-product-actions {
+        font-size: 24px;
+
+        .r-action-height {
+            height: 45px;
+            line-height: 45px;
+        }
+
+        .r-product-cart {
+            height: 45px;
+            width: 45px;
+
+            .r-shopping-cart {
+                height: 45px;
+                width: 45px;
+            }
+
+            .r-product-cart-count {
+                font-size: 24px;
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                margin-right: -22.5px;
+            }
+        }
+
+        .r-btn-icon {
+            height: 45px;
+            line-height: 45px;
+            width: 45px;
+        }
     }
 }
 
@@ -2073,7 +2061,7 @@ h4.r-heading-light {
     border-bottom: 1px solid rgb(236, 236, 236, 1);
 }
 
-.r-welcome{
+.r-welcome {
 
 }
 
@@ -2350,6 +2338,10 @@ h4.r-heading-light {
         margin: 0 3px;
     }
 
+    a {
+        font-width: 500;
+    }
+
     .ant-breadcrumb-link {
         &:hover,
         .nuxt-link-exact-active {
@@ -2478,13 +2470,13 @@ h4.r-heading-light {
 }
 
 .r-hide-sm {
-    @media (max-width: 768px) {
+    @media (max-width: 968px) {
         display: none !important;
     }
 }
 
 .r-hide-lg {
-    @media (min-width: 768px) {
+    @media (min-width: 968px) {
         display: none !important;
     }
 }
@@ -3304,7 +3296,8 @@ h4.r-heading-light {
     }
 }
 
-.r-product {
+.r-product,
+.r-product-show {
     .ant-avatar-image {
         line-height: 150px;
         width: 100%;
@@ -3317,6 +3310,34 @@ h4.r-heading-light {
         }
     }
 }
+
+.ant-tabs-bar {
+    margin: 0;
+}
+
+.ant-tabs .ant-tabs-top-content, .ant-tabs .ant-tabs-bottom-content {
+    background: #FFF;
+    padding: 24px;
+}
+
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+    height: 42px;
+    margin: 0;
+    padding: 0 24px;
+    line-height: 40px;
+}
+
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab-active {
+    background: #FFFFFF !important;
+}
+
+.ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
+    background: #fafafa;
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: 12px;
+}
+
 
 .r-product-spinner--active {
     .r-product {
@@ -3432,7 +3453,7 @@ h4.r-heading-light {
                 display: none;
             }
 
-            .r-product-text{
+            .r-product-text {
                 margin-bottom: 0;
             }
         }
@@ -4671,6 +4692,7 @@ h4.r-heading-light {
 
 .ant-steps-horizontal {
     margin: -12px;
+
     .ant-steps-item-icon {
         margin: 0px;
         top: 24px;
@@ -5060,7 +5082,7 @@ h4.r-heading-light {
 }
 
 .r-store-item {
-    padding: 0 0 0 87px;
+    padding: 0 0 0 99px;
     margin: 0px;
     display: block;
     text-align: left;
@@ -5487,10 +5509,7 @@ h4.r-heading-light {
 }
 
 .r-filter-item {
-    text-align: center;
     width: 100%;
-    height: 36px;
-    line-height: 36px;
     border-radius: 3px;
     background: #F7F8F9;
     display: block;
@@ -5621,4 +5640,12 @@ h4.r-heading-light {
 .slick-dots li.slick-active button:before {
     opacity: .96;
     color: #f50a2b
+}
+
+.r-slick-thumb {
+    padding-bottom: 76px;
+
+    .slick-dots-bottom {
+        bottom: -88px;
+    }
 }

@@ -65,7 +65,7 @@
         </a-col>
       </a-row>
       <a-row class="r-mt-24" :gutter="24" type="flex" justify="end">
-        <a-col v-if="hasAddress" class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }"
+        <a-col v-if="hasAddress" :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }"
                :lg="{ span: 8 }">
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onDelete"
@@ -77,7 +77,7 @@
             </a-button>
           </a-form-item>
         </a-col>
-        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
+        <a-col :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onReturn"
                      size="default"
@@ -88,7 +88,7 @@
             </a-button>
           </a-form-item>
         </a-col>
-        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
+        <a-col :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onPost"
                      size="default"

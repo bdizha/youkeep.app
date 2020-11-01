@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="24" v-if='cart.count > 0' type="flex"
          justify="center">
-    <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
+    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
            :lg="{ span: 12 }">
       <a-button block v-on:click="onSave()"
                 size="small"
@@ -10,7 +10,7 @@
         Save cart
       </a-button>
     </a-col>
-    <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
+    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
            :lg="{ span: 12 }">
       <a-popconfirm
         @confirm="onClear"

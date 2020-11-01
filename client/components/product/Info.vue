@@ -1,9 +1,12 @@
 <template>
-  <a-tabs class="r-mv-48" type="card" @change="callback">
-    <a-tab-pane key="1" tab="Details">
+  <a-tabs class="r-mv-48 r-p-24" type="card" @change="callback">
+    <a-tab-pane key="1" tab="Product information & reviews">
       <div :data-descrption="product.description">Not set</div>
     </a-tab-pane>
-    <a-tab-pane key="2" tab="Delvery & returns">
+    <a-tab-pane key="2" tab="Seller information">
+      Not set
+    </a-tab-pane>
+    <a-tab-pane key="3" tab="Delivery & returns">
       Not set
     </a-tab-pane>
   </a-tabs>

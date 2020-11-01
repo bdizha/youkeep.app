@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
-    <a-col class="gutter-row" :span="24">
+    <a-col :span="24">
       <div class="gutter-box">
         <h3 class="r-product-price">
           {{ 'R' + product.price }}

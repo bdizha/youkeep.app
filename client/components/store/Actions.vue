@@ -12,7 +12,7 @@
           </a-button>
         </a-col>
       </a-row>
-      <a-row :gutter="[6,12]" type="flex" justify="center" align="middle">
+      <a-row class="r-hide-sm" :gutter="[12,12]" type="flex" justify="center" align="middle">
         <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
           <r-store-rate :store="store"></r-store-rate>
         </a-col>

@@ -1,7 +1,7 @@
 <template>
     <a-row :gutter="24" type="flex"
            justify="center">
-        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :lg="{ span: 24 }">
             <a-form class="ant-form ant-form-vertical"
                     @submit="onStep"

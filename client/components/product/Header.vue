@@ -1,8 +1,8 @@
 <template>
-  <a-row v-on:click="onProduct">
+  <a-row>
     <a-col class="gutter-row r-pt-12" :span="24">
       <a-row type="flex" justify="start">
-        <a-col :style="'min-height: ' + isShowing ? '36px;': '72px;'" class="gutter-row" :span="24">
+        <a-col :style="'min-height: ' + isShowing ? '36px;': '72px;'" :span="24">
           <div class="r-text-normal r-product-text">
             {{ product.name }}
           </div>

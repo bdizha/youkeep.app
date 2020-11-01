@@ -76,7 +76,7 @@
           </a-form-item>
           <a-form-item>
             <a-row type="flex" justify="center" align="middle">
-              <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 18 }">
+              <a-col :sm="{ span: 24 }" :lg="{ span: 18 }">
                 <span class="r-inline-text">Already have an account?</span>
                 <a class="r-inline-text" v-on:click="onModal('login', $event)"
                    href="">

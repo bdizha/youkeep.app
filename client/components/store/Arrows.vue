@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <div :class="padding" class="r-slider">
         <a-carousel v-if="hasStores"
                     :infinite="true"

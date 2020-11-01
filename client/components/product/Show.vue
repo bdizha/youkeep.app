@@ -1,73 +1,64 @@
 <template>
-  <a-row style="margin-bottom: 24px;">
-    <a-col class="gutter-row" :span="24">
-      <a-row>
-        <a-col class="gutter-row" :span="12">
-          <a-breadcrumb>
-            <a-breadcrumb-item><a :href="'/store/' + store.slug">Categories</a></a-breadcrumb-item>
-            <a-breadcrumb-item v-for="(breadcrumb, index) in category.breadcrumbs" :key="index">
-              <a :href="'/store/' + store.slug + '/category/' + breadcrumb.slug">{{ breadcrumb.name }}</a>
-            </a-breadcrumb-item>
-          </a-breadcrumb>
-        </a-col>
-      </a-row>
-      <a-row style="padding: 0;">
-        <a-col class="gutter-row" :span="12">
-          <h3 class="r-size-large">
-            {{ category.name }}
+  <a-row type="flex" justify="start" align="middle">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }">
+      <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
+    </a-col>
+    <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }">
+      <a-card v-if="product" class="r-product-show">
+        <a-row class="r-product-modal" :gutter="36" type="flex"
+               justify="center" align="middle">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+            <r-product-photos :photos="product.photos" :product="product" :size="650"></r-product-photos>
+          </a-col>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+            <r-product-header :is-showing="true" :product="product"></r-product-header>
+            <r-product-credit :is-showing="true" :product="product"></r-product-credit>
+            <r-product-price :is-showing="true" :product="product"></r-product-price>
+            <r-product-types :is-showing="true" :product="product"></r-product-types>
+            <r-product-actions :is-showing="true" :size="'large'" :product="product"></r-product-actions>
+          </a-col>
+        </a-row>
+        <r-product-info :product="product"></r-product-info>
+      </a-card>
+      <a-row class="r-mv-48" type="flex" justify="center">
+        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+          <h3 class="r-heading r-text-black">
+            You may also like
           </h3>
-        </a-col>
-        <a-col class="gutter-row" :span="12" style="text-align: right">
-          <a-dropdown>
-            <a-button>
-              Sort By
-              <a-icon type="down"/>
-            </a-button>
-            <a-menu slot="overlay">
-              <a-menu-item>
-                <a href="javascript:;">Popularity</a>
-              </a-menu-item>
-              <a-menu-item>
-                <a href="javascript:;">Price: Lowest First</a>
-              </a-menu-item>
-              <a-menu-item>
-                <a href="javascript:;">PriceL Highest FIrst</a>
-              </a-menu-item>
-            </a-menu>
-          </a-dropdown>
+          <p class="r-text-normal">Realtime product recommendations just for you</p>
         </a-col>
       </a-row>
-      <a-row style="border: 1px solid rgba(0, 0, 0, 0.1)">
-        <a-col :span="24">
-          <a-row>
-            <a-col class="gutter-row" v-for="(product, index) in products" :key="index + 1" :span="4">
-              <r-product :product="product"></r-product>
-            </a-col>
-          </a-row>
-        </a-col>
-      </a-row>
+      <r-category-list :columns="6"></r-category-list>
     </a-col>
   </a-row>
 </template>
 <script>
+import {mapGetters} from "vuex";
+
 export default {
   name: 'r-product-show',
   components: {},
-  props: {
-    product: {type: Array, required: true},
-    categories: {type: Array, required: true},
-  },
+  props: {},
   data() {
     return {
       store: {}
     }
   },
+  computed: mapGetters({
+    category: 'shop/category',
+    product: 'shop/product',
+    store: 'shop/store',
+    processes: 'base/processes'
+  }),
   created() {
     this.payload();
   },
   methods: {
     payload() {
-      this.store = this.$store.state.store;
     }
   }
 };

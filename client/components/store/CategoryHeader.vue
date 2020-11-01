@@ -1,12 +1,12 @@
 <template>
   <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="start">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
            :lg="{ span: 20 }">
       <h3 class="r-heading">
         {{ category.name }}
       </h3>
     </a-col>
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
            :lg="{ span: 4 }">
       <template v-if="isLast">
         <nuxt-link class="r-same-height r-text-view-more"

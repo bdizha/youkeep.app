@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Product;
+use App\StoreProduct;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ProductController extends Controller
 {
@@ -18,7 +20,7 @@ class ProductController extends Controller
         $item = [];
 
     /**
-     * Find categories
+     * Find products by category id
      *
      * @param Request $request
      * @return \Illuminate\Http\Response
@@ -34,40 +36,63 @@ class ProductController extends Controller
     }
 
     /**
-     * Find category category
+     * Find product by slug
      *
-     * @param String $storeSlug
-     * @param String $slug
-     * @param String $productSlug
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function show($storeSlug = null, $slug = null, $productSlug)
+    public function show(Request $request)
     {
-        $this->with = ['breadcrumbs', 'store'];
+        $response = [];
+        $this->slug = $request->get('slug', null);
+        $this->limit = $request->get('limit', 3);
+        $this->with = $request->get('with', ['categories', 'photos', 'breadcrumbs']);
 
-        $query = Category::where('slug', $slug);
-        $query->with(array_intersect($this->with, $this->relations));
+        $this->categories = [];
+        $this->category = [];
+        $this->store = [];
 
-        $this->items = $query
-            ->limit(1)
-            ->get()
-            ->toArray();
+        $key = $this->_setCacheKey($request);
 
-        $this->items = $this->_pruneRelations($this->items);
+        if (Cache::has($key)) {
+            $response = Cache::get($key, []);
+        } else {
 
-        $this->item = [];
-        if (!empty($this->items)) {
-            $this->item = $this->items[0];
+            $this->product = Product::where('is_active', true)
+                ->where('slug', $this->slug)
+                ->first();
+
+            if (!empty($this->product)) {
+                $storeProduct = StoreProduct::where('product_id', $this->product->id)
+                    ->with('store')
+                    ->first();
+
+                if (!empty($storeProduct)) {
+                    $this->store = $storeProduct->store;
+                }
+
+                $query = Category::with(array_intersect($this->with, $this->relations));
+                $this->categories = $query
+                    ->limit(3)
+                    ->get()
+                    ->toArray();
+
+                $this->categories = $this->_pruneRelations($this->categories);
+
+                $this->category = Category::where('id', $this->product->category_id)
+                    ->first();
+
+            }
+            if (!empty($this->categories)) {
+                $this->category = $this->categories[0];
+            }
+
+            $response['store'] = $this->store;
+            $response['category'] = $this->category;
+            $response['product'] = $this->product;
+            $response['categories'] = $this->categories;
         }
 
-        $product = Product::where('is_active', true)
-            ->where('slug', $productSlug)
-            ->first();
-
-        return response()->json([
-            'category' => $this->item,
-            'product' => $product,
-            'status' => 'success'
-        ], 200);
+        return response()->json($response, 200);
     }
 }

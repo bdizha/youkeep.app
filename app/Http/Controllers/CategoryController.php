@@ -112,8 +112,7 @@ class CategoryController extends Controller
     /**
      * Return category values
      *
-     * @param String $store
-     * @param String $slug
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
     public function show(Request $request)

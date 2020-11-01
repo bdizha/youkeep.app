@@ -1,8 +1,8 @@
 <template>
   <a-row type="flex" justify="center" class="r-mv-48">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row :gutter="[24,24]" type="flex" justify="center">
-        <a-col class="gutter-row" :xs="{ span: 20 }" :sm="{ span: 20 }" :lg="{ span: 20 }">
+        <a-col :xs="{ span: 20 }" :sm="{ span: 20 }" :lg="{ span: 20 }">
           <h2 class="r-heading r-same-height">
             {{ title ? title : 'How it works?' }}
           </h2>
@@ -22,7 +22,7 @@
         </a-col>
       </a-row>
       <a-row :gutter="[48,24]" type="flex" justify="center" align="middle">
-        <a-col class="gutter-row" :xs="{ span: 24 }"
+        <a-col :xs="{ span: 24 }"
                :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
           <a-steps v-model="currentStep" direction="horizontal" :current="currentStep">
             <a-step v-for="(step, index) in steps"

@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-category-items">
-    <a-col class="gutter-row" :span="24">
+    <a-col :span="24">
       <r-category-header :category="category" :store="store"></r-category-header>
       <a-row :gutter="0" class="r-product-cards">
         <a-col class="gutter-row r-spin-holder" :span="24">

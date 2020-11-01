@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="24" type="flex"
          justify="center">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :lg="{ span: 24 }">
       <r-account-address-list :has-title="false"></r-account-address-list>
       <a-row class="r-mv-24" :gutter="24" type="flex" justify="start">

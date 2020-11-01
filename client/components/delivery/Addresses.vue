@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-mt-24" type="flex" justify="center">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <div class="r-account-item"
            v-for="address in search.data"
            :class="{'r-account-item__active': address.is_default}"

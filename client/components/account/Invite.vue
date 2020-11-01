@@ -1,7 +1,7 @@
 <template>
     <r-account>
         <a-row type="flex" justify="start" align="middle">
-            <a-col class="gutter-row" :xs="{ span: 24 }"
+            <a-col :xs="{ span: 24 }"
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
                 <a-card class="r-mb-24" title="INVITE A FRIEND" style="width: 100%;">
                     <a-row type="flex" justify="start" align="start">
@@ -16,10 +16,10 @@
             </a-col>
         </a-row>
         <a-row class="r-mt-24" :gutter="24" type="flex" justify="end">
-            <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 18 }" :lg="{ span: 18 }">
+            <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 18 }" :lg="{ span: 18 }">
 
             </a-col>
-            <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
+            <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
                 <a-button block type="secondary"
                           :class="'r-btn-secondary'"
                          size="default"

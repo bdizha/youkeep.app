@@ -1,6 +1,6 @@
 <template>
     <a-row type="flex" justify="end">
-        <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 6 }" :lg="{ span: 6 }">
+        <a-col :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 6 }" :lg="{ span: 6 }">
             <a-button v-on:click="onModal"
                       block
                      size="default"

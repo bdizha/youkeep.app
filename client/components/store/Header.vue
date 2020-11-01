@@ -1,16 +1,16 @@
 <template>
   <a-layout-header class="r-header r-store-header">
     <a-row style="width: 100%;" type="flex" justify="start">
-      <a-col type="flex" class="gutter-row" :span="24">
+      <a-col type="flex" :span="24">
         <a-row type="flex" justify="center" align="middle">
-          <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
+          <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
             <div class="r-nav-item r-nav-item__logo">
               <r-logo :is-icon="true"></r-logo>
             </div>
           </a-col>
-          <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
+          <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
                  :md="{ span: 18 }"
                  :lg="{ span: 18 }">
             <div class="r-layout-menu">

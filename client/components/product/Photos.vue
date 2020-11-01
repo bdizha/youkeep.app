@@ -1,18 +1,17 @@
 <template>
-  <a-carousel dots-class="slick-dots slick-thumb">
-    <a slot="customPaging" slot-scope="props">
-      <r-avatar shape="square" :size="64" :src="getPhoto(props.i)"/>
-    </a>
-    <div v-for="photo in product.photos">
-      <div class="ant-avatar ant-avatar-square ant-avatar-image"
-           :style="styles">
-        <v-lazy-image
-          :src="'/assets/icon_default.png'"
-          src-placeholder="~/assets/cart_holder.svg"
-        />
+  <div class="r-slick-thumb">
+    <a-carousel dots-class="slick-dots slick-thumb">
+      <a slot="customPaging" slot-scope="props">
+        <r-avatar shape="square" :size="60" :src="getPhoto(props.i)"/>
+      </a>
+      <div v-for="photo in product.photos">
+        <div class="ant-avatar ant-avatar-square ant-avatar-image"
+             :style="styles">
+          <r-avatar shape="square" :size="600" :src="photo.image"/>
+        </div>
       </div>
-    </div>
-  </a-carousel>
+    </a-carousel>
+  </div>
 </template>
 <script>
 export default {

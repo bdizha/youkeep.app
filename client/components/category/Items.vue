@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center" class="r-p-24 r-product-categories">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: span }">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: span }">
       <r-category v-for="(category, index) in categories"
                   :columns="columns"
                   :key="index + 1"

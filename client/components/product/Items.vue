@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" v-if="category" justify="center" align="middle">
-    <a-col class="gutter-row" :span="24">
+    <a-col :span="24">
       <a-carousel :infinite="false"
                   :slides-to-show="6"
                   :arrows="true"

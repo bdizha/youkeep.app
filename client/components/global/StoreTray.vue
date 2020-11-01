@@ -2,12 +2,12 @@
   <a-row class="r-stores-tray" :class="{'r-stores-tray-active': hasStoreTray}" type="flex" justify="center"
          :gutter="24"
          style="padding: 48px 24px;background: #FFFFFF url(/images/art-grey.svg) repeat scroll 0% 0% !important;">
-    <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-mb-24" type="flex" justify="start">
-        <a-col class="gutter-row" :span="12">
+        <a-col :span="12">
           <r-store-delivery-options></r-store-delivery-options>
         </a-col>
-        <a-col class="gutter-row" :span="12" style="text-align: right;">
+        <a-col :span="12" style="text-align: right;">
           <a-select
             size="default"
             labelInValue
@@ -23,7 +23,7 @@
         </a-col>
       </a-row>
       <a-row :gutter="[24,48]" type="flex" justify="start">
-        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 4 }"
+        <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 4 }"
                v-if="stores.length > 0"
                v-for="(store, index) in stores"
                :key="index">

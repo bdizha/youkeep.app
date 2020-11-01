@@ -57,7 +57,6 @@ const mutations = {
   },
   setProduct(state, product) {
     state.product = product;
-    window.scrollTo(0, 0);
   },
   setStore(state, store) {
     state.store = store;
@@ -263,8 +262,37 @@ const actions = {
       console.log(e);
     }
   },
-  onProduct({dispatch, commit}, payload) {
-    commit('setProduct', payload);
+  async onProduct({dispatch, commit, state}, params) {
+    dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
+
+    try {
+      let route = params.route;
+
+      await axios.post(route, params).then(({data}) => {
+
+        let product = data.product;
+        let category = data.category;
+        let store = data.store;
+        let categories = data.categories;
+
+        commit('setStore', store);
+        commit('setProduct', product);
+        commit('setCategories', categories);
+
+        console.log('setProduct', data);
+        commit('setCategory', category);
+
+        dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
+
+        setTimeout(() => {
+          dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
+        }, 600);
+      });
+
+    } catch (e) {
+      console.error('onProduct errors');
+      console.log(e);
+    }
   },
   onFilters({dispatch, commit}, payload) {
     commit('setFilters', payload)

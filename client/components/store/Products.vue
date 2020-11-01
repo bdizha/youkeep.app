@@ -2,7 +2,7 @@
   <a-row type="flex" justify="center">
     <a-col v-if="category" class="gutter-row r-p-24" :span="24">
       <a-row :gutter="[24,24]" type="flex" justify="center">
-        <a-col class="gutter-row" :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
+        <a-col :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
           <h3 class="r-heading r-same-height">
             {{ category.name }}
           </h3>
@@ -26,7 +26,7 @@
         </a-col>
       </a-row>
       <a-row :gutter="[24,24]" class="r-product-cards">
-        <a-col class="gutter-row" v-for="(product, index) in category.products" :key="index" :xs="{span: 24}"
+        <a-col v-for="(product, index) in category.products" :key="index" :xs="{span: 24}"
                :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}">
           <r-product-item :product="product"></r-product-item>
         </a-col>

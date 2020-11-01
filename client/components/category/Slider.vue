@@ -1,6 +1,8 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }">
       <a-row :gutter="[24,24]" v-if="hasCategories" class="r-slider">
         <a-col :span="24">
           <VueSlickCarousel v-bind="settings">
@@ -23,32 +25,34 @@
           </VueSlickCarousel>
         </a-col>
       </a-row>
-      <a-row v-if="!processes.isCategories && isEmpty" class="r-mv-24" type="flex"
+      <a-row v-if="!processes.isCategories && isEmpty" type="flex"
              justify="center" align="middle">
-        <a-col class="gutter-row r-bg-white" :xs="{ span: 24 }" :sm="{ span: 12 }"
-               :md="{ span: 12 }"
-               :lg="{ span: 12 }">
-          <a-row :gutter="[24,24]" class="r-mv-24" type="flex" justify="center"
-                 align="middle">
-            <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                   :md="{ span: 24 }"
-                   :lg="{ span: 24 }">
-              <h1 class="r-heading">
-                Everything your heart desires
-              </h1>
-            </a-col>
-            <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                   :md="{ span: 12 }"
-                   :lg="{ span: 12 }">
-              <a-button block
-                        size="large"
-                        type="secondary"
-                        class="r-btn-secondary">
-                <a-icon type="clock-circle"/>
-                Coming soon
-              </a-button>
-            </a-col>
-          </a-row>
+        <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }">
+          <a-card class="r-p-48 r-text-center">
+            <a-row :gutter="[24,24]" type="flex" justify="center"
+                   align="middle">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                     :md="{ span: 24 }"
+                     :lg="{ span: 24 }">
+                <h1 class="r-heading">
+                  Everything your heart desires
+                </h1>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 12 }"
+                     :md="{ span: 12 }"
+                     :lg="{ span: 12 }">
+                <a-button block
+                          size="large"
+                          type="secondary"
+                          class="r-btn-secondary">
+                  <a-icon type="clock-circle"/>
+                  Coming soon
+                </a-button>
+              </a-col>
+            </a-row>
+          </a-card>
         </a-col>
       </a-row>
     </a-col>

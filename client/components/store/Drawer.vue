@@ -2,7 +2,7 @@
   <r-drawer-template placement="right"
                      current="store">
     <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="center" align="middle">
-      <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
              :lg="{ span: 24 }">
         <r-store-window :has-actions="false" :store="store"></r-store-window>
         <a-button block
@@ -13,7 +13,7 @@
           <a-icon type="info-circle"/>
         </a-button>
       </a-col>
-      <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 24 }"
              :lg="{ span: 24 }">
         <p class="r-text-normal">

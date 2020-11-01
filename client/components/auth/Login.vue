@@ -43,7 +43,7 @@
       </a-form-item>
       <a-form-item>
         <a-row type="flex" justify="center">
-          <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 18 }">
+          <a-col :sm="{ span: 24 }" :lg="{ span: 18 }">
             <span class="r-inline-text">Don't have an account?</span>
             <a class="r-inline-text r-text-primary" v-on:click="onModal('register', $event)" href="/">
               Sign up

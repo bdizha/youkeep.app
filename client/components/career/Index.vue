@@ -3,7 +3,7 @@
         <a-row type="flex" justify="center" align="middle">
             <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48 r-mv-48">
                 <a-row type="flex" justify="space-around" align="middle">
-                    <a-col class="gutter-row" :span="24">
+                    <a-col :span="24">
                         <h1 class="r-heading r-text-secondary">
                             Current job openings at Shopple
                         </h1>
@@ -13,36 +13,36 @@
                     <a-col class="r-career r-text-left" v-for="(department, d) in departments" :key="d"
                            :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                         <a-row class="r-margin-top-24">
-                            <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
                                 <h3 class="r-heading r-text-capitalize r-text-secondary">{{ department.name }}</h3>
                             </a-col>
                         </a-row>
                         <a-row class="r-mv-12" v-for="(position, p) in department.positions" :key="p">
-                            <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                                 <a-card class="r-p-24">
                                     <a-row type="flex" justify="start" align="middle">
-                                        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                                                :lg="{ span: 24 }">
                                             <a-row>
-                                                <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                                                <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
                                                     <a :href="'/career/' + position.slug">
                                                         <h4 class="r-heading">{{ position.title }}</h4>
                                                     </a>
                                                 </a-col>
                                             </a-row>
                                             <a-row>
-                                                <a-col class="gutter-row" :xs="{ span: 14 }" :sm="{ span: 16 }"
+                                                <a-col :xs="{ span: 14 }" :sm="{ span: 16 }"
                                                        :lg="{ span: 18 }">
                                                     <a :href="'/career/' + position.slug">
                                                         <a-row>
-                                                            <a-col class="gutter-row" :xs="{ span: 24 }"
+                                                            <a-col :xs="{ span: 24 }"
                                                                    :sm="{ span: 12 }"
                                                                    :lg="{ span: 24 }">
                                                                 <h4 class="r-text-normal">{{ position.city.name
                                                                     }}
                                                                 </h4>
                                                             </a-col>
-                                                            <a-col class="gutter-row" :xs="{ span: 24 }"
+                                                            <a-col :xs="{ span: 24 }"
                                                                    :sm="{ span: 12 }"
                                                                    :lg="{ span: 24 }">
                                                                 <h4 class="r-text-primary r-text-capitalize">
@@ -78,7 +78,7 @@
                     </a-col>
                 </a-row>
                 <a-row v-if="hasData && departments.length == 0" type="flex" justify="center">
-                    <a-col class="gutter-row" :span="24">
+                    <a-col :span="24">
                         <a-empty
                                 image="/assets/icon_grey.svg"
                                 :imageStyle="{ height: '81px',}">

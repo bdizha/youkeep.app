@@ -87,8 +87,9 @@ class Category extends Model
     public function getBreadcrumbsAttribute()
     {
         $breadcrumbs = [];
-        return array_reverse($breadcrumbs);
         $breadcrumbs = $this->getBreadcrumbs($this, $breadcrumbs);
+
+        return $breadcrumbs;
     }
 
     /**
@@ -191,17 +192,15 @@ class Category extends Model
      */
     private function getBreadcrumbs($category, $breadcrumbs)
     {
-        if (!empty($category->category_id)) {
-            $breadcrumbs[] = [
-                'id' => $category->id,
-                'slug' => $category->slug,
-                'route' => $category->route,
-                'name' => $category->name,
-                'has_products' => $category->has_products,
-                'has_categories' => $category->has_categories,
-                'categories' => [],
-            ];
-        }
+        $breadcrumbs[] = [
+            'id' => $category->id,
+            'slug' => $category->slug,
+            'route' => $category->route,
+            'name' => $category->name,
+            'has_products' => $category->has_products,
+            'has_categories' => $category->has_categories,
+            'categories' => [],
+        ];
 
         if (empty($category->category)) {
             return $breadcrumbs;

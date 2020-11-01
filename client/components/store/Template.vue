@@ -10,12 +10,12 @@
                :sm="{ span: 24 }" :lg="{ span: 24 }">
           <a-row :gutter="[24,24]" class="r-mb-12" type="flex" justify="center"
                  align="middle">
-            <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 20 }" :lg="{ span: 20 }">
+            <a-col :xs="{ span: 24 }" :sm="{ span: 20 }" :lg="{ span: 20 }">
               <h3 class="r-heading">
                 {{ hasStore ? store.name : '' }}
               </h3>
             </a-col>
-            <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 4 }" :lg="{ span: 4 }"
+            <a-col :xs="{ span: 24 }" :sm="{ span: 4 }" :lg="{ span: 4 }"
                    style="text-align: right">
               <r-store-shop-now v-if="isStore" justify="end"></r-store-shop-now>
               <r-category-shop-by v-if="!isStore" :category="category" justify="end"></r-category-shop-by>

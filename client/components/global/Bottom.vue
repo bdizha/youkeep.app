@@ -1,7 +1,7 @@
 <template>
   <a-layout-header v-show="true" class="r-hide-lg r-layout-bottom">
     <a-row style="width: 100%;" type="flex" justify="center">
-      <a-col type="flex" class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
+      <a-col type="flex" :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 16 }"
              :lg="{ span: 12 }">
         <a-row type="flex" justify="center" align="middle">

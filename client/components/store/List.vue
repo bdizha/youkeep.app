@@ -1,8 +1,8 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-store-item-line" type="flex" justify="start">
-        <a-col class="gutter-row"
+        <a-col
                :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
                style="text-align: right;">
@@ -28,7 +28,7 @@
         </a-col>
       </a-row>
       <a-row v-if="hasStores && !processes.isTray" type="flex" justify="start">
-        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
                v-for="(store, index) in stores.data"
                :key="index">
@@ -37,20 +37,20 @@
             <r-store-item :store="store"></r-store-item>
           </nuxt-link>
         </a-col>
-        <a-col v-if="!hasStores" class="gutter-row" :span="24">
+        <a-col v-if="!hasStores" :span="24">
           <a-empty image="/assets/icon_grey.svg"
                    description="No stores were found! Please try other store categories."/>
         </a-col>
       </a-row>
       <r-spinner :is-absolute="true" v-if="processes.isRunning"></r-spinner>
-      <a-row class="r-mv-48" type="flex" justify="center">
-        <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-          <p class="r-store-text-light">
+      <a-row class="r-mb-48" type="flex" justify="center">
+        <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+          <div class="r-store-text-light">
             Shopple is an independent shopping service that is not necessarily affiliated with,
             endorsed or sponsored by the stores listed here but it enables you to get the deliveries
             you
             want.
-          </p>
+          </div>
         </a-col>
       </a-row>
     </a-col>

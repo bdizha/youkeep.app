@@ -8,7 +8,7 @@
       <r-category-slider :category="category"></r-category-slider>
       <r-product-flush :columns="3"></r-product-flush>
       <r-product-list :columns="columns"></r-product-list>
-      <r-category-list :columns="6" :limit="2"></r-category-list>
+      <r-category-list :columns="6"></r-category-list>
     </a-col>
   </a-row>
 </template>

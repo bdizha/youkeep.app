@@ -15,14 +15,10 @@ const routes = [
   {path: '/password/reset/:token', name: 'password.reset', component: page('auth/password/reset.vue')},
   {path: '/email/verify/:id', name: 'verification.verify', component: page('auth/verification/verify.vue')},
   {path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue')},
-  {
-    path: '/store/:store/category/:category',
-    name: 'store.category.show',
-    component: page('store/Category.vue')
-  },
-  {
-    path: '/store/:slug', name: 'store.show', component: page('store/Show.vue'),
-  },
+  {path: '/store/:store/category/:category', name: 'store.category.show', component: page('store/Category.vue')},
+  {path: '/store/:slug', name: 'store.show', component: page('store/Show.vue'),},
+  {path: '/category/:slug', name: 'category.show', component: page('store/Category.vue')},
+  {path: '/product/:slug', name: 'product.show', component: page('store/Product.vue'),},
   {path: '/shopper', name: 'shopper', component: page('shopper/Index.vue')},
   {path: '/shopper/paise', name: 'shopper-paise', component: page('shopper/Paise.vue')},
   {path: '/customer', name: 'customer', component: page('customer/Index.vue')},

@@ -1,7 +1,7 @@
 <template>
     <r-account>
         <a-row type="flex" justify="start" align="middle">
-            <a-col class="gutter-row" :xs="{ span: 24 }"
+            <a-col :xs="{ span: 24 }"
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
                 <a-card class="r-mb-24" title="ACCOUNT CREDIT" style="width: 100%;">
                     <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
@@ -43,7 +43,7 @@
             </a-col>
         </a-row>
         <a-row type="flex" justify="start" align="middle">
-            <a-col class="gutter-row" :xs="{ span: 24 }"
+            <a-col :xs="{ span: 24 }"
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
                 <a-card class="r-mb-24" title="ACCOUNT PROMOS" style="width: 100%;">
                     <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">

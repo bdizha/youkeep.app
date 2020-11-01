@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-category-menu" :gutter="[0, 12]" type="flex" justify="start">
-    <a-col class="gutter-row" :span="24">
+    <a-col :span="24">
       <r-category-menu-item v-for="(category, index) in categories"
                             :key="index"
                             :category="category"></r-category-menu-item>

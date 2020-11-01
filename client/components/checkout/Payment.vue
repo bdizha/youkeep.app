@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="24" v-if='cart.count > 0' type="flex"
          justify="center">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :lg="{ span: 24 }">
       <r-account-card-list :has-title="false"></r-account-card-list>
       <a-row class="r-mv-24" :gutter="24" type="flex" justify="end">
@@ -9,7 +9,7 @@
                :md="{ span: 18 }" :lg="{ span: 18 }">
           <r-account-card-add></r-account-card-add>
         </a-col>
-        <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
+        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
                :md="{ span: 6 }" :lg="{ span: 6 }">
           <a-button block type="secondary" html-type="button"
                     class="r-btn-secondary">

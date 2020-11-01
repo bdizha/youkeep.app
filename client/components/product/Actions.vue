@@ -1,14 +1,14 @@
 <template>
   <a-row class="r-pt-12" type="flex" justify="center" align="middle">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-product-actions">
-        <a-col class="gutter-row r-btn--minus r-text-left" :xs="{ span: 7 }" :sm="{ span: 6 }"
+        <a-col class="r-btn--minus r-text-left" :xs="{ span: 7 }" :sm="{ span: 6 }"
                :lg="{ span: 6 }">
           <div class="r-btn-icon" @click="onMinus">
             <a-icon class="r-icon-empty" type="minus"/>
           </div>
         </a-col>
-        <a-col class="gutter-row" :xs="{ span: 10 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
+        <a-col :xs="{ span: 10 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
           <div class="r-action-height">
             <div class="r-product-cart" :class="{'r-product-cart__active': quantity > 0}">
               <div class="r-shopping-cart"></div>
@@ -16,7 +16,7 @@
             </div>
           </div>
         </a-col>
-        <a-col class="gutter-row r-btn--plus r-text-right" :xs="{ span: 7 }" :sm="{ span: 6 }"
+        <a-col class="r-btn--plus r-text-right" :xs="{ span: 7 }" :sm="{ span: 6 }"
                :lg="{ span: 6 }">
           <div class="r-btn-icon" @click="onPlus">
             <a-icon class="r-icon-empty" type="plus"/>
@@ -24,9 +24,9 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col v-if="false" class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col v-if="false" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row>
-        <a-col class="gutter-row" :span="24">
+        <a-col :span="24">
           <a-button class="r-btn-secondary" @click="onPlus" block type="secondary"
                     :size=size>
             <a-icon type="shopping"/>

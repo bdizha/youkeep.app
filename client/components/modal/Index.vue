@@ -6,7 +6,7 @@
            v-model="modal.isVisible">
     <template slot="footer">
       <a-row type="flex" justify="center" align="middle">
-        <a-col class="gutter-row" :span="24">
+        <a-col :span="24">
           <h4 class="r-heading r-text-secondary r-text-center">
             <a-icon type="gift"/>
             <span>FREE Deliveries For 1 Week with Shopple <br></span>

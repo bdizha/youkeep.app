@@ -4,7 +4,7 @@
       <a-row v-if="hasCategories" type="flex" justify="center">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: size }">
           <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="start">
-            <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
                    :lg="{ span: 20 }">
               <h3 class="r-heading r-same-height">
                 It's shopping time
@@ -16,7 +16,7 @@
             </a-col>
           </a-row>
           <a-row :class="{'r-is-empty': processes.isCategories}" class="r-store-items">
-            <a-col class="gutter-row" :span="24">
+            <a-col :span="24">
               <a-carousel :infinite="false"
                           :slides-to-show="3"
                           :arrows="true"

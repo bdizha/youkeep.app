@@ -28,7 +28,7 @@
                 </a-input>
             </a-form-item>
             <a-row class="r-mt-24" :gutter="12" type="flex" justify="end">
-                <a-col class="gutter-row" :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
+                <a-col :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
                     <a-form-item :wrapper-col="{ span: 24 }">
                         <a-button block @click="onReturn"
                                  size="default"
@@ -39,7 +39,7 @@
                         </a-button>
                     </a-form-item>
                 </a-col>
-                <a-col class="gutter-row" :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
+                <a-col :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
                     <a-form-item :wrapper-col="{ span: 24 }">
                         <a-button block @click="onPost"
                                  size="default"

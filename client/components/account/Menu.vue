@@ -1,6 +1,6 @@
 <template>
   <a-row :gutter="16" type="flex" justify="start">
-    <a-col class="gutter-row" :span="24">
+    <a-col :span="24">
       <a-list :data-source="links">
         <a-list-item class="r-list-item" slot="renderItem" slot-scope="item, index">
           <nuxt-link v-if="item.link" class="r-text-link" :to="item.link">

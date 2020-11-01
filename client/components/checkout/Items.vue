@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="24" v-if='cart.count > 0' type="flex"
          justify="center">
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :lg="{ span: 24 }">
       <a-table bordered
                :pagination="false"
