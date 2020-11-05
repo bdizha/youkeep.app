@@ -1,4 +1,8 @@
 {
+  "name": "shopple",
+  "version": "1.0.0",
+  "description": "It's shopping time!",
+  "author": "Batanayi Matuku",
   "private": true,
   "scripts": {
     "dev": "nuxt dev -c client/nuxt.config.js",

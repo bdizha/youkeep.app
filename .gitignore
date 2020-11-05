@@ -13,6 +13,7 @@ yarn-error.log
 *.sql
 storage/
 .nuxt/
-dist
+dist/*
+!dist/index.html
 public/_nuxt
 echo dist
