@@ -5,6 +5,9 @@
   "author": "Batanayi Matuku",
   "private": true,
   "scripts": {
+    "start": "nuxt start -c client/nuxt.config.js",
+    "generate": "nuxt generate -c client/nuxt.config.js",
+    "lint": "eslint --fix --ext .js,.vue client/",
     "dev": "nuxt dev -c client/nuxt.config.js",
     "build": "nuxt generate -c client/nuxt.config.js"
   },
