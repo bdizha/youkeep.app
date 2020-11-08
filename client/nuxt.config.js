@@ -76,8 +76,11 @@ module.exports = {
     }
   },
 
+  generate: {
+    subFolders: false
+  },
+
   hooks: {
-    generate: {
-    }
+    generate: {}
   }
 }

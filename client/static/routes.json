@@ -5,6 +5,10 @@
       "errorType": "NotFound",
       "serve": "/200.html",
       "statusCode": 200
+    },
+    {
+      "serve": "/index.html",
+      "statusCode": 200
     }
   ]
 }
