@@ -14,6 +14,5 @@ yarn-error.log
 storage/
 .nuxt/
 dist/*
-!dist/index.html
 public/_nuxt
 echo dist
