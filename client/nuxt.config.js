@@ -29,6 +29,10 @@ module.exports = {
     ]
   },
 
+  generate: {
+    fallback: 'index.html'
+  },
+
   loading: {
     color: '#f50a2b',
     height: '3px'

@@ -15,4 +15,3 @@ storage/
 .nuxt/
 !dist/index.html
 public/_nuxt
-echo dist
