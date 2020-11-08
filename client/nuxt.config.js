@@ -74,8 +74,4 @@ module.exports = {
       less: {javascriptEnabled: true}
     }
   },
-
-  generate: {
-    subFolders: false
-  },
 }
