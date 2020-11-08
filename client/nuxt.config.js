@@ -1,6 +1,4 @@
 require('dotenv').config()
-const {join} = require('path')
-const {copySync, removeSync} = require('fs-extra')
 
 module.exports = {
   target: 'static', // default is 'server'
