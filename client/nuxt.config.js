@@ -6,7 +6,6 @@ module.exports = {
   target: 'static', // default is 'server'
 
   // mode: 'spa', // Comment this for SSR
-
   srcDir: __dirname,
 
   env: {
