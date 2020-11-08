@@ -5,8 +5,7 @@
   "author": "Batanayi Matuku",
   "private": true,
   "scripts": {
-//    "dev": "nuxt dev -c client/nuxt.config.js",
-//    "build": "nuxt generate -c client/nuxt.config.js"
+    "build": "nuxt dev -c client/nuxt.config.js"
   },
   "dependencies": {
     "@nuxtjs/router": "^1.5.0",
