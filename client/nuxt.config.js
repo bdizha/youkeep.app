@@ -76,7 +76,6 @@ module.exports = {
   },
 
   generate: {
-    routes: ['/', 'index'],
     subFolders: false
   },
 }
