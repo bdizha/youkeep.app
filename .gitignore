@@ -16,3 +16,4 @@ storage/
 public/_nuxt
 dist
 dist/*
+local.settings*.json
