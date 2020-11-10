@@ -7,16 +7,16 @@ module.exports = {
   srcDir: __dirname,
 
   env: {
-    apiUrl: process.env.API_URL || process.env.APP_URL + '/api',
-    appUrl: process.env.APP_URL,
-    appName: process.env.APP_NAME || 'Shopple',
-    appLocale: process.env.APP_LOCALE || 'en',
+    apiUrl: process.env.VUE_APP_API_URL || process.env.VUE_APP_URL + '/api',
+    appUrl: process.env.VUE_APP_URL,
+    appName: process.env.VUE_APP_NAME || 'Shopple',
+    appLocale: process.env.VUE_APP_LOCALE || 'en',
     githubAuth: !!process.env.GITHUB_CLIENT_ID
   },
 
   head: {
-    title: process.env.APP_NAME,
-    titleTemplate: '%s - ' + process.env.APP_NAME,
+    title: process.env.VUE_APP_NAME,
+    titleTemplate: '%s - ' + process.env.VUE_APP_NAME,
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
