@@ -7,7 +7,7 @@ module.exports = {
   srcDir: __dirname,
 
   env: {
-    apiUrl: 'https://shoppleapi.azurewebsites.net/api',
+    apiUrl: process.env.VUE_APP_API_URL || process.env.VUE_APP_URL + '/api',
     appUrl: process.env.VUE_APP_URL,
     appName: process.env.VUE_APP_NAME || 'Shopple',
     appLocale: process.env.VUE_APP_LOCALE || 'en',
