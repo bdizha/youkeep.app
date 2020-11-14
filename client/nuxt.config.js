@@ -7,16 +7,16 @@ module.exports = {
   srcDir: __dirname,
 
   env: {
-    apiUrl: process.env.VUE_APP_API_URL || process.env.VUE_APP_URL + '/api',
+    apiUrl: 'shoppleapi.azurewebsites.net/api',
     appUrl: process.env.VUE_APP_URL,
-    appName: process.env.VUE_APP_NAME || 'Shopple',
+    appName: "Shopple - It's shopping time!" || 'Shopple',
     appLocale: process.env.VUE_APP_LOCALE || 'en',
     githubAuth: !!process.env.GITHUB_CLIENT_ID
   },
 
   head: {
-    title: process.env.VUE_APP_NAME,
-    titleTemplate: '%s - ' + process.env.VUE_APP_NAME,
+    title: "Shopple - It's shopping time!",
+    titleTemplate: '%s - ' + "Shopple - It's shopping time!",
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
