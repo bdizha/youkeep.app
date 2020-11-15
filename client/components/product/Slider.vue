@@ -79,8 +79,8 @@ export default {
     this.hasData = false;
     this.isProcessing = true;
 
-    if (this.category.products.length > 0) {
-      this.products = this.category.products;
+    if (this.category.products.data != undefined) {
+      this.products = this.category.products.data;
       return;
     }
 
