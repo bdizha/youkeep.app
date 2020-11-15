@@ -6,9 +6,8 @@
                     collapsible>
       <r-category-menu></r-category-menu>
     </a-layout-sider>
-    <a-layout-content class="r-layout-content__store" :class="{'r-has-data': !processes['isFixed']}">
-      <nuxt/>
-      <r-spinner process="isFixed" :is-absolute="false"></r-spinner>
+    <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
+      <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
     </a-layout-content>
   </a-layout>
 </template>

@@ -31,7 +31,6 @@ export default {
   },
   data() {
     return {
-
       settings: {
         "slidesToShow": this.columns,
         "slidesToScroll": 1,
