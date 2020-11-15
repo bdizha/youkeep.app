@@ -93,7 +93,7 @@ import {mapGetters} from "vuex";
 export default {
   name: 'r-subscribe',
   props: {
-    size: {type: String, required: false, default: 24}
+    size: {type: Number, required: false, default: 24}
   },
   data() {
     return {

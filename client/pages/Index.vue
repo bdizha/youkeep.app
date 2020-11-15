@@ -75,7 +75,7 @@ export default {
       category_id: 1,
       limit: 12,
       order_by: 'randomized_at',
-      with: ['photos', 'breadcrumbs']
+      with: ['photos', 'breadcrumbs', 'products']
     };
 
     await store.dispatch('shop/onCategories', payload);

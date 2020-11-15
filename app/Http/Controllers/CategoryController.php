@@ -84,7 +84,7 @@ class CategoryController extends Controller
                 $query->with(array_intersect($this->with, $this->relations));
             }
 
-            if ($type !== 1) {
+            if ($type == Category::TYPE_CATALOG) {
                 $query->where('has_products', true);
             }
 

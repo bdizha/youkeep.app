@@ -75,49 +75,42 @@ export default {
       }
     }
   },
+  async fetch() {
+    this.hasData = false;
+    this.isProcessing = true;
+
+    if (this.category.products.length > 0) {
+      this.products = this.category.products;
+      return;
+    }
+
+    let params = {
+      category_id: this.category.id,
+      limit: 12,
+      filters: this.filters
+    };
+
+    let path = `/products`;
+    let $this = this;
+
+    console.log('product path: ', path);
+
+    await axios.post(path, params)
+      .then(({data}) => {
+        $this.products = data.data;
+        $this.hasData = true;
+
+        setTimeout(function () {
+          $this.isProcessing = false;
+        }, 600);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  },
   computed: mapGetters({
     processes: "base/processes",
   }),
-  created() {
-    this.payload();
-  },
-  methods: {
-    payload() {
-      console.log('do you have category: ', this.category.name);
-      console.log('do you have products: ', this.category.products);
-
-      if (this.category.products.length > 0) {
-        this.products = this.category.products;
-        return;
-      }
-
-      this.hasData = false;
-      this.isProcessing = true;
-
-      let params = {
-        category_id: this.category.id,
-        limit: 9,
-        filters: this.filters
-      };
-
-      let path = `/products`;
-      let $this = this;
-
-      console.log('do you have path: ', path);
-
-      axios.post(path, params)
-        .then(({data}) => {
-          $this.products = data.data;
-          $this.hasData = true;
-
-          setTimeout(function () {
-            $this.isProcessing = false;
-          }, 600);
-        })
-        .catch(e => {
-          console.log(e);
-        });
-    }
-  }
+  methods: {}
 };
 </script>
