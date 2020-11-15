@@ -30,16 +30,13 @@ class ProductMTGSeeder extends DatabaseSeeder
 
             echo ">>>>>> Fetching store > categories: " . $store->name . "\n";
 
-            $this->getCategories($this->domain);
+            $this->getCategories($store->url);
 
             $this->categories = Category::where('store_id', $this->storeId)
-//                ->where('slug', 'like', 'duvet-covers')
                 ->get();
 
             echo ">>>>>> Decoding store > categories: " . $store->name . "\n";
             $this->decodeCategories($this->storeId);
-
-//            die('done');
 
             // Get all the category products
             foreach ($this->categories as $category) {
