@@ -115,10 +115,9 @@ const actions = {
       dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
 
       let route = params.route;
-      console.log('route: ', route);
 
+      params.type = 1;
       params.with = ['categories'];
-
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
       await axios.post(route, params).then(({data}) => {

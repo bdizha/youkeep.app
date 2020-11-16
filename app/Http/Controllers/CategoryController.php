@@ -33,7 +33,7 @@ class CategoryController extends Controller
         $category = null;
 
         $this->limit = $request->get('limit', 4);
-        $this->level = $request->get('level', null);
+        $this->level = $request->get('level', 1);
         $orderBy = $request->get('order_by', 'created_at');
 
         $this->with = $request->get('with', []);
@@ -44,7 +44,7 @@ class CategoryController extends Controller
         $storeId = $request->get('store_id', null);
         $storeSlug = $request->get('store', null);
 
-        $key = $this->_setCacheKey($request);
+        $key = $this->_setCacheKey($request) . time();
 
         if (Cache::has($key)) {
             $response = Cache::get($key, []);
@@ -122,7 +122,7 @@ class CategoryController extends Controller
         $this->limit = $request->get('limit', 4);
         $this->with = $request->get('with', []);
 
-        $key = $this->_setCacheKey($request);
+        $key = $this->_setCacheKey($request) . time();
 
         if (Cache::has($key)) {
             $response = Cache::get($key, []);

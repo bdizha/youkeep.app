@@ -128,8 +128,6 @@ class DatabaseSeeder extends Seeder
         foreach ($this->categories as $key => $category) {
             $this->parentCategory = null;
 
-//            dd($category);
-
             echo "{$key} >>>\n";
 
             $url = $category->url;

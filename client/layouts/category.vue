@@ -7,7 +7,7 @@
       <r-category-menu></r-category-menu>
     </a-layout-sider>
     <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
-      <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
+      <nuxt />
     </a-layout-content>
   </a-layout>
 </template>

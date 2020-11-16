@@ -25,7 +25,6 @@
 <script>
 import axios from 'axios'
 import {mapGetters} from "vuex";
-
 export default {
   name: 'r-product-slider',
   components: {},
@@ -78,11 +77,6 @@ export default {
   async fetch() {
     this.hasData = false;
     this.isProcessing = true;
-
-    if (this.category.products.data != undefined) {
-      this.products = this.category.products.data;
-      return;
-    }
 
     let params = {
       category_id: this.category.id,

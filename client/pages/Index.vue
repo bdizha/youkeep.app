@@ -72,10 +72,11 @@ export default {
   props: {},
   async asyncData({store}) {
     let payload = {
+      type: 2,
       category_id: 1,
       limit: 12,
       order_by: 'randomized_at',
-      with: ['photos', 'breadcrumbs', 'products']
+      with: ['photos', 'breadcrumbs']
     };
 
     await store.dispatch('shop/onCategories', payload);

@@ -23,16 +23,13 @@ class CategoryUpdateSeeder extends DatabaseSeeder
 
             $this->categories = Category::orderBy('created_at', 'DESC')
                 ->where('store_id', $this->storeId)
-//                ->whereIn('id', [3732])
                 ->get();
-//        dd($categories);
 
-            $this->decodeCategories($this->storeId);
+//            $this->decodeCategories($this->storeId);
 
             foreach ($this->categories as $category) {
                 $category->name = trim($category->name);
                 $category->save();
-
 
                 $this->setFilters($category);
                 $this->setFilters($category, true);
@@ -46,37 +43,37 @@ class CategoryUpdateSeeder extends DatabaseSeeder
 
         $this->setParentCategory($category);
 
-        $hasItemField = 'has_categories';
-        $query = Category::orderBy('created_at', 'DESC')
-            ->with('products')
-            ->whereIn('store_id', $this->storesIds)
-            ->where('is_active', true);
+        if (empty($hasProducts)) {
+            $hasItemField = 'has_categories';
+            $query = Category::orderBy('created_at', 'DESC')
+                ->whereIn('store_id', $this->storesIds)
+                ->where('is_active', true);
 
-        if (!empty($category->id) && !$hasProducts) {
-            $query->where('category_id', $category->id);
-        }
+            if (!empty($category->id) && empty($hasProducts)) {
+                $query->where('category_id', $category->id);
+            }
 
-        $query->has('products', '>', 1);
-
-        if ($hasProducts) {
-            $query->where('id', $category->id);
+            $items = $query->get();
+            $hasItems = $items->count() > ($hasProducts ? 0 : 1);
+        } else {
             $hasItemField = 'has_products';
-        }
+            $hasItems = count($category->products) > 0;
 
-        $items = $query->get();
-        $hasItems = $items->count() > ($hasProducts ? 0 : 1);
+            if ($hasItems) {
+                echo "Category has products: {$category->slug} >>>>> \n";
+            }
+        }
 
         if (!empty($category->id)) {
             $categoryValues = [
                 $hasItemField => $hasItems,
-                'name' => ucwords(strtolower($category->name))
+                'name' => ucwords(strtolower($category->name)),
+                'type' => Category::TYPE_CATALOG
             ];
 
             $categoryAttributes = [
                 'id' => $category->id
             ];
-
-//            dd([$categoryValues, $category]);
 
             Category::updateOrCreate($categoryAttributes, $categoryValues);
         }
@@ -105,7 +102,6 @@ class CategoryUpdateSeeder extends DatabaseSeeder
         }
 
         $categories = Category::orderBy('created_at', 'DESC')
-            ->has('products', '>', 1)
             ->where('level', '=', 1)
             ->where('id', '!=', 1)
             ->where('is_active', true)

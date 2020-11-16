@@ -99,7 +99,7 @@ class Category extends Model
     {
         $this->products = [];
 
-        if ($this->type !== self::TYPE_STORE) {
+        if ($this->type == self::TYPE_CATALOG) {
             $this->products = Product::whereHas('categories', function ($query) {
                 $query->where('category_products.category_id', $this->id);
             })

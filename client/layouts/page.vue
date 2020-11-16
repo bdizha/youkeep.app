@@ -4,7 +4,7 @@
     <a-layout-content :class="{'r-has-data': true}">
       <a-layout>
         <a-layout-content>
-          <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
+          <nuxt />
         </a-layout-content>
       </a-layout>
       <r-footer></r-footer>
