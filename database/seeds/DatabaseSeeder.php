@@ -149,7 +149,7 @@ class DatabaseSeeder extends Seeder
 
                 echo "Updated category: " . $category->name . str_pad('*', $category->level * 2, '=', STR_PAD_LEFT) . "\n";
 
-            } elseif (empty($this->parentCategory->id)) {
+            } elseif (empty($this->parentCategory->id) && $category->level != 1) {
                 $values = [
                     'level' => 1,
                     'category_id' => null,

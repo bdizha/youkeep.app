@@ -16,6 +16,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
     public function run()
     {
         $this->setHighlights();
+
         $this->setCategoryProducts();
 
         foreach ($this->storesIds as $storesId) {
@@ -23,6 +24,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
 
             $this->categories = Category::orderBy('created_at', 'DESC')
                 ->where('store_id', $this->storeId)
+                ->where('id', $this->storeId)
                 ->get();
 
             $this->decodeCategories($this->storeId);
