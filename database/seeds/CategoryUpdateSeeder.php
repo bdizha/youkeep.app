@@ -68,6 +68,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
 
         if (!empty($category->id)) {
             $categoryValues = [
+                'product_count' => count($category->products),
                 $hasItemField => $hasItems,
                 'name' => ucwords(strtolower($category->name)),
                 'type' => Category::TYPE_CATALOG
