@@ -185,7 +185,8 @@ class ProductMTGSeeder extends DatabaseSeeder
             'order' => 1,
             'description' => $categoryDescription,
             'category_id' => null,
-            'store_id' => $this->storeId
+            'store_id' => $this->storeId,
+            'type' => Category::TYPE_CATALOG
         ];
 
         $category = \App\Category::updateOrCreate($attributes, $values);

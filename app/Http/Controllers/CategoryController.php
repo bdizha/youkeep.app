@@ -39,7 +39,7 @@ class CategoryController extends Controller
         $this->with = $request->get('with', []);
 
         $type = $request->get('type', 2);
-        $slug = $request->get('category', null);
+        $slug = $request->get('category', dsfnull);
         $categoryId = $request->get('category_id', null);
         $storeId = $request->get('store_id', null);
         $storeSlug = $request->get('store', null);

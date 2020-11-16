@@ -10,6 +10,7 @@ class DatabaseSeeder extends Seeder
     protected $storeId = null;
     protected $categories = [];
     protected $parentCategory = null;
+
     /**
      * Run the database seeds.
      *
@@ -79,7 +80,6 @@ class DatabaseSeeder extends Seeder
         $this->parentCategory = null;
         $urlParts = explode('/', $category->url);
 
-
         $urlParts = array_slice($urlParts, 4, count($urlParts) - 7);
 
 //        dd([$urlParts, $category]);
@@ -113,9 +113,6 @@ class DatabaseSeeder extends Seeder
                 ];
 
                 echo "Updated parent {$this->parentCategory->name} category for {$category->slug} >>>>> \n";
-
-//                dd([$categoryValues, $category]);
-
                 Category::updateOrCreate($categoryAttributes, $categoryValues);
             }
         }
@@ -144,14 +141,14 @@ class DatabaseSeeder extends Seeder
                 $values = [
                     'level' => count($urlParts) + 1,
                     'category_id' => $this->parentCategory->id,
-                    'store_id' => $storeId
+                    'store_id' => $storeId,
+                    'type' => Category::TYPE_CATALOG
                 ];
 
                 $category = \App\Category::updateOrCreate($attributes, $values);
 
                 echo "Updated category: " . $category->name . str_pad('*', $category->level * 2, '=', STR_PAD_LEFT) . "\n";
 
-//                dd($this->parentCategory);
             } elseif (empty($this->parentCategory->id)) {
                 $values = [
                     'level' => 1,

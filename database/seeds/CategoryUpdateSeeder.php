@@ -25,7 +25,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
                 ->where('store_id', $this->storeId)
                 ->get();
 
-//            $this->decodeCategories($this->storeId);
+            $this->decodeCategories($this->storeId);
 
             foreach ($this->categories as $category) {
                 $category->name = trim($category->name);
