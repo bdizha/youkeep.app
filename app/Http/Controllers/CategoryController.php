@@ -103,7 +103,7 @@ class CategoryController extends Controller
             $response['categories'] = $categories;
             $response['category'] = $category;
 
-            Cache::put($key, $response, now()->addMinutes(1200));
+            Cache::put($key, $response, now()->addMinutes(15));
         }
 
         return response()->json($response, 200);
@@ -149,7 +149,7 @@ class CategoryController extends Controller
             $category['categories'] = $categories;
             $response['category'] = $category;
 
-            Cache::put($key, $response, now()->addMinutes(1200));
+            Cache::put($key, $response, now()->addMinutes(15));
         }
 
         return response()->json($response, 200);
@@ -189,7 +189,7 @@ class CategoryController extends Controller
 
             $response['stores'] = $this->_pruneRelations($this->items);
 
-            Cache::put($key, $response, now()->addMinutes(1200));
+            Cache::put($key, $response, now()->addMinutes(15));
         }
 
         return response()->json($response, 200);
