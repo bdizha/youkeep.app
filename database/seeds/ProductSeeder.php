@@ -58,9 +58,10 @@ class ProductSeeder extends Seeder
         $totalPurges = 0;
         foreach ($products as $product) {
             $photos = ProductPhoto::where('product_id', $product->id)
+                ->take(1)
                 ->get();
 
-            if (empty($photos)) {
+            if ($photos->count() == 0) {
                 \App\CategoryProduct::where('product_id', $product->id)->delete();
                 \App\ProductPhoto::where('product_id', $product->id)->delete();
                 \App\ProductVariant::where('product_id', $product->id)->delete();

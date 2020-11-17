@@ -21,6 +21,8 @@ class ProductMTGSeeder extends DatabaseSeeder
      */
     public function run()
     {
+        $this->storesIds = array_rand($this->storesIds, 2);
+
         $this->stores = Store::whereIn('id', $this->storesIds)
             ->get();
 

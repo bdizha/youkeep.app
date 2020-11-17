@@ -5,7 +5,13 @@
            :lg="{ span: 24 }">
       <r-category-actions></r-category-actions>
       <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
-      <r-category-slider :category="category"></r-category-slider>
+      <a-row type="flex" justify="start" align="middle">
+        <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }">
+          <r-category-slider :category="category"></r-category-slider>
+        </a-col>
+      </a-row>
       <r-product-flush :columns="3"></r-product-flush>
       <r-product-list :columns="columns"></r-product-list>
       <r-category-list :columns="6"></r-category-list>
