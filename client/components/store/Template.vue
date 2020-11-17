@@ -1,11 +1,11 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
-    <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
+    <a-col class="r-store-page" :xs="{ span: 24 }"
            :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-category-arrows v-if="hasCategories"></r-category-arrows>
       <r-store-arrows v-if="!hasCategories"></r-store-arrows>
       <a-row class="r-mt-24" type="flex" justify="center" align="middle">
-        <a-col class="gutter-row r-ph-24"
+        <a-col class="r-ph-24"
                :xs="{ span: 24 }"
                :sm="{ span: 24 }" :lg="{ span: 24 }">
           <a-row :gutter="[24,24]" class="r-mb-12" type="flex" justify="center"

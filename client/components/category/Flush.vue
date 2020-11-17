@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="gutter-row r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row v-if="hasCategories" type="flex" justify="center">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: size }">
           <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="start">
@@ -10,7 +10,7 @@
                 It's shopping time
               </h3>
             </a-col>
-            <a-col class="gutter-row r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
+            <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
                    :lg="{ span: 4 }">
               <r-category-shop-now :category="flush.category" justify="end"></r-category-shop-now>
             </a-col>

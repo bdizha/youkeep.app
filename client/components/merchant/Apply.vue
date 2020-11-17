@@ -8,7 +8,7 @@
               :form="formApply">
         <a-form-item>
           <a-row class="r-mt-48" type="flex" justify="center">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+            <a-col class="r-text-left" :xs="{ span: 24 }">
               <h2 class="r-heading">
                 Shopple merchant application
               </h2>
@@ -19,7 +19,7 @@
           </a-row>
         </a-form-item>
         <a-row :gutter="24" type="flex" justify="start">
-          <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item
               label="Full name">
@@ -31,7 +31,7 @@
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item
               label="Role title">
@@ -43,7 +43,7 @@
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item
               label="Phone number">
@@ -55,7 +55,7 @@
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item
               label="Business email">
@@ -67,7 +67,7 @@
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item
               label="Business website">
@@ -79,7 +79,7 @@
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item
               label="Platform">
@@ -97,7 +97,7 @@
               </a-select>
             </a-form-item>
           </a-col>
-          <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item
               label="Business industry">
@@ -115,7 +115,7 @@
               </a-select>
             </a-form-item>
           </a-col>
-          <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item
               label="Business website">
@@ -127,7 +127,7 @@
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item
               label="Average order value">
@@ -139,7 +139,7 @@
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item
               label="Business annual sales">
@@ -169,11 +169,11 @@
         </a-form-item>
         <a-form-item class="r-mt-48">
           <a-row :gutter="24" type="flex" justify="center">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+            <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                    :md="{ span: 12 }"
                    :lg="{ span: 12 }">
             </a-col>
-            <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+            <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                    :md="{ span: 12 }"
                    :lg="{ span: 12 }">
               <a-button block @click="onApply" :size="'large'" type="secondary"

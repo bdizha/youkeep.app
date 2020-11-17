@@ -7,7 +7,7 @@
             {{ title ? title : 'How it works?' }}
           </h2>
         </a-col>
-        <a-col class="gutter-row r-text-right" :xs="{ span: 4 }" :sm="{ span: 4 }" :md="{ span: 4 }"
+        <a-col class="r-text-right" :xs="{ span: 4 }" :sm="{ span: 4 }" :md="{ span: 4 }"
                :lg="{ span: 4 }">
           <nuxt-link v-show="hasMore" to="/hiw">
             <a-button class="r-hide-sm r-btn-bordered-primary"

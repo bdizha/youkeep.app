@@ -6,7 +6,7 @@
     <r-notice  process="isSuccess"></r-notice>
     <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
     <a-row v-show="hasForm" type="flex" justify="center">
-      <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+      <a-col class="r-text-left" :xs="{ span: 24 }">
         <h3 class="r-heading">
           {{ hasAddress ? 'Edit' : 'Add' }} an address
         </h3>
@@ -51,14 +51,14 @@
         </a-col>
       </a-row>
       <a-row class="r-mt-24" type="flex" justify="center" align="middle">
-        <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 12 }"
+        <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 12 }"
                :md="{ span: 12 }"
                :lg="{ span: 12 }">
           <div class="r-text-normal r-same-height">
             Set as default
           </div>
         </a-col>
-        <a-col class="gutter-row r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }"
+        <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }"
                :md="{ span: 12 }"
                :lg="{ span: 12 }">
           <a-switch v-model="isDefault" size="small" :default-checked="isDefault"/>

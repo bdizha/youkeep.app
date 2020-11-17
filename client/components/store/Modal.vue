@@ -5,7 +5,7 @@
                       current="store"
                       style="position: relative;">
         <a-row type="flex" justify="center">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+            <a-col class="r-text-left" :xs="{ span: 24 }">
                 <h2 class="r-heading">
                     Shop at your favourite store
                 </h2>

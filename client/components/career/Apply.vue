@@ -69,7 +69,7 @@
                                         :form="formApply">
                                     <a-form-item>
                                         <a-row type="flex" justify="center">
-                                            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+                                            <a-col class="r-text-left" :xs="{ span: 24 }">
                                                 <h2 class="r-heading">
                                                     Submit your application
                                                 </h2>
@@ -90,7 +90,7 @@
                                         </a-upload>
                                     </a-form-item>
                                     <a-row :gutter="24" type="flex" justify="start">
-                                        <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                        <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                                :md="{ span: 12 }"
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Full name">
@@ -101,7 +101,7 @@
                                                 </a-input>
                                             </a-form-item>
                                         </a-col>
-                                        <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                        <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                                :md="{ span: 12 }"
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Your mobile">
@@ -112,7 +112,7 @@
                                                 </a-input>
                                             </a-form-item>
                                         </a-col>
-                                        <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                        <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                                :md="{ span: 12 }"
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Email address">
@@ -123,7 +123,7 @@
                                                 </a-input>
                                             </a-form-item>
                                         </a-col>
-                                        <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                        <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                                :md="{ span: 12 }"
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Current company">
@@ -134,7 +134,7 @@
                                                 </a-input>
                                             </a-form-item>
                                         </a-col>
-                                        <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                        <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                                :md="{ span: 12 }"
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Linkedin URL">
@@ -145,7 +145,7 @@
                                                 </a-input>
                                             </a-form-item>
                                         </a-col>
-                                        <a-col class="gutter-row r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                        <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                                :md="{ span: 12 }"
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Other URL">
@@ -166,12 +166,12 @@
                                     </a-form-item>
                                     <a-form-item class="r-margin-top-48">
                                         <a-row :gutter="24" type="flex" justify="center">
-                                            <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
+                                            <a-col class="r-text-left" :xs="{ span: 12 }"
                                                    :sm="{ span: 12 }"
                                                    :md="{ span: 12 }"
                                                    :lg="{ span: 12 }">
                                             </a-col>
-                                            <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
+                                            <a-col class="r-text-left" :xs="{ span: 12 }"
                                                    :sm="{ span: 12 }"
                                                    :md="{ span: 12 }"
                                                    :lg="{ span: 12 }">

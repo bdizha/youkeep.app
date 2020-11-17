@@ -124,7 +124,7 @@
     </a-row>
     <r-steps :has-wave="false" :has-title="true" heading="Shopple shopping experience"></r-steps>
     <a-row class="r-text-center" type="flex" justify="center">
-      <a-col class="gutter-row r-padding-48" :xs="{ span: 24 }" :md="{ span: 24 }"
+      <a-col class="r-padding-48" :xs="{ span: 24 }" :md="{ span: 24 }"
              :lg="{ span: 24 }">
         <a-row type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-padding-vertical-48">

@@ -1,6 +1,6 @@
 <template>
   <a-row>
-    <a-col class="gutter-row r-pt-12" :span="24">
+    <a-col class="r-pt-12" :span="24">
       <a-row type="flex" justify="start">
         <a-col :style="'min-height: ' + isShowing ? '36px;': '72px;'" :span="24">
           <div class="r-text-normal r-product-text">

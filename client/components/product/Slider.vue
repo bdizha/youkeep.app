@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-slider" type="flex" justify="start" style="margin-bottom: 24px;">
-    <a-col class="gutter-row r-spin-holder" :span="24">
+    <a-col class="r-spin-holder" :span="24">
       <VueSlickCarousel
         v-bind="settings"
         v-if="products.length > 0">

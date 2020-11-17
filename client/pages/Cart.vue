@@ -55,7 +55,7 @@
                         </a-col>
                     </a-row>
                     <a-row v-if='!hasItems' type="flex" justify="middle">
-                        <a-col class="gutter-row r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                        <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                :lg="{ span: 18 }">
                             <a-empty image="/images/Shopple/icon_black_light.svg"
                                      :image-style="{
@@ -75,14 +75,14 @@
                         </a-col>
                     </a-row>
                     <a-row :gutter="24" class="r-cart-bottom-actions" v-if='hasItems' type="flex" justify="center">
-                        <a-col class="gutter-row r-text-center" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                        <a-col class="r-text-center" :xs="{ span: 12 }" :sm="{ span: 12 }"
                                :lg="{ span: 12 }">
                             <a-button block v-on:click="save()" size="small" class="r-btn-bordered-grey">
                                 <a-icon type="file-done"/>
                                 Save cart
                             </a-button>
                         </a-col>
-                        <a-col class="gutter-row r-text-center" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                        <a-col class="r-text-center" :xs="{ span: 12 }" :sm="{ span: 12 }"
                                :lg="{ span: 12 }">
                             <a-popconfirm
                                     @confirm="reset"
@@ -99,7 +99,7 @@
             </a-row>
             <div class="r-cart-footer">
                 <a-row :gutter="24" type="flex" justify="start" align="middle">
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                    <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                            :lg="{ span: 12 }">
                         <nuxt-link to="/checkout">
                             <h3 class="r-heading r-text-white">
@@ -107,7 +107,7 @@
                             </h3>
                         </nuxt-link>
                     </a-col>
-                    <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                    <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
                            :lg="{ span: 12 }">
                         <nuxt-link to="/checkout">
                             <a-button block size="small" type="secondary" class="r-btn-bordered-white">

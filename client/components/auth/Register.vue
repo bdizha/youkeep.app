@@ -11,7 +11,7 @@
         <a-col :xs="{ span: 24 }">
           <a-form-item>
             <a-row type="flex" justify="center">
-              <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+              <a-col class="r-text-left" :xs="{ span: 24 }">
                 <h2 class="r-heading r-text-secondary">
                   Request a Shopple account
                 </h2>

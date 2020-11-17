@@ -6,7 +6,7 @@
         <r-notice :process="'isSubmit'"></r-notice>
         <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
         <a-row v-show="hasForm" type="flex" justify="center">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+            <a-col class="r-text-left" :xs="{ span: 24 }">
                 <h3 class="r-heading">
                     Edit password
                 </h3>
@@ -44,13 +44,13 @@
             </a-form-item>
             <a-form-item class="r-mt-48">
                 <a-row :gutter="24" type="flex" justify="center">
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+                    <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                            :lg="{ span: 12 }">
                         <a-button block @click="onReturn" size="default" class="r-btn-bordered-grey">
                             Back
                         </a-button>
                     </a-col>
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+                    <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                            :lg="{ span: 12 }">
                         <a-button block @click="onPost" size="default" type="secondary" html-type="submit"
                                   class="r-btn-secondary">

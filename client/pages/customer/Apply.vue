@@ -7,7 +7,7 @@
               :form="formApply">
         <a-form-item v-if="step == 0">
           <a-row type="flex" justify="start">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+            <a-col class="r-text-left" :xs="{ span: 24 }">
               <h2 class="r-heading">
                 Shopple shopper application
               </h2>
@@ -17,7 +17,7 @@
             </a-col>
           </a-row>
           <a-row type="flex" justify="start">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+            <a-col class="r-text-left" :xs="{ span: 24 }">
               <h3 class="r-heading">
                 What is Shopple?
               </h3>
@@ -31,7 +31,7 @@
             </a-col>
           </a-row>
           <a-row type="flex" justify="start">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+            <a-col class="r-text-left" :xs="{ span: 24 }">
               <h3 class="r-heading">
                 What is a Shopple shopper?
               </h3>
@@ -241,7 +241,7 @@
         </a-form-item>
         <a-form-item @click="onStep" :wrapper-col="{ span: 24 }">
           <a-row type="flex" justify="start">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
+            <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onBack"
                         :size="'large'"
                         type="default"
@@ -250,7 +250,7 @@
                 Back
               </a-button>
             </a-col>
-            <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
+            <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onStep"
                         :size="'large'"
                         type="secondary" html-type="button"

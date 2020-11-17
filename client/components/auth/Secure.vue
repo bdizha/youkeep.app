@@ -11,7 +11,7 @@
                 <a-col :xs="{ span: 24 }">
                     <a-form-item>
                         <a-row type="flex" justify="center">
-                            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+                            <a-col class="r-text-left" :xs="{ span: 24 }">
                                 <h3 v-if="user" class="r-heading ">
                                     <span class="r-text-secondary">Welcome, </span>{{ user.name }}!
                                 </h3>

@@ -49,7 +49,7 @@
                                                                     {{ position.type_formatted }}
                                                                 </h4>
                                                             </a-col>
-                                                            <a-col class="gutter-row r-text-secondary r-text-capitalize"
+                                                            <a-col class="r-text-secondary r-text-capitalize"
                                                                    :xs="{ span: 24 }"
                                                                    :sm="{ span: 12 }"
                                                                    :lg="{ span: 24 }">

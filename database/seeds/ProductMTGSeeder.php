@@ -21,12 +21,13 @@ class ProductMTGSeeder extends DatabaseSeeder
      */
     public function run()
     {
-        foreach (array_rand($this->storesIds, 2) as $key) {
-            $this->storesIds[] = $this->storesIds[$key];
+        $storesIds = [];
+
+        foreach (array_rand($this->storesIds, 6) as $key) {
+            $storesIds[] = $this->storesIds[$key];
         }
 
-        $this->stores = Store::whereIn('id', $this->storesIds)
-            ->get();
+        $this->storesIds = $storesIds;
 
         foreach ($this->stores as $store) {
             $this->storeId = $store->id;

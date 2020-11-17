@@ -4,7 +4,7 @@
       <r-store-category-header :is-last="false" :category="category" justify="end"></r-store-category-header>
       <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]"
              class="r-store-cards">
-        <a-col class="gutter-row r-p-24" v-for="(store, index) in category.stores"
+        <a-col class="r-p-24" v-for="(store, index) in category.stores"
                :key="index + 1"
                :xs="{span: 12}"
                :sm="{span: 12}" :md="{span: 6}" :lg="{span: 4}">

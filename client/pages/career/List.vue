@@ -83,7 +83,7 @@
                       {{ position.type_formatted }}
                     </h4>
                   </a-col>
-                  <a-col v-on:click="onDepartment(department)" class="gutter-row r-text-secondary r-text-capitalize"
+                  <a-col v-on:click="onDepartment(department)" class="r-text-secondary r-text-capitalize"
                          :xs="{ span: 24 }"
                          :sm="{ span: 12 }"
                          :lg="{ span: 24 }">

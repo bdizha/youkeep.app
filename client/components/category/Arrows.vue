@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
-    <a-col class="gutter-row r-ph-12" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="r-ph-12" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <VueSlickCarousel v-if="hasCategories" v-bind="settings">
         <nuxt-link class="r-slider-item r-text-view-more"
                    :class="'r-slider-item-' + size"

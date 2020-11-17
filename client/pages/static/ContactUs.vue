@@ -73,7 +73,7 @@
                     :form="form">
               <a-form-item>
                 <a-row type="flex" justify="center">
-                  <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+                  <a-col class="r-text-left" :xs="{ span: 24 }">
                     <h2 class="r-heading">
                       Get in touch
                     </h2>
@@ -133,11 +133,11 @@
                 </a-input>
               </a-form-item>
               <a-row type="flex" justify="center">
-                <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }">
                 </a-col>
-                <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }">
                   <a-button block @click="onSubmit" :size="'large'"

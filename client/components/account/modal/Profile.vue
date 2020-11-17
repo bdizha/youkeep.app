@@ -6,7 +6,7 @@
         <r-notice  process="isSuccess"></r-notice>
         <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
         <a-row v-show="hasForm" type="flex" justify="center">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+            <a-col class="r-text-left" :xs="{ span: 24 }">
                 <h3 class="r-heading">
                     Edit your account settings
                 </h3>
@@ -32,7 +32,7 @@
                         v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"/>
             </a-form-item>
             <a-row :gutter="24" type="flex" justify="center">
-                <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+                <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                        :lg="{ span: 12 }">
                     <a-form-item label="Mobile number">
                         <a-input
@@ -43,7 +43,7 @@
                         </a-input>
                     </a-form-item>
                 </a-col>
-                <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+                <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                        :lg="{ span: 12 }">
                     <a-form-item label="Your birth date">
                         <a-date-picker
@@ -56,13 +56,13 @@
             </a-row>
             <a-form-item class="r-mt-48">
                 <a-row :gutter="24" type="flex" justify="center">
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+                    <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                            :lg="{ span: 12 }">
                         <a-button block @click="onReturn" size="default" class="r-btn-bordered-grey">
                             Back
                         </a-button>
                     </a-col>
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+                    <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                            :lg="{ span: 12 }">
                         <a-button block @click="onPost" size="default" type="secondary" html-type="submit"
                                   class="r-btn-secondary">

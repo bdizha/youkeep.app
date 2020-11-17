@@ -1,7 +1,7 @@
 <template>
     <r-account>
         <a-row type="flex" justify="center" align="middle">
-            <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
+            <a-col class="r-store-page" :xs="{ span: 24 }"
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
                 <a-card class="r-mb-24" title="ACCOUNT INFORMATION" style="width: 100%;">
                     <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">

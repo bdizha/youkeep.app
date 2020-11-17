@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="gutter-row r-p-24" :span="24"
+    <a-col class="r-p-24" :span="24"
            :class="{'r-product-spinner--active': processes.isProduct}">
       <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" type="flex" justify="center">
         <a-col :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
@@ -18,7 +18,7 @@
             </template>
           </a-pagination>
         </a-col>
-        <a-col class="gutter-row r-text-right" :xs="{span: 24}"
+        <a-col class="r-text-right" :xs="{span: 24}"
                :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}">
           <div class="r-same-height">
             <a-select
@@ -38,7 +38,7 @@
       </a-row>
       <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]"
              class="r-product-cards">
-        <a-col class="gutter-row r-p-24" v-for="(product, index) in products.data" :key="index"
+        <a-col class="r-p-24" v-for="(product, index) in products.data" :key="index"
                :xs="{span: 12}"
                :sm="{span: 12}" :md="{span: 6}" :lg="{span: 4}">
           <r-product-item :product="product"></r-product-item>

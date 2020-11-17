@@ -4,7 +4,7 @@
              :current="current"
              style="position: relative;">
         <a-row type="flex" justify="center">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+            <a-col class="r-text-left" :xs="{ span: 24 }">
                 <h3 class="r-heading">
                     Your stores history
                 </h3>

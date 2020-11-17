@@ -99,7 +99,7 @@
       </a-col>
     </a-row>
     <a-row type="flex" justify="center" :gutter="24">
-      <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :md="{ span: 18 }"
+      <a-col class="r-p-48" :xs="{ span: 24 }" :md="{ span: 18 }"
              :lg="{ span: 18 }">
         <a-row type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-p-48">

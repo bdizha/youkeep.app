@@ -12,11 +12,11 @@
                                     header="Delivery address">
                     <r-account-address-list></r-account-address-list>
                     <a-row class="r-mv-24" :gutter="24" type="flex" justify="start">
-                      <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                      <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                              :md="{ span: 18 }" :lg="{ span: 18 }">
                         <r-account-address-add></r-account-address-add>
                       </a-col>
-                      <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                      <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
                              :md="{ span: 6 }" :lg="{ span: 6 }">
                         <a-button block type="secondary" html-type="button"
                                   class="r-btn-secondary">
@@ -45,7 +45,7 @@
                       </a-form-item>
                       <a-row class="r-mv-24" :gutter="24" type="flex"
                              justify="start">
-                        <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
+                        <a-col class="r-text-left" :xs="{ span: 12 }"
                                :sm="{ span: 12 }"
                                :md="{ span: 18 }" :lg="{ span: 18 }">
                           <a-button size="default"
@@ -55,7 +55,7 @@
                             Skip
                           </a-button>
                         </a-col>
-                        <a-col class="gutter-row r-text-right" :xs="{ span: 12 }"
+                        <a-col class="r-text-right" :xs="{ span: 12 }"
                                :sm="{ span: 12 }"
                                :md="{ span: 6 }" :lg="{ span: 6 }">
                           <a-button block type="secondary" html-type="submit"
@@ -84,7 +84,7 @@
                       </a-form-item>
                       <a-row class="r-mv-24" :gutter="24" type="flex"
                              justify="start">
-                        <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
+                        <a-col class="r-text-left" :xs="{ span: 12 }"
                                :sm="{ span: 12 }"
                                :md="{ span: 18 }" :lg="{ span: 18 }">
                           <a-button size="default"
@@ -94,7 +94,7 @@
                             Skip
                           </a-button>
                         </a-col>
-                        <a-col class="gutter-row r-text-right" :xs="{ span: 12 }"
+                        <a-col class="r-text-right" :xs="{ span: 12 }"
                                :sm="{ span: 12 }"
                                :md="{ span: 6 }" :lg="{ span: 6 }">
                           <a-button block type="secondary" html-type="button"
@@ -111,7 +111,7 @@
                                     header="Payment">
                     <r-account-card-list></r-account-card-list>
                     <a-row class="r-mv-24" :gutter="24" type="flex" justify="end">
-                      <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                      <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                              :md="{ span: 18 }" :lg="{ span: 18 }">
                         <r-account-card-add></r-account-card-add>
                       </a-col>

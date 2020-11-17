@@ -3,7 +3,7 @@
          align="middle">
     <a-col @click="onModal" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-row v-if="hasModal" type="flex" justify="center">
-        <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+        <a-col class="r-text-left" :xs="{ span: 24 }">
           <h3 class="r-heading">
             Enter delivery address
           </h3>

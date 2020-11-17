@@ -5,7 +5,7 @@
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
                 <a-card title="INVITE A FRIEND" style="width: 100%; margin-bottom: 20px;">
                     <a-row type="flex" justify="start" align="start">
-                        <a-col class="gutter-row r-store-page" :xs="{ span: 24 }"
+                        <a-col class="r-store-page" :xs="{ span: 24 }"
                                :sm="{ span: 24 }" :lg="{ span: 12 }">
                             <h4 class="r-heading-light">
                                 Bring 1 friend, get R100!

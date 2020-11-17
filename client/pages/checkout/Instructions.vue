@@ -20,7 +20,7 @@
                 </a-form-item>
                 <a-row class="r-margin-vertical-24" :gutter="24" type="flex"
                        justify="start">
-                    <a-col class="gutter-row r-text-left" :xs="{ span: 12 }"
+                    <a-col class="r-text-left" :xs="{ span: 12 }"
                            :sm="{ span: 12 }"
                            :md="{ span: 18 }" :lg="{ span: 18 }">
                         <a-button size="default"
@@ -30,7 +30,7 @@
                             Skip
                         </a-button>
                     </a-col>
-                    <a-col class="gutter-row r-text-right" :xs="{ span: 12 }"
+                    <a-col class="r-text-right" :xs="{ span: 12 }"
                            :sm="{ span: 12 }"
                            :md="{ span: 6 }" :lg="{ span: 6 }">
                         <a-button block type="secondary" html-type="submit"

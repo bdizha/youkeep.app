@@ -1,7 +1,7 @@
 <template>
     <r-article-template v-if="hasData" :article="null">
         <a-row :gutter="0">
-            <a-col class="gutter-row r-p-24">
+            <a-col class="r-p-24">
                 <a-row :gutter="[24,24]" class="r-product-cards">
                     <a-col class="gutter-row" v-if="articles.length > 0"
                            v-for="(article, index) in articles"

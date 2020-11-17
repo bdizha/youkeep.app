@@ -5,7 +5,7 @@
       <a-card-meta>
         <template slot="description">
           <a-row type="flex" justify="center" align="middle">
-            <a-col class="gutter-row r-p-24 r-text-center" :span="24">
+            <a-col class="r-p-24 r-text-center" :span="24">
               <h3 class="r-heading r-text-view-more" style="margin-bottom: 0;">
                 {{ category.name }}
               </h3>

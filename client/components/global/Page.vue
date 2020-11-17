@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="gutter-row r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{ span: 16 }">
+    <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{ span: 16 }">
       <slot/>
     </a-col>
   </a-row>

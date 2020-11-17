@@ -3,14 +3,14 @@
                       :closable="true"
                       current="wishlist">
         <a-row type="flex" justify="center">
-            <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+            <a-col class="r-text-left" :xs="{ span: 24 }">
                 <h3 class="r-heading">
                     Your shopping list
                 </h3>
             </a-col>
         </a-row>
         <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]" class="r-product-cards" type="flex" justify="start">
-            <a-col class="gutter-row r-p-24" v-for="(product, index) in products" :key="index"
+            <a-col class="r-p-24" v-for="(product, index) in products" :key="index"
                    :xs="{span: 12}"
                    :sm="{span: 12}" :md="{span: 6}" :lg="{span: 4}">
                 <r-product-item :product="product"></r-product-item>

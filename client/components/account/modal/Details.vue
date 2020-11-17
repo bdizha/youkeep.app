@@ -4,7 +4,7 @@
            :current="current"
            style="position: relative;">
     <a-row type="flex" justify="center">
-      <a-col class="gutter-row r-text-left" :xs="{ span: 24 }">
+      <a-col class="r-text-left" :xs="{ span: 24 }">
         <h2 class="r-heading">
           Edit account details
         </h2>
@@ -30,7 +30,7 @@
           v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"/>
       </a-form-item>
       <a-row :gutter="24" type="flex" justify="center">
-        <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+        <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                :lg="{ span: 12 }">
           <a-form-item label="Mobile number">
             <a-input
@@ -41,7 +41,7 @@
             </a-input>
           </a-form-item>
         </a-col>
-        <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+        <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                :lg="{ span: 12 }">
           <a-form-item label="Your birth date">
             <a-date-picker
@@ -54,13 +54,13 @@
       </a-row>
       <a-form-item class="r-mt-48">
         <a-row :gutter="24" type="flex" justify="center">
-          <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-button block @click="onCancel" :size="'large'" class="r-btn-bordered-primary">
               Cancel
             </a-button>
           </a-col>
-          <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-button block @click="onSave" :size="'large'" type="secondary" html-type="submit"
                       class="r-btn-secondary">

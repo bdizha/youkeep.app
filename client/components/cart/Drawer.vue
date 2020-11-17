@@ -24,7 +24,7 @@
       </a-row>
       <div class="r-cart-footer">
         <a-row :gutter="24" type="flex" justify="start" align="middle">
-          <a-col class="gutter-row r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                  :lg="{ span: 12 }">
             <nuxt-link to="/checkout">
               <h3 class="r-heading r-text-white">
@@ -32,7 +32,7 @@
               </h3>
             </nuxt-link>
           </a-col>
-          <a-col class="gutter-row r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
+          <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
                  :lg="{ span: 12 }">
             <nuxt-link to="/checkout">
               <a-button block
