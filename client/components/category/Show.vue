@@ -13,7 +13,13 @@
         </a-col>
       </a-row>
       <r-product-flush :columns="3"></r-product-flush>
-      <r-product-list :columns="columns"></r-product-list>
+      <a-row type="flex" justify="start" align="middle">
+        <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }">
+          <r-product-list :columns="columns"></r-product-list>
+        </a-col>
+      </a-row>
       <r-category-list :columns="6"></r-category-list>
     </a-col>
   </a-row>
