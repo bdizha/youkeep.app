@@ -24,7 +24,6 @@ class CategoryUpdateSeeder extends DatabaseSeeder
 
             $this->categories = Category::orderBy('created_at', 'DESC')
                 ->where('store_id', $this->storeId)
-                ->where('id', $this->storeId)
                 ->get();
 
             $this->decodeCategories($this->storeId);
@@ -59,7 +58,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
             $hasItems = $items->count() > ($hasProducts ? 0 : 1);
         } else {
             $hasItemField = 'has_products';
-            $hasItems = count($category->products) > 0;
+            $hasItems = count($category->photos) > 0;
 
             if ($hasItems) {
                 echo "Category has products: {$category->slug} >>>>> \n";

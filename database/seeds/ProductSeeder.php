@@ -1,5 +1,6 @@
 <?php
 
+use App\ProductPhoto;
 use Illuminate\Database\Seeder;
 
 use App\Product;
@@ -13,7 +14,7 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        $this->_deleteIncorrectProducts();
+        $this->_updateProductPhotos();
 
         die("Well done.");
     }
@@ -42,6 +43,39 @@ class ProductSeeder extends Seeder
             } else {
                 echo "Found images for product {$products->slug}:\n";
                 echo $photo . "\n";
+            }
+        }
+
+        echo "<> Total deleted {$totalPurges} products <>\n";
+    }
+
+    private function _updateProductPhotos()
+    {
+        $products = Product::orderBy('created_at', 'DESC')
+            ->where('thumbnail', 'icon_default.png')
+            ->get();
+
+        $totalPurges = 0;
+        foreach ($products as $product) {
+            $photos = ProductPhoto::where('product_id', $product->id)
+                ->get();
+
+            if (empty($photos)) {
+                \App\CategoryProduct::where('product_id', $product->id)->delete();
+                \App\ProductPhoto::where('product_id', $product->id)->delete();
+                \App\ProductVariant::where('product_id', $product->id)->delete();
+                \App\StoreProduct::where('product_id', $product->id)->delete();
+
+                $product->categories()->delete();
+                $product->delete();
+                $totalPurges++;
+            } else {
+                foreach ($photos as $photo) {
+                    $product->thumbnail = $photo->thumb;
+                    $product->photo = $photo->image;
+                    $product->save();
+                    break;
+                }
             }
         }
 

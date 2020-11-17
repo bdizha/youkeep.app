@@ -92,7 +92,8 @@ class CategoryController extends Controller
                 $query->limit($this->limit);
             }
 
-            $categories = $query->orderBy($orderBy, 'DESC')
+            $categories = $query->orderBy('product_count', 'DESC')
+                ->orderBy($orderBy, 'DESC')
                 ->get()
                 ->toArray();
 
