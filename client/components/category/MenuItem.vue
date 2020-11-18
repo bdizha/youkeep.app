@@ -1,9 +1,9 @@
 <template>
   <div v-if="hasData" class="r-category-filter">
     <nuxt-link v-if="!category.has_categories"
-                 @click.native="onCategory(category)"
-                 class="r-category-menu-link"
-                 :to="category.route">
+               @click.native="onCategory(category)"
+               class="r-category-menu-link"
+               :to="category.route">
       <a-avatar class="r-lazy" shape="circle" :size="30"
                 :data-src="(category == null ? '/assets/icon_default.png' : '/' + category.photo)"
                 src="/assets/icon_default.png"
@@ -19,7 +19,7 @@
       </template>
       <a-collapse-panel :key="category.id" class="r-category-menu-panel" :header="category.name">
         <nuxt-link @click.native="onCategory(category)" class="r-category-menu-link"
-                     :to="category.route">
+                   :to="category.route">
           <a-avatar class="r-lazy" shape="circle" :size="30"
                     :data-src="'/' + category.photo"
                     src="/assets/icon_default.png"
@@ -44,6 +44,32 @@ export default {
   props: {
     category: {type: Object, required: true, default: {}}
   },
+  async fetch() {
+    if (this.category.has_categories) {
+      let path = `/categories`;
+      let params = {
+        category_id: this.category.id,
+        limit: 6,
+        store_id: this.category.store_id
+      };
+
+      params.with = ['categories'];
+
+      let $this = this;
+
+      await axios.post(path, params)
+        .then(response => {
+          $this.categories = response.data.categories;
+          $this.hasData = true;
+        })
+        .catch(e => {
+          console.log(e);
+        });
+    } else {
+      this.hasData = true;
+      this.categories = this.category.categories;
+    }
+  },
   data() {
     return {
       hasData: false,
@@ -56,31 +82,7 @@ export default {
   },
   methods: {
     async payload() {
-      if (this.category.categories == undefined ||
-        this.category.categories.length == 0) {
-        let path = `/categories`;
-        let params = {
-          category_id: this.category.id,
-          limit: 6,
-          store_id: this.category.store_id
-        };
 
-        params.with = ['categories'];
-
-        let $this = this;
-
-        await axios.post(path, params)
-          .then(response => {
-            $this.categories = response.data.categories;
-            $this.hasData = true;
-          })
-          .catch(e => {
-            console.log(e);
-          });
-      } else {
-        this.hasData = true;
-        this.categories = this.category.categories;
-      }
     },
     onCategory(category) {
       this.$store.dispatch('shop/onCategory', this.category.route);

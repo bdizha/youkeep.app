@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Cache;
 class CategoryController extends Controller
 {
     protected $without = ['categories', 'products', 'category', 'store'],
-        $relations = ['categories', 'category', 'store', 'stores'],
+        $relations = ['categories', 'store', 'stores'],
         $with = [],
         $categoryId = null,
         $products = [],
@@ -44,7 +44,7 @@ class CategoryController extends Controller
         $storeId = $request->get('store_id', null);
         $storeSlug = $request->get('store', null);
 
-        $key = $this->_setCacheKey($request);
+        $key = $this->_setCacheKey($request) . time();
 
         if (Cache::has($key)) {
             $response = Cache::get($key, []);
@@ -96,6 +96,8 @@ class CategoryController extends Controller
                 ->orderBy($orderBy, 'DESC')
                 ->get()
                 ->toArray();
+
+            $categories = $this->_pruneRelations($categories);
 
             if ($type === Category::TYPE_STORE) {
                 $this->_setCategoryStores($categories);
