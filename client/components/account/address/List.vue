@@ -64,7 +64,7 @@ export default {
     onModal(current, address) {
       let modal = {};
       modal.isVisible = true;
-modal.isClosable = true;
+      modal.isClosable = true;
       modal.current = current;
 
       this.$store.dispatch('address/onAddress', address);
@@ -72,8 +72,8 @@ modal.isClosable = true;
     },
     onItemLabel(address) {
       let label = '<strong>' + address.address_line + ', ' +
-          address.address_line_2 + ', ' + address.suburb + '</strong>,<br>' +
-          address.city + ', ' + address.postal_code;
+        address.address_line_2 + ', ' + address.suburb + '</strong>,<br>' +
+        address.city + ', ' + address.postal_code;
 
       return label;
     }

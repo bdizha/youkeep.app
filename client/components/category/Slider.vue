@@ -76,7 +76,7 @@ export default {
       with: ['photos', 'breadcrumbs']
     };
 
-    await this.store.dispatch('shop/onCategories', payload);
+    await this.$store.dispatch('shop/onCategories', payload);
   },
   data() {
     return {
