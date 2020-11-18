@@ -30,9 +30,18 @@ class ProductController extends Controller
         $this->limit = $request->get('limit', 18);
         $this->categoryId = $request->get('category_id', null);
 
-        $this->setProducts();
+        $key = $this->_setCacheKey($request);
 
-        return response()->json($this->products, 200);
+        if (Cache::has($key)) {
+            $response = Cache::get($key, []);
+        } else {
+            $this->setProducts();
+
+            $response = $this->products;
+            Cache::put($key, $response, now()->addMinutes(15));
+        }
+
+        return response()->json($response, 200);
     }
 
     /**
@@ -91,6 +100,8 @@ class ProductController extends Controller
             $response['category'] = $this->category;
             $response['product'] = $this->product;
             $response['categories'] = $this->categories;
+
+            Cache::put($key, $response, now()->addMinutes(15));
         }
 
         return response()->json($response, 200);

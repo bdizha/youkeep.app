@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 class TestimonialController extends Controller
 {
@@ -15,14 +16,20 @@ class TestimonialController extends Controller
      */
     public function index(Request $request)
     {
-        $testimonials = Testimonial::where('is_active', true)
-            ->orderBy('created_at', 'DESC')
-            ->get();
+        $key = $this->_setCacheKey($request);
 
-        session('testimonials', $testimonials);
+        if (Cache::has($key)) {
+            $response = Cache::get($key, []);
+        } else {
+            $testimonials = Testimonial::where('is_active', true)
+                ->orderBy('created_at', 'DESC')
+                ->get();
 
-        return response()->json([
-            'testimonials' => $testimonials
-        ], 200);
+            $response['testimonials'] = $testimonials;
+
+            Cache::put($key, $response, now()->addMinutes(15));
+        }
+
+        return response()->json($response, 200);
     }
 }
