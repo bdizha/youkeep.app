@@ -1,5 +1,5 @@
 <template>
-  <a-row v-if="hasCategories" type="flex" justify="start" align="middle"
+  <a-row type="flex" justify="start" align="middle"
          class="r-bg-white r-sticky-69s r-line-top r-line-bottom" id="r-store-header">
     <a-col  class="r-p-12" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"

@@ -39,6 +39,17 @@ export default {
     columns: {type: Number, required: false, default: 8},
     size: {type: Number, required: false, default: 75},
   },
+  async fetch() {
+    let payload = {
+      type: 2,
+      category_id: 1,
+      limit: 12,
+      order_by: 'randomized_at',
+      with: ['photos', 'breadcrumbs']
+    };
+
+    await this.$store.dispatch('shop/onCategories', payload);
+  },
   data() {
     return {
       settings: {
