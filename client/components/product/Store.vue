@@ -2,7 +2,7 @@
   <nuxt-link :to="store.route"
              style="display: block; width: 100%;">
     <a-row type="flex" justify="start" align="middle">
-      <a-col class="r-pt-24" :xs="{ span: 24 }"
+      <a-col class="r-pb-24" :xs="{ span: 24 }"
              :sm="{ span: 24 }" :lg="{ span: 24 }">
         {{ store.name }}
       </a-col>
