@@ -2,10 +2,13 @@
   <a-row class="r-product" type="flex" justify="center" align="middle">
     <a-col :span="24">
       <a-card hoverable>
-        <nuxt-link :to="product.route"
-                   style="display: block; width: 100%;">
-          <r-product-photo slot="cover" :product="product"></r-product-photo>
-        </nuxt-link>
+        <div slot="cover">
+          <nuxt-link :to="product.route"
+                     style="display: block; width: 100%;">
+            <r-product-photo :product="product">
+            </r-product-photo>
+          </nuxt-link>
+        </div>
         <a-card-meta>
           <template slot="description">
             <r-product-credit :product="product"></r-product-credit>
