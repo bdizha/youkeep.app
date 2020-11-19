@@ -1,18 +1,12 @@
 <template>
   <nuxt-link :to="store.route"
              style="display: block; width: 100%;">
-    <a-card hoverable>
-      <a-card-meta>
-        <template slot="description">
-          <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
-            <a-col :xs="{ span: 24 }"
-                   :sm="{ span: 24 }" :lg="{ span: 24 }">
-              {{ store.name }}
-            </a-col>
-          </a-row>
-        </template>
-      </a-card-meta>
-    </a-card>
+    <a-row type="flex" justify="start" align="middle">
+      <a-col class="r-pt-24" :xs="{ span: 24 }"
+             :sm="{ span: 24 }" :lg="{ span: 24 }">
+        {{ store.name }}
+      </a-col>
+    </a-row>
   </nuxt-link>
 </template>
 <script>
