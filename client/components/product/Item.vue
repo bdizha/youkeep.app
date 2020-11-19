@@ -28,6 +28,7 @@
                   </a-row>
                 </a-col>
               </a-row>
+              <r-product-store :store="product.store"></r-product-store>
             </template>
           </a-card-meta>
         </a-card>

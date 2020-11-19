@@ -52,8 +52,11 @@ class ProductSeeder extends Seeder
     private function _updateProductPhotos()
     {
         $products = Product::orderBy('created_at', 'DESC')
-            ->where('thumbnail', 'icon_default.png')
+            ->whereNotNull('store_id')
             ->get();
+
+        dd($products[0]->store);
+
 
         $totalPurges = 0;
         foreach ($products as $product) {

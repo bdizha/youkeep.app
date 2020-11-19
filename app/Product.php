@@ -78,6 +78,7 @@ class Product extends KModel
         'thumbnail_url',
         'photo_url',
         'rating',
+        'store',
         'route'
     ];
 
@@ -268,12 +269,21 @@ class Product extends KModel
         return $route;
     }
 
-    /**
-     * @return string
+    /*  * @return string
      */
     public function getStoreAttribute()
     {
-        return [];
+        $stores = Store::where('id', $this->store_id)->get();
+
+        $store = ['name' => null, 'route' => null, 'photo_url' => null];
+        if (!empty($stores)) {
+            $stores = array_map(function ($store) {
+                return ['name' => $store['name'], 'route' => $store['route'], 'photo_url' => $store['photo_url']];
+            }, $stores->toArray());
+
+            $store = $stores[0];
+        }
+        return $store;
     }
 
     /**

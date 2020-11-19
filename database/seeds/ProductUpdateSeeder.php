@@ -13,14 +13,34 @@ class ProductUpdateSeeder extends Seeder
     public function run()
     {
         $products = Product::with('photos')
-            ->has('photos')
             ->get();
 
         foreach ($products as $product) {
-            echo "Updating Product photo >>>> {$product->name} \n";
+            echo "Updating Product >>>> {$product->name} \n";
 
-            $product->photo = $product->photos[0]['image'];
+            if (!empty($product->photos[0])) {
+                echo "Updating Product Photo >>>> {$product->name} \n";
+
+                if(empty($product->photo)){
+                    $product->photo = $product->photos[0]['image'];
+                }
+            }
+
+            $this->setStore($product);
             $product->save();
         }
+    }
+
+    public function setStore(&$product)
+    {
+        $storeId = null;
+        $storeProduct = \App\StoreProduct::where('product_id', $product->id)
+            ->first();
+
+        if (!empty($storeProduct)) {
+            $storeId = $storeProduct->store_id;
+        }
+
+        $product->store_id = $storeId;
     }
 }
