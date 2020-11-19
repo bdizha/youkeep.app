@@ -30,7 +30,7 @@ class ProductController extends Controller
         $this->limit = $request->get('limit', 18);
         $this->categoryId = $request->get('category_id', null);
 
-        $key = $this->_setCacheKey($request);
+        $key = $this->_setCacheKey($request) . time();
 
         if (Cache::has($key)) {
             $response = Cache::get($key, []);

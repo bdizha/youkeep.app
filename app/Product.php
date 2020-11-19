@@ -269,6 +269,14 @@ class Product extends KModel
     }
 
     /**
+     * @return string
+     */
+    public function getStoreAttribute()
+    {
+        return [];
+    }
+
+    /**
      * Get all the types for this product.
      */
     public function product_types()

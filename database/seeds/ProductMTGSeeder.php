@@ -10,7 +10,7 @@ class ProductMTGSeeder extends DatabaseSeeder
     protected $domain = "https://www.archivestore.co.za";
     protected $storeId = null;
 
-    protected $storesIds = [12, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
+    protected $storeIds = [12, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
     protected $categories = [];
     protected $level = 0;
 
@@ -21,13 +21,17 @@ class ProductMTGSeeder extends DatabaseSeeder
      */
     public function run()
     {
-        $storesIds = [];
+        $storeIds = [];
 
-        foreach (array_rand($this->storesIds, 6) as $key) {
-            $storesIds[] = $this->storesIds[$key];
+        foreach (array_rand($this->storeIds, 6) as $key) {
+            $storeIds[] = $this->storeIds[$key];
         }
 
-        $this->storesIds = $storesIds;
+        $this->storeIds = $storeIds;
+
+        $this->store = Store::where()
+            -where('id', $this->storeIds)
+            ->get();
 
         foreach ($this->stores as $store) {
             $this->storeId = $store->id;

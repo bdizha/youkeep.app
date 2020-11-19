@@ -125,7 +125,7 @@ class CategoryController extends Controller
         $this->limit = $request->get('limit', 4);
         $this->with = $request->get('with', []);
 
-        $key = $this->_setCacheKey($request);
+        $key = $this->_setCacheKey($request) . time();
 
         if (Cache::has($key)) {
             $response = Cache::get($key, []);
@@ -143,11 +143,14 @@ class CategoryController extends Controller
 
             $categories = $query
                 ->take($this->limit)
-                ->get()->toArray();
+                ->get()
+                ->toArray();
 
             if ($category->type === Category::TYPE_STORE) {
                 $this->_setCategoryStores($categories);
             }
+
+            $categories = $this->_pruneRelations($categories);
 
             $category['categories'] = $categories;
             $response['category'] = $category;
