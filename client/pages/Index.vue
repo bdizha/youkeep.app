@@ -60,7 +60,7 @@ import {mapGetters} from "vuex";
 
 export default {
   layout: 'default',
-  name: 'r-welcome',
+  name: 'r-index',
   props: {},
   async asyncData({store}) {
     await store.dispatch('base/onReviews', {});
