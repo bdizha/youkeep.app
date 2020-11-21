@@ -33,6 +33,12 @@ export default {
   props: {
     columns: {type: Number, required: false, default: 6}
   },
+  async fetch() {
+    let route = `/store/${this.$route.params.store}/category/${this.$route.params.category}`;
+    params.route = route;
+    params.with = ['category', 'breadcrumbs'];
+    await store.dispatch('shop/onCategory', params);
+  },
   data() {
     return {
       hasData: false,

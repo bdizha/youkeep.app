@@ -3,7 +3,7 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <r-category-actions></r-category-actions>
       <a-row class="r-mt-48" type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 18 }">
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
           <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                    :md="{ span: 12 }"
@@ -46,16 +46,8 @@
         </a-col>
       </a-row>
       <a-row type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 18 }">
-          <r-store-slider :title="title" :columns="6"></r-store-slider>
-          <a-row class="r-mb-48" type="flex" justify="start">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                   :md="{ span: 24 }"
-                   :lg="{ span: 24 }">
-              <r-category-slider></r-category-slider>
-            </a-col>
-          </a-row>
-          <r-category-list :columns="6" :limit="3"></r-category-list>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
+          <r-welcome></r-welcome>
           <r-features :span="24"></r-features>
           <r-testimonials></r-testimonials>
         </a-col>
@@ -80,7 +72,6 @@ export default {
         'welcome-02.jpg',
         'welcome-03.jpg',
       ],
-      title: "It's shopping time!",
       isProcessing: true,
       testimonials: [],
       modal: {

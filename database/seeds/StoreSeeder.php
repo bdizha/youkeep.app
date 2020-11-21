@@ -333,57 +333,57 @@ class StoreSeeder extends Seeder
                 }
 
                 $store['name'] = $name;
-//                $storeNode = Goutte::request('GET', $url);
-//
-//                $photoNode = $storeNode->filter('.entry-content .col-md-5 img');
-//                $photoName = '';
-//
-//                if ($photoNode->count() > 0) {
-//                    $photoName = $photoNode->attr('src');
-//                }
-//
-//                echo "Store name: <<<<<<{$name}>>>>>\n";
-//
-//                $store['photo'] = $photoName;
-//                $tradingHoursNode = $storeNode->filter('.entry-content .col-md-6 p')->eq(1);
-//
-//                $store['photo_cover'] = $this->photoCovers[rand(0, count($this->photoCovers) - 1)];
-//
-//                if ($tradingHoursNode->count() > 0) {
-//                    $store['trading_hours'] = $tradingHoursNode->text();
-//                }
-//
-//                $storeNode->filter('.entry-content .col-md-6 p')->each(function ($node) use (&$store) {
-//                    $content = $node->text();
-//                    $labelNode = $node->filter('strong');
-//
-//                    if ($labelNode->count() > 0 && $labelNode->text() != 'Trading Hours:') {
-//                        $label = $labelNode->text();
-//
-//                        if ($label == 'Store Number:') {
-//                            echo "Store label: <<<<<<{$label}>>>>>\n";
-//                            echo "Store content: <<<<<<{$content}>>>>>\n";
-//
-//                            $store['phone'] = str_replace($label, '', $content);
-//
-//                            $store['content'] = serialize(['store_number' => $content]);
-//                        }
-//
-//                        if ($label == 'Contact Number:') {
-//                            $store['phone'] = str_replace($label, '', $content);
-//                        }
-//
-//                        if ($label == 'Store Description:') {
-//                            $store['description'] = $content;
-//                        }
-//
-//                        if ($label == 'Store Website:') {
-//                            $store['url'] = str_replace($label, '', $content);
-//                        }
-//                    } else if (@$store['description'] == 'Store Description:') {
-//                        $store['description'] = $content;
-//                    }
-//                });
+                $storeNode = Goutte::request('GET', $url);
+
+                $photoNode = $storeNode->filter('.entry-content .col-md-5 img');
+                $photoName = '';
+
+                if ($photoNode->count() > 0) {
+                    $photoName = $photoNode->attr('src');
+                }
+
+                echo "Store name: <<<<<<{$name}>>>>>\n";
+
+                $store['photo'] = $photoName;
+                $tradingHoursNode = $storeNode->filter('.entry-content .col-md-6 p')->eq(1);
+
+                $store['photo_cover'] = $this->photoCovers[rand(0, count($this->photoCovers) - 1)];
+
+                if ($tradingHoursNode->count() > 0) {
+                    $store['trading_hours'] = $tradingHoursNode->text();
+                }
+
+                $storeNode->filter('.entry-content .col-md-6 p')->each(function ($node) use (&$store) {
+                    $content = $node->text();
+                    $labelNode = $node->filter('strong');
+
+                    if ($labelNode->count() > 0 && $labelNode->text() != 'Trading Hours:') {
+                        $label = $labelNode->text();
+
+                        if ($label == 'Store Number:') {
+                            echo "Store label: <<<<<<{$label}>>>>>\n";
+                            echo "Store content: <<<<<<{$content}>>>>>\n";
+
+                            $store['phone'] = str_replace($label, '', $content);
+
+                            $store['content'] = serialize(['store_number' => $content]);
+                        }
+
+                        if ($label == 'Contact Number:') {
+                            $store['phone'] = str_replace($label, '', $content);
+                        }
+
+                        if ($label == 'Store Description:') {
+                            $store['description'] = $content;
+                        }
+
+                        if ($label == 'Store Website:') {
+                            $store['url'] = str_replace($label, '', $content);
+                        }
+                    } else if (@$store['description'] == 'Store Description:') {
+                        $store['description'] = $content;
+                    }
+                });
 
                 try {
                     $this->_setStore($store);
