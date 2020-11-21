@@ -88,14 +88,12 @@ export default {
     categories: "shop/categories",
     hasCategories: "shop/hasCategories",
   }),
-  created() {
-    this.payload();
-  },
   mounted() {
-    this.hasData = true;
+    this.payload();
   },
   methods: {
     payload() {
+      this.hasData = true;
     },
     onCategory(category) {
       // this.$store.dispatch('shop/onCategory', category.route);

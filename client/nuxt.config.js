@@ -28,7 +28,7 @@ module.exports = {
   },
 
   generate: {
-    fallback: 'index.html'
+    fallback: '200.html'
   },
 
   loading: {

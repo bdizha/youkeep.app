@@ -44,7 +44,7 @@ export default {
   created() {
   },
   mounted() {
-    this.hasData = false;
+    this.hasData = true;
   },
   methods: {
     async payload() {
