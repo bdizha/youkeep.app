@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <r-category-actions></r-category-actions>
@@ -33,9 +33,20 @@ export default {
   props: {
     columns: {type: Number, required: false, default: 6}
   },
+  async fetch() {
+    let payload = {
+      type: 2,
+      category_id: 1,
+      limit: 12,
+      order_by: 'randomized_at',
+      with: ['photos', 'breadcrumbs']
+    };
+
+    await this.$store.dispatch('shop/onCategories', payload);
+  },
   data() {
     return {
-      hasData: true,
+      hasData: false,
       isProcessing: false
     }
   },
@@ -46,6 +57,9 @@ export default {
   }),
   created() {
     this.payload();
+  },
+  mounted() {
+    this.hasData = true;
   },
   methods: {
     payload() {

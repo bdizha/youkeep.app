@@ -1,7 +1,7 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
     <a-col class="r-ph-12" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <VueSlickCarousel v-if="hasCategories" v-bind="settings">
+      <VueSlickCarousel v-if="hasData && hasCategories" v-bind="settings">
         <nuxt-link class="r-slider-item r-text-view-more"
                    :class="'r-slider-item-' + size"
                    v-for="(category, index) in categories"
@@ -39,22 +39,11 @@ export default {
     columns: {type: Number, required: false, default: 8},
     size: {type: Number, required: false, default: 75},
   },
-  async fetch() {
-    let payload = {
-      type: 2,
-      category_id: 1,
-      limit: 12,
-      order_by: 'randomized_at',
-      with: ['photos', 'breadcrumbs']
-    };
-
-    await this.$store.dispatch('shop/onCategories', payload);
-  },
   data() {
     return {
+      hasData: false,
       settings: {
         slidesToScroll: 1,
-        // "slidesToShow": this.columns,
         infinite: true,
         dots: false,
         variableWidth: true,
@@ -103,6 +92,7 @@ export default {
     this.payload();
   },
   mounted() {
+    this.hasData = true;
   },
   methods: {
     payload() {
