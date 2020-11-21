@@ -123,6 +123,9 @@ export default {
   created() {
     this.payload();
   },
+  mounted() {
+    this.hasData = true;
+  },
   methods: {
     async payload() {
     }
