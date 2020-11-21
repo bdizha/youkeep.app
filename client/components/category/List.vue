@@ -1,12 +1,13 @@
 <template>
   <a-row v-if="hasData" type="flex" justify="start">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="r-spin-holder" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-category-item v-if="index < limit"
                        v-for="(category, index) in categories"
                        :key="index + 1"
                        :columns="columns"
                        :category="category">
       </r-category-item>
+      <r-spinner :is-absolute="true" v-if="processes.isCategory"></r-spinner>
     </a-col>
   </a-row>
 </template>

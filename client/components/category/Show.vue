@@ -36,7 +36,7 @@ export default {
   async fetch() {
     let route = `/store/${this.$route.params.store}/category/${this.$route.params.category}`;
     params.route = route;
-    params.with = ['category', 'breadcrumbs'];
+    params.with = ['category', 'breadcrumbs', 'categories'];
     await store.dispatch('shop/onCategory', params);
   },
   data() {
