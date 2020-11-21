@@ -2,7 +2,7 @@
   <a-row type="flex" justify="center">
     <a-col :span="24">
       <a-row class="r-mb-48" type="flex" justify="center">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 18 }" :lg="{ span: 18 }">
+        <a-col :xs="{ span: 24 }" :sm="{ span: 21 }" :lg="{ span: 21 }">
           <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
             <a-col v-if="hasSubscribe" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <r-subscribe></r-subscribe>
