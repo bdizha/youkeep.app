@@ -153,7 +153,7 @@ const actions = {
             with: ['photos', 'breadcrumbs']
           };
 
-          dispatch('shop/onCategories', payload);
+          dispatch('onCategories', payload);
         }
 
         console.log('onCategory filters data >>>>> ', category.filters);
