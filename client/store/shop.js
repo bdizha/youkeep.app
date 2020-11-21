@@ -144,6 +144,16 @@ const actions = {
 
           commit('setCategories', categories);
           dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
+        } else {
+          let payload = {
+            type: 2,
+            category_id: category.id,
+            limit: 12,
+            order_by: 'randomized_at',
+            with: ['photos', 'breadcrumbs']
+          };
+
+          dispatch('shop/onCategories', payload);
         }
 
         console.log('onCategory filters data >>>>> ', category.filters);
