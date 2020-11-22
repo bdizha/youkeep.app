@@ -137,7 +137,7 @@ const actions = {
           commit('setProducts', products);
         }
 
-        if (category.categories != undefined) {
+        if (category.categories != undefined && category.categories.length > 0) {
           let categories = category.categories;
 
           console.log('onCategory categories data >>>>> ', categories);

@@ -34,7 +34,11 @@ export default {
     columns: {type: Number, required: false, default: 6}
   },
   async fetch() {
+    console.log('category params', this.$route.params);
     let route = `/store/${this.$route.params.store}/category/${this.$route.params.category}`;
+
+    console.log('route', route);
+
     params.route = route;
     params.with = ['category', 'breadcrumbs', 'categories'];
     await store.dispatch('shop/onCategory', params);
