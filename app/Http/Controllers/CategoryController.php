@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Cache;
 
 class CategoryController extends Controller
 {
-    protected $without = ['categories', 'products', 'category', 'store'],
-        $relations = ['categories', 'store', 'stores'],
+    protected $without = ['categories', 'category', 'store'],
+        $relations = ['categories', 'products', 'store', 'stores'],
         $with = [],
         $categoryId = null,
         $products = [],

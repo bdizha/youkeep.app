@@ -109,6 +109,8 @@ const actions = {
   async onCategory({dispatch, commit, state}, params) {
     // console.log('response: route category', route);
 
+    commit('setCategories', []);
+
     try {
       dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
       dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
@@ -154,7 +156,7 @@ const actions = {
             category_id: category.id,
             limit: 12,
             order_by: 'randomized_at',
-            with: ['photos', 'breadcrumbs']
+            with: ['photos', 'breadcrumbs', 'products']
           };
 
           dispatch('onCategories', payload);
@@ -228,6 +230,8 @@ const actions = {
     try {
       dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
+
+      commit('setCategories', []);
 
       await axios.post('/categories', payload).then(({data}) => {
         let categories = data.categories;

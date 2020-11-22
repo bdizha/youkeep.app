@@ -6,9 +6,11 @@
           <a-col v-for="(size, index) in size.items"
                  :key="size.id"
                  :xs="{span: 24}" :sm="{span: 24}" :md="{span: 12}" :lg="{span: 12}">
-            <a-checkbox :value="size.id">
-              {{ size.name }}
-            </a-checkbox>
+            <div class="r-product-type">
+              <a-checkbox :value="size.id">
+                {{ size.name }}
+              </a-checkbox>
+            </div>
           </a-col>
         </a-row>
       </a-checkbox-group>
