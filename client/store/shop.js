@@ -124,6 +124,10 @@ const actions = {
         let category = data.category;
         commit('setCategory', category);
 
+        // set the store object
+        // force the store to change
+        commit('setStore', category.store);
+
         console.log('setCategory data >>>>> ', category);
 
         if (category.products != undefined) {
@@ -182,10 +186,6 @@ const actions = {
         setTimeout(() => {
           dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
         }, 300);
-
-        // set the store object
-        // force the store to change
-        commit('setStore', category.store);
       });
 
     } catch (e) {

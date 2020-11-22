@@ -1,7 +1,7 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <r-store-item :store="store"></r-store-item>
+    <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <r-store-item v-if="hasStore" :store="store"></r-store-item>
       <a-collapse default-active-key="1" expandIconPosition="right">
         <a-collapse-panel v-for="(filter, index) in filters"
                           :key="index"
@@ -34,7 +34,7 @@ export default {
   props: {},
   data() {
     return {
-      hasData: true,
+      hasData: false,
       hasBrands: true,
       hasDiscounts: true,
       discounts: DISCOUNTS,
@@ -43,15 +43,17 @@ export default {
   },
   computed: mapGetters({
     store: 'shop/store',
+    hasStore: 'shop/hasStore',
     filters: 'shop/filters',
-    hasProducts: 'shop/hasProducts',
     hasCategories: 'shop/hasCategories',
-    category: 'shop/category'
   }),
   created() {
   },
+  mounted() {
+    this.hasData = true;
+  },
   methods: {
-    payload(category) {
+    payload() {
 
     },
     onSlot() {

@@ -49,8 +49,18 @@ export default {
   props: {
     isShow: {type: Boolean, required: false},
   },
+  async fetch() {
+    let payload = {
+      category_id: null,
+      limit: 24
+    };
+
+    await this.$store.dispatch('base/onStores', payload);
+  },
   data() {
-    return {};
+    return {
+      hasData: false
+    };
   },
   computed: mapGetters({
     modal: 'base/modal',
@@ -59,25 +69,11 @@ export default {
     processes: 'base/processes'
   }),
   created() {
-    this.onStores();
+    this.hasData = true;
   },
   methods: {
     payload() {
     },
-    onRight() {
-      let drawer = {};
-      drawer.current = 'store-right';
-      drawer.isVisible = true;
-      this.$store.dispatch('base/onDrawer', drawer);
-    },
-    async onStores() {
-      let payload = {
-        category_id: null,
-        limit: 24
-      };
-
-      await this.$store.dispatch('base/onStores', payload);
-    }
   },
   watch: {},
 };
