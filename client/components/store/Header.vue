@@ -37,7 +37,7 @@
         </a-row>
       </a-col>
     </a-row>
-    <r-drawer></r-drawer>
+    <r-drawer v-if="hasStore"></r-drawer>
   </a-layout-header>
 </template>
 <script>
