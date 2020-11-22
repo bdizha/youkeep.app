@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Cache;
 class CategoryController extends Controller
 {
     protected $without = ['categories', 'category', 'store'],
-        $relations = ['categories', 'products', 'store', 'stores'],
+        $relations = ['categories', 'store', 'stores'],
         $with = [],
         $categoryId = null,
         $products = [],
@@ -101,6 +101,14 @@ class CategoryController extends Controller
 
             if ($type === Category::TYPE_STORE) {
                 $this->_setCategoryStores($categories);
+            }
+
+            if (!empty($this->with['products'])) {
+                foreach ($categories as $category) {
+                    $this->categoryId = $category->id;
+                    $this->setProducts();
+                    $categories['products'] = $this->products;
+                }
             }
 
             $response['categories'] = $categories;
