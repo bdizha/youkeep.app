@@ -142,7 +142,7 @@ class CategoryController extends Controller
             $category = Category::with($this->with)
                 ->where('slug', $this->slug)->first();
 
-            $query = Category::with($this->with);
+            $query = Category::with(array_intersect($this->with, $this->relations));
 
             if (!empty($this->limit)) {
                 $query->limit($this->limit);
