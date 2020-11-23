@@ -38,7 +38,7 @@ class ProductController extends Controller
             $this->setProducts();
 
             $response = $this->products;
-            Cache::put($key, $response, now()->addMinutes(15));
+            Cache::put($key, $response, now()->addMinutes(3600));
         }
 
         return response()->json($response, 200);
@@ -101,7 +101,7 @@ class ProductController extends Controller
             $response['product'] = $this->product;
             $response['categories'] = $this->categories;
 
-            Cache::put($key, $response, now()->addMinutes(15));
+            Cache::put($key, $response, now()->addMinutes(3600));
         }
 
         return response()->json($response, 200);

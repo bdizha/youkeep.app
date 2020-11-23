@@ -27,7 +27,7 @@ class TestimonialController extends Controller
 
             $response['testimonials'] = $testimonials;
 
-            Cache::put($key, $response, now()->addMinutes(15));
+            Cache::put($key, $response, now()->addMinutes(3600));
         }
 
         return response()->json($response, 200);
