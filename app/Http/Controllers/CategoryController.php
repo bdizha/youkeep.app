@@ -139,10 +139,11 @@ class CategoryController extends Controller
             $response = Cache::get($key, []);
         } else {
 
-            $category = Category::with($this->with)
+            $with = array_intersect($this->with, $this->relations);
+            $category = Category::with($with)
                 ->where('slug', $this->slug)->first();
 
-            $query = Category::with(array_intersect($this->with, $this->relations));
+            $query = Category::with($with);
 
             if (!empty($this->limit)) {
                 $query->limit($this->limit);
