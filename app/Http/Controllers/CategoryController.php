@@ -133,7 +133,7 @@ class CategoryController extends Controller
         $this->limit = $request->get('limit', 4);
         $this->with = $request->get('with', []);
 
-        $key = $this->_setCacheKey($request) . time();
+        $key = $this->_setCacheKey($request);
 
         if (Cache::has($key)) {
             $response = Cache::get($key, []);
