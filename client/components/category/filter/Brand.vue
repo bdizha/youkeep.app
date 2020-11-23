@@ -2,10 +2,10 @@
   <a-row class="r-mv-12" :gutter="[12,12]" type="flex" justify="start">
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-checkbox-group v-model="selected" @change="onFilter">
-        <a-row type="flex" justify="start">
+        <a-row :gutter="[12,12]" type="flex" justify="start">
           <a-col v-for="(brand, index) in brand.items"
                  :key="brand.id"
-                 :xs="{span: 24}" :sm="{span: 24}" :md="{span: 12}" :lg="{span: 12}">
+                 :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
             <div class="r-product-type">
               <a-checkbox :value="brand.id">
                 {{ brand.name }}

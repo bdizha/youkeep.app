@@ -830,6 +830,12 @@ x {
     text-align: center;
     cursor: pointer;
 
+    .ant-checkbox-wrapper {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
     &.r-product-type__active,
     &:hover {
         border: 1px solid #FDBAC4;
@@ -2314,10 +2320,6 @@ h4.r-heading-light {
 
 .r-text-underline {
     width: 100%;
-}
-
-.ant-checkbox-wrapper {
-    margin: 3px 0 !important;
 }
 
 .ant-checkbox {
