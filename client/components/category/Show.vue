@@ -42,7 +42,7 @@ export default {
 
     params.route = route;
     params.category = this.$route.params.category;
-    params.with = ['category', 'breadcrumbs', 'categories'];
+    params.with = ['breadcrumbs'];
     await this.$store.dispatch('shop/onCategory', params);
   },
   data() {

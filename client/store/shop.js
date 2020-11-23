@@ -119,7 +119,6 @@ const actions = {
       let route = params.route;
 
       params.type = 1;
-      params.with = ['categories'];
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
       await axios.post(route, params).then(({data}) => {
@@ -156,7 +155,7 @@ const actions = {
             category_id: category.id,
             limit: 12,
             order_by: 'randomized_at',
-            with: ['photos', 'breadcrumbs', 'products']
+            with: ['photos', 'breadcrumbs']
           };
 
           dispatch('onCategories', payload);
