@@ -9,7 +9,7 @@ class DatabaseSeeder extends Seeder
 {
     protected $storeId = null;
     protected $categories = [];
-    protected $parentCategory = null;
+    protected $parentStoreCategory = null;
 
     /**
      * Run the database seeds.
@@ -75,14 +75,12 @@ class DatabaseSeeder extends Seeder
      * @param $category
      * @return array
      */
-    protected function setParentCategory($category)
+    protected function setParentStoreCategory($storeCategory)
     {
-        $this->parentCategory = null;
-        $urlParts = explode('/', $category->url);
+        $this->parentStoreCategory = null;
+        $urlParts = explode('/', $storeCategory->url);
 
         $urlParts = array_slice($urlParts, 4, count($urlParts) - 7);
-
-//        dd([$urlParts, $category]);
 
         $slug = '';
         foreach ($urlParts as $part) {
@@ -91,29 +89,35 @@ class DatabaseSeeder extends Seeder
             $slug = str_replace('plp/', '', $slug);
             $slug = str_replace('rclp/', '', $slug);
 
-            $parentCategory = Category::where('url', 'like', "%plp{$slug}/_/%")
-                ->where('store_id', $category->store_id)
+            $parentStoreCategory = \App\StoreCategory::where('url', 'like', "%plp{$slug}/_/%")
+                ->with('category')
+                ->where('store_id', $this->storeId)
                 ->first();
 
-            if (empty($parentCategory)) {
-                $parentCategory = Category::where('url', 'like', "%rclp{$slug}/_/%")
-                    ->where('store_id', $category->store_id)
+            if (empty($parentStoreCategory)) {
+                $parentStoreCategory = \App\StoreCategory::where('url', 'like', "%rclp{$slug}/_/%")
+                    ->with('category')
+                    ->where('store_id', $this->storeId)
                     ->first();
             }
 
-            if (!empty($parentCategory)) {
-                $this->parentCategory = $parentCategory;
-
-                $categoryValues = [
-                    'category_id' => $this->parentCategory->id,
-                ];
+            if (!empty($parentStoreCategory)) {
+                $this->parentStoreCategory = $parentStoreCategory;
 
                 $categoryAttributes = [
-                    'id' => $category->id
+                    'id' => $storeCategory->id
                 ];
 
-                echo "Updated parent {$this->parentCategory->name} category for {$category->slug} >>>>> \n";
-                Category::updateOrCreate($categoryAttributes, $categoryValues);
+                $categoryValues = [
+                    'parent_id' => $this->parentStoreCategory->category_id
+                ];
+
+                echo "Updated parent {$this->parentStoreCategory->category->name} category for {$storeCategory->slug} >>>>> \n";
+                \App\StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
+
+                if ($storeCategory->category->name === 'Furniture' && count($urlParts) > 0) {
+//                    dd([$urlParts, $storeCategory, $this->parentStoreCategory]);
+                }
             }
         }
 
@@ -122,41 +126,46 @@ class DatabaseSeeder extends Seeder
 
     protected function decodeCategories($storeId)
     {
-        foreach ($this->categories as $key => $category) {
-            $this->parentCategory = null;
+        foreach ($this->storeCategories as $key => $storeCategory) {
+            $this->parentStoreCategory = null;
+
+            $category = $storeCategory->category;
 
             echo "{$key} >>>\n";
 
-            $url = $category->url;
+            $url = $storeCategory->url;
 
-            $urlParts = $this->setParentCategory($category);
+            $urlParts = $this->setParentStoreCategory($storeCategory);
 
-            $attributes = [
-                'url' => $category->url
-            ];
+            echo 'Processing category ::::' . $storeCategory->url . "\n<<===================================\n";
 
-            echo 'Processing category ::::' . $category->url . "\n<<===================================\n";
+            $attributes = ['id' => $storeCategory->id];
 
-            if (!empty($this->parentCategory) && $this->parentCategory->id != $category->id) {
+            if (!empty($this->parentStoreCategory) && $this->parentStoreCategory->id != $storeCategory->id) {
                 $values = [
                     'level' => count($urlParts) + 1,
-                    'category_id' => $this->parentCategory->id,
-                    'store_id' => $storeId,
-                    'type' => Category::TYPE_CATALOG
+                    'parent_id' => $this->parentStoreCategory->category_id,
                 ];
 
-                $category = \App\Category::updateOrCreate($attributes, $values);
+                if($storeCategory->url === 'https://www.home.co.za/plp/dining/furniture/_/N-27iu'){
+//                    dd([$urlParts, $this->parentStoreCategory, 'level' => count($urlParts) + 1]);
+                }
 
-                echo "Updated category: " . $category->name . str_pad('*', $category->level * 2, '=', STR_PAD_LEFT) . "\n";
+                \App\StoreCategory::updateOrCreate($attributes, $values);
 
-            } elseif (empty($this->parentCategory->id) && $category->level != 1) {
+                echo "Updated category: " . $storeCategory->category->name . str_pad('*', $storeCategory->level * 2, '=', STR_PAD_LEFT) . "\n";
+
+            } elseif (empty($this->parentStoreCategory->id)) {
                 $values = [
-                    'level' => 1,
-                    'category_id' => null,
-                    'store_id' => $storeId
+                    'parent_id' => null,
+                    'level' => count($urlParts) + 1
                 ];
 
-                \App\Category::updateOrCreate($attributes, $values);
+//                if ($storeCategory->url === 'https://www.home.co.za/rclp/furniture/_/N-2c9x') {
+//                    dd([$storeCategory, $urlParts]);
+//                }
+
+                \App\StoreCategory::updateOrCreate($attributes, $values);
             } else {
                 echo 'Skipped category ::::' . $category->level . ' <> ' . $url . "\n<<===================================\n";
             }

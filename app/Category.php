@@ -73,7 +73,7 @@ class Category extends Model
     public function getRouteAttribute()
     {
         if ($this->type !== 1) {
-            $route = '/store/' . $this->store->slug . '/category/' . $this->slug;
+            $route = '/category/' . $this->slug;
         } else {
             $route = '/stores/' . $this->slug;
         }
@@ -221,8 +221,7 @@ class Category extends Model
      */
     public function categories()
     {
-        return $this->hasMany('App\Category', 'category_id', 'id')
-            ->take(12);
+        return $this->hasMany('App\Category', 'category_id', 'id');
     }
 
     /**
@@ -230,16 +229,7 @@ class Category extends Model
      */
     public function stores()
     {
-        return $this->belongsToMany('App\Store', 'store_categories', 'category_id', 'store_id')
-            ->take(12);
-    }
-
-    /**
-     * Get the category stores
-     */
-    public function store()
-    {
-        return $this->belongsTo('App\Store', 'store_id', 'id');
+        return $this->belongsToMany('App\Store', 'store_categories', 'category_id', 'store_id');
     }
 
 }

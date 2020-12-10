@@ -50,6 +50,7 @@ class CategoryController extends Controller
             $response = Cache::get($key, []);
         } else {
             $query = Category::limit($this->limit)
+                ->has('stores')
                 ->where('type', $type)
                 ->where('store_id', '!=', 1);
 

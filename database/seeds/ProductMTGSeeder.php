@@ -10,7 +10,7 @@ class ProductMTGSeeder extends DatabaseSeeder
     protected $domain = "https://www.archivestore.co.za";
     protected $storeId = null;
 
-    protected $storeIds = [12, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
+    protected $storeIds = [12, 16]; //, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
     protected $categories = [];
     protected $level = 0;
 
@@ -22,15 +22,13 @@ class ProductMTGSeeder extends DatabaseSeeder
     public function run()
     {
         $storeIds = [];
-
-        foreach (array_rand($this->storeIds, 6) as $key) {
+        foreach (array_rand($this->storeIds, 2) as $key) {
             $storeIds[] = $this->storeIds[$key];
         }
 
-        $this->storeIds = $storeIds;
+//        $this->storeIds = $storeIds;
 
-        $this->store = Store::where()
-            -where('id', $this->storeIds)
+        $this->stores = Store::whereIn('id', $this->storeIds)
             ->get();
 
         foreach ($this->stores as $store) {
@@ -41,16 +39,18 @@ class ProductMTGSeeder extends DatabaseSeeder
 
             $this->getCategories($store->url);
 
-            $this->categories = Category::where('store_id', $this->storeId)
+            $this->storeCategories = \App\StoreCategory::where('store_id', $this->storeId)
+                ->with('category')
                 ->get();
 
             echo ">>>>>> Decoding store > categories: " . $store->name . "\n";
             $this->decodeCategories($this->storeId);
 
             // Get all the category products
-            foreach ($this->categories as $category) {
-                echo ">>>>>> Fetching store > categories > products: " . $category->name . ' >> ' . $category->store->name . "\n";
-                $this->processCategory($category);
+            foreach ($this->storeCategories as $storeCategory) {
+                $category = $storeCategory->category;
+                echo ">>>>>> Fetching store > categories > products: " . $category->name . ' >> ' . $store->name . "\n";
+                $this->processCategory($storeCategory);
             }
 
         }
@@ -64,28 +64,30 @@ class ProductMTGSeeder extends DatabaseSeeder
         $categoryNodes = $categoryNode->filter('.nav__list li a');
 
         $categoryNodes->each(function ($node) {
-            echo __LINE__ . " <> \n";
+//            echo __LINE__ . " <> \n";
 
-            $categoryLink = $this->domain . $node->attr('href');
-            echo __LINE__ . " <> \n";
+            if (strpos($node->attr('href'), $this->domain) === false) {
+                $categoryLink = $this->domain . $node->attr('href');
+            } else {
+                $categoryLink = $node->attr('href');
+            }
+//            echo __LINE__ . " <> \n";
             $categoryName = $node->text();
-            echo __LINE__ . " <> \n";
+//            echo __LINE__ . " <> \n";
+
+            $categoryName = trim($categoryName);
 
             $linkParts = explode(';jsessionid', $categoryLink);
 
             if (!empty($linkParts[0])) {
-                $categoryName = ucwords(strtolower($categoryName));
-
                 $categoryLink = $linkParts[0];
 
                 echo "Category: " . $categoryName . "\n";
                 echo "Category link: " . $categoryLink . "\n";
-                echo __LINE__ . " <> \n";
+//                echo __LINE__ . " <> \n";
 
                 if (strpos($categoryLink, 'plp') !== false ||
                     strpos($categoryLink, 'rclp') !== false) {
-
-//                    dd([$categoryName, $categoryLink]);
                     $this->setCategory($categoryName, $categoryLink);
                 }
 
@@ -94,14 +96,16 @@ class ProductMTGSeeder extends DatabaseSeeder
     }
 
     /**
-     * @param $category
+     * @param $storeCategory
      * @param int $page
      */
-    public function processCategory($category, $page = 1)
+    public function processCategory($storeCategory, $page = 1)
     {
         try {
+            $category = $storeCategory->category;
+
             // find the category filter to use
-            $filterItem = $this->setCategoryFilterItem($category);
+            $filterItem = $this->setCategoryFilterItem($storeCategory);
 
             if (empty($filterItem)) {
                 return;
@@ -117,7 +121,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             if (!empty($productItems)) {
 
                 if ($page > 1) {
-                    echo __LINE__ . ">>>>>>>>next\n";
+//                    echo __LINE__ . ">>>>>>>>next\n";
                 }
 
                 $this->setProducts($productItems, $category);
@@ -125,13 +129,13 @@ class ProductMTGSeeder extends DatabaseSeeder
 
             if ($page < $totalPages) {
                 ++$page;
-                echo __LINE__ . ">>>>>>>>previous\n";
+//                echo __LINE__ . ">>>>>>>>previous\n";
 
-                echo __LINE__ . ">>>>>>>> Next page: {$page} on category: {$category->name} \n";
+//                echo __LINE__ . ">>>>>>>> Next page: {$page} on category: {$category->name} \n";
 
                 $this->processCategory($category, $page);
             } else {
-                echo __LINE__ . "page($page) >= totalPages ($totalPages) > >>>>>>>>cool\n";
+//                echo __LINE__ . "page($page) >= totalPages ($totalPages) > >>>>>>>>cool\n";
             }
 
             // set the search/lookup data
@@ -152,6 +156,8 @@ class ProductMTGSeeder extends DatabaseSeeder
             'external_url' => $values['external_url']
         ];
 
+        $values['store_id'] = $this->storeId;
+
         $product = \App\Product::updateOrCreate($attributes, $values);
 
 //        echo "Inserted: " . $values['name'] . "\n===================================>>\n";
@@ -165,13 +171,11 @@ class ProductMTGSeeder extends DatabaseSeeder
 
         \App\StoreProduct::updateOrCreate($values, $values);
 
-//        dd([$product, $category]);
-
         return $product;
     }
 
     /**
-     * @param $parentCategory
+     * @param $categoryName
      * @param $url
      * @return mixed
      */
@@ -184,17 +188,13 @@ class ProductMTGSeeder extends DatabaseSeeder
 
         /* Update or create this category */
         $attributes = $values = [
-            'url' => $url,
+            'name' => $categoryName,
         ];
 
         $values = [
             'name' => $categoryName,
-            'level' => $this->level,
-            'url' => $url,
             'order' => 1,
             'description' => $categoryDescription,
-            'category_id' => null,
-            'store_id' => $this->storeId,
             'type' => Category::TYPE_CATALOG
         ];
 
@@ -205,7 +205,12 @@ class ProductMTGSeeder extends DatabaseSeeder
         $values = [
             'store_id' => $this->storeId,
             'category_id' => $category->id,
+            'url' => $url,
         ];
+
+        if($url == 'https://www.home.co.za/plp/furniture/bedroom-bathroom/_/N-300fib'){
+            dd([$values, $category]);
+        }
 
         \App\StoreCategory::updateOrCreate($values, $values);
         return $category;
@@ -252,7 +257,7 @@ class ProductMTGSeeder extends DatabaseSeeder
     }
 
     /**
-     * @param $categoryData
+     * @param $filterSets
      * @param $category
      */
     private function setCategoryFilters($filterSets, $category): void
@@ -294,7 +299,7 @@ class ProductMTGSeeder extends DatabaseSeeder
 
                 $this->processFilterProducts($filterItem['value'], $category, $productType);
             }
-            echo __LINE__ . " <> \n";
+//            echo __LINE__ . " <> \n";
         }
     }
 
@@ -463,19 +468,19 @@ class ProductMTGSeeder extends DatabaseSeeder
     }
 
     /**
-     * @param $category
+     * @param $storeCategory
      * @return mixed|string
      */
-    private function setCategoryFilterItem($category)
+    private function setCategoryFilterItem($storeCategory)
     {
         $filterItem = null;
-        $urlParts = explode("N-", $category->url);
+        $urlParts = explode("N-", $storeCategory->url);
 
         if (empty($urlParts[1])) {
             return $filterItem;
         }
 
-        echo "Next category url: {$category->url} >>>\n";
+        echo "Next category url: {$storeCategory->url} >>>\n";
         if (strpos($urlParts[1], ';') === true) {
             $urlParts = explode(";", $urlParts[1]);
             $filterItem = $urlParts[0];
