@@ -64,7 +64,7 @@
                class="r-radius-right-white r-text-center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
                  :lg="{span: 18, offset:6}" class="r-p-48">
-            <a-row :gutter="[48,48]" type="flex" justify="start"
+            <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start"
                    class="r-radius-right-white">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                      :lg="{span: 8}">

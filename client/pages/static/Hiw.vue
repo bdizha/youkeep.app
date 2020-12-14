@@ -1,10 +1,10 @@
 <template>
   <r-page>
-    <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card class="r-p-24">
+        <a-card class="">
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">
@@ -47,7 +47,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card class="r-p-24">
+        <a-card class="">
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
@@ -61,11 +61,11 @@
       </a-col>
     </a-row>
     <r-steps></r-steps>
-    <a-row :gutter="[48,48]" type="flex" justify="justify">
+    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="justify">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
              :lg="{ span: 12 }"
              style="text-align: left;">
-        <a-card class="r-p-24">
+        <a-card class="">
           <a-card-meta>
             <template slot="description">
               <a-row :gutter="[24,24]" type="flex" justify="start">
@@ -75,7 +75,7 @@
                   </div>
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }">
-                  <h4 class="r-heading-light">
+                  <h4 class="r-heading-light r-text-secondary">
                     Online and in-store options
                   </h4>
                   <p class="r-text-normal">
@@ -99,7 +99,7 @@
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
-        <a-card class="r-p-24">
+        <a-card class="">
           <a-card-meta>
             <template slot="description">
               <a-row :gutter="[24,24]" type="flex" justify="start">
@@ -109,7 +109,7 @@
                   </div>
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }">
-                  <h4 class="r-heading-light">
+                  <h4 class="r-heading-light r-text-secondary">
                     One stop shopping platform
                   </h4>
                   <p class="r-text-normal">
@@ -125,7 +125,7 @@
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
              style="text-align: left;">
-        <a-card class="r-p-24">
+        <a-card class="">
           <a-card-meta>
             <template slot="description">
               <a-row :gutter="[24,24]" type="flex" justify="start">
@@ -135,7 +135,7 @@
                   </div>
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 14 }">
-                  <h4 class="r-heading-light">
+                  <h4 class="r-heading-light r-text-secondary">
                     Instant checkout finance
                   </h4>
                   <p class="r-text-normal">

@@ -3,12 +3,12 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <r-category-actions></r-category-actions>
       <a-row class="r-mt-48" type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
-          <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+        <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
+          <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                    :md="{ span: 12 }"
                    :lg="{ span: 12 }">
-              <a-card class="r-p-24">
+              <a-card class="">
                 <a-card-meta>
                   <template slot="description">
                     <h1 class="r-heading">
@@ -46,7 +46,7 @@
         </a-col>
       </a-row>
       <a-row type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
+        <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
           <r-welcome></r-welcome>
           <r-features :span="24"></r-features>
           <r-testimonials></r-testimonials>

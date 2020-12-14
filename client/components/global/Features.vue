@@ -3,13 +3,13 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
            :lg="{span: 8}">
       <a-card>
-        <div slot="cover" class="r-card-cover-secondary r-p-24">
-          <a-icon class="r-icon r-icon-stroke r-icon-primary"
+        <div slot="cover" class="r-card-cover-primary r-p-24">
+          <a-icon class="r-icon r-icon__white r-icon-stroke r-icon-primary"
                   type="shop"/>
         </div>
-        <a-card-meta class="r-p-24">
+        <a-card-meta>
           <template slot="description">
-            <h3 class="r-heading-light">
+            <h3 class="r-heading-light r-text-secondary">
               Find the stores that you want
             </h3>
             <p class="r-text-normal">
@@ -23,13 +23,13 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
            :lg="{span: 8}">
       <a-card>
-        <div slot="cover" class="r-card-cover-secondary r-p-24">
-          <a-icon class="r-icon r-icon-stroke r-icon-primary"
+        <div slot="cover" class="r-card-cover-primary r-p-24">
+          <a-icon class="r-icon r-icon__white r-icon-stroke r-icon-secondary"
                   type="shopping"/>
         </div>
-        <a-card-meta class="r-p-24">
+        <a-card-meta>
           <template slot="description">
-            <h3 class="r-heading-light">
+            <h3 class="r-heading-light r-text-secondary">
               Effortless shopping anywhere
             </h3>
             <p class="r-text-normal">
@@ -43,13 +43,13 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
            :lg="{span: 8}">
       <a-card>
-        <div slot="cover" class="r-card-cover-secondary r-p-24">
-          <a-icon class="r-icon r-icon-stroke r-icon-primary"
+        <div slot="cover" class="r-card-cover-primary r-p-24">
+          <a-icon class="r-icon r-icon__white r-icon-stroke r-icon-primary"
                   type="clock-circle"/>
         </div>
-        <a-card-meta class="r-p-24">
+        <a-card-meta>
           <template slot="description">
-            <h3 class="r-heading-light">
+            <h3 class="r-heading-light r-text-secondary">
               Instant checkout process
             </h3>
             <p class="r-text-normal">

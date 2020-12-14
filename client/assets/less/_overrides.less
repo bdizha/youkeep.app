@@ -1707,7 +1707,7 @@ h4.r-heading-light {
     font-size: 16px;
     position: relative;
 
-    .r-store-item-line{
+    .r-store-item-line {
         padding: 24px 0;
     }
 
@@ -1867,7 +1867,6 @@ h4.r-heading-light {
 
 .ant-menu-submenu-title {
     font-weight: 600;
-    font-size: 16px;
 }
 
 .ant-menu-submenu-popup {
@@ -3519,6 +3518,14 @@ h4.r-heading-light {
     }
 }
 
+.r-p-sm-0 {
+    .ant-card-body {
+        @media (max-width: 768px) {
+            padding: 0px;
+        }
+    }
+}
+
 .r-stores-tray {
     .ant-card {
         margin: 6px;
@@ -4699,8 +4706,6 @@ h4.r-heading-light {
 }
 
 .ant-steps-horizontal {
-    margin: -12px;
-
     .ant-steps-item-icon {
         margin: 0px;
         top: 24px;
@@ -4710,13 +4715,14 @@ h4.r-heading-light {
 
     .ant-steps-item-tail {
         &:after {
-            margin-top: 6px;
+            content: none;
+            display: none;
         }
     }
 
     &:not(.ant-steps-label-vertical) {
         .ant-steps-item {
-            margin: 24px 12px;
+            margin-right: 24px;
 
             &:last-child {
                 flex: 1;
@@ -4772,12 +4778,6 @@ h4.r-heading-light {
         }
 
         .ant-steps-item-container {
-            .ant-steps-item-tail {
-                &:after {
-                    background: #0069cd;
-                }
-            }
-
             position: relative;
             overflow: hidden;
 
@@ -4797,6 +4797,10 @@ h4.r-heading-light {
             }
         }
     }
+}
+
+.ant-card-meta-detail {
+    overflow: visible;
 }
 
 .r-steps {
@@ -5324,12 +5328,16 @@ h4.r-heading-light {
     font-size: 92px;
     line-height: 92px;
     margin: auto;
-    border-radius: 3px;
+    border-radius: 50%;
     overflow: hidden;
     color: #0069cd;
-    background: #EBF6FE url(/images/icon_pattern_secondary.svg) repeat;
+    background: #FFEFEF url(/images/icon_pattern_secondary.svg) repeat;
     border-color: #0069cd;
     text-align: center;
+
+    &.r-icon__white {
+        background-color: #FFFFFF;
+    }
 
     @media (max-width: 768px) {
         width: 100%;

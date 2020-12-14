@@ -1,11 +1,11 @@
 <template>
   <r-page>
-    <a-row :gutter="[48,48]" type="flex" justify="start" align="top">
+    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="top">
       <a-col :xs="{ span: 24 }"
              :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card class="r-p-24">
+        <a-card class="">
           <nuxt-link :to="'/career/' + position.slug">
             <h3 class="r-heading">
               <a-icon type="left"/>
@@ -49,7 +49,7 @@
             </a-breadcrumb>
           </a-col>
           <a-col :xs="{span: 24}" :md="{span: 24}" :lg="{span: 24}" class="r-padding-48">
-            <a-card class="r-p-24">
+            <a-card class="">
               <a-form v-if="!isSuccessful"
                       @submit="onSend"
                       :form="formApply">

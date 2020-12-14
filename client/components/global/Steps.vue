@@ -1,7 +1,7 @@
 <template>
-  <a-row type="flex" justify="center" class="r-mv-48">
+  <a-row class="r-mt-48" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row :gutter="[24,24]" type="flex" justify="center">
+      <a-row type="flex" justify="center">
         <a-col :xs="{ span: 20 }" :sm="{ span: 20 }" :lg="{ span: 20 }">
           <h2 class="r-heading r-same-height">
             {{ title ? title : 'How it works?' }}
@@ -21,7 +21,7 @@
           </nuxt-link>
         </a-col>
       </a-row>
-      <a-row :gutter="[48,24]" type="flex" justify="center" align="middle">
+      <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="center" align="middle">
         <a-col :xs="{ span: 24 }"
                :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
           <a-steps v-model="currentStep" direction="horizontal" :current="currentStep">

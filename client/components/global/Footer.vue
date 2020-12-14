@@ -2,8 +2,9 @@
   <a-row type="flex" justify="center">
     <a-col :span="24">
       <a-row class="r-mb-48" type="flex" justify="center">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 21 }" :lg="{ span: 21 }">
-          <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
+        <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 21 }" :lg="{ span: 21 }">
+          <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="center"
+                 align="middle">
             <a-col v-if="hasSubscribe" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <r-subscribe></r-subscribe>
             </a-col>
@@ -111,30 +112,35 @@
         <a-row type="flex" justify="center" class="r-bg-dark">
           <a-col class="r-p-24 r-footer-center-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
             <a-row :gutter="[24,24]" type="flex" justify="start">
-              <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 8 }">
+              <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 6 }">
                                 <span class="r-same-height r-text-white">
                                     Interested in making extra money?
                                 </span>
               </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 16 }">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 18 }">
                 <a-row :gutter="[24,24]" type="flex" justify="start">
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 8 }">
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 6 }" :lg="{ span: 6 }">
                     <nuxt-link class="r-same-height r-footer-link" to="/shopper">
                       <a-button block class="r-btn-bordered-white" size="default">
                         Become a shopper
                       </a-button>
                     </nuxt-link>
                   </a-col>
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
-                    <div class="r-text-white r-same-height r-footer-link">
-                      &copy; Shopple 2020 All Rights Reserved
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
+                    <div class="r-text-white r-same-height">
+                      &copy; Shopple 2020
                     </div>
                   </a-col>
-                  <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 8 }">
-                    <nuxt-link class="r-text-white r-same-height r-footer-link" to="/privacy">
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
+                    <div class="r-text-white r-same-height">
+                      All Rights Reserved
+                    </div>
+                  </a-col>
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
+                    <nuxt-link class="r-text-white" to="/privacy">
                       Privacy
                     </nuxt-link>
-                    <span>|</span>
+                    <span class="r-text-white">~</span>
                     <nuxt-link class="r-text-white r-same-height" to="/terms">Terms</nuxt-link>
                   </a-col>
                 </a-row>

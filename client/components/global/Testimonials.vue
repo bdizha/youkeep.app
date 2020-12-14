@@ -1,11 +1,11 @@
 <template>
   <a-row class="r-mv-48" type="flex" justify="center" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <a-card class="r-bg-primary-light">
+      <a-card class="r-bg-secondary-light">
         <a-card-meta>
           <template slot="description">
             <a-row type="flex" justify="center">
-              <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                 <h2 class="r-heading r-text-center">
                   What our customers say...
                 </h2>

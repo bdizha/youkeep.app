@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-primary-light r-p-24">
+  <a-card class="r-bg-primary-light">
     <a-card-meta class="r-text-center">
       <template slot="description">
         <a-row type="flex" justify="center">

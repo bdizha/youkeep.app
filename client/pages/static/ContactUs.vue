@@ -2,11 +2,11 @@
   <r-page>
     <a-row type="flex" justify="center">
       <a-col class="gutter-row" :span="24">
-        <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+        <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"
                  :lg="{ span: 12 }">
-            <a-card class="r-p-24">
+            <a-card class="">
               <a-card-meta>
                 <template slot="description">
                   <h1 class="r-heading r-text-secondary">
@@ -54,7 +54,7 @@
             </a-card>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-            <a-card class="r-p-24">
+            <a-card class="">
               <a-card-meta>
                 <template slot="description">
                   <div class="r-page-header-photo">

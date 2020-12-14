@@ -1,10 +1,10 @@
 <template>
   <r-page>
-    <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card class="r-p-24">
+        <a-card class="">
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
@@ -27,7 +27,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card class="r-p-24">
+        <a-card class="">
           <a-card-meta>
             <template slot="description">
               <r-slider :images="images"></r-slider>
@@ -38,14 +38,14 @@
     </a-row>
     <a-row class="r-mt-48" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-        <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
+        <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="center" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             &nbsp;
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card class="r-p-24">
+            <a-card class="">
               <a-card-meta>
                 <template slot="description">
                   <h2 class="r-heading">
@@ -61,7 +61,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card class="r-p-24">
+            <a-card class="">
               <a-card-meta>
                 <template slot="description">
                   <h2 class="r-heading">
@@ -86,7 +86,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card class="r-p-24">
+            <a-card class="">
               <a-card-meta>
                 <template slot="description">
                   <h2 class="r-heading">
@@ -103,7 +103,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card class="r-p-24">
+            <a-card class="">
               <a-card-meta>
                 <template slot="description">
                   <h2 class="r-heading">
@@ -128,7 +128,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card class="r-p-24">
+            <a-card class="">
               <a-card-meta>
                 <template slot="description">
                   <h2 class="r-heading">
