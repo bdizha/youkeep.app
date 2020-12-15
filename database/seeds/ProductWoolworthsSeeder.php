@@ -280,7 +280,7 @@ class ProductWoolworthsSeeder extends Seeder
             });
         }
 
-        dd([$category->name]);
+//        dd([$category->name]);
     }
 
     function setProduct($category, $values)

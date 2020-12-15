@@ -209,11 +209,11 @@ class Category extends Model
     }
 
     /**
-     * Get the category parent
+     * Get the store category
      */
-    public function category()
+    public function store_category()
     {
-        return $this->belongsTo('App\Category', 'category_id', 'id');
+        return $this->belongsTo('App\StoreCategory', 'category_id', 'id');
     }
 
     /**
@@ -221,7 +221,7 @@ class Category extends Model
      */
     public function categories()
     {
-        return $this->hasMany('App\Category', 'category_id', 'id');
+        return $this->belongsToMany('App\Category', 'store_categories', 'parent_id', 'id');
     }
 
     /**

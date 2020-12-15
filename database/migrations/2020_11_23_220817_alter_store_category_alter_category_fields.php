@@ -14,11 +14,15 @@ class AlterStoreCategoryAlterCategoryFields extends Migration
     public function up()
     {
         Schema::table('store_categories', function (Blueprint $table) {
-            $table->smallInteger('level')->index()->nullable(-1);
+            $table->smallInteger('level')->index()->default(-1);
             $table->string('url')->index()->nullable();
             $table->unsignedInteger('parent_id')->index()->nullable();
+            $table->boolean('has_products')->index()->default(false);
+            $table->boolean('has_categories')->index()->default(false);
+            $table->dateTime('randomized_at')->nullable();
+            $table->smallInteger('product_count');
 
-//            $table->foreign('parent_id')->references('id')->on('store_categories');
+            $table->foreign('parent_id')->references('id')->on('store_categories');
         });
     }
 

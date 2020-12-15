@@ -21,4 +21,12 @@ class StoreCategory extends Model
     {
         return $this->belongsTo('App\Store');
     }
+
+    /**
+     * Get the previous parent
+     */
+    public function previous()
+    {
+        return $this->belongsTo('App\Category', 'parent_id', 'id');
+    }
 }

@@ -14,7 +14,7 @@ class AlterCategoriesAddHasStores extends Migration
     public function up()
     {
         Schema::table('categories', function (Blueprint $table) {
-            $table->smallInteger('has_stores')->index()->default(false);
+            $table->boolean('has_stores')->index()->default(false);
         });
     }
 

@@ -50,9 +50,9 @@ class CategoryController extends Controller
             $response = Cache::get($key, []);
         } else {
             $query = Category::limit($this->limit)
-                ->has('stores')
-                ->where('type', $type)
-                ->where('store_id', '!=', 1);
+                ->with('store_categories')
+                ->has('store_categories')
+                ->where('type', $type);
 
             if (!is_null($storeId)) {
                 $query->where('store_id', $storeId);
@@ -68,7 +68,7 @@ class CategoryController extends Controller
             }
 
             if (!is_null($storeSlug)) {
-                $query->whereHas('store', function ($query) use ($storeSlug) {
+                $query->whereHas('stores', function ($query) use ($storeSlug) {
                     $query->where('stores.slug', $storeSlug);
                 });
             }

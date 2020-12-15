@@ -10,7 +10,7 @@ class ProductMTGSeeder extends DatabaseSeeder
     protected $domain = "https://www.archivestore.co.za";
     protected $storeId = null;
 
-    protected $storeIds = [12, 16]; //, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
+    protected $storeIds = [12]; //, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
     protected $categories = [];
     protected $level = 0;
 
@@ -22,7 +22,7 @@ class ProductMTGSeeder extends DatabaseSeeder
     public function run()
     {
         $storeIds = [];
-        foreach (array_rand($this->storeIds, 2) as $key) {
+        foreach ($this->storeIds as $key => $value) {
             $storeIds[] = $this->storeIds[$key];
         }
 
@@ -209,7 +209,7 @@ class ProductMTGSeeder extends DatabaseSeeder
         ];
 
         if($url == 'https://www.home.co.za/plp/furniture/bedroom-bathroom/_/N-300fib'){
-            dd([$values, $category]);
+//            dd([$values, $category]);
         }
 
         \App\StoreCategory::updateOrCreate($values, $values);

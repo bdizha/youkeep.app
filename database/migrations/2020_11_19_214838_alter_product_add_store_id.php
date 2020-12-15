@@ -14,7 +14,7 @@ class AlterProductAddStoreId extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->smallInteger('store_id')->index()->nullable();
+//            $table->smallInteger('store_id')->index()->nullable();
 
 //            $table->foreign('store_id')->references('id')->on('stores');
         });
@@ -28,7 +28,7 @@ class AlterProductAddStoreId extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            //
+            $table->dropColumn('store_id');
         });
     }
 }
