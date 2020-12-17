@@ -25,7 +25,7 @@ export default {
   async fetch() {
     let payload = {
       type: 2,
-      category_id: 1,
+      category_id: null,
       limit: 12,
       order_by: 'randomized_at',
       with: ['photos', 'breadcrumbs']

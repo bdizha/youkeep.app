@@ -128,6 +128,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('/stores/{slug}', 'CategoryController@stores')->name('stores.show');
     Route::get('/store/{store_slug}/category/{category_slug}', 'CategoryController@show')->name('category.show');
     Route::post('/store/{store_slug}/category/{category_slug}', 'CategoryController@show')->name('category.show.post');
+    Route::post('/category/{slug}', 'CategoryController@show')->name('category.show.post');
     Route::get('/product/{slug}', 'ProductController@show')->name('product.get');
     Route::post('/product/{slug}', 'ProductController@show')->name('product.show');
 });

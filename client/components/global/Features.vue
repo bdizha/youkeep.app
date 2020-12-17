@@ -9,9 +9,9 @@
         </div>
         <a-card-meta>
           <template slot="description">
-            <h3 class="r-heading-light r-text-secondary">
+            <h4 class="r-heading r-text-secondary">
               Find the stores that you want
-            </h3>
+            </h4>
             <p class="r-text-normal">
               Shopple helps customers discover stores, purchase products, and more. Whatever your business sells, we
               help you grow.
@@ -29,9 +29,9 @@
         </div>
         <a-card-meta>
           <template slot="description">
-            <h3 class="r-heading-light r-text-secondary">
+            <h4 class="r-heading r-text-secondary">
               Effortless shopping anywhere
-            </h3>
+            </h4>
             <p class="r-text-normal">
               We're changing how shopping is experienced. Get new products served to you based on your liking and
               preferences.
@@ -49,9 +49,9 @@
         </div>
         <a-card-meta>
           <template slot="description">
-            <h3 class="r-heading-light r-text-secondary">
+            <h4 class="r-heading r-text-secondary">
               Instant checkout process
-            </h3>
+            </h4>
             <p class="r-text-normal">
               Easily checkout with a one-click option and complete your order fast. Make sure you get the best
               shopping experience anytime.

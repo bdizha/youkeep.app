@@ -189,7 +189,7 @@ class Product extends KModel
 
         foreach ($types as $type => $label) {
             $variants = ProductVariant::with([
-                'stores' => function ($query) use ($type) {
+                'product_type' => function ($query) use ($type) {
                     $query->where('product_types.type', $type);
                 }])
                 ->where('product_id', $this->id)

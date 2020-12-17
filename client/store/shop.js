@@ -127,7 +127,8 @@ const actions = {
 
         // set the store object
         // force the store to change
-        commit('setStore', category.store);
+        commit('setStore', []);
+        // commit('setStore', category.store);
 
         console.log('setCategory data >>>>> ', category);
 

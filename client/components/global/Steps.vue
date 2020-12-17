@@ -2,22 +2,22 @@
   <a-row class="r-mt-48" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row type="flex" justify="center">
-        <a-col :xs="{ span: 20 }" :sm="{ span: 20 }" :lg="{ span: 20 }">
+        <a-col :xs="{ span: 21}" :sm="{ span: 21 }" :lg="{ span: 21 }">
           <h2 class="r-heading r-same-height">
             {{ title ? title : 'How it works?' }}
           </h2>
         </a-col>
-        <a-col class="r-text-right" :xs="{ span: 4 }" :sm="{ span: 4 }" :md="{ span: 4 }"
-               :lg="{ span: 4 }">
+        <a-col class="r-text-right" :xs="{ span: 3 }" :sm="{ span: 3 }" :md="{ span: 3 }"
+               :lg="{ span: 3}">
           <nuxt-link v-show="hasMore" to="/hiw">
-            <a-button class="r-hide-sm r-btn-bordered-primary"
+            <a-button class="r-btn--grey"
                       block
                       type="secondary"
-                      :size="'default'">
-              Read more
+                      size="large">
+              <span class="r-hide-sm">Read more</span>
+              <span class="r-hide-lg">Go</span>
               <a-icon type="right"/>
             </a-button>
-            <a-avatar class="r-hide-lg" shape="square" icon="right"/>
           </nuxt-link>
         </a-col>
       </a-row>
@@ -28,7 +28,7 @@
             <a-step v-for="(step, index) in steps"
                     :key="index">
               <template slot="title">
-                <h3 class="r-text-secondary">{{ step.title }}</h3>
+                <h3 class="r-heading">{{ step.title }}</h3>
               </template>
               <template slot="description">
                 <div class="r-step-caption">
