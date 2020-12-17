@@ -4,8 +4,8 @@
            :lg="{span: 24}">
       <a-breadcrumb>
         <a-icon slot="separator" type="right"/>
-        <a-breadcrumb-item v-if="hasStore" :key="0">
-          <nuxt-link :to="store.route">
+        <a-breadcrumb-item :key="0">
+          <nuxt-link v-if="hasStore" :to="store.route">
             {{ store.name }}
           </nuxt-link>
         </a-breadcrumb-item>

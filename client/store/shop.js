@@ -123,6 +123,7 @@ const actions = {
 
       await axios.post(route, params).then(({data}) => {
         let category = data.category;
+        let categories = data.categories;
         commit('setCategory', category);
 
         // set the store object
@@ -143,9 +144,7 @@ const actions = {
           commit('setProducts', products);
         }
 
-        if (category.categories != undefined && category.categories.length > 0) {
-          let categories = category.categories;
-
+        if (categories != undefined && categories.length > 0) {
           console.log('onCategory categories data >>>>> ', categories);
 
           commit('setCategories', categories);

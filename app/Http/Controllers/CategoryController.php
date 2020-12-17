@@ -179,7 +179,7 @@ class CategoryController extends Controller
                     $this->_setCategoryStores($categories);
                 }
 
-                $categories = $this->_pruneRelations($categories);
+//                $categories = $this->_pruneRelations($categories);
             }
 
             $response['categories'] = $categories;
