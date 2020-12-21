@@ -116,15 +116,15 @@ const getters = {
 // mutations
 const mutations = {
   setStore(state, store) {
-    console.log('store...', store);
+    // console.log('store...', store);
     state.store = store;
   },
   setNotice(state, notice) {
     state.notice = notice;
     state.hasNotice = notice !== null;
 
-    console.log('response: state.hasNotice data: ', state.hasNotice);
-    console.log('response: state.notice data: ', state.notice);
+    // console.log('response: state.hasNotice data: ', state.hasNotice);
+    // console.log('response: state.notice data: ', state.notice);
   },
   setHasNotice(state, hasNotice) {
     state.hasNotice = hasNotice;
@@ -133,7 +133,7 @@ const mutations = {
     state.isValid = isValid;
   },
   setStores(state, stores) {
-    console.log('stores...', stores);
+    // console.log('stores...', stores);
     state.stores = stores;
   },
   setCategory(state, category) {
@@ -167,7 +167,7 @@ const mutations = {
     state.drawer.isVisible = false;
   },
   setHasOverlay(state, hasOverlay) {
-    console.log('setHasOverlay', hasOverlay);
+    // console.log('setHasOverlay', hasOverlay);
     state.hasOverlay = hasOverlay;
   },
   setFilters(state, filters) {
@@ -244,14 +244,14 @@ const actions = {
 
       let route = params.route;
 
-      console.log('route: ', route);
+      // console.log('route: ', route);
       dispatch('onProcess', {key: 'isFixed', value: true});
 
       await axios.post(route, params).then(({data}) => {
         let category = data.category;
         commit('setCategory', category);
 
-        console.log('setCategory data >>>>> ', category);
+        // console.log('setCategory data >>>>> ', category);
 
         dispatch('onProcess', {key: 'isCategory', value: false});
         dispatch('onProcess', {key: 'isFixed', value: false});
@@ -266,7 +266,7 @@ const actions = {
       const {data} = await axios.post('/categories', payload);
       commit('setCategories', data.categories);
 
-      console.log('setCategories data >>>>> ', data);
+      // console.log('setCategories data >>>>> ', data);
 
       commit('setProcess', {key: 'isCategories', value: false});
 
@@ -280,7 +280,7 @@ const actions = {
       const {data} = await axios.get(payload.route, {});
       commit('setPosition', data.position);
 
-      console.log('setPosition data >>>>> ', data);
+      // console.log('setPosition data >>>>> ', data);
 
       commit('setProcess', {key: 'isCareers', value: false});
 
@@ -295,7 +295,7 @@ const actions = {
       commit('setDepartments', data.departments);
       commit('setPositions', data.positions);
 
-      console.log('setPositions data >>>>> ', data);
+      // console.log('setPositions data >>>>> ', data);
 
       commit('setProcess', {key: 'isCareers', value: false});
 
@@ -309,7 +309,7 @@ const actions = {
       const {data} = await axios.post('/categories', payload);
       commit('setStoreCategories', data.categories);
 
-      console.log('setStoreCategories', data.categories);
+      // console.log('setStoreCategories', data.categories);
 
       commit('setProcess', {key: 'isRunning', value: false});
 
@@ -322,7 +322,7 @@ const actions = {
 
     await axios.post('/shops', payload).then(({data}) => {
       let stores = data;
-      console.log('before onStores: ', stores);
+      // console.log('before onStores: ', stores);
 
       commit('setStores', stores);
       commit('setFilter', {key: 'stores', value: stores});
@@ -331,7 +331,7 @@ const actions = {
         commit('setProcess', {key: 'isTray', value: false});
       }, 300);
 
-      console.log('after onStores: ', stores);
+      // console.log('after onStores: ', stores);
     });
   },
   async onReviews({dispatch, commit, state}, payload) {
@@ -339,7 +339,7 @@ const actions = {
       commit('setProcess', {key: 'isRunning', value: true});
 
       await axios.get('/testimonials', payload).then(({data}) => {
-        console.log('response: reviews', data);
+        // console.log('response: reviews', data);
 
         commit('setReviews', data.testimonials);
         commit('setProcess', {key: 'isRunning', value: false});
