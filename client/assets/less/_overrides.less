@@ -822,7 +822,7 @@ x {
     min-width: 45px;
     min-height: 45px;
     line-height: 45px;
-    padding: 0 12px;
+    padding: 0;
     display: block;
     border: 1px solid #ececec;
     box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
@@ -835,6 +835,17 @@ x {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        display: block;
+        padding: 0 12px;
+
+        .ant-checkbox-inner::after {
+            transform: rotate(45deg) scale(1) translate(-50%,-50%);
+            opacity: 1;
+            border-color: #3C444C;
+        }
+        &:hover{
+            border-color: #FDBAC4;
+        }
     }
 
     &.r-product-type__active,
@@ -2340,6 +2351,17 @@ h4.r-heading-light {
 .ant-checkbox-inner {
     width: 24px !important;
     height: 24px !important;
+
+    &:after{
+        top: 50%;
+        left: 50%;
+        width: 6px;
+        height: 12px;
+        transition: all .1s cubic-bezier(.71,-.46,.88,.6),opacity .1s;
+        content: " ";
+        margin-top: -1px;
+        margin-left: -6px;
+    }
 }
 
 .ant-breadcrumb {

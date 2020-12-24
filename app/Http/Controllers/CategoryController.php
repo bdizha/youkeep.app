@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Cache;
 
 class CategoryController extends Controller
 {
-    protected $without = ['categories', 'category', 'store'],
+    protected $without = ['categories', 'category', 'store', 'products'],
         $relations = ['categories', 'store', 'stores'],
         $with = [],
         $categoryId = null,
@@ -138,9 +138,10 @@ class CategoryController extends Controller
         $categories = [];
         $this->slug = $request->get('slug', $slug);
         $this->level = $request->get('level', null);
-        $this->limit = $request->get('limit', 12);
+        $this->limit = $request->get('limit', 2);
         $this->orderBy = $request->get('order_by', 'store_categories.created_at');
         $this->with = $request->get('with', []);
+        $this->limit = 3;
 
         $key = $this->_setCacheKey($request);
 
