@@ -6,9 +6,9 @@
         <template slot="description">
           <a-row type="flex" justify="center" align="middle">
             <a-col class="r-p-24 r-text-center" :span="24">
-              <h3 class="r-heading r-text-view-more" style="margin-bottom: 0;">
+              <h4 class="r-heading r-text-view-more" style="margin-bottom: 0;">
                 {{ category.name }}
-              </h3>
+              </h4>
             </a-col>
           </a-row>
         </template>

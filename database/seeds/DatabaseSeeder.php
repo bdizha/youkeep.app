@@ -147,7 +147,9 @@ class DatabaseSeeder extends Seeder
                     'parent_id' => $this->parentStoreCategory->category_id,
                 ];
 
-                if($storeCategory->url === 'https://www.home.co.za/plp/dining/furniture/_/N-27iu'){
+                $this->setCategoryParent($storeCategory);
+
+                if ($storeCategory->url === 'https://www.home.co.za/plp/dining/furniture/_/N-27iu') {
 //                    dd([$urlParts, $this->parentStoreCategory, 'level' => count($urlParts) + 1]);
                 }
 
@@ -169,6 +171,17 @@ class DatabaseSeeder extends Seeder
             } else {
                 echo 'Skipped category ::::' . $category->level . ' <> ' . $url . "\n<<===================================\n";
             }
+        }
+    }
+
+    private function setCategoryParent($storeCategory)
+    {
+        $category = Category::where('id', $storeCategory->category_id)
+            ->first();
+
+        if (empty($category->parent_id)) {
+            $category->category_id = $this->parentStoreCategory->category_id;
+            $category->save();
         }
     }
 }

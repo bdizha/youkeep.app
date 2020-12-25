@@ -840,9 +840,18 @@ x {
 
         .ant-checkbox-inner::after {
             transform: rotate(45deg) scale(1) translate(-50%,-50%);
-            opacity: 0.45;
+            opacity: 0.15;
+            border-width: 1.5px;
             border-color: #3C444C;
-            &:hover{
+        }
+        &.ant-checkbox-wrapper-checked{
+            .ant-checkbox-inner::after {
+                opacity: 0.96;
+                border-color: #FFFFFF;
+            }
+        }
+        &:hover{
+             .ant-checkbox-inner::after {
                 opacity: 0.96;
                 border-color: #FDBAC4;
             }
@@ -3517,6 +3526,7 @@ h4.r-heading-light {
 
 .r-product-cards {
     margin-bottom: 24px;
+    margin-top: 12px;
 
     .ant-carousel {
         .slick-slide {

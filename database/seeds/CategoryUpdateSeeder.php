@@ -1,12 +1,13 @@
 <?php
 
 use App\Category;
+use App\StoreCategory;
 use App\Product;
 use Illuminate\Database\Seeder;
 
 class CategoryUpdateSeeder extends DatabaseSeeder
 {
-    protected $storesIds = [12, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
+    protected $storesIds = [12]; //, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
 
     /**
      * Run the database seeds.
@@ -15,25 +16,27 @@ class CategoryUpdateSeeder extends DatabaseSeeder
      */
     public function run()
     {
-        $this->setHighlights();
+//        $this->setHighlights();
 
-        $this->setCategoryProducts();
+//        $this->setCategoryProducts();
 
         foreach ($this->storesIds as $storesId) {
             $this->storeId = $storesId;
 
-            $this->categories = Category::orderBy('created_at', 'DESC')
-                ->where('store_id', $this->storeId)
+            $this->storeCategories = \App\StoreCategory::where('store_id', $storesId)
+                ->with('category')
                 ->get();
 
             $this->decodeCategories($this->storeId);
 
-            foreach ($this->categories as $category) {
-                $category->name = trim($category->name);
-                $category->save();
+            dd($this->storeCategories);
 
-                $this->setFilters($category);
-                $this->setFilters($category, true);
+            foreach ($this->storeCategories as $this->storeCategory) {
+//                $category->name = trim($category->name);
+//                $category->save();
+//
+//                $this->setFilters($category);
+//                $this->setFilters($category, true);
             }
         }
     }
@@ -42,7 +45,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
     {
         echo "Updated category filter : {$category->slug} >>>>> \n";
 
-        $this->setParentCategory($category);
+//        $this->setParentCategory($category);
 
         if (empty($hasProducts)) {
             $hasItemField = 'has_categories';
@@ -77,7 +80,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
                 'id' => $category->id
             ];
 
-            Category::updateOrCreate($categoryAttributes, $categoryValues);
+            \App\StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
         }
     }
 

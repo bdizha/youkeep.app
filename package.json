@@ -9,7 +9,7 @@
     "generate": "nuxt generate -c client/nuxt.config.js",
     "lint": "eslint --fix --ext .js,.vue client/",
     "dev": "nuxt dev -c client/nuxt.config.js",
-    "build": "nuxt generate -c client/nuxt.config.js"
+    "build": "nuxt build -c client/nuxt.config.js"
   },
   "dependencies": {
     "@nuxtjs/router": "^1.5.0",
