@@ -37,7 +37,7 @@ class CategoryController extends Controller
 
         $this->limit = $request->get('limit', 4);
         $this->level = $request->get('level', 1);
-        $this->orderBy = $request->get('order_by', 'created_at');
+        $this->orderBy = $request->get('order_by', 'store_categories.created_at');
 
         $this->with = $request->get('with', []);
 
