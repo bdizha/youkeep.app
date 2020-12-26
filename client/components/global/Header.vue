@@ -2,10 +2,13 @@
   <a-layout-header :class="{'r-switch-primary': isDark}" class="r-header">
     <r-layout-menu v-if="!modal.isVisible && !isRaised && !hasShop">
       <r-nav-item>
-        <a-icon @click="onDrawer('menu')" type="menu"/>
+        <a-icon class="r-text-white" @click="onDrawer('menu')" type="menu"/>
       </r-nav-item>
-      <r-nav-item class="r-nav-item__logo">
+      <r-nav-item class="r-nav-item__logo r-p-r-0">
         <r-logo></r-logo>
+      </r-nav-item>
+      <r-nav-item class="r-hide-sm r-p-l-0">
+        <nuxt-link class="r-text-logo" to="/">shopple</nuxt-link>
       </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__store-switch">
         <r-store-switch></r-store-switch>
@@ -16,7 +19,7 @@
       <r-nav-item class="r-hide-sm">
         <r-nav></r-nav>
       </r-nav-item>
-      <r-nav-item class="">
+      <r-nav-item>
         <r-cart-count></r-cart-count>
       </r-nav-item>
     </r-layout-menu>

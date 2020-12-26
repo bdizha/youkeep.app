@@ -3,14 +3,13 @@
         <a-col v-if="category" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
             <nuxt-link @click.native="onCategory(category)" class="r-same-height r-text-view-more"
                          :to="category.route">
-                <a-button class="r-hide-sm r-btn-bordered-secondary"
+                <a-button class="r-btn-bordered-secondary"
                           block
                           type="secondary"
                           :size="size">
                     View all
                     <a-icon type="right"/>
                 </a-button>
-                <a-avatar class="r-hide-lg" shape="square" icon="right"/>
             </nuxt-link>
         </a-col>
     </a-row>

@@ -1,0 +1,69 @@
+<template>
+  <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]">
+    <a-col class="r-p-24" v-for="(product, index) in products" :key="index"
+           :xs="{span: 12}"
+           :sm="{span: 12}" :md="{span: 6}" :lg="{span: 4}">
+      <r-product-item :product="product"></r-product-item>
+    </a-col>
+    <a-col class="r-hide-lg" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+           :lg="{ span: 24 }">
+      <r-category-shop-now :category="category" justify="center"></r-category-shop-now>
+    </a-col>
+  </a-row>
+</template>
+<script>
+import axios from 'axios'
+import {mapGetters} from "vuex";
+
+export default {
+  name: 'r-category-products',
+  components: {},
+  props: {
+    columns: {type: Number, required: false, default: 3},
+    category: {type: Object, required: false},
+  },
+  data() {
+    return {
+      hasData: false,
+      isProcessing: false,
+      products: []
+    }
+  },
+  async fetch() {
+    this.hasData = false;
+    this.isProcessing = true;
+
+    let params = {
+      category_id: this.category.id,
+      limit: 6,
+      filters: this.filters
+    };
+
+    let path = `/products`;
+    let $this = this;
+
+    console.log('product path: ', path);
+
+    await axios.post(path, params)
+      .then(({data}) => {
+
+        console.log(data.data, '>>>>>>');
+
+        $this.products = data.data;
+        $this.hasData = true;
+
+        setTimeout(function () {
+          $this.isProcessing = false;
+        }, 600);
+      })
+      .catch(e => {
+        console.log(e);
+      });
+  },
+  computed: mapGetters({
+    processes: "base/processes",
+  }),
+  methods: {}
+};
+</script>
+

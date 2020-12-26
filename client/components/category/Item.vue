@@ -5,9 +5,9 @@
                          :store="store"></r-category-header>
       <a-row v-if="hasData" class="r-slider r-product-cards" type="flex" justify="start">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-          <r-product-slider
+          <r-category-products
             :columns="columns"
-            :category="category"></r-product-slider>
+            :category="category"></r-category-products>
         </a-col>
       </a-row>
     </a-col>
