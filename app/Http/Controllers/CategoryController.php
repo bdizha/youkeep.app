@@ -108,7 +108,7 @@ class CategoryController extends Controller
                 $this->_setCategoryStores($categories);
             }
 
-            if (!empty($this->with['products'])) {
+            if (false && !empty($this->with['products'])) {
                 foreach ($categories as $category) {
                     $this->categoryId = $category->id;
                     $this->setProducts();
@@ -180,8 +180,10 @@ class CategoryController extends Controller
                     $this->_setCategoryStores($categories);
                 }
 
-//                $categories = $this->_pruneRelations($categories);
+                $categories = $this->_pruneRelations($categories);
             }
+
+            dd($categories);
 
             $response['categories'] = $categories;
             $response['category'] = $category;
