@@ -212,11 +212,13 @@ class CategoryController extends Controller
         } else {
             $query = Store::where('is_active', true);
 
-            $this->without = ['categories'];
+//            $this->without = ['categories'];
 
-            if (!is_null($this->categoryId)) {
-                $query->where('category_id', $this->categoryId);
-            }
+            $query->whereHas('categories', function ($query) {
+                if (!is_null($this->categoryId)) {
+                    $query->where('parent_id', $this->categoryId);
+                }
+            });
 
             if (!empty($this->limit)) {
                 $query->limit($this->limit);
