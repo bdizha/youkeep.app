@@ -2512,6 +2512,7 @@ h4.r-heading-light {
     z-index: 999;
     position: absolute;
     background: #FFFFFF;
+    display: none;
 
     .ant-spin-spinning {
         opacity: 1;
@@ -3440,8 +3441,16 @@ h4.r-heading-light {
     margin-right: 12px;
 }
 
+.r-show-category-spin__active{
+    .r-abs-spinner{
+        display: block;
+    }
+}
 
-.r-product-spinner--active {
+.r-show-product-spin__active{
+    .r-abs-spinner{
+        display: block;
+    }
     .r-product {
         .r-credit {
             display: none;

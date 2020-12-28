@@ -38,7 +38,7 @@
           </template>
         </a-card-meta>
       </a-card>
-      <r-spinner v-if="false" :process="'isProduct'" :is-absolute="true"></r-spinner>
+      <r-spinner :is-absolute="true"></r-spinner>
     </a-col>
   </a-row>
 </template>
@@ -59,9 +59,6 @@ export default {
     let $this = this;
     this.payload();
   },
-  computed: mapGetters({
-    processes: 'base/processes',
-  }),
   methods: {
     payload() {
     },

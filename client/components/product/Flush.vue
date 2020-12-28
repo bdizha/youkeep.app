@@ -1,7 +1,7 @@
 <template>
-  <a-row v-if="hasProducts" class="r-product-flush r-slider" type="flex" justify="start" style="margin-bottom: 24px;">
-    <a-col class="r-spin-holder r-p-24" :span="24"
-           :class="{'r-product-spinner--active': processes.isProduct}">
+  <a-row :class="{'r-show-product-spin__active' :processes.isProduct}" v-if="hasProducts"
+         class="r-product-flush r-slider" type="flex" justify="start" style="margin-bottom: 24px;">
+    <a-col class="r-spin-holder r-p-24" :span="24">
       <VueSlickCarousel v-bind="settings">
         <r-product-item v-for="(product, index) in products.data" :key="index"
                         :product="product"></r-product-item>

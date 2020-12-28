@@ -15,7 +15,7 @@
       </a-card-meta>
       <r-category-photo :category="category" :start="3"></r-category-photo>
     </nuxt-link>
-    <r-spinner process="isCategories" :is-absolute="true"></r-spinner>
+    <r-spinner :is-absolute="true"></r-spinner>
   </a-card>
 </template>
 <script>

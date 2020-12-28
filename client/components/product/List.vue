@@ -1,7 +1,6 @@
 <template>
-  <a-row type="flex" justify="center">
-    <a-col class="r-p-24" :span="24"
-           :class="{'r-product-spinner--active': processes.isProduct}">
+  <a-row :class="{'r-show-product-spin__active' :processes.isProduct}" type="flex" justify="center">
+    <a-col class="r-p-24" :span="24">
       <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" type="flex" justify="center">
         <a-col :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
           <a-pagination class="r-same-height" v-model="products.current_page"
