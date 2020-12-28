@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Cache;
 
 class CategoryController extends Controller
 {
-    protected $without = ['categories', 'category', 'store', 'products'],
+    protected $without = ['categories', 'category', 'store', 'products','filters', 'breadcrumbs'],
         $relations = ['categories', 'store', 'stores'],
         $with = [],
         $categoryId = null,
@@ -160,6 +160,8 @@ class CategoryController extends Controller
             }
 
             if(!empty($category)){
+                $category['products'] = [];
+
                 $query->whereHas('stores', function ($query) use ($category) {
                     if (!is_null($this->level)) {
                         $query->where('store_categories.level', $this->level);
@@ -182,8 +184,6 @@ class CategoryController extends Controller
 
                 $categories = $this->_pruneRelations($categories);
             }
-
-            dd($categories);
 
             $response['categories'] = $categories;
             $response['category'] = $category;

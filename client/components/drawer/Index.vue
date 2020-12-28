@@ -9,19 +9,16 @@
           <r-nav-item v-if="drawer.current == 'cart'" class="r-nav-item">
             <r-cart-count></r-cart-count>
           </r-nav-item>
-          <r-nav-item v-if="drawer.current != 'cart'">
-            <div class="r-logo">
-              <img :src="'/images/icon_white.svg'"
-                   alt="Shopple - It's Shopping Time!"/>
-            </div>
+          <r-nav-item v-if="drawer.current != 'cart'" class="r-nav-item__logo">
+            <r-logo :is-icon="true"></r-logo>
           </r-nav-item>
         </a-col>
-        <a-col class="r-text-right r-ph-24"
+        <a-col class="r-text-right"
                :xs="{span: 18}"
                :sm="{span: 18}"
                :md="{span: 12}"
                :lg="{span: 18}">
-          <h4 class="r-same-height r-heading">Hi, {{ isLoggedIn ? user.first_name : 'Guest' }}</h4>
+          <h4 class="r-heading r-ph-24">Hi, {{ isLoggedIn ? user.first_name : 'Guest' }}</h4>
         </a-col>
       </a-row>
     </div>
