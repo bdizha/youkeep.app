@@ -1,22 +1,24 @@
 <template>
-  <VueSlickCarousel v-bind="settings">
-    <div class="r-page-header-photo"
-         v-for="(category, index) in categories"
-         v-if="category.photo"
-         :key="index + '-image'">
-      <img :src="'/images/' + category.photo"/>
-      <div class="r-page-primary"
-           :style="{backgroundImage: 'url(' + '/images/' + category.photo + ')'}">
+  <div class="r-banner">
+    <VueSlickCarousel v-bind="settings">
+      <div class="r-page-header-photo"
+           v-for="(category, index) in categories"
+           v-if="category.photo"
+           :key="index + '-image'">
+        <img :src="'/images/' + category.photo"/>
+        <div class="r-page-primary"
+             :style="{backgroundImage: 'url(' + '/images/' + category.photo + ')'}">
+        </div>
       </div>
-    </div>
-  </VueSlickCarousel>
+    </VueSlickCarousel>
+  </div>
 </template>
 <script>
 import {mapGetters} from "vuex";
+
 export default {
   name: 'r-banner',
-  props: {
-  },
+  props: {},
   data() {
     return {
       settings: {

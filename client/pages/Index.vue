@@ -33,7 +33,7 @@
               </a-card>
             </a-col>
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-              <a-card>
+              <a-card v-if="hasCategories">
                 <a-card-meta>
                   <template slot="description">
                     <r-banner></r-banner>
@@ -85,6 +85,7 @@ export default {
     store: 'shop/store',
     category: 'shop/category',
     categories: 'base/categories',
+    hasCategories: 'base/hasCategories',
   }),
   mounted() {
   },
