@@ -45,7 +45,6 @@ export default {
   props: {},
   data() {
     return {
-      store: {}
     }
   },
   computed: mapGetters({

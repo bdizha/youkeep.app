@@ -1,5 +1,8 @@
 <template>
-  <div class="r-abs-spinner">
+  <div v-show="isRunning()" :class="{
+        'r-abs-spinner' : isAbsolute,
+    'r-fix-spinner' : !isAbsolute
+    }">
     <div class="ant-spin-spinning">
       <svg height="100%" viewBox="0 0 32 32" width="100%">
         <circle cx="16" cy="16" fill="none" r="14" stroke-width="4"

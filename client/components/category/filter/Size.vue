@@ -24,12 +24,13 @@ export default {
   name: 'r-category-filter-size',
   data() {
     return {
+      size: {items: [{'name': 'Mediuam', 'id': 0}, {'name': 'Large', 'id': 1}]},
       sizes: [],
       selected: []
     };
   },
   computed: mapState({
-    size: state => state.shop.filters.filter(item => item.type === 1)[0]
+    // size: state => state.shop.filters.filter(item => item.type === 1)[0]
   }),
   mounted() {
   },

@@ -36,7 +36,7 @@
               <a-card>
                 <a-card-meta>
                   <template slot="description">
-                    <r-slider :images="images"></r-slider>
+                    <r-banner></r-banner>
                   </template>
                 </a-card-meta>
               </a-card>

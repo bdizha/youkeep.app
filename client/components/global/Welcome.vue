@@ -8,7 +8,7 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
-          <r-category-slider></r-category-slider>
+          <r-category-slider v-if="processes.isFixed"></r-category-slider>
         </a-col>
       </a-row>
       <r-category-list :columns="6" :limit="6"></r-category-list>
@@ -39,7 +39,9 @@ export default {
       hasData: false
     }
   },
-  computed: mapGetters({}),
+  computed: mapGetters({
+    processes: 'base/processes'
+  }),
   created() {
   },
   mounted() {

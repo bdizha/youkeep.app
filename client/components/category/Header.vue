@@ -2,9 +2,9 @@
   <a-row :gutter="[24, 24]" class="r-mb-24" type="flex" justify="start">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: hasProduct ? 18 : 20 }"
            :lg="{ span: hasProduct ? 18 : 20 }">
-      <h3 class="r-heading">
+      <h4 class="r-heading">
         {{ category.name }}
-      </h3>
+      </h4>
     </a-col>
     <a-col class="r-hide-sm" :xs="{ span: 4 }" :sm="{ span: 4 }" :md="{ span: hasProduct ? 6 : 4 }"
            :lg="{ span: hasProduct ? 6 : 4 }">
