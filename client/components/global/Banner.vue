@@ -54,6 +54,7 @@ export default {
         ]
       },
     }
+
   },
   computed: mapGetters({
     categories: 'shop/categories',

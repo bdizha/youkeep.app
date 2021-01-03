@@ -18,7 +18,7 @@
           </div>
         </template>
       </VueSlickCarousel>
-      <r-spinner :is-absolute="true" v-if="processes.isCategory"></r-spinner>
+      <r-spinner :is-absolute="true" process="isCategories" v-if="processes.isCategory"></r-spinner>
     </a-col>
   </a-row>
 </template>

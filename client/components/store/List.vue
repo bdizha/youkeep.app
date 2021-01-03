@@ -42,7 +42,7 @@
                    description="No stores were found! Please try other store categories."/>
         </a-col>
       </a-row>
-      <r-spinner :is-absolute="true" v-if="processes.isRunning"></r-spinner>
+      <r-spinner :is-absolute="true" process="isCategories" v-if="processes.isRunning"></r-spinner>
       <a-row class="r-mb-48" type="flex" justify="center">
         <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <div class="r-store-text-light">

@@ -1,5 +1,5 @@
 <template>
-  <div v-show="isRunning()" :class="{
+  <div :class="{
         'r-abs-spinner' : isAbsolute,
     'r-fix-spinner' : !isAbsolute
     }">

@@ -1,5 +1,5 @@
 <template>
-  <a-row v-if="hasData" type="flex" justify="start">
+  <a-row type="flex" justify="start">
     <a-col class="r-spin-holder" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-category-item v-if="index < limit"
                        v-for="(category, index) in categories"
@@ -7,7 +7,7 @@
                        :columns="columns"
                        :category="category">
       </r-category-item>
-      <r-spinner :is-absolute="true" v-if="processes.isCategory"></r-spinner>
+      <r-spinner :is-absolute="true" process="isCategories" v-if="processes.isCategory"></r-spinner>
     </a-col>
   </a-row>
 </template>
@@ -34,7 +34,6 @@ export default {
   created() {
   },
   mounted() {
-    this.hasData = true;
   },
   methods: {
     async payload() {
