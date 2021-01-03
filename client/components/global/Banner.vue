@@ -5,9 +5,12 @@
            v-for="(category, index) in categories"
            v-if="category.photo"
            :key="index + '-image'">
-        <img :src="'/images/' + category.photo"/>
+        <r-avatar shape="square"
+                  :size="480"
+                  :src="category.photo"
+                  src-placeholder="/assets/icon_default.png"/>
         <div class="r-page-primary"
-             :style="{backgroundImage: 'url(' + '/images/' + category.photo + ')'}">
+             :style="{backgroundImage: 'url(' + category.photo + ')'}">
         </div>
       </div>
     </VueSlickCarousel>

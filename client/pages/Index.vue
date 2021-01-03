@@ -85,7 +85,7 @@ export default {
     store: 'shop/store',
     category: 'shop/category',
     categories: 'base/categories',
-    hasCategories: 'base/hasCategories',
+    hasCategories: 'shop/hasCategories',
   }),
   mounted() {
   },
