@@ -49,7 +49,7 @@ export default {
       let path = `/categories`;
       let params = {
         category_id: this.category.id,
-        limit: 6,
+        limit: 12,
         store_id: this.category.store_id
       };
 

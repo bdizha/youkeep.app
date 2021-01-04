@@ -105,7 +105,7 @@ class Category extends Model
             })
                 ->where('is_active', true)
                 ->orderBy('created_at', 'desc')
-                ->paginate(12);
+                ->paginate(24);
         }
 
         return $this->products;

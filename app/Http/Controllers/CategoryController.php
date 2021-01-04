@@ -161,7 +161,6 @@ class CategoryController extends Controller
 
             if(!empty($category)){
                 $category['products'] = [];
-
                 $query->whereHas('stores', function ($query) use ($category) {
                     if (!is_null($this->level)) {
                         $query->where('store_categories.level', $this->level);

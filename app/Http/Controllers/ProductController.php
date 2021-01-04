@@ -14,7 +14,7 @@ class ProductController extends Controller
         $relations = ['categories', 'products', 'category', 'store'],
         $with = [],
         $categoryId = null,
-        $limit = [],
+        $limit = 18,
         $level = [],
         $items = [],
         $item = [];
@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $this->limit = $request->get('limit', 18);
+        $this->limit = $request->get('limit', 24);
         $this->categoryId = $request->get('category_id', null);
 
         $key = $this->_setCacheKey($request);

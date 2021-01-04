@@ -22,7 +22,7 @@ class Controller extends BaseController
         $with = [],
         $categoryId = null,
         $products = [],
-        $limit = [],
+        $limit = 24,
         $level = [],
         $items = [],
         $item = [];
