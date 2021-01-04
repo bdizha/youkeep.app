@@ -265,7 +265,6 @@ a.r-text-logo {
 
 .ant-drawer-header {
     background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
-    border-bottom: none;
     padding: 12px;
 }
 
@@ -279,6 +278,20 @@ a.r-text-logo {
     h4.r-heading {
         margin-bottom: 0;
         color: #3C444C;
+        line-height: 36px;
+        height: 36px;
+    }
+}
+
+.r-drawer-content {
+    .ant-list-split {
+        .ant-list-item {
+            border: none;
+            padding: 0;
+            &:hover{
+                background: #ebf6fe;
+            }
+        }
     }
 }
 
@@ -1291,9 +1304,14 @@ xxl	≥1600px, could be a span value or an object containing above props
                     opacity: 0.96;
 
                     .ant-avatar-icon {
-                        background: rgba(251, 0, 40, 1);
-                        border-color: #F50A2B33;
+                        background: #0069cd;
+                        border-color: #0069cd33;
                         color: #FFFFFF;
+                    }
+
+                    .r-text-link {
+                        color: #0069cd;
+                        opacity: 0.96;
                     }
                 }
             }
@@ -5152,7 +5170,7 @@ h4.r-heading-light {
     }
 }
 
-.r-gradient{
+.r-gradient {
     .r-slider {
         .slick-list {
             .slick-slide {
@@ -5294,8 +5312,7 @@ h4.r-heading-light {
     z-index: 99;
     border-radius: 3px;
     position: relative;
-    height: 75px;
-    line-height: 75px;
+    line-height: 72px;
 }
 
 .r-store-item,

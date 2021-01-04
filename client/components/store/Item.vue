@@ -1,6 +1,6 @@
 <template>
   <div class="r-store-item-line">
-    <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+    <a-row type="flex" justify="center" align="middle">
       <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
         <div class="r-store-item">
           <r-avatar shape="square"
@@ -13,7 +13,7 @@
       <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
         <r-store-actions :store="store"></r-store-actions>
       </a-col>
-      <a-row class="r-hide-lg" :gutter="[24,24]" type="flex" justify="center" align="middle">
+      <a-row v-if="false" class="r-hide-lg" :gutter="[24,24]" type="flex" justify="center" align="middle">
         <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
           <r-store-rate :store="store"></r-store-rate>
         </a-col>
