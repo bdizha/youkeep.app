@@ -25,7 +25,7 @@
                        :class="'r-slider-item-36'"
                        :to="category.route">
               <r-avatar shape="circle"
-                        size="36"
+                        :size="36"
                         :src="category.photo"
                         :style="'background-image: url(' + category.photo + ');'">
               </r-avatar>

@@ -281,7 +281,9 @@ class Product extends KModel
                 return ['name' => $store['name'], 'route' => $store['route'], 'photo_url' => $store['photo_url']];
             }, $stores->toArray());
 
-            $store = $stores[0];
+            if(!empty($stores[0])){
+                $store = $stores[0];
+            }
         }
         return $store;
     }
