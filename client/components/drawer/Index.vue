@@ -1,8 +1,8 @@
 <template>
   <a-drawer :class="'r-drawer-' + drawer.current"
-    :placement="drawer.placement"
-    @close="onClose"
-    :visible="drawer.isVisible">
+            :placement="drawer.placement"
+            @close="onClose"
+            :visible="drawer.isVisible">
     <div style="margin-right: 45px;" slot="title">
       <a-row type="flex" justify="start" align="middle">
         <a-col @click="onClose" :xs="{span: 6}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 6}">
@@ -18,7 +18,9 @@
                :sm="{span: 18}"
                :md="{span: 12}"
                :lg="{span: 18}">
-          <h4 class="r-heading r-ph-24">Hi, {{ isLoggedIn ? user.first_name : 'Guest' }}</h4>
+          <r-nav-item class="r-nav-item">
+            <h4 class="r-heading">Hi, {{ isLoggedIn ? user.first_name : 'Guest' }}</h4>
+          </r-nav-item>
         </a-col>
       </a-row>
     </div>
@@ -28,7 +30,7 @@
     <r-cart-drawer v-if="isCurrent('cart')"
                    v-bind:key="'cart'" class="r-animate"></r-cart-drawer>
     <r-store-drawer v-if="isCurrent('store')"
-                         v-bind:key="'store'" class="r-animate"></r-store-drawer>
+                    v-bind:key="'store'" class="r-animate"></r-store-drawer>
     <r-account-drawer v-if="isCurrent('account')"
                       v-bind:key="'category'" class="r-animate"></r-account-drawer>
     <r-drawer-menu v-if="isCurrent('menu')"
