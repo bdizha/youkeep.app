@@ -4,7 +4,7 @@
       <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
         <div class="r-store-item">
           <r-avatar shape="square"
-                    :size="81"
+                    :size="72"
                     :src="store.photo_url"
                     src-placeholder="/assets/icon_default.png"/>
           <r-store-meta :store="store"></r-store-meta>
