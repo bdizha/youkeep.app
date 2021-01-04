@@ -628,15 +628,16 @@ x {
     display: table;
     color: #FFFFFF;
     position: absolute;
-    top: -12px;
-    left: 50%;
-    margin-left: -60px;
-    width: 120px;
-    height: 26px;
+    top: 0px;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    height: 36px;
     z-index: 11;
     border-radius: 3px;
     text-transform: uppercase;
     overflow: hidden;
+    box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
 
     .r-credit-text {
         width: 50%;
@@ -645,11 +646,10 @@ x {
         padding: 0px 9px 0;
         font-size: 14px;
         height: 24px;
-        line-height: 30px;
+        line-height: 36px;
         font-weight: 600;
         background: #FFFFFF;
         color: #0069cd;
-        border: 1px solid rgb(236, 236, 236, 1);
         overflow: hidden;
         border-radius: 3px 0 0 6px;
 
@@ -666,14 +666,13 @@ x {
         display: table-cell;
         width: 50%;
         height: 24px;
-        line-height: 30px;
+        line-height: 36px;
         font-weight: 500;
         font-size: 12px;
         text-align: center;
         padding: 0 12px;
         color: #FFFFFF;
         background: #0069cd;
-        border: 1px solid #0069cd;
         border-radius: 0 6px 6px 0;
         @media (max-width: 768px) {
             padding: 0px 10px;
@@ -694,8 +693,8 @@ x {
     }
 
     .r-action-height {
-        height: 32px;
-        line-height: 32px;
+        height: 36px;
+        line-height: 36px;
         display: block;
         margin-bottom: 0;
         text-align: center;
@@ -704,8 +703,8 @@ x {
     .r-product-cart {
         display: inline-block;
         position: relative;
-        height: 32px;
-        width: 32px;
+        height: 36px;
+        width: 36px;
         line-height: 32px;
         padding: 0;
         cursor: pointer;
@@ -3613,7 +3612,7 @@ h4.r-heading-light {
 
 .r-product-cards {
     margin-bottom: 24px;
-    margin-top: 12px;
+    margin-top: 24px;
 
     .ant-carousel {
         .slick-slide {
@@ -5130,8 +5129,9 @@ h4.r-heading-light {
         padding: 0;
 
         .slick-slide {
-            padding: 4px 12px;
+            padding: 0 12px;
             pointer-events: auto;
+            height: 36px;
 
             &.slick-cloned {
                 //display: none !important;
@@ -5185,7 +5185,7 @@ h4.r-heading-light {
 .r-text-slider {
     font-size: 16px;
     font-weight: 600;
-    line-height: 75px;
+    line-height: 36px;
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -5195,7 +5195,7 @@ h4.r-heading-light {
 
 .r-slider-item {
     padding: 0 6px 0 81px;
-    margin: 12px;
+    margin: 0 12px;
     display: block;
     text-align: center;
     color: rgba(60, 68, 76);
@@ -5359,6 +5359,13 @@ h4.r-heading-light {
     }
 }
 
+.r-grey-shadow {
+    box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
+    background: #FFFFFF;
+    border-radius: 3px;
+    padding: 4.5px 12px;
+}
+
 .r-store-item {
     .ant-avatar-square {
         position: absolute;
@@ -5384,6 +5391,13 @@ h4.r-heading-light {
 
     .ant-avatar-square {
         border-radius: 3px;
+    }
+}
+
+.r-category-header {
+    .r-slider-item {
+        padding: 0 !important;
+        margin: 0;
     }
 }
 

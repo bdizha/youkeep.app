@@ -3,7 +3,6 @@
     <VueSlickCarousel v-bind="settings">
       <div class="r-page-header-photo"
            v-for="(category, index) in categories"
-           v-if="category.photo"
            :key="index + '-image'">
         <r-avatar shape="square"
                   :size="480"

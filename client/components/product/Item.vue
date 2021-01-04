@@ -30,7 +30,7 @@
                   <a-col :xs="{ span: 24 }"
                          :sm="{ span: 24 }" :lg="{ span: 24 }">
                     <r-product-store :store="product.store"></r-product-store>
-                    <r-product-actions :product="product" size="small"></r-product-actions>
+                    <r-product-actions :product="product" size="default"></r-product-actions>
                   </a-col>
                 </a-row>
               </a-col>

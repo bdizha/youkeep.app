@@ -1,7 +1,7 @@
 <template>
   <a-row class="r-welcome" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <r-category-actions></r-category-actions>
+      <r-category-actions v-if="hasCategories"></r-category-actions>
       <a-row class="r-mt-48" type="flex" justify="center" align="middle">
         <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
           <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
@@ -33,7 +33,7 @@
               </a-card>
             </a-col>
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-              <a-card v-if="hasCategories">
+              <a-card v-if="hasCategories && categories.length > 0">
                 <a-card-meta>
                   <template slot="description">
                     <r-banner></r-banner>
@@ -84,7 +84,7 @@ export default {
   computed: mapGetters({
     store: 'shop/store',
     category: 'shop/category',
-    categories: 'base/categories',
+    categories: 'shop/categories',
     hasCategories: 'shop/hasCategories',
   }),
   mounted() {

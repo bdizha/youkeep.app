@@ -37,7 +37,7 @@ export default {
   name: 'r-category-arrows',
   props: {
     columns: {type: Number, required: false, default: 8},
-    size: {type: Number, required: false, default: 75},
+    size: {type: Number, required: false, default: 36},
   },
   data() {
     return {
