@@ -5,7 +5,7 @@
            :lg="{ span: 24 }">
       <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
     </a-col>
-    <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <a-card v-if="product" class="r-product-show">
