@@ -266,6 +266,10 @@ a.r-text-logo {
 .ant-drawer-header {
     background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
     padding: 12px;
+
+    .r-nav-item{
+        display: block;
+    }
 }
 
 .ant-drawer-title {
@@ -276,6 +280,7 @@ a.r-text-logo {
     display: block;
 
     h4.r-heading {
+        font-size: 16px;
         margin-bottom: 0;
         color: #3C444C;
         line-height: 36px;
@@ -284,6 +289,7 @@ a.r-text-logo {
 }
 
 .r-drawer-content {
+    background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
     .ant-list-split {
         .ant-list-item {
             border: none;
@@ -1226,7 +1232,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 .ant-drawer-close {
     background: #FFFFFF;
     color: #3C444C;
-    width: 72px;
+    width: 60px;
     height: 60px;
     font-size: 27px;
     line-height: 60px;
@@ -1406,13 +1412,10 @@ xxl	≥1600px, could be a span value or an object containing above props
     }
 
     .r-cart-btn {
-        background: #FFFFFF;
+        border: 1px solid #FFFFFF;
         color: #F50A2BAC;
         width: 100%;
-        height: 60px;
         text-align: center;
-        cursor: pointer;
-        display: block;
 
         &:hover {
             background: rgba(251, 0, 40, 1);
@@ -1421,6 +1424,24 @@ xxl	≥1600px, could be a span value or an object containing above props
 
         h4.r-heading {
             color: #FFFFFF;
+        }
+    }
+
+    &.r-cart-footer__empty{
+        background: #0069cd;
+
+        .r-cart-btn {
+            background: #FFFFFF;
+            color: #0069cdAC;
+
+            &:hover {
+                background: #0069cd;
+                color: #FFFFFF;
+            }
+
+            h4.r-heading {
+                color: #FFFFFF;
+            }
         }
     }
 }

@@ -35,6 +35,7 @@
                       v-bind:key="'category'" class="r-animate"></r-account-drawer>
     <r-drawer-menu v-if="isCurrent('menu')"
                    v-bind:key="'menu'" class="r-animate"></r-drawer-menu>
+    <r-cart-footer v-if="drawer.current == 'cart'"></r-cart-footer>
   </a-drawer>
 </template>
 <script>

@@ -2,17 +2,17 @@
   <a-row type="flex" justify="start" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :lg="{ span: 24 }">
-      <a-empty image="/assets/icon_grey.svg"
+      <a-empty image="/images/icon_default.png"
                :image-style="imageStyle">
-        <h3 slot="description" class="r-heading-light">
+        <h4 slot="description" class="r-heading-light r-text-primary">
           Your shopping cart is
           empty.
-        </h3>
+        </h4>
         <a-row type="flex" justify="center" align="middle">
           <a-col type="flex" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                 :md="{ span: 16 }"
-                 :lg="{ span: 12 }">
-            <r-store-shop-now size="large"></r-store-shop-now>
+                 :md="{ span: 24 }"
+                 :lg="{ span: 24 }">
+            <r-store-shop-now size="default"></r-store-shop-now>
           </a-col>
         </a-row>
       </a-empty>
@@ -29,6 +29,10 @@ export default {
     return {
       imageStyle: {
         height: '200px',
+        width: '200px',
+        borderRadius: '100%',
+        overflow: 'hidden',
+        margin: '48px auto'
       }
     };
   },

@@ -22,30 +22,6 @@
           <r-cart-actions v-if="cart.count > 0"></r-cart-actions>
         </a-col>
       </a-row>
-      <div class="r-cart-footer">
-        <a-row :gutter="24" type="flex" justify="start" align="middle">
-          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                 :lg="{ span: 12 }">
-            <nuxt-link to="/checkout">
-              <h3 class="r-heading r-text-white">
-                {{ 'R' + cart.total }}
-              </h3>
-            </nuxt-link>
-          </a-col>
-          <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                 :lg="{ span: 12 }">
-            <nuxt-link to="/checkout">
-              <a-button block
-                        size="small"
-                        type="secondary"
-                        class="r-btn-bordered-accent">
-                <a-icon type="shopping-cart"/>
-                Checkout
-              </a-button>
-            </nuxt-link>
-          </a-col>
-        </a-row>
-      </div>
     </r-drawer-template>
   </div>
 </template>
