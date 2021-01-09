@@ -9,7 +9,7 @@
               <div class="r-status-update">
                 <h4 class="r-heading-light r-text-secondary">
                   <a-icon type="check-circle"/>
-                  You have pending items in your cart
+                  You've pending items in your cart
                 </h4>
                 <p class="r-text-sm r-text-secondary">Items remain in your cart until the checkout is
                   completed.</p>
