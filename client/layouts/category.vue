@@ -1,6 +1,6 @@
 <template>
   <a-layout class="r-layout__store">
-    <r-store-header></r-store-header>
+    <r-header></r-header>
     <a-layout-sider v-model="collapsed"
                     :trigger="null"
                     collapsible>

@@ -7,11 +7,17 @@
       <r-nav-item class="r-nav-item__logo r-p-r-0">
         <r-logo></r-logo>
       </r-nav-item>
-      <r-nav-item class="r-hide-sm r-p-l-0">
-        <nuxt-link class="r-text-logo" to="/">shopple</nuxt-link>
-      </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__store-switch">
-        <r-store-switch></r-store-switch>
+        <r-store-switch v-if="!hasStore"></r-store-switch>
+        <div v-if="hasStore" class="r-nav-item">
+          <nuxt-link :to="'/store/' + store.slug">
+            <a-button block
+                      class="r-btn-bordered-grey"
+                      type="secondary">
+              {{ store.name }}
+            </a-button>
+          </nuxt-link>
+        </div>
       </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__search">
         <r-search></r-search>
@@ -62,6 +68,7 @@ export default {
     store: 'shop/store',
     processes: 'base/processes',
     stores: 'base/stores',
+    hasStore: 'base/hasStore',
     drawer: 'base/drawer',
     hasStoreTray: 'base/hasStoreTray',
     isDark: 'base/isDark',
