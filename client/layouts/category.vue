@@ -9,6 +9,7 @@
     <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
       <nuxt />
     </a-layout-content>
+    <r-bottom></r-bottom>
   </a-layout>
 </template>
 <script>

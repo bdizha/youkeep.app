@@ -9,6 +9,7 @@
       </a-layout>
       <r-footer></r-footer>
     </a-layout-content>
+    <r-bottom></r-bottom>
   </a-layout>
 </template>
 <script>

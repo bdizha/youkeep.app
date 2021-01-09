@@ -4,6 +4,7 @@
     <a-layout-content :class="{'r-has-data': true}">
       <nuxt />
     </a-layout-content>
+    <r-bottom></r-bottom>
   </a-layout>
 </template>
 <script>

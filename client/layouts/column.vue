@@ -13,8 +13,8 @@
         </a-layout-content>
       </a-layout>
       <r-footer></r-footer>
-      <r-bottom></r-bottom>
     </a-layout-content>
+    <r-bottom></r-bottom>
   </a-layout>
 </template>
 <script>
