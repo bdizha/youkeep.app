@@ -1,18 +1,6 @@
 <template>
   <div class="r-banner">
-    <VueSlickCarousel v-bind="settings">
-      <div class="r-page-header-photo"
-           v-for="(category, index) in categories"
-           :key="index + '-image'">
-        <r-avatar shape="square"
-                  :size="480"
-                  :src="category.photo"
-                  src-placeholder="/assets/icon_default.png"/>
-        <div class="r-page-primary"
-             :style="{backgroundImage: 'url(' + category.photo + ')'}">
-        </div>
-      </div>
-    </VueSlickCarousel>
+    <r-product-flush v-if="hasCategories" :columns="1" :category="categories[0]"></r-product-flush>
   </div>
 </template>
 <script>
@@ -56,10 +44,10 @@ export default {
         ]
       },
     }
-
   },
   computed: mapGetters({
     categories: 'shop/categories',
+    hasCategories: 'shop/hasCategories',
     processes: 'base/processes',
   }),
   methods: {}

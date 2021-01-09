@@ -8,8 +8,8 @@
         <r-logo></r-logo>
       </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__store-switch">
-        <r-store-switch v-if="!hasStore"></r-store-switch>
-        <div v-if="hasStore" class="r-nav-item">
+        <r-store-switch v-if="!hasStores"></r-store-switch>
+        <div v-if="hasStores" class="r-nav-item">
           <nuxt-link :to="'/store/' + store.slug">
             <a-button block
                       class="r-btn-bordered-grey"
@@ -68,7 +68,7 @@ export default {
     store: 'shop/store',
     processes: 'base/processes',
     stores: 'base/stores',
-    hasStore: 'base/hasStore',
+    hasStores: 'base/hasStores',
     drawer: 'base/drawer',
     hasStoreTray: 'base/hasStoreTray',
     isDark: 'base/isDark',

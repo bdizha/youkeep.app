@@ -1,5 +1,5 @@
 <template>
-  <div class="r-cart-footer" :class="{'r-cart-footer__empty': cart.total == 0}">
+  <div class="r-cart-footer" :class="{'r-cart-footer__empty': cart.total > 0}">
     <a-row v-if="cart.total > 0" :gutter="24" type="flex" justify="start" align="middle">
       <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
              :lg="{ span: 12 }">
