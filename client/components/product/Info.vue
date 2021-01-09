@@ -6,7 +6,7 @@
                           :key="index"
                           class="r-category-menu-panel" :header="link.label">
           <div class="r-product-description">
-            {{ product.html_description }}
+            {{ product.description }}
           </div>
         </a-collapse-panel>
       </a-collapse>
