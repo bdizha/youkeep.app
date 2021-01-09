@@ -3,6 +3,9 @@
     <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
+      <div class="r-gradient r-ph-24 r-pv-12 r-hide-lg">
+        <r-search></r-search>
+      </div>
       <r-category-actions v-if="hasCategories"></r-category-actions>
       <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
       <a-row type="flex" justify="start" align="middle">
