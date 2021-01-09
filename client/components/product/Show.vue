@@ -21,7 +21,7 @@
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 6 }">
             <r-product-credit :is-showing="true" :product="product"></r-product-credit>
             <h4 class="r-heading r-text-secondary">
-             Item in stock
+              Item in stock
             </h4>
             <r-product-types :is-showing="true" :product="product"></r-product-types>
             <r-product-actions :is-showing="true" :size="'large'" :product="product"></r-product-actions>
@@ -37,7 +37,9 @@
           <p class="r-text-normal">Realtime product recommendations just for you</p>
         </a-col>
       </a-row>
-      <r-category-list :columns="6"></r-category-list>
+      <div class="r-margin-out">
+        <r-category-list :columns="6"></r-category-list>
+      </div>
     </a-col>
   </a-row>
 </template>
@@ -50,8 +52,7 @@ export default {
   components: {},
   props: {},
   data() {
-    return {
-    }
+    return {}
   },
   computed: mapGetters({
     category: 'shop/category',
