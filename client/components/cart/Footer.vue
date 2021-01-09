@@ -1,5 +1,5 @@
 <template>
-  <div class="r-cart-footer" :class="{'r-cart-footer__empty': cart.total === 0}">
+  <div class="r-cart-footer" :class="{'r-cart-footer__empty': cart.total == 0}">
     <a-row v-if="cart.total > 0" :gutter="24" type="flex" justify="start" align="middle">
       <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -22,7 +22,7 @@
         </nuxt-link>
       </a-col>
     </a-row>
-    <a-row v-if="cart.total === 0" type="flex" justify="start" align="middle">
+    <a-row v-if="cart.total == 0" type="flex" justify="start" align="middle">
       <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
              :lg="{ span: 24 }">
         <nuxt-link to="/">
