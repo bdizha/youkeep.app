@@ -3,7 +3,7 @@
 </template>
 <script>
 export default {
-  layout: 'category',
+  layout: 'product',
   name: 'r-store-category',
   components: {},
   props: {},

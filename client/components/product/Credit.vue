@@ -1,14 +1,20 @@
 <template>
-  <div class="r-credit">
-    <template v-if="hasDiscount">
-      <div class="r-credit-text">SAVE</div>
-      <div class="r-credit-discount">{{ product.discount_percent }}%</div>
-    </template>
-    <template v-if="!hasDiscount && product.is_great_value">
-      <div class="r-credit-text">GREAT</div>
-      <div class="r-credit-discount">Value</div>
-    </template>
-  </div>
+  <a-row type="flex" justify="start" align="top">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }">
+      <div class="r-credit">
+        <template v-if="!product.is_great_value">
+          <div class="r-credit-text">SAVE</div>
+          <div class="r-credit-discount">{{ product.discount_percent }}%</div>
+        </template>
+        <template v-else>
+          <div class="r-credit-text">GREAT</div>
+          <div class="r-credit-discount">Value</div>
+        </template>
+      </div>
+    </a-col>
+  </a-row>
 </template>
 <script>
 export default {

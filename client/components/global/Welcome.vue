@@ -26,7 +26,7 @@ export default {
     let payload = {
       type: 2,
       category_id: null,
-      limit: 12,
+      limit: process.env.APP_LIMIT,
       order_by: 'randomized_at',
       with: ['photos', 'breadcrumbs']
     };

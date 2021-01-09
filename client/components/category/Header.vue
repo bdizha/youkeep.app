@@ -1,24 +1,14 @@
 <template>
   <a-row class="r-mb-24" :gutter="[24, 24]" type="flex" justify="start">
-    <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: hasProduct ? 6 : 4 }"
-           :lg="{ span: hasProduct ? 6 : 4 }">
-      <a-button class="r-btn-bordered-secondary"
-                block
-                type="secondary"
-                size="default">
-        {{ category.name }}
-        <a-icon type="down"/>
-      </a-button>
-    </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: hasProduct ? 14 : 16 }"
-           :lg="{ span: hasProduct ? 14 : 16 }">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+           :lg="{ span: 24 }">
       <div class="r-category-header">
         <a-row :gutter="[24, 24]" type="flex" justify="start" align="middle">
           <a-col v-for="(category, index) in categories"
-                 v-if="index < 4"
+                 v-if="index < 12"
                  :key="index + 1"
-                 :xs="{ span: 2 }"
-                 :sm="{ span: 3 }"
+                 :xs="{ span: 12 }"
+                 :sm="{ span: 8 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
             <nuxt-link class="r-slider-item r-text-view-more"
@@ -37,8 +27,8 @@
         </a-row>
       </div>
     </a-col>
-    <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: hasProduct ? 6 : 4 }"
-           :lg="{ span: hasProduct ? 6 : 4 }">
+    <a-col v-if="false" class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+           :lg="{ span: 24 }">
       <r-category-shop-now v-if="!isShowing" :category="category" justify="end"></r-category-shop-now>
       <r-category-shop-by v-if="isShowing" :category="category" justify="end"></r-category-shop-by>
     </a-col>

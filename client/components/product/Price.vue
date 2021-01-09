@@ -2,9 +2,9 @@
   <a-row type="flex" justify="center" align="middle">
     <a-col :span="24">
       <div class="gutter-box">
-        <h3 class="r-product-price">
+        <h4 class="r-product-price">
           {{ 'R' + product.price }}
-        </h3>
+        </h4>
         <h3 v-if="hasDiscount"
             class="r-product-price">
                 <span class="r-price-discount text-strike">

@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $this->limit = $request->get('limit', 24);
+        $this->limit = $request->get('limit', 12);
         $this->categoryId = $request->get('category_id', null);
 
         $key = $this->_setCacheKey($request);

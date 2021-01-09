@@ -153,7 +153,7 @@ const actions = {
           let payload = {
             type: 2,
             category_id: category.id,
-            limit: 12,
+            limit: process.env.APP_LIMIT,
             order_by: 'randomized_at',
             with: ['photos', 'breadcrumbs']
           };

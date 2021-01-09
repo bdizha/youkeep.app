@@ -1,29 +1,15 @@
 <template>
   <a-row class="r-tabs" type="flex" justify="start">
     <a-col class="r-text-left" :xs="{ span: 24 }">
-      <VueSlickCarousel v-if="links.length > 0" v-bind="settings">
-        <div class="r-tab-item"
-             v-for="(link, index) in links"
-             :key="link.key">
-          <a-button block type="secondary"
-                    :class="{'r-btn-bordered-grey': link.key !== currentLink, 'r-btn-bordered-primary': link.key === currentLink}"
-                    size="large"
-                    v-on:click="setTab(link)"
-                    html-type="button">
-            {{ link.label }}
-          </a-button>
-        </div>
-        <template #prevArrow="arrowOption">
-          <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-            <a-icon type="left"/>
+      <a-collapse default-active-key="0" expandIconPosition="right">
+        <a-collapse-panel v-for="(link, index) in links"
+                          :key="index"
+                          class="r-category-menu-panel" :header="link.label">
+          <div class="r-product-description">
+            {{ product.html_description }}
           </div>
-        </template>
-        <template #nextArrow="arrowOption">
-          <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-            <a-icon type="right"/>
-          </div>
-        </template>
-      </VueSlickCarousel>
+        </a-collapse-panel>
+      </a-collapse>
     </a-col>
   </a-row>
 </template>
