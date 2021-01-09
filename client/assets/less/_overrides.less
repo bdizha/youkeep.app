@@ -5448,10 +5448,15 @@ h4.r-heading-light {
     }
 }
 
+.r-margin-out-sm {
+    @media (max-width: 768px) {
+        margin: 0 -24px;
+    }
+}
+
 .r-gradient {
     .r-slider-item {
         background: #ffffff18;
-        border: 1px solid transparent;
 
         .r-text-slider {
             color: #FFF;
@@ -5464,7 +5469,6 @@ h4.r-heading-light {
             }
 
             background: #FFFFFF;
-            border: 1px solid #FFFFFF;
         }
     }
 
@@ -5791,7 +5795,9 @@ h4.r-heading-light {
 
     &.r-has-data {
         opacity: 1;
-        padding-bottom: 80px;
+        @media (max-width: 768px) {
+            padding-bottom: 63px;
+        }
 
         .ant-layout-content {
             opacity: 1;
