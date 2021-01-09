@@ -1,7 +1,7 @@
 <template>
   <a-row type="flex" justify="start">
     <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-collapse default-active-key="0" expandIconPosition="right">
+      <a-collapse default-active-key="[1,2]" expandIconPosition="right">
         <a-collapse-panel v-if="index < limit"
                           v-for="(category, index) in categories"
                           :key="index + 1"
