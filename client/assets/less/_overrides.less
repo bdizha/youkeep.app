@@ -5444,9 +5444,17 @@ h4.r-heading-light {
 
 .r-gradient{
     .r-slider-item{
-        color: #FFF;
-        font-size: 14px;
         background: #ffffff18;
+        .r-text-slider{
+            color: #FFF;
+            font-size: 14px;
+        }
+        &:hover{
+            .r-text-slider{
+                color: #0069cd;
+            }
+            background: #FFFFFF6C;
+        }
     }
 
     .r-slider .slick-prev, .r-slider .slick-next {
@@ -5454,10 +5462,6 @@ h4.r-heading-light {
         background: #FFFFFF18;
         border: 1px solid transparent;
         top: 50%;
-        &:hover{
-            color: #0069cd;
-            background: #FFFFFF6C;
-        }
     }
 }
 
