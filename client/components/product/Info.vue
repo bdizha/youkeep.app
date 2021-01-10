@@ -16,10 +16,8 @@
   </a-row>
 </template>
 <script>
-import RProductDescription from "@/client/components/product/Description";
 export default {
   name: 'r-product-info',
-  components: {RProductDescription},
   props: {
     isShowing: {type: Boolean, required: false, default: false},
     product: {type: Object, required: false, default: null},
