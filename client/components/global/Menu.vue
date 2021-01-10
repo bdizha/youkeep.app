@@ -31,26 +31,26 @@ import {mapGetters} from "vuex";
 
 const LINKS = [
   {
+    label: 'Explore',
+    icon: 'compass',
+    link: '/stores/its-shopping-time',
+  },
+  {
     label: 'Home',
     icon: 'home',
     link: '/',
     modal: null
   },
   {
-    label: 'Explore',
-    icon: 'compass',
-    link: '/stores/its-shopping-time',
-  },
-  {
-    label: 'Highlights',
-    icon: 'fire',
-    link: '/stores/todays-highlights',
+    label: 'Rewards',
+    icon: 'gift',
+    link: '/rewards',
     modal: null
   },
   {
-    label: 'What\'s new',
+    label: 'My Orders',
     icon: 'gift',
-    link: '/stores/new-stores-for-you',
+    link: '/orders',
     modal: null
   },
   {
@@ -60,7 +60,7 @@ const LINKS = [
     modal: 'wishlist'
   },
   {
-    label: 'Timeline',
+    label: 'History',
     icon: 'clock-circle',
     link: '/timeline',
     modal: 'timeline'
