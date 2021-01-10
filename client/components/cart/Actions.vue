@@ -16,7 +16,7 @@
         @confirm="onClear"
         title="Are you sure you would like to clear your cart?">
         <a-icon slot="icon" type="question-circle-o" class="r-text-secondary"/>
-        <a-button block size="small" class="r-btn-bordered-primary">
+        <a-button block size="default" class="r-btn-bordered-primary">
           <a-icon type="delete"/>
           Clear cart
         </a-button>

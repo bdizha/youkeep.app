@@ -69,7 +69,7 @@
             </a-radio-group>
           </a-form-item>
           <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button block :size="'large'" type="secondary" html-type="submit"
+            <a-button block :size="'default'" type="secondary" html-type="submit"
                       class="r-btn-secondary">
               Request an invite
             </a-button>

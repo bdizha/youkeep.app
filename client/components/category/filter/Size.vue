@@ -24,7 +24,7 @@ export default {
   name: 'r-category-filter-size',
   data() {
     return {
-      size: {items: [{'name': 'Mediuam', 'id': 0}, {'name': 'Large', 'id': 1}]},
+      size: {items: [{'name': 'Mediuam', 'id': 0}, {'name': 'default', 'id': 1}]},
       sizes: [],
       selected: []
     };

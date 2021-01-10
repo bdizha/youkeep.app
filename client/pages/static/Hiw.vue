@@ -27,7 +27,7 @@
                   <a-button @click="onModal('register')" class="r-btn-secondary"
                             block
                             type="secondary"
-                            size='large'>
+                            size='default'>
                     Join now
                   </a-button>
                 </a-col>
@@ -37,7 +37,7 @@
                   <a-button @click="onStoreTray" class="r-btn-bordered-grey"
                             block
                             type="secondary"
-                            size='large'>
+                            size='default'>
                     Shop directory
                   </a-button>
                 </a-col>

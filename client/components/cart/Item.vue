@@ -1,15 +1,15 @@
 <template>
   <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 10 }"
-           :sm="{ span: 10 }" :md="{ span: 10 }" :lg="{ span: 10 }">
+    <a-col :xs="{ span: 12 }"
+           :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
       <nuxt-link :to="product.route"
                  style="display: block; width: 100%;">
         <r-product-photo :product="item">
         </r-product-photo>
       </nuxt-link>
     </a-col>
-    <a-col :xs="{ span: 14 }"
-           :sm="{ span: 14 }" :md="{ span: 14 }" :lg="{ span: 14 }">
+    <a-col :xs="{ span: 12 }"
+           :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
       <a-row :gutter="12" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }"
                :sm="{ span: 24 }" :lg="{ span: 24 }">

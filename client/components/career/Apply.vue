@@ -175,7 +175,7 @@
                                                    :sm="{ span: 12 }"
                                                    :md="{ span: 12 }"
                                                    :lg="{ span: 12 }">
-                                                <a-button block @click="onSend" :size="'large'" type="secondary"
+                                                <a-button block @click="onSend" :size="'default'" type="secondary"
                                                           html-type="submit"
                                                           class="r-btn-secondary">
                                                     Submit application

@@ -15,7 +15,7 @@
             quantity: 1,
             variant: {
                 key: 3,
-                label: 'Large',
+                label: 'default',
                 price: 175.00
             },
             variants: [
@@ -31,7 +31,7 @@
                 },
                 {
                     key: 3,
-                    label: 'Large',
+                    label: 'default',
                     price: 175.00
                 }
             ]
@@ -60,7 +60,7 @@
                 },
                 {
                     key: 3,
-                    label: 'Large',
+                    label: 'default',
                     price: 175.00
                 }
             ]
@@ -89,7 +89,7 @@
                 },
                 {
                     key: 3,
-                    label: 'Large',
+                    label: 'default',
                     price: 175.00
                 }
             ]

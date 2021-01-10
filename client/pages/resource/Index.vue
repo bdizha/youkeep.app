@@ -39,7 +39,7 @@
                           <a-button @click="onModal('merchant')" class="r-btn-secondary"
                                     block
                                     type="secondary"
-                                    size='large'>
+                                    size='default'>
                             Apply now
                           </a-button>
                         </a-col>
@@ -49,7 +49,7 @@
                           <a-button @click="onModal('store')" class="r-btn-bordered-secondary"
                                     block
                                     type="secondary"
-                                    size='large'>
+                                    size='default'>
                             Shop directory
                           </a-button>
                         </a-col>

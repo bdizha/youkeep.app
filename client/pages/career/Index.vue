@@ -194,7 +194,7 @@
                     <a-button class="r-btn-bordered-grey"
                               block
                               type="secondary"
-                              size='large'>
+                              size='default'>
                       Contact us
                     </a-button>
                   </nuxt-link>

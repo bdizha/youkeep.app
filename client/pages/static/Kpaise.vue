@@ -43,7 +43,7 @@
                           <a-button class="r-btn-secondary"
                                     block
                                     type="secondary"
-                                    size='large'>
+                                    size='default'>
                             Sign up
                           </a-button>
                         </a-col>
@@ -53,7 +53,7 @@
                           <a-button class="r-btn-bordered-purple"
                                     block
                                     type="secondary"
-                                    size='large'>
+                                    size='default'>
                             Shop directory
                           </a-button>
                         </a-col>

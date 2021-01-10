@@ -24,7 +24,7 @@
               Item in stock
             </h4>
             <r-product-types :is-showing="true" :product="product"></r-product-types>
-            <r-product-actions :is-showing="true" :size="'large'" :product="product"></r-product-actions>
+            <r-product-actions :is-showing="true" :size="'default'" :product="product"></r-product-actions>
           </a-col>
         </a-row>
         <r-product-info :product="product"></r-product-info>

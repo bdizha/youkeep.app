@@ -243,7 +243,7 @@
           <a-row type="flex" justify="start">
             <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onBack"
-                        :size="'large'"
+                        :size="'default'"
                         type="default"
                         class="r-btn-secondary">
                 <a-icon type="left"/>
@@ -252,7 +252,7 @@
             </a-col>
             <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onStep"
-                        :size="'large'"
+                        :size="'default'"
                         type="secondary" html-type="button"
                         class="ant-btn r-btn-secondary">
                 {{ step == 11 ? 'Submit' : 'Continue' }}

@@ -45,7 +45,7 @@ export default {
     hasModal: {type: Boolean, required: false, default: false},
     isStore: {type: Boolean, required: false, default: false},
     hasSubmit: {type: Boolean, required: false, default: true},
-    size: {type: String, required: false, default: 'large'},
+    size: {type: String, required: false, default: 'default'},
   },
   data() {
     return {

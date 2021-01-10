@@ -56,13 +56,13 @@
         <a-row :gutter="24" type="flex" justify="center">
           <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
-            <a-button block @click="onCancel" :size="'large'" class="r-btn-bordered-primary">
+            <a-button block @click="onCancel" :size="'default'" class="r-btn-bordered-primary">
               Cancel
             </a-button>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
-            <a-button block @click="onSave" :size="'large'" type="secondary" html-type="submit"
+            <a-button block @click="onSave" :size="'default'" type="secondary" html-type="submit"
                       class="r-btn-secondary">
               Save
             </a-button>
