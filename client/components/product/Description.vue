@@ -3,7 +3,7 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      Some description will come here {{ product.descriptionsss }}
+      Some description will come here {{ product.description }}
     </a-col>
   </a-row>
 </template>
