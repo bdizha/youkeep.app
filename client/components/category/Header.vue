@@ -3,7 +3,7 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <div class="r-category-header">
-        <a-row :gutter="[24, 24]" type="flex" justify="start" align="middle">
+        <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]" type="flex" justify="start" align="middle">
           <a-col v-for="(category, index) in categories"
                  v-if="index < 12"
                  :key="index + 1"

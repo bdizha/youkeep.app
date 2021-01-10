@@ -33,13 +33,7 @@
               </a-card>
             </a-col>
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-              <a-card v-if="hasCategories && categories.length > 0">
-                <a-card-meta>
-                  <template slot="description">
-                    <r-banner></r-banner>
-                  </template>
-                </a-card-meta>
-              </a-card>
+              <r-banner></r-banner>
             </a-col>
           </a-row>
           <r-steps></r-steps>
