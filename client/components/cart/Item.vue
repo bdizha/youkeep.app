@@ -2,12 +2,11 @@
   <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
     <a-col :xs="{ span: 10 }"
            :sm="{ span: 10 }" :md="{ span: 10 }" :lg="{ span: 10 }">
-      <a-avatar
-        shape="square"
-        size="large"
-        slot="avatar"
-        :src="'/storage/product/' + item.thumbnail">
-      </a-avatar>
+      <nuxt-link :to="product.route"
+                 style="display: block; width: 100%;">
+        <r-product-photo :product="item">
+        </r-product-photo>
+      </nuxt-link>
     </a-col>
     <a-col :xs="{ span: 14 }"
            :sm="{ span: 14 }" :md="{ span: 14 }" :lg="{ span: 14 }">
@@ -26,7 +25,7 @@
         </a-col>
         <a-col :xs="{ span: 24 }"
                :sm="{ span: 24 }" :lg="{ span: 24 }">
-          <r-product-actions :product="item" size="small"></r-product-actions>
+          <r-product-actions :product="item" size="default"></r-product-actions>
         </a-col>
       </a-row>
     </a-col>

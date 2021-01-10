@@ -11,7 +11,7 @@
           <r-category-slider v-if="processes.isFixed"></r-category-slider>
         </a-col>
       </a-row>
-      <div class="r-margin-out-sm r-grey-shadow">
+      <div class="r-padding-out-lg r-grey-shadow">
         <r-category-list :columns="6" :limit="6"></r-category-list>
       </div>
     </a-col>

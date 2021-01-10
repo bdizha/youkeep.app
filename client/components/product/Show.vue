@@ -29,17 +29,15 @@
         </a-row>
         <r-product-info :product="product"></r-product-info>
       </a-card>
-      <a-row class="r-mv-48" type="flex" justify="center">
+      <a-row class="r-mv-24" type="flex" justify="center">
         <a-col class="r-p-24" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
           <h3 class="r-heading r-text-black">
             You may also like
           </h3>
           <p class="r-text-normal">Realtime product recommendations just for you</p>
+          <r-category-list :columns="6"></r-category-list>
         </a-col>
       </a-row>
-      <div class="r-margin-out">
-        <r-category-list :columns="6"></r-category-list>
-      </div>
     </a-col>
   </a-row>
 </template>

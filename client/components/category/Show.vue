@@ -17,7 +17,7 @@
       </a-row>
       <r-product-flush :columns="3"></r-product-flush>
       <r-product-list :columns="columns"></r-product-list>
-      <a-row class="r-categories" type="flex" justify="start" align="middle">
+      <a-row type="flex" justify="start" align="middle">
         <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
