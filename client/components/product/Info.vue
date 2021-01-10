@@ -6,7 +6,9 @@
                           :key="index"
                           class="r-category-menu-panel" :header="link.label">
           <div class="r-product-description">
+            <r-product-description v-if="link.key == 'description'"></r-product-description>
             <r-product-reviews v-if="link.key == 'reviews'"></r-product-reviews>
+            <r-product-returns v-if="link.key == 'returns'"></r-product-returns>
           </div>
         </a-collapse-panel>
       </a-collapse>
@@ -14,8 +16,10 @@
   </a-row>
 </template>
 <script>
+import RProductDescription from "@/client/components/product/Description";
 export default {
   name: 'r-product-info',
+  components: {RProductDescription},
   props: {
     isShowing: {type: Boolean, required: false, default: false},
     product: {type: Object, required: false, default: null},
@@ -26,48 +30,8 @@ export default {
       links: [
         {label: 'Product Description', key: 'description'},
         {label: 'Reviews', key: 'reviews'},
-        {label: 'Delivery & Returns', key: 'delivery-returns'}
-      ],
-      settings: {
-        slidesToScroll: 5,
-        infinite: false,
-        dots: false,
-        variableWidth: true,
-        responsive: [
-          {
-            "breakpoint": 1024,
-            "settings": {
-              "slidesToShow": 3,
-              "slidesToScroll": 5,
-              "dots": false
-            }
-          },
-          {
-            "breakpoint": 900,
-            "settings": {
-              "slidesToShow": 5,
-              "slidesToScroll": 5,
-              "dots": false
-            }
-          },
-          {
-            "breakpoint": 700,
-            "settings": {
-              "slidesToShow": 4,
-              "slidesToScroll": 1,
-              "dots": false
-            }
-          },
-          {
-            "breakpoint": 560,
-            "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1,
-              "dots": false
-            }
-          }
-        ]
-      },
+        {label: 'Delivery & Returns', key: 'returns'}
+      ]
     };
   },
   created() {
