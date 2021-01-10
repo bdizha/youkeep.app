@@ -6,7 +6,7 @@
                           :key="index"
                           class="r-category-menu-panel" :header="link.label">
           <div class="r-product-description">
-            {{ product.description }}
+            <r-product-reviews v-if="link.key == 'reviews'"></r-product-reviews>
           </div>
         </a-collapse-panel>
       </a-collapse>
