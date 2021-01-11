@@ -4,38 +4,40 @@
       <r-category-actions v-if="hasCategories"></r-category-actions>
       <a-row class="r-mt-48" type="flex" justify="center" align="middle">
         <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
-          <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                   :md="{ span: 12 }"
-                   :lg="{ span: 12 }">
-              <a-card class="">
-                <a-card-meta>
-                  <template slot="description">
-                    <h1 class="r-heading">
-                      It's shopping time!
-                    </h1>
-                    <h2 class="r-heading">
-                      <span class="r-heading r-text-secondary">Shop more,</span>
-                      <span class="r-text-secondary">Pay less</span>
-                    </h2>
-                    <p class="r-text-normal">
-                      Yes, as long as you shop it with Shopple, you are fully in control.
-                    </p><br/>
-                    <a-row type="flex" justify="start">
-                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                             :md="{ span: 24 }"
-                             :lg="{ span: 24 }">
-                        <r-delivery-form></r-delivery-form>
-                      </a-col>
-                    </a-row>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-              <r-banner></r-banner>
-            </a-col>
-          </a-row>
+         <div class="r-margin-out-sm">
+           <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
+             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                    :md="{ span: 12 }"
+                    :lg="{ span: 12 }">
+               <a-card class="">
+                 <a-card-meta>
+                   <template slot="description">
+                     <h1 class="r-heading">
+                       It's shopping time!
+                     </h1>
+                     <h2 class="r-heading">
+                       <span class="r-heading r-text-secondary">Shop more,</span>
+                       <span class="r-text-secondary">Pay less</span>
+                     </h2>
+                     <p class="r-text-normal">
+                       Yes, as long as you shop it with Shopple, you are fully in control.
+                     </p><br/>
+                     <a-row type="flex" justify="start">
+                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                              :md="{ span: 24 }"
+                              :lg="{ span: 24 }">
+                         <r-delivery-form></r-delivery-form>
+                       </a-col>
+                     </a-row>
+                   </template>
+                 </a-card-meta>
+               </a-card>
+             </a-col>
+             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+               <r-banner></r-banner>
+             </a-col>
+           </a-row>
+         </div>
           <r-steps></r-steps>
         </a-col>
       </a-row>

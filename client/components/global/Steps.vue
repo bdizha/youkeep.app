@@ -2,12 +2,12 @@
   <a-row class="r-mt-48" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row type="flex" justify="center">
-        <a-col :xs="{ span: 18}" :sm="{ span: 18 }" :lg="{ span: 21 }">
+        <a-col :xs="{ span: 16}" :sm="{ span: 18 }" :md="{ span: 21 }" :lg="{ span: 21 }">
           <h2 class="r-heading r-same-height">
             {{ title ? title : 'How it works?' }}
           </h2>
         </a-col>
-        <a-col class="r-text-right" :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 3 }"
+        <a-col class="r-text-right" :xs="{ span: 8 }" :sm="{ span: 6 }" :md="{ span: 3 }"
                :lg="{ span: 3}">
           <nuxt-link v-show="hasMore" to="/hiw">
             <a-button class="r-btn--grey"

@@ -78,7 +78,7 @@ const mutations = {
   },
   setCategories(state, categories) {
     state.categories = categories;
-    state.cc = categories.length > 0;
+    state.hasCategories = categories.length > 0;
   },
   setProducts(state, products) {
     state.products = products;

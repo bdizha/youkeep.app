@@ -8,7 +8,7 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
-          <r-category-slider v-if="processes.isFixed"></r-category-slider>
+          <r-category-slider></r-category-slider>
         </a-col>
       </a-row>
       <div class="r-padding-out-lg r-grey-shadow">
