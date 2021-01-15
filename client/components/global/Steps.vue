@@ -1,51 +1,61 @@
 <template>
   <a-row class="r-mt-48" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row type="flex" justify="center">
-        <a-col :xs="{ span: 16}" :sm="{ span: 18 }" :md="{ span: 21 }" :lg="{ span: 21 }">
-          <h2 class="r-heading r-same-height">
-            {{ title ? title : 'How it works?' }}
-          </h2>
-        </a-col>
-        <a-col class="r-text-right" :xs="{ span: 8 }" :sm="{ span: 6 }" :md="{ span: 3 }"
-               :lg="{ span: 3}">
-          <nuxt-link v-show="hasMore" to="/hiw">
-            <a-button class="r-btn--grey"
-                      block
-                      type="secondary"
-                      size="large">
-              <span class="r-hide-sm">Read more</span>
-              <span class="r-hide-lg">Go</span>
-              <a-icon type="right"/>
-            </a-button>
-          </nuxt-link>
-        </a-col>
-      </a-row>
-      <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-          <a-steps v-model="currentStep" direction="horizontal" :current="currentStep">
-            <a-step v-for="(step, index) in steps"
-                    :key="index">
-              <template slot="title">
-                <h3 class="r-heading">{{ step.title }}</h3>
-              </template>
-              <template slot="description">
-                <div class="r-step-caption">
-                  {{ step.description }}
-                </div>
-                <div class="r-animate r-step-avatar">
-                  <r-avatar
-                            :key="index" shape="square"
-                            :size="210"
-                            :src="'/assets/Step_' + (index + 1) + '.svg?v=1'"
-                            src-placeholder="/assets/icon_default.png"/>
-                </div>
-              </template>
-            </a-step>
-          </a-steps>
-        </a-col>
-      </a-row>
+      <a-card>
+        <a-card-meta class="r-text-center">
+          <template slot="description">
+            <a-row type="flex" justify="center">
+              <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                <h2 class="r-heading r-same-height">
+                  {{ title ? title : 'How it works?' }}
+                </h2>
+              </a-col>
+            </a-row>
+            <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="center"
+                   align="middle">
+              <a-col :xs="{ span: 24 }"
+                     :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                <a-steps v-model="currentStep" direction="horizontal" :current="currentStep">
+                  <a-step v-for="(step, index) in steps"
+                          :key="index">
+                    <template slot="title">
+                      <h3 class="r-heading">{{ step.title }}</h3>
+                    </template>
+                    <template slot="description">
+                      <div class="r-step-caption">
+                        {{ step.description }}
+                      </div>
+                      <div class="r-animate r-step-avatar">
+                        <r-avatar
+                          :key="index" shape="square"
+                          :size="210"
+                          :src="'/assets/Step_' + (index + 1) + '.svg?v=1'"
+                          src-placeholder="/assets/icon_default.png"/>
+                      </div>
+                    </template>
+                  </a-step>
+                </a-steps>
+              </a-col>
+            </a-row>
+            <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="center"
+                   align="middle">
+              <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 6 }"
+                     :lg="{ span: 4}">
+                <nuxt-link v-show="hasMore" to="/hiw">
+                  <a-button class="r-btn--grey"
+                            block
+                            type="secondary"
+                            size="large">
+                    <span class="r-hide-sm">Read more</span>
+                    <span class="r-hide-lg">Go</span>
+                    <a-icon type="right"/>
+                  </a-button>
+                </nuxt-link>
+              </a-col>
+            </a-row>
+          </template>
+        </a-card-meta>
+      </a-card>
     </a-col>
   </a-row>
 </template>

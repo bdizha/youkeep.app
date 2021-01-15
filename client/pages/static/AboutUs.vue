@@ -29,7 +29,7 @@
             <template slot="description">
               <div class="r-page-header-photo">
                 <div class="r-page-primary"
-                     style="background-image: url('/images/welcome.jpg')">
+                     style="background-image: url('/assets/welcome-01.jpeg')">
                 </div>
               </div>
             </template>

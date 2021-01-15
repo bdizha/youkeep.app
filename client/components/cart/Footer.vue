@@ -4,9 +4,9 @@
       <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
              :lg="{ span: 12 }">
         <nuxt-link to="/checkout">
-          <h3 class="r-heading r-text-white">
+          <h4 class="r-heading r-text-white">
             {{ 'R' + cart.total }}
-          </h3>
+          </h4>
         </nuxt-link>
       </a-col>
       <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"

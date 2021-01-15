@@ -1,17 +1,15 @@
 <template>
   <a-row type="flex" justify="start">
     <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <div class="r-margin-out">
-        <a-collapse default-active-key="0" expandIconPosition="right">
-          <a-collapse-panel v-if="index < limit"
-                            v-for="(category, index) in categories"
-                            :key="index"
-                            :columns="columns"
-                            class="r-category-menu-panel" :header="category.name">
-            <r-category-item :category="category"></r-category-item>
-          </a-collapse-panel>
-        </a-collapse>
-      </div>
+      <a-collapse default-active-key="0" expandIconPosition="right">
+        <a-collapse-panel v-if="index < limit"
+                          v-for="(category, index) in categories"
+                          :key="index"
+                          :columns="columns"
+                          class="r-category-menu-panel" :header="category.name">
+          <r-category-item :category="category"></r-category-item>
+        </a-collapse-panel>
+      </a-collapse>
       <r-spinner :is-absolute="true" process="isCategories" v-if="processes.isCategory"></r-spinner>
     </a-col>
   </a-row>

@@ -11,7 +11,7 @@
           <r-category-slider></r-category-slider>
         </a-col>
       </a-row>
-      <div class="r-padding-out-lg r-grey-shadow">
+      <div class="r-grey-shadow">
         <r-category-list :columns="6" :limit="6"></r-category-list>
       </div>
     </a-col>

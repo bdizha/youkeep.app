@@ -18,7 +18,7 @@
         <a-icon slot="icon" type="question-circle-o" class="r-text-secondary"/>
         <a-button block size="default" class="r-btn-bordered-primary">
           <a-icon type="delete"/>
-          Clear cart
+          Clear all
         </a-button>
       </a-popconfirm>
     </a-col>

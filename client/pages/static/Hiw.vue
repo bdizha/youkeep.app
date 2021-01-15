@@ -52,7 +52,7 @@
             <template slot="description">
               <div class="r-page-header-photo">
                 <div class="r-page-primary"
-                     style="background-image: url('/images/hiw-01.png')">
+                     style="background-image: url('/assets/hiw-01.jpeg')">
                 </div>
               </div>
             </template>

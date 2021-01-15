@@ -61,7 +61,7 @@
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                   <div class="r-page-header-photo">
                     <div class="r-page-primary"
-                         style="background-image: url('/images/merchant-02.jpg')">
+                         style="background-image: url('/images/merchant-01.jpeg')">
                     </div>
                   </div>
                 </a-col>

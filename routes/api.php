@@ -51,6 +51,10 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('/account/credit/delete', 'AccountCreditController@store')->name('account.credit.delete');
     Route::get('/account/invite', 'AccountController@invite')->name('account.invite');
     Route::post('/account/invite/store', 'AccountInviteController@store')->name('account.invite.store');
+    Route::post('/reviews', 'ReviewController@store')->name('reviews');
+    Route::post('/review/store', 'ReviewController@store')->name('review.store');
+    Route::post('/actions', 'ActionController@index')->name('actions');
+    Route::post('/action/store', 'ActionController@store')->name('action.store');
 });
 
 Route::group(['middleware' => 'guest:api'], function () {

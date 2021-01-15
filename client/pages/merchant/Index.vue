@@ -191,10 +191,10 @@ export default {
   data() {
     return {
       images: [
-        'merchant-01.jpg',
-        'merchant-02.jpg',
-        'merchant-03.jpg',
-        'merchant-04.jpg',
+        'merchant-01.jpeg',
+        'customer-01.jpeg',
+        'paise-01.jpeg',
+        'about-01.jpeg',
       ],
     }
   },

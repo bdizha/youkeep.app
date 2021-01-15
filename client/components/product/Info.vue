@@ -6,9 +6,9 @@
                           :key="index"
                           class="r-category-menu-panel" :header="link.label">
           <div class="r-product-description">
-            <r-product-description v-if="link.key == 'description'"></r-product-description>
-            <r-product-reviews v-if="link.key == 'reviews'"></r-product-reviews>
-            <r-product-returns v-if="link.key == 'returns'"></r-product-returns>
+            <r-product-description v-if="link.key == 'description'" :product="product"></r-product-description>
+            <r-product-reviews v-if="link.key == 'reviews'" :product="product"></r-product-reviews>
+            <r-product-returns v-if="link.key == 'returns'" :product="product"></r-product-returns>
           </div>
         </a-collapse-panel>
       </a-collapse>

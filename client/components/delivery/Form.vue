@@ -26,7 +26,7 @@
                       slot="suffix"
                       style="margin-right: -12px"
                       class="r-btn-secondary"
-                      size="large"
+                      size="default"
                       type="secondary">
               Let's go
             </a-button>

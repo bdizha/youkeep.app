@@ -3,9 +3,9 @@
     <div class="r-page-header-photo"
          v-for="(image, index) in images"
          :key="index + '-image'">
-      <img :src="'/images/' + image"/>
+      <img :src="'/assets/' + image"/>
       <div class="r-page-primary"
-           :style="{backgroundImage: 'url(' + '/images/' + image + ')'}">
+           :style="{backgroundImage: 'url(' + '/assets/' + image + ')'}">
       </div>
     </div>
   </VueSlickCarousel>

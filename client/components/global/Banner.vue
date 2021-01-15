@@ -1,6 +1,6 @@
 <template>
   <div class="r-banner">
-    <r-product-flush v-if="hasCategories" :columns="1" :category="categories[0]"></r-product-flush>
+    <r-product-flush v-if="category" :columns="6" :category="category"></r-product-flush>
   </div>
 </template>
 <script>
@@ -8,16 +8,20 @@ import {mapGetters} from "vuex";
 
 export default {
   name: 'r-banner',
-  props: {},
-  data() {
-    return {
-    }
+  props: {
+    category: {type: Object, required: null}
   },
-  computed: mapGetters({
-    categories: 'shop/categories',
-    hasCategories: 'shop/hasCategories',
-    processes: 'base/processes',
-  }),
+  async fetch() {
+    let params = {
+      category_id: this.category.id,
+      limit: 6
+    };
+
+    await this.$store.dispatch('shop/onProducts', params);
+  },
+  data() {
+    return {}
+  },
   methods: {}
 };
 </script>

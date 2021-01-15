@@ -180,9 +180,9 @@ export default {
   data() {
     return {
       images: [
-        'paise-01.jpg',
-        'paise-02.jpg',
-        'paise-03.jpg',
+        'paise-01.jpeg',
+        'customer-01.jpeg',
+        'about-01.jpeg',
       ],
       modal: {
         current: null,

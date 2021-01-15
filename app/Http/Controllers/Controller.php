@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Address;
 use App\Product;
+use App\Review;
 use App\UserAddress;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
@@ -21,7 +22,11 @@ class Controller extends BaseController
         $relations = [],
         $with = [],
         $categoryId = null,
+        $productId = null,
+        $reviewId = null,
         $products = [],
+        $reviews = [],
+        $categories = [],
         $limit = 24,
         $level = [],
         $items = [],
@@ -97,8 +102,7 @@ class Controller extends BaseController
     }
 
     /**
-     * @param String $categoryId
-     * @return mixed
+     * @return void
      */
     protected function setProducts()
     {
@@ -111,6 +115,24 @@ class Controller extends BaseController
             $query->where('category_products.category_id', $this->categoryId);
         })
             ->where('is_active', true)
+            ->orderBy($sort['column'], $sort['dir'])
+            ->paginate($this->limit);
+    }
+
+    /**
+     * @return void
+     */
+    protected function setReviews()
+    {
+        $sort = request()->get('sort', 0);
+        $sortOptions = Review::$sortOptions;
+
+        $sort = $sortOptions[$sort];
+
+        $this->reviews = Review::whereHas('product', function ($query) {
+            $query->where('reviews.product_id', $this->productId);
+        })
+//            ->where('is_active', true)
             ->orderBy($sort['column'], $sort['dir'])
             ->paginate($this->limit);
     }
