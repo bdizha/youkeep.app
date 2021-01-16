@@ -8,7 +8,7 @@
                             <h1 class="r-heading">
                                 <span class="r-text-secondary">Kkapital</span>
                             </h1>
-                            <h2 class="r-heading">
+                            <h2 class="r-heading r-text-secondary">
                                 Your Business Capital
                             </h2>
                         </a-col>

@@ -5,12 +5,12 @@
         <div class="r-bg-primary-light">
           <a-row type="flex" justify="center">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-              <a-row type="flex" justify="start">
+              <a-row type="flex" justify="start" align="middle">
                 <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ offset: 3, span: 9 }"
                        :lg="{ offset: 3, span: 9 }">
                   <r-space></r-space>
-                  <a-row type="flex" justify="start">
+                  <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" s="r" :md="{ span: 24 }"
                            :lg="{ span: 16 }"
                            style="text-align: left;">
@@ -23,7 +23,7 @@
                       </h1>
                     </a-col>
                   </a-row>
-                  <a-row type="flex" justify="start">
+                  <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                            :lg="{ span: 24 }"
                            style="text-align: left;">
@@ -33,10 +33,10 @@
                       </h4>
                     </a-col>
                   </a-row>
-                  <a-row type="flex" justify="start">
+                  <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
                            :lg="{ span: 18 }">
-                      <a-row :gutter="[24,24]" type="flex" justify="start">
+                      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }">
@@ -64,7 +64,7 @@
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                   <div class="r-page-header-photo">
-                    <div class="r-page-primary"
+                    <div class="r-page-white"
                          style="background-image: url('/images/welcome-02.jpg')">
                     </div>
                   </div>

@@ -1,10 +1,10 @@
 <template>
-  <a-row type="flex" justify="start">
+  <a-row type="flex" justify="start" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <r-store-slider :title="title" :columns="6"></r-store-slider>
-      <a-row class="r-mb-48" type="flex" justify="start">
+      <a-row class="r-mb-48" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }">

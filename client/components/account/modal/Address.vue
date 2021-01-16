@@ -34,7 +34,7 @@
            size="default"
             v-decorator="['suburb', { rules: [{ required: true, message: 'Please enter your suburb' }] }]"/>
       </a-form-item>
-      <a-row class="r-mt-24" :gutter="24" type="flex" justify="start">
+      <a-row class="r-mt-24" :gutter="24" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 16 }">
           <a-form-item label="City">
             <a-input

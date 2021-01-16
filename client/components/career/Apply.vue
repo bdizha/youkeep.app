@@ -70,7 +70,7 @@
                                     <a-form-item>
                                         <a-row type="flex" justify="center">
                                             <a-col class="r-text-left" :xs="{ span: 24 }">
-                                                <h2 class="r-heading">
+                                                <h2 class="r-heading r-text-secondary">
                                                     Submit your application
                                                 </h2>
                                             </a-col>
@@ -89,7 +89,7 @@
                                             </a-button>
                                         </a-upload>
                                     </a-form-item>
-                                    <a-row :gutter="24" type="flex" justify="start">
+                                    <a-row :gutter="24" type="flex" justify="start" align="middle">
                                         <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
                                                :md="{ span: 12 }"
                                                :lg="{ span: 12 }">

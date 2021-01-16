@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
+    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -26,7 +26,7 @@
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
-                <div class="r-page-primary"
+                <div class="r-page-white"
                      style="background-image: url('/images/careers-03.jpg')">
                 </div>
               </div>
@@ -40,10 +40,10 @@
         <a-card class="">
           <a-card-meta>
             <template slot="description">
-              <h4 class="r-heading-light r-text-secondary">
+              <h4 class="r-heading-light r-text-uppercase">
                 Innovative
               </h4>
-              <h2 class="r-heading">
+              <h2 class="r-heading r-text-secondary">
                 Transforming
                 the way shopping is experienced
               </h2>
@@ -73,12 +73,12 @@
         <a-card class="">
           <a-card-meta>
             <template slot="description">
-              <h4 class="r-heading-light r-text-secondary">
+              <h4 class="r-heading-light r-text-uppercase">
                 Dynamic
               </h4>
-              <h3 class="r-heading">
+              <h2 class="r-heading r-text-secondary">
                 Why we do what we do
-              </h3>
+              </h2>
               <p class="r-text-normal">
                 At Shopple, we are building a shopping experience that helps millions of people be effortlessly in
                 control of their shopping experience.
@@ -104,10 +104,10 @@
         <a-card class="">
           <a-card-meta>
             <template slot="description">
-              <h4 class="r-heading-light r-text-secondary">
+              <h4 class="r-heading-light r-text-uppercase">
                 Progressive
               </h4>
-              <h2 class="r-heading">
+              <h2 class="r-heading r-text-secondary">
                 Function with new tools
               </h2>
               <p class="r-text-normal">
@@ -135,10 +135,10 @@
         <a-card class="">
           <a-card-meta>
             <template slot="description">
-              <h4 class="r-heading-light r-text-secondary">
+              <h4 class="r-heading-light r-text-uppercase">
                 Collaborative
               </h4>
-              <h2 class="r-heading">
+              <h2 class="r-heading r-text-secondary">
                 Shopple as a specialist house
               </h2>
               <p class="r-text-normal">
@@ -173,7 +173,7 @@
               <p class="r-text-normal">
                 Bring your animal friend (a bird, or a dog, and even a cat/doll) to keep you super focused if necessary.
               </p><br />
-              <a-row :gutter="[24,24]" type="flex" justify="start">
+              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }">

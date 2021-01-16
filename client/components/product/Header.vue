@@ -1,7 +1,7 @@
 <template>
   <a-row>
     <a-col class="r-pt-12" :span="24">
-      <a-row type="flex" justify="start">
+      <a-row type="flex" justify="start" align="middle">
         <a-col :span="24">
           <h4 class="r-text-normal r-product-text">
             {{ product.name }}

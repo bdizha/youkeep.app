@@ -1,6 +1,6 @@
 <template>
     <r-store-template v-if="hasData" :category="category">
-        <a-row :gutter="16" type="flex" justify="start">
+        <a-row :gutter="16" type="flex" justify="start" align="middle">
             <a-col :xs="{ span: 24 }">
                 <r-store-products :category="category"
                                   :colums="6"

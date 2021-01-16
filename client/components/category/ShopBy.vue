@@ -1,5 +1,5 @@
 <template>
-  <a-row type="flex" justify="start">
+  <a-row type="flex" justify="start" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-button @click="onModal" class="r-hide-sm r-btn-bordered-grey"
                 block

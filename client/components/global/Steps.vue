@@ -11,7 +11,7 @@
                 </h2>
               </a-col>
             </a-row>
-            <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="center"
+            <a-row :gutter="[24,24]" type="flex" justify="center"
                    align="middle">
               <a-col :xs="{ span: 24 }"
                      :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
@@ -37,17 +37,16 @@
                 </a-steps>
               </a-col>
             </a-row>
-            <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="center"
+            <a-row v-show="hasMore" :gutter="[24,24]" type="flex" justify="center"
                    align="middle">
-              <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 6 }"
-                     :lg="{ span: 4}">
-                <nuxt-link v-show="hasMore" to="/hiw">
+              <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 18 }" :md="{ span: 6 }"
+                     :lg="{ span: 6}">
+                <nuxt-link to="/hiw">
                   <a-button class="r-btn--grey"
                             block
                             type="secondary"
                             size="large">
-                    <span class="r-hide-sm">Read more</span>
-                    <span class="r-hide-lg">Go</span>
+                    Read more
                     <a-icon type="right"/>
                   </a-button>
                 </nuxt-link>

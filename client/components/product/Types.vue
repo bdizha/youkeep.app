@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-mb-24" type="flex" justify="start">
+  <a-row class="r-mb-24" type="flex" justify="start" align="middle">
     <a-col :span="24">
       <a-collapse default-active-key="0" expandIconPosition="right">
         <a-collapse-panel v-for="(filter, index) in filters"

@@ -1,7 +1,7 @@
 <template>
   <a-row type="flex" justify="center">
     <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row class="r-store-item-line" type="flex" justify="start">
+      <a-row class="r-store-item-line" type="flex" justify="start" align="middle">
         <a-col
                :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
@@ -27,7 +27,7 @@
           </a-select>
         </a-col>
       </a-row>
-      <a-row v-if="hasStores && !processes.isTray" type="flex" justify="start">
+      <a-row v-if="hasStores && !processes.isTray" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
                v-for="(store, index) in stores.data"

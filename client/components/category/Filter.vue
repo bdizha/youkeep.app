@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-category-menu" :gutter="[0, 12]" type="flex" justify="start">
+  <a-row class="r-category-menu" :gutter="[0, 12]" type="flex" justify="start" align="middle">
     <a-col :span="24">
       <r-category-menu-item v-for="(category, index) in categories"
                             :key="index"

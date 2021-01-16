@@ -2,7 +2,7 @@
   <r-page>
     <a-row :gutter="16" style="min-height: 150px;background: #FFFFFF;">
       <a-col :span="24">
-        <a-row type="flex" justify="start">
+        <a-row type="flex" justify="start" align="middle">
           <a-col :lg="{span: 9, offset: 3}" class="r-page-padding">
             <h1 class="r-heading">
               <span class="r-text-secondary">About Us</span>

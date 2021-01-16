@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-mt-24" :class="{'r-is-empty': false}" type="flex" justify="start">
+  <a-row class="r-mt-24" :class="{'r-is-empty': false}" type="flex" justify="start" align="middle">
     <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-store-category-header :is-last="false" :category="category" justify="end"></r-store-category-header>
       <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]"

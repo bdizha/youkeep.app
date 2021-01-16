@@ -24,7 +24,7 @@
         <a-row type="flex" justify="center" align="middle" :gutter="[12,12]">
           <a-col :xs="{ span: 16 }" :sm="{ span: 16 }" :md="{ span: 16 }"
                  :lg="{ span: 16 }">
-            <a-row :gutter="24" type="flex" justify="start">
+            <a-row :gutter="24" type="flex" justify="start" align="middle">
               <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                      :lg="{ span: 12 }">
                 Card number
@@ -34,7 +34,7 @@
                 {{ card.card_number }}
               </a-col>
             </a-row>
-            <a-row :gutter="24" type="flex" justify="start">
+            <a-row :gutter="24" type="flex" justify="start" align="middle">
               <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                      :lg="{ span: 12 }">
                 Expiration

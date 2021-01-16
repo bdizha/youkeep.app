@@ -1,5 +1,5 @@
 <template>
-    <a-row type="flex" justify="start">
+    <a-row type="flex" justify="start" align="middle">
         <a-col v-if="category" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
             <nuxt-link @click.native="onCategory(category)" class="r-same-height r-text-view-more"
                          :to="category.route">

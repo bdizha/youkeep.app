@@ -11,7 +11,7 @@
                   <a-collapse-panel class="r-checkout-icon r-checkout-icon-address" :key="1"
                                     header="Delivery address">
                     <r-account-address-list></r-account-address-list>
-                    <a-row class="r-mv-24" :gutter="24" type="flex" justify="start">
+                    <a-row class="r-mv-24" :gutter="24" type="flex" justify="start" align="middle">
                       <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                              :md="{ span: 18 }" :lg="{ span: 18 }">
                         <r-account-address-add></r-account-address-add>

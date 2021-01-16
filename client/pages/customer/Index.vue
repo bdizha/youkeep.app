@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
+    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -16,7 +16,7 @@
               <p class="r-text-normal">
                 Order everything from clothes to household essentials for delivery to your door.
               </p><br />
-              <a-row type="flex" justify="start">
+              <a-row type="flex" justify="start" align="middle">
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ span: 24 }"
                        :lg="{ span: 24 }">
@@ -139,7 +139,7 @@
             <template slot="description">
               <a-row type="flex" justify="center">
                 <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
-                  <h2 class="r-heading">
+                  <h2 class="r-heading r-text-secondary">
                     Think you know shopping experience? Give it a go again.
                   </h2>
                   <p class="r-text-normal">
@@ -173,10 +173,10 @@ export default {
   data() {
     return {
       images: [
-        'customer-01.jpg',
-        'customer-02.jpg',
-        'customer-03.jpg',
-        'customer-04.jpg',
+        'art-05.png',
+        'art-06.png',
+        'art-07.png',
+        'art-08.png',
       ],
       postCode: null,
       formPostCode: this.$form.createForm(this, {name: 'form_post_code'}),

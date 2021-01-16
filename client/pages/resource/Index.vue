@@ -5,11 +5,11 @@
         <div class="r-page-welcome r-bg-primary">
           <a-row type="flex" justify="center">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-              <a-row type="flex" justify="start">
+              <a-row type="flex" justify="start" align="middle">
                 <a-col class="r-padding-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ offset: 3, span: 9 }"
                        :lg="{ offset: 3, span: 9 }">
-                  <a-row type="flex" justify="start">
+                  <a-row type="flex" justify="start" align="middle">
                     <a-col class="r-padding-vertical-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                            :md="{ span: 24 }"
                            :lg="{ span: 24 }"
@@ -29,10 +29,10 @@
                       </p>
                     </a-col>
                   </a-row>
-                  <a-row type="flex" justify="start">
+                  <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
                            :lg="{ span: 18 }">
-                      <a-row :gutter="[24,24]" type="flex" justify="start">
+                      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }">
@@ -60,8 +60,8 @@
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                   <div class="r-page-header-photo">
-                    <div class="r-page-primary"
-                         style="background-image: url('/images/merchant-01.jpeg')">
+                    <div class="r-page-white"
+                         style="background-image: url('/images/art-04.png')">
                     </div>
                   </div>
                 </a-col>
@@ -77,7 +77,7 @@
                class="r-radius-right-white r-text-center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
                  :lg="{span: 18, offset:6}" class="r-padding-48">
-            <a-row class="r-margin-vertical-24" type="flex" justify="start">
+            <a-row class="r-margin-vertical-24" type="flex" justify="start" align="middle">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                      :lg="{ span: 24 }"
                      style="text-align: left;">
@@ -88,7 +88,7 @@
                 </h4>
               </a-col>
             </a-row>
-            <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start"
+            <a-row :gutter="[24,24]" type="flex" justify="start"
                    class="r-radius-right-white">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
                      :lg="{span: 8}">
@@ -128,7 +128,7 @@
              :lg="{ span: 24 }">
         <a-row type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-padding-vertical-48">
-            <h2 class="r-heading">
+            <h2 class="r-heading r-text-secondary">
               Become a verified merchant today
             </h2>
             <p class="r-text-normal">

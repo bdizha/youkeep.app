@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
+    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -28,8 +28,8 @@
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
-                <div class="r-page-primary"
-                     style="background-image: url('/assets/welcome-01.jpeg')">
+                <div class="r-page-white"
+                     style="background-image: url('/assets/art-05.png')">
                 </div>
               </div>
             </template>
@@ -56,17 +56,17 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-        <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="center">
+        <a-row :gutter="[24,24]" type="flex" justify="center">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
                  style="text-align: left;">
             <a-card>
               <a-card-meta>
                 <template slot="description">
-                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                  <h4 class="r-heading-light r-text-uppercase">
                     It's shopping time!
                   </h4>
-                  <h2 class="r-heading">
+                  <h2 class="r-heading r-text-secondary">
                     Shopping
                   </h2>
                   <p class="r-text-normal">
@@ -93,10 +93,10 @@
             <a-card>
               <a-card-meta>
                 <template slot="description">
-                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                  <h4 class="r-heading-light r-text-uppercase">
                     Smarter way to shop
                   </h4>
-                  <h2 class="r-heading">
+                  <h2 class="r-heading r-text-secondary">
                     Quality
                   </h2>
                   <p class="r-text-normal">
@@ -119,10 +119,10 @@
             <a-card>
               <a-card-meta>
                 <template slot="description">
-                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                  <h4 class="r-heading-light r-text-uppercase">
                     Delivery on demand
                   </h4>
-                  <h2 class="r-heading">
+                  <h2 class="r-heading r-text-secondary">
                     Craftsmanship
                   </h2>
                   <p class="r-text-normal">
@@ -131,8 +131,7 @@
                     enjoy our instant offers and your shopping experience with us.
 
                     We do not warehouse any product that we sell on our platforms. We use an on demand supply
-                    mechanism
-                    such that everything goes directly from the store or restaurant to your doorstep. That is why you always get a better
+                    mechanism such that everything goes directly from the store or restaurant to your doorstep. That is why you always get a better
                     service on our shopping experience.</p>
                 </template>
               </a-card-meta>
@@ -151,10 +150,10 @@
             <a-card>
               <a-card-meta>
                 <template slot="description">
-                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                  <h4 class="r-heading-light r-text-uppercase">
                     Making sense
                   </h4>
-                  <h2 class="r-heading">
+                  <h2 class="r-heading r-text-secondary">
                     Value
                   </h2>
                   <p class="r-text-normal">

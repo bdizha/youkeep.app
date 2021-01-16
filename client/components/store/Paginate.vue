@@ -1,5 +1,5 @@
 <template>
-    <a-row class="r-store-row" type="flex" justify="start">
+    <a-row class="r-store-row" type="flex" justify="start" align="middle">
         <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
             <a-pagination v-if="hasStores" class="r-same-height" v-model="stores.current_page"
                           :show-total="(total, range) => `${range[0]}-${range[1]} of ${total} items`"

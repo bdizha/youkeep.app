@@ -2,7 +2,7 @@
   <a-card class="r-bg-primary-light">
     <a-card-meta class="r-text-center">
       <template slot="description">
-        <a-row type="flex" justify="start">
+        <a-row type="flex" justify="start" align="middle">
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                  :lg="{ span: 24 }">
             <a-card>
@@ -10,7 +10,7 @@
                 <template slot="description">
                   <a-row type="flex" justify="center">
                     <a-col :span="24">
-                      <h2 class="r-heading">
+                      <h2 class="r-heading r-text-secondary">
                         Shop online with Shopple
                       </h2>
                       <p class="r-text-normal">

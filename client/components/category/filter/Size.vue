@@ -1,8 +1,8 @@
 <template>
-  <a-row class="r-mv-12" :gutter="[12,12]" type="flex" justify="start">
+  <a-row class="r-mv-12" :gutter="[12,12]" type="flex" justify="start" align="middle">
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-checkbox-group v-model="selected" @change="onFilter">
-        <a-row :gutter="[12,12]" type="flex" justify="start">
+        <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
           <a-col v-for="(size, index) in size.items"
                  :key="size.id"
                  :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">

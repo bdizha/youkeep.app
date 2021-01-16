@@ -2,7 +2,7 @@
   <r-page>
     <a-row type="flex" justify="center">
       <a-col class="gutter-row" :span="24">
-        <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
+        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"
                  :lg="{ span: 12 }">
@@ -58,8 +58,8 @@
               <a-card-meta>
                 <template slot="description">
                   <div class="r-page-header-photo">
-                    <div class="r-page-primary"
-                         style="background-image: url('/assets/welcome-01.jpeg')">
+                    <div class="r-page-white"
+                         style="background-image: url('/assets/art-05.png')">
                     </div>
                   </div>
                 </template>
@@ -74,7 +74,7 @@
               <a-form-item>
                 <a-row type="flex" justify="center">
                   <a-col class="r-text-left" :xs="{ span: 24 }">
-                    <h2 class="r-heading">
+                    <h2 class="r-heading r-text-secondary">
                       Get in touch
                     </h2>
                     <p class="r-text-normal">

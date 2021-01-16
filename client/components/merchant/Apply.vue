@@ -9,7 +9,7 @@
         <a-form-item>
           <a-row class="r-mt-48" type="flex" justify="center">
             <a-col class="r-text-left" :xs="{ span: 24 }">
-              <h2 class="r-heading">
+              <h2 class="r-heading r-text-secondary">
                 Shopple merchant application
               </h2>
               <p class="r-text-normal">
@@ -18,7 +18,7 @@
             </a-col>
           </a-row>
         </a-form-item>
-        <a-row :gutter="24" type="flex" justify="start">
+        <a-row :gutter="24" type="flex" justify="start" align="middle">
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
             <a-form-item

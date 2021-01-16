@@ -6,9 +6,9 @@
               @submit="apply"
               :form="formApply">
         <a-form-item v-if="step == 0">
-          <a-row type="flex" justify="start">
+          <a-row type="flex" justify="start" align="middle">
             <a-col class="r-text-left" :xs="{ span: 24 }">
-              <h2 class="r-heading">
+              <h2 class="r-heading r-text-secondary">
                 Shopper application
               </h2>
               <p v-if="false" class="r-text-normal">
@@ -16,7 +16,7 @@
               </p>
             </a-col>
           </a-row>
-          <a-row type="flex" justify="start">
+          <a-row type="flex" justify="start" align="middle">
             <a-col class="r-text-left" :xs="{ span: 24 }">
               <h3 class="r-heading">
                 What is Shopple?
@@ -30,7 +30,7 @@
               </p>
             </a-col>
           </a-row>
-          <a-row type="flex" justify="start">
+          <a-row type="flex" justify="start" align="middle">
             <a-col class="r-text-left" :xs="{ span: 24 }">
               <h3 class="r-heading">
                 What is a Shopple shopper?
@@ -240,7 +240,7 @@
           </a-radio-group>
         </a-form-item>
         <a-form-item @click="onStep" :wrapper-col="{ span: 24 }">
-          <a-row :gutter="0" type="flex" justify="start">
+          <a-row :gutter="0" type="flex" justify="start" align="middle">
             <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onBack"
                         :size="'default'"

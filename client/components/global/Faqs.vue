@@ -30,7 +30,7 @@
                        justify="space-around" align="middle">
                     <a-col :lg="{span: 20 , offset: 4}" class="r-page-padding">
                         <div style="margin-bottom: 24px;" v-for="(faqSection, fs) in sections" :key="fs+1">
-                            <h2 class="r-heading">
+                            <h2 class="r-heading r-text-secondary">
                                 {{ faqSection.name }}
                             </h2>
                             <a-collapse accordion :expandIconPosition="'right'" bordered="false"

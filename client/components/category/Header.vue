@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-mb-24" :gutter="[24, 24]" type="flex" justify="start">
+  <a-row class="r-mb-24" :gutter="[24, 24]" type="flex" justify="start" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <div class="r-category-header">

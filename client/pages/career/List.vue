@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="top">
+    <a-row :gutter="[24,24]" type="flex" justify="start" align="top">
       <a-col :xs="{ span: 24 }"
              :sm="{ span: 24 }"
              :md="{ span: 24 }"
@@ -8,7 +8,7 @@
         <a-card class="">
           <a-card-meta>
             <template slot="description">
-              <h2 class="r-heading">
+              <h2 class="r-heading r-text-secondary">
                 <span v-if="!department">Current job openings at Shopple</span>
                 <span v-if="department" v-on:click="onDepartment(null)">
                   <a-icon type="left"/>

@@ -31,7 +31,7 @@
             </a-breadcrumb>
           </a-col>
         </a-row>
-        <a-row :gutter="16" type="flex" justify="start">
+        <a-row :gutter="16" type="flex" justify="start" align="middle">
           <a-col class="gutter-row" :span="24">
             <a-collapse accordion :expandIconPosition="'right'" :defaultActiveKey="fs+1">
               <template #expandIcon="props">

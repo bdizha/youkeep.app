@@ -4,7 +4,7 @@
          v-for="(image, index) in images"
          :key="index + '-image'">
       <img :src="'/assets/' + image"/>
-      <div class="r-page-primary"
+      <div class="r-page-white"
            :style="{backgroundImage: 'url(' + '/assets/' + image + ')'}">
       </div>
     </div>

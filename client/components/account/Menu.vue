@@ -1,5 +1,5 @@
 <template>
-  <a-row :gutter="16" type="flex" justify="start">
+  <a-row :gutter="16" type="flex" justify="start" align="middle">
     <a-col :span="24">
       <a-list :data-source="links">
         <a-list-item class="r-list-item" slot="renderItem" slot-scope="item, index">

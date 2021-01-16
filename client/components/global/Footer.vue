@@ -3,7 +3,7 @@
     <a-col :span="24">
       <a-row class="r-mb-48" type="flex" justify="center">
         <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 21 }" :lg="{ span: 21 }">
-          <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="center"
+          <a-row :gutter="[24,24]" type="flex" justify="center"
                  align="middle">
             <a-col v-if="hasSubscribe" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <r-subscribe></r-subscribe>
@@ -17,10 +17,10 @@
       <a-layout-footer v-if="hasFooter">
         <a-row class="r-bg-white r-mv-24" type="flex" justify="center">
           <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-            <a-row type="flex" justify="start">
+            <a-row type="flex" justify="start" align="middle">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 6 }">
                 <a-card title="It's shopping time" :bordered="false" style="width: 100%;">
-                  <a-row type="flex" justify="start">
+                  <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                       <nuxt-link class="r-same-height" to="/">
                         <img src="/images/icon-06.svg?v=1"
@@ -29,7 +29,7 @@
                       </nuxt-link>
                     </a-col>
                   </a-row>
-                  <a-row type="flex" justify="start">
+                  <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 18 }" :sm="{ span: 16 }" :lg="{ span: 16 }">
                       <nuxt-link :to="$route.path" @click.native="onModal('delivery')"
                                  class="r-footer-link r-pt-24">
@@ -40,7 +40,7 @@
                 </a-card>
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 18 }">
-                <a-row :gutter="[24,24]" type="flex" justify="start">
+                <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Shoppers" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
@@ -111,14 +111,14 @@
         </a-row>
         <a-row type="flex" justify="center" class="r-bg-dark">
           <a-col class="r-p-24 r-footer-center-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-            <a-row :gutter="[24,24]" type="flex" justify="start">
+            <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
               <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 6 }">
                                 <span class="r-same-height r-text-white">
                                     Interested in making extra money?
                                 </span>
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 18 }">
-                <a-row :gutter="[24,24]" type="flex" justify="start">
+                <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                   <a-col :xs="{ span: 24 }" :sm="{ span: 6 }" :lg="{ span: 6 }">
                     <nuxt-link class="r-same-height r-footer-link" to="/shopper">
                       <a-button block class="r-btn-bordered-white" size="default">

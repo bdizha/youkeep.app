@@ -4,7 +4,7 @@
       <template slot="description">
         <a-row class="r-m-48" type="flex" justify="center">
           <a-col :span="24">
-            <h2 class="r-heading">
+            <h2 class="r-heading r-text-secondary">
               Download the Shopple app
             </h2>
             <p class="r-text-normal">

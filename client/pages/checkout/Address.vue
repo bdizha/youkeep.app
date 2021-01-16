@@ -4,7 +4,7 @@
     <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :lg="{ span: 24 }">
       <r-account-address-list :has-title="false"></r-account-address-list>
-      <a-row class="r-margin-vertical-24" :gutter="24" type="flex" justify="start">
+      <a-row class="r-margin-vertical-24" :gutter="24" type="flex" justify="start" align="middle">
         <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                :md="{ span: 18 }" :lg="{ span: 18 }">
           <r-account-address-add></r-account-address-add>

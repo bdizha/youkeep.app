@@ -5,7 +5,7 @@
            style="position: relative;">
     <a-row type="flex" justify="center">
       <a-col class="r-text-left" :xs="{ span: 24 }">
-        <h2 class="r-heading">
+        <h2 class="r-heading r-text-secondary">
           Edit account details
         </h2>
         <p class="r-text-normal">

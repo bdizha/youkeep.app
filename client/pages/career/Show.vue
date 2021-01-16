@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="top">
+    <a-row :gutter="[24,24]" type="flex" justify="start" align="top">
       <a-col :xs="{ span: 24 }"
              :sm="{ span: 24 }"
              :md="{ span: 12 }"
@@ -43,7 +43,7 @@
             <a-row class="" type="flex" justify="start" align="middle">
               <a-col :lg="{span: 24}">
                 <a-card class="">
-                  <h2 class="r-heading">{{ position.title }}</h2>
+                  <h2 class="r-heading r-text-secondary">{{ position.title }}</h2>
                   <div class="r-mt-48" v-html="position.description"></div>
                 </a-card>
               </a-col>

@@ -3,7 +3,7 @@
          :gutter="24"
          style="padding: 48px 24px;background: #FFFFFF url(/images/art-grey.svg) repeat scroll 0% 0% !important;">
     <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row class="r-mb-24" type="flex" justify="start">
+      <a-row class="r-mb-24" type="flex" justify="start" align="middle">
         <a-col :span="12">
           <r-store-delivery-options></r-store-delivery-options>
         </a-col>
@@ -22,7 +22,7 @@
           </a-select>
         </a-col>
       </a-row>
-      <a-row :gutter="[24,48]" type="flex" justify="start">
+      <a-row :gutter="[24,48]" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 4 }"
                v-if="stores.length > 0"
                v-for="(store, index) in stores"

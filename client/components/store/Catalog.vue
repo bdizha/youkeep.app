@@ -1,11 +1,11 @@
 <template>
-  <a-row class="r-catalog" type="flex" justify="start">
+  <a-row class="r-catalog" type="flex" justify="start" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: span }">
       <div class="r-store-item-line">
-        <a-row type="flex" justify="start">
+        <a-row type="flex" justify="start" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                  :lg="{ span: 24 }">
-            <a-row :gutter="[24,24]" type="flex" justify="start">
+            <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
               <a-col :xs="{ span: 18 }" :sm="{ span: 18 }" :md="{ span: 12 }"
                      :lg="{ span: 12 }">
                 <r-category-shop-by justify="end"></r-category-shop-by>

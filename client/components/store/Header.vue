@@ -1,6 +1,6 @@
 <template>
   <a-layout-header class="r-header r-store-header">
-    <a-row style="width: 100%;" type="flex" justify="start">
+    <a-row style="width: 100%;" type="flex" justify="start" align="middle">
       <a-col type="flex" :span="24">
         <a-row type="flex" justify="center" align="middle">
           <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"

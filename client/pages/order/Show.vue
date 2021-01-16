@@ -3,7 +3,7 @@
         <a-row type="flex" justify="center" align="middle">
             <a-col class="r-margin-vertical-24" :xs="{ span: 24 }"
                    :sm="{ span: 24 }" :lg="{ span: 24 }">
-                <h2 class="r-heading">
+                <h2 class="r-heading r-text-secondary">
                     ORDER #202511935 placed on 27 July 2019 12:59
                 </h2>
                 <h4 class="r-heading">

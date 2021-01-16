@@ -5,7 +5,7 @@
                 <a-icon type="check-circle"/>
                 <span>{{ notice }} </span>
             </h4>
-            <h3 v-if="hasThanks" class="r-heading-light r-text-secondary">Thank you!</h3>
+            <h3 v-if="hasThanks" class="r-heading-light r-text-uppercase">Thank you!</h3>
         </div>
     </div>
 </template>

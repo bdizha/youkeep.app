@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="top">
+    <a-row :gutter="[24,24]" type="flex" justify="start" align="top">
       <a-col :xs="{ span: 24 }"
              :sm="{ span: 24 }"
              :md="{ span: 12 }"
@@ -54,7 +54,7 @@
                       @submit="onSend"
                       :form="formApply">
                 <a-form-item>
-                  <h2 class="r-heading">
+                  <h2 class="r-heading r-text-secondary">
                     Submit your application
                   </h2>
                 </a-form-item>
@@ -71,7 +71,7 @@
                     </a-button>
                   </a-upload>
                 </a-form-item>
-                <a-row :gutter="24" type="flex" justify="start">
+                <a-row :gutter="24" type="flex" justify="start" align="middle">
                   <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
                          :md="{ span: 12 }"
                          :lg="{ span: 12 }">

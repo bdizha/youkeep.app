@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-tabs" type="flex" justify="start">
+  <a-row class="r-tabs" type="flex" justify="start" align="middle">
     <a-col class="r-text-left" :xs="{ span: 24 }">
       <a-collapse default-active-key="0" expandIconPosition="right">
         <a-collapse-panel v-for="(link, index) in links"

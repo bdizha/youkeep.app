@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start" align="middle">
+    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 24 }"
              :lg="{ span: 24 }">
@@ -20,9 +20,9 @@
     </a-row>
     <a-row v-if="hasData" type="flex" justify="center" align="middle">
       <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}">
-        <a-row :gutter="16" type="flex" justify="start">
+        <a-row :gutter="16" type="flex" justify="start" align="middle">
           <a-col class="gutter-row" :span="24">
-            <a-row :gutter="36" type="flex" justify="start">
+            <a-row :gutter="36" type="flex" justify="start" align="middle">
               <a-col v-for="(section, s) in help.sections"
                      :key="'section-' + s" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 12}"
                      :lg="{span: 12}"

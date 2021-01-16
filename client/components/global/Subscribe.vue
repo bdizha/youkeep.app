@@ -5,7 +5,7 @@
         <a-card>
           <a-card-meta class="r-text-center">
             <template slot="description">
-              <a-row type="flex" justify="start">
+              <a-row type="flex" justify="start" align="middle">
                 <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                        :lg="{ span: 24 }">
                   <div class="r-subscribe-title">
@@ -30,7 +30,7 @@
                           @submit="onPost">
                     <a-row type="flex" justify="start" :gutter="[24,24]">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }" class="r-text-left">
-                        <a-row class="r-mt-24" :gutter="24" type="flex" justify="start">
+                        <a-row class="r-mt-24" :gutter="24" type="flex" justify="start" align="middle">
                           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
                             <a-form-item label="First name">
                               <a-input size="large"
@@ -54,7 +54,7 @@
                           <a-radio-group v-model="userType"
                                          @change="onUserType"
                                          name="type" :default-value="1">
-                            <a-row :gutter="[24,24]" type="flex" justify="start">
+                            <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
                                 <a-radio :value="1">
                                   I'm a business

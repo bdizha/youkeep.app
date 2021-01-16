@@ -5,7 +5,7 @@
         <r-category-actions v-if="hasCategories"></r-category-actions>
         <a-row class="r-mt-48" type="flex" justify="center" align="middle">
           <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
-            <a-row :gutter="[{ md: 24, lg: 48 },{xs:24, sm:24, md: 24, lg: 48 }]" type="flex" justify="start"
+            <a-row :gutter="[24,24]" type="flex" justify="start"
                    align="middle">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                 <a-card class="">
@@ -25,14 +25,14 @@
                       <h1 class="r-heading">
                         It's shopping time!
                       </h1>
-                      <h2 class="r-heading">
+                      <h2 class="r-heading r-text-secondary">
                         <span class="r-heading r-text-secondary">Shop more,</span>
                         <span class="r-text-secondary">Pay less</span>
                       </h2>
                       <p class="r-text-normal">
                         Yes, as long as you shop it with Shopple, you are fully in control.
                       </p><br/>
-                      <a-row type="flex" justify="start">
+                      <a-row type="flex" justify="start" align="middle">
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                                :md="{ span: 24 }"
                                :lg="{ span: 24 }">
@@ -53,7 +53,6 @@
         <a-row type="flex" justify="center" align="middle">
           <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
             <r-welcome></r-welcome>
-            <r-features :span="24"></r-features>
             <r-testimonials></r-testimonials>
           </a-col>
         </a-row>
@@ -74,9 +73,9 @@ export default {
   data() {
     return {
       images: [
-        'paise-01.jpeg',
-        'customer-01.jpeg',
-        'about-01.jpeg',
+        'art-01.png',
+        'art-02.png',
+        'art-03.png',
       ],
       isProcessing: true,
       testimonials: [],
