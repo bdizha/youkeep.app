@@ -25,7 +25,7 @@
       </a-form-item>
       <a-form-item label="New password">
         <a-input type="password"
-                 size="large"
+                 size="default"
                  placeholder="New password"
                  v-decorator="['password', { rules: [{ required: true, message: 'Please enter new password' }] }]">
           <a-icon slot="prefix" type="lock"/>

@@ -8,7 +8,7 @@
                     :form="form">
                 <a-form-item label="Notes">
                     <a-input type="textarea"
-                             size="large"
+                             size="default"
                              placeholder="Your delivery instructions"
                              v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]">
                     </a-input>

@@ -29,7 +29,7 @@
                 <nuxt-link class="r-inline-block" to="/career/openings">
                   <a-button type="secondary"
                             class="ant-btn ant-btn-secondary r-btn-black"
-                            size="large">
+                            size="default">
                     See openings
                   </a-button>
                 </nuxt-link>
@@ -161,7 +161,7 @@
             </a-row>
             <nuxt-link class="r-inline-block" to="/career/openings">
               <a-button type="secondary"
-                        class="r-btn-secondary" size="large">
+                        class="r-btn-secondary" size="default">
                 See openings
               </a-button>
             </nuxt-link>

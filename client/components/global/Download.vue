@@ -14,13 +14,13 @@
         </a-row>
         <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
           <a-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-            <a-button block size="large" type="secondary" class="r-btn-secondary">
+            <a-button block size="default" type="secondary" class="r-btn-secondary">
               <a-icon type="apple"/>
               Coming soon
             </a-button>
           </a-col>
           <a-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-            <a-button block size="large" type="secondary" class="r-btn-secondary">
+            <a-button block size="default" type="secondary" class="r-btn-secondary">
               <a-icon type="android"/>
               Coming soon
             </a-button>

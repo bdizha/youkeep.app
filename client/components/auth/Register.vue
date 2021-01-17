@@ -28,7 +28,7 @@
           </a-form-item>
           <a-form-item label="Name">
             <a-input
-              size="large"
+              size="default"
               placeholder="Your full name"
               v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
               <a-icon slot="prefix" type="user"/>
@@ -36,7 +36,7 @@
           </a-form-item>
           <a-form-item label="Your mobile number">
             <a-input
-              size="large"
+              size="default"
               placeholder="Your mobile number"
               v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
               <a-icon slot="prefix" type="mobile"/>
@@ -44,7 +44,7 @@
           </a-form-item>
           <a-form-item label="Email address">
             <a-input type="email"
-                     size="large"
+                     size="default"
                      placeholder="Your email address"
                      v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
               <a-icon slot="prefix" type="mail"/>

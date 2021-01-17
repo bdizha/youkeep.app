@@ -33,7 +33,7 @@
                             :form="formContact">
                       <a-form-item label="Notes">
                         <a-input type="textarea"
-                                 size="large"
+                                 size="default"
                                  placeholder="Your delivery instructions"
                                  v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]">
                         </a-input>
@@ -77,7 +77,7 @@
                       <a-form-item :wrapper-col="{ xs: {span: 24},  lg: {span: 12} }"
                                    label="We use your number to text or call you about your order.">
                         <a-input
-                          size="large"
+                          size="default"
                           placeholder="Your mobile number name"
                           v-decorator="['name', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
                         </a-input>
@@ -144,14 +144,14 @@
                   <a-form-item :wrapper-col="{ xs: {span: 24},  lg: {span: 12} }"
                                label="We use your number to text or call you about your order.">
                     <a-input
-                      size="large"
+                      size="default"
                       placeholder="Your mobile number name"
                       v-decorator="['name', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
                     </a-input>
                   </a-form-item>
                   <a-form-item label="Coupon">
                     <a-input
-                      size="large"
+                      size="default"
                       placeholder="Enter your coupon code"
                       v-decorator="['coupon', { rules: [{ required: false, message: 'Please enter your coupon' }] }]">
                     </a-input>

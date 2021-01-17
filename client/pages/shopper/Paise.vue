@@ -75,9 +75,9 @@
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 14 }" :lg="{ span: 14 }"
                                style="text-align: left;">
-                          <h2 class="r-heading r-text-primary">
+                          <h4 class="r-heading r-text-primary">
                             Zero interest payments
-                          </h2>
+                          </h4>
                           <p class="r-text-normal">
                             50% of shoppers are more likely to make a purchase if offered the ability to pay in
                             interest-free installment payments. Enroll more customers and offer them rewards for buying
@@ -127,9 +127,9 @@
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 14 }" :lg="{ span: 14 }"
                                style="text-align: left;">
-                          <h2 class="r-heading r-text-primary">
+                          <h4 class="r-heading r-text-primary">
                             Higher conversion rate
-                          </h2>
+                          </h4>
                           <p class="r-text-normal">
                             Because shoppers pay over time using their existing credit, they don’t need to fill out an
                             application or endure a credit check that frustrates them at checkout—leading to higher
@@ -179,9 +179,9 @@
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 14 }" :lg="{ span: 14 }"
                                style="text-align: left;">
-                          <h2 class="r-heading r-text-primary">
+                          <h4 class="r-heading r-text-primary">
                             Higher average order rate
-                          </h2>
+                          </h4>
                           <p class="r-text-normal">
                             Shopple is the only buy-now-pay-later plan that lets shoppers set up payment plans with
                             their
@@ -232,9 +232,9 @@
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 14 }" :lg="{ span: 14 }"
                                style="text-align: left;">
-                          <h2 class="r-heading r-text-primary">
+                          <h4 class="r-heading r-text-primary">
                             More qualified customers
-                          </h2>
+                          </h4>
                           <p class="r-text-normal">
                             Unlike other buy-now-pay-later plans, Shopple isn’t new financing. Shopple lets online
                             shoppers
@@ -285,9 +285,9 @@
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 14 }" :lg="{ span: 14 }"
                                style="text-align: left;">
-                          <h2 class="r-heading r-text-primary">
+                          <h4 class="r-heading r-text-primary">
                             Highest approval rating
-                          </h2>
+                          </h4>
                           <p class="r-text-normal">With hundreds of
                             thousands
                             of

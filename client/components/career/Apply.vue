@@ -83,7 +83,7 @@
                                                 :accept="accept"
                                                 action="/career/resume"
                                                 v-decorator="['resume', { rules: [{ required: true, message: 'Please upload your resume/CV' }] }]">
-                                            <a-button size="large">
+                                            <a-button size="default">
                                                 <a-icon type="paper-clip"/>
                                                 Attach resume/CV
                                             </a-button>
@@ -95,7 +95,7 @@
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Full name">
                                                 <a-input
-                                                        size="large"
+                                                        size="default"
                                                         placeholder="Your full name"
                                                         v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
                                                 </a-input>
@@ -106,7 +106,7 @@
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Your mobile">
                                                 <a-input
-                                                        size="large"
+                                                        size="default"
                                                         placeholder="Your mobile"
                                                         v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile' }] }]">
                                                 </a-input>
@@ -117,7 +117,7 @@
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Email address">
                                                 <a-input type="email"
-                                                         size="large"
+                                                         size="default"
                                                          placeholder="Your email address"
                                                          v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
                                                 </a-input>
@@ -128,7 +128,7 @@
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Current company">
                                                 <a-input
-                                                        size="large"
+                                                        size="default"
                                                         placeholder="Your current company"
                                                         v-decorator="['company', { rules: [{ required: true, message: 'Please enter your current company' }] }]">
                                                 </a-input>
@@ -139,7 +139,7 @@
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Linkedin URL">
                                                 <a-input
-                                                        size="large"
+                                                        size="default"
                                                         placeholder="Your Linkedin URL"
                                                         v-decorator="['public_url', { rules: [{ required: false, message: 'Please enter your public URL' }] }]">
                                                 </a-input>
@@ -150,7 +150,7 @@
                                                :lg="{ span: 12 }">
                                             <a-form-item label="Other URL">
                                                 <a-input
-                                                        size="large"
+                                                        size="default"
                                                         placeholder="Your other URL"
                                                         v-decorator="['url_url', { rules: [{ required: false, message: 'Please enter your other URL' }] }]">
                                                 </a-input>

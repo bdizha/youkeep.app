@@ -67,90 +67,100 @@
             </a-card>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
-            <a-form v-if="hasForm"
-                    class="ant-form ant-form-vertical"
-                    @submit="onSubmit"
-                    :form="form">
-              <a-form-item>
-                <a-row type="flex" justify="center">
-                  <a-col class="r-text-left" :xs="{ span: 24 }">
-                    <h2 class="r-heading r-text-secondary">
-                      Get in touch
-                    </h2>
-                    <p class="r-text-normal">
-                      How can we help? Just a quick note: try visiting our
-                      <nuxt-link to="/help">Help center</nuxt-link>
-                      that maybe of help only for general queries that we frequently receive from
-                      our customers.
-                    </p>
-                  </a-col>
-                </a-row>
-              </a-form-item>
-              <a-form-item label="Select a department">
-                <a-select
-                  labelInValue
-                  :defaultValue="categories[0]"
-                  size="large"
-                  @change="onCategory"
-                  style="min-width: 100%;">
-                  <a-select-option v-for="(option, index) in categories"
-                                   :key="index"
-                                   :value="option.key">
-                    <span class="r-sort-value">{{ option.label }}</span>
-                  </a-select-option>
-                </a-select>
-              </a-form-item>
-              <a-form-item label="Name">
-                <a-input
-                  size="large"
-                  placeholder="Your full name"
-                  v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
-                  <a-icon slot="prefix" type="mail"/>
-                </a-input>
-              </a-form-item>
-              <a-form-item label="Mobile">
-                <a-input
-                  size="large"
-                  placeholder="Your mobile number"
-                  v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
-                  <a-icon slot="prefix" type="mobile"/>
-                </a-input>
-              </a-form-item>
-              <a-form-item label="Email address">
-                <a-input type="email"
-                         size="large"
-                         placeholder="Your email address"
-                         v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
-                  <a-icon slot="prefix" type="user"/>
-                </a-input>
-              </a-form-item>
-              <a-form-item label="Notes">
-                <a-input type="textarea"
-                         size="large"
-                         placeholder="Your message"
-                         v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]">
-                  <a-icon slot="prefix" type="user"/>
-                </a-input>
-              </a-form-item>
-              <a-row type="flex" justify="center">
-                <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }">
-                </a-col>
-                <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }">
-                  <a-button block @click="onSubmit" :size="'default'"
-                            type="secondary"
-                            html-type="submit"
-                            class="r-btn-secondary">
-                    Save
-                  </a-button>
-                </a-col>
-              </a-row>
-            </a-form>
-            <r-notice :process="current"></r-notice>
-            <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+            <a-card>
+              <div slot="cover" class="r-card-cover-secondary r-p-24">
+                <a-card>
+                  <a-card-meta>
+                    <template slot="description">
+                      <a-form v-show="hasForm"
+                              class="ant-form ant-form-vertical"
+                              @submit="onSubmit"
+                              :form="form">
+                        <a-form-item>
+                          <a-row type="flex" justify="center">
+                            <a-col class="r-text-left" :xs="{ span: 24 }">
+                              <h2 class="r-heading r-text-secondary">
+                                Get in touch
+                              </h2>
+                              <p class="r-text-normal">
+                                How can we help? Just a quick note: try visiting our
+                                <nuxt-link to="/help">Help center</nuxt-link>
+                                that maybe of help only for general queries that we frequently receive from
+                                our customers.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-form-item>
+                        <a-form-item label="Select a department">
+                          <a-select
+                            labelInValue
+                            :defaultValue="categories[0]"
+                            size="default"
+                            @change="onCategory"
+                            style="min-width: 100%;">
+                            <a-select-option v-for="(option, index) in categories"
+                                             :key="index"
+                                             :value="option.key">
+                              <span class="r-sort-value">{{ option.label }}</span>
+                            </a-select-option>
+                          </a-select>
+                        </a-form-item>
+                        <a-form-item label="Name">
+                          <a-input
+                            size="default"
+                            placeholder="Your full name"
+                            v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
+                            <a-icon slot="prefix" type="mail"/>
+                          </a-input>
+                        </a-form-item>
+                        <a-form-item label="Mobile">
+                          <a-input
+                            size="default"
+                            placeholder="Your mobile number"
+                            v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
+                            <a-icon slot="prefix" type="mobile"/>
+                          </a-input>
+                        </a-form-item>
+                        <a-form-item label="Email address">
+                          <a-input type="email"
+                                   size="default"
+                                   placeholder="Your email address"
+                                   v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
+                            <a-icon slot="prefix" type="user"/>
+                          </a-input>
+                        </a-form-item>
+                        <a-form-item label="Notes">
+                          <a-input type="textarea"
+                                   size="default"
+                                   placeholder="Your message"
+                                   v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]">
+                            <a-icon slot="prefix" type="user"/>
+                          </a-input>
+                        </a-form-item>
+                        <a-row type="flex" justify="center">
+                          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                                 :md="{ span: 12 }"
+                                 :lg="{ span: 12 }">
+                          </a-col>
+                          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+                                 :md="{ span: 12 }"
+                                 :lg="{ span: 12 }">
+                            <a-button block @click="onSubmit" :size="'default'"
+                                      type="secondary"
+                                      html-type="submit"
+                                      class="r-btn-secondary">
+                              Save
+                            </a-button>
+                          </a-col>
+                        </a-row>
+                      </a-form>
+                      <r-notice :process="current"></r-notice>
+                      <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </div>
+            </a-card>
           </a-col>
         </a-row>
       </a-col>

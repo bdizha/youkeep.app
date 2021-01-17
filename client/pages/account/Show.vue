@@ -6,11 +6,11 @@
                 <a-card class="r-mb-24" title="ACCOUNT INFORMATION" style="width: 100%;">
                     <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
                         <a-col :xs="{ span: 10 }"
-                               :sm="{ span: 10 }" :lg="{ span: 10 }">
+                               :sm="{ span: 9}" :lg="{ span: 9 }">
                             <label class="r-heading-light">Email:</label>
                         </a-col>
                         <a-col :xs="{ span: 10 }"
-                               :sm="{ span: 10 }" :lg="{ span: 10 }">
+                               :sm="{ span: 9}" :lg="{ span: 9 }">
                             <label class="r-heading-light">{{ user.email }}</label>
                         </a-col>
                         <a-col :xs="{ span: 4 }"
@@ -23,11 +23,11 @@
                     </a-row>
                     <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
                         <a-col :xs="{ span: 10 }"
-                               :sm="{ span: 10 }" :lg="{ span: 10 }">
+                               :sm="{ span: 9}" :lg="{ span: 9 }">
                             <label class="r-heading-light">Password:</label>
                         </a-col>
                         <a-col :xs="{ span: 10 }"
-                               :sm="{ span: 10 }" :lg="{ span: 10 }">
+                               :sm="{ span: 9}" :lg="{ span: 9 }">
                             <label class="r-heading-light">***********</label>
                         </a-col>
                         <a-col :xs="{ span: 4 }"
@@ -46,11 +46,11 @@
                 <a-card class="r-mb-24" title="PERSONAL INFORMATIN" style="width: 100%;">
                     <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
                         <a-col :xs="{ span: 10 }"
-                               :sm="{ span: 10 }" :lg="{ span: 10 }">
+                               :sm="{ span: 9}" :lg="{ span: 9 }">
                             <label class="r-heading-light">Full name:</label>
                         </a-col>
                         <a-col :xs="{ span: 10 }"
-                               :sm="{ span: 10 }" :lg="{ span: 10 }">
+                               :sm="{ span: 9}" :lg="{ span: 9 }">
                             <label class="r-heading-light">{{ user.name }}</label>
                         </a-col>
                         <a-col :xs="{ span: 4 }"
@@ -63,11 +63,11 @@
                     </a-row>
                     <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
                         <a-col :xs="{ span: 10 }"
-                               :sm="{ span: 10 }" :lg="{ span: 10 }">
+                               :sm="{ span: 9}" :lg="{ span: 9 }">
                             <label class="r-heading-light">Mobile:</label>
                         </a-col>
                         <a-col :xs="{ span: 10 }"
-                               :sm="{ span: 10 }" :lg="{ span: 10 }">
+                               :sm="{ span: 9}" :lg="{ span: 9 }">
                             <label class="r-heading-light">{{ user.phone_number }}</label>
                         </a-col>
                         <a-col :xs="{ span: 4 }"

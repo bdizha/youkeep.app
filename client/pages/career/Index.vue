@@ -27,182 +27,169 @@
             <template slot="description">
               <div class="r-page-header-photo">
                 <div class="r-page-white"
-                     style="background-image: url('/images/careers-03.jpg')">
+                     style="background-image: url('/assets/art-04.jpg')">
                 </div>
               </div>
             </template>
           </a-card-meta>
         </a-card>
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :md="{ span: 12 }"
-             :lg="{ span: 12 }">
-        <a-card class="">
-          <a-card-meta>
-            <template slot="description">
-              <h4 class="r-heading-light r-text-uppercase">
-                Innovative
-              </h4>
-              <h2 class="r-heading r-text-secondary">
-                Transforming
-                the way shopping is experienced
-              </h2>
-              <p class="r-text-normal">
-                Shopple is a consumer centric platform that transforms
-                the way shoppers experience their shopping.
-              </p>
-              <p class="r-text-normal">
-                If you take innovation intelligently and methodically, you're in the right place with unlimited
-                possibilities.
-              </p>
-            </template>
-          </a-card-meta>
-        </a-card>
+    </a-row>
+    <a-row class="r-mt-48" type="flex" justify="justify">
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
+             style="text-align: left;">
+        <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                 :md="{ span: 12 }"
+                 :lg="{ span: 12 }">
+            <a-card>
+              <div slot="cover" class="r-card-cover-secondary r-p-24">
+                <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                  <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }">
+                    <h3 class="r-heading">
+                      Yes, we're hiring now
+                    </h3>
+                    <p class="r-text-normal">
+                      Bring your animal friend (a bird, or a dog, and even a cat/doll) to keep you super focused if
+                      necessary.
+                    </p>
+                  </a-col>
+                  <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
+                         :md="{ span: 12 }"
+                         :lg="{ span: 12 }">
+                    <nuxt-link to="/career/openings">
+                      <a-button
+                        block
+                        type="secondary"
+                        class="r-btn-secondary"
+                        size="default">
+                        See openings
+                      </a-button>
+                    </nuxt-link>
+                  </a-col>
+                  <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
+                         :md="{ span: 12 }"
+                         :lg="{ span: 12 }">
+                    <nuxt-link to="/contact-us">
+                      <a-button class="r-btn-bordered-grey"
+                                block
+                                type="secondary"
+                                size='default'>
+                        Contact us
+                      </a-button>
+                    </nuxt-link>
+                  </a-col>
+                </a-row>
+              </div>
+            </a-card>
+          </a-col>
+        </a-row>
       </a-col>
-      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
+    </a-row>
+    <a-row class="r-mt-48" type="flex" justify="justify">
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
+             style="text-align: left;">
+        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                 :md="{ span: 12 }"
+                 :lg="{ span: 12 }">
+            <a-card class="">
+              <a-card-meta>
+                <template slot="description">
+                  <h4 class="r-heading-light r-text-uppercase">
+                    Innovative
+                  </h4>
+                  <h4 class="r-heading r-text-secondary">
+                    Transforming
+                    the way shopping is experienced
+                  </h4>
+                  <p class="r-text-normal">
+                    Shopple is a consumer centric platform that transforms
+                    the way shoppers experience their shopping.
+                  </p>
+                  <p class="r-text-normal">
+                    If you take innovation intelligently and methodically, you're in the right place with unlimited
+                    possibilities.
+                  </p>
+                </template>
+              </a-card-meta>
+            </a-card>
           </a-col>
-          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                 :md="{ span: 12 }"
+                 :lg="{ span: 12 }">
+            <a-card class="">
+              <a-card-meta>
+                <template slot="description">
+                  <h4 class="r-heading-light r-text-uppercase">
+                    Dynamic
+                  </h4>
+                  <h4 class="r-heading r-text-secondary">
+                    Why we do what we do
+                  </h4>
+                  <p class="r-text-normal">
+                    At Shopple, we are building a shopping experience that helps millions of people be effortlessly in
+                    control of their shopping experience.
+                  </p>
+                  <p class="r-text-normal">
+                    It's all about giving back our customers the control of their shopping capacity.
+                  </p>
+                </template>
+              </a-card-meta>
+            </a-card>
           </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :md="{ span: 12 }"
-             :lg="{ span: 12 }">
-        <a-card class="">
-          <a-card-meta>
-            <template slot="description">
-              <h4 class="r-heading-light r-text-uppercase">
-                Dynamic
-              </h4>
-              <h2 class="r-heading r-text-secondary">
-                Why we do what we do
-              </h2>
-              <p class="r-text-normal">
-                At Shopple, we are building a shopping experience that helps millions of people be effortlessly in
-                control of their shopping experience.
-              </p>
-              <p class="r-text-normal">
-                It's all about giving back our customers the control of their shopping capacity.
-              </p>
-            </template>
-          </a-card-meta>
-        </a-card>
-      </a-col>
-      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                 :md="{ span: 12 }"
+                 :lg="{ span: 12 }">
+            <a-card class="">
+              <a-card-meta>
+                <template slot="description">
+                  <h4 class="r-heading-light r-text-uppercase">
+                    Progressive
+                  </h4>
+                  <h4 class="r-heading r-text-secondary">
+                    Function with new tools
+                  </h4>
+                  <p class="r-text-normal">
+                    You want to create bright ideas, achieve great work & cash out.
+                  </p>
+                  <p class="r-text-normal">
+                    We use the latest technologies to solve problems (AI, Graphical Data Tool Sets). Customer
+                    satisfaction
+                    comes first, create products which users love.
+                  </p>
+                </template>
+              </a-card-meta>
+            </a-card>
           </a-col>
-          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                 :md="{ span: 12 }"
+                 :lg="{ span: 12 }">
+            <a-card class="">
+              <a-card-meta>
+                <template slot="description">
+                  <h4 class="r-heading-light r-text-uppercase">
+                    Collaborative
+                  </h4>
+                  <h4 class="r-heading r-text-secondary">
+                    Shopple as a specialist house
+                  </h4>
+                  <p class="r-text-normal">
+                    We work together as set of teams within teams of different specialities. Great work mates are at the
+                    core of the work we do, here.
+                  </p>
+                  <p class="r-text-normal">
+                    We incentives making mistakes and this helps to foster the spirit of innovation with as minimum
+                    friction
+                    and costs as possible.
+                  </p>
+                </template>
+              </a-card-meta>
+            </a-card>
           </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :md="{ span: 12 }"
-             :lg="{ span: 12 }">
-        <a-card class="">
-          <a-card-meta>
-            <template slot="description">
-              <h4 class="r-heading-light r-text-uppercase">
-                Progressive
-              </h4>
-              <h2 class="r-heading r-text-secondary">
-                Function with new tools
-              </h2>
-              <p class="r-text-normal">
-                You want to create bright ideas, achieve great work & cash out.
-              </p>
-              <p class="r-text-normal">
-                We use the latest technologies to solve problems (AI, Graphical Data Tool Sets). Customer satisfaction
-                comes first, create products which users love.
-              </p>
-            </template>
-          </a-card-meta>
-        </a-card>
-      </a-col>
-      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
-          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :md="{ span: 12 }"
-             :lg="{ span: 12 }">
-        <a-card class="">
-          <a-card-meta>
-            <template slot="description">
-              <h4 class="r-heading-light r-text-uppercase">
-                Collaborative
-              </h4>
-              <h2 class="r-heading r-text-secondary">
-                Shopple as a specialist house
-              </h2>
-              <p class="r-text-normal">
-                We work together as set of teams within teams of different specialities. Great work mates are at the
-                core of the work we do, here.
-              </p>
-              <p class="r-text-normal">
-                We incentives making mistakes and this helps to foster the spirit of innovation with as minimum friction
-                and costs as possible.
-              </p>
-            </template>
-          </a-card-meta>
-        </a-card>
-      </a-col>
-      <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
-          <a-col class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            &nbsp;
-          </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :md="{ span: 12 }"
-             :lg="{ span: 12 }">
-        <a-card class="">
-          <a-card-meta>
-            <template slot="description">
-              <h1 class="r-heading">
-                Yes, we're hiring now
-              </h1>
-              <p class="r-text-normal">
-                Bring your animal friend (a bird, or a dog, and even a cat/doll) to keep you super focused if necessary.
-              </p><br />
-              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }">
-                  <nuxt-link to="/career/openings">
-                    <a-button
-                      block
-                      type="secondary"
-                      class="r-btn-secondary"
-                      size="large">
-                      See openings
-                    </a-button>
-                  </nuxt-link>
-                </a-col>
-                <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }">
-                  <nuxt-link to="/contact-us">
-                    <a-button class="r-btn-bordered-grey"
-                              block
-                              type="secondary"
-                              size='default'>
-                      Contact us
-                    </a-button>
-                  </nuxt-link>
-                </a-col>
-              </a-row>
-            </template>
-          </a-card-meta>
-        </a-card>
+        </a-row>
       </a-col>
     </a-row>
   </r-page>

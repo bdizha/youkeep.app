@@ -21,7 +21,7 @@
       </a-form-item>
       <a-form-item label="Email address">
         <a-input
-            size="large"
+            size="default"
             placeholder="Your email address"
             v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please enter your email address' }] }]">
           <a-icon slot="prefix" type="mail"/>
@@ -29,7 +29,7 @@
       </a-form-item>
       <a-form-item label="Password">
         <a-input type="password"
-                 size="large"
+                 size="default"
                  placeholder="Your Password"
                  v-decorator="['password', { rules: [{ required: true, message: 'Please enter your password' }] }]">
           <a-icon slot="prefix" type="lock"/>

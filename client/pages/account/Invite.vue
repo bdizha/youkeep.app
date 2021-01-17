@@ -22,7 +22,7 @@
             <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
                 <a-button block type="secondary"
                           :class="'r-btn-black'"
-                          size="large"
+                          size="default"
                           html-type="button">
                     Invite
                 </a-button>

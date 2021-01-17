@@ -53,7 +53,7 @@
                 <a :href="'/career/' + position.slug + '/apply'">
                   <a-button block
                             class="r-btn-secondary"
-                            size="large" type="secondary">
+                            size="default" type="secondary">
                     Apply for this job
                   </a-button>
                 </a>

@@ -45,7 +45,7 @@
                   image="/assets/icon_grey.svg"
                   :imageStyle="{ height: '81px',}">
                   <span slot="description">Sorry. There aren't any job openings currently.</span>
-                  <a-button size="large" class="ant-btn-primary r-btn-secondary">Shop now</a-button>
+                  <a-button size="default" class="ant-btn-primary r-btn-secondary">Shop now</a-button>
                 </a-empty>
               </a-card-meta>
             </a-card>

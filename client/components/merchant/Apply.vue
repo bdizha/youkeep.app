@@ -24,7 +24,7 @@
             <a-form-item
               label="Full name">
               <a-input
-                size="large"
+                size="default"
                 placeholder="Your full name"
                 v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
                 <a-icon slot="prefix" type="user"/>
@@ -36,7 +36,7 @@
             <a-form-item
               label="Role title">
               <a-input
-                size="large"
+                size="default"
                 placeholder="Your role number"
                 v-decorator="['role', { rules: [{ required: true, message: 'Please enter your role title' }] }]">
                 <a-icon slot="prefix" type="audit"/>
@@ -48,7 +48,7 @@
             <a-form-item
               label="Phone number">
               <a-input
-                size="large"
+                size="default"
                 placeholder="Your phone number"
                 v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your phone number' }] }]">
                 <a-icon slot="prefix" type="phone"/>
@@ -60,7 +60,7 @@
             <a-form-item
               label="Business email">
               <a-input type="email"
-                       size="large"
+                       size="default"
                        placeholder="Your company email"
                        v-decorator="['email', { rules: [{ required: true, message: 'Please enter your company email' }] }]">
                 <a-icon slot="prefix" type="mail"/>
@@ -72,7 +72,7 @@
             <a-form-item
               label="Business website">
               <a-input type="text"
-                       size="large"
+                       size="default"
                        placeholder="Your company website"
                        v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]">
                 <a-icon slot="prefix" type="link"/>
@@ -86,7 +86,7 @@
               <a-select
                 labelInValue
                 :defaultValue="platforms[0]"
-                size="large"
+                size="default"
                 @change="onPlatform"
                 style="min-width: 100%;">
                 <a-select-option v-for="(option, index) in platforms"
@@ -104,7 +104,7 @@
               <a-select
                 labelInValue
                 :defaultValue="industries[0]"
-                size="large"
+                size="default"
                 @change="onIndustry"
                 style="min-width: 100%;">
                 <a-select-option v-for="(option, index) in industries"
@@ -120,7 +120,7 @@
             <a-form-item
               label="Business website">
               <a-input type="text"
-                       size="large"
+                       size="default"
                        placeholder="Your company website"
                        v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]">
                 <a-icon slot="prefix" type="link"/>
@@ -132,7 +132,7 @@
             <a-form-item
               label="Average order value">
               <a-input type="text"
-                       size="large"
+                       size="default"
                        placeholder="Your average order value"
                        v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your company email' }] }]">
                 <a-icon slot="prefix" type="dollar"/>
@@ -146,7 +146,7 @@
               <a-select
                 labelInValue
                 :defaultValue="annual_sales_range[0]"
-                size="large"
+                size="default"
                 @change="onAnnualSales"
                 style="min-width: 100%;">
                 <a-select-option v-for="(option, index) in annual_sales_range"
@@ -161,7 +161,7 @@
         <a-form-item
           label="Notes">
           <a-input type="textarea"
-                   size="large"
+                   size="default"
                    placeholder="Your message"
                    v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]">
             <a-icon slot="prefix" type="user"/>

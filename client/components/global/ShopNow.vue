@@ -20,7 +20,7 @@
                   </a-row>
                   <a-row class="r-mt-24" type="flex" justify="center" align="middle">
                     <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 12}" :lg="{span: 8}">
-                      <a-button block size="large" type="secondary" class="r-btn-secondary">
+                      <a-button block size="default" type="secondary" class="r-btn-secondary">
                         Let's go
                       </a-button>
                     </a-col>

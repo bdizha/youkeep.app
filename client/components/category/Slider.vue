@@ -44,7 +44,7 @@
                      :md="{ span: 12 }"
                      :lg="{ span: 12 }">
                 <a-button block
-                          size="large"
+                          size="default"
                           type="secondary"
                           class="r-btn-secondary">
                   <a-icon type="clock-circle"/>

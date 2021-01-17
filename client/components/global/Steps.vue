@@ -45,7 +45,7 @@
                   <a-button class="r-btn--grey"
                             block
                             type="secondary"
-                            size="large">
+                            size="default">
                     Read more
                     <a-icon type="right"/>
                   </a-button>
