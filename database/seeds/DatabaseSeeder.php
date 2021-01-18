@@ -84,7 +84,9 @@ class DatabaseSeeder extends Seeder
 
         $urlPart = array_pop($urlParts);
 
+
         $urlParts[] = $urlPart;
+
 
         $slug = '';
         foreach ([$urlPart] as $part) {
@@ -105,16 +107,16 @@ class DatabaseSeeder extends Seeder
                     ->first();
             }
 
+            $categoryAttributes = [
+                'id' => $storeCategory->id
+            ];
+
             if (!empty($parentStoreCategory)) {
                 $this->parentStoreCategory = $parentStoreCategory;
 
-                if($storeCategory->url == 'https://www.home.co.za/plp/offers/everyday-essentials/shop-all-everyday-essentials/_/N-1diy8qz'){
+                if ($storeCategory->url == 'https://www.home.co.za/plp/offers/everyday-essentials/shop-all-everyday-essentials/_/N-1diy8qz') {
 //                    dd($parentStoreCategory);
                 }
-
-                $categoryAttributes = [
-                    'id' => $storeCategory->id
-                ];
 
                 $categoryValues = [
                     'level' => count($urlParts) + 1,
@@ -122,12 +124,17 @@ class DatabaseSeeder extends Seeder
                 ];
 
                 echo "Updated parent {$this->parentStoreCategory->category->name} category for {$storeCategory->slug} >>>>> \n";
-                \App\StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
-
-                if ($storeCategory->category->name === 'Furniture' && count($urlParts) > 0) {
-//                    dd([$urlParts, $storeCategory, $this->parentStoreCategory]);
-                }
+            } else {
+                $categoryValues = [
+                    'level' => 1,
+                    'parent_id' => null
+                ];
             }
+
+            if ($storeCategory->url === 'https://www.home.co.za/rclp/offers/_/N-27ff') {
+//                dd([$categoryAttributes, $categoryValues]);
+            }
+            \App\StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
         }
 
         return $urlParts;
@@ -142,28 +149,9 @@ class DatabaseSeeder extends Seeder
 
             echo "{$key} >>>\n";
 
-            $url = $storeCategory->url;
+            $this->setParentStoreCategory($storeCategory);
 
-            $urlParts = $this->setParentStoreCategory($storeCategory);
-
-            echo 'Processing category ::::' . $storeCategory->url . "\n<<===================================\n";
-
-            $attributes = ['id' => $storeCategory->id];
-
-            if (empty($this->parentStoreCategory->id)) {
-                $values = [
-                    'parent_id' => null,
-                    'level' => count($urlParts) + 1
-                ];
-
-//                if ($storeCategory->url === 'https://www.home.co.za/rclp/furniture/_/N-2c9x') {
-//                    dd([$storeCategory, $urlParts]);
-//                }
-
-                \App\StoreCategory::updateOrCreate($attributes, $values);
-            } else {
-                echo 'Skipped category ::::' . $category->level . ' <> ' . $url . "\n<<===================================\n";
-            }
+            echo 'Store category ::::' . $storeCategory->url . "\n<<===================================\n";
         }
     }
 
