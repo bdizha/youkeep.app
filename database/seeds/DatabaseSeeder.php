@@ -145,10 +145,6 @@ class DatabaseSeeder extends Seeder
         foreach ($this->storeCategories as $key => $storeCategory) {
             $this->parentStoreCategory = null;
 
-            $category = $storeCategory->category;
-
-            echo "{$key} >>>\n";
-
             $this->setParentStoreCategory($storeCategory);
 
             echo 'Store category ::::' . $storeCategory->url . "\n<<===================================\n";

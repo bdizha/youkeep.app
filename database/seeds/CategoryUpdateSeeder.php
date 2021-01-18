@@ -27,7 +27,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
                 ->with('category')
                 ->get();
 
-//            $this->decodeCategories($this->storeId);
+            $this->decodeCategories($this->storeId);
 
             foreach ($this->storeCategories as $this->storeCategory) {
                 $this->setFilters($this->storeCategory);
