@@ -82,20 +82,24 @@ class DatabaseSeeder extends Seeder
 
         $urlParts = array_slice($urlParts, 4, count($urlParts) - 7);
 
+        $urlPart = array_pop($urlParts);
+
+        $urlParts[] = $urlPart;
+
         $slug = '';
-        foreach ($urlParts as $part) {
+        foreach ([$urlPart] as $part) {
             $slug .= '/' . $part;
 
             $slug = str_replace('plp/', '', $slug);
             $slug = str_replace('rclp/', '', $slug);
 
-            $parentStoreCategory = \App\StoreCategory::where('url', 'like', "%plp{$slug}/_/%")
+            $parentStoreCategory = \App\StoreCategory::where('url', 'like', "%{$slug}/_/%")
                 ->with('category')
                 ->where('store_id', $this->storeId)
                 ->first();
 
             if (empty($parentStoreCategory)) {
-                $parentStoreCategory = \App\StoreCategory::where('url', 'like', "%rclp{$slug}/_/%")
+                $parentStoreCategory = \App\StoreCategory::where('url', 'like', "%{$slug}/_/%")
                     ->with('category')
                     ->where('store_id', $this->storeId)
                     ->first();
@@ -104,11 +108,16 @@ class DatabaseSeeder extends Seeder
             if (!empty($parentStoreCategory)) {
                 $this->parentStoreCategory = $parentStoreCategory;
 
+                if($storeCategory->url == 'https://www.home.co.za/plp/offers/everyday-essentials/shop-all-everyday-essentials/_/N-1diy8qz'){
+//                    dd($parentStoreCategory);
+                }
+
                 $categoryAttributes = [
                     'id' => $storeCategory->id
                 ];
 
                 $categoryValues = [
+                    'level' => count($urlParts) + 1,
                     'parent_id' => $this->parentStoreCategory->category_id
                 ];
 
@@ -141,23 +150,7 @@ class DatabaseSeeder extends Seeder
 
             $attributes = ['id' => $storeCategory->id];
 
-            if (!empty($this->parentStoreCategory) && $this->parentStoreCategory->id != $storeCategory->id) {
-                $values = [
-                    'level' => count($urlParts) + 1,
-                    'parent_id' => $this->parentStoreCategory->category_id,
-                ];
-
-                $this->setCategoryParent($storeCategory);
-
-                if ($storeCategory->url === 'https://www.home.co.za/plp/dining/furniture/_/N-27iu') {
-//                    dd([$urlParts, $this->parentStoreCategory, 'level' => count($urlParts) + 1]);
-                }
-
-                \App\StoreCategory::updateOrCreate($attributes, $values);
-
-                echo "Updated category: " . $storeCategory->category->name . str_pad('*', $storeCategory->level * 2, '=', STR_PAD_LEFT) . "\n";
-
-            } elseif (empty($this->parentStoreCategory->id)) {
+            if (empty($this->parentStoreCategory->id)) {
                 $values = [
                     'parent_id' => null,
                     'level' => count($urlParts) + 1
