@@ -27,60 +27,53 @@ class CategoryUpdateSeeder extends DatabaseSeeder
                 ->with('category')
                 ->get();
 
-            $this->decodeCategories($this->storeId);
-
-            dd($this->storeCategories);
+//            $this->decodeCategories($this->storeId);
 
             foreach ($this->storeCategories as $this->storeCategory) {
-//                $category->name = trim($category->name);
-//                $category->save();
-//
-//                $this->setFilters($category);
-//                $this->setFilters($category, true);
+                $this->setFilters($this->storeCategory);
+                $this->setFilters($this->storeCategory, true);
             }
         }
     }
 
-    public function setFilters($category = null, $hasProducts = false)
+    public function setFilters($storeCategory = null, $hasProducts = false)
     {
-        echo "Updated category filter : {$category->slug} >>>>> \n";
+        echo "Updated category filter : {$storeCategory->url} >>>>> \n";
 
 //        $this->setParentCategory($category);
 
         if (empty($hasProducts)) {
             $hasItemField = 'has_categories';
-            $query = Category::orderBy('created_at', 'DESC')
-                ->whereIn('store_id', $this->storesIds)
-                ->where('is_active', true);
+            $query = StoreCategory::orderBy('created_at', 'DESC')
+                ->with('category')
+                ->whereIn('store_id', $this->storesIds);
 
-            if (!empty($category->id) && empty($hasProducts)) {
-                $query->where('category_id', $category->id);
+            if (!empty($storeCategory->id) && empty($hasProducts)) {
+                $query->where('parent_id', $storeCategory->category_id);
             }
 
             $items = $query->get();
-            $hasItems = $items->count() > ($hasProducts ? 0 : 1);
+            $hasItems = $items->count() > 0;
         } else {
             $hasItemField = 'has_products';
-            $hasItems = count($category->photos) > 0;
+            $hasItems = count($storeCategory->category->photos) > 0;
 
             if ($hasItems) {
-                echo "Category has products: {$category->slug} >>>>> \n";
+                echo "Category has products: {$storeCategory->url} >>>>> \n";
             }
         }
 
-        if (!empty($category->id)) {
-            $categoryValues = [
-                'product_count' => count($category->products),
-                $hasItemField => $hasItems,
-                'name' => ucwords(strtolower($category->name)),
-                'type' => Category::TYPE_CATALOG
+        if (!empty($storeCategory->id)) {
+            $values = [
+                'product_count' => count($storeCategory->category->products),
+                $hasItemField => $hasItems
             ];
 
-            $categoryAttributes = [
-                'id' => $category->id
+            $attributes = [
+                'id' => $storeCategory->id
             ];
 
-            \App\StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
+            \App\StoreCategory::updateOrCreate($attributes, $values);
         }
     }
 
