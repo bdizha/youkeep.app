@@ -7,7 +7,7 @@
                           :key="index"
                           :columns="columns"
                           class="r-category-menu-panel" :header="category.name">
-          <r-category-item :category="category"></r-category-item>
+          <r-category-item :isVertical="isVertical" :category="category"></r-category-item>
         </a-collapse-panel>
       </a-collapse>
       <r-spinner :is-absolute="true" process="isCategories" v-if="processes.isCategory"></r-spinner>
@@ -22,6 +22,7 @@ export default {
   components: {},
   props: {
     columns: {type: Number, required: false, default: 3},
+    isVertical: {type: Boolean, required: false, default: true},
     limit: {type: Number, required: false, default: 6}
   },
   data() {

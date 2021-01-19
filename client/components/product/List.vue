@@ -40,7 +40,7 @@
           <a-col class="r-p-24" v-for="(product, index) in products.data" :key="index"
                  :xs="{span: 12}"
                  :sm="{span: 12}" :md="{span: 6}" :lg="{span: 4}">
-            <r-product-item :product="product"></r-product-item>
+            <r-product-item :isVertical="isVertical" :product="product"></r-product-item>
           </a-col>
         </a-row>
       </div>
@@ -75,7 +75,9 @@ const SORTS = [
 export default {
   name: 'r-product-list',
   components: {},
-  props: {},
+  props: {
+    isVertical: {type: Boolean, required: false, default: true},
+  },
   data() {
     return {
       hasData: false,

@@ -10,7 +10,7 @@
                  :xs="{ span: 12 }"
                  :sm="{ span: 8 }"
                  :md="{ span: 6 }"
-                 :lg="{ span: 6 }">
+                 :lg="{ span: 4 }">
             <nuxt-link class="r-slider-item r-text-view-more"
                        :class="'r-slider-item-36'"
                        :to="category.route">

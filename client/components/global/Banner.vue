@@ -1,6 +1,21 @@
 <template>
-  <div class="r-banner">
-    <r-product-flush v-if="category" :columns="6" :category="category"></r-product-flush>
+  <div class="r-product-cards">
+    <VueSlickCarousel v-if="hasProducts" v-bind="settings">
+      <r-product-item v-for="(product, index) in products.data"
+                      :isVertical="false"
+                      :key="index"
+                      :product="product"></r-product-item>
+      <template #prevArrow="arrowOption">
+        <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
+          <a-icon type="left"/>
+        </div>
+      </template>
+      <template #nextArrow="arrowOption">
+        <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
+          <a-icon type="right"/>
+        </div>
+      </template>
+    </VueSlickCarousel>
   </div>
 </template>
 <script>
@@ -9,18 +24,88 @@ import {mapGetters} from "vuex";
 export default {
   name: 'r-banner',
   props: {
-    category: {type: Object, required: null}
+    category: {type: Object, required: true},
+    columns: {type: Number, required: false, default: 3},
+  },
+  computed: mapGetters({
+    store: 'shop/store',
+    filters: 'shop/filters',
+    products: 'shop/products',
+    hasProducts: 'shop/hasProducts',
+    processes: 'base/processes',
+  }),
+  data() {
+    return {
+      hasData: false,
+      isProcessing: false,
+      products: [],
+      settings: {
+        "slidesToShow": this.columns,
+        "slidesToScroll": 1,
+        "infinite": true,
+        "dots": false,
+        responsive: [
+          {
+            "breakpoint": 1024,
+            "settings": {
+              "slidesToShow": this.columns,
+              "slidesToScroll": 1,
+              "infinite": true,
+              "dots": false,
+              "gap": 24
+            }
+          },
+          {
+            "breakpoint": 600,
+            "settings": {
+              "slidesToShow": 1,
+              "slidesToScroll": 1,
+              "initialSlide": 1,
+              "gap": 12
+            }
+          },
+          {
+            "breakpoint": 480,
+            "settings": {
+              "slidesToShow": 1,
+              "slidesToScroll": 1,
+              "gap": 12
+            }
+          }
+        ]
+      }
+    }
   },
   async fetch() {
+    this.hasData = false;
+    this.isProcessing = true;
+
     let params = {
       category_id: this.category.id,
-      limit: 6
+      limit: 6,
+      filters: this.filters
     };
 
-    await this.$store.dispatch('shop/onProducts', params);
-  },
-  data() {
-    return {}
+    let path = `/products`;
+    let $this = this;
+
+    console.log('product path: ', path);
+
+    await axios.post(path, params)
+      .then(({data}) => {
+
+        console.log(data.data, '>>>>>>');
+
+        $this.products = data.data;
+        $this.hasData = true;
+
+        setTimeout(function () {
+          $this.isProcessing = false;
+        }, 600);
+      })
+      .catch(e => {
+        console.log(e);
+      });
   },
   methods: {}
 };

@@ -2,7 +2,7 @@
   <a-row class="r-breadcrumbs">
     <a-col class="r-p-24 r-pv-12" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{span: 24}">
-      <a-breadcrumb>
+      <a-breadcrumb v-if="!processes.isCategories">
         <a-icon slot="separator" type="right"/>
         <a-breadcrumb-item :key="0">
           <nuxt-link v-if="hasStore" :to="store.route">
@@ -33,6 +33,7 @@ export default {
   computed: mapGetters({
     store: 'shop/store',
     hasStore: 'shop/hasStore',
+    processes: "base/processes",
   }),
   created() {
     this.payload();

@@ -120,7 +120,7 @@ class DatabaseSeeder extends Seeder
 
                 $categoryValues = [
                     'level' => count($urlParts) + 1,
-                    'parent_id' => $this->parentStoreCategory->category_id
+                    'parent_id' => $this->parentStoreCategory->id
                 ];
 
                 echo "Updated parent {$this->parentStoreCategory->category->name} category for {$storeCategory->slug} >>>>> \n";

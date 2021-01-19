@@ -338,9 +338,15 @@ class ProductMTGSeeder extends DatabaseSeeder
 //            echo __LINE__ . " <> \n";
 
             $productNode = Goutte::request('GET', $productLink)
-                ->filter('#product-static-data');
+                ->filter('meta[itemprop=description]')->eq(0);
 
             $description = 'Not set';
+            if($productNode->count() > 0){
+                $description = $productNode->attr('content');
+            }
+
+            $productNode = Goutte::request('GET', $productLink)
+                ->filter('#product-static-data');
 
             $attributes = [
                 'name' => $productName,
@@ -489,5 +495,13 @@ class ProductMTGSeeder extends DatabaseSeeder
             $filterItem = $urlParts[1];
         }
         return $filterItem;
+    }
+
+    protected function testResponse($productLink){
+        $productNode = Goutte::request('GET', $productLink)
+            ->filter('meta[itemprop=description]')->eq(0);
+
+        dd($productNode->attr('content'));
+        dd(['text']);
     }
 }

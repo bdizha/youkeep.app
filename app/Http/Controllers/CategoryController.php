@@ -5,24 +5,27 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Product;
 use App\Store;
+use App\StoreCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 
 class CategoryController extends Controller
 {
-    protected $without = ['categories', 'category', 'store', 'products','filters', 'breadcrumbs'],
+    protected $without = ['categories', 'category', 'store', 'products', 'filters', 'breadcrumbs'],
         $relations = ['categories', 'store', 'stores'],
         $with = [],
         $categoryId = null,
         $orderBy = null,
+        $breadcrumbs = [],
         $categoryType = null,
         $storeId = null,
-        $products = [],
+        $product = [],
+        $category = [],
+        $store = [],
         $limit = [],
         $level = [],
         $items = [],
-        $item = [],
-        $store = [];
+        $item = [];
 
     /**
      * Find categories
@@ -35,7 +38,7 @@ class CategoryController extends Controller
         $response = [];
         $category = null;
 
-        $this->limit = $request->get('limit', 4);
+        $this->limit = $request->get('limit', 24);
         $this->level = $request->get('level', 1);
         $this->orderBy = $request->get('order_by', 'store_categories.created_at');
 
@@ -138,14 +141,13 @@ class CategoryController extends Controller
         $categories = [];
         $this->slug = $request->get('slug', $slug);
         $this->level = $request->get('level', null);
-        $this->limit = $request->get('limit', 2);
+        $this->limit = $request->get('limit', 24);
         $this->orderBy = $request->get('order_by', 'store_categories.created_at');
         $this->with = $request->get('with', []);
-        $this->limit = 3;
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key)) {
+        if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
 
@@ -159,7 +161,7 @@ class CategoryController extends Controller
                 $query->limit($this->limit);
             }
 
-            if(!empty($category)){
+            if (!empty($category)) {
                 $category['products'] = [];
                 $query->whereHas('stores', function ($query) use ($category) {
                     if (!is_null($this->level)) {
@@ -181,11 +183,14 @@ class CategoryController extends Controller
                     $this->_setCategoryStores($categories);
                 }
 
+                $this->category = $category->toArray();
+
+                $this->_setBreadcrumbs();
+
                 $categories = $this->_pruneRelations($categories);
             }
-
             $response['categories'] = $categories;
-            $response['category'] = $category;
+            $response['category'] = $this->category;
 
             Cache::put($key, $response, now()->addMinutes(3600));
         }
@@ -248,5 +253,17 @@ class CategoryController extends Controller
 
             $categories[$key]['stores'] = $storeCategory->stores;
         }
+    }
+
+    /**
+     * @return void
+     */
+    private function _setBreadcrumbs()
+    {
+        $storeCategory = StoreCategory::where('category_id', $this->category['id'])
+            ->first();
+
+        $this->breadcrumbs = !empty($storeCategory->breadcrumbs) ? $storeCategory->breadcrumbs : [];
+        $this->category['breadcrumbs'] = $this->breadcrumbs;
     }
 }

@@ -7,7 +7,7 @@
           <template v-if="cart.count > 0">
             <div class="r-store-notice">
               <div class="r-status-update">
-                <h4 class="r-heading-light r-text-uppercase">
+                <h4 class="r-heading-light">
                   <a-icon type="check-circle"/>
                   You've pending items in your cart
                 </h4>
