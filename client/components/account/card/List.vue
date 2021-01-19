@@ -5,7 +5,7 @@
         <a-row type="flex" justify="start" align="middle">
           <a-col class="r-store-page" :xs="{ span: 24 }"
                  :sm="{ span: 24 }" :lg="{ span: 12 }">
-            <div class="r-text-sm">
+            <div class="r-text-small">
               <template v-if="hasCards">
                 Here you can manage all your payment cards.
               </template>

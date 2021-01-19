@@ -2,7 +2,7 @@
   <a-row type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-card v-if="hasTitle" class="r-mb-24" title="YOUR DELIVERY ADDRESSES" style="width: 100%;">
-        <div class="r-text-sm">
+        <div class="r-text-small">
           <template v-if="hasAddresses">
             Here you can manage all your address.
           </template>

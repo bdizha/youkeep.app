@@ -11,17 +11,16 @@
       <a-card v-if="product" class="r-product-show">
         <a-row class="r-product-modal" :gutter="36" type="flex"
                justify="center" align="top">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 8 }">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
             <r-product-photos :photos="product.photos" :product="product" :size="650"></r-product-photos>
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 10 }">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
             <r-product-header :is-showing="true" :product="product"></r-product-header>
             <r-product-price :is-showing="true" :product="product"></r-product-price>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 6 }">
             <r-product-credit :is-showing="true" :product="product"></r-product-credit>
-            <h4 class="r-heading r-text-secondary">
-              Item in stock
+            <h4 class="r-heading-light">
+              <span>Availability:</span>
+              <span class="r-text-secondary">Item in stock</span>
             </h4>
             <r-product-types :is-showing="true" :product="product"></r-product-types>
             <r-product-actions :is-showing="true" :size="'default'" :product="product"></r-product-actions>

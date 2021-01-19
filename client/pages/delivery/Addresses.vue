@@ -48,7 +48,7 @@ export default {
       await this.$store.dispatch('address/onSelect', params);
     },
     onItemLabel(address) {
-      let label = '<div class="r-text-sm"><strong title="' + address.secondary_text + '">' + address.title + ', ' + '</strong><br>' +
+      let label = '<div class="r-text-small"><strong title="' + address.secondary_text + '">' + address.title + ', ' + '</strong><br>' +
           address.main_text + '</div>';
 
       return label;

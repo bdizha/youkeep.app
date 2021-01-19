@@ -19,7 +19,7 @@
                   <a-icon slot="prefix" type="environment"/>
                   Available in <span class="r-text-secondary">{{ address.city }}</span>!
                 </h3>
-                <p class="r-text-sm">
+                <p class="r-text-small">
                   This will just take a few steps to complete. First, please help us set up your
                   shopping account details.
                 </p>

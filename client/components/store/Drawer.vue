@@ -22,12 +22,12 @@
       </a-col>
     </a-row>
     <a-card class="r-mb-24" title="YOU MIGHT ALSO LIKE" style="width: 100%;">
-      <p class="r-text-sm">
+      <p class="r-text-small">
         Here you can discover shops that you like.
       </p>
     </a-card>
     <a-card class="r-mb-24" title="WHAT'S NEW" style="width: 100%;">
-      <p class="r-text-sm">
+      <p class="r-text-small">
         Buy your favourite items today.
       </p>
     </a-card>

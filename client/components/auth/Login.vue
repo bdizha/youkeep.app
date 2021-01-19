@@ -13,7 +13,7 @@
             <h2 class="r-heading r-text-secondary">
               Sign in
             </h2>
-            <div class="r-text-sm">
+            <div class="r-text-small">
               Sign in to your account with your email address.
             </div>
           </a-col>

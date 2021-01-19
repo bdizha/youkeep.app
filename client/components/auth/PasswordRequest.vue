@@ -13,7 +13,7 @@
                         <h3 class="r-heading r-text-secondary">
                             Reset password
                         </h3>
-                        <p class="r-text-sm">
+                        <p class="r-text-small">
                             Enter the email address associated with your Shopple Account and we will send you
                             instructions to reset your password.
                         </p>

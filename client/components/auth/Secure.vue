@@ -15,7 +15,7 @@
                                 <h3 v-if="user" class="r-heading ">
                                     <span class="r-text-secondary">Welcome, </span>{{ user.name }}!
                                 </h3>
-                                <p class="r-text-sm">
+                                <p class="r-text-small">
                                     Enter and confirm new credentials to secure your Shopple account.
                                 </p>
                             </a-col>
