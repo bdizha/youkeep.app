@@ -8,7 +8,7 @@
       </div>
       <r-category-actions v-if="hasCategories"></r-category-actions>
       <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
-      <a-row type="flex" justify="start" align="middle">
+      <a-row v-if="hasCategories" type="flex" justify="start" align="middle">
         <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }">

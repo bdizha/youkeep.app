@@ -21,6 +21,11 @@ class ProductMTGSeeder extends DatabaseSeeder
      */
     public function run()
     {
+
+        $this->testResponse('https://www.home.co.za/pdp/duvet-cover-egyptian-cotton-800-thread-count/_/A-157506AAJM8');
+
+        die('done');
+
         $storeIds = [];
         foreach ($this->storeIds as $key => $value) {
             $storeIds[] = $this->storeIds[$key];
@@ -501,7 +506,9 @@ class ProductMTGSeeder extends DatabaseSeeder
         $productNode = Goutte::request('GET', $productLink)
             ->filter('meta[itemprop=description]')->eq(0);
 
-        dd($productNode->attr('content'));
-        dd(['text']);
+        $productNode = Goutte::request('GET', $productLink)
+            ->filter('.tabs__wrap');
+
+        dd($productNode->html());
     }
 }

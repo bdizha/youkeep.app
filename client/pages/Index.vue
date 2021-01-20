@@ -3,19 +3,10 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <div class="r-margin-out-sm">
         <r-category-actions v-if="hasCategories"></r-category-actions>
-        <a-row class="r-mt-48" type="flex" justify="center" align="middle">
+        <a-row type="flex" justify="center" align="middle">
           <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
             <a-row :gutter="[24,24]" type="flex" justify="start"
                    align="middle">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-                <a-card class="">
-                  <a-card-meta>
-                    <template slot="description">
-                      <r-slider :images="images"></r-slider>
-                    </template>
-                  </a-card-meta>
-                </a-card>
-              </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                      :md="{ span: 12 }"
                      :lg="{ span: 12 }">
@@ -43,8 +34,17 @@
                   </a-card-meta>
                 </a-card>
               </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+                <a-card class="">
+                  <a-card-meta>
+                    <template slot="description">
+                      <r-slider :images="images"></r-slider>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-                <r-banner v-if="hasCategories" :category="categories[0]"></r-banner>
+<!--                <r-banner v-if="hasCategories" :category="categories[0]"></r-banner>-->
               </a-col>
             </a-row>
             <r-steps></r-steps>
@@ -73,9 +73,7 @@ export default {
   data() {
     return {
       images: [
-        'art-01.png',
-        'art-02.png',
-        'art-03.png',
+        'art-01.png'
       ],
       isProcessing: true,
       testimonials: [],
