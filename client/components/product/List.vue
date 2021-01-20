@@ -36,7 +36,7 @@
         </a-col>
       </a-row>
       <div class="r-product-cards">
-        <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]">
+        <a-row type="flex" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]">
           <a-col class="r-p-24" v-for="(product, index) in products.data" :key="index"
                  :xs="{span: 12}"
                  :sm="{span: 12}" :md="{span: 6}" :lg="{span: 4}">

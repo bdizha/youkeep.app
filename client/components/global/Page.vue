@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-mt-48-sm" type="flex" justify="center">
+  <a-row type="flex" justify="center">
     <a-col class="r-margin-out-sm" :xs="{ span: 24 }" :sm="{ span: 18 }" :md="{ span: 18 }" :lg="{ span: 16 }">
       <slot/>
     </a-col>
