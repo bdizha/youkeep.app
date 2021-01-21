@@ -49,7 +49,7 @@ class StoreController extends Controller
 
             $response = $query
                 ->orderBy('created_at', 'DESC')
-                ->paginate(18);
+                ->paginate(24);
 
             Cache::put($key, $response, now()->addMinutes(3600));
         }

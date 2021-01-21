@@ -39,7 +39,7 @@ class SearchController extends Controller
         }
 
         $results = $query->orderBy('created_at', 'DESC')
-            ->paginate(18);
+            ->paginate(24);
 
         if ($request->ajax()) {
             return response()->json($results, 200);
