@@ -21,6 +21,41 @@ class ProductMTGSeeder extends DatabaseSeeder
      */
     public function run()
     {
+//        $description = '<div class="tabs__wrap">
+//										<div class="tabs__content no-padd no-pad ugc">
+//											<p class="tabs__para">
+//														<p>Use the 150gram Tritan coffee powder container with lid to store your fresh ground coffee.&nbsp;</p></p>
+//												<table>
+//													<tr>
+//																		<th>Material Type</th>
+//																		<td>stainless steel</td>
+//																	</tr>
+//																<tr>
+//																		<th>Guarantee/Warrantee</th>
+//																		<td>2 years</td>
+//																	</tr>
+//																<tr>
+//																		<th>Dimensions</th>
+//																		<td>50 x 28 x 20cm</td>
+//																	</tr>
+//																<tr>
+//																		<th>Dishwasher Safe</th>
+//																		<td>no</td>
+//																	</tr>
+//																<tr>
+//																		<th>Model Name & No</th>
+//																		<td><p>BLACK: CGF01BLEU</p>
+//<p>RED: CGF01RDEU</p>
+//<p>WHITE: CGF01WHEU</p>
+//<p>CREAM: CGF01CREU</p></td>
+//																	</tr>
+//																</table>
+//											</div>
+//									</div>
+//								</div>';
+//        $return = $this->getProductDescription($description);
+//
+//        dd($return);
 
         $this->testResponse('https://www.home.co.za/pdp/duvet-cover-egyptian-cotton-800-thread-count/_/A-157506AAJM8');
 
@@ -96,7 +131,6 @@ class ProductMTGSeeder extends DatabaseSeeder
                     strpos($categoryLink, 'rclp') !== false) {
                     $this->setCategory($categoryName, $categoryLink);
                 }
-
             }
         });
     }
@@ -180,6 +214,15 @@ class ProductMTGSeeder extends DatabaseSeeder
         return $product;
     }
 
+    protected function getProductDescription($content)
+    {
+        dd($content);
+
+        preg_match('/<div class="tabs__wrap">(.*?)<\/div>/s', $content, $match);
+
+        return $match;
+    }
+
     /**
      * @param $categoryName
      * @param $url
@@ -214,7 +257,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             'url' => $url,
         ];
 
-        if($url == 'https://www.home.co.za/plp/furniture/bedroom-bathroom/_/N-300fib'){
+        if ($url == 'https://www.home.co.za/plp/furniture/bedroom-bathroom/_/N-300fib') {
 //            dd([$values, $category]);
         }
 
@@ -346,9 +389,13 @@ class ProductMTGSeeder extends DatabaseSeeder
                 ->filter('meta[itemprop=description]')->eq(0);
 
             $description = 'Not set';
-            if($productNode->count() > 0){
-                $description = $productNode->attr('content');
+            if ($productNode->count() > 0) {
+                $productSummary = $productNode->attr('content');
             }
+
+            $productNode = Goutte::request('GET', $productLink);
+
+            $this->getProductDescription($productNode->text(), $description);
 
             $productNode = Goutte::request('GET', $productLink)
                 ->filter('#product-static-data');
@@ -502,13 +549,15 @@ class ProductMTGSeeder extends DatabaseSeeder
         return $filterItem;
     }
 
-    protected function testResponse($productLink){
+    protected function testResponse($productLink)
+    {
         $productNode = Goutte::request('GET', $productLink)
             ->filter('meta[itemprop=description]')->eq(0);
 
-        $productNode = Goutte::request('GET', $productLink)
-            ->filter('.tabs__wrap');
+        $productNode = Goutte::request('GET', $productLink);
 
-        dd($productNode->html());
+        $description = $this->getProductDescription($productNode->html());
+
+        dd($description);
     }
 }

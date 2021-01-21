@@ -94,9 +94,9 @@
                 <template slot="description">
                   <a-row :gutter="[24,24]" type="flex" justify="center"
                          align="middle">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{span: 8}">
                       <div class="r-icon r-icon__secondary r-icon-stroke">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="80px" height="80px">
                           <path fill="#F50A2B"
                                 d="M8.4 44.24a3.96 3.96 0 0 0 4.41.52A23.89 23.89 0 0 1 24 42c4.04 0 7.85 1 11.19 2.76 1.43.76 3.19.52 4.42-.53a23.95 23.95 0 0 0 8.33-19.96 24.1 24.1 0 0 0-22.4-22.22 24 24 0 0 0-17.13 42.2zm2.48-4.6l-.41-.41A19.24 19.24 0 0 1 5.08 23.9c.12-.82.18-1.7.4-2.5l.3-1.23.43-1.2c.12-.42.3-.82.48-1.2.19-.4.36-.8.56-1.18.44-.75.84-1.53 1.38-2.22a19.52 19.52 0 0 1 7.85-6.53c.76-.35 1.53-.63 2.28-.89.77-.19 1.51-.47 2.27-.57.75-.12 1.48-.27 2.2-.3.7-.04 1.43-.1 2.06-.07a20.12 20.12 0 0 1 8.62 2.15 1.71 1.71 0 1 1-1.5 3.08l-.04-.03-.06-.03-.47-.25a17.93 17.93 0 0 0-3.62-1.35 17 17 0 0 0-3.02-.45c-.6-.05-1.16-.02-1.78 0-.6 0-1.23.1-1.87.18-.65.06-1.29.28-1.96.41a17.7 17.7 0 0 0-5.77 2.88c-1.17.94-2.3 1.99-3.2 3.23-.51.58-.87 1.26-1.3 1.9-.19.33-.35.68-.52 1.02-.18.33-.35.68-.47 1.03l-.41 1.06-.3 1.08c-.24.72-.3 1.42-.44 2.12a17.25 17.25 0 0 0 .74 7.92 17.58 17.58 0 0 0 3.65 6.22l.4.44a.75.75 0 0 1-1.09 1.03z"></path>
                           <path fill="#0069cd"
@@ -104,7 +104,7 @@
                         </svg>
                       </div>
                     </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 14 }" :lg="{span: 16}">
                       <h4 class="r-heading">
                         Increase your conversion rate by 24%
                       </h4>
@@ -121,7 +121,7 @@
                 <template slot="description">
                   <a-row :gutter="[24,24]" type="flex" justify="center"
                          align="middle">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{span: 8}">
                       <div class="r-icon r-icon__secondary r-icon-stroke">
                         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 48 48">
                           <g id="Artboard-2" fill="none" fill-rule="evenodd">
@@ -133,7 +133,7 @@
                         </svg>
                       </div>
                     </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 14 }" :lg="{span: 16}">
                       <h4 class="r-heading">
                         Increase returning orders by 75%
                       </h4>
@@ -150,7 +150,7 @@
                 <template slot="description">
                   <a-row :gutter="[24,24]" type="flex" justify="center"
                          align="middle">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{span: 8}">
                       <div class="r-icon r-icon__secondary r-icon-stroke">
                         <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 48 48">
                           <g id="Artboard-2" fill="none" fill-rule="evenodd">
@@ -162,7 +162,7 @@
                         </svg>
                       </div>
                     </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 14 }" :lg="{span: 16}">
                       <h4 class="r-heading">
                         Increase sales volume by at least 36%
                       </h4>
@@ -178,33 +178,27 @@
     <a-row class="r-mt-48" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
         <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            <a-card class="">
-              <a-card-meta>
-                <template slot="description">
-                  <h2 class="r-heading r-text-secondary">
-                    Benefits for merchant
-                  </h2>
-                  <p class="r-text-normal">
-                    <a-icon type="check-circle" class="r-text-secondary"/>
-                    Enable more buying customers and increase recurring orders with Shopple.
-                  </p>
-                  <p class="r-text-normal">
-                    <a-icon type="check-circle" class="r-text-secondary"/>
-                    Enable more buying customers and increase recurring orders with Shopple.
-                  </p>
-                  <p class="r-text-normal">
-                    <a-icon type="check-circle" class="r-text-secondary"/>
-                    Maximize in-store impact with Shopple signage and online training for
-                    retail associates.
-                  </p>
-                  <p class="r-text-normal">
-                    <a-icon type="check-circle" class="r-text-secondary"/>
-                    We’ll ship you an activation kit to promote Shopple in-store.
-                  </p>
-                </template>
-              </a-card-meta>
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+            <a-card>
+              <div slot="cover" class="r-card-cover-secondary r-p-24">
+                <a-card>
+                  <a-card-meta>
+                    <template slot="description">
+                      <h2 class="r-heading r-text-secondary">
+                        Benefits for merchant
+                      </h2>
+                      <a-list :data-source="benefits">
+                        <a-list-item slot="renderItem" slot-scope="item, index">
+                          <a-icon type="check-circle" class="r-text-secondary"/>
+                          <div class="r-list-item-text">
+                            {{ item }}
+                          </div>
+                        </a-list-item>
+                      </a-list>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </div>
             </a-card>
           </a-col>
         </a-row>
@@ -221,11 +215,13 @@ export default {
   data() {
     return {
       images: [
-        'art-04.png',
-        'art-02.png',
-        'art-01.png',
-        'art-03.png',
+        'art-04.png'
       ],
+      benefits: [
+        'Enable more buying customers and increase recurring orders with Shopple.',
+        'Maximize in-store impact with Shopple signage and online training for retail associates.',
+        'We’ll ship you an activation kit to promote Shopple in-store.'
+      ]
     }
   },
   computed: mapGetters({

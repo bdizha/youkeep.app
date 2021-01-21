@@ -3697,8 +3697,6 @@ h4.r-heading-light {
     }
 
     @media (max-width: 768px) {
-        margin: 24px -12px;
-
         .ant-card-cover {
         }
     }
@@ -4722,17 +4720,33 @@ h4.r-heading-light {
     }
 }
 
-.ant-list-item {
-    a {
-        padding: 12px 24px;
-        display: block;
-        width: 100%;
-        font-weight: 600;
+.ant-list-split{
+    .ant-list-item {
+        padding: 6px 0;
+        border-bottom: none;
+        align-items: start;
+        justify-content: start;
 
-        &:hover,
-        &.nuxt-link-exact-active {
-            color: rgba(251, 0, 40, 1);
-            background: transparent;
+        .r-list-item-text{
+            display: inline-block;
+            line-height: 18px;
+        }
+        a {
+            padding: 12px 24px;
+            display: block;
+            width: 100%;
+            font-weight: 600;
+
+            &:hover,
+            &.nuxt-link-exact-active {
+                color: rgba(251, 0, 40, 1);
+                background: transparent;
+            }
+        }
+
+        .anticon{
+            font-size: 18px;
+            margin-right: 6px;
         }
     }
 }
@@ -5274,10 +5288,6 @@ h4.r-heading-light {
             }
         }
     }
-
-    @media (max-width: 768px) {
-        margin: 0 24px;
-    }
 }
 
 .r-text-slider {
@@ -5647,38 +5657,12 @@ h4.r-heading-light {
         color: #0069cd;
         position: relative;
         background: linear-gradient(90deg, #FFEFEF 0%, #FFFFFF 75%, #FFEFEF 100%);
-
-        &:after {
-            background: transparent url(/images/icon_pattern_white.svg) repeat;
-            background-size: 30%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            content: ""
-        }
     }
 
     .r-card-cover-secondary {
         color: rgba(251, 0, 40, 1);
         position: relative;
         background: linear-gradient(90deg, #EBF6FE 0%, #FFFFFF 75%, #EBF6FE 100%);
-
-        &:after {
-            background: transparent url(/images/icon_pattern_white.svg) repeat;
-            background-size: 30%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            height: 100%;
-            content: ""
-        }
     }
 }
 

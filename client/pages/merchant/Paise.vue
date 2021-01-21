@@ -282,8 +282,6 @@ export default {
   data() {
     return {
       images: [
-        'art-01.png',
-        'art-02.png',
         'art-03.png',
       ],
       modal: {

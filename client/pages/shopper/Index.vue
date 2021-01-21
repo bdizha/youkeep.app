@@ -202,31 +202,39 @@
         <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card class="">
-              <a-card-meta>
-                <template slot="description">
-                  <a-row :gutter="[24,24]" type="flex" justify="start">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                      <h2 class="r-heading r-text-primary">
-                        Requirements:
-                      </h2>
-                      <h4 v-for="requirement in requirements" class="r-text-light">
-                        <a-icon type="check-square" theme="filled" class="r-text-primary"></a-icon>
-                        {{ requirement }}
-                      </h4>
-                    </a-col>
-                    <a-col :xs="{ span: 24 }" :md="{ span: 12 }"
-                           :lg="{ span: 12 }">
-                      <a-button block @click="onModal"
-                                size="default"
-                                class="r-btn-primary"
-                                type="primary">
-                        Apply Now
-                      </a-button>
-                    </a-col>
-                  </a-row>
-                </template>
-              </a-card-meta>
+            <a-card>
+              <div slot="cover" class="r-card-cover-primary r-p-24">
+                <a-card>
+                  <a-card-meta>
+                    <template slot="description">
+                      <a-row :gutter="[24,24]" type="flex" justify="start">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                          <h2 class="r-heading r-text-primary">
+                            Requirements:
+                          </h2>
+                          <a-list :data-source="requirements">
+                            <a-list-item slot="renderItem" slot-scope="item, index">
+                              <a-icon type="check-circle" class="r-text-primary"/>
+                              <div class="r-list-item-text">
+                                {{ item }}
+                              </div>
+                            </a-list-item>
+                          </a-list>
+                        </a-col>
+                        <a-col :xs="{ span: 24 }" :md="{ span: 12 }"
+                               :lg="{ span: 12 }">
+                          <a-button block @click="onModal"
+                                    size="default"
+                                    class="r-btn-primary"
+                                    type="primary">
+                            Apply Now
+                          </a-button>
+                        </a-col>
+                      </a-row>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </div>
             </a-card>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
