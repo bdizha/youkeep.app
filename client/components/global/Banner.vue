@@ -1,6 +1,6 @@
 <template>
   <div class="r-product-cards">
-    <VueSlickCarousel v-if="hasProducts" v-bind="settings">
+    <VueSlickCarousel v-if="hasData" v-bind="settings">
       <r-product-item v-for="(product, index) in products.data"
                       :isVertical="false"
                       :key="index"
@@ -20,6 +20,7 @@
 </template>
 <script>
 import {mapGetters} from "vuex";
+import axios from 'axios'
 
 export default {
   name: 'r-banner',
@@ -30,8 +31,6 @@ export default {
   computed: mapGetters({
     store: 'shop/store',
     filters: 'shop/filters',
-    products: 'shop/products',
-    hasProducts: 'shop/hasProducts',
     processes: 'base/processes',
   }),
   data() {

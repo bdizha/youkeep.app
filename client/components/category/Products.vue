@@ -1,6 +1,6 @@
 <template>
   <div class="r-product-cards">
-    <a-row type="flex" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]">
+    <a-row v-if="hasData" type="flex" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]">
       <a-col v-for="(product, index) in products" :key="index"
              :xs="{span: isVertical ? 12 : 24}"
              :sm="{span: isVertical ? 12 : 12}" :md="{span: isVertical ? 6 : 8}" :lg="{span: isVertical ? 4 : 8}">
@@ -50,7 +50,7 @@ export default {
     await axios.post(path, params)
       .then(({data}) => {
 
-        console.log(data.data, '>>>>>>');
+        console.log(data.data, '33333');
 
         $this.products = data.data;
         $this.hasData = true;

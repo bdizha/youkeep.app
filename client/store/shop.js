@@ -131,7 +131,7 @@ const actions = {
         commit('setStore', []);
         // commit('setStore', category.store);
 
-        console.log('setCategory data >>>>> ', category);
+        // console.log('setCategory data >>>>> ', category);
 
         if (category.products != undefined) {
           let products = category.products;
@@ -140,12 +140,12 @@ const actions = {
             dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
           }, 300);
 
-          console.log('onCategory products >>>>> ', products);
+          // console.log('onCategory products >>>>> ', products);
           commit('setProducts', products);
         }
 
         if (categories != undefined && categories.length > 0) {
-          console.log('onCategory categories data >>>>> ', categories);
+          // console.log('onCategory categories data >>>>> ', categories);
 
           commit('setCategories', categories);
           dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
@@ -166,7 +166,7 @@ const actions = {
         if (category.filters != undefined) {
           let filters = category.filters;
 
-          console.log('onCategory filters data >>>>> ', filters);
+          // console.log('onCategory filters data >>>>> ', filters);
 
           commit('setFilters', filters);
         }
@@ -210,7 +210,7 @@ const actions = {
         if (store.categories != undefined) {
           let categories = store.categories;
 
-          console.log('onStore categories data >>>>> ', categories);
+          // console.log('onStore categories data >>>>> ', categories);
 
           commit('setCategories', categories);
           dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
@@ -237,7 +237,7 @@ const actions = {
 
         commit('setCategories', categories);
 
-        console.log(categories, 'setCategories');
+        // console.log(categories, 'setCategories');
 
         setTimeout(() => {
           dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
@@ -291,7 +291,7 @@ const actions = {
         commit('setProduct', product);
         commit('setCategories', categories);
 
-        console.log('setProduct', data);
+        // console.log('setProduct', data);
         commit('setCategory', category);
 
         dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});

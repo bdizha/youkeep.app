@@ -6,8 +6,8 @@
         <a-layout-content>
           <nuxt />
         </a-layout-content>
+        <r-footer></r-footer>
       </a-layout>
-      <r-footer></r-footer>
       <r-spinner processes="isFixed" :is-absolute="false"></r-spinner>
     </a-layout-content>
     <r-bottom></r-bottom>

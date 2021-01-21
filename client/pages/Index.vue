@@ -1,62 +1,62 @@
 <template>
   <a-row class="r-welcome" type="flex" justify="center">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <r-category-actions v-if="hasCategories"></r-category-actions>
-      <a-row type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
-          <a-row :gutter="[24,24]" type="flex" justify="start"
-                 align="middle">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                   :md="{ span: 12 }"
-                   :lg="{ span: 12 }">
-              <a-card class="">
-                <a-card-meta>
-                  <template slot="description">
-                    <h1 class="r-heading">
-                      It's shopping time!
-                    </h1>
-                    <h2 class="r-heading r-text-secondary">
-                      <span class="r-heading r-text-secondary">Shop more,</span>
-                      <span class="r-text-secondary">Pay less</span>
-                    </h2>
-                    <p class="r-text-normal">
-                      Yes, as long as you shop it with Shopple, you are fully in control.
-                    </p><br/>
-                    <a-row type="flex" justify="start" align="middle">
-                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                             :md="{ span: 24 }"
-                             :lg="{ span: 24 }">
-                        <r-delivery-form></r-delivery-form>
-                      </a-col>
-                    </a-row>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-              <a-card class="">
-                <a-card-meta>
-                  <template slot="description">
-                    <r-slider :images="images"></r-slider>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-              <r-banner v-if="hasCategories" :category="categories[0]"></r-banner>
-            </a-col>
-          </a-row>
-          <r-steps></r-steps>
-        </a-col>
-      </a-row>
-      <a-row type="flex" justify="center" align="middle">
-        <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
-          <div class="r-margin-out-sm">
+    <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+      <div class="r-margin-out-sm">
+        <r-category-actions v-if="hasCategories"></r-category-actions>
+        <a-row type="flex" justify="center" align="middle">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
+            <a-row :gutter="[24,24]" type="flex" justify="start"
+                   align="middle">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                     :md="{ span: 12 }"
+                     :lg="{ span: 12 }">
+                <a-card class="">
+                  <a-card-meta>
+                    <template slot="description">
+                      <h1 class="r-heading">
+                        It's shopping time!
+                      </h1>
+                      <h2 class="r-heading r-text-secondary">
+                        <span class="r-heading r-text-secondary">Shop more,</span>
+                        <span class="r-text-secondary">Pay less</span>
+                      </h2>
+                      <p class="r-text-normal">
+                        Yes, as long as you shop it with Shopple, you are fully in control.
+                      </p><br/>
+                      <a-row type="flex" justify="start" align="middle">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                               :md="{ span: 24 }"
+                               :lg="{ span: 24 }">
+                          <r-delivery-form></r-delivery-form>
+                        </a-col>
+                      </a-row>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+                <a-card class="">
+                  <a-card-meta>
+                    <template slot="description">
+                      <r-slider :images="images"></r-slider>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                <r-banner v-if="hasCategories" :category="categories[0]"></r-banner>
+              </a-col>
+            </a-row>
+            <r-steps></r-steps>
+          </a-col>
+        </a-row>
+        <a-row class="r-mt-48" type="flex" justify="center" align="middle">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
             <r-welcome></r-welcome>
             <r-testimonials></r-testimonials>
-          </div>
-        </a-col>
-      </a-row>
+          </a-col>
+        </a-row>
+      </div>
     </a-col>
   </a-row>
 </template>

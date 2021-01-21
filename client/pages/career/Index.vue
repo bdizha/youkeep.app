@@ -35,7 +35,7 @@
         </a-card>
       </a-col>
     </a-row>
-    <a-row class="r-mt-48" type="flex" justify="justify">
+    <a-row class="r-mt-48" type="flex" justify="start">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
              style="text-align: left;">
         <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
@@ -88,7 +88,7 @@
         </a-row>
       </a-col>
     </a-row>
-    <a-row class="r-mt-48" type="flex" justify="justify">
+    <a-row class="r-mt-48" type="flex" justify="start">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
              style="text-align: left;">
         <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">

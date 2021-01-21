@@ -2,10 +2,17 @@
   <a-row class="r-product" type="flex" justify="center" align="middle">
     <a-col :span="24">
       <a-card hoverable>
+        <div v-if="isVertical" slot="cover">
+          <nuxt-link :to="product.route"
+                     style="display: block; width: 100%;">
+            <r-product-photo :product="product">
+            </r-product-photo>
+          </nuxt-link>
+        </div>
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
-              <a-col :xs="{ span: isVertical ? 24 : 12 }"
+              <a-col v-if="!isVertical" :xs="{ span: isVertical ? 24 : 12 }"
                      :sm="{ span:  isVertical ? 24 : 12 }" :lg="{ span:  isVertical ? 24 : 12 }">
                 <r-product-photo :product="product">
                 </r-product-photo>

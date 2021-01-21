@@ -3697,8 +3697,7 @@ h4.r-heading-light {
     }
 
     @media (max-width: 768px) {
-        .ant-card-cover {
-        }
+
     }
 
     .ant-card {
@@ -4263,6 +4262,13 @@ h4.r-heading-light {
     padding-right: 24px;
 }
 
+.r-ph-24-lg {
+    @media (min-width: 768px) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
 .r-ph-48 {
     padding-left: 48px;
     padding-right: 48px;
@@ -4297,6 +4303,20 @@ h4.r-heading-light {
 .r-p-xs-24 {
     @media (max-width: 768px) {
         padding: 24px;
+    }
+}
+
+.r-pt-12 {
+    padding-top: 12px;
+}
+
+.r-pb-12 {
+    padding-bottom: 12px;
+}
+
+.r-pb-12-lg {
+    @media (min-width: 768px) {
+        padding-bottom: 12px;
     }
 }
 
@@ -4720,17 +4740,18 @@ h4.r-heading-light {
     }
 }
 
-.ant-list-split{
+.ant-list-split {
     .ant-list-item {
         padding: 6px 0;
         border-bottom: none;
         align-items: start;
         justify-content: start;
 
-        .r-list-item-text{
+        .r-list-item-text {
             display: inline-block;
             line-height: 18px;
         }
+
         a {
             padding: 12px 24px;
             display: block;
@@ -4744,7 +4765,7 @@ h4.r-heading-light {
             }
         }
 
-        .anticon{
+        .anticon {
             font-size: 18px;
             margin-right: 6px;
         }
@@ -5170,6 +5191,8 @@ h4.r-heading-light {
 }
 
 .r-slider {
+    margin: 0 -12px;
+
     .slick-prev,
     .slick-next {
         z-index: 99;
@@ -5188,12 +5211,12 @@ h4.r-heading-light {
 
         &.r-slick-arrow-prev {
             margin-top: -18px;
-            left: -12px;
+            left: 24px;
         }
 
         &.r-slick-arrow-next {
             margin-top: -18px;
-            right: -12px;
+            right: 24px;
         }
     }
 }
@@ -5251,7 +5274,7 @@ h4.r-heading-light {
     .r-slider {
         .slick-list {
             .slick-slide {
-                padding: 0px 12px;
+                padding: 0px 6px;
                 height: 36px;
             }
         }
@@ -5562,6 +5585,14 @@ h4.r-heading-light {
         background: #5c636a;
         border: 1px solid transparent;
         top: 50%;
+    }
+
+    .r-slider .slick-prev {
+        left: 0px;
+    }
+
+    .r-slider .slick-next {
+        right: 0px;
     }
 }
 
