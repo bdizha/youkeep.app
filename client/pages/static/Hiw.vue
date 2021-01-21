@@ -4,7 +4,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card class="">
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <h1 class="r-heading">
@@ -47,7 +47,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card class="">
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <div class="r-page-header-photo">
@@ -71,7 +71,7 @@
                  style="text-align: left;">
             <a-card>
               <div slot="cover" class="r-card-cover-secondary r-p-24">
-                <a-card class="">
+                <a-card>
                   <a-card-meta>
                     <template slot="description">
                       <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
@@ -126,7 +126,7 @@
                  style="text-align: left;">
             <a-card>
               <div slot="cover" class="r-card-cover-secondary r-p-24">
-                <a-card class="">
+                <a-card>
                   <a-card-meta>
                     <template slot="description">
                       <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
@@ -175,7 +175,7 @@
                  style="text-align: left;">
             <a-card>
               <div slot="cover" class="r-card-cover-secondary r-p-24">
-                <a-card class="">
+                <a-card>
                   <a-card-meta>
                     <template slot="description">
                       <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">

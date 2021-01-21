@@ -1466,23 +1466,24 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 h1.r-heading {
-    font-weight: 900;
+    font-weight: 800;
     @media (min-width: 768px) {
         font-size: 36px;
-        line-height: 54px;
-        margin: 0 0 12px;
+        line-height: 45px;
+        margin: 0 0 24px;
+        letter-spacing: -1.12px;
     }
 
     @media (max-width: 768px) {
         font-weight: 700;
         font-size: 30px;
-        line-height: 42px;
+        line-height: 36px;
         margin: 0 0 24px;
     }
 }
 
 h2.r-heading {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 27px;
     margin-bottom: 18px;
 
@@ -1492,7 +1493,7 @@ h2.r-heading {
     }
 
     @media (max-width: 768px) {
-        font-weight: 700;
+        font-weight: 600;
         font-size: 24px;
         line-height: 27px;
     }
@@ -1563,6 +1564,7 @@ h3.r-heading {
 h4.r-heading {
     font-size: 18px;
     font-weight: 700;
+
 }
 
 label {
@@ -3678,6 +3680,21 @@ h4.r-heading-light {
             }
         }
     }
+
+    .r-slider {
+        .slick-prev,
+        .slick-next {
+            &.r-slick-arrow-prev {
+                margin-top: -18px;
+                left: 24px;
+            }
+
+            &.r-slick-arrow-next {
+                margin-top: -18px;
+                right: 24px;
+            }
+        }
+    }
 }
 
 .r-product-cards {
@@ -5083,6 +5100,15 @@ h4.r-heading-light {
     overflow: visible;
 }
 
+.ant-card-cover {
+    .ant-avatar-image {
+        width: 100% !important;
+        height: 100% !important;
+        margin: auto;
+        display: block;
+    }
+}
+
 .r-steps {
     .ant-card-cover {
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
@@ -5234,11 +5260,19 @@ h4.r-heading-light {
 }
 
 .r-bg-primary-light {
-    background: #FFEFEF url(/images/icon_pattern_white.svg) repeat;
+    background: linear-gradient(90deg, #FFEFEF 0%, #FFFFFF 75%, #FFEFEF 100%);
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_white.svg) repeat;
+    }
 }
 
 .r-bg-secondary-light {
     background: linear-gradient(90deg, #EBF6FE 0%, #FFFFFF 75%, #EBF6FE 100%);
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_white.svg) repeat;
+    }
 }
 
 .r-bg-grey {
@@ -5588,11 +5622,11 @@ h4.r-heading-light {
     }
 
     .r-slider .slick-prev {
-        left: 0px;
+        left: -12px;
     }
 
     .r-slider .slick-next {
-        right: 0px;
+        right: -12px;
     }
 }
 
@@ -5688,12 +5722,20 @@ h4.r-heading-light {
         color: #0069cd;
         position: relative;
         background: linear-gradient(90deg, #FFEFEF 0%, #FFFFFF 75%, #FFEFEF 100%);
+
+        .ant-card-body {
+            background: transparent url(/images/icon_pattern_white.svg) repeat;
+        }
     }
 
     .r-card-cover-secondary {
         color: rgba(251, 0, 40, 1);
         position: relative;
         background: linear-gradient(90deg, #EBF6FE 0%, #FFFFFF 75%, #EBF6FE 100%);
+
+        .ant-card-body {
+            background: transparent url(/images/icon_pattern_white.svg) repeat;
+        }
     }
 }
 

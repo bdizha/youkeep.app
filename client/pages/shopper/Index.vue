@@ -4,7 +4,7 @@
       <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card class="">
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
@@ -37,7 +37,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card class="">
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <r-slider :images="images"></r-slider>

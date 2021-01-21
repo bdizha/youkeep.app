@@ -10,7 +10,7 @@
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                      :md="{ span: 12 }"
                      :lg="{ span: 12 }">
-                <a-card class="">
+                <a-card>
                   <a-card-meta>
                     <template slot="description">
                       <h1 class="r-heading">
@@ -35,12 +35,10 @@
                 </a-card>
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-                <a-card class="">
-                  <a-card-meta>
-                    <template slot="description">
-                      <r-slider :images="images"></r-slider>
-                    </template>
-                  </a-card-meta>
+                <a-card>
+                  <div slot="cover">
+                    <r-avatar shape="square" :src="'/assets/' + banner"/>
+                  </div>
                 </a-card>
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
@@ -72,9 +70,7 @@ export default {
   },
   data() {
     return {
-      images: [
-        'art-01.png'
-      ],
+      banner: 'art-01.png',
       isProcessing: true,
       testimonials: [],
       modal: {

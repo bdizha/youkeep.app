@@ -25,15 +25,9 @@
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
         <a-card>
-          <a-card-meta>
-            <template slot="description">
-              <div class="r-page-header-photo">
-                <div class="r-page-white"
-                     style="background-image: url('/assets/art-05.png')">
-                </div>
-              </div>
-            </template>
-          </a-card-meta>
+          <div slot="cover">
+            <r-avatar shape="square" :src="'/assets/' + banner"/>
+          </div>
         </a-card>
       </a-col>
     </a-row>
@@ -173,6 +167,7 @@ export default {
   props: {},
   data() {
     return {
+      banner: 'art-06.png',
       modal: {
         current: null,
         message: null,

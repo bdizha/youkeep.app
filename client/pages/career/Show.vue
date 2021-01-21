@@ -5,7 +5,7 @@
              :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-       <a-card class="">
+       <a-card>
          <nuxt-link to="/career/openings">
            <h3 class="r-heading">
              <a-icon type="left"/>
@@ -42,7 +42,7 @@
           <a-col :xs="{span: 24}" :md="{span: 24}" :lg="{span: 24}" class="r-padding-48">
             <a-row class="" type="flex" justify="start" align="middle">
               <a-col :lg="{span: 24}">
-                <a-card class="">
+                <a-card>
                   <h2 class="r-heading r-text-secondary">{{ position.title }}</h2>
                   <div class="r-mt-48" v-html="position.description"></div>
                 </a-card>

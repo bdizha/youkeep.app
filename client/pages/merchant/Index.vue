@@ -4,7 +4,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card class="">
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <h2 class="r-heading r-text-secondary">
@@ -42,12 +42,10 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card class="">
-          <a-card-meta>
-            <template slot="description">
-              <r-slider :images="images"></r-slider>
-            </template>
-          </a-card-meta>
+        <a-card>
+          <div slot="cover">
+            <r-avatar shape="square" :src="'/assets/' + banner"/>
+          </div>
         </a-card>
       </a-col>
     </a-row>
@@ -56,7 +54,7 @@
         <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card class="">
+            <a-card>
               <div slot="cover" class="r-card-cover-secondary r-p-24">
                 <a-row type="flex" justify="center" align="middle">
                   <a-col :xs="{ span: 24 }" :md="{ span: 24 }"
@@ -89,7 +87,7 @@
         <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card class="">
+            <a-card>
               <a-card-meta>
                 <template slot="description">
                   <a-row :gutter="[24,24]" type="flex" justify="center"
@@ -116,7 +114,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card class="">
+            <a-card>
               <a-card-meta>
                 <template slot="description">
                   <a-row :gutter="[24,24]" type="flex" justify="center"
@@ -145,7 +143,7 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
-            <a-card class="">
+            <a-card>
               <a-card-meta>
                 <template slot="description">
                   <a-row :gutter="[24,24]" type="flex" justify="center"
@@ -214,9 +212,7 @@ export default {
   props: {},
   data() {
     return {
-      images: [
-        'art-04.png'
-      ],
+      banner: 'art-04.png',
       benefits: [
         'Enable more buying customers and increase recurring orders with Shopple.',
         'Maximize in-store impact with Shopple signage and online training for retail associates.',

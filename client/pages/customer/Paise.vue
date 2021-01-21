@@ -4,7 +4,7 @@
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
-        <a-card class="">
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
@@ -15,8 +15,7 @@
                 <span>Pay less</span>
               </h1>
               <h4 class="r-heading">
-                We're a better way to shopping. Pay in 3 installments with zero interest
-                when you pay on time.
+                We're a better way to shopping.
               </h4>
               <p class="r-text-normal">
                 Unlike other buy-now-pay-later plans, Shopple lets shoppers use their existing credit card for
@@ -27,13 +26,52 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card class="">
-          <a-card-meta>
-            <template slot="description">
-              <r-slider :images="images"></r-slider>
-            </template>
-          </a-card-meta>
+        <a-card>
+          <div slot="cover">
+            <r-avatar shape="square" :src="'/assets/' + banner"/>
+          </div>
         </a-card>
+      </a-col>
+    </a-row>
+    <a-row class="r-mt-48" type="flex" justify="start">
+      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
+             style="text-align: left;">
+        <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                 :md="{ span: 12 }"
+                 :lg="{ span: 12 }">
+            <a-card>
+              <div slot="cover" class="r-card-cover-secondary r-p-24">
+                <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+                  <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }">
+                    <h3 class="r-heading">
+                      We're a better way to shopping.
+                    </h3>
+                    <p class="r-text-normal">
+                      Pay in 3 installments with zero interest
+                      when you pay on time.
+                    </p>
+                  </a-col>
+                  <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
+                         :md="{ span: 12 }"
+                         :lg="{ span: 12 }">
+                    <nuxt-link to="/career/openings">
+                      <a-button
+                        block
+                        type="secondary"
+                        class="r-btn-secondary"
+                        size="default">
+                        Get started
+                      </a-button>
+                    </nuxt-link>
+                  </a-col>
+                </a-row>
+              </div>
+            </a-card>
+          </a-col>
+        </a-row>
       </a-col>
     </a-row>
     <a-row class="r-mt-48" type="flex" justify="start">
@@ -278,9 +316,7 @@ export default {
   props: {},
   data() {
     return {
-      images: [
-        'art-07.png',
-      ],
+      banner: 'art-07.png',
       modal: {
         current: null,
         message: null,

@@ -5,7 +5,7 @@
              :sm="{ span: 24 }"
              :md="{ span: 24 }"
              :lg="{ span: 24 }">
-        <a-card class="">
+        <a-card>
           <a-card-meta>
             <template slot="description">
               <h2 class="r-heading r-text-secondary">
@@ -23,7 +23,7 @@
              :sm="{ span: 24 }"
              :md="{ span: 10 }"
              :lg="{ span: 8 }">
-        <a-card class="">
+        <a-card>
           <a-list :data-source="departments">
             <a-list-item slot="renderItem"
                          slot-scope="item, index">
@@ -39,7 +39,7 @@
       <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 14 }" :lg="{ span: 16 }">
         <a-row v-if="departments.length == 0" type="flex" justify="center">
           <a-col class="gutter-row" :span="24">
-            <a-card class="">
+            <a-card>
               <a-card-meta>
                 <a-empty
                   image="/assets/icon_grey.svg"
