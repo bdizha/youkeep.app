@@ -3,6 +3,7 @@
 use App\Category;
 use App\Lookup;
 use App\Product;
+use App\StoreCategory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -22,15 +23,17 @@ class DatabaseSeeder extends Seeder
     }
 
     /**
-     * @param $category
+     * @param $storeCategory
      */
-    protected function setSearchLookup($category): void
+    protected function setSearchLookup($storeCategory): void
     {
-        $products = Product::whereHas('categories', function ($query) use ($category) {
-            $query->where('category_products.category_id', $category->id);
+        $products = Product::whereHas('categories', function ($query) use ($storeCategory) {
+            $query->where('category_products.category_id', $storeCategory->category_id);
         })
             ->where('is_active', true)
             ->get();
+
+        $category = $storeCategory->category;
 
         $attributes = [
             'route' => $category->route
@@ -38,15 +41,15 @@ class DatabaseSeeder extends Seeder
 
         $values = [
             'title' => $category->name,
-            'type' => 1,
+            'type' => Lookup::TYPE_CATEGORY,
             'item_id' => $category->id,
             'order' => 1,
-            'store_id' => $category->store_id,
+            'store_id' => $storeCategory->store_id,
             'photo' => $category->photo,
             'count' => $products->count(),
         ];
 
-        echo ">>>>>Inserting category ::: " . $category->name . "\n";
+        echo ">>>>>Inserting lookup category :" . $category->name . "\n";
 
         Lookup::updateOrCreate($attributes, $values);
 
@@ -57,15 +60,15 @@ class DatabaseSeeder extends Seeder
 
             $values = [
                 'title' => $product->name,
-                'type' => 2,
+                'type' => Lookup::TYPE_PRODUCT,
                 'item_id' => $product->id,
                 'order' => 1,
-                'store_id' => $category->store_id,
+                'store_id' => $storeCategory->store_id,
                 'photo' => $product->photo,
                 'count' => 1,
             ];
 
-            echo ">>>>>Inserting product ::: " . $product->name . "\n";
+            echo ">>>>>Inserting lookup product :" . $product->name . "\n";
 
             Lookup::updateOrCreate($attributes, $values);
         }
@@ -83,10 +86,7 @@ class DatabaseSeeder extends Seeder
         $urlParts = array_slice($urlParts, 4, count($urlParts) - 7);
 
         $urlPart = array_pop($urlParts);
-
-
         $urlParts[] = $urlPart;
-
 
         $slug = '';
         foreach ([$urlPart] as $part) {
@@ -114,16 +114,12 @@ class DatabaseSeeder extends Seeder
             if (!empty($parentStoreCategory)) {
                 $this->parentStoreCategory = $parentStoreCategory;
 
-                if ($storeCategory->url == 'https://www.home.co.za/plp/offers/everyday-essentials/shop-all-everyday-essentials/_/N-1diy8qz') {
-//                    dd($parentStoreCategory);
-                }
-
                 $categoryValues = [
                     'level' => count($urlParts) + 1,
                     'parent_id' => $this->parentStoreCategory->id
                 ];
 
-                echo "Updated parent {$this->parentStoreCategory->category->name} category for {$storeCategory->slug} >>>>> \n";
+                echo ">>>>>Updated parent {$this->parentStoreCategory->category->name} category for {$storeCategory->slug} >>>>> \n";
             } else {
                 $categoryValues = [
                     'level' => 1,
@@ -131,10 +127,7 @@ class DatabaseSeeder extends Seeder
                 ];
             }
 
-            if ($storeCategory->url === 'https://www.home.co.za/rclp/offers/_/N-27ff') {
-//                dd([$categoryAttributes, $categoryValues]);
-            }
-            \App\StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
+            StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
         }
 
         return $urlParts;
@@ -146,19 +139,6 @@ class DatabaseSeeder extends Seeder
             $this->parentStoreCategory = null;
 
             $this->setParentStoreCategory($storeCategory);
-
-            echo 'Store category ::::' . $storeCategory->url . "\n<<===================================\n";
-        }
-    }
-
-    private function setCategoryParent($storeCategory)
-    {
-        $category = Category::where('id', $storeCategory->category_id)
-            ->first();
-
-        if (empty($category->parent_id)) {
-            $category->category_id = $this->parentStoreCategory->category_id;
-            $category->save();
         }
     }
 }

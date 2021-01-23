@@ -556,8 +556,11 @@ class ProductMTGSeeder extends DatabaseSeeder
 
         $productNode = Goutte::request('GET', $productLink);
 
-        $description = $this->getProductDescription($productNode->html());
+        $content = $productNode->text();
 
-        dd($description);
+        dd($content);
+
+        preg_match('/<div class="tabs__wrap">(.*?)<\/div>/s', $content, $match);
+
     }
 }

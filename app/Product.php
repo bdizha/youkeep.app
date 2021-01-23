@@ -281,7 +281,7 @@ class Product extends KModel
                 return ['name' => $store['name'], 'route' => $store['route'], 'photo_url' => $store['photo_url']];
             }, $stores->toArray());
 
-            if(!empty($stores[0])){
+            if (!empty($stores[0])) {
                 $store = $stores[0];
             }
         }
@@ -320,18 +320,17 @@ class Product extends KModel
         return $this->hasMany('App\ProductPhoto');
     }
 
-    public function updateAncestryIds($category)
+    public function updateAncestryIds($storeCategory)
     {
         $values = [
-            'category_id' => $category->id,
+            'category_id' => $storeCategory->category_id,
             'product_id' => $this->id
         ];
 
         CategoryProduct::updateOrCreate($values, $values);
 
-        if (!empty($category->category_id) &&
-            $category->category_id != $category->id) {
-            return $this->updateAncestryIds($category->category);
+        if (!empty($storeCategory->parent_id)) {
+            return $this->updateAncestryIds($storeCategory->previous);
         }
     }
 

@@ -141,6 +141,7 @@ class CategoryController extends Controller
         $categories = [];
         $this->slug = $request->get('slug', $slug);
         $this->level = $request->get('level', null);
+        $this->storeId = $request->get('store_id', 7);
         $this->limit = $request->get('limit', 24);
         $this->orderBy = $request->get('order_by', 'store_categories.created_at');
         $this->with = $request->get('with', []);
@@ -161,14 +162,21 @@ class CategoryController extends Controller
                 $query->limit($this->limit);
             }
 
-            if (!empty($category)) {
+            if(!empty($category)){
+                $storeCategory = StoreCategory::with($with)
+                    ->where('category_id', $category->id)
+                    ->where('store_id', $this->storeId)
+                    ->first();
+            }
+
+            if (!empty($storeCategory)) {
                 $category['products'] = [];
-                $query->whereHas('stores', function ($query) use ($category) {
+                $query->whereHas('stores', function ($query) use ($storeCategory) {
                     if (!is_null($this->level)) {
-                        $query->where('store_categories.level', $this->level);
+//                        $query->where('store_categories.level', $this->level);
                     }
 
-                    $query->where('parent_id', $category->id);
+                    $query->where('parent_id', $storeCategory->id);
 
                     $query->orderBy($this->orderBy, 'DESC');
                     $query->orderBy('product_count', 'DESC');
@@ -192,7 +200,7 @@ class CategoryController extends Controller
             $response['categories'] = $categories;
             $response['category'] = $this->category;
 
-            Cache::put($key, $response, now()->addMinutes(3600));
+            Cache::put($key, $response, now()->addMinutes(1));
         }
 
         return response()->json($response, 200);

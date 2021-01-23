@@ -9,12 +9,18 @@ class ProductType extends Model
 {
     use Sluggable;
 
+    const TYPE_SIZE = 1;
+    const TYPE_COLOR = 2;
+    const TYPE_VOLUME = 3;
+    const TYPE_MASS = 4;
+    const TYPE_BRAND = 5;
+
     public static $types = [
-        1 => 'Size',
-        2 => 'Color',
-        3 => 'Volume',
-        4 => 'Kg',
-        5 => 'Brand',
+        self::TYPE_SIZE => 'Size',
+        self::TYPE_COLOR => 'Color',
+        self::TYPE_VOLUME => 'Volume',
+        self::TYPE_MASS => 'Mass',
+        self::TYPE_BRAND => 'Brand',
     ];
 
     /**
