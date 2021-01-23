@@ -44,6 +44,7 @@ class ProductMrSeeder extends DatabaseSeeder
             $this->domain = $store->url;
 
             echo ">>>>>> Fetching store > categories: ". $store->name . "\n";
+            $this->setCategories($store->url);
 
             $this->storeCategories = StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
@@ -96,7 +97,7 @@ class ProductMrSeeder extends DatabaseSeeder
         }
 
         if (!empty($slug)) {
-            $parentStoreCategory = \App\StoreCategory::where('url', 'like', "%/{$slug}")
+            $parentStoreCategory = StoreCategory::where('url', 'like', "%/{$slug}")
                 ->with('category')
                 ->where('store_id', $this->storeId)
                 ->first();
@@ -121,7 +122,7 @@ class ProductMrSeeder extends DatabaseSeeder
                 'parent_id' => null
             ];
         }
-        \App\StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
+        StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
     }
 
     public function setCategories($categoryLink)
@@ -226,11 +227,7 @@ class ProductMrSeeder extends DatabaseSeeder
             'url' => $url,
         ];
 
-        if ($url == 'https://www.home.co.za/plp/furniture/bedroom-bathroom/_/N-300fib') {
-//            dd([$values, $category]);
-        }
-
-        \App\StoreCategory::updateOrCreate($values, $values);
+        StoreCategory::updateOrCreate($values, $values);
         return $category;
     }
 
