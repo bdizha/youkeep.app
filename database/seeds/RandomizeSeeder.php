@@ -18,7 +18,7 @@ class RandomizeSeeder extends Seeder
             ->get();
 
         foreach ($storeCategories as $key => $storeCategory) {
-            $storeCategory->randomized_at = $key;
+            $storeCategory->randomized_at = \Carbon\Carbon::now()->subMinutes($key);
             echo ">>>> {$storeCategory->category->name}\n";
             $storeCategory->save();
         }

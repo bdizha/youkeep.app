@@ -200,7 +200,7 @@ class CategoryController extends Controller
             $response['categories'] = $categories;
             $response['category'] = $this->category;
 
-            Cache::put($key, $response, now()->addMinutes(1));
+            Cache::put($key, $response, now()->addMinutes(3600));
         }
 
         return response()->json($response, 200);
