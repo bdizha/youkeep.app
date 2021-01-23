@@ -14,7 +14,7 @@ class ProductMrSeeder extends DatabaseSeeder
     protected $domain = "https://www.mrp.com/";
     protected $storeId = null;
 
-    protected $storeIds = [7]; //, 7, 9
+    protected $storeIds = [7, 8, 9];
     protected $categories = [];
     protected $level = 0;
     protected $filterBrand = [];
@@ -42,9 +42,8 @@ class ProductMrSeeder extends DatabaseSeeder
         foreach ($this->stores as $store) {
             $this->storeId = $store->id;
             $this->domain = $store->url;
-//
-//            echo ">>>>>> Fetching store > categories: ". $store->name . "\n";
-//            $this->setCategories($store->url);
+
+            echo ">>>>>> Fetching store > categories: ". $store->name . "\n";
 
             $this->storeCategories = StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
@@ -57,7 +56,7 @@ class ProductMrSeeder extends DatabaseSeeder
             // Get all the category products
             foreach ($this->storeCategories as $storeCategory) {
                 $category = $storeCategory->category;
-                echo ">>>>>> Fetching store > categories > products: " . $category->name . ' >> ' . $store->name . "\n";
+                echo ">>>>>> Fetching store > categories > products: " . $store->name . ' >> ' . $category->name . "\n";
                 $this->processCategory($storeCategory);
 
                 $storeCategory->updated_at = date('Y-m-d H:i:s');
@@ -167,10 +166,8 @@ class ProductMrSeeder extends DatabaseSeeder
             $this->setSearchLookup($storeCategory);
 
         } catch (Exception $ex) {
-            dd($ex);
+            dump($ex);
         }
-
-//        dd([$category->name]);
     }
 
     protected function setProduct($values, $storeCategory)
@@ -362,7 +359,7 @@ class ProductMrSeeder extends DatabaseSeeder
             'product_type_id' => $productType->id,
             'product_id' => $product->id,
             'price' => $this->setPrice($filterItem['price']),
-            'discount' => $filterItem['discount'],
+            'discount' => $this->setPrice($filterItem['discount']),
         ];
 
         \App\ProductVariant::updateOrCreate($attributes, $values);
@@ -520,7 +517,7 @@ class ProductMrSeeder extends DatabaseSeeder
                 'name' => trim($productName),
                 'external_url' => $productUrl,
                 'price' => $this->setPrice($productPrice),
-                'discount' => $productPrice,
+                'discount' => $this->setPrice($productPrice),
             ];
         });
 
