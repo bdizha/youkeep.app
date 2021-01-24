@@ -3,7 +3,7 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <div class="r-text-small" v-html="product.description"></div>
+      <div class="r-text-normal" v-html="product.description"></div>
     </a-col>
   </a-row>
 </template>
