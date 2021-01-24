@@ -41,7 +41,7 @@ export default {
   async fetch() {
     let params = {};
     console.log('category params', this.$route);
-    let route = this.$route.params.path;
+    let route = this.$route.path;
 
     console.log('route', route);
 
