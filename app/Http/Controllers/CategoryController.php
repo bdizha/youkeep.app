@@ -40,7 +40,10 @@ class CategoryController extends Controller
         $category = null;
 
         $this->limit = $request->get('limit', 24);
-        $this->level = $request->get('level', 1);
+
+        $level = $request->get('level', 1);
+        $this->level = $this->_decodeLevel($level);
+
         $this->orderBy = $request->get('order_by', 'store_categories.created_at');
 
         $this->with = $request->get('with', []);
@@ -53,7 +56,7 @@ class CategoryController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key)) {
+        if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
             $query = Category::limit($this->limit)
@@ -108,19 +111,21 @@ class CategoryController extends Controller
 
             $categories = $this->_pruneRelations($categories);
 
+            $this->_setCategoryRoute($categories);
+
             if ($this->categoryType === Category::TYPE_STORE) {
-                $this->_setCategoryStores($categories);
+                $this->_setCategoryStores($this->categories);
             }
 
             if (false && !empty($this->with['products'])) {
-                foreach ($categories as $category) {
+                foreach ($this->categories as $category) {
                     $this->categoryId = $category->id;
                     $this->setProducts();
                     $categories['products'] = $this->products;
                 }
             }
 
-            $response['categories'] = $categories;
+            $response['categories'] = $this->categories;
             $response['category'] = $category;
 
             Cache::put($key, $response, now()->addMinutes(3600));
@@ -187,10 +192,7 @@ class CategoryController extends Controller
                         ->get()
                         ->toArray();
 
-                    $this->categories = array_map(function ($category) {
-                        $category['route'] .= $this->_encodeLevel();
-                        return $category;
-                    }, $categories);
+                    $this->_setCategoryRoute($categories);
 
                     if ($this->category->type === Category::TYPE_STORE) {
                         $this->_setCategoryStores($this->categories);
@@ -280,5 +282,16 @@ class CategoryController extends Controller
 
         $this->breadcrumbs = !empty($storeCategory->breadcrumbs) ? $storeCategory->breadcrumbs : [];
         $this->category['breadcrumbs'] = $this->breadcrumbs;
+    }
+
+    /**
+     * @param array $categories
+     */
+    private function _setCategoryRoute(array $categories): void
+    {
+        $this->categories = array_map(function ($category) {
+            $category['route'] .= $this->_encodeLevel();
+            return $category;
+        }, $categories);
     }
 }
