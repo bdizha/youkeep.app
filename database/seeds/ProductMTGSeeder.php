@@ -46,12 +46,8 @@ class ProductMTGSeeder extends DatabaseSeeder
                 ->orderBy('store_categories.updated_at', "ASC")
                 ->get();
 
-//            dd($this->storeCategories);
-
             echo ">>>>>> Decoding store > categories: " . $store->name . "\n";
             $this->decodeCategories($this->storeId);
-
-            dd('Done putting the categories together for: ' . $this->storeId);
 
             // Get all the category products
             foreach ($this->storeCategories as $storeCategory) {
@@ -167,10 +163,6 @@ class ProductMTGSeeder extends DatabaseSeeder
 
         $category = \App\Category::updateOrCreate($attributes, $values);
         $this->categories[] = $category->id;
-
-        if($url == "https://www.home.co.za/plp/furniture/bedroom-bathroom/_/N-300fib"){
-            dump([$categoryName, $url, $category]);
-        }
 
         /* Add in the store category link */
         $values = [

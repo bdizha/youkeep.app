@@ -177,6 +177,7 @@ class DatabaseSeeder extends Seeder
     protected function setPrice($price)
     {
         $price = str_replace("R", "", $price);
+        $price = str_replace(",", "", $price);
         $priceParts = explode(" ", trim($price));
 
         if (count($priceParts) > 1) {
