@@ -118,7 +118,6 @@ const actions = {
 
       let route = params.route;
 
-      params.type = 1;
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
       await axios.post(route, params).then(({data}) => {
@@ -150,12 +149,13 @@ const actions = {
           commit('setCategories', categories);
           dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
         } else {
+
           let payload = {
             type: 2,
             category_id: category.id,
             limit: process.env.APP_LIMIT,
             order_by: 'randomized_at',
-            with: ['photos', 'breadcrumbs']
+            with: ['photos', 'breadcrumbs', 'fdfdsa']
           };
 
           dispatch('onCategories', payload);

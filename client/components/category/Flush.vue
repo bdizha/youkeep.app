@@ -6,7 +6,7 @@
           <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="start" align="middle">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
                    :lg="{ span: 20 }">
-              <h3 class="r-heading r-same-height">
+              <h3 class="r-heading-light">
                 It's shopping time
               </h3>
             </a-col>

@@ -1,8 +1,8 @@
 <template>
   <a-row class="r-welcome" type="flex" justify="center">
     <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+      <r-category-actions v-if="hasCategories"></r-category-actions>
       <div class="r-margin-out-sm">
-        <r-category-actions v-if="hasCategories"></r-category-actions>
         <a-row type="flex" justify="center" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
             <a-row :gutter="[24,24]" type="flex" justify="start"

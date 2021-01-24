@@ -3,7 +3,7 @@
     <a-col v-if="category" class="r-p-24" :span="24">
       <a-row :gutter="[24,24]" type="flex" justify="center">
         <a-col :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
-          <h3 class="r-heading r-same-height">
+          <h3 class="r-heading-light">
             {{ category.name }}
           </h3>
         </a-col>

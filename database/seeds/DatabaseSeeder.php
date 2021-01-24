@@ -3,6 +3,8 @@
 use App\Category;
 use App\Lookup;
 use App\Product;
+use App\ProductType;
+use App\ProductVariant;
 use App\StoreCategory;
 use Illuminate\Database\Seeder;
 
@@ -11,6 +13,7 @@ class DatabaseSeeder extends Seeder
     protected $storeId = null;
     protected $categories = [];
     protected $parentStoreCategory = null;
+    protected $filterBrand = null;
 
     /**
      * Run the database seeds.
@@ -74,6 +77,114 @@ class DatabaseSeeder extends Seeder
         }
     }
 
+    protected function setProduct($values, $storeCategory)
+    {
+        $attributes = [
+            'external_url' => $values['external_url']
+        ];
+
+        $values['store_id'] = $this->storeId;
+
+        $product = \App\Product::updateOrCreate($attributes, $values);
+
+        $product->updateAncestryIds($storeCategory);
+
+        $values = [
+            'store_id' => $this->storeId,
+            'product_id' => $product->id
+        ];
+
+        \App\StoreProduct::updateOrCreate($values, $values);
+
+        return $product;
+    }
+
+    /**
+     * @param $filterSets
+     * @param $product
+     */
+    protected function setProductTypes($filterSets, $product): void
+    {
+        $productTypes = ProductType::$types;
+        $productTypeKeys = array_flip($productTypes);
+
+        if (!empty($this->filterBrand)) {
+            $filterSets[] = $this->filterBrand;
+        }
+
+        foreach ($filterSets as $filterItem) {
+            $name = $filterItem['name'];
+            $name = trim($name);
+
+            $typeName = $filterItem['type'];
+
+            $type = $productTypeKeys[$typeName];
+
+            echo ">>>>>>Inserting product type: {$name} with type: {$typeName} \n";
+
+            $attributes = [
+                'name' => $name
+            ];
+
+            $values = [
+                'name' => $name,
+                'type' => $type,
+            ];
+
+            $productType = \App\ProductType::updateOrCreate($attributes, $values);
+            echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
+
+            $this->setProductVariant($filterItem, $product, $productType);
+        }
+
+        $this->filterBrand = [];
+    }
+
+
+    /**
+     * @param $filterItem
+     * @param $product
+     * @param $productType
+     */
+    protected function setProductVariant($filterItem, $product, $productType): void
+    {
+        $attributes = [
+            'product_type_id' => $productType->id,
+            'product_id' => $product->id,
+        ];
+
+        dump($filterItem);
+
+        if (empty($filterItem['price'])) {
+            $filterItem['price'] = !empty($product->price) ? $product->price : 0;
+        }
+
+        if (empty($filterItem['discount'])) {
+            $filterItem['discount'] = !empty($product->discount) ? $product->discount : 0;
+        }
+
+        $values = [
+            'product_type_id' => $productType->id,
+            'product_id' => $product->id,
+            'price' => $this->setPrice($filterItem['price']),
+            'discount' => $this->setPrice($filterItem['discount']),
+        ];
+
+        \App\ProductVariant::updateOrCreate($attributes, $values);
+    }
+
+
+    protected function setPrice($price)
+    {
+        $price = str_replace("R", "", $price);
+        $priceParts = explode(" ", trim($price));
+
+        if (count($priceParts) > 1) {
+            $price = $priceParts[0];
+        }
+        return trim($price);
+    }
+
     /**
      * @param $category
      * @return array
@@ -99,13 +210,6 @@ class DatabaseSeeder extends Seeder
                 ->with('category')
                 ->where('store_id', $this->storeId)
                 ->first();
-
-            if (empty($parentStoreCategory)) {
-                $parentStoreCategory = \App\StoreCategory::where('url', 'like', "%{$slug}/_/%")
-                    ->with('category')
-                    ->where('store_id', $this->storeId)
-                    ->first();
-            }
 
             $categoryAttributes = [
                 'id' => $storeCategory->id
@@ -133,7 +237,7 @@ class DatabaseSeeder extends Seeder
         return $urlParts;
     }
 
-    protected function decodeCategories($storeId)
+    protected function decodeCategories()
     {
         foreach ($this->storeCategories as $key => $storeCategory) {
             $this->parentStoreCategory = null;

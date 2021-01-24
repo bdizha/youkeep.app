@@ -40,13 +40,13 @@ export default {
   },
   async fetch() {
     let params = {};
-    console.log('category params', this.$route.params);
-    let route = `/category/${this.$route.params.slug}`;
+    console.log('category params', this.$route);
+    let route = this.$route.params.path;
 
     console.log('route', route);
 
     params.route = route;
-    params.category = this.$route.params.category;
+    params.slug = this.$route.params.slug;
     params.with = [];
     await this.$store.dispatch('shop/onCategory', params);
   },

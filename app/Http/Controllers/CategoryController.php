@@ -14,6 +14,7 @@ class CategoryController extends Controller
     protected $without = ['categories', 'category', 'store', 'products', 'filters', 'breadcrumbs'],
         $relations = ['categories', 'store', 'stores'],
         $with = [],
+        $slug = null,
         $categoryId = null,
         $orderBy = null,
         $breadcrumbs = [],
@@ -132,16 +133,18 @@ class CategoryController extends Controller
      * Return category values
      *
      * @param String $slug
+     * @param String $level
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function show($slug = null, Request $request)
+    public function show($slug = null, $level = 1, Request $request)
     {
         $response = [];
-        $categories = [];
         $this->slug = $request->get('slug', $slug);
-        $this->level = $request->get('level', null);
-        $this->storeId = $request->get('store_id', 7);
+        $level = $request->get('level', $level);
+        $this->level = $this->_decodeLevel($level);
+
+        $this->storeId = $request->get('store_id', null);
         $this->limit = $request->get('limit', 24);
         $this->orderBy = $request->get('order_by', 'store_categories.created_at');
         $this->with = $request->get('with', []);
@@ -151,56 +154,57 @@ class CategoryController extends Controller
         if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
-
             $with = array_intersect($this->with, $this->relations);
-            $category = Category::with($with)
-                ->where('slug', $this->slug)->first();
+            $this->category = Category::where('slug', $this->slug)->first();
 
-            $query = Category::with($with);
-
-            if (!empty($this->limit)) {
-                $query->limit($this->limit);
-            }
-
-            if(!empty($category)){
-                $storeCategory = StoreCategory::with($with)
-                    ->where('category_id', $category->id)
-                    ->where('store_id', $this->storeId)
+            if (!empty($this->category)) {
+                $storeCategory = StoreCategory::where('category_id', $this->category->id)
+                    ->where('level', $this->level)
                     ->first();
-            }
 
-            if (!empty($storeCategory)) {
-                $category['products'] = [];
-                $query->whereHas('stores', function ($query) use ($storeCategory) {
-                    if (!is_null($this->level)) {
-//                        $query->where('store_categories.level', $this->level);
-                    }
+                $query = Category::with($with)
+                    ->take($this->limit);
 
-                    $query->where('parent_id', $storeCategory->id);
-
-                    $query->orderBy($this->orderBy, 'DESC');
-                    $query->orderBy('product_count', 'DESC');
-                });
-
-                $categories = $query
-                    ->take($this->limit)
-                    ->get()
-                    ->toArray();
-
-                if ($category->type === Category::TYPE_STORE) {
-                    $this->_setCategoryStores($categories);
+                if (!empty($this->limit)) {
+                    $query->limit($this->limit);
                 }
 
-                $this->category = $category->toArray();
+                $this->category['level'] = $this->level + 1;
 
-                $this->_setBreadcrumbs();
+                if (!empty($storeCategory)) {
+                    $query->whereHas('stores', function ($query) use ($storeCategory) {
+                        $query->where('parent_id', $storeCategory->id);
 
-                $categories = $this->_pruneRelations($categories);
+                        if (!empty($this->level)) {
+                            $query->where('level', $this->level + 1);
+                        }
+
+                        $query->orderBy($this->orderBy, 'DESC');
+                        $query->orderBy('product_count', 'DESC');
+                    });
+
+                    $categories = $query
+                        ->get()
+                        ->toArray();
+
+                    $this->categories = array_map(function ($category) {
+                        $category['route'] .= $this->_encodeLevel();
+                        return $category;
+                    }, $categories);
+
+                    if ($this->category->type === Category::TYPE_STORE) {
+                        $this->_setCategoryStores($this->categories);
+                    }
+
+                    $this->_setBreadcrumbs();
+
+                    $this->categories = $this->_pruneRelations($this->categories);
+                }
+                $response['categories'] = $this->categories;
+                $response['category'] = $this->category;
+
+                Cache::put($key, $response, now()->addMinutes(3600));
             }
-            $response['categories'] = $categories;
-            $response['category'] = $this->category;
-
-            Cache::put($key, $response, now()->addMinutes(3600));
         }
 
         return response()->json($response, 200);
@@ -212,7 +216,8 @@ class CategoryController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function stores($request)
+    public
+    function stores($request)
     {
         $response = [];
         $this->categoryId = $request->get('category_id', null);
@@ -252,7 +257,8 @@ class CategoryController extends Controller
      * @param array $categories
      * @return array
      */
-    private function _setCategoryStores(array &$categories)
+    private
+    function _setCategoryStores(array &$categories)
     {
         foreach ($categories as $key => $category) {
             $storeCategory = Category::with('stores')
@@ -266,7 +272,8 @@ class CategoryController extends Controller
     /**
      * @return void
      */
-    private function _setBreadcrumbs()
+    private
+    function _setBreadcrumbs()
     {
         $storeCategory = StoreCategory::where('category_id', $this->category['id'])
             ->first();

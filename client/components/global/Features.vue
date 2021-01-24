@@ -1,6 +1,6 @@
 <template>
   <div class="r-mt-48">
-    <a-row :gutter="[24,24]" type="flex" justify="center">
+    <a-row :gutter="[gutter,gutter]" type="flex" justify="center">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
              :lg="{span: 8}">
         <a-card>
@@ -118,7 +118,8 @@
 export default {
   name: 'r-features',
   props: {
-    span: {type: Number, required: false, default: 18}
+    span: {type: Number, required: false, default: 18},
+    gutter: {type: Number, required: false, default: 48}
   },
   data() {
     return {};

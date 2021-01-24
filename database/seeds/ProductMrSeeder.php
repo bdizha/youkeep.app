@@ -171,28 +171,6 @@ class ProductMrSeeder extends DatabaseSeeder
         }
     }
 
-    protected function setProduct($values, $storeCategory)
-    {
-        $attributes = [
-            'external_url' => $values['external_url']
-        ];
-
-        $values['store_id'] = $this->storeId;
-
-        $product = \App\Product::updateOrCreate($attributes, $values);
-
-        $product->updateAncestryIds($storeCategory);
-
-        $values = [
-            'store_id' => $this->storeId,
-            'product_id' => $product->id
-        ];
-
-        \App\StoreProduct::updateOrCreate($values, $values);
-
-        return $product;
-    }
-
     /**
      * @param $categoryName
      * @param $url
@@ -292,90 +270,6 @@ class ProductMrSeeder extends DatabaseSeeder
     }
 
     /**
-     * @param $filterSets
-     * @param $product
-     */
-    private function setProductTypes($filterSets, $product): void
-    {
-        $productTypes = ProductType::$types;
-        $productTypeKeys = array_flip($productTypes);
-
-        if (!empty($this->filterBrand)) {
-            $filterSets[] = $this->filterBrand;
-        }
-
-        foreach ($filterSets as $filterSet) {
-            $name = ucwords(strtolower($filterSet['name']));
-            $name = trim($name);
-
-            $name = str_replace('Colour', 'Color', $name);
-
-            if (empty($productTypeKeys[$name])) {
-                echo ">>>>>>Skipping product type: {$name} \n";
-                continue;
-            }
-            $type = $productTypeKeys[$name];
-
-            echo ">>>>>>Inserting product type: {$name} with type: {$type} \n";
-
-            foreach ($filterSet['items'] as $filterItem) {
-                $name = $filterItem['name'];
-
-                $attributes = [
-                    'name' => $name
-                ];
-
-                $values = [
-                    'name' => $name,
-                    'type' => $type,
-                ];
-
-                $productType = \App\ProductType::updateOrCreate($attributes, $values);
-                echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
-
-                $this->setProductVariants($filterItem, $product, $productType);
-            }
-        }
-
-        $this->filterBrand = [];
-    }
-
-    /**
-     * @param $filterItem
-     * @param $product
-     * @param $productType
-     */
-    private function setProductVariants($filterItem, $product, $productType): void
-    {
-        $attributes = [
-            'product_type_id' => $productType->id,
-            'product_id' => $product->id,
-        ];
-
-        $values = [
-            'product_type_id' => $productType->id,
-            'product_id' => $product->id,
-            'price' => $this->setPrice($filterItem['price']),
-            'discount' => $this->setPrice($filterItem['discount']),
-        ];
-
-        \App\ProductVariant::updateOrCreate($attributes, $values);
-    }
-
-
-    private function setPrice($price)
-    {
-        $priceParts = explode(" ", $price);
-
-        if (count($priceParts) > 1) {
-            $price = $priceParts[0];
-        }
-
-        $price = str_replace("R", "", $price);
-        return trim($price);
-    }
-
-    /**
      * @param $productItems
      * @param $category
      * @param $productType
@@ -383,7 +277,7 @@ class ProductMrSeeder extends DatabaseSeeder
     private function setProducts($productItems, $storeCategory): void
     {
         foreach ($productItems as $productItem) {
-            $_product = App\Product::where('external_url', $productItem['external_url'])->first();
+            $product = App\Product::where('external_url', $productItem['external_url'])->first();
 
             $productNode = Goutte::request('GET', $productItem['external_url']);
 
@@ -416,22 +310,21 @@ class ProductMrSeeder extends DatabaseSeeder
                 $productItem['description'] .= $description;
             });
 
-            if (empty($_product->id)) {
-                $filterSets = $this->getProductVariants($productNode);
-
+            if (empty($product->id)) {
                 $product = $this->setProduct($productItem, $storeCategory);
+            }
 
-                if (!empty($filterSets)) {
-                    $this->setProductTypes($filterSets, $product);
-                }
+            $filterSets = $this->getProductVariants($productNode);
+            if (!empty($filterSets)) {
+                $this->setProductTypes($filterSets, $product);
+            }
 
-                $urlParts = explode("_", $product->external_url);
+            $urlParts = explode("_", $product->external_url);
 
-                if (!empty($urlParts)) {
-                    $externalProductId = $urlParts[count($urlParts) - 1];
+            if (!empty($urlParts)) {
+                $externalProductId = $urlParts[count($urlParts) - 1];
 
-                    $this->setProductPhotos($externalProductId, $product);
-                }
+                $this->setProductPhotos($externalProductId, $product);
             }
         }
     }
@@ -461,8 +354,8 @@ class ProductMrSeeder extends DatabaseSeeder
                         if (!empty($filterSet['mrp_' . $productType])) {
                             $name = $filterSet['mrp_' . $productType];
                             $filterSets[] = [
-                                'name' => $name,
-                                'type' => $productTypeId
+                                'name' => trim($name),
+                                'type' => $productTypes[$productTypeId]
                             ];
                         }
                     }
@@ -503,10 +396,12 @@ class ProductMrSeeder extends DatabaseSeeder
             }
 
             $brandNode = $node->filter('.brand-text');
+            $this->filterBrand = [];
+
             if ($brandNode->count() > 0) {
                 $this->filterBrand = [
                     'name' => $brandNode->eq(0)->text(),
-                    'type' => ProductType::TYPE_BRAND
+                    'type' => ProductType::$types[ProductType::TYPE_BRAND]
                 ];
             }
 

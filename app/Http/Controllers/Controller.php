@@ -28,7 +28,7 @@ class Controller extends BaseController
         $reviews = [],
         $categories = [],
         $limit = 24,
-        $level = [],
+        $level = 1,
         $items = [],
         $item = [];
 
@@ -74,6 +74,19 @@ class Controller extends BaseController
         session('address', $address);
         session('addresses', $addresses);
         return array($address, $addresses);
+    }
+
+    protected function _decodeLevel($level)
+    {
+        $level = trim($level, "L");
+        $level = trim($level, "0");
+
+        return $level;
+    }
+
+    protected function _encodeLevel(): string
+    {
+        return "/L" . str_pad($this->level + 1, 6, STR_PAD_LEFT, "0");
     }
 
     /**

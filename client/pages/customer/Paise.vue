@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+    <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -14,11 +14,11 @@
                 <span class="r-text-secondary">Shop more,</span><br>
                 <span>Pay less</span>
               </h1>
-              <h4 class="r-heading">
-                We're a better way to shopping.
-              </h4>
+              <h3 class="r-heading-light">
+               Paise is a better way to make or receive payments.
+              </h3>
               <p class="r-text-normal">
-                Unlike other buy-now-pay-later plans, Shopple lets shoppers use their existing credit card for
+                Unlike other buy-now-pay-later plans, Paise lets shoppers use their existing credit card for
                 the easiest most intuitive checkout.
               </p>
             </template>
@@ -36,7 +36,7 @@
     <a-row class="r-mt-48" type="flex" justify="start">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
              style="text-align: left;">
-        <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
+        <a-row :gutter="[48,48]" type="flex" justify="end" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"
                  :lg="{ span: 12 }">
@@ -47,7 +47,7 @@
                          :md="{ span: 24 }"
                          :lg="{ span: 24 }">
                     <h3 class="r-heading">
-                      We're a better way to shopping.
+                      Paise is a better way to do payments.
                     </h3>
                     <p class="r-text-normal">
                       Pay in 3 installments with zero interest
@@ -77,7 +77,7 @@
     <a-row class="r-mt-48" type="flex" justify="start">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
              style="text-align: left;">
-        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+        <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             <a-card>

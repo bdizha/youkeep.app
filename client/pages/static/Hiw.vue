@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+    <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -61,11 +61,11 @@
       </a-col>
     </a-row>
     <r-steps :has-more="false"></r-steps>
-    <r-features :span="24"></r-features>
+    <r-features :span="48"></r-features>
     <a-row class="r-mt-48" type="flex" justify="center">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
              style="text-align: left;">
-        <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+        <a-row :gutter="[48,48]" type="flex" justify="end" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
                  style="text-align: left;">
@@ -75,7 +75,7 @@
                   <a-card-meta>
                     <template slot="description">
                       <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 9}" :lg="{ span: 9 }">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8}" :lg="{ span: 8 }">
                           <div class="r-icon r-icon__secondary r-icon-stroke">
                             <svg class="ProductIcon ProductIcon--Payments ProductPricingSection__icon" width="80"
                                  height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><title>
@@ -104,7 +104,7 @@
                             </svg>
                           </div>
                         </a-col>
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 15 }" :lg="{ span: 15 }">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 16 }">
                           <h4 class="r-heading-light r-text-uppercase">
                             Online and in-store options
                           </h4>
@@ -130,7 +130,7 @@
                   <a-card-meta>
                     <template slot="description">
                       <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 9}" :lg="{ span: 9 }">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8}" :lg="{ span: 8 }">
                           <div class="r-icon r-icon__secondary r-icon-stroke">
                             <svg class="Icon " viewBox="0 0 34 40" xmlns="http://www.w3.org/2000/svg" width="68"
                                  height="80">
@@ -153,7 +153,7 @@
                             </svg>
                           </div>
                         </a-col>
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 15 }" :lg="{ span: 15 }">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 16 }">
                           <h4 class="r-heading-light r-text-uppercase">
                             One stop shopping platform
                           </h4>
@@ -179,7 +179,7 @@
                   <a-card-meta>
                     <template slot="description">
                       <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 9}" :lg="{ span: 9 }">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8}" :lg="{ span: 8 }">
                           <div class="r-icon r-icon__secondary r-icon-stroke">
                             <svg class="Icon " viewBox="0 0 39 37" xmlns="http://www.w3.org/2000/svg" width="78"
                                  height="74">
@@ -204,7 +204,7 @@
                             </svg>
                           </div>
                         </a-col>
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 15 }" :lg="{ span: 15 }">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 16 }">
                           <h4 class="r-heading-light r-text-uppercase">
                             Instant checkout finance
                           </h4>

@@ -5,10 +5,10 @@
         <a-card-meta class="r-text-center">
           <template slot="description">
             <a-row type="flex" justify="center">
-              <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-                <h2 class="r-heading r-same-height">
-                  {{ title ? title : 'How it works?' }}
-                </h2>
+              <a-col class="r-text-center" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                <h3 class="r-heading-light">
+                  {{ title ? title : 'Shopple brings customers to merchants' }}
+                </h3>
               </a-col>
             </a-row>
             <a-row :gutter="[24,24]" type="flex" justify="center"

@@ -1,6 +1,6 @@
 <template>
   <r-page>
-    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+    <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
@@ -19,7 +19,7 @@
                     <span>Pay less</span>
                   </h1>
                   <p class="r-text-normal">
-                    Unlike other buy-now-pay-later plans, Shopple lets shoppers use their existing credit card for
+                    Unlike other buy-now-pay-later plans, Paise lets shoppers use their existing credit card for
                     the easiest most intuitive checkout.
                   </p>
                 </a-col>
@@ -61,7 +61,7 @@
     <a-row class="r-mt-48" type="flex" justify="start">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
              style="text-align: left;">
-        <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
+        <a-row :gutter="[48,48]" type="flex" justify="end" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"
                  :lg="{ span: 12 }">
@@ -101,7 +101,7 @@
     <a-row class="r-mt-48" type="flex" justify="start">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
              style="text-align: left;">
-        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+        <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
                  style="text-align: left;">
             <a-card>

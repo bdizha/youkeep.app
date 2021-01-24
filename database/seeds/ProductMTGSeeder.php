@@ -4,6 +4,8 @@ use App\ProductType;
 use Illuminate\Database\Seeder;
 use App\Category;
 use App\Store;
+use App\Product;
+use Illuminate\Support\Str;
 
 class ProductMTGSeeder extends DatabaseSeeder
 {
@@ -21,52 +23,13 @@ class ProductMTGSeeder extends DatabaseSeeder
      */
     public function run()
     {
-//        $description = '<div class="tabs__wrap">
-//										<div class="tabs__content no-padd no-pad ugc">
-//											<p class="tabs__para">
-//														<p>Use the 150gram Tritan coffee powder container with lid to store your fresh ground coffee.&nbsp;</p></p>
-//												<table>
-//													<tr>
-//																		<th>Material Type</th>
-//																		<td>stainless steel</td>
-//																	</tr>
-//																<tr>
-//																		<th>Guarantee/Warrantee</th>
-//																		<td>2 years</td>
-//																	</tr>
-//																<tr>
-//																		<th>Dimensions</th>
-//																		<td>50 x 28 x 20cm</td>
-//																	</tr>
-//																<tr>
-//																		<th>Dishwasher Safe</th>
-//																		<td>no</td>
-//																	</tr>
-//																<tr>
-//																		<th>Model Name & No</th>
-//																		<td><p>BLACK: CGF01BLEU</p>
-//<p>RED: CGF01RDEU</p>
-//<p>WHITE: CGF01WHEU</p>
-//<p>CREAM: CGF01CREU</p></td>
-//																	</tr>
-//																</table>
-//											</div>
-//									</div>
-//								</div>';
-//        $return = $this->getProductDescription($description);
-//
-//        dd($return);
-
-        $this->testResponse('https://www.home.co.za/pdp/duvet-cover-egyptian-cotton-800-thread-count/_/A-157506AAJM8');
-
-        die('done');
+//        $this->testResponse('https://www.home.co.za/pdp/duvet-cover-egyptian-cotton-800-thread-count/_/A-157506AAJM8');
+//        die('done');
 
         $storeIds = [];
         foreach ($this->storeIds as $key => $value) {
             $storeIds[] = $this->storeIds[$key];
         }
-
-//        $this->storeIds = $storeIds;
 
         $this->stores = Store::whereIn('id', $this->storeIds)
             ->get();
@@ -80,18 +43,24 @@ class ProductMTGSeeder extends DatabaseSeeder
 
             $this->storeCategories = \App\StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
+                ->orderBy('store_categories.updated_at', "ASC")
                 ->get();
+
+//            dd($this->storeCategories);
 
             echo ">>>>>> Decoding store > categories: " . $store->name . "\n";
             $this->decodeCategories($this->storeId);
 
-//            die('>>>');
+            dd('Done putting the categories together for: ' . $this->storeId);
 
             // Get all the category products
             foreach ($this->storeCategories as $storeCategory) {
                 $category = $storeCategory->category;
                 echo ">>>>>> Fetching store > categories > products: " . $category->name . ' >> ' . $store->name . "\n";
                 $this->processCategory($storeCategory);
+
+                $storeCategory->updated_at = date('Y-m-d H:i:s');
+                $storeCategory->save();
             }
 
         }
@@ -105,16 +74,12 @@ class ProductMTGSeeder extends DatabaseSeeder
         $categoryNodes = $categoryNode->filter('.nav__list li a');
 
         $categoryNodes->each(function ($node) {
-//            echo __LINE__ . " <> \n";
-
             if (strpos($node->attr('href'), $this->domain) === false) {
                 $categoryLink = $this->domain . $node->attr('href');
             } else {
                 $categoryLink = $node->attr('href');
             }
-//            echo __LINE__ . " <> \n";
             $categoryName = $node->text();
-//            echo __LINE__ . " <> \n";
 
             $categoryName = trim($categoryName);
 
@@ -125,7 +90,6 @@ class ProductMTGSeeder extends DatabaseSeeder
 
                 echo "Category: " . $categoryName . "\n";
                 echo "Category link: " . $categoryLink . "\n";
-//                echo __LINE__ . " <> \n";
 
                 if (strpos($categoryLink, 'plp') !== false ||
                     strpos($categoryLink, 'rclp') !== false) {
@@ -142,8 +106,6 @@ class ProductMTGSeeder extends DatabaseSeeder
     public function processCategory($storeCategory, $page = 1)
     {
         try {
-            $category = $storeCategory->category;
-
             // find the category filter to use
             $filterItem = $this->setCategoryFilterItem($storeCategory);
 
@@ -152,72 +114,28 @@ class ProductMTGSeeder extends DatabaseSeeder
             }
 
             // fetch the category home page
-            list($totalPages, $productItems, $filterSets) = $this->setCategoryPages($filterItem, $page);
-
-            if (!empty($filterSets)) {
-                $this->setCategoryFilters($filterSets, $category);
-            }
+            list($totalPages, $productItems) = $this->setCategoryPages($filterItem, $page);
 
             if (!empty($productItems)) {
-
-                if ($page > 1) {
-//                    echo __LINE__ . ">>>>>>>>next\n";
-                }
-
-                $this->setProducts($productItems, $category);
+                $this->setProducts($productItems, $storeCategory);
             }
 
             if ($page < $totalPages) {
                 ++$page;
-//                echo __LINE__ . ">>>>>>>>previous\n";
 
-//                echo __LINE__ . ">>>>>>>> Next page: {$page} on category: {$category->name} \n";
-
-                $this->processCategory($category, $page);
-            } else {
-//                echo __LINE__ . "page($page) >= totalPages ($totalPages) > >>>>>>>>cool\n";
+                $this->processCategory($storeCategory, $page);
             }
 
             // set the search/lookup data
-            $this->setSearchLookup($category);
+            $this->setSearchLookup($storeCategory);
 
         } catch (Exception $ex) {
-//            dd($ex);
+            dump($ex);
         }
-
-//        dd([$category->name]);
-    }
-
-    protected function setProduct($category, $values)
-    {
-//        echo "Product external url: " . $values['external_url'] . "\n===================================>>\n";
-
-        $attributes = [
-            'external_url' => $values['external_url']
-        ];
-
-        $values['store_id'] = $this->storeId;
-
-        $product = \App\Product::updateOrCreate($attributes, $values);
-
-//        echo "Inserted: " . $values['name'] . "\n===================================>>\n";
-
-        $product->updateAncestryIds($category);
-
-        $values = [
-            'store_id' => $this->storeId,
-            'product_id' => $product->id
-        ];
-
-        \App\StoreProduct::updateOrCreate($values, $values);
-
-        return $product;
     }
 
     protected function getProductDescription($content)
     {
-        dd($content);
-
         preg_match('/<div class="tabs__wrap">(.*?)<\/div>/s', $content, $match);
 
         return $match;
@@ -250,16 +168,16 @@ class ProductMTGSeeder extends DatabaseSeeder
         $category = \App\Category::updateOrCreate($attributes, $values);
         $this->categories[] = $category->id;
 
+        if($url == "https://www.home.co.za/plp/furniture/bedroom-bathroom/_/N-300fib"){
+            dump([$categoryName, $url, $category]);
+        }
+
         /* Add in the store category link */
         $values = [
             'store_id' => $this->storeId,
             'category_id' => $category->id,
             'url' => $url,
         ];
-
-        if ($url == 'https://www.home.co.za/plp/furniture/bedroom-bathroom/_/N-300fib') {
-//            dd([$values, $category]);
-        }
 
         \App\StoreCategory::updateOrCreate($values, $values);
         return $category;
@@ -269,29 +187,80 @@ class ProductMTGSeeder extends DatabaseSeeder
 
     /**
      * @param $productData
+     * @return array
+     */
+    private function getProductVariants($productData): array
+    {
+        $filterSets = [];
+
+        $productTypes = ProductType::$types;
+        if (!empty($productData)) {
+
+            foreach ($productTypes as $productType) {
+                $productTypeKey = strtolower($productType);
+                $productTypeKey = str_replace('colour', 'color', $productTypeKey);
+
+                $productTypeKey = Str::plural($productTypeKey);
+
+                if (empty($productData[$productTypeKey])) {
+//                    echo __LINE__ . " Skipping product variant: {$productTypeKey} \n";
+                    continue;
+                }
+
+                foreach ($productData[$productTypeKey] as $filterSet) {
+                    $name = ucwords(strtolower($filterSet['name']));
+                    $name = trim(str_replace("  ", "", $name));
+                    $name = ucwords($name);
+
+                    $filterSets[] = [
+                        'name' => $name,
+                        'type' => $productType,
+                        'price' => !empty($filterSet['price']) ? $filterSet['price'] : null,
+                        'discount' => !empty($filterSet['oldPricediscount']) ? $filterSet['oldPrice'] : null,
+                    ];
+                }
+            }
+        }
+
+        if (!empty($productData['brand'])) {
+            $filterSets[] = [
+                'name' => $productData['brand'],
+                'type' => $productTypes[ProductType::TYPE_BRAND]
+            ];
+        }
+
+        return $filterSets;
+    }
+
+    /**
+     * @param $productData
      * @param $product
      * @return array
      */
-    private function setProductImages($productData, $product): void
+    private function setProductPhotos($productData, $product): void
     {
-        foreach ($productData['images'] as $photo) {
+        foreach ($productData['images'] as $key => $photo) {
             $productPhotoUrl = $photo['large'];
             $productThumbUrl = $photo['thumb'];
-//            echo __LINE__ . " <> \n";
 
             // set the product photo
             $productPhoto = sha1($productPhotoUrl) . ".jpeg";
-//            echo "Product photo: " . $productPhoto . "\n";
-
             $productThumb = sha1($productThumbUrl) . ".jpeg";
-//            echo "Product thumb: " . $productThumb . "\n";
-//            echo "Product thumb url : " . $productThumbUrl . "\n";
 
             if (!file_exists(public_path('storage/product/' . $productPhoto))) {
                 Storage::disk('product')->put($productPhoto, file_get_contents($productPhotoUrl));
                 Storage::disk('product')->put($productThumb, file_get_contents($productThumbUrl));
             } else {
                 echo "Product photo skipped: " . public_path('storage/product/' . $productPhoto) . "\n";
+            }
+
+            if (empty($key)) {
+                $values = [
+                    'photo' => $productPhoto,
+                    'thumbnail' => $productThumb
+                ];
+
+                Product::updateOrCreate(['id' => $product->id], $values);
             }
 
             $values = [
@@ -301,79 +270,28 @@ class ProductMTGSeeder extends DatabaseSeeder
             ];
 
             \App\ProductPhoto::updateOrCreate($values, $values);
-//            echo __LINE__ . " <> \n";
-        }
-    }
-
-    /**
-     * @param $filterSets
-     * @param $category
-     */
-    private function setCategoryFilters($filterSets, $category): void
-    {
-        $productTypes = ProductType::$types;
-        $productTypeKeys = array_flip($productTypes);
-
-        foreach ($filterSets as $filterSet) {
-            $name = ucwords(strtolower($filterSet['name']));
-            $name = trim($name);
-
-            $name = str_replace('Colour', 'Color', $name);
-
-            // currently here we don't wanna process types that we dont need
-            if (empty($productTypeKeys[$name])) {
-                echo __LINE__ . " Skipping product type: {$name} \n";
-                continue;
-            }
-            $type = $productTypeKeys[$name];
-
-            echo __LINE__ . " Inserting product type: {$name} with type: {$type} \n";
-
-            foreach ($filterSet['items'] as $filterItem) {
-                // set the product type to variant relationship
-
-                $name = ucwords($filterItem['name']);
-
-                $attributes = [
-                    'name' => $name
-                ];
-
-                $values = [
-                    'name' => $name,
-                    'type' => $type,
-                ];
-
-                $productType = \App\ProductType::updateOrCreate($attributes, $values);
-                echo __LINE__ . " Inserting {$productType->name} product variant: {$name} \n";
-
-                $this->processFilterProducts($filterItem['value'], $category, $productType);
-            }
-//            echo __LINE__ . " <> \n";
         }
     }
 
     /**
      * @param $productItems
-     * @param $category
+     * @param $storeCategory
      * @param $productType
      */
-    private function setProducts($productItems, $category, $productType = null): void
+    private function setProducts($productItems, $storeCategory): void
     {
         foreach ($productItems as $productItem) {
             $productLink = strpos($productItem['pdpLinkUrl'], $this->domain) === false ?
                 $this->domain . $productItem['pdpLinkUrl'] : $productItem['pdpLinkUrl'];
-//            echo __LINE__ . " <> \n";
 
             $_product = App\Product::where('external_url', $productLink)->first();
 
             $productName = $productItem['name'];
             $productSummary = '';
-//            echo __LINE__ . " <> \n";
 
             $productPrice = $productItem['latestPriceRange'];
 
             $priceParts = explode('-', $productPrice);
-//            echo __LINE__ . " <> \n";
 
             if (!empty($priceParts)) {
                 $productPrice = $priceParts[count($priceParts) - 1];
@@ -383,7 +301,6 @@ class ProductMTGSeeder extends DatabaseSeeder
             $productPrice = str_replace(',', '', $productPrice);
 
             $productPrice = trim($productPrice);
-//            echo __LINE__ . " <> \n";
 
             $productNode = Goutte::request('GET', $productLink)
                 ->filter('meta[itemprop=description]')->eq(0);
@@ -394,7 +311,6 @@ class ProductMTGSeeder extends DatabaseSeeder
             }
 
             $productNode = Goutte::request('GET', $productLink);
-
             $this->getProductDescription($productNode->text(), $description);
 
             $productNode = Goutte::request('GET', $productLink)
@@ -408,17 +324,13 @@ class ProductMTGSeeder extends DatabaseSeeder
                 'external_url' => $productLink,
                 'description' => $description
             ];
-//            echo __LINE__ . " <> \n";
 
             $productData = json_decode($productNode->text(), true);
 
             if (empty($_product->id)) {
-//                echo __LINE__ . " <> \n";
                 // set the thumb
                 $productThumbUrl = $productItem['defaultImages'][0];
-//                echo __LINE__ . " <> \n";
                 $productThumb = sha1($productThumbUrl) . ".jpeg";
-//                echo "Product thumb: " . $productThumb . "\n";
 
                 if (!file_exists(public_path('storage/product/' . $productThumb))) {
                     Storage::disk('product')->put($productThumb, file_get_contents($productThumbUrl));
@@ -428,71 +340,32 @@ class ProductMTGSeeder extends DatabaseSeeder
 
                 // set the main photo
                 $productPhotoUrl = !empty($productData['images'][0]['large']) ? $productData['images'][0]['large'] : $productThumbUrl;
-//                echo __LINE__ . " <> \n";
 
                 $productPhoto = sha1($productPhotoUrl) . ".jpeg";
-
-//                echo "Product photo: " . $productPhoto . "\n";
-
-//                echo __LINE__ . " <> \n";
                 Storage::disk('product')->put($productPhoto, file_get_contents($productPhotoUrl));
 
                 $attributes['photo'] = $productPhoto;
                 $attributes['thumbnail'] = $productThumb;
             } else {
-                $_product->updateAncestryIds($category);
+                $_product->updateAncestryIds($storeCategory);
             }
 
-//            echo __LINE__ . " <> \n";
+            $product = $this->setProduct($attributes, $storeCategory);
+            $filterSets = $this->getProductVariants($productData);
 
-            $product = $this->setProduct($category, $attributes);
+            if (!empty($filterSets)) {
+                $this->setProductTypes($filterSets, $product);
+            }
 
             if (!empty($productData['images'])) {
-                $this->setProductImages($productData, $product);
-            }
-
-            if (!empty($productType)) {
-                $attributes = [
-                    'product_type_id' => $productType->id,
-                    'product_id' => $product->id,
-                ];
-
-                $values = [
-                    'product_type_id' => $productType->id,
-                    'product_id' => $product->id,
-                    'price' => $product->price,
-                    'discount' => $product->price,
-                ];
-
-                \App\ProductVariant::updateOrCreate($attributes, $values);
+                $this->setProductPhotos($productData, $product);
             }
         }
     }
 
     protected $productItems = [];
 
-    /**
-     * @param $filterItem
-     * @param $category
-     * @param $productType
-     * @param int $page
-     */
-    private function processFilterProducts($filterItem, $category, $productType, $page = 1): void
-    {
-        list($totalPages, $productItems) = $this->setCategoryPages($filterItem, $page);
-
-//        dd([$productItems]);
-
-        $this->setProducts($productItems, $category, $productType);
-
-        if ($totalPages > $page) {
-            $this->productItems = $productItems;
-            ++$page;
-            echo "Next page for: {$page} >>> {$productType->name} {$category->url}\n";
-            $this->processFilterProducts($filterItem, $category, $productType, $page);
-        }
-
-    }
+    private $filterSets = [];
 
     /**
      * @param $filterItem
@@ -511,19 +384,15 @@ class ProductMTGSeeder extends DatabaseSeeder
         $categoryNode = Goutte::request('GET', $categoryFilterUrl);
         $categoryData = json_decode($categoryNode->text(), true);
 
-        $totalPages = $categoryData['data']['totalPages'];
-        echo "Total pages: {$totalPages} >>> for {$categoryFilterUrl}\n";
+        $totalPages = 0;
         $productItems = [];
-
         if (!empty($categoryData['data']['products'])) {
+            $totalPages = $categoryData['data']['totalPages'];
             $productItems = $categoryData['data']['products'];
         }
 
-        $filterSets = [];
-        if (!empty($categoryData['data']['filterSets'])) {
-            $filterSets = $categoryData['data']['filterSets'];
-        }
-        return array($totalPages, $productItems, $filterSets);
+        echo "Total pages: {$totalPages} >>> for {$categoryFilterUrl}\n";
+        return array($totalPages, $productItems);
     }
 
     /**
@@ -546,6 +415,7 @@ class ProductMTGSeeder extends DatabaseSeeder
         } else {
             $filterItem = $urlParts[1];
         }
+
         return $filterItem;
     }
 

@@ -18,6 +18,7 @@ const routes = [
   {path: '/store/:store/category/:category', name: 'store.category.show', component: page('store/Category.vue')},
   {path: '/store/:slug', name: 'store.show', component: page('store/Show.vue'),},
   {path: '/category/:slug', name: 'category.show', component: page('store/Category.vue')},
+  {path: '/category/:slug/:level', name: 'category.show', component: page('store/Category.vue')},
   {path: '/product/:slug', name: 'product.show', component: page('store/Product.vue'),},
   {path: '/shopper', name: 'shopper', component: page('shopper/Index.vue')},
   {path: '/shopper/paise', name: 'shopper-paise', component: page('shopper/Paise.vue')},
