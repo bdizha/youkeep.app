@@ -3,7 +3,7 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <a-row v-if="hasData && hasCategories" class="r-slider">
+      <a-row v-if="hasCategories" class="r-slider">
         <a-col :span="24">
           <VueSlickCarousel v-bind="settings">
             <r-category-bundle
@@ -105,9 +105,6 @@ export default {
     };
   },
   computed: {
-    slidesToShow() {
-      return this.categories.length < 3 ? this.categories.length : 3;
-    },
     isEmpty() {
       return !this.hasProducts && !this.hasCategories;
     },
@@ -124,7 +121,6 @@ export default {
     this.payload();
   },
   mounted() {
-    this.hasData = true;
   },
   methods: {
     async payload() {

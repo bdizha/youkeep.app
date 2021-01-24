@@ -1,11 +1,15 @@
 <template>
-  <a-row class="r-welcome" type="flex" justify="center">
+  <a-row type="flex" justify="center">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+      <div class="r-margin-out-sm">
+        <r-category-actions v-if="hasCategories"></r-category-actions>
+      </div>
+    </a-col>
     <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <r-category-actions v-if="hasCategories"></r-category-actions>
       <div class="r-margin-out-sm">
         <a-row type="flex" justify="center" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
-            <a-row :gutter="[24,24]" type="flex" justify="start"
+            <a-row :gutter="[48,48]" type="flex" justify="start"
                    align="middle">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                      :md="{ span: 12 }"
@@ -42,10 +46,9 @@
                 </a-card>
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-                <r-banner v-if="hasCategories" :category="categories[0]"></r-banner>
+                <r-category-products :is-vertical="false" v-if="false" :category="categories[0]"></r-category-products>
               </a-col>
             </a-row>
-            <r-steps></r-steps>
           </a-col>
         </a-row>
         <a-row class="r-mt-48" type="flex" justify="center" align="middle">

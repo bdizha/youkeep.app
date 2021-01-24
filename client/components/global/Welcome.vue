@@ -8,6 +8,7 @@
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
           <r-category-slider></r-category-slider>
+          <r-steps></r-steps>
         </a-col>
       </a-row>
       <div class="r-grey-shadow">
