@@ -1,8 +1,8 @@
 <template>
   <nuxt-link class="r-logo" :class="{'r-logo__icon': isIcon}" to="/">
-    <img class="r-hide-sm" :src="'/images/' + (isIcon ? 'icon-07': 'icon-07') + '.svg'"
+    <img class="r-hide-sm" :src="'/images/logo.png'"
          alt="Shopple - It's Shopping Time!"/>
-    <img class="r-hide-lg" :src="'/images/' + (isIcon ? 'icon-07': 'icon-07') + '.svg'"
+    <img class="r-hide-lg" :src="'/images/logo.png'"
          alt="Shopple - It's Shopping Time!"/>
   </nuxt-link>
 </template>
