@@ -1,6 +1,7 @@
 <?php
 
 use App\CategoryProduct;
+use App\ProductPhoto;
 use Illuminate\Database\Seeder;
 use \App\Product;
 use \App\StoreProduct;
@@ -21,14 +22,28 @@ class ProductUpdateSeeder extends Seeder
         foreach ($products as $product) {
             echo "Updating Product >>>> {$product->name} \n";
 
-            if (!empty($product->photos[0])) {
+            $photos = ProductPhoto::where('product_id', $product->id)
+                ->get();
+
+            if (!empty($photos[0])) {
                 echo "Updating Product Photo >>>> {$product->name} \n";
 
                 if (empty($product->photo)) {
-                    $product->photo = $product->photos[0]['image'];
+                    $product->photo = $photos[0]['image'];
                 }
                 if (empty($product->thumbnail)) {
-                    $product->thumbnail = $product->photos[0]['thumb'];
+                    $product->thumbnail = $photos[0]['thumb'];
+                }
+
+                if (!file_exists(public_path('storage/product/' . $photos[0]['image'])) ||
+                    !file_exists(public_path('storage/product/' . $photos[0]['thumb']))) {
+                    \App\ProductPhoto::where('product_id', $photos[0]['id'])
+                        ->delete();
+
+                    echo "Deleted Product Photo >>>> " . public_path('storage/product/' . $photos[0]['thumb']) . " \n";
+                }
+                else{
+                    echo "Skipped Product Photo >>>> {$photos[0]['image']} \n";
                 }
             } else {
                 CategoryProduct::where('product_id', $product->id)
