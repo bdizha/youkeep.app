@@ -1,7 +1,10 @@
 <?php
 
+use App\CategoryProduct;
 use Illuminate\Database\Seeder;
 use \App\Product;
+use \App\StoreProduct;
+use \App\ProductVariant;
 
 class ProductUpdateSeeder extends Seeder
 {
@@ -21,9 +24,23 @@ class ProductUpdateSeeder extends Seeder
             if (!empty($product->photos[0])) {
                 echo "Updating Product Photo >>>> {$product->name} \n";
 
-                if(empty($product->photo)){
+                if (empty($product->photo)) {
                     $product->photo = $product->photos[0]['image'];
                 }
+                if (empty($product->thumbnail)) {
+                    $product->thumbnail = $product->photos[0]['thumb'];
+                }
+            } else {
+                CategoryProduct::where('product_id', $product->id)
+                    ->delete();
+
+                StoreProduct::where('product_id', $product->id)
+                    ->delete();
+
+                ProductVariant::where('product_id', $product->id)
+                    ->delete();
+
+                $product->delete();
             }
 
             $this->setStore($product);

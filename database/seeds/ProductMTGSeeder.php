@@ -12,7 +12,7 @@ class ProductMTGSeeder extends DatabaseSeeder
     protected $domain = "https://www.archivestore.co.za";
     protected $storeId = null;
 
-    protected $storeIds = [12]; //, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
+    protected $storeIds = [12, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
     protected $categories = [];
     protected $level = 0;
 
