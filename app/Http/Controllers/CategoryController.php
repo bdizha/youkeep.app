@@ -56,7 +56,7 @@ class CategoryController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key) && false) {
+        if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
             $query = Category::limit($this->limit)
@@ -157,7 +157,7 @@ class CategoryController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key) && false) {
+        if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
             $with = array_intersect($this->with, $this->relations);
