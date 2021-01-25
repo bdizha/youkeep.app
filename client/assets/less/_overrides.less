@@ -603,24 +603,9 @@ x {
         border: 1px solid rgb(236, 236, 236, 1);
         padding: 12px;
         background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
-        width: calc(100% - 12px) !important;
+        line-height: 100%;
+        width: 100% !important;
         height: 100% !important;
-
-        @media (max-width: 900px) {
-            line-height: 90px;
-            width: 90px !important;
-            height: 90px !important;
-        }
-        @media (max-width: 768px) {
-            line-height: 81px;
-            width: 81px !important;
-            height: 81px !important;
-        }
-        @media (max-width: 360px) {
-            line-height: 69px;
-            width: 69px !important;
-            height: 69px !important;
-        }
     }
 }
 
@@ -629,8 +614,8 @@ x {
         .ant-avatar-image {
             @media (min-width: 900px) {
                 line-height: 99px;
-                width: 99px !important;
-                height: 99px !important;
+                width: 100% !important;
+                height: 100% !important;
             }
         }
     }

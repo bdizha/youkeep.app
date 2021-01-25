@@ -1,5 +1,5 @@
 <template>
-  <a-row :gutter="[0,0]" type="flex" justify="center" align="middle">
+  <a-row :gutter="[12,12]" type="flex" justify="center" align="middle">
     <a-col v-for="(photo, index) in category.photos"
            v-if="(index + 1) > start && index < start + 3"
            :key="index"
