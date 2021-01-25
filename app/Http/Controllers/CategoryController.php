@@ -44,7 +44,7 @@ class CategoryController extends Controller
         $level = $request->get('level', 1);
         $this->level = $this->_decodeLevel($level);
 
-        $this->orderBy = $request->get('order_by', 'store_categories.created_at');
+        $this->orderBy = $request->get('order_by', 'product_count');
 
         $this->with = $request->get('with', []);
 
@@ -93,10 +93,10 @@ class CategoryController extends Controller
                 if (!is_null($this->level)) {
                     $query->where('store_categories.level', $this->level);
                 }
-
-                $query->orderBy($this->orderBy, 'DESC');
                 $query->orderBy('store_categories.product_count', 'DESC');
             });
+
+            $query->orderBy($this->orderBy, 'DESC');
 
             if (!empty($this->with)) {
                 $query->with(array_intersect($this->with, $this->relations));

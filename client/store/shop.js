@@ -154,8 +154,8 @@ const actions = {
             type: 2,
             category_id: category.id,
             limit: process.env.APP_LIMIT,
-            order_by: 'randomized_at',
-            with: ['photos', 'breadcrumbs', 'fdfdsa']
+            order_by: 'product_count',
+            with: ['photos', 'breadcrumbs']
           };
 
           dispatch('onCategories', payload);

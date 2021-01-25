@@ -29,7 +29,7 @@ export default {
       type: 2,
       category_id: null,
       limit: process.env.APP_LIMIT,
-      order_by: 'randomized_at',
+      order_by: 'product_count',
       with: ['photos', 'breadcrumbs']
     };
 
