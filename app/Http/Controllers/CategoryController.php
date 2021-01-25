@@ -93,10 +93,9 @@ class CategoryController extends Controller
                 if (!is_null($this->level)) {
                     $query->where('store_categories.level', $this->level);
                 }
-                $query->orderBy('store_categories.product_count', 'DESC');
-            });
 
-            $query->orderBy($this->orderBy, 'DESC');
+                $query->orderBy($this->orderBy, 'DESC');
+            });
 
             if (!empty($this->with)) {
                 $query->with(array_intersect($this->with, $this->relations));
