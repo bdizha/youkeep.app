@@ -111,6 +111,7 @@ class CategoryController extends Controller
 
             $categories = $this->_pruneRelations($categories);
 
+            --$this->level;
             $this->_setCategoryRoute($categories);
 
             if ($this->categoryType === Category::TYPE_STORE) {
@@ -230,8 +231,6 @@ class CategoryController extends Controller
             $response = Cache::get($key, []);
         } else {
             $query = Store::where('is_active', true);
-
-//            $this->without = ['categories'];
 
             $query->whereHas('categories', function ($query) {
                 if (!is_null($this->categoryId)) {

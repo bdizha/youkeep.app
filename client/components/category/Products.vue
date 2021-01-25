@@ -3,7 +3,7 @@
     <a-row v-if="hasData" type="flex" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]">
       <a-col v-for="(product, index) in products" :key="index"
              :xs="{span: isVertical ? 12 : 24}"
-             :sm="{span: isVertical ? 12 : 12}" :md="{span: isVertical ? 6 : 8}" :lg="{span: isVertical ? 4 : 8}">
+             :sm="{span: isVertical ? 12 : 24}" :md="{span: 24 / columns}" :lg="{span: 24 / columns}">
         <r-product-item :isVertical="isVertical" :product="product"></r-product-item>
       </a-col>
       <a-col class="r-hide-lg" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"

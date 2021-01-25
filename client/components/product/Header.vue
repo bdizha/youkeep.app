@@ -1,11 +1,14 @@
 <template>
   <a-row>
-    <a-col class="r-pt-12" :span="24">
+    <a-col :span="24">
       <a-row type="flex" justify="start" align="middle">
         <a-col :span="24">
           <h4 class="r-text-normal r-product-text">
             {{ product.name }}
           </h4>
+          <div v-if="isShowing" class="r-text-normal">
+            {{ product.summary }}
+          </div>
         </a-col>
       </a-row>
     </a-col>

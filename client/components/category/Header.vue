@@ -9,8 +9,8 @@
                  :key="index + 1"
                  :xs="{ span: 12 }"
                  :sm="{ span: 8 }"
-                 :md="{ span: 6 }"
-                 :lg="{ span: 4 }">
+                 :md="{ span: 24 / columns }"
+                 :lg="{ span: 24 / columns }">
             <nuxt-link class="r-slider-item r-text-view-more"
                        :class="'r-slider-item-36'"
                        :to="category.route">
@@ -40,6 +40,7 @@ import {mapGetters} from "vuex";
 export default {
   name: 'r-category-header',
   props: {
+    columns: {type: Number, required: false, default: 6},
     category: {type: Object, required: false, default: {}},
     hasProduct: {type: Boolean, required: false, default: true},
     isShowing: {type: Boolean, required: false, default: false},

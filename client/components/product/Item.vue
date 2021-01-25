@@ -27,7 +27,7 @@
                   </a-col>
                   <a-col :xs="{ span: 24 }"
                          :sm="{ span: 24 }" :lg="{ span: 24 }">
-                    <a-row>
+                    <a-row type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }"
                              :sm="{ span: 24 }" :lg="{ span: 24 }">
                         <nuxt-link :to="product.route">

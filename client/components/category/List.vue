@@ -7,7 +7,9 @@
                           :key="index"
                           :columns="columns"
                           class="r-category-menu-panel" :header="category.name">
-          <r-category-item :isVertical="isVertical" :category="category"></r-category-item>
+          <r-category-item :isVertical="isVertical"
+                           :columns="columns"
+                           :category="category"></r-category-item>
         </a-collapse-panel>
       </a-collapse>
       <r-spinner :is-absolute="true" process="isCategories" v-if="processes.isCategory"></r-spinner>
