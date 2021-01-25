@@ -1,9 +1,7 @@
 <template>
   <a-row type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <div class="r-margin-out-sm">
-        <r-category-actions v-if="hasCategories"></r-category-actions>
-      </div>
+      <r-category-actions v-if="hasCategories"></r-category-actions>
     </a-col>
     <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <div class="r-margin-out-sm">

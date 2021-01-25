@@ -3,13 +3,13 @@
     <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <div class="r-gradient r-ph-24 r-pt-12 r-pb-12-lg r-hide-lg">
-        <r-search></r-search>
+      <div class="r-gradient r-p-12" :class="{'r-hide-lg': !hasCategories}">
+        <r-search class="r-hide-lg r-ph-12" :class="{'r-pb-12': hasCategories}"></r-search>
+        <r-category-arrows v-if="hasCategories"></r-category-arrows>
       </div>
-      <r-category-actions v-if="hasCategories"></r-category-actions>
       <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
       <a-row v-if="hasCategories" type="flex" justify="start" align="middle">
-        <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
           <r-category-slider :category="category"></r-category-slider>
@@ -26,6 +26,7 @@
           </div>
         </a-col>
       </a-row>
+      <r-category-actions v-if="hasCategories"></r-category-actions>
     </a-col>
   </a-row>
 </template>

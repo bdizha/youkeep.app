@@ -29,7 +29,7 @@
             <r-product-info :product="product"></r-product-info>
           </a-card>
           <a-row class="r-mv-24" type="flex" justify="center">
-            <a-col class="r-p-24" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+            <a-col class="r-ph-24" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
               <h3 class="r-heading r-text-black">
                 You may also like
               </h3>

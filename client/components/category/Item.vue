@@ -3,12 +3,14 @@
     <a-col class="r-spin-holder" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-category-header :category="category"
                          :columns="columns"
-                         :is-showing="isShowing" :has-product="hasProduct"
+                         :is-showing="isShowing"
+                         :has-product="hasProduct"
                          :store="store"></r-category-header>
       <a-row v-if="hasData" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <r-category-products
             :isVertical="isVertical"
+            :is-flush="isFlush"
             :columns="columns"
             :category="category"></r-category-products>
         </a-col>
@@ -25,6 +27,7 @@ export default {
   props: {
     columns: {type: Number, required: false, default: 3},
     isVertical: {type: Boolean, required: false, default: true},
+    isFlush: {type: Boolean, required: false, default: false},
     isShowing: {type: Boolean, required: false, default: false},
     category: {type: Object, required: false, default: {}},
     hasProduct: {type: Boolean, required: false, default: false},

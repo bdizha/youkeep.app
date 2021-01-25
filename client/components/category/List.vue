@@ -9,6 +9,7 @@
                           class="r-category-menu-panel" :header="category.name">
           <r-category-item :isVertical="isVertical"
                            :columns="columns"
+                           :is-flush="isFlush"
                            :category="category"></r-category-item>
         </a-collapse-panel>
       </a-collapse>
@@ -25,6 +26,7 @@ export default {
   props: {
     columns: {type: Number, required: false, default: 3},
     isVertical: {type: Boolean, required: false, default: true},
+    isFlush: {type: Boolean, required: false, default: false},
     limit: {type: Number, required: false, default: 6}
   },
   data() {

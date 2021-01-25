@@ -1,11 +1,11 @@
 <template>
-  <a-card class="r-bg-primary-light">
+  <a-card class="r-bg-secondary-light">
     <a-card-meta>
       <template slot="description">
         <a-card>
-          <a-card-meta class="r-text-center">
+          <a-card-meta>
             <template slot="description">
-              <a-row type="flex" justify="start" align="middle">
+              <a-row class="r-text-center" type="flex" justify="start" align="middle">
                 <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                        :lg="{ span: 24 }">
                   <div class="r-subscribe-title">

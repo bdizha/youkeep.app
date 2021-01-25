@@ -1,11 +1,11 @@
 <template>
   <a-layout-header v-show="true" class="r-hide-lg r-layout-bottom">
-    <a-row style="width: 100%;" type="flex" justify="center">
+    <a-row type="flex" justify="center">
       <a-col type="flex" :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :md="{ span: 16 }"
-             :lg="{ span: 12 }">
-        <a-row type="flex" justify="center" align="middle">
-          <a-col class="r-ph-24" :xs="{ span: 6 }" :sm="{ span: 6 }"
+             :md="{ span: 24 }"
+             :lg="{ span: 24 }">
+        <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+          <a-col :xs="{ span: 6 }" :sm="{ span: 6 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
             <div @click="onDrawer('store-menu')" class="r-nav-item r-nav-item__menu">
@@ -15,7 +15,7 @@
                             </span>
             </div>
           </a-col>
-          <a-col @click="onDrawer('store-right')" class="r-ph-24" :xs="{ span: 6 }"
+          <a-col @click="onDrawer('store-right')" :xs="{ span: 6 }"
                  :sm="{ span: 6 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
@@ -26,7 +26,7 @@
                             </span>
             </div>
           </a-col>
-          <a-col @click="onDrawer('store-right')" class="r-ph-24" :xs="{ span: 6 }"
+          <a-col @click="onDrawer('store-right')" :xs="{ span: 6 }"
                  :sm="{ span: 6 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">
@@ -37,7 +37,7 @@
                             </span>
             </div>
           </a-col>
-          <a-col @click="onDrawer('store-account')" class="r-ph-24"
+          <a-col @click="onDrawer('store-account')"
                  :xs="{ span: 6 }" :sm="{ span: 6 }"
                  :md="{ span: 6 }"
                  :lg="{ span: 6 }">

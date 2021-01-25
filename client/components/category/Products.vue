@@ -1,6 +1,6 @@
 <template>
-  <div class="r-product-cards">
-    <a-row v-if="hasData" type="flex" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]">
+  <div class="r-product-cards" :class="{'r-product-flush': isFlush()}">
+    <a-row v-if="hasData" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]" type="flex" justify="start" align="middle">
       <a-col v-for="(product, index) in products" :key="index"
              :xs="{span: isVertical ? 12 : 24}"
              :sm="{span: isVertical ? 12 : 24}" :md="{span: 24 / columns}" :lg="{span: 24 / columns}">
@@ -66,7 +66,11 @@ export default {
   computed: mapGetters({
     processes: "base/processes",
   }),
-  methods: {}
+  methods: {
+    isFlush() {
+      return Math.floor(Math.random() * Math.floor(2));
+    }
+  }
 };
 </script>
 

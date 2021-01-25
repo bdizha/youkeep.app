@@ -22,6 +22,7 @@ class CategoryController extends Controller
         $storeId = null,
         $product = [],
         $category = [],
+        $storeCategory = [],
         $store = [],
         $limit = [],
         $level = [],
@@ -128,7 +129,7 @@ class CategoryController extends Controller
             $response['categories'] = $this->categories;
             $response['category'] = $category;
 
-            Cache::put($key, $response, now()->addMinutes(3600));
+            Cache::put($key, $response, now()->addMinutes(3));
         }
 
         return response()->json($response, 200);
@@ -163,7 +164,7 @@ class CategoryController extends Controller
             $this->category = Category::where('slug', $this->slug)->first();
 
             if (!empty($this->category)) {
-                $storeCategory = StoreCategory::where('category_id', $this->category->id)
+                $this->storeCategory = StoreCategory::where('category_id', $this->category->id)
                     ->where('level', $this->level)
                     ->first();
 
@@ -176,9 +177,9 @@ class CategoryController extends Controller
 
                 $this->category['level'] = $this->level + 1;
 
-                if (!empty($storeCategory)) {
-                    $query->whereHas('stores', function ($query) use ($storeCategory) {
-                        $query->where('parent_id', $storeCategory->id);
+                if (!empty($this->storeCategory)) {
+                    $query->whereHas('stores', function ($query) {
+                        $query->where('parent_id', $this->storeCategory->id);
 
                         if (!empty($this->level)) {
                             $query->where('level', $this->level + 1);
@@ -205,7 +206,7 @@ class CategoryController extends Controller
                 $response['categories'] = $this->categories;
                 $response['category'] = $this->category;
 
-                Cache::put($key, $response, now()->addMinutes(3600));
+                Cache::put($key, $response, now()->addMinutes(15));
             }
         }
 
@@ -257,35 +258,30 @@ class CategoryController extends Controller
      * @param array $categories
      * @return array
      */
-    private
-    function _setCategoryStores(array &$categories)
+    protected function _setCategoryStores(array &$categories)
     {
         foreach ($categories as $key => $category) {
-            $storeCategory = Category::with('stores')
+            $this->storeCategory = Category::with('stores')
                 ->where('id', $category['id'])
                 ->first();
 
-            $categories[$key]['stores'] = $storeCategory->stores;
+            $categories[$key]['stores'] = $this->storeCategory->stores;
         }
     }
 
     /**
      * @return void
      */
-    private
-    function _setBreadcrumbs()
+    protected function _setBreadcrumbs()
     {
-        $storeCategory = StoreCategory::where('category_id', $this->category['id'])
-            ->first();
-
-        $this->breadcrumbs = !empty($storeCategory->breadcrumbs) ? $storeCategory->breadcrumbs : [];
+        $this->breadcrumbs = !empty($this->storeCategory->breadcrumbs) ? $this->storeCategory->breadcrumbs : [];
         $this->category['breadcrumbs'] = $this->breadcrumbs;
     }
 
     /**
      * @param array $categories
      */
-    private function _setCategoryRoute(array $categories): void
+    protected function _setCategoryRoute(array $categories): void
     {
         $this->categories = array_map(function ($category) {
             $category['route'] .= $this->_encodeLevel();

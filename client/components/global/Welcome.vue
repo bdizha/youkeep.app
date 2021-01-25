@@ -12,7 +12,7 @@
         </a-col>
       </a-row>
       <div class="r-grey-shadow">
-        <r-category-list :columns="6" :limit="6"></r-category-list>
+        <r-category-list :is-flush="true" :columns="6" :limit="6"></r-category-list>
       </div>
     </a-col>
   </a-row>
@@ -29,7 +29,7 @@ export default {
       type: 2,
       category_id: null,
       limit: process.env.APP_LIMIT,
-      order_by: 'product_count',
+      order_by: 'randomized_at',
       with: ['photos', 'breadcrumbs']
     };
 

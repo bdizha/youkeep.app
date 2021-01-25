@@ -1,7 +1,7 @@
 <template>
   <a-row type="flex" justify="center">
     <a-col :span="24">
-      <a-row class="r-mb-48" type="flex" justify="center">
+      <a-row class="r-mb-24" type="flex" justify="center">
         <a-col class="r-ph-24-lg" :xs="{ span: 24 }" :sm="{ span: 21 }" :lg="{ span: 21 }">
           <a-row :gutter="[24,24]" type="flex" justify="center"
                  align="middle">
