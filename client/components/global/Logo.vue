@@ -1,9 +1,8 @@
 <template>
-  <nuxt-link class="r-logo" :class="{'r-logo__icon': isIcon}" to="/">
-    <img class="r-hide-sm" :src="'/images/logo.png'"
-         alt="Shopple - It's Shopping Time!"/>
-    <img class="r-hide-lg" :src="'/images/logo.png'"
-         alt="Shopple - It's Shopping Time!"/>
+  <nuxt-link class="r-logo" to="/">
+    <img :class="{'r-hide-sm': !isIcon && false, 'r-hide-lg': isIcon && false}"
+         :src="'/images/' + (isIcon ? 'icon' : 'logo') + '.png'"
+         :alt="title"/>
   </nuxt-link>
 </template>
 <script>
@@ -20,7 +19,8 @@ export default {
   created() {
   },
   computed: mapGetters({
-    isDark: 'base/isDark'
+    isDark: 'base/isDark',
+    title: process.env.APP_NAME
   }),
   methods: {},
 };

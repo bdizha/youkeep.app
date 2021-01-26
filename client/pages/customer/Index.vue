@@ -52,7 +52,7 @@
                       <div class="r-icon r-icon__secondary r-icon-stroke">
                         <svg xmlns="http://www.w3.org/2000/svg" width="80px" height="80px" viewBox="0 0 48 48">
                           <g fill="none" fill-rule="evenodd">
-                            <path fill="#0069cd" fill-rule="nonzero"
+                            <path fill="#1B9BD9" fill-rule="nonzero"
                                   d="M4 42a4 4 0 0 1-4-4h4V10a4 4 0 0 1 4-4h13v36H4z"></path>
                             <path fill="#F50A2B" fill-rule="nonzero"
                                   d="M8 10h13v28H8V10zm20-8h16a4 4 0 0 1 4 4v36a4 4 0 0 1-4 4H28a4 4 0 0 1-4-4V6a4 4 0 0 1 4-4zm-2 6v32h20V8H26z"></path>
@@ -92,7 +92,7 @@
                                 fill="#fff"></path>
                           <path
                             d="M24,0A24,24,0,0,0,.19,27H47.81A24,24,0,0,0,24,0ZM38,21H10V14a4,4,0,0,1,4-4H34a4,4,0,0,1,4,4Z"
-                            fill="#0069cd"></path>
+                            fill="#1B9BD9"></path>
                         </svg>
                       </div>
                     </a-col>
@@ -128,7 +128,7 @@
                                 transform="translate(0 0)" style="fill:#F50A2B"></path>
                               <path
                                 d="M57.672,1.078c-.446-.1-.882-.168-1.318-.248L25.386,43.5a11.981,11.981,0,0,0,4.43,17.788l13.626,6.659L52.1,27.239,65.729,33.9a11.97,11.97,0,0,1,4.43,17.788L39.21,94.368A47.55,47.55,0,1,0,57.672,1.078Z"
-                                transform="translate(0 0)" style="fill:#0069cd"></path>
+                                transform="translate(0 0)" style="fill:#1B9BD9"></path>
                               <path
                                 d="M65.441,33.75,52.123,27.239,39.062,88.65a2.527,2.527,0,0,0,1.932,3.006q.069.015.139.026h.03l29.016-40A12.011,12.011,0,0,0,72.1,41.727,12.328,12.328,0,0,0,65.441,33.75Z"
                                 transform="translate(0 0)" style="fill:#fff"></path>
@@ -166,12 +166,12 @@
                               <clipPath id="ShieldWithCheckmarkIconClipPath">
                                 <path
                                   d="M13.5 1.273S19.8 5.866 27 5.866v10.105c0 14.699-11.7 20.21-13.5 20.21-1.8 0-13.5-5.511-13.5-20.21V5.866c7.2 0 13.5-4.593 13.5-4.593zm0 12a3.467 3.467 0 00-3.462 3.472v1.389h-.346a.693.693 0 00-.692.694v4.167c0 .767.62 1.389 1.385 1.389h6.23c.765 0 1.385-.622 1.385-1.39v-4.166a.693.693 0 00-.692-.694h-.346v-1.39a3.467 3.467 0 00-3.462-3.471zm0 1.389a2.08 2.08 0 012.077 2.083v1.389h-4.154v-1.39c0-1.15.93-2.082 2.077-2.082z"
-                                  class="Icon__blendBackground" style="fill: #0069cd;"></path>
+                                  class="Icon__blendBackground" style="fill: #1B9BD9;"></path>
                               </clipPath>
                             </defs>
                             <path
                               d="M13.5 1.273S19.8 5.866 27 5.866v10.105c0 14.699-11.7 20.21-13.5 20.21-1.8 0-13.5-5.511-13.5-20.21V5.866c7.2 0 13.5-4.593 13.5-4.593zm0 12a3.467 3.467 0 00-3.462 3.472v1.389h-.346a.693.693 0 00-.692.694v4.167c0 .767.62 1.389 1.385 1.389h6.23c.765 0 1.385-.622 1.385-1.39v-4.166a.693.693 0 00-.692-.694h-.346v-1.39a3.467 3.467 0 00-3.462-3.471zm0 1.389a2.08 2.08 0 012.077 2.083v1.389h-4.154v-1.39c0-1.15.93-2.082 2.077-2.082z"
-                              class="Icon__blendBackground" style="fill: #0069cd;"></path>
+                              class="Icon__blendBackground" style="fill: #1B9BD9;"></path>
                             <path
                               d="M26 0a9 9 0 110 18 9 9 0 010-18zm3.94 4.73L24 10.78 22.43 9a.83.83 0 00-1.3 1L23 13.2a1 1 0 001.7 0c.3-.41 6-7.57 6-7.57.75-.8-.16-1.51-.76-.9z"
                               class="Icon__blendForeground" style="fill: #F50A2B;"></path>

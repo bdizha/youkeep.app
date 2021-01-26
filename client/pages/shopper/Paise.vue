@@ -94,12 +94,12 @@
                                 <clipPath id="MarketIconClipPath">
                                   <path
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#0069cd" class="Icon__blendBackground"></path>
+                                    fill="#1B9BD9" class="Icon__blendBackground"></path>
                                 </clipPath>
                               </defs>
                               <path
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#0069cd" class="Icon__blendBackground"></path>
+                                fill="#1B9BD9" class="Icon__blendBackground"></path>
                               <path
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
                                 fill="#F50A2B" class="Icon__blendForeground"></path>
@@ -146,12 +146,12 @@
                                 <clipPath id="MarketIconClipPath">
                                   <path
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#0069cd" class="Icon__blendBackground"></path>
+                                    fill="#1B9BD9" class="Icon__blendBackground"></path>
                                 </clipPath>
                               </defs>
                               <path
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#0069cd" class="Icon__blendBackground"></path>
+                                fill="#1B9BD9" class="Icon__blendBackground"></path>
                               <path
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
                                 fill="#F50A2B" class="Icon__blendForeground"></path>
@@ -198,12 +198,12 @@
                                 <clipPath id="MarketIconClipPath">
                                   <path
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#0069cd" class="Icon__blendBackground"></path>
+                                    fill="#1B9BD9" class="Icon__blendBackground"></path>
                                 </clipPath>
                               </defs>
                               <path
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#0069cd" class="Icon__blendBackground"></path>
+                                fill="#1B9BD9" class="Icon__blendBackground"></path>
                               <path
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
                                 fill="#F50A2B" class="Icon__blendForeground"></path>
@@ -251,12 +251,12 @@
                                 <clipPath id="MarketIconClipPath">
                                   <path
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#0069cd" class="Icon__blendBackground"></path>
+                                    fill="#1B9BD9" class="Icon__blendBackground"></path>
                                 </clipPath>
                               </defs>
                               <path
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#0069cd" class="Icon__blendBackground"></path>
+                                fill="#1B9BD9" class="Icon__blendBackground"></path>
                               <path
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
                                 fill="#F50A2B" class="Icon__blendForeground"></path>
@@ -304,12 +304,12 @@
                                 <clipPath id="MarketIconClipPath">
                                   <path
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#0069cd" class="Icon__blendBackground"></path>
+                                    fill="#1B9BD9" class="Icon__blendBackground"></path>
                                 </clipPath>
                               </defs>
                               <path
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#0069cd" class="Icon__blendBackground"></path>
+                                fill="#1B9BD9" class="Icon__blendBackground"></path>
                               <path
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
                                 fill="#F50A2B" class="Icon__blendForeground"></path>

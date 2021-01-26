@@ -46,9 +46,7 @@ class CategoryController extends Controller
         $this->level = $this->_decodeLevel($level);
 
         $this->orderBy = $request->get('order_by', 'randomized_at');
-
         $this->with = $request->get('with', []);
-
         $this->categoryType = $request->get('type', 2);
         $slug = $request->get('category', null);
         $this->categoryId = $request->get('category_id', null);
@@ -80,7 +78,7 @@ class CategoryController extends Controller
                 }
 
                 if (!is_null($this->categoryId)) {
-                    $query->where('parent_id', $this->categoryId);
+                    $query->where('category_id', $this->categoryId);
                 }
 
                 if (!is_null($this->storeId)) {
@@ -88,14 +86,12 @@ class CategoryController extends Controller
                 }
 
                 if ($this->categoryType == Category::TYPE_CATALOG) {
-//                    $query->where('store_categories.has_products', true);
+                    $query->where('store_categories.has_products', true);
                 }
 
                 if (!is_null($this->level)) {
                     $query->where('store_categories.level', $this->level);
                 }
-
-                $query->orderBy($this->orderBy, 'DESC');
             });
 
             if (!empty($this->with)) {
@@ -106,7 +102,9 @@ class CategoryController extends Controller
                 $query->limit($this->limit);
             }
 
-            $categories = $query->get()
+            $categories = $query
+                ->orderBy($this->orderBy, 'DESC')
+                ->get()
                 ->toArray();
 
             $categories = $this->_pruneRelations($categories);
@@ -129,7 +127,7 @@ class CategoryController extends Controller
             $response['categories'] = $this->categories;
             $response['category'] = $category;
 
-            Cache::put($key, $response, now()->addMinutes(3));
+            Cache::put($key, $response, now()->addMinutes(15));
         }
 
         return response()->json($response, 200);
@@ -152,7 +150,7 @@ class CategoryController extends Controller
 
         $this->storeId = $request->get('store_id', null);
         $this->limit = $request->get('limit', 24);
-        $this->orderBy = $request->get('order_by', 'store_categories.created_at');
+        $this->orderBy = $request->get('order_by', 'randomized_at');
         $this->with = $request->get('with', []);
 
         $key = $this->_setCacheKey($request);
@@ -175,7 +173,7 @@ class CategoryController extends Controller
                     $query->limit($this->limit);
                 }
 
-                $this->category['level'] = $this->level + 1;
+                $this->category['level'] = $this->level;
 
                 if (!empty($this->storeCategory)) {
                     $query->whereHas('stores', function ($query) {
@@ -185,11 +183,13 @@ class CategoryController extends Controller
                             $query->where('level', $this->level + 1);
                         }
 
-                        $query->orderBy($this->orderBy, 'DESC');
-                        $query->orderBy('product_count', 'DESC');
+                        if ($this->categoryType == Category::TYPE_CATALOG) {
+                            $query->where('store_categories.has_products', true);
+                        }
                     });
 
                     $categories = $query
+                        ->orderBy($this->orderBy, 'DESC')
                         ->get()
                         ->toArray();
 
@@ -206,7 +206,7 @@ class CategoryController extends Controller
                 $response['categories'] = $this->categories;
                 $response['category'] = $this->category;
 
-                Cache::put($key, $response, now()->addMinutes(15));
+                Cache::put($key, $response, now()->addMinutes(45));
             }
         }
 

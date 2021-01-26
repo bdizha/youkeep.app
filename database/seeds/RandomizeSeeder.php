@@ -13,14 +13,14 @@ class RandomizeSeeder extends Seeder
      */
     public function run()
     {
-        $storeCategories = \App\StoreCategory::inRandomOrder()
+        $categories = Category::inRandomOrder()
             ->with('category')
             ->get();
 
-        foreach ($storeCategories as $key => $storeCategory) {
-            $storeCategory->randomized_at = \Carbon\Carbon::now()->subMinutes(rand(1, 10000000));
-            echo ">>>> {$storeCategory->category->name}\n";
-            $storeCategory->save();
+        foreach ($categories as $key => $category) {
+            $category->randomized_at = \Carbon\Carbon::now()->subMinutes(rand(1, 10000000));
+            echo ">>>> {$category->name} randomized at{$category->randomized_at}\n";
+            $category->save();
         }
     }
 }

@@ -1,54 +1,48 @@
 <template>
-  <a-layout-header v-show="true" class="r-hide-lg r-layout-bottom">
-    <a-row type="flex" justify="center">
-      <a-col type="flex" :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :md="{ span: 24 }"
-             :lg="{ span: 24 }">
-        <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-          <a-col :xs="{ span: 6 }" :sm="{ span: 6 }"
-                 :md="{ span: 6 }"
-                 :lg="{ span: 6 }">
-            <div @click="onDrawer('store-menu')" class="r-nav-item r-nav-item__menu">
-              <a-icon style="font-size: 18px;" type="compass"/>
-              <span class="r-icon-text">
+  <a-layout-header class="r-hide-lg r-layout-bottom">
+    <a-row type="flex" justify="space-around">
+      <a-col :xs="{ span: 6 }" :sm="{ span: 6 }"
+             :md="{ span: 6 }"
+             :lg="{ span: 6 }">
+        <div @click="onDrawer('store-menu')" class="r-nav-item r-nav-item__menu">
+          <a-icon style="font-size: 18px;" type="compass"/>
+          <span class="r-icon-text">
                                 Explore
                             </span>
-            </div>
-          </a-col>
-          <a-col @click="onDrawer('store-right')" :xs="{ span: 6 }"
-                 :sm="{ span: 6 }"
-                 :md="{ span: 6 }"
-                 :lg="{ span: 6 }">
-            <div class="r-nav-item r-nav-item__menu">
-              <a-icon style="font-size: 18px;" type="shop"/>
-              <span class="r-icon-text">
+        </div>
+      </a-col>
+      <a-col :xs="{ span: 6 }"
+             :sm="{ span: 6 }"
+             :md="{ span: 6 }"
+             :lg="{ span: 6 }">
+        <div @click="onDrawer('store-right')" class="r-nav-item r-nav-item__menu">
+          <a-icon style="font-size: 18px;" type="shop"/>
+          <span class="r-icon-text">
                                 Stores
                             </span>
-            </div>
-          </a-col>
-          <a-col @click="onDrawer('store-right')" :xs="{ span: 6 }"
-                 :sm="{ span: 6 }"
-                 :md="{ span: 6 }"
-                 :lg="{ span: 6 }">
-            <div class="r-nav-item r-nav-item__menu">
-              <a-icon style="font-size: 18px;" type="gift"/>
-              <span class="r-icon-text">
+        </div>
+      </a-col>
+      <a-col :xs="{ span: 6 }"
+             :sm="{ span: 6 }"
+             :md="{ span: 6 }"
+             :lg="{ span: 6 }">
+        <div @click="onDrawer('store-right')" class="r-nav-item r-nav-item__menu">
+          <a-icon style="font-size: 18px;" type="gift"/>
+          <span class="r-icon-text">
                                 List
                             </span>
-            </div>
-          </a-col>
-          <a-col @click="onDrawer('store-account')"
-                 :xs="{ span: 6 }" :sm="{ span: 6 }"
-                 :md="{ span: 6 }"
-                 :lg="{ span: 6 }">
-            <div class="r-nav-item r-nav-item__menu">
-              <a-icon style="font-size: 18px;" type="bars"/>
-              <span class="r-icon-text">
+        </div>
+      </a-col>
+      <a-col :xs="{ span: 6 }" :sm="{ span: 6 }"
+             :md="{ span: 6 }"
+             :lg="{ span: 6 }">
+        <div @click="onDrawer('store-account')"
+             class="r-nav-item r-nav-item__menu">
+          <a-icon style="font-size: 18px;" type="bars"/>
+          <span class="r-icon-text">
                                 More
                             </span>
-            </div>
-          </a-col>
-        </a-row>
+        </div>
       </a-col>
     </a-row>
   </a-layout-header>
