@@ -45,7 +45,7 @@ class CategoryController extends Controller
         $level = $request->get('level', 1);
         $this->level = $this->_decodeLevel($level);
 
-        $this->orderBy = $request->get('order_by', 'product_count');
+        $this->orderBy = $request->get('order_by', 'randomized_at');
 
         $this->with = $request->get('with', []);
 

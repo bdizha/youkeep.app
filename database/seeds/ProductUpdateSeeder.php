@@ -26,36 +26,43 @@ class ProductUpdateSeeder extends Seeder
                 ->get();
 
             if (!empty($photos[0])) {
-                echo "Updating Product Photo >>>> {$product->name} \n";
-
-                if (empty($product->photo)) {
-                    $product->photo = $photos[0]['image'];
-                }
-                if (empty($product->thumbnail)) {
-                    $product->thumbnail = $photos[0]['thumb'];
-                }
-
                 if (!file_exists(public_path('storage/product/' . $photos[0]['image'])) ||
                     !file_exists(public_path('storage/product/' . $photos[0]['thumb']))) {
-                    \App\ProductPhoto::where('product_id', $photos[0]['id'])
+                    \App\ProductPhoto::where('id', $photos[0]['id'])
                         ->delete();
 
                     echo "Deleted Product Photo >>>> " . public_path('storage/product/' . $photos[0]['thumb']) . " \n";
-                }
-                else{
+                } else {
                     echo "Skipped Product Photo >>>> {$photos[0]['image']} \n";
+
+                    if (empty($product->photo) || !file_exists(public_path('storage/product/' . $product->photo))) {
+                        echo "Updating Product Photo >>>> {$product->name} \n";
+                        $product->photo = $photos[0]['image'];
+                    }
+                    if (empty($product->thumbnail) || !file_exists(public_path('storage/product/' . $product->thumbnail))) {
+                        echo "Updating Product Thumb >>>> {$product->name} \n";
+                        $product->thumbnail = $photos[0]['thumb'];
+                    }
+
+                    $product->save();
                 }
             } else {
-                CategoryProduct::where('product_id', $product->id)
-                    ->delete();
+                if (empty($product->photo) || !file_exists(public_path('storage/product/' . $product->photo)) ||
+                    empty($product->thumbnail) || !file_exists(public_path('storage/product/' . $product->thumbnail))) {
 
-                StoreProduct::where('product_id', $product->id)
-                    ->delete();
+                    CategoryProduct::where('product_id', $product->id)
+                        ->delete();
 
-                ProductVariant::where('product_id', $product->id)
-                    ->delete();
+                    StoreProduct::where('product_id', $product->id)
+                        ->delete();
 
-                $product->delete();
+                    ProductVariant::where('product_id', $product->id)
+                        ->delete();
+
+                    echo "Deleted Product >>>> " . $product->name . " \n";
+
+                    $product->delete();
+                }
             }
 
             $this->setStore($product);

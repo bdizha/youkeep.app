@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 
 class CategoryUpdateSeeder extends DatabaseSeeder
 {
-    protected $storesIds = [12, 7, 8, 9]; //, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
+    protected $storesIds = [12, 7, 8, 9, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
 
     /**
      * Run the database seeds.
