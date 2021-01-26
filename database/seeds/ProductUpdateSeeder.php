@@ -71,7 +71,7 @@ class ProductUpdateSeeder extends Seeder
                     Product::where('id', $product->id)
                         ->delete();
 
-                    echo "Deleted Product >>>> " . $product->name . "\n";
+                    echo "Deleted Product >>>> " . $product->name ." product id > " . $product->id . "\n";
                 }
             }
 
