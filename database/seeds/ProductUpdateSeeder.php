@@ -16,7 +16,7 @@ class ProductUpdateSeeder extends Seeder
      */
     public function run()
     {
-        $products = Product::with(['store', 'photos'])
+        $products = Product::with('photos')
             ->get();
 
         foreach ($products as $product) {
@@ -68,7 +68,7 @@ class ProductUpdateSeeder extends Seeder
                     ProductVariant::where('product_id', $product->id)
                         ->delete();
 
-                    echo "Deleted Product >>>> " . $product->name . " store {$product->store->slug} \n";
+                    echo "Deleted Product >>>> " . $product->name . "\n";
 
                     $product->delete();
                 }
