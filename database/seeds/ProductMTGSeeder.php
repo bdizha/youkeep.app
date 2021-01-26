@@ -12,7 +12,7 @@ class ProductMTGSeeder extends DatabaseSeeder
     protected $domain = "https://www.archivestore.co.za";
     protected $storeId = null;
 
-    protected $storeIds = [12, 69, 68, 67, 66, 65, 12, 61, 34, 50, 64, 63, 62, 29];
+    protected $storeIds = [69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
     protected $categories = [];
     protected $level = 0;
 
@@ -38,7 +38,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             $this->storeId = $store->id;
             $this->domain = $store->url;
 
-            echo ">>>>>> Fetching store > categories: " . $store->name . "\n";
+            echo ">>>>>> Fetching store > categories: " . $store->id . "\n";
             $this->getCategories($store->url);
 
             $this->storeCategories = \App\StoreCategory::where('store_id', $this->storeId)
