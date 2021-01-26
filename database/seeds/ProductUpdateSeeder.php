@@ -68,9 +68,10 @@ class ProductUpdateSeeder extends Seeder
                     ProductVariant::where('product_id', $product->id)
                         ->delete();
 
-                    echo "Deleted Product >>>> " . $product->name . "\n";
+                    Product::where('id', $product->id)
+                        ->delete();
 
-                    $product->delete();
+                    echo "Deleted Product >>>> " . $product->name . "\n";
                 }
             }
 
