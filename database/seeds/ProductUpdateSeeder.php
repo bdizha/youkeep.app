@@ -16,7 +16,7 @@ class ProductUpdateSeeder extends Seeder
      */
     public function run()
     {
-        $products = Product::with('photos')
+        $products = Product::with(['store', 'photos'])
             ->get();
 
         foreach ($products as $product) {
@@ -24,6 +24,13 @@ class ProductUpdateSeeder extends Seeder
 
             $photos = ProductPhoto::where('product_id', $product->id)
                 ->get();
+
+            if (file_exists(public_path('storage/product/' . $product->photo))) {
+                if (empty($product->thumbnail) || !file_exists(public_path('storage/product/' . $product->thumbnail))) {
+                    $product->thumbnail = $product->photo;
+                    $product->save();
+                }
+            }
 
             if (!empty($photos[0])) {
                 foreach ($photos as $photo) {
@@ -61,7 +68,7 @@ class ProductUpdateSeeder extends Seeder
                     ProductVariant::where('product_id', $product->id)
                         ->delete();
 
-                    echo "Deleted Product >>>> " . $product->name . " \n";
+                    echo "Deleted Product >>>> " . $product->name . " store {$product->store->slug} \n";
 
                     $product->delete();
                 }
