@@ -27,11 +27,11 @@ class ProductMTGSeeder extends DatabaseSeeder
 //        die('done');
 
         $storeIds = [];
-        foreach ($this->storeIds as $key => $value) {
-            $storeIds[] = $this->storeIds[$key];
-        }
+        shuffle($this->storeIds);
 
-        $this->stores = Store::whereIn('id', $this->storeIds)
+        $storeIds[] = array_shift($this->storeIds);
+
+        $this->stores = Store::whereIn('id', $storeIds)
             ->get();
 
         foreach ($this->stores as $store) {
