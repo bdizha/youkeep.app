@@ -246,4 +246,22 @@ class DatabaseSeeder extends Seeder
             $this->setParentStoreCategory($storeCategory);
         }
     }
+
+    /**
+     * @param string $productPhoto
+     * @param string $productThumb
+     * @param $product
+     * @return array
+     */
+    protected function _setProductPhoto(string $productPhoto, string $productThumb, $product): array
+    {
+        $values = [
+            'image' => $productPhoto,
+            'thumb' => $productThumb,
+            'product_id' => $product->id,
+        ];
+
+        \App\ProductPhoto::updateOrCreate($values, $values);
+        return $values;
+    }
 }

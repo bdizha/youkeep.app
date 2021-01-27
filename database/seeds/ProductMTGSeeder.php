@@ -256,13 +256,7 @@ class ProductMTGSeeder extends DatabaseSeeder
                 Product::updateOrCreate(['id' => $product->id], $values);
             }
 
-            $values = [
-                'image' => $productPhoto,
-                'thumb' => $productThumb,
-                'product_id' => $product->id,
-            ];
-
-            \App\ProductPhoto::updateOrCreate($values, $values);
+            $this->_setProductPhoto($productPhoto, $productThumb, $product);
         }
     }
 

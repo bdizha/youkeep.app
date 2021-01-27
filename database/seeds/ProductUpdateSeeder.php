@@ -32,6 +32,13 @@ class ProductUpdateSeeder extends Seeder
                 }
             }
 
+            if (file_exists(public_path('storage/product/' . $product->thumbnail))) {
+                if (empty($product->photo) || !file_exists(public_path('storage/product/' . $product->photo))) {
+                    $product->photo = $product->thumbnail;
+                    $product->save();
+                }
+            }
+
             if (!empty($photos[0])) {
                 foreach ($photos as $photo) {
                     if (!file_exists(public_path('storage/product/' . $photo['image'])) ||
@@ -71,7 +78,10 @@ class ProductUpdateSeeder extends Seeder
                     Product::where('id', $product->id)
                         ->delete();
 
-                    echo "Deleted Product >>>> " . $product->name ." product id > " . $product->id . "\n";
+                    echo "Deleted Product >>>> " . $product->name . " product id > " . $product->id . "\n";
+                } else {
+                    $this->_setProductPhoto($product->photo, $product->thumbnail, $product);
+                    echo "Added Product Photos >>>> {$product->name} \n";
                 }
             }
 
