@@ -47,6 +47,7 @@ class ProductMrSeeder extends DatabaseSeeder
             $this->storeCategories = StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
                 ->orderBy('store_categories.updated_at', "ASC")
+                ->limit(24)
                 ->get();
 
             echo ">>>>>> Setting category to parent relations categories: " . $store->name . "\n";

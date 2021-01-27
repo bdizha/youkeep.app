@@ -44,6 +44,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             $this->storeCategories = \App\StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
                 ->orderBy('store_categories.updated_at', "ASC")
+                ->limit(24)
                 ->get();
 
             echo ">>>>>> Decoding store > categories: " . $store->name . "\n";

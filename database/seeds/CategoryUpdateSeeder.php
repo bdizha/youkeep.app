@@ -25,6 +25,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
 
             $this->storeCategories = \App\StoreCategory::where('store_id', $storesId)
                 ->with('category')
+                ->orderBy('updated_at', 'ASC')
                 ->get();
 
             foreach ($this->storeCategories as $this->storeCategory) {
