@@ -8,12 +8,12 @@
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
           <r-category-slider></r-category-slider>
-          <r-steps></r-steps>
         </a-col>
       </a-row>
       <div class="r-grey-shadow">
-        <r-category-list :is-flush="true" :columns="6" :limit="6"></r-category-list>
+        <r-category-list :is-flush="true" :columns="6" :limit="12"></r-category-list>
       </div>
+      <r-steps></r-steps>
     </a-col>
   </a-row>
 </template>

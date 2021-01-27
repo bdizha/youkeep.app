@@ -27,7 +27,7 @@ export default {
     columns: {type: Number, required: false, default: 3},
     isVertical: {type: Boolean, required: false, default: true},
     isFlush: {type: Boolean, required: false, default: false},
-    limit: {type: Number, required: false, default: 6}
+    limit: {type: Number, required: false, default: 12}
   },
   data() {
     return {

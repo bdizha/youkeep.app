@@ -38,7 +38,7 @@
             <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
               <div class="r-grey-shadow r-ph-24">
                 <div class="r-margin-out">
-                  <r-category-list :is-vertical="false" :columns="2"></r-category-list>
+                  <r-category-list :columns="2" :product="product"></r-category-list>
                 </div>
               </div>
             </a-col>
@@ -47,7 +47,7 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }" :lg="{ span: 6 }">
           <div class="r-grey-shadow r-ph-24">
             <div class="r-margin-out">
-              <r-category-list :columns="1"></r-category-list>
+              <r-category-list :columns="1" :product="product"></r-category-list>
             </div>
           </div>
         </a-col>
