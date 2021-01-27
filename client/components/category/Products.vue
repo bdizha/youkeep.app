@@ -38,7 +38,7 @@ export default {
 
     let params = {
       category_id: this.category.id,
-      limit: 6,
+      limit: 12,
       filters: this.filters
     };
 
