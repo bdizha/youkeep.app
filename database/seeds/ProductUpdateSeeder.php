@@ -7,7 +7,7 @@ use \App\Product;
 use \App\StoreProduct;
 use \App\ProductVariant;
 
-class ProductUpdateSeeder extends Seeder
+class ProductUpdateSeeder extends DatabaseSeeder
 {
     /**
      * Run the database seeds.
