@@ -3,7 +3,7 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
+      <r-product-breadcrumbs :product="product"></r-product-breadcrumbs>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
@@ -38,7 +38,7 @@
             <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
               <div class="r-grey-shadow r-ph-24">
                 <div class="r-margin-out">
-                  <r-category-list :columns="2" :product="product"></r-category-list>
+                  <r-product-recommended :product="product"></r-product-recommended>
                 </div>
               </div>
             </a-col>
@@ -47,7 +47,7 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }" :lg="{ span: 6 }">
           <div class="r-grey-shadow r-ph-24">
             <div class="r-margin-out">
-              <r-category-list :columns="1" :product="product"></r-category-list>
+              <r-product-related :product="product"></r-product-related>
             </div>
           </div>
         </a-col>
@@ -57,11 +57,12 @@
 </template>
 <script>
 import {mapGetters} from "vuex";
+import RProductRecommended from "@/client/components/product/Recommended";
 
 export default {
   layout: 'product',
   name: 'r-product-show',
-  components: {},
+  components: {RProductRecommended},
   props: {},
   data() {
     return {}
