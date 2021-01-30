@@ -129,7 +129,7 @@ const actions = {
           type: 2,
           has_store: true,
           category_id: category.id,
-          level: 1,
+          level: category.level,
           limit: process.env.APP_LIMIT,
           order_by: 'product_count',
           with: ['photos', 'breadcrumbs']
