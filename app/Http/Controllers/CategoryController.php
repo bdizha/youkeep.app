@@ -183,7 +183,7 @@ class CategoryController extends Controller
     {
         $this->categories = array_map(function ($category) {
             $category['route'] .= $this->_encodeLevel();
-            $category['level'] = $this->level;
+            $category['level'] = $this->level + 1;
             return $category;
         }, $this->categories);
     }
