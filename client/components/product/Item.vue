@@ -12,8 +12,10 @@
         <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
           <a-col v-if="!isVertical" :xs="{ span: isVertical ? 24 : 12 }"
                  :sm="{ span:  isVertical ? 24 : 12 }" :lg="{ span:  isVertical ? 24 : 12 }">
-            <r-product-photo :product="product">
-            </r-product-photo>
+            <nuxt-link :to="product.route">
+              <r-product-photo :product="product">
+              </r-product-photo>
+            </nuxt-link>
           </a-col>
           <a-col :xs="{ span: isVertical ? 24 : 12 }"
                  :sm="{ span:  isVertical ? 24 : 12 }" :lg="{ span:  isVertical ? 24 : 12 }">
@@ -57,16 +59,13 @@ export default {
     product: {type: Object, required: false}
   },
   data() {
-    return {
-      hasData: false
-    };
+    return {};
   },
   created() {
-    let $this = this;
-    this.payload();
+    this.onProduct();
   },
   methods: {
-    payload() {
+    onProduct() {
     },
   },
 };

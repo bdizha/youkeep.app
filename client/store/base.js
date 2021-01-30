@@ -89,7 +89,7 @@ const getters = {
   position: state => state.position,
   categories: state => state.categories,
   storeCategories: state => state.storeCategories,
-  hasCategories: state => state.categories.length > 0,
+  hasCategories: state => state.hasCategories,
   drawer: state => state.drawer,
   hasDrawer: state => state.hasDrawer,
   hasOverlay: state => state.hasOverlay,
@@ -122,9 +122,6 @@ const mutations = {
   setNotice(state, notice) {
     state.notice = notice;
     state.hasNotice = notice !== null;
-
-    // console.log('response: state.hasNotice data: ', state.hasNotice);
-    // console.log('response: state.notice data: ', state.notice);
   },
   setHasNotice(state, hasNotice) {
     state.hasNotice = hasNotice;
@@ -141,6 +138,7 @@ const mutations = {
   },
   setCategories(state, categories) {
     state.categories = categories;
+    state.hasCategories = categories.length > 0;
   },
   setPositions(state, positions) {
     state.positions = positions;
@@ -260,18 +258,28 @@ const actions = {
       console.error('on error: ', e);
     }
   },
-  async onCategories({dispatch, commit}, payload) {
+  async onCategories({dispatch, commit, state}, payload) {
+
     try {
-      commit('setProcess', {key: 'isCategories', value: true});
-      const {data} = await axios.post('/categories', payload);
-      commit('setCategories', data.categories);
+      dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
+      dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
-      // console.log('setCategories data >>>>> ', data);
+      commit('setCategories', []);
 
-      commit('setProcess', {key: 'isCategories', value: false});
+      await axios.post('/categories', payload).then(({data}) => {
+        let categories = data.categories;
+        commit('setCategories', categories);
 
+        setTimeout(() => {
+          dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
+        }, 300);
+
+        dispatch('base/onProcess', {key: 'isCategory', value: false}, {root: true});
+        dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
+      });
     } catch (e) {
-      console.error('on error: ', e);
+      console.error('onCategories errors');
+      console.log(e);
     }
   },
   async onPosition({dispatch, commit}, payload) {

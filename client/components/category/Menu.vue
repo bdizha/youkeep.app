@@ -45,7 +45,7 @@ export default {
     store: 'shop/store',
     hasStore: 'shop/hasStore',
     filters: 'shop/filters',
-    hasCategories: 'shop/hasCategories',
+    hasCategories: 'base/hasCategories',
   }),
   created() {
   },

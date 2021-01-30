@@ -75,7 +75,7 @@ export default {
     isRaised: 'base/isRaised',
     search: 'base/search',
     isSearching: 'base/isSearching',
-    hasCategories: 'shop/hasCategories',
+    hasCategories: 'base/hasCategories',
     isLoggedIn: 'auth/isLoggedIn',
   }),
   created() {
@@ -116,7 +116,7 @@ export default {
     async onStores() {
       let payload = {
         category_id: null,
-        limit: 24
+        limit: process.env.APP_LIMIT
       };
 
       await this.$store.dispatch('base/onStores', payload);

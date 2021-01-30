@@ -35,11 +35,12 @@ export default {
 
       let payload = {
         store: params.slug,
+        has_store: true,
         level: 1,
         limit: process.env.APP_LIMIT,
         with: ['breadcrumbs', 'photos', 'products', 'categories.products']
       };
-      await store.dispatch('shop/onCategories', payload);
+      await store.dispatch('base/onCategories', payload);
 
     } catch (e) {
       console.error('onStore errors');
@@ -55,7 +56,7 @@ export default {
   computed: mapGetters({
     store: 'shop/store',
     processes: 'base/processes',
-    hasCategories: 'shop/hasCategories'
+    hasCategories: 'base/hasCategories'
   }),
   created() {
     this.payload();

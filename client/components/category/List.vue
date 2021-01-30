@@ -1,12 +1,12 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
     <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-collapse default-active-key="0" expandIconPosition="right">
+      <a-collapse v-if="hasCategories" default-active-key="0" expandIconPosition="right">
         <a-collapse-panel v-if="index < limit"
                           v-for="(category, index) in categories"
                           :key="index"
                           :columns="columns"
-                          class="r-category-menu-panel" :header="category.name">
+                          class="r-category-menu-panel" :header="category.name + '>>>' + category.id">
           <r-category-item :isVertical="isVertical"
                            :columns="columns"
                            :is-flush="isFlush"
@@ -35,8 +35,8 @@ export default {
     }
   },
   computed: mapGetters({
-    categories: "shop/categories",
-    hasCategories: "shop/hasCategories",
+    categories: "base/categories",
+    hasCategories: "base/hasCategories",
     processes: "base/processes",
   }),
   created() {

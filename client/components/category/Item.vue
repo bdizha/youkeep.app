@@ -6,7 +6,7 @@
                          :is-showing="isShowing"
                          :has-product="hasProduct"
                          :store="store"></r-category-header>
-      <a-row v-if="hasData" type="flex" justify="start" align="middle">
+      <a-row type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <r-category-products
             :isVertical="isVertical"
@@ -33,9 +33,7 @@ export default {
     hasProduct: {type: Boolean, required: false, default: false},
   },
   data() {
-    return {
-      hasData: false
-    }
+    return {}
   },
   computed: mapGetters({
     store: 'shop/store',
@@ -46,7 +44,6 @@ export default {
   },
   methods: {
     payload() {
-      this.hasData = true;
     }
   }
 };

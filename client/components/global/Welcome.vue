@@ -7,11 +7,11 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
-          <r-category-slider></r-category-slider>
+          <r-category-slider v-if="hasCategories"></r-category-slider>
         </a-col>
       </a-row>
       <div class="r-grey-shadow">
-        <r-category-list :is-flush="true" :columns="6" :limit="12"></r-category-list>
+        <r-category-list v-if="hasCategories" :is-flush="true" :columns="6" :limit="12"></r-category-list>
       </div>
       <r-steps></r-steps>
     </a-col>
@@ -25,32 +25,34 @@ export default {
   components: {},
   props: {},
   async fetch() {
-    let payload = {
+    this.payload = {
       type: 2,
+      has_store: true,
       category_id: null,
       limit: process.env.APP_LIMIT,
       order_by: 'randomized_at',
       with: ['photos', 'breadcrumbs']
     };
 
-    await this.$store.dispatch('shop/onCategories', payload);
+    await this.onCategories();
   },
   data() {
     return {
       title: "It's shopping time!",
-      hasData: false
+      payload: {}
     }
   },
   computed: mapGetters({
-    processes: 'base/processes'
+    processes: 'base/processes',
+    hasCategories: 'base/hasCategories'
   }),
   created() {
   },
   mounted() {
-    this.hasData = true;
   },
   methods: {
-    async payload() {
+    async onCategories() {
+      await this.$store.dispatch('base/onCategories', this.payload);
     }
   }
 };

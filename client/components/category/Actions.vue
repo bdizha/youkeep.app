@@ -14,15 +14,12 @@ import {mapGetters} from "vuex";
 export default {
   name: 'r-category-actions',
   props: {
-    hasPad: {type: String, required: false, default: true},
+    hasPad: {type: Boolean, required: false, default: true},
   },
   data() {
     return {};
   },
   computed: mapGetters({
-    store: "shop/store",
-    categories: "shop/categories",
-    hasCategories: "shop/hasCategories",
   }),
   created() {
     this.payload();

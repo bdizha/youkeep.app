@@ -2,35 +2,40 @@
   <a-row class="r-mb-24" :gutter="[24, 24]" type="flex" justify="start" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <div class="r-category-header">
-        <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]" type="flex" justify="start" align="middle">
-          <a-col v-for="(category, index) in categories"
-                 v-if="index < 12"
-                 :key="index + 1"
-                 :xs="{ span: 12 }"
-                 :sm="{ span: 8 }"
-                 :md="{ span: 24 / columns }"
-                 :lg="{ span: 24 / columns }">
-            <nuxt-link class="r-slider-item r-text-view-more"
-                       :class="'r-slider-item-36'"
-                       :to="category.route">
-              <r-avatar shape="circle"
-                        :size="36"
-                        :src="category.photo"
-                        :style="'background-image: url(' + category.photo + ');'">
-              </r-avatar>
-              <div class="r-text-slider">
-                {{ category.name }}
-              </div>
-            </nuxt-link>
-          </a-col>
-        </a-row>
-      </div>
+      <a-row v-if="hasCategories" class="r-category-header" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]"
+             type="flex" justify="start"
+             align="middle">
+        <a-col v-for="(category, index) in categories"
+               v-if="index < 12"
+               :key="index + 1"
+               :xs="{ span: 12 }"
+               :sm="{ span: 8 }"
+               :md="{ span: 24 / columns }"
+               :lg="{ span: 24 / columns }">
+          <nuxt-link class="r-slider-item r-slider-item-36 r-text-view-more"
+                     :to="category.route">
+            <r-avatar shape="circle"
+                      :size="36"
+                      :src="category.photo"
+                      :style="'background-image: url(' + category.photo + ');'">
+            </r-avatar>
+            <div class="r-text-slider">
+              {{ category.name }}
+            </div>
+          </nuxt-link>
+        </a-col>
+      </a-row>
     </a-col>
-    <a-col v-if="false" class="r-hide-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <r-category-shop-now v-if="!isShowing" :category="category" justify="end"></r-category-shop-now>
-      <r-category-shop-by v-if="isShowing" :category="category" justify="end"></r-category-shop-by>
+      <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+             :lg="{ span: 12 }">
+        <r-category-shop-now :category="category" justify="end"></r-category-shop-now>
+      </a-col>
+      <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
+             :lg="{ span: 12 }">
+        <r-category-shop-by :category="category" justify="end"></r-category-shop-by>
+      </a-col>
     </a-col>
   </a-row>
 </template>
@@ -45,26 +50,37 @@ export default {
     hasProduct: {type: Boolean, required: false, default: true},
     isShowing: {type: Boolean, required: false, default: false},
   },
+  async fetch() {
+    this.payload = {
+      type: 2,
+      has_store: false,
+      level: this.category.level,
+      category_id: this.category.id,
+      limit: process.env.APP_LIMIT,
+      order_by: 'randomized_at',
+      with: ['photos', 'breadcrumbs']
+    };
+
+    await this.onCategories();
+  },
   data() {
     return {
-      fetchBy: {
-        id: 1
-      }
+      payload: {},
+      categories: []
     }
   },
-  computed: mapGetters({
-    store: 'shop/store',
-    hasCategories: 'shop/hasCategories',
-    categories: 'shop/categories',
-  }),
+  computed: {
+    hasCategories() {
+      return this.categories.length > 0;
+    }
+  },
   created() {
-    this.payload();
   },
   methods: {
-    payload() {
-    },
-    onCategory() {
-      this.$store.dispatch('shop/onCategory', this.category.route);
+    async onCategories() {
+      this.categories = await this.$store.dispatch('shop/onCategories', this.payload);
+
+      console.log('new categories', this.categories);
     }
   }
 };

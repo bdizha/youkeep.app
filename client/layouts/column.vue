@@ -33,7 +33,7 @@ export default {
     async onStores() {
       let params = {
         category_id: null,
-        limit: 24
+        limit: process.env.APP_LIMIT
       };
 
       await this.$store.dispatch('base/onStores', params);

@@ -85,8 +85,8 @@ export default {
     };
   },
   computed: mapGetters({
-    categories: "shop/categories",
-    hasCategories: "shop/hasCategories",
+    categories: "base/categories",
+    hasCategories: "base/hasCategories",
   }),
   mounted() {
     this.payload();

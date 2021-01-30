@@ -109,11 +109,11 @@ export default {
       return !this.hasProducts && !this.hasCategories;
     },
     ...mapGetters({
-      categories: "shop/categories",
+      categories: "base/categories",
       category: "shop/category",
       store: "shop/store",
       hasProducts: 'shop/hasProducts',
-      hasCategories: "shop/hasCategories",
+      hasCategories: "base/hasCategories",
       processes: "base/processes",
     })
   },

@@ -85,7 +85,7 @@ export default {
     store: 'shop/store',
     category: 'shop/category',
     categories: 'shop/categories',
-    hasCategories: 'shop/hasCategories',
+    hasCategories: 'base/hasCategories',
   }),
   mounted() {
   },
@@ -97,8 +97,6 @@ export default {
       modal.current = 'store';
 
       this.$store.dispatch('base/onModal', modal);
-    },
-    async onCategories() {
     }
   }
 };

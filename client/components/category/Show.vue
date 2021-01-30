@@ -18,7 +18,7 @@
           </div>
         </a-col>
       </a-row>
-      <r-product-list :columns="columns"></r-product-list>
+      <r-product-list :category="category" :columns="columns"></r-product-list>
       <a-row type="flex" justify="start" align="middle">
         <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
@@ -61,7 +61,7 @@ export default {
   },
   computed: mapGetters({
     category: 'shop/category',
-    hasCategories: 'shop/hasCategories',
+    hasCategories: 'base/hasCategories',
     processes: 'base/processes'
   }),
   created() {

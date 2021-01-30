@@ -20,7 +20,7 @@ export default {
   computed: mapGetters({
     categories: 'shop/categories',
     processes: 'base/processes',
-    hasCategories: 'shop/hasCategories',
+    hasCategories: 'base/hasCategories',
   }),
   created() {
     this.payload();

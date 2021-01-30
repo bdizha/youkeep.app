@@ -14,13 +14,14 @@ export default {
   },
   name: 'r-logo',
   data() {
-    return {};
+    return {
+      title: "It's shopping time!",
+    };
   },
   created() {
   },
   computed: mapGetters({
-    isDark: 'base/isDark',
-    title: process.env.APP_NAME
+    isDark: 'base/isDark'
   }),
   methods: {},
 };

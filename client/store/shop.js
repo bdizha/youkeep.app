@@ -107,10 +107,6 @@ const mutations = {
 // actions
 const actions = {
   async onCategory({dispatch, commit, state}, params) {
-    // console.log('response: route category', route);
-
-    commit('setCategories', []);
-
     try {
       dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
       dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
@@ -128,60 +124,22 @@ const actions = {
         // set the store object
         // force the store to change
         commit('setStore', []);
-        // commit('setStore', category.store);
 
-        // console.log('setCategory data >>>>> ', category);
-
-        if (category.products != undefined) {
-          let products = category.products;
-
-          setTimeout(() => {
-            dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
-          }, 300);
-
-          // console.log('onCategory products >>>>> ', products);
-          commit('setProducts', products);
-        }
-
-        if (categories != undefined && categories.length > 0) {
-          // console.log('onCategory categories data >>>>> ', categories);
-
-          commit('setCategories', categories);
-          dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
-        } else {
-
-          let payload = {
-            type: 2,
-            category_id: category.id,
-            limit: process.env.APP_LIMIT,
-            order_by: 'product_count',
-            with: ['photos', 'breadcrumbs']
-          };
-
-          dispatch('onCategories', payload);
-        }
-
-        console.log('onCategory filters data >>>>> ', category.filters);
+        let payload = {
+          type: 2,
+          has_store: true,
+          category_id: category.id,
+          level: 1,
+          limit: process.env.APP_LIMIT,
+          order_by: 'product_count',
+          with: ['photos', 'breadcrumbs']
+        };
+        dispatch('base/onCategories', payload, {root: true});
 
         if (category.filters != undefined) {
           let filters = category.filters;
 
-          // console.log('onCategory filters data >>>>> ', filters);
-
           commit('setFilters', filters);
-        }
-
-        if (data.product != undefined) {
-          let product = data.product;
-          commit('setProduct', product);
-
-          let modal = {};
-          modal.isVisible = true;
-          modal.isClosable = true;
-          modal.current = 'product';
-
-          // fire off the product modal
-          dispatch('base/onModal', modal, {root: true});
         }
 
         setTimeout(() => {
@@ -232,12 +190,8 @@ const actions = {
 
       commit('setCategories', []);
 
-      await axios.post('/categories', payload).then(({data}) => {
+      return await axios.post('/categories', payload).then(({data}) => {
         let categories = data.categories;
-
-        commit('setCategories', categories);
-
-        // console.log(categories, 'setCategories');
 
         setTimeout(() => {
           dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
@@ -245,8 +199,9 @@ const actions = {
 
         dispatch('base/onProcess', {key: 'isCategory', value: false}, {root: true});
         dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
-      });
 
+        return categories;
+      });
     } catch (e) {
       console.error('onCategories errors');
       console.log(e);
@@ -256,17 +211,17 @@ const actions = {
     dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
 
     try {
-      await axios.post('/products', payload).then(({data}) => {
-        // console.log('response: onProducts data: ', data);
-
+      return await axios.post('/products', payload).then(({data}) => {
+        console.log('response: onProducts data: ', data);
         let products = data;
-        commit('setProducts', products);
 
         dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
 
         setTimeout(() => {
           dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
         }, 600);
+
+        return products;
       });
 
     } catch (e) {

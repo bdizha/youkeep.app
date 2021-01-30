@@ -76,48 +76,57 @@ export default {
   name: 'r-product-list',
   components: {},
   props: {
+    category: {
+      type: Object, required: true, default: () => {
+        id: null
+      }
+    },
     isVertical: {type: Boolean, required: false, default: true},
   },
   data() {
     return {
-      hasData: false,
       sortOptions: SORTS,
-      params: {
-        limit: 24,
+      payload: {
+        limit: process.env.APP_LIMIT,
         category_id: null,
         sort: 0,
         page: 1
-      }
+      },
+      products: {data: []}
     }
   },
-  computed: mapGetters({
-    store: 'shop/store',
-    filters: 'shop/filters',
-    category: 'shop/category',
-    products: 'shop/products',
-    hasProducts: 'shop/hasProducts',
-    processes: 'base/processes',
-  }),
+  async fetch() {
+    this.payload.category_id = this.category.id;
+    await this.onProducts();
+  },
+  computed: {
+    hasProducts() {
+      return this.products.data.length > 0;
+    },
+    ...mapGetters({
+      store: 'shop/store',
+      filters: 'shop/filters',
+      processes: 'base/processes',
+    })
+  },
   created() {
-    this.payload();
   },
   methods: {
-    payload() {
-    },
     onChange(pageNumber, pageSize) {
       console.log('pageNumber ::: ', pageNumber);
       console.log('pageSize ::: ', pageSize);
 
-      this.params.page = pageNumber;
-      this.fetchProducts();
+      this.payload.page = pageNumber;
+      this.onProducts();
     },
     onSort(option) {
-      this.params.sort = option.key;
-      this.fetchProducts();
+      this.payload.sort = option.key;
+      this.onProducts();
     },
-    async fetchProducts() {
-      this.params.category_id = this.category.id;
-      await this.$store.dispatch('shop/onProducts', this.params);
+    async onProducts() {
+      this.products = await this.$store.dispatch('shop/onProducts', this.payload);
+
+      console.log('dadfad', this.products)
     }
   }
 };

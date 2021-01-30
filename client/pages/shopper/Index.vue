@@ -274,7 +274,7 @@ export default {
   data() {
     return {
       images: [
-        'art-05.jpg'
+        'art-05.png'
       ],
       postCode: null,
       formPostCode: this.$form.createForm(this, {name: 'form_post_code'}),
