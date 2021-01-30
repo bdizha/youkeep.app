@@ -4,9 +4,9 @@
       <a-collapse v-if="hasCategories" default-active-key="0" expandIconPosition="right">
         <a-collapse-panel v-if="index < limit"
                           v-for="(category, index) in categories"
-                          :key="index"
+                          :key="category.id + '-category'"
                           :columns="columns"
-                          class="r-category-menu-panel" :header="category.name + '>>>' + category.id">
+                          class="r-category-menu-panel" :header="category.name">
           <r-category-item :isVertical="isVertical"
                            :columns="columns"
                            :is-flush="isFlush"

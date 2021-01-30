@@ -61,7 +61,6 @@ class CategoryController extends Controller
             }
 
             $this->_setCategories();
-
             $response['categories'] = $this->categories;
 
             Cache::put($key, $response, now()->addMinutes(15));
@@ -178,8 +177,9 @@ class CategoryController extends Controller
     }
 
     /**
+     * @return void
      */
-    protected function _setCategoryRoute(): void
+    protected function _setRoutes(): void
     {
         $this->categories = array_map(function ($category) {
             $category['route'] .= $this->_encodeLevel();
@@ -224,7 +224,7 @@ class CategoryController extends Controller
             ->get()
             ->toArray();
 
-        $this->_setCategoryRoute();
+        $this->_setRoutes();
         $this->_setBreadcrumbs();
 
         if ($this->categoryType === Category::TYPE_STORE) {
