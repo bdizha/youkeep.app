@@ -38,7 +38,7 @@
             <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
               <div class="r-grey-shadow r-ph-24">
                 <div class="r-margin-out">
-                  <r-product-recommended :product="product"></r-product-recommended>
+                  <r-product-recomended :product="product"></r-product-recomended>
                 </div>
               </div>
             </a-col>
@@ -57,12 +57,10 @@
 </template>
 <script>
 import {mapGetters} from "vuex";
-import RProductRecommended from "@/client/components/product/Recommended";
 
 export default {
   layout: 'product',
   name: 'r-product-show',
-  components: {RProductRecommended},
   props: {},
   data() {
     return {}

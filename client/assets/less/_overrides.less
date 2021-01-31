@@ -202,7 +202,7 @@ a.r-text-logo {
     width: 100%;
     z-index: 1001;
     transition: background 0.25s ease;
-    box-shadow: 2px 0 12px rgba(0,0,0,.3);
+    box-shadow: 2px 0 12px rgba(0, 0, 0, .3);
     line-height: 1 !important;
 
     @media (min-width: 768px) {
@@ -303,6 +303,17 @@ a.r-text-logo {
             &:hover {
                 background: #eefaff;
             }
+        }
+    }
+}
+
+.r-reviews {
+    background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
+
+    .ant-list-split {
+        .ant-list-item {
+            border-bottom: 1px solid #e8e8e8;
+            padding: 24px 0;
         }
     }
 }
@@ -1655,10 +1666,13 @@ h4.r-heading-light {
     }
 }
 
+.ant-progress-bg {
+    background-color: #1B9BD9;
+}
+
 .r-product-show {
     .ant-rate {
         font-size: 24px;
-        margin-top: 12px;
     }
 
     @media (max-width: 768px) {
@@ -2017,6 +2031,7 @@ h4.r-heading-light {
         border: none;
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
     }
+
     h2.r-heading {
         margin-top: 24px;
     }
@@ -4775,6 +4790,19 @@ h4.r-heading-light {
         border-bottom: none;
         align-items: start;
         justify-content: start;
+
+        .ant-list-item-meta-avatar {
+            margin-right: 15px;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+
+        .ant-list-item-meta-title {
+            margin-bottom: 0;
+            color: #494949;
+            font-size: 14px;
+            line-height: 18px;
+        }
 
         .r-list-item-text {
             display: inline-block;
