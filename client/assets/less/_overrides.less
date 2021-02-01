@@ -950,7 +950,7 @@ x {
     opacity: 1;
 
     &:hover {
-        background: linear-gradient(0deg,rgba(0,0,0,0.06),rgba(0,0,0,0.06)),#F50A2B;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #F50A2B;
         opacity: 1;
         border-color: #F50A2B;
     }
@@ -973,7 +973,7 @@ x {
     opacity: 1;
 
     &:hover {
-        background: linear-gradient(0deg,rgba(0,0,0,0.06),rgba(0,0,0,0.06)),#1B9BD9;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #1B9BD9;
         opacity: 1;
         border-color: #1B9BD9;
     }
@@ -5497,6 +5497,11 @@ h4.r-heading-light {
         overflow: hidden;
         height: 24px;
         text-overflow: ellipsis;
+
+        @media (max-width: 768px) {
+            font-size: 13px;
+            font-weight: 400;
+        }
     }
 
     .ant-avatar {
@@ -5564,6 +5569,10 @@ h4.r-heading-light {
             font-weight: 600;
             text-align: center;
             color: #FFFFFF;
+            @media (max-width: 768px) {
+                font-weight: 400;
+                font-size: 13px;
+            }
         }
     }
 }
@@ -5644,6 +5653,14 @@ h4.r-heading-light {
             border: none;
         }
 
+        @media (max-width: 768px) {
+            width: 90px;
+            height: 90px;
+            .ant-avatar {
+                width: 78px;
+                height: 78px;
+            }
+        }
     }
 }
 
