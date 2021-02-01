@@ -35,7 +35,7 @@ class ProductLinkSeeder extends DatabaseSeeder
                 ->get();
 
             foreach ($relatedCategoryProducts as $relatedCategoryProduct) {
-                if($relatedCategoryProduct->product_id == $product.id){
+                if($relatedCategoryProduct->product_id == $product->id){
                     continue;
                 }
 
