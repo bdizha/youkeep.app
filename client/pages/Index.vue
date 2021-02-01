@@ -44,8 +44,33 @@
                 </a-card>
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-                <r-store-arrows></r-store-arrows>
-                <r-category-products v-if="hasCategories" :is-vertical="false" :category="categories[0]"></r-category-products>
+                <a-card>
+                  <a-card-meta>
+                    <template slot="description">
+                      <a-row :gutter="[24,24]"  type="flex" justify="space-between">
+                        <a-col class="r-text-left" :xs="{ span: 12}" :sm="{ span: 12 }" :md="{ span: 12 }"
+                               :lg="{ span: 12 }">
+                          <h2 class="r-heading-light" style="margin: 0;">
+                            Shop everywhere
+                          </h2>
+                        </a-col>
+                        <a-col class="r-text-center" :xs="{ span: 12}" :sm="{ span: 12 }" :md="{ span: 6 }"
+                               :lg="{ span: 4 }">
+                          <r-store-shop-now></r-store-shop-now>
+                        </a-col>
+                      </a-row>
+                      <a-row :gutter="[24,24]" type="flex" justify="center"
+                             align="middle">
+                        <a-col :xs="{ span: 24 }"
+                               :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                          <r-store-arrows></r-store-arrows>
+                        </a-col>
+                      </a-row>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+                <r-category-products v-if="hasCategories" :is-vertical="false"
+                                     :category="categories[0]"></r-category-products>
               </a-col>
             </a-row>
           </a-col>

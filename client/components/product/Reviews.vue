@@ -18,7 +18,9 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
           <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
             <a-col class="r-text-right" :xs="{ span: 8 }" :sm="{ span: 8 }" :md="{ span: 6 }" :lg="{ span: 6 }">
-              <a-button class="r-btn-bordered-grey" type="secondary"
+              <a-button class="r-btn-bordered-grey"
+                        block
+                        type="secondary"
                         size="default">
                 {{ product.rating + "/" + 5 }}
               </a-button>
