@@ -2,19 +2,17 @@
   <r-drawer-template placement="right"
                      current="store">
     <r-store-window :has-actions="false" :store="store"></r-store-window>
-    <div class="r-margin-out">
-      <a-collapse default-active-key="1" expandIconPosition="right">
-        <a-collapse-panel header="Catalog">
-          <r-store-catalog></r-store-catalog>
-        </a-collapse-panel>
-        <a-collapse-panel header="You might like">
-          <r-store-list></r-store-list>
-        </a-collapse-panel>
-        <a-collapse-panel header="About this store">
-          <r-store-info :store="store"></r-store-info>
-        </a-collapse-panel>
-      </a-collapse>
-    </div>
+    <a-collapse default-active-key="1" expandIconPosition="right">
+      <a-collapse-panel class="r-category-menu-panel" header="Catalog">
+        <r-store-catalog></r-store-catalog>
+      </a-collapse-panel>
+      <a-collapse-panel class="r-category-menu-panel" header="You might like">
+        <r-store-list></r-store-list>
+      </a-collapse-panel>
+      <a-collapse-panel class="r-category-menu-panel" header="About this store">
+        <r-store-info :store="store"></r-store-info>
+      </a-collapse-panel>
+    </a-collapse>
   </r-drawer-template>
 </template>
 <script>
