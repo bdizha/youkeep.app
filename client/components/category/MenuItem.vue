@@ -17,7 +17,7 @@
       <template #expandIcon="props">
         <a-icon :type="props.isActive ? 'minus' : 'plus'"/>
       </template>
-      <a-collapse-panel :key="category.id" class="r-category-menu-panel" :header="category.name">
+      <a-collapse-panel :key="category.id" :header="category.name">
         <nuxt-link @click.native="onCategory(category)" class="r-category-menu-link"
                    :to="category.route">
           <a-avatar class="r-lazy" shape="circle" :size="30"

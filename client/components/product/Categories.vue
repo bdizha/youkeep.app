@@ -4,7 +4,7 @@
       <a-collapse default-active-key="0" expandIconPosition="right">
         <a-collapse-panel v-for="(category, index) in categories"
                           :key="category.type + '-category'"
-                          class="r-category-menu-panel" :header="category.name">
+                          :header="category.name">
           <r-product-related :product="product"></r-product-related>
         </a-collapse-panel>
       </a-collapse>

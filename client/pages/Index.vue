@@ -69,8 +69,6 @@
                     </template>
                   </a-card-meta>
                 </a-card>
-                <r-category-products v-if="hasCategories" :is-vertical="false"
-                                     :category="categories[0]"></r-category-products>
               </a-col>
             </a-row>
           </a-col>

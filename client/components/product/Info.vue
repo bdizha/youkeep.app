@@ -4,7 +4,7 @@
       <a-collapse default-active-key="0" expandIconPosition="right">
         <a-collapse-panel v-for="(link, index) in links"
                           :key="index"
-                          class="r-category-menu-panel" :header="link.label">
+                          :header="link.label">
           <div class="r-product-description">
             <r-product-description v-if="link.key == 'description'" :product="product"></r-product-description>
             <r-product-reviews v-if="link.key == 'reviews'" :product="product"></r-product-reviews>

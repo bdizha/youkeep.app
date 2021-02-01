@@ -6,7 +6,7 @@
                           v-for="(category, index) in categories"
                           :key="category.id + '-category'"
                           :columns="columns"
-                          class="r-category-menu-panel" :header="category.name">
+                          :header="category.name">
           <r-category-item :isVertical="isVertical"
                            :columns="columns"
                            :is-flush="isFlush"

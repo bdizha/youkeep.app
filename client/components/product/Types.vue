@@ -4,7 +4,7 @@
       <a-collapse default-active-key="0" expandIconPosition="right">
         <a-collapse-panel v-for="(filter, index) in filters"
                           :key="index"
-                          class="r-category-menu-panel" :header="filter.label">
+                          :header="filter.label">
           <r-category-filter-color></r-category-filter-color>
           <r-category-filter-size></r-category-filter-size>
         </a-collapse-panel>
