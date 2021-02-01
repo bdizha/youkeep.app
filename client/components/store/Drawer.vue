@@ -1,37 +1,20 @@
 <template>
   <r-drawer-template placement="right"
                      current="store">
-    <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="center" align="middle">
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-             :lg="{ span: 24 }">
-        <r-store-window :has-actions="false" :store="store"></r-store-window>
-        <a-button block
-                  size="default"
-                  @click="onToggle"
-                  :class="{'r-btn-bordered-primary': isToggled, 'r-btn-bordered-secondary' :!isToggled}">
-          {{ isToggled ? 'Less' : 'More' }} info
-          <a-icon type="info-circle"/>
-        </a-button>
-      </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :md="{ span: 24 }"
-             :lg="{ span: 24 }">
-        <p class="r-text-normal">
-          {{ store.description }}
-        </p>
-      </a-col>
-    </a-row>
-    <a-card class="r-mb-24" title="YOU MIGHT ALSO LIKE" style="width: 100%;">
-      <p class="r-text-small">
-        Here you can discover shops that you like.
-      </p>
-    </a-card>
-    <a-card class="r-mb-24" title="WHAT'S NEW" style="width: 100%;">
-      <p class="r-text-small">
-        Buy your favourite items today.
-      </p>
-    </a-card>
-    <r-store-info v-if="isToggled"></r-store-info>
+    <r-store-window :has-actions="false" :store="store"></r-store-window>
+    <div class="r-margin-out">
+      <a-collapse default-active-key="1" expandIconPosition="right">
+        <a-collapse-panel header="Catalog">
+          <r-store-catalog></r-store-catalog>
+        </a-collapse-panel>
+        <a-collapse-panel header="You might like">
+          <r-store-list></r-store-list>
+        </a-collapse-panel>
+        <a-collapse-panel header="About this store">
+          <r-store-info :store="store"></r-store-info>
+        </a-collapse-panel>
+      </a-collapse>
+    </div>
   </r-drawer-template>
 </template>
 <script>

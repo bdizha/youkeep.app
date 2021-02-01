@@ -1,32 +1,6 @@
 <template>
   <a-row type="flex" justify="center">
     <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row class="r-store-item-line" type="flex" justify="start" align="middle">
-        <a-col
-               :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }"
-               style="text-align: right;">
-          <a-select
-            labelInValue
-            :defaultValue="{key: defaultCategory.id}"
-            size="default"
-            @change="onFilter"
-            style="min-width: 100%;">
-            <a-select-option :value="defaultCategory.id">
-              <a-icon type="control"/>
-              {{ defaultCategory.label }}
-            </a-select-option>
-            <a-select-option v-for="(item, index) in categories"
-                             :key="index"
-                             :value="item.id">
-                                <span class="r-sort-value">
-                                    <a-icon type="appstore"/>
-                                    {{ item.name }}
-                                </span>
-            </a-select-option>
-          </a-select>
-        </a-col>
-      </a-row>
       <a-row v-if="hasStores && !processes.isTray" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
@@ -43,16 +17,6 @@
         </a-col>
       </a-row>
       <r-spinner :is-absolute="true" process="isCategories" v-if="processes.isRunning"></r-spinner>
-      <a-row class="r-mb-48" type="flex" justify="center">
-        <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-          <div class="r-store-text-light">
-            Shopple is an independent shopping service that is not necessarily affiliated with,
-            endorsed or sponsored by the stores listed here but it enables you to get the deliveries
-            you
-            want.
-          </div>
-        </a-col>
-      </a-row>
     </a-col>
   </a-row>
 </template>

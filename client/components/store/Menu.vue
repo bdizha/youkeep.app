@@ -6,8 +6,27 @@
     <r-delivery-form size="default"
                      :is-store="true"
                      :has-submit="false"></r-delivery-form>
-    <r-store-catalog></r-store-catalog>
-    <r-store-list></r-store-list>
+    <a-collapse default-active-key="1" expandIconPosition="right">
+      <a-collapse-panel class="r-category-menu-panel" header="Catalog">
+        <r-store-catalog></r-store-catalog>
+      </a-collapse-panel>
+      <a-collapse-panel class="r-category-menu-panel" header="You might like">
+        <r-store-list></r-store-list>
+      </a-collapse-panel>
+      <a-collapse-panel class="r-category-menu-panel" header="About this store">
+        <r-store-info :store="store"></r-store-info>
+      </a-collapse-panel>
+    </a-collapse>
+    <a-row class="r-mb-48" type="flex" justify="center">
+      <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <div class="r-store-text-light">
+          Shopple is an independent shopping service that is not necessarily affiliated with,
+          endorsed or sponsored by the stores listed here but it enables you to get the deliveries
+          you
+          want.
+        </div>
+      </a-col>
+    </a-row>
   </div>
 </template>
 <script>
