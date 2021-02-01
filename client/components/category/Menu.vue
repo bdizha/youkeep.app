@@ -3,14 +3,14 @@
     <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-store-item v-if="hasStore" :store="store"></r-store-item>
       <a-collapse default-active-key="1" expandIconPosition="right">
-        <a-collapse-panel v-for="(filter, index) in filters"
+        <a-collapse-panel class="r-category-menu-panel" v-for="(filter, index) in filters"
                           :key="index"
                           :header="filter.name">
           <r-category-filter-brand v-if="filter.type === 5"></r-category-filter-brand>
           <r-category-filter-color v-if="filter.type === 2"></r-category-filter-color>
           <r-category-filter-size v-if="filter.type === 1"></r-category-filter-size>
         </a-collapse-panel>
-        <a-collapse-panel :key="6" header="Categories">
+        <a-collapse-panel class="r-category-menu-panel" :key="6" header="Categories">
           <r-category-filter v-if="hasCategories"></r-category-filter>
           <a-empty v-if="!hasCategories"
                    image="/assets/icon_grey.svg"

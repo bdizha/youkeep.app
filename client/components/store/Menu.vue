@@ -7,13 +7,13 @@
                      :is-store="true"
                      :has-submit="false"></r-delivery-form>
     <a-collapse default-active-key="1" expandIconPosition="right">
-      <a-collapse-panel header="Catalog">
+      <a-collapse-panel class="r-category-menu-panel" header="Catalog">
         <r-store-catalog></r-store-catalog>
       </a-collapse-panel>
-      <a-collapse-panel header="You might like">
+      <a-collapse-panel class="r-category-menu-panel" header="You might like">
         <r-store-list></r-store-list>
       </a-collapse-panel>
-      <a-collapse-panel header="About this store">
+      <a-collapse-panel class="r-category-menu-panel" header="About this store">
         <r-store-info :store="store"></r-store-info>
       </a-collapse-panel>
     </a-collapse>

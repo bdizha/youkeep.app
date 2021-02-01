@@ -950,9 +950,9 @@ x {
     opacity: 1;
 
     &:hover {
-        background: #1B9BD9 !important;
+        background: linear-gradient(0deg,rgba(0,0,0,0.06),rgba(0,0,0,0.06)),#F50A2B;
         opacity: 1;
-        border-color: #1B9BD9;
+        border-color: #F50A2B;
     }
 
     &:focus {
@@ -973,9 +973,9 @@ x {
     opacity: 1;
 
     &:hover {
+        background: linear-gradient(0deg,rgba(0,0,0,0.06),rgba(0,0,0,0.06)),#1B9BD9;
         opacity: 1;
-        border-color: #F50A2B;
-        background: #F50A2B !important;
+        border-color: #1B9BD9;
     }
 
     &:focus {
@@ -2007,6 +2007,7 @@ h4.r-heading-light {
     &.ant-card-bordered {
         border: none;
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
+        margin: 3px;
     }
 
     h2.r-heading {
@@ -5547,6 +5548,26 @@ h4.r-heading-light {
     }
 }
 
+.r-store-card {
+    background-size: cover;
+
+    .ant-card-body {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
+
+        .r-store-text {
+            font-weight: 700;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .r-store-slogan {
+            font-weight: 600;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+}
+
 .ant-popover {
     .ant-popover-title {
         color: #1B9BD9;
@@ -5565,6 +5586,7 @@ h4.r-heading-light {
     box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
     background: #FFFFFF;
     border-radius: 3px;
+    margin: 0 3px;
 }
 
 .r-store-item {
@@ -5617,6 +5639,9 @@ h4.r-heading-light {
             background-repeat: no-repeat;
             background-size: 100%;
             background-position: center;
+            margin: 0;
+            box-shadow: none;
+            border: none;
         }
 
     }

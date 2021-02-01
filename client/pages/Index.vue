@@ -43,14 +43,16 @@
                   </div>
                 </a-card>
               </a-col>
+            </a-row>
+            <a-row class="r-mv-48" type="flex" justify="center" align="middle">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
                 <a-card>
                   <a-card-meta>
                     <template slot="description">
-                      <a-row :gutter="[24,24]"  type="flex" justify="space-between">
+                      <a-row :gutter="[24,24]"  type="flex" align="middle" justify="space-between">
                         <a-col class="r-text-left" :xs="{ span: 12}" :sm="{ span: 12 }" :md="{ span: 12 }"
                                :lg="{ span: 12 }">
-                          <h2 class="r-heading-light" style="margin: 0;">
+                          <h2 class="r-heading-light">
                             Shop everywhere
                           </h2>
                         </a-col>
