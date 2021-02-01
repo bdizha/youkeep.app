@@ -18,7 +18,6 @@ export default {
     return {};
   },
   computed: mapGetters({
-    store: 'shop/store',
     hasStoreTray: 'base/hasStoreTray'
   }),
   created() {

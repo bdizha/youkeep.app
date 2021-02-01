@@ -28,14 +28,18 @@
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
-             :lg="{ span: 12 }">
-        <r-category-shop-now :category="category" justify="end"></r-category-shop-now>
-      </a-col>
-      <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
-             :lg="{ span: 12 }">
-        <r-category-shop-by :category="category" justify="end"></r-category-shop-by>
-      </a-col>
+      <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]"
+             type="flex" justify="space-between"
+             align="middle">
+        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 4 }"
+               :lg="{ span: 4 }">
+          <r-category-shop-now :category="category" justify="end"></r-category-shop-now>
+        </a-col>
+        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 4 }"
+               :lg="{ span: 4 }">
+          <r-category-shop-by :category="category" justify="end"></r-category-shop-by>
+        </a-col>
+      </a-row>
     </a-col>
   </a-row>
 </template>

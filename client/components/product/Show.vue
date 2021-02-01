@@ -4,10 +4,6 @@
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <r-product-breadcrumbs :product="product"></r-product-breadcrumbs>
-    </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }">
       <a-row :gutter="[24,24]" type="flex"
              justify="start" align="top">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 18 }">
@@ -18,10 +14,10 @@
                 <r-product-photos :photos="product.photos" :product="product" :size="650"></r-product-photos>
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }" :lg="{ span: 8 }">
+                <r-product-credit :is-showing="true" :product="product"></r-product-credit>
                 <r-product-header :is-showing="true" :product="product"></r-product-header>
                 <r-rate :rating="product.rating"></r-rate>
                 <r-product-price :is-showing="true" :product="product"></r-product-price>
-                <r-product-credit :is-showing="true" :product="product"></r-product-credit>
                 <r-product-types :is-showing="true" :product="product"></r-product-types>
                 <r-product-actions :is-showing="true" :size="'default'" :product="product"></r-product-actions>
               </a-col>
@@ -38,7 +34,7 @@
             <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
               <div class="r-grey-shadow r-ph-24">
                 <div class="r-margin-out">
-                  <r-product-recomended :product="product"></r-product-recomended>
+                  <r-product-categories :product="product"></r-product-categories>
                 </div>
               </div>
             </a-col>
@@ -47,7 +43,7 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }" :lg="{ span: 6 }">
           <div class="r-grey-shadow r-ph-24">
             <div class="r-margin-out">
-              <r-product-related :product="product"></r-product-related>
+              <r-product-categories :product="product"></r-product-categories>
             </div>
           </div>
         </a-col>

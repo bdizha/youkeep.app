@@ -15,7 +15,7 @@
                     block
                     type="secondary"
                     :size="size">
-            View all
+            See all
             <a-icon type="right"/>
           </a-button>
           <a-avatar class="r-hide-lg" shape="square" icon="right"/>

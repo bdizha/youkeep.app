@@ -1,23 +1,32 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
+  <a-row type="flex" justify="start" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <r-category-actions></r-category-actions>
-    </a-col>
-    <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }">
-      <r-category-slider></r-category-slider>
-      <r-category-list :limit="3"></r-category-list>
-      <a-empty v-show="!hasCategories"
-               image="/assets/icon_grey.svg"
-               description="This store is coming soon. Please try other available stores."/>
-    </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }">
-      <r-category-actions></r-category-actions>
+      <div class="r-gradient r-p-12" :class="{'r-hide-lg': !hasCategories}">
+        <r-search class="r-hide-lg r-ph-12" :class="{'r-pb-12': hasCategories}"></r-search>
+        <r-category-arrows v-if="hasCategories"></r-category-arrows>
+      </div>
+      <a-row type="flex" justify="start" align="middle">
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }">
+          <div class="r-margin-out-sm">
+            <r-category-slider :category="category"></r-category-slider>
+            <r-product-flush :columns="3"></r-product-flush>
+          </div>
+        </a-col>
+      </a-row>
+      <a-row class="r-mt-24" type="flex" justify="start" align="middle">
+        <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }">
+          <div class="r-margin-out">
+            <r-category-list :columns="6"></r-category-list>
+          </div>
+        </a-col>
+      </a-row>
+      <r-category-actions v-if="hasCategories"></r-category-actions>
     </a-col>
   </a-row>
 </template>
@@ -35,10 +44,9 @@ export default {
 
       let payload = {
         store: params.slug,
-        has_store: true,
         level: 1,
         limit: process.env.APP_LIMIT,
-        with: ['breadcrumbs', 'photos', 'products', 'categories.products']
+        with: ['breadcrumbs', 'photos', 'products']
       };
       await store.dispatch('base/onCategories', payload);
 

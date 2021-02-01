@@ -7,7 +7,7 @@
                           block
                           type="secondary"
                           :size="size">
-                    View all
+                    See all
                     <a-icon type="right"/>
                 </a-button>
             </nuxt-link>

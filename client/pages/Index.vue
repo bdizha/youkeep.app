@@ -23,7 +23,7 @@
                         <span class="r-text-secondary">Pay less</span>
                       </h2>
                       <p class="r-text-normal">
-                        Yes, as long as you shop it with Shopple, you are fully in control.
+                        Yes, as long as you shop it with Shopple, you are fully powered.
                       </p><br/>
                       <a-row type="flex" justify="start" align="middle">
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -43,8 +43,9 @@
                   </div>
                 </a-card>
               </a-col>
-              <a-col v-if="false" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-                <r-category-products :is-vertical="false" :category="categories[0]"></r-category-products>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                <r-store-arrows></r-store-arrows>
+                <r-category-products v-if="hasCategories" :is-vertical="false" :category="categories[0]"></r-category-products>
               </a-col>
             </a-row>
           </a-col>

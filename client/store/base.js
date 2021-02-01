@@ -82,7 +82,7 @@ const getters = {
   hasForm: state => state.hasForm,
   store: state => state.store,
   stores: state => state.stores,
-  hasStores: state => state.stores.data.length > 0,
+  hasStores: state => state.hasStores,
   category: state => state.category,
   departments: state => state.departments,
   positions: state => state.positions,
@@ -130,8 +130,8 @@ const mutations = {
     state.isValid = isValid;
   },
   setStores(state, stores) {
-    // console.log('stores...', stores);
     state.stores = stores;
+    state.hasStores = stores.data != undefined && stores.data.length > 0;
   },
   setCategory(state, category) {
     state.category = category;

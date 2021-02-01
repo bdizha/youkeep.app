@@ -2,28 +2,32 @@
   <a-row type="flex" justify="center" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <div :class="padding" class="r-slider">
-        <a-carousel v-if="hasStores"
-                    :infinite="true"
-                    :arrows="true"
-                    :dots="false"
-                    :slidesToShow="7"
-                    :variable-width="true"
-                    :responsive="responsive">
-          <nuxt-link class="r-slider-item r-text-view-more"
-                       v-for="(store, index) in stores.data"
-                       :key="store.id"
-                       @click.native="onStore(store)"
-                       :to="store.route">
-            <a-avatar class="r-lazy"
-                      shape="circle"
-                      :size="36"
-                      :data-src="'/storage/store/' + store.photo"
-                      src="/assets/icon_default.png"
-                      :style="'background-image: url(/storage/store/' + store.photo + ');'"
-                      src-placeholder="~/assets/icon_default.png"/>
-            <div class="r-text-slider">
-              {{ store.name }}
-            </div>
+        <VueSlickCarousel v-if="hasStores" v-bind="settings">
+          <nuxt-link class="r-store-arrow" v-for="(store, index) in stores.data"
+                     :key="store.id"
+                     @click.native="onStore(store)"
+                     :to="store.route">
+            <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+              <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                <dev class="r-store-arrow-cover">
+                  <a-avatar class="r-lazy"
+                            shape="square"
+                            :size="120"
+                            :src="store.photo_url"
+                            :style="'background-image: url(' + store.photo_url + ');'"
+                            src-placeholder="~/assets/icon_default.png"/>
+                </dev>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                <a-button
+                  block
+                  class="r-btn-bordered-grey"
+                  size="default"
+                  type="secondary">
+                  {{ store.name }}
+                </a-button>
+              </a-col>
+            </a-row>
           </nuxt-link>
           <div slot="prevArrow"
                slot-scope="props"
@@ -34,7 +38,7 @@
                class="r-slick-arrow r-slick-arrow-next r-arrow-next">
             <a-icon type="right"/>
           </div>
-        </a-carousel>
+        </VueSlickCarousel>
       </div>
     </a-col>
   </a-row>
@@ -50,32 +54,38 @@ export default {
   data() {
     return {
       hasData: false,
-      responsive: [
-        {
-          "breakpoint": 1024,
-          "settings": {
-            "slidesToShow": 7,
-            "slidesToScroll": 1,
-            "dots": false
+      settings: {
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        dots: false,
+        variableWidth: false,
+        responsive: [
+          {
+            "breakpoint": 1024,
+            "settings": {
+              "slidesToShow": 6,
+              "slidesToScroll": 1,
+              "dots": false
+            }
+          },
+          {
+            "breakpoint": 700,
+            "settings": {
+              "slidesToShow": 4,
+              "slidesToScroll": 1,
+              "dots": false
+            }
+          },
+          {
+            "breakpoint": 560,
+            "settings": {
+              "slidesToShow": 2,
+              "slidesToScroll": 1,
+              "dots": false
+            }
           }
-        },
-        {
-          "breakpoint": 700,
-          "settings": {
-            "slidesToShow": 4,
-            "slidesToScroll": 1,
-            "dots": false
-          }
-        },
-        {
-          "breakpoint": 560,
-          "settings": {
-            "slidesToShow": 2,
-            "slidesToScroll": 1,
-            "dots": false
-          }
-        }
-      ],
+        ],
+      },
     };
   },
   computed: mapGetters({

@@ -1,27 +1,29 @@
 <template>
-  <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-    <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-      <a-row v-if="hasInfo" :gutter="[24,24]" type="flex" justify="center" align="middle">
-        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-          <a-button @click="onDrawer" class="r-btn-bordered-secondary"
-                    block
-                    type="secondary"
-                    size="default">
-            <a-icon type="shop"></a-icon>
-            Store info
-          </a-button>
-        </a-col>
-      </a-row>
-      <a-row v-if="hasInfo" :gutter="[12,12]" type="flex" justify="center" align="middle">
-        <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-          <r-store-rate :store="store"></r-store-rate>
-        </a-col>
-        <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-          <r-store-subscribe :store="store"></r-store-subscribe>
-        </a-col>
-      </a-row>
-    </a-col>
-  </a-row>
+  <div class="r-store-item-line">
+    <a-row type="flex" justify="center" align="middle">
+      <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+        <a-row :gutter="[12,12]" type="flex" justify="center" align="middle">
+          <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
+            <r-store-subscribe :store="store"></r-store-subscribe>
+          </a-col>
+          <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
+            <a-button @click="onDrawer" class="r-btn-bordered-secondary"
+                      block
+                      type="secondary"
+                      size="default">
+              <a-icon type="shop"></a-icon>
+              Store info
+            </a-button>
+          </a-col>
+        </a-row>
+        <a-row v-if="hasInfo" :gutter="[12,12]" type="flex" justify="center" align="middle">
+          <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
+            <r-store-rate :store="store"></r-store-rate>
+          </a-col>
+        </a-row>
+      </a-col>
+    </a-row>
+  </div>
 </template>
 <script>
 export default {
