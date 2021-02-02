@@ -91,12 +91,6 @@ class CategoryController extends Controller
         if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
-            $this->category = Category::where('slug', $this->slug)->first();
-
-            if (!empty($this->category)) {
-                $this->categoryId = $this->category->id;
-            }
-
             $this->_setCategories();
 
             $response['categories'] = $this->categories;
@@ -188,13 +182,18 @@ class CategoryController extends Controller
      */
     private function _setCategories(): void
     {
+        if (!empty($this->slug)) {
+            $this->category = Category::where('slug', $this->slug)
+                ->first();
+        }
+
         if (!empty($this->categoryId)) {
             $this->category = Category::where('id', $this->categoryId)
                 ->first();
         }
 
-        if (!empty($this->categoryId)) {
-            $this->storeCategory = StoreCategory::where('category_id', $this->categoryId)
+        if (!empty($this->category->id)) {
+            $this->storeCategory = StoreCategory::where('category_id', $this->category->id)
                 ->where('level', $this->level)
                 ->first();
         }

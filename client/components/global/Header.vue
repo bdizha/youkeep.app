@@ -8,16 +8,14 @@
         <r-logo></r-logo>
       </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__store-switch">
-        <r-store-switch v-if="!hasStores"></r-store-switch>
-        <div v-if="hasStores" class="r-nav-item">
-          <nuxt-link :to="'/store/' + store.slug">
-            <a-button block
-                      class="r-btn-bordered-grey"
-                      type="secondary">
-              {{ store.name }}
-            </a-button>
-          </nuxt-link>
-        </div>
+        <r-store-switch v-if="!hasStore"></r-store-switch>
+        <nuxt-link v-if="hasStore" :to="'/store/' + store.slug">
+          <a-button block
+                    class="r-btn-bordered-grey"
+                    type="secondary">
+            {{ store.name }}
+          </a-button>
+        </nuxt-link>
       </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__search">
         <r-search></r-search>
@@ -31,17 +29,19 @@
     </r-layout-menu>
     <r-layout-menu v-if="modal.isVisible || isRaised" class="r-layout-menu r-layout-menu-modal">
       <r-nav-item class="r-nav-item__text">
-        <a-button v-on:click="onModalClose"
-                  size="default"
-                  type="secondary" html-type="button">
-          <a-icon type="left"/>
-          Back
-        </a-button>
+        <div v-on:click="onModalClose">
+          <a-button v-on:click="onModalClose"
+                    size="default"
+                    type="secondary"
+                    html-type="button">
+            <a-icon type="left"/>
+            Back
+          </a-button>
+        </div>
       </r-nav-item>
       <r-nav-item class="r-nav-item__logo">
         <div v-on:click="onModalClose" class="r-logo">
-          <img :src="'/assets/' + (isDark ? 'icon_white': 'icon_secondary') + '.svg'"
-               alt="Shopple - It's Shopping Time!"/>
+          <r-logo :is-icon="true"></r-logo>
         </div>
       </r-nav-item>
     </r-layout-menu>
@@ -69,6 +69,7 @@ export default {
     processes: 'base/processes',
     stores: 'base/stores',
     hasStores: 'base/hasStores',
+    hasStore: 'shop/hasStore',
     drawer: 'base/drawer',
     hasStoreTray: 'base/hasStoreTray',
     isDark: 'base/isDark',

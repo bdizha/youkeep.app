@@ -12,7 +12,7 @@
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
           <div class="r-margin-out-sm">
-            <r-category-slider></r-category-slider>
+            <r-store-catalog :columns="3" :span="3"></r-store-catalog>
             <r-product-flush :columns="3"></r-product-flush>
           </div>
         </a-col>

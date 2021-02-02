@@ -1,7 +1,8 @@
 <template>
   <a-row class="r-catalog" type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: span }">
-      <r-category-slider :columns="1"></r-category-slider>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <r-category-slider :columns="columns"></r-category-slider>
+      <r-category-empty></r-category-empty>
     </a-col>
   </a-row>
 </template>
@@ -12,7 +13,7 @@ export default {
   name: 'r-store-catalog',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 6},
+    columns: {type: Number, required: false, default: 1},
     store: {type: Object, required: false},
     span: {type: Number, required: false, default: 24},
   },

@@ -9,11 +9,11 @@
       <a-collapse-panel class="r-collapse-panel" header="Catalog">
         <r-store-catalog></r-store-catalog>
       </a-collapse-panel>
-      <a-collapse-panel class="r-collapse-panel" header="You might like">
-        <r-store-list></r-store-list>
-      </a-collapse-panel>
       <a-collapse-panel class="r-collapse-panel" header="About this store">
         <r-store-info :store="store"></r-store-info>
+      </a-collapse-panel>
+      <a-collapse-panel class="r-collapse-panel" header="You might like">
+        <r-store-list></r-store-list>
       </a-collapse-panel>
     </a-collapse>
     <a-row class="r-mb-48" type="flex" justify="center">
