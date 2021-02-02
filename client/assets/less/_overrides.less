@@ -3284,7 +3284,7 @@ h4.r-heading-light {
     border: none;
 
     > .ant-collapse-content-box {
-        padding: 0px 0 12px 12px;
+        padding: 0px 0 12px 0;
     }
 }
 
@@ -5475,6 +5475,11 @@ h4.r-heading-light {
     line-height: 72px;
 }
 
+
+.r-card-plain {
+    margin: 0 !important;
+}
+
 .r-store-item,
 .r-store-card {
     .r-store-text {
@@ -5525,7 +5530,7 @@ h4.r-heading-light {
     }
 
     .ant-card-body {
-        margin-top: 24px;
+        margin: 0;
         background: #FFF;
 
         .r-slider-item-title {
@@ -5580,6 +5585,12 @@ h4.r-heading-light {
 .ant-popover {
     .ant-popover-title {
         color: #1B9BD9;
+        padding: 12px 24px;
+        font-weight: 600;
+        font-size: 18px;
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
     }
 
     .ant-popover-content {
@@ -5633,8 +5644,8 @@ h4.r-heading-light {
     }
 }
 
-.r-store-arrow {
-    .r-store-arrow-cover {
+.r-store-card {
+    .ant-card-cover {
         background: #FFFFFF;
         border-radius: 100%;
         overflow: hidden;

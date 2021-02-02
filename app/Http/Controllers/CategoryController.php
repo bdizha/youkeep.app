@@ -20,6 +20,7 @@ class CategoryController extends Controller
         $breadcrumbs = [],
         $categoryType = null,
         $storeId = null,
+        $storeSlug = null,
         $product = [],
         $category = [],
         $storeCategory = [],
@@ -55,11 +56,6 @@ class CategoryController extends Controller
         if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
-            if (!empty($this->categoryId)) {
-                $this->category = Category::where('id', $this->categoryId)
-                    ->first();
-            }
-
             $this->_setCategories();
             $response['categories'] = $this->categories;
 
@@ -193,8 +189,18 @@ class CategoryController extends Controller
     private function _setCategories(): void
     {
         if (!empty($this->categoryId)) {
+            $this->category = Category::where('id', $this->categoryId)
+                ->first();
+        }
+
+        if (!empty($this->categoryId)) {
             $this->storeCategory = StoreCategory::where('category_id', $this->categoryId)
                 ->where('level', $this->level)
+                ->first();
+        }
+
+        if (!empty($this->storeSlug)) {
+            $this->store = Store::where('slug', $this->storeSlug)
                 ->first();
         }
 
@@ -215,6 +221,10 @@ class CategoryController extends Controller
 
             if ($this->categoryType == Category::TYPE_CATALOG) {
                 $query->where('store_categories.has_products', true);
+            }
+
+            if (!empty($this->store->id)) {
+                $query->where('store_categories.store_id', $this->store->id);
             }
 
             $query->orderBy($this->orderBy, 'DESC');

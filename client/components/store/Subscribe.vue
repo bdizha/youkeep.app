@@ -3,7 +3,8 @@
             block
             type="secondary" class="r-btn-bordered-secondary"
             icon="check-circle"
-            :size="'default'">{{ 'Subscribe' }}
+            :size="'default'">
+    Follow
   </a-button>
 </template>
 <script>

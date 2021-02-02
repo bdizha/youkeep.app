@@ -1,8 +1,7 @@
 <template>
   <div :class="{'r-store-flex__has-notice': hasNotice}" class="r-store-flex">
     <r-store-notice v-if="hasNotice"></r-store-notice>
-    <r-store-item :store="store"></r-store-item>
-    <r-store-actions :store="store"></r-store-actions>
+    <r-store-face :is-plain="true" :store="store"></r-store-face>
     <r-delivery-form size="default"
                      :is-store="true"
                      :has-submit="false"></r-delivery-form>

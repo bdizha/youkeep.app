@@ -1,16 +1,27 @@
 <template>
   <nuxt-link :to="store.route"
              style="display: block; width: 100%;">
-    <a-card class="r-store-card"
-            :style="{backgroundImage: 'url(' + store.photo_cover_url + ')'}"
-            hoverable>
-      <r-store-photo slot="cover" :store="store"></r-store-photo>
+    <a-card :class="{'r-card-plain': isPlain}" class="r-store-card"
+            :style="'background-image: url(' + store.photo_cover_url + ');'">
       <a-card-meta>
-        <template slot="title">
-          <r-store-meta :store="store"></r-store-meta>
-          <a-row class="r-mt-12" type="flex" justify="center" align="middle">
-            <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-              <r-store-actions :store="store"></r-store-actions>
+        <template slot="description">
+          <a-row type="flex" justify="center" align="middle">
+            <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+              <dev class="r-store-avatar">
+                <r-store-photo slot="cover" :store="store"></r-store-photo>
+              </dev>
+            </a-col>
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+              <r-store-meta :store="store"></r-store-meta>
+            </a-col>
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+              <a-button
+                block
+                class="r-btn-primary"
+                size="default"
+                type="secondary">
+                Follow
+              </a-button>
             </a-col>
           </a-row>
         </template>
@@ -26,6 +37,7 @@ export default {
   components: {},
   props: {
     store: {type: Object, required: false},
+    isPlain: {type: Boolean, required: false, default: false},
     span: {type: Number, required: false, default: 24}
   },
   data() {

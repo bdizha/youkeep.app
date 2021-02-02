@@ -127,7 +127,7 @@ class Controller extends BaseController
 
         if (!empty($this->productId)) {
             $query = Product::find($this->productId)->links()
-            ->where('type', $this->productType);
+                ->where('type', $this->productType);
         }
 
         if (!empty($this->categoryId)) {
@@ -154,7 +154,6 @@ class Controller extends BaseController
         $this->reviews = Review::whereHas('product', function ($query) {
             $query->where('reviews.product_id', $this->productId);
         })
-//            ->where('is_active', true)
             ->orderBy($sort['column'], $sort['dir'])
             ->paginate($this->limit);
     }

@@ -8,6 +8,11 @@
   >
     <div slot="content">
       <r-store-item :store="store"></r-store-item>
+      <a-row type="flex" justify="center" align="middle">
+        <a-col class="r-ph-24 r-pv-12" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+          <r-store-actions :store="store"></r-store-actions>
+        </a-col>
+      </a-row>
     </div>
   </a-popover>
 </template>
@@ -22,6 +27,12 @@ export default {
       clicked: true,
       hovered: false,
     };
+  },
+  mounted() {
+    let $this = this;
+    setTimeout(function () {
+      $this.clicked = false;
+    }, 9000);
   },
   methods: {
     hide() {

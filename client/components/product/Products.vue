@@ -38,7 +38,7 @@ export default {
   async fetch() {
     this.payload = {
       product_id: this.product.id,
-      type: 1, // related products
+      type: this.type,
       limit: process.env.APP_LIMIT,
       filters: []
     };

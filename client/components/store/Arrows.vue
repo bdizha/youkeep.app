@@ -7,37 +7,7 @@
                      :key="store.id"
                      @click.native="onStore(store)"
                      :to="store.route">
-            <a-card class="r-store-card"
-                    :style="'background-image: url(' + store.photo_cover_url + ');'">
-              <a-card-meta>
-                <template slot="description">
-                  <a-row type="flex" justify="center" align="middle">
-                    <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                      <dev class="r-store-arrow-cover">
-                        <a-avatar class="r-lazy"
-                                  shape="square"
-                                  :size="72"
-                                  :src="store.photo_url"
-                                  :style="'background-image: url(' + store.photo_url + ');'"
-                                  src-placeholder="~/assets/icon_default.png"/>
-                      </dev>
-                    </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                      <r-store-meta :store="store"></r-store-meta>
-                    </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                      <a-button
-                        block
-                        class="r-btn-primary"
-                        size="default"
-                        type="secondary">
-                        Follow
-                      </a-button>
-                    </a-col>
-                  </a-row>
-                </template>
-              </a-card-meta>
-            </a-card>
+            <r-store-face :store="store"></r-store-face>
           </nuxt-link>
           <div slot="prevArrow"
                slot-scope="props"

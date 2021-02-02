@@ -1,6 +1,7 @@
 <template>
   <r-avatar shape="square"
-            :size="96"
+            :size="72"
+            src-placeholder="~/assets/icon_default.png"
             :src="store.photo_url"/>
 </template>
 <script>
