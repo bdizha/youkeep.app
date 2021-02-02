@@ -5269,6 +5269,21 @@ h4.r-heading-light {
     }
 }
 
+.r-store-arrows{
+    .r-slider {
+        .slick-prev,
+        .slick-next {
+            &.r-slick-arrow-prev {
+                left: 0;
+            }
+
+            &.r-slick-arrow-next {
+                right: 0;
+            }
+        }
+    }
+}
+
 .r-breadcrumbs {
     overflow: hidden;
 }
@@ -6084,7 +6099,6 @@ a:hover {
 
     .ant-row-flex {
         opacity: 1;
-        overflow: hidden;
 
         &.r-is-empty {
             opacity: 0;

@@ -19,6 +19,7 @@
                 block
                 class="r-btn-primary"
                 size="default"
+                icon="check-circle"
                 type="secondary">
                 Follow
               </a-button>

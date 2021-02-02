@@ -21,9 +21,7 @@
         <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
-          <div class="r-margin-out">
-            <r-category-list :columns="6"></r-category-list>
-          </div>
+          <r-category-list :columns="6"></r-category-list>
         </a-col>
       </a-row>
       <r-store-popover :store="store"></r-store-popover>

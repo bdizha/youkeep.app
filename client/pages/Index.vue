@@ -50,13 +50,13 @@
                   <a-card-meta>
                     <template slot="description">
                       <a-row :gutter="[24,24]"  type="flex" align="middle" justify="space-between">
-                        <a-col class="r-text-left" :xs="{ span: 12}" :sm="{ span: 12 }" :md="{ span: 12 }"
+                        <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }"
                                :lg="{ span: 12 }">
                           <h2 class="r-heading-light">
                             Shop everywhere
                           </h2>
                         </a-col>
-                        <a-col class="r-text-center" :xs="{ span: 12}" :sm="{ span: 12 }" :md="{ span: 6 }"
+                        <a-col class="r-text-center" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 6 }"
                                :lg="{ span: 4 }">
                           <r-store-shop-now></r-store-shop-now>
                         </a-col>
