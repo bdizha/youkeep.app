@@ -225,9 +225,9 @@ class CategoryController extends Controller
             if (!empty($this->store->id)) {
                 $query->where('store_categories.store_id', $this->store->id);
             }
-
-            $query->orderBy($this->orderBy, 'DESC');
         });
+
+        $query->orderBy($this->orderBy, 'DESC');
 
         $this->categories = $query
             ->get()

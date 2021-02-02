@@ -118,7 +118,6 @@ const actions = {
 
       await axios.post(route, params).then(({data}) => {
         let category = data.category;
-        let categories = data.categories;
         commit('setCategory', category);
 
         // set the store object
@@ -131,7 +130,7 @@ const actions = {
           category_id: category.id,
           level: category.level,
           limit: process.env.APP_LIMIT,
-          order_by: 'product_count',
+          order_by: 'randomized_at',
           with: ['photos', 'breadcrumbs']
         };
         dispatch('base/onCategories', payload, {root: true});
