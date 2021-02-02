@@ -87,7 +87,7 @@ class Controller extends BaseController
 
     protected function _encodeLevel(): string
     {
-        return "/L" . str_pad($this->level + 1, 6, STR_PAD_LEFT, "0");
+        return "/L" . str_pad(empty($this->level) ? 1 : $this->level + 1, 6, STR_PAD_LEFT, "0");
     }
 
     /**
