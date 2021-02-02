@@ -16,7 +16,7 @@
                       <dev class="r-store-arrow-cover">
                         <a-avatar class="r-lazy"
                                   shape="square"
-                                  :size="120"
+                                  :size="72"
                                   :src="store.photo_url"
                                   :style="'background-image: url(' + store.photo_url + ');'"
                                   src-placeholder="~/assets/icon_default.png"/>

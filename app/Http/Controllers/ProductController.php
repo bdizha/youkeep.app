@@ -27,12 +27,14 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
+        $this->productType = $request->get('type', 1);
         $this->limit = $request->get('limit', 12);
         $this->categoryId = $request->get('category_id', null);
+        $this->productId = $request->get('product_id', null);
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key)) {
+        if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
             $this->setProducts();

@@ -19,12 +19,13 @@ import axios from 'axios'
 import {mapGetters} from "vuex";
 
 export default {
-  name: 'r-product-related',
+  name: 'r-product-products',
   components: {},
   props: {
     columns: {type: Number, required: false, default: 3},
     isVertical: {type: Boolean, required: false, default: true},
     product: {type: Object, required: false},
+    type: {type: Object, required: false, default: 1},
   },
   data() {
     return {

@@ -8,4 +8,5 @@ class ProductLink extends Model
 {
     const TYPE_RELATED = 1;
     const TYPE_BOUGHT_WITH = 2;
+    const TYPE_RECOMMENDED = 3;
 }

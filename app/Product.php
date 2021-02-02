@@ -297,6 +297,14 @@ class Product extends KModel
     }
 
     /**
+     * Get the related products
+     */
+    public function links()
+    {
+        return $this->belongsToMany('App\Product', 'product_links', 'product_id', 'related_id');
+    }
+
+    /**
      * Get the related categories
      */
     public function categories()

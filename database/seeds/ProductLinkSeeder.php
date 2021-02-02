@@ -45,7 +45,7 @@ class ProductLinkSeeder extends DatabaseSeeder
                 ];
 
                 $values = [
-                    'type' => \App\ProductLink::TYPE_RELATED,
+                    'type' => rand(1,3),
                     'product_id' => $product->id,
                     'related_id' => $relatedCategoryProduct->product_id
                 ];

@@ -34,7 +34,7 @@
             <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
               <div class="r-grey-shadow r-ph-24">
                 <div class="r-margin-out">
-                  <r-product-categories :product="product"></r-product-categories>
+                  <r-product-categories columns="3" :types="[1,2,3]" :product="product"></r-product-categories>
                 </div>
               </div>
             </a-col>
@@ -43,7 +43,7 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }" :lg="{ span: 6 }">
           <div class="r-grey-shadow r-ph-24">
             <div class="r-margin-out">
-              <r-product-categories :product="product"></r-product-categories>
+              <r-product-categories :columns="1" :product="product"></r-product-categories>
             </div>
           </div>
         </a-col>

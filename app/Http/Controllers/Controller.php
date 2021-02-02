@@ -23,6 +23,7 @@ class Controller extends BaseController
         $with = [],
         $categoryId = null,
         $productId = null,
+        $productType = null,
         $reviewId = null,
         $products = [],
         $reviews = [],
@@ -124,11 +125,19 @@ class Controller extends BaseController
 
         $sort = $sortOptions[$sort];
 
-        $this->products = Product::whereHas('categories', function ($query) {
-            $query->where('category_products.category_id', $this->categoryId);
-        })
-            ->where('is_active', true)
-            ->orderBy($sort['column'], $sort['dir'])
+        if (!empty($this->productId)) {
+            $query = Product::find($this->productId)->links()
+            ->where('type', $this->productType);
+        }
+
+        if (!empty($this->categoryId)) {
+            $query = Product::orderBy($sort['column'], $sort['dir']);
+            $query->whereHas('categories', function ($query) {
+                $query->where('category_products.category_id', $this->categoryId);
+            });
+        }
+
+        $this->products = $query->orderBy($sort['column'], $sort['dir'])
             ->paginate($this->limit);
     }
 
