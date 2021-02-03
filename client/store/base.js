@@ -258,7 +258,7 @@ const actions = {
 
       commit('setCategories', []);
       commit('setStores', []);
-      commit('setProducts', []);
+      commit('setProducts', { data: []});
 
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
