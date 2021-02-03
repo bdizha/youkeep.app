@@ -12,7 +12,7 @@ class ProductMTGSeeder extends DatabaseSeeder
     protected $domain = "https://www.archivestore.co.za";
     protected $storeId = null;
 
-    protected $storeIds = [69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
+    protected $storeIds = [66]; //, 68, 67, 69, 65, 61, 34, 50, 64, 63, 62, 29];
     protected $categories = [];
     protected $level = 0;
 
@@ -38,17 +38,19 @@ class ProductMTGSeeder extends DatabaseSeeder
             $this->storeId = $store->id;
             $this->domain = $store->url;
 
+            echo ">>>>>> Updating store > categories: " . $store->name . "\n";
+            $this->updateStoreCategories();
+
             echo ">>>>>> Fetching store > categories: " . $store->id . "\n";
             $this->getCategories($store->url);
+
+            dd("Done with updates without pulling out the products >>>");
 
             $this->storeCategories = \App\StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
                 ->orderBy('store_categories.updated_at', "ASC")
                 ->limit(9)
                 ->get();
-
-            echo ">>>>>> Decoding store > categories: " . $store->name . "\n";
-            $this->decodeCategories($this->storeId);
 
             // Get all the category products
             foreach ($this->storeCategories as $storeCategory) {
@@ -64,35 +66,44 @@ class ProductMTGSeeder extends DatabaseSeeder
         die("Well done.");
     }
 
+    public function updateStoreCategories()
+    {
+        foreach (range(5, 1, -1) as $level) {
+            \App\StoreCategory::where('store_id', $this->storeId)
+                ->where('level', $level)
+                ->delete();
+        }
+    }
+
     public function getCategories($categoryLink)
     {
         $category = null;
         $categoryNode = Goutte::request('GET', $categoryLink);
-        $categoryNodes = $categoryNode->filter('.nav__list li a');
+        $navItems = $categoryNode->filter('.nav__list .nav__item');
 
-        $categoryNodes->each(function ($node) {
-            if (strpos($node->attr('href'), $this->domain) === false) {
-                $categoryLink = $this->domain . $node->attr('href');
-            } else {
-                $categoryLink = $node->attr('href');
-            }
-            $categoryName = $node->text();
+        $navItems->each(function ($node) {
+            $linkNode = $node->filter('.nav__item-title')->eq(0);
+            $categoryLink = $linkNode->attr('href');
+            $categoryName = $linkNode->text();
 
-            $categoryName = trim($categoryName);
+            $this->setCategory($categoryName, $categoryLink, 1);
 
-            $linkParts = explode(';jsessionid', $categoryLink);
+            $secondaryNavNode = $node->filter('.nav__sub-title')->eq(0);
 
-            if (!empty($linkParts[0])) {
-                $categoryLink = $linkParts[0];
+            $categoryLink = $secondaryNavNode->attr('href');
+            $categoryName = $secondaryNavNode->text();
 
-                echo "Category: " . $categoryName . "\n";
-                echo "Category link: " . $categoryLink . "\n";
+            $this->setCategory($categoryName, $categoryLink, 2);
 
-                if (strpos($categoryLink, 'plp') !== false ||
-                    strpos($categoryLink, 'rclp') !== false) {
-                    $this->setCategory($categoryName, $categoryLink);
-                }
-            }
+            $tertiaryNavItems = $node->filter('.nav__sub-item-list .nav__sub-item');
+
+            $tertiaryNavItems->each(function ($node) {
+                $linkNode = $node->filter('.nav__sub-link')->eq(0);
+                echo $node->html();
+                $categoryLink = $linkNode->attr('href');
+                $categoryName = $linkNode->text();
+                $this->setCategory($categoryName, $categoryLink, 3);
+            });
         });
     }
 
@@ -141,14 +152,17 @@ class ProductMTGSeeder extends DatabaseSeeder
     /**
      * @param $categoryName
      * @param $url
+     * @param $level
      * @return mixed
      */
-    private function setCategory($categoryName, $url)
+    private function setCategory($categoryName, $url, $level)
     {
         $categoryDescription = 'Not set';
 
         $this->level = -1;
         $this->categories = [];
+
+        $categoryName = trim($categoryName);
 
         /* Update or create this category */
         $attributes = $values = [
@@ -159,20 +173,33 @@ class ProductMTGSeeder extends DatabaseSeeder
             'name' => $categoryName,
             'order' => 1,
             'description' => $categoryDescription,
-            'type' => Category::TYPE_CATALOG
+            'type' => Category::TYPE_CATALOG,
+            'randomized_at' => \Carbon\Carbon::now()->addMinutes(rand(1, 3600))
         ];
 
         $category = \App\Category::updateOrCreate($attributes, $values);
         $this->categories[] = $category->id;
+
+        $urlParts = explode(';jsessionid', $url);
+        if (!empty($urlParts[0])) {
+            $url = $urlParts[0];
+            if (strpos($url, 'http') === false) {
+                $url = trim($this->domain, '/') . trim($url);
+            }
+        }
 
         /* Add in the store category link */
         $values = [
             'store_id' => $this->storeId,
             'category_id' => $category->id,
             'url' => $url,
+            'level' => $level,
+            'randomized_at' => \Carbon\Carbon::now()->addMinutes(rand(1, 3600))
         ];
 
-        \App\StoreCategory::updateOrCreate($values, $values);
+        $this->parentStoreCategory = \App\StoreCategory::updateOrCreate($values, $values);
+
+//        dd($this->parentStoreCategory);
         return $category;
     }
 

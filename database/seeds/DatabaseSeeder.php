@@ -193,12 +193,19 @@ class DatabaseSeeder extends Seeder
     protected function setParentStoreCategory($storeCategory)
     {
         $this->parentStoreCategory = null;
-        $urlParts = explode('/', $storeCategory->url);
 
-        $urlParts = array_slice($urlParts, 4, count($urlParts) - 7);
+        $categoryUrl = str_replace('pclp/', '', $storeCategory->url);
+        $categoryUrl = str_replace('plp/', '', $categoryUrl);
+        $categoryUrl = str_replace('//', '/', $categoryUrl);
+
+        $urlParts = explode('/', $categoryUrl);
+
+        $urlParts = array_slice($urlParts, 2, count($urlParts) - 5);
 
         $urlPart = array_pop($urlParts);
         $urlParts[] = $urlPart;
+
+        dd([$urlPart, $urlParts]);
 
         $slug = '';
         foreach ([$urlPart] as $part) {
@@ -243,7 +250,7 @@ class DatabaseSeeder extends Seeder
         foreach ($this->storeCategories as $key => $storeCategory) {
             $this->parentStoreCategory = null;
 
-            $this->setParentStoreCategory($storeCategory);
+//            $this->setParentStoreCategory($storeCategory);
         }
     }
 
