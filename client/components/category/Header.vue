@@ -58,7 +58,7 @@ export default {
     this.payload = {
       type: 2,
       has_store: false,
-      level: parseInt(this.category.level) + 1,
+      level: this.category.level,
       category_id: this.category.id,
       limit: process.env.APP_LIMIT,
       order_by: 'randomized_at',

@@ -108,8 +108,6 @@ const actions = {
 
         if (store.categories != undefined) {
           let categories = store.categories;
-
-          commit('setCategories', categories);
           dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
         }
 
@@ -125,8 +123,6 @@ const actions = {
     try {
       dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
-
-      commit('setCategories', []);
 
       return await axios.post('/categories', payload).then(({data}) => {
         let categories = data.categories;
@@ -182,7 +178,7 @@ const actions = {
 
         commit('setStore', store);
         commit('setProduct', product);
-        commit('setCategories', categories);
+
 
         // console.log('setProduct', data);
         commit('setCategory', category);
