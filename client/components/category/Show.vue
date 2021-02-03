@@ -58,6 +58,7 @@ export default {
 
     this.payload.route = this.$route.path;
     this.payload.slug = this.$route.params.slug;
+
     await this.onCategory();
   },
   computed: mapGetters({

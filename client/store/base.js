@@ -258,7 +258,7 @@ const actions = {
 
       commit('setCategories', []);
       commit('setStores', []);
-      commit('setProducts', { data: []});
+      commit('setProducts', {data: []});
 
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
@@ -309,6 +309,28 @@ const actions = {
       });
     } catch (e) {
       console.error('onCategories errors');
+      console.log(e);
+    }
+  },
+  async onProducts({dispatch, commit}, payload) {
+    dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
+
+    try {
+      await axios.post('/products', payload).then(({data}) => {
+        console.log('response: onProducts data: ', data);
+        let products = data;
+
+        commit('setProducts', products);
+
+        dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
+
+        setTimeout(() => {
+          dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
+        }, 600);
+      });
+
+    } catch (e) {
+      console.error('onProducts errors');
       console.log(e);
     }
   },

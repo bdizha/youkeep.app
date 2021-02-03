@@ -95,38 +95,30 @@ export default {
       products: {data: []}
     }
   },
-  async fetch() {
-    this.payload.category_id = this.category.id;
-    await this.onProducts();
-  },
-  computed: {
-    hasProducts() {
-      return this.products.data.length > 0;
-    },
-    ...mapGetters({
-      store: 'shop/store',
-      filters: 'shop/filters',
-      processes: 'base/processes',
-    })
-  },
+  computed: mapGetters({
+    store: 'shop/store',
+    filters: 'shop/filters',
+    hasProducts: 'base/hasProducts',
+    products: 'base/products'
+  }),
   created() {
   },
   methods: {
-    onChange(pageNumber, pageSize) {
+    async onChange(pageNumber, pageSize) {
       console.log('pageNumber ::: ', pageNumber);
       console.log('pageSize ::: ', pageSize);
 
       this.payload.page = pageNumber;
-      this.onProducts();
+      await this.onProducts();
     },
-    onSort(option) {
+    async onSort(option) {
       this.payload.sort = option.key;
-      this.onProducts();
+      await this.onProducts();
     },
     async onProducts() {
-      this.products = await this.$store.dispatch('shop/onProducts', this.payload);
+      await this.$store.dispatch('base/onProducts', this.payload);
 
-      console.log('dadfad', this.products)
+      console.log('products', this.products)
     }
   }
 };
