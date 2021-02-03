@@ -9,10 +9,10 @@ use Illuminate\Support\Str;
 
 class ProductMTGSeeder extends DatabaseSeeder
 {
-    protected $domain = "https://www.archivestore.co.za";
+    protected $domain = "";
     protected $storeId = null;
 
-    protected $storeIds = [66]; //, 68, 67, 69, 65, 61, 34, 50, 64, 63, 62, 29];
+    protected $storeIds = [66, 68, 67, 69, 65, 61, 34, 50, 64, 63, 62, 29];
     protected $categories = [];
     protected $level = 0;
 
@@ -44,7 +44,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             echo ">>>>>> Fetching store > categories: " . $store->id . "\n";
             $this->getCategories($store->url);
 
-            dd("Done with updates without pulling out the products >>>");
+//            dd("Done with updates without pulling out the products >>>");
 
             $this->storeCategories = \App\StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
@@ -86,26 +86,32 @@ class ProductMTGSeeder extends DatabaseSeeder
             $categoryLink = $linkNode->attr('href');
             $categoryName = $linkNode->text();
 
-            $this->setCategory($categoryName, $categoryLink, 1);
+            $parentId = $this->setCategory($categoryName, $categoryLink, 1, null);
 
             $secondaryNavNode = $node->filter('.nav__sub-title')->eq(0);
 
-            $categoryLink = $secondaryNavNode->attr('href');
-            $categoryName = $secondaryNavNode->text();
+            if ($node->filter('.nav__sub-title')->count() > 0) {
+                $categoryLink = $secondaryNavNode->attr('href');
+                $categoryName = $secondaryNavNode->text();
 
-            $this->setCategory($categoryName, $categoryLink, 2);
+                $parentId = $this->setCategory($categoryName, $categoryLink, 2, $parentId);
+                $level = 3;
+            } else {
+                $level = 2;
+            }
 
             $tertiaryNavItems = $node->filter('.nav__sub-item-list .nav__sub-item');
 
-            $tertiaryNavItems->each(function ($node) {
+            $tertiaryNavItems->each(function ($node) use ($level, $parentId) {
                 $linkNode = $node->filter('.nav__sub-link')->eq(0);
                 echo $node->html();
                 $categoryLink = $linkNode->attr('href');
                 $categoryName = $linkNode->text();
-                $this->setCategory($categoryName, $categoryLink, 3);
+                $this->setCategory($categoryName, $categoryLink, $level, $parentId);
             });
         });
     }
+
 
     /**
      * @param $storeCategory
@@ -153,9 +159,10 @@ class ProductMTGSeeder extends DatabaseSeeder
      * @param $categoryName
      * @param $url
      * @param $level
+     * @param $parentId
      * @return mixed
      */
-    private function setCategory($categoryName, $url, $level)
+    private function setCategory($categoryName, $url, $level, $parentId)
     {
         $categoryDescription = 'Not set';
 
@@ -192,6 +199,7 @@ class ProductMTGSeeder extends DatabaseSeeder
         $values = [
             'store_id' => $this->storeId,
             'category_id' => $category->id,
+            'parent_id' => $parentId,
             'url' => $url,
             'level' => $level,
             'randomized_at' => \Carbon\Carbon::now()->addMinutes(rand(1, 3600))
@@ -199,8 +207,11 @@ class ProductMTGSeeder extends DatabaseSeeder
 
         $this->parentStoreCategory = \App\StoreCategory::updateOrCreate($values, $values);
 
-//        dd($this->parentStoreCategory);
-        return $category;
+        $parentId = null;
+        if (!empty($this->parentStoreCategory->id)) {
+            $parentId = $this->parentStoreCategory->id;
+        }
+        return $parentId;
     }
 
     protected $parentCategory = null;
