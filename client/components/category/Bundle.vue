@@ -42,7 +42,7 @@ export default {
       let $this = this;
     },
     onCategory(category) {
-      this.$store.dispatch('shop/onCategory', category.route);
+      this.$store.dispatch('base/onCategory', category.route);
     },
   }
 };

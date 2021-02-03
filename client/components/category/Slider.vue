@@ -82,7 +82,7 @@ export default {
       categories: "base/categories",
       category: "shop/category",
       store: "shop/store",
-      hasProducts: 'shop/hasProducts',
+      hasProducts: 'base/hasProducts',
       hasCategories: "base/hasCategories",
       processes: "base/processes",
     })

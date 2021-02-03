@@ -22,10 +22,11 @@ class CategoryController extends Controller
         $storeId = null,
         $storeSlug = null,
         $product = [],
+        $products = [],
         $category = [],
         $storeCategory = [],
         $store = [],
-        $limit = [],
+        $limit = 24,
         $level = [],
         $items = [],
         $item = [];
@@ -78,7 +79,7 @@ class CategoryController extends Controller
         $response = [];
         $this->slug = $request->get('slug', $slug);
         $level = $request->get('level', $level);
-        $this->level = $this->_decodeLevel($level);
+        $this->level = (integer) $this->_decodeLevel($level);
 
         $this->categoryType = $request->get('type', 2);
         $this->storeId = $request->get('store_id', null);
@@ -92,9 +93,11 @@ class CategoryController extends Controller
             $response = Cache::get($key, []);
         } else {
             $this->_setCategories();
+            $this->setProducts();
 
             $response['categories'] = $this->categories;
             $response['category'] = $this->category;
+            $response['products'] = $this->products;
 
             Cache::put($key, $response, now()->addMinutes(45));
         }

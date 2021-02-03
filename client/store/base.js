@@ -6,7 +6,9 @@ const state = () => ({
   store: {},
   stores: {data: []},
   category: {},
+  products: [],
   categories: [],
+  hasProducts: false,
   departments: [],
   positions: [],
   position: {},
@@ -17,7 +19,8 @@ const state = () => ({
   hasNotice: false,
   hasForm: true,
   isValid: true,
-  hasCategories: true,
+  hasCategories: false,
+  hasCategory: false,
   drawer: {
     current: null,
     isVisible: false,
@@ -34,7 +37,6 @@ const state = () => ({
   hasDrawer: false,
   hasModal: false,
   hasStoreTray: false,
-  products: [],
   reviews: [],
   filters: {
     stores: [],
@@ -90,6 +92,8 @@ const getters = {
   categories: state => state.categories,
   storeCategories: state => state.storeCategories,
   hasCategories: state => state.hasCategories,
+  hasProducts: state => state.hasProducts,
+  hasCategory: state => state.hasCategory,
   drawer: state => state.drawer,
   hasDrawer: state => state.hasDrawer,
   hasOverlay: state => state.hasOverlay,
@@ -135,10 +139,15 @@ const mutations = {
   },
   setCategory(state, category) {
     state.category = category;
+    state.hasCategory = category != null;
   },
   setCategories(state, categories) {
     state.categories = categories;
     state.hasCategories = categories.length > 0;
+  },
+  setProducts(state, products) {
+    state.products = products;
+    state.hasProducts = products.data != undefined && products.data.length > 0;
   },
   setPositions(state, positions) {
     state.positions = positions;
@@ -238,24 +247,43 @@ const actions = {
   },
   async onCategory({dispatch, commit, state}, params) {
     try {
-      dispatch('onProcess', {key: 'isCategory', value: true});
+      dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
+      dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
+      dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
 
       let route = params.route;
 
-      // console.log('route: ', route);
-      dispatch('onProcess', {key: 'isFixed', value: true});
+      console.log("onCategory params", params);
+      console.trace();
+
+      dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
       await axios.post(route, params).then(({data}) => {
         let category = data.category;
+        let categories = data.categories;
+        let products = data.products;
+
         commit('setCategory', category);
+        commit('setCategories', categories);
+        commit('setStores', []);
 
-        // console.log('setCategory data >>>>> ', category);
+        setTimeout(() => {
+          dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
+          dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
+        }, 300);
 
-        dispatch('onProcess', {key: 'isCategory', value: false});
-        dispatch('onProcess', {key: 'isFixed', value: false});
+        commit('setProducts', products);
+
+        if (category.filters != undefined) {
+          let filters = category.filters;
+
+          commit('setFilters', filters);
+        }
       });
+
     } catch (e) {
-      console.error('on error: ', e);
+      console.error('onCategory errors');
+      console.log(e);
     }
   },
   async onCategories({dispatch, commit, state}, payload) {

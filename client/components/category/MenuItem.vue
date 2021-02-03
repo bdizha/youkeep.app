@@ -85,7 +85,7 @@ export default {
 
     },
     onCategory(category) {
-      this.$store.dispatch('shop/onCategory', this.category.route);
+      this.$store.dispatch('base/onCategory', this.category.route);
     },
   }
 };

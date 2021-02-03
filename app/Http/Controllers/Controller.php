@@ -130,6 +130,10 @@ class Controller extends BaseController
                 ->where('type', $this->productType);
         }
 
+        if (!empty($this->category->id)) {
+            $this->categoryId = $this->category->id;
+        }
+
         if (!empty($this->categoryId)) {
             $query = Product::orderBy($sort['column'], $sort['dir']);
             $query->whereHas('categories', function ($query) {
@@ -174,7 +178,7 @@ class Controller extends BaseController
     protected function _setCacheKey(Request $request): string
     {
         $fields = $request->all();
-        $value = "category";
+        $value = $request->path();
 
         foreach ($fields as $field) {
             $value .= "_" . (is_array($field) ? implode("_", $field) : $field);

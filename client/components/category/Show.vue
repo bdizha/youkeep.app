@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
-    <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <div class="r-gradient r-p-12" :class="{'r-hide-lg': !hasCategories}">
@@ -14,7 +14,7 @@
                :lg="{ span: 24 }">
           <div class="r-margin-out-sm">
             <r-category-slider :category="category"></r-category-slider>
-            <r-product-flush :columns="3"></r-product-flush>
+            <!--            <r-product-flush :columns="3"></r-product-flush>-->
           </div>
         </a-col>
       </a-row>
@@ -41,37 +41,38 @@ export default {
   props: {
     columns: {type: Number, required: false, default: 6}
   },
-  async fetch() {
-    let params = {};
-    console.log('category params', this.$route);
-    let route = this.$route.path;
-
-    console.log('route', route);
-
-    params.route = route;
-    params.slug = this.$route.params.slug;
-    params.with = [];
-    await this.$store.dispatch('shop/onCategory', params);
-  },
   data() {
     return {
-      hasData: false,
-      isProcessing: false
+      payload: {
+        route: null,
+        slug: null,
+        limit: process.env.APP_LIMIT,
+        with: []
+      },
     }
   },
+  async fetch() {
+    console.log('category params', this.$route);
+
+    console.log('route', this.$route.path);
+
+    this.payload.route = this.$route.path;
+    this.payload.slug = this.$route.params.slug;
+    await this.onCategory();
+  },
   computed: mapGetters({
-    category: 'shop/category',
+    category: 'base/category',
     hasCategories: 'base/hasCategories',
+    hasCategory: 'base/hasCategory',
     processes: 'base/processes'
   }),
   created() {
-    this.payload();
   },
   mounted() {
-    this.hasData = true;
   },
   methods: {
-    payload() {
+    async onCategory() {
+      await this.$store.dispatch('base/onCategory', this.payload);
     }
   }
 };

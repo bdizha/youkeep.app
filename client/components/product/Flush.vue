@@ -70,7 +70,7 @@ export default {
   },
   computed: mapGetters({
     products: 'shop/products',
-    hasProducts: 'shop/hasProducts',
+    hasProducts: 'base/hasProducts',
     processes: 'base/processes',
   }),
   created() {

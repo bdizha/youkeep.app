@@ -5,7 +5,7 @@
         <a-col :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
           <a-pagination class="r-same-height" v-model="products.current_page"
                         :show-total="(total, range) => `${range[0]}-${range[1]} of ${total} items`"
-                        :page-size="products.per_page"
+                        :page-size="parseInt(products.per_page)"
                         @change="onChange"
                         :total="products.total"
                         show-less-items>

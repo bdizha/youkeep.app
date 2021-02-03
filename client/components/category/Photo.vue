@@ -39,7 +39,7 @@ export default {
       this.styles = styles;
     },
     onCategory(event) {
-      this.$store.dispatch('shop/onCategory', this.category.route);
+      this.$store.dispatch('base/onCategory', this.category.route);
     }
   }
 };

@@ -8,8 +8,6 @@ const state = () => ({
   category: {},
   product: {},
   products: [],
-  categories: [],
-  hasProducts: false,
   hasNotice: false,
   notice: null,
   hasCategories: false,
@@ -41,8 +39,6 @@ const getters = {
   categoriesReverse: state => state.categories,
   products: state => state.products,
   productsReverse: state => state.products,
-  hasCategories: state => state.hasCategories,
-  hasProducts: state => state.hasProducts,
   filters: state => state.filters,
   sort: state => state.sort,
   search: state => state.search,
@@ -76,14 +72,6 @@ const mutations = {
   setHasNotice(state, hasNotice) {
     state.hasNotice = hasNotice;
   },
-  setCategories(state, categories) {
-    state.categories = categories;
-    state.hasCategories = categories.length > 0;
-  },
-  setProducts(state, products) {
-    state.products = products;
-    state.hasProducts = products.data.length > 0;
-  },
   setFilters(state, filters) {
     state.filters = filters;
   },
@@ -106,51 +94,6 @@ const mutations = {
 
 // actions
 const actions = {
-  async onCategory({dispatch, commit, state}, params) {
-    try {
-      dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
-      dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
-      dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
-
-      let route = params.route;
-
-      dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
-
-      await axios.post(route, params).then(({data}) => {
-        let category = data.category;
-        commit('setCategory', category);
-
-        // set the store object
-        // force the store to change
-        commit('setStore', []);
-
-        let payload = {
-          type: 2,
-          has_store: true,
-          category_id: category.id,
-          level: category.level,
-          limit: process.env.APP_LIMIT,
-          order_by: 'randomized_at',
-          with: ['photos', 'breadcrumbs']
-        };
-        dispatch('base/onCategories', payload, {root: true});
-
-        if (category.filters != undefined) {
-          let filters = category.filters;
-
-          commit('setFilters', filters);
-        }
-
-        setTimeout(() => {
-          dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
-        }, 300);
-      });
-
-    } catch (e) {
-      console.error('onCategory errors');
-      console.log(e);
-    }
-  },
   async onStore({dispatch, commit}, route) {
     console.log('response: route store', route);
     try {
@@ -182,7 +125,6 @@ const actions = {
     }
   },
   async onCategories({dispatch, commit, state}, payload) {
-
     try {
       dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
