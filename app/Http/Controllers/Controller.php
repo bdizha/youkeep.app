@@ -146,11 +146,11 @@ class Controller extends BaseController
         if (!empty($this->category['id'])) {
             $this->category['level'] = $this->level;
 
-            ++$this->level;
-
             $this->storeCategory = StoreCategory::where('category_id', $this->category['id'])
                 ->where('level', $this->level)
                 ->first();
+
+            ++$this->level;
         }
 
         if (!empty($this->storeSlug)) {
