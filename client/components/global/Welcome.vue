@@ -29,6 +29,7 @@ export default {
       type: 2,
       has_store: true,
       category_id: null,
+      level: 1,
       limit: process.env.APP_LIMIT,
       order_by: 'randomized_at',
       with: ['photos', 'breadcrumbs']
