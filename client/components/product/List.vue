@@ -88,7 +88,7 @@ export default {
       sortOptions: SORTS,
       payload: {
         limit: process.env.APP_LIMIT,
-        category_id: null,
+        category_id: this.category.id,
         sort: 0,
         page: 1
       },

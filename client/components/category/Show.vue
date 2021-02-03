@@ -18,7 +18,7 @@
           </div>
         </a-col>
       </a-row>
-      <r-product-list :category="category" :columns="columns"></r-product-list>
+      <r-product-list v-if="hasCategory" :category="category" :columns="columns"></r-product-list>
       <a-row type="flex" justify="start" align="middle">
         <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
