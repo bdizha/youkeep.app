@@ -173,6 +173,10 @@ class Controller extends BaseController
 
             if ($this->categoryType == Category::TYPE_CATALOG) {
                 $query->where('store_categories.has_products', true);
+
+                if(empty($this->store->id) && empty($this->slug)){
+                    $query->where('store_categories.has_categories', true);
+                }
             }
 
             if (!empty($this->store->id)) {
