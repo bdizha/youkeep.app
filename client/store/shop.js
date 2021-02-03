@@ -97,7 +97,6 @@ const actions = {
   async onStore({dispatch, commit}, route) {
     console.log('response: route store', route);
     try {
-      dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
       dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
 
       // console.log('route: ', route);
@@ -109,8 +108,6 @@ const actions = {
 
         if (store.categories != undefined) {
           let categories = store.categories;
-
-          // console.log('onStore categories data >>>>> ', categories);
 
           commit('setCategories', categories);
           dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})

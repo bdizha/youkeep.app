@@ -1,5 +1,5 @@
 <template>
-  <a-row :class="{'r-show-category-spin__active' :processes.isCategories}" type="flex" justify="center">
+  <a-row :class="{'r-show-category-spin__active': processes.isProducts}" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">

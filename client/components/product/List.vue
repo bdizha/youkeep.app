@@ -3,7 +3,7 @@
     <a-col class="r-p-24" :span="24">
       <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" type="flex" justify="center">
         <a-col :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
-          <a-pagination class="r-same-height" v-model="products.current_page"
+          <a-pagination v-model="products.current_page"
                         :show-total="(total, range) => `${range[0]}-${range[1]} of ${total} items`"
                         :page-size="parseInt(products.per_page)"
                         @change="onChange"
@@ -91,15 +91,15 @@ export default {
         category_id: this.category.id,
         sort: 0,
         page: 1
-      },
-      products: {data: []}
+      }
     }
   },
   computed: mapGetters({
     store: 'shop/store',
     filters: 'shop/filters',
     hasProducts: 'base/hasProducts',
-    products: 'base/products'
+    products: 'base/products',
+    processes: 'base/processes',
   }),
   created() {
   },
@@ -117,8 +117,6 @@ export default {
     },
     async onProducts() {
       await this.$store.dispatch('base/onProducts', this.payload);
-
-      console.log('products', this.products)
     }
   }
 };

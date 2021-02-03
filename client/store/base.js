@@ -247,9 +247,8 @@ const actions = {
   },
   async onCategory({dispatch, commit, state}, params) {
     try {
-      dispatch('base/onProcess', {key: 'isCategory', value: true}, {root: true});
-      dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
-      dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
+      dispatch('onProcess', {key: 'isCategory', value: true});
+      dispatch('onProcess', {key: 'isProduct', value: true});
 
       let route = params.route;
 
@@ -260,7 +259,7 @@ const actions = {
       commit('setStores', []);
       commit('setProducts', {data: []});
 
-      dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
+      dispatch('onProcess', {key: 'isFixed', value: true});
 
       await axios.post(route, params).then(({data}) => {
         let category = data.category;
@@ -272,8 +271,8 @@ const actions = {
         commit('setProducts', products);
 
         setTimeout(() => {
-          dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
-          dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
+          dispatch('onProcess', {key: 'isProduct', value: false});
+          dispatch('onProcess', {key: 'isCategory', value: false});
         }, 300);
 
         if (category.filters != undefined) {
@@ -291,8 +290,8 @@ const actions = {
   async onCategories({dispatch, commit, state}, payload) {
 
     try {
-      dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
-      dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
+      dispatch('onProcess', {key: 'isCategories', value: true});
+      dispatch('onProcess', {key: 'isFixed', value: true});
 
       commit('setCategories', []);
 
@@ -301,11 +300,11 @@ const actions = {
         commit('setCategories', categories);
 
         setTimeout(() => {
-          dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
+          dispatch('onProcess', {key: 'isFixed', value: false});
         }, 300);
 
-        dispatch('base/onProcess', {key: 'isCategory', value: false}, {root: true});
-        dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
+        dispatch('onProcess', {key: 'isCategory', value: false});
+        dispatch('onProcess', {key: 'isCategories', value: false});
       });
     } catch (e) {
       console.error('onCategories errors');
@@ -313,7 +312,7 @@ const actions = {
     }
   },
   async onProducts({dispatch, commit}, payload) {
-    dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
+    dispatch('onProcess', {key: 'isProduct', value: true});
 
     try {
       await axios.post('/products', payload).then(({data}) => {
@@ -322,10 +321,10 @@ const actions = {
 
         commit('setProducts', products);
 
-        dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
+        dispatch('onProcess', {key: 'isFixed', value: false});
 
         setTimeout(() => {
-          dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
+          dispatch('onProcess', {key: 'isProduct', value: false});
         }, 600);
       });
 
