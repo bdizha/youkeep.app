@@ -256,6 +256,10 @@ const actions = {
       console.log("onCategory params", params);
       console.trace();
 
+      commit('setCategories', []);
+      commit('setStores', []);
+      commit('setProducts', []);
+
       dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
 
       await axios.post(route, params).then(({data}) => {
@@ -265,14 +269,12 @@ const actions = {
 
         commit('setCategory', category);
         commit('setCategories', categories);
-        commit('setStores', []);
+        commit('setProducts', products);
 
         setTimeout(() => {
           dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
           dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
         }, 300);
-
-        commit('setProducts', products);
 
         if (category.filters != undefined) {
           let filters = category.filters;
