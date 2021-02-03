@@ -33,6 +33,7 @@ class Controller extends BaseController
         $productId = null,
         $productType = null,
         $storeId = null,
+        $slug = null,
         $storeSlug = null,
         $reviewId = null,
         $products = [],
