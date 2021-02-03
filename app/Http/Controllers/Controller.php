@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Address;
+use App\Category;
 use App\Product;
 use App\Review;
+use App\Store;
+use App\StoreCategory;
 use App\UserAddress;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
@@ -123,9 +126,79 @@ class Controller extends BaseController
     }
 
     /**
+     * Get categories by criteria
+     */
+    protected function _setCategories(): void
+    {
+        if (!empty($this->slug)) {
+            $this->category = Category::where('slug', $this->slug)
+                ->first()
+                ->toArray();
+        }
+
+        if (!empty($this->categoryId)) {
+            $this->category = Category::where('id', $this->categoryId)
+                ->first()
+                ->toArray();
+        }
+
+        if (!empty($this->category['id'])) {
+            $this->category['level'] = $this->level;
+
+            ++$this->level;
+
+            $this->storeCategory = StoreCategory::where('category_id', $this->category['id'])
+                ->where('level', $this->level)
+                ->first();
+        }
+
+        if (!empty($this->storeSlug)) {
+            $this->store = Store::where('slug', $this->storeSlug)
+                ->first();
+        }
+
+        $this->with = array_intersect($this->with, $this->relations);
+
+        $query = Category::with($this->with)
+            ->take($this->limit);
+        $query->whereHas('stores', function ($query) {
+            if (!empty($this->storeCategory)) {
+                $query->where('parent_id', $this->storeCategory->id);
+            }
+
+            if (!empty($this->level)) {
+                $query->where('level', $this->level);
+            }
+
+            if ($this->categoryType == Category::TYPE_CATALOG) {
+                $query->where('store_categories.has_products', true);
+            }
+
+            if (!empty($this->store->id)) {
+                $query->where('store_categories.store_id', $this->store->id);
+            }
+        });
+
+        $query->orderBy($this->orderBy, 'DESC');
+
+        $this->categories = $query
+            ->get()
+            ->toArray();
+
+        $this->_setRoutes();
+        $this->_setBreadcrumbs();
+
+        if ($this->categoryType === Category::TYPE_STORE) {
+            $this->_setCategoryStores();
+        }
+
+        $this->categories = $this->_pruneRelations($this->categories);
+    }
+
+    /**
      * @return void
      */
-    protected function setProducts()
+    protected function _setProducts()
     {
         $sort = request()->get('sort', 0);
         $sortOptions = Product::$sortOptions;
@@ -137,8 +210,8 @@ class Controller extends BaseController
                 ->where('type', $this->productType);
         }
 
-        if (!empty($this->category->id)) {
-            $this->categoryId = $this->category->id;
+        if (!empty($this->category['id'])) {
+            $this->categoryId = $this->category['id'];
         }
 
         if (!empty($this->categoryId)) {

@@ -37,7 +37,7 @@ class ProductController extends Controller
         if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
-            $this->setProducts();
+            $this->_setProducts();
 
             $response = $this->products;
             Cache::put($key, $response, now()->addMinutes(3600));

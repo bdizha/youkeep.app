@@ -79,7 +79,7 @@ class CategoryController extends Controller
         $response = [];
         $this->slug = $request->get('slug', $slug);
         $level = $request->get('level', $level);
-        $this->level = (integer) $this->_decodeLevel($level);
+        $this->level = (integer)$this->_decodeLevel($level);
 
         $this->categoryType = $request->get('type', 2);
         $this->storeId = $request->get('store_id', null);
@@ -93,7 +93,7 @@ class CategoryController extends Controller
             $response = Cache::get($key, []);
         } else {
             $this->_setCategories();
-            $this->setProducts();
+            $this->_setProducts();
 
             $response['categories'] = $this->categories;
             $response['category'] = $this->category;
@@ -179,70 +179,5 @@ class CategoryController extends Controller
             $category['level'] = $this->level;
             return $category;
         }, $this->categories);
-    }
-
-    /**
-     */
-    private function _setCategories(): void
-    {
-        if (!empty($this->slug)) {
-            $this->category = Category::where('slug', $this->slug)
-                ->first();
-        }
-
-        if (!empty($this->categoryId)) {
-            $this->category = Category::where('id', $this->categoryId)
-                ->first();
-        }
-
-        if (!empty($this->category->id)) {
-            $this->level = $this->category['level'] + 1;
-
-            $this->storeCategory = StoreCategory::where('category_id', $this->category->id)
-                ->where('level', $this->level)
-                ->first();
-        }
-
-        if (!empty($this->storeSlug)) {
-            $this->store = Store::where('slug', $this->storeSlug)
-                ->first();
-        }
-
-        $this->with = array_intersect($this->with, $this->relations);
-
-        $query = Category::with($this->with)
-            ->take($this->limit);
-        $query->whereHas('stores', function ($query) {
-            if (!empty($this->storeCategory)) {
-                $query->where('parent_id', $this->storeCategory->id);
-            }
-
-            if (!empty($this->level)) {
-                $query->where('level', $this->level);
-            }
-
-            if ($this->categoryType == Category::TYPE_CATALOG) {
-                $query->where('store_categories.has_products', true);
-            }
-
-            if (!empty($this->store->id)) {
-                $query->where('store_categories.store_id', $this->store->id);
-            }
-        });
-
-        $query->orderBy($this->orderBy, 'DESC');
-
-        $this->categories = $query
-            ->get()
-            ->toArray();
-
-        $this->_setRoutes();
-        $this->_setBreadcrumbs();
-
-        if ($this->categoryType === Category::TYPE_STORE) {
-            $this->_setCategoryStores();
-        }
-
-        $this->categories = $this->_pruneRelations($this->categories);
     }
 }
