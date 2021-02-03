@@ -176,7 +176,7 @@ class CategoryController extends Controller
     {
         $this->categories = array_map(function ($category) {
             $category['route'] .= $this->_encodeLevel();
-            $category['level'] = $this->level + 1;
+            $category['level'] = $this->level;
             return $category;
         }, $this->categories);
     }
@@ -196,6 +196,8 @@ class CategoryController extends Controller
         }
 
         if (!empty($this->category->id)) {
+            $this->level = $this->category['level'] + 1;
+
             $this->storeCategory = StoreCategory::where('category_id', $this->category->id)
                 ->where('level', $this->level)
                 ->first();
@@ -210,15 +212,13 @@ class CategoryController extends Controller
 
         $query = Category::with($this->with)
             ->take($this->limit);
-
-        $this->category['level'] = $this->level;
         $query->whereHas('stores', function ($query) {
             if (!empty($this->storeCategory)) {
                 $query->where('parent_id', $this->storeCategory->id);
             }
 
             if (!empty($this->level)) {
-                $query->where('level', $this->level + 1);
+                $query->where('level', $this->level);
             }
 
             if ($this->categoryType == Category::TYPE_CATALOG) {

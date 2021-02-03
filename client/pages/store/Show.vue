@@ -43,7 +43,7 @@ export default {
 
       let payload = {
         store: params.slug,
-        level: 0,
+        level: 1,
         order_by: 'randomized_at',
         limit: process.env.APP_LIMIT,
         with: ['breadcrumbs', 'photos', 'products']
