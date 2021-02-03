@@ -86,28 +86,32 @@ class ProductMTGSeeder extends DatabaseSeeder
             $categoryLink = $linkNode->attr('href');
             $categoryName = $linkNode->text();
 
-            $parentId = $this->setCategory($categoryName, $categoryLink, 1, null);
+            $level = 1;
+            $parentId = $this->setCategory($categoryName, $categoryLink, $level, null);
 
-            $secondaryNavNode = $node->filter('.nav__sub-title')->eq(0);
+            $secondaryNavItems = $node->filter('.nav__sub-list');
+            $secondaryNavItems->each(function ($node) use ($level, $parentId) {
+                $secondaryNavNode = $node->filter('.nav__sub-title')->eq(0);
 
-            if ($node->filter('.nav__sub-title')->count() > 0) {
-                $categoryLink = $secondaryNavNode->attr('href');
-                $categoryName = $secondaryNavNode->text();
+                if ($node->filter('.nav__sub-title')->count() > 0) {
+                    $categoryLink = $secondaryNavNode->attr('href');
+                    $categoryName = $secondaryNavNode->text();
 
-                $parentId = $this->setCategory($categoryName, $categoryLink, 2, $parentId);
-                $level = 3;
-            } else {
-                $level = 2;
-            }
+                    $parentId = $this->setCategory($categoryName, $categoryLink, 2, $parentId);
+                    $level = 3;
+                } else {
+                    $level = 2;
+                }
 
-            $tertiaryNavItems = $node->filter('.nav__sub-item-list .nav__sub-item');
+                $tertiaryNavItems = $node->filter('.nav__sub-item-list .nav__sub-item');
 
-            $tertiaryNavItems->each(function ($node) use ($level, $parentId) {
-                $linkNode = $node->filter('.nav__sub-link')->eq(0);
-                echo $node->html();
-                $categoryLink = $linkNode->attr('href');
-                $categoryName = $linkNode->text();
-                $this->setCategory($categoryName, $categoryLink, $level, $parentId);
+                $tertiaryNavItems->each(function ($node) use ($level, $parentId) {
+                    $linkNode = $node->filter('.nav__sub-link')->eq(0);
+                    echo $node->html();
+                    $categoryLink = $linkNode->attr('href');
+                    $categoryName = $linkNode->text();
+                    $this->setCategory($categoryName, $categoryLink, $level, $parentId);
+                });
             });
         });
     }
