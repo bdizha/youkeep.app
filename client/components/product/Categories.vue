@@ -9,7 +9,8 @@
           <r-product-products :columns="columns"
                               :is-vertical="isVertical"
                               :type="category.type"
-                              :product="product"/>
+                              :product="product">
+          </r-product-products>
         </a-collapse-panel>
       </a-collapse>
     </a-col>

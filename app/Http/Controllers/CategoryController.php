@@ -152,32 +152,15 @@ class CategoryController extends Controller
     protected function _setCategoryStores()
     {
         foreach ($this->categories as $key => $category) {
-            $this->storeCategory = Category::with('stores')
+            $storeCategory = Category::with('stores')
                 ->where('id', $category['id'])
                 ->first();
 
-            $this->categories[$key]['stores'] = $this->storeCategory->stores;
+            if (empty($storeCategory)) {
+                continue;
+            }
+
+            $this->categories[$key]['stores'] = $storeCategory->stores;
         }
-    }
-
-    /**
-     * @return void
-     */
-    protected function _setBreadcrumbs()
-    {
-        $this->breadcrumbs = !empty($this->storeCategory->breadcrumbs) ? $this->storeCategory->breadcrumbs : [];
-        $this->category['breadcrumbs'] = $this->breadcrumbs;
-    }
-
-    /**
-     * @return void
-     */
-    protected function _setRoutes(): void
-    {
-        $this->categories = array_map(function ($category) {
-            $category['route'] .= $this->_encodeLevel();
-            $category['level'] = $this->level;
-            return $category;
-        }, $this->categories);
     }
 }

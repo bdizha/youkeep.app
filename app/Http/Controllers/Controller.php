@@ -174,7 +174,7 @@ class Controller extends BaseController
             if ($this->categoryType == Category::TYPE_CATALOG) {
                 $query->where('store_categories.has_products', true);
 
-                if(empty($this->store->id) && empty($this->slug)){
+                if (empty($this->store->id) && empty($this->slug)) {
                     $query->where('store_categories.has_categories', true);
                 }
             }
@@ -190,8 +190,8 @@ class Controller extends BaseController
             ->get()
             ->toArray();
 
-        $this->_setRoutes();
-        $this->_setBreadcrumbs();
+        $this->_setCategoryRoutes();
+        $this->_setCategoryBreadcrumbs();
 
         if ($this->categoryType === Category::TYPE_STORE) {
             $this->_setCategoryStores();
@@ -271,5 +271,35 @@ class Controller extends BaseController
 
         $key = md5($value);
         return $key;
+    }
+
+    /**
+     * @return void
+     */
+    protected function _setCategoryBreadcrumbs()
+    {
+        $this->breadcrumbs = !empty($this->storeCategory->breadcrumbs) ? $this->storeCategory->breadcrumbs : [];
+        $this->category['breadcrumbs'] = $this->breadcrumbs;
+    }
+
+    /**
+     * @return void
+     */
+    protected function _setProductBreadcrumbs()
+    {
+        $this->breadcrumbs = !empty($this->storeCategory->breadcrumbs) ? $this->storeCategory->breadcrumbs : [];
+        $this->product['breadcrumbs'] = $this->breadcrumbs;
+    }
+
+    /**
+     * @return void
+     */
+    protected function _setCategoryRoutes(): void
+    {
+        $this->categories = array_map(function ($category) {
+            $category['route'] .= $this->_encodeLevel();
+            $category['level'] = $this->level;
+            return $category;
+        }, $this->categories);
     }
 }

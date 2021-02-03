@@ -31,7 +31,6 @@
       </a-col>
     </a-row>
     <div class="r-product-products">
-      <r-product-products v-if="false" :product="product"></r-product-products>
     </div>
   </r-modal>
 </template>

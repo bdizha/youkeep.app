@@ -24,7 +24,7 @@ export default {
   props: {
     columns: {type: Number, required: false, default: 3},
     isVertical: {type: Boolean, required: false, default: true},
-    product: {type: Object, required: false},
+    product: {type: Object, required: false, default: null},
     type: {type: Object, required: false, default: 1},
   },
   data() {

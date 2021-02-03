@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\CategoryProduct;
 use App\Product;
+use App\StoreCategory;
 use App\StoreProduct;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -71,37 +73,35 @@ class ProductController extends Controller
 
             $this->product = Product::where('is_active', true)
                 ->where('slug', $this->slug)
-                ->first();
+                ->first()
+                ->toArray();
 
             if (!empty($this->product)) {
-                $storeProduct = StoreProduct::where('product_id', $this->product->id)
+                $storeProduct = StoreProduct::where('product_id', $this->product['id'])
                     ->with('store')
                     ->first();
 
                 if (!empty($storeProduct)) {
                     $this->store = $storeProduct->store;
+
+                    $this->categoryProduct = CategoryProduct::where('product_id', $this->product['id'])
+                        ->first();
+
+                    if (!empty($this->categoryProduct)) {
+                        $this->storeCategory = StoreCategory::where('store_id', $this->store->id)
+                            ->where('category_id', $this->categoryProduct->category_id)
+                            ->orderBy('level', 'DESC')
+                            ->first();
+                    }
                 }
-
-                $query = Category::with(array_intersect($this->with, $this->relations));
-                $this->categories = $query
-                    ->limit(3)
-                    ->get()
-                    ->toArray();
-
-                $this->categories = $this->_pruneRelations($this->categories);
-
-                $this->category = Category::where('id', $this->product->category_id)
-                    ->first();
-
             }
-            if (!empty($this->categories)) {
-                $this->category = $this->categories[0];
-            }
+
+            $this->_setProductBreadcrumbs();
 
             $response['store'] = $this->store;
-            $response['category'] = $this->category;
+            $response['category'] = [];
             $response['product'] = $this->product;
-            $response['categories'] = $this->categories;
+            $response['categories'] = [];
 
             Cache::put($key, $response, now()->addMinutes(3600));
         }
