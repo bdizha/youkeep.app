@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'r-abs-spinner' : isAbsolute,'r-fix-spinner' : !isAbsolute}">
+  <div :class="{'r-spin-abs' : isAbsolute,'r-spin-fix' : !isAbsolute}">
     <div class="ant-spin-spinning">
       <svg height="100%" viewBox="0 0 32 32" width="100%">
         <circle cx="16" cy="16" fill="none" r="14" stroke-width="4"
@@ -30,10 +30,6 @@ export default {
     this.payload();
   },
   methods: {
-    isRunning() {
-      return this.processes[this.process] !== undefined &&
-        this.processes[this.process];
-    },
     payload() {
     }
   },

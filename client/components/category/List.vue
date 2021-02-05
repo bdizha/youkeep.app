@@ -14,7 +14,6 @@
                            :category="category"></r-category-item>
         </a-collapse-panel>
       </a-collapse>
-      <r-spinner :is-absolute="true" process="isCategories" v-if="processes.isCategory"></r-spinner>
     </a-col>
   </a-row>
 </template>

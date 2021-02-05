@@ -23,7 +23,14 @@
         </template>
       </a-list-item>
     </a-list>
-    <r-store-list></r-store-list>
+    <a-collapse default-active-key="1" expandIconPosition="right">
+      <a-collapse-panel class="r-collapse-panel" header="All categories">
+        <r-category-filter-category></r-category-filter-category>
+      </a-collapse-panel>
+      <a-collapse-panel class="r-collapse-panel" header="Popular stores">
+        <r-store-list></r-store-list>
+      </a-collapse-panel>
+    </a-collapse>
   </div>
 </template>
 <script>
@@ -31,15 +38,15 @@ import {mapGetters} from "vuex";
 
 const LINKS = [
   {
-    label: 'Explore',
-    icon: 'compass',
-    link: '/stores/its-shopping-time',
-  },
-  {
     label: 'Home',
     icon: 'home',
     link: '/',
     modal: null
+  },
+  {
+    label: 'Explore',
+    icon: 'compass',
+    link: '/stores/its-shopping-time',
   },
   {
     label: 'Rewards',

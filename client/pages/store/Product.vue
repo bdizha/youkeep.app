@@ -3,8 +3,8 @@
 </template>
 <script>
 export default {
-  layout: 'category',
-  name: 'r-store-category',
+  layout: 'product',
+  name: 'r-store-product',
   components: {},
   props: {},
   async asyncData({store, params}) {

@@ -1,5 +1,5 @@
 <template>
-  <a-row :class="{'r-show-product-spin__active' :processes.isProduct}" v-if="hasProducts"
+  <a-row :class="{'r-spin__active' :processes.isProduct}" v-if="hasProducts"
          class="r-product-flush r-slider" type="flex" justify="start">
     <a-col class="r-spin-holder r-p-24" :span="24">
       <VueSlickCarousel v-bind="settings">

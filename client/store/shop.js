@@ -12,7 +12,36 @@ const state = () => ({
   notice: null,
   hasCategories: false,
   hasSearched: false,
-  filters: [],
+  filters: [
+    {
+      id: 1,
+      name: 'Size'
+    },
+    {
+      id: 2,
+      name: 'Color'
+    },
+    {
+      id: 3,
+      name: 'Volume'
+    },
+    {
+      id: 4,
+      name: 'Mass'
+    },
+    {
+      id: 5,
+      name: 'Brand'
+    },
+    {
+      id: 6,
+      name: 'Collection'
+    },
+    {
+      id: 7,
+      name: 'Store'
+    },
+  ],
   sort: null,
   isSearching: false,
   search: {

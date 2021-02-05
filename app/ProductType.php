@@ -15,6 +15,7 @@ class ProductType extends Model
     const TYPE_MASS = 4;
     const TYPE_BRAND = 5;
     const TYPE_COLLECTION = 6;
+    const TYPE_STORE = 7;
 
     public static $types = [
         self::TYPE_SIZE => 'Size',
@@ -23,6 +24,7 @@ class ProductType extends Model
         self::TYPE_MASS => 'Mass',
         self::TYPE_BRAND => 'Brand',
         self::TYPE_COLLECTION => 'Collection',
+        self::TYPE_STORE => 'Store',
     ];
 
 

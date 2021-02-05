@@ -45,6 +45,7 @@
             </a-row>
           </a-col>
         </a-row>
+        <r-spinner :is-absolute="true"></r-spinner>
       </template>
     </a-card-meta>
   </a-card>

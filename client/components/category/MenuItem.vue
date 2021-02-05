@@ -4,10 +4,10 @@
                @click.native="onCategory(category)"
                class="r-category-menu-link"
                :to="category.route">
-      <a-avatar class="r-lazy" shape="circle" :size="30"
-                :data-src="(category == null ? '/assets/icon_default.png' : '/' + category.photo)"
-                src="/assets/icon_default.png"
-                src-placeholder="~/assets/icon_default.png"/>
+      <r-avatar shape="circle"
+                :size="30"
+                :src="category.photo"
+                src-placeholder="/assets/icon_default.png"/>
       {{ category.name }}
     </nuxt-link>
     <a-collapse v-if="category.has_categories"
@@ -20,10 +20,10 @@
       <a-collapse-panel :key="category.id" :header="category.name">
         <nuxt-link @click.native="onCategory(category)" class="r-category-menu-link"
                    :to="category.route">
-          <a-avatar class="r-lazy" shape="circle" :size="30"
-                    :data-src="'/' + category.photo"
-                    src="/assets/icon_default.png"
-                    src-placeholder="~/assets/icon_default.png"/>
+          <r-avatar shape="circle"
+                    :size="30"
+                    :src="category.photo"
+                    src-placeholder="/assets/icon_default.png"/>
           {{ 'Browse All' }}
         </nuxt-link>
         <template v-for="(cat) in categories">

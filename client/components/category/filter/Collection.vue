@@ -3,12 +3,12 @@
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-radio-group v-model="selected" @change="onFilter">
         <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
-          <a-col v-for="(brand, index) in brand.items"
-                 :key="brand.id"
+          <a-col v-for="(collection, index) in collection.items"
+                 :key="collection.id"
                  :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
             <div class="r-product-type">
-              <a-radio v;m :value="brand.id">
-                {{ brand.name }}
+              <a-radio :value="collection.id">
+                {{ collection.name }}
               </a-radio>
             </div>
           </a-col>
@@ -21,7 +21,7 @@
 import {mapState} from "vuex";
 
 export default {
-  name: 'r-category-filter-brand',
+  name: 'r-category-filter-collection',
   data() {
     return {
       sizes: [],
@@ -29,7 +29,7 @@ export default {
     };
   },
   computed: mapState({
-    brand: state => state.shop.filters.filter(item => item.type === 5)[0]
+    collection: state => state.shop.filters.filter(item => item.type === 5)[0]
   }),
   mounted() {
   },

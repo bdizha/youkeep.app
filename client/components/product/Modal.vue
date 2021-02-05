@@ -30,8 +30,6 @@
         <p class="r-text-normal">Realtime product recommendations just for you</p>
       </a-col>
     </a-row>
-    <div class="r-product-products">
-    </div>
   </r-modal>
 </template>
 <script>

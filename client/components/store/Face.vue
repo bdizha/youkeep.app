@@ -7,9 +7,9 @@
         <template slot="description">
           <a-row type="flex" justify="center" align="middle">
             <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-              <dev class="r-store-avatar">
+              <div class="r-store-avatar">
                 <r-store-photo slot="cover" :store="store"></r-store-photo>
-              </dev>
+              </div>
             </a-col>
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
               <r-store-meta :store="store"></r-store-meta>

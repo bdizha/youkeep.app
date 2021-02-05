@@ -55,7 +55,6 @@
 import {mapGetters} from "vuex";
 
 export default {
-  layout: 'product',
   name: 'r-product-show',
   props: {},
   data() {
