@@ -121,12 +121,6 @@ class Product extends KModel
         ];
     }
 
-    public function getVariantsAttribute()
-    {
-        return [
-        ];
-    }
-
     public function getCategoryIdAttribute()
     {
         $categoryProduct = CategoryProduct::where('product_id', $this->id)
@@ -195,21 +189,22 @@ class Product extends KModel
                 ->where('product_id', $this->id)
                 ->get();
 
-            $productVariants = [];
-            foreach ($variants as $variant) {
-                if (!empty($variant->product_type)) {
-                    $productVariants[] = [
-                        'id' => $variant->product_variant_id,
-                        'label' => @$variant->product_type->name,
-                    ];
-                }
-            }
 
-            $productTypes[] = [
-                'label' => $label,
-                'variants' => $productVariants,
-                'has_variants' => count($productVariants) > 0
-            ];
+            if (!empty($variants)) {
+                $productVariants = [];
+                foreach ($variants as $variant) {
+                    if (!empty($variant->product_type)) {
+                        $variant['label'] = @$variant->product_type->nam;
+                        $productVariants[] = $variant;
+                    }
+                }
+
+                $productTypes[] = [
+                    'label' => $label,
+                    'variants' => $productVariants,
+                    'has_variants' => count($productVariants) > 0
+                ];
+            }
         }
 
         return $productTypes;

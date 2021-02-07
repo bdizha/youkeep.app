@@ -297,7 +297,10 @@ const actions = {
 
       await axios.post('/categories', payload).then(({data}) => {
         let categories = data.categories;
+        let store = data.store;
+
         commit('setCategories', categories);
+        commit('setStore', store);
 
         setTimeout(() => {
           dispatch('onProcess', {key: 'isFixed', value: false});

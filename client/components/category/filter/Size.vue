@@ -1,19 +1,19 @@
 <template>
   <a-row class="r-mv-12" :gutter="[12,12]" type="flex" justify="start" align="middle">
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-      <a-radio-group v-model="selected" @change="onFilter">
+      <a-checkbox-group v-model="selected" @change="onFilter">
         <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
           <a-col v-for="(size, index) in size.items"
                  :key="size.id"
                  :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
             <div class="r-product-type">
-              <a-radio :value="size.id">
+              <a-checkbox :value="size.id">
                 {{ size.name }}
-              </a-radio>
+              </a-checkbox>
             </div>
           </a-col>
         </a-row>
-      </a-radio-group>
+      </a-checkbox-group>
     </a-col>
   </a-row>
 </template>

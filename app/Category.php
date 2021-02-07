@@ -108,6 +108,8 @@ class Category extends Model
                 ->paginate(24);
         }
 
+        $this->products = [];
+
         return $this->products;
     }
 
@@ -126,7 +128,6 @@ class Category extends Model
                     });
                 });
             })
-                ->where('is_active', false)
                 ->where('type', $type)
                 ->get();
 
@@ -134,6 +135,7 @@ class Category extends Model
                 $filters[] = [
                     'name' => $name,
                     'type' => $type,
+                    'per_row' => ProductType::$lengths[$type],
                     'items' => $productTypes->toArray()
                 ];
             }

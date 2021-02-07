@@ -19,6 +19,7 @@ class ProductController extends Controller
         $limit = 18,
         $level = [],
         $items = [],
+        $filters = [],
         $item = [];
 
     /**
@@ -33,6 +34,7 @@ class ProductController extends Controller
         $this->limit = $request->get('limit', 12);
         $this->categoryId = $request->get('category_id', null);
         $this->productId = $request->get('product_id', null);
+        $this->filters = $request->get('filters', []);
 
         $key = $this->_setCacheKey($request);
 
@@ -96,11 +98,11 @@ class ProductController extends Controller
                 }
             }
 
-            $this->_setProductBreadcrumbs();
+            $this->_setBreadcrumbs();
 
             $response['store'] = $this->store;
-            $response['category'] = [];
             $response['product'] = $this->product;
+            $response['category'] = [];
             $response['categories'] = [];
 
             Cache::put($key, $response, now()->addMinutes(3600));

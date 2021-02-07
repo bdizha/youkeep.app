@@ -6,8 +6,7 @@
                :lg="{ span: 24 }"
                v-for="(store, index) in stores.data"
                :key="index">
-          <nuxt-link @click.native="onStore(store)" :to="store.route"
-                     style="display: block; width: 100%;">
+          <nuxt-link :to="store.route">
             <r-store-item :store="store"></r-store-item>
           </nuxt-link>
         </a-col>

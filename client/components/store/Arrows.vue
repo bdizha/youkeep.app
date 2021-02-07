@@ -3,9 +3,9 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <div :class="padding" class="r-slider">
         <VueSlickCarousel v-if="hasStores" v-bind="settings">
-          <nuxt-link class="r-store-arrow" v-for="(store, index) in stores.data"
+          <nuxt-link class="r-store-arrow"
+                     v-for="(store, index) in stores.data"
                      :key="store.id"
-                     @click.native="onStore(store)"
                      :to="store.route">
             <r-store-face :store="store"></r-store-face>
           </nuxt-link>
@@ -80,10 +80,7 @@ export default {
   },
   methods: {
     payload() {
-    },
-    onStore(store) {
-      this.$store.dispatch('shop/onStore', store.route);
-    },
+    }
   }
 };
 </script>

@@ -2,15 +2,11 @@
   <a-row type="flex" justify="center" align="middle">
     <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-store-item v-if="hasStore" :store="store"></r-store-item>
-      <a-collapse default-active-key="1" expandIconPosition="right">
-        <a-collapse-panel class="r-collapse-panel" v-for="(filter, index) in filters"
+      <a-collapse v-if="hasCategory" default-active-key="1" expandIconPosition="right">
+        <a-collapse-panel class="r-collapse-panel" v-for="(filter, index) in category.filters"
                           :key="index"
                           :header="filter.name">
-          <r-category-filter-brand v-if="filter.type === 5"></r-category-filter-brand>
-          <r-category-filter-color v-if="filter.type === 2"></r-category-filter-color>
-          <r-category-filter-size v-if="filter.type === 1"></r-category-filter-size>
-          <r-category-filter-collection v-if="filter.type === 6"></r-category-filter-collection>
-          <r-category-filter-store v-if="filter.type === 7"></r-category-filter-store>
+          <r-category-filter-item :filter="filter"></r-category-filter-item>
         </a-collapse-panel>
         <a-collapse-panel v-if="hasCategories" class="r-collapse-panel" key="categories" header="Categories">
           <r-category-filter-category></r-category-filter-category>
@@ -43,7 +39,9 @@ export default {
   computed: mapGetters({
     store: 'shop/store',
     hasStore: 'shop/hasStore',
-    filters: 'shop/filters',
+    category: 'base/category',
+    hasCategory: 'base/hasCategory',
+    filters: 'base/filters',
     hasCategories: 'base/hasCategories',
   }),
   created() {

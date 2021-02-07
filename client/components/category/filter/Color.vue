@@ -4,12 +4,10 @@
            :key="index"
            :xs="{span: 6}" :sm="{span: 6}" :md="{span: 4}" :lg="{span: 3}">
       <div class="r-filter-item r-filter-color"
-           :class="{'r-filter-item__active': color.is_active}"
+           :class="{'r-filter-item__active': currentColor == color}"
            @click="onColor(color)"
            :style="{backgroundColor: color.name }">
-        <a-icon v-show="color.is_active"
-                style="font-size: 18px;"
-                type="check"/>
+        {{ color.is_active }}
       </div>
     </a-col>
   </a-row>
@@ -19,10 +17,12 @@ import {mapState} from "vuex";
 
 export default {
   name: 'r-category-filter-color',
+  props: {
+    color: {type: Object, required: true, default: {}}
+  },
   data() {
     return {
-      color:  {items: [{'name': 'Red', 'id': 0}, {'name': 'Blue', 'id': 1}]},
-      colors: [],
+      currentColor: null,
       selected: []
     };
   },

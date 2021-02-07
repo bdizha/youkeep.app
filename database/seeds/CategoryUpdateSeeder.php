@@ -17,8 +17,15 @@ class CategoryUpdateSeeder extends DatabaseSeeder
     public function run()
     {
 //        $this->setHighlights();
-
 //        $this->setCategoryProducts();
+
+        $category = Category::where('slug', 'new-in')
+            ->first()
+            ->toArray();
+
+        dd($category);
+
+        return;
 
         foreach ($this->storesIds as $storesId) {
             $this->storeId = $storesId;

@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Cache;
 
 class CategoryController extends Controller
 {
-    protected $without = ['categories', 'category', 'store', 'products', 'filters', 'breadcrumbs'],
+    protected $without = ['categories', 'category', 'filters', 'store', 'products', 'breadcrumbs'],
         $relations = ['categories', 'store', 'stores'],
         $with = [],
         $slug = null,
@@ -19,6 +19,7 @@ class CategoryController extends Controller
         $orderBy = null,
         $breadcrumbs = [],
         $categoryType = null,
+        $filters = [],
         $storeId = null,
         $storeSlug = null,
         $product = [],
@@ -39,11 +40,11 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
+        $level = 1;
         $response = [];
         $this->limit = $request->get('limit', 24);
 
-        $level = $request->get('level', 1);
-        $this->level = $this->_decodeLevel($level);
+        $this->_setLevel($request, $level);
 
         $this->orderBy = $request->get('order_by', 'randomized_at');
         $this->with = $request->get('with', []);
@@ -51,7 +52,6 @@ class CategoryController extends Controller
         $this->categoryId = $request->get('category_id', null);
         $this->storeId = $request->get('store_id', null);
         $this->storeSlug = $request->get('store', null);
-
         $key = $this->_setCacheKey($request);
 
         if (Cache::has($key)) {
@@ -59,8 +59,9 @@ class CategoryController extends Controller
         } else {
             $this->_setCategories();
             $response['categories'] = $this->categories;
+            $response['store'] = $this->store;
 
-            Cache::put($key, $response, now()->addMinutes(15));
+            Cache::put($key, $response, now()->addMinutes(3600));
         }
 
         return response()->json($response, 200);
@@ -78,8 +79,47 @@ class CategoryController extends Controller
     {
         $response = [];
         $this->slug = $request->get('slug', $slug);
-        $level = $request->get('level', $level);
-        $this->level = (integer)$this->_decodeLevel($level);
+
+        $this->categoryType = $request->get('type', 2);
+        $this->storeId = $request->get('store_id', null);
+        $this->limit = $request->get('limit', 24);
+        $this->orderBy = $request->get('order_by', 'randomized_at');
+        $this->with = $request->get('with', []);
+        $this->_setLevel($request, $level);
+
+        $key = $this->_setCacheKey($request);
+
+        if (Cache::has($key)) {
+            $response = Cache::get($key, []);
+        } else {
+            $this->_setCategories();
+            $this->_setProducts();
+
+            $response['categories'] = $this->categories;
+            $response['category'] = $this->category;
+            $response['products'] = $this->products;
+
+            Cache::put($key, $response, now()->addMinutes(3600));
+        }
+
+        return response()->json($response, 200);
+    }
+
+    /**
+     * Return store categories
+     *
+     * @param String $slug
+     * @param String $category
+     * @param String $level
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store($store = null, $slug = null, $level = 1, Request $request)
+    {
+        $response = [];
+        $this->slug = $request->get('slug', $slug);
+        $this->storeSlug = $request->get('store', $store);
+        $this->_setLevel($request, $level);
 
         $this->categoryType = $request->get('type', 2);
         $this->storeId = $request->get('store_id', null);
@@ -99,7 +139,7 @@ class CategoryController extends Controller
             $response['category'] = $this->category;
             $response['products'] = $this->products;
 
-            Cache::put($key, $response, now()->addMinutes(45));
+            Cache::put($key, $response, now()->addMinutes(3600));
         }
 
         return response()->json($response, 200);
@@ -147,20 +187,12 @@ class CategoryController extends Controller
     }
 
     /**
-     * @return array
+     * @param Request $request
+     * @param string $level
      */
-    protected function _setCategoryStores()
+    private function _setLevel(Request $request, string $level): void
     {
-        foreach ($this->categories as $key => $category) {
-            $storeCategory = Category::with('stores')
-                ->where('id', $category['id'])
-                ->first();
-
-            if (empty($storeCategory)) {
-                continue;
-            }
-
-            $this->categories[$key]['stores'] = $storeCategory->stores;
-        }
+        $level = $request->get('level', $level);
+        $this->level = (integer)$this->_decodeLevel($level);
     }
 }

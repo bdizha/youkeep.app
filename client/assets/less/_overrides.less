@@ -882,57 +882,114 @@ x {
     border-radius: 3px;
 }
 
-.r-product-type {
-    min-width: 45px;
-    min-height: 45px;
-    line-height: 45px;
-    padding: 0;
+.ant-checkbox-wrapper {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     display: block;
-    border: 1px solid transparent;
-    box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
+    padding: 12px;
+    width: 100%;
+    border: none;
     border-radius: 3px;
-    text-align: left;
-    cursor: pointer;
-    height: 45px;
-    margin: 1px;
+    box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
 
-    .ant-checkbox-wrapper {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: block;
-        padding: 0 12px;
+    .ant-checkbox {
+        .ant-checkbox-inner {
+            border-color: transparent;
 
-        .ant-checkbox-inner::after {
-            transform: rotate(45deg) scale(1) translate(-50%, -50%);
-            opacity: 0.3;
-            border-width: 2px;
-            border-color: #3C444C;
-        }
-
-        &.ant-checkbox-wrapper-checked {
-            .ant-checkbox-inner::after {
-                opacity: 0.99;
-                border-color: #FFFFFF;
-                background-color: #1B9BD9;
+            &:after {
+                border-color: rgba(0, 0, 0, 0.25);
             }
         }
 
-        &.ant-checkbox-wrapper-checked:hover,
+        &.ant-checkbox-checked,
         &:hover {
-            .ant-checkbox-inner::after {
-                opacity: 0.99;
+            box-shadow: #eefaff 0px 1px 3px 0px;
+
+            &:after {
                 border-color: #1B9BD9;
-                background-color: #FFFFFF;
+            }
+
+            .ant-checkbox-inner {
+                border-color: #1B9BD9;
+                background-color: #1B9BD9;
+
+                &:after {
+                    border-color: #FFFFFF;
+                }
             }
         }
     }
 
-    &.r-product-type__active,
     &:hover {
-        border: 1px solid #1B9BD9;
-        background: #eefaff;
-        color: #FFFFFF;
+        .ant-checkbox {
+            box-shadow: #eefaff 0px 1px 3px 0px;
+
+            .ant-checkbox-inner {
+                border-color: #1B9BD9;
+
+                &:after {
+                    background-color: #1B9BD9;
+                    border-color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+.r-filter-color {
+    .ant-checkbox-wrapper {
+        padding: 6px;
+        text-align: center;
+        box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
+
+        .ant-checkbox {
+            .ant-checkbox-inner {
+                border-color: transparent;
+                background: transparent;
+
+                &:after {
+                    border-color: rgba(0, 0, 0, 0.25);
+                }
+            }
+
+            + span {
+                display: none;
+            }
+
+            &.ant-checkbox-checked,
+            &:hover {
+                box-shadow: #eefaff 0px 1px 3px 0px;
+
+                &:after {
+                    border-color: transparent;
+                }
+
+                .ant-checkbox-inner {
+                    border-color: #FFFFFF;
+                    background-color: transparent;
+
+                    &:after {
+                        border-color: #FFFFFF;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .ant-checkbox {
+                box-shadow: #eefaff 0px 1px 3px 0px;
+
+                .ant-checkbox-inner {
+                    border-color: #FFFFFF;
+
+                    &:after {
+                        background-color: #1B9BD9;
+                        border-color: #FFFFFF;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -6154,6 +6211,7 @@ a:hover {
 
 .r-filter-item {
     width: 100%;
+    height: 36px;
     border-radius: 3px;
     background: #F7F8F9;
     display: block;
@@ -6172,31 +6230,22 @@ a:hover {
 }
 
 .r-filter-color {
-    &:hover,
-    &.r-filter-item__active {
-        opacity: 1;
+    .ant-checkbox {
+        &:hover,
+        &.ant-checkbox-chekced {
+            opacity: 1;
 
-        &:before {
-            content: "";
-            background-color: rgba(0, 0, 0, 0.3);
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            border-radius: 5px;
+            &:before {
+                content: "";
+                background-color: rgba(0, 0, 0, 0.3);
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                border-radius: 5px;
+            }
         }
-    }
-
-    .anticon {
-        font-size: 18px;
-        line-height: 18px;
-        color: #FFFFFF;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        margin-top: -9px;
-        margin-left: -9px;
     }
 }
 

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Address;
 use App\Category;
 use App\Product;
+use App\ProductType;
+use App\ProductVariant;
 use App\Review;
 use App\Store;
 use App\StoreCategory;
@@ -39,10 +41,15 @@ class Controller extends BaseController
         $products = [],
         $reviews = [],
         $categories = [],
+        $productTypes = [],
+        $categoryType = null,
+        $filters = [],
+        $store = [],
         $limit = 24,
-        $level = 1,
+        $level = [],
         $items = [],
         $item = [];
+
 
     /**
      * @param array $values
@@ -131,6 +138,16 @@ class Controller extends BaseController
      */
     protected function _setCategories(): void
     {
+        if (!empty($this->storeSlug)) {
+            $this->store = Store::where('slug', $this->storeSlug)
+                ->first();
+        }
+
+        if (!empty($this->storeId)) {
+            $this->store = Store::where('id', $this->storeId)
+                ->first();
+        }
+
         if (!empty($this->slug)) {
             $this->category = Category::where('slug', $this->slug)
                 ->first()
@@ -153,15 +170,11 @@ class Controller extends BaseController
             ++$this->level;
         }
 
-        if (!empty($this->storeSlug)) {
-            $this->store = Store::where('slug', $this->storeSlug)
-                ->first();
-        }
-
         $this->with = array_intersect($this->with, $this->relations);
 
         $query = Category::with($this->with)
             ->take($this->limit);
+
         $query->whereHas('stores', function ($query) {
             if (!empty($this->storeCategory)) {
                 $query->where('parent_id', $this->storeCategory->id);
@@ -190,8 +203,8 @@ class Controller extends BaseController
             ->get()
             ->toArray();
 
-        $this->_setCategoryRoutes();
-        $this->_setCategoryBreadcrumbs();
+        $this->_setRoutes();
+        $this->_setBreadcrumbs();
 
         if ($this->categoryType === Category::TYPE_STORE) {
             $this->_setCategoryStores();
@@ -207,7 +220,6 @@ class Controller extends BaseController
     {
         $sort = request()->get('sort', 0);
         $sortOptions = Product::$sortOptions;
-
         $sort = $sortOptions[$sort];
 
         if (!empty($this->productId)) {
@@ -224,10 +236,41 @@ class Controller extends BaseController
             $query->whereHas('categories', function ($query) {
                 $query->where('category_products.category_id', $this->categoryId);
             });
+
+            if (!empty($this->filters)) {
+                $query->whereHas('product_types', function ($query) {
+                    $query->whereIn('product_types.id', $this->filters);
+                });
+            }
+
+            if (!empty($this->store->id)) {
+                $query->where('store_id', $this->store->id);
+            }
         }
 
-        $this->products = $query->orderBy($sort['column'], $sort['dir'])
-            ->paginate($this->limit);
+        if (!empty($query)) {
+            $this->products = $query->orderBy($sort['column'], $sort['dir'])
+                ->paginate($this->limit);
+        }
+    }
+
+
+    /**
+     * @return array
+     */
+    protected function _setCategoryStores()
+    {
+        foreach ($this->categories as $key => $category) {
+            $storeCategory = Category::with('stores')
+                ->where('id', $category['id'])
+                ->first();
+
+            if (empty($storeCategory)) {
+                continue;
+            }
+
+            $this->categories[$key]['stores'] = $storeCategory->stores;
+        }
     }
 
     /**
@@ -248,12 +291,13 @@ class Controller extends BaseController
     }
 
     /**
-     * @param String $record
+     * return void
      */
-    protected function _setRouteStore(&$record)
+    protected function _setStoreRoute()
     {
-        $route = $record['route'];
-        $record['route'] = '/store/' . $this->store->slug + $route;
+        if (!empty($this->store->id)) {
+            $this->route = '/store/' . $this->store->slug . $this->route;
+        }
     }
 
     /**
@@ -276,30 +320,62 @@ class Controller extends BaseController
     /**
      * @return void
      */
-    protected function _setCategoryBreadcrumbs()
+    protected function _setBreadcrumbs()
     {
-        $this->breadcrumbs = !empty($this->storeCategory->breadcrumbs) ? $this->storeCategory->breadcrumbs : [];
+        $this->breadcrumbs = @$this->storeCategory->breadcrumbs;
         $this->category['breadcrumbs'] = $this->breadcrumbs;
     }
 
     /**
      * @return void
      */
-    protected function _setProductBreadcrumbs()
+    protected function _setRoutes(): void
     {
-        $this->breadcrumbs = !empty($this->storeCategory->breadcrumbs) ? $this->storeCategory->breadcrumbs : [];
-        $this->product['breadcrumbs'] = $this->breadcrumbs;
+        $this->categories = array_map(function ($category) {
+            $this->route = $category['route'];
+
+            $this->_setStoreRoute();
+            $this->route .= $this->_encodeLevel();
+
+            $category['route'] = $this->route;
+            $category['level'] = $this->level;
+            return $category;
+        }, $this->categories);
     }
 
     /**
      * @return void
      */
-    protected function _setCategoryRoutes(): void
+    protected function _setCategoryFilters(): void
     {
-        $this->categories = array_map(function ($category) {
-            $category['route'] .= $this->_encodeLevel();
-            $category['level'] = $this->level;
-            return $category;
-        }, $this->categories);
+        $types = ProductType::$types;
+        $this->productTypes = [];
+
+        foreach ($types as $type => $label) {
+
+            $variants = ProductVariant::with([
+                'product_type' => function ($query) use ($type) {
+                    $query->where('product_types.type', $type);
+                }])
+                ->where('product_id', $this->id)
+                ->get();
+
+
+            if (!empty($variants)) {
+                $productVariants = [];
+                foreach ($variants as $variant) {
+                    if (!empty($variant->product_type)) {
+                        $variant['label'] = @$variant->product_type->nam;
+                        $productVariants[] = $variant;
+                    }
+                }
+
+                $this->productTypes[] = [
+                    'label' => $label,
+                    'variants' => $productVariants,
+                    'has_variants' => count($productVariants) > 0
+                ];
+            }
+        }
     }
 }

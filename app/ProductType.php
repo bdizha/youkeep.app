@@ -27,6 +27,16 @@ class ProductType extends Model
         self::TYPE_STORE => 'Store',
     ];
 
+    public static $lengths = [
+        self::TYPE_SIZE => 2,
+        self::TYPE_COLOR => 6,
+        self::TYPE_VOLUME => 2,
+        self::TYPE_MASS => 2,
+        self::TYPE_BRAND => 1,
+        self::TYPE_COLLECTION => 2,
+        self::TYPE_STORE => 1,
+    ];
+
 
     /**
      * The attributes that should be appended for arrays.
