@@ -61,8 +61,8 @@ export default {
   },
   computed: mapGetters({
     modal: 'base/modal',
-    store: 'shop/store',
-    hasStore: 'shop/hasStore',
+    store: 'base/store',
+    hasStore: 'base/hasStore',
     processes: 'base/processes'
   }),
   created() {

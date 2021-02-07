@@ -28,7 +28,7 @@ export default {
       modal.current = 'product';
       this.$store.dispatch('base/onModal', modal);
 
-      this.$store.dispatch('shop/onProduct', this.product);
+      this.$store.dispatch('base/onProduct', this.product);
     }
   },
 };

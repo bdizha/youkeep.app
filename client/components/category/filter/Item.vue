@@ -8,9 +8,15 @@
           <a-col v-for="(item, index) in filter.items"
                  :key="filter.id"
                  :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24 / filter.per_row }" :lg="{span: 24 / filter.per_row}">
-            <a-checkbox :style="{background: filter.type == 2 ? item.name : 'transparent'}" :value="item.id">
-              {{  filter.type == 2 ? null : item.name }}
-            </a-checkbox>
+            <a-tooltip placement="top">
+              <template slot="title">
+                <span>Select: {{ item.name }}</span>
+              </template>
+              <a-checkbox :style="'background: ' + (filter.type == 2 ?  item.name : 'transparent')"
+                          :value="item.id">
+                {{ filter.type == 2 ? null : item.name }}
+              </a-checkbox>
+            </a-tooltip>
           </a-col>
         </a-row>
       </a-checkbox-group>
@@ -31,13 +37,14 @@ export default {
     };
   },
   computed: mapState({
-    filters: 'shop/filters'
+    filters: 'base/filters'
   }),
   mounted() {
+
   },
   methods: {
     onFilter() {
-      this.$store.dispatch('shop/onFilters', this.selected);
+      this.$store.dispatch('base/onFilters', this.selected);
     },
   },
 };

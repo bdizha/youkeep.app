@@ -26,7 +26,7 @@ export default {
     };
   },
   computed: mapGetters({
-    store: 'shop/store'
+    store: 'base/store'
   }),
   created() {
     this.payload();

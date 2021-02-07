@@ -33,7 +33,7 @@ export default {
     }
   },
   computed: mapGetters({
-    store: 'shop/store',
+    store: 'base/store',
     stores: 'base/stores',
     processes: 'base/processes',
     search: 'address/search',

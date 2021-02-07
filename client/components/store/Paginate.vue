@@ -27,7 +27,7 @@
         },
         computed: mapGetters({
             stores: 'base/stores',
-            store: 'shop/store',
+            store: 'base/store',
             search: 'base/search',
             hasStores: 'base/hasStores',
         }),

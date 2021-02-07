@@ -56,7 +56,7 @@ export default {
     this.payload();
   },
   computed: mapGetters({
-    store: 'shop/store',
+    store: 'base/store',
     cart: 'cart/cart',
   }),
   methods: {

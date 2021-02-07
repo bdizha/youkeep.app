@@ -99,6 +99,7 @@ class ProductController extends Controller
             }
 
             $this->_setBreadcrumbs();
+            $this->product['breadcrumbs'] = $this->breadcrumbs;
 
             $response['store'] = $this->store;
             $response['product'] = $this->product;

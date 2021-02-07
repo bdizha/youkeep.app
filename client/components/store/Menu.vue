@@ -40,7 +40,7 @@ export default {
   computed: mapGetters({
     user: 'auth/user',
     hasNotice: 'base/hasNotice',
-    store: 'shop/store',
+    store: 'base/store',
   }),
   created() {
     this.payload();

@@ -51,9 +51,9 @@ export default {
       return 'Search ' + (this.hasStore ? this.store.name : '') + '...';
     },
     ...mapGetters({
-      store: 'shop/store',
+      store: 'base/store',
       search: 'shop/search',
-      hasStore: 'shop/hasStore',
+      hasStore: 'base/hasStore',
       hasSearched: 'shop/hasSearched',
       processes: 'base/processes'
     })

@@ -36,7 +36,7 @@ export default {
     return {}
   },
   computed: mapGetters({
-    store: 'shop/store',
+    store: 'base/store',
     processes: "base/processes",
   }),
   mounted() {

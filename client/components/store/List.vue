@@ -34,7 +34,7 @@ export default {
     }
   },
   computed: mapGetters({
-    store: 'shop/store',
+    store: 'base/store',
     stores: 'base/stores',
     categories: 'base/storeCategories',
     hasStores: 'base/hasStores',

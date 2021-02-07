@@ -86,7 +86,7 @@ export default {
     }
   },
   computed: mapGetters({
-    store: 'shop/store',
+    store: 'base/store',
     filters: 'shop/filters',
     hasProducts: 'base/hasProducts',
     products: 'base/products',

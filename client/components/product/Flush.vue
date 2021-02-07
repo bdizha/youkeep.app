@@ -1,8 +1,8 @@
 <template>
-  <a-row :class="{'r-spin__active' :processes.isProduct}" v-if="hasProducts"
+  <a-row :class="{'r-spin__active' :processes.isProduct}"
          class="r-product-flush r-slider" type="flex" justify="start">
     <a-col class="r-spin-holder r-p-24" :span="24">
-      <VueSlickCarousel v-bind="settings">
+      <VueSlickCarousel v-if="hasProducts" v-bind="settings">
         <r-product-item v-for="(product, index) in products.data" :key="index"
                         :product="product"></r-product-item>
         <template #prevArrow="arrowOption">
@@ -69,7 +69,7 @@ export default {
     }
   },
   computed: mapGetters({
-    products: 'shop/products',
+    products: 'base/products',
     hasProducts: 'base/hasProducts',
     processes: 'base/processes',
   }),

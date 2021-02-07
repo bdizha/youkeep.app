@@ -1,5 +1,5 @@
 <template>
-  <r-category-show :colums="6"></r-category-show>
+  <r-store-category-show :colums="6"></r-store-category-show>
 </template>
 <script>
 

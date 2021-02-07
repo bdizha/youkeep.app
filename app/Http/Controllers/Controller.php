@@ -161,6 +161,9 @@ class Controller extends BaseController
         }
 
         if (!empty($this->category['id'])) {
+            $this->_setBreadcrumbs();
+            $this->category['breadcrumbs'] = $this->breadcrumbs;
+
             $this->category['level'] = $this->level;
 
             $this->storeCategory = StoreCategory::where('category_id', $this->category['id'])
@@ -204,7 +207,6 @@ class Controller extends BaseController
             ->toArray();
 
         $this->_setRoutes();
-        $this->_setBreadcrumbs();
 
         if ($this->categoryType === Category::TYPE_STORE) {
             $this->_setCategoryStores();
@@ -323,7 +325,6 @@ class Controller extends BaseController
     protected function _setBreadcrumbs()
     {
         $this->breadcrumbs = @$this->storeCategory->breadcrumbs;
-        $this->category['breadcrumbs'] = $this->breadcrumbs;
     }
 
     /**

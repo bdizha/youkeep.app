@@ -38,7 +38,7 @@ export default {
     user: 'auth/user',
     cart: 'cart/cart',
     modal: 'base/modal',
-    store: 'shop/store',
+    store: 'base/store',
     drawer: 'base/drawer',
     isRaised: 'base/isRaised',
     isLoggedIn: 'auth/isLoggedIn'

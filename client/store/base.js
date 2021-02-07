@@ -6,6 +6,7 @@ const state = () => ({
   store: {},
   stores: {data: []},
   category: {},
+  product: {},
   products: [],
   categories: [],
   hasProducts: false,
@@ -21,6 +22,7 @@ const state = () => ({
   isValid: true,
   hasCategories: false,
   hasCategory: false,
+  hasProduct: false,
   drawer: {
     current: null,
     isVisible: false,
@@ -39,12 +41,9 @@ const state = () => ({
   hasStoreTray: false,
   reviews: [],
   filters: {
-    stores: [],
-    categories: [],
-    products: [],
-    discounts: [],
-    brands: [],
-    sort: null
+    selected: [],
+    price_min: 15,
+    price_max: 999999
   },
   sort: null,
   search: {
@@ -94,12 +93,14 @@ const getters = {
   hasCategories: state => state.hasCategories,
   hasProducts: state => state.hasProducts,
   hasCategory: state => state.hasCategory,
+  hasProduct: state => state.hasProduct,
   drawer: state => state.drawer,
   hasDrawer: state => state.hasDrawer,
   hasOverlay: state => state.hasOverlay,
   modal: state => state.modal,
   hasModal: state => state.hasModal,
   hasStoreTray: state => state.hasStoreTray,
+  product: state => state.product,
   products: state => state.products,
   reviews: state => state.reviews,
   hasReviews: state => state.reviews.length > 0,
@@ -144,6 +145,10 @@ const mutations = {
   setCategories(state, categories) {
     state.categories = categories;
     state.hasCategories = categories.length > 0;
+  },
+  setProduct(state, product) {
+    state.product = product;
+    state.hasProduct = product != null;
   },
   setProducts(state, products) {
     state.products = products;
@@ -198,6 +203,12 @@ const mutations = {
   },
   setProcess(state, process) {
     state.processes[process.key] = process.value;
+
+    if (process.key == 'isProduct') {
+      console.log('on process >>>>>>>');
+
+      console.trace();
+    }
   },
   setHasForm(state, hasForm) {
     state.hasForm = hasForm;
@@ -249,6 +260,7 @@ const actions = {
     try {
       dispatch('onProcess', {key: 'isCategory', value: true});
       dispatch('onProcess', {key: 'isProduct', value: true});
+      dispatch('onProcess', {key: 'isFixed', value: true});
 
       let route = params.route;
 
@@ -259,27 +271,23 @@ const actions = {
       commit('setStores', []);
       commit('setProducts', {data: []});
 
-      dispatch('onProcess', {key: 'isFixed', value: true});
-
       await axios.post(route, params).then(({data}) => {
         let category = data.category;
         let categories = data.categories;
         let products = data.products;
+        let store = data.store;
 
         commit('setCategory', category);
         commit('setCategories', categories);
         commit('setProducts', products);
+        commit('setStore', store);
+
+        dispatch('onProcess', {key: 'isFixed', value: false});
 
         setTimeout(() => {
           dispatch('onProcess', {key: 'isProduct', value: false});
           dispatch('onProcess', {key: 'isCategory', value: false});
         }, 300);
-
-        if (category.filters != undefined) {
-          let filters = category.filters;
-
-          commit('setFilters', filters);
-        }
       });
 
     } catch (e) {
@@ -291,7 +299,6 @@ const actions = {
 
     try {
       dispatch('onProcess', {key: 'isCategories', value: true});
-      dispatch('onProcess', {key: 'isFixed', value: true});
 
       commit('setCategories', []);
 
@@ -302,15 +309,45 @@ const actions = {
         commit('setCategories', categories);
         commit('setStore', store);
 
-        setTimeout(() => {
-          dispatch('onProcess', {key: 'isFixed', value: false});
-        }, 300);
+        dispatch('onProcess', {key: 'isFixed', value: false});
 
-        dispatch('onProcess', {key: 'isCategory', value: false});
-        dispatch('onProcess', {key: 'isCategories', value: false});
+        setTimeout(() => {
+          dispatch('onProcess', {key: 'isCategory', value: false});
+          dispatch('onProcess', {key: 'isCategories', value: false});
+        }, 300);
       });
     } catch (e) {
       console.error('onCategories errors');
+      console.log(e);
+    }
+  },
+  async onProduct({dispatch, commit, state}, params) {
+    dispatch('onProcess', {key: 'isProduct', value: true});
+
+    try {
+      let route = params.route;
+
+      await axios.post(route, params).then(({data}) => {
+
+        let product = data.product;
+        let category = data.category;
+        let store = data.store;
+
+        commit('setStore', store);
+        commit('setProduct', product);
+
+        // console.log('setProduct', data);
+        commit('setCategory', category);
+
+        dispatch('onProcess', {key: 'isFixed', value: false});
+
+        setTimeout(() => {
+          dispatch('onProcess', {key: 'isProduct', value: false});
+        }, 600);
+      });
+
+    } catch (e) {
+      console.error('onProduct errors');
       console.log(e);
     }
   },
@@ -328,7 +365,7 @@ const actions = {
 
         setTimeout(() => {
           dispatch('onProcess', {key: 'isProduct', value: false});
-        }, 600);
+        }, 300);
       });
 
     } catch (e) {
@@ -357,8 +394,6 @@ const actions = {
       commit('setDepartments', data.departments);
       commit('setPositions', data.positions);
 
-      // console.log('setPositions data >>>>> ', data);
-
       commit('setProcess', {key: 'isCareers', value: false});
 
     } catch (e) {
@@ -370,8 +405,6 @@ const actions = {
       commit('setProcess', {key: 'isRunning', value: true});
       const {data} = await axios.post('/categories', payload);
       commit('setStoreCategories', data.categories);
-
-      // console.log('setStoreCategories', data.categories);
 
       commit('setProcess', {key: 'isRunning', value: false});
 

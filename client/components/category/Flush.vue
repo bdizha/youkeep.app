@@ -83,7 +83,7 @@ export default {
     };
   },
   computed: mapGetters({
-    store: 'shop/store',
+    store: 'base/store',
     flush: "base/flush",
     hasCategories: "base/hasCategories",
     processes: "base/processes",

@@ -39,8 +39,8 @@ export default {
     };
   },
   computed: mapGetters({
-    store: 'shop/store',
-    hasStore: 'shop/hasStore',
+    store: 'base/store',
+    hasStore: 'base/hasStore',
     filters: 'shop/filters',
     hasCategories: 'base/hasCategories',
   }),

@@ -11,7 +11,7 @@ export default {
     let route = `/product/${params.slug}`;
     params.route = route;
     params.with = ['category', 'breadcrumbs'];
-    await store.dispatch('shop/onProduct', params);
+    await store.dispatch('base/onProduct', params);
   },
   data() {
     return {}

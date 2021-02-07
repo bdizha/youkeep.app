@@ -108,8 +108,6 @@ class Category extends Model
                 ->paginate(24);
         }
 
-        $this->products = [];
-
         return $this->products;
     }
 

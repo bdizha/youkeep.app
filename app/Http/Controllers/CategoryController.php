@@ -94,10 +94,12 @@ class CategoryController extends Controller
         } else {
             $this->_setCategories();
             $this->_setProducts();
+            $this->_setBreadcrumbs();
 
             $response['categories'] = $this->categories;
             $response['category'] = $this->category;
             $response['products'] = $this->products;
+            $response['store'] = $this->store;
 
             Cache::put($key, $response, now()->addMinutes(3600));
         }
@@ -138,6 +140,7 @@ class CategoryController extends Controller
             $response['categories'] = $this->categories;
             $response['category'] = $this->category;
             $response['products'] = $this->products;
+            $response['store'] = $this->store;
 
             Cache::put($key, $response, now()->addMinutes(3600));
         }

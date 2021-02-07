@@ -14,33 +14,10 @@ const state = () => ({
   hasSearched: false,
   filters: [
     {
-      id: 1,
-      name: 'Size'
-    },
-    {
-      id: 2,
-      name: 'Color'
-    },
-    {
-      id: 3,
-      name: 'Volume'
-    },
-    {
-      id: 4,
-      name: 'Mass'
-    },
-    {
-      id: 5,
-      name: 'Brand'
-    },
-    {
-      id: 6,
-      name: 'Collection'
-    },
-    {
-      id: 7,
-      name: 'Store'
-    },
+      selected: [],
+      price_min: 15,
+      price_max: 999999
+    }
   ],
   sort: null,
   isSearching: false,
@@ -189,38 +166,6 @@ const actions = {
 
     } catch (e) {
       console.error('onProducts errors');
-      console.log(e);
-    }
-  },
-  async onProduct({dispatch, commit, state}, params) {
-    dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
-
-    try {
-      let route = params.route;
-
-      await axios.post(route, params).then(({data}) => {
-
-        let product = data.product;
-        let category = data.category;
-        let store = data.store;
-        let categories = data.categories;
-
-        commit('setStore', store);
-        commit('setProduct', product);
-
-
-        // console.log('setProduct', data);
-        commit('setCategory', category);
-
-        dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
-
-        setTimeout(() => {
-          dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
-        }, 600);
-      });
-
-    } catch (e) {
-      console.error('onProduct errors');
       console.log(e);
     }
   },

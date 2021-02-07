@@ -56,7 +56,7 @@
             modal: 'base/modal',
             category: 'shop/category',
             hasCategories: 'base/hasCategories',
-            product: 'shop/product',
+            product: 'base/product',
         }),
         methods: {
             async payload() {

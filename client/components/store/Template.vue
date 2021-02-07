@@ -40,8 +40,8 @@ export default {
     return {}
   },
   computed: mapGetters({
-    store: 'shop/store',
-    hasStore: 'shop/hasStore',
+    store: 'base/store',
+    hasStore: 'base/hasStore',
     category: 'shop/category',
     hasNotice: 'base/hasNotice',
     hasCategories: 'base/hasCategories',
