@@ -49,7 +49,7 @@ class StoreCategory extends Model
         $breadcrumbs[] = [
             'id' => $storeCategory->category_id,
             'slug' => $storeCategory->category->slug,
-            'route' => $storeCategory->category->route,
+            'route' => $storeCategory->category->route . $this->_encodeLevel($storeCategory->level),
             'name' => $storeCategory->category->name,
             'has_products' => $storeCategory->has_products,
             'has_categories' => $storeCategory->has_categories,
@@ -60,6 +60,11 @@ class StoreCategory extends Model
             return $breadcrumbs;
         }
         return $this->getBreadcrumbs($storeCategory->previous, $breadcrumbs);
+    }
+
+    protected function _encodeLevel(): string
+    {
+        return "/L" . str_pad(empty($this->level) ? 1 : $this->level, 6, STR_PAD_LEFT, "0");
     }
 
     /**

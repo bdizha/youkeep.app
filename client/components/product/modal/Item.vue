@@ -54,7 +54,7 @@
         },
         computed: mapGetters({
             modal: 'base/modal',
-            category: 'shop/category',
+            category: 'base/category',
             hasCategories: 'base/hasCategories',
             product: 'base/product',
         }),

@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 // state
 const state = () => ({
   store: {},
+  hasStore: false,
   stores: {data: []},
   category: {},
   product: {},
@@ -82,6 +83,7 @@ const getters = {
   hasNotice: state => state.hasNotice,
   hasForm: state => state.hasForm,
   store: state => state.store,
+  hasStore: state => state.hasStore,
   stores: state => state.stores,
   hasStores: state => state.hasStores,
   category: state => state.category,
@@ -121,8 +123,8 @@ const getters = {
 // mutations
 const mutations = {
   setStore(state, store) {
-    // console.log('store...', store);
     state.store = store;
+    state.hasStore = store !== undefined && store != null;
   },
   setNotice(state, notice) {
     state.notice = notice;
@@ -136,7 +138,7 @@ const mutations = {
   },
   setStores(state, stores) {
     state.stores = stores;
-    state.hasStores = stores.data != undefined && stores.data.length > 0;
+    state.hasStores = stores.data !== undefined && stores.data.length > 0;
   },
   setCategory(state, category) {
     state.category = category;
@@ -144,7 +146,7 @@ const mutations = {
   },
   setCategories(state, categories) {
     state.categories = categories;
-    state.hasCategories = categories.length > 0;
+    state.hasCategories = categories !== undefined && categories.length > 0;
   },
   setProduct(state, product) {
     state.product = product;
@@ -152,7 +154,7 @@ const mutations = {
   },
   setProducts(state, products) {
     state.products = products;
-    state.hasProducts = products.data != undefined && products.data.length > 0;
+    state.hasProducts = products.data !== undefined && products.data.length > 0;
   },
   setPositions(state, positions) {
     state.positions = positions;

@@ -12,7 +12,7 @@ class ProductMTGSeeder extends DatabaseSeeder
     protected $domain = "";
     protected $storeId = null;
 
-    protected $storeIds = [66, 68, 67, 69, 65, 61, 34, 50, 64, 63, 62, 29];
+    protected $storeIds = [66, 68, 67, 69, 65, 61, 34, 50, 64, 63, 62, 12, 29];
     protected $categories = [];
     protected $level = 0;
 

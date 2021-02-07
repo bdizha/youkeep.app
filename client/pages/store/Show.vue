@@ -11,8 +11,10 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
-          <r-store-catalog :columns="3" :span="3"></r-store-catalog>
-          <r-product-flush :columns="3"></r-product-flush>
+          <div class="r-margin-out-sm">
+            <r-store-catalog :columns="3" :span="3"></r-store-catalog>
+            <r-product-flush :columns="3"></r-product-flush>
+          </div>
         </a-col>
       </a-row>
       <a-row class="r-mt-48" type="flex" justify="start" align="middle">

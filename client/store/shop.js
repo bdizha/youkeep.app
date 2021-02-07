@@ -128,7 +128,7 @@ const actions = {
   async onCategories({dispatch, commit, state}, payload) {
     try {
       dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
-      dispatch('base/onProcess', {key: 'isFixed', value: true}, {root: true});
+      dispatch('base/onProcess', {key: 'isCategory', value: false}, {root: true});
 
       return await axios.post('/categories', payload).then(({data}) => {
         let categories = data.categories;
@@ -137,7 +137,6 @@ const actions = {
           dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
         }, 300);
 
-        dispatch('base/onProcess', {key: 'isCategory', value: false}, {root: true});
         dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
 
         return categories;

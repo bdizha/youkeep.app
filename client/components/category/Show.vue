@@ -14,7 +14,7 @@
                :lg="{ span: 24 }">
           <div class="r-margin-out-sm">
             <r-category-slider :category="category"></r-category-slider>
-            <!--            <r-product-flush :columns="3"></r-product-flush>-->
+            <r-product-flush :columns="3"></r-product-flush>
           </div>
         </a-col>
       </a-row>

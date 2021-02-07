@@ -18,7 +18,7 @@
             <a-col :xs="{ span: 24 }" :sm="{ span: 4 }" :lg="{ span: 4 }"
                    style="text-align: right">
               <r-store-shop-now v-if="isStore" justify="end"></r-store-shop-now>
-              <r-category-shop-by v-if="!isStore" :category="category" justify="end"></r-category-shop-by>
+              <r-category-filters v-if="!isStore" :category="category" justify="end"></r-category-filters>
             </a-col>
           </a-row>
         </a-col>
@@ -42,7 +42,7 @@ export default {
   computed: mapGetters({
     store: 'base/store',
     hasStore: 'base/hasStore',
-    category: 'shop/category',
+    category: 'base/category',
     hasNotice: 'base/hasNotice',
     hasCategories: 'base/hasCategories',
     hasShop: 'base/hasShop'

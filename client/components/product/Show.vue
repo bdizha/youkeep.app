@@ -61,7 +61,7 @@ export default {
     return {}
   },
   computed: mapGetters({
-    category: 'shop/category',
+    category: 'base/category',
     product: 'base/product',
     store: 'base/store',
     processes: 'base/processes'

@@ -38,7 +38,7 @@
         </a-col>
         <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 4 }"
                :lg="{ span: 4 }">
-          <r-category-shop-by :category="category" justify="end"></r-category-shop-by>
+          <r-category-filters :category="category" justify="end"></r-category-filters>
         </a-col>
       </a-row>
     </a-col>

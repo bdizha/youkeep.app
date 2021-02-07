@@ -23,7 +23,7 @@ export default {
     }
   },
   computed: mapGetters({
-    category: 'shop/category',
+    category: 'base/category',
   }),
   created() {
     this.payload();

@@ -2,7 +2,7 @@
   <a-row type="flex" justify="center">
     <a-col :span="24">
       <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" type="flex" justify="center">
-        <a-col :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
+        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 16}" :lg="{span: 16}">
           <a-pagination v-model="products.current_page"
                         :show-total="(total, range) => `${range[0]}-${range[1]} of ${total} items`"
                         :page-size="parseInt(products.per_page)"
@@ -17,8 +17,12 @@
             </template>
           </a-pagination>
         </a-col>
+        <a-col class="r-text-center" :xs="{span: 24}"
+               :sm="{span: 24}" :md="{span: 4}" :lg="{span: 4}">
+          <r-category-filters></r-category-filters>
+        </a-col>
         <a-col class="r-text-right" :xs="{span: 24}"
-               :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}">
+               :sm="{span: 24}" :md="{span: 4}" :lg="{span: 4}">
           <div class="r-same-height">
             <a-select
               labelInValue

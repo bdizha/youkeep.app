@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-mv-12" :gutter="[12,12]" type="flex" justify="start" align="middle">
+  <a-row class="r-mv-12" type="flex" justify="start" align="middle">
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-slider :min="price.min" :max="price.max"
                 :included="false"
@@ -16,13 +16,12 @@ export default {
   data() {
     return {
       price: {
-        max: '24000',
-        min: '100'
+        max: 2400,
+        min: 100
       },
     };
   },
-  computed: mapGetters({
-  }),
+  computed: mapGetters({}),
   created() {
     this.payload();
   },
