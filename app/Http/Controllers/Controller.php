@@ -45,6 +45,7 @@ class Controller extends BaseController
         $categoryType = null,
         $filters = [],
         $store = [],
+        $stores = [],
         $limit = 24,
         $level = [],
         $items = [],
@@ -347,20 +348,22 @@ class Controller extends BaseController
     /**
      * @return void
      */
-    protected function _setCategoryFilters(): void
+    protected function _setFilters(): void
     {
         $types = ProductType::$types;
         $this->productTypes = [];
 
-        foreach ($types as $type => $label) {
+        if (empty($this->product->id)) {
+            return;
+        }
 
+        foreach ($types as $type => $label) {
             $variants = ProductVariant::with([
                 'product_type' => function ($query) use ($type) {
                     $query->where('product_types.type', $type);
                 }])
-                ->where('product_id', $this->id)
+                ->where('product_id', $this->product->id)
                 ->get();
-
 
             if (!empty($variants)) {
                 $productVariants = [];
@@ -378,5 +381,30 @@ class Controller extends BaseController
                 ];
             }
         }
+    }
+
+    /**
+     * @return mixed
+     */
+    private function _setStores()
+    {
+        $query = Store::where('is_active', true);
+        $this->without = ['categories'];
+
+        if (!empty($this->term)) {
+            $query->where('name', 'like', '%' . $this->term . '%');
+        }
+
+        if (!empty($this->categoryId)) {
+            $query->where('category_id', $this->categoryId);
+        }
+
+        if (!empty($this->limit)) {
+            $query->limit($this->limit);
+        }
+
+        $this->stores = $query
+            ->orderBy('created_at', 'DESC')
+            ->paginate($this->limit);
     }
 }
