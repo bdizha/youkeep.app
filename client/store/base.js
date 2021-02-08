@@ -205,12 +205,6 @@ const mutations = {
   },
   setProcess(state, process) {
     state.processes[process.key] = process.value;
-
-    if (process.key == 'isProduct') {
-      console.log('on process >>>>>>>');
-
-      console.trace();
-    }
   },
   setHasForm(state, hasForm) {
     state.hasForm = hasForm;
@@ -267,7 +261,6 @@ const actions = {
       let route = params.route;
 
       console.log("onCategory params", params);
-      console.trace();
 
       commit('setCategories', []);
       commit('setStores', []);
@@ -284,12 +277,8 @@ const actions = {
         commit('setProducts', products);
         commit('setStore', store);
 
-        dispatch('onProcess', {key: 'isFixed', value: false});
-
-        setTimeout(() => {
-          dispatch('onProcess', {key: 'isProduct', value: false});
-          dispatch('onProcess', {key: 'isCategory', value: false});
-        }, 300);
+        dispatch('onProcess', {key: 'isProduct', value: false});
+        dispatch('onProcess', {key: 'isCategory', value: false});
       });
 
     } catch (e) {

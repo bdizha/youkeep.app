@@ -1,9 +1,13 @@
 <template>
-  <a-row class="r-mv-12" type="flex" justify="start" align="middle">
+  <a-row class="r-mv-24" type="flex" justify="start" align="middle">
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-      <a-slider :min="price.min" :max="price.max"
+      <a-slider range
+                :tooltipVisible="true"
+                :tip-formatter="formatter"
+                :min="price.min"
+                :max="price.max"
                 :included="false"
-                :default-value="600"/>
+                :default-value="[100,2000]"/>
     </a-col>
   </a-row>
 </template>
@@ -17,7 +21,7 @@ export default {
     return {
       price: {
         max: 2400,
-        min: 100
+        min: 33
       },
     };
   },
@@ -27,6 +31,9 @@ export default {
   },
   methods: {
     payload() {
+    },
+    formatter(value) {
+      return `R${value}`
     }
   },
 }

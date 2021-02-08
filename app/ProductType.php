@@ -28,12 +28,12 @@ class ProductType extends Model
     ];
 
     public static $lengths = [
-        self::TYPE_SIZE => 2,
+        self::TYPE_SIZE => 1,
         self::TYPE_COLOR => 6,
-        self::TYPE_VOLUME => 2,
-        self::TYPE_MASS => 2,
+        self::TYPE_VOLUME => 1,
+        self::TYPE_MASS => 1,
         self::TYPE_BRAND => 1,
-        self::TYPE_COLLECTION => 2,
+        self::TYPE_COLLECTION => 1,
         self::TYPE_STORE => 1,
     ];
 

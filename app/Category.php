@@ -127,6 +127,7 @@ class Category extends Model
                 });
             })
                 ->where('type', $type)
+                ->orderBy('name', 'ASC')
                 ->get();
 
             if ($productTypes->toArray()) {

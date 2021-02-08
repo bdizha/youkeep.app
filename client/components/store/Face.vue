@@ -8,6 +8,7 @@
           <a-row type="flex" justify="center" align="middle">
             <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
               <div class="r-store-avatar">
+                <r-store-rate :store="store"></r-store-rate>
                 <r-store-photo slot="cover" :store="store"></r-store-photo>
               </div>
             </a-col>

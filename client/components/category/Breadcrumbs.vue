@@ -5,11 +5,13 @@
       <a-breadcrumb v-if="!processes.isCategories">
         <a-icon slot="separator" type="right"/>
         <a-breadcrumb-item :key="0">
-          <nuxt-link v-if="hasStore" :to="store.route">
+          <nuxt-link v-if="hasStore"
+                     :to="store.route">
             {{ store.name }}
           </nuxt-link>
         </a-breadcrumb-item>
-        <a-breadcrumb-item v-for="(breadcrumb, index) in category.breadcrumbs" :key="index">
+        <a-breadcrumb-item v-for="(breadcrumb, index) in category.breadcrumbs"
+                           :key="index">
           <nuxt-link :to="breadcrumb.route">
             {{ breadcrumb.name }}
           </nuxt-link>

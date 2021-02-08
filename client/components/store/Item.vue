@@ -10,14 +10,6 @@
           <r-store-meta :store="store"></r-store-meta>
         </nuxt-link>
       </a-col>
-      <a-row class="r-hide-lg" :gutter="[24,24]" type="flex" justify="center" align="middle">
-        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-          <r-store-rate :store="store"></r-store-rate>
-        </a-col>
-        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-          <r-store-subscribe :store="store"></r-store-subscribe>
-        </a-col>
-      </a-row>
     </a-row>
   </div>
 </template>

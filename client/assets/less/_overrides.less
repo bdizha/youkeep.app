@@ -895,8 +895,6 @@ x {
 
     .ant-checkbox {
         .ant-checkbox-inner {
-            border-color: transparent;
-
             &:after {
                 border-color: rgba(0, 0, 0, 0.25);
             }
@@ -1032,6 +1030,29 @@ x {
     }
 }
 
+.r-btn-dark {
+    span {
+        font-weight: 600;
+    }
+
+    background: rgba(255, 255, 255, 0.09);
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.045);
+    opacity: 1;
+
+    &:hover {
+        border-color: #3C444C;
+        background: rgba(255, 255, 255, 0.03);
+        opacity: 1;
+    }
+
+    &:focus {
+        opacity: 0.9;
+        border-color: #3C444C;
+        background: rgba(255, 255, 255, 0.03);
+    }
+}
+
 .r-btn-secondary {
     span {
         font-weight: 600;
@@ -1052,6 +1073,51 @@ x {
         opacity: 0.9;
         border-color: #F50A2B;
         background: #F50A2B !important;
+    }
+}
+
+
+.r-store-card {
+    background-size: cover;
+
+    .r-store-avatar {
+        .r-btn-bordered-primary {
+            background: rgba(255, 255, 255, 0.45);
+
+            &:hover {
+                color: #1B9BD9;
+                background: rgba(255, 255, 255, 1);
+                border-color: #FFFFFF;
+            }
+        }
+    }
+
+    .ant-card-body {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
+
+        .r-store-text {
+            font-weight: 700;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .r-store-slogan {
+            font-weight: 600;
+            text-align: center;
+            color: #FFFFFF;
+            @media (max-width: 768px) {
+                font-weight: 400;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ant-btn {
+                .anticon {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
@@ -2196,6 +2262,7 @@ h4.r-heading-light {
         border: 1px solid transparent;
         border-radius: 3px;
         overflow: hidden;
+        text-transform: capitalize;
 
         &:hover {
             border: 1px solid #FFFFFF;
@@ -5660,30 +5727,6 @@ h4.r-heading-light {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-        }
-    }
-}
-
-.r-store-card {
-    background-size: cover;
-
-    .ant-card-body {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
-
-        .r-store-text {
-            font-weight: 700;
-            text-align: center;
-            color: #FFFFFF;
-        }
-
-        .r-store-slogan {
-            font-weight: 600;
-            text-align: center;
-            color: #FFFFFF;
-            @media (max-width: 768px) {
-                font-weight: 400;
-                font-size: 13px;
-            }
         }
     }
 }

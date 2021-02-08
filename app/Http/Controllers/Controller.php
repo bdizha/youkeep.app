@@ -30,7 +30,7 @@ class Controller extends BaseController
         $breadcrumbs = [],
         $categoryId = null,
         $category = null,
-        $storeCategory = [],
+        $storeCategory = null,
         $product = null,
         $productId = null,
         $productType = null,
@@ -44,12 +44,12 @@ class Controller extends BaseController
         $productTypes = [],
         $categoryType = null,
         $filters = [],
-        $store = [],
+        $store = null,
         $stores = [],
         $limit = 24,
-        $level = [],
+        $level = 1,
         $items = [],
-        $item = [];
+        $item = null;
 
 
     /**
@@ -162,14 +162,15 @@ class Controller extends BaseController
         }
 
         if (!empty($this->category['id'])) {
-            $this->_setBreadcrumbs();
-            $this->category['breadcrumbs'] = $this->breadcrumbs;
 
             $this->category['level'] = $this->level;
 
             $this->storeCategory = StoreCategory::where('category_id', $this->category['id'])
                 ->where('level', $this->level)
                 ->first();
+
+            $this->_setBreadcrumbs();
+            $this->category['breadcrumbs'] = $this->breadcrumbs;
 
             ++$this->level;
         }
@@ -325,7 +326,7 @@ class Controller extends BaseController
      */
     protected function _setBreadcrumbs()
     {
-        $this->breadcrumbs = @$this->storeCategory->breadcrumbs;
+        $this->breadcrumbs = $this->storeCategory->breadcrumbs;
     }
 
     /**
@@ -386,7 +387,7 @@ class Controller extends BaseController
     /**
      * @return mixed
      */
-    private function _setStores()
+    protected function _setStores()
     {
         $query = Store::where('is_active', true);
         $this->without = ['categories'];

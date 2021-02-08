@@ -32,6 +32,7 @@
         <div v-on:click="onModalClose">
           <a-button v-on:click="onModalClose"
                     size="default"
+                    class="r-btn-dark"
                     type="secondary"
                     html-type="button">
             <a-icon type="left"/>

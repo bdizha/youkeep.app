@@ -55,7 +55,7 @@ export const mutations = {
     state.isSpinning = false;
     state.isDark = false;
     state.isRaised = false;
-    console.trace();
+    // console.trace();
   },
   setSpin(state, isSpinning) {
     state.isSpinning = isSpinning;

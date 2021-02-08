@@ -13,24 +13,7 @@ class CategoryController extends Controller
 {
     protected $without = ['categories', 'category', 'filters', 'store', 'products', 'breadcrumbs'],
         $relations = ['categories', 'store', 'stores'],
-        $with = [],
-        $slug = null,
-        $categoryId = null,
-        $orderBy = null,
-        $breadcrumbs = [],
-        $categoryType = null,
-        $filters = [],
-        $storeId = null,
-        $storeSlug = null,
-        $product = [],
-        $products = [],
-        $category = [],
-        $storeCategory = [],
-        $store = [],
-        $limit = 24,
-        $level = [],
-        $items = [],
-        $item = [];
+        $with = [];
 
     /**
      * Find categories
