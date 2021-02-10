@@ -12,10 +12,8 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }">
-          <div class="r-margin-out-sm">
-            <r-category-slider :category="category"></r-category-slider>
-            <r-product-flush :columns="3"></r-product-flush>
-          </div>
+          <r-category-slider :category="category"></r-category-slider>
+          <r-product-flush :columns="3"></r-product-flush>
         </a-col>
       </a-row>
       <r-product-list v-if="hasCategory" :category="category" :columns="columns"></r-product-list>

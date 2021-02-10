@@ -2,7 +2,7 @@
   <a-row class="r-mb-24" :gutter="[24, 24]" type="flex" justify="start" align="middle">
     <a-col :class="{'r-spin__active': $fetchState.pending}" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <a-row v-if="hasCategories" class="r-category-header" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]"
+      <a-row v-if="hasCategories" class="r-category-header" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]"
              type="flex" justify="start"
              align="middle">
         <a-col v-for="(category, index) in categories"
@@ -29,7 +29,7 @@
     </a-col>
     <a-col v-if="!$fetchState.pending" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]"
+      <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]"
              type="flex" justify="space-between"
              align="middle">
         <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 4 }"

@@ -112,7 +112,7 @@ class Category extends Model
     }
 
     /**
-     * Get all the types for this product.
+     * Get all the types for this category.
      */
     public function getFiltersAttribute()
     {
@@ -130,7 +130,7 @@ class Category extends Model
                 ->orderBy('name', 'ASC')
                 ->get();
 
-            if ($productTypes->toArray()) {
+            if (!empty($productTypes)) {
                 $filters[] = [
                     'name' => $name,
                     'type' => $type,
@@ -150,7 +150,6 @@ class Category extends Model
     public function getPhotosAttribute()
     {
         $photos = [];
-
         if (empty($this->products)) {
             $this->products = $this->getProductsAttribute();
         }

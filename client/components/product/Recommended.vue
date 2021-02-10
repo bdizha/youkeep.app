@@ -1,6 +1,6 @@
 <template>
   <div class="r-product-cards" :class="{'r-product-flush': isFlush()}">
-    <a-row v-if="hasProducts" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, 24]" type="flex" justify="start"
+    <a-row v-if="hasProducts" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]" type="flex" justify="start"
            align="middle">
       <a-col v-for="(product, index) in products.data" :key="index"
              :xs="{span: isVertical ? 12 : 24}"

@@ -1,14 +1,11 @@
 <template>
   <a-row class="r-mb-24" type="flex" justify="start" align="middle">
     <a-col :span="24">
-      <a-collapse default-active-key="0" expandIconPosition="right">
-        <a-collapse-panel v-for="(filter, index) in filters"
+      <r-product-variants v-for="(type, index) in types"
+                          v-if="type.variants.length > 0"
                           :key="index"
-                          :header="filter.label">
-          <r-category-filter-color></r-category-filter-color>
-          <r-category-filter-size></r-category-filter-size>
-        </a-collapse-panel>
-      </a-collapse>
+                          :header="type.name"
+                          :product-type="type"></r-product-variants>
     </a-col>
   </a-row>
 </template>
@@ -17,22 +14,14 @@
 export default {
   name: 'r-product-types',
   props: {
-    isShowing: {type: Boolean, required: false, default: false},
-    product: {type: Object, required: false, default: null},
+    types: { type: Array, required: false, default: [] },
   },
-  data() {
-    return {
-      currentColor: null,
-      currentSize: null,
-      filters: [
-        {'label': 'Color', 'key': 'color'},
-        {'label': 'Size', 'key': 'size'},
-      ]
-    };
+  data () {
+    return {}
   },
-  created() {
+  created () {
   },
   computed: {},
   methods: {},
-};
+}
 </script>

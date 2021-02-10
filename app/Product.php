@@ -181,7 +181,7 @@ class Product extends KModel
         $types = ProductType::$types;
         $productTypes = [];
 
-        foreach ($types as $type => $label) {
+        foreach ($types as $type => $name) {
             $variants = ProductVariant::with([
                 'product_type' => function ($query) use ($type) {
                     $query->where('product_types.type', $type);
@@ -194,13 +194,13 @@ class Product extends KModel
                 $productVariants = [];
                 foreach ($variants as $variant) {
                     if (!empty($variant->product_type)) {
-                        $variant['label'] = @$variant->product_type->nam;
+                        $variant['name'] = $variant->product_type->name;
                         $productVariants[] = $variant;
                     }
                 }
 
                 $productTypes[] = [
-                    'label' => $label,
+                    'name' => $name,
                     'variants' => $productVariants,
                     'has_variants' => count($productVariants) > 0
                 ];
