@@ -21,7 +21,7 @@
                 <r-product-header :is-showing="true" :product="product"></r-product-header>
                 <r-rate :rating="product.rating"></r-rate>
                 <r-product-price :is-showing="true" :product="product"></r-product-price>
-                <r-product-types :types="product.types"></r-product-types>
+                <r-product-types :product-types="product.types" :product="product"></r-product-types>
                 <r-product-actions :is-showing="true" :size="'default'" :product="product"></r-product-actions>
               </a-col>
             </a-row>
@@ -37,7 +37,7 @@
             <a-col class="r-hide-sm" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
               <div class="r-grey-shadow r-ph-24">
                 <div class="r-margin-out">
-                  <r-product-categories columns="3" :types="[1,2,3]" :product="product"></r-product-categories>
+                  <r-product-categories :columns="3" :types="[1,2,3]" :product="product"></r-product-categories>
                 </div>
               </div>
             </a-col>

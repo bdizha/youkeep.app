@@ -340,12 +340,6 @@ const actions = {
 
         dispatch('onProcess', {key: 'isFixed', value: false});
 
-        let defaultVariant = product.default_variant;
-        let productType = defaultVariant.product_type
-
-        dispatch('product/onVariant', defaultVariant, {root: true});
-        dispatch('product/onProductType', productType, {root: true});
-
         setTimeout(() => {
           dispatch('onProcess', {key: 'isProduct', value: false});
         }, 600);

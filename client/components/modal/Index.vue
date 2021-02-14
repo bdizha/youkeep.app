@@ -30,8 +30,7 @@
                         v-bind:key="'password-request'" class="r-animate"></r-password-request>
     <r-password-reset v-if="isCurrent('password-reset')"
                       v-bind:key="'password-reset'" class="r-animate"></r-password-reset>
-    <r-product-modal v-if="isCurrent('product')"
-                     v-bind:key="'product'" class="r-animate"></r-product-modal>
+    <r-product-modal v-if="isCurrent('product')"  class="r-animate"></r-product-modal>
     <r-product-modal-wishlist v-if="isCurrent('wishlist')"
                               v-bind:key="'wish'" class="r-animate"></r-product-modal-wishlist>
     <r-product-modal-timeline v-if="isCurrent('timeline')"

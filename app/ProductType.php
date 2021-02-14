@@ -9,6 +9,7 @@ class ProductType extends Model
 {
     use Sluggable;
 
+    const TYPE_DEFAULT = 0;
     const TYPE_SIZE = 1;
     const TYPE_COLOR = 2;
     const TYPE_VOLUME = 3;
@@ -18,6 +19,7 @@ class ProductType extends Model
     const TYPE_STORE = 7;
 
     public static $types = [
+        self::TYPE_DEFAULT => 'Default',
         self::TYPE_SIZE => 'Size',
         self::TYPE_COLOR => 'Color',
         self::TYPE_VOLUME => 'Volume',
@@ -28,6 +30,7 @@ class ProductType extends Model
     ];
 
     public static $lengths = [
+        self::TYPE_DEFAULT => 1,
         self::TYPE_SIZE => 1,
         self::TYPE_COLOR => 6,
         self::TYPE_VOLUME => 1,
@@ -75,5 +78,44 @@ class ProductType extends Model
     public function variants()
     {
         return $this->hasMany('App\ProductVariant');
+    }
+
+    /**
+     * @return Bool
+     */
+    static function hasDefaultType()
+    {
+        $type = self::where('type', self::TYPE_DEFAULT)
+            ->first();
+
+        return !empty($type);
+    }
+
+    static function setDefaultType()
+    {
+        $hasDefaultType = self::hasDefaultType();
+
+        $defaultType = null;
+
+        if (empty($hasDefaultType)) {
+            $attributes = [
+                'name' => 'Default',
+                'type' => self::TYPE_DEFAULT,
+            ];
+
+            $values = [
+                'name' => 'Default',
+                'type' => self::TYPE_DEFAULT,
+                'is_active' => true
+            ];
+
+            $defaultType = ProductType::updateOrCreate($attributes, $values);
+        } else {
+
+            $defaultType = ProductType::where('type', self::TYPE_DEFAULT)
+                ->first();
+        }
+
+        return $defaultType;
     }
 }

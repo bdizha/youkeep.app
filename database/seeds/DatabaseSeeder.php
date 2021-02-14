@@ -170,7 +170,7 @@ class DatabaseSeeder extends Seeder
             'discount' => $this->setPrice($filterItem['discount']),
         ];
 
-        \App\ProductVariant::updateOrCreate($attributes, $values);
+        ProductVariant::updateOrCreate($attributes, $values);
     }
 
 

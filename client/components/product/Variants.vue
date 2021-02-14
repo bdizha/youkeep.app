@@ -1,62 +1,44 @@
 <template>
   <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-      <a-popover :visible="isVisible" placement="topLeft">
-        <span slot="title">Choose {{ productType.name }}:</span>
-        <template slot="content">
-          <a-checkbox-group v-model="selected"
-                            @change="onVariant"
+      <a-button block
+                size="large"
+                class="r-btn-bordered-grey"
+                @click="onShow"
+      >
+        <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
+          <a-col class="r-text-left r-text-capitalize" :xs="{span: 18}" :sm="{span: 18}" :md="{span: 18}"
+                 :lg="{span: 18}"
           >
-            <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
-              <a-col v-for="(variant, index) in productType.variants"
-                     :key="variant.id"
-                     :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24 }" :lg="{span: 24}"
-              >
-                <a-tooltip placement="top">
-                  <template slot="title">
-                    <span>Select: {{ variant.name }}</span>
-                  </template>
-                  <a-checkbox :value="variant.id">
-                    {{ variant.name }}
-                  </a-checkbox>
-                </a-tooltip>
-              </a-col>
-            </a-row>
-          </a-checkbox-group>
-        </template>
-        <a-button block
-                  class="r-btn-bordered-grey"
-                  @click="onShow"
-        >
-          <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
-            <a-col class="r-text-left" :xs="{span: 18}" :sm="{span: 18}" :md="{span: 18}" :lg="{span: 18}">
-              {{ productType.name + ': ' + selected }}
-            </a-col>
-            <a-col class="r-text-right" :xs="{span: 6}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 6}">
-              <a-icon type="right"/>
-            </a-col>
-          </a-row>
-        </a-button>
-      </a-popover>
+            {{ variant.name ? 'Selected' : null }} {{ productType.name + ': ' }} <b>{{ variant.name }}</b>
+          </a-col>
+          <a-col class="r-text-right" :xs="{span: 6}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 6}">
+            <a-icon type="right"/>
+          </a-col>
+        </a-row>
+      </a-button>
     </a-col>
   </a-row>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'r-product-variants',
   props: {
+    product: { type: Object, required: true, default: { name: null, types: [] } },
     productType: { type: Object, required: true, default: { name: null, variants: [] } },
   },
   data () {
     return {
       selected: null,
-      isVisible: false
+      isVisible: false,
+      variant: { name: '' },
+      defaultVariant: null,
     }
   },
-  computed: mapState({
-    filters: 'base/filters'
+  computed: mapGetters({
+    popover: 'base/popover',
   }),
   mounted () {
 
@@ -67,8 +49,23 @@ export default {
     },
     onShow () {
       this.isVisible = true
+      this.$store.dispatch('base/onPopover', { name: this.productType.name })
+
+      let modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = 'product'
+      this.$store.dispatch('base/onModal', modal)
     },
-    onVariant () {
+    async onVariant () {
+      this.variant = this.productType.variants.find(item => item.id === this.selected)
+
+      await this.$store.dispatch('product/onVariant', this.variant)
+      await this.$store.dispatch('product/onProductType', this.productType)
+    },
+    async onSelect () {
+      await this.onVariant()
+      this.$store.dispatch('base/onPopover', { name: null })
       this.isVisible = false
     },
   },

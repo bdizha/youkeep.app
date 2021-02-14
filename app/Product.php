@@ -64,7 +64,7 @@ class Product extends KModel
         'color_name',
         'color_code',
         'quantity',
-        'variant',
+        'default_variant',
         'types',
         'photos',
         'category_id',
@@ -81,6 +81,10 @@ class Product extends KModel
         'store',
         'route'
     ];
+
+    protected $defaultType = null;
+    protected $defaultVariant = null;
+    protected $hasDefaultType = false;
 
     /**
      * Return the sluggable configuration array for this model.
@@ -109,16 +113,6 @@ class Product extends KModel
     public function getIsGreatValueAttribute()
     {
         return rand(0, 1);
-    }
-
-    public function getVariantAttribute()
-    {
-        return [
-            'name' => $this->name,
-            'price' => $this->price,
-            'discount' => $this->discount,
-            'quantity' => 0,
-        ];
     }
 
     public function getCategoryIdAttribute()
@@ -176,12 +170,66 @@ class Product extends KModel
         return number_format($this->price, 0);
     }
 
+    /**
+     * @return Bool
+     */
+    private function hasDefaultType()
+    {
+        $this->defaultType = $this->product_types()
+            ->where('type', 9)
+            ->first();
+
+        return !empty($this->defaultType);
+    }
+
+    public function setDefaultVariant()
+    {
+        $this->hasDefaultType = $this->hasDefaultType();
+
+        if (empty($this->defaultVariant)) {
+            $this->defaultType = ProductType::setDefaultType();
+
+            if (!empty($this->defaultType)) {
+                $attributes = [
+                    'product_type_id' => $this->defaultType->id,
+                    'product_id' => $this->id
+                ];
+
+                $values = [
+                    'product_type_id' => $this->defaultType->id,
+                    'product_id' => $this->id,
+                    'price' => $this->price,
+                    'discount' => $this->discount,
+                ];
+
+                $this->defaultVariant = ProductVariant::updateOrCreate($attributes, $values);
+                $productType = [
+                    'name' => 'Default',
+                    'type' => ProductType::TYPE_DEFAULT,
+                    'is_saleable' => true,
+                ];
+
+                $this->defaultVariant['product_type'] = $productType;
+            }
+        }
+    }
+
+    public function getDefaultVariantAttribute()
+    {
+        $this->setDefaultVariant();
+        return $this->defaultVariant;
+    }
+
     public function getTypesAttribute()
     {
         $types = ProductType::$types;
         $productTypes = [];
 
+        $this->setDefaultVariant();
+
         foreach ($types as $type => $name) {
+            $isSaleable = false;
+
             $variants = ProductVariant::with([
                 'product_type' => function ($query) use ($type) {
                     $query->where('product_types.type', $type);
@@ -189,19 +237,24 @@ class Product extends KModel
                 ->where('product_id', $this->id)
                 ->get();
 
-
             if (!empty($variants)) {
                 $productVariants = [];
                 foreach ($variants as $variant) {
                     if (!empty($variant->product_type)) {
                         $variant['name'] = $variant->product_type->name;
                         $productVariants[] = $variant;
+                        if ($type === ProductType::TYPE_DEFAULT ||
+                            (!empty($variant->price) && $variant->price !== $this->price)) {
+                            $isSaleable = true;
+                        }
                     }
                 }
 
                 $productTypes[] = [
                     'name' => $name,
+                    'type' => $type,
                     'variants' => $productVariants,
+                    'is_saleable' => $isSaleable,
                     'has_variants' => count($productVariants) > 0
                 ];
             }
@@ -313,6 +366,14 @@ class Product extends KModel
     public function tags()
     {
         return $this->belongsToMany('App\Tag', 'tag_products', 'product_id', 'tag_id');
+    }
+
+    /**
+     * Get all product variants
+     */
+    public function variants()
+    {
+        return $this->hasMany('App\ProductVariant');
     }
 
     /**

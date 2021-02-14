@@ -1,5 +1,6 @@
 <template>
   <r-avatar shape="square"
+            :size="size"
             :src="product.thumbnail_url"/>
 </template>
 <script>
@@ -7,13 +8,12 @@ export default {
   name: 'r-product-photo',
   props: {
     product: {type: Object, required: false, default: null},
-    isShowing: {type: Boolean, required: false, default: false},
+    size: {type: Number, required: false, default: 180},
   },
   data() {
     return {
       quantity: 1,
       styles: null,
-      size: 180,
     };
   },
   created() {

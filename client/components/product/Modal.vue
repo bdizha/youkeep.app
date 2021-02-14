@@ -1,60 +1,65 @@
 <template>
-  <r-modal class="r-modal-product"
-           :mask-closable="false"
-           :closable="true"
-           current="product"
-           style="position: relative;width: 75%">
-    <div class="r-pt-24">
-      <a-card v-if="product" class="r-product">
-        <a-row class="r-product-modal" :gutter="36" type="flex"
-               justify="center" align="middle">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
-            <r-product-credit :is-showing="true" :product="product"></r-product-credit>
-            <r-product-photos :photos="product.photos" :product="product" :size="400"></r-product-photos>
-          </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
-            <r-product-header :is-showing="true" :product="product"></r-product-header>
-            <r-product-price :is-showing="true" :product="product"></r-product-price>
-            <r-product-types :is-showing="true" :product="product"></r-product-types>
-            <r-product-actions :is-showing="true" :size="'default'" :product="product"></r-product-actions>
-          </a-col>
-        </a-row>
-      </a-card>
-    </div>
-    <r-product-info v-if="false" :product="product"></r-product-info>
-    <a-row class="r-mt-48" type="flex" justify="center">
-      <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-        <h3 class="r-heading r-text-black">
-          You may also like
+  <r-modal-template :mask-closable="maskClosable"
+                    :closable="closable"
+                    :current="modal"
+  >
+    <a-row class="r-product-show" type="flex" justify="center" align="middle">
+      <a-col v-if="hasProduct" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <h3 class="r-heading">
+          {{ product.name }}
         </h3>
-        <p class="r-text-normal">Realtime product recommendations just for you</p>
+        <div class="r-product-summary">
+          {{ product.summary }}
+        </div>
+      </a-col>
+      <a-col class="r-product-modal" v-if="hasProduct" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <a-collapse default-active-key="1" expandIconPosition="right">
+          <a-collapse-panel class="r-collapse-panel"
+                            v-for="(productType, index) in product.types"
+                            v-if="productType.variants.length > 0 && productType.type > 0"
+                            :key="productType.name"
+          >
+            <template slot="header">
+              <span class="r-text-normal">Select:</span>
+              <span>{{ productType.name }}</span>
+            </template>
+            <r-product-options :product="product" :product-type="productType"></r-product-options>
+          </a-collapse-panel>
+        </a-collapse>
       </a-col>
     </a-row>
-  </r-modal>
+    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+  </r-modal-template>
 </template>
 <script>
-  import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
-  export default {
-    name: 'r-product-modal',
-    props: {},
-    data() {
-      return {
-        hasData: true,
-        categories: [],
-      };
-    },
-    mounted() {
-      this.payload();
-    },
-    computed: mapGetters({
-      store: 'store/store',
-      cart: 'cart/cart',
-      product: 'store/product',
-    }),
-    methods: {
-      payload() {
-      },
-    },
-  };
+export default {
+  name: 'r-product-modal',
+  props: {
+    maskClosable: { type: Boolean, required: false, default: false },
+    closable: { type: Boolean, required: false, default: false },
+  },
+  data () {
+    return {
+      modal: 'product',
+      message: 'Thank you for successfully signing up with Shopple. Enjoy your shopping!'
+    }
+  },
+  computed: mapGetters({
+    category: 'base/category',
+    product: 'base/product',
+    productType: 'product/productType',
+    hasProductType: 'product/hasProductType',
+    hasProduct: 'base/hasProduct',
+    processes: 'base/processes'
+  }),
+  created () {
+    this.payload()
+  },
+  methods: {
+    payload () {
+    }
+  },
+}
 </script>

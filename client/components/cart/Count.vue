@@ -3,7 +3,7 @@
        class="r-menu-cart"
        :class="{'r-menu-cart__active': cart.count > 0}">
     <div class="r-shopping-cart"></div>
-    <span class="r-menu-cart-count">{{ cart.count }}</span>
+    <span class="r-cart-count">{{ cart.count }}</span>
   </div>
 </template>
 <script>

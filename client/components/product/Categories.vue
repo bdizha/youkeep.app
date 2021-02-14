@@ -5,11 +5,13 @@
         <a-collapse-panel class="r-collapse-panel"
                           v-for="(category, index) in categories"
                           :key="index"
-                          :header="category.name">
+                          :header="category.name"
+        >
           <r-product-products :columns="columns"
                               :is-vertical="isVertical"
                               :type="category.type"
-                              :product="product">
+                              :product="product"
+          >
           </r-product-products>
         </a-collapse-panel>
       </a-collapse>
@@ -17,7 +19,7 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 const CATEGORIES = [
   {
@@ -35,34 +37,34 @@ const CATEGORIES = [
     type: 3,
     columns: 3,
   }
-];
+]
 
 export default {
   name: 'r-product-categories',
   components: {},
   props: {
-    product: {type: Object, required: false, default: null},
-    columns: {type: Number, required: false, default: 1},
-    isVertical: {type: Boolean, required: false, default: true},
-    types: {type: Array, required: false, default: [1]},
-    limit: {type: Number, required: false, default: 12}
+    product: { type: Object, required: false, default: null },
+    columns: { type: Number, required: false, default: 1 },
+    isVertical: { type: Boolean, required: false, default: true },
+    types: { type: Array, required: false, default: () => [1] },
+    limit: { type: Number, required: false, default: 12 }
   },
-  data() {
+  data () {
     return {
       hasData: false,
       categories: CATEGORIES
     }
   },
   computed: mapGetters({
-    processes: "base/processes",
+    processes: 'base/processes',
   }),
-  created() {
+  created () {
   },
-  mounted() {
+  mounted () {
   },
   methods: {
-    async payload() {
+    async payload () {
     }
   }
-};
+}
 </script>

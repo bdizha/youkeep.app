@@ -1,11 +1,13 @@
 <template>
   <a-row class="r-mb-24" type="flex" justify="start" align="middle">
     <a-col :span="24">
-      <r-product-variants v-for="(type, index) in types"
-                          v-if="type.variants.length > 0"
+      <r-product-variants v-for="(productType, index) in productTypes"
+                          v-if="productType.type >= 0 && productType.has_variants"
                           :key="index"
-                          :header="type.name"
-                          :product-type="type"></r-product-variants>
+                          :product="product"
+                          :header="productType.name"
+                          :product-type="productType"
+      ></r-product-variants>
     </a-col>
   </a-row>
 </template>
@@ -14,7 +16,8 @@
 export default {
   name: 'r-product-types',
   props: {
-    types: { type: Array, required: false, default: [] },
+    product: { type: Object, required: true, default: null },
+    productTypes: { type: Array, required: false, default: [] },
   },
   data () {
     return {}
