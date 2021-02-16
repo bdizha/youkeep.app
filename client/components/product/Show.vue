@@ -21,8 +21,13 @@
                 <r-product-header :is-showing="true" :product="product"></r-product-header>
                 <r-rate :rating="product.rating"></r-rate>
                 <r-product-price :is-showing="true" :product="product"></r-product-price>
-                <r-product-types :product-types="product.types" :product="product"></r-product-types>
-                <r-product-actions :is-showing="true" :size="'default'" :product="product"></r-product-actions>
+                <r-product-types v-if="productItem.key" :item-key="productItem.key"
+                                 :product-types="product.types" :product="product"
+                ></r-product-types>
+                <r-product-actions v-if="productItem.key"
+                                   :item-key="productItem.key" :is-showing="true"
+                                   :product="product"
+                ></r-product-actions>
               </a-col>
             </a-row>
             <r-product-info :product="product"></r-product-info>
@@ -61,20 +66,41 @@ export default {
   name: 'r-product-show',
   props: {},
   data () {
-    return {}
+    return {
+      productItem: { key: null }
+    }
   },
   computed: mapGetters({
     category: 'base/category',
     product: 'base/product',
     store: 'base/store',
-    processes: 'base/processes'
+    processes: 'base/processes',
+    productItems: 'product/items'
   }),
   created () {
-    this.payload()
+    this.onInit()
   },
   methods: {
     payload () {
-    }
+    },
+    async onInit () {
+      const current = new Date()
+      let itemKey = current.getMilliseconds() * this.product.id
+      console.log(itemKey, 'current time')
+
+      this.productItem.key = itemKey
+      this.productItem.product = this.product
+      this.productItem.quantity = 0
+      this.productItem.variant = this.product.default_variant
+      this.productItem.variantIds = [this.productItem.variant.id]
+      this.productItem.productType = null
+      this.productItem.productTypes = [this.productItem.variant.type]
+      this.productItem.variants = [this.productItem.variant]
+
+      await this.$store.dispatch('product/onItem', this.productItem)
+
+      console.log('on productShow onInit call', this.productItem)
+    },
   }
 }
 </script>

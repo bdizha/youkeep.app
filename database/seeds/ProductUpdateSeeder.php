@@ -22,7 +22,7 @@ class ProductUpdateSeeder extends DatabaseSeeder
         $product = Product::where('slug', 'pekal-long-printed-tights')
             ->first();
 
-        dd($product->variant);
+        dd($product->types[0]['variants']);
 
         $products = Product::with('photos')
             ->get();

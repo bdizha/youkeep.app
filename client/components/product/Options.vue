@@ -11,7 +11,9 @@
           <template slot="title">
             <span>Select: {{ productType.name }}</span>
           </template>
-          <a-radio :value="variant.id">
+          <a-radio :checked="true"
+                   :value="variant.id"
+          >
             {{ variant.name }}
           </a-radio>
         </a-tooltip>
@@ -21,12 +23,13 @@
 </template>
 
 <script>
-import { mapGetters, mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-product-options',
   props: {
     product: { type: Object, required: false, default: { name: null, types: [] } },
+    productItem: { type: Object, required: true, default: null },
     productType: { type: Object, required: true, default: { name: null, variants: [] } },
   },
   data () {
@@ -42,11 +45,28 @@ export default {
       defaultVariant: null,
     }
   },
-  computed: mapGetters({
-    popover: 'base/popover',
-  }),
-  mounted () {
+  created () {
+    this.selected = this.variantId
+  },
+  computed: {
+    variantId () {
+      let variant = this.productItem.variants.find((variant, index) => {
+        if (this.productType.type === variant.product_type.type) {
+          return true
+        }
+      })
 
+      if (variant !== undefined) {
+        return variant.id
+      } else {
+        return null
+      }
+    },
+    ...mapGetters({
+      popover: 'base/popover'
+    })
+  },
+  mounted () {
   },
   methods: {
     onShow () {
@@ -54,10 +74,30 @@ export default {
       this.$store.dispatch('base/onPopover', { name: this.productType.name })
     },
     async onVariant () {
-      this.variant = this.productType.variants.find(item => item.id === this.selected)
+      let productItem = JSON.parse(JSON.stringify(this.productItem))
 
-      await this.$store.dispatch('product/onVariant', this.variant)
-      await this.$store.dispatch('product/onProductType', this.type)
+      console.log('productItem', productItem)
+
+      let variant = this.productType.variants.find(item => item.id === this.selected)
+
+      productItem.variants = productItem.variants.filter((item, index) => {
+        if (item.product_type.type !== variant.product_type.type) {
+          return true
+        }
+      })
+
+      if (!productItem.productTypes.includes(this.productType.type)) {
+        productItem.productTypes.push(this.productType.type)
+      }
+
+      productItem.productType = this.productType
+      productItem.variantIds.push(variant.id)
+      if (this.productType.is_saleable) {
+        productItem.variant = variant
+      }
+      productItem.variants.push(variant)
+
+      await this.$store.dispatch('product/onItem', productItem)
     },
     async onSelect () {
       await this.onVariant()

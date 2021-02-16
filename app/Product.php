@@ -237,25 +237,31 @@ class Product extends KModel
                 ->where('product_id', $this->id)
                 ->get();
 
-            if (!empty($variants)) {
+            if (!empty($variants) && $variants->count() > 0) {
                 $productVariants = [];
+                $hasVariants = false;
                 foreach ($variants as $variant) {
                     if (!empty($variant->product_type)) {
                         $variant['name'] = $variant->product_type->name;
-                        $productVariants[] = $variant;
+                        $variant->product_type->label = $name;
                         if ($type === ProductType::TYPE_DEFAULT ||
                             (!empty($variant->price) && $variant->price !== $this->price)) {
                             $isSaleable = true;
                         }
+                        $productVariants[] = $variant;
+                        $hasVariants = true;
                     }
                 }
+
+                $notRequired = [ProductType::TYPE_DEFAULT, ProductType::TYPE_STORE, ProductType::TYPE_BRAND];
 
                 $productTypes[] = [
                     'name' => $name,
                     'type' => $type,
                     'variants' => $productVariants,
                     'is_saleable' => $isSaleable,
-                    'has_variants' => count($productVariants) > 0
+                    'is_required' => $hasVariants && !in_array($type, $notRequired),
+                    'has_variants' => $hasVariants
                 ];
             }
         }

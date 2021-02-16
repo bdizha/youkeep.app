@@ -27,20 +27,18 @@
               </a-col>
               <a-col :xs="{ span: 24 }"
                      :sm="{ span: 24 }" :lg="{ span: 24 }">
-                <a-row type="flex" justify="start" align="middle">
-                  <a-col :xs="{ span: 24 }"
-                         :sm="{ span: 24 }" :lg="{ span: 24 }">
-                    <nuxt-link :to="product.route">
-                      <r-product-header :product="product"></r-product-header>
-                      <r-product-price :product="product"></r-product-price>
-                    </nuxt-link>
-                  </a-col>
-                  <a-col :xs="{ span: 24 }"
-                         :sm="{ span: 24 }" :lg="{ span: 24 }">
-                    <r-product-store :store="product.store"></r-product-store>
-                    <r-product-actions :product="product" size="default"></r-product-actions>
-                  </a-col>
-                </a-row>
+                <nuxt-link :to="product.route">
+                  <r-product-header :product="product"></r-product-header>
+                  <r-product-price :product="product"></r-product-price>
+                </nuxt-link>
+              </a-col>
+              <a-col :xs="{ span: 24 }"
+                     :sm="{ span: 24 }" :lg="{ span: 24 }">
+                <r-product-store :store="product.store"></r-product-store>
+              </a-col>
+              <a-col :xs="{ span: 24 }"
+                     :sm="{ span: 24 }" :lg="{ span: 24 }">
+                <r-product-actions :product="product" size="default"></r-product-actions>
               </a-col>
             </a-row>
           </a-col>

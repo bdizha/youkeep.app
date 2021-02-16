@@ -10,7 +10,16 @@
           <a-col class="r-text-left r-text-capitalize" :xs="{span: 18}" :sm="{span: 18}" :md="{span: 18}"
                  :lg="{span: 18}"
           >
-            {{ variant.name ? 'Selected' : null }} {{ productType.name + ': ' }} <b>{{ variant.name }}</b>
+            <span>{{ productType.name + ': ' }}</span>
+            <span v-if="!isSelected" class="r-text-primary">
+              (required)
+            </span>
+            <template v-if="isSelected">
+                <span class="r-text-secondary">
+                {{ variant.name }}
+                </span>
+              <span class="r-text-normal">(selected)</span>
+            </template>
           </a-col>
           <a-col class="r-text-right" :xs="{span: 6}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 6}">
             <a-icon type="right"/>
@@ -28,25 +37,43 @@ export default {
   props: {
     product: { type: Object, required: true, default: { name: null, types: [] } },
     productType: { type: Object, required: true, default: { name: null, variants: [] } },
+    itemKey: { type: Number, required: false, default: null },
   },
   data () {
     return {
       selected: null,
       isVisible: false,
-      variant: { name: '' },
       defaultVariant: null,
     }
   },
-  computed: mapGetters({
-    popover: 'base/popover',
-  }),
-  mounted () {
+  computed: {
+    ...mapState({
+      productItem (state) {
+        return state.product.items.find(item => item.key === this.itemKey)
+      },
+    }),
+    ...mapGetters({
+      popover: 'base/popover',
+    }),
+    isSelected () {
+      return this.productItem !== undefined && this.productItem.productTypes.includes(this.productType.type)
+    },
+    variant () {
+      if (this.productItem === undefined) {
+        return { name: null }
+      }
 
+      let variant = this.productItem.variants.find(variant => variant.product_type.type === this.productType.type)
+      if (variant === undefined) {
+        return { name: '>>>>' }
+      }
+
+      return variant
+    },
+  },
+  mounted () {
   },
   methods: {
-    onFilter () {
-      this.$store.dispatch('base/onFilters', this.selected)
-    },
     onShow () {
       this.isVisible = true
       this.$store.dispatch('base/onPopover', { name: this.productType.name })
@@ -56,17 +83,6 @@ export default {
       modal.isClosable = true
       modal.current = 'product'
       this.$store.dispatch('base/onModal', modal)
-    },
-    async onVariant () {
-      this.variant = this.productType.variants.find(item => item.id === this.selected)
-
-      await this.$store.dispatch('product/onVariant', this.variant)
-      await this.$store.dispatch('product/onProductType', this.productType)
-    },
-    async onSelect () {
-      await this.onVariant()
-      this.$store.dispatch('base/onPopover', { name: null })
-      this.isVisible = false
     },
   },
 }

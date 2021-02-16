@@ -50,7 +50,8 @@ export default {
       this.$store.dispatch('base/onModal', modal);
     },
     onClear() {
-      let cart = this.cart;
+      let cart = JSON.parse(JSON.stringify(this.cart))
+
       cart.items = [];
       this.$store.dispatch('cart/onCart', cart);
     },

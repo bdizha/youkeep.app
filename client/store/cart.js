@@ -44,7 +44,7 @@ const mutations = {
           discountTotal += parseInt(discount * item.quantity)
         }
         subTotal += parseInt(price * item.quantity)
-        count++
+        count += item.quantity
       }
     })
 
@@ -115,14 +115,13 @@ const actions = {
   async onCart ({ commit }, payload) {
     commit('setCart', payload)
 
-    await axios.post('/cart', { cart: payload })
+    // await axios.post('/cart', { cart: payload })
   },
   async onItem ({ dispatch, commit, state }, payload) {
 
     // console.log(state.cart, 'current cart')
 
     let productItem = payload
-    let quantity = payload.quantity
     let cart = JSON.parse(JSON.stringify(state.cart))
     let items = cart.items
 
@@ -132,7 +131,7 @@ const actions = {
     let key = null
 
     items.filter((item, index) => {
-      if (productItem.product.id === item.product.id && (!item.product_type.is_saleable || productItem.product_type.type == 0)) {
+      if (productItem.key === item.key) {
         key = index
         return true
       }
@@ -140,44 +139,15 @@ const actions = {
 
     let status = 0
 
-    productItem.quantity = quantity
-
-    let variants = []
-    let variant = null
-
     if (key != null) {
-      if (quantity === 0) {
+      if (productItem.quantity === 0) {
         // deleting
         status = 3
       } else {
         // updating
         status = 2
       }
-      variants = items[key].variants
-      variant = items[key].variant
     }
-
-    variants = variants.filter((variant, index) => {
-      if (productItem.product_type.type !== variant.product_type.type &&
-        productItem.variant.id !== variant.id) {
-        return true
-      }
-    })
-
-    if (productItem.product_type.is_saleable) {
-      productItem.variant.product_type = productItem.product_type
-    } else {
-      if (variant == null) {
-        let defaultType = productItem.product.defaultVariant
-
-        console.log(defaultVariant, 'defaultType >>>')
-
-        productItem.variant = defaultVariant
-      }
-    }
-
-    variants.push(productItem.variant)
-    productItem.variants = variants
 
     if (key != null) {
       // updating
