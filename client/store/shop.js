@@ -147,7 +147,6 @@ const actions = {
     }
   },
   async onProducts({dispatch, commit}, payload) {
-    dispatch('base/onProcess', {key: 'isProduct', value: true}, {root: true});
 
     try {
       return await axios.post('/products', payload).then(({data}) => {
@@ -155,10 +154,6 @@ const actions = {
         let products = data;
 
         dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
-
-        setTimeout(() => {
-          dispatch('base/onProcess', {key: 'isProduct', value: false}, {root: true});
-        }, 600);
 
         return products;
       });

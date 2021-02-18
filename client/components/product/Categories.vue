@@ -3,7 +3,8 @@
     <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-collapse :activeKey="'0'" expandIconPosition="right">
         <a-collapse-panel class="r-collapse-panel"
-                          v-for="(category, index) in categories"
+                          v-for="(category, index) in product.categories"
+                          v-if="category.has_products"
                           :key="index"
                           :header="category.name"
         >
@@ -14,30 +15,18 @@
           >
           </r-product-products>
         </a-collapse-panel>
+        <a-collapse-panel class="r-collapse-panel"
+                          key="stores"
+                          header="Explore similar stores"
+        >
+          <r-store-list></r-store-list>
+        </a-collapse-panel>
       </a-collapse>
     </a-col>
   </a-row>
 </template>
 <script>
 import { mapGetters } from 'vuex'
-
-const CATEGORIES = [
-  {
-    name: 'Related to this product',
-    type: 1,
-    columns: 1
-  },
-  {
-    name: 'Products bought together',
-    type: 2,
-    columns: 3,
-  },
-  {
-    name: 'Recommended products',
-    type: 3,
-    columns: 3,
-  }
-]
 
 export default {
   name: 'r-product-categories',
@@ -50,13 +39,11 @@ export default {
     limit: { type: Number, required: false, default: 12 }
   },
   data () {
-    return {
-      hasData: false,
-      categories: CATEGORIES
-    }
+    return {}
   },
   computed: mapGetters({
     processes: 'base/processes',
+    hasProduct: 'base/hasProduct',
   }),
   created () {
   },

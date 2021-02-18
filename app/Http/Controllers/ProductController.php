@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\CategoryProduct;
 use App\Product;
+use App\ProductLink;
 use App\StoreCategory;
 use App\StoreProduct;
 use Illuminate\Http\Request;
@@ -33,6 +34,7 @@ class ProductController extends Controller
         $this->productType = $request->get('type', 1);
         $this->limit = $request->get('limit', 12);
         $this->categoryId = $request->get('category_id', null);
+        $this->storeId = $request->get('store_id', null);
         $this->productId = $request->get('product_id', null);
         $this->filters = $request->get('filters', []);
 
@@ -56,10 +58,10 @@ class ProductController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function show(Request $request)
+    public function show($slug = null, Request $request)
     {
         $response = [];
-        $this->slug = $request->get('slug', null);
+        $this->slug = $request->get('slug', $slug);
         $this->limit = $request->get('limit', 3);
         $this->with = $request->get('with', ['categories', 'photos', 'breadcrumbs']);
 
@@ -75,18 +77,17 @@ class ProductController extends Controller
 
             $this->product = Product::where('is_active', true)
                 ->where('slug', $this->slug)
-                ->first()
-                ->toArray();
+                ->first();
 
             if (!empty($this->product)) {
-                $storeProduct = StoreProduct::where('product_id', $this->product['id'])
+                $storeProduct = StoreProduct::where('product_id', $this->product->id)
                     ->with('store')
                     ->first();
 
                 if (!empty($storeProduct)) {
                     $this->store = $storeProduct->store;
 
-                    $this->categoryProduct = CategoryProduct::where('product_id', $this->product['id'])
+                    $this->categoryProduct = CategoryProduct::where('product_id', $this->product->id)
                         ->first();
 
                     if (!empty($this->categoryProduct)) {
@@ -100,7 +101,24 @@ class ProductController extends Controller
 
             $this->_setBreadcrumbs();
             $this->product['breadcrumbs'] = $this->breadcrumbs;
+            $categories = [];
 
+            $productTypes = ProductLink::$types;
+            foreach ($productTypes as $productType => $name) {
+                $this->productType = $productType;
+                $this->productId = $this->product->id;
+                $this->_setProducts();
+
+                if (!empty($this->products)) {
+                    $categories[] = [
+                        'type' => $productType,
+                        'name' => $name,
+                        'has_products' => $this->products->count() > 0
+                    ];
+                }
+            }
+
+            $this->product->categories = $categories;
             $response['store'] = $this->store;
             $response['product'] = $this->product;
             $response['category'] = [];

@@ -2,37 +2,46 @@
   <a-row type="flex" justify="center">
     <a-col :span="24">
       <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" type="flex" justify="center">
-        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 16}" :lg="{span: 16}">
+        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: span}" :lg="{span: span}">
           <a-pagination v-model="products.current_page"
                         :show-total="(total, range) => `${range[0]}-${range[1]} of ${total} items`"
                         :page-size="parseInt(products.per_page)"
                         @change="onChange"
                         :total="products.total"
-                        show-less-items>
+                        :simple="span === 24"
+                        show-less-items
+          >
             <template slot="buildOptionText" slot-scope="props">
               <a-button class="r-btn-bordered-grey"
-                        type="secondary" :size="'default'">
+                        type="secondary" :size="'default'"
+              >
                 {{ props.value }}
               </a-button>
             </template>
           </a-pagination>
         </a-col>
         <a-col class="r-text-center" :xs="{span: 24}"
-               :sm="{span: 24}" :md="{span: 4}" :lg="{span: 4}">
+               :sm="{span: 24}" :md="{span: span === 24 ? span : (24-span) / 2}"
+               :lg="{span: span === 24 ? span : (24-span) / 2}"
+        >
           <r-category-filters></r-category-filters>
         </a-col>
         <a-col class="r-text-right" :xs="{span: 24}"
-               :sm="{span: 24}" :md="{span: 4}" :lg="{span: 4}">
+               :sm="{span: 24}" :md="{span: span === 24 ? span : (24-span) / 2}"
+               :lg="{span: span === 24 ? span : (24-span) / 2}"
+        >
           <div class="r-same-height">
             <a-select
               labelInValue
               :defaultValue="sortOptions[0]"
               size="default"
               @change="onSort"
-              style="min-width: 100%;">
+              style="min-width: 100%;"
+            >
               <a-select-option v-for="(s, index) in sortOptions"
                                :key="index"
-                               :value="s.key">
+                               :value="s.key"
+              >
                 <span class="r-sort-value">{{ s.label }}</span>
               </a-select-option>
             </a-select>
@@ -43,7 +52,7 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 const SORTS = [
   {
@@ -66,53 +75,42 @@ const SORTS = [
     label: 'Most Recent',
     key: 4
   }
-];
+]
 export default {
   name: 'r-product-paginate',
   components: {},
   props: {
-    category: {
-      type: Object, required: true, default: () => {
-        id: null
-      }
-    },
-    isVertical: {type: Boolean, required: false, default: true},
+    span: { type: Number, required: true, default: 16 },
+    filters: { type: Object, required: true, default: null },
+    isVertical: { type: Boolean, required: false, default: true },
   },
-  data() {
+  data () {
     return {
       sortOptions: SORTS,
-      payload: {
-        limit: process.env.APP_LIMIT,
-        category_id: this.category.id,
-        sort: 0,
-        page: 1
-      }
+      payload: this.filters
     }
   },
   computed: mapGetters({
     store: 'base/store',
-    filters: 'shop/filters',
     hasProducts: 'base/hasProducts',
     products: 'base/products',
     processes: 'base/processes',
   }),
-  created() {
+  created () {
   },
   methods: {
-    async onChange(pageNumber, pageSize) {
-      console.log('pageNumber ::: ', pageNumber);
-      console.log('pageSize ::: ', pageSize);
-
-      this.payload.page = pageNumber;
-      await this.onProducts();
+    async onChange (page, limit) {
+      this.payload.page = page
+      this.payload.limit = limit
+      await this.onProducts()
     },
-    async onSort(option) {
-      this.payload.sort = option.key;
-      await this.onProducts();
+    async onSort (option) {
+      this.payload.sort = option.key
+      await this.onProducts()
     },
-    async onProducts() {
-      await this.$store.dispatch('base/onProducts', this.payload);
+    async onProducts () {
+      await this.$store.dispatch('base/onProducts', this.payload)
     }
   }
-};
+}
 </script>

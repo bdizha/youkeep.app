@@ -133,7 +133,6 @@ export default {
     onClose () {
       if (this.isValid()) {
         this.modal.isVisible = false
-        this.modal.current = null
         this.$store.dispatch('base/onModal', this.modal)
       }
     },

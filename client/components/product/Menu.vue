@@ -1,82 +1,66 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
-    <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-store-item v-if="hasStore" :store="store"></r-store-item>
-      <a-collapse default-active-key="1" expandIconPosition="right">
+      <a-collapse default-active-key="stores" expandIconPosition="right">
         <a-collapse-panel v-if="hasCategories" class="r-collapse-panel"
-                          key="1"
-                          header="Recent categories">
+                          key="categories"
+                          header="Recent categories"
+        >
           <r-category-filter-category></r-category-filter-category>
         </a-collapse-panel>
         <a-collapse-panel class="r-collapse-panel"
-                          key="2"
-                          header="You may also like">
-          <r-store-list></r-store-list>
+                          key="stores"
+                          header="You may also like"
+        >
+          <r-product-list v-if="hasStore" :filters="filters" :span="24" :vertical="false" :columns="1"></r-product-list>
         </a-collapse-panel>
       </a-collapse>
     </a-col>
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
-const DISCOUNTS = [10, 15, 20, 25, 30];
-const BRANDS = [10, 15, 20, 25, 30];
-const FILTERS = {
-  discounts: [],
-  brands: []
-};
 export default {
   name: 'r-product-menu',
   props: {},
-  data() {
-    return {
-      hasData: false,
-      hasBrands: true,
-      hasDiscounts: true,
-      discounts: DISCOUNTS,
-      brands: BRANDS
-    };
+  data () {
+    return {}
   },
-  computed: mapGetters({
-    store: 'base/store',
-    hasStore: 'base/hasStore',
-    filters: 'shop/filters',
-    hasCategories: 'base/hasCategories',
-  }),
-  created() {
+  async fetch () {
+    await this.onProducts()
   },
-  mounted() {
-    this.hasData = true;
+  computed: {
+    filters () {
+      return {
+        limit: process.env.APP_LIMIT,
+        store_id: this.hasStore ? this.store.id : null,
+        sort: 0,
+        page: 1
+      }
+    },
+    ...mapGetters({
+      store: 'base/store',
+      hasStore: 'base/hasStore',
+      hasCategories: 'base/hasCategories',
+    })
+  },
+  created () {
+  },
+  mounted () {
   },
   methods: {
-    payload() {
+    async onProducts () {
 
-    },
-    onSlot() {
-      console.log('onSlot');
-    },
-    onFilter() {
-      this.$store.commit('onFilter', this.filters);
-    },
-    onChange(value) {
-      console.log('change: ', value);
-    },
-    onAfterChange(value) {
-      console.log('afterChange: ', value);
-    },
-    onClear() {
-      this.filterDiscounts = [];
-      this.filterBrands = [];
+      console.log('filters', this.filters)
 
-      console.log('onClear : filterDiscounts', this.filterDiscounts);
-      console.log('onClear : filterBrands', this.filterBrands);
+      await this.$store.dispatch('base/onProducts', this.filters)
     },
-    formatter(value) {
-      return 'R' + value;
+    formatter (value) {
+      return 'R' + value
     },
   },
-  watch: {},
-};
+}
 </script>
 

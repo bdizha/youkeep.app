@@ -229,6 +229,13 @@ class Controller extends BaseController
         if (!empty($this->productId)) {
             $query = Product::find($this->productId)->links()
                 ->where('type', $this->productType);
+        } else {
+            $query = Product::orderBy($sort['column'], $sort['dir']);
+        }
+
+        if (!empty($this->storeId)) {
+            $this->store = Store::where('id', $this->storeId)
+                ->first();
         }
 
         if (!empty($this->category['id'])) {
@@ -236,7 +243,6 @@ class Controller extends BaseController
         }
 
         if (!empty($this->categoryId)) {
-            $query = Product::orderBy($sort['column'], $sort['dir']);
             $query->whereHas('categories', function ($query) {
                 $query->where('category_products.category_id', $this->categoryId);
             });
@@ -246,10 +252,10 @@ class Controller extends BaseController
                     $query->whereIn('product_types.id', $this->filters);
                 });
             }
+        }
 
-            if (!empty($this->store->id)) {
-                $query->where('store_id', $this->store->id);
-            }
+        if (!empty($this->store->id)) {
+            $query->where('store_id', $this->store->id);
         }
 
         if (!empty($query)) {

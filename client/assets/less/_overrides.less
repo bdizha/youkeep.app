@@ -11,8 +11,6 @@ html {
     font-size: 16px;
     background: #FAFBFC url(/images/icon_pattern_bg.svg);
     background-repeat: repeat;
-    overflow-x: hidden;
-    overflow-y: auto;
     height: 100%;
 }
 
@@ -648,6 +646,20 @@ x {
     @media (max-width: 768px) {
         display: none;
     }
+}
+
+.ant-pagination-simple .ant-pagination-prev, .ant-pagination-simple .ant-pagination-next {
+    height: 36px;
+    line-height: 36px;
+}
+
+.ant-pagination-simple .ant-pagination-simple-pager {
+    height: 36px;
+    margin-right: 9px;
+}
+
+.ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
+    font-size: 16px;
 }
 
 .ant-rate {
@@ -4083,12 +4095,6 @@ h4.r-heading-light {
     }
 }
 
-.r-store-notice {
-    background: linear-gradient(90deg, #eefaff 0%, #FFFFFF 75%, #eefaff 100%);
-    margin: -24px -24px 24px;
-    padding: 24px;
-}
-
 .r-store-item-line {
     border-bottom: 1px solid rgb(236, 236, 236, 1);
     padding: 12px 24px;
@@ -5494,8 +5500,6 @@ h4.r-heading-light {
 .r-gradient {
     .r-slider {
         .slick-list {
-            overflow: auto;
-
             .slick-slide {
                 padding: 0px 6px;
                 height: 36px;
@@ -6254,6 +6258,7 @@ a:hover {
 
     &.r-has-data {
         opacity: 1;
+        overflow: hidden;
         @media (max-width: 768px) {
             padding-bottom: 63px;
         }

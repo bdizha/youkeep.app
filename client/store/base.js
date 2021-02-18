@@ -359,6 +359,8 @@ const actions = {
   async onProducts({dispatch, commit}, payload) {
     dispatch('onProcess', {key: 'isProduct', value: true});
 
+    console.log('setProducts', ">>>>")
+
     try {
       await axios.post('/products', payload).then(({data}) => {
         console.log('response: onProducts data: ', data);

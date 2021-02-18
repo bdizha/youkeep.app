@@ -1,5 +1,5 @@
 <template>
-  <div class="r-product-cards" :class="{'r-product-flush': isFlush()}">
+  <div class="" :class="{'r-product-flush': isFlush()}">
     <a-row v-if="hasProducts" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]"
            type="flex" justify="start"
            align="middle"
@@ -9,11 +9,6 @@
              :sm="{span: isVertical ? 12 : 24}" :md="{span: 24 / columns}" :lg="{span: 24 / columns}"
       >
         <r-product-item :isVertical="isVertical" :product="product"></r-product-item>
-      </a-col>
-      <a-col class="r-hide-lg" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-             :lg="{ span: 24 }"
-      >
-        <r-category-shop-now :category="category" justify="center"></r-category-shop-now>
       </a-col>
     </a-row>
   </div>
