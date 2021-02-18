@@ -4,6 +4,7 @@ namespace App;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 
 class Store extends Model
 {
@@ -19,6 +20,11 @@ class Store extends Model
         'updated_at',
         'content',
     ];
+
+    /**
+     * @var string[]
+     */
+    private $ignoredPhotos = ['d2fda6827655f4795e9f288f7404358a069fe1ce'];
 
 
     /**
@@ -43,6 +49,8 @@ class Store extends Model
      */
     protected $appends = [
         'content_formatted',
+        'photos',
+        'photo',
         'route',
         'rate',
         'photo_url',
@@ -81,6 +89,43 @@ class Store extends Model
     {
         return url('/storage/store/' . $this->photo_cover);
     }
+    /**
+     * @return array
+     */
+    public function getPhotosAttribute()
+    {
+        $photos = [];
+
+        foreach ($this->products as $product) {
+            if (count($photos) > 5) break;
+
+            $photo = $product->thumbnail;
+
+            if (!in_array($photo, $this->ignoredPhotos)) {
+                if (file_exists(public_path('storage/product/' . $photo)) && !empty($photo)) {
+                    $photos[] = url('/storage/product/' . $photo);
+                }
+            }
+        }
+
+        if (count($photos) >= 6) {
+            $photos = Arr::random($photos, min(6, count($photos)));
+        }
+        return $photos;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhotoAttribute()
+    {
+        $photos = $this->getPhotosAttribute();
+
+        if (empty($photos)) {
+            return null;
+        }
+        return $photos[rand(0, count($photos) - 1)];;
+    }
 
     /**
      * @return string
@@ -107,6 +152,14 @@ class Store extends Model
      */
     public function categories()
     {
-        return $this->belongsToMany('App\Category', 'store_categories', 'store_id', 'category_id')->take(12);;
+        return $this->belongsToMany('App\Category', 'store_categories', 'store_id', 'category_id')->take(24);;
+    }
+
+    /**
+     * Get the related categories
+     */
+    public function products()
+    {
+        return $this->belongsToMany('App\ProductPhoto', 'store_products', 'store_id', 'product_id')->take(24);;
     }
 }

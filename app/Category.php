@@ -159,7 +159,7 @@ class Category extends Model
 
             $photo = $product->thumbnail;
 
-            if (!in_array($photo, $this->ignoredPhotos)) {
+            if (!in_array($photo, $this->ignoredPhotos) && !empty($photo)) {
                 if (file_exists(public_path('storage/product/' . $photo))) {
                     $photos[] = url('/storage/product/' . $photo);
                 }

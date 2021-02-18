@@ -41,10 +41,6 @@ class SearchController extends Controller
         $results = $query->orderBy('created_at', 'DESC')
             ->paginate(24);
 
-        if ($request->ajax()) {
-            return response()->json($results, 200);
-        }
-
-        return view('home', ['results' => $results]);
+        return response()->json($results, 200);
     }
 }

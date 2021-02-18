@@ -359,7 +359,7 @@ x {
 .ant-btn {
     font-weight: 400;
     border-radius: 3px;
-    padding: 0 6px;
+    padding: 0 12px;
     box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
     text-transform: uppercase;
     font-size: 14px;
@@ -5504,6 +5504,7 @@ h4.r-heading-light {
 .r-gradient {
     .r-slider {
         margin: 0 -12px;
+
         .slick-list {
             .slick-slide {
                 padding: 0px 6px;
@@ -6149,44 +6150,59 @@ h4.r-heading-light {
     }
 }
 
-.ant-select-dropdown-menu-item {
-    position: relative;
+.ant-select-dropdown-menu {
+    padding: 0;
 
-    .r-search-item-link {
-        display: block;
-        width: 100%;
-    }
+    .ant-select-dropdown-menu-item {
+        position: relative;
+        border-bottom: 1px solid #eefaff;
 
-    .r-search-item-avatar {
-        background: #FAFBFC;
-        border-radius: 3px;
-        overflow: hidden;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 48px;
-        height: 48px;
-        padding: 6px;
-        text-align: center;
-        display: block;
-    }
+        &:last-child {
+            border: none;
+        }
 
-    .r-search-item-icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 48px;
-        height: 48px;
-        line-height: 48px;
-        text-align: center;
-        display: block;
-        font-size: 24px;
-    }
+        .r-search-item-link {
+            display: block;
+            width: 100%;
+        }
 
-    &.ant-select-dropdown-menu-item-selected,
-    &:hover {
-        color: #1B9BD9;
-        background-color: #ffe6e6;
+        .r-text-link {
+            display: block;
+            padding-left: 48px;
+            height: 24px;
+        }
+
+        .r-search-item-avatar {
+            background: #FAFBFC;
+            border-radius: 3px;
+            overflow: hidden;
+            position: absolute;
+            left: 12px;
+            top: 6px;
+            width: 36px;
+            height: 36px;
+            padding: 6px;
+            text-align: center;
+            display: block;
+        }
+
+        .r-search-item-icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            display: block;
+            font-size: 21px;
+        }
+
+        &.ant-select-dropdown-menu-item-selected,
+        &:hover {
+            color: #1B9BD9;
+            background-color: #eefaff;
+        }
     }
 }
 
