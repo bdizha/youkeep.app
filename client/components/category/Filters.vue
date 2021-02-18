@@ -6,7 +6,7 @@
                       type="secondary"
                       :size="size">
                 <a-icon type="control"/>
-                Show Filters
+                Filters
             </a-button>
         </a-col>
     </a-row>

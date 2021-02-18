@@ -5,7 +5,7 @@
            :lg="{ span: 24 }"
     >
       <div class="r-gradient r-p-12" :class="{'r-hide-lg': !hasCategories}">
-        <r-search class="r-hide-lg r-ph-12" :class="{'r-pb-12': hasCategories}"></r-search>
+        <r-search class="r-hide-lg" :class="{'r-pb-12': hasCategories}"></r-search>
         <r-category-arrows v-if="hasCategories"></r-category-arrows>
       </div>
       <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
@@ -14,18 +14,17 @@
                :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
-          <div class="r-margin-out-sm">
-            <r-category-slider :category="category"></r-category-slider>
-            <r-product-flush :columns="3"></r-product-flush>
-          </div>
+          <r-category-slider :category="category"></r-category-slider>
+          <r-product-flush :columns="3"></r-product-flush>
         </a-col>
       </a-row>
       <r-product-list v-if="hasCategory" :filters="filters" :columns="columns"></r-product-list>
-      <a-row type="flex" justify="start" align="middle">
+      <a-row class="r-mt-48 r-relative" type="flex" justify="start" align="middle">
         <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
+          <r-store-popover v-if="hasStore && hasCategories" :store="store"></r-store-popover>
           <div class="r-margin-out">
             <r-category-list :columns="6"></r-category-list>
           </div>
@@ -76,7 +75,9 @@ export default {
       }
     },
     ...mapGetters({
+      store: 'base/store',
       category: 'base/category',
+      hasStore: 'base/hasStore',
       hasCategories: 'base/hasCategories',
       hasCategory: 'base/hasCategory',
       processes: 'base/processes'

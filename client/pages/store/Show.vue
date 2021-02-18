@@ -5,7 +5,7 @@
            :lg="{ span: 24 }"
     >
       <div class="r-gradient r-p-12" :class="{'r-hide-lg': !hasCategories}">
-        <r-search class="r-hide-lg r-ph-12" :class="{'r-pb-12': hasCategories}"></r-search>
+        <r-search class="r-hide-lg" :class="{'r-pb-12': hasCategories}"></r-search>
         <r-category-arrows v-if="hasCategories"></r-category-arrows>
       </div>
       <a-row type="flex" justify="start" align="middle">
@@ -28,8 +28,6 @@
           </div>
         </a-col>
       </a-row>
-      <r-category-actions v-if="hasCategories"></r-category-actions>
-      <r-store-popover :store="store"></r-store-popover>
       <r-category-actions v-if="hasCategories"></r-category-actions>
     </a-col>
   </a-row>

@@ -49,7 +49,8 @@
           </a-row>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }" :lg="{ span: 6 }">
-          <div class="r-grey-shadow r-ph-24">
+          <div class="r-grey-shadow r-ph-24 r-relative">
+            <r-store-popover v-if="hasStore && hasProduct" :store="store"></r-store-popover>
             <div class="r-margin-out">
               <r-product-categories :columns="1" :product="product"></r-product-categories>
             </div>
@@ -73,7 +74,9 @@ export default {
   computed: mapGetters({
     category: 'base/category',
     product: 'base/product',
+    hasProduct: 'base/hasProduct',
     store: 'base/store',
+    hasStore: 'base/hasStore',
     processes: 'base/processes',
     productItems: 'product/items'
   }),
