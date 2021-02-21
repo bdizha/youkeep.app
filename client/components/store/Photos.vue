@@ -8,8 +8,8 @@
            :style="'background-image: url(' + photo + ');'">
         <r-avatar shape="square"
                   :size="105"
-                  src-placeholder="~/assets/icon_default.png"
-                  src="~/assets/icon_default.png"
+                  src-placeholder="/assets/icon_default.png"
+                  src="/assets/icon_default.png"
         />
 
       </div>

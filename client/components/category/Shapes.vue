@@ -9,7 +9,7 @@
           <r-avatar shape="circle"
                     size="36"
                     :data-src="category.photo"
-                    src="~/assets/icon_default.png"
+                    src="/assets/icon_default.png"
                     :style="'background-image: url(/' + category.photo + ');'">
           </r-avatar>
           <div class="r-text-slider">
