@@ -57,7 +57,7 @@ export default {
   name: 'r-category-filter-item',
   props: {
     filter: {type: Object, required: true, default: {}},
-    limit: {type: Number, required: true, default: 6},
+    limit: {type: Number, required: false, default: 6},
   },
   data() {
     return {
