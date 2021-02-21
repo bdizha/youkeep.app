@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 
 class CategoryUpdateSeeder extends DatabaseSeeder
 {
-    protected $storesIds = [12, 7, 8, 9, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
+    protected $storesIds = [70, 12, 7, 8, 9, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
 
     /**
      * Run the database seeds.
@@ -18,14 +18,6 @@ class CategoryUpdateSeeder extends DatabaseSeeder
     {
 //        $this->setHighlights();
 //        $this->setCategoryProducts();
-
-        $category = Category::where('slug', 'new-in')
-            ->first()
-            ->toArray();
-
-        dd($category);
-
-        return;
 
         foreach ($this->storesIds as $storesId) {
             $this->storeId = $storesId;
@@ -45,8 +37,6 @@ class CategoryUpdateSeeder extends DatabaseSeeder
     public function setFilters($storeCategory = null, $hasProducts = false)
     {
         echo "Updated category filter : {$storeCategory->url} >>>>> \n";
-
-//        $this->setParentCategory($storeCategory);
 
         if (empty($hasProducts)) {
             $hasItemField = 'has_categories';
