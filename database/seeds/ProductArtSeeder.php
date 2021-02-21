@@ -29,7 +29,7 @@ class ProductArtSeeder extends DatabaseSeeder
 //        $this->testResponse('http://api.knuxt.local/api/art');
 //        die('done');
 
-        $categoryLink = 'http://api.knuxt.local/api/art';
+        $categoryLink = public_path('/api/art');
 
         $storeIds = [];
         shuffle($this->storeIds);
