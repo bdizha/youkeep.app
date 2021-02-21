@@ -9,6 +9,18 @@ class User extends Authenticatable
 {
     use Notifiable;
 
+    const TYPE_SHOPPER = 1;
+    const TYPE_ARTIST = 2;
+    const TYPE_MERCHANT = 3;
+    const TYPE_ADMIN = 4;
+
+    public static $types = [
+        self::TYPE_SHOPPER => 'Shopper',
+        self::TYPE_ARTIST => 'Artist',
+        self::TYPE_MERCHANT => 'Merchant',
+        self::TYPE_ADMIN => 'Admin'
+    ];
+
     /**
      * The attributes that are mass assignable.
      *

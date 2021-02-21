@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     protected $categories = [];
     protected $parentStoreCategory = null;
     protected $filterBrand = null;
+    protected $product = null;
 
     /**
      * Run the database seeds.
@@ -33,13 +34,12 @@ class DatabaseSeeder extends Seeder
         $products = Product::whereHas('categories', function ($query) use ($storeCategory) {
             $query->where('category_products.category_id', $storeCategory->category_id);
         })
-            ->where('is_active', true)
             ->get();
 
         $category = $storeCategory->category;
 
         $attributes = [
-            'route' => $category->route
+            'route' => $category->route . '/' . $storeCategory->level_padded
         ];
 
         $values = [
@@ -58,7 +58,7 @@ class DatabaseSeeder extends Seeder
 
         foreach ($products as $product) {
             $attributes = [
-                'route' => $category->route . "/" . $product->slug
+                'route' => "/product/" . $product->slug
             ];
 
             $values = [
@@ -85,6 +85,8 @@ class DatabaseSeeder extends Seeder
 
         $values['store_id'] = $this->storeId;
 
+        unset($values['dimensions'], $values['photos'], $values['artist']);
+
         $product = \App\Product::updateOrCreate($attributes, $values);
 
         $product->updateAncestryIds($storeCategory);
@@ -107,10 +109,6 @@ class DatabaseSeeder extends Seeder
     {
         $productTypes = ProductType::$types;
         $productTypeKeys = array_flip($productTypes);
-
-        if (!empty($this->filterBrand)) {
-            $filterSets[] = $this->filterBrand;
-        }
 
         foreach ($filterSets as $filterItem) {
             $name = $filterItem['name'];

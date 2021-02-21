@@ -33,4 +33,14 @@ class HomeController extends Controller
         }
         return response()->json($response, 200);
     }
+
+    /**
+     * Show the art categories.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function art(Request $request)
+    {
+        return view('art');
+    }
 }

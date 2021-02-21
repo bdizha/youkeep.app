@@ -26,7 +26,7 @@ class ProductType extends Model
         self::TYPE_MASS => 'Mass',
         self::TYPE_BRAND => 'Brand',
         self::TYPE_COLLECTION => 'Collection',
-        self::TYPE_STORE => 'Store',
+        self::TYPE_STORE => 'Store'
     ];
 
     public static $lengths = [

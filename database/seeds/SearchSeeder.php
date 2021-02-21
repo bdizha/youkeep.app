@@ -1,12 +1,10 @@
 <?php
 
-use App\Product;
-use App\Category;
-use App\Lookup;
+use App\StoreCategory;
 
 use Illuminate\Database\Seeder;
 
-class SearchSeeder extends Seeder
+class SearchSeeder extends DatabaseSeeder
 {
     /**
      * Run the database seeds.
@@ -15,15 +13,16 @@ class SearchSeeder extends Seeder
      */
     public function run()
     {
-        $categories = Category::orderBy('created_at', 'DESC')
-            ->where('is_active', true)
-            ->has('store')
+//        $store = App\Store::where('id', 12)->first();
+//        dd($store->photos);
+
+        $storeCategories = StoreCategory::orderBy('created_at', 'DESC')
             ->get();
 
-        foreach ($categories as $category) {
+        foreach ($storeCategories as $storeCategory) {
 
             // set the search/lookup data
-            $this->setSearchLookup($category);
+            $this->setSearchLookup($storeCategory);
         }
     }
 }

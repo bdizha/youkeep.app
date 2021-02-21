@@ -50,7 +50,6 @@ class Store extends Model
     protected $appends = [
         'content_formatted',
         'photos',
-        'photo',
         'route',
         'rate',
         'photo_url',
@@ -89,6 +88,7 @@ class Store extends Model
     {
         return url('/storage/store/' . $this->photo_cover);
     }
+
     /**
      * @return array
      */
@@ -96,35 +96,27 @@ class Store extends Model
     {
         $photos = [];
 
-        foreach ($this->products as $product) {
+        foreach ($this->product_photos as $photo) {
             if (count($photos) > 5) break;
 
-            $photo = $product->thumbnail;
-
-            if (!in_array($photo, $this->ignoredPhotos)) {
-                if (file_exists(public_path('storage/product/' . $photo)) && !empty($photo)) {
-                    $photos[] = url('/storage/product/' . $photo);
+            if (!in_array($photo->thumb, $this->ignoredPhotos)) {
+                if (file_exists(public_path('storage/product/' . $photo->thumb)) && !empty($photo->thumb)) {
+                    $photos[] = url('/storage/product/' . $photo->thumb);
                 }
             }
         }
 
         if (count($photos) >= 6) {
             $photos = Arr::random($photos, min(6, count($photos)));
+        } else {
+            $photosShortfall = count($photos) - 6;
+            while ($photosShortfall > 0) {
+                $photos[] = url('/storage/product/icon_default.png');
+                $photosShortfall--;
+            }
         }
+
         return $photos;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPhotoAttribute()
-    {
-        $photos = $this->getPhotosAttribute();
-
-        if (empty($photos)) {
-            return null;
-        }
-        return $photos[rand(0, count($photos) - 1)];;
     }
 
     /**
@@ -140,7 +132,6 @@ class Store extends Model
 
         $content = null;
         foreach ($parts as $key => $value) {
-            $label = $value;
             $content .= "{$value}<br/>";
         }
 
@@ -156,9 +147,9 @@ class Store extends Model
     }
 
     /**
-     * Get the related categories
+     * Get the related product photos
      */
-    public function products()
+    public function product_photos()
     {
         return $this->belongsToMany('App\ProductPhoto', 'store_products', 'store_id', 'product_id')->take(24);;
     }

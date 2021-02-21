@@ -12,7 +12,8 @@ class StoreCategory extends Model
      * @var array
      */
     protected $appends = [
-        'breadcrumbs'
+        'breadcrumbs',
+        'level_padded'
     ];
 
     /**
@@ -77,5 +78,15 @@ class StoreCategory extends Model
         $breadcrumbs = $this->getBreadcrumbs($this, $breadcrumbs);
 
         return array_reverse($breadcrumbs);
+
+        "/L" . str_pad(empty($this->level) ? 1 : $this->level, 6, STR_PAD_LEFT, "0");
+    }
+
+    /**
+     * @return array
+     */
+    public function getLevelPaddedAttribute()
+    {
+        return "/L" . str_pad(empty($this->level) ? 1 : $this->level, 6, STR_PAD_LEFT, "0");
     }
 }

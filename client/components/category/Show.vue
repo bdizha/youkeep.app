@@ -19,7 +19,7 @@
         </a-col>
       </a-row>
       <r-product-list v-if="hasCategory" :filters="filters" :columns="columns"></r-product-list>
-      <a-row type="flex" justify="start" align="middle">
+      <a-row class="r-mt-48" type="flex" justify="start" align="middle">
         <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }"

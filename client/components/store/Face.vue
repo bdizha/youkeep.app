@@ -1,14 +1,14 @@
 <template>
-  <nuxt-link :to="store.route"
-             style="display: block; width: 100%;">
+  <div class="r-store-face">
+    <r-store-photos :store="store"></r-store-photos>
     <a-card :class="{'r-card-plain': isPlain}" class="r-store-card"
-            :style="'background-image: url(' + store.photo_cover_url + ');'">
+            :data="'background-image: url(' + store.photo_cover_url + ');'">
       <a-card-meta>
         <template slot="description">
           <a-row type="flex" justify="center" align="middle">
             <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
               <div class="r-store-avatar">
-                <r-store-rate :store="store"></r-store-rate>
+                <r-store-rate v-if="false" :store="store"></r-store-rate>
                 <r-store-photo slot="cover" :store="store"></r-store-photo>
               </div>
             </a-col>
@@ -29,7 +29,7 @@
         </template>
       </a-card-meta>
     </a-card>
-  </nuxt-link>
+  </div>
 </template>
 <script>
 import {mapGetters} from "vuex";

@@ -5444,6 +5444,50 @@ h4.r-heading-light {
     }
 }
 
+.r-store-face {
+    position: relative;
+    display: block;
+    .r-store-card {
+        zoom: 1;
+        background: transparent;
+        .ant-card-body {
+            background: transparent;
+        }
+    }
+}
+
+.r-store-photos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+
+    &:before {
+        content: "";
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        border-radius: 5px;
+    }
+
+    .r-store-photo-item{
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    .ant-avatar {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
 .r-breadcrumbs {
     overflow: hidden;
 }
@@ -5506,6 +5550,9 @@ h4.r-heading-light {
         margin: 0 -12px;
 
         .slick-list {
+            max-height: 36px;
+            overflow-y: hidden;
+
             .slick-slide {
                 padding: 0px 6px;
                 height: 36px;
@@ -5712,7 +5759,7 @@ h4.r-heading-light {
 
     .ant-card-body {
         margin: 0;
-        background: #FFF;
+        background: transparent;
 
         .r-slider-item-title {
             cursor: default;
