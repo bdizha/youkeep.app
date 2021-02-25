@@ -6,10 +6,10 @@
       <a-row type="flex" justify="start" align="middle">
         <a-col :span="24" class="r-cart-body">
           <template v-if="cart.count > 0">
-            <a-row class="r-bg-primary-light" type="flex" justify="start" align="middle">
+            <a-row type="flex" justify="start" align="middle">
               <a-col :span="24">
-               <div class="r-margin-out">
-                 <h4 class="r-heading-light">
+               <div class="r-bg-primary-light r-p-24" style="margin: -24px -24px 24px;">
+                 <h4 class="r-heading-light r-text-primary">
                    <a-icon type="check-circle"/>
                    You've pending items in your cart
                  </h4>
