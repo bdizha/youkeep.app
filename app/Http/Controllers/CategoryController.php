@@ -80,6 +80,7 @@ class CategoryController extends Controller
             $this->_setBreadcrumbs();
 
             $response['categories'] = $this->categories;
+            $this->category['products'] = [];
             $response['category'] = $this->category;
             $response['products'] = $this->products;
             $response['store'] = $this->store;
