@@ -2,7 +2,7 @@
   <a-layout-header :class="{'r-switch-primary': isDark}" class="r-header">
     <r-layout-menu v-if="!modal.isVisible && !isRaised && !hasShop">
       <r-nav-item>
-        <a-icon class="r-text-white" @click="onDrawer('menu')" type="menu"/>
+        <a-icon @click="onDrawer('menu')" type="menu"/>
       </r-nav-item>
       <r-nav-item class="r-nav-item__logo r-p-r-0">
         <r-logo></r-logo>
