@@ -5,34 +5,38 @@
   "author": "Batanayi Matuku",
   "private": true,
   "scripts": {
-    "start": "nuxt start -c client/nuxt.config.js",
+    "start": "export NODE_ENV=production && nuxt start -c client/nuxt.config.js",
     "generate": "nuxt generate -c client/nuxt.config.js",
     "lint": "eslint --fix --ext .js,.vue client/",
     "dev": "nuxt dev -c client/nuxt.config.js",
     "build": "nuxt build -c client/nuxt.config.js"
   },
   "dependencies": {
-    "@nuxtjs/router": "^1.5.0",
-    "ant-design-vue": "^1.6.4",
-    "axios": "^0.19.2",
+    "@nuxtjs/router": "^1.6.1",
+    "ant-design-vue": "^1.7.4",
+    "axios": "^0.21.1",
     "dotenv": "^8.2.0",
     "js-cookie": "^2.2.1",
-    "nuxt": "^2.14.1",
-    "nuxt-lazy-load": "^1.2.4",
+    "nuxt": "^2.15.3",
+    "nuxt-lazy-load": "^1.2.6",
     "popper.js": "^1.16.1",
-    "sweetalert2": "^8.19.0",
+    "sweetalert2": "^10.16.0",
+    "vue": "^2.6.12",
     "vue-i18n": "^8.20.0",
+    "vue-server-renderer": "^2.6.12",
     "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.1.2",
     "babel-eslint": "^10.1.0",
+    "css-loader": "^4.3.0",
     "eslint": "^6.8.0",
-    "fs-extra": "^8.1.0",
-    "less": "^3.12.2",
+    "fs-extra": "^9.1.0",
+    "less": "^3.13.1",
     "less-loader": "^5.0.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^7.3.1",
+    "style-loader": "^2.0.0",
     "v-lazy-image": "^1.4.0"
   }
 }
