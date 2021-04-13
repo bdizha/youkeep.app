@@ -15,10 +15,10 @@ html {
 }
 
 a {
-    color: #1B9BD9;
+    color: @secondary-color;
 
     &:hover {
-        color: #1B9BD9;
+        color: @secondary-color;
     }
 }
 
@@ -65,7 +65,7 @@ a.r-text-link {
     color: #3C444C;
 
     &:hover {
-        color: #1B9BD9;
+        color: @secondary-color;
     }
 }
 
@@ -80,11 +80,11 @@ a.r-text-logo {
 }
 
 .r-text-primary {
-    color: #1B9BD9;
+    color: @secondary-color;
 }
 
 .r-text-secondary {
-    color: #1B9BD9 !important;
+    color: @secondary-color !important;
 }
 
 .r-text-normal {
@@ -185,7 +185,7 @@ a.r-text-logo {
 }
 
 .r-bg-left {
-    background: #1B9BD9;
+    background: @secondary-color;
 }
 
 .r-bg-right {
@@ -227,10 +227,10 @@ a.r-text-logo {
         font-size: 14px;
 
         &:hover {
-            color: #1B9BD9;
+            color: @secondary-color;
 
             .r-icon-text {
-                color: #1B9BD9;
+                color: @secondary-color;
             }
         }
     }
@@ -573,7 +573,7 @@ x {
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
 
         &:hover {
-            background: #1B9BD9;
+            background: @secondary-color;
             color: #FFFFFF;
             border: 1px solid #FDBAC4;
         }
@@ -691,7 +691,7 @@ x {
         line-height: 36px;
         font-weight: 600;
         background: #FFFFFF;
-        color: #1B9BD9;
+        color: @secondary-color;
         overflow: hidden;
         border-radius: 3px 0 0 6px;
 
@@ -714,7 +714,7 @@ x {
         text-align: center;
         padding: 0 12px;
         color: #FFFFFF;
-        background: #1B9BD9;
+        background: @secondary-color;
         border-radius: 0 6px 6px 0;
         @media (max-width: 768px) {
             padding: 0px 9px;
@@ -742,7 +742,7 @@ x {
     .r-cart {
         .r-shopping-cart {
             background-image: url("/assets/icon_cart_off.svg");
-            color: #1B9BD9;
+            color: @secondary-color;
             height: 36px;
             width: 36px;
         }
@@ -786,15 +786,15 @@ x {
     .r-btn-icon {
         opacity: 0.7;
         background: #FFFFFF;
-        color: #1B9BD9;
-        border: 1px solid #1B9BD9;
+        color: @secondary-color;
+        border: 1px solid @secondary-color;
 
         &:hover,
         &:focus,
         &.r-btn-icon__active {
             opacity: 1;
             color: #FFFFFF;
-            background: #1B9BD9;
+            background: @secondary-color;
         }
     }
 }
@@ -872,12 +872,12 @@ x {
             box-shadow: #eefaff 0px 1px 3px 0px;
 
             &:after {
-                border-color: #1B9BD9;
+                border-color: @secondary-color;
             }
 
             .ant-checkbox-inner {
-                border-color: #1B9BD9;
-                background-color: #1B9BD9;
+                border-color: @secondary-color;
+                background-color: @secondary-color;
 
                 &:after {
                     border-color: #FFFFFF;
@@ -891,10 +891,10 @@ x {
             box-shadow: #eefaff 0px 1px 3px 0px;
 
             .ant-checkbox-inner {
-                border-color: #1B9BD9;
+                border-color: @secondary-color;
 
                 &:after {
-                    background-color: #1B9BD9;
+                    background-color: @secondary-color;
                     border-color: #FFFFFF;
                 }
             }
@@ -994,7 +994,7 @@ x {
                     border-color: #FFFFFF;
 
                     &:after {
-                        background-color: #1B9BD9;
+                        background-color: @secondary-color;
                         border-color: #FFFFFF;
                     }
                 }
@@ -1009,7 +1009,7 @@ x {
     .r-btn-icon {
         opacity: 0.7;
         background: #FFFFFF;
-        color: #1B9BD9;
+        color: @secondary-color;
         border: 1px solid #FDBAC4;
 
         &:hover,
@@ -1017,7 +1017,7 @@ x {
         &.r-btn-icon__active {
             opacity: 1;
             color: #FFFFFF;
-            background: #1B9BD9;
+            background: @secondary-color;
         }
     }
 }
@@ -1036,9 +1036,9 @@ x {
     }
 
     &:focus {
-        background: #1B9BD9 !important;
+        background: @secondary-color !important;
         opacity: 0.9;
-        border-color: #1B9BD9;
+        border-color: @secondary-color;
     }
 }
 
@@ -1070,15 +1070,15 @@ x {
         font-weight: 600;
     }
 
-    background: #1B9BD9;
+    background: @secondary-color;
     color: #FFFFFF;
-    border-color: #1B9BD9;
+    border-color: @secondary-color;
     opacity: 1;
 
     &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #1B9BD9;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), @secondary-color;
         opacity: 1;
-        border-color: #1B9BD9;
+        border-color: @secondary-color;
     }
 
     &:focus {
@@ -1097,7 +1097,7 @@ x {
             background: rgba(255, 255, 255, 0.45);
 
             &:hover {
-                color: #1B9BD9;
+                color: @secondary-color;
                 background: rgba(255, 255, 255, 1);
                 border-color: #FFFFFF;
             }
@@ -1352,7 +1352,7 @@ xxl	≥1600px, could be a span value or an object containing above props
     }
 
     .anticon {
-        color: #1B9BD9;
+        color: @secondary-color;
         margin-right: 3px;
     }
 }
@@ -1444,7 +1444,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
                 .nuxt-link-exact-active,
                 a:hover {
-                    color: #1B9BD9;
+                    color: @secondary-color;
                     opacity: 1;
                 }
 
@@ -1463,13 +1463,13 @@ xxl	≥1600px, could be a span value or an object containing above props
                     opacity: 0.96;
 
                     .ant-avatar-icon {
-                        background: #1B9BD9;
+                        background: @secondary-color;
                         border-color: #0069cd33;
                         color: #FFFFFF;
                     }
 
                     .r-text-link {
-                        color: #1B9BD9;
+                        color: @secondary-color;
                         opacity: 0.96;
                     }
                 }
@@ -1515,7 +1515,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .r-cart-footer {
-    background: #1B9BD9;
+    background: @secondary-color;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -1537,7 +1537,7 @@ xxl	≥1600px, could be a span value or an object containing above props
         text-align: center;
 
         &:hover {
-            background: #1B9BD9;
+            background: @secondary-color;
             color: #FFFFFF;
         }
 
@@ -1547,14 +1547,14 @@ xxl	≥1600px, could be a span value or an object containing above props
     }
 
     &.r-cart-footer__empty {
-        background: #1B9BD9;
+        background: @secondary-color;
 
         .r-cart-btn {
             background: #FFFFFF;
             color: #0069cdAC;
 
             &:hover {
-                background: #1B9BD9;
+                background: @secondary-color;
                 color: #FFFFFF;
             }
 
@@ -1709,17 +1709,17 @@ h4.r-heading-light {
 
 .r-text-tip-primary {
     font-weight: 300;
-    color: #1B9BD9;
+    color: @secondary-color;
 }
 
 .r-text-tip-secondary {
     font-weight: 300;
-    color: #1B9BD9;
+    color: @secondary-color;
 }
 
 .ant-modal-footer {
     padding: 24px !important;
-    border-top: 1px solid #1B9BD9 !important;
+    border-top: 1px solid @secondary-color !important;
     background: #eefaff;
 }
 
@@ -1782,7 +1782,7 @@ h4.r-heading-light {
 }
 
 .ant-progress-bg {
-    background-color: #1B9BD9;
+    background-color: @secondary-color;
 }
 
 .r-product-show {
@@ -2049,13 +2049,13 @@ h4.r-heading-light {
         border-bottom: 2px solid transparent;
 
         &:hover {
-            color: #1B9BD9;
+            color: @secondary-color;
         }
     }
 
     > .ant-menu-submenu {
         &:hover {
-            color: #1B9BD9;
+            color: @secondary-color;
             border-bottom: 2px solid transparent;
         }
     }
@@ -2184,7 +2184,7 @@ h4.r-heading-light {
 
         &.router-link-exact-active,
         &:hover {
-            color: #1B9BD9 !important;
+            color: @secondary-color !important;
         }
     }
 
@@ -2250,7 +2250,7 @@ h4.r-heading-light {
 }
 
 .r-menu-trigger {
-    color: #1B9BD9;
+    color: @secondary-color;
 }
 
 .r-logo-wrap {
@@ -2398,10 +2398,10 @@ h4.r-heading-light {
     &.nuxt-link-exact-active,
     &:hover {
         background: transparent;
-        color: #1B9BD9;
+        color: @secondary-color;
 
         .ant-avatar-icon {
-            color: #1B9BD9;
+            color: @secondary-color;
             background: #FFEFEF;
             border-color: #F50A2B33;
         }
@@ -2505,7 +2505,7 @@ h4.r-heading-light {
     }
 
     .ant-radio-button-wrapper {
-        color: #1B9BD9;
+        color: @secondary-color;
         background: #FFFFFF;
         border: 1px solid #FDBAC4;
         width: 50%;
@@ -2514,7 +2514,7 @@ h4.r-heading-light {
 
     .ant-radio-button-wrapper-checked {
         color: #FFFFFF;
-        background: #1B9BD9;
+        background: @secondary-color;
         border-color: #FDBAC4;
     }
 
@@ -2544,7 +2544,7 @@ h4.r-heading-light {
 
     .ant-dropdown-menu-submenu-title {
         &:hover {
-            color: #1B9BD9;
+            color: @secondary-color;
         }
     }
 
@@ -2553,7 +2553,7 @@ h4.r-heading-light {
         font-size: 16px;
 
         &:hover {
-            color: #1B9BD9;
+            color: @secondary-color;
         }
 
         .anticon {
@@ -2576,15 +2576,15 @@ h4.r-heading-light {
 
     .ant-message-notice-content {
         padding: 6px 12px;
-        color: #1B9BD9;
+        color: @secondary-color;
         background: #FFFFFF;
-        border: 1px solid #1B9BD9;
+        border: 1px solid @secondary-color;
         font-size: 16px;
         -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.125);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.125);
 
         .anticon {
-            color: #1B9BD9;
+            color: @secondary-color;
         }
     }
 
@@ -2641,7 +2641,7 @@ h4.r-heading-light {
     .ant-breadcrumb-link {
         &:hover,
         .nuxt-link-exact-active {
-            color: #1B9BD9;
+            color: @secondary-color;
         }
     }
 }
@@ -2872,13 +2872,13 @@ h4.r-heading-light {
     }
 
     &.r-cart__active {
-        color: #1B9BD9;
+        color: @secondary-color;
 
         .r-shopping-cart {
             background-image: url("/assets/icon_cart_on.svg");
 
             .r-cart-count {
-                color: #1B9BD9;
+                color: @secondary-color;
             }
         }
     }
@@ -2894,7 +2894,7 @@ h4.r-heading-light {
     &:hover {
         .ant-badge-icon {
             border: 1px solid #FDBAC4;
-            color: #1B9BD9;
+            color: @secondary-color;
         }
     }
 }
@@ -2930,9 +2930,9 @@ h4.r-heading-light {
 }
 
 .r-btn-secondary {
-    border: 1px solid #1B9BD9 !important;
+    border: 1px solid @secondary-color !important;
     color: #FFFFFF !important;
-    background: #1B9BD9 !important;
+    background: @secondary-color !important;
 }
 
 .r-btn-bordered {
@@ -2950,14 +2950,14 @@ h4.r-heading-light {
 
     &:hover {
         border: 1px solid #FFFFFF;
-        color: #1B9BD9;
+        color: @secondary-color;
         background: #FFFFFF !important;
     }
 }
 
 .r-btn-bordered-primary {
     border: 1px solid #F50A2B36;
-    color: #1B9BD9;
+    color: @secondary-color;
     background: transparent !important;
 
     &:hover {
@@ -2969,13 +2969,13 @@ h4.r-heading-light {
 
 .r-btn-bordered-secondary {
     border: 1px solid #eefaff;
-    color: #1B9BD9;
+    color: @secondary-color;
     background: transparent !important;
 
     &:hover {
-        border: 1px solid #1B9BD9;
+        border: 1px solid @secondary-color;
         color: #FFFFFF;
-        background: #1B9BD9 !important;
+        background: @secondary-color !important;
     }
 }
 
@@ -2985,9 +2985,9 @@ h4.r-heading-light {
     background: #FFFFFF !important;
 
     &:hover {
-        border: 1px solid #1B9BD9;
+        border: 1px solid @secondary-color;
         color: #FFFFFF;
-        background: #1B9BD9 !important;
+        background: @secondary-color !important;
     }
 }
 
@@ -3055,14 +3055,14 @@ h4.r-heading-light {
     }
 
     i {
-        color: #1B9BD9;
-        fill: #1B9BD9;
+        color: @secondary-color;
+        fill: @secondary-color;
         font-size: 24px;
     }
 
     svg {
-        color: #1B9BD9;
-        fill: #1B9BD9;
+        color: @secondary-color;
+        fill: @secondary-color;
     }
 }
 
@@ -3071,7 +3071,7 @@ h4.r-heading-light {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        color: #1B9BD9;
+        color: @secondary-color;
         font-size: 16px;
         font-variant: tabular-nums;
         line-height: 1.5;
@@ -3140,7 +3140,7 @@ h4.r-heading-light {
             line-height: 22px;
             cursor: pointer;
             transition: all .3s;
-            color: #1B9BD9;
+            color: @secondary-color;
 
             .ant-collapse-arrow {
                 color: inherit;
@@ -3246,13 +3246,13 @@ h4.r-heading-light {
         &.ant-collapse-item-active,
         &:hover {
             > .ant-collapse-header {
-                color: #1B9BD9;
-                fill: #1B9BD9;
+                color: @secondary-color;
+                fill: @secondary-color;
             }
 
             .ant-collapse-arrow {
-                color: #1B9BD9;
-                fill: #1B9BD9;
+                color: @secondary-color;
+                fill: @secondary-color;
                 background: #eefaff;
             }
         }
@@ -3420,7 +3420,7 @@ h4.r-heading-light {
                 }
 
                 &:hover {
-                    color: #1B9BD9;
+                    color: @secondary-color;
                 }
             }
         }
@@ -3964,7 +3964,7 @@ h4.r-heading-light {
     color: #FFFFFF;
 
     &:hover {
-        background-color: #1B9BD9;
+        background-color: @secondary-color;
         color: #FFFFFF;
     }
 }
@@ -3997,7 +3997,7 @@ h4.r-heading-light {
     right: 0;
     top: 50%;
     width: 100%;
-    border-top: 1px solid #1B9BD9;
+    border-top: 1px solid @secondary-color;
 }
 
 .r-tab {
@@ -4018,7 +4018,7 @@ h4.r-heading-light {
     }
 
     &.r-tab-secondary {
-        border-color: #1B9BD9;
+        border-color: @secondary-color;
     }
 
     border-bottom: none;
@@ -4069,29 +4069,29 @@ h4.r-heading-light {
 
     &.r-avatar-primary {
         border-bottom: 1px solid #FAAEBB;
-        fill: #1B9BD9;
-        color: #1B9BD9;
+        fill: @secondary-color;
+        color: @secondary-color;
         background-color: #FFEFEF;
 
         &:hover {
-            border-bottom: 1px solid #1B9BD9;
+            border-bottom: 1px solid @secondary-color;
             fill: #FFFFFF;
             color: #FFFFFF;
-            background-color: #1B9BD9;
+            background-color: @secondary-color;
         }
     }
 
     &.r-avatar-secondary {
         border-bottom: 1px solid #B3DDFA;
-        fill: #1B9BD9;
-        color: #1B9BD9;
+        fill: @secondary-color;
+        color: @secondary-color;
         background-color: #eefaff;
 
         &:hover {
-            border-bottom: 1px solid #1B9BD9;
+            border-bottom: 1px solid @secondary-color;
             fill: #FFFFFF;
             color: #FFFFFF;
-            background-color: #1B9BD9;
+            background-color: @secondary-color;
         }
     }
 }
@@ -4169,7 +4169,7 @@ h4.r-heading-light {
             &:hover {
                 background: transparent;
                 border: none;
-                color: #1B9BD9;
+                color: @secondary-color;
             }
         }
 
@@ -4200,7 +4200,7 @@ h4.r-heading-light {
 
         .r-btn-bordered {
             border: 1px solid #FDBAC4;
-            color: #1B9BD9;
+            color: @secondary-color;
         }
 
         @media (max-width: 768px) {
@@ -4289,13 +4289,13 @@ h4.r-heading-light {
         color: #FFFFFF;
 
         &:hover {
-            color: #1B9BD9;
+            color: @secondary-color;
         }
     }
 
     .r-has-store-tray {
         .ant-menu-submenu-title {
-            color: #1B9BD9;
+            color: @secondary-color;
 
             &:hover {
                 color: #FFFFFF;
@@ -4594,7 +4594,7 @@ h4.r-heading-light {
     letter-spacing: 1px;
     line-height: 14px;
     text-transform: uppercase;
-    color: #1B9BD9;
+    color: @secondary-color;
     display: none;
 }
 
@@ -4894,7 +4894,7 @@ h4.r-heading-light {
         top: 0;
         bottom: 0;
         display: block;
-        color: #1B9BD9;
+        color: @secondary-color;
     }
 
     @media (max-width: 768px) {
@@ -4956,7 +4956,7 @@ h4.r-heading-light {
 
             &:hover,
             &.nuxt-link-exact-active {
-                color: #1B9BD9;
+                color: @secondary-color;
                 background: transparent;
             }
         }
@@ -4973,7 +4973,7 @@ h4.r-heading-light {
 
     &:hover {
         background: #FAFBFC;
-        color: #1B9BD9;
+        color: @secondary-color;
     }
 }
 
@@ -5181,7 +5181,7 @@ h4.r-heading-light {
         background: #FFFFFF;
 
         .ant-steps-item-icon {
-            color: #1B9BD9;
+            color: @secondary-color;
         }
 
         overflow: visible;
@@ -5217,21 +5217,21 @@ h4.r-heading-light {
 
         &.ant-steps-item-process,
         &.ant-steps-item-finish {
-            color: #1B9BD9;
+            color: @secondary-color;
             background: #eefaff url(/images/icon_pattern_secondary.svg) repeat;
-            border-color: #1B9BD9;
+            border-color: @secondary-color;
 
             .ant-steps-item-icon {
                 color: #FFFFFF;
-                border-color: #1B9BD9;
+                border-color: @secondary-color;
             }
 
             .r-heading {
-                color: #1B9BD9;
+                color: @secondary-color;
             }
 
             > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
-                background-color: #1B9BD9;
+                background-color: @secondary-color;
             }
         }
 
@@ -5310,7 +5310,7 @@ h4.r-heading-light {
 .r-shopper-steps {
     .ant-card {
         .r-shopper-icon {
-            color: #1B9BD9;
+            color: @secondary-color;
             background: #FFEFEF;
             height: 168px;
             width: 168px;
@@ -5351,7 +5351,7 @@ h4.r-heading-light {
 
 .r-message {
     background: #FFFFFF;
-    color: #1B9BD9;
+    color: @secondary-color;
     display: block;
     margin: auto;
 
@@ -5371,7 +5371,7 @@ h4.r-heading-light {
     padding: 0;
     border-radius: 100%;
     cursor: pointer;
-    color: #1B9BD9;
+    color: @secondary-color;
     background: #FDFEFF;
     line-height: 34px;
     font-weight: 700;
@@ -5390,7 +5390,7 @@ h4.r-heading-light {
     }
 
     &:hover {
-        background: #1B9BD9;
+        background: @secondary-color;
         color: #FFFFFF;
     }
 }
@@ -5652,7 +5652,7 @@ h4.r-heading-light {
 }
 
 .ant-tooltip-inner {
-    background: #1B9BD9;
+    background: @secondary-color;
     font-size: 14px;
     color: #FFFFFF;
 }
@@ -5662,7 +5662,7 @@ h4.r-heading-light {
         width: 9px;
         height: 9px;
 
-        background-color: #1B9BD9;
+        background-color: @secondary-color;
     }
 }
 
@@ -5787,7 +5787,7 @@ h4.r-heading-light {
     min-width: 300px;
 
     .ant-popover-title {
-        color: #1B9BD9;
+        color: @secondary-color;
         padding: 12px 24px;
         font-weight: 600;
         font-size: 18px;
@@ -5933,7 +5933,7 @@ h4.r-heading-light {
 
         &:hover {
             .r-text-slider {
-                color: #1B9BD9;
+                color: @secondary-color;
             }
 
             background: #FFFFFF;
@@ -6029,7 +6029,7 @@ h4.r-heading-light {
         .r-account-item-icon {
             visibility: visible;
             font-size: 24px;
-            color: #1B9BD9;
+            color: @secondary-color;
             border: 1px solid #FDBAC4;
             border-radius: 3px;
 
@@ -6045,7 +6045,7 @@ h4.r-heading-light {
     text-align: center;
 
     .r-card-cover-primary {
-        color: #1B9BD9;
+        color: @secondary-color;
         position: relative;
         background: linear-gradient(90deg, #FFEFEF 0%, #FFFFFF 75%, #FFEFEF 100%);
 
@@ -6055,7 +6055,7 @@ h4.r-heading-light {
     }
 
     .r-card-cover-secondary {
-        color: #1B9BD9;
+        color: @secondary-color;
         position: relative;
         background: linear-gradient(90deg, #eefaff 0%, #FFFFFF 75%, #eefaff 100%);
 
@@ -6075,7 +6075,7 @@ h4.r-heading-light {
     overflow: hidden;
     color: #F50A2B;
     background: #FFEFEF url(/images/icon_pattern_white.svg) repeat;
-    border-color: #1B9BD9;
+    border-color: @secondary-color;
     text-align: center;
     box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
 
@@ -6096,7 +6096,7 @@ h4.r-heading-light {
     }
 
     &.r-icon__secondary {
-        color: #1B9BD9;
+        color: @secondary-color;
         background: linear-gradient(90deg, #eefaff 0%, #FFFFFF 75%, #eefaff 100%);
     }
 
@@ -6242,7 +6242,7 @@ h4.r-heading-light {
 
         &.ant-select-dropdown-menu-item-selected,
         &:hover {
-            color: #1B9BD9;
+            color: @secondary-color;
             background-color: #eefaff;
         }
     }
@@ -6260,25 +6260,25 @@ h4.r-heading-light {
 
 .r-search-item-count {
     flex: none;
-    color: #1B9BD9;
+    color: @secondary-color;
 }
 
 .ant-avatar-icon {
     font-size: 16px;
-    color: #1B9BD9;
+    color: @secondary-color;
     background: #FAFBFC;
     box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
 }
 
 a:hover {
-    color: #1B9BD9;
+    color: @secondary-color;
 }
 
 .r-list-item,
 .r-account-item {
     .nuxt-link-exact-active,
     a:hover {
-        color: #1B9BD9;
+        color: @secondary-color;
     }
 
     .ant-avatar-icon {
@@ -6292,7 +6292,7 @@ a:hover {
         .ant-avatar-icon {
             background: #FFEFEF;
             border-color: #F50A2B33;
-            color: #1B9BD9;
+            color: @secondary-color;
         }
     }
 }
@@ -6384,7 +6384,7 @@ a:hover {
 
     &:hover,
     &.r-filter-item__active {
-        background-color: #1B9BD9;
+        background-color: @secondary-color;
         color: #FFFFFF;
     }
 }
@@ -6452,7 +6452,7 @@ a:hover {
     content: "•";
     text-align: center;
     opacity: 0.6;
-    color: #1B9BD9;
+    color: @secondary-color;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
