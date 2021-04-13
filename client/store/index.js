@@ -1,3 +1,5 @@
+export const strict = false
+
 require('./account');
 require('./app');
 require('./auth');

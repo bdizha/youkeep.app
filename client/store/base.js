@@ -351,23 +351,14 @@ const actions = {
     }
   },
   async onProducts({dispatch, commit}, payload) {
-    console.log('>>> 222');
-
     dispatch('onProcess', {key: 'isProduct', value: true});
 
-    console.log('setProducts', ">>>>")
-
     try {
-      console.log('>>> 333');
       await axios.post('/products', payload).then(({data}) => {
         console.log('response: onProducts data: ', data);
         let products = data;
 
-        console.log('>>> 444');
-
         commit('setProducts', products);
-
-        console.log('>>> 55');
 
         dispatch('onProcess', {key: 'isFixed', value: false});
         dispatch('onProcess', {key: 'isProduct', value: false});
@@ -383,8 +374,6 @@ const actions = {
       commit('setProcess', {key: 'isCareers', value: true});
       const {data} = await axios.get(payload.route, {});
       commit('setPosition', data.position);
-
-      // console.log('setPosition data >>>>> ', data);
 
       commit('setProcess', {key: 'isCareers', value: false});
 
@@ -422,7 +411,6 @@ const actions = {
 
     await axios.post('/shops', payload).then(({data}) => {
       let stores = data;
-      // console.log('before onStores: ', stores);
 
       commit('setStores', stores);
       commit('setFilter', {key: 'stores', value: stores});
@@ -434,8 +422,6 @@ const actions = {
       commit('setProcess', {key: 'isRunning', value: true});
 
       await axios.get('/testimonials', payload).then(({data}) => {
-        // console.log('response: reviews', data);
-
         commit('setReviews', data.testimonials);
         commit('setProcess', {key: 'isRunning', value: false});
       });
@@ -449,7 +435,6 @@ const actions = {
     commit('setProcess', {key: 'isFixed', value: false});
   },
   async onProcess({dispatch, commit, state}, payload) {
-    console.log('>>> 666');
     commit('setProcess', payload);
   },
   async onHasForm({dispatch, commit, state}, payload) {
@@ -479,11 +464,8 @@ const actions = {
     commit('setProcess', {key: 'isRunning', value: true});
     commit('setProcess', {key: 'isFixed', value: true});
     commit('setDrawer', payload);
-
-    setTimeout(function () {
-      commit('setProcess', {key: 'isRunning', value: false});
-      commit('setProcess', {key: 'isFixed', value: false});
-    }, 300);
+    commit('setProcess', {key: 'isRunning', value: false});
+    commit('setProcess', {key: 'isFixed', value: false});
 
     commit('setHasOverlay', state.hasDrawer);
   },
