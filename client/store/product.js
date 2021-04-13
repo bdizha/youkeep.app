@@ -73,9 +73,7 @@ const actions = {
 
       commit('setProducts', data)
 
-      setTimeout(() => {
-        dispatch('base/onProcess', { key: 'isProduct', value: false }, { root: true })
-      }, 600)
+      dispatch('base/onProcess', { key: 'isProduct', value: false }, { root: true })
     })
   },
   async onVariant ({ dispatch, commit }, payload) {

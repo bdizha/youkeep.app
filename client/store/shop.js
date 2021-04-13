@@ -133,10 +133,7 @@ const actions = {
       return await axios.post('/categories', payload).then(({data}) => {
         let categories = data.categories;
 
-        setTimeout(() => {
-          dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
-        }, 300);
-
+        dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
         dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
 
         return categories;
@@ -171,10 +168,7 @@ const actions = {
   },
   onNotice({dispatch, commit}, payload) {
     commit('setNotice', payload);
-
-    setTimeout(() => {
-      // commit('setHasNotice', false);
-    }, 1200);
+    // commit('setHasNotice', false);
   },
   async onSearch({dispatch, commit}, payload) {
 
@@ -187,10 +181,7 @@ const actions = {
         let search = data;
         commit('setSearch', search);
         console.log('response: onSearch: ', search);
-
-        setTimeout(() => {
-          commit('setProcess', {key: 'isSearching', value: false});
-        }, 300);
+        commit('setProcess', {key: 'isSearching', value: false});
       });
 
     } catch (e) {

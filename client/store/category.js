@@ -310,10 +310,8 @@ const actions = {
 
         dispatch('onProcess', {key: 'isFixed', value: false});
 
-        setTimeout(() => {
-          dispatch('onProcess', {key: 'isCategory', value: false});
-          dispatch('onProcess', {key: 'isCategories', value: false});
-        }, 300);
+        dispatch('onProcess', {key: 'isCategory', value: false});
+        dispatch('onProcess', {key: 'isCategories', value: false});
       });
     } catch (e) {
       console.error('onCategories errors');
@@ -339,10 +337,7 @@ const actions = {
         commit('setCategory', category);
 
         dispatch('onProcess', {key: 'isFixed', value: false});
-
-        setTimeout(() => {
-          dispatch('onProcess', {key: 'isProduct', value: false});
-        }, 600);
+        dispatch('onProcess', {key: 'isProduct', value: false});
       });
 
     } catch (e) {
@@ -361,10 +356,7 @@ const actions = {
         commit('setProducts', products);
 
         dispatch('onProcess', {key: 'isFixed', value: false});
-
-        setTimeout(() => {
-          dispatch('onProcess', {key: 'isProduct', value: false});
-        }, 300);
+        dispatch('onProcess', {key: 'isProduct', value: false});
       });
 
     } catch (e) {
@@ -420,10 +412,7 @@ const actions = {
 
       commit('setStores', stores);
       commit('setFilter', {key: 'stores', value: stores});
-
-      setTimeout(() => {
-        commit('setProcess', {key: 'isTray', value: false});
-      }, 300);
+      commit('setProcess', {key: 'isTray', value: false});
 
       // console.log('after onStores: ', stores);
     });
@@ -494,10 +483,7 @@ const actions = {
   },
   onNotice({dispatch, commit}, payload) {
     commit('setNotice', payload);
-
-    setTimeout(() => {
-      commit('setHasNotice', false);
-    }, 24000);
+    commit('setHasNotice', false);
   },
   async onInit({dispatch, commit, state}, payload) {
     const search = Cookies.get('search');
