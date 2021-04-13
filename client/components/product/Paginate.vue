@@ -109,6 +109,8 @@ export default {
       await this.onProducts()
     },
     async onProducts () {
+
+      console.log('>>> 111');
       await this.$store.dispatch('base/onProducts', this.payload)
     }
   }

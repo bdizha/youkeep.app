@@ -351,16 +351,24 @@ const actions = {
     }
   },
   async onProducts({dispatch, commit}, payload) {
+    console.log('>>> 222');
+
     dispatch('onProcess', {key: 'isProduct', value: true});
 
     console.log('setProducts', ">>>>")
 
     try {
+      console.log('>>> 333');
       await axios.post('/products', payload).then(({data}) => {
         console.log('response: onProducts data: ', data);
         let products = data;
 
+        console.log('>>> 444');
+
         commit('setProducts', products);
+
+        console.log('>>> 55');
+
         dispatch('onProcess', {key: 'isFixed', value: false});
         dispatch('onProcess', {key: 'isProduct', value: false});
       });
@@ -438,10 +446,10 @@ const actions = {
   },
   onIsFixed({commit}) {
     commit('setProcess', {key: 'isFixed', value: true});
-
     commit('setProcess', {key: 'isFixed', value: false});
   },
   async onProcess({dispatch, commit, state}, payload) {
+    console.log('>>> 666');
     commit('setProcess', payload);
   },
   async onHasForm({dispatch, commit, state}, payload) {
