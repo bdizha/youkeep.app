@@ -1,6 +1,7 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
     <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :class="{'r-spin__active' :processes.isCategory}"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <div class="r-gradient r-p-12" :class="{'r-hide-lg': !hasCategories}">
@@ -28,7 +29,7 @@
         </a-col>
       </a-row>
       <r-category-actions v-if="hasCategories"></r-category-actions>
-      <r-spinner :is-absolute="true"></r-spinner>
+      <r-spinner :is-absolute="false"></r-spinner>
     </a-col>
   </a-row>
 </template>
