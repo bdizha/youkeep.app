@@ -63,9 +63,13 @@ class StoreCategory extends Model
         return $this->getBreadcrumbs($storeCategory->previous, $breadcrumbs);
     }
 
-    protected function _encodeLevel(): string
+    /**
+     * @param null $level
+     * @return string
+     */
+    protected function _encodeLevel($level = null): string
     {
-        return "/L" . str_pad(empty($this->level) ? 1 : $this->level, 6, STR_PAD_LEFT, "0");
+        return "/L" . str_pad(empty($level) ? 1 : $level, 6, STR_PAD_LEFT, "0");
     }
 
     /**

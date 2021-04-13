@@ -1,7 +1,7 @@
 <template>
   <nuxt-link class="r-logo" to="/">
     <img :class="{'r-hide-sm': !isIcon && false, 'r-hide-lg': isIcon && false}"
-         :src="'/images/' + (isIcon ? 'icon' : 'logo') + '.png'"
+         :src="imageHost + '/images/' + (isIcon ? 'icon' : 'logo') + '.png'"
          :alt="title"/>
   </nuxt-link>
 </template>
@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       title: "It's shopping time!",
+      imageHost: process.env.APP_URL
     };
   },
   created() {

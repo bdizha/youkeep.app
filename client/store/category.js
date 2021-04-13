@@ -268,10 +268,7 @@ const actions = {
 
       let route = params.route;
 
-      console.log("onCategory params", params);
-
       commit('setCategories', []);
-      commit('setStores', []);
       commit('setProducts', {data: []});
 
       await axios.post(route, params).then(({data}) => {
