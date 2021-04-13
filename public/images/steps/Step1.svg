@@ -97,7 +97,7 @@
         filter: url(#Rectangle_505);
       }
         .cls-00{
-        fill: #EBF6FE;
+        fill: #eefaff;
         }
     </style>
     <filter id="Rectangle_505" x="-42" y="-31" width="2885" height="1511" filterUnits="userSpaceOnUse">

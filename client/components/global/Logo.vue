@@ -2,28 +2,33 @@
   <nuxt-link class="r-logo" to="/">
     <img :class="{'r-hide-sm': !isIcon && false, 'r-hide-lg': isIcon && false}"
          :src="imageHost + '/images/' + (isIcon ? 'icon' : 'logo') + '.png'"
-         :alt="title"/>
+         :alt="title"
+    />
   </nuxt-link>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   props: {
-    isIcon: {type: Boolean, required: false, default: false}
+    isIcon: { type: Boolean, required: false, default: false }
   },
   name: 'r-logo',
-  data() {
+  data () {
     return {
-      title: "It's shopping time!",
-      imageHost: process.env.APP_URL
-    };
+      title: 'It\'s shopping time!'
+    }
   },
-  created() {
+  created () {
   },
-  computed: mapGetters({
-    isDark: 'base/isDark'
-  }),
+  computed: {
+    imageHost () {
+      return process.env.APP_URL
+    },
+    ...mapGetters({
+      isDark: 'base/isDark'
+    })
+  },
   methods: {},
-};
+}
 </script>
