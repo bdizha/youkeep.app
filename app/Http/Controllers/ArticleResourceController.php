@@ -15,7 +15,7 @@ class ArticleResourceController extends Controller
      */
     public function index()
     {
-        $articles = ArticleResource::take(24)->get();
+        $articles = ArticleResource::take(12)->get();
 
         if (request()->ajax()) {
             return response()->json([

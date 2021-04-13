@@ -143,7 +143,7 @@ class Store extends Model
      */
     public function categories()
     {
-        return $this->belongsToMany('App\Category', 'store_categories', 'store_id', 'category_id')->take(24);;
+        return $this->belongsToMany('App\Category', 'store_categories', 'store_id', 'category_id')->take(12);;
     }
 
     /**
@@ -151,6 +151,6 @@ class Store extends Model
      */
     public function product_photos()
     {
-        return $this->belongsToMany('App\ProductPhoto', 'store_products', 'store_id', 'product_id')->take(24);;
+        return $this->belongsToMany('App\ProductPhoto', 'store_products', 'store_id', 'product_id')->take(12);;
     }
 }

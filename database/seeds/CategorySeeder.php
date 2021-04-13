@@ -113,7 +113,7 @@ class CategorySeeder extends Seeder
             echo "Updated category :: " . $category['name'] . "\n";
 
             if ($category->type == 1) {
-                $stores = Store::inRandomOrder()->take(24)->get();
+                $stores = Store::inRandomOrder()->take(12)->get();
 
                 if (!in_array($category->id, $this->storeCategories)) {
                     // randomise and get this out

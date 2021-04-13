@@ -46,7 +46,7 @@ class Controller extends BaseController
         $filters = [],
         $store = null,
         $stores = [],
-        $limit = 24,
+        $limit = 12,
         $level = 1,
         $items = [],
         $item = null;
