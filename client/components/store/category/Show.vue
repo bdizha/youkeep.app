@@ -1,9 +1,8 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-col :class="{'r-spin__active' :processes.isCategory}" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
-           :lg="{ span: 24 }"
-    >
+           :lg="{ span: 24 }">
       <div class="r-gradient r-p-12" :class="{'r-hide-lg': !hasCategories}">
         <r-search class="r-hide-lg" :class="{'r-pb-12': hasCategories}"></r-search>
         <r-category-arrows v-if="hasCategories"></r-category-arrows>
@@ -31,6 +30,7 @@
         </a-col>
       </a-row>
       <r-category-actions v-if="hasCategories"></r-category-actions>
+      <r-spinner :is-absolute="true"></r-spinner>
     </a-col>
   </a-row>
 </template>
@@ -55,9 +55,8 @@ export default {
     }
   },
   async fetch () {
-    console.log('category params', this.$route)
-
-    console.log('route', this.$route.path)
+    // console.log('category params', this.$route)
+    // console.log('route', this.$route.path)
 
     this.payload.route = this.$route.path
     this.payload.store = this.$route.params.store
