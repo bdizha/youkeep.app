@@ -1,7 +1,7 @@
 <template>
   <nuxt-link class="r-logo" to="/">
     <img :class="{'r-hide-sm': !isIcon && false, 'r-hide-lg': isIcon && false}"
-         :src="imageHost + '/images/' + (isIcon ? 'icon' : 'logo') + '.png'"
+         :src="'/images/' + (isIcon ? 'icon' : 'logo') + '.png'"
          :alt="title"
     />
   </nuxt-link>
