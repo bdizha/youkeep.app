@@ -1,5 +1,5 @@
 <template>
-  <r-avatar shape="square"
+  <r-avatar shape="circle"
             :size="72"
             src-placeholder="/assets/icon_default.png"
             :src="store.photo_url"/>

@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 module.exports = {
-  target: 'server', // default is 'server'
+  target: 'static', // default is 'server'
 
   // mode: 'spa', // Comment this for SSR
   srcDir: __dirname,
@@ -69,6 +69,15 @@ module.exports = {
     '@nuxtjs/router',
     'nuxt-lazy-load',
   ],
+
+  hooks: {
+    'build:done'() {
+      const modulesToClear = ['vue', 'vue/dist/vue.runtime.common.prod']
+      modulesToClear.forEach((entry) => {
+        delete require.cache[require.resolve(entry)]
+      })
+    },
+  },
 
   build: {
     extractCSS: true,

@@ -7,45 +7,23 @@
       <div class="r-margin-out-sm">
         <a-row type="flex" justify="center" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
-            <a-row :gutter="[48,48]" type="flex" justify="start"
+            <div class="r-relative" style="height: 300px;">
+              <div class="r-absolute" style="position: absolute; top: 0px; width: 100%; height: 100%">
+                <a-row :gutter="[48,48]" type="flex" justify="start"
+                       align="middle">
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                    <a-card>
+                      <div slot="cover">
+                        <r-avatar shape="square" :src="'/assets/' + banner"/>
+                      </div>
+                    </a-card>
+                  </a-col>
+                </a-row>
+              </div>
+            </div>
+            <a-row :gutter="[24,24]" type="flex" justify="start"
                    align="middle">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                     :md="{ span: 12 }"
-                     :lg="{ span: 12 }">
-                <a-card>
-                  <a-card-meta>
-                    <template slot="description">
-                      <h1 class="r-heading">
-                        It's shopping time!
-                      </h1>
-                      <h2 class="r-heading r-text-secondary">
-                        <span class="r-heading r-text-secondary">Shop more,</span>
-                        <span class="r-text-secondary">Pay less</span>
-                      </h2>
-                      <p class="r-text-normal">
-                        Yes, as long as you shop it with Shopple, you are fully powered.
-                      </p><br/>
-                      <a-row type="flex" justify="start" align="middle">
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 24 }"
-                               :lg="{ span: 24 }">
-                          <r-delivery-form></r-delivery-form>
-                        </a-col>
-                      </a-row>
-                    </template>
-                  </a-card-meta>
-                </a-card>
-              </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-                <a-card>
-                  <div slot="cover">
-                    <r-avatar shape="square" :src="'/assets/' + banner"/>
-                  </div>
-                </a-card>
-              </a-col>
-            </a-row>
-            <a-row class="r-mv-48" type="flex" justify="center" align="middle">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 16 }">
                 <a-card>
                   <a-card-meta>
                     <template slot="description">
@@ -71,6 +49,37 @@
                     </template>
                   </a-card-meta>
                 </a-card>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                     :md="{ span: 8 }"
+                     :lg="{ span: 8 }">
+                <a-card>
+                  <a-card-meta>
+                    <template slot="description">
+                      <h1 class="r-heading">
+                        It's shopping time!
+                      </h1>
+                      <h2 class="r-heading r-text-secondary">
+                        <span class="r-heading r-text-secondary">Shop more,</span>
+                        <span class="r-text-secondary">Pay less</span>
+                      </h2>
+                      <p class="r-text-normal">
+                        Yes, as long as you shop it with Shopple, you are fully powered.
+                      </p><br/>
+                      <a-row type="flex" justify="start" align="middle">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                               :md="{ span: 24 }"
+                               :lg="{ span: 24 }">
+                          <r-delivery-form></r-delivery-form>
+                        </a-col>
+                      </a-row>
+                    </template>
+                  </a-card-meta>
+                </a-card>
+              </a-col>
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                     :md="{ span: 24 }"
+                     :lg="{ span: 24 }">
               </a-col>
             </a-row>
           </a-col>

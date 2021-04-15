@@ -6,7 +6,7 @@
                     collapsible>
       <r-category-menu></r-category-menu>
     </a-layout-sider>
-    <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
+    <a-layout-content class="r-layout-content__store" :class="{'r-spin__active' :processes.isFixed}">
       <nuxt />
     </a-layout-content>
     <r-bottom></r-bottom>

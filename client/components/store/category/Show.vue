@@ -1,7 +1,6 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
     <a-col class="r-spin-holder r-categories"
-           :class="{'r-spin__active' :processes.isCategory}"
            :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
@@ -32,7 +31,6 @@
         </a-col>
       </a-row>
       <r-category-actions v-if="hasCategories"></r-category-actions>
-      <r-spinner :is-absolute="false"></r-spinner>
     </a-col>
   </a-row>
 </template>

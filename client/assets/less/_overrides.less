@@ -134,7 +134,6 @@ a.r-text-logo {
 .ant-layout-header {
     &.r-header {
         height: 60px !important;
-        background: #FFFFFF url(/images/icon-dark.svg) repeat;
         padding: 12px !important;
         margin-bottom: 0;
         position: fixed;
@@ -614,7 +613,7 @@ x {
 .r-card-category {
     .ant-avatar-image {
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
-        padding: 12px;
+        padding: 0;
         background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
         line-height: 100%;
         width: 100% !important;
@@ -2237,14 +2236,14 @@ h4.r-heading-light {
     justify-content: flex-start;
 
     .ant-menu-submenu-title {
-        color: #FFFFFF;
+        color: @black;
         border: 1px solid transparent;
         border-radius: @border-radius-base;
         overflow: hidden;
         text-transform: capitalize;
 
         &:hover {
-            border: 1px solid #FFFFFF;
+            border: 1px solid @black;
         }
     }
 }
@@ -5488,10 +5487,6 @@ h4.r-heading-light {
     overflow: hidden;
 }
 
-.r-gradient {
-    background: @secondary-color;
-}
-
 .r-bg-white {
     background: #FFFFFF;
 }
@@ -5523,9 +5518,17 @@ h4.r-heading-light {
         .slick-slide {
             padding: 4px 12px;
             pointer-events: auto;
+            &:first-child{
+                padding-left: 0;
+            }
 
             &.slick-cloned {
                 //display: none !important;
+            }
+            &.slick-active{
+                &:last-child{
+                    padding-right: 0;
+                }
             }
         }
     }
@@ -5542,6 +5545,7 @@ h4.r-heading-light {
 }
 
 .r-gradient {
+    background: @secondary-color;
     .r-slider {
         margin: 0 -12px;
 
@@ -5551,7 +5555,7 @@ h4.r-heading-light {
 
             .slick-slide {
                 padding: 0px 6px;
-                height: 36px;
+                height: 38px;
             }
         }
     }
@@ -5923,28 +5927,32 @@ h4.r-heading-light {
 
 .r-gradient {
     .r-slider-item {
-        background: #ffffff18;
+        background: rgba(0, 0, 0, 0.06);
         padding: 0;
         margin: 0 6px;
+        border: 1px solid transparent;
+        height: 36px;
 
         .r-text-slider {
-            background: #FFFFFF;
-            font-size: 13px;
-            font-weight: 400;
+            background: transparent;
+            font-size: 12px;
+            font-weight: 600;
+            color: #FFFFFF;
         }
 
         &:hover {
+            border: 1px solid rgab(255, 255, 255, 0.06);
+            color: #FFFFFF;
             .r-text-slider {
-                color: @secondary-color;
+                color: #FFFFFF;
             }
-
-            background: #FFFFFF;
+            background: transparent;
         }
     }
 
     .r-slider .slick-prev, .r-slider .slick-next {
         color: #FFFFFF;
-        background: #5c636a;
+        background: #1B9BD9;
         border: 1px solid transparent;
         top: 50%;
     }

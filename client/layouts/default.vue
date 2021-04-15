@@ -1,14 +1,14 @@
 <template>
-  <a-layout class="r-layout__default" :class="{'r-fixed-spin__active':processes.isFixed}">
+  <a-layout class="r-layout__default">
     <r-header></r-header>
-    <a-layout-content :class="{'r-has-data': true, 'r-fixed-spin__active':processes.isFixed}">
+    <a-layout-content :class="{'r-spin__active' :processes.isFixed}">
       <a-layout>
         <a-layout-content>
           <nuxt />
         </a-layout-content>
         <r-footer></r-footer>
       </a-layout>
-      <r-spinner processes="isFixed" :is-absolute="false"></r-spinner>
+      <r-spinner :is-absolute="false"></r-spinner>
     </a-layout-content>
     <r-bottom></r-bottom>
   </a-layout>
