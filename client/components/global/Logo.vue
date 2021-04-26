@@ -1,9 +1,6 @@
 <template>
   <nuxt-link class="r-logo" to="/">
-    <img :class="{'r-hide-sm': !isIcon && false, 'r-hide-lg': isIcon && false}"
-         :src="'/images/' + (isIcon ? 'icon' : 'logo') + '.png'"
-         :alt="title"
-    />
+    <img src="~/assets/icon.png" :alt="title"/>
   </nuxt-link>
 </template>
 <script>
@@ -16,15 +13,13 @@ export default {
   name: 'r-logo',
   data () {
     return {
-      title: 'It\'s shopping time!'
+      title: 'It\'s shopping time!',
+      logo: (this.isIcon ? 'icon' : 'logo')
     }
   },
   created () {
   },
   computed: {
-    imageHost () {
-      return process.env.APP_URL
-    },
     ...mapGetters({
       isDark: 'base/isDark'
     })

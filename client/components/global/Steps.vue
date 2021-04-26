@@ -1,60 +1,49 @@
 <template>
   <a-row class="r-mt-48" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-card>
-        <a-card-meta class="r-text-center">
-          <template slot="description">
-            <a-row type="flex" justify="center">
-              <a-col class="r-text-center" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-                <h2 class="r-heading-light">
-                  {{ title ? title : 'Shopple brings customers to merchants' }}
-                </h2>
-              </a-col>
-            </a-row>
-            <a-row :gutter="[24,24]" type="flex" justify="center"
-                   align="middle">
-              <a-col :xs="{ span: 24 }"
-                     :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-                <a-steps v-model="currentStep" direction="horizontal" :current="currentStep">
-                  <a-step v-for="(step, index) in steps"
-                          :key="index">
-                    <template slot="title">
-                      <h3 class="r-heading">{{ step.title }}</h3>
-                    </template>
-                    <template slot="description">
-                      <div class="r-step-caption">
-                        {{ step.description }}
-                      </div>
-                      <div class="r-animate r-step-avatar">
-                        <r-avatar
-                          :key="index" shape="square"
-                          :size="210"
-                          :src="'/assets/Step_' + (index + 1) + '.svg?v=1'"
-                          src-placeholder="/assets/icon_default.png"/>
-                      </div>
-                    </template>
-                  </a-step>
-                </a-steps>
-              </a-col>
-            </a-row>
-            <a-row v-show="hasMore" :gutter="[24,24]" type="flex" justify="center"
-                   align="middle">
-              <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 18 }" :md="{ span: 6 }"
-                     :lg="{ span: 6}">
-                <nuxt-link to="/hiw">
-                  <a-button class="r-btn--grey"
-                            block
-                            type="secondary"
-                            size="default">
-                    Read more
-                    <a-icon type="right"/>
-                  </a-button>
-                </nuxt-link>
-              </a-col>
-            </a-row>
-          </template>
-        </a-card-meta>
-      </a-card>
+      <a-row :gutter="[24,24]" type="flex" justify="center"
+             align="middle">
+        <a-col :xs="{ span: 15}" :sm="{ span: 15 }" :md="{ span: 20 }" :lg="{ span: 20 }">
+          <h2 class="r-heading">
+            {{ title ? title : 'Shopple brings customers to merchants' }}
+          </h2>
+        </a-col>
+        <a-col v-show="hasMore" class="r-text-right" :xs="{ span: 8 }" :sm="{ span: 8 }" :md="{ span: 4 }"
+               :lg="{ span: 4}">
+          <nuxt-link to="/hiw">
+            <a-button class="r-btn--grey"
+                      block
+                      type="secondary"
+                      size="default">
+              Read more
+              <a-icon type="right"/>
+            </a-button>
+          </nuxt-link>
+        </a-col>
+        <a-col :xs="{ span: 24 }"
+               :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+          <a-steps v-model="currentStep" direction="horizontal" :current="currentStep">
+            <a-step v-for="(step, index) in steps"
+                    :key="index">
+              <template slot="title">
+                <h3 class="r-heading">{{ step.title }}</h3>
+              </template>
+              <template slot="description">
+                <div class="r-step-caption">
+                  {{ step.description }}
+                </div>
+                <div class="r-animate r-step-avatar">
+                  <r-avatar
+                    :key="index" shape="square"
+                    :size="210"
+                    :src="'/assets/Step_' + (index + 1) + '.svg?v=1'"
+                    src-placeholder="/assets/icon_default.png"/>
+                </div>
+              </template>
+            </a-step>
+          </a-steps>
+        </a-col>
+      </a-row>
     </a-col>
   </a-row>
 </template>

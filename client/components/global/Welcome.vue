@@ -3,13 +3,6 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <a-row class="r-mb-48" type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 24 }"
-               :lg="{ span: 24 }">
-          <r-category-slider v-if="hasCategories"></r-category-slider>
-        </a-col>
-      </a-row>
       <div class="r-grey-shadow">
         <r-category-list v-if="hasCategories" :is-flush="true" :columns="6" :limit="12"></r-category-list>
       </div>

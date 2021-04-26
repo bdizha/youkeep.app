@@ -2,6 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   target: 'static', // default is 'server'
+server: {
+        port: 6000
+ },
 
   // mode: 'spa', // Comment this for SSR
   srcDir: __dirname,
