@@ -1,11 +1,10 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
+  <a-row type="flex" justify="start" align="middle"
+         class="r-gradient" id="r-store-header">
     <a-col :class="{'r-p-12': hasPad }" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
-      <div class="r-margin-out">
-        <r-category-arrows></r-category-arrows>
-      </div>
+      <r-category-arrows></r-category-arrows>
     </a-col>
   </a-row>
 </template>

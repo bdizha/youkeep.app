@@ -5,12 +5,10 @@
            :lg="{ span: 24 }">
       <div class="r-credit">
         <template v-if="!product.is_great_value">
-          <div class="r-credit-text">SAVE</div>
-          <div class="r-credit-discount">{{ product.discount_percent }}%</div>
+          <div class="r-credit-discount">-{{ product.discount_percent }}%</div>
         </template>
         <template v-else>
-          <div class="r-credit-text">GREAT</div>
-          <div class="r-credit-discount">Value</div>
+          <div class="r-credit-discount">-{{ product.discount_percent }}%</div>
         </template>
       </div>
     </a-col>

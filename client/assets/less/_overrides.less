@@ -146,13 +146,14 @@ a.r-text-logo {
         flex: 0 0 auto;
         display: flex;
         line-height: 1 !important;
+        background: linear-gradient(to right,#1B9BD9 0,#F50A2B 100%) no-repeat;
 
         @media (max-width: 768px) {
             padding: 12px 0 !important;
         }
 
         .r-text-link {
-            color: @black;
+            color: #FFFFFF;
         }
     }
 
@@ -660,25 +661,26 @@ x {
 }
 
 .ant-rate {
-    font-size: 18px;
+    font-size: 21px;
+    color: #1B9BD9;
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 18px;
     }
 }
 
 .r-credit {
-    display: table;
-    color: #FFFFFF;
-    top: 0px;
+    display: block;
+    position: absolute;
+    top: -60px;
     left: 0;
-    margin: 0 0 18px;
-    width: 100%;
-    height: 36px;
+    color: #FFFFFF;
+    margin: 0;
+    height: 24px;
     z-index: 11;
-    border-radius: @border-radius-base;
     text-transform: uppercase;
     overflow: hidden;
-    box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
+    box-shadow: none;
+    width: 100%;
 
     .r-credit-text {
         width: 50%;
@@ -704,22 +706,16 @@ x {
 
     .r-credit-discount {
         overflow: hidden;
-        display: table-cell;
-        width: 50%;
+        width: 45px;
         height: 24px;
-        line-height: 36px;
-        font-weight: 400;
-        font-size: 12px;
-        text-align: center;
+        line-height: 24px;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: left;
         padding: 0 12px;
-        color: #FFFFFF;
-        background: @secondary-color;
-        border-radius: 0 6px 6px 0;
-        @media (max-width: 768px) {
-            padding: 0px 9px;
-            font-size: 13px;
-            height: 24px;
-        }
+        color: #F50A2B;
+        background: #FFEFEF;
+        border-radius: 6px;
     }
 }
 
@@ -1437,13 +1433,13 @@ xxl	≥1600px, could be a span value or an object containing above props
             .r-list-item,
             .r-account-item {
                 .r-text-link {
-                    color: #3C444C;
-                    opacity: 0.81;
+                    color: #FFFFFF;
+                    opacity: 0.87;
                 }
 
                 .nuxt-link-exact-active,
                 a:hover {
-                    color: @secondary-color;
+                    color: #FFFFFF;
                     opacity: 1;
                 }
 
@@ -1468,7 +1464,7 @@ xxl	≥1600px, could be a span value or an object containing above props
                     }
 
                     .r-text-link {
-                        color: @secondary-color;
+                        color: #FFFFFF;
                         opacity: 0.96;
                     }
                 }
@@ -2235,15 +2231,19 @@ h4.r-heading-light {
     -ms-flex-pack: start;
     justify-content: flex-start;
 
+    .r-nav-item{
+        color: #FFFFFF;
+    }
+
     .ant-menu-submenu-title {
-        color: @black;
+        color: #FFFFFF;
         border: 1px solid transparent;
         border-radius: @border-radius-base;
         overflow: hidden;
         text-transform: capitalize;
 
         &:hover {
-            border: 1px solid @black;
+            border: 1px solid #FFFFFF;
         }
     }
 }
@@ -2275,8 +2275,9 @@ h4.r-heading-light {
         height: 36px;
         width: auto;
         display: block;
-        border-radius: 6%;
+        border-radius: 100%;
         overflow: hidden;
+        background: #FFF;
     }
 
     &.r-logo__icon {
@@ -5495,7 +5496,7 @@ h4.r-heading-light {
     background: linear-gradient(90deg, #FFEFEF 0%, #FFFFFF 75%, #FFEFEF 100%);
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_white.svg) repeat;
+        background: transparent url(/images/icon_pattern_primary.svg) repeat;
     }
 }
 
@@ -5503,7 +5504,7 @@ h4.r-heading-light {
     background: linear-gradient(90deg, #eefaff 0%, #FFFFFF 75%, #eefaff 100%);
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_white.svg) repeat;
+        background: transparent url(/images/icon_pattern_secondary.svg) repeat;
     }
 }
 
@@ -5545,7 +5546,7 @@ h4.r-heading-light {
 }
 
 .r-gradient {
-    background: @secondary-color;
+    background: linear-gradient(to right, #1B9BD9 0, #F50A2B 100%) no-repeat;
     .r-slider {
         margin: 0 -12px;
 
@@ -5930,6 +5931,9 @@ h4.r-heading-light {
 
 
 .r-gradient {
+    .r-nav-item{
+        color: #FFFFFF;
+    }
     .r-slider-item {
         background: rgba(0, 0, 0, 0.06);
         padding: 0;
@@ -5955,8 +5959,8 @@ h4.r-heading-light {
     }
 
     .r-slider .slick-prev, .r-slider .slick-next {
-        color: #FFFFFF;
-        background: #1B9BD9;
+        color: #1B9BD9;
+        background: #FFFFFF;
         border: 1px solid transparent;
         top: 50%;
     }

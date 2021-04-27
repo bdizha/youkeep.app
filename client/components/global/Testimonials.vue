@@ -7,7 +7,7 @@
       <a-row class="r-slider" type="flex" justify="center" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <VueSlickCarousel v-if="hasReviews" v-bind="settings">
-            <a-card class="r-bg-secondary-light" v-for="(review, index) in reviews"
+            <a-card class="r-bg-primary-light" v-for="(review, index) in reviews"
                     :key="index + '-review'">
               <a-card-meta>
                 <template slot="description">
