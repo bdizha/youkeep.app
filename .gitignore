@@ -13,7 +13,5 @@ yarn-error.log
 storage/
 .nuxt/
 public/_nuxt
-dist
-dist/*
 local.settings.json
 .env
