@@ -19,7 +19,7 @@
                       </h4>
                       <h1 class="r-heading r-text-secondary">
                         <span class="r-text-secondary">Shop more,</span><br>
-                        <span class="r-text-secondary">Pay less</span>
+                        <span class="r-text-secondary">Pay less.</span>
                       </h1>
                     </a-col>
                   </a-row>

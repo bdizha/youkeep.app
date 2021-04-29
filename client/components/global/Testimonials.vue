@@ -11,7 +11,7 @@
                     :key="index + '-review'">
               <a-card-meta>
                 <template slot="description">
-                  <h4 class="r-heading">
+                  <h4 class="r-heading r-text-secondary">
                     {{ review.author }}
                   </h4>
                   <p class="r-text-normal">
@@ -50,14 +50,13 @@ export default {
     return {
       settings: {
         slidesToScroll: 1,
-        slidesToShow: 3,
-        infinite: true,
+        slidesToShow: 1,
         dots: false,
         responsive: [
           {
             "breakpoint": 1024,
             "settings": {
-              "slidesToShow": 3,
+              "slidesToShow": 1,
               "slidesToScroll": 1,
               "dots": false
             }
@@ -65,7 +64,7 @@ export default {
           {
             "breakpoint": 900,
             "settings": {
-              "slidesToShow": 3,
+              "slidesToShow": 1,
               "slidesToScroll": 1,
               "dots": false
             }
@@ -73,7 +72,7 @@ export default {
           {
             "breakpoint": 700,
             "settings": {
-              "slidesToShow": 2,
+              "slidesToShow": 1,
               "slidesToScroll": 1,
               "dots": false
             }

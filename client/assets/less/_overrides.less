@@ -1048,7 +1048,8 @@ x {
     opacity: 1;
 
     &:hover {
-        border-color: #3C444C;
+        border-color: #FFFFFF;
+        color: #FFFFFF;
         background: rgba(255, 255, 255, 0.03);
         opacity: 1;
     }
@@ -1592,19 +1593,15 @@ h1.r-heading {
 }
 
 h2.r-heading {
-    font-weight: 700;
-    font-size: 27px;
+    font-weight: 800;
+    font-size: 33px;
     margin-bottom: 18px;
-
-    &.r-same-height {
-        margin-bottom: 12px;
-        line-height: 36px;
-    }
+    line-height: 33px;
 
     @media (max-width: 768px) {
         font-weight: 600;
-        font-size: 24px;
-        line-height: 27px;
+        font-size: 27px;
+        line-height: 30px;
     }
 }
 
@@ -2367,7 +2364,6 @@ h4.r-heading-light {
 }
 
 .r-collapse-panel {
-
     > .ant-collapse-content {
         > .ant-collapse-content-box {
             padding-left: 0 !important;
@@ -2376,6 +2372,9 @@ h4.r-heading-light {
 
     .r-collapse-panel {
         border-top: 1px solid rgb(236, 236, 236, 1);
+        &:first-child{
+            border-top: 1px solid transparent;
+        }
     }
 
     .r-store-item-line {
@@ -2836,7 +2835,7 @@ h4.r-heading-light {
     overflow: hidden;
 
     .r-shopping-cart {
-        background-image: url("/assets/icon_cart_secondary.svg");
+        background-image: url("/assets/icon_cart_white.svg");
         background-repeat: no-repeat;
         background-size: cover;
         height: 36px;
@@ -2849,7 +2848,7 @@ h4.r-heading-light {
         right: 0;
 
         &.r-shopping-cart__active {
-            background-image: url("/assets/icon_cart_primary.svg");
+            background-image: url("/assets/icon_cart_secondary.svg");
         }
     }
 
@@ -5433,10 +5432,16 @@ h4.r-heading-light {
         .slick-next {
             &.r-slick-arrow-prev {
                 left: 0;
+                @media (max-width: 768px) {
+                    left: -24px;
+                }
             }
 
             &.r-slick-arrow-next {
                 right: 0;
+                @media (max-width: 768px) {
+                    right: -24px;
+                }
             }
         }
     }

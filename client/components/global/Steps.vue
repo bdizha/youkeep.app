@@ -3,12 +3,12 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row :gutter="[24,24]" type="flex" justify="center"
              align="middle">
-        <a-col :xs="{ span: 15}" :sm="{ span: 15 }" :md="{ span: 20 }" :lg="{ span: 20 }">
+        <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 20 }" :lg="{ span: 20 }">
           <h3 class="r-heading">
             {{ title ? title : 'Shopple connects customers to merchants' }}
           </h3>
         </a-col>
-        <a-col v-show="hasMore" class="r-text-right" :xs="{ span: 8 }" :sm="{ span: 8 }" :md="{ span: 4 }"
+        <a-col v-show="hasMore" class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
                :lg="{ span: 4}">
           <nuxt-link to="/hiw">
             <a-button class="r-btn--grey"
