@@ -2,9 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   target: 'static', // default is 'server'
-server: {
-        port: 6000
- },
+  server: {
+    port: 6000
+  },
 
   // mode: 'spa', // Comment this for SSR
   srcDir: __dirname,
@@ -21,12 +21,12 @@ server: {
     title: process.env.APP_NAME,
     titleTemplate: '%s - ' + process.env.APP_NAME,
     meta: [
-      {charset: 'utf-8'},
-      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: 'Nuxt.js project'}
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/assets.icon'}
+      { rel: 'icon', type: 'image/x-icon', href: '/assets.icon' }
     ]
   },
 
@@ -44,7 +44,7 @@ server: {
   },
 
   css: [
-    {src: '~assets/less/app.less', lang: 'less'}
+    { src: '~assets/less/app.less', lang: 'less' }
   ],
 
   plugins: [
@@ -70,11 +70,11 @@ server: {
 
   modules: [
     '@nuxtjs/router',
-    'nuxt-lazy-load',
+    'nuxt-lazy-load'
   ],
 
   hooks: {
-    'build:done'() {
+    'build:done' () {
       const modulesToClear = ['vue', 'vue/dist/vue.runtime.common.prod']
       modulesToClear.forEach((entry) => {
         delete require.cache[require.resolve(entry)]
@@ -85,7 +85,7 @@ server: {
   build: {
     extractCSS: true,
     loaders: {
-      less: {javascriptEnabled: true}
+      less: { javascriptEnabled: true }
     }
   },
 }
