@@ -166,9 +166,9 @@
               <a-col class="r-checkout-footer" :span="24">
                 <p class="r-text-normal">
                   By placing your order, you agree to be bound by the Shopple Terms of
-                  <nuxt-link target="_blank" to="/service">Service</nuxt-link>
+                  <NuxtLink  :prefetch="true" target="_blank" to="/service">Service</NuxtLink>
                   and
-                  <nuxt-link to="_blank" href="/privacy">Privacy Policy</nuxt-link>
+                  <NuxtLink  :prefetch="true" to="_blank" href="/privacy">Privacy Policy</NuxtLink>
                   .
                 </p>
                 <p class="r-text-normal">

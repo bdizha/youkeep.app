@@ -13,7 +13,7 @@
                          :key="item.route"
                          :title="item.title"
         >
-          <nuxt-link class="r-text-link" :to="item.route">
+          <NuxtLink  :prefetch="true" class="r-text-link" :to="item.route">
             <div class="r-search-item-avatar">
               <a-avatar class="r-lazy" shape="circle" :size="36"
                         :src="item.photo"
@@ -25,7 +25,7 @@
               <a-icon type="clock-circle"/>
             </div>
             <span className="r-search-item-count">{{ item.count }} results</span>
-          </nuxt-link>
+          </NuxtLink>
         </a-select-option>
       </template>
       <a-input>

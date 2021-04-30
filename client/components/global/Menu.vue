@@ -8,18 +8,18 @@
       <a-list-item class="r-list-item" slot="renderItem"
                    slot-scope="item, index">
         <template v-if="!item.modal">
-          <nuxt-link class="r-text-link" :to="item.link">
+          <NuxtLink  :prefetch="true" class="r-text-link" :to="item.link">
             <a-avatar shape="square" :icon="item.icon"/>
             {{ item.label }}
-          </nuxt-link>
+          </NuxtLink>
         </template>
         <template v-if="item.modal">
-          <nuxt-link :to="item.link"
+          <NuxtLink  :prefetch="true" :to="item.link"
                      @click.native="onModal(item.modal)"
                      class="r-text-link">
             <a-avatar shape="square" :icon="item.icon"/>
             {{ item.label }}
-          </nuxt-link>
+          </NuxtLink>
         </template>
       </a-list-item>
     </a-list>

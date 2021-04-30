@@ -2,13 +2,13 @@
   <div class="r-store-item-line">
     <a-row type="flex" justify="center" align="middle">
       <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-        <nuxt-link :to="store.route" class="r-store-item">
+        <NuxtLink  :prefetch="true" :to="store.route" class="r-store-item">
           <r-avatar shape="square"
                     :size="72"
                     :src="store.photo_url"
                     src-placeholder="/assets/icon_default.png"/>
           <r-store-meta :store="store"></r-store-meta>
-        </nuxt-link>
+        </NuxtLink>
       </a-col>
     </a-row>
   </div>

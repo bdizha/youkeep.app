@@ -4,10 +4,10 @@
       <card :title="$t('settings')" class="settings-card">
         <ul class="nav flex-column nav-pills">
           <li v-for="tab in tabs" :key="tab.route" class="nav-item">
-            <nuxt-link :to="{ name: tab.route }" class="nav-link" active-class="active">
+            <NuxtLink  :prefetch="true" :to="{ name: tab.route }" class="nav-link" active-class="active">
               <fa :icon="tab.icon" fixed-width />
               {{ tab.name }}
-            </nuxt-link>
+            </NuxtLink>
           </li>
         </ul>
       </card>

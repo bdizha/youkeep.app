@@ -22,19 +22,19 @@
                 <a-card title="It's shopping time" :bordered="false" style="width: 100%;">
                   <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                      <nuxt-link class="r-text-center" to="/">
+                      <NuxtLink  :prefetch="true" class="r-text-center" to="/">
                         <img src="/images/icon-06.svg?v=1"
                              alt="Shopple - Online shop"
                              class="r-footer-logo /">
-                      </nuxt-link>
+                      </NuxtLink>
                     </a-col>
                   </a-row>
                   <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 18 }" :sm="{ span: 16 }" :lg="{ span: 16 }">
-                      <nuxt-link :to="$route.path" @click.native="onModal('delivery')"
+                      <NuxtLink  :prefetch="true" :to="$route.path" @click.native="onModal('delivery')"
                                  class="r-footer-link r-pt-24">
                         Enter delivery address
-                      </nuxt-link>
+                      </NuxtLink>
                     </a-col>
                   </a-row>
                 </a-card>
@@ -44,63 +44,63 @@
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Shoppers" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <nuxt-link to="/shopper">Become a shopper</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/shopper">Become a shopper</NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/shopper/paise">Paise for shoppers</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/shopper/paise">Paise for shoppers</NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/help">Help center</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/help">Help center</NuxtLink>
                       </div>
                     </a-card>
                   </a-col>
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Customers" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <nuxt-link to="/customer">Join Shopple</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/customer">Join Shopple</NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/customer/paise">Paise for customers</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/customer/paise">Paise for customers</NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/hiw">How it works</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/hiw">How it works</NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/help">Help center</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/help">Help center</NuxtLink>
                       </div>
                     </a-card>
                   </a-col>
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Merchants" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <nuxt-link to="/merchant">Become a merchant</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/merchant">Become a merchant</NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/merchant/paise">Paise for businesses</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/merchant/paise">Paise for businesses</NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/merchant/resources">Resources</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/merchant/resources">Resources</NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/help">Merchant center</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/help">Merchant center</NuxtLink>
                       </div>
                     </a-card>
                   </a-col>
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
                     <a-card title="Company" :bordered="false" style="width: 100%;">
                       <div class="r-footer-link">
-                        <nuxt-link to="/about-us">About us</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/about-us">About us</NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/stores/its-shopping-time" @click.native="onModal('store')">
+                        <NuxtLink  :prefetch="true" to="/stores/its-shopping-time" @click.native="onModal('store')">
                           Shop directory
-                        </nuxt-link>
+                        </NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/careers">Careers</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/careers">Careers</NuxtLink>
                       </div>
                       <div class="r-footer-link">
-                        <nuxt-link to="/contact-us">Contact us</nuxt-link>
+                        <NuxtLink  :prefetch="true" to="/contact-us">Contact us</NuxtLink>
                       </div>
                     </a-card>
                   </a-col>
@@ -120,11 +120,11 @@
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 18 }">
                 <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                   <a-col :xs="{ span: 24 }" :sm="{ span: 6 }" :lg="{ span: 6 }">
-                    <nuxt-link class="r-same-height r-footer-link" to="/shopper">
+                    <NuxtLink  :prefetch="true" class="r-same-height r-footer-link" to="/shopper">
                       <a-button block class="r-btn-bordered-white" size="default">
                         Become a shopper
                       </a-button>
-                    </nuxt-link>
+                    </NuxtLink>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
                     <div class="r-text-white r-same-height">
@@ -137,11 +137,11 @@
                     </div>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
-                    <nuxt-link class="r-text-white" to="/privacy">
+                    <NuxtLink  :prefetch="true" class="r-text-white" to="/privacy">
                       Privacy
-                    </nuxt-link>
+                    </NuxtLink>
                     <span class="r-text-white">~</span>
-                    <nuxt-link class="r-text-white r-same-height" to="/terms">Terms</nuxt-link>
+                    <NuxtLink  :prefetch="true" class="r-text-white r-same-height" to="/terms">Terms</NuxtLink>
                   </a-col>
                 </a-row>
               </a-col>

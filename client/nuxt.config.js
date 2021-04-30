@@ -40,6 +40,7 @@ module.exports = {
   },
 
   router: {
+    prefetchLinks: true,
     middleware: ['locale', 'check-auth']
   },
 

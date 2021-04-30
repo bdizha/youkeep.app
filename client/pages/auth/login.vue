@@ -29,9 +29,9 @@
                 {{ $t('remember_me') }}
               </checkbox>
 
-              <nuxt-link :to="{ name: 'password.request' }" class="small ml-auto my-auto">
+              <NuxtLink  :prefetch="true" :to="{ name: 'password.request' }" class="small ml-auto my-auto">
                 {{ $t('forgot_password') }}
-              </nuxt-link>
+              </NuxtLink>
             </div>
           </div>
 

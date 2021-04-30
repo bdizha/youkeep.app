@@ -1,6 +1,6 @@
 <template>
   <a-card class="r-card-category r-spin-holder" hoverable>
-    <nuxt-link class="r-text-primary r-text-view-more" :to="category.route">
+    <NuxtLink  :prefetch="true" class="r-text-primary r-text-view-more" :to="category.route">
       <r-category-photo v-if="category.photos !== undefined" :category="category" :start="0"></r-category-photo>
       <a-card-meta>
         <template slot="description">
@@ -14,7 +14,7 @@
         </template>
       </a-card-meta>
       <r-category-photo v-if="category.photos !== undefined" :category="category" :start="3"></r-category-photo>
-    </nuxt-link>
+    </NuxtLink>
     <r-spinner :is-absolute="true"></r-spinner>
   </a-card>
 </template>

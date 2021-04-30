@@ -9,13 +9,13 @@
       </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__store-switch">
         <r-store-switch v-if="!hasStore"></r-store-switch>
-        <nuxt-link v-if="hasStore" :to="'/store/' + store.slug">
+        <NuxtLink  :prefetch="true" v-if="hasStore" :to="'/store/' + store.slug">
           <a-button block
                     class="r-btn-bordered-grey"
                     type="secondary">
             {{ store.name }}
           </a-button>
-        </nuxt-link>
+        </NuxtLink>
       </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__search">
         <r-search></r-search>

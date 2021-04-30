@@ -12,18 +12,18 @@
                     <template slot="action" slot-scope="text, record">
                         <a-row :gutter="24" type="flex" justify="center" align="middle">
                             <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-                                <nuxt-link to="/account/order/A-52062240">
+                                <NuxtLink  :prefetch="true" to="/account/order/A-52062240">
                                     <a-button block size="small" class="r-btn-bordered-primary" type="secondary">
                                         Order
                                     </a-button>
-                                </nuxt-link>
+                                </NuxtLink>
                             </a-col>
                             <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-                                <nuxt-link to="/account/order/A-52062240/invoice">
+                                <NuxtLink  :prefetch="true" to="/account/order/A-52062240/invoice">
                                     <a-button block size="small" type="secondary" class="r-btn-bordered-secondary">
                                         Invoice
                                     </a-button>
-                                </nuxt-link>
+                                </NuxtLink>
                             </a-col>
                         </a-row>
                     </template>

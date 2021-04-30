@@ -2,7 +2,7 @@
   <a-row class="r-slider" type="flex" justify="center" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <VueSlickCarousel v-if="hasData" v-bind="settings">
-        <nuxt-link class="r-slider-item r-text-view-more"
+        <NuxtLink  :prefetch="true" class="r-slider-item r-text-view-more"
                    v-for="(category, index) in categories"
                    :key="category.id"
                    :to="category.route">
@@ -15,7 +15,7 @@
           <div class="r-text-slider">
             {{ category.name }}
           </div>
-        </nuxt-link>
+        </NuxtLink>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
             <a-icon type="left"/>

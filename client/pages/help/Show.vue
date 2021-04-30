@@ -18,10 +18,10 @@
           <a-col class="gutter-row" :span="24">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
-                <nuxt-link class="r-text-primary r-text-view-more"
+                <NuxtLink  :prefetch="true" class="r-text-primary r-text-view-more"
                              :to="'/help'">
                   Help center
-                </nuxt-link>
+                </NuxtLink>
               </a-breadcrumb-item>
               <a-breadcrumb-item>
                                  <span class="r-text-view-more">

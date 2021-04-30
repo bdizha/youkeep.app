@@ -26,25 +26,25 @@
               <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                      :md="{ span: 12 }"
                      :lg="{ span: 12 }">
-                <nuxt-link class="r-inline-block" to="/career/openings">
+                <NuxtLink  :prefetch="true" class="r-inline-block" to="/career/openings">
                   <a-button type="secondary"
                             class="ant-btn ant-btn-secondary r-btn-black"
                             size="default">
                     See openings
                   </a-button>
-                </nuxt-link>
+                </NuxtLink>
               </a-col>
               <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                      :md="{ span: 12 }"
                      :lg="{ span: 12 }">
-                <nuxt-link class="r-inline-block" to="/contact-us">
+                <NuxtLink  :prefetch="true" class="r-inline-block" to="/contact-us">
                   <a-button class="r-btn-bordered-grey"
                             block
                             type="secondary"
                             size='default'>
                     Contact us
                   </a-button>
-                </nuxt-link>
+                </NuxtLink>
               </a-col>
             </a-row>
           </a-col>
@@ -159,12 +159,12 @@
                 </a-checkbox>
               </a-col>
             </a-row>
-            <nuxt-link class="r-inline-block" to="/career/openings">
+            <NuxtLink  :prefetch="true" class="r-inline-block" to="/career/openings">
               <a-button type="secondary"
                         class="r-btn-secondary" size="default">
                 See openings
               </a-button>
-            </nuxt-link>
+            </NuxtLink>
           </a-col>
         </a-row>
       </a-col>

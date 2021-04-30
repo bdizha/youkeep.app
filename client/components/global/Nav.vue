@@ -6,10 +6,10 @@
               :defaultSelectedKeys="['2']">
         <a-sub-menu>
           <div slot="title">
-            <nuxt-link class="r-text-link" to="/help">
+            <NuxtLink  :prefetch="true" class="r-text-link" to="/help">
               <a-icon type="question-circle"/>
               Help center
-            </nuxt-link>
+            </NuxtLink>
           </div>
         </a-sub-menu>
         <a-sub-menu>

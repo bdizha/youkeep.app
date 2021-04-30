@@ -12,7 +12,7 @@
                :sm="{ span: 8 }"
                :md="{ span: 24 / columns }"
                :lg="{ span: 24 / columns }">
-          <nuxt-link class="r-slider-item r-slider-item-36 r-text-view-more"
+          <NuxtLink  :prefetch="true" class="r-slider-item r-slider-item-36 r-text-view-more"
                      :to="category.route">
             <r-avatar shape="circle"
                       :size="36"
@@ -22,7 +22,7 @@
             <div class="r-text-slider">
               {{ category.name }}
             </div>
-          </nuxt-link>
+          </NuxtLink>
         </a-col>
       </a-row>
       <r-spinner :is-absolute="true"></r-spinner>

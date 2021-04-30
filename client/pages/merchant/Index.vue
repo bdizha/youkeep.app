@@ -27,14 +27,14 @@
                 <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }">
-                  <nuxt-link to="/merchant/help">
+                  <NuxtLink  :prefetch="true" to="/merchant/help">
                     <a-button class="r-btn-bordered-grey"
                               block
                               type="secondary"
                               size='default'>
                       Merchant Help
                     </a-button>
-                  </nuxt-link>
+                  </NuxtLink>
                 </a-col>
               </a-row>
             </template>

@@ -2,11 +2,11 @@
   <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
     <a-col :xs="{ span: 12 }"
            :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-      <nuxt-link :to="item.product.route"
+      <NuxtLink  :prefetch="true" :to="item.product.route"
                  style="display: block; width: 100%;">
         <r-product-photo :size="138" :product="item.product">
         </r-product-photo>
-      </nuxt-link>
+      </NuxtLink>
     </a-col>
     <a-col :xs="{ span: 12 }"
            :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
