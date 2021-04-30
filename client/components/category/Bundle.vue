@@ -1,7 +1,7 @@
 <template>
   <a-card class="r-card-category r-spin-holder" hoverable>
     <nuxt-link class="r-text-primary r-text-view-more" :to="category.route">
-      <r-category-photo :category="category" :start="0"></r-category-photo>
+      <r-category-photo v-if="category.photos !== undefined" :category="category" :start="0"></r-category-photo>
       <a-card-meta>
         <template slot="description">
           <a-row type="flex" justify="center" align="middle">
@@ -13,7 +13,7 @@
           </a-row>
         </template>
       </a-card-meta>
-      <r-category-photo :category="category" :start="3"></r-category-photo>
+      <r-category-photo v-if="category.photos !== undefined" :category="category" :start="3"></r-category-photo>
     </nuxt-link>
     <r-spinner :is-absolute="true"></r-spinner>
   </a-card>

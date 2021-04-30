@@ -75,9 +75,6 @@ export default {
     };
   },
   computed: {
-    isEmpty() {
-      return !this.hasProducts && !this.hasCategories;
-    },
     ...mapGetters({
       categories: "base/categories",
       category: "shop/category",

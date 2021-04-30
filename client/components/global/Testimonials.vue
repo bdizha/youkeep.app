@@ -49,23 +49,23 @@ export default {
   data() {
     return {
       settings: {
-        slidesToScroll: 1,
-        slidesToShow: 1,
+        slidesToScroll: 2,
+        slidesToShow: 2,
         dots: false,
         responsive: [
           {
             "breakpoint": 1024,
             "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1,
+              "slidesToShow": 2,
+              "slidesToScroll": 2,
               "dots": false
             }
           },
           {
             "breakpoint": 900,
             "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1,
+              "slidesToShow": 2,
+              "slidesToScroll": 2,
               "dots": false
             }
           },

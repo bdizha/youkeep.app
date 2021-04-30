@@ -1,7 +1,7 @@
 <template>
-  <a-button block @click="onStoreTray" class="r-btn-bordered-grey">
-    <a-icon type="shop"/>
+  <a-button block @click="onStoreTray" class="r-btn-secondary">
     {{ hasStore ? store.name : 'Switch Store' }}
+    <a-icon type="down"/>
   </a-button>
 </template>
 <script>

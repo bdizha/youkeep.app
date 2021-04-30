@@ -268,20 +268,15 @@ const actions = {
 
       let route = params.route;
 
-      commit('setCategories', []);
-      commit('setStores', []);
+      // commit('setCategories', []);
+      // commit('setStores', []);
       commit('setProducts', {data: []});
 
       await axios.post(route, params).then(({data}) => {
-        let category = data.category;
-        let categories = data.categories;
-        let products = data.products;
-        let store = data.store;
-
-        commit('setCategory', category);
-        commit('setCategories', categories);
-        commit('setProducts', products);
-        commit('setStore', store);
+        commit('setCategory', data.category);
+        commit('setCategories', data.categories);
+        commit('setProducts', data.products);
+        commit('setStore', data.store);
 
         dispatch('onProcess', {key: 'isProduct', value: false});
         dispatch('onProcess', {key: 'isCategory', value: false});
@@ -297,14 +292,12 @@ const actions = {
     try {
       dispatch('onProcess', {key: 'isCategories', value: true});
 
-      commit('setCategories', []);
+      // commit('setCategories', []);
 
       await axios.post('/categories', payload).then(({data}) => {
-        let categories = data.categories;
-        let store = data.store;
 
-        commit('setCategories', categories);
-        commit('setStore', store);
+        commit('setCategories', data.categories);
+        commit('setStore', data.store);
 
         dispatch('onProcess', {key: 'isFixed', value: false});
         dispatch('onProcess', {key: 'isCategory', value: false});
@@ -322,16 +315,11 @@ const actions = {
       let route = params.route;
 
       await axios.post(route, params).then(({data}) => {
-
-        let product = data.product;
-        let category = data.category;
-        let store = data.store;
-
-        commit('setStore', store);
-        commit('setProduct', product);
+        commit('setStore', data.store);
+        commit('setProduct', data.product);
 
         // console.log('setProduct', data);
-        commit('setCategory', category);
+        commit('setCategory', data.category);
 
         dispatch('onProcess', {key: 'isFixed', value: false});
 

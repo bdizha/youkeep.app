@@ -736,7 +736,8 @@ x {
 
     .r-cart {
         .r-shopping-cart {
-            background-image: url("/assets/icon_cart_off.svg");
+            //background-image: url("/assets/icon_cart_off.svg");
+            background-image: url("/assets/icon_white.svg");
             color: @secondary-color;
             height: 36px;
             width: 36px;
@@ -748,7 +749,8 @@ x {
 
         &.r-cart__active {
             .r-shopping-cart {
-                background-image: url("/assets/icon_cart_on.svg");
+                //background-image: url("/assets/icon_cart_on.svg");
+                color: @primary-color;
             }
 
             .r-cart-count {
@@ -5642,13 +5644,11 @@ h4.r-heading-light {
         position: absolute;
         left: 0;
         top: 0;
-        border-radius: @border-radius-base;
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
         background-size: cover;
         background-repeat: no-repeat;
 
         img {
-            border-radius: @border-radius-base;
             visibility: hidden;
             opacity: 0;
         }
@@ -5943,23 +5943,23 @@ h4.r-heading-light {
         background: rgba(0, 0, 0, 0.06);
         padding: 0;
         margin: 0 6px;
-        border: 1px solid transparent;
+        border: none;
         height: 36px;
 
         .r-text-slider {
             background: transparent;
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 400;
             color: #FFFFFF;
         }
 
         &:hover {
-            border: 1px solid rgab(255, 255, 255, 0.06);
+            border: none;
             color: #FFFFFF;
             .r-text-slider {
                 color: #FFFFFF;
             }
-            background: transparent;
+            background: rgba(0, 0, 0, 0.15);
         }
     }
 
@@ -6321,8 +6321,8 @@ a:hover {
 }
 
 .fade-item-enter-active, .fade-item-leave-active {
-    -webkit-animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
-    animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
+    -webkit-animation: slide-up-fadeIn .09s ease 0s 1 normal forwards;
+    animation: slide-up-fadeIn .09s ease 0s 1 normal forwards;
 }
 
 .fade-item-enter, .fade-item-leave-to /* .fade-leave-active below version 2.1.8 */ {
@@ -6331,8 +6331,8 @@ a:hover {
 
 .ant-layout-content {
     opacity: 0;
-    -webkit-animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
-    animation: slide-up-fadeIn .45s ease 0s 1 normal forwards;
+    -webkit-animation: slide-up-fadeIn .09s ease 0s 1 normal forwards;
+    animation: slide-up-fadeIn .09s ease 0s 1 normal forwards;
 
     .ant-row-flex {
         opacity: 1;
@@ -6367,9 +6367,9 @@ a:hover {
     display: block;
     opacity: 0.45;
     position: relative;
-    transition: opacity .5s linear, -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
-    transition: opacity .5s linear, transform 2s cubic-bezier(.19, 1, .22, 1);
-    transition: opacity .5s linear, transform 2s cubic-bezier(.19, 1, .22, 1), -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
+    transition: opacity .09s linear, -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
+    transition: opacity .09s linear, transform 2s cubic-bezier(.19, 1, .22, 1);
+    transition: opacity .09s linear, transform 2s cubic-bezier(.19, 1, .22, 1), -webkit-transform 2s cubic-bezier(.19, 1, .22, 1);
 
     .r-filter-item-text {
         text-transform: uppercase;
