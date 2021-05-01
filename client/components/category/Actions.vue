@@ -5,7 +5,7 @@
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <r-category-arrows></r-category-arrows>
-    </a-col>*
+    </a-col>
   </a-row>
 </template>
 <script>
