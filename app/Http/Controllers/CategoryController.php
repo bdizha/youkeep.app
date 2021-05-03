@@ -58,7 +58,7 @@ class CategoryController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function show($slug = null, $level = 1, Request $request)
+    public function show(Request $request, $slug = null, $level = 1)
     {
         $response = [];
         $this->slug = $request->get('slug', $slug);
@@ -94,13 +94,13 @@ class CategoryController extends Controller
     /**
      * Return store categories
      *
+     * @param Request $request
      * @param String $slug
      * @param String $category
      * @param String $level
-     * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store($store = null, $slug = null, $level = 1, Request $request)
+    public function store(Request $request, $store = null, $slug = null, $level = 1)
     {
         $response = [];
         $this->slug = $request->get('slug', $slug);
