@@ -1815,6 +1815,7 @@ h4.r-heading-light {
     .r-credit {
         margin-bottom: 24px;
         position: relative;
+        top: 0px;
     }
 
     .r-superscript {
@@ -3648,15 +3649,17 @@ h4.r-heading-light {
 .r-product,
 .r-product-show {
     .ant-avatar-image {
-        line-height: 150px;
-        width: 100% !important;
-        max-height: 100% !important;
-        max-width: 100% !important;
         margin: auto;
         display: block;
+        width: 100%;
+        height: 100%;
         @media (max-width: 768px) {
-            width: 100%;
-            height: 100%;
+            max-height: 100% !important;
+            max-width: 100% !important;
+        }
+        @media (max-width: 768px) {
+            max-height: 100% !important;
+            max-width: 100% !important;
         }
     }
 }

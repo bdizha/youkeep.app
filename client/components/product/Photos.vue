@@ -1,55 +1,72 @@
 <template>
-  <div class="r-slick-thumb">
-    <a-carousel dots-class="slick-dots slick-thumb">
-      <a slot="customPaging" slot-scope="props">
-        <r-avatar shape="square" :size="60" :src="getPhoto(props.i)"/>
-      </a>
-      <div v-for="photo in product.photos">
-        <div class="ant-avatar ant-avatar-square ant-avatar-image"
-             :style="styles">
-          <r-avatar shape="square" :size="600" :src="photo.image"/>
-        </div>
+  <div class="r-slider">
+    <VueSlickCarousel v-bind="settings">
+      <div v-for="(photo, index) in product.photos"
+           :key="index"
+           :product="product"
+           class="ant-avatar ant-avatar-square ant-avatar-image"
+      >
+        <r-avatar shape="square"
+                  :size="600"
+                  :src="photo.image"
+        />
       </div>
-    </a-carousel>
+      <template #prevArrow="arrowOption">
+        <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
+          <a-icon type="left"/>
+        </div>
+      </template>
+      <template #nextArrow="arrowOption">
+        <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
+          <a-icon type="right"/>
+        </div>
+      </template>
+    </VueSlickCarousel>
   </div>
 </template>
 <script>
 export default {
   name: 'r-product-photos',
   props: {
-    product: {type: Object, required: false, default: null},
-    size: {type: Number, required: false, default: 140},
+    product: { type: Object, required: false, default: null },
+    size: { type: Number, required: false, default: 140 },
   },
-  data() {
+  data () {
     return {
       quantity: 1,
-      styles: null
-    };
+      styles: null,
+      settings: {
+        "slidesToShow": 1,
+        "slidesToScroll": 1,
+        "infinite": true,
+        "dots": false
+      }
+    }
   },
-  created() {
-    this.setStyles();
+  created () {
+    this.setStyles()
   },
   computed: {},
   methods: {
-    getPhoto(i) {
-      return this.product.photos[i].thumb;
+    getPhoto (i) {
+      return this.product.photos[i].thumb
     },
-    setStyles() {
-      let styles = '';
-      let suffix = ';';
+    setStyles () {
+      let styles = ''
+      let suffix = ';'
 
       if (typeof this.size === 'number') {
-        suffix = 'px;';
+        suffix = 'px;'
       }
 
-      styles += 'max-width: ' + this.size + suffix;
-      styles += 'max-height: ' + this.size + suffix;
-      styles += 'line-height: ' + this.size + suffix;
+      styles += 'max-width: ' + this.size + suffix
+      styles += 'max-height: ' + this.size + suffix
+      styles += 'line-height: ' + this.size + suffix
 
-      this.styles = styles;
+      this.styles = styles
     }
   },
-};
+}
 </script>
 <style scoped>
 /* For demo */
