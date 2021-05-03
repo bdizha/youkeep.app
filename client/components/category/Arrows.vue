@@ -1,13 +1,12 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
     <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <VueSlickCarousel v-if="hasCategories" v-bind="settings">
-        <NuxtLink  :prefetch="true" class="r-slider-item r-text-view-more"
+      <VueSlickCarousel v-show="hasCategories" v-bind="settings">
+        <NuxtLink :prefetch="true" class="r-slider-item r-text-view-more"
                    :class="'r-slider-item-' + size"
                    v-for="(category, index) in categories"
                    :key="category.id"
-                   :to="category.route"
-        >
+                   :to="category.route">
           <r-avatar shape="circle"
                     :size="size"
                     :src="category.photo"

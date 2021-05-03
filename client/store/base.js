@@ -268,11 +268,13 @@ const actions = {
 
       let route = params.route;
 
-      // commit('setCategories', []);
-      // commit('setStores', []);
+      commit('setCategories', []);
+      commit('setStores', []);
       commit('setProducts', {data: []});
 
       await axios.post(route, params).then(({data}) => {
+        dispatch('onProcess', {key: 'isFixed', value: false});
+
         commit('setCategory', data.category);
         commit('setCategories', data.categories);
         commit('setProducts', data.products);
@@ -288,11 +290,10 @@ const actions = {
     }
   },
   async onCategories({dispatch, commit, state}, payload) {
-
     try {
       dispatch('onProcess', {key: 'isCategories', value: true});
 
-      // commit('setCategories', []);
+      commit('setCategories', []);
 
       await axios.post('/categories', payload).then(({data}) => {
 

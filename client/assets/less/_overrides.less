@@ -2862,7 +2862,7 @@ h4.r-heading-light {
         right: 0;
         width: 36px;
         height: 36px;
-        color: #FFFFFF;
+        color: @secondary-color;
         border-radius: 100%;
         display: block;
         line-height: 36px;
@@ -2873,13 +2873,11 @@ h4.r-heading-light {
     }
 
     &.r-cart__active {
-        color: @secondary-color;
-
         .r-shopping-cart {
             background-image: url("/assets/icon_cart_on.svg");
 
             .r-cart-count {
-                color: @secondary-color;
+                color: @primary-color;
             }
         }
     }
