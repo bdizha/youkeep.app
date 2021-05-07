@@ -1,5 +1,12 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
+  <a-row :gutter="[24,48]" type="flex" justify="start" align="middle">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }">
+      <div class="r-margin-out-12">
+        <r-category-slider></r-category-slider>
+      </div>
+    </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">

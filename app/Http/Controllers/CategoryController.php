@@ -44,7 +44,7 @@ class CategoryController extends Controller
             $response['categories'] = $this->categories;
             $response['store'] = $this->store;
 
-            Cache::put($key, $response, now()->addMinutes(3600));
+            Cache::put($key, \GuzzleHttp\json_encode($response), now()->addMinutes(60 * 9)); // 9 hours
         }
 
         return response()->json($response, 200);
@@ -85,7 +85,7 @@ class CategoryController extends Controller
             $response['products'] = $this->products;
             $response['store'] = $this->store;
 
-            Cache::put($key, $response, now()->addMinutes(3600));
+            Cache::put($key, \GuzzleHttp\json_encode($response), now()->addMinutes(60 * 9)); // 9 hours
         }
 
         return response()->json($response, 200);
@@ -126,7 +126,7 @@ class CategoryController extends Controller
             $response['products'] = $this->products;
             $response['store'] = $this->store;
 
-            Cache::put($key, $response, now()->addMinutes(3600));
+            Cache::put($key, \GuzzleHttp\json_encode($response), now()->addMinutes(60 * 9)); // 9 hours
         }
 
         return response()->json($response, 200);
@@ -167,7 +167,7 @@ class CategoryController extends Controller
 
             $response['stores'] = $this->_pruneRelations($this->items);
 
-            Cache::put($key, $response, now()->addMinutes(3600));
+            Cache::put($key, \GuzzleHttp\json_encode($response), now()->addMinutes(60 * 9)); // 9 hours
         }
 
         return response()->json($response, 200);

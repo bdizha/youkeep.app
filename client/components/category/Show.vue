@@ -39,6 +39,16 @@ export default {
   props: {
     columns: { type: Number, required: false, default: 6 }
   },
+  async fetch () {
+    console.log('category params', this.$route)
+
+    console.log('route', this.$route.path)
+
+    this.payload.route = this.$route.path
+    this.payload.slug = this.$route.params.slug
+
+    await this.onCategory()
+  },
   data () {
     return {
       payload: {
@@ -66,13 +76,6 @@ export default {
     })
   },
   async created () {
-    console.log('category params', this.$route)
-
-    console.log('route', this.$route.path)
-
-    this.payload.route = this.$route.path
-    this.payload.slug = this.$route.params.slug
-
     await this.onCategory()
   },
   mounted () {

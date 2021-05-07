@@ -12,7 +12,7 @@
                    :md="{ span: 24 }"
                    :lg="{ span: 24 }">
               <div class="r-margin-out-12">
-                <r-category-slider></r-category-slider>
+                <r-category-banner></r-category-banner>
               </div>
             </a-col>
             <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 16 }"

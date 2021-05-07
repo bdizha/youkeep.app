@@ -14,7 +14,6 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-
         echo ">>>> Start product photos update";
 
         $this->_updateProductPhotos();

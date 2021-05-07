@@ -10,6 +10,7 @@ export default {
   name: 'r-avatar',
   props: {
     size: {type: Number, required: false, default: null},
+    unit: {type: String, required: false, default: 'px'},
     shape: {type: String, required: false, default: 'square'},
     dataSrc: {type: String, required: false, default: null},
   },
@@ -21,7 +22,7 @@ export default {
   methods: {
     style() {
       if (this.size) {
-        return {width: this.size + 'px', lineHeight: this.size + 'px', height: this.size + 'px'}
+        return {width: this.size + 'px', lineHeight: this.size + this.unit, height: this.size + this.unit}
       } else {
         return {}
       }
