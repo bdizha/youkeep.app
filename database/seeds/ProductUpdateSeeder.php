@@ -19,15 +19,8 @@ class ProductUpdateSeeder extends DatabaseSeeder
         // set product default type
         \App\ProductType::setDefaultType();
 
-        $product = Product::where('slug', 'pekal-long-printed-tights')
-            ->first();
-
-        dd($product->types[0]['variants']);
-
         $products = Product::with('photos')
             ->get();
-
-        dd('Done');
 
         // Update product images
         foreach ($products as $product) {
