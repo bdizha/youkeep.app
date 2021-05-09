@@ -7,18 +7,18 @@
             {{ status }}
           </div>
 
-          <NuxtLink  :prefetch="true" :to="{ name: 'login' }" class="btn btn-primary">
+          <nuxt-link :to="{ name: 'login' }" class="btn btn-primary">
             {{ $t('login') }}
-          </NuxtLink>
+          </nuxt-link>
         </template>
         <template v-else>
           <div class="alert alert-danger" role="alert">
             {{ status || $t('failed_to_verify_email') }}
           </div>
 
-          <NuxtLink  :prefetch="true" :to="{ name: 'verification.resend' }" class="small float-right">
+          <nuxt-link :to="{ name: 'verification.resend' }" class="small float-right">
             {{ $t('resend_verification_link') }}
-          </NuxtLink>
+          </nuxt-link>
         </template>
       </card>
     </div>

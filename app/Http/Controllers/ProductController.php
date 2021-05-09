@@ -46,7 +46,7 @@ class ProductController extends Controller
             $this->_setProducts();
 
             $response = $this->products;
-            Cache::put($key, \GuzzleHttp\json_encode($response), now()->addMinutes(60 * 9)); // 9 hours
+            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
         }
 
         return response()->json($response, 200);
@@ -124,7 +124,7 @@ class ProductController extends Controller
             $response['category'] = [];
             $response['categories'] = [];
 
-            Cache::put($key, \GuzzleHttp\json_encode($response), now()->addMinutes(60 * 9)); // 9 hours
+            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
         }
 
         return response()->json($response, 200);

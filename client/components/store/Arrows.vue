@@ -3,12 +3,12 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <div :class="padding" class="r-slider">
         <VueSlickCarousel v-if="hasStores" v-bind="settings">
-          <NuxtLink  :prefetch="true" class="r-store-arrow"
+          <nuxt-link class="r-store-arrow"
                      v-for="(store, index) in stores.data"
                      :key="store.id"
                      :to="store.route">
             <r-store-face :store="store"></r-store-face>
-          </NuxtLink>
+          </nuxt-link>
           <div slot="prevArrow"
                slot-scope="props"
                class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">

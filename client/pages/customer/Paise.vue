@@ -57,7 +57,7 @@
                   <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                          :md="{ span: 12 }"
                          :lg="{ span: 12 }">
-                    <NuxtLink  :prefetch="true" to="/career/openings">
+                    <nuxt-link to="/career/openings">
                       <a-button
                         block
                         type="secondary"
@@ -65,7 +65,7 @@
                         size="default">
                         Get started
                       </a-button>
-                    </NuxtLink>
+                    </nuxt-link>
                   </a-col>
                 </a-row>
               </div>

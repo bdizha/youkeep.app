@@ -41,16 +41,16 @@
                     <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48">
                         <a-breadcrumb class="r-same-height">
                             <a-breadcrumb-item>
-                                <NuxtLink  :prefetch="true" class="r-text-primary r-text-view-more"
+                                <nuxt-link class="r-text-primary r-text-view-more"
                                              :to="'/career/openings'">
                                     Jop openings
-                                </NuxtLink>
+                                </nuxt-link>
                             </a-breadcrumb-item>
                             <a-breadcrumb-item>
-                                <NuxtLink  :prefetch="true" class="r-text-primary r-text-view-more"
+                                <nuxt-link class="r-text-primary r-text-view-more"
                                              :to="'/career/' + position.slug">
                                     {{ position.title }}
-                                </NuxtLink>
+                                </nuxt-link>
                             </a-breadcrumb-item>
                             <a-breadcrumb-item>
                                 <span class="r-text-view-more">

@@ -9,7 +9,7 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
            :lg="{ span: 4 }">
       <template v-if="isLast">
-        <NuxtLink  :prefetch="true" class="r-same-height r-text-view-more"
+        <nuxt-link class="r-same-height r-text-view-more"
                    :to="category.route">
           <a-button class="r-hide-sm r-btn-bordered-secondary"
                     block
@@ -19,7 +19,7 @@
             <a-icon type="right"/>
           </a-button>
           <a-avatar class="r-hide-lg" shape="square" icon="right"/>
-        </NuxtLink>
+        </nuxt-link>
       </template>
       <template v-if="!isLast">
         <r-store-sort></r-store-sort>

@@ -3,15 +3,15 @@
     <a-row v-if="cart.total > 0" :gutter="24" type="flex" justify="start" align="middle">
       <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
              :lg="{ span: 12 }">
-        <NuxtLink  :prefetch="true" to="/checkout">
+        <nuxt-link to="/checkout">
           <h4 class="r-heading r-text-white">
             {{ 'R' + cart.total }}
           </h4>
-        </NuxtLink>
+        </nuxt-link>
       </a-col>
       <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
              :lg="{ span: 12 }">
-        <NuxtLink  :prefetch="true" to="/checkout">
+        <nuxt-link to="/checkout">
           <a-button block
                     size="default"
                     type="secondary"
@@ -19,13 +19,13 @@
             <a-icon type="shopping-cart"/>
             Checkout
           </a-button>
-        </NuxtLink>
+        </nuxt-link>
       </a-col>
     </a-row>
     <a-row v-if="cart.total == 0" type="flex" justify="start" align="middle">
       <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
              :lg="{ span: 24 }">
-        <NuxtLink  :prefetch="true" to="/">
+        <nuxt-link to="/">
           <a-button block
                     size="default"
                     type="secondary"
@@ -33,7 +33,7 @@
             <a-icon type="shopping-cart"/>
             Shop now
           </a-button>
-        </NuxtLink>
+        </nuxt-link>
       </a-col>
     </a-row>
   </div>

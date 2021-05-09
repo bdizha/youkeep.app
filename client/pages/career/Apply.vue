@@ -6,12 +6,12 @@
              :md="{ span: 12 }"
              :lg="{ span: 12 }">
         <a-card>
-          <NuxtLink  :prefetch="true" :to="'/career/' + position.slug">
+          <nuxt-link :to="'/career/' + position.slug">
             <h3 class="r-heading">
               <a-icon type="left"/>
               Back to position
             </h3>
-          </NuxtLink>
+          </nuxt-link>
           <h4 class="r-heading">
             <a-icon type="solution"/>
             {{ position.type_formatted }}
@@ -30,16 +30,16 @@
           <a-col :xs="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
             <a-breadcrumb class="r-mb-24">
               <a-breadcrumb-item>
-                <NuxtLink  :prefetch="true" class="r-text-primary r-text-view-more"
+                <nuxt-link class="r-text-primary r-text-view-more"
                            :to="'/career/openings'">
                   Jop openings
-                </NuxtLink>
+                </nuxt-link>
               </a-breadcrumb-item>
               <a-breadcrumb-item>
-                <NuxtLink  :prefetch="true" class="r-text-primary r-text-view-more"
+                <nuxt-link class="r-text-primary r-text-view-more"
                            :to="'/career/' + position.slug">
                   {{ position.title }}
-                </NuxtLink>
+                </nuxt-link>
               </a-breadcrumb-item>
               <a-breadcrumb-item>
                 <span class="r-text-view-more">

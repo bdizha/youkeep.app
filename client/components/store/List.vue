@@ -6,9 +6,9 @@
                :lg="{ span: 24 }"
                v-for="(store, index) in stores.data"
                :key="index">
-          <NuxtLink  :prefetch="true" :to="store.route">
+          <nuxt-link :to="store.route">
             <r-store-item :store="store"></r-store-item>
-          </NuxtLink>
+          </nuxt-link>
         </a-col>
         <a-col v-if="!hasStores" :span="24">
           <a-empty image="/assets/icon_grey.svg"

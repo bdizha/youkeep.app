@@ -24,7 +24,7 @@
                       </h4>
                       <p class="r-text-normal">
                         <span>Then apply </span>
-                        <NuxtLink  :prefetch="true" target="_blank" to="/careers">here</NuxtLink>
+                        <nuxt-link target="_blank" to="/careers">here</nuxt-link>
                       </p>
                     </a-col>
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
@@ -35,7 +35,7 @@
                       </h4>
                       <p class="r-text-normal">
                         <span>Check out the </span>
-                        <NuxtLink  :prefetch="true" target="_blank" to="/help">Help center</NuxtLink>
+                        <nuxt-link target="_blank" to="/help">Help center</nuxt-link>
                       </p>
                     </a-col>
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
@@ -78,7 +78,7 @@
                               </h2>
                               <p class="r-text-normal">
                                 How can we help? Just a quick note: try visiting our
-                                <NuxtLink  :prefetch="true" to="/help">Help center</NuxtLink>
+                                <nuxt-link to="/help">Help center</nuxt-link>
                                 that maybe of help only for general queries that we frequently receive from
                                 our customers.
                               </p>

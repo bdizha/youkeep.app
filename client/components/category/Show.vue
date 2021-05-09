@@ -39,16 +39,6 @@ export default {
   props: {
     columns: { type: Number, required: false, default: 6 }
   },
-  async fetch () {
-    console.log('category params', this.$route)
-
-    console.log('route', this.$route.path)
-
-    this.payload.route = this.$route.path
-    this.payload.slug = this.$route.params.slug
-
-    await this.onCategory()
-  },
   data () {
     return {
       payload: {
@@ -75,15 +65,11 @@ export default {
       processes: 'base/processes'
     })
   },
-  async created () {
-    await this.onCategory()
+  created () {
   },
   mounted () {
   },
   methods: {
-    async onCategory () {
-      await this.$store.dispatch('base/onCategory', this.payload)
-    }
   }
 }
 </script>

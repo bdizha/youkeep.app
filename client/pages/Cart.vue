@@ -65,12 +65,12 @@
                                     Your shopping cart is
                                     empty.
                                 </h4>
-                                <NuxtLink  :prefetch="true" :to="'/store/' + store.slug">
+                                <nuxt-link :to="'/store/' + store.slug">
                                     <a-button size="default" class="ant-btn-primary r-btn-black">
                                         <a-icon type="shopping"/>
                                         Shop now
                                     </a-button>
-                                </NuxtLink>
+                                </nuxt-link>
                             </a-empty>
                         </a-col>
                     </a-row>
@@ -101,20 +101,20 @@
                 <a-row :gutter="24" type="flex" justify="start" align="middle">
                     <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                            :lg="{ span: 12 }">
-                        <NuxtLink  :prefetch="true" to="/checkout">
+                        <nuxt-link to="/checkout">
                             <h3 class="r-heading r-text-white">
                                 {{ 'R' + cart.total }}
                             </h3>
-                        </NuxtLink>
+                        </nuxt-link>
                     </a-col>
                     <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
                            :lg="{ span: 12 }">
-                        <NuxtLink  :prefetch="true" to="/checkout">
+                        <nuxt-link to="/checkout">
                             <a-button block size="small" type="secondary" class="r-btn-bordered-white">
                                 <a-icon type="shopping-cart"/>
                                 Checkout
                             </a-button>
-                        </NuxtLink>
+                        </nuxt-link>
                     </a-col>
                 </a-row>
             </div>

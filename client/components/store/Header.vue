@@ -15,13 +15,13 @@
                  :lg="{ span: 18 }">
             <div class="r-layout-menu">
               <div v-if="hasStore" class="r-nav-item">
-                <NuxtLink  :prefetch="true" :to="'/store/' + store.slug">
+                <nuxt-link :to="'/store/' + store.slug">
                   <a-button block
                             class="r-btn-bordered-grey"
                             type="secondary">
                     {{ store.name }}
                   </a-button>
-                </NuxtLink>
+                </nuxt-link>
               </div>
               <div class="r-hide-sm r-nav-item r-nav-item__search">
                 <r-search></r-search>

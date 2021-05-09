@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 module.exports = {
-  target: 'static', // default is 'server'
+  // target: 'static', // default is 'server'
   server: {
     port: 6000
   },
@@ -39,9 +39,9 @@ module.exports = {
     height: '3px'
   },
 
-  router: {
-    middleware: ['locale', 'check-auth']
-  },
+  // router: {
+  //   middleware: ['locale', 'check-auth']
+  // },
 
   css: [
     { src: '~assets/less/app.less', lang: 'less' }

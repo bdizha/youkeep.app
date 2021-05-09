@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink  :prefetch="true" :to="store.route"
+  <nuxt-link :to="store.route"
              style="display: block; width: 100%;">
     <a-row type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }"
@@ -7,7 +7,7 @@
         {{ store.name }}
       </a-col>
     </a-row>
-  </NuxtLink>
+  </nuxt-link>
 </template>
 <script>
 import {mapGetters} from "vuex";

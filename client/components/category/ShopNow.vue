@@ -1,7 +1,7 @@
 <template>
     <a-row type="flex" justify="start" align="middle">
         <a-col v-if="category" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-            <NuxtLink  :prefetch="true" @click.native="onCategory(category)" class="r-same-height r-text-view-more"
+            <nuxt-link @click.native="onCategory(category)" class="r-same-height r-text-view-more"
                          :to="category.route">
                 <a-button class="r-btn-bordered-secondary"
                           block
@@ -10,7 +10,7 @@
                     See all
                     <a-icon type="right"/>
                 </a-button>
-            </NuxtLink>
+            </nuxt-link>
         </a-col>
     </a-row>
 </template>

@@ -9,7 +9,7 @@
           <a-card hoverable>
             <div slot="cover">
               <VueSlickCarousel v-bind="settings">
-                <NuxtLink
+                <nuxt-link
                   v-for="(cateogry, index) in categories"
                   :key="index"
                   :to="cateogry.route" style="display: block; width: 100%;"
@@ -19,7 +19,7 @@
                             unit="%"
                             :src="cateogry.photo"
                   />
-                </NuxtLink>
+                </nuxt-link>
                 <template #prevArrow="arrowOption">
                   <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
                     <a-icon type="left"/>
@@ -43,14 +43,14 @@
                  :lg="{span: 6}">
             <a-card hoverable>
               <div slot="cover">
-                <NuxtLink
+                <nuxt-link
                   :to="banner.route" style="display: block; width: 100%;">
                   <r-avatar shape="square"
                             :size="100"
                             unit="%"
                             :src="banner.photo"
                   />
-                </NuxtLink>
+                </nuxt-link>
               </div>
             </a-card>
           </a-col>

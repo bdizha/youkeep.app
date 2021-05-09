@@ -3,14 +3,14 @@
     <a-col :span="24">
       <a-list :data-source="links">
         <a-list-item class="r-list-item" slot="renderItem" slot-scope="item, index">
-          <NuxtLink  :prefetch="true" v-if="item.link" class="r-text-link" :to="item.link">
+          <nuxt-link v-if="item.link" class="r-text-link" :to="item.link">
             <a-avatar shape="square" :icon="item.icon"/>
             {{ item.label }}
-          </NuxtLink>
-          <NuxtLink  :prefetch="true" v-else-if="!item.link" @click.native="onLogout" class="r-text-normal" to="/">
+          </nuxt-link>
+          <nuxt-link v-else-if="!item.link" @click.native="onLogout" class="r-text-normal" to="/">
             <a-avatar shape="square" :icon="item.icon"/>
             {{ item.label }}
-          </NuxtLink>
+          </nuxt-link>
         </a-list-item>
         <template slot="footer">
           <div class="r-list-item ant-list-item">

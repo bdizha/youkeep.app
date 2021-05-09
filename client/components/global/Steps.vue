@@ -10,7 +10,7 @@
         </a-col>
         <a-col v-show="hasMore" class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
                :lg="{ span: 4}">
-          <NuxtLink  :prefetch="true" to="/hiw">
+          <nuxt-link to="/hiw">
             <a-button class="r-btn--grey"
                       block
                       type="secondary"
@@ -18,7 +18,7 @@
               Read more
               <a-icon type="right"/>
             </a-button>
-          </NuxtLink>
+          </nuxt-link>
         </a-col>
         <a-col :xs="{ span: 24 }"
                :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">

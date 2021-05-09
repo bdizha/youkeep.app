@@ -1,7 +1,7 @@
 <template>
-  <NuxtLink  :prefetch="true" class="r-logo" to="/">
+  <nuxt-link class="r-logo" to="/">
     <img src="~/assets/icon.svg" :alt="title"/>
-  </NuxtLink>
+  </nuxt-link>
 </template>
 <script>
 import { mapGetters } from 'vuex'

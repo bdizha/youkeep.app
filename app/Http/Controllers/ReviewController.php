@@ -28,7 +28,7 @@ class ReviewController extends Controller
             $this->setReviews();
 
             $response = $this->reviews;
-             Cache::put($key, \GuzzleHttp\json_encode($response), now()->addMinutes(60 * 9)); // 9 hours
+             Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
         }
 
         return response()->json($response, 200);
