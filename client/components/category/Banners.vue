@@ -5,7 +5,8 @@
            :lg="{ span: 24 }">
       <a-row class="r-slider">
         <a-col :span="24">
-          <div class="r-grey-shadow">
+          <a-card hoverable>
+            <div slot="cover">
               <VueSlickCarousel v-bind="settings">
                 <nuxt-link
                   v-for="(cateogry, index) in categories"
@@ -30,6 +31,7 @@
                 </template>
               </VueSlickCarousel>
             </div>
+          </a-card>
         </a-col>
       </a-row>
       <div class="r-mv-48">

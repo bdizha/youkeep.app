@@ -39,7 +39,18 @@ module.exports = {
   generate: {
     interval: 3000,
     fallback: '200.html',
-    routes: ['/help', '/customer', '/shopper']
+    routes: ['/help', '/customer', '/shopper', '/'],
+    cache: {
+      ignore: [
+        '.nuxt', // buildDir
+        'static', // dir.static
+        'dist', // generate.dir
+        'node_modules',
+        '.**/*',
+        '.*',
+        'README.md'
+      ]
+    }
   },
 
   loading: {
