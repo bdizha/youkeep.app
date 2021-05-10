@@ -10,9 +10,9 @@
               <h4 class="r-heading-light r-text-uppercase">
                 It's about you
               </h4>
-              <h1 class="r-heading r-text-secondary">
+              <h2 class="r-heading r-text-secondary">
                 Shop better
-              </h1>
+              </h2>
               <p class="r-text-normal">
                 We set out to build Shopple to give everyone the power to take back
                 control of their day-to-day shopping experience. Your shopping assistants are waiting to
@@ -25,7 +25,7 @@
       </a-col>
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
         <a-card>
-          <div slot="cover">
+          <div class="r-grey-shadow">
             <r-avatar shape="square" :src="'/assets/' + banner"/>
           </div>
         </a-card>

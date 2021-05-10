@@ -26,7 +26,6 @@
           </div>
         </a-col>
       </a-row>
-      <r-spinner :is-absolute="false"></r-spinner>
     </a-col>
   </a-row>
 </template>

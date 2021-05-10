@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/merchant", {data:[{}],fetch:{},mutations:[["base\u002FsetProcess",{key:"isTray",value:true}]]});

@@ -3,28 +3,27 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <r-category-actions v-if="hasCategories"></r-category-actions>
     </a-col>
-    <a-col class="r-ph-24 r-mt-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <a-row type="flex" justify="center" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
-          <a-row :gutter="[24,24]" type="flex" justify="start"
-                 align="middle">
+          <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                    :md="{ span: 24 }"
                    :lg="{ span: 24 }">
               <div class="r-margin-out-12">
-                <r-category-banner></r-category-banner>
+                <r-category-banners></r-category-banners>
               </div>
             </a-col>
             <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 16 }"
                    :lg="{ span: 16 }">
               <a-row :gutter="[24,24]"  type="flex" align="middle" justify="space-between">
-                <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 14 }" :md="{ span: 16 }"
+                <a-col class="r-text-left" :xs="{ span: 15}" :sm="{ span: 14 }" :md="{ span: 16 }"
                        :lg="{ span: 16 }">
-                  <h3 class="r-heading">
+                  <h3 class="r-heading-light">
                     Shop everywhere, anytime!
                   </h3>
                 </a-col>
-                <a-col class="r-text-center" :xs="{ span: 24}" :sm="{ span: 10 }" :md="{ span: 8 }"
+                <a-col class="r-text-center" :xs="{ span: 9}" :sm="{ span: 10 }" :md="{ span: 8 }"
                        :lg="{ span: 8 }">
                   <r-store-shop-now></r-store-shop-now>
                 </a-col>

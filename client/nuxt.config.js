@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 module.exports = {
-  // target: 'static', // default is 'server'
+  target: 'static', // default is 'server'
   server: {
     port: 6000
   },
@@ -27,11 +27,19 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/assets.icon' }
+    ],
+    script: [
+      {
+        src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver',
+        body: true
+      }
     ]
   },
 
   generate: {
-    fallback: '200.html'
+    interval: 2400,
+    fallback: '200.html',
+    routes: ['/help', '/customer', '/shopper']
   },
 
   loading: {
@@ -39,9 +47,11 @@ module.exports = {
     height: '3px'
   },
 
-  // router: {
-  //   middleware: ['locale', 'check-auth']
-  // },
+  router: {
+    middleware: ['locale', 'check-auth'],
+    prefetchLinks: true,
+    prefetchPayloads: true
+  },
 
   css: [
     { src: '~assets/less/app.less', lang: 'less' }

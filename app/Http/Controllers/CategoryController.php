@@ -82,7 +82,7 @@ class CategoryController extends Controller
             $response['categories'] = $this->categories;
             $this->category['products'] = [];
             $response['category'] = $this->category;
-            $response['products'] = $this->products;
+            $response['products'] = [];
             $response['store'] = $this->store;
 
             Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours

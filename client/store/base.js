@@ -273,15 +273,24 @@ const actions = {
       commit('setProducts', {data: []});
 
       await axios.post(route, params).then(({data}) => {
-        dispatch('onProcess', {key: 'isFixed', value: false});
 
         commit('setCategory', data.category);
         commit('setCategories', data.categories);
         commit('setProducts', data.products);
         commit('setStore', data.store);
 
+        // const payload = {
+        //   limit: process.env.APP_LIMIT,
+        //   category_id: data.category.id,
+        //   sort: 0,
+        //   page: 1
+        // };
+        //
+        // dispatch('onProducts', payload)
+
         dispatch('onProcess', {key: 'isProduct', value: false});
         dispatch('onProcess', {key: 'isCategory', value: false});
+        dispatch('onProcess', {key: 'isFixed', value: false});
       });
 
     } catch (e) {
@@ -291,6 +300,7 @@ const actions = {
   },
   async onCategories({dispatch, commit, state}, payload) {
     try {
+      dispatch('onProcess', {key: 'isFixed', value: true});
       dispatch('onProcess', {key: 'isCategories', value: true});
 
       commit('setCategories', []);
@@ -300,9 +310,10 @@ const actions = {
         commit('setCategories', data.categories);
         commit('setStore', data.store);
 
-        dispatch('onProcess', {key: 'isFixed', value: false});
         dispatch('onProcess', {key: 'isCategory', value: false});
         dispatch('onProcess', {key: 'isCategories', value: false});
+
+        dispatch('onProcess', {key: 'isFixed', value: false});
       });
     } catch (e) {
       console.error('onCategories errors');
@@ -311,6 +322,7 @@ const actions = {
   },
   async onProduct({dispatch, commit, state}, params) {
     dispatch('onProcess', {key: 'isProduct', value: true});
+    dispatch('onProcess', {key: 'isFixed', value: true});
 
     try {
       let route = params.route;
@@ -339,6 +351,7 @@ const actions = {
   },
   async onProducts({dispatch, commit}, payload) {
     dispatch('onProcess', {key: 'isProduct', value: true});
+    dispatch('onProcess', {key: 'isFixed', value: true});
 
     try {
       await axios.post('/products', payload).then(({data}) => {
