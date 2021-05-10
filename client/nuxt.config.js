@@ -37,7 +37,7 @@ module.exports = {
   },
 
   generate: {
-    interval: 2400,
+    interval: 3000,
     fallback: '200.html',
     routes: ['/help', '/customer', '/shopper']
   },
