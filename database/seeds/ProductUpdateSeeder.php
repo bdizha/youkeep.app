@@ -79,7 +79,8 @@ class ProductUpdateSeeder extends DatabaseSeeder
                     ProductVariant::where('product_id', $product->id)
                         ->delete();
 
-                    \App\ProductLink::where('product_id', $product->id)
+                    ProductLink::where('product_id', $product->id)
+                        ->orWhere('related_id', $product->id)
                         ->delete();
 
                     Product::where('id', $product->id)
