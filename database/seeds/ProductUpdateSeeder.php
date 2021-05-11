@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use \App\Product;
 use \App\StoreProduct;
 use \App\ProductVariant;
+use \App\ProductLink;
 
 class ProductUpdateSeeder extends DatabaseSeeder
 {
