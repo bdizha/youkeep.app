@@ -1,6 +1,6 @@
 <template>
   <div class="r-store-face">
-    <r-store-photos :store="store"></r-store-photos>
+    <r-store-photos v-if="false" :store="store"></r-store-photos>
     <a-card :class="{'r-card-plain': isPlain}" class="r-store-card"
             :data="'background-image: url(' + store.photo_cover_url + ');'">
       <a-card-meta>

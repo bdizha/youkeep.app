@@ -4,9 +4,9 @@
       <a-row :gutter="[24,24]" type="flex" justify="center"
              align="middle">
         <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 20 }" :lg="{ span: 20 }">
-          <h3 class="r-heading">
-            {{ title ? title : 'Shopple connects customers to merchants' }}
-          </h3>
+          <h2 class="r-heading r-text-left">
+            {{ title ? title : 'Shopple connects customers to merchants!' }}
+          </h2>
         </a-col>
         <a-col v-show="hasMore" class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
                :lg="{ span: 4}">

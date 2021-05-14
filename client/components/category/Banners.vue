@@ -2,48 +2,53 @@
   <a-row type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
-           :lg="{ span: 24 }">
-      <a-row class="r-slider">
+           :lg="{ span: 24 }"
+    >
+      <a-row class="r-slider r-slider-banners">
         <a-col :span="24">
-          <a-card hoverable>
-            <div slot="cover">
-              <VueSlickCarousel v-bind="settings">
+          <VueSlickCarousel v-bind="settings">
+            <a-card
+              v-for="(cateogry, index) in categories"
+              :key="index" hoverable>
+              <div slot="cover">
                 <nuxt-link
-                  v-for="(cateogry, index) in categories"
-                  :key="index"
-                  :to="cateogry.route" style="display: block; width: 100%;"
-                >
+                  :to="cateogry.route"
+                  style="display: block; width: 100%;">
                   <r-avatar shape="square"
                             :size="100"
                             unit="%"
                             :src="cateogry.photo"
                   />
                 </nuxt-link>
-                <template #prevArrow="arrowOption">
-                  <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-                    <a-icon type="left"/>
-                  </div>
-                </template>
-                <template #nextArrow="arrowOption">
-                  <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-                    <a-icon type="right"/>
-                  </div>
-                </template>
-              </VueSlickCarousel>
-            </div>
-          </a-card>
+              </div>
+            </a-card>
+            <template #prevArrow="arrowOption">
+              <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
+                <a-icon type="left"/>
+              </div>
+            </template>
+            <template #nextArrow="arrowOption">
+              <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
+                <a-icon type="right"/>
+              </div>
+            </template>
+          </VueSlickCarousel>
         </a-col>
       </a-row>
-      <div class="r-mv-48">
-        <a-row :gutter="[24,24]" type="flex" justify="center">
+      <div class="r-mt-48">
+        <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]" type="flex"
+               justify="center"
+        >
           <a-col
             v-for="(banner, index) in banners"
             :key="index" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 6 }"
-                 :lg="{span: 6}">
+            :lg="{span: 6}"
+          >
             <a-card hoverable>
               <div slot="cover">
                 <nuxt-link
-                  :to="banner.route" style="display: block; width: 100%;">
+                  :to="banner.route" style="display: block; width: 100%;"
+                >
                   <r-avatar shape="square"
                             :size="100"
                             unit="%"

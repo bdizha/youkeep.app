@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/store/athome", (function(a,b,c,d){return {data:[{}],fetch:{},mutations:[[a,{key:c,value:b}],[a,{key:d,value:b}],[a,{key:c,value:b}],["base\u002FsetCategories",[]],[a,{key:d,value:false}],[a,{key:"isTray",value:b}]]}}("base\u002FsetProcess",true,"isCategories","isFixed")));

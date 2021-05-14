@@ -1,7 +1,7 @@
 <template>
   <a-row v-show="!isLoggedIn" type="flex" justify="center"
          align="middle">
-    <a-col class="r-pv-12 r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-col class="r-pv-12 r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }">
       <a-row type="flex" :gutter="[12,12]" justify="start" align="middle">

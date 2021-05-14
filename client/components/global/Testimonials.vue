@@ -1,9 +1,24 @@
 <template>
-  <a-row class="r-mv-48" type="flex" justify="center" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <h2 class="r-heading r-text-center">
+  <a-row :gutter="[24,24]" type="flex" justify="center"
+         align="middle">
+    <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 20 }" :lg="{ span: 20 }">
+      <h2 class="r-heading r-text-left">
         What our customers say...
       </h2>
+    </a-col>
+    <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
+           :lg="{ span: 4}">
+      <nuxt-link to="/testimonials">
+        <a-button class="r-btn--grey"
+                  block
+                  type="secondary"
+                  size="default">
+          Read more
+          <a-icon type="right"/>
+        </a-button>
+      </nuxt-link>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-slider" type="flex" justify="center" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <VueSlickCarousel v-if="hasReviews" v-bind="settings">

@@ -18,7 +18,7 @@
 
 body,
 html {
-    font-size: 16px;
+    font-size: 15px;
     background: #FAFBFC url(/images/icon_pattern_bg.svg);
     background-repeat: repeat;
     height: 100%;
@@ -57,17 +57,17 @@ h3 {
 
 .r-text-grey {
     color: #3C444CCD;
-    font-size: 16px;
+    font-size: 15px;
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
 .r-text-grey-light {
     color: #3C444CAA !important;
-    font-size: 16px;
+    font-size: 15px;
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
@@ -98,7 +98,7 @@ a.r-text-logo {
 }
 
 .r-text-normal {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 21px;
     color: #3C444C;
     font-family: Inter, 'Avenir', 'Avenir Book', 'Calibre', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
@@ -116,7 +116,7 @@ a.r-text-logo {
 }
 
 .r-text-small {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .text-strike {
@@ -182,7 +182,7 @@ a.r-text-logo {
     text-align: center;
     color: #3C444C;
     margin-top: 3px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 }
 
@@ -234,7 +234,7 @@ a.r-text-logo {
         display: inline-block;
         padding: 0;
         width: 100%;
-        font-size: 14px;
+        font-size: 15px;
 
         &:hover {
             color: @secondary-color;
@@ -293,13 +293,13 @@ a.r-text-logo {
 
 .ant-drawer-title {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 36px;
     height: 36px;
     display: block;
 
     h4.r-heading {
-        font-size: 16px;
+        font-size: 15px;
         margin-bottom: 0;
         color: #3C444C;
         line-height: 36px;
@@ -314,6 +314,12 @@ a.r-text-logo {
         .ant-list-item {
             border: none;
             padding: 0;
+
+            @media (max-width: 768px) {
+                &:last-child{
+                    padding-bottom: 12px;
+                }
+            }
 
             &:hover {
                 background: #eefaff;
@@ -337,7 +343,7 @@ a.r-text-logo {
     .submenu-title-wrapper {
         font-weight: 600;
         background: transparent;
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
@@ -363,7 +369,7 @@ x {
     }
 
     color: #3C444C;
-    font-size: 16px !important;
+    font-size: 15px !important;
 }
 
 .ant-btn {
@@ -372,22 +378,22 @@ x {
     padding: 0 12px;
     box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 15px;
     text-align: center;
 
     > span {
         & + .anticon {
-            font-size: 14px;
+            font-size: 15px;
         }
     }
 
     &.ant-btn-lg {
         padding: 0 24px;
-        font-size: 16px;
+        font-size: 15px;
         border-radius: @border-radius-base;
         @media (max-width: 768px) {
             padding: 0 12px;
-            font-size: 16px;
+            font-size: 15px;
         }
     }
 }
@@ -406,7 +412,7 @@ x {
 .ant-menu-item {
     .anticon {
         min-width: 18px;
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .r-store-active {
@@ -421,9 +427,9 @@ x {
 
     a {
         font-weight: 600;
-        font-size: 16px;
+        font-size: 15px;
         @media (max-width: 768px) {
-            font-size: 16px;
+            font-size: 15px;
         }
     }
 }
@@ -450,7 +456,7 @@ x {
     width: 100%;
 
     span {
-        font-size: 16px !important;
+        font-size: 15px !important;
     }
 }
 
@@ -480,14 +486,14 @@ x {
             border-right: 3px solid #F50A2B !important;
         }
 
-        font-size: 16px !important;
+        font-size: 15px !important;
         font-weight: 600;
     }
 
     border-right: 1px solid transparent !important;
 
     .ant-menu-submenu-title {
-        font-size: 16px !important;
+        font-size: 15px !important;
         font-weight: 600;
     }
 }
@@ -499,14 +505,14 @@ x {
             border-right: 3px solid #F50A2B !important;
         }
 
-        font-size: 16px !important;
+        font-size: 15px !important;
         font-weight: 600;
     }
 
     border-right: 1px solid transparent !important;
 
     .ant-menu-submenu-title {
-        font-size: 16px !important;
+        font-size: 15px !important;
         font-weight: 600;
     }
 }
@@ -518,12 +524,12 @@ x {
             border-right: 3px solid #F50A2B !important;
         }
 
-        font-size: 16px !important;
+        font-size: 15px !important;
         font-weight: 600;
     }
 
     .ant-menu-submenu-title {
-        font-size: 16px !important;
+        font-size: 15px !important;
         font-weight: 600;
     }
 }
@@ -667,7 +673,7 @@ x {
 }
 
 .ant-pagination-prev .ant-pagination-item-link, .ant-pagination-next .ant-pagination-item-link {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .ant-rate {
@@ -697,7 +703,7 @@ x {
         display: table-cell;
         text-align: center;
         padding: 0px 9px 0;
-        font-size: 14px;
+        font-size: 15px;
         height: 24px;
         line-height: 36px;
         font-weight: 600;
@@ -708,7 +714,7 @@ x {
 
         @media (max-width: 768px) {
             padding: 0px 9px;
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 400;
             height: 24px;
         }
@@ -720,7 +726,7 @@ x {
         height: 24px;
         line-height: 24px;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 15px;
         text-align: left;
         padding: 0 12px;
         color: #F50A2B;
@@ -730,10 +736,10 @@ x {
 }
 
 .r-product-actions {
-    font-size: 16px;
+    font-size: 15px;
 
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     .r-action-height {
@@ -777,7 +783,7 @@ x {
         width: 36px;
         text-align: center;
         border-radius: @border-radius-base;
-        font-size: 16px;
+        font-size: 15px;
 
         @media (max-width: 768px) {
             height: 36px;
@@ -829,7 +835,7 @@ x {
     }
 
     .r-product-cart-text {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 700;
         color: #FFFFFF;
     }
@@ -1116,18 +1122,16 @@ x {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
 
         .r-store-text {
-            font-weight: 700;
+            font-weight: 800;
             text-align: center;
-            color: #FFFFFF;
         }
 
         .r-store-slogan {
-            font-weight: 600;
+            font-weight: 500;
             text-align: center;
-            color: #FFFFFF;
             @media (max-width: 768px) {
                 font-weight: 400;
-                font-size: 13px;
+                font-size: 15px;
             }
         }
 
@@ -1153,6 +1157,10 @@ x {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
+}
+
+.ant-menu {
+    font-size: 15px;
 }
 
 .ant-drawer-body {
@@ -1194,7 +1202,7 @@ x {
     }
 
     .r-product-price {
-        font-size: 16px;
+        font-size: 15px;
         text-align: right;
         font-weight: 600;
         display: inline-block;
@@ -1312,7 +1320,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .r-size-18 {
-    font-size: 16px !important;
+    font-size: 15px !important;
     font-weight: 600;
     padding: 0 0 8px 0 !important;
 }
@@ -1324,7 +1332,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
     .ant-btn {
         .anticon {
-            font-size: 14px;
+            font-size: 15px;
         }
     }
 
@@ -1344,7 +1352,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .r-remove-action {
-    font-size: 16px;
+    font-size: 15px;
     background-color: transparent;
     border: 0px;
     padding: 0px;
@@ -1371,7 +1379,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
 .r-cart-count {
     position: absolute;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     top: 12px;
     right: 50%;
@@ -1409,7 +1417,7 @@ xxl	≥1600px, could be a span value or an object containing above props
     margin: 0;
 
     .r-superscript {
-        font-size: 16px;
+        font-size: 15px;
         position: relative;
         top: -10px;
         left: -3px;
@@ -1418,9 +1426,9 @@ xxl	≥1600px, could be a span value or an object containing above props
 
     @media (max-width: 768px) {
         font-weight: 600;
-        font-size: 16px;
+        font-size: 15px;
         .r-superscript {
-            font-size: 16px;
+            font-size: 15px;
             top: -10px;
             left: -3px;
         }
@@ -1435,24 +1443,24 @@ xxl	≥1600px, could be a span value or an object containing above props
     .ant-drawer-content-wrapper {
         width: 360px !important;
 
+        @media (max-width: 768px) {
+            width: 100% !important;
+        }
+
         .ant-drawer-content {
             overflow: hidden;
             color: #3C444C;
 
-            .r-store-item-line {
-                background: #FAFBFC url(/images/icon_pattern_bg.svg);
-            }
-
             .r-list-item,
             .r-account-item {
                 .r-text-link {
-                    color: #FFFFFF;
+                    color: #3C444C;
                     opacity: 0.87;
                 }
 
                 .nuxt-link-exact-active,
                 a:hover {
-                    color: #FFFFFF;
+                    color: #1B9BD9;
                     opacity: 1;
                 }
 
@@ -1472,12 +1480,12 @@ xxl	≥1600px, could be a span value or an object containing above props
 
                     .ant-avatar-icon {
                         background: @secondary-color;
-                        border-color: #0069cd33;
+                        border-color: #1B9BD933;
                         color: #FFFFFF;
                     }
 
                     .r-text-link {
-                        color: #FFFFFF;
+                        color: #1B9BD9;
                         opacity: 0.96;
                     }
                 }
@@ -1559,7 +1567,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
         .r-cart-btn {
             background: #FFFFFF;
-            color: #0069cdAC;
+            color: #1B9BD9AC;
 
             &:hover {
                 background: @secondary-color;
@@ -1579,7 +1587,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
 .ant-btn-full {
     width: 100%;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -1588,60 +1596,60 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 h1.r-heading {
-    font-weight: 800;
+    font-weight: 400;
     @media (min-width: 768px) {
-        font-size: 36px;
-        line-height: 45px;
+        font-size: 45px;
+        line-height: 54px;
         margin: 0 0 24px;
-        letter-spacing: -1.12px;
+        letter-spacing: -0.99px;
     }
 
     @media (max-width: 768px) {
         font-weight: 700;
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 36px;
+        line-height: 45px;
         margin: 0 0 24px;
     }
 }
 
 h2.r-heading {
-    font-weight: 800;
-    font-size: 33px;
+    font-weight: 300;
+    font-size: 36px;
     margin-bottom: 18px;
-    line-height: 33px;
+    line-height: 42px;
 
     @media (max-width: 768px) {
-        font-weight: 600;
-        font-size: 27px;
-        line-height: 30px;
+        font-size: 33px;
+        line-height: 36px;
     }
 }
 
 h2.r-heading-light {
     font-weight: 300;
-    line-height: 36px;
-    font-size: 30px;
+    line-height: 45px;
+    font-size: 36px;
     margin-top: 24px;
 
     @media (max-width: 768px) {
         font-weight: 200;
-        font-size: 24px;
-        line-height: 27px;
+        font-size: 30px;
+        line-height: 33px;
     }
 }
 
 h3.r-heading-light {
     font-weight: 300;
     line-height: 36px;
-    font-size: 24px;
+    font-size: 27px;
     @media (min-width: 768px) {
-        font-size: 21px;
+        font-size: 24px;
     }
 }
 
 h3.r-heading {
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 36px;
 
     &.r-text-capitalize {
         text-transform: uppercase;
@@ -1649,16 +1657,10 @@ h3.r-heading {
         color: #3C444C;
     }
 
-    @media (min-width: 768px) {
-        line-height: 36px;
-        &.r-same-height {
-            line-height: 36px;
-        }
-    }
-
     @media (max-width: 768px) {
-        font-weight: 700;
-        font-size: 21px;
+        line-height: 27px;
+        font-weight: 600;
+        font-size: 24px;
         &.r-same-height {
             white-space: nowrap;
             overflow: hidden;
@@ -1829,7 +1831,7 @@ h4.r-heading-light {
     }
 
     .r-superscript {
-        font-size: 16px;
+        font-size: 15px;
         top: -18px;
         left: -6px;
     }
@@ -1880,7 +1882,7 @@ h4.r-heading-light {
         }
 
         .r-product-cart-text {
-            //font-size: 16px;
+            //font-size: 15px;
             //font-weight: 700;
             //filter: #FFFFFF;
         }
@@ -1940,17 +1942,22 @@ h4.r-heading-light {
     }
 }
 
-.ant-modal-body {
+.ant-modal-body,
+.ant-drawer-body{
     padding: 24px;
-    font-size: 16px;
+    font-size: 15px;
     position: relative;
 
     .r-store-item-line {
         padding: 12px 0;
+
+        @media (max-width: 768px) {
+            padding: 12px;
+        }
     }
 
     @media (max-width: 768px) {
-        padding: 24px;
+        padding: 24px 12px;
     }
 
     .r-notice {
@@ -1963,7 +1970,7 @@ h4.r-heading-light {
 
         .r-status-update {
             display: block;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 400;
             z-index: 30;
             text-align: left;
@@ -2007,7 +2014,7 @@ h4.r-heading-light {
 
 .r-inline-text {
     display: inline-block !important;
-    font-size: 16px !important;
+    font-size: 15px !important;
 }
 
 .r-layout-menu {
@@ -2157,7 +2164,7 @@ h4.r-heading-light {
         background: transparent;
 
         @media (max-width: 768px) {
-            font-size: 14px;
+            font-size: 15px;
         }
     }
 
@@ -2194,7 +2201,7 @@ h4.r-heading-light {
     }
 
     @media (max-width: 768px) {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 
@@ -2278,6 +2285,7 @@ h4.r-heading-light {
     cursor: pointer;
     border-radius: 100%;
     height: 36px;
+    width: 36px;
     text-align: center;
     overflow: hidden;
 
@@ -2287,7 +2295,7 @@ h4.r-heading-light {
         display: block;
         border-radius: 100%;
         overflow: hidden;
-        background: #FFF;
+        background: linear-gradient(to right, #1B9BD9 0, #F50A2B 100%) no-repeat;
     }
 
     &.r-logo__icon {
@@ -2313,10 +2321,10 @@ h4.r-heading-light {
     margin-bottom: -1px;
     color: #3C444C;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
 
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
@@ -2346,7 +2354,7 @@ h4.r-heading-light {
 .r-product-text {
     font-weight: 400;
     line-height: 18px;
-    font-size: 16px;
+    font-size: 15px;
     display: block;
     height: 36px;
     overflow: hidden;
@@ -2355,7 +2363,7 @@ h4.r-heading-light {
 
     @media (max-width: 768px) {
         margin-bottom: 12px;
-        font-size: 14px;
+        font-size: 15px;
         margin-top: 6px;
     }
 }
@@ -2363,7 +2371,7 @@ h4.r-heading-light {
 .r-product-summary {
     font-weight: 400;
     line-height: 18px;
-    font-size: 14px;
+    font-size: 15px;
     display: block;
     height: 36px;
     overflow: hidden;
@@ -2401,7 +2409,7 @@ h4.r-heading-light {
     width: 100%;
     padding: 12px 0;
     border-bottom: 1px solid rgb(236, 236, 236, 1);
-    font-size: 14px;
+    font-size: 15px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -2434,7 +2442,7 @@ h4.r-heading-light {
 .r-category-menu-item {
     padding: 6px 12px;
     border-bottom: 1px solid rgb(236, 236, 236, 1);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     border-radius: @border-radius-base;
     overflow: hidden;
@@ -2446,7 +2454,7 @@ h4.r-heading-light {
 }
 
 .r-product-text-cart {
-    font-size: 14px;
+    font-size: 15px;
     line-height: 18px;
     font-weight: 400;
     margin: 0;
@@ -2470,18 +2478,18 @@ h4.r-heading-light {
 .r-store-text-light {
     color: #3C444C;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 21px;
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
 .r-product-text-promo {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
@@ -2494,11 +2502,11 @@ h4.r-heading-light {
 }
 
 .ant-radio-group {
-    font-size: 16px;
+    font-size: 15px;
     width: 100%;
 
     .ant-radio {
-        font-size: 16px;
+        font-size: 15px;
 
         .ant-radio-inner {
             top: 0;
@@ -2531,7 +2539,7 @@ h4.r-heading-light {
     }
 
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 15px;
         .ant-radio-button-wrapper {
             padding: 0 12px;
         }
@@ -2546,7 +2554,7 @@ h4.r-heading-light {
 
 .ant-dropdown-menu {
     .anticon {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     @media (max-width: 528px) {
@@ -2562,14 +2570,14 @@ h4.r-heading-light {
 
     .ant-dropdown-menu-item {
         padding: 9px 24px;
-        font-size: 16px;
+        font-size: 15px;
 
         &:hover {
             color: @secondary-color;
         }
 
         .anticon {
-            font-size: 16px;
+            font-size: 15px;
         }
     }
 }
@@ -2580,7 +2588,7 @@ h4.r-heading-light {
 
 .r-text-capitalize {
     text-transform: capitalize;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .ant-message {
@@ -2591,7 +2599,7 @@ h4.r-heading-light {
         color: @secondary-color;
         background: #FFFFFF;
         border: 1px solid @secondary-color;
-        font-size: 16px;
+        font-size: 15px;
         -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.125);
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.125);
 
@@ -2639,7 +2647,7 @@ h4.r-heading-light {
     line-height: 36px;
 
     .anticon {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     .ant-breadcrumb-separator {
@@ -2867,7 +2875,7 @@ h4.r-heading-light {
 
     .r-cart-count {
         position: absolute;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 600;
         top: 0;
         right: 0;
@@ -2949,7 +2957,7 @@ h4.r-heading-light {
     border: 1px solid #ECECEC !important;
     color: #ECECEC !important;
     background: transparent !important;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
 }
 
@@ -3052,11 +3060,11 @@ h4.r-heading-light {
     text-align: left;
 
     .r-heading-light {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     p {
@@ -3082,14 +3090,14 @@ h4.r-heading-light {
         margin: 0;
         padding: 0;
         color: @secondary-color;
-        font-size: 16px;
+        font-size: 15px;
         font-variant: tabular-nums;
         line-height: 1.5;
         background-color: transparent !important;
         border: 0;
 
         @media (max-width: 768px) {
-            font-size: 16px;
+            font-size: 15px;
         }
     }
 }
@@ -3166,7 +3174,7 @@ h4.r-heading-light {
                 top: 50%;
                 left: 15px;
                 display: inline-block;
-                font-size: 14px;
+                font-size: 15px;
                 transform: translateY(-50%);
                 color: #3c444c;
                 fill: #3c444c;
@@ -3232,12 +3240,12 @@ h4.r-heading-light {
             padding: 12px 36px 12px 0;
             font-weight: 600;
             color: rgb(60, 68, 76);
-            font-size: 16px;
+            font-size: 15px;
 
             .ant-collapse-arrow {
                 right: 0 !important;
                 left: auto;
-                font-size: 16px !important;
+                font-size: 15px !important;
                 background: #FAFBFC;
                 height: 30px;
                 width: 30px;
@@ -3396,16 +3404,16 @@ h4.r-heading-light {
     }
 
     .r-checkout-footer {
-        font-size: 14px;
+        font-size: 15px;
         padding: 48px 24px;
         color: #969696;
 
         .r-text-sm {
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .r-text-normal {
-            font-size: 16px;
+            font-size: 15px;
         }
     }
 
@@ -3643,7 +3651,7 @@ h4.r-heading-light {
 }
 
 .ant-table-tbody > tr {
-    font-size: 14px;
+    font-size: 15px;
 
     .ant-table-row-cell-break-word {
         font-weight: 400;
@@ -3696,7 +3704,7 @@ h4.r-heading-light {
 
 .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
     background: #fafafa;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 500;
     margin-right: 12px;
 }
@@ -3745,13 +3753,13 @@ h4.r-heading-light {
 
 .r-text-view-more {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     white-space: nowrap;
     text-overflow: ellipsis;
 
     @media (max-width: 768px) {
         font-weight: 600;
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
@@ -3943,7 +3951,7 @@ h4.r-heading-light {
         overflow: hidden;
         text-overflow: ellipsis;
         @media (max-width: 768px) {
-            font-size: 16px;
+            font-size: 15px;
             line-height: 30px;
         }
     }
@@ -3953,7 +3961,7 @@ h4.r-heading-light {
     }
 
     .r-store-description {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 30px;
         font-weight: 500;
         white-space: nowrap;
@@ -3962,7 +3970,7 @@ h4.r-heading-light {
         color: #3C444C;
 
         @media (max-width: 768px) {
-            font-size: 16px;
+            font-size: 15px;
             line-height: 18px;
         }
     }
@@ -4016,7 +4024,7 @@ h4.r-heading-light {
 }
 
 .r-tab {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 24px;
     text-align: center;
     padding: 12px;
@@ -4382,7 +4390,7 @@ h4.r-heading-light {
 }
 
 .r-superscript {
-    font-size: 16px;
+    font-size: 15px;
     position: relative;
     top: -10px;
     left: 1px;
@@ -4404,6 +4412,10 @@ h4.r-heading-light {
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
         padding: 48px 24px;
         text-align: center;
+    }
+
+    .r-step-caption{
+        font-size: 15px;
     }
 
     .r-step-avatar {
@@ -4604,10 +4616,10 @@ h4.r-heading-light {
 }
 
 .r-sort-label {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 1px;
-    line-height: 14px;
+    line-height: 12px;
     text-transform: uppercase;
     color: @secondary-color;
     display: none;
@@ -4615,16 +4627,6 @@ h4.r-heading-light {
 
 .ant-select-dropdown-menu-item {
     padding: 12px;
-}
-
-.ant-select-selection {
-    background: #FAFBFC;
-
-    .ant-select-selection__rendered {
-        .r-sort-label {
-            display: inline-block;
-        }
-    }
 }
 
 .r-download {
@@ -4655,7 +4657,7 @@ h4.r-heading-light {
 .r-article {
     font-size: 24px;
     @media (max-width: 768px) {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
@@ -4938,12 +4940,20 @@ h4.r-heading-light {
     }
 }
 
+.ant-list {
+    font-size: 15px;
+}
+
 .ant-list-split {
     .ant-list-item {
         padding: 6px 0;
         border-bottom: none;
         align-items: start;
         justify-content: start;
+
+        @media (max-width: 768px) {
+            padding-bottom: 12px;
+        }
 
         .ant-list-item-meta-avatar {
             margin-right: 15px;
@@ -4954,7 +4964,7 @@ h4.r-heading-light {
         .ant-list-item-meta-title {
             margin-bottom: 0;
             color: #494949;
-            font-size: 14px;
+            font-size: 15px;
             line-height: 18px;
         }
 
@@ -4968,6 +4978,10 @@ h4.r-heading-light {
             display: block;
             width: 100%;
             font-weight: 600;
+
+            @media (max-width: 768px) {
+                padding: 6px 12px;
+            }
 
             &:hover,
             &.nuxt-link-exact-active {
@@ -5064,7 +5078,7 @@ h4.r-heading-light {
         top: 0;
         left: 12px;
         bottom: 0;
-        font-size: 16px;
+        font-size: 15px;
         height: 60px;
         line-height: 45px;
         width: 18px;
@@ -5078,13 +5092,13 @@ h4.r-heading-light {
             width: 100%;
             font-weight: 600;
             line-height: 18px;
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .r-address-secondary {
             display: block;
             width: 100%;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 18px;
             color: #45454581;
             height: 18px;
@@ -5097,7 +5111,7 @@ h4.r-heading-light {
     @media (max-width: 768px) {
         display: block;
         text-align: left;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
         position: fixed;
         z-index: 1011;
@@ -5134,7 +5148,7 @@ h4.r-heading-light {
                     width: 100%;
                     font-weight: 600;
                     line-height: 18px;
-                    font-size: 16px;
+                    font-size: 15px;
                     white-space: nowrap;
                     overflow: hidden;
                     text-overflow: ellipsis;
@@ -5252,7 +5266,7 @@ h4.r-heading-light {
 
         &.ant-steps-item-active {
             color: #F50A2B;
-            background: #FFEFEF url(/images/icon_pattern_primary.svg) repeat;
+            background: #FFEFEF url(/images/icon_pattern_white.svg) repeat;
 
             .ant-steps-item-icon {
                 color: #F50A2B;
@@ -5337,10 +5351,10 @@ h4.r-heading-light {
         }
 
         .ant-card-meta-description {
-            font-size: 16px;
+            font-size: 15px;
             line-height: 30px;
             @media (max-width: 768px) {
-                font-size: 16px;
+                font-size: 15px;
                 line-height: 18px;
             }
         }
@@ -5371,11 +5385,11 @@ h4.r-heading-light {
     margin: auto;
 
     .r-message-text {
-        font-size: 16px;
+        font-size: 15px;
 
         h3.r-heading {
             line-height: 24px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 400;
         }
     }
@@ -5394,7 +5408,7 @@ h4.r-heading-light {
     height: 36px;
     display: block;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.22);
     margin-top: 0px;
@@ -5413,6 +5427,30 @@ h4.r-heading-light {
 .r-slider {
     margin: 0;
 
+    &.r-slider-banners{
+        .slick-list{
+            .slick-slide{
+                padding: 0;
+            }
+        }
+    }
+
+    &.r-slider-out-12{
+        margin: 0 -12px;
+
+        .slick-list{
+            .slick-slide{
+                padding: 0 12px;
+                @media (max-width: 768px) {
+                    padding: 0 6px !important;
+                }
+            }
+        }
+    }
+    .slick-list{
+        .slick-slide{
+        }
+    }
     .slick-prev,
     .slick-next {
         z-index: 99;
@@ -5447,16 +5485,10 @@ h4.r-heading-light {
         .slick-next {
             &.r-slick-arrow-prev {
                 left: 0;
-                @media (max-width: 768px) {
-                    left: -24px;
-                }
             }
 
             &.r-slick-arrow-next {
                 right: 0;
-                @media (max-width: 768px) {
-                    right: -24px;
-                }
             }
         }
     }
@@ -5474,6 +5506,7 @@ h4.r-heading-light {
 }
 
 .r-store-photos {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -5516,7 +5549,7 @@ h4.r-heading-light {
     background: linear-gradient(90deg, #FFEFEF 0%, #FFFFFF 75%, #FFEFEF 100%);
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_primary.svg) repeat;
+        background: transparent url(/images/icon_pattern_white.svg) repeat;
     }
 }
 
@@ -5524,7 +5557,7 @@ h4.r-heading-light {
     background: linear-gradient(90deg, #eefaff 0%, #FFFFFF 75%, #eefaff 100%);
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_secondary.svg) repeat;
+        background: transparent url(/images/icon_pattern_white.svg) repeat;
     }
 }
 
@@ -5615,7 +5648,7 @@ h4.r-heading-light {
 }
 
 .r-text-slider {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     line-height: 36px;
     text-overflow: ellipsis;
@@ -5646,9 +5679,9 @@ h4.r-heading-light {
             padding-left: 48px;
             text-align: left;
             font-weight: 500;
-            font-size: 13px;
+            font-size: 15px;
             @media (max-width: 768px) {
-                font-size: 12px;
+                font-size: 15px;
             }
         }
     }
@@ -5678,7 +5711,7 @@ h4.r-heading-light {
 
 .ant-tooltip-inner {
     background: @secondary-color;
-    font-size: 14px;
+    font-size: 15px;
     color: #FFFFFF;
 }
 
@@ -5732,7 +5765,7 @@ h4.r-heading-light {
 .r-store-card {
     .r-store-text {
         font-weight: 600;
-        font-size: 16px;
+        font-size: 15px;
         display: block;
         margin-bottom: 0;
         overflow: hidden;
@@ -5743,7 +5776,7 @@ h4.r-heading-light {
 
     .r-store-slogan {
         font-weight: 400;
-        font-size: 14px;
+        font-size: 15px;
         line-height: 24px;
         color: #9c9c9c;
         display: block;
@@ -5752,7 +5785,7 @@ h4.r-heading-light {
         text-overflow: ellipsis;
 
         @media (max-width: 768px) {
-            font-size: 13px;
+            font-size: 15px;
             font-weight: 400;
         }
     }
@@ -5793,7 +5826,7 @@ h4.r-heading-light {
         }
 
         .r-slider-item-tag {
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 400;
             color: rgba(0, 0, 0, 0.54);
             line-height: 21px;
@@ -5817,7 +5850,7 @@ h4.r-heading-light {
         font-weight: 600;
         font-size: 18px;
         @media (max-width: 768px) {
-            font-size: 16px;
+            font-size: 15px;
         }
     }
 
@@ -5961,7 +5994,7 @@ h4.r-heading-light {
 
         .r-text-slider {
             background: transparent;
-            font-size: 12px;
+            font-size: 15px;
             font-weight: 400;
             color: #FFFFFF;
         }
@@ -5994,18 +6027,23 @@ h4.r-heading-light {
 
 .r-store-card {
     .ant-avatar-circle {
-        padding: 6px;
+        padding: 12px;
         border: 6px solid #FFFFFF;
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
+
+        @media(max-width: 768px){
+            max-width: 99px;
+            max-height: 99px;
+        }
 
         img {
             display: block;
             position: absolute;
-            left: 6px;
+            left: 12px;
             bottom: 0;
-            right: 6px;
+            right: 12px;
             top: 0;
-            width: calc(100% - 12px);
+            width: calc(100% - 24px);
             margin: auto;
             height: auto;
             border-radius: @border-radius-base;
@@ -6033,7 +6071,7 @@ h4.r-heading-light {
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
         border-radius: @border-radius-base;
         overflow: hidden;
-        font-size: 16px;
+        font-size: 15px;
         height: 45px;
         line-height: 45px;
     }
@@ -6046,7 +6084,7 @@ h4.r-heading-light {
     box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
     border-radius: @border-radius-base;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 15px;
     position: relative;
     cursor: pointer;
 
@@ -6168,12 +6206,45 @@ h4.r-heading-light {
     width: 100%;
 }
 
+.r-header{
 .ant-select-auto-complete {
+    background: transparent;
+
+    .ant-select-selection {
+        background: transparent;
+        border-radius: @border-radius-base;
+        overflow: hidden;
+    }
+
     &.ant-select {
         .ant-input {
-            background: #FAFBFC;
+            background: rgba(255,255, 255, 0.3);;
+            border-color: #1B9BD9;
+            color: #FFFFFF;
+
+            &::placeholder {
+                color: #FFFFFF;
+                font-size: 15px;
+            }
+
+            &:hover,
+            &:focus{
+                background: rgba(255,255, 255, 0.999);
+                &.ant-select {
+                    .ant-input {
+                        background: rgba(255,255, 255, 0.999);
+                        border-color: #F50A2B;
+                        color: #3C444C;
+                    }
+                }
+
+                &::placeholder {
+                    color: #3C444C;
+                }
+            }
         }
     }
+}
 }
 
 .r-search.ant-select-auto-complete {
@@ -6300,7 +6371,7 @@ h4.r-heading-light {
 }
 
 .ant-avatar-icon {
-    font-size: 16px;
+    font-size: 15px;
     color: @secondary-color;
     background: #FAFBFC;
     box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
@@ -6386,7 +6457,7 @@ a:hover {
 
     .r-filter-item-text {
         text-transform: uppercase;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
         line-height: 36px;
     }

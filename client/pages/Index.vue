@@ -3,41 +3,54 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <r-category-actions v-if="hasCategories"></r-category-actions>
     </a-col>
-    <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="r-ph-24 r-mt-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <a-row type="flex" justify="center" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 21 }" :lg="{ span: 21 }">
           <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                    :md="{ span: 24 }"
-                   :lg="{ span: 24 }">
-              <div class="r-margin-out-12">
-                <r-category-banners></r-category-banners>
-              </div>
+                   :lg="{ span: 24 }"
+            >
+              <r-category-banners></r-category-banners>
             </a-col>
             <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 16 }"
-                   :lg="{ span: 16 }">
-              <a-row :gutter="[24,24]"  type="flex" align="middle" justify="space-between">
-                <a-col class="r-text-left" :xs="{ span: 15}" :sm="{ span: 14 }" :md="{ span: 16 }"
-                       :lg="{ span: 16 }">
-                  <h3 class="r-heading-light">
-                    Shop everywhere, anytime!
-                  </h3>
-                </a-col>
-                <a-col class="r-text-center" :xs="{ span: 9}" :sm="{ span: 10 }" :md="{ span: 8 }"
-                       :lg="{ span: 8 }">
-                  <r-store-shop-now></r-store-shop-now>
-                </a-col>
-                <a-col :xs="{ span: 24 }"
-                       :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-                  <div class="r-margin-out-12">
-                    <r-store-arrows></r-store-arrows>
-                  </div>
-                </a-col>
-              </a-row>
+                   :lg="{ span: 16 }"
+            >
+              <a-card>
+                <a-card-meta>
+                  <template slot="description">
+                    <a-row :gutter="[24,24]" type="flex" align="middle" justify="space-between">
+                      <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 16 }"
+                             :lg="{ span: 16 }"
+                      >
+                        <h3 class="r-heading-light">
+                          Shop everywhere, anytime!
+                        </h3>
+                      </a-col>
+                      <a-col class="r-text-center r-hide-sm" :xs="{ span: 9}" :sm="{ span: 10 }" :md="{ span: 8 }"
+                             :lg="{ span: 8 }"
+                      >
+                        <r-store-shop-now></r-store-shop-now>
+                      </a-col>
+                      <a-col :xs="{ span: 24 }"
+                             :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
+                      >
+                        <r-store-arrows></r-store-arrows>
+                      </a-col>
+                      <a-col class="r-text-center r-hide-lg" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }"
+                             :lg="{ span: 8 }"
+                      >
+                        <r-store-shop-now></r-store-shop-now>
+                      </a-col>
+                    </a-row>
+                  </template>
+                </a-card-meta>
+              </a-card>
             </a-col>
             <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                    :md="{ span: 8 }"
-                   :lg="{ span: 8 }">
+                   :lg="{ span: 8 }"
+            >
               <a-card>
                 <a-card-meta>
                   <template slot="description">
@@ -54,7 +67,8 @@
                     <a-row type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                              :md="{ span: 24 }"
-                             :lg="{ span: 24 }">
+                             :lg="{ span: 24 }"
+                      >
                         <r-delivery-form></r-delivery-form>
                       </a-col>
                     </a-row>
@@ -75,16 +89,16 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   layout: 'default',
   name: 'r-index',
   props: {},
-  async asyncData({store}) {
-    await store.dispatch('base/onReviews', {});
+  async asyncData ({ store }) {
+    await store.dispatch('base/onReviews', {})
   },
-  data() {
+  data () {
     return {
       banner: 'art-01.png',
       isProcessing: true,
@@ -102,17 +116,17 @@ export default {
     categories: 'shop/categories',
     hasCategories: 'base/hasCategories',
   }),
-  mounted() {
+  mounted () {
   },
   methods: {
-    onStoreTray() {
-      let modal = {};
-      modal.isVisible = true;
-      modal.isClosable = true;
-      modal.current = 'store';
+    onStoreTray () {
+      let modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = 'store'
 
-      this.$store.dispatch('base/onModal', modal);
+      this.$store.dispatch('base/onModal', modal)
     }
   }
-};
+}
 </script>
