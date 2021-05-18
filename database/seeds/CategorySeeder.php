@@ -1,11 +1,13 @@
 <?php
 
+use App\CategoryProduct;
 use Illuminate\Database\Seeder;
 use App\Category;
 use App\Store;
 
-class CategorySeeder extends Seeder
+class CategorySeeder extends DatabaseSeeder
 {
+    protected $storeId = 24; // Shopple store
     protected $storeCategories = [4784, 4788, 4789];
 
     /**
@@ -15,140 +17,192 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $this->categories = [
-            [
-                'name' => "It's shopping time!"
-            ],
-            [
-                'name' => "Today's Highlights"
-            ],
-            [
-                'name' => "You might also like"
-            ],
-            [
-                'name' => "What's popular for you"
-            ],
-            [
-                'name' => "Recommended for you"
-            ],
-            [
-                'name' => "New stores for you"
-            ],
-            [
-                'name' => "Browse our picks"
-            ],
-            [
-                'name' => "Coming soon stores"
-            ],
-            [
-                'name' => "We're loving"
-            ],
-            [
-                'name' => "It's that time again"
-            ],
-            [
-                'name' => "Summer bells"
-            ],
-            [
-                'name' => "Yay & oooo deals"
-            ],
-        ];
+        $this->level = 0;
+        $this->fetchCategories();
 
-        $this->updateCategories();
-
-        foreach ($this->categories as $category) {
-            $this->setCategory($category);
-        }
-
-        $this->updateCategories();
-
-        die("updateCategories >>> done");
+        die("fetchCategories >>> done");
     }
 
-    /**
-     * @param array $category
-     */
-    private function setCategory(array $category)
+    private function fetchCategories()
     {
-        $name = \Illuminate\Support\Str::slug($category['name'], ' ');
-        $name = ucwords($name);
+        $link = url("/api/home/categories");
 
-        $attributes = [
-            'name' => $name
-        ];
+        $categoryNode = Goutte::request('GET', $link);
+        $categoryNodes = $categoryNode->filter('.menu__items .menu-item__title');
 
-        $values = [
-            "level" => 0,
-            "store_id" => 0,
-            "type" => 1,
-            "description" => 'Not set',
-            "order" => 1,
-            "has_stores" => true,
-        ];
+        $categoryNodes->each(function ($node) {
+            echo __LINE__ . " <> \n";
+            $categoryName = $node->text();
+            echo __LINE__ . " <> \n";
 
-        $category = Category::updateOrCreate($attributes, $values);
-        echo "Updated category :: " . $category['name'] . "\n";
+            $categoryName = ucwords(strtolower($categoryName));
+            $this->category = $this->setCategory($categoryName, null);
+
+            $this->linkCategories();
+        });
     }
 
-    /**
-     */
-    private function updateCategories()
+    protected $mappedNames = [
+        'furniture' => 'house-hold-items',
+        'bed-bath' => 'house-hold-items',
+        'kids' => 'for-children',
+        'kitchen' => 'house-hold-items',
+        'accessories' => 'accessories',
+        'appliances-tech' => 'electronics',
+        'audio' => 'electronics',
+        'shop-by-brand' => 'clothes',
+        'dining' => 'house-hold-items',
+        'decor' => 'house-hold-items',
+        'exclusive-to-online' => 'premium',
+        'offers' => 'promos',
+        'sale' => 'clothing',
+        'promos' => 'promos',
+        'what-s-new' => ['premium','house-hold-items'],
+        'ladies' => 'for-women',
+        'clothing' => 'clothing',
+        'shoes' => 'clothing',
+        'mens' => 'for-men',
+        'new-in' => ['premium','house-hold-items'],
+        'baby' => 'for-children',
+        'schoolgear' => 'for-children',
+        'girls' => 'for-children',
+        'boys' => 'for-children',
+        'beauty' => 'beauty',
+        'skincare' => 'beauty',
+        'mrp-co' => 'house-hold-items',
+        'inspo' => 'house-hold-items',
+        'cellular' => 'electronics',
+        'gift-registry' => 'gifts',
+        'add-gifts' => 'gifts',
+        'bags-accessories' => ['premium','clothing'],
+        'jeans' => 'clothing',
+        'brands' => 'house-hold-items',
+        'locally-made' => 'house-hold-items',
+        'tech' => 'electronics',
+        'cellphones' => ['just-for-you', 'electronics'],
+        'laptops-tablets' => ['just-for-you', 'electronics'],
+        'tv-home' => 'electronics',
+        'makeup' => 'beauty',
+        'men' => 'for-men',
+        'hair' => 'beauty',
+        'hot-deals' => 'house-hold-items',
+        'e-gift-cards-1' => 'gifts',
+        '50-off' => 'art',
+        'women' => 'for-women',
+        'fan-gear' => 'clothing',
+        'equipment' => 'house-hold-items',
+        'gaming' => 'electronics',
+        'team-sports-catalogue' => 'sports',
+        'lingerie' => 'for-women',
+        'footwear' => 'shoes',
+        'denim' => ['just-for-you', 'clothing'],
+        'new-arrivals' => 'accessories',
+        'specials' => 'house-hold-items',
+        'tech-accessories' => 'electronics',
+        'shop-the-look' => 'clothing',
+        'suit-shop' => 'clothing',
+        'sale-offers' => 'promos',
+        'fragrance' => 'beauty',
+        'exclusives' => 'exclusives',
+        'shop-local' => 'clothing',
+        'how-to' => 'house-hold-items',
+        'soda-bloc' => 'just-for-you',
+        'blog' => 'house-hold-items',
+        'release-calendar' => 'house-hold-items',
+        'exactcares' => 'house-hold-items',
+        'fashion' => ['just-for-you', 'clothing'],
+        'new' => ['just-for-you', 'clothing'],
+        'painting' => 'art',
+        'printmaking' => 'art',
+        'photography' => 'art',
+        'sculpture' => ['house-hold-items', 'art'],
+        'drawing' => 'art',
+        'digital-art' => 'art',
+        'collage' => ['house-hold-items', 'art'],
+        'new-art' => ['house-hold-items', 'art'],
+        'all-art' => 'house-hold-items',
+        'landscapes' => ['house-hold-items', 'art'],
+        'abstracts' => ['house-hold-items', 'art'],
+        'people-and-portraits' => ['house-hold-items', 'art'],
+        'nudes' => ['house-hold-items', 'art'],
+        'florals-and-plants' => ['house-hold-items', 'art'],
+        'still-life' => ['house-hold-items', 'art'],
+        'animals' => ['house-hold-items', 'art'],
+        'architecture-and-cities' => ['house-hold-items', 'art'],
+        '100-and-under' => ['house-hold-items', 'art'],
+        '500-and-under' => ['house-hold-items', 'art'],
+        '1-000-and-under' => 'art',
+        '1-000-and-over' => 'art',
+        '20-off' => 'house-hold-items',
+        '30-off' => ['just-for-you', 'house-hold-items', 'art'],
+        'all-sale' => ['just-for-you', 'house-hold-items'],
+        'free-shipping' => ['house-hold-items', 'art'],
+        'be-inspired' => 'house-hold-items'
+    ];
+
+    public function linkCategories()
     {
-        // randomly assign stores to categories
+        $categoryName = $this->category->slug;
+        $categoryParts = explode("-", $categoryName);
 
-        $categories = Category::where('type', 1)
-            ->with('stores')
-            ->with('categories')
-            ->get();
+        $categoryIds = [];
 
-        $storeIdKey = 0;
+        $ignoredWords = ['for'];
+        foreach ($categoryParts as $categoryPart) {
+            if (in_array($categoryPart, $ignoredWords)) {
+                continue;
+            }
 
-        foreach ($categories as $category) {
+            foreach ($this->mappedNames as $mappedKey => $mappedName) {
+                if (in_array($categoryName, is_array($mappedName) ? $mappedName : [$mappedName])) {
+                    $query = Category::with('stores')
+                        ->where('slug', 'like', $mappedKey);
 
-            $name = \Illuminate\Support\Str::slug($category->name, ' ');
-            $name = ucwords($name);
+                    $query->whereHas('stores', function ($query) {
+                        $query->where('level', '=', 1);
+                    });
 
-            $category->name = $name;
+                    $categories = $query->get();
 
-            echo "Updated category :: " . $category['name'] . "\n";
+                    foreach ($categories as $category) {
+                        $categoryIds[] = $category->id;
 
-            if ($category->type == 1) {
-                $stores = Store::inRandomOrder()->take(12)->get();
+                        $attributes = [
+                            'category_id' => $category->id,
+                            'level' => 1,
+                        ];
 
-                if (!in_array($category->id, $this->storeCategories)) {
-                    // randomise and get this out
-                    $categoryId = $this->storeCategories[$storeIdKey];
+                        $values = [
+                            'parent_id' => $this->category->id
+                        ];
 
-                    if ($storeIdKey == count($this->storeCategories) - 1) {
-                        $storeIdKey = 0;
-                    } else {
-                        $storeIdKey++;
+                        // save store categories
+                        $storeCategory = \App\StoreCategory::updateOrCreate($attributes, $values);
                     }
-
-                    $category->category_id = $categoryId;
-                }
-                else{
-                    $category->category_id = null;
-                }
-
-                foreach ($stores as $store) {
-                    $attributes = [
-                        'category_id' => $category->id,
-                        'store_id' => $store->id
-                    ];
-
-                    $values = [
-                        'category_id' => $category->id,
-                        'store_id' => $store->id
-                    ];
-
-                    \App\StoreCategory::updateOrCreate($attributes, $values);
                 }
             }
 
-            $category->has_stores = $category->stores->count() > 0;
-            $category->has_categories = $category->categories->count() > 0;
-            $category->save();
+            $this->setCategoryProducts($categoryIds);
+        }
+    }
+
+    public function setCategoryProducts($categoryIds)
+    {
+        $categoryProducts = CategoryProduct::whereIn('category_id', $categoryIds)
+            ->get();
+
+        foreach ($categoryProducts as $categoryProduct) {
+            $attributes = [
+                'category_id' => $this->category->id,
+                'product_id' => $categoryProduct->product_id
+            ];
+
+            $values = [
+                'category_id' => $this->category->id,
+                'product_id' => $categoryProduct->product_id
+            ];
+
+            \App\CategoryProduct::updateOrCreate($attributes, $values);
         }
     }
 }

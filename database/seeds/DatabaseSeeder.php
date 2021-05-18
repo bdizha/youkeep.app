@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     protected $parentStoreCategory = null;
     protected $filterBrand = null;
     protected $product = null;
+    protected $level = -1;
 
     /**
      * Run the database seeds.
@@ -75,6 +76,57 @@ class DatabaseSeeder extends Seeder
 
             Lookup::updateOrCreate($attributes, $values);
         }
+    }
+
+    /**
+     * @param $categoryName
+     * @param $url
+     * @return mixed
+     */
+    protected function setCategory($categoryName, $url)
+    {
+        $categoryDescription = 'Not set';
+
+        $this->categories = [];
+
+        /* Update or create this category */
+        $attributes = [
+            'name' => $categoryName,
+        ];
+
+        $values = [
+            'name' => $categoryName,
+            'order' => 1,
+            'description' => $categoryDescription,
+            'type' => Category::TYPE_CATALOG,
+            'randomized_at' => date('Y-m-d'),
+        ];
+
+        $category = \App\Category::updateOrCreate($attributes, $values);
+        $this->categories[] = $category->id;
+
+        $attributes = [
+            'store_id' => $this->storeId,
+            'category_id' => $category->id,
+            'url' => $url,
+            'level' => $this->level,
+        ];
+
+        /* Add in the store category link */
+        $values = [
+            'store_id' => $this->storeId,
+            'category_id' => $category->id,
+            'url' => $url,
+            'level' => $this->level,
+            'has_products' => empty($this->level),
+            'has_categories' => empty($this->level),
+            'randomized_at' => date('Y-m-d'),
+        ];
+
+        echo ">>>>>Updating lookup category :" . $category->name . "\n";
+
+        StoreCategory::updateOrCreate($attributes, $values);
+        return $category;
     }
 
     protected function setProduct($values, $storeCategory)

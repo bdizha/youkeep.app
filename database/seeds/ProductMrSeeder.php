@@ -170,44 +170,6 @@ class ProductMrSeeder extends DatabaseSeeder
         }
     }
 
-    /**
-     * @param $categoryName
-     * @param $url
-     * @return mixed
-     */
-    private function setCategory($categoryName, $url)
-    {
-        $categoryDescription = 'Not set';
-
-        $this->level = -1;
-        $this->categories = [];
-
-        /* Update or create this category */
-        $attributes = $values = [
-            'name' => $categoryName,
-        ];
-
-        $values = [
-            'name' => $categoryName,
-            'order' => 1,
-            'description' => $categoryDescription,
-            'type' => Category::TYPE_CATALOG
-        ];
-
-        $category = \App\Category::updateOrCreate($attributes, $values);
-        $this->categories[] = $category->id;
-
-        /* Add in the store category link */
-        $values = [
-            'store_id' => $this->storeId,
-            'category_id' => $category->id,
-            'url' => $url,
-        ];
-
-        StoreCategory::updateOrCreate($values, $values);
-        return $category;
-    }
-
     protected $parentCategory = null;
 
     /**

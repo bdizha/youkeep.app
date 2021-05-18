@@ -39,7 +39,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function art(Request $request)
+    public function categories(Request $request)
     {
         return view('art');
     }

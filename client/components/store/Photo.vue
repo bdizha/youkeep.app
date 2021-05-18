@@ -9,14 +9,13 @@ export default {
   name: 'r-store-photo',
   props: {
     store: {type: Object, required: false, default: null},
-    size: {type: Number, required: false, default: 150},
+    size: {type: Number, required: false, default: 180},
     isShowing: {type: Boolean, required: false, default: false},
   },
   data() {
     return {
       quantity: 1,
-      styles: null,
-      size: 180,
+      styles: null
     };
   },
   created() {

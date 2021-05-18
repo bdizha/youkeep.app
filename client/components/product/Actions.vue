@@ -3,7 +3,7 @@
     <a-col v-if="isEnabled || hasActions" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :lg="{ span: hasAddToCart ? 12 : 24 }"
     >
-      <a-row class="r-product-actions">
+      <a-row type="flex" justify="center" align="middle">
         <a-col class="r-text-left" :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: !isShowing ? 6 : 4 }"
                :lg="{ span: !isShowing ? 6 : 4 }"
         >
@@ -17,10 +17,10 @@
             <a-icon class="r-icon-empty" type="minus"/>
           </a-button>
         </a-col>
-        <a-col :xs="{ span: 10 }" :sm="{ span: 12 }" :md="{ span: !isShowing ? 16 : 12 }"
+        <a-col class="r-text-center" :xs="{ span: 10 }" :sm="{ span: 12 }" :md="{ span: !isShowing ? 16 : 12 }"
                :lg="{ span: !isShowing ? 12 : 16 }"
         >
-          <div class="r-action-height">
+          <div class="r-text-center r-action-height">
             <div class="r-cart" :class="{'r-cart__active': productItem.quantity > 0}">
               <div class="r-shopping-cart"></div>
               <span class="r-cart-count">{{ productItem.quantity }}</span>

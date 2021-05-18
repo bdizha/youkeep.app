@@ -1,79 +1,59 @@
-<ul data-dropdown-content="" id="SHOP_DROPDOWN" navigation="[object Object]"
-    class="af-subnav f-dropdown xlarge content af-dropdown-shadow"
->
-    <li class="small-12 row af-in-grid">
-        <div class="row pad pad-m only-v">
-            <div class="small-2 column"><p class="af-lead-text-s margin margin-m margin-bottom">Medium</p>
-                <p class="af-small-text margin margin-s"><a href="/art/product_category-painting/" class="pad pad-none">Painting</a>
-                </p>
-                <p class="af-small-text margin margin-s"><a href="/art/product_category-printmaking/"
-                                                            class="pad pad-none"
-                    >Printmaking</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/product_category-photography/"
-                                                            class="pad pad-none"
-                    >Photography</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/product_category-sculpture/"
-                                                            class="pad pad-none"
-                    >Sculpture</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/product_category-drawing/" class="pad pad-none">Drawing</a>
-                </p>
-                <p class="af-small-text margin margin-s"><a href="/art/product_category-digital-art/"
-                                                            class="pad pad-none"
-                    >Digital art</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/product_category-collage/" class="pad pad-none">Collage</a>
-                </p>
-                <hr class="margin margin-m">
-                <p class="af-small-text af-bold margin margin-s"><a href="/art/sort-newest/" class="pad pad-none">New
-                        art</a></p>
-                <p class="af-small-text af-bold margin margin-s"><a href="/art/" class="pad pad-none">All art</a></p>
-            </div>
-            <div class="small-2 small-offset-1 column"><p class="af-lead-text-s margin margin-m margin-bottom">
-                    Subject</p>
-                <p class="af-small-text margin margin-s"><a href="/art/subject-landscapes-sea-sky/"
-                                                            class="pad pad-none"
-                    >Landscapes</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/subject-abstract-conceptual/"
-                                                            class="pad pad-none"
-                    >Abstracts</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/subject-people-portraits/" class="pad pad-none">People
-                        and portraits</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/subject-nudes-erotic/" class="pad pad-none"
-                    >Nudes</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/subject-flowers-plants/" class="pad pad-none">Florals
-                        and plants</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/subject-still-life/" class="pad pad-none">Still
-                        life</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/subject-animals-birds/" class="pad pad-none">Animals</a>
-                </p>
-                <p class="af-small-text margin margin-s"><a href="/art/subject-architecture-cityscapes/"
-                                                            class="pad pad-none"
-                    >Architecture and cities</a></p></div>
-            <div class="small-2 small-offset-1 column"><p class="af-lead-text-s margin margin-m margin-bottom">For your
-                    budget</p>
-                <p class="af-small-text margin margin-s"><a href="/art/price_max-100/" class="pad pad-none">$100 and
-                        under</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/price_max-500/" class="pad pad-none">$500 and
-                        under</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/price_max-1000/" class="pad pad-none">$1,000 and
-                        under</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/price_min-1000/" class="pad pad-none">$1,000 and
-                        over</a></p>
-                <hr class="margin margin-m">
-                <a title="Gift cards" href="/product/giftcard/" class="pad pad-none"><img
-                        src="https://d2m7ibezl7l5lt.cloudfront.net/img/v2/megamenu/gift-card.svg" alt=""
-                        class="small-11"
-                    ></a></div>
-            <div class="small-2 small-offset-1 column"><p class="af-lead-text-s margin margin-m margin-bottom">Sales
-                    <img src="https://d2m7ibezl7l5lt.cloudfront.net/img/v2/megamenu/tag.svg" style="width: 37px;"></p>
-                <p class="af-small-text margin margin-s"><a href="/art/in_sale-20/" class="pad pad-none">20% off</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/in_sale-30/" class="pad pad-none">30% off</a></p>
-                <p class="af-small-text margin margin-s"><a href="/art/in_sale-50/" class="pad pad-none">50% off</a></p>
-                <hr class="margin margin-m">
-                <p class="af-small-text af-bold margin margin-s"><a href="/art/in_sale-on/" class="pad pad-none">All
-                        sale</a></p>
-                <p class="af-small-text af-bold margin margin-s"><a href="/art/free_shipping-true/"
-                                                                    class="pad pad-none"
-                    >Free shipping</a></p></div>
-        </div>
-    </li>
+<ul class="menu__items" data-tag="items">
+    <li class="menu-item has-arrow" data-ind="0" data-id="306">
+        <span class="menu-item__title" data-tag="title">For women</span>
+        <i class="menu-icon r-menu-icon--for-women"></i></li>
+    <li class="menu-item has-arrow" data-ind="1" data-id="566">
+        <span class="menu-item__title" data-tag="title">For men</span>
+        <i class="menu-icon r-menu-icon--for-men"></i></li>
+    <li class="menu-item has-arrow" data-ind="1" data-id="566">
+        <span class="menu-item__title" data-tag="title">Clothes</span>
+        <i class="menu-icon r-menu-icon--for-men"></i></li>
+    <li class="menu-item has-arrow" data-ind="2" data-id="115">
+        <span class="menu-item__title" data-tag="title">For children</span>
+        <i class="menu-icon r-menu-icon--for-children"></i></li>
+    <li class="menu-item has-arrow" data-ind="3" data-id="629">
+        <span class="menu-item__title" data-tag="title">Shoes</span>
+        <i class="menu-icon r-menu-icon--shoes"></i></li>
+    <li class="menu-item has-arrow" data-ind="4" data-id="1">
+        <span class="menu-item__title" data-tag="title">Accessories</span>
+        <i class="menu-icon r-menu-icon--accessories"></i></li>
+    <li class="menu-item has-arrow" data-ind="5" data-id="4830">
+        <span class="menu-item__title" data-tag="title">Electronics</span>
+        <i class="menu-icon r-menu-icon--electronics"></i></li>
+    <li class="menu-item has-arrow" data-ind="6" data-id="128297">
+        <span class="menu-item__title" data-tag="title">Premium</span>
+        <i class="menu-icon r-menu-icon--premium"></i></li>
+    <li class="menu-item has-arrow" data-ind="8" data-id="519">
+        <span class="menu-item__title" data-tag="title">Books</span>
+        <i class="menu-icon r-menu-icon--519"></i></li>
+    <li class="menu-item has-arrow" data-ind="9" data-id="784">
+        <span class="menu-item__title" data-tag="title">Sport</span>
+        <i class="menu-icon r-menu-icon--784"></i></li>
+    <li class="menu-item has-arrow" data-ind="10" data-id="543">
+        <span class="menu-item__title" data-tag="title">Beauty</span>
+        <i class="menu-icon r-menu-icon--beauty"></i></li>
+    <li class="menu-item has-arrow" data-ind="11" data-id="481">
+        <span class="menu-item__title" data-tag="title">Toys</span>
+        <i class="menu-icon r-menu-icon--toys"></i></li>
+    <li class="menu-item has-arrow" data-ind="12" data-id="6119">
+        <span class="menu-item__title" data-tag="title">Pet products</span>
+        <i class="menu-icon r-menu-icon--pet-products"></i></li>
+    <li class="menu-item has-arrow" data-ind="13" data-id="5486">
+        <span class="menu-item__title" data-tag="title">Stationery</span>
+        <i class="menu-icon r-menu-icon--stationery"></i></li>
+    <li class="menu-item has-arrow" data-ind="14" data-id="17006">
+        <span class="menu-item__title" data-tag="title">Just for you</span>
+        <i class="menu-icon r-menu-icon--just-for-you"></i></li>
+    <li class="menu-item has-arrow" data-ind="15" data-id="258">
+        <span class="menu-item__title" data-tag="title">Household items</span>
+        <i class="menu-icon r-menu-icon--house-hold-items"></i></li>
+    <li class="menu-item has-arrow" data-ind="16" data-id="6994">
+        <span class="menu-item__title" data-tag="title">Automotive supplies</span>
+        <i class="menu-icon r-menu-icon--automotive-supplies"></i></li>
+    <li class="menu-item has-arrow" data-ind="17" data-id="62057">
+        <span class="menu-item__title" data-tag="title">Exclusives</span>
+        <i class="menu-icon r-menu-icon--exclusives"></i></li>
+    <li class="menu-item has-arrow" data-ind="17" data-id="62057">
+        <span class="menu-item__title" data-tag="title">Promos</span>
+        <i class="menu-icon r-menu-icon--accessories"></i></li>
 </ul>

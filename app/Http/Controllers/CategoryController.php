@@ -37,7 +37,7 @@ class CategoryController extends Controller
         $this->storeSlug = $request->get('store', null);
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key)) {
+        if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
             $this->_setCategories();

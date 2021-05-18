@@ -80,7 +80,7 @@ export default {
 
     let params = {
       category_id: this.category.id,
-      limit: 12,
+      limit: 24,
       filters: this.filters
     };
 
@@ -93,10 +93,6 @@ export default {
       .then(({data}) => {
         $this.products = data.data;
         $this.hasData = true;
-
-        setTimeout(function () {
-          $this.isProcessing = false;
-        }, 600);
       })
       .catch(e => {
         console.log(e);

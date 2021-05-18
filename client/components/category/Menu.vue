@@ -2,11 +2,11 @@
   <a-row type="flex" justify="center" align="middle">
     <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <r-store-item v-if="hasStore" :store="store"></r-store-item>
-      <a-collapse v-if="hasCategory" default-active-key="1" expandIconPosition="right">
-        <a-collapse-panel class="r-collapse-panel" key="1" header="Price">
+      <a-collapse default-active-key="1" expandIconPosition="right">
+        <a-collapse-panel v-if="hasCategory" class="r-collapse-panel" key="1" header="Price">
           <r-category-filter-price></r-category-filter-price>
         </a-collapse-panel>
-        <a-collapse-panel class="r-collapse-panel" v-for="(filter, index) in category.filters"
+        <a-collapse-panel v-if="hasCategory" class="r-collapse-panel" v-for="(filter, index) in category.filters"
                           :key="filter.name"
                           :header="filter.name">
           <r-category-filter-item :filter="filter"></r-category-filter-item>

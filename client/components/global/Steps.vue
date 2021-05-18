@@ -1,12 +1,12 @@
 <template>
-  <a-row class="r-mt-48" type="flex" justify="center">
+  <a-row class="r-mt-48" type="flex" justify="center" align="top">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row :gutter="[24,24]" type="flex" justify="center"
-             align="middle">
+             align="top">
         <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 20 }" :lg="{ span: 20 }">
-          <h2 class="r-heading r-text-left">
-            {{ title ? title : 'Shopple connects customers to merchants!' }}
-          </h2>
+          <h3 class="r-heading-light r-text-left">
+            {{ title ? title : 'Shopple connects shoppers to sellers.' }}
+          </h3>
         </a-col>
         <a-col v-show="hasMore" class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
                :lg="{ span: 4}">
@@ -15,7 +15,7 @@
                       block
                       type="secondary"
                       size="default">
-              Read more
+              Explore More
               <a-icon type="right"/>
             </a-button>
           </nuxt-link>
@@ -26,7 +26,7 @@
             <a-step v-for="(step, index) in steps"
                     :key="index">
               <template slot="title">
-                <h3 class="r-heading">{{ step.title }}</h3>
+                <h3 class="r-heading-light">{{ step.title }}</h3>
               </template>
               <template slot="description">
                 <div class="r-step-caption">

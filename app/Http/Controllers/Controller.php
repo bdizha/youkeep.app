@@ -46,7 +46,7 @@ class Controller extends BaseController
         $filters = [],
         $store = null,
         $stores = [],
-        $limit = 12,
+        $limit = 24,
         $level = 1,
         $items = [],
         $item = null;
@@ -184,7 +184,7 @@ class Controller extends BaseController
                 $query->where('parent_id', $this->storeCategory->id);
             }
 
-            if (!empty($this->level)) {
+            if (isset($this->level)) {
                 $query->where('level', $this->level);
             }
 
