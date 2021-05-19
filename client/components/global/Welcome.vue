@@ -32,7 +32,7 @@ export default {
       level: 0,
       limit: process.env.APP_LIMIT,
       order_by: 'randomized_at',
-      with: ['photos', 'breadcrumbs']
+      with: ['photos', 'breadcrumbs', 'categories']
     };
 
     await this.onCategories();

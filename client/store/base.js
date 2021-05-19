@@ -1,14 +1,16 @@
 import axios from 'axios'
-import Cookies from "js-cookie";
+import Cookies from 'js-cookie'
 
 // state
 const state = () => ({
   store: {},
   hasStore: false,
-  stores: {data: []},
+  stores: { data: [] },
   category: {},
   product: {},
   products: [],
+  menuCategory: {name: 'All Categories', slug: null},
+  hasMenuCategory: false,
   categories: [],
   hasProducts: false,
   departments: [],
@@ -73,7 +75,7 @@ const state = () => ({
   hasDownload: true,
   hasSubscribe: true,
   redirectTo: null,
-  popover: {name: null},
+  popover: { name: null },
   errors: [],
 })
 
@@ -87,6 +89,8 @@ const getters = {
   hasStore: state => state.hasStore,
   stores: state => state.stores,
   hasStores: state => state.hasStores,
+  menuCategory: state => state.menuCategory,
+  hasMenuCategory: state => state.hasMenuCategory,
   category: state => state.category,
   departments: state => state.departments,
   positions: state => state.positions,
@@ -124,160 +128,172 @@ const getters = {
 
 // mutations
 const mutations = {
-  setStore(state, store) {
-    state.store = store;
-    state.hasStore = store !== undefined && store != null;
+  setStore (state, store) {
+    state.store = store
+    state.hasStore = store !== undefined && store != null
   },
-  setNotice(state, notice) {
-    state.notice = notice;
-    state.hasNotice = notice !== null;
+  setNotice (state, notice) {
+    state.notice = notice
+    state.hasNotice = notice !== null
   },
-  setHasNotice(state, hasNotice) {
-    state.hasNotice = hasNotice;
+  setHasNotice (state, hasNotice) {
+    state.hasNotice = hasNotice
   },
-  setIsValid(state, isValid) {
-    state.isValid = isValid;
+  setIsValid (state, isValid) {
+    state.isValid = isValid
   },
-  setStores(state, stores) {
-    state.stores = stores;
-    state.hasStores = stores.data !== undefined && stores.data.length > 0;
+  setStores (state, stores) {
+    state.stores = stores
+    state.hasStores = stores.data !== undefined && stores.data.length > 0
   },
-  setCategory(state, category) {
-    state.category = category;
-    state.hasCategory = category != null;
+  setMenuCategory (state, category) {
+    state.menuCategory = category
+    state.hasMenuCategory = category.slug !== null
   },
-  setCategories(state, categories) {
-    state.categories = categories;
-    state.hasCategories = categories !== undefined && categories.length > 0;
+  setCategory (state, category) {
+    state.category = category
+    state.hasCategory = category != null
   },
-  setProduct(state, product) {
-    state.product = product;
-    state.hasProduct = product != null;
+  setCategories (state, categories) {
+    state.categories = categories
+    state.hasCategories = categories !== undefined && categories.length > 0
   },
-  setProducts(state, products) {
-    state.products = products;
-    state.hasProducts = products.data !== undefined && products.data.length > 0;
+  setProduct (state, product) {
+    state.product = product
+    state.hasProduct = product != null
   },
-  setPositions(state, positions) {
-    state.positions = positions;
+  setProducts (state, products) {
+    state.products = products
+    state.hasProducts = products.data !== undefined && products.data.length > 0
   },
-  setPosition(state, position) {
-    state.position = position;
+  setPositions (state, positions) {
+    state.positions = positions
   },
-  setDepartments(state, departments) {
-    state.departments = departments;
+  setPosition (state, position) {
+    state.position = position
   },
-  setStoreCategories(state, storeCategories) {
-    state.storeCategories = storeCategories;
+  setDepartments (state, departments) {
+    state.departments = departments
   },
-  setDrawer(state, drawer) {
-    state.drawer = drawer;
-    state.hasDrawer = state.drawer.isVisible;
-    state.hasModal = false;
-    state.modal.isVisible = false;
+  setStoreCategories (state, storeCategories) {
+    state.storeCategories = storeCategories
   },
-  setModal(state, modal) {
-    state.modal = modal;
-    state.hasDrawer = false;
-    state.hasModal = state.modal.isVisible;
-    state.drawer.isVisible = false;
+  setDrawer (state, drawer) {
+    state.drawer = drawer
+    state.hasDrawer = state.drawer.isVisible
+    state.hasModal = false
+    state.modal.isVisible = false
   },
-  setHasOverlay(state, hasOverlay) {
+  setModal (state, modal) {
+    state.modal = modal
+    state.hasDrawer = false
+    state.hasModal = state.modal.isVisible
+    state.drawer.isVisible = false
+  },
+  setHasOverlay (state, hasOverlay) {
     // console.log('setHasOverlay', hasOverlay);
-    state.hasOverlay = hasOverlay;
+    state.hasOverlay = hasOverlay
   },
-  setFilters(state, filters) {
-    state.filters = filters;
+  setFilters (state, filters) {
+    state.filters = filters
   },
-  setFilter(state, filter) {
-    state.filters[filter.key] = filter.value;
+  setFilter (state, filter) {
+    state.filters[filter.key] = filter.value
   },
-  setReviews(state, reviews) {
-    state.reviews = reviews;
+  setReviews (state, reviews) {
+    state.reviews = reviews
   },
-  setSort(state, sort) {
-    state.sort = sort;
+  setSort (state, sort) {
+    state.sort = sort
 
-    Cookies.set('sort', sort, {expires: 365});
+    Cookies.set('sort', sort, { expires: 365 })
   },
-  setSearch(state, search) {
-    state.search = search;
+  setSearch (state, search) {
+    state.search = search
 
-    Cookies.set('search', search, {expires: 365});
+    Cookies.set('search', search, { expires: 365 })
   },
-  setProcess(state, process) {
-    state.processes[process.key] = process.value;
+  setProcess (state, process) {
+    state.processes[process.key] = process.value
   },
-  setHasForm(state, hasForm) {
-    state.hasForm = hasForm;
+  setHasForm (state, hasForm) {
+    state.hasForm = hasForm
   },
-  setIsDark(state, isDark) {
-    state.isDark = isDark;
+  setIsDark (state, isDark) {
+    state.isDark = isDark
   },
-  setHasFooter(state, hasFooter) {
-    state.hasFooter = hasFooter;
+  setHasFooter (state, hasFooter) {
+    state.hasFooter = hasFooter
   },
-  setHasDownload(state, hasDownload) {
-    state.hasDownload = hasDownload;
+  setHasDownload (state, hasDownload) {
+    state.hasDownload = hasDownload
   },
-  setHasSubscribe(state, hasSubscribe) {
-    state.hasSubscribe = hasSubscribe;
+  setHasSubscribe (state, hasSubscribe) {
+    state.hasSubscribe = hasSubscribe
   },
-  setIsRaised(state, isRaised) {
-    state.isRaised = isRaised;
+  setIsRaised (state, isRaised) {
+    state.isRaised = isRaised
   },
-  setHasShop(state, hasShop) {
-    state.hasShop = hasShop;
+  setHasShop (state, hasShop) {
+    state.hasShop = hasShop
   },
-  setErrors(state, errors) {
-    state.errors = errors;
+  setErrors (state, errors) {
+    state.errors = errors
   },
-  setPopover(state, popover) {
-    state.popover = popover;
+  setPopover (state, popover) {
+    state.popover = popover
   },
 }
 
 // actions
 const actions = {
-  onFilters({dispatch, commit}, payload) {
+  onFilters ({ dispatch, commit }, payload) {
     commit('setFilters', payload)
   },
-  onSort({dispatch, commit}, payload) {
+  onSort ({ dispatch, commit }, payload) {
     commit('setSort', payload)
   },
-  onSearch({dispatch, commit}, payload) {
+  onSearch ({ dispatch, commit }, payload) {
     commit('setSearch', payload)
   },
-  onHasShop({dispatch, commit}, payload) {
+  onHasShop ({ dispatch, commit }, payload) {
     commit('setHasShop', payload)
   },
-  onHasDownload({dispatch, commit}, payload) {
+  onHasDownload ({ dispatch, commit }, payload) {
     commit('setHasDownload', payload)
   },
-  onHasSubscribe({dispatch, commit}, payload) {
+  onHasSubscribe ({ dispatch, commit }, payload) {
     commit('setHasSubscribe', payload)
   },
-  onPopover({dispatch, commit}, payload) {
+  onPopover ({ dispatch, commit }, payload) {
     commit('setPopover', payload)
   },
-  async onCategory({dispatch, commit, state}, params) {
+  async onMenuCategory ({ dispatch, commit, state }, category) {
     try {
-      dispatch('onProcess', {key: 'isCategory', value: true});
-      dispatch('onProcess', {key: 'isProduct', value: true});
-      dispatch('onProcess', {key: 'isFixed', value: true});
+      commit('setMenuCategory', category)
+    } catch (e) {
+      console.error('onCategory errors')
+      console.log(e)
+    }
+  },
+  async onCategory ({ dispatch, commit, state }, params) {
+    try {
+      dispatch('onProcess', { key: 'isCategory', value: true })
+      dispatch('onProcess', { key: 'isProduct', value: true })
+      dispatch('onProcess', { key: 'isFixed', value: true })
 
-      let route = params.route;
+      let route = params.route
 
-      commit('setCategories', []);
-      commit('setStores', []);
-      commit('setProducts', {data: []});
+      commit('setCategories', [])
+      commit('setStores', [])
+      commit('setProducts', { data: [] })
 
-      await axios.post(route, params).then(({data}) => {
+      await axios.post(route, params).then(({ data }) => {
 
-        commit('setCategory', data.category);
-        commit('setCategories', data.categories);
-        commit('setProducts', data.products);
-        commit('setStore', data.store);
+        commit('setCategory', data.category)
+        commit('setCategories', data.categories)
+        commit('setProducts', data.products)
+        commit('setStore', data.store)
 
         // const payload = {
         //   limit: process.env.APP_LIMIT,
@@ -288,201 +304,221 @@ const actions = {
         //
         // dispatch('onProducts', payload)
 
-        dispatch('onProcess', {key: 'isProduct', value: false});
-        dispatch('onProcess', {key: 'isCategory', value: false});
-        dispatch('onProcess', {key: 'isFixed', value: false});
-      });
+        dispatch('onProcess', { key: 'isProduct', value: false })
+        dispatch('onProcess', { key: 'isCategory', value: false })
+        dispatch('onProcess', { key: 'isFixed', value: false })
+      })
 
     } catch (e) {
-      console.error('onCategory errors');
-      console.log(e);
+      console.error('onCategory errors')
+      console.log(e)
     }
-  },
-  async onCategories({dispatch, commit, state}, payload) {
+  }
+  ,
+  async onCategories ({ dispatch, commit, state }, payload) {
     try {
-      dispatch('onProcess', {key: 'isFixed', value: true});
-      dispatch('onProcess', {key: 'isCategories', value: true});
+      dispatch('onProcess', { key: 'isFixed', value: true })
+      dispatch('onProcess', { key: 'isCategories', value: true })
 
-      commit('setCategories', []);
+      commit('setCategories', [])
 
-      await axios.post('/categories', payload).then(({data}) => {
+      await axios.post('/categories', payload).then(({ data }) => {
 
-        commit('setCategories', data.categories);
-        commit('setStore', data.store);
+        commit('setCategories', data.categories)
+        commit('setStore', data.store)
 
-        dispatch('onProcess', {key: 'isCategory', value: false});
-        dispatch('onProcess', {key: 'isCategories', value: false});
+        dispatch('onProcess', { key: 'isCategory', value: false })
+        dispatch('onProcess', { key: 'isCategories', value: false })
 
-        dispatch('onProcess', {key: 'isFixed', value: false});
-      });
+        dispatch('onProcess', { key: 'isFixed', value: false })
+      })
     } catch (e) {
-      console.error('onCategories errors');
-      console.log(e);
+      console.error('onCategories errors')
+      console.log(e)
     }
-  },
-  async onProduct({dispatch, commit, state}, params) {
-    dispatch('onProcess', {key: 'isProduct', value: true});
-    dispatch('onProcess', {key: 'isFixed', value: true});
+  }
+  ,
+  async onProduct ({ dispatch, commit, state }, params) {
+    dispatch('onProcess', { key: 'isProduct', value: true })
+    dispatch('onProcess', { key: 'isFixed', value: true })
 
     try {
-      let route = params.route;
+      let route = params.route
 
-      await axios.post(route, params).then(({data}) => {
-        commit('setStore', data.store);
-        commit('setProduct', data.product);
+      await axios.post(route, params).then(({ data }) => {
+        commit('setStore', data.store)
+        commit('setProduct', data.product)
 
         // console.log('setProduct', data);
-        commit('setCategory', data.category);
+        commit('setCategory', data.category)
 
-        dispatch('onProcess', {key: 'isFixed', value: false});
+        dispatch('onProcess', { key: 'isFixed', value: false })
 
-        let defaultVariant = product.default_variant;
+        let defaultVariant = product.default_variant
         let productType = defaultVariant.product_type
 
-        dispatch('product/onVariant', defaultVariant, {root: true});
-        dispatch('product/onProductType', productType, {root: true});
-        dispatch('onProcess', {key: 'isProduct', value: false});
-      });
+        dispatch('product/onVariant', defaultVariant, { root: true })
+        dispatch('product/onProductType', productType, { root: true })
+        dispatch('onProcess', { key: 'isProduct', value: false })
+      })
 
     } catch (e) {
-      console.error('onProduct errors');
-      console.log(e);
+      console.error('onProduct errors')
+      console.log(e)
     }
-  },
-  async onProducts({dispatch, commit}, payload) {
-    dispatch('onProcess', {key: 'isProduct', value: true});
-    dispatch('onProcess', {key: 'isFixed', value: true});
+  }
+  ,
+  async onProducts ({ dispatch, commit }, payload) {
+    dispatch('onProcess', { key: 'isProduct', value: true })
+    dispatch('onProcess', { key: 'isFixed', value: true })
 
     try {
-      await axios.post('/products', payload).then(({data}) => {
-        commit('setProducts', data);
-        dispatch('onProcess', {key: 'isFixed', value: false});
-        dispatch('onProcess', {key: 'isProduct', value: false});
-      });
+      await axios.post('/products', payload).then(({ data }) => {
+        commit('setProducts', data)
+        dispatch('onProcess', { key: 'isFixed', value: false })
+        dispatch('onProcess', { key: 'isProduct', value: false })
+      })
 
     } catch (e) {
-      console.error('onProducts errors');
-      console.log(e);
+      console.error('onProducts errors')
+      console.log(e)
     }
-  },
-  async onPosition({dispatch, commit}, payload) {
+  }
+  ,
+  async onPosition ({ dispatch, commit }, payload) {
     try {
-      commit('setProcess', {key: 'isCareers', value: true});
-      const {data} = await axios.get(payload.route, {});
-      commit('setPosition', data.position);
+      commit('setProcess', { key: 'isCareers', value: true })
+      const { data } = await axios.get(payload.route, {})
+      commit('setPosition', data.position)
 
-      commit('setProcess', {key: 'isCareers', value: false});
+      commit('setProcess', { key: 'isCareers', value: false })
 
     } catch (e) {
-      console.error('on error: ', e);
+      console.error('on error: ', e)
     }
-  },
-  async onCareers({dispatch, commit}, payload) {
+  }
+  ,
+  async onCareers ({ dispatch, commit }, payload) {
     try {
-      commit('setProcess', {key: 'isCareers', value: true});
-      const {data} = await axios.post('/careers', payload);
-      commit('setDepartments', data.departments);
-      commit('setPositions', data.positions);
+      commit('setProcess', { key: 'isCareers', value: true })
+      const { data } = await axios.post('/careers', payload)
+      commit('setDepartments', data.departments)
+      commit('setPositions', data.positions)
 
-      commit('setProcess', {key: 'isCareers', value: false});
+      commit('setProcess', { key: 'isCareers', value: false })
 
     } catch (e) {
-      console.error('on error: ', e);
+      console.error('on error: ', e)
     }
-  },
-  async onStoreCategories({dispatch, commit}, payload) {
+  }
+  ,
+  async onStoreCategories ({ dispatch, commit }, payload) {
     try {
-      commit('setProcess', {key: 'isRunning', value: true});
-      const {data} = await axios.post('/categories', payload);
-      commit('setStoreCategories', data.categories);
+      commit('setProcess', { key: 'isRunning', value: true })
+      const { data } = await axios.post('/categories', payload)
+      commit('setStoreCategories', data.categories)
 
-      commit('setProcess', {key: 'isRunning', value: false});
+      commit('setProcess', { key: 'isRunning', value: false })
 
     } catch (e) {
-      console.error('on error: ', e);
+      console.error('on error: ', e)
     }
-  },
-  async onStores({dispatch, commit}, payload) {
-    commit('setProcess', {key: 'isTray', value: true});
+  }
+  ,
+  async onStores ({ dispatch, commit }, payload) {
+    commit('setProcess', { key: 'isTray', value: true })
 
-    await axios.post('/shops', payload).then(({data}) => {
-      let stores = data;
+    await axios.post('/shops', payload).then(({ data }) => {
+      let stores = data
 
-      commit('setStores', stores);
-      commit('setFilter', {key: 'stores', value: stores});
-      commit('setProcess', {key: 'isTray', value: false});
-    });
-  },
-  async onReviews({dispatch, commit, state}, payload) {
+      commit('setStores', stores)
+      commit('setFilter', { key: 'stores', value: stores })
+      commit('setProcess', { key: 'isTray', value: false })
+    })
+  }
+  ,
+  async onReviews ({ dispatch, commit, state }, payload) {
     try {
-      commit('setProcess', {key: 'isRunning', value: true});
+      commit('setProcess', { key: 'isRunning', value: true })
 
-      await axios.get('/testimonials', payload).then(({data}) => {
-        commit('setReviews', data.testimonials);
-        commit('setProcess', {key: 'isRunning', value: false});
-      });
+      await axios.get('/testimonials', payload).then(({ data }) => {
+        commit('setReviews', data.testimonials)
+        commit('setProcess', { key: 'isRunning', value: false })
+      })
 
     } catch (e) {
-      console.error('on error: ', e);
+      console.error('on error: ', e)
     }
-  },
-  onIsFixed({commit}) {
-    commit('setProcess', {key: 'isFixed', value: true});
-    commit('setProcess', {key: 'isFixed', value: false});
-  },
-  async onProcess({dispatch, commit, state}, payload) {
-    commit('setProcess', payload);
-  },
-  async onHasForm({dispatch, commit, state}, payload) {
-    commit('setHasForm', payload);
-  },
-  onFooter({dispatch, commit, state}, payload) {
-    commit('setHasFooter', payload);
-  },
-  onDownload({dispatch, commit, state}, payload) {
-    commit('setHasDownload', payload);
-  },
-  onSubscribe({dispatch, commit, state}, payload) {
-    commit('setHasSubscribe', payload);
-  },
-  onModal({dispatch, commit, state}, payload) {
-    commit('setProcess', {key: 'isRunning', value: true});
-    commit('setProcess', {key: 'isFixed', value: true});
-    commit('setModal', payload);
-    commit('setHasOverlay', state.hasModal);
+  }
+  ,
+  onIsFixed ({ commit }) {
+    commit('setProcess', { key: 'isFixed', value: true })
+    commit('setProcess', { key: 'isFixed', value: false })
+  }
+  ,
+  async onProcess ({ dispatch, commit, state }, payload) {
+    commit('setProcess', payload)
+  }
+  ,
+  async onHasForm ({ dispatch, commit, state }, payload) {
+    commit('setHasForm', payload)
+  }
+  ,
+  onFooter ({ dispatch, commit, state }, payload) {
+    commit('setHasFooter', payload)
+  }
+  ,
+  onDownload ({ dispatch, commit, state }, payload) {
+    commit('setHasDownload', payload)
+  }
+  ,
+  onSubscribe ({ dispatch, commit, state }, payload) {
+    commit('setHasSubscribe', payload)
+  }
+  ,
+  onModal ({ dispatch, commit, state }, payload) {
+    commit('setProcess', { key: 'isRunning', value: true })
+    commit('setProcess', { key: 'isFixed', value: true })
+    commit('setModal', payload)
+    commit('setHasOverlay', state.hasModal)
 
     setTimeout(function () {
-      commit('setProcess', {key: 'isRunning', value: false});
-      commit('setProcess', {key: 'isFixed', value: false});
-    }, 300);
-  },
-  onDrawer({dispatch, commit, state}, payload) {
-    commit('setProcess', {key: 'isRunning', value: true});
-    commit('setProcess', {key: 'isFixed', value: true});
-    commit('setDrawer', payload);
-    commit('setProcess', {key: 'isRunning', value: false});
-    commit('setProcess', {key: 'isFixed', value: false});
+      commit('setProcess', { key: 'isRunning', value: false })
+      commit('setProcess', { key: 'isFixed', value: false })
+    }, 300)
+  }
+  ,
+  onDrawer ({ dispatch, commit, state }, payload) {
+    commit('setProcess', { key: 'isRunning', value: true })
+    commit('setProcess', { key: 'isFixed', value: true })
+    commit('setDrawer', payload)
+    commit('setProcess', { key: 'isRunning', value: false })
+    commit('setProcess', { key: 'isFixed', value: false })
 
-    commit('setHasOverlay', state.hasDrawer);
-  },
-  onIsRaised({dispatch, commit}, payload) {
-    commit('setIsRaised', payload);
-  },
-  onIsDark({dispatch, commit}, payload) {
-    commit('setIsDark', payload);
-  },
-  onNotice({dispatch, commit}, payload) {
-    commit('setNotice', payload);
-    commit('setHasNotice', false);
-  },
-  async onInit({dispatch, commit, state}, payload) {
-    const search = Cookies.get('search');
+    commit('setHasOverlay', state.hasDrawer)
+  }
+  ,
+  onIsRaised ({ dispatch, commit }, payload) {
+    commit('setIsRaised', payload)
+  }
+  ,
+  onIsDark ({ dispatch, commit }, payload) {
+    commit('setIsDark', payload)
+  }
+  ,
+  onNotice ({ dispatch, commit }, payload) {
+    commit('setNotice', payload)
+    commit('setHasNotice', false)
+  }
+  ,
+  async onInit ({ dispatch, commit, state }, payload) {
+    const search = Cookies.get('search')
     if (search) {
-      commit('setSearch', JSON.parse(search));
+      commit('setSearch', JSON.parse(search))
     }
-    const stores = Cookies.get('stores');
+    const stores = Cookies.get('stores')
     if (stores) {
-      commit('setStores', JSON.parse(stores));
+      commit('setStores', JSON.parse(stores))
     }
   }
 }

@@ -26,19 +26,27 @@
             <a-step v-for="(step, index) in steps"
                     :key="index">
               <template slot="title">
-                <h3 class="r-heading-light">{{ step.title }}</h3>
+                <h4 class="r-heading">{{ step.title }}</h4>
               </template>
               <template slot="description">
-                <div class="r-step-caption">
-                  {{ step.description }}
-                </div>
-                <div class="r-animate r-step-avatar">
-                  <r-avatar
-                    :key="index" shape="square"
-                    :size="210"
-                    :src="'/assets/Step_' + (index + 1) + '.svg?v=1'"
-                    src-placeholder="/assets/icon_default.png"/>
-                </div>
+                <a-row :gutter="[24,24]" type="flex" justify="center"
+                       align="top">
+                  <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                    <div class="r-step-avatar">
+                      <r-avatar
+                        :key="index" shape="square"
+                        :size="90"
+                        unit="px"
+                        :src="'/assets/icons/step-0' + (index + 1) + '.svg?v=1'"
+                        src-placeholder="/assets/icon_default.png"/>
+                    </div>
+                  </a-col>
+                  <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                    <p class="r-text-normal r-step-caption">
+                      {{ step.description }}
+                    </p>
+                  </a-col>
+                </a-row>
               </template>
             </a-step>
           </a-steps>

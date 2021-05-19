@@ -1,5 +1,5 @@
 <template>
-  <a-row v-show="!isLoggedIn" type="flex" justify="center"
+  <a-row v-show="!hasMenuCategory && !isLoggedIn" type="flex" justify="center"
          align="middle">
     <a-col class="r-pv-12 r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
@@ -25,7 +25,8 @@ export default {
     return {};
   },
   computed: mapGetters({
-    isLoggedIn: 'auth/isLoggedIn'
+    isLoggedIn: 'auth/isLoggedIn',
+    hasMenuCategory: 'base/hasMenuCategory'
   }),
   created() {
     this.payload();

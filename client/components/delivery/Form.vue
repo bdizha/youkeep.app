@@ -11,8 +11,8 @@
           </h3>
         </a-col>
       </a-row>
-      <a-form :class="{'r-form-white': !hasModal && !isStore}"
-              class="ant-form ant-form-vertical"
+      <a-form :class="{'r-p-24': !isStore}"
+              class="ant-form"
               @submit="onModal"
               :form="form">
         <a-auto-complete

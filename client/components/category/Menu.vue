@@ -11,10 +11,8 @@
                           :header="filter.name">
           <r-category-filter-item :filter="filter"></r-category-filter-item>
         </a-collapse-panel>
-        <a-collapse-panel v-if="hasCategories" class="r-collapse-panel" key="categories" header="Categories">
-          <r-category-filter-category></r-category-filter-category>
-        </a-collapse-panel>
       </a-collapse>
+      <r-category-filter-category></r-category-filter-category>
     </a-col>
   </a-row>
 </template>
@@ -41,6 +39,8 @@ export default {
   },
   computed: mapGetters({
     store: 'base/store',
+    menuCategory: 'base/menuCategory',
+    hasMenuCategory: 'base/hasMenuCategory',
     hasStore: 'base/hasStore',
     category: 'base/category',
     hasCategory: 'base/hasCategory',

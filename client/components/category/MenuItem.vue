@@ -1,10 +1,9 @@
 <template>
   <div v-if="hasData" class="r-category-filter">
-    <nuxt-link v-if="!category.has_categories"
+    <div class="r-category-menu-link"
+         v-if="!category.has_categories"
                @click.native="onCategory(category)"
-               class="r-category-menu-link"
-               :to="category.route"
-    >
+               :to="category.route">
       <i v-show="category.level == 0" :class="onClass(category)"></i>
       <r-avatar v-show="category.level > 0" shape="circle"
                 :size="30"
@@ -12,19 +11,17 @@
                 src-placeholder="/assets/icon_default.png"
       />
       {{ category.name }}
-    </nuxt-link>
+    </div>
     <a-collapse v-if="category.has_categories"
                 default-active-key="null"
                 accordion
-                expandIconPosition="right"
-    >
+                expandIconPosition="right">
       <template #expandIcon="props">
         <a-icon :type="props.isActive ? 'minus' : 'plus'"/>
       </template>
       <a-collapse-panel :key="category.id" :header="category.name">
-        <nuxt-link @click.native="onCategory(category)" class="r-category-menu-link"
-                   :to="category.route"
-        >
+        <nuxt-link class="r-category-menu-link"
+                   :to="category.route">
           <r-avatar shape="circle"
                     :size="30"
                     :src="category.photo"

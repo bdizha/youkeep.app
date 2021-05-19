@@ -1,8 +1,8 @@
 <template>
   <a-row class="r-store-arrows" type="flex" justify="center" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <div :class="padding" class="r-slider r-slider-out-12">
-        <VueSlickCarousel v-if="hasStores" v-bind="settings">
+      <div v-if="hasStores" :class="padding" class="r-slider r-slider-out-12">
+        <VueSlickCarousel v-bind="settings">
           <nuxt-link class="r-store-arrow"
                      v-for="(store, index) in stores.data"
                      :key="store.id"

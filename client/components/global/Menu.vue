@@ -1,10 +1,11 @@
 <template>
   <div :class="{'r-store-flex__has-notice': hasNotice}" class="r-store-flex">
     <r-store-notice v-if="hasNotice"></r-store-notice>
-    <r-delivery-form size="default"
-                     :is-store="true"
+    <r-delivery-form v-if="!hasMenuCategory" size="default"
+                     :is-store="false"
                      :has-submit="false"></r-delivery-form>
-    <a-list :data-source="links">
+    <r-category-filter-category></r-category-filter-category>
+    <a-list v-show="!hasMenuCategory" :data-source="links">
       <a-list-item class="r-list-item" slot="renderItem"
                    slot-scope="item, index">
         <template v-if="!item.modal">
@@ -23,10 +24,7 @@
         </template>
       </a-list-item>
     </a-list>
-    <a-collapse default-active-key="1" expandIconPosition="right">
-      <a-collapse-panel class="r-collapse-panel" header="All categories">
-        <r-category-filter-category></r-category-filter-category>
-      </a-collapse-panel>
+    <a-collapse v-show="!hasMenuCategory" default-active-key="1" expandIconPosition="right">
       <a-collapse-panel class="r-collapse-panel" header="Popular stores">
         <r-store-list></r-store-list>
       </a-collapse-panel>
@@ -86,6 +84,7 @@ export default {
     user: 'auth/user',
     flush: 'base/flush',
     hasNotice: 'base/hasNotice',
+    hasMenuCategory: 'base/hasMenuCategory',
   }),
   created() {
     this.payload();
