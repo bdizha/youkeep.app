@@ -31,17 +31,17 @@
               <template slot="description">
                 <a-row :gutter="[24,24]" type="flex" justify="center"
                        align="top">
-                  <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                  <a-col :xs="{ span: 8}" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
                     <div class="r-step-avatar">
                       <r-avatar
                         :key="index" shape="square"
-                        :size="90"
+                        :size="72"
                         unit="px"
-                        :src="'/assets/icons/step-0' + (index + 1) + '.svg?v=1'"
+                        :src="'/assets/icons/art-0' + (index + 1) + '.svg?v=1'"
                         src-placeholder="/assets/icon_default.png"/>
                     </div>
                   </a-col>
-                  <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+                  <a-col :xs="{ span: 16}" :sm="{ span: 16 }" :md="{ span: 16 }" :lg="{ span: 16 }">
                     <p class="r-text-normal r-step-caption">
                       {{ step.description }}
                     </p>

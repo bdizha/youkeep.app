@@ -1,47 +1,33 @@
 <template>
-  <div v-if="hasData" class="r-category-filter">
-    <div class="r-category-menu-link"
-         v-if="!category.has_categories"
-               @click.native="onCategory(category)"
-               :to="category.route">
-      <i v-show="category.level == 0" :class="onClass(category)"></i>
-      <r-avatar v-show="category.level > 0" shape="circle"
-                :size="30"
-                :src="category.photo"
-                src-placeholder="/assets/icon_default.png"
-      />
-      {{ category.name }}
+  <div class="r-category-categories">
+    <div class="r-category-filter">
+      <div class="r-category-menu-link"
+           @click="onCategory(selected)">
+        <a-icon :type="'left'"/>
+        <i :class="onClass(menuCategory)"></i>
+        {{ menuCategory.name }}
+      </div>
     </div>
-    <a-collapse v-if="category.has_categories"
-                default-active-key="null"
-                accordion
-                expandIconPosition="right">
-      <template #expandIcon="props">
-        <a-icon :type="props.isActive ? 'minus' : 'plus'"/>
-      </template>
-      <a-collapse-panel :key="category.id" :header="category.name">
+    <template v-if="hasData">
+      <div v-for="(_category, index) in categories"
+           :key="index"
+           class="r-category-filter r-category-filter-avatar">
         <nuxt-link class="r-category-menu-link"
-                   :to="category.route">
+                   :to="_category.route">
           <r-avatar shape="circle"
-                    :size="30"
-                    :src="category.photo"
+                    :size="24"
+                    :src="_category.photo"
                     src-placeholder="/assets/icon_default.png"
           />
-          {{ 'Browse All' }}
+          {{ _category.name }}
         </nuxt-link>
-        <template v-for="(cat) in categories">
-          <r-category-menu-item
-            v-if="cat.has_categories"
-            :category="cat"
-          >
-          </r-category-menu-item>
-        </template>
-      </a-collapse-panel>
-    </a-collapse>
+      </div>
+    </template>
   </div>
 </template>
 <script>
 import axios from 'axios'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-category-menu-item',
@@ -49,50 +35,46 @@ export default {
     category: { type: Object, required: true, default: {} }
   },
   async fetch () {
-    if (this.category.has_categories) {
-      let path = `/categories`
-      let params = {
-        category_id: this.category.id,
-        limit: 24,
-        store_id: this.category.store_id
-      }
-
-      params.with = ['categories']
-
-      let $this = this
-
-      await axios.post(path, params)
-        .then(response => {
-          $this.categories = response.data.categories
-          $this.hasData = true
-        })
-        .catch(e => {
-          console.log(e)
-        })
-    } else {
-      this.hasData = true
-      this.categories = this.category.categories
+    const path = `/categories`
+    const params = {
+      category_id: this.category.id,
+      limit: 24,
+      level: 0
     }
+
+    params.with = []
+
+    let $this = this
+
+    await axios.post(path, params)
+      .then(response => {
+        $this.categories = response.data.categories
+        $this.hasData = true
+      })
+      .catch(e => {
+        console.log(e)
+      })
   },
   data () {
     return {
+      selected: {name: 'All Categories', slug: null},
       hasData: false,
-      categories: [],
-      text: `A dog is a type of domesticated animal.Known for its loyalty and faithfulness,it can be found as a welcome guest in many households across the world.`,
+      categories: []
     }
   },
+  computed: mapGetters({
+    menuCategory: 'base/menuCategory',
+    hasMenuCategory: 'base/hasMenuCategory'
+  }),
   created () {
-    this.payload()
   },
   methods: {
-    async payload () {
-
-    },
     onClass (category) {
       return `r-menu-icon r-menu-icon--${category.slug}`
     },
     onCategory (category) {
-      this.$store.dispatch('base/onCategory', this.category.route)
+      this.$store.dispatch('base/onMenuCategory', category)
+      return false
     }
   }
 }

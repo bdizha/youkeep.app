@@ -162,14 +162,19 @@ class Controller extends BaseController
         }
 
         if (!empty($this->category['id'])) {
+
+//            dd([$this->level, $this->category['id']]);
+
             $this->category['level'] = $this->level;
 
             $this->storeCategory = StoreCategory::where('category_id', $this->category['id'])
                 ->where('level', $this->level)
                 ->first();
 
-            $this->_setBreadcrumbs();
-            $this->category['breadcrumbs'] = $this->breadcrumbs;
+            if (!empty($this->storeSlug)) {
+                $this->_setBreadcrumbs();
+                $this->category['breadcrumbs'] = $this->breadcrumbs;
+            }
 
             ++$this->level;
         }
@@ -340,14 +345,7 @@ class Controller extends BaseController
     protected function _setRoutes(): void
     {
         $this->categories = array_map(function ($category) {
-            $this->route = $category['route'];
-
-            $this->_setStoreRoute();
-            $this->route .= $this->_encodeLevel();
-
-            $category['route'] = $this->route;
-            $category['level'] = $this->level;
-            return $category;
+            return $this->_setCategoryRoute($category);
         }, $this->categories);
     }
 
@@ -412,5 +410,28 @@ class Controller extends BaseController
         $this->stores = $query
             ->orderBy('created_at', 'DESC')
             ->paginate($this->limit);
+    }
+
+    /**
+     * @param $category
+     * @return mixed
+     */
+    protected function _setCategoryRoute($category)
+    {
+        $this->route = $category['route'];
+
+        $this->_setStoreRoute();
+        $this->route .= $this->_encodeLevel();
+
+        $category['route'] = $this->route;
+        $category['level'] = $this->level;
+
+        if (!empty($category['categories'])) {
+            $category['categories'] = array_map(function ($category) {
+                return $this->_setCategoryRoute($category);
+            }, $category['categories']);
+        }
+
+        return $category;
     }
 }

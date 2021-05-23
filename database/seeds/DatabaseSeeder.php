@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
     protected $storeId = null;
     protected $categories = [];
     protected $parentStoreCategory = null;
+    protected $storeCategory = null;
     protected $filterBrand = null;
     protected $product = null;
     protected $level = -1;
@@ -125,7 +126,7 @@ class DatabaseSeeder extends Seeder
 
         echo ">>>>>Updating lookup category :" . $category->name . "\n";
 
-        StoreCategory::updateOrCreate($attributes, $values);
+        $this->storeCategory = StoreCategory::updateOrCreate($attributes, $values);
         return $category;
     }
 

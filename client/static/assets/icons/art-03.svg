@@ -1,0 +1,16 @@
+<svg width="97" height="61" viewBox="0 0 97 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.1" fill-rule="evenodd" clip-rule="evenodd" d="M17.6364 10C17.6364 27.9242 31.4545 42.4545 48.5 42.4545C65.5455 42.4545 79.3636 27.9241 79.3636 10L97 10C97 40.2222 74.6154 61 48.5 61C21.4519 61 -2.21284e-06 40.2222 -2.22928e-06 10L17.6364 10Z" fill="#1B9BD9"/>
+<circle cx="48" cy="26" r="25" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="48" cy="24" rx="25" ry="23" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<circle cx="48" cy="25" r="5" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<line x1="48" y1="20" x2="48" y2="12" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<line x1="48" y1="3" x2="48" y2="1" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<line x1="48" y1="46" x2="48" y2="44" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<line x1="62.2028" y1="39.2891" x2="63.617" y2="40.7033" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<line x1="30.797" y1="8.88281" x2="32.2112" y2="10.297" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<line x1="32.5687" y1="39.0782" x2="31.1416" y2="40.4795" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<line x1="63.2593" y1="7.94931" x2="61.8323" y2="9.35059" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<line x1="70.5" y1="25.5" x2="72.5" y2="25.5" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<line x1="23.5" y1="25.5" x2="25.5" y2="25.5" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+<line x1="53" y1="25" x2="66" y2="25" stroke="#1B9BD9" stroke-width="2" stroke-linecap="round"/>
+</svg>
