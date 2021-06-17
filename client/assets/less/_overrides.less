@@ -1595,68 +1595,164 @@ xxl	≥1600px, could be a span value or an object containing above props
     background-color: #FFFFFF;
 }
 
+
+
+.ant-drawer-right {
+    width: 100%;
+    max-width: 360px;
+
+    @media (max-width: 360px) {
+        .ant-drawer-content-wrapper {
+            max-width: 100%;
+        }
+    }
+}
+
+.r-cart-body {
+    padding-bottom: 93px;
+
+    .r-btn--shopping {
+        display: none;
+    }
+
+    h3.r-heading {
+        margin: 0;
+    }
+
+    .r-bordered-top {
+        padding: 12px 0;
+    }
+}
+
+.r-cart-footer {
+    background: @secondary-color;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 24px;
+
+    .r-cart-total {
+        overflow: hidden;
+        color: #FFFFFF;
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .r-cart-btn {
+        border: 1px solid #FFFFFF;
+        color: #1B9BD9AC;
+        width: 100%;
+        text-align: center;
+
+        &:hover {
+            background: @secondary-color;
+            color: #FFFFFF;
+        }
+
+        h4.r-heading {
+            color: #FFFFFF;
+        }
+    }
+
+    &.r-cart-footer__empty {
+        background: @secondary-color;
+
+        .r-cart-btn {
+            background: #FFFFFF;
+            color: #1B9BD9AC;
+
+            &:hover {
+                background: @secondary-color;
+                color: #FFFFFF;
+            }
+
+            h4.r-heading {
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.ant-drawer-content {
+    position: relative;
+}
+
+.ant-btn-full {
+    width: 100%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.r-bg-white {
+    background-color: #FFFFFF;
+}
+
 h1.r-heading {
-    font-weight: 400;
+    font-weight: 700;
     @media (min-width: 768px) {
         font-size: 45px;
         line-height: 54px;
-        margin: 0 0 24px;
+        margin: 0;
         letter-spacing: -0.99px;
     }
 
     @media (max-width: 768px) {
         font-weight: 700;
-        font-size: 36px;
+        font-size: 42px;
         line-height: 45px;
-        margin: 0 0 24px;
+        margin: 0;
     }
 }
 
 h2.r-heading {
-    font-weight: 300;
-    font-size: 36px;
-    margin-bottom: 18px;
+    font-weight: 800;
+    font-size: 33px;
+    margin: 0;
     line-height: 42px;
 
     @media (max-width: 768px) {
-        font-size: 33px;
+        font-size: 30px;
         line-height: 36px;
     }
 }
 
 h2.r-heading-light {
     font-weight: 300;
-    line-height: 45px;
-    font-size: 36px;
-    margin-top: 24px;
+    line-height: 30px;
+    font-size: 30px;
+    margin-top: 0;
 
     @media (max-width: 768px) {
         font-weight: 200;
-        font-size: 30px;
-        line-height: 33px;
+        font-size: 27px;
+        line-height: 30px;
     }
 }
 
 h3.r-heading-light {
     font-weight: 300;
-    line-height: 36px;
-    font-size: 30px;
+    line-height: 30px;
+    font-size: 27px;
     margin-bottom: 0;
 
     @media (min-width: 768px) {
-        font-size: 27px;
+        font-size: 24px;
+        line-height: 27px;
     }
 }
 
 h3.r-heading {
     font-weight: 600;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
 
     &.r-text-capitalize {
         text-transform: uppercase;
         font-size: 18px;
-        color: #3C444C;
+        color: @black;
     }
 
     @media (max-width: 768px) {
@@ -1672,7 +1768,7 @@ h3.r-heading {
         &.r-text-capitalize {
             text-transform: uppercase;
             font-size: 21px;
-            color: #3C444C;
+            color: @black;
         }
     }
 }
@@ -1698,7 +1794,8 @@ h3.r-heading {
 
 h4.r-heading {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
+    margin: 0;
 }
 
 label {
@@ -1712,7 +1809,11 @@ label {
 h4.r-heading-light {
     font-size: 18px;
     font-weight: 300;
-    margin-bottom: 18px;
+    margin: 0;
+
+    &.r-heading-small {
+        font-size: 15px;
+    }
 }
 
 .r-text-tip-primary {
@@ -2023,7 +2124,7 @@ h4.r-heading-light {
     flex-grow: 0;
 }
 
-.r-text-center {
+.r-text-leftr-text-center {
     text-align: center;
 }
 
@@ -2144,10 +2245,6 @@ h4.r-heading-light {
     &.ant-card-bordered {
         border: none;
         box-shadow: rgba(12, 12, 13, 0.11) 0px 1px 3px 0px;
-    }
-
-    h2.r-heading {
-        margin-top: 24px;
     }
 }
 
@@ -3122,6 +3219,39 @@ h4.r-heading-light {
         bottom: 0;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+}
+
+.ant-avatar {
+    &.r-avatar-auto {
+        background: none;
+        width: auto !important;
+        position: relative;
+        overflow: visible;
+        img{
+            width: auto !important;
+        }
+
+        &.r-avatar-shape {
+            background: none;
+            &:after {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 30%;
+                background: #5AEEBC15;
+                border-radius: 100%;
+                content: '';
+                z-index: -1;
+            }
+        }
+    }
+
+    &.r-avatar-block {
+        background: none;
+        width: 100% !important;
+        height: 100% !important;
     }
 }
 
@@ -4412,7 +4542,7 @@ h4.r-heading-light {
 }
 
 .ant-avatar {
-    background: #FFFFFF url(/assets/icon_pattern_light.svg) repeat;
+    background: transparent url(/assets/icon_pattern_light.svg) repeat;
 
     > img {
         border-radius: @border-radius-base;
@@ -5623,6 +5753,17 @@ h4.r-heading-light {
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_white.svg) repeat;
+    }
+}
+
+.r-bg-secondary {
+    background: #1B9BD9;
+    p.r-text-normal,
+    h1,
+    h2,
+    h3,
+    h4{
+        color: #FFFFFF;
     }
 }
 

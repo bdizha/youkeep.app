@@ -1,359 +1,528 @@
 <template>
-  <r-page style="background: #FFFFFF;">
-    <a-row type="flex" justify="center">
-      <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}" class="r-page-padding">
-        <h1 class="r-heading r-text-center">
-          Terms of Service
-        </h1>
-      </a-col>
-    </a-row>
-    <a-row class="r-mv-48" type="flex"
-           justify="center" align="left">
-      <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}">
-        <article class="r-article">
-          <p>Thank you for using Shopple!</p>
-          <p><strong>PLEASE READ THE FOLLOWING TERMS AND CONDITIONS (THE “TERMS”) CAREFULLY BEFORE
-            USING OUR WEBSITE, www.shopple.app, OR OUR MOBILE APPLICATIONS (COLLECTIVELY, THE
-            “SITE”).</strong></p>
-          <p><strong>YOU AGREE THAT BY USING THE SITE, YOU ACCEPT AND AGREE TO BE BOUND BY THESE TERMS
-            AND OUR PRIVACY POLICY, INCORPORATED HEREIN BY REFERENCED. IF YOU DO NOT AGREE TO THESE
-            TERMS, PLEASE DO NOT USE THE SITE.</strong></p>
-          <p>You may visit the Site without registering to become a member. However, in order to enjoy
-            all the benefits of the Site and the services offered through the Site, you must
-            register and become a member. By using the Site, you represent and warrant that you are
-            at least 18 years of age (or at least 13 years of age and visiting under the supervision
-            of a parent or guardian) and legally able to enter into a binding contract. If you are
-            using the Site on behalf of a legal entity, you hereby represent and warrant that (i)
-            you have the authority to enter into these Terms on behalf of the legal entity and (ii)
-            agree to be bound by the Terms individually, even when acting on behalf of the legal
-            entity.</p>
-          <h4>Changes to the Terms</h4>
-          <p>We may make changes to these Terms from time to time in our sole discretion. When we do
-            so, we will post the most current version of the Terms on our website and, if a revision
-            to the Terms is material, we will also notify you of the new Terms (for example, by
-            email to the address provided by you when registering or through a notification on our
-            Site). Changes are effective immediately when we post them and apply to all access to
-            and use of the Site thereafter. Your continued use of the Site following the posting of
-            revised Terms means that you accept and agree to the changes. If you do not agree to the
-            revised Terms, you should discontinue your use of the Site.</p>
-          <h4>Registration and Membership</h4>
-          <p>To register and become a member of our Site:</p>
-          <ol>
-            <li>Complete the member survey to verify our services are available in your area,</li>
-            <li>Select the Plan that works best for you, and</li>
-            <li>Provide your valid email address, payment information and create a password to
-              register your profile.
-            </li>
-          </ol>
-          <p>It is a condition of your use of the Site that all information you provide on the Site,
-            including payment information, is correct, current and complete. You agree that all
-            information you provide to register with the Site is governed by the Privacy Policy and
-            you consent to all actions we take with respect to your information consistent with our
-            Privacy Policy.</p>
-          <p>YOU WILL BE SOLELY RESPONSIBLE FOR ALL ACCESS TO AND USE OF THIS SITE BY ANYONE USING
-            YOUR ACCOUNT, WHETHER OR NOT SUCH ACCESS TO AND USE OF THIS SITE IS ACTUALLY AUTHORIZED
-            BY YOU, INCLUDING WITHOUT LIMITATION, ALL COMMUNICATIONS AND OBLIGATIONS (INCLUDING,
-            WITHOUT LIMITATION, FINANCIAL OBLIGATIONS) INCURRED THROUGH SUCH ACCESS OR USE.</p>
-          <p>You are solely responsible for protecting the security and confidentiality of your
-            password and identification. You will immediately notify us of any unauthorized use of
-            your password or account or any other breach or threatened breach of the Site’s
-            security.</p>
-          <p>As a member, you agree to receive emails promoting any special offer(s), including third
-            party offers. We may also send you our monthly newsletter. Additionally, we may employ
-            the use of cookies and other automatic means of collecting information about you, your
-            use of the Site or your device. By using the Site you consent to the use of cookies and
-            other automatic means of collection in accordance with our Privacy Policy.</p>
-          <p>To cancel your membership, please contact Shopple HQ via <a class="text-bold"
-                                                                       href="https://web.archive.org/web/20181025162846/mailto:support@shopple.app">support@shopple.app</a>
-            or <a class="text-bold hide-for-medium"
-                  href="https://web.archive.org/web/20181025162846/tel:1-205-502-2500">(205)
-              502-2500</a><span class="text-bold hide-for-small">072 522 3792</span>.</p>
-          <h4>Billing and Payments</h4>
-          <p>We accept Visa, MasterCard, American Express and Discover. In using our services, you may
-            be charged local sales tax. By registering to become a member and providing your payment
-            information, you agree that we may save your payment information for your
-            convenience.</p>
-          <p>If your payment method is declined, we will attempt to process your charge until the
-            transaction is approved. We, and our third party payment service providers, may request
-            and receive, updated credit card information from your credit card issuer, such as
-            updated card numbers and expiration date information when your credit card has expired.
-            If such updated information is provided to us and our third-party payment service
-            providers, we will update your account information accordingly, and will use such
-            updated information to process payments for your future purchases and subscriptions.
-            Your credit card issuer may give you the right to opt out of providing vendors and
-            third-party payment service providers with your updated credit card information. If you
-            wish to opt out of your credit card’s updating service, you should contact your credit
-            card issuer directly.</p>
-          <p>We are not responsible for any fees or charges that your bank or credit card issuer may
-            apply. If your bank or credit card issuer reverses a charge to your credit card, we may
-            bill your account directly and seek payment through another method, including a mailed
-            statement.</p>
-          <p>The risk of loss and title for items purchased by you through our services passes to you
-            upon our delivery of the items to you. Replacement of products or credits to your
-            account for shipped merchandise claimed by you as not received are subject to our
-            investigation. After our investigation, we may credit your account in our sole
-            discretion.</p>
-          <h4>Typographical Errors</h4>
-          <p>In the event a product is listed on our Site at an incorrect price or with incorrect
-            information due to typographical error or error in pricing or product information
-            provided by our retailers, we have the right to refuse or cancel any orders placed for
-            such products in our sole discretion, whether or not your order has been confirmed and
-            your bank or credit card charged. If your bank or credit card has already been charged
-            for the purchase and your order is cancelled, we will issue a credit to your bank or
-            credit card account in the amount of the cancelled charge.</p>
-          <h4>Transactions involving Certain Products</h4>
-          <p>You may have the option to order delivery of alcohol products in some locations and from
-            certain retailers. You will not use Shopple to order alcohol products unless you are 21
-            years of age or older and you will not furnish alcohol products obtained through Shopple
-            to any person who is not a lawful consumer. You agree that you will comply with all
-            applicable laws related thereto and not cause Shopple, your Shopper, or any retailer to
-            contravene or violate any applicable law. Shopple may offer information and a method to
-            connect duly licensed, participating retailers to you to purchase alcohol beverages.
-            Shopple does not, and does not intend to, make sales of alcohol beverages. Each
-            participating retailer is the seller of record for the particular products it promotes
-            on Shopple and sells to you. Shopple HAS NO RESPONSIBILITY OR LIABILITY FOR (I) ANY SALE OF
-            ALCOHOL PRODUCTS OR DELIVERY OF SUCH PRODUCTS SOLD AND DELIVERED BY RETAILERS TO YOU OR
-            ANY OTHER CUSTOMER OR THIRD PARTY AND/OR (II) ANY ACTIONS OR OMISSIONS OF YOU OR ANY
-            THIRD PARTY THAT MAY RESULT, DIRECTLY OR INDIRECTLY, FROM THE PURCHASE AND/OR
-            CONSUMPTION OF ALCOHOL PRODUCTS PROMOTED OR ACQUIRED THROUGH Shopple.</p>
-          <p>We reserve the right, in our sole discretion, to refuse to offer the delivery of certain
-            items. In the event we choose to refuse to offer certain products after you have placed
-            your order but before the product is delivered to you, we may cancel the portion of your
-            order related to that product and issue a credit to your bank or credit card account in
-            the amount of your cancelled charge.</p>
-          <h4>Intellectual Property Rights</h4>
-          <p>The Site and the content of the Site including, but not limited to, text, graphics,
-            images, audio clips, digital downloads, data compilation or code is owned by Shopple, its
-            licensors or other providers of such material and are protected by United States and
-            international intellectual property or proprietary rights laws.</p>
-          <p>These Terms permit you to use the Site for your personal, non-commercial use only.
-            Subject to these Terms, Shopple grants you a limited, non-exclusive, non-transferable
-            license to download, install and use the Site for your personal, non-commercial use on a
-            mobile device or computer owned or otherwise controlled by you. You may not:</p>
-          <ol>
-            <li>Republish, reproduce, duplicate, copy, sell, rent, distribute, create derivative
-              works, publicly display, publicly perform, store, transmit or sub-license the Site
-              or material from the Site;
-            </li>
-            <li>Copy the Site or modify copies of any materials from the Site;</li>
-            <li>Delete or alter any copyright, trademark or other proprietary notices from copies of
-              materials from the Site;
-            </li>
-            <li>Create frames around our web pages or use other techniques that alter in any way the
-              visual presentation or appearance of the Site (without prior written approval by
-              Shopple);
-            </li>
-            <li>Remove, disable, circumvent or otherwise create or implement any workaround to any
-              copy protection, rights management or security features in or protecting the Site;
-            </li>
-            <li>Use the Site for any unlawful purposes or in any way that violates any applicable
-              federal, state, local or international law or regulation;
-            </li>
-            <li>Use the Site for the purpose of exploiting, harming or attempting to exploit or harm
-              minors in any way by exposing them to inappropriate content, asking for personally
-              identifiable information or otherwise;
-            </li>
-            <li>Transmit or procure the sending of any advertising or promotional material without
-              prior written consent, including any junk mail, chain letter, or spam; or
-            </li>
-            <li>Engage in any other conduct that restricts or inhibits anyone’s use or enjoyment of
-              the Site, or which, as determined by us, may harm Shopple or users of the Site or
-              expose them to liability.
-            </li>
-          </ol>
-          <p>All trademarks, service marks and trade names of Shopple on the Site are trademarks or
-            registered trademarks of Shopple or their respective owners. You may not use such marks
-            without Shopple’s or the respective owner’s prior written consent or as provided below in
-            “Third Party Links and Sites”.</p>
-          <p>You acknowledge and agree that the Site is provided under a license, and not sold, to
-            you. You do not acquire any ownership interest in the Site under these Terms or any
-            other rights thereto other than to use the Site in accordance with these Terms. Shopple
-            and its licensors reserve and retain their entire right, title and interest in and to
-            the Site, except as expressly granted to you in these Terms.</p>
-          <p>Through your use of the Site, you may be able to submit, upload, publish or otherwise
-            make available to Shopple textual, audio and/or visual content, including commentary and
-            feedback (the “Content”). As between you and Shopple, any Content that you provide remains
-            your property. However, by providing Content to Shopple, you grant Shopple and all of its
-            subsidiaries, affiliates, successors and assigns a worldwide, perpetual, royalty-free,
-            irrevocable, sublicensable, non-exclusive and transferable right to use, publish,
-            reproduce, modify, adapt, publicly display and otherwise use your Content, without
-            further notice to or consent from you, and without the requirement of payment to you or
-            any other person or entity. Such right shall survive the termination of these Terms and
-            your use of the Site.</p>
-          <h4>Third-Party Links and Sites</h4>
-          <p>The Site may link to other websites operated by third parties. We have no control over
-            these linked sites, each of which has a separate privacy and data collection practices
-            independent of Shopple. We are not responsible for, do not endorse and do not accept any
-            responsibility for the availability, contents, products, services or use of any third
-            party site, any website accessed from a third party site or any changes or updates to
-            such sites. These linked sites are provided to you only for your convenience and you
-            access them at your own risk. You agree that we are not responsible for any loss or
-            damage you may incur from dealing with any such third party site. You should contact the
-            site administrator for the applicable third party site if you have any concerns
-            regarding such links or the content located on any such third party site.</p>
-          <p>The following organizations may link to our Site by use of our corporate name or by use
-            of the uniform resource locator (Web address) without prior written approval:</p>
-          <ol>
-            <li>Government agencies;</li>
-            <li>Search engines;</li>
-            <li>News organizations;</li>
-            <li>Online directory distributors, if the Site is linked to in the same manner as the
-              web sites of other listed businesses; and
-            </li>
-            <li>Systemwide Accredited Businesses, except for soliciting non-profit organizations,
-              charity shopping malls, and charity fundraising groups.
-            </li>
-          </ol>
-          <p>The above-listed organizations may link to our home page, to publications or to other
-            Site information so long as the link: (a) is not in any way misleading; (b) does not
-            falsely imply sponsorship, endorsement or approval of the linking party and its products
-            or services; and (c) fits within the context of the linking party’s site.</p>
-          <h4>Text Messaging</h4>
-          <p>By registering to become a member, you agree that we may send you text (SMS) messages in
-            order to provide you with the services and products offered through the Site. You may
-            opt-out of receiving text (SMS) messages from Company at any time by contacting Shopple HQ
-            via support@shopple.app, provided however that opting out of text (SMS) messages may
-            affect your use of the Site and the services and products offered through the Site. You
-            may continue to receive text messages for a short period while we de-activate your
-            account, and you may also receive text messages confirming the receipt of your
-            de-activation request.</p>
-          <h4>Copyright Policy</h4>
-          <p>Shopple respects the intellectual property rights of others and has implemented a copyright
-            policy in accordance with the Digital Millennium Copyright Act (“DMCA”). If you believe
-            that any content on the Site violates your copyright, please send Shopple a written notice
-            of infringement to our Copyright Agent (identified below), using the contact information
-            listed below, containing the following information:</p>
-          <ol>
-            <li>A description of the claimed infringing material as well as identification of the
-              claimed infringing material, including the location of such material on the Shopple
-              Services (e.g., the URL of the claimed infringing material if applicable or other
-              means by which we may locate the material);
-            </li>
-            <li>Your contact information, including the name of the owner of the copyright and your
-              name, title, address, telephone number, and email address;
-            </li>
-            <li>A statement that you have a good faith belief that the disputed use is not
-              authorized by the copyright owner, its agent, or the law;
-            </li>
-            <li>A statement, made under penalty of perjury, that the information provided in your
-              notice is accurate and that you are the copyright owner or authorized to act on
-              behalf of the owner; and
-            </li>
-            <li>An electronic or physical signature of the owner of the copyright in question or a
-              person authorized to act on behalf of the owner of the copyright.
-            </li>
-          </ol>
-          <p>If you fail to substantially comply with the above requirements, contained in Section
-            512(c)(3) of the DMCA, your DMCA Notice may not be effective and we may not have to take
-            corrective measures against the alleged copyright infringement. It is our policy in
-            appropriate circumstances to disable and/or terminate the accounts of users who are
-            repeat infringers.</p>
-          <p>Please be aware that if you knowingly materially misrepresent that material or activity
-            on our Site is infringing your copyright, you may be held liable for damages (including
-            costs and attorney’s fees) under Section 512(f) of the DMCA.</p>
-          <p><span class="text-bold">Shopple</span><br>
-            Attn: Compliance<br>
-            17 20th St. N Unit 100<br>
-            Birmingham, AL, 35203, United States</p>
-          <h4>Monitoring and Termination</h4>
-          <p>If you are linking to our Site, we reserve the right at any time and in our sole
-            discretion to request that you remove all links or any particular link to our Web site.
-            You agree to immediately remove all links to our Web site upon such request.</p>
-          <p>We may terminate your use of the Site and the services offered on the Site at any time,
-            for any reason and Shopple may prohibit your use of the Site and services offered on the
-            Site at any time in our sole discretion. The terms of these Terms shall remain in effect
-            at all times after the termination of your use of the Site and the services offered on
-            the Site.</p>
-          <h4>Credits</h4>
-          <p>
-            <a href="https://web.archive.org/web/20181025162846/http://credits.shopple.app/">credits.shopple.app</a>
-          </p>
-          <h4>Warranty Disclaimer</h4>
-          <p>EXCEPT AS OTHERWISE SPECIFICALLY PROVIDED HEREIN, THE SITE AND THE PRODUCTS AND SERVICES
-            OFFERED THROUGH THE SITE ARE PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS AND WITHOUT
-            WARRANTIES OF ANY KIND. TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, Shopple
-            DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
-            IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-            NON-INFRINGEMENT. Shopple DOES NOT REPRESENT OR WARRANT THAT THE SITE AND FEATURES AND
-            FUNCTIONS CONTAINED ON THE SITE WILL BE UNINTERRUPTED OR ERROR-FREE, THAT ANY DEFECTS
-            WILL BE CORRECTED OR THAT THE SITE, OR THE SERVER THAT MAKES THE SITE AVAILABLE, ARE
-            FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. Shopple DOES NOT MAKE ANY WARRANTIES OR
-            REPRESENTATIONS REGARDING THE USE OF MATERIALS ON THE SITE IN TERMS OF THEIR
-            CORRECTNESS, ACCURACY, ADEQUACY, USEFULNESS, TIMELINESS, RELIABILITY OR OTHERWISE.
-            APPLICABLE LAW MAY NOT ALLOW LIMITATIONS OR EXCLUSIONS ON WARRANTIES SO THE ABOVE
-            LIMITATIONS MAY NOT APPLY TO YOU.</p>
-          <h4>Limitation of Liability</h4>
-          <p>Shopple SHALL NOT BE LIABLE TO ANYONE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR
-            CONSEQUENTIAL DAMAGES (INCLUDING PERSONAL INJURY, LOSS OF DATA, REVENUE, PROFITS, USE OR
-            OTHER ECONOMIC ADVANTAGE) THAT RESULT FROM YOUR USE OF OR YOUR INABILITY TO USE, THE
-            SITE OR MATERIALS ON THE SITE, EVEN IF Shopple HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
-            DAMAGES. Shopple WILL NOT BE LIABLE FOR ANY LOSS, DAMAGE OR INJURY WHICH MAY BE INCURRED
-            BY YOU, INCLUDING BUT NOT LIMITED TO LOSS, DAMAGE OR INJURY ARISING OUT OF, OR IN ANY
-            WAY CONNECTED WITH THE SITE OR Shopple’S SERVICES, ANY RELIANCE PLACED BY YOU ON THE
-            COMPLETENESS, ACCURACY OR EXISTENCE OF ANY ADVERTISING, OR AS A RESULT OF ANY
-            RELATIONSHIP OR TRANSACTION BETWEEN YOU AND ANY THIRD PARTY SERVICE PROVIDER, ADVERTISER
-            OR SPONSOR. IN NO EVENT SHALL Shopple’S AGGREGATE LIABILITY TO YOU OR ANY THIRD PARTY
-            EXCEED THE AMOUNTS ACTUALLY PAID BY AND/OR DUE FROM YOU IN THE SIX (6) MONTH PERIOD
-            IMMEDIATELY PRECEDING THE EVENT GIVING RISE TO SUCH CLAIM.</p>
-          <p>Shopple MAY INTRODUCE YOU TO SHOPPERS FOR THE PURPOSES OF PROVIDING COURIER SERVICES. YOU
-            EXPRESSLY WAIVE AND RELEASE Shopple FROM ANY AND ALL LIABILITY, CLAIMS OR DAMAGES ARISING
-            FROM OR IN ANY WAY RELATED TO THE SHOPPERS. Shopple WILL NOT BE A PARTY TO DISPUTES
-            BETWEEN YOU AND SUCH SHOPPERS. APPLICABLE LAW MAY NOT ALLOW THE LIMITATION OR EXCLUSION
-            OF LIABILITY OR INCIDENTAL OR CONSEQUENTIAL DAMAGES SO THE ABOVE LIMITATION OR EXCLUSION
-            MAY NOT APPLY TO YOU.</p>
-          <h4>Indemnification</h4>
-          <p>You agree to indemnify, defend and hold harmless Shopple, its officers, directors,
-            employees, agents, licensors and suppliers from and against all losses, liabilities,
-            expenses, damages and costs, including reasonable attorneys’ fees, resulting from (i)
-            your violation of these Terms or any applicable law or regulation, whether or not
-            referenced herein, (ii) your violation of any rights of any third party, including
-            Shoppers or any party providing services arranged via the Site, or (iii) the use or
-            misuse of the Site (including negligent or wrongful conduct) by you or any other person
-            accessing the Site using your Internet account.</p>
-          <h4>General</h4>
-          <p>These Terms, along with any rules, guidelines or policies published in the Site
-            constitute the entire agreement between Shopple and you with respect to your use of the
-            Site and the services and products offered through the Site. If there is any conflict
-            between the Terms and other rules or instructions posted, the Terms shall control. We
-            shall not be liable for damages for any delay or failure of delivery arising out of
-            causes beyond our reasonable control and without our fault or negligence, including, but
-            not limited to, Acts of God, acts of civil or military authority, fires, riots, wars,
-            embargoes, Internet disruptions, hacker attacks, or communications failures. Subject to
-            applicable law to the contrary, you agree that any cause of action arising out of or
-            related to the use of our Site must be commenced within one (1) year after the cause of
-            action accrues, or such action will be permanently barred. These Terms shall be governed
-            by, and construed in accordance with, the laws of the state of Georgia, without
-            reference to its choice and conflict of law rules. You may not assign your rights or
-            obligation under these Terms without the prior consent of Shopple. Shopple’s failure to
-            insist upon or enforce any provision of these Terms shall not be construed as a waiver
-            of any provision or right. All headings included in these Terms are included for
-            convenience only, and shall not be considered in interpreting these Terms. These Terms
-            do not limit any rights that Shopple may have pursuant to any intellectual property laws
-            or other laws. All rights and remedies available to Shopple, pursuant to these Terms or
-            otherwise, at law or in equity, are cumulative and not exclusive of any other rights or
-            remedies that may be available. No independent contractor relationship, partnership,
-            joint venture, employer-employee or franchise relationship is created by these
-            Terms.</p>
-        </article>
-      </a-col>
-    </a-row>
-  </r-page>
+  <a-row type="flex" justify="center">
+    <a-col class="r-page-padding" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 18}" :lg="{span: 16}">
+      <a-row :gutter="[24,24]" type="flex" justify="center">
+        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+          <h1 class="r-heading">
+            Terms of Service
+          </h1>
+        </a-col>
+        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+          <article class="r-article">
+
+            <!-- NOTE: this page is a business-critical part of the Shopple service.  Any changes should be reviewed by legal and made with extreme care.  -->
+
+            <p>Date posted: May 12, 2021</p>
+
+            <h1 id="Shopple-subscription-agreement">Shopple Subscription Agreement</h1>
+
+            <p>This Shopple Subscription Agreement (these “<strong>terms</strong>” or this “<strong>agreement</strong>”)
+              is
+              made between you (either an individual or, if you are using Shopple on behalf of an entity, that entity)
+              and
+              Shopple.com, Inc. It governs your access to and use of Shopple’s services, products, software, and
+              websites (the “<strong>Services</strong>”).
+            </p>
+
+            <p>If your Order Form contains additional terms and conditions, then those terms and conditions govern to
+              the
+              extent they conflict with any of these terms. If you are agreeing to these terms on behalf of an entity,
+              you
+              represent that you have the authority to bind that organization, otherwise you must not sign up for the
+              Services.</p>
+
+            <p><em>Please read this agreement carefully. It requires the use of binding individual arbitration to
+              resolve
+              disputes rather than jury trials or class actions (for information about how to opt-out, see Section 11.8
+              (30-day opt-out period) below).</em></p>
+
+            <h2 id="1-services">1. Services</h2>
+
+            <h3 id="11-we-provide-bookkeeping-services">1.1. We provide bookkeeping services</h3>
+
+            <p>Shopple’s bookkeeping services are a solution for bookkeeping and marketplace organization. Shopple’s
+              bookkeeping
+              services and any related communications with us are not a substitute for and do not include legal, tax,
+              marketplace, real estate, healthcare, or accounting advice. Shopple is not a public accounting firm. For
+              more
+              about what the Services do and do not include, and how you can use them, please see our <a
+                href="/terms"
+              >Acceptable Use Policy</a>.</p>
+
+            <h3 id="12-certain-year-end-services">1.2 Certain Year-End Services</h3>
+
+            <p>If you are a Shopple Bookkeeping customer for the quarter following the calendar year end (i.e., your
+              subscription has not been terminated during such period), Shopple will perform certain year-end
+              bookkeeping
+              activities at that time as part of your subscription, including making year-end annual adjustments and
+              providing a trial balance and standard full-year marketplace statements for your tax returns. If you are not
+              a
+              Shopple Bookkeeping customer for the quarter following the calendar year end, Shopple will not perform
+              such
+              year-end bookkeeping activities and bears no responsibility or liability with respect to any failure to
+              perform such activities on your behalf.</p>
+
+            <h3 id="13-quickbooks-online">1.3. Quickbooks Online™</h3>
+
+            <p>We use Intuit Inc.’s Quickbooks Online™ to provide the Services. If you don’t already have an account, we
+              will create one for you. Your and our use of Quickbooks Online™ will be governed by Intuit’s <a
+                href="https://accounts.intuit.com/terms-of-service"
+              >Terms of Service</a> and <a href="https://security.intuit.com/index.php/privacy">Privacy Policy</a>.</p>
+
+            <h3 id="14-third-party-services-and-login-credentials">1.4. Third-party services and Login Credentials</h3>
+
+            <p>Our Services can automatically transfer data from other websites and services, like your bank account. If
+              you
+              provide us with login credentials (for example, an account name or number, password, answers to security
+              questions (collectively, the “<strong>Login Credentials</strong>”)), you both (a) give us permission, and
+              a
+              limited power of attorney, to use them to login to these other websites and services and access, transfer,
+              reformat, and manipulate your account on your behalf; and (b) represent to us that you have the authority
+              to
+              give us this permission. We will maintain Login Credentials in encrypted form, and we will only use them
+              as
+              described in this agreement.</p>
+
+            <h3 id="15-unauthorized-uses-of-the-services">1.5. Unauthorized uses of the Services</h3>
+
+            <p>You will only use the Services in accordance with the <a href="/terms">Shopple Acceptable Use
+              Policy</a>. We may suspend or terminate provision of the Services, in whole or in part, where we believe
+              it is
+              being used in a manner that breaches this agreement (including the Acceptable Use Policy) or creates risk
+              of
+              personal injury, property damage, or legal liability for Shopple, you or any third party, or may cause
+              Shopple to
+              lose the services of one of our third-party service providers. You represent and warrant that any
+              information
+              you provide to us about your (or, if you are acting on behalf of another, that person’s) business,
+              products,
+              or services is accurate and complete.</p>
+
+            <h3 id="16-modifications-to-the-services">1.6. Modifications to the Services</h3>
+
+            <p>We are constantly changing and improving our Services. We may add or remove functionality or features,
+              and we
+              may suspend or stop part of the Services altogether.</p>
+
+            <h3 id="17-facilities-and-data-transfer">1.7. Facilities and data transfer</h3>
+
+            <p>All facilities used to store and process Customer Data will adhere to reasonable security standards no
+              less
+              protective than the security standards at facilities where Shopple stores and processes its own
+              information of a
+              similar type. As part of providing the Services, we may transfer, store and process Customer Data in the
+              United States. By using the Services, you consent to this transfer, processing and storage of Customer
+              Data.</p>
+
+            <h3 id="18-exclusivity">1.8. Exclusivity</h3>
+
+            <p>If you are a Shopple Bookkeeping customer, you acknowledge and agree that in performing the Services,
+              Shopple
+              must use, record, classify and reconcile your marketplace transactions and other data to prepare your books.
+              For
+              example, depending upon the Services, Shopple may have to: (a) import transactions from your books in
+              order to
+              reconcile your bank accounts, (b) categorize transactions in your books to expense accounts and to balance
+              sheet accounts for amortization purposes and/or (c) sync your payroll data via the Gusto sync. Any
+              modifications made by you or on your behalf (e.g., by a third party service provider other than Shopple)
+              to your
+              books may adversely impact Services previously performed by Shopple, causing Shopple to have to re-perform
+              such
+              Services in order to correct any resulting inconsistencies or inaccuracies or to confirm that there are no
+              such inconsistencies or inaccuracies. To avoid these types of situations that are undesirable not only for
+              Shopple, but also for you, you hereby appoint Shopple as your exclusive third-party bookkeeper. If you
+              engage
+              another third-party service provider to make changes to your books, or you otherwise make changes to your
+              books directly, while you have engaged Shopple to provide the Services, Shopple reserves the right to
+              terminate
+              your subscription at any time upon written notice without a refund of prepaid fees for unelapsed months of
+              the
+              Services.</p>
+
+            <h2 id="2-tax-and-cfo-services">2. Tax and CFO Services</h2>
+
+            <p>Notwithstanding anything to the contrary herein, if your Order Form shows that you’ve purchased Shopple’s
+              tax
+              preparation service or R&amp;D tax credit services, your use of such service is governed by the <a
+                href="/terms"
+              >Shopple tax terms</a>.</p>
+
+            <p>Notwithstanding anything to the contrary herein, if your Order Form shows that you’ve purchased Shopple’s
+              CFO
+              services, your use of that service is governed by the <a href="/hiw">Shopple CFO services terms</a>.
+            </p>
+
+            <h2 id="3-non-disclosure-and-confidentiality">3. Non-Disclosure and Confidentiality</h2>
+
+            <h3 id="31-obligations">3.1. Obligations</h3>
+
+            <p>Subject to Section 3.2 (Disclosure of Confidential Information) the recipient (that is, Shopple and you)
+              will
+              use the other party’s Confidential Information only to exercise rights and fulfill obligations under this
+              agreement. Customer Data is your Confidential Information. The recipient will use reasonable care to
+              protect
+              against disclosure of the other party’s Confidential Information to other parties other than the
+              recipient’s
+              Delegates who need to know it and who have a legal obligation to keep it confidential. The recipient will
+              ensure that its Delegates are also subject to the same non-disclosure and use obligations.</p>
+
+            <p>Upon request, Shopple will execute a separate agreement reflecting these non-disclosure and
+              confidentiality
+              obligations for your records.</p>
+
+            <h3 id="32-disclosure-of-confidential-information">3.2. Disclosure of Confidential Information</h3>
+
+            <h4 id="321-general">3.2.1. General</h4>
+
+            <p>Regardless of any other provision in this agreement, the recipient or its Affiliates may disclose the
+              other
+              party’s Confidential Information (a) in accordance with a Legal Process, subject to Section 3.2.2 (Legal
+              Process notification); (b) with the other party’s written consent; or (c) in connection with enforcing our
+              rights under our agreements with you.</p>
+
+            <h4 id="322-legal-process-notification">3.2.2. Legal Process notification</h4>
+
+            <p>The recipient will use commercially reasonable efforts to notify the other party before disclosing that
+              party’s Confidential Information in accordance with Legal Process. Notice is not required before
+              disclosure if
+              the recipient is informed that (a) it is legally prohibited from giving notice or (b) the Legal Process
+              relates to exceptional circumstances involving danger of death or serious physical injury.</p>
+
+            <h4 id="323-opposition">3.2.3. Opposition</h4>
+
+            <p>The recipient and its Affiliates will comply with the other party’s reasonable requests to oppose
+              disclosure
+              of its Confidential Information.</p>
+
+            <h2 id="4-payment">4. Payment</h2>
+
+            <p>Shopple will collect payment for the fees automatically via ACH. Fees are exclusive of taxes, which
+              you’re
+              responsible for if applicable. You hereby authorize Shopple or its payment processor to initiate entries
+              to your
+              business bank checking accounts on file with Shopple (using your business address on file) in order to pay
+              amounts that you owe to Shopple (including for any Renewal Terms as those payments come due), and, if
+              necessary,
+              to initiate adjustments for any transactions credited or debited in error. Shopple may immediately suspend
+              provision of the Services if your account is past due. Except to the extent expressly set forth in this
+              Section 4 (Payment), all payments are non-refundable and non-creditable.</p>
+
+            <h2 id="5-term-and-termination">5. Term and Termination</h2>
+
+            <h3 id="51-initial-term">5.1. Initial term</h3>
+
+            <p>This agreement is effective on the date you sign an Order Form or you otherwise agree to these terms (for
+              example, by clicking through an online agreement) (the “<strong>Effective Date</strong>”). Your initial
+              subscription term will begin at the subscription start date and continue, unless terminated earlier, for
+              the
+              term specified on your Order Form (the “<strong>Initial Term</strong>”).</p>
+
+            <h3 id="52-automatic-renewal">5.2. Automatic renewal</h3>
+
+            <p>Upon the end of the Initial Term and any Renewal Term, your subscription will automatically renew for the
+              same duration as the Initial Term and at Shopple’s then-list price unless you give us notice (via
+              support@Shopple.com) at least (a) seven (7) days for monthly or quarterly subscriptions; or (b) thirty
+              (30) days
+              for annual subscriptions, in each case, prior to the end of the then-current Initial Term or Renewal Term,
+              as
+              applicable. If Shopple increases your subscription fees in connection with a renewal, we will provide you
+              with
+              thirty (30) days’ advance notice of such increase to the email address associated with your account. If
+              you do
+              not terminate your subscription within such thirty (30)-day period, your continued use of the Service
+              constitutes your agreement to pay, and your authorization for us to collect payment from you in accordance
+              with Section 4 herein, such increased subscription fee.</p>
+
+            <h3 id="53-termination-by-us">5.3. Termination by us</h3>
+
+            <p>We may terminate your subscription at any time by providing notice of termination to you via the email
+              address we have on file. In the event we terminate your subscription for any reason other than your
+              violation
+              of Section 1.4 (Unauthorized uses of the Services) or your material breach of this agreement, we will give
+              you
+              a refund of prepaid fees for unelapsed months of the Services.</p>
+
+            <h3 id="54-effect-of-termination-or-expiration-of-subscription">5.4. Effect of termination or expiration of
+              subscription</h3>
+
+            <p>In the event your subscription ends, we will try to transfer to you the “master administrator” status for
+              the
+              Intuit Quickbooks Online account that was maintained for you by Shopple, so that you can elect to maintain
+              that
+              subscription with Intuit or export your data.</p>
+
+            <h3 id="55-survival">5.5. Survival</h3>
+
+            <p>Sections 3, 5.4, 6, and 8 – 12 (inclusive) will survive the termination or expiration of this
+              agreement.</p>
+
+            <h2 id="6-intellectual-property">6. Intellectual Property</h2>
+
+            <p>As between the parties, you retain all intellectual property rights in your data, and we retain all
+              intellectual property rights in the Services. You grant us a limited license to use your data to provide,
+              protect, and improve the Services. We may retain anonymized, de-identified, and aggregated data that is
+              protected by organizational and technical safeguards in order to perform research and development. If you
+              provide us with feedback or suggestions about the Services (“<strong>Feedback</strong>”), then we may use
+              that
+              information without obligation to you, and you hereby irrevocably assign to us all right, title, and
+              interest
+              in that Feedback.</p>
+
+            <h2 id="7-using-Shopple-services-on-behalf-of-others">7. Using Shopple Services on Behalf of Others</h2>
+
+            <p>If you are using the Services on behalf of another individual or entity, you represent and warrant that
+              you
+              have all the authorizations and rights necessary and sufficient to do so.</p>
+
+            <h2 id="8-warranty-disclaimer">8. Warranty Disclaimer</h2>
+
+            <p>TO THE FULLEST EXTENT PERMITTED BY LAW, Shopple, ITS AFFILIATES, AND ITS AND THEIR SUPPLIERS AND
+              DISTRIBUTORS
+              (THE “<strong>Shopple ENTITIES</strong>”) MAKE NO WARRANTIES, EITHER EXPRESS OR IMPLIED, ABOUT THE
+              SERVICES. THE
+              SERVICES ARE PROVIDED “AS IS.” NO WARRANTY IS MADE THAT THE SERVICES OR RESULTS OF USE OF THE SERVICES
+              WILL
+              MEET YOUR NEEDS OR EXPECTATIONS, THAT THE SERVICES WILL BE TIMELY, SECURE, UNINTERRUPTED OR ERROR-FREE OR
+              THAT
+              THE RESULTS THAT MAY BE OBTAINED FROM THE SERVICES WILL BE ACCURATE OR RELIABLE. WE ALSO DISCLAIM ANY
+              WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IF THE EXCLUSIONS
+              FOR
+              IMPLIED WARRANTIES DO NOT APPLY TO YOU UNDER APPLICABLE LAW, ANY IMPLIED WARRANTIES ARE LIMITED TO 60 DAYS
+              FROM THE DATE OF PURCHASE OR DELIVERY OF THE SERVICE, WHICHEVER IS SOONER. THE Shopple ENTITIES DISCLAIM
+              ANY
+              REPRESENTATIONS OR WARRANTIES THAT YOUR USE OF THE SERVICES WILL SATISFY OR ENSURE COMPLIANCE WITH ANY
+              LEGAL
+              OBLIGATIONS OR LAWS OR REGULATIONS.</p>
+
+            <h2 id="9-limitation-of-liability">9. Limitation of Liability</h2>
+
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE ENTIRE LIABILITY OF THE Shopple ENTITIES FOR ALL
+              CLAIMS
+              RELATING TO THE SERVICES AND THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT YOU PAID FOR THE SERVICES
+              DURING
+              THE TWELVE (12) MONTHS PRIOR TO SUCH CLAIM OR ONE HUNDRED US DOLLARS, WHICHEVER IS GREATER. SUBJECT TO
+              APPLICABLE LAW, THE Shopple ENTITIES ARE NOT LIABLE FOR ANY OF THE FOLLOWING: (A) INDIRECT, SPECIAL,
+              INCIDENTAL,
+              PUNITIVE, OR CONSEQUENTIAL DAMAGES; (B) DAMAGES RELATING TO LOSS OF USE, DATA, BUSINESS, REVENUES, OR
+              PROFITS.
+              THE ABOVE LIMITATIONS APPLY EVEN IF THE Shopple ENTITIES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH
+              DAMAGES.
+              THIS AGREEMENT SETS FORTH THE ENTIRE LIABILITY OF THE Shopple ENTITIES AND YOUR EXCLUSIVE REMEDY WITH
+              RESPECT TO
+              THE SERVICES AND THEIR USE.</p>
+
+            <h2 id="10-indemnification">10. Indemnification</h2>
+
+            <p>You shall defend and indemnify the Shopple Entities from and against all damages, losses, liabilities,
+              claims,
+              demands, actions, suits, judgements, settlements, costs and expenses, including all attorneys’ fees, that
+              arise from or relate to: (a) your use of and our provision of the Services (except to the extent arising
+              directly from our willful misconduct or gross negligence), (b) your violation of this agreement, (c) any
+              content, information or materials provided by you, or (d) infringement by you, or any third party using
+              your
+              account or identity in the services, of any intellectual property or other right of any person or entity.
+              We
+              reserve the right to assume the exclusive defense and control of any matter otherwise subject to
+              indemnification by you, in which event you will assist and cooperate with us in asserting any available
+              defenses.</p>
+
+            <h2 id="11-disputes-class-action-waiver">11. Disputes; Class-Action Waiver</h2>
+
+            <h3 id="111-judicial-forum-for-disputes">11.1. Judicial forum for disputes</h3>
+
+            <p>Except as set forth in Section 11.5 (Arbitration), you and Shopple agree that any and all claims relating
+              to
+              these terms or the Services may only be brought in the federal or state courts of South Africa,
+              the Western Cape Government, subject to the mandatory arbitration provisions below. Both you and Shopple
+              consent to venue and
+              personal jurisdiction in such courts.</p>
+
+            <h3 id="112-notice-of-disputes">11.2. Notice of disputes</h3>
+
+            <p>If you have a dispute with Shopple, you will promptly send written notice to: Shopple.com, Inc., PO Box
+              7775
+              #86889, South Africa, the Western Cape Government Graphigem Inc.</p>
+
+            <h3 id="113-governing-law">11.3. Governing law</h3>
+
+            <p>This agreement and all claims (including procedural issues) between the parties are governed by the laws
+              of
+              the Western Cape Government, excluding the Western Cape Government’s conflict of laws rules.</p>
+
+            <h3 id="114-informal-resolution">11.4. Informal resolution</h3>
+
+            <p>Before filing a claim, you and we each agree to try to resolve the dispute by contacting the other party
+              through the notice procedures in Section 11.2 (Notice of disputes). If a dispute is not resolved within
+              thirty
+              days of notice, you and we may bring a formal proceeding.</p>
+
+            <h3 id="115-arbitration">11.5. Arbitration</h3>
+
+            <p>You and Shopple agree to resolve any and all claims relating to this agreement or the Services through
+              final
+              and binding arbitration, except as set forth below. The <a href="https://www.adr.org/index.php">American
+                Arbitration Association</a> (AAA) will administer the arbitration under its Commercial Arbitration
+              Rules.
+              The arbitration will be held in South Africa , or any other location both parties agree to in
+              writing.
+            </p>
+
+            <h3 id="116-exception-to-arbitration">11.6. Exception to arbitration</h3>
+
+            <p>Either party may bring a lawsuit in the federal or state courts of South Africa solely
+              for injunctive relief to stop unauthorized use or abuse of the Services or infringement of Intellectual
+              Property Rights without first engaging in the informal dispute notice process described above.</p>
+
+            <h3 id="117-no-class-actions">11.7. NO CLASS ACTIONS</h3>
+
+            <p>You may only resolve disputes related to or arising from the Services with the Shopple Entities on an
+              individual basis and will not bring a claim in a class, consolidated, or representative action.</p>
+
+            <h3 id="118-30-day-opt-out-period">11.8. 30-day opt-out period</h3>
+
+            <p>If you don’t wish to be bound by these arbitration provisions (including its waiver of class and
+              representative claims), you must notify us by emailing <a href="mailto:arbitration-opt-out@Shopple.com">arbitration-opt-out@Shopple.com</a>
+              no later than 30 days after the first acceptance date of any version of this agreement containing an
+              arbitration provision (unless a longer period is required by applicable law). An opt-out notice does not
+              revoke any previous arbitration agreement between us.</p>
+
+            <h3 id="119-future-changes-to-this-dispute-resolution-agreement">11.9. Future changes to this dispute
+              resolution
+              agreement</h3>
+
+            <p>If Shopple makes any changes to this Section 11 (or successor section and not including Section 11.2
+              (Notice of
+              Disputes)), you may reject any such change by notifying us via the procedure set forth in Section 11.8
+              (30-day
+              opt-out period) within 30 days of the change. It is not necessary to submit a rejection of a future change
+              to
+              this Section 11 if you have properly opted out of arbitration in compliance with the requirements of
+              Section
+              11.8 (30-day opt-out period).</p>
+
+            <h2 id="12-miscellaneous">12. Miscellaneous</h2>
+
+            <h3 id="121-updates-to-this-agreement">12.1. Updates to this agreement</h3>
+
+            <p>Shopple may make nonmaterial changes to these terms at any time without notice, but we will provide
+              advance
+              notice of any material changes to them. Other than changes made under Section 11.9 (Future changes to this
+              dispute resolution agreement), the changes to the terms will not apply retroactively and will become
+              effective
+              30 days after we give you notice or the stated effective date of the new terms, whichever is later. If a
+              new
+              version of these terms has a material negative impact on you, then you may object to the change by
+              notifying
+              us (via support@Shopple.com) within 30 days after we provide you with notice of the changes. If you so
+              notify
+              us, then you will remain governed by the terms in effect immediately before the change until the end of
+              your
+              then-current Initial Term or Renewal Term, as applicable. After that, you will be governed by the changed
+              terms. Notwithstanding anything to the contrary in the foregoing, any changes to the terms related to new
+              features or made for legal reasons will become effective immediately upon notice.</p>
+
+            <h3 id="122-severability">12.2. Severability</h3>
+
+            <p>If one or more of the provisions contained in this agreement is held invalid, illegal or unenforceable in
+              any
+              respect by any court of competent jurisdiction, such holding will not impair the validity, legality, or
+              enforceability of the remaining provisions.</p>
+
+            <h3 id="123-assignment">12.3. Assignment</h3>
+
+            <p>You may not assign this agreement, or your rights or obligations under it, in whole or in part and any
+              such
+              assignment is void. Shopple may freely assign this agreement, or its rights and obligations under it, in
+              whole
+              or in part.</p>
+
+            <h3 id="124-electronic-notices">12.4. Electronic notices</h3>
+
+            <p>We will communicate with you via email or the Services’ user interface. It is your responsibility to keep
+              your Services account e-mail address up-to-date so that you are able to receive electronic communications
+              from
+              us.</p>
+
+            <h3 id="125-entire-agreement-amendments">12.5. Entire agreement; amendments</h3>
+
+            <p>This agreement, together with your Order Form, constitutes the entire agreement between you and Shopple
+              with
+              respect to its subject matter, and supersedes any and all prior agreements, discussions, negotiations, and
+              offers. Except as specifically stated otherwise in the agreement, any amendment to the agreement must be
+              in
+              writing, expressly state that it is amending the Agreement and signed by both parties.</p>
+
+            <h3 id="126-order-of-precedence-headings">12.6. Order of precedence; headings</h3>
+
+            <p>In the event of a conflict between this agreement and any Order Form, the terms of the Order Form shall
+              govern. Headings are for information purposes only.</p>
+
+            <h3 id="127-third-party-beneficiaries">12.7. Third-party beneficiaries</h3>
+
+            <p>Shopple’s Affiliates and Shopple’s and its Affiliates’ suppliers and distributors are intended third
+              party
+              beneficiaries of Sections 8 – 10 (inclusive). Except as expressly set forth in the foregoing, there are no
+              third party beneficiaries to these terms.</p>
+
+            <h2 id="13-definitions">13. Definitions</h2>
+
+            <p>“<strong>Affiliate</strong>” means any entity that directly or indirectly Controls, is Controlled by, or
+              is
+              under common Control with a party.</p>
+
+            <p>“<strong>Confidential Information</strong>” means information that one party (or Affiliate) discloses to
+              the
+              other party under the agreement, and that is marked as confidential or would normally be considered
+              confidential information under the circumstances. Customer Data is your Confidential Information.
+              Confidential
+              Information does not include information that is independently developed by the recipient, is shared with
+              the
+              recipient by a third party without confidentiality obligations, or becomes public through no fault of the
+              recipient.</p>
+
+            <p>“<strong>Control</strong>” means control of greater than 50% of the voting rights or equity interests of
+              a
+              party.</p>
+
+            <p>“<strong>Customer Data</strong>” means data submitted, stored, sent or received via the Services by you,
+              at
+              your direction, or as part of the Services for you.</p>
+
+            <p>“<strong>Delegates</strong>” means employees, Affiliates, agents, and professional advisors.</p>
+
+            <p>“<strong>including</strong>” means including, without limitation.</p>
+
+            <p>“<strong>Legal Process</strong>” means an information disclosure request made under law, governmental
+              regulation, court order, subpoena, warrant, governmental regulatory or agency request, or other valid
+              legal
+              authority, legal procedure, or similar process.</p>
+
+            <p>“<strong>Order Form</strong>” means the ordering document or website page for the Services.</p>
+
+            <p>“<strong>Shopple</strong>”, “<strong>we</strong>”, and “<strong>us</strong>” means Shopple.com, Inc.</p>
+
+
+          </article>
+        </a-col>
+      </a-row>
+    </a-col>
+  </a-row>
 </template>
 <script>
-  export default {
-    name: 'r-terms',
-    props: {},
-    data() {
-      return {
-        modal: {
-          current: null,
-          message: null,
-        },
-      }
-    },
-    mounted() {
-      this.modal = this.$store.state.modal;
-    },
-    methods: {},
-  };
+export default {
+  name: 'r-terms',
+  props: {},
+  data () {
+    return {
+      modal: {
+        current: null,
+        message: null,
+      },
+    }
+  },
+  mounted () {
+    this.modal = this.$store.state.modal
+  },
+  methods: {},
+}
 </script>

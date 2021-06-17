@@ -1,182 +1,448 @@
 <template>
-  <r-page>
-    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :md="{ span: 12 }"
-             :lg="{ span: 12 }">
-        <a-card>
-          <a-card-meta>
-            <template slot="description">
-              <h4 class="r-heading-light r-text-uppercase">
-                It's about you
-              </h4>
-              <h2 class="r-heading r-text-secondary">
-                Shop better
-              </h2>
-              <p class="r-text-normal">
-                We set out to build Shopple to give everyone the power to take back
-                control of their day-to-day shopping experience. Your shopping assistants are waiting to
-                choose you high quality
-                products and bring them right to your doorstep for a considerably small service fee/tip.
-              </p>
-            </template>
-          </a-card-meta>
-        </a-card>
-      </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-        <a-card>
-          <div class="r-grey-shadow">
-            <r-avatar shape="square" :src="'/assets/' + banner"/>
-          </div>
-        </a-card>
-      </a-col>
-    </a-row>
-    <a-row class="r-mt-48" type="flex" justify="start" align="middle">
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-        <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
-            <a-card>
-              <div slot="cover" class="r-card-cover-secondary r-p-24">
-                <h2 class="r-heading r-text-secondary">
-                  Our mission
-                </h2>
-                <p class="r-text-normal">
-                  To provide our customers with a dynamic and adaptive shopping service on the market.
-                </p>
-              </div>
-            </a-card>
-          </a-col>
-        </a-row>
-      </a-col>
-    </a-row>
-    <a-row class="r-mt-48" type="flex" justify="start" align="middle">
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-            <a-row :gutter="[24,24]" type="flex" justify="center">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                     :lg="{ span: 12 }"
-                     style="text-align: left;">
-                <a-card>
-                  <a-card-meta>
-                    <template slot="description">
-                      <h4 class="r-heading-light r-text-uppercase">
-                        It's shopping time!
-                      </h4>
-                      <h2 class="r-heading r-text-secondary">
-                        Shopping
-                      </h2>
-                      <p class="r-text-normal">
-                        We offer an advanced online shopping platform that collects and supplies through private
-                        shops and retail chains across the world, leveraging the short-term advantage.
-                        Instead of independent shoppers, every customer receives a super fast delivery from a
-                        shop close to home that requires a short drive, while maintaining the highest level of
-                        service and quality.
-                      </p>
-                    </template>
-                  </a-card-meta>
-                </a-card>
-              </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                     style="text-align: left;">
-                <a-card>
-                  <a-card-meta>
-                    <template slot="description">
-                      <h4 class="r-heading-light r-text-uppercase">
-                        Smarter way to shop
-                      </h4>
-                      <h2 class="r-heading r-text-secondary">
-                        Quality
-                      </h2>
-                      <p class="r-text-normal">
-                        Online shopping experience is part of it, but there are more fun things to do. Yet we are often
-                        in
-                        the shops and we do more and more ourselves. We enter the fitting rooms at least 3
-                        times just not to like the item we're trying. Almost by chance, we finally choose the most
-                        beautiful
-                        products with the best promise. We push our
-                        trolleys around the different departments in our favourite stores,
-                        chat with the shopping assistants, carry bags and wait in line for the cash
-                        register.
-                      </p>
-                    </template>
-                  </a-card-meta>
-                </a-card>
-              </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                     style="text-align: left;">
-                <a-card>
-                  <a-card-meta>
-                    <template slot="description">
-                      <h4 class="r-heading-light r-text-uppercase">
-                        Delivery on demand
-                      </h4>
-                      <h2 class="r-heading r-text-secondary">
-                        Craftsmanship
-                      </h2>
-                      <p class="r-text-normal">
-                        You just have to make a reservation at a super convenient and rich
-                        interface,
-                        enjoy our instant offers and your shopping experience with us.
+  <a-row :gutter="[48,96]" type="flex" justify="center" align="middle">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+           :lg="{ span: 24 }"
+    >
+      <a-row style="background: #FFFFFF" type="flex" justify="start" align="middle">
+        <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 12 }"
+               :lg="{ span: 12 }"
+        >
+          <a-row type="flex" justify="end" align="middle">
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
+                   :lg="{ span: 16 }"
+            >
+              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                       :md="{ span: 24 }"
+                       :lg="{ span: 24 }"
+                >
+                  <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                    About us
+                  </h4>
+                </a-col>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                       :md="{ span: 24 }"
+                       :lg="{ span: 24 }"
+                >
+                  <h1 class="r-heading">
+                    Shopple's technology enables better shopping.
+                  </h1>
+                </a-col>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                       :md="{ span: 24 }"
+                       :lg="{ span: 24 }"
+                >
+                  <p class="r-text-normal">
+                    Changing how people experience shopping and buy what they desire is just getting started.
+                  </p>
+                  <p class="r-text-normal">
+                    Shopple powers the whole shopping experience for shppers around the world. We specialize
+                    online shopping, order tracking, and marketplace services focused on delivering a customer
+                    experience of unparalleled quality.
+                  </p>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </a-col>
+        <a-col class="r-pv-48"
+               style="background: url(/images/content/7.svg) no-repeat; background-size: cover; padding-bottom: 600px;"
+               :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 12 }"
+               :lg="{ span: 12 }"
+        >
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+      <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
 
-                        We do not warehouse any product that we sell on our platforms. We use an on demand supply
-                        mechanism such that everything goes directly from the store or restaurant to your doorstep. That
-                        is why you always get a better
-                        service on our shopping experience.</p>
-                    </template>
-                  </a-card-meta>
-                </a-card>
-              </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                     style="text-align: left;">
-                <a-card>
-                  <a-card-meta>
-                    <template slot="description">
-                      <h4 class="r-heading-light r-text-uppercase">
-                        Making sense
+          <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+            <a-col :xs="{ span: 24 }" :sm="{  span: 24 }"
+                   :md="{ span: 18 }"
+                   :lg="{ span: 16 }"
+            >
+              <a-row class="r-text-left" type="flex" justify="center" align="middle">
+                <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                       :lg="{ span: 12 }"
+                >
+                  <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center" align="middle">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                           :md="{ span: 24 }"
+                           :lg="{ span: 24 }"
+                    >
+                      <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                        Our story
                       </h4>
-                      <h2 class="r-heading r-text-secondary">
-                        Value
+                    </a-col>
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                           :md="{ span: 24 }"
+                           :lg="{ span: 24 }"
+                    >
+                      <h2 class="r-heading">
+                        We continue to prioritize quality shopping services.
                       </h2>
+                    </a-col>
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                           :md="{ span: 24 }"
+                           :lg="{ span: 24 }"
+                    >
                       <p class="r-text-normal">
-                        We promise to deliver on demand at your home comfort. We're only able to achieve this great
-                        service because of the great people that make this possible. We've shoppers in every city where
-                        we're partnered with local retailers.
-                        Shopple thinks it can be done differently: faster, easier and cheaper. The idea is
-                        simple. We
-                        arrange
-                        the shopping, so that you have more time for fun things.
-                        We're constantly expanding and if we aren't in your area
-                        yet, chances are high that will be there soon.</p>
-                    </template>
-                  </a-card-meta>
-                </a-card>
-              </a-col>
-            </a-row>
-          </a-col>
-        </a-row>
-      </a-col>
-    </a-row>
-  </r-page>
+                        Shopple’s mission is to bring the best shopping tools directly to the customers and retailers.
+                        Shopple
+                        should always be
+                        transparent and easily accessible. Shopping freedom should be for all of us.
+                      </p>
+                      <p class="r-text-normal">
+                        Historically, finest services have been known to be complicated, expensive and difficult to
+                        access.
+                        Shopple is
+                        here to make better shopping services easily accessible to everyone.
+                      </p>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </a-col>
+
+        <a-col :xs="{ span: 24 }" :sm="{  span: 24 }"
+               :md="{ span: 18 }"
+               :lg="{ span: 16 }"
+        >
+          <a-card class="r-bg-secondary-light">
+            <a-card-meta>
+              <template slot="description">
+                <div class="r-mv-48">
+                  <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                    >
+                      <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center" align="middle">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                               :md="{ span: 24 }"
+                               :lg="{ span: 24 }"
+                        >
+                          <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                            Our values
+                          </h4>
+                        </a-col>
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                               :md="{ span: 24 }"
+                               :lg="{ span: 24 }"
+                        >
+                          <h2 class="r-heading">
+                            We make handling your <span class="r-text-secondary">marketplaces</span> more human
+                          </h2>
+                        </a-col>
+                      </a-row>
+                    </a-col>
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                    >
+                      <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center" align="middle">
+                        <a-col v-for="(value, index) in values"
+                               :key="index"
+                               :xs="{ span: 24 }" :sm="{ span: 24 }"
+                               :md="{ span: 24 }"
+                               :lg="{ span: 24 }"
+                        >
+                          <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center" align="middle">
+                            <a-col :xs="{ span: 8 }" :sm="{ span: 9 }"
+                                   :md="{ span: 6 }"
+                                   :lg="{ span: 4 }"
+                            >
+                              <r-avatar :dataSrc="'/images/icons/' + value.image" :size="60"></r-avatar>
+                            </a-col>
+                            <a-col :xs="{ span: 16 }" :sm="{ span: 16 }"
+                                   :md="{ span: 18 }"
+                                   :lg="{ span: 20 }"
+                            >
+                              <h3 class="r-heading-light">
+                                {{ value.title }}
+                              </h3>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                      </a-row>
+                    </a-col>
+                  </a-row>
+                </div>
+              </template>
+            </a-card-meta>
+          </a-card>
+        </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <a-row type="flex" justify="center" align="middle">
+            <a-col :xs="{ span: 24 }" :sm="{  span: 24 }"
+                   :md="{ span: 18 }"
+                   :lg="{ span: 16 }"
+            >
+              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                       :lg="{ span: 12 }"
+                >
+                  <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center" align="middle">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                           :md="{ span: 24 }"
+                           :lg="{ span: 24 }"
+                    >
+                      <h2 class="r-heading">
+                        We’re <span class="r-text-primary">excited</span> to meet you!
+                      </h2>
+                    </a-col>
+                  </a-row>
+                </a-col>
+                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                       :lg="{ span: 12 }"
+                >
+                  <a-card class="r-bg-primary-light">
+                    <a-card-meta>
+                      <template slot="description">
+                        <div class="r-mv-48">
+                          <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+                            <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <p class="r-text-normal">
+                                Ready to join a team of bold and passionate builders to do your best work yet? We're a
+                                team of innovative players and come join if you want to play an important role in
+                                building the future of
+                                fintech.
+                              </p>
+                            </a-col>
+                            <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                                   :lg="{ span: 12 }"
+                            >
+                              <nuxt-link to="/career/openings">
+                                <a-button type="secondary"
+                                          class="r-btn-bordered-secondary"
+                                          size="large"
+                                          html-type="submit"
+                                >
+                                  See job openings
+                                </a-button>
+                              </nuxt-link>
+                            </a-col>
+                          </a-row>
+                        </div>
+                      </template>
+                    </a-card-meta>
+                  </a-card>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+            <a-col :xs="{ span: 24 }" :sm="{  span: 24 }"
+                   :md="{ span: 18 }"
+                   :lg="{ span: 16 }"
+            >
+              <a-card class="r-bg-secondary-light">
+                <a-card-meta>
+                  <template slot="description">
+                    <div class="r-mv-48">
+                      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                               :lg="{ span: 12 }"
+                        >
+                          <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center" align="middle">
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                                Our promise to you
+                              </h4>
+                            </a-col>
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <h2 class="r-heading">
+                                We help stores <span class="r-text-primary">achieve</span> their sales goals:
+                              </h2>
+                            </a-col>
+                            <a-col v-for="(promise, index) in promises"
+                                   :key="index"
+                                   :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <a-row class="r-text-left" :gutter="[12,12]" type="flex" justify="center" align="middle">
+                                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                       :md="{ span: 24 }"
+                                       :lg="{ span: 24 }"
+                                >
+                                  <h3 class="r-heading">
+                                    {{ promise.title }}
+                                  </h3>
+                                </a-col>
+                                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                       :md="{ span: 24 }"
+                                       :lg="{ span: 24 }"
+                                >
+                                  <h4 class="r-heading-light">
+                                    {{ promise.content }}
+                                  </h4>
+                                </a-col>
+                              </a-row>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
+                               :lg="{ span: 12 }"
+                        >
+                          <r-avatar class="r-avatar-block" data-src="/images/content/9.png" :size="450"></r-avatar>
+                        </a-col>
+                      </a-row>
+                    </div>
+                  </template>
+                </a-card-meta>
+              </a-card>
+            </a-col>
+          </a-row>
+        </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+          <a-card class="r-bg-secondary r-border-none r-border-radius-none">
+            <a-card-meta class="r-text-center">
+              <template slot="description">
+                <a-row class="r-mv-48" type="flex" justify="center">
+                  <a-col class="r-text-center" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 18}" :lg="{span: 16}">
+                    <a-row type="flex" justify="start" :gutter="[24,24]">
+                      <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                             :lg="{ span: 24 }"
+                      >
+                        <h4 class="r-heading-light r-text-uppercase">
+                          Where we're located
+                        </h4>
+                      </a-col>
+                      <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 8 }"
+                             :lg="{ span: 8 }"
+                      >
+                        <a-row type="flex" justify="start" :gutter="[24,24]">
+                          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                                 :lg="{ span: 24 }"
+                          >
+                            <h2 class="r-heading">
+                              Johannesburg, <br>
+                              South Africa
+                            </h2>
+                          </a-col>
+                          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                                 :lg="{ span: 24 }"
+                          >
+                            <p class="r-text-normal">
+                              <nuxt-link class="r-text-white" to="mailto:info@kinkipa.com">info@kinkipa.com
+                              </nuxt-link>
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                      <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 8 }"
+                             :lg="{ span: 8 }"
+                      >
+                        <a-row type="flex" justify="start" :gutter="[24,24]">
+                          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                                 :lg="{ span: 24 }"
+                          >
+                            <h2 class="r-heading">
+                              London, <br>
+                              United Kingdom
+                            </h2>
+                          </a-col>
+                          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                                 :lg="{ span: 24 }"
+                          >
+                            <p class="r-text-normal">
+                              <nuxt-link class="r-text-white" to="mailto:info@kinkipa.com">Coming soon</nuxt-link>
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                      <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 8 }"
+                             :lg="{ span: 8 }"
+                      >
+                        <a-row type="flex" justify="start" :gutter="[24,24]">
+                          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                                 :lg="{ span: 24 }"
+                          >
+                            <h2 class="r-heading">
+                              Sydney, <br>
+                              Australia
+                            </h2>
+                          </a-col>
+                          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                                 :lg="{ span: 24 }"
+                          >
+                            <p class="r-text-normal">
+                              <nuxt-link class="r-text-white" to="mailto:info@kinkipa.com">Coming soon</nuxt-link>
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                    </a-row>
+                  </a-col>
+                </a-row>
+              </template>
+            </a-card-meta>
+          </a-card>
+        </a-col>
+      </a-row>
+    </a-col>
+  </a-row>
 </template>
 <script>
 export default {
-  layout: 'page',
+  layout: 'default',
   name: 'r-about-us',
   props: {},
-  data() {
+  data () {
     return {
-      banner: 'art-06.png',
-      modal: {
-        current: null,
-        message: null,
-      },
+      values: [
+        {
+          title: 'We put our customers first',
+          image: 'about-01.svg'
+        },
+        {
+          title: 'We do the right thing',
+          image: 'about-02.svg'
+        },
+        {
+          title: 'We hold ourselves to high standards',
+          image: 'about-03.svg'
+        }
+      ],
+      promises: [
+        {
+          title: 'Affordable',
+          content: 'You’re unique and your marketplaces should be too. We help match you to a plan that fits you and your business needs. '
+        },
+        {
+          title: 'Simple',
+          content: 'Easily find a plan in minutes. Set everything up online and cancel anytime. '
+        },
+        {
+          title: 'Reliable',
+          content: 'We provide high-quality solutions that are essential to your business marketplaces, and marketplace freedom.'
+        }
+      ]
     }
   },
-  mounted() {
-    this.modal = this.$store.state.modal;
+  mounted () {
+    this.modal = this.$store.state.modal
   },
   methods: {},
-};
+}
 </script>

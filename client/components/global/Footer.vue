@@ -2,16 +2,11 @@
   <a-row type="flex" justify="center">
     <a-col :span="24">
       <a-row class="r-mb-24" type="flex" justify="center">
-        <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 21 }" :lg="{ span: 21 }">
-          <a-row :gutter="[24,24]" type="flex" justify="center"
-                 align="middle">
-            <a-col v-if="hasSubscribe" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
-              <r-subscribe></r-subscribe>
-            </a-col>
-            <a-col v-if="hasDownload" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
-              <r-shop-now></r-shop-now>
-            </a-col>
-          </a-row>
+        <a-col v-if="hasDownload" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+          <r-shop-now></r-shop-now>
+        </a-col>
+        <a-col v-if="hasSubscribe && false" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+          <r-subscribe></r-subscribe>
         </a-col>
       </a-row>
       <a-layout-footer v-if="hasFooter">

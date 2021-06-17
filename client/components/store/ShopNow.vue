@@ -6,7 +6,7 @@
                       type="secondary"
                       :size="size">
                 <a-icon type="shop"></a-icon>
-                Shop now
+                Find your store
             </a-button>
         </a-col>
     </a-row>
