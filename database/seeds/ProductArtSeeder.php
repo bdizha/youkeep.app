@@ -212,7 +212,7 @@ class ProductArtSeeder extends DatabaseSeeder
 
             $filterSets = $this->getProductVariants($productItem);
             if (!empty($filterSets)) {
-                $this->setProductTypes($filterSets, $this->product);
+                $this->setProductTypes($filterSets);
             }
 
             $this->setProductPhotos($productItem);

@@ -34,236 +34,218 @@ class StoreSeeder extends Seeder
 //        $this->_setStoreData();
 
         $this->stores = [
-//            [
-//                'name' => 'Archive',
-//                'photo' => 'https://image.tfgmedia.co.za/image/1/process/639x639?source=http://cdn.tfgmedia.co.za/06/ProductImages/57526725_02.jpg',
-//                'photo_cover' => 'https://blog.archivestore.co.za/wp-content/uploads/2019/03/vans-style-73-dx-anaheim-factory-og-black-va3wlqul1-2-os.jpg',
-//                'phone' => '0860 834 834',
-//                'description' => 'Archive is South Africa’s premium streetwear destination, which has an extensive collection of highly coveted, limited edition sneakers, clothing and accessories. Our selection of exclusives include limited edition sneaker- and streetwear packs by Nike Sportswear, adidas Originals, PUMA, Vans, ASICS, FILA and Jordan’s iconic Retro collection. We collaborate with iconic brands with celebrated heritage to deliver best-level, collector’s edition sneakers, clothing and accessories. Our love of street culture is emanated through our collections that’s available in-store and online. We are sneaker and streetwear enthusiasts. We understand sneaker heritage, we’re connected to current trends and excited by brand innovation through technology. Welcome to Archive’s online shop.',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.archivestore.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//            [
-//                'name' => 'Foschini',
-//                'photo' => 'https://image.tfgmedia.co.za/image/1/process/452x57?source=http://cdn.tfgmedia.co.za/00/BrandImage/foschini.png',
-//                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/639x639?source=http://cdn.tfgmedia.co.za/00/ProductImages/57396384.jpg',
-//                'phone' => '0860 834 834',
-//                'description' => 'Locally made. From one woman to another.',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.foschini.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//            [
-//                'name' => 'Exact',
-//                'photo' => 'https://image.tfgmedia.co.za/image/1/process/200x75?imageQuality=100&source=http://cdn.tfgmedia.co.za/03/Marketing/PromotionalImages/Exact%20New%20Logo_thick%20web.png',
-//                'photo_cover' => 'http://cdn.tfgmedia.co.za/03/Marketing/Love%20local%20Banner%202.jpg',
-//                'phone' => '0860 834 834',
-//                'description' => 'Family savings and more!',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.exact.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//            [
-//                'name' => 'The FIX',
-//                'photo' => 'https://image.tfgmedia.co.za/image/1/process/160x57?source=https://cdn.tfgmedia.co.za/17/Marketing/Logo/FIX%20LOGO%20WEB%20160mm%20x%2057mm%20h.png',
-//                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/750x750?source=http://cdn.tfgmedia.co.za/17/Marketing/Widgets/SALE.png',
-//                'phone' => '0860 834 834',
-//                'description' => 'Locally made!',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.thefix.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//            [
-//                'name' => 'Foschini For Beauty',
-//                'photo' => 'https://image.tfgmedia.co.za/image/1/process/452x57?source=http://cdn.tfgmedia.co.za/00/BrandImage/foschini.png',
-//                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/602x424?source=https://cdn.tfgmedia.co.za/00/Marketing/Blocks/JBF_BlockAllWomanEyes_602x424.jpg',
-//                'phone' => '0860 834 834',
-//                'description' => 'All women since 1925',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.foschiniforbeauty.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//            [
-//                'name' => 'Sportscene',
-//                'photo' => 'https://vml.tfgmedia.co.za/dev/img/logo/logo-sportscene.png',
-//                'photo_cover' => 'https://blog.sportscene.co.za/wp-content/uploads/2020/04/DSC_2147.jpg',
-//                'phone' => '0860 834 834',
-//                'description' => 'Kings of sneakerwear',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.thefix.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//            [
-//                'name' => 'Markham',
-//                'photo' => 'https://vml.tfgmedia.co.za/dev/img/logo/logo-markham.png',
-//                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/602x424?source=https://cdn.tfgmedia.co.za/02/Marketing/Homepage%20Promo%20Blocks-MKM/mkm_wk31_hi_cellphones_block_2020collab_v2.jpg',
-//                'phone' => '0860 834 834',
-//                'description' => 'Shop our top offers',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.markham.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//            [
-//                'name' => 'My Wedding',
-//                'photo' => 'https://vml.tfgmedia.co.za/prod/img/logo/logo-mywedding-optim.png',
-//                'photo_cover' => 'http://cdn.tfgmedia.co.za/myWedding/HoneymoonGuide(9).jpg',
-//                'phone' => '0860 834 834',
-//                'description' => 'Your home partner',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.mywedding.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//            [
-//                'name' => 'Donna',
-//                'photo' => 'https://vml.tfgmedia.co.za/dev/img/logo/logo-donna.png',
-//                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/602x424?source=http://cdn.tfgmedia.co.za/10/Marketing/PromotionalImages/MBlockTopsAugPlusSize.jpg',
-//                'phone' => '0860 834 834',
-//                'description' => 'Online exclusive',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.donna.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//
-//            [
-//                'name' => 'Total Sports',
-//                'photo' => 'https://vml.tfgmedia.co.za/prod/img/logo/logo-mywedding-optim.png',
-//                'photo_cover' => 'https://cdn.tfgmedia.co.za/13/Marketing/Banners/RCLP_accessories.png',
-//                'phone' => '0860 834 834',
-//                'description' => 'Fly as one',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.totalsports.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//            [
-//                'name' => 'Due South Escapes',
-//                'photo' => 'https://vml.tfgmedia.co.za/dev/img/logo/logo-duesouthescapes.png',
-//                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/1224x424?source=https://cdn.tfgmedia.co.za/19/Marketing/DSE-LUGGAGE.png',
-//                'phone' => '0860 834 834',
-//                'description' => 'Your choice our products',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.duesouthescapes.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
-//            [
-//                'name' => 'Hi Online',
-//                'photo' => 'https://vml.tfgmedia.co.za/dev/img/logo/logo-hi.png',
-//                'photo_cover' => 'http://image.tfgmedia.co.za/image/1/process/1600x450?source=http://cdn.tfgmedia.co.za/27/Marketing/PromotionalImages/Home_school_CatBannerDesktop.png',
-//                'phone' => '0860 834 834',
-//                'description' => 'Everyday gigs',
-//                'content' => serialize(['store_number' => 'Not set']),
-//                'url' => 'https://www.hi-online.co.za/',
-//                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
-//                                    Saturday: 08h00 - 15h00<br/>
-//                                    Sunday: 08h00 - 13h00<br/>
-//                                    Public Holidays: 08h00 – 15h00',
-//            ],
+            [
+                'name' => 'Archive',
+                'photo' => 'https://image.tfgmedia.co.za/image/1/process/639x639?source=http://cdn.tfgmedia.co.za/06/ProductImages/57526725_02.jpg',
+                'photo_cover' => 'https://blog.archivestore.co.za/wp-content/uploads/2019/03/vans-style-73-dx-anaheim-factory-og-black-va3wlqul1-2-os.jpg',
+                'phone' => '0860 834 834',
+                'description' => 'Archive is South Africa’s premium streetwear destination, which has an extensive collection of highly coveted, limited edition sneakers, clothing and accessories. Our selection of exclusives include limited edition sneaker- and streetwear packs by Nike Sportswear, adidas Originals, PUMA, Vans, ASICS, FILA and Jordan’s iconic Retro collection. We collaborate with iconic brands with celebrated heritage to deliver best-level, collector’s edition sneakers, clothing and accessories. Our love of street culture is emanated through our collections that’s available in-store and online. We are sneaker and streetwear enthusiasts. We understand sneaker heritage, we’re connected to current trends and excited by brand innovation through technology. Welcome to Archive’s online shop.',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.archivestore.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'Foschini',
+                'photo' => 'https://image.tfgmedia.co.za/image/1/process/452x57?source=http://cdn.tfgmedia.co.za/00/BrandImage/foschini.png',
+                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/639x639?source=http://cdn.tfgmedia.co.za/00/ProductImages/57396384.jpg',
+                'phone' => '0860 834 834',
+                'description' => 'Locally made. From one woman to another.',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.foschini.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'Exact',
+                'photo' => 'https://image.tfgmedia.co.za/image/1/process/200x75?imageQuality=100&source=http://cdn.tfgmedia.co.za/03/Marketing/PromotionalImages/Exact%20New%20Logo_thick%20web.png',
+                'photo_cover' => 'http://cdn.tfgmedia.co.za/03/Marketing/Love%20local%20Banner%202.jpg',
+                'phone' => '0860 834 834',
+                'description' => 'Family savings and more!',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.exact.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'The FIX',
+                'photo' => 'https://image.tfgmedia.co.za/image/1/process/160x57?source=https://cdn.tfgmedia.co.za/17/Marketing/Logo/FIX%20LOGO%20WEB%20160mm%20x%2057mm%20h.png',
+                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/750x750?source=http://cdn.tfgmedia.co.za/17/Marketing/Widgets/SALE.png',
+                'phone' => '0860 834 834',
+                'description' => 'Locally made!',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.thefix.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'Foschini For Beauty',
+                'photo' => 'https://image.tfgmedia.co.za/image/1/process/452x57?source=http://cdn.tfgmedia.co.za/00/BrandImage/foschini.png',
+                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/602x424?source=https://cdn.tfgmedia.co.za/00/Marketing/Blocks/JBF_BlockAllWomanEyes_602x424.jpg',
+                'phone' => '0860 834 834',
+                'description' => 'All women since 1925',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.foschiniforbeauty.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'Sportscene',
+                'photo' => 'https://vml.tfgmedia.co.za/dev/img/logo/logo-sportscene.png',
+                'photo_cover' => 'https://blog.sportscene.co.za/wp-content/uploads/2020/04/DSC_2147.jpg',
+                'phone' => '0860 834 834',
+                'description' => 'Kings of sneakerwear',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.thefix.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'Markham',
+                'photo' => 'https://vml.tfgmedia.co.za/dev/img/logo/logo-markham.png',
+                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/602x424?source=https://cdn.tfgmedia.co.za/02/Marketing/Homepage%20Promo%20Blocks-MKM/mkm_wk31_hi_cellphones_block_2020collab_v2.jpg',
+                'phone' => '0860 834 834',
+                'description' => 'Shop our top offers',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.markham.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'My Wedding',
+                'photo' => 'https://vml.tfgmedia.co.za/prod/img/logo/logo-mywedding-optim.png',
+                'photo_cover' => 'http://cdn.tfgmedia.co.za/myWedding/HoneymoonGuide(9).jpg',
+                'phone' => '0860 834 834',
+                'description' => 'Your home partner',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.mywedding.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'Donna',
+                'photo' => 'https://vml.tfgmedia.co.za/dev/img/logo/logo-donna.png',
+                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/602x424?source=http://cdn.tfgmedia.co.za/10/Marketing/PromotionalImages/MBlockTopsAugPlusSize.jpg',
+                'phone' => '0860 834 834',
+                'description' => 'Online exclusive',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.donna.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
 
-
-            ///
-//            [
-//                'name' => 'MRP',
-//                'photo' => 'https://www.waterfront.co.za/wp-content/uploads/2018/05/mrp.jpg',
-//                'photo_cover' => 'https://mrp.scene7.com/is/image/MRP/01_1104610665_SI_00?$atg-viewer-LargeView$&qlt=80',
-//                'description' => 'Less means more',
-//                'url' => 'https://www.mrp.com',
-//            ],
-//            [
-//                'name' => 'MRP Home',
-//                'photo' => 'https://www.mrphome.com/media/vaimo/uploadlogo/stores/11/logo-home.png',
-//                'photo_cover' => 'https://www.mrphome.com/media/wysiwyg/mrp_home/2019/wk-7/shop-rugs-2019.jpg',
-//                'description' => 'We believe fashion is for everyone',
-//                'url' => 'https://www.mrphome.com/'
-//            ],
-//            [
-//                'name' => 'Office Group',
-//                'photo' => 'https://www.officegroup.co.za/wp-content/uploads/2018/04/office-group-logo.png',
-//                'photo_cover' => 'https://www.officegroup.co.za/wp-content/uploads/2018/04/dakota-desk-with-round-tube-legs.jpg',
-//                'description' => 'The largest variety of furniture anywhere',
-//                'url' => 'https://www.officegroup.co.za/'
-//            ],
-//            [
-//                'name' => 'Weylandts',
-//                'photo' => 'http://movingtactics.co.za/wp-content/uploads/2016/09/imgres.png',
-//                'photo_cover' => 'https://www.weylandts.co.za/wp-content/uploads/nf_image/WEBSITE-IMAGE-HOMEPAGE-IMAGE-min-p2pdwgf7b64j1x1gdivul47k.jpg',
-//                'description' => 'Welcome to the home of bold design with soul.',
-//                'url' => 'https://www.weylandts.co.za/'
-//            ],
-//            [
-//                'name' => 'MRP Sport',
-//                'photo' => 'https://www.mrpsport.com/media/vaimo/uploadlogo/websites/13/logo-sport.png',
-//                'photo_cover' => 'https://www.mrpsport.com/cdn/07/landingPages/Team_Sports/2019/wk40/soccer-balls.jpg',
-//                'description' => 'We\'ve got the gear for everyone',
-//                'url' => 'https://www.mrphome.com/'
-//            ],
-//            [
-//                'name' => 'Label Collections',
-//                'photo' => 'https://i.pinimg.com/280x280_RS/50/8d/e6/508de6d58d25eb4e8649065927696fab.jpg',
-//                'photo_cover' => 'https://www.labelcollections.com/image/cache/catalog/Slider-Banner-2-2048x931.jpg?1592058761810',
-//                'description' => 'LABEL Collections is about luxury, quality, simplicity and integrity. ',
-//                'url' => 'https://www.labelcollections.com'
-//            ],
-//            [
-//                'name' => 'Yuppiechef',
-//                'photo' => 'https://media.2oceansvibe.com/wp-content/uploads/2017/09/Wedding-friends-Yuppie-Chef-Competition-Cover1.jpg',
-//                'photo_cover' => 'https://res.cloudinary.com/yuppiechef/image/upload/c_lpad,f_auto,h_556,q_auto,w_556/v1/contentdocs/46595/picture20190930125912',
-//                'description' => 'Premier kitchen and homeware store.',
-//                'url' => 'https://www.yuppiechef.com/',
-//            ],
-//            [
-//                'name' => 'Superbalist',
-//                'photo' => 'https://i.pinimg.com/280x280_RS/52/02/d1/5202d142699d8ccccb488a6ec2a4476e.jpg',
-//                'photo_cover' => 'https://assets.superbalistcdn.co.za/1250x/filters:quality(75):format(jpg)/cms/HM_banner_double_the_size.jpg',
-//                'description' => 'South Africa’s most-loved, online wardrobe + lifestyle destination. ',
-//                'url' => 'https://superbalist.com/',
-//            ],
-//            [
-//                'name' => 'Cotton On',
-//                'photo' => 'https://foresthillcity.co.za/wp-content/uploads/2018/11/cottonon-hover-450x450.jpg',
-//                'photo_cover' => 'https://imgaz1.chiccdn.com/thumb/large/oaupload/ser1/newchic/images/EC/13/0b749ed4-c57b-414b-8fd5-0f04b5186582.jpg',
-//                'description' => 'Cotton On',
-//                'url' => 'Cotton On',
-//            ],
-//            [
-//                'name' => 'Zara',
-//                'photo' => 'https://i.pinimg.com/564x/86/ef/cf/86efcfa971fc6d1858f8826bcaef5e1c.jpg',
-//                'photo_cover' => 'https://static.zara.net/photos///2020/S/0/1/p/0014/013/800/2/w/1140/0014013800_2_1_1.jpg?ts=1591288045918',
-//                'description' => 'Zara is one of the largest international fashion companies.',
-//                'url' => 'https://www.zara.com/za/',
-//            ],
+            [
+                'name' => 'Total Sports',
+                'photo' => 'https://vml.tfgmedia.co.za/prod/img/logo/logo-mywedding-optim.png',
+                'photo_cover' => 'https://cdn.tfgmedia.co.za/13/Marketing/Banners/RCLP_accessories.png',
+                'phone' => '0860 834 834',
+                'description' => 'Fly as one',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.totalsports.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'Due South Escapes',
+                'photo' => 'https://vml.tfgmedia.co.za/dev/img/logo/logo-duesouthescapes.png',
+                'photo_cover' => 'https://image.tfgmedia.co.za/image/1/process/1224x424?source=https://cdn.tfgmedia.co.za/19/Marketing/DSE-LUGGAGE.png',
+                'phone' => '0860 834 834',
+                'description' => 'Your choice our products',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.duesouthescapes.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'Hi Online',
+                'photo' => 'https://vml.tfgmedia.co.za/dev/img/logo/logo-hi.png',
+                'photo_cover' => 'http://image.tfgmedia.co.za/image/1/process/1600x450?source=http://cdn.tfgmedia.co.za/27/Marketing/PromotionalImages/Home_school_CatBannerDesktop.png',
+                'phone' => '0860 834 834',
+                'description' => 'Everyday gigs',
+                'content' => serialize(['store_number' => 'Not set']),
+                'url' => 'https://www.hi-online.co.za/',
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'MRP',
+                'photo' => 'https://www.waterfront.co.za/wp-content/uploads/2018/05/mrp.jpg',
+                'photo_cover' => 'https://mrp.scene7.com/is/image/MRP/01_1104610665_SI_00?$atg-viewer-LargeView$&qlt=80',
+                'description' => 'Less means more',
+                'url' => 'https://www.mrp.com',
+            ],
+            [
+                'name' => 'MRP Home',
+                'photo' => 'https://www.mrphome.com/media/vaimo/uploadlogo/stores/11/logo-home.png',
+                'photo_cover' => 'https://www.mrphome.com/media/wysiwyg/mrp_home/2019/wk-7/shop-rugs-2019.jpg',
+                'description' => 'We believe fashion is for everyone',
+                'url' => 'https://www.mrphome.com/'
+            ],
+            [
+                'name' => 'Office Group',
+                'photo' => 'https://www.officegroup.co.za/wp-content/uploads/2018/04/office-group-logo.png',
+                'photo_cover' => 'https://www.officegroup.co.za/wp-content/uploads/2018/04/dakota-desk-with-round-tube-legs.jpg',
+                'description' => 'The largest variety of furniture anywhere',
+                'url' => 'https://www.officegroup.co.za/'
+            ],
+            [
+                'name' => 'MRP Sport',
+                'photo' => 'https://www.mrpsport.com/media/vaimo/uploadlogo/websites/13/logo-sport.png',
+                'photo_cover' => 'https://www.mrpsport.com/cdn/07/landingPages/Team_Sports/2019/wk40/soccer-balls.jpg',
+                'description' => 'We\'ve got the gear for everyone',
+                'url' => 'https://www.mrphome.com/'
+            ],
+            [
+                'name' => 'Adidas',
+                'photo' => 'https://lexprotector.com/wp-content/uploads/2019/02/adidas-mountain-logo.jpg',
+                'photo_cover' => 'https://cdn.zando.co.za/cms/new/1920X800_MastheadSM_DualGender_CAM_Onsite_EMS_SALE_(1).jpg',
+                'description' => 'Own the Game.',
+                'url' => 'https://shop.adidas.co.za/',
+                'phone' => '+27723775792',
+                'content' => serialize(['store_number' => 'Not set']),
+                'trading_hours' => 'Monday - Friday: 08h00 - 19h00<br/>
+                                    Saturday: 08h00 - 15h00<br/>
+                                    Sunday: 08h00 - 13h00<br/>
+                                    Public Holidays: 08h00 – 15h00',
+            ],
+            [
+                'name' => 'Cotton On',
+                'photo' => 'https://jobapplications.net/wp-content/uploads/cotton-on-logo-1.png',
+                'photo_cover' => 'https://www.menstuff.co.za/wp-content/uploads/2018/02/Cotton-on-fashion.jpg',
+                'description' => 'Cotton On',
+                'url' => 'Cotton On',
+            ],
+            [
+                'name' => 'Zara',
+                'photo' => 'https://i.pinimg.com/564x/86/ef/cf/86efcfa971fc6d1858f8826bcaef5e1c.jpg',
+                'photo_cover' => 'https://static.zara.net/photos///2020/S/0/1/p/0014/013/800/2/w/1140/0014013800_2_1_1.jpg?ts=1591288045918',
+                'description' => 'Zara is one of the largest international fashion companies.',
+                'url' => 'https://www.zara.com/za/',
+            ],
             [
                 'name' => 'Artbeam',
                 'photo' => url('/artbeam/logo.png'),
@@ -278,6 +260,7 @@ class StoreSeeder extends Seeder
                 'url' => 'http://www.artbeam.shop',
             ],
         ];
+
         foreach ($this->stores as $store) {
             $this->_setStore($store);
         }

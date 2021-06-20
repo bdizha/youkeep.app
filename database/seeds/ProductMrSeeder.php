@@ -140,6 +140,8 @@ class ProductMrSeeder extends DatabaseSeeder
             $categoryName = $node->text();
             $categoryName = trim($categoryName);
 
+            echo "Category >>>> {$categoryName}\n";
+
             $this->setCategory($categoryName, $categoryLink);
         });
     }
@@ -179,7 +181,7 @@ class ProductMrSeeder extends DatabaseSeeder
      */
     private function setProductPhotos($externalProductId, $product): void
     {
-        $productPhotosUrl = "https://mrp.scene7.com/is/image/MRP/01_{$externalProductId}_GS_00?req=set,json,UTF-8&labelkey=label";
+        $productPhotosUrl = "https://mrp.scene7.com/is/image/MRP/{$externalProductId}_GS_00?req=set,json,UTF-8&labelkey=label";
         $productImagesData = file_get_contents($productPhotosUrl);
 
         preg_match('/\[(.*?)\]/s', $productImagesData, $match);
@@ -189,8 +191,6 @@ class ProductMrSeeder extends DatabaseSeeder
             $items = $match[0];
             $productPhotos = json_decode($items, true);
         }
-
-//        dd([$match, $productPhotosUrl, $productPhotos]);
 
         foreach ($productPhotos as $key => $photo) {
 
@@ -276,11 +276,12 @@ class ProductMrSeeder extends DatabaseSeeder
             }
 
             $filterSets = $this->getProductVariants($productNode);
+
             if (!empty($filterSets)) {
-                $this->setProductTypes($filterSets, $product);
+                $this->setProductTypes($filterSets);
             }
 
-            $urlParts = explode("_", $product->external_url);
+            $urlParts = explode("sku=", $product->external_url);
 
             if (!empty($urlParts)) {
                 $externalProductId = $urlParts[count($urlParts) - 1];
@@ -288,6 +289,42 @@ class ProductMrSeeder extends DatabaseSeeder
                 $this->setProductPhotos($externalProductId, $product);
             }
         }
+    }
+
+    /**
+     * @param $filterSets
+     */
+    protected function setProductTypes($filterSets): void
+    {
+        $productTypes = ProductType::$types;
+        $productTypeKeys = array_flip($productTypes);
+
+        foreach ($filterSets as $filterItem) {
+            $name = $filterItem['name'];
+            $name = trim($name);
+
+            $typeName = $filterItem['type'];
+
+            $type = $productTypeKeys[$typeName];
+
+            echo ">>>>>>Inserting product type: {$name} with type: {$typeName} \n";
+
+            $attributes = [
+                'name' => $name
+            ];
+
+            $values = [
+                'name' => $name,
+                'type' => $type,
+            ];
+
+            $productType = \App\ProductType::updateOrCreate($attributes, $values);
+            echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
+
+            $this->setProductVariant($filterItem, $product, $productType);
+        }
+
+        $this->filterBrand = [];
     }
 
     protected $productItems = [];

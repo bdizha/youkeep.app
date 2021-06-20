@@ -9,8 +9,11 @@
       <a-collapse-panel class="r-collapse-panel" header="Catalog">
         <r-store-catalog></r-store-catalog>
       </a-collapse-panel>
-      <a-collapse-panel class="r-collapse-panel" header="About this store">
-        <r-store-info :store="store"></r-store-info>
+      <a-collapse-panel v-for="(item, index) in list"
+                        :key="index"
+                        class="r-collapse-panel"
+                        :header="item.title">
+        <div v-html="item.content"></div>
       </a-collapse-panel>
       <a-collapse-panel class="r-collapse-panel" header="You might like">
         <r-store-list></r-store-list>
@@ -35,7 +38,9 @@ export default {
   name: 'r-store-menu',
   props: {},
   data() {
-    return {};
+    return {
+      list: []
+    };
   },
   computed: mapGetters({
     user: 'auth/user',
@@ -47,6 +52,24 @@ export default {
   },
   methods: {
     async payload() {
+      this.list = [
+        {
+          title: 'Trading Hours',
+          content: this.store.trading_hours
+        },
+        {
+          title: 'Contact',
+          content: this.store.phone
+        },
+        {
+          title: 'Description',
+          content: this.store.content_formatted
+        },
+        {
+          title: 'Website',
+          content: this.store.url
+        }
+      ];
     },
   },
 }

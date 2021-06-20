@@ -65,7 +65,7 @@ class PageController extends Controller
                 ->get();
         }
 
-        return view('page.faqs', ['faqSections' => (object)$faqSections]);
+        return response()->json($faqSections, 200);
     }
 
     /**

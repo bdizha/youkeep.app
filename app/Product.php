@@ -392,6 +392,7 @@ class Product extends KModel
 
     public function updateAncestryIds($storeCategory)
     {
+        return;
         $values = [
             'category_id' => $storeCategory->category_id,
             'product_id' => $this->id

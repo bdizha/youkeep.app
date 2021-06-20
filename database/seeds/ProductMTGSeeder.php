@@ -87,7 +87,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             $categoryName = $linkNode->text();
 
             $level = 1;
-            $parentId = $this->setCategory($categoryName, $categoryLink, $level, null);
+            $parentId = $this->_setCategory($categoryName, $categoryLink, $level, null);
 
             $secondaryNavItems = $node->filter('.nav__sub-list');
             $secondaryNavItems->each(function ($node) use ($level, $parentId) {
@@ -97,7 +97,7 @@ class ProductMTGSeeder extends DatabaseSeeder
                     $categoryLink = $secondaryNavNode->attr('href');
                     $categoryName = $secondaryNavNode->text();
 
-                    $parentId = $this->setCategory($categoryName, $categoryLink, 2, $parentId);
+                    $parentId = $this->_setCategory($categoryName, $categoryLink, 2, $parentId);
                     $level = 3;
                 } else {
                     $level = 2;
@@ -110,7 +110,7 @@ class ProductMTGSeeder extends DatabaseSeeder
                     echo $node->html();
                     $categoryLink = $linkNode->attr('href');
                     $categoryName = $linkNode->text();
-                    $this->setCategory($categoryName, $categoryLink, $level, $parentId);
+                    $this->_setCategory($categoryName, $categoryLink, $level, $parentId);
                 });
             });
         });
@@ -166,7 +166,7 @@ class ProductMTGSeeder extends DatabaseSeeder
      * @param $parentId
      * @return mixed
      */
-    private function setCategory($categoryName, $url, $level, $parentId)
+    protected function _setCategory($categoryName, $url, $level, $parentId)
     {
         $categoryDescription = 'Not set';
 
@@ -383,7 +383,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             $filterSets = $this->getProductVariants($productData);
 
             if (!empty($filterSets)) {
-                $this->setProductTypes($filterSets, $product);
+                $this->setProductTypes($filterSets);
             }
 
             if (!empty($productData['images'])) {

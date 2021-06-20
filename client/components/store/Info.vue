@@ -56,7 +56,26 @@
         components: {},
         props: {},
         data() {
-            return {}
+            return {
+              list: [
+                {
+                  title: 'Trading Hours',
+                  content: this.store.trading_hours
+                },
+                {
+                  title: 'Contact',
+                  content: this.store.phone
+                },
+                {
+                  title: 'Description',
+                  content: this.store.content_formatted
+                },
+                {
+                  title: 'Website',
+                  content: this.store.url
+                }
+              ]
+            }
         },
         computed: mapGetters({
             store: 'base/store'

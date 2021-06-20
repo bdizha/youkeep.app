@@ -1,6 +1,7 @@
 <?php
 
 use App\Category;
+use App\CategoryProduct;
 use App\Lookup;
 use App\Product;
 use App\ProductType;
@@ -130,7 +131,7 @@ class DatabaseSeeder extends Seeder
         return $category;
     }
 
-    protected function setProduct($values, $storeCategory)
+    protected function setProduct($values)
     {
         $attributes = [
             'external_url' => $values['external_url']
@@ -140,25 +141,29 @@ class DatabaseSeeder extends Seeder
 
         unset($values['dimensions'], $values['photos'], $values['artist']);
 
-        $product = \App\Product::updateOrCreate($attributes, $values);
+        $this->product = \App\Product::updateOrCreate($attributes, $values);
 
-        $product->updateAncestryIds($storeCategory);
+        echo ">>>>>Inserting product: " . $this->product->name . "\n";
 
+        $this->setProductStore($values);
+
+        $this->setProductCategory();
+    }
+
+    protected function setProductCategory()
+    {
         $values = [
-            'store_id' => $this->storeId,
-            'product_id' => $product->id
+            'category_id' => $this->storeCategory->category_id,
+            'product_id' => $this->product->id
         ];
 
-        \App\StoreProduct::updateOrCreate($values, $values);
-
-        return $product;
+        CategoryProduct::updateOrCreate($values, $values);
     }
 
     /**
      * @param $filterSets
-     * @param $product
      */
-    protected function setProductTypes($filterSets, $product): void
+    protected function setProductTypes($filterSets): void
     {
         $productTypes = ProductType::$types;
         $productTypeKeys = array_flip($productTypes);
@@ -185,7 +190,7 @@ class DatabaseSeeder extends Seeder
             $productType = \App\ProductType::updateOrCreate($attributes, $values);
             echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
 
-            $this->setProductVariant($filterItem, $product, $productType);
+            $this->setProductVariant($filterItem, $productType);
         }
 
         $this->filterBrand = [];
@@ -194,29 +199,26 @@ class DatabaseSeeder extends Seeder
 
     /**
      * @param $filterItem
-     * @param $product
      * @param $productType
      */
-    protected function setProductVariant($filterItem, $product, $productType): void
+    protected function setProductVariant($filterItem, $productType): void
     {
         $attributes = [
             'product_type_id' => $productType->id,
-            'product_id' => $product->id,
+            'product_id' => $this->product->id,
         ];
 
-        dump($filterItem);
-
         if (empty($filterItem['price'])) {
-            $filterItem['price'] = !empty($product->price) ? $product->price : 0;
+            $filterItem['price'] = !empty($this->product->price) ? $this->product->price : 0;
         }
 
         if (empty($filterItem['discount'])) {
-            $filterItem['discount'] = !empty($product->discount) ? $product->discount : 0;
+            $filterItem['discount'] = !empty($this->product->discount) ? $this->product->discount : 0;
         }
 
         $values = [
             'product_type_id' => $productType->id,
-            'product_id' => $product->id,
+            'product_id' => $this->product->id,
             'price' => $this->setPrice($filterItem['price']),
             'discount' => $this->setPrice($filterItem['discount']),
         ];
@@ -255,8 +257,6 @@ class DatabaseSeeder extends Seeder
 
         $urlPart = array_pop($urlParts);
         $urlParts[] = $urlPart;
-
-        dd([$urlPart, $urlParts]);
 
         $slug = '';
         foreach ([$urlPart] as $part) {
@@ -321,5 +321,18 @@ class DatabaseSeeder extends Seeder
 
         \App\ProductPhoto::updateOrCreate($values, $values);
         return $values;
+    }
+
+    /**
+     * @param array $values
+     */
+    protected function setProductStore(array $values): void
+    {
+        $values = [
+            'store_id' => $this->storeId,
+            'product_id' => $this->product->id
+        ];
+
+        \App\StoreProduct::updateOrCreate($values, $values);
     }
 }

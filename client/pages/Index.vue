@@ -3,8 +3,7 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <a-row :gutter="[96,48]" type="flex" justify="center" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-          <a-row style="background: url(/images/content/4_lighter.svg) no-repeat; background-size: cover"
-                 type="flex" justify="start" align="top"
+          <a-row type="flex" justify="start" align="top"
           >
             <a-col class="r-pv-48 r-ph-24" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }"
                    :lg="{ span: 12 }"

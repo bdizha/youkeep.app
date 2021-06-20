@@ -32,14 +32,15 @@ class ProductLinkSeeder extends DatabaseSeeder
 
         foreach ($categoryProducts as $categoryProduct) {
             $relatedCategoryProducts = CategoryProduct::where('category_id', $categoryProduct->category_id)
-                ->get();
+                ->inRandomOrder()
+                ->take(12);
 
             foreach ($relatedCategoryProducts as $relatedCategoryProduct) {
                 if($relatedCategoryProduct->product_id == $product->id){
                     continue;
                 }
 
-                $attributes = $values = [
+                $attributes = [
                     'product_id' => $product->id,
                     'related_id' => $relatedCategoryProduct->product_id
                 ];
