@@ -2,7 +2,7 @@
   <a-row type="flex" justify="center">
     <a-col :span="24">
       <a-row class="r-mb-24" type="flex" justify="center">
-        <a-col v-if="hasDownload" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <a-col v-if="hasDownload && false" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <r-shop-now></r-shop-now>
         </a-col>
         <a-col v-if="hasSubscribe && false" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
@@ -11,7 +11,8 @@
       </a-row>
       <a-layout-footer v-if="hasFooter">
         <a-row class="r-bg-white" type="flex" justify="center">
-          <a-col style="background: url(/images/content/11.png) no-repeat;background-size: cover;" class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+          <a-col v-if="false" style="background: url(/images/content/11.png) no-repeat;background-size: cover;"
+                 class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 24 }"
                  :lg="{ span: 24 }"
           >
@@ -26,14 +27,16 @@
                       <nuxt-link class="r-text-center" to="/">
                         <img src="/images/icon-06.svg?v=1"
                              alt="Shopple - Online shop"
-                             class="r-footer-logo /">
+                             class="r-footer-logo /"
+                        >
                       </nuxt-link>
                     </a-col>
                   </a-row>
                   <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 18 }" :sm="{ span: 16 }" :lg="{ span: 16 }">
                       <nuxt-link :to="$route.path" @click.native="onModal('delivery')"
-                                 class="r-footer-link r-pt-24">
+                                 class="r-footer-link r-pt-24"
+                      >
                         Enter delivery address
                       </nuxt-link>
                     </a-col>
@@ -154,34 +157,34 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-footer',
-  data() {
-    return {};
+  data () {
+    return {}
   },
   computed: mapGetters({
     hasDownload: 'base/hasDownload',
     hasSubscribe: 'base/hasSubscribe',
     hasFooter: 'base/hasFooter',
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onModal(current) {
-      let modal = {};
-      modal.isVisible = true;
-      modal.isClosable = true;
-      modal.current = current;
+    onModal (current) {
+      let modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = current
 
-      console.log('modal', modal);
+      console.log('modal', modal)
 
-      this.$store.dispatch('base/onModal', modal);
+      this.$store.dispatch('base/onModal', modal)
     },
   },
-};
+}
 </script>

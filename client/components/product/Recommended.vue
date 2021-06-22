@@ -1,14 +1,18 @@
 <template>
   <div class="r-product-cards" :class="{'r-product-flush': isFlush()}">
-    <a-row v-if="hasProducts" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]" type="flex" justify="start"
-           align="middle">
+    <a-row v-if="hasProducts" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]"
+           type="flex" justify="start"
+           align="middle"
+    >
       <a-col v-for="(product, index) in products.data" :key="index"
              :xs="{span: isVertical ? 12 : 24}"
-             :sm="{span: isVertical ? 12 : 24}" :md="{span: 24 / columns}" :lg="{span: 24 / columns}">
+             :sm="{span: isVertical ? 12 : 24}" :md="{span: 24 / columns}" :lg="{span: 24 / columns}"
+      >
         <r-product-item :isVertical="isVertical" :product="product"></r-product-item>
       </a-col>
       <a-col class="r-hide-lg" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-             :lg="{ span: 24 }">
+             :lg="{ span: 24 }"
+      >
         <r-category-shop-now :category="category" justify="center"></r-category-shop-now>
       </a-col>
     </a-row>
@@ -16,17 +20,17 @@
 </template>
 <script>
 import axios from 'axios'
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-product-recommended',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 3},
-    isVertical: {type: Boolean, required: false, default: true},
-    product: {type: Object, required: false},
+    columns: { type: Number, required: false, default: 3 },
+    isVertical: { type: Boolean, required: false, default: true },
+    product: { type: Object, required: false },
   },
-  data() {
+  data () {
     return {
       payload: {},
       products: {
@@ -34,29 +38,29 @@ export default {
       }
     }
   },
-  async fetch() {
+  async fetch () {
     this.payload = {
       product_id: this.product.id,
       type: 1, // related products
       limit: process.env.APP_LIMIT,
       filters: []
-    };
+    }
 
-    await this.onProducts();
+    await this.onProducts()
   },
   computed: {
-    hasProducts() {
-      return this.products.data.length > 0;
+    hasProducts () {
+      return this.products.data.length > 0
     },
   },
   methods: {
-    async onProducts() {
-      this.products = await this.$store.dispatch('shop/onProducts', this.payload);
+    async onProducts () {
+      this.products = await this.$store.dispatch('shop/onProducts', this.payload)
     },
-    isFlush() {
-      return Math.floor(Math.random() * Math.floor(2));
+    isFlush () {
+      return Math.floor(Math.random() * Math.floor(2))
     }
   }
-};
+}
 </script>
 

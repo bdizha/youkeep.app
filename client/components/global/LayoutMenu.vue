@@ -7,14 +7,14 @@
 
 export default {
   name: 'r-layout-menu',
-  data() {
+  data () {
     return {}
   },
-  created() {
+  created () {
   },
   methods: {
-    payload() {
+    payload () {
     },
   }
-};
+}
 </script>

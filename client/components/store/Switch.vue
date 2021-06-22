@@ -5,34 +5,33 @@
   </a-button>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-switch',
-  props: {
-  },
-  data() {
-    return {};
+  props: {},
+  data () {
+    return {}
   },
   computed: mapGetters({
     hasStore: 'base/hasStore',
     store: 'base/store',
     hasStoreTray: 'base/hasStoreTray'
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onStoreTray() {
-      let modal = {};
-      modal.isVisible = !this.hasStoreTray;
-      modal.current = 'store';
+    onStoreTray () {
+      let modal = {}
+      modal.isVisible = !this.hasStoreTray
+      modal.current = 'store'
 
-      this.$store.dispatch('base/onModal', modal);
+      this.$store.dispatch('base/onModal', modal)
     }
   },
   watch: {},
-};
+}
 </script>

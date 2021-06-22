@@ -1,47 +1,51 @@
 <template>
-    <a-row :gutter="24" v-if='cart.count > 0' type="flex"
-           justify="center">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :lg="{ span: 24 }">
-            <r-account-address-list></r-account-address-list>
-            <a-row class="r-mv-24" :gutter="24" type="flex" justify="start" align="middle">
-                <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                       :md="{ span: 18 }" :lg="{ span: 18 }">
-                    <r-account-address-add></r-account-address-add>
-                </a-col>
-                <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                       :md="{ span: 6 }" :lg="{ span: 6 }">
-                    <a-button block type="secondary" html-type="button"
-                              class="r-btn-secondary">
-                        Proceed
-                    </a-button>
-                </a-col>
-            </a-row>
+  <a-row :gutter="24" v-if="cart.count > 0" type="flex"
+         justify="center"
+  >
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :lg="{ span: 24 }"
+    >
+      <r-account-address-list></r-account-address-list>
+      <a-row class="r-mv-24" :gutter="24" type="flex" justify="start" align="middle">
+        <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
+               :md="{ span: 18 }" :lg="{ span: 18 }"
+        >
+          <r-account-address-add></r-account-address-add>
         </a-col>
-    </a-row>
+        <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
+               :md="{ span: 6 }" :lg="{ span: 6 }"
+        >
+          <a-button block type="secondary" html-type="button"
+                    class="r-btn-secondary"
+          >
+            Proceed
+          </a-button>
+        </a-col>
+      </a-row>
+    </a-col>
+  </a-row>
 </template>
 <script>
-    import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
-    export default {
-      name: 'r-checkout-delivery',
-        props: {
-        },
-        data() {
-            return {};
-        },
-        computed: mapGetters({
-            cart: 'cart/cart'
-        }),
-        created() {
-            this.payload();
-        },
-        methods: {
-            payload() {
-            },
-            onStep() {
-                this.$store.dispatch('base/onModal', modal);
-            }
-        },
+export default {
+  name: 'r-checkout-delivery',
+  props: {},
+  data () {
+    return {}
+  },
+  computed: mapGetters({
+    cart: 'cart/cart'
+  }),
+  created () {
+    this.payload()
+  },
+  methods: {
+    payload () {
+    },
+    onStep () {
+      this.$store.dispatch('base/onModal', modal)
     }
+  },
+}
 </script>

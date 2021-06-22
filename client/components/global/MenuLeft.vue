@@ -50,16 +50,16 @@ const LINKS = [
     icon: 'question-circle',
     link: '/help'
   },
-];
+]
 export default {
   name: 'r-menu-left',
-  data() {
+  data () {
     return {
       current: ['mail'],
       openKeys: ['sub1'],
-    };
+    }
   },
   methods: {},
   watch: {},
-};
+}
 </script>

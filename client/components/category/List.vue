@@ -7,45 +7,47 @@
                           v-for="(category, index) in categories"
                           :key="category.id + '-category'"
                           :columns="columns"
-                          :header="category.name">
+                          :header="category.name"
+        >
           <r-category-item :isVertical="isVertical"
                            :columns="columns"
                            :is-flush="isFlush"
-                           :category="category"></r-category-item>
+                           :category="category"
+          ></r-category-item>
         </a-collapse-panel>
       </a-collapse>
     </a-col>
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-category-list',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 3},
-    isVertical: {type: Boolean, required: false, default: true},
-    isFlush: {type: Boolean, required: false, default: false},
-    limit: {type: Number, required: false, default: 12}
+    columns: { type: Number, required: false, default: 3 },
+    isVertical: { type: Boolean, required: false, default: true },
+    isFlush: { type: Boolean, required: false, default: false },
+    limit: { type: Number, required: false, default: 12 }
   },
-  data() {
+  data () {
     return {
       hasData: false
     }
   },
   computed: mapGetters({
-    categories: "base/categories",
-    hasCategories: "base/hasCategories",
-    processes: "base/processes",
+    categories: 'base/categories',
+    hasCategories: 'base/hasCategories',
+    processes: 'base/processes',
   }),
-  created() {
+  created () {
   },
-  mounted() {
+  mounted () {
   },
   methods: {
-    async payload() {
+    async payload () {
     }
   }
-};
+}
 </script>

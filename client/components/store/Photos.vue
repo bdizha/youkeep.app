@@ -5,7 +5,8 @@
            :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
     >
       <div class="r-store-photo-item"
-           :style="'background-image: url(' + photo + ');'">
+           :style="'background-image: url(' + photo + ');'"
+      >
         <r-avatar shape="square"
                   :size="105"
                   src-placeholder="/assets/icon_default.png"
@@ -23,8 +24,7 @@ export default {
     store: { type: Object, required: false, default: {} },
   },
   data () {
-    return {
-    }
+    return {}
   },
   computed: {},
   mounted () {

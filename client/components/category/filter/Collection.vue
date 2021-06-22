@@ -5,7 +5,8 @@
         <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
           <a-col v-for="(collection, index) in collection.items"
                  :key="collection.id"
-                 :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+                 :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}"
+          >
             <div class="r-product-type">
               <a-checkbox :value="collection.id">
                 {{ collection.name }}
@@ -18,25 +19,25 @@
   </a-row>
 </template>
 <script>
-import {mapState} from "vuex";
+import { mapState } from 'vuex'
 
 export default {
   name: 'r-category-filter-collection',
-  data() {
+  data () {
     return {
       sizes: [],
       selected: []
-    };
+    }
   },
   computed: mapState({
     collection: state => state.shop.filters.filter(item => item.type === 5)[0]
   }),
-  mounted() {
+  mounted () {
   },
   methods: {
-    onFilter() {
+    onFilter () {
       // this.$store.dispatch('shop/onFilters', this.selected);
     },
   },
-};
+}
 </script>

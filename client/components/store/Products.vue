@@ -8,17 +8,20 @@
           </h3>
         </a-col>
         <a-col class="r-text-right" :xs="{span: 24}"
-               :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}">
+               :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}"
+        >
           <div class="r-same-height">
             <a-select
               labelInValue
               :defaultValue="sortOptions[0]"
               size="default"
               @change="onSort"
-              style="min-width: 100%;">
+              style="min-width: 100%;"
+            >
               <a-select-option v-for="(s, index) in sortOptions"
                                :key="index"
-                               :value="s.key">
+                               :value="s.key"
+              >
                 <span class="r-sort-value">{{ s.label }}</span>
               </a-select-option>
             </a-select>
@@ -27,7 +30,8 @@
       </a-row>
       <a-row :gutter="[24,24]" class="r-product-cards">
         <a-col v-for="(product, index) in category.products" :key="index" :xs="{span: 24}"
-               :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}">
+               :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}"
+        >
           <r-product-item :product="product"></r-product-item>
         </a-col>
       </a-row>
@@ -35,51 +39,51 @@
   </a-row>
 </template>
 <script>
-  const SORTS = [
-    {
-      label: 'Name: A to Z',
-      key: 0
-    },
-    {
-      label: 'Name: Z to A',
-      key: 1
-    },
-    {
-      label: 'Price: Low to High',
-      key: 2
-    },
-    {
-      label: 'Price: High to Low',
-      key: 3
-    },
-    {
-      label: 'Most Recent',
-      key: 4
+const SORTS = [
+  {
+    label: 'Name: A to Z',
+    key: 0
+  },
+  {
+    label: 'Name: Z to A',
+    key: 1
+  },
+  {
+    label: 'Price: Low to High',
+    key: 2
+  },
+  {
+    label: 'Price: High to Low',
+    key: 3
+  },
+  {
+    label: 'Most Recent',
+    key: 4
+  }
+]
+export default {
+  name: 'r-store-products',
+  components: {},
+  props: {
+    category: { type: Object, required: false, default: {} },
+  },
+  data () {
+    return {
+      sort: 0,
+      sortOptions: SORTS,
     }
-  ];
-  export default {
-    name: 'r-store-products',
-    components: {},
-    props: {
-      category: {type: Object, required: false, default: {}},
+  },
+  mounted () {
+    this.payload()
+  },
+  methods: {
+    payload () {
+      console.log('r-store-products >>> ', this.category)
     },
-    data() {
-      return {
-        sort: 0,
-        sortOptions: SORTS,
-      }
-    },
-    mounted() {
-      this.payload();
-    },
-    methods: {
-      payload() {
-        console.log('r-store-products >>> ', this.category);
-      },
-      onSort(sort) {
-        this.sort = sort;
-        this.$store.commit('onSort', sort);
-      }
+    onSort (sort) {
+      this.sort = sort
+      this.$store.commit('onSort', sort)
     }
-  };
+  }
+}
 </script>

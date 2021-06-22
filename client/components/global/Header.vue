@@ -12,7 +12,8 @@
         <nuxt-link v-if="hasStore" :to="'/store/' + store.slug">
           <a-button block
                     class="r-btn-bordered-grey"
-                    type="secondary">
+                    type="secondary"
+          >
             {{ store.name }}
           </a-button>
         </nuxt-link>
@@ -34,7 +35,8 @@
                     size="default"
                     class="r-btn-dark"
                     type="secondary"
-                    html-type="button">
+                    html-type="button"
+          >
             <a-icon type="left"/>
             Back
           </a-button>
@@ -51,13 +53,13 @@
   </a-layout-header>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-header',
-  data() {
+  data () {
     return {
-      formStore: this.$form.createForm(this, {name: 'form_store'}),
+      formStore: this.$form.createForm(this, { name: 'form_store' }),
       deliveryOption: 1,
     }
   },
@@ -80,49 +82,49 @@ export default {
     hasCategories: 'base/hasCategories',
     isLoggedIn: 'auth/isLoggedIn',
   }),
-  created() {
-    console.log('How many stores have we got?', this.stores.length);
-    this.onStores();
+  created () {
+    console.log('How many stores have we got?', this.stores.length)
+    this.onStores()
   },
   methods: {
-    onModalClose() {
-      this.$store.dispatch('base/onIsRaised', false);
+    onModalClose () {
+      this.$store.dispatch('base/onIsRaised', false)
 
       let modal = {}
-      modal.isVisible = false;
-      modal.current = null;
+      modal.isVisible = false
+      modal.current = null
 
-      this.$store.dispatch('base/onModal', modal);
+      this.$store.dispatch('base/onModal', modal)
     },
-    onDelivery() {
-      let modal = {};
-      modal.isVisible = true;
-      modal.isClosable = true;
-      modal.current = 'delivery';
-      this.$store.dispatch('base/onModal', modal);
+    onDelivery () {
+      let modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = 'delivery'
+      this.$store.dispatch('base/onModal', modal)
     },
-    onDrawer(current) {
-      let drawer = {};
-      drawer.current = current;
-      drawer.placement = 'left';
-      drawer.isVisible = true;
+    onDrawer (current) {
+      let drawer = {}
+      drawer.current = current
+      drawer.placement = 'left'
+      drawer.isVisible = true
 
-      console.log('current', current);
+      console.log('current', current)
 
-      this.$store.dispatch('base/onDrawer', drawer);
+      this.$store.dispatch('base/onDrawer', drawer)
     },
-    onSearch() {
-      let isSearching = !this.isSearching;
-      this.$store.dispatch('onSearch', isSearching);
+    onSearch () {
+      let isSearching = !this.isSearching
+      this.$store.dispatch('onSearch', isSearching)
     },
-    async onStores() {
+    async onStores () {
       let payload = {
         category_id: null,
         limit: process.env.APP_LIMIT
-      };
+      }
 
-      await this.$store.dispatch('base/onStores', payload);
+      await this.$store.dispatch('base/onStores', payload)
     }
   },
-};
+}
 </script>

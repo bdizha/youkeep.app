@@ -6,34 +6,35 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <r-store-slider
             :columns="columns"
-            :category="category"></r-store-slider>
+            :category="category"
+          ></r-store-slider>
         </a-col>
       </a-row>
     </a-col>
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-category',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 6},
-    category: {type: Object, required: false, default: {}}
+    columns: { type: Number, required: false, default: 6 },
+    category: { type: Object, required: false, default: {} }
   },
-  data() {
+  data () {
     return {
       hasData: false
     }
   },
   computed: mapGetters({}),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     }
   }
-};
+}
 </script>

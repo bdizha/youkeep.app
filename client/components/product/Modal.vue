@@ -42,7 +42,8 @@
         <r-product-actions :is-showing="false"
                            :has-add-to-cart="true"
                            :item-key="productItem.key"
-                           :product="product"></r-product-actions>
+                           :product="product"
+        ></r-product-actions>
       </a-col>
     </a-row>
     <r-spinner process="isRunning" :is-absolute="true"></r-spinner>

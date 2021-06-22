@@ -3,11 +3,13 @@
     <a-col v-for="(photo, index) in category.photos"
            v-if="(index + 1) > start && index < start + 3"
            :key="index"
-           :xs="{span:8}" :sm="{span:8}" :md="{span:8}" :lg="{span:8}">
+           :xs="{span:8}" :sm="{span:8}" :md="{span:8}" :lg="{span:8}"
+    >
       <r-avatar shape="square"
                 :size="99"
                 :src="photo"
-                src-placeholder="/assets/icon_default.png"/>
+                src-placeholder="/assets/icon_default.png"
+      />
     </a-col>
   </a-row>
 </template>
@@ -15,32 +17,32 @@
 export default {
   name: 'r-category-photo',
   props: {
-    category: {type: Object, required: true, default: {}},
-    start: {type: Number, required: true, default: 1},
+    category: { type: Object, required: true, default: {} },
+    start: { type: Number, required: true, default: 1 },
   },
-  data() {
+  data () {
     return {
       size: 80,
       styles: null
-    };
+    }
   },
-  created() {
-    this.setStyles();
+  created () {
+    this.setStyles()
   },
   methods: {
-    setStyles() {
-      let styles = '';
-      let suffix = 'px;';
+    setStyles () {
+      let styles = ''
+      let suffix = 'px;'
 
-      styles += 'max-width: ' + this.size + suffix;
-      styles += 'max-height: ' + this.size + suffix;
-      styles += 'line-height: ' + this.size + suffix;
+      styles += 'max-width: ' + this.size + suffix
+      styles += 'max-height: ' + this.size + suffix
+      styles += 'line-height: ' + this.size + suffix
 
-      this.styles = styles;
+      this.styles = styles
     },
-    onCategory(event) {
-      this.$store.dispatch('base/onCategory', this.category.route);
+    onCategory (event) {
+      this.$store.dispatch('base/onCategory', this.category.route)
     }
   }
-};
+}
 </script>

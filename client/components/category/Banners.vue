@@ -9,11 +9,13 @@
           <VueSlickCarousel v-bind="settings">
             <a-card
               v-for="(cateogry, index) in categories"
-              :key="index" hoverable>
+              :key="index" hoverable
+            >
               <div slot="cover">
                 <nuxt-link
                   :to="cateogry.route"
-                  style="display: block; width: 100%;">
+                  style="display: block; width: 100%;"
+                >
                   <r-avatar shape="square"
                             :size="100"
                             unit="%"

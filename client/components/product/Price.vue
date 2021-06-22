@@ -6,7 +6,8 @@
           {{ 'R' + product.price }}
         </h4>
         <h3 v-if="hasDiscount"
-            class="r-product-price">
+            class="r-product-price"
+        >
                 <span class="r-price-discount text-strike">
                     {{ 'R' + product.price }}
                 </span>
@@ -19,10 +20,10 @@
 export default {
   name: 'r-product-price',
   props: {
-    product: {type: Object, required: false, default: null},
-    isShowing: {type: Boolean, required: false, default: false},
+    product: { type: Object, required: false, default: null },
+    isShowing: { type: Boolean, required: false, default: false },
   },
-  data() {
+  data () {
     return {
       quantity: 1,
       modal: {
@@ -30,18 +31,18 @@ export default {
         current: 'product',
         product: null,
       }
-    };
+    }
   },
-  created() {
+  created () {
   },
   computed: {
-    hasDiscount() {
-      return parseFloat(this.product.discount_percent) > 0;
+    hasDiscount () {
+      return parseFloat(this.product.discount_percent) > 0
     },
-    cart() {
-      return this.$store.state.cart;
+    cart () {
+      return this.$store.state.cart
     },
   },
   methods: {},
-};
+}
 </script>

@@ -7,14 +7,14 @@
 
 export default {
   name: 'r-nav-item',
-  data() {
+  data () {
     return {}
   },
-  created() {
+  created () {
   },
   methods: {
-    payload() {
+    payload () {
     },
   }
-};
+}
 </script>

@@ -4,7 +4,8 @@
       <a-collapse default-active-key="0" expandIconPosition="right">
         <a-collapse-panel v-for="(link, index) in links"
                           :key="index"
-                          :header="link.label">
+                          :header="link.label"
+        >
           <div class="r-product-description">
             <r-product-description v-if="link.key == 'description'" :product="product"></r-product-description>
             <r-product-reviews v-if="link.key == 'reviews'" :product="product"></r-product-reviews>
@@ -19,26 +20,26 @@
 export default {
   name: 'r-product-info',
   props: {
-    isShowing: {type: Boolean, required: false, default: false},
-    product: {type: Object, required: false, default: null},
+    isShowing: { type: Boolean, required: false, default: false },
+    product: { type: Object, required: false, default: null },
   },
-  data() {
+  data () {
     return {
       currentLink: 'description',
       links: [
-        {label: 'Product Description', key: 'description'},
-        {label: 'Reviews', key: 'reviews'},
-        {label: 'Delivery & Returns', key: 'returns'}
+        { label: 'Product Description', key: 'description' },
+        { label: 'Reviews', key: 'reviews' },
+        { label: 'Delivery & Returns', key: 'returns' }
       ]
-    };
+    }
   },
-  created() {
+  created () {
   },
   computed: {},
   methods: {
-    setTab(link) {
-      this.currentLink = link.key;
+    setTab (link) {
+      this.currentLink = link.key
     }
   },
-};
+}
 </script>

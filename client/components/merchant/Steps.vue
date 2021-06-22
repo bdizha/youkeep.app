@@ -54,11 +54,11 @@
 export default {
   name: 'r-merchant-steps',
   props: {
-    size: {type: Number, required: false, default: 24},
-    hasMore: {type: Boolean, required: false, default: false},
-    title: {type: String, required: false, default: null},
+    size: { type: Number, required: false, default: 24 },
+    hasMore: { type: Boolean, required: false, default: false },
+    title: { type: String, required: false, default: null },
   },
-  data() {
+  data () {
     return {
       currentStep: 0,
       steps: [
@@ -75,12 +75,12 @@ export default {
           description: 'Use the money as you like – shop online, send it to friends, or transfer it to your bank account.'
         },
       ]
-    };
+    }
   },
   methods: {
-    hasTitle() {
-      return this.title.length > 0;
+    hasTitle () {
+      return this.title.length > 0
     }
   }
-};
+}
 </script>

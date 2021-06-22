@@ -8,14 +8,14 @@
           <template v-if="cart.count > 0">
             <a-row type="flex" justify="start" align="middle">
               <a-col :span="24">
-               <div class="r-bg-primary-light r-p-24" style="margin: -24px -24px 24px;">
-                 <h4 class="r-heading-light r-text-primary">
-                   <a-icon type="check-circle"/>
-                   You've pending items in your cart
-                 </h4>
-                 <p class="r-text-sm r-text-secondary">Items remain in your cart until the checkout is
-                   completed.</p>
-               </div>
+                <div class="r-bg-primary-light r-p-24" style="margin: -24px -24px 24px;">
+                  <h4 class="r-heading-light r-text-primary">
+                    <a-icon type="check-circle"/>
+                    You've pending items in your cart
+                  </h4>
+                  <p class="r-text-sm r-text-secondary">Items remain in your cart until the checkout is
+                    completed.</p>
+                </div>
               </a-col>
             </a-row>
           </template>

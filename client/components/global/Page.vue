@@ -9,13 +9,13 @@
 export default {
   name: 'r-page',
   props: {},
-  data() {
+  data () {
     return {}
   },
-  mounted() {
-    this.$store.dispatch('base/onHasSubscribe', false);
-    this.$store.dispatch('base/onHasDownload', false);
+  mounted () {
+    this.$store.dispatch('base/onHasSubscribe', false)
+    this.$store.dispatch('base/onHasDownload', false)
   },
   methods: {},
-};
+}
 </script>

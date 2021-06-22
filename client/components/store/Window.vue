@@ -6,27 +6,27 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-window',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 6},
-    category: {type: Object, required: false, default: {}}
+    columns: { type: Number, required: false, default: 6 },
+    category: { type: Object, required: false, default: {} }
   },
-  data() {
+  data () {
     return {
       hasData: false
     }
   },
   computed: mapGetters({}),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     }
   }
-};
+}
 </script>

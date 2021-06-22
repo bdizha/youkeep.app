@@ -11,39 +11,39 @@
   </a-row>
 </template>
 <script>
-  import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
-  export default {
-    name: 'r-category',
-    components: {},
-    props: {
-      columns: {type: Number, required: false, default: 6},
-      isStore: {type: Boolean, required: false, default: false},
-      category: {type: Object, required: false}
-    },
-    data() {
-      return {
-        products: [],
-        hasData: true,
-        filters: {}
-      }
-    },
-    computed: mapGetters({
-      store: 'base/store',
-    }),
-    mounted() {
-      this.payload();
-    },
-    methods: {
-      async payload() {
-        let params = {
-          category_id: this.category.id
-        };
-
-        console.log('this category', this.category);
-
-        const {data} = await this.$store.dispatch('store/fetchProducts', params);
-      }
+export default {
+  name: 'r-category',
+  components: {},
+  props: {
+    columns: { type: Number, required: false, default: 6 },
+    isStore: { type: Boolean, required: false, default: false },
+    category: { type: Object, required: false }
+  },
+  data () {
+    return {
+      products: [],
+      hasData: true,
+      filters: {}
     }
-  };
+  },
+  computed: mapGetters({
+    store: 'base/store',
+  }),
+  mounted () {
+    this.payload()
+  },
+  methods: {
+    async payload () {
+      let params = {
+        category_id: this.category.id
+      }
+
+      console.log('this category', this.category)
+
+      const { data } = await this.$store.dispatch('store/fetchProducts', params)
+    }
+  }
+}
 </script>

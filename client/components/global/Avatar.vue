@@ -1,7 +1,8 @@
 <template>
   <div class="ant-avatar ant-avatar-image"
        :class="shapeClass()"
-       :style="style()">
+       :style="style()"
+  >
     <img :src="dataSrc"/>
   </div>
 </template>
@@ -9,27 +10,27 @@
 export default {
   name: 'r-avatar',
   props: {
-    size: {type: Number, required: false, default: null},
-    unit: {type: String, required: false, default: 'px'},
-    shape: {type: String, required: false, default: 'square'},
-    dataSrc: {type: String, required: false, default: null},
+    size: { type: Number, required: false, default: null },
+    unit: { type: String, required: false, default: 'px' },
+    shape: { type: String, required: false, default: 'square' },
+    dataSrc: { type: String, required: false, default: null },
   },
-  data() {
-    return {};
+  data () {
+    return {}
   },
-  created() {
+  created () {
   },
   methods: {
-    style() {
+    style () {
       if (this.size) {
-        return {width: this.size + 'px', lineHeight: this.size + this.unit, height: this.size + this.unit}
+        return { width: this.size + 'px', lineHeight: this.size + this.unit, height: this.size + this.unit }
       } else {
         return {}
       }
     },
-    shapeClass() {
-      return 'ant-avatar-' + this.shape;
+    shapeClass () {
+      return 'ant-avatar-' + this.shape
     }
   },
-};
+}
 </script>

@@ -1,45 +1,54 @@
 <template>
   <a-row class="r-stores-tray" type="flex" justify="center"
-         :gutter="24">
+         :gutter="24"
+  >
     <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-mt-24" :gutter="24" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }">
+               :lg="{ span: 24 }"
+        >
           <strong>Trading hours:</strong>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }">
+               :lg="{ span: 24 }"
+        >
           <p class="r-text-normal" v-html="store.trading_hours"></p>
         </a-col>
       </a-row>
       <a-row :gutter="24" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }">
+               :lg="{ span: 24 }"
+        >
           <strong>Contact:</strong>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }">
+               :lg="{ span: 24 }"
+        >
           <p class="r-text-normal">{{ store.phone }}</p>
         </a-col>
       </a-row>
       <a-row :gutter="24" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }">
+               :lg="{ span: 24 }"
+        >
           <strong>Description:</strong>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }">
+               :lg="{ span: 24 }"
+        >
           <p class="r-text-normal" v-html="store.description"></p>
           <p class="r-text-normal" v-html="store.content_formatted"></p>
         </a-col>
       </a-row>
       <a-row :gutter="24" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }">
+               :lg="{ span: 24 }"
+        >
           <strong>Website:</strong>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }">
+               :lg="{ span: 24 }"
+        >
           <a class="r-text-link" :href="store.url" target="_blank">
             {{ store.url }}
           </a>
@@ -49,43 +58,43 @@
   </a-row>
 </template>
 <script>
-    import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 
-    export default {
-        name: 'r-store-info',
-        components: {},
-        props: {},
-        data() {
-            return {
-              list: [
-                {
-                  title: 'Trading Hours',
-                  content: this.store.trading_hours
-                },
-                {
-                  title: 'Contact',
-                  content: this.store.phone
-                },
-                {
-                  title: 'Description',
-                  content: this.store.content_formatted
-                },
-                {
-                  title: 'Website',
-                  content: this.store.url
-                }
-              ]
-            }
+export default {
+  name: 'r-store-info',
+  components: {},
+  props: {},
+  data () {
+    return {
+      list: [
+        {
+          title: 'Trading Hours',
+          content: this.store.trading_hours
         },
-        computed: mapGetters({
-            store: 'base/store'
-        }),
-        created() {
-            this.payload();
+        {
+          title: 'Contact',
+          content: this.store.phone
         },
-        methods: {
-            async payload() {
-            },
+        {
+          title: 'Description',
+          content: this.store.content_formatted
+        },
+        {
+          title: 'Website',
+          content: this.store.url
         }
-    };
+      ]
+    }
+  },
+  computed: mapGetters({
+    store: 'base/store'
+  }),
+  created () {
+    this.payload()
+  },
+  methods: {
+    async payload () {
+    },
+  }
+}
 </script>

@@ -2,7 +2,8 @@
   <div class="r-category-categories">
     <div class="r-category-filter">
       <div class="r-category-menu-link"
-           @click="onCategory(selected)">
+           @click="onCategory(selected)"
+      >
         <a-icon :type="'left'"/>
         <i :class="onClass(menuCategory)"></i>
         {{ menuCategory.name }}
@@ -11,9 +12,11 @@
     <template v-if="hasData">
       <div v-for="(_category, index) in categories"
            :key="index"
-           class="r-category-filter r-category-filter-avatar">
+           class="r-category-filter r-category-filter-avatar"
+      >
         <nuxt-link class="r-category-menu-link"
-                   :to="_category.route">
+                   :to="_category.route"
+        >
           <r-avatar shape="circle"
                     :size="24"
                     :src="_category.photo"
@@ -57,7 +60,7 @@ export default {
   },
   data () {
     return {
-      selected: {name: 'All Categories', slug: null},
+      selected: { name: 'All Categories', slug: null },
       hasData: false,
       categories: []
     }

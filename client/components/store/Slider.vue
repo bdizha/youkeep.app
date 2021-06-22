@@ -5,7 +5,8 @@
         <nuxt-link class="r-text-view-more"
                    v-for="(store, index) in category.stores"
                    :key="store.id"
-                   :to="store.route">
+                   :to="store.route"
+        >
           <r-store-face :store="store"></r-store-face>
         </nuxt-link>
         <template #prevArrow="arrowOption">
@@ -23,57 +24,57 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-slider',
   props: {
-    columns: {type: Number, required: false, default: 6},
-    category: {type: Object, required: false, default: null},
-    title: {type: String, required: false, default: null},
+    columns: { type: Number, required: false, default: 6 },
+    category: { type: Object, required: false, default: null },
+    title: { type: String, required: false, default: null },
   },
-  data() {
+  data () {
     return {
       settings: {
-        "slidesToShow": this.columns,
-        "slidesToScroll": 1,
-        "infinite": true,
-        "dots": false,
+        'slidesToShow': this.columns,
+        'slidesToScroll': 1,
+        'infinite': true,
+        'dots': false,
         responsive: [
           {
-            "breakpoint": 1024,
-            "settings": {
-              "slidesToShow": this.columns,
-              "slidesToScroll": 1,
-              "infinite": true,
-              "dots": false,
-              "gap": 24
+            'breakpoint': 1024,
+            'settings': {
+              'slidesToShow': this.columns,
+              'slidesToScroll': 1,
+              'infinite': true,
+              'dots': false,
+              'gap': 24
             }
           },
           {
-            "breakpoint": 600,
-            "settings": {
-              "slidesToShow": 3,
-              "slidesToScroll": 1,
-              "initialSlide": 1,
-              "gap": 12
+            'breakpoint': 600,
+            'settings': {
+              'slidesToShow': 3,
+              'slidesToScroll': 1,
+              'initialSlide': 1,
+              'gap': 12
             }
           },
           {
-            "breakpoint": 480,
-            "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1,
-              "gap": 12
+            'breakpoint': 480,
+            'settings': {
+              'slidesToShow': 1,
+              'slidesToScroll': 1,
+              'gap': 12
             }
           }
         ]
       }
-    };
+    }
   },
   computed: mapGetters({}),
-  created() {
+  created () {
   },
   methods: {}
-};
+}
 </script>

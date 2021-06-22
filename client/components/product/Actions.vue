@@ -70,7 +70,7 @@ export default {
     hasAddToCart: { type: Boolean, required: false, default: false },
     hasActions: { type: Boolean, required: false, default: true },
     product: { type: Object, required: false, default: null },
-    size: { type: String, required: false, default: 'default' },
+    size: { type: String, required: false, default: 'large' },
     itemKey: { type: Number, required: false, default: null },
   },
   data () {

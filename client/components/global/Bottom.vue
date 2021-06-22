@@ -3,7 +3,8 @@
     <a-row type="flex" justify="space-around">
       <a-col :xs="{ span: 6 }" :sm="{ span: 6 }"
              :md="{ span: 6 }"
-             :lg="{ span: 6 }">
+             :lg="{ span: 6 }"
+      >
         <div @click="onDrawer('store-menu')" class="r-nav-item r-nav-item__menu">
           <a-icon style="font-size: 18px;" type="compass"/>
           <span class="r-icon-text">
@@ -14,7 +15,8 @@
       <a-col :xs="{ span: 6 }"
              :sm="{ span: 6 }"
              :md="{ span: 6 }"
-             :lg="{ span: 6 }">
+             :lg="{ span: 6 }"
+      >
         <div @click="onDrawer('store-right')" class="r-nav-item r-nav-item__menu">
           <a-icon style="font-size: 18px;" type="shop"/>
           <span class="r-icon-text">
@@ -25,7 +27,8 @@
       <a-col :xs="{ span: 6 }"
              :sm="{ span: 6 }"
              :md="{ span: 6 }"
-             :lg="{ span: 6 }">
+             :lg="{ span: 6 }"
+      >
         <div @click="onDrawer('store-right')" class="r-nav-item r-nav-item__menu">
           <a-icon style="font-size: 18px;" type="gift"/>
           <span class="r-icon-text">
@@ -35,9 +38,11 @@
       </a-col>
       <a-col :xs="{ span: 6 }" :sm="{ span: 6 }"
              :md="{ span: 6 }"
-             :lg="{ span: 6 }">
+             :lg="{ span: 6 }"
+      >
         <div @click="onDrawer('store-account')"
-             class="r-nav-item r-nav-item__menu">
+             class="r-nav-item r-nav-item__menu"
+        >
           <a-icon style="font-size: 18px;" type="bars"/>
           <span class="r-icon-text">
                                 More
@@ -48,16 +53,16 @@
   </a-layout-header>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-bottom',
   components: {},
   props: {
-    isShow: {type: Boolean, required: false},
+    isShow: { type: Boolean, required: false },
   },
-  data() {
-    return {};
+  data () {
+    return {}
   },
   computed: mapGetters({
     modal: 'base/modal',
@@ -65,25 +70,25 @@ export default {
     hasStore: 'base/hasStore',
     processes: 'base/processes'
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onDrawer(current) {
-      let drawer = {};
-      drawer.current = current;
-      drawer.isVisible = true;
-      this.$store.dispatch('base/onDrawer', drawer);
+    onDrawer (current) {
+      let drawer = {}
+      drawer.current = current
+      drawer.isVisible = true
+      this.$store.dispatch('base/onDrawer', drawer)
     },
-    onSearch() {
-      let drawer = {};
-      drawer.current = 'category';
-      drawer.isVisible = true;
-      this.$store.dispatch('base/onDrawer', drawer);
+    onSearch () {
+      let drawer = {}
+      drawer.current = 'category'
+      drawer.isVisible = true
+      this.$store.dispatch('base/onDrawer', drawer)
     }
   },
   watch: {},
-};
+}
 </script>

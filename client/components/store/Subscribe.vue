@@ -3,38 +3,39 @@
             block
             type="secondary" class="r-btn-bordered-secondary"
             icon="check-circle"
-            :size="'default'">
+            :size="'default'"
+  >
     Follow
   </a-button>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-subscribe',
   props: {
-    store: {type: Object, required: true}
+    store: { type: Object, required: true }
   },
-  data() {
-    return {};
+  data () {
+    return {}
   },
   computed: mapGetters({
     hasStoreTray: 'base/hasStoreTray'
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onModal() {
-      let modal = {};
-      modal.isVisible = !this.hasStoreTray;
-      modal.current = 'subscribe';
+    onModal () {
+      let modal = {}
+      modal.isVisible = !this.hasStoreTray
+      modal.current = 'subscribe'
 
-      this.$store.dispatch('base/onModal', modal);
+      this.$store.dispatch('base/onModal', modal)
     }
   },
   watch: {},
-};
+}
 </script>

@@ -3,7 +3,8 @@
                     :mask-closable="false"
                     :closable="true"
                     current="store"
-                    style="position: relative;">
+                    style="position: relative;"
+  >
     <a-row type="flex" justify="center">
       <a-col class="r-text-left" :xs="{ span: 24 }">
         <h2 class="r-heading r-text-secondary">
@@ -19,13 +20,13 @@
   </r-modal-template>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-modal',
   components: {},
   props: {},
-  data() {
+  data () {
     return {}
   },
   computed: mapGetters({
@@ -34,13 +35,13 @@ export default {
     hasStores: 'base/hasStores',
     processes: 'base/processes',
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
       // this.fetchCategories();
     },
   }
-};
+}
 </script>

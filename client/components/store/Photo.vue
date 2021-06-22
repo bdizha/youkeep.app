@@ -1,27 +1,28 @@
 <template>
-  <r-avatar shape="circle"
+  <r-avatar class="r-avatar-store"
+            shape="square"
             :size="size"
             src-placeholder="/assets/icon_default.png"
-            :src="store.photo_url"/>
+            :src="store.photo_url"
+  />
 </template>
 <script>
 export default {
   name: 'r-store-photo',
   props: {
-    store: {type: Object, required: false, default: null},
-    size: {type: Number, required: false, default: 180},
-    isShowing: {type: Boolean, required: false, default: false},
+    store: { type: Object, required: false, default: null },
+    size: { type: Number, required: false, default: 150 },
+    isShowing: { type: Boolean, required: false, default: false },
   },
-  data() {
+  data () {
     return {
       quantity: 1,
       styles: null
-    };
+    }
   },
-  created() {
-
+  created () {
 
   },
-  methods: {},
-};
+  methods: {}
+}
 </script>

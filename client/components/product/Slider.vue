@@ -3,10 +3,12 @@
     <a-col class="r-spin-holder" :span="24">
       <VueSlickCarousel
         v-bind="settings"
-        v-if="products.length > 0">
+        v-if="products.length > 0"
+      >
         <r-product-item v-for="(product, index) in products"
                         :key="index"
-                        :product="product"></r-product-item>
+                        :product="product"
+        ></r-product-item>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
             <a-icon type="left"/>
@@ -24,83 +26,84 @@
 </template>
 <script>
 import axios from 'axios'
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'r-product-slider',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 3},
-    category: {type: Object, required: false},
+    columns: { type: Number, required: false, default: 3 },
+    category: { type: Object, required: false },
   },
-  data() {
+  data () {
     return {
       hasData: false,
       isProcessing: false,
       products: [],
       settings: {
-        "slidesToShow": this.columns,
-        "slidesToScroll": 1,
-        "infinite": true,
-        "dots": false,
+        'slidesToShow': this.columns,
+        'slidesToScroll': 1,
+        'infinite': true,
+        'dots': false,
         responsive: [
           {
-            "breakpoint": 1024,
-            "settings": {
-              "slidesToShow": this.columns,
-              "slidesToScroll": 1,
-              "infinite": true,
-              "dots": false,
-              "gap": 24
+            'breakpoint': 1024,
+            'settings': {
+              'slidesToShow': this.columns,
+              'slidesToScroll': 1,
+              'infinite': true,
+              'dots': false,
+              'gap': 24
             }
           },
           {
-            "breakpoint": 600,
-            "settings": {
-              "slidesToShow": 3,
-              "slidesToScroll": 1,
-              "initialSlide": 1,
-              "gap": 12
+            'breakpoint': 600,
+            'settings': {
+              'slidesToShow': 3,
+              'slidesToScroll': 1,
+              'initialSlide': 1,
+              'gap': 12
             }
           },
           {
-            "breakpoint": 480,
-            "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1,
-              "gap": 12
+            'breakpoint': 480,
+            'settings': {
+              'slidesToShow': 1,
+              'slidesToScroll': 1,
+              'gap': 12
             }
           }
         ]
       }
     }
   },
-  async fetch() {
-    this.hasData = false;
-    this.isProcessing = true;
+  async fetch () {
+    this.hasData = false
+    this.isProcessing = true
 
     let params = {
       category_id: this.category.id,
       limit: 24,
       filters: this.filters
-    };
+    }
 
-    let path = `/products`;
-    let $this = this;
+    let path = `/products`
+    let $this = this
 
-    console.log('product path: ', path);
+    console.log('product path: ', path)
 
     await axios.post(path, params)
-      .then(({data}) => {
-        $this.products = data.data;
-        $this.hasData = true;
+      .then(({ data }) => {
+        $this.products = data.data
+        $this.hasData = true
       })
       .catch(e => {
-        console.log(e);
-      });
+        console.log(e)
+      })
   },
   computed: mapGetters({
-    processes: "base/processes",
+    processes: 'base/processes',
   }),
   methods: {}
-};
+}
 </script>

@@ -5,20 +5,23 @@
         <a-row type="flex" justify="center" align="middle">
           <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
                  :md="{ span: 6 }"
-                 :lg="{ span: 6 }">
+                 :lg="{ span: 6 }"
+          >
             <div class="r-nav-item r-nav-item__logo">
               <r-logo :is-icon="true"></r-logo>
             </div>
           </a-col>
           <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
                  :md="{ span: 18 }"
-                 :lg="{ span: 18 }">
+                 :lg="{ span: 18 }"
+          >
             <div class="r-layout-menu">
               <div v-if="hasStore" class="r-nav-item">
                 <nuxt-link :to="'/store/' + store.slug">
                   <a-button block
                             class="r-btn-bordered-grey"
-                            type="secondary">
+                            type="secondary"
+                  >
                     {{ store.name }}
                   </a-button>
                 </nuxt-link>
@@ -41,26 +44,26 @@
   </a-layout-header>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-header',
   components: {},
   props: {
-    isShow: {type: Boolean, required: false},
+    isShow: { type: Boolean, required: false },
   },
-  async fetch() {
+  async fetch () {
     let payload = {
       category_id: null,
       limit: process.env.APP_LIMIT
-    };
+    }
 
-    await this.$store.dispatch('base/onStores', payload);
+    await this.$store.dispatch('base/onStores', payload)
   },
-  data() {
+  data () {
     return {
       hasData: false
-    };
+    }
   },
   computed: mapGetters({
     modal: 'base/modal',
@@ -68,13 +71,13 @@ export default {
     hasStore: 'base/hasStore',
     processes: 'base/processes'
   }),
-  created() {
-    this.hasData = true;
+  created () {
+    this.hasData = true
   },
   methods: {
-    payload() {
+    payload () {
     },
   },
   watch: {},
-};
+}
 </script>

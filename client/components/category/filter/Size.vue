@@ -5,7 +5,8 @@
         <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
           <a-col v-for="(size, index) in size.items"
                  :key="size.id"
-                 :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+                 :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}"
+          >
             <div class="r-product-type">
               <a-checkbox :value="size.id">
                 {{ size.name }}
@@ -18,26 +19,26 @@
   </a-row>
 </template>
 <script>
-import {mapState} from "vuex";
+import { mapState } from 'vuex'
 
 export default {
   name: 'r-category-filter-size',
-  data() {
+  data () {
     return {
-      size: {items: [{'name': 'Mediuam', 'id': 0}, {'name': 'default', 'id': 1}]},
+      size: { items: [{ 'name': 'Mediuam', 'id': 0 }, { 'name': 'default', 'id': 1 }] },
       sizes: [],
       selected: []
-    };
+    }
   },
   computed: mapState({
     // size: state => state.shop.filters.filter(item => item.type === 1)[0]
   }),
-  mounted() {
+  mounted () {
   },
   methods: {
-    onFilter() {
+    onFilter () {
       // this.$store.dispatch('shop/onFilters', this.selected);
     },
   },
-};
+}
 </script>

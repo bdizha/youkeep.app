@@ -149,7 +149,7 @@ const mutations = {
   },
   setStores (state, stores) {
     state.stores = stores
-    state.hasStores = stores !== undefined && stores.length > 0
+    state.hasStores = stores.data !== undefined && stores.data.length > 0
   },
   setFaqs (state, faqs) {
     state.faqs = faqs

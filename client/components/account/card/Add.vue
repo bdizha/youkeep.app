@@ -6,7 +6,8 @@
                 size="default"
                 type="secondary"
                 html-type="button"
-                class="r-btn-secondary">
+                class="r-btn-secondary"
+      >
         Add new
       </a-button>
     </a-col>
@@ -15,7 +16,7 @@
 <script>
 export default {
   props: {},
-  data() {
+  data () {
     return {
       isDefault: false,
       modal: {
@@ -24,20 +25,20 @@ export default {
         category: null,
         address: null,
       }
-    };
+    }
   },
   computed: {},
-  created() {
+  created () {
   },
   methods: {
-    onModal() {
-      let modal = {};
-      modal.isVisible = true;
-      modal.isClosable = true;
-      modal.current = 'account-card';
+    onModal () {
+      let modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = 'account-card'
 
-      this.$store.dispatch('base/onModal', modal);
+      this.$store.dispatch('base/onModal', modal)
     }
   }
-};
+}
 </script>

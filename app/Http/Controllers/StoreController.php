@@ -26,11 +26,11 @@ class StoreController extends Controller
         $this->categoryId = $request->get('category_id', null);
 
         $key = $this->_setCacheKey($request);
+
         if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
-            $query = $this->_setStores();
-
+            $this->_setStores();
             $response = $this->stores;
 
              Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours

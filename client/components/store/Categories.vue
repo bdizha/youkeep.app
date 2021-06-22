@@ -4,32 +4,33 @@
       <r-store-category v-for="(category, index) in category.categories"
                         :key="index + 1"
                         :columns="columns"
-                        :category="category">
+                        :category="category"
+      >
       </r-store-category>
     </a-col>
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-categories',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 6}
+    columns: { type: Number, required: false, default: 6 }
   },
-  data() {
+  data () {
     return {}
   },
   computed: mapGetters({
     category: 'base/category'
   }),
-  mounted() {
-    this.payload();
+  mounted () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     }
   }
-};
+}
 </script>

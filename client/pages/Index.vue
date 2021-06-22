@@ -1,9 +1,12 @@
 <template>
-  <a-row type="flex" justify="center">
+  <a-row :gutter="[96,48]" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row :gutter="[96,48]" type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-          <a-row type="flex" justify="start" align="top"
+      <a-row style="background-color: #FFFFFF;" type="flex" justify="center" align="middle">
+        <a-col style="background-color: #FFFFFF;" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <a-row style="background: url(/images/content/1_lighter.svg) no-repeat; background-size: cover;"
+                 type="flex" justify="start" align="top"
           >
             <a-col class="r-pv-48 r-ph-24" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }"
                    :lg="{ span: 12 }"
@@ -69,23 +72,18 @@
                 >
                   <r-store-arrows></r-store-arrows>
                 </a-col>
-                <a-col class="r-text-center r-hide-lg" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }"
-                       :lg="{ span: 8 }"
-                >
-                  <r-store-shop-now></r-store-shop-now>
-                </a-col>
               </a-row>
             </a-col>
           </a-row>
-          <r-category-banners></r-category-banners>
         </a-col>
       </a-row>
-      <a-row class="r-mt-48" type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-          <r-welcome></r-welcome>
-          <r-testimonials></r-testimonials>
-        </a-col>
-      </a-row>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+      <r-category-banners></r-category-banners>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+      <r-welcome></r-welcome>
+      <r-testimonials></r-testimonials>
     </a-col>
   </a-row>
 </template>

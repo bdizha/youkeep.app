@@ -4,41 +4,42 @@
       <r-category v-for="(category, index) in categories"
                   :columns="columns"
                   :key="index + 1"
-                  :category="category">
+                  :category="category"
+      >
       </r-category>
     </a-col>
   </a-row>
 </template>
 <script>
-  export default {
-    name: 'r-category-items',
-    props: {
-      columns: {type: Number, required: false, default: 6},
-      span: {type: Number, required: false, default: 18},
-      categories: {type: Array, required: true, default: []}
-    },
-    data() {
-      return {
-        products: [],
-        size: 24,
-        isProcessing: true
-      }
-    },
-    computed: {},
-    mounted() {
-      this.payload();
-    },
-    methods: {
-      payload() {
-        let $this = this;
-        setTimeout(function () {
-          $this.isProcessing = false;
-        }, 900);
+export default {
+  name: 'r-category-items',
+  props: {
+    columns: { type: Number, required: false, default: 6 },
+    span: { type: Number, required: false, default: 18 },
+    categories: { type: Array, required: true, default: [] }
+  },
+  data () {
+    return {
+      products: [],
+      size: 24,
+      isProcessing: true
+    }
+  },
+  computed: {},
+  mounted () {
+    this.payload()
+  },
+  methods: {
+    payload () {
+      let $this = this
+      setTimeout(function () {
+        $this.isProcessing = false
+      }, 900)
 
-        if (this.columns <= 4) {
-          this.size = 24;
-        }
+      if (this.columns <= 4) {
+        this.size = 24
       }
     }
-  };
+  }
+}
 </script>

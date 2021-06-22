@@ -1,14 +1,13 @@
 <template>
   <div class="r-store-face">
     <r-store-photos v-if="false" :store="store"></r-store-photos>
-    <a-card :class="{'r-card-plain': isPlain}" class="r-store-card"
-            :data="'background-image: url(' + store.photo_cover_url + ');'">
+    <a-card class="r-bg-grey-light">
       <a-card-meta>
         <template slot="description">
-          <a-row type="flex" justify="center" align="middle">
+          <a-row :gutter="[12, 12]" type="flex" justify="center" align="middle">
             <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
               <div class="r-store-avatar">
-                <r-store-rate v-if="false" :sto\re="store"></r-store-rate>
+                <r-store-rate v-if="false" :store="store"></r-store-rate>
                 <r-store-photo slot="cover" :store="store"></r-store-photo>
               </div>
             </a-col>
@@ -21,7 +20,8 @@
                 class="r-btn-primary"
                 size="default"
                 icon="check-circle"
-                type="secondary">
+                type="secondary"
+              >
                 Follow
               </a-button>
             </a-col>
@@ -32,25 +32,25 @@
   </div>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-face',
   components: {},
   props: {
-    store: {type: Object, required: false},
-    isPlain: {type: Boolean, required: false, default: false},
-    span: {type: Number, required: false, default: 24}
+    store: { type: Object, required: false },
+    isPlain: { type: Boolean, required: false, default: false },
+    span: { type: Number, required: false, default: 24 }
   },
-  data() {
+  data () {
     return {}
   },
   computed: mapGetters({}),
-  mounted() {
+  mounted () {
   },
   methods: {
-    onDrawer() {
+    onDrawer () {
     }
   }
-};
+}
 </script>

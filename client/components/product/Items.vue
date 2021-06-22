@@ -5,17 +5,21 @@
                   :slides-to-show="6"
                   :arrows="true"
                   :dots="false"
-                  :responsive="responsive">
+                  :responsive="responsive"
+      >
         <r-product-item v-for="(product, index) in category.products"
-                   :key="index"
-                   :product="product"></r-product-item>
+                        :key="index"
+                        :product="product"
+        ></r-product-item>
         <div slot="prevArrow"
              slot-scope="props"
-             class="r-slick-arrow r-slick-arrow-prev">
+             class="r-slick-arrow r-slick-arrow-prev"
+        >
           <a-icon type="left"/>
         </div>
         <div slot="nextArrow" slot-scope="props"
-             class="r-slick-arrow r-slick-arrow-next">
+             class="r-slick-arrow r-slick-arrow-next"
+        >
           <a-icon type="right"/>
         </div>
       </a-carousel>
@@ -24,56 +28,56 @@
   </a-row>
 </template>
 <script>
-  export default {
-    name: 'r-product-items',
-    components: {},
-    props: {
-      columns: {type: Number, required: false, default: 6},
-      category: {type: Object, required: false, default: null},
-    },
-    data() {
-      return {
-        hasData: true,
-        isProcessing: true,
-        responsive: [
-          {
-            "breakpoint": 1024,
-            "settings": {
-              "slidesToShow": 7,
-              "slidesToScroll": 1,
-              "dots": false
-            }
-          },
-          {
-            "breakpoint": 700,
-            "settings": {
-              "slidesToShow": 4,
-              "slidesToScroll": 1,
-              "dots": false
-            }
-          },
-          {
-            "breakpoint": 560,
-            "settings": {
-              "slidesToShow": 2,
-              "slidesToScroll": 1,
-              "dots": false
-            }
+export default {
+  name: 'r-product-items',
+  components: {},
+  props: {
+    columns: { type: Number, required: false, default: 6 },
+    category: { type: Object, required: false, default: null },
+  },
+  data () {
+    return {
+      hasData: true,
+      isProcessing: true,
+      responsive: [
+        {
+          'breakpoint': 1024,
+          'settings': {
+            'slidesToShow': 7,
+            'slidesToScroll': 1,
+            'dots': false
           }
-        ],
-      };
-    },
-    mounted() {
-      this.payload();
-    },
-    computed: {},
-    methods: {
-      payload() {
-        let $this = this;
-        setTimeout(function () {
-          $this.isProcessing = false;
-        }, 300);
-      }
+        },
+        {
+          'breakpoint': 700,
+          'settings': {
+            'slidesToShow': 4,
+            'slidesToScroll': 1,
+            'dots': false
+          }
+        },
+        {
+          'breakpoint': 560,
+          'settings': {
+            'slidesToShow': 2,
+            'slidesToScroll': 1,
+            'dots': false
+          }
+        }
+      ],
     }
-  };
+  },
+  mounted () {
+    this.payload()
+  },
+  computed: {},
+  methods: {
+    payload () {
+      let $this = this
+      setTimeout(function () {
+        $this.isProcessing = false
+      }, 300)
+    }
+  }
+}
 </script>

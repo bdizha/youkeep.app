@@ -9,7 +9,8 @@
           <a-button @click="onDrawer" class="r-btn-bordered-secondary"
                     block
                     type="secondary"
-                    size="default">
+                    size="default"
+          >
             <a-icon type="shop"></a-icon>
             Catalog
           </a-button>
@@ -23,25 +24,25 @@ export default {
   name: 'r-store-actions',
   components: {},
   props: {
-    store: {type: Object, required: false},
-    hasInfo: {type: Boolean, required: false, default: false},
+    store: { type: Object, required: false },
+    hasInfo: { type: Boolean, required: false, default: false },
   },
-  data() {
+  data () {
     return {}
   },
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onDrawer() {
-      let drawer = {};
-      drawer.isVisible = true;
-      drawer.current = 'store';
+    onDrawer () {
+      let drawer = {}
+      drawer.isVisible = true
+      drawer.current = 'store'
 
-      this.$store.dispatch('base/onDrawer', drawer);
+      this.$store.dispatch('base/onDrawer', drawer)
     },
   }
-};
+}
 </script>

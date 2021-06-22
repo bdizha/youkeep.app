@@ -9,10 +9,12 @@
                         @change="onChange"
                         :total="products.total"
                         :simple="span === 24"
-                        show-less-items>
+                        show-less-items
+          >
             <template slot="buildOptionText" slot-scope="props">
               <a-button class="r-btn-bordered-grey"
-                        type="secondary" :size="'default'">
+                        type="secondary" :size="'default'"
+              >
                 {{ props.value }}
               </a-button>
             </template>
@@ -109,7 +111,7 @@ export default {
     },
     async onProducts () {
 
-      console.log('>>> 111');
+      console.log('>>> 111')
       await this.$store.dispatch('base/onProducts', this.payload)
     }
   }

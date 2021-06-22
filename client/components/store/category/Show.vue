@@ -3,7 +3,8 @@
     <a-col class="r-spin-holder r-categories"
            :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
-           :lg="{ span: 24 }">
+           :lg="{ span: 24 }"
+    >
       <div class="r-gradient r-p-12" :class="{'r-hide-lg': !hasCategories}">
         <r-search class="r-hide-lg" :class="{'r-pb-12': hasCategories}"></r-search>
         <r-category-arrows v-if="hasCategories"></r-category-arrows>

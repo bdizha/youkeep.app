@@ -36,10 +36,10 @@ export default {
       quantity: 1,
       styles: null,
       settings: {
-        "slidesToShow": 1,
-        "slidesToScroll": 1,
-        "infinite": true,
-        "dots": false
+        'slidesToShow': 1,
+        'slidesToScroll': 1,
+        'infinite': true,
+        'dots': false
       }
     }
   },

@@ -2,7 +2,8 @@
   <a-row :gutter="[24, 24]" type="flex" justify="start" align="top">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 12 }"
-           :lg="{ span: 12 }">
+           :lg="{ span: 12 }"
+    >
       <h4 class="r-heading-light">
         DELIVERY INFORMATION
       </h4>
@@ -20,7 +21,8 @@
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 12 }"
-           :lg="{ span: 12 }">
+           :lg="{ span: 12 }"
+    >
       <h4 class="r-heading-light">
         RETURNS INFORMATION
       </h4>
@@ -37,14 +39,14 @@
 export default {
   name: 'r-product-returns',
   props: {
-    product: {type: Object, required: false, default: null},
+    product: { type: Object, required: false, default: null },
   },
-  data() {
-    return {};
+  data () {
+    return {}
   },
-  created() {
+  created () {
   },
   computed: {},
   methods: {},
-};
+}
 </script>

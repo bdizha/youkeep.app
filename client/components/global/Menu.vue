@@ -3,11 +3,13 @@
     <r-store-notice v-if="hasNotice"></r-store-notice>
     <r-delivery-form v-if="!hasMenuCategory" size="default"
                      :is-store="false"
-                     :has-submit="false"></r-delivery-form>
+                     :has-submit="false"
+    ></r-delivery-form>
     <r-category-filter-category></r-category-filter-category>
     <a-list v-show="!hasMenuCategory" :data-source="links">
       <a-list-item class="r-list-item" slot="renderItem"
-                   slot-scope="item, index">
+                   slot-scope="item, index"
+      >
         <template v-if="!item.modal">
           <nuxt-link class="r-text-link" :to="item.link">
             <a-avatar shape="square" :icon="item.icon"/>
@@ -17,7 +19,8 @@
         <template v-if="item.modal">
           <nuxt-link :to="item.link"
                      @click.native="onModal(item.modal)"
-                     class="r-text-link">
+                     class="r-text-link"
+          >
             <a-avatar shape="square" :icon="item.icon"/>
             {{ item.label }}
           </nuxt-link>
@@ -32,7 +35,7 @@
   </div>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 const LINKS = [
   {
@@ -70,15 +73,15 @@ const LINKS = [
     link: '/timeline',
     modal: 'timeline'
   }
-];
+]
 
 export default {
   name: 'r-menu',
   props: {},
-  data() {
+  data () {
     return {
       links: LINKS,
-    };
+    }
   },
   computed: mapGetters({
     user: 'auth/user',
@@ -86,19 +89,19 @@ export default {
     hasNotice: 'base/hasNotice',
     hasMenuCategory: 'base/hasMenuCategory',
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    async payload() {
+    async payload () {
     },
-    async onModal(current) {
-      let modal = {};
-      modal.isVisible = true;
-      modal.isClosable = true;
-      modal.current = current;
+    async onModal (current) {
+      let modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = current
 
-      this.$store.dispatch('base/onModal', modal);
+      this.$store.dispatch('base/onModal', modal)
     }
   },
 }

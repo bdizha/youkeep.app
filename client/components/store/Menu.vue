@@ -1,10 +1,11 @@
 <template>
-  <div :class="{'r-store-flex__has-notice': hasNotice}" class="r-store-flex">
+  <div class="r-store-flex">
     <r-store-notice v-if="hasNotice"></r-store-notice>
     <r-store-face :is-plain="true" :store="store"></r-store-face>
     <r-delivery-form size="default"
                      :is-store="true"
-                     :has-submit="false"></r-delivery-form>
+                     :has-submit="false"
+    ></r-delivery-form>
     <a-collapse default-active-key="1" expandIconPosition="right">
       <a-collapse-panel class="r-collapse-panel" header="Catalog">
         <r-store-catalog></r-store-catalog>
@@ -12,7 +13,8 @@
       <a-collapse-panel v-for="(item, index) in list"
                         :key="index"
                         class="r-collapse-panel"
-                        :header="item.title">
+                        :header="item.title"
+      >
         <div v-html="item.content"></div>
       </a-collapse-panel>
       <a-collapse-panel class="r-collapse-panel" header="You might like">
@@ -32,26 +34,26 @@
   </div>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-menu',
   props: {},
-  data() {
+  data () {
     return {
       list: []
-    };
+    }
   },
   computed: mapGetters({
     user: 'auth/user',
     hasNotice: 'base/hasNotice',
     store: 'base/store',
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    async payload() {
+    async payload () {
       this.list = [
         {
           title: 'Trading Hours',
@@ -69,7 +71,7 @@ export default {
           title: 'Website',
           content: this.store.url
         }
-      ];
+      ]
     },
   },
 }

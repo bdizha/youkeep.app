@@ -19,31 +19,31 @@
   </a-card>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-category-bundle',
   components: {},
   props: {
-    category: {type: Object, required: false, default: null},
+    category: { type: Object, required: false, default: null },
   },
-  data() {
+  data () {
     return {}
   },
   computed: mapGetters({
     store: 'base/store',
     processes: 'base/processes',
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
-      let $this = this;
+    payload () {
+      let $this = this
     },
-    onCategory(category) {
-      this.$store.dispatch('base/onCategory', category.route);
+    onCategory (category) {
+      this.$store.dispatch('base/onCategory', category.route)
     },
   }
-};
+}
 </script>

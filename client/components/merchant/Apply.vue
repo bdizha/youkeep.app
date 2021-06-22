@@ -1,11 +1,13 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24}"
-           :lg="{span: 24}">
+           :lg="{span: 24}"
+    >
       <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
               class="ant-form ant-form-vertical"
               @submit="onApply"
-              :form="formApply">
+              :form="formApply"
+      >
         <a-form-item>
           <a-row class="r-mt-48" type="flex" justify="center">
             <a-col class="r-text-left" :xs="{ span: 24 }">
@@ -20,138 +22,171 @@
         </a-form-item>
         <a-row :gutter="24" type="flex" justify="start" align="middle">
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-form-item
-              label="Full name">
+              label="Full name"
+            >
               <a-input
                 size="default"
                 placeholder="Your full name"
-                v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
+                v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
+              >
                 <a-icon slot="prefix" type="user"/>
               </a-input>
             </a-form-item>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-form-item
-              label="Role title">
+              label="Role title"
+            >
               <a-input
                 size="default"
                 placeholder="Your role number"
-                v-decorator="['role', { rules: [{ required: true, message: 'Please enter your role title' }] }]">
+                v-decorator="['role', { rules: [{ required: true, message: 'Please enter your role title' }] }]"
+              >
                 <a-icon slot="prefix" type="audit"/>
               </a-input>
             </a-form-item>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-form-item
-              label="Phone number">
+              label="Phone number"
+            >
               <a-input
                 size="default"
                 placeholder="Your phone number"
-                v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your phone number' }] }]">
+                v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your phone number' }] }]"
+              >
                 <a-icon slot="prefix" type="phone"/>
               </a-input>
             </a-form-item>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-form-item
-              label="Business email">
+              label="Business email"
+            >
               <a-input type="email"
                        size="default"
                        placeholder="Your company email"
-                       v-decorator="['email', { rules: [{ required: true, message: 'Please enter your company email' }] }]">
+                       v-decorator="['email', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+              >
                 <a-icon slot="prefix" type="mail"/>
               </a-input>
             </a-form-item>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-form-item
-              label="Business website">
+              label="Business website"
+            >
               <a-input type="text"
                        size="default"
                        placeholder="Your company website"
-                       v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]">
+                       v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+              >
                 <a-icon slot="prefix" type="link"/>
               </a-input>
             </a-form-item>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-form-item
-              label="Platform">
+              label="Platform"
+            >
               <a-select
                 labelInValue
                 :defaultValue="platforms[0]"
                 size="default"
                 @change="onPlatform"
-                style="min-width: 100%;">
+                style="min-width: 100%;"
+              >
                 <a-select-option v-for="(option, index) in platforms"
                                  :key="index"
-                                 :value="option.key">
+                                 :value="option.key"
+                >
                   <span class="r-sort-value">{{ option.label }}</span>
                 </a-select-option>
               </a-select>
             </a-form-item>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-form-item
-              label="Business industry">
+              label="Business industry"
+            >
               <a-select
                 labelInValue
                 :defaultValue="industries[0]"
                 size="default"
                 @change="onIndustry"
-                style="min-width: 100%;">
+                style="min-width: 100%;"
+              >
                 <a-select-option v-for="(option, index) in industries"
                                  :key="index"
-                                 :value="option.key">
+                                 :value="option.key"
+                >
                   <span class="r-sort-value">{{ option.label }}</span>
                 </a-select-option>
               </a-select>
             </a-form-item>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-form-item
-              label="Business website">
+              label="Business website"
+            >
               <a-input type="text"
                        size="default"
                        placeholder="Your company website"
-                       v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]">
+                       v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+              >
                 <a-icon slot="prefix" type="link"/>
               </a-input>
             </a-form-item>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-form-item
-              label="Average order value">
+              label="Average order value"
+            >
               <a-input type="text"
                        size="default"
                        placeholder="Your average order value"
-                       v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your company email' }] }]">
+                       v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+              >
                 <a-icon slot="prefix" type="dollar"/>
               </a-input>
             </a-form-item>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-form-item
-              label="Business annual sales">
+              label="Business annual sales"
+            >
               <a-select
                 labelInValue
                 :defaultValue="annual_sales_range[0]"
                 size="default"
                 @change="onAnnualSales"
-                style="min-width: 100%;">
+                style="min-width: 100%;"
+              >
                 <a-select-option v-for="(option, index) in annual_sales_range"
                                  :key="index"
-                                 :value="option.key">
+                                 :value="option.key"
+                >
                   <span class="r-sort-value">{{ option.label }}</span>
                 </a-select-option>
               </a-select>
@@ -159,11 +194,13 @@
           </a-col>
         </a-row>
         <a-form-item
-          label="Notes">
+          label="Notes"
+        >
           <a-input type="textarea"
                    size="default"
                    placeholder="Your message"
-                   v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]">
+                   v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]"
+          >
             <a-icon slot="prefix" type="user"/>
           </a-input>
         </a-form-item>
@@ -171,14 +208,17 @@
           <a-row :gutter="24" type="flex" justify="center">
             <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                    :md="{ span: 12 }"
-                   :lg="{ span: 12 }">
+                   :lg="{ span: 12 }"
+            >
             </a-col>
             <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
                    :md="{ span: 12 }"
-                   :lg="{ span: 12 }">
+                   :lg="{ span: 12 }"
+            >
               <a-button block @click="onApply" :size="'default'" type="secondary"
                         html-type="submit"
-                        class="r-btn-secondary">
+                        class="r-btn-secondary"
+              >
                 Submit
               </a-button>
             </a-col>
@@ -234,7 +274,7 @@ const INDUSTRIES = [
     label: 'Education',
     key: 11
   }
-];
+]
 const PLATFORMS = [
   {
     label: 'Bold Cashier',
@@ -272,7 +312,7 @@ const PLATFORMS = [
     label: 'Other',
     key: 9
   }
-];
+]
 const ANNUAL_SALES_RANGE = [
   {
     label: 'Less than R1m',
@@ -302,16 +342,16 @@ const ANNUAL_SALES_RANGE = [
     label: 'R100m+',
     key: 7
   }
-];
+]
 export default {
   name: 'r-merchant-apply',
   props: {
-    maskClosable: {type: Boolean, required: false, default: false},
-    closable: {type: Boolean, required: false, default: false},
+    maskClosable: { type: Boolean, required: false, default: false },
+    closable: { type: Boolean, required: false, default: false },
   },
-  data() {
+  data () {
     return {
-      formApply: this.$form.createForm(this, {name: 'form_apply'}),
+      formApply: this.$form.createForm(this, { name: 'form_apply' }),
       fields: [' name', 'url', 'platform', 'order_value', 'sales_revenue', 'mobile', 'email', 'notes'],
       hasData: false,
       message: 'Thank you for contacting us! We\'ll be getting back to you soonest.',
@@ -328,96 +368,96 @@ export default {
         slug: 'all'
       },
       redirectTo: ''
-    };
+    }
   },
-  mounted() {
-    this.modal = this.$store.state.modal;
+  mounted () {
+    this.modal = this.$store.state.modal
   },
   computed: {},
   methods: {
-    onApply(event) {
-      event.preventDefault();
+    onApply (event) {
+      event.preventDefault()
 
-      this.hasError = false;
+      this.hasError = false
 
       this.formApply.validateFields((error, values) => {
         if (!error) {
-          this.isProcessing = true;
+          this.isProcessing = true
 
-          console.log('Making request...', values);
-          let $this = this;
+          console.log('Making request...', values)
+          let $this = this
 
-          values['industry'] = this.industry;
-          values['platform'] = this.platform;
-          values['annual_sales'] = this.annual_sales;
+          values['industry'] = this.industry
+          values['platform'] = this.platform
+          values['annual_sales'] = this.annual_sales
 
-          let params = Object.assign({}, values);
+          let params = Object.assign({}, values)
 
-          console.log('Request params...', params);
+          console.log('Request params...', params)
 
-          let path = '/merchant/store';
+          let path = '/merchant/store'
           HTTP.post(path, params)
             .then(response => {
               if ((response.status == 422 || response.status == 500) && response.data.errors != undefined) {
-                $this.onError(response, $this);
+                $this.onError(response, $this)
               } else {
-                $this.onResponse(response, $this);
+                $this.onResponse(response, $this)
               }
             })
             .catch(e => {
-              $this.isProcessing = false;
-              $this.hasError = true;
-              console.log('Errors', e);
-            });
+              $this.isProcessing = false
+              $this.hasError = true
+              console.log('Errors', e)
+            })
         } else {
-          this.hasError = true;
-          console.error(error);
+          this.hasError = true
+          console.error(error)
         }
-      });
+      })
     },
-    onResponse(response, $this) {
-      $this.isSuccessful = true;
-      $this.formApply.resetFields();
+    onResponse (response, $this) {
+      $this.isSuccessful = true
+      $this.formApply.resetFields()
 
       setTimeout(function () {
-        $this.isProcessing = false;
-      }, 3000);
+        $this.isProcessing = false
+      }, 3000)
     },
-    onError(response, $this) {
-      let errors = response.data.errors;
+    onError (response, $this) {
+      let errors = response.data.errors
 
       this.fields.forEach(function (field) {
         if (errors[field] != undefined) {
-          let value = $this.formApply.getFieldValue(field);
-          let fields = {};
+          let value = $this.formApply.getFieldValue(field)
+          let fields = {}
           fields[field] = {
             'value': value,
-            "errors": [
+            'errors': [
               {
-                "notes": errors[field][0],
-                "field": field
+                'notes': errors[field][0],
+                'field': field
               }
             ]
-          };
-          $this.formApply.setFields(fields);
-          console.log('what is this :: ' + field, errors[field][0]);
+          }
+          $this.formApply.setFields(fields)
+          console.log('what is this :: ' + field, errors[field][0])
         }
-      });
+      })
 
       setTimeout(function () {
-        this.isProcessing = false;
-        this.isSuccessful = false;
-      }, 3000);
+        this.isProcessing = false
+        this.isSuccessful = false
+      }, 3000)
     },
-    onIndustry(industry) {
-      this.industry = industry.key;
+    onIndustry (industry) {
+      this.industry = industry.key
     },
-    onAnnualSales(annual_sales) {
-      this.annual_sales = annual_sales.key;
+    onAnnualSales (annual_sales) {
+      this.annual_sales = annual_sales.key
     },
-    onPlatform(platform) {
-      this.platform = platform.key;
+    onPlatform (platform) {
+      this.platform = platform.key
     },
   },
-};
+}
 </script>

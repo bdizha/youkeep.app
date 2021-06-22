@@ -4,16 +4,18 @@
     :defaultValue="sortOptions[0]"
     size="default"
     @change="onSort"
-    style="min-width: 100%;">
+    style="min-width: 100%;"
+  >
     <a-select-option v-for="(s, index) in sortOptions"
                      :key="index"
-                     :value="s.key">
+                     :value="s.key"
+    >
       <span class="r-sort-value">{{ s.label }}</span>
     </a-select-option>
   </a-select>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 const SORTS = [
   {
@@ -36,33 +38,32 @@ const SORTS = [
     label: 'Most Recent',
     key: 4
   }
-];
+]
 export default {
   name: 'r-store-sort',
   components: {},
   props: {},
-  data() {
+  data () {
     return {
       hasData: false,
       sortOptions: SORTS
     }
   },
-  computed: mapGetters({
-  }),
-  created() {
-    this.payload();
+  computed: mapGetters({}),
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onSort(option) {
-      this.params.sort = option.key;
+    onSort (option) {
+      this.params.sort = option.key
       // this.fetchStores();
     },
-    async fetchStores() {
-      this.params.category_id = this.category.id;
-      await this.$store.dispatch('shop/onStores', this.params);
+    async fetchStores () {
+      this.params.category_id = this.category.id
+      await this.$store.dispatch('shop/onStores', this.params)
     }
   }
-};
+}
 </script>

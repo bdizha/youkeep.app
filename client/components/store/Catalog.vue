@@ -7,17 +7,17 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-catalog',
   components: {},
   props: {
-    columns: {type: Number, required: false, default: 1},
-    store: {type: Object, required: false},
-    span: {type: Number, required: false, default: 24},
+    columns: { type: Number, required: false, default: 1 },
+    store: { type: Object, required: false },
+    span: { type: Number, required: false, default: 24 },
   },
-  data() {
+  data () {
     return {
       hasData: true,
       isProcessing: true,
@@ -25,12 +25,12 @@ export default {
     }
   },
   computed: mapGetters({}),
-  mounted() {
-    this.payload();
+  mounted () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     }
   }
-};
+}
 </script>

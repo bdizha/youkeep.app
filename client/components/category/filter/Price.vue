@@ -7,32 +7,33 @@
                 :min="price.min"
                 :max="price.max"
                 :included="false"
-                :default-value="[100,2000]"/>
+                :default-value="[100,2000]"
+      />
     </a-col>
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-category-filter-price',
   props: {},
-  data() {
+  data () {
     return {
       price: {
         max: 2400,
         min: 33
       },
-    };
+    }
   },
   computed: mapGetters({}),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    formatter(value) {
+    formatter (value) {
       return `R${value}`
     }
   },

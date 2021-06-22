@@ -3,18 +3,21 @@
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-checkbox-group :class="{'r-filter-color': filter.type == 2}"
                         v-model="selected"
-                        @change="onFilter">
+                        @change="onFilter"
+      >
         <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
           <a-col v-for="(item, index) in filter.items"
                  v-if="index < counter"
                  :key="filter.id"
-                 :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24 / filter.per_row }" :lg="{span: 24 / filter.per_row}">
+                 :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24 / filter.per_row }" :lg="{span: 24 / filter.per_row}"
+          >
             <a-tooltip placement="top">
               <template slot="title">
                 <span>Select: {{ item.name }}</span>
               </template>
               <a-checkbox :style="'background: ' + (filter.type == 2 ?  item.name : 'transparent')"
-                          :value="item.id">
+                          :value="item.id"
+              >
                 {{ filter.type == 2 ? null : item.name }}
               </a-checkbox>
             </a-tooltip>
@@ -31,7 +34,8 @@
             class="r-btn-bordered-secondary"
             size="default"
             icon="plus-circle"
-            type="secondary">
+            type="secondary"
+          >
             More
           </a-button>
         </a-col>
@@ -42,7 +46,8 @@
             class="r-btn-bordered-primary"
             size="default"
             icon="minus-circle"
-            type="secondary">
+            type="secondary"
+          >
             Less
           </a-button>
         </a-col>
@@ -51,36 +56,36 @@
   </a-row>
 </template>
 <script>
-import {mapState} from "vuex";
+import { mapState } from 'vuex'
 
 export default {
   name: 'r-category-filter-item',
   props: {
-    filter: {type: Object, required: true, default: {}},
-    limit: {type: Number, required: false, default: 6},
+    filter: { type: Object, required: true, default: {} },
+    limit: { type: Number, required: false, default: 6 },
   },
-  data() {
+  data () {
     return {
       selected: [],
       counter: this.limit,
-    };
+    }
   },
   computed: mapState({
     filters: 'base/filters'
   }),
-  mounted() {
+  mounted () {
 
   },
   methods: {
-    onFilter() {
-      this.$store.dispatch('base/onFilters', this.selected);
+    onFilter () {
+      this.$store.dispatch('base/onFilters', this.selected)
     },
-    onIncrement() {
-      this.counter += this.limit;
+    onIncrement () {
+      this.counter += this.limit
     },
-    onDecrement() {
-      this.counter -= this.limit;
+    onDecrement () {
+      this.counter -= this.limit
     },
   },
-};
+}
 </script>

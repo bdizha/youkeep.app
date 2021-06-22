@@ -213,7 +213,8 @@
                     >
                       <p class="r-text-normal">
                         Forget about spending hours learning new software. The Shopple platform makes it
-                        super simple to view your marketplaces, update information, or track your inventory in real time.
+                        super simple to view your marketplaces, update information, or track your inventory in real
+                        time.
                       </p>
                     </a-col>
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -222,7 +223,8 @@
                     >
                       <p v-for="(feature, index) in features"
                          :key="index"
-                         class="r-text-normal">
+                         class="r-text-normal"
+                      >
                         <a-icon class="r-text-primary" slot="prefix" type="check"/>
                         {{ feature.content }}
                       </p>
@@ -349,7 +351,8 @@
                   <template slot="description">
                     <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/merchant-01.png'" shape="circle" :size="90"
+                        <r-avatar class="r-avatar-secondary" :dataSrc="'/images/content/merchant-01.png'" shape="circle"
+                                  :size="90"
                         ></r-avatar>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
@@ -373,7 +376,8 @@
                   <template slot="description">
                     <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/merchant-02.png'" shape="circle" :size="90"
+                        <r-avatar class="r-avatar-secondary" :dataSrc="'/images/content/merchant-02.png'" shape="circle"
+                                  :size="90"
                         ></r-avatar>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
@@ -397,7 +401,8 @@
                   <template slot="description">
                     <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/merchant-03.png'" shape="circle" :size="90"
+                        <r-avatar class="r-avatar-secondary" :dataSrc="'/images/content/merchant-03.png'" shape="circle"
+                                  :size="90"
                         ></r-avatar>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
@@ -407,7 +412,8 @@
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                         <p class="r-text-normal">
-                          Automatic fraud screening and our Seller Protection Policy help keep you and your customers safe.
+                          Automatic fraud screening and our Seller Protection Policy help keep you and your customers
+                          safe.
                         </p>
                       </a-col>
                     </a-row>
@@ -424,13 +430,11 @@
 <script>
 export default {
   name: 'r-merchant-hiw',
-  props: {
+  props: {},
+  data () {
+    return {}
   },
-  data() {
-    return {
-    };
-  },
-  mounted() {
+  mounted () {
   },
   methods: {
     onModal () {
@@ -440,6 +444,6 @@ export default {
       modal.current = 'register'
       this.$store.dispatch('base/onModal', modal)
     }
-    },
-};
+  },
+}
 </script>

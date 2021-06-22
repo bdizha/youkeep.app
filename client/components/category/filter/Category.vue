@@ -4,25 +4,30 @@
       <a-collapse v-show="!hasMenuCategory" defaultActiveKey="0"
                   activeKey="0"
                   accordion
-                  expandIconPosition="left">
+                  expandIconPosition="left"
+      >
         <template v-if="false" #expandIcon="props">
           <a-icon :type="hasMenuCategory ? 'down' : 'right'"/>
         </template>
         <a-collapse-panel key="0"
-                           v-if="hasCategories"
+                          v-if="hasCategories"
                           class="r-collapse-panel"
-                          :header="menuCategory.name">
+                          :header="menuCategory.name"
+        >
           <template v-if="hasCategories">
             <div v-for="(category, index) in categories"
                  :key="index"
-                 class="r-category-filter">
+                 class="r-category-filter"
+            >
               <div class="r-category-menu-link"
-                   @click="onCategory(category)">
+                   @click="onCategory(category)"
+              >
                 <i v-show="category.level == 0" :class="onClass(category)"></i>
                 <r-avatar v-show="category.level > 0" shape="circle"
                           :size="30"
                           :src="category.photo"
-                          src-placeholder="/assets/icon_default.png"/>
+                          src-placeholder="/assets/icon_default.png"
+                />
                 {{ category.name }}
               </div>
             </div>
@@ -30,24 +35,24 @@
         </a-collapse-panel>
       </a-collapse>
       <template v-show="hasMenuCategory">
-      <r-category-menu-item v-for="(category, index) in categories"
-                            :key="index"
-                            v-show="menuCategory.id == category.id"
-                            :category="category"></r-category-menu-item>
+        <r-category-menu-item v-for="(category, index) in categories"
+                              :key="index"
+                              v-show="menuCategory.id == category.id"
+                              :category="category"
+        ></r-category-menu-item>
       </template>
     </a-col>
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 import axios from 'axios'
 
 export default {
   name: 'r-category-filter-category',
   props: {},
   data () {
-    return {
-    }
+    return {}
   },
   computed: mapGetters({
     menuCategory: 'base/menuCategory',
@@ -56,11 +61,11 @@ export default {
     processes: 'base/processes',
     hasCategories: 'base/hasCategories'
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
     onClass (category) {
       return `r-menu-icon r-menu-icon--${category.slug}`

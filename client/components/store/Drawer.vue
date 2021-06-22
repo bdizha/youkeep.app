@@ -1,6 +1,7 @@
 <template>
   <r-drawer-template placement="right"
-                     current="store">
+                     current="store"
+  >
     <r-store-window :has-actions="false" :store="store"></r-store-window>
     <a-collapse default-active-key="1" expandIconPosition="right">
       <a-collapse-panel header="Catalog">
@@ -16,26 +17,26 @@
   </r-drawer-template>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-drawer',
-  data() {
+  data () {
     return {
       isToggled: false
-    };
+    }
   },
   computed: mapGetters({
     store: 'base/store'
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onToggle() {
-      this.isToggled = !this.isToggled;
+    onToggle () {
+      this.isToggled = !this.isToggled
     }
   },
 }

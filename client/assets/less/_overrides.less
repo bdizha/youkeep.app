@@ -133,6 +133,7 @@ a.r-text-logo {
 .r-text-light {
     font-family: Inter, 'Avenir', 'Avenir Book', 'Calibre', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 200;
+    color: #3C444C99;
 }
 
 .ant-layout {
@@ -382,7 +383,7 @@ x {
     font-weight: 400;
     border-radius: @border-radius-base;
     padding: 0 12px;
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     text-transform: uppercase;
     font-size: 15px;
     text-align: center;
@@ -592,7 +593,7 @@ x {
         text-align: center;
         font-size: 24px;
         font-weight: 600;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
 
         &:hover {
             background: @secondary-color;
@@ -635,7 +636,7 @@ x {
 
 .r-card-category {
     .ant-avatar-image {
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         padding: 0;
         background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
         line-height: 100%;
@@ -645,7 +646,7 @@ x {
 
 .r-category-filter {
     .ant-avatar-image {
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     }
 }
 
@@ -877,7 +878,7 @@ x {
     width: 100%;
     border: none;
     border-radius: @border-radius-base;
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
 
     .ant-checkbox {
         .ant-checkbox-inner {
@@ -930,7 +931,7 @@ x {
     width: 100%;
     border: none;
     border-radius: @border-radius-base;
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
 
     .ant-radio {
         .ant-radio-inner {
@@ -970,7 +971,7 @@ x {
     .ant-checkbox-wrapper {
         padding: 6px;
         text-align: center;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
 
         .ant-checkbox {
             .ant-checkbox-inner {
@@ -1137,7 +1138,7 @@ x {
             text-align: center;
             @media (max-width: 768px) {
                 font-weight: 400;
-                font-size: 15px;
+                font-size: 18px;
             }
         }
 
@@ -1194,7 +1195,7 @@ x {
 
     .r-product-qnty {
         width: 36px;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         cursor: pointer;
         text-align: center;
         height: 36px;
@@ -2277,7 +2278,7 @@ h4.r-heading-light {
 .ant-card {
     &.ant-card-bordered {
         border: none;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     }
 }
 
@@ -2465,7 +2466,7 @@ h4.r-heading-light {
 }
 
 .r-bordered {
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
 }
 
 .r-bordered-top {
@@ -3040,7 +3041,7 @@ h4.r-heading-light {
 
 .ant-badge-bordered {
     .ant-badge-icon {
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         color: #3C444C;
         background: transparent;
     }
@@ -3134,7 +3135,7 @@ h4.r-heading-light {
 }
 
 .r-btn-bordered-grey {
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     color: #3C444C;
     background: #FFFFFF !important;
 
@@ -3158,7 +3159,7 @@ h4.r-heading-light {
 }
 
 .ant-btn-default {
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     color: #3C444C;
     background: transparent !important;
 
@@ -3256,6 +3257,32 @@ h4.r-heading-light {
 }
 
 .ant-avatar {
+    &.r-avatar-primary {
+        border: 1px solid #f50a2b66;
+    }
+    &.r-avatar-secondary {
+        border: 1px solid #1B9BD966;
+    }
+    &.r-avatar-store {
+        border: 6px solid #FFFFFF;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
+        margin: 24px auto auto;
+        background-color: #FFFFFF;
+
+        img {
+            display: block;
+            position: absolute;
+            left: 12px;
+            bottom: 0;
+            right: 12px;
+            top: 0;
+            width: calc(100% - 24px);
+            margin: auto;
+            height: auto;
+            border-radius: 0;
+        }
+    }
+
     &.r-avatar-auto {
         background: none;
         width: auto !important;
@@ -3973,7 +4000,7 @@ h4.r-heading-light {
 .r-category-photos {
     width: 202px;
     height: 202px;
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     display: block;
     margin: 0 auto 24px;
     border-right: none;
@@ -3982,7 +4009,7 @@ h4.r-heading-light {
     .r-category-photo {
         height: 100px;
         width: 100px;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         margin: 0;
         position: relative;
         padding: 6px;
@@ -4235,7 +4262,7 @@ h4.r-heading-light {
     line-height: 24px;
     text-align: center;
     padding: 12px;
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     width: 100%;
     display: block;
     font-weight: 600;
@@ -4510,7 +4537,7 @@ h4.r-heading-light {
     }
 
     .ant-avatar-square {
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     }
 }
 
@@ -4552,7 +4579,7 @@ h4.r-heading-light {
     border: 6px solid #FFFFFF;
     border-radius: @border-radius-base;
     overflow: hidden;
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     background-color: #FAFBFC;
 }
 
@@ -4624,7 +4651,7 @@ h4.r-heading-light {
 .r-steps {
     .r-step-right {
         background: #eefaff url(/images/icon_pattern_secondary.svg) repeat;;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         padding: 48px 24px;
         text-align: center;
     }
@@ -4641,7 +4668,7 @@ h4.r-heading-light {
 
     .ant-avatar {
         background: #eefaff url(/images/icon_pattern_secondary.svg) repeat;;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         border-radius: 50%;
         display: inline-block;
 
@@ -5428,7 +5455,7 @@ h4.r-heading-light {
     }
 
     .ant-steps-item {
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         margin: 24px 0;
         border-radius: @border-radius-base;
         background: #FFFFFF;
@@ -5611,7 +5638,7 @@ h4.r-heading-light {
 
 .r-steps {
     .ant-card-cover {
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         padding: 12px;
         border-radius: @border-radius-base;
         background: #FFFFFF;
@@ -5701,8 +5728,8 @@ h4.r-heading-light {
     display: block;
     text-align: center;
     font-size: 15px;
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.22);
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     margin-top: 0px;
     top: 50%;
 
@@ -5736,7 +5763,7 @@ h4.r-heading-light {
 
         .slick-list{
             .slick-slide{
-                padding: 0 12px;
+                padding: 0 12px 6px;
                 @media (max-width: 768px) {
                     padding: 0 6px !important;
                 }
@@ -5851,6 +5878,14 @@ h4.r-heading-light {
 
 .r-bg-secondary-light {
     background: #f2fbff;
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_white.svg) repeat;
+    }
+}
+
+.r-bg-grey-light{
+    background: #FAFBFC;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_white.svg) repeat;
@@ -5997,7 +6032,7 @@ h4.r-heading-light {
         position: absolute;
         left: 0;
         top: 0;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -6096,27 +6131,6 @@ h4.r-heading-light {
             font-weight: 400;
         }
     }
-
-    .ant-avatar {
-        border: 6px solid #FAFBFC;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
-        margin: 24px auto auto;
-        background-color: #FFFFFF;
-
-        img {
-            display: block;
-            position: absolute;
-            left: 12px;
-            bottom: 0;
-            right: 12px;
-            top: 0;
-            width: calc(100% - 24px);
-            margin: auto;
-            height: auto;
-            border-radius: 0;
-        }
-    }
-
     .ant-card-body {
         margin: 0;
         background: transparent;
@@ -6186,7 +6200,7 @@ h4.r-heading-light {
 }
 
 .r-grey-shadow {
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     background: #FFFFFF;
     border-radius: @border-radius-base;
     margin: 0 3px;
@@ -6199,7 +6213,7 @@ h4.r-heading-light {
         top: 0;
         padding: 6px;
         border: 6px solid #FFFFFF;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
 
         img {
             display: block;
@@ -6235,7 +6249,7 @@ h4.r-heading-light {
         padding: 12px;
         width: 96px;
         height: 96px;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         display: inline-block;
 
         .ant-avatar {
@@ -6336,7 +6350,7 @@ h4.r-heading-light {
     .ant-avatar-circle {
         padding: 12px;
         border: 6px solid #FFFFFF;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
 
         @media(max-width: 768px){
             max-width: 99px;
@@ -6375,7 +6389,7 @@ h4.r-heading-light {
         margin-right: 0;
         padding: 0px 12px;
         background: #FFFFFF;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
         border-radius: @border-radius-base;
         overflow: hidden;
         font-size: 15px;
@@ -6388,7 +6402,7 @@ h4.r-heading-light {
     margin: 0 0 24px;
     padding: 12px;
     background: #FFFFFF;
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     border-radius: @border-radius-base;
     overflow: hidden;
     font-size: 15px;
@@ -6458,7 +6472,7 @@ h4.r-heading-light {
     background: #FFEFEF url(/images/icon_pattern_white.svg) repeat;
     border-color: @secondary-color;
     text-align: center;
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
 
     @media (min-width: 768px) {
         svg {
@@ -6681,7 +6695,7 @@ h4.r-heading-light {
     font-size: 15px;
     color: @secondary-color;
     background: #FAFBFC;
-    box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+    box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
 }
 
 a:hover {
@@ -6699,7 +6713,7 @@ a:hover {
         color: #3C444C;
         margin-right: 6px;
         background: #FAFBFC;
-        box-shadow: rgba(12, 12, 13, 0.06) 0px 2px 4px 0px;
+        box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
     }
 
     &:hover {

@@ -6,7 +6,8 @@
                    :class="'r-slider-item-' + size"
                    v-for="(category, index) in categories"
                    :key="category.id"
-                   :to="category.route">
+                   :to="category.route"
+        >
           <r-avatar shape="circle"
                     :size="size"
                     :src="category.photo"

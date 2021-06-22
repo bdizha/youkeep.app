@@ -33,11 +33,11 @@
 <script>
 export default {
   name: 'r-download',
-  data() {
-    return {};
+  data () {
+    return {}
   },
-  created() {
+  created () {
   },
   methods: {},
-};
+}
 </script>

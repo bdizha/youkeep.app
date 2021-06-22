@@ -18,27 +18,27 @@
 export default {
   name: 'r-product-header',
   props: {
-    product: {type: Object, required: false, default: null},
-    isShowing: {type: Boolean, required: false, default: false},
+    product: { type: Object, required: false, default: null },
+    isShowing: { type: Boolean, required: false, default: false },
   },
-  data() {
+  data () {
     return {
       quantity: 1
-    };
+    }
   },
-  created() {
+  created () {
   },
   computed: {},
   methods: {
-    onProduct() {
-      let modal = {};
-      modal.isVisible = true;
-      modal.isClosable = true;
-      modal.current = 'product';
-      this.$store.dispatch('base/onModal', modal);
+    onProduct () {
+      let modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = 'product'
+      this.$store.dispatch('base/onModal', modal)
 
-      this.$store.dispatch('base/onProduct', this.product);
+      this.$store.dispatch('base/onProduct', this.product)
     }
   },
-};
+}
 </script>

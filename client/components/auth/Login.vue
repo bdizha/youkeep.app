@@ -2,7 +2,8 @@
   <r-modal-template :mask-closable="maskClosable"
                     :closable="closable"
                     :current="formName"
-                    style="position: relative;">
+                    style="position: relative;"
+  >
     <a-row :gutter="[24,24]" type="flex" justify="center">
       <a-col class="r-text-left" :xs="{ span: 24 }">
         <h2 class="r-heading r-text-secondary">
@@ -18,12 +19,14 @@
     <a-form v-if="hasForm"
             class="ant-form ant-form-vertical"
             @submit="onPost"
-            :form="form">
+            :form="form"
+    >
       <a-form-item label="Email address">
         <a-input
-            size="default"
-            placeholder="Your email address"
-            v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please enter your email address' }] }]">
+          size="default"
+          placeholder="Your email address"
+          v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please enter your email address' }] }]"
+        >
           <a-icon slot="prefix" type="mail"/>
         </a-input>
       </a-form-item>
@@ -31,13 +34,15 @@
         <a-input type="password"
                  size="default"
                  placeholder="Your Password"
-                 v-decorator="['password', { rules: [{ required: true, message: 'Please enter your password' }] }]">
+                 v-decorator="['password', { rules: [{ required: true, message: 'Please enter your password' }] }]"
+        >
           <a-icon slot="prefix" type="lock"/>
         </a-input>
       </a-form-item>
       <a-form-item :wrapper-col="{ span: 24 }">
         <a-button block @click="onPost" :size="'default'" type="secondary" html-type="submit"
-                  class="r-btn-secondary">
+                  class="r-btn-secondary"
+        >
           Login
         </a-button>
       </a-form-item>
@@ -50,7 +55,8 @@
             </a><br/>
             <span class="r-inline-text ">Forgot your password?</span>
             <a class="r-inline-text r-text-primary" v-on:click="onModal('password-request', $event)"
-               href="/">
+               href="/"
+            >
               Reset it
             </a>
           </a-col>
@@ -62,50 +68,50 @@
   </r-modal-template>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-login',
   props: {
-    maskClosable: {type: Boolean, required: false, default: false},
-    closable: {type: Boolean, required: false, default: false},
+    maskClosable: { type: Boolean, required: false, default: false },
+    closable: { type: Boolean, required: false, default: false },
   },
-  data() {
+  data () {
     return {
       formName: 'login',
       fields: ['email', 'password'],
-      form: this.$form.createForm(this, {name: 'form_login'}),
+      form: this.$form.createForm(this, { name: 'form_login' }),
       errors: [],
       process: 'isSuccess',
       redirectTo: '',
-      message: "Thank you for successfully confirming your credentials! Please wait a little more, and pay less with Shopple",
-    };
+      message: 'Thank you for successfully confirming your credentials! Please wait a little more, and pay less with Shopple',
+    }
   },
   computed: mapGetters({
-    store: "shop/store",
-    user: "auth/user",
-    isLoggedIn: "auth/isLoggedIn",
-    current: "auth/current",
-    processes: "base/processes",
-    isValid: "form/isValid",
-    hasForm: "base/hasForm",
+    store: 'shop/store',
+    user: 'auth/user',
+    isLoggedIn: 'auth/isLoggedIn',
+    current: 'auth/current',
+    processes: 'base/processes',
+    isValid: 'form/isValid',
+    hasForm: 'base/hasForm',
   }),
-  created() {
+  created () {
   },
   methods: {
-    onPost(event) {
-      event.preventDefault();
+    onPost (event) {
+      event.preventDefault()
 
       this.form.validateFields((errors, values) => {
         if (!errors) {
-          let params = Object.assign({}, values);
+          let params = Object.assign({}, values)
 
-          this.onLogin(params);
+          this.onLogin(params)
         }
-      });
+      })
     },
-    async onLogin(params) {
-      let $this = this;
+    async onLogin (params) {
+      let $this = this
 
       let payload = {
         params: params,
@@ -116,54 +122,54 @@ export default {
         fields: this.fields,
         hasUser: true,
         canRedirect: true,
-      };
+      }
 
       await this.$store.dispatch('auth/onPost', payload).catch(error => {
         try {
-          let data = error.response.data;
+          let data = error.response.data
           if (data.errors !== undefined) {
-            $this.setErrors(data.errors, $this);
+            $this.setErrors(data.errors, $this)
           }
         } catch (e) {
         }
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your shopping with Shopple.');
+            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your shopping with Shopple.')
           } else {
-            $this.$message.error('Oops, the submitted form was invalid.');
+            $this.$message.error('Oops, the submitted form was invalid.')
           }
-        }, 600);
-      });
+        }, 600)
+      })
     },
-    onModal(current, event) {
-      event.preventDefault();
+    onModal (current, event) {
+      event.preventDefault()
 
-      let modal = {};
-      modal.isVisible = true;
-      modal.isClosable = false;
-      modal.current = current;
-      this.$store.dispatch('base/onModal', modal);
+      let modal = {}
+      modal.isVisible = true
+      modal.isClosable = false
+      modal.current = current
+      this.$store.dispatch('base/onModal', modal)
     },
-    setErrors(errors, $this) {
-      $this.errors = errors;
+    setErrors (errors, $this) {
+      $this.errors = errors
       $this.fields.forEach(function (field) {
         if ($this.errors[field] !== undefined) {
-          let value = $this.form.getFieldValue(field);
-          let fields = {};
+          let value = $this.form.getFieldValue(field)
+          let fields = {}
           fields[field] = {
             'value': value,
-            "errors": [
+            'errors': [
               {
-                "message": $this.errors[field][0],
-                "field": field
+                'message': $this.errors[field][0],
+                'field': field
               }
             ]
-          };
-          $this.form.setFields(fields);
+          }
+          $this.form.setFields(fields)
         }
-      });
+      })
     }
   }
-};
+}
 </script>

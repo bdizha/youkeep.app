@@ -2,7 +2,8 @@
   <a-row :class="{'r-spin__active': processes.isProducts}" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
-           :lg="{ span: 24 }">
+           :lg="{ span: 24 }"
+    >
       <a-row v-if="hasCategories" class="r-slider">
         <a-col :span="24">
           <VueSlickCarousel v-bind="settings">
@@ -11,7 +12,8 @@
               v-for="(c, index) in categories"
               :key="index"
               style="display: block; width: 100%;"
-              :category="c"></r-category-bundle>
+              :category="c"
+            ></r-category-bundle>
             <template #prevArrow="arrowOption">
               <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
                 <a-icon type="left"/>
@@ -29,69 +31,69 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-category-slider',
   props: {
-    size: {type: Number, required: false, default: 150},
-    columns: {type: Number, required: false, default: 3},
+    size: { type: Number, required: false, default: 150 },
+    columns: { type: Number, required: false, default: 3 },
   },
-  data() {
+  data () {
     return {
       hasData: false,
       process: 'categories',
       settings: {
-        "slidesToShow": this.columns,
-        "slidesToScroll": 1,
-        "dots": false,
+        'slidesToShow': this.columns,
+        'slidesToScroll': 1,
+        'dots': false,
         responsive: [
           {
-            "breakpoint": 1024,
-            "settings": {
-              "slidesToShow": this.columns,
-              "slidesToScroll": 1,
-              "dots": false
+            'breakpoint': 1024,
+            'settings': {
+              'slidesToShow': this.columns,
+              'slidesToScroll': 1,
+              'dots': false
             }
           },
           {
-            "breakpoint": 700,
-            "settings": {
-              "slidesToShow": this.columns > 2 ? 2 : this.columns,
-              "slidesToScroll": 1,
-              "dots": false
+            'breakpoint': 700,
+            'settings': {
+              'slidesToShow': this.columns > 2 ? 2 : this.columns,
+              'slidesToScroll': 1,
+              'dots': false
             }
           },
           {
-            "breakpoint": 560,
-            "settings": {
-              "slidesToShow": 1,
-              "slidesToScroll": 1,
-              "dots": false
+            'breakpoint': 560,
+            'settings': {
+              'slidesToShow': 1,
+              'slidesToScroll': 1,
+              'dots': false
             }
           }
         ]
       },
-    };
+    }
   },
   computed: {
     ...mapGetters({
-      categories: "base/categories",
-      category: "shop/category",
-      store: "shop/store",
+      categories: 'base/categories',
+      category: 'shop/category',
+      store: 'shop/store',
       hasProducts: 'base/hasProducts',
-      hasCategories: "base/hasCategories",
-      processes: "base/processes",
+      hasCategories: 'base/hasCategories',
+      processes: 'base/processes',
     })
   },
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
-  mounted() {
+  mounted () {
   },
   methods: {
-    async payload() {
+    async payload () {
     }
   }
-};
+}
 </script>

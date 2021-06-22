@@ -3,7 +3,8 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{span: 24}">
       <a-menu theme="light"
               mode="horizontal"
-              :defaultSelectedKeys="['2']">
+              :defaultSelectedKeys="['2']"
+      >
         <a-sub-menu>
           <div slot="title">
             <nuxt-link class="r-text-link" to="/help">
@@ -27,11 +28,11 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-nav',
-  data() {
+  data () {
     return {}
   },
   computed: mapGetters({
@@ -43,26 +44,26 @@ export default {
     isRaised: 'base/isRaised',
     isLoggedIn: 'auth/isLoggedIn'
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onDrawer() {
-      let drawer = {};
-      drawer.current = 'account';
-      drawer.isVisible = true;
+    onDrawer () {
+      let drawer = {}
+      drawer.current = 'account'
+      drawer.isVisible = true
 
-      this.$store.dispatch('base/onDrawer', drawer);
+      this.$store.dispatch('base/onDrawer', drawer)
     },
-    onModal() {
-      let modal = {};
-      modal.isVisible = true;
-      modal.isClosable = true;
-      modal.current = 'login';
-      this.$store.dispatch('base/onModal', modal);
+    onModal () {
+      let modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = 'login'
+      this.$store.dispatch('base/onModal', modal)
     },
   }
-};
+}
 </script>

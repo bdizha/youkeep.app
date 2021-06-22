@@ -6,7 +6,8 @@
           <a-row v-for="(rate, index) in ratings" :gutter="[24,24]"
                  :key="index"
                  type="flex"
-                 justify="start" align="top">
+                 justify="start" align="top"
+          >
             <a-col :xs="{ span: 8 }" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
               {{ rate.stars + ' star' + (rate.stars > 1 ? 's' : '') }}
             </a-col>
@@ -21,8 +22,9 @@
               <a-button class="r-btn-bordered-grey"
                         block
                         type="secondary"
-                        size="default">
-                {{ product.rating + "/" + 5 }}
+                        size="default"
+              >
+                {{ product.rating + '/' + 5 }}
               </a-button>
             </a-col>
             <a-col class="r-text-left" :xs="{ span: 15 }" :sm="{ span: 16 }" :md="{ span: 18 }" :lg="{ span: 18 }">
@@ -52,7 +54,7 @@
             </div>
           </a-list-item-meta>
           <div class="r-text-normal">
-            {{ item.title + " " + item.title }}
+            {{ item.title + ' ' + item.title }}
           </div>
         </a-list-item>
       </a-list>
@@ -72,7 +74,7 @@ const TITLES = [
   'Perfect, identical to those sites much more expensive. Excellent quality ',
   'Product exactly as described. very high-quality prints! Came very fast',
   'Material drawing, quality of norms ',
-];
+]
 
 const IMAGES = [
   'https://ae01.alicdn.com/kf/U96edfff39fca4c71a64a00980ccb549a6.jpg',
@@ -85,26 +87,26 @@ const IMAGES = [
   'https://ae04.alicdn.com/kf/HTB1YbLYeW1s3KVjSZFAq6x_ZXXaW.jpg_200x200.jpg',
   'https://ae04.alicdn.com/kf/He72185b4955a49c18dde42f535d83185G.jpg_200x200.jpg',
   'https://ae04.alicdn.com/kf/HTB1v7EnacfrK1Rjy0Fmq6xhEXXa3.jpg_200x200.jpg',
-];
+]
 
-const REVIEWS = [];
+const REVIEWS = []
 
-const RATINGS = [];
+const RATINGS = []
 
-let ratingTotal = 0;
+let ratingTotal = 0
 for (let i = 5; i >= 1; i--) {
-  let value = Math.floor(Math.random() * Math.floor(i <= 3 ? 10 : 100));
+  let value = Math.floor(Math.random() * Math.floor(i <= 3 ? 10 : 100))
 
-  ratingTotal += value;
+  ratingTotal += value
 
   RATINGS.push({
     stars: i,
     value: value
-  });
+  })
 }
 
 for (let i = 0; i < 23; i++) {
-  let index = Math.floor(Math.random() * Math.floor(TITLES.length));
+  let index = Math.floor(Math.random() * Math.floor(TITLES.length))
 
   REVIEWS.push({
     href: 'https://www.antdv.com/',
@@ -113,16 +115,16 @@ for (let i = 0; i < 23; i++) {
     rating: Math.floor(Math.random() * Math.floor(5)),
     content:
       'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-  });
+  })
 }
 
 export default {
   name: 'r-product-reviews',
   props: {
-    product: {type: Object, required: false, default: null},
-    isShowing: {type: Boolean, required: false, default: false},
+    product: { type: Object, required: false, default: null },
+    isShowing: { type: Boolean, required: false, default: false },
   },
-  data() {
+  data () {
     return {
       quantity: 1,
       modal: {
@@ -135,27 +137,27 @@ export default {
       ratingTotal: ratingTotal,
       pagination: {
         onChange: page => {
-          console.log(page);
+          console.log(page)
         },
         pageSize: 3,
       },
       actions: [
-        {type: 'dislike', text: Math.floor(Math.random() * Math.floor(100))},
-        {type: 'like', text: Math.floor(Math.random() * Math.floor(100))},
-        {type: 'message', text: '2'},
+        { type: 'dislike', text: Math.floor(Math.random() * Math.floor(100)) },
+        { type: 'like', text: Math.floor(Math.random() * Math.floor(100)) },
+        { type: 'message', text: '2' },
       ],
-    };
+    }
   },
-  created() {
+  created () {
   },
   computed: {
-    hasDiscount() {
-      return parseFloat(this.product.discount_percent) > 0;
+    hasDiscount () {
+      return parseFloat(this.product.discount_percent) > 0
     },
-    cart() {
-      return this.$store.state.cart;
+    cart () {
+      return this.$store.state.cart
     },
   },
   methods: {},
-};
+}
 </script>

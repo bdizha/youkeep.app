@@ -3,7 +3,8 @@
     <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :class="{'r-spin__active' :processes.isCategory}"
            :md="{ span: 24 }"
-           :lg="{ span: 24 }">
+           :lg="{ span: 24 }"
+    >
       <div class="r-gradient r-hide-lg r-p-12">
         <r-search class="r-hide-lg" :class="{'r-pb-12': hasCategories}"></r-search>
       </div>
@@ -11,7 +12,8 @@
       <a-row type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
-               :lg="{ span: 24 }">
+               :lg="{ span: 24 }"
+        >
           <r-category-slider :category="category"></r-category-slider>
           <r-product-flush :columns="3"></r-product-flush>
         </a-col>
@@ -20,7 +22,8 @@
       <a-row class="r-mt-48" type="flex" justify="start" align="middle">
         <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
-               :lg="{ span: 24 }">
+               :lg="{ span: 24 }"
+        >
           <div class="r-margin-out">
             <r-category-list :columns="6"></r-category-list>
           </div>
@@ -68,7 +71,6 @@ export default {
   },
   mounted () {
   },
-  methods: {
-  }
+  methods: {}
 }
 </script>

@@ -1,7 +1,8 @@
 <template>
   <a-row class="r-stores-tray" :class="{'r-stores-tray-active': hasStoreTray}" type="flex" justify="center"
          :gutter="24"
-         style="padding: 48px 24px;background: #FFFFFF url(/images/art-grey.svg) repeat scroll 0% 0% !important;">
+         style="padding: 48px 24px;background: #FFFFFF url(/images/art-grey.svg) repeat scroll 0% 0% !important;"
+  >
     <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row class="r-mb-24" type="flex" justify="start" align="middle">
         <a-col :span="12">
@@ -13,10 +14,12 @@
             labelInValue
             :defaultValue="sortOptions[0]"
             style="width: 160px;"
-            @change="onFilter">
+            @change="onFilter"
+          >
             <a-select-option v-for="(sort, index) in sortOptions"
                              :key="index"
-                             :value="sort.key">
+                             :value="sort.key"
+            >
               <span class="r-sort-value">{{ sort.label }}</span>
             </a-select-option>
           </a-select>
@@ -26,7 +29,8 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 4 }"
                v-if="stores.length > 0"
                v-for="(store, index) in stores"
-               :key="index">
+               :key="index"
+        >
           <a :href="'/store/' + store.slug" style="display: block; width: 100%;">
             <r-store-item :store="store"></r-store-item>
           </a>
@@ -45,52 +49,52 @@
   </a-row>
 </template>
 <script>
-  import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
-  export default {
-    name: 'r-store-tray',
-    components: {},
-    props: {},
-    data() {
-      return {
-        sort: null,
-        sortOptions: [
-          {
-            label: 'All',
-            key: 0
-          },
-          {
-            label: 'Biggest Savings',
-            key: 1
-          },
-          {
-            label: 'Shopping',
-            key: 2
-          },
-          {
-            label: 'Prepared Meals',
-            key: 3
-          },
-          {
-            label: 'Alcohol',
-            key: 4
-          }
-        ]
-      }
-    },
-    computed: mapGetters({
-      stores: 'store/stores',
-      hasStoreTray: 'app/hasStoreTray',
-    }),
-    mounted() {
-      this.payload();
-    },
-    methods: {
-      payload() {
-      },
-      onFilter(value) {
-        this.sort = value;
-      }
+export default {
+  name: 'r-store-tray',
+  components: {},
+  props: {},
+  data () {
+    return {
+      sort: null,
+      sortOptions: [
+        {
+          label: 'All',
+          key: 0
+        },
+        {
+          label: 'Biggest Savings',
+          key: 1
+        },
+        {
+          label: 'Shopping',
+          key: 2
+        },
+        {
+          label: 'Prepared Meals',
+          key: 3
+        },
+        {
+          label: 'Alcohol',
+          key: 4
+        }
+      ]
     }
-  };
+  },
+  computed: mapGetters({
+    stores: 'store/stores',
+    hasStoreTray: 'app/hasStoreTray',
+  }),
+  mounted () {
+    this.payload()
+  },
+  methods: {
+    payload () {
+    },
+    onFilter (value) {
+      this.sort = value
+    }
+  }
+}
 </script>

@@ -1,7 +1,8 @@
 <template>
   <a-row class="r-breadcrumbs">
     <a-col class="r-p-24 r-pv-12" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-           :lg="{span: 24}">
+           :lg="{span: 24}"
+    >
       <a-breadcrumb v-if="!processes.isProduct">
         <a-icon slot="separator" type="right"/>
         <a-breadcrumb-item :key="0">
@@ -19,29 +20,29 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-product-breadcrumbs',
   props: {
-    product: {type: Object, required: true, default: null},
-    hasClass: {type: Boolean, required: false, default: true}
+    product: { type: Object, required: true, default: null },
+    hasClass: { type: Boolean, required: false, default: true }
   },
-  data() {
+  data () {
     return {}
   },
   computed: mapGetters({
     store: 'base/store',
     hasStore: 'base/hasStore',
-    processes: "base/processes",
+    processes: 'base/processes',
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
 
     }
   }
-};
+}
 </script>

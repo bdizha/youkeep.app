@@ -1,21 +1,23 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
     <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 20 }" :md="{ span: 24 }"
-           :lg="{ span: 24 }">
+           :lg="{ span: 24 }"
+    >
       <a-button @click="onPrev" type="secondary" class="r-btn-bordered-grey"
-                icon="left">
+                icon="left"
+      >
         Back
       </a-button>
     </a-col>
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-category-prev',
   props: {},
-  data() {
+  data () {
     return {
       fetchBy: {
         id: 1
@@ -25,15 +27,15 @@ export default {
   computed: mapGetters({
     category: 'base/category',
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onPrev() {
-      this.$router.go(-1);
+    onPrev () {
+      this.$router.go(-1)
     }
   }
-};
+}
 </script>

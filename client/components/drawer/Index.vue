@@ -2,7 +2,8 @@
   <a-drawer :class="'r-drawer-' + drawer.current"
             :placement="drawer.placement"
             @close="onClose"
-            :visible="drawer.isVisible">
+            :visible="drawer.isVisible"
+  >
     <div style="margin-right: 45px;" slot="title">
       <a-row type="flex" justify="start" align="middle">
         <a-col @click="onClose" :xs="{span: 6}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 6}">
@@ -17,7 +18,8 @@
                :xs="{span: 18}"
                :sm="{span: 18}"
                :md="{span: 12}"
-               :lg="{span: 18}">
+               :lg="{span: 18}"
+        >
           <r-nav-item class="r-nav-item">
             <h4 class="r-heading">Hi, {{ isLoggedIn ? user.first_name : 'Guest' }}</h4>
           </r-nav-item>
@@ -26,36 +28,41 @@
     </div>
     <r-auth-actions v-if="drawer.current !== 'cart'"></r-auth-actions>
     <r-category-drawer v-if="isCurrent('category')"
-                       v-bind:key="'category'" class="r-animate"></r-category-drawer>
+                       v-bind:key="'category'" class="r-animate"
+    ></r-category-drawer>
     <r-cart-drawer v-if="isCurrent('cart')"
-                   v-bind:key="'cart'" class="r-animate"></r-cart-drawer>
+                   v-bind:key="'cart'" class="r-animate"
+    ></r-cart-drawer>
     <r-store-drawer v-if="isCurrent('store')"
-                    v-bind:key="'store'" class="r-animate"></r-store-drawer>
+                    v-bind:key="'store'" class="r-animate"
+    ></r-store-drawer>
     <r-account-drawer v-if="isCurrent('account')"
-                      v-bind:key="'category'" class="r-animate"></r-account-drawer>
+                      v-bind:key="'category'" class="r-animate"
+    ></r-account-drawer>
     <r-drawer-menu v-if="isCurrent('menu')"
-                   v-bind:key="'menu'" class="r-animate"></r-drawer-menu>
+                   v-bind:key="'menu'" class="r-animate"
+    ></r-drawer-menu>
     <r-cart-footer v-if="drawer.current == 'cart'"></r-cart-footer>
   </a-drawer>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-drawer',
   props: {
-    hasFooter: {type: Boolean, required: false, default: false},
-    maskClosable: {type: Boolean, required: false, default: true},
-    closable: {type: Boolean, required: false, default: true},
-    current: {type: String, required: false, default: null},
-    cssClass: {type: String, required: false, default: null},
-    redirectTo: {type: String, required: false, default: null},
+    hasFooter: { type: Boolean, required: false, default: false },
+    maskClosable: { type: Boolean, required: false, default: true },
+    closable: { type: Boolean, required: false, default: true },
+    current: { type: String, required: false, default: null },
+    cssClass: { type: String, required: false, default: null },
+    redirectTo: { type: String, required: false, default: null },
   },
-  data() {
-    return {};
+  data () {
+    return {}
   },
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   computed: mapGetters({
     drawer: 'base/drawer',
@@ -64,20 +71,20 @@ export default {
     store: 'base/store',
   }),
   methods: {
-    isCurrent(current) {
-      return this.drawer.current === current;
+    isCurrent (current) {
+      return this.drawer.current === current
     },
-    payload() {
-      let $this = this;
+    payload () {
+      let $this = this
     },
-    async onClose(event) {
-      let drawer = {};
-      drawer.isVisible = false;
-      drawer.placement = 'left';
-      drawer.current = null;
+    async onClose (event) {
+      let drawer = {}
+      drawer.isVisible = false
+      drawer.placement = 'left'
+      drawer.current = null
 
-      await this.$store.dispatch('base/onDrawer', drawer);
+      await this.$store.dispatch('base/onDrawer', drawer)
     }
   },
-};
+}
 </script>

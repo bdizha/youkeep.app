@@ -2,11 +2,13 @@
   <r-modal-template :mask-closable="maskClosable"
                     :closable="closable"
                     :current="formName"
-                    style="position: relative;">
+                    style="position: relative;"
+  >
     <a-form v-if="hasForm"
             class="ant-form ant-form-vertical"
             @submit="onPost"
-            :form="form">
+            :form="form"
+    >
       <a-row>
         <a-col :xs="{ span: 24 }">
           <a-form-item>
@@ -30,7 +32,8 @@
             <a-input
               size="default"
               placeholder="Your full name"
-              v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]">
+              v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
+            >
               <a-icon slot="prefix" type="user"/>
             </a-input>
           </a-form-item>
@@ -38,7 +41,8 @@
             <a-input
               size="default"
               placeholder="Your mobile number"
-              v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
+              v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
+            >
               <a-icon slot="prefix" type="mobile"/>
             </a-input>
           </a-form-item>
@@ -46,14 +50,16 @@
             <a-input type="email"
                      size="default"
                      placeholder="Your email address"
-                     v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]">
+                     v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
+            >
               <a-icon slot="prefix" type="mail"/>
             </a-input>
           </a-form-item>
           <a-form-item>
             <a-radio-group v-model="userType"
                            @change="onUserType"
-                           name="type" :default-value="1">
+                           name="type" :default-value="1"
+            >
               <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
                   <a-radio :value="1">
@@ -70,7 +76,8 @@
           </a-form-item>
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block :size="'default'" type="secondary" html-type="submit"
-                      class="r-btn-secondary">
+                      class="r-btn-secondary"
+            >
               Request an invite
             </a-button>
           </a-form-item>
@@ -79,7 +86,8 @@
               <a-col :sm="{ span: 24 }" :lg="{ span: 18 }">
                 <span class="r-inline-text">Already have an account?</span>
                 <a class="r-inline-text" v-on:click="onModal('login', $event)"
-                   href="">
+                   href=""
+                >
                   Login
                 </a>
               </a-col>
@@ -93,53 +101,53 @@
   </r-modal-template>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-register',
   props: {
-    maskClosable: {type: Boolean, required: false, default: false},
-    closable: {type: Boolean, required: false, default: false},
+    maskClosable: { type: Boolean, required: false, default: false },
+    closable: { type: Boolean, required: false, default: false },
   },
-  data() {
+  data () {
     return {
       process: 'isSuccess',
       formName: 'register',
       fields: ['name', 'mobile', 'email'],
-      form: this.$form.createForm(this, {name: 'form_register'}),
-      message: "Thank you for successfully signing up with Shopple. Enjoy your shopping!",
+      form: this.$form.createForm(this, { name: 'form_register' }),
+      message: 'Thank you for successfully signing up with Shopple. Enjoy your shopping!',
       userType: 1,
-    };
+    }
   },
   computed: mapGetters({
-    user: "auth/user",
-    current: "auth/current",
-    hasAddress: "account/hasAddress",
-    address: "account/address",
-    processes: "base/processes",
-    isValid: "form/isValid",
-    hasForm: "base/hasForm",
+    user: 'auth/user',
+    current: 'auth/current',
+    hasAddress: 'account/hasAddress',
+    address: 'account/address',
+    processes: 'base/processes',
+    isValid: 'form/isValid',
+    hasForm: 'base/hasForm',
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onPost(event) {
-      event.preventDefault();
+    onPost (event) {
+      event.preventDefault()
 
       this.form.validateFields((errors, values) => {
         if (!errors) {
-          let params = Object.assign({}, values);
-          this.onRegister(params);
+          let params = Object.assign({}, values)
+          this.onRegister(params)
         }
-      });
+      })
     },
-    async onRegister(params) {
-      params.type = this.userType;
-      params.password = '@%Chang3m3#';
-      params.password_confirmation = params.password;
+    async onRegister (params) {
+      params.type = this.userType
+      params.password = '@%Chang3m3#'
+      params.password_confirmation = params.password
 
       let payload = {
         params: params,
@@ -150,59 +158,59 @@ export default {
         fields: this.fields,
         hasUser: true,
         canRedirect: false,
-      };
-      let $this = this;
+      }
+      let $this = this
 
       await this.$store.dispatch('auth/onPost', payload).catch(error => {
         try {
-          let data = error.response.data;
+          let data = error.response.data
           if (data.errors !== undefined) {
-            $this.setErrors(data.errors, $this);
+            $this.setErrors(data.errors, $this)
           }
         } catch (e) {
         }
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Shopple.');
+            $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Shopple.')
           } else {
-            $this.$message.error('Oops, the submitted form was invalid.');
+            $this.$message.error('Oops, the submitted form was invalid.')
           }
-        }, 600);
-      });
+        }, 600)
+      })
     },
-    onModal(current, event) {
-      event.preventDefault();
+    onModal (current, event) {
+      event.preventDefault()
 
-      let modal = {};
-      modal.isVisible = true;
-      modal.isClosable = false;
-      modal.current = current;
-      this.$store.dispatch('base/onModal', modal);
+      let modal = {}
+      modal.isVisible = true
+      modal.isClosable = false
+      modal.current = current
+      this.$store.dispatch('base/onModal', modal)
     },
-    onUserType(e) {
-      this.userType = e.target.value;
+    onUserType (e) {
+      this.userType = e.target.value
     },
-    setErrors(errors, $this) {
-      $this.errors = errors;
+    setErrors (errors, $this) {
+      $this.errors = errors
       $this.fields.forEach(function (field) {
         if ($this.errors[field] !== undefined) {
-          let value = $this.form.getFieldValue(field);
-          let fields = {};
+          let value = $this.form.getFieldValue(field)
+          let fields = {}
           fields[field] = {
             'value': value,
-            "errors": [
+            'errors': [
               {
-                "message": $this.errors[field][0],
-                "field": field
+                'message': $this.errors[field][0],
+                'field': field
               }
             ]
-          };
-          $this.form.setFields(fields);
-          console.log('what is this :: ' + field, $this.errors[field][0]);
+          }
+          $this.form.setFields(fields)
+          console.log('what is this :: ' + field, $this.errors[field][0])
         }
-      });
+      })
     }
   },
-};
+}
 </script>

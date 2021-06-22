@@ -18,12 +18,13 @@
         </template>
       </a-list>
       <r-spinner :is-absolute="true"
-                 v-if="(processes.isRunning)"></r-spinner>
+                 v-if="(processes.isRunning)"
+      ></r-spinner>
     </a-col>
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 const LINKS = [
   {
@@ -86,34 +87,34 @@ const LINKS = [
     icon: 'logout',
     link: null
   },
-];
+]
 export default {
-  data() {
+  data () {
     return {
       links: LINKS,
       store: null,
       placement: 'right',
       redirectTo: '/'
-    };
+    }
   },
   computed: mapGetters({
-    processes: "base/processes",
+    processes: 'base/processes',
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onLogout() {
+    onLogout () {
       let payload = {
         redirectTo: this.redirectTo,
         params: {}
-      };
+      }
 
-      this.$message.success('Your browsing session has been successfully closed off. Good bye!');
+      this.$message.success('Your browsing session has been successfully closed off. Good bye!')
 
-      this.$store.dispatch('auth/onLogout', payload);
+      this.$store.dispatch('auth/onLogout', payload)
     }
   },
 }

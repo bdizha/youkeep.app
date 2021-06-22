@@ -32,7 +32,8 @@
                :lg="{ span: 15 }"
         >
           <p class="r-text-normal">
-            With Shopple, your financial info and purchases are better protected. You save time shopping online and sending money. And you get more ways to cover your payments.
+            With Shopple, your financial info and purchases are better protected. You save time shopping online and
+            sending money. And you get more ways to cover your payments.
           </p>
           <a-button class="r-btn-secondary"
                     type="secondary"
@@ -181,7 +182,9 @@
                                    :lg="{ span: 24 }"
                             >
                               <p class="r-text-normal">
-                                Shopple partners with trusted and local stores that ensures faster deliveries in less than an hour for some lucky shoppers like you. Shoppers is created to offer you the best shopping experience on the online market.
+                                Shopple partners with trusted and local stores that ensures faster deliveries in less
+                                than an hour for some lucky shoppers like you. Shoppers is created to offer you the best
+                                shopping experience on the online market.
                               </p>
                             </a-col>
                           </a-row>
@@ -274,13 +277,11 @@
 <script>
 export default {
   name: 'r-shopper-hiw',
-  props: {
+  props: {},
+  data () {
+    return {}
   },
-  data() {
-    return {
-    };
-  },
-  mounted() {
+  mounted () {
   },
   methods: {
     onModal () {
@@ -290,6 +291,6 @@ export default {
       modal.current = 'register'
       this.$store.dispatch('base/onModal', modal)
     }
-    },
-};
+  },
+}
 </script>
