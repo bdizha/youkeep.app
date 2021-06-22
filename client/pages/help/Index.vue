@@ -46,19 +46,19 @@
                 <a-card>
                   <a-card-meta>
                     <template slot="description">
-                      <p class="r-text-normal r-text-primary">
+                      <p class="r-text-normal">
                         <a-icon type="check"></a-icon>
                         <span>
                           No hidden fees.
                         </span>
                       </p>
-                      <p class="r-text-normal r-text-primary">
+                      <p class="r-text-normal">
                         <a-icon type="check"></a-icon>
                         <span>
                         No confusing tiered pricing.
                         </span>
                       </p>
-                      <p class="r-text-normal r-text-primary">
+                      <p class="r-text-normal">
                         <a-icon type="check"></a-icon>
                         <span>
                           What you see is what you get
@@ -71,34 +71,26 @@
             </a-row>
           </div>
         </a-col>
-        <r-help-list></r-help-list>
+        <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <r-help-list></r-help-list>
+        </a-col>
       </a-row>
     </a-col>
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
 export default {
   name: 'r-help',
   props: {},
+  async fetch () {
+    console.log('loading data')
+    await this.$store.dispatch('base/onFaqs', {})
+  },
   data () {
     return {
-      activeKey: ['1'],
-      currentFaq: null,
-      currentCategory: null
-    }
-  },
-  computed: mapGetters({
-    faqs: 'base/faqs',
-    hasFaqs: 'base/hasFaqs'
-  }),
-  created () {
-    this.currentFaq = this.faqs[0].faqs[0]
-  },
-  methods: {
-    setFaq (faq, currentCategory) {
-      this.currentFaq = faq
-      this.currentCategory = currentCategory
     }
   }
 }

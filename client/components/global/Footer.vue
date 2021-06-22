@@ -10,7 +10,13 @@
         </a-col>
       </a-row>
       <a-layout-footer v-if="hasFooter">
-        <a-row class="r-bg-white r-mv-24" type="flex" justify="center">
+        <a-row class="r-bg-white" type="flex" justify="center">
+          <a-col style="background: url(/images/content/11.png) no-repeat;background-size: cover;" class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+                 :md="{ span: 24 }"
+                 :lg="{ span: 24 }"
+          >
+            <div style="padding-bottom: 300px;"></div>
+          </a-col>
           <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
             <a-row type="flex" justify="start" align="top">
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 6 }">

@@ -6,7 +6,7 @@
       </r-store-window>
       <r-store-categories></r-store-categories>
       <a-empty v-show="!hasStores"
-               image="/assets/icon_grey.svg"
+               image="/images/icon_pattern_grey.svg"
                description="This store is coming soon. Please try other available stores."/>
     </a-col>
   </a-row>

@@ -73,13 +73,9 @@ class HelpController extends Controller
             }
         }
 
-        if ($request->ajax()) {
-            return response()->json([
-                'sections' => $sections,
-                'status' => 'success'
-            ], 200);
-        }
-
-        return view('help.index', ['sections' => $sections]);
+        return response()->json([
+            'sections' => $sections,
+            'status' => 'success'
+        ], 200);
     }
 }

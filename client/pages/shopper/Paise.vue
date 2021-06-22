@@ -170,7 +170,7 @@
                           </h4>
                           <p class="r-text-normal">
                             Because shoppers pay over time using their existing credit, they don’t need to fill out an
-                            application or endure a credit check that frustrates them at checkout—leading to higher
+                            application or endure a credit check that frustrates them at checkout - leading to higher
                             checkout
                             conversions.
                           </p>
@@ -225,7 +225,7 @@
                             their
                             existing credit card without interest charges or fees. This keeps their payments small so
                             they
-                            get to keep more of their money to spend the way they want—up to +20% higher AOV.
+                            get to keep more of their money to spend the way they want - up to +20% higher AOV.
                           </p>
                         </a-col>
                       </a-row>

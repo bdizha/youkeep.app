@@ -80,7 +80,7 @@
                 <a-row v-if="hasData && departments.length == 0" type="flex" justify="center">
                     <a-col :span="24">
                         <a-empty
-                                image="/assets/icon_grey.svg"
+                                image="/images/icon_pattern_grey.svg"
                                 :imageStyle="{ height: '81px',}">
                             <span slot="description">Sorry. There aren't any job openings currently.</span>
                             <a-button size="default" class="ant-btn-primary r-btn-secondary">Shop now</a-button>

@@ -1,0 +1,295 @@
+<template>
+  <a-row :gutter="[48,96]" type="flex" justify="start" align="middle">
+    <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }"
+    >
+      <r-steps></r-steps>
+    </a-col>
+    <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }"
+    >
+      <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <h3 class="r-heading-light r-text-uppercase r-text-secondary">
+            Shopple for shoppers
+          </h3>
+        </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <h2 class="r-heading">
+            Shop and pay online quickly and securely.
+          </h2>
+        </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 15 }"
+               :lg="{ span: 15 }"
+        >
+          <p class="r-text-normal">
+            With Shopple, your financial info and purchases are better protected. You save time shopping online and sending money. And you get more ways to cover your payments.
+          </p>
+          <a-button class="r-btn-secondary"
+                    type="secondary"
+                    to="/register"
+                    size="large"
+                    @click="onModal"
+          >
+            Shop Now
+          </a-button>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }"
+    >
+      <a-row type="flex" justify="start" align="middle">
+        <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <a-card class="r-bg-secondary-light">
+            <a-card-meta>
+              <template slot="description">
+                <div class="r-mv-48">
+                  <a-row :gutter="[96,48]" type="flex" justify="start" align="middle">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                           :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                    >
+                      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                               :md="{ span: 24 }"
+                               :lg="{ span: 24 }"
+                        >
+                          <a-row :gutter="[24,24]" type="flex" justify="start" align="top">
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                                Better way to shop
+                              </h4>
+                            </a-col>
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <h2 class="r-heading">
+                                Shopple gives you the flexibility to shop however you like.
+                              </h2>
+                            </a-col>
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <h4 class="r-heading">
+                                You can use it with:
+                              </h4>
+                            </a-col>
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <p class="r-text-normal">
+                                <a-icon class="r-text-primary" slot="prefix" type="check"/>
+                                Your bank account
+                              </p>
+                              <p class="r-text-normal">
+                                <a-icon class="r-text-primary" slot="prefix" type="check"/>
+                                Your debit or credit card
+                              </p>
+                              <p class="r-text-normal">
+                                <a-icon class="r-text-primary" slot="prefix" type="check"/>
+                                New payment options like <a href="https://paise.shop" target="_blank">Paise</a>
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                      </a-row>
+                    </a-col>
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                           :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                    >
+                      <r-avatar class="r-avatar-block" :dataSrc="'/images/content/4.png'" :size="300"
+                      ></r-avatar>
+                    </a-col>
+                  </a-row>
+                </div>
+              </template>
+            </a-card-meta>
+          </a-card>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }"
+    >
+      <a-row type="flex" justify="start" align="middle">
+        <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <a-card class="r-bg-primary-light">
+            <a-card-meta>
+              <template slot="description">
+                <div class="r-mv-48">
+                  <a-row :gutter="[96,48]" type="flex" justify="start" align="middle">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                           :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                    >
+                      <r-avatar class="r-avatar-block" :dataSrc="'/images/content/5.svg'" :size="300"
+                      ></r-avatar>
+                    </a-col>
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                           :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                    >
+                      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                               :md="{ span: 24 }"
+                               :lg="{ span: 24 }"
+                        >
+                          <a-row :gutter="[24,24]" type="flex" justify="start" align="top">
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                                Buy online at Shopple
+                              </h4>
+                            </a-col>
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <h2 class="r-heading">
+                                Shopple is the best way to find and purchase whatever your haert desires.
+                              </h2>
+                            </a-col>
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <p class="r-text-normal">
+                                Shopple partners with trusted and local stores that ensures faster deliveries in less than an hour for some lucky shoppers like you. Shoppers is created to offer you the best shopping experience on the online market.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                      </a-row>
+                    </a-col>
+                  </a-row>
+                </div>
+              </template>
+            </a-card-meta>
+          </a-card>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }"
+    >
+      <a-row type="flex" justify="start" align="middle">
+        <a-col class="r-ph-24 r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                   :md="{ span: 24 }"
+                   :lg="{ span: 24 }"
+            >
+              <h2 class="r-heading">
+                Why millions of shoppers <span class="r-text-secondary">choose</span> Shopple
+              </h2>
+            </a-col>
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 8 }">
+              <a-card class="r-bg-secondary-light">
+                <a-card-meta>
+                  <template slot="description">
+                    <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                        <r-avatar :dataSrc="'/images/content/shopper-01.png'" shape="circle" :size="90"
+                        ></r-avatar>
+                      </a-col>
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                        Perfectly categorized and reconciled transactions come standard
+                      </a-col>
+                    </a-row>
+                  </template>
+                </a-card-meta>
+              </a-card>
+            </a-col>
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 8 }">
+              <a-card class="r-bg-secondary-light">
+                <a-card-meta>
+                  <template slot="description">
+                    <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                        <r-avatar :dataSrc="'/images/content/shopper-02.png'" shape="circle" :size="90"
+                        ></r-avatar>
+                      </a-col>
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                        Our Client Research Team tackles complex questions and is 100% free
+                      </a-col>
+                    </a-row>
+                  </template>
+                </a-card-meta>
+              </a-card>
+            </a-col>
+            <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 8 }">
+              <a-card class="r-bg-secondary-light">
+                <a-card-meta>
+                  <template slot="description">
+                    <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                        <r-avatar :dataSrc="'/images/content/shopper-03.png'" shape="circle" :size="90"
+                        ></r-avatar>
+                      </a-col>
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                        We always respond to messages or calls in one business day or less
+                      </a-col>
+                    </a-row>
+                  </template>
+                </a-card-meta>
+              </a-card>
+            </a-col>
+          </a-row>
+        </a-col>
+      </a-row>
+    </a-col>
+  </a-row>
+</template>
+<script>
+export default {
+  name: 'r-shopper-hiw',
+  props: {
+  },
+  data() {
+    return {
+    };
+  },
+  mounted() {
+  },
+  methods: {
+    onModal () {
+      const modal = {}
+      modal.isVisible = true
+      modal.isClosable = false
+      modal.current = 'register'
+      this.$store.dispatch('base/onModal', modal)
+    }
+    },
+};
+</script>

@@ -3,23 +3,23 @@
              :closable="closable"
              :current="formName"
              style="position: relative;">
+      <a-row :gutter="[24,24]" type="flex" justify="center">
+        <a-col class="r-text-left" :xs="{ span: 24 }">
+          <h2 class="r-heading r-text-secondary">
+            Request password
+          </h2>
+        </a-col>
+        <a-col class="r-text-left" :xs="{ span: 24 }">
+          <p class="r-text-small">
+            Enter the email address associated with your Shopple Account and we will send you
+            instructions to reset your password.
+          </p>
+        </a-col>
+      </a-row>
         <a-form v-if="hasForm"
                 class="ant-form ant-form-vertical"
                 @submit="onPost"
                 :form="form">
-            <a-form-item>
-                <a-row type="flex" justify="center">
-                    <a-col class="r-text-left" :xs="{ span: 24 }">
-                        <h3 class="r-heading r-text-secondary">
-                            Reset password
-                        </h3>
-                        <p class="r-text-small">
-                            Enter the email address associated with your Shopple Account and we will send you
-                            instructions to reset your password.
-                        </p>
-                    </a-col>
-                </a-row>
-            </a-form-item>
             <a-form-item label="Email address">
                 <a-input
                         size="default"

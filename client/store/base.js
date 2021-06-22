@@ -6,6 +6,8 @@ const state = () => ({
   store: {},
   hasStore: false,
   stores: { data: [] },
+  faqs: [],
+  faq: { data: [] },
   category: {},
   product: {},
   products: [],
@@ -18,6 +20,7 @@ const state = () => ({
   position: {},
   storeCategories: [],
   hasStores: false,
+  hasFaqs: false,
   hasShop: false,
   notice: null,
   hasNotice: false,
@@ -88,7 +91,9 @@ const getters = {
   store: state => state.store,
   hasStore: state => state.hasStore,
   stores: state => state.stores,
+  faqs: state => state.faqs,
   hasStores: state => state.hasStores,
+  hasFaqs: state => state.hasFaqs,
   menuCategory: state => state.menuCategory,
   hasMenuCategory: state => state.hasMenuCategory,
   category: state => state.category,
@@ -121,9 +126,9 @@ const getters = {
   hasFooter: state => state.hasFooter,
   hasDownload: state => state.hasDownload,
   hasSubscribe: state => state.hasSubscribe,
-  redirectTo: state => stores.redirectTo,
+  redirectTo: state => state.redirectTo,
   errors: state => state.errors,
-  popover: state => state.popover,
+  popover: state => state.popover
 }
 
 // mutations
@@ -144,7 +149,11 @@ const mutations = {
   },
   setStores (state, stores) {
     state.stores = stores
-    state.hasStores = stores.data !== undefined && stores.data.length > 0
+    state.hasStores = stores !== undefined && stores.length > 0
+  },
+  setFaqs (state, faqs) {
+    state.faqs = faqs
+    state.hasFaqs = faqs !== undefined && faqs.length > 0
   },
   setMenuCategory (state, category) {
     state.menuCategory = category
@@ -423,16 +432,26 @@ const actions = {
     } catch (e) {
       console.error('on error: ', e)
     }
-  }
-  ,
+  },
   async onStores ({ dispatch, commit }, payload) {
     commit('setProcess', { key: 'isTray', value: true })
 
     await axios.post('/shops', payload).then(({ data }) => {
-      let stores = data
+      const stores = data
 
       commit('setStores', stores)
       commit('setFilter', { key: 'stores', value: stores })
+      commit('setProcess', { key: 'isTray', value: false })
+    })
+  }
+  ,
+  async onFaqs ({ dispatch, commit }, payload) {
+    commit('setProcess', { key: 'isTray', value: true })
+
+    await axios.post('/faqs', payload).then(({ data }) => {
+      const faqs = data
+
+      commit('setFaqs', faqs)
       commit('setProcess', { key: 'isTray', value: false })
     })
   }

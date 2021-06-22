@@ -1,7 +1,7 @@
 <template>
-  <a-row align="top" class="r-mt-48" justify="center" type="flex">
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-steps v-model="currentStep" :current="currentStep" direction="horizontal">
+  <a-row class="r-mt-48" type="flex" justify="center" align="top">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <a-steps v-model="currentStep" direction="horizontal" :current="currentStep">
         <a-step v-for="(step, index) in steps"
                 :key="index"
         >
@@ -52,35 +52,35 @@
 </template>
 <script>
 export default {
-  name: 'r-steps',
+  name: 'r-merchant-steps',
   props: {
-    size: { type: Number, required: false, default: 24 },
-    hasMore: { type: Boolean, required: false, default: false },
-    title: { type: String, required: false, default: null },
+    size: {type: Number, required: false, default: 24},
+    hasMore: {type: Boolean, required: false, default: false},
+    title: {type: String, required: false, default: null},
   },
-  data () {
+  data() {
     return {
       currentStep: 0,
       steps: [
         {
-          title: 'You order.',
-          description: 'Shop better at your favorite stores around the world, anytime.'
+          title: 'You setup.',
+          description: 'Create a Shopple account and list your product catalog on the Shopple marketplace today.'
         },
         {
-          title: 'We shop.',
-          description: 'It\'s shopping time! We handle all your shopping experience and more.'
+          title: 'We sell.',
+          description: 'Your item sells, you ship your item to the buyer. and money is deposited to your Shopple account.'
         },
         {
           title: 'You enjoy.',
-          description: 'Sit back and wait for your delivery to arrive at your doorstep.'
+          description: 'Use the money as you like – shop online, send it to friends, or transfer it to your bank account.'
         },
       ]
-    }
+    };
   },
   methods: {
-    hasTitle () {
-      return this.title.length > 0
+    hasTitle() {
+      return this.title.length > 0;
     }
   }
-}
+};
 </script>

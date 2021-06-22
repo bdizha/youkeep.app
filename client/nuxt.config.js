@@ -71,6 +71,7 @@ module.exports = {
   plugins: [
     '~components/auth',
     '~components/global',
+    '~components/help',
     '~components/product',
     '~components/category',
     '~components/delivery',
@@ -100,7 +101,7 @@ module.exports = {
       modulesToClear.forEach((entry) => {
         delete require.cache[require.resolve(entry)]
       })
-    },
+    }
   },
 
   build: {

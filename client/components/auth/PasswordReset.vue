@@ -3,19 +3,22 @@
                     :closable="closable"
                     :current="formName"
                     style="position: relative;">
+    <a-row type="flex" justify="center">
+      <a-col class="r-text-left" :xs="{ span: 24 }">
+        <h2 class="r-heading r-text-secondary">
+          Set a new password
+        </h2>
+      </a-col>
+      <a-col class="r-text-left" :xs="{ span: 24 }">
+        <div class="r-text-small">
+          Sign in to your account with your email address.
+        </div>
+      </a-col>
+    </a-row>
     <a-form v-if="hasForm"
             class="ant-form ant-form-vertical"
             @submit="onPost"
             :form="form">
-      <a-form-item>
-        <a-row type="flex" justify="center">
-          <a-col class="r-text-left" :xs="{ span: 24 }">
-            <h2 class="r-heading r-text-secondary">
-              Set a new password
-            </h2>
-          </a-col>
-        </a-row>
-      </a-form-item>
       <a-form-item label="Email Address">
         <a-input
           placeholder="Your email address"

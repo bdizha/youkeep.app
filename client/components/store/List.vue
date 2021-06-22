@@ -11,7 +11,7 @@
           </nuxt-link>
         </a-col>
         <a-col v-if="!hasStores" :span="24">
-          <a-empty image="/assets/icon_grey.svg"
+          <a-empty image="/images/icon_pattern_grey.svg"
                    description="No stores were found! Please try other store categories."/>
         </a-col>
       </a-row>
