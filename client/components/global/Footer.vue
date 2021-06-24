@@ -1,7 +1,7 @@
 <template>
-  <a-row type="flex" justify="center">
+  <a-row class="r-mt-48" type="flex" justify="center">
     <a-col :span="24">
-      <a-row class="r-mb-24" type="flex" justify="center">
+      <a-row v-if="hasDownload && false" class="r-mb-24" type="flex" justify="center">
         <a-col v-if="hasDownload && false" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
           <r-shop-now></r-shop-now>
         </a-col>

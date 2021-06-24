@@ -253,7 +253,7 @@
 
             <h3 id="55-survival">5.5. Survival</h3>
 
-            <p>Sections 3, 5.4, 6, and 8 – 12 (inclusive) will survive the termination or expiration of this
+            <p>Sections 3, 5.4, 6, and 8 - 12 (inclusive) will survive the termination or expiration of this
               agreement.</p>
 
             <h2 id="6-intellectual-property">6. Intellectual Property</h2>
@@ -461,7 +461,7 @@
 
             <p>Shopple’s Affiliates and Shopple’s and its Affiliates’ suppliers and distributors are intended third
               party
-              beneficiaries of Sections 8 – 10 (inclusive). Except as expressly set forth in the foregoing, there are no
+              beneficiaries of Sections 8 - 10 (inclusive). Except as expressly set forth in the foregoing, there are no
               third party beneficiaries to these terms.</p>
 
             <h2 id="13-definitions">13. Definitions</h2>

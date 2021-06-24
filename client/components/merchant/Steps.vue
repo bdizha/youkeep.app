@@ -73,7 +73,7 @@ export default {
         },
         {
           title: 'You enjoy.',
-          description: 'Use the money as you like – shop online, send it to friends, or transfer it to your bank account.'
+          description: 'Use the money as you like - shop online, send it to friends, or transfer it to your bank account.'
         },
       ]
     }

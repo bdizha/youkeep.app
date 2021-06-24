@@ -1,8 +1,14 @@
 <template>
-  <a-button block @click="onStoreTray" class="r-btn-secondary">
-    {{ hasStore ? store.name : 'Switch Store' }}
-    <a-icon type="down"/>
-  </a-button>
+  <a-row type="flex" justify="center" align="middle">
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+           :lg="{ span: 24 }"
+    >
+      <a-button block @click="onStoreTray" class="r-btn-secondary">
+        {{ hasStore ? store.name : 'Switch Store' }}
+        <a-icon type="down"/>
+      </a-button>
+    </a-col>
+  </a-row>
 </template>
 <script>
 import { mapGetters } from 'vuex'

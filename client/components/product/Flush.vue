@@ -75,7 +75,7 @@ export default {
   computed: mapGetters({
     products: 'base/products',
     hasProducts: 'base/hasProducts',
-    processes: 'base/processes',
+    processes: 'base/processes'
   }),
   created () {
     this.payload()

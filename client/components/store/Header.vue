@@ -19,7 +19,7 @@
               <div v-if="hasStore" class="r-nav-item">
                 <nuxt-link :to="'/store/' + store.slug">
                   <a-button block
-                            class="r-btn-bordered-grey"
+                            class="r-btn-dark"
                             type="secondary"
                   >
                     {{ store.name }}
