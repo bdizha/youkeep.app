@@ -128,20 +128,11 @@
 </template>
 <script>
 
-import RMerchant from '../merchant/Index'
-
 export default {
   name: 'r-hiw',
-  components: { RMerchant },
   props: {},
   data () {
     return {
-      features: [
-        { content: 'Access Shopple via mobile or desktop - we go where you go' },
-        { content: 'Quickly answer categorization requests from your team' },
-        { content: 'Contact your team with our simple messaging feature' },
-        { content: 'Get operating support at any time within our work ours' }
-      ]
     }
   },
   created () {

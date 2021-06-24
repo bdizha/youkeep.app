@@ -1,73 +1,73 @@
 <template>
   <a-row :gutter="[48,96]" type="flex" justify="center" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
-           :lg="{ span: 16 }"
+    <a-col style="background: #FFFFFF;" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+           :lg="{ span: 24 }"
     >
-     <div class="r-mv-48">
-       <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                :md="{ span: 12 }"
-                :lg="{ span: 12 }"
-         >
-           <a-card class="r-pv-48 r-bg-secondary-light">
-             <a-card-meta>
-               <template slot="description">
-                 <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                          :md="{ span: 24 }"
-                          :lg="{ span: 24 }"
-                   >
-                     <h4 class="r-heading-light r-text-secondary r-text-uppercase r-text-secondary">
-                       For shoppers
-                     </h4>
-                   </a-col>
-                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                          :md="{ span: 24 }"
-                          :lg="{ span: 24 }"
-                   >
-                     <h1 class="r-heading">
-                       More flexible,<br>
-                       Less intrusive
-                     </h1>
-                   </a-col>
-                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                          :md="{ span: 24 }"
-                          :lg="{ span: 24 }"
-                   >
-                     <p class="r-text-normal">
-                       Earn up to R55/hr or more shopping for Shopple members.
-                       Deliver things people love, from the stores they trust.
-                     </p>
-                   </a-col>
-                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                          :md="{ span: 12 }"
-                          :lg="{ span: 12 }"
-                   >
-                     <a-button class="r-btn-secondary"
-                               block
-                               type="secondary"
-                               to="/register"
-                               size="large"
-                               @click="onModal"
-                     >
-                       Get started today!
-                     </a-button>
-                   </a-col>
-                 </a-row>
-               </template>
-             </a-card-meta>
-           </a-card>
-         </a-col>
-         <a-col
-           :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 12 }"
-           :lg="{ span: 12 }"
-         >
-           <r-avatar class="r-avatar-block" data-src="/images/content/hero-02.png" :size="450"
-           ></r-avatar>
-         </a-col>
-       </a-row>
-     </div>
+      <div class="r-mt-48 r-ph-24">
+        <a-row :gutter="[96,48]" type="flex" justify="start" align="middle">
+          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                 :md="{ span: 12 }"
+                 :lg="{ span: 12 }"
+          >
+            <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }"
+                     :lg="{ span: 15 }"
+              >
+                <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
+                  >
+                    <h4 class="r-heading-light r-text-secondary r-text-uppercase r-text-secondary">
+                      For shoppers
+                    </h4>
+                  </a-col>
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
+                  >
+                    <h1 class="r-heading">
+                      More flexible,<br>
+                      Less intrusive.
+                    </h1>
+                  </a-col>
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
+                  >
+                    <p class="r-text-normal">
+                      Earn up to R55/hr or more shopping for Shopple members.
+                      Deliver things people love, from the stores they trust.
+                    </p>
+                  </a-col>
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                     :md="{ span: 12 }"
+                     :lg="{ span: 12 }"
+              >
+                <a-button class="r-btn-secondary"
+                          block
+                          type="secondary"
+                          to="/register"
+                          size="large"
+                          @click="onModal"
+                >
+                  Get started today!
+                </a-button>
+              </a-col>
+                </a-row>
+              </a-col>
+            </a-row>
+          </a-col>
+          <a-col
+            :xs="{ span: 24 }" :sm="{ span: 24 }"
+            :md="{ span: 12 }"
+            :lg="{ span: 12 }"
+          >
+            <r-avatar class="r-avatar-block" data-src="/images/content/hero-01.png" :size="450"
+            ></r-avatar>
+          </a-col>
+        </a-row>
+      </div>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
            :lg="{ span: 16 }"
@@ -77,31 +77,67 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
            :lg="{ span: 16 }"
     >
-      <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 9 }"
-               :lg="{ span: 9 }"
-        >
-          <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-            <a-col v-for="(image, index) in [66, 67, 68, 69, 70, 71]"
-                   :key="index"
-                   :xs="{ span: 8 }" :sm="{ span: 8 }"
-                   :md="{ span: 8 }"
-                   :lg="{ span: 8 }"
-            >
-              <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/' + image + '.png'" :size="75"
-              ></r-avatar>
-            </a-col>
-          </a-row>
-        </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 15 }"
-               :lg="{ span: 15 }"
+      <a-row :gutter="[24,24]" type="flex" justify="start" align="top">
+        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
+               :md="{ span: 8 }"
+               :lg="{ span: 8 }"
         >
           <a-card class="r-bg-secondary-light">
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                  <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
+                         :md="{ span: 10 }"
+                         :lg="{ span: 8 }"
+                  >
+                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/73.png'" :size="90"
+                    ></r-avatar>
+                  </a-col>
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
+                  >
+                    <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                      Do it
+                    </h4>
+                  </a-col>
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
+                  >
+                    <h2 class="r-heading">
+                      Set your schedule
+                    </h2>
+                  </a-col>
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
+                  >
+                    <p class="r-text-normal">
+                      Work part time or full time - any time.
+                      Set your own hours for a completely flexible schedule. We offer during operating hours: 8am-9pm.
+                    </p>
+                  </a-col>
+                </a-row>
+              </template>
+            </a-card-meta>
+          </a-card>
+        </a-col>
+        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
+               :md="{ span: 8 }"
+               :lg="{ span: 8 }"
+        >
+          <a-card class="r-bg-secondary-light">
+            <a-card-meta>
+              <template slot="description">
+                <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                  <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
+                         :md="{ span: 10 }"
+                         :lg="{ span: 8 }"
+                  >
+                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/72.png'" :size="90"
+                    ></r-avatar>
+                  </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                          :md="{ span: 24 }"
                          :lg="{ span: 24 }"
@@ -115,16 +151,17 @@
                          :lg="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Work on your schedule
+                      Get shopping requests
                     </h2>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                         :md="{ span: 18 }"
-                         :lg="{ span: 16 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
                   >
                     <p class="r-text-normal">
-                      Work part time or full time - any time.
-                      Set your own hours for a completely flexible schedule.
+                      Shop your go-to products from your favorite stores. That’s why we deliver from local
+                      and
+                      global retailers you love - like Adidas and more.
                     </p>
                   </a-col>
                 </a-row>
@@ -132,20 +169,21 @@
             </a-card-meta>
           </a-card>
         </a-col>
-      </a-row>
-    </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
-           :lg="{ span: 16 }"
-    >
-      <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 15 }"
-               :lg="{ span: 15 }"
+        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
+               :md="{ span: 8 }"
+               :lg="{ span: 8 }"
         >
           <a-card class="r-bg-secondary-light">
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                  <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
+                         :md="{ span: 10 }"
+                         :lg="{ span: 8 }"
+                  >
+                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/64.png'" :size="90"
+                    ></r-avatar>
+                  </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                          :md="{ span: 24 }"
                          :lg="{ span: 24 }"
@@ -163,11 +201,11 @@
                     </h2>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                         :md="{ span: 18 }"
-                         :lg="{ span: 16 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
                   >
                     <p class="r-text-normal">
-                      Get tips from other shoppers, attend launch parties, and get a free Shopple membership.
+                      Get tips from other shoppers, attend launch parties, and get a free Shopple membership and enjoy many discounts at favourite stores.
                     </p>
                   </a-col>
                 </a-row>
@@ -175,52 +213,21 @@
             </a-card-meta>
           </a-card>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 9 }"
-               :lg="{ span: 9 }"
-        >
-          <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-            <a-col v-for="(image, index) in [61, 62, 63, 64, 65, 66]"
-                   :key="index"
-                   :xs="{ span: 8 }" :sm="{ span: 8 }"
-                   :md="{ span: 8 }"
-                   :lg="{ span: 8 }"
-            >
-              <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/' + image + '.png'" :size="75"
-              ></r-avatar>
-            </a-col>
-          </a-row>
-        </a-col>
-      </a-row>
-    </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
-           :lg="{ span: 16 }"
-    >
-      <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 9 }"
-               :lg="{ span: 9 }"
-        >
-          <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-            <a-col v-for="(image, index) in [65, 66, 67, 68, 69, 70]"
-                   :key="index"
-                   :xs="{ span: 8 }" :sm="{ span: 8 }"
-                   :md="{ span: 8 }"
-                   :lg="{ span: 8 }"
-            >
-              <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/' + image + '.png'" :size="75"
-              ></r-avatar>
-            </a-col>
-          </a-row>
-        </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 15 }"
-               :lg="{ span: 15 }"
+        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
+               :md="{ span: 8 }"
+               :lg="{ span: 8 }"
         >
           <a-card class="r-bg-secondary-light">
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                  <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
+                         :md="{ span: 10 }"
+                         :lg="{ span: 8 }"
+                  >
+                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/70.png'" :size="90"
+                    ></r-avatar>
+                  </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                          :md="{ span: 24 }"
                          :lg="{ span: 24 }"
@@ -235,19 +242,17 @@
                          :lg="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Earn money as you shop
+                      Earn as you shop
                     </h2>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                         :md="{ span: 18 }"
-                         :lg="{ span: 16 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
 
                   >
                     <p class="r-text-normal">
                       Experienced shoppers make an average of R50/hr.
-                    </p>
-                    <p class="r-text-normal">
-                      * Paychecks are delivered every week.
+                      * Paychecks are delivered every week on a set day.
                     </p>
                   </a-col>
                 </a-row>
@@ -255,15 +260,9 @@
             </a-card-meta>
           </a-card>
         </a-col>
-      </a-row>
-    </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
-           :lg="{ span: 16 }"
-    >
-      <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 12 }"
-               :lg="{ span: 12 }"
+        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
+               :md="{ span: 16 }"
+               :lg="{ span: 16 }"
         >
           <a-card class="r-bg-secondary-light">
             <a-card-meta>
@@ -283,7 +282,7 @@
                          :lg="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Requirements:
+                      Requirements for shoppers:
                     </h2>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
@@ -306,6 +305,17 @@
                         </div>
                       </a-list-item>
                     </a-list>
+                  </a-col>
+                  <a-col :xs="{ span: 24 }" :md="{ span: 12 }"
+                         :lg="{ span: 12 }"
+                  >
+                    <a-button block @click="onRegister"
+                              size="large"
+                              class="r-btn-secondary"
+                              type="secondary"
+                    >
+                      Apply Now
+                    </a-button>
                   </a-col>
                 </a-row>
               </template>

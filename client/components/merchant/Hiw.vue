@@ -67,7 +67,7 @@
                            :md="{ span: 12 }"
                            :lg="{ span: 12 }"
                     >
-                      <r-avatar class="r-avatar-block" :dataSrc="'/images/content/7.png'" :size="300"
+                      <r-avatar class="r-avatar-block" :dataSrc="'/images/content/hero-01.png'" :size="300"
                       ></r-avatar>
                     </a-col>
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -248,7 +248,7 @@
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }"
                 >
-                  <r-avatar class="r-avatar-block" :dataSrc="'/images/content/47.png'" :size="300"
+                  <r-avatar class="r-avatar-block" :dataSrc="'/images/content/hero-02.png'" :size="300"
                   ></r-avatar>
                 </a-col>
               </a-row>
@@ -270,7 +270,7 @@
                        :md="{ span: 12 }"
                        :lg="{ span: 12 }"
                 >
-                  <r-avatar class="r-avatar-block" :dataSrc="'/images/content/49.png'" :size="300"
+                  <r-avatar class="r-avatar-block" :dataSrc="'/images/content/hero-01.png'" :size="300"
                   ></r-avatar>
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -432,7 +432,14 @@ export default {
   name: 'r-merchant-hiw',
   props: {},
   data () {
-    return {}
+    return {
+      features: [
+        { content: 'Access Shopple via mobile or desktop - we go where you go' },
+        { content: 'Quickly answer categorization requests from your team' },
+        { content: 'Contact your team with our simple messaging feature' },
+        { content: 'Get operating support at any time within our work ours' }
+      ]
+    }
   },
   mounted () {
   },
