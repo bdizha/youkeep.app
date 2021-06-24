@@ -44,7 +44,7 @@
         <a-col :xs="{ span: 24 }"
                :sm="{ span: 24 }" :lg="{ span: 24 }"
         >
-          <r-product-actions :item-key="item.key" :product="item.product" size="default"></r-product-actions>
+          <r-product-actions :item-key="item.key" :product="item.product" size="large"></r-product-actions>
         </a-col>
       </a-row>
     </a-col>

@@ -15,7 +15,7 @@
       >
         <nuxt-link to="/checkout">
           <a-button block
-                    size="default"
+                    size="large"
                     type="secondary"
                     class="r-cart-btn"
           >
@@ -31,7 +31,7 @@
       >
         <nuxt-link to="/">
           <a-button block
-                    size="default"
+                    size="large"
                     type="secondary"
                     class="r-cart-btn"
           >

@@ -55,7 +55,7 @@
         <a-form-item v-if="step == 1" label="First name">
           <a-input
             v-model="application.first_name"
-            size="default"
+            size="large"
             placeholder="Your first name"
             v-decorator="['first_name', { rules: [{ required: true, message: 'Please enter your first name' }] }]"
           >
@@ -65,7 +65,7 @@
         <a-form-item v-if="step == 1" label="Last name">
           <a-input
             v-model="application.last_name"
-            size="default"
+            size="large"
             placeholder="Your last name"
             v-decorator="['last_name', { rules: [{ required: true, message: 'Please enter your last name' }] }]"
           >
@@ -85,7 +85,7 @@
         <a-form-item v-if="step == 2" label="Mobile number">
           <a-input
             v-model="application.mobile"
-            size="default"
+            size="large"
             placeholder="Your mobile number"
             v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
           >
@@ -95,7 +95,7 @@
         <a-form-item v-if="step == 2" label="Email address">
           <a-input
             v-model="application.email"
-            size="default"
+            size="large"
             placeholder="Your email address"
             v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please confirm your email' }] }]"
           >
@@ -130,7 +130,7 @@
         <a-form-item v-if="step == 4" label="Address line 1">
           <a-input
             v-model="application.address_line_1"
-            size="default"
+            size="large"
             placeholder="Your address line 1"
             v-decorator="['address_line_1', { rules: [{ required: true, message: 'Please enter your address line 1' }] }]"
           >
@@ -140,7 +140,7 @@
         <a-form-item v-if="step == 4" label="Address line 2 (optional)">
           <a-input
             v-model="application.address_line_2"
-            size="default"
+            size="large"
             placeholder="Your address line 2"
             v-decorator="['address_line_2', { rules: [{ required: false, message: 'Please enter your address line 2' }] }]"
           >
@@ -150,7 +150,7 @@
         <a-form-item v-if="step == 5" label="Post code">
           <a-input
             v-model="application.post_code"
-            size="default"
+            size="large"
             placeholder="Your post code"
             v-decorator="['post_code', { rules: [{ required: true, message: 'Please enter your post code' }] }]"
           >
@@ -160,7 +160,7 @@
         <a-form-item v-if="step == 5" label="City">
           <a-input
             v-model="application.city"
-            size="default"
+            size="large"
             placeholder="Your city"
             v-decorator="['city', { rules: [{ required: true, message: 'Please enter your city' }] }]"
           >
@@ -170,7 +170,7 @@
         <a-form-item v-if="step == 6" label="Province">
           <a-input
             v-model="application.province"
-            size="default"
+            size="large"
             placeholder="Your province"
             v-decorator="['province', { rules: [{ required: true, message: 'Please enter your province' }] }]"
           >

@@ -12,7 +12,6 @@
                   src-placeholder="/assets/icon_default.png"
                   src="/assets/icon_default.png"
         />
-
       </div>
     </a-col>
   </a-row>

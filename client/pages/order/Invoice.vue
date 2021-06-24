@@ -14,7 +14,7 @@
         <a-row type="flex" justify="center" align="middle">
             <a-col :xs="{ span: 24 }">
                 <a-card title="ORDER TIMELINE" style="width: 100%;">
-                    <a-steps :direction="isVertical ? 'vertical' : 'horizontal'" size="default">
+                    <a-steps :direction="isVertical ? 'vertical' : 'horizontal'" size="large">
                         <a-step title="Order received"
                                 :description="isVertical ? 'We are awaiting payment for your order' : ''"/>
                         <a-step title="Order is being processed"
@@ -80,7 +80,7 @@
         <a-table bordered :dataSource="data" :columns="columns">
             <template slot="photo" slot-scope="photo">
                 <a-avatar
-                        shape="square" size="default"
+                        shape="square" size="large"
                         style="width: 56px; height: 56px; border-radius: 0px;"
                         slot="avatar"
                         :src="photo"

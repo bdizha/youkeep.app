@@ -12,7 +12,7 @@
                     @click="onMinus"
                     block
                     type="secondary"
-                    size="default"
+                    size="large"
           >
             <a-icon class="r-icon-empty" type="minus"/>
           </a-button>
@@ -35,7 +35,7 @@
                     @click="onPlus"
                     block
                     type="secondary"
-                    size="default"
+                    size="large"
           >
             <a-icon class="r-icon-empty" type="plus"/>
           </a-button>

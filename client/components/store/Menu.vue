@@ -1,14 +1,17 @@
 <template>
-  <div class="r-store-flex">
+  <div class="r-catalog-store">
     <r-store-notice v-if="hasNotice"></r-store-notice>
     <r-store-face :is-plain="true" :store="store"></r-store-face>
-    <r-delivery-form size="default"
-                     :is-store="true"
-                     :has-submit="false"
-    ></r-delivery-form>
     <a-collapse default-active-key="1" expandIconPosition="right">
-      <a-collapse-panel class="r-collapse-panel" header="Catalog">
+      <a-collapse-panel key="1" class="r-collapse-panel" header="Delivery">
+        <r-delivery-form size="default"
+                         :is-store="true"
+                         :has-submit="false"
+        ></r-delivery-form>
+      </a-collapse-panel>
+      <a-collapse-panel key="10" class="r-collapse-panel" header="Catalog">
         <r-store-catalog></r-store-catalog>
+        <r-spinner :is-absolute="true"></r-spinner>
       </a-collapse-panel>
       <a-collapse-panel v-for="(item, index) in list"
                         :key="index"
@@ -17,7 +20,7 @@
       >
         <div v-html="item.content"></div>
       </a-collapse-panel>
-      <a-collapse-panel class="r-collapse-panel" header="You might like">
+      <a-collapse-panel :key="list.length" class="r-collapse-panel" header="You may also like">
         <r-store-list></r-store-list>
       </a-collapse-panel>
     </a-collapse>
@@ -53,11 +56,11 @@ export default {
     this.payload()
   },
   methods: {
-    async payload () {
+    payload () {
       this.list = [
         {
           title: 'Trading Hours',
-          content: this.store.trading_hours
+          content: this.store ? this.store.trading_hours : null
         },
         {
           title: 'Contact',
@@ -65,14 +68,14 @@ export default {
         },
         {
           title: 'Description',
-          content: this.store.content_formatted
+          content: this.store ? this.store.content_formatted : null
         },
         {
           title: 'Website',
-          content: this.store.url
+          content: '<a target="_blank" href="' + this.store.url + '">' + this.store.url + '</a>'
         }
       ]
-    },
-  },
+    }
+  }
 }
 </script>

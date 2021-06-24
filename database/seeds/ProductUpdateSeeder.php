@@ -71,23 +71,12 @@ class ProductUpdateSeeder extends DatabaseSeeder
                 if (empty($product->photo) || !file_exists(public_path('storage/product/' . $product->photo)) ||
                     empty($product->thumbnail) || !file_exists(public_path('storage/product/' . $product->thumbnail))) {
 
-                    CategoryProduct::where('product_id', $product->id)
+                    $attributes = ['product_id' => $product->id];
+                    $values = ['is_active', false];
+                    Product::updateOrCreate($attributes, $values)
                         ->delete();
 
-                    StoreProduct::where('product_id', $product->id)
-                        ->delete();
-
-                    ProductVariant::where('product_id', $product->id)
-                        ->delete();
-
-                    ProductLink::where('product_id', $product->id)
-                        ->orWhere('related_id', $product->id)
-                        ->delete();
-
-                    Product::where('id', $product->id)
-                        ->delete();
-
-                    echo "Deleted Product >>>> " . $product->name . " product id > " . $product->id . "\n";
+                    echo "Disabled Product >>>> " . $product->name . " product id > " . $product->id . "\n";
                 } else {
                     $this->_setProductPhoto($product->photo, $product->thumbnail, $product);
                     echo "Added Product Photos >>>> {$product->name} \n";

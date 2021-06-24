@@ -1,5 +1,5 @@
 <template>
-  <a-row align="top" class="r-mt-48" justify="center" type="flex">
+  <a-row align="top"  justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-steps v-model="currentStep" :current="currentStep" direction="horizontal">
         <a-step v-for="(step, index) in steps"
@@ -19,8 +19,9 @@
                   <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <div class="r-step-avatar">
                       <r-avatar
+                        class="r-avatar-auto"
                         :key="index" :size="72"
-                        :src="'/assets/icons/art-0' + (index + 1) + '.svg?v=1'"
+                        :src="'/images/content/step-0' + (index + 1) + '.png?v=1'"
                         shape="square"
                         src-placeholder="/assets/icon_default.png"
                         unit="px"

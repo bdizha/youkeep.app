@@ -27,7 +27,7 @@
           <a-col :xs="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
             <a-breadcrumb class="r-mb-24">
               <a-breadcrumb-item>
-                <nuxt-link class="r-text-primary r-text-view-more"
+                <nuxt-link class="r-text-primary"
                            :to="'/career/openings'">
                   Jop openings
                 </nuxt-link>
@@ -53,7 +53,7 @@
                 <a :href="'/career/' + position.slug + '/apply'">
                   <a-button block
                             class="r-btn-secondary"
-                            size="default" type="secondary">
+                            size="large" type="secondary">
                     Apply for this job
                   </a-button>
                 </a>

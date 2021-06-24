@@ -25,7 +25,7 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
           <a-form-item label="Amount">
             <a-input type="text"
-                     size="default"
+                     size="large"
                      placeholder="Amount"
                      v-decorator="['amount', { rules: [{ required: true, message: 'Please enter amount' }] }]"
             >
@@ -38,7 +38,7 @@
         <a-col :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onReturn"
-                      size="default"
+                      size="large"
                       type="secondary"
                       html-type="button"
                       class="r-btn-bordered-grey"
@@ -50,7 +50,7 @@
         <a-col :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onPost"
-                      size="default"
+                      size="large"
                       type="secondary"
                       html-type="submit"
                       class="r-btn-secondary"

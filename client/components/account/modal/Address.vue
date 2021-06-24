@@ -23,19 +23,19 @@
     >
       <a-form-item label="Address Line 1">
         <a-input
-          size="default"
+          size="large"
           v-decorator="['address_line', { rules: [{ required: true, message: 'Please enter your Address line 1' }] }]"
         />
       </a-form-item>
       <a-form-item label="Address line 1 (optional)">
         <a-input
-          size="default"
+          size="large"
           v-decorator="['address_line_2', { rules: [] }]"
         />
       </a-form-item>
       <a-form-item label="Suburb">
         <a-input
-          size="default"
+          size="large"
           v-decorator="['suburb', { rules: [{ required: true, message: 'Please enter your suburb' }] }]"
         />
       </a-form-item>
@@ -43,7 +43,7 @@
         <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 16 }">
           <a-form-item label="City">
             <a-input
-              size="default"
+              size="large"
               v-decorator="['city', { rules: [{ required: true, message: 'Please enter your city' }] }]"
             />
           </a-form-item>
@@ -51,7 +51,7 @@
         <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 8 }">
           <a-form-item label="Postal Code">
             <a-input
-              size="default"
+              size="large"
               v-decorator="['postal_code', { rules: [{ required: true, message: 'Please enter your postal code' }] }]"
             />
           </a-form-item>
@@ -79,7 +79,7 @@
         >
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onDelete"
-                      size="default"
+                      size="large"
                       type="secondary"
                       html-type="button"
                       class="r-btn-bordered-primary"
@@ -91,7 +91,7 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onReturn"
-                      size="default"
+                      size="large"
                       type="secondary"
                       html-type="button"
                       class="r-btn-bordered-grey"
@@ -103,7 +103,7 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onPost"
-                      size="default"
+                      size="large"
                       type="secondary"
                       html-type="submit"
                       class=" r-btn-secondary"

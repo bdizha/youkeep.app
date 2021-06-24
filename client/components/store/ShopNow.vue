@@ -1,7 +1,9 @@
 <template>
   <a-row type="flex" :justify="justify" align="middle">
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: span}">
-      <a-button @click="onModal" class="r-btn-secondary"
+      <a-button @click="onModal"
+                block
+                class="r-btn-secondary"
                 type="secondary"
                 :size="size"
       >

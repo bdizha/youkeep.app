@@ -17,7 +17,6 @@
         <r-category-shop-now :category="category" justify="center"></r-category-shop-now>
       </a-col>
     </a-row>
-    <r-spinner :is-absolute="true"></r-spinner>
   </div>
 </template>
 <script>

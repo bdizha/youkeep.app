@@ -140,7 +140,7 @@
         <a-row type="flex" justify="center" align="middle">
           <a-col class="r-padding-bottom-48" :xs="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }">
-            <a-button @click="onModal('merchant')" size="default" type="secondary">
+            <a-button @click="onModal('merchant')" size="large" type="secondary">
               Become a merchant
             </a-button>
           </a-col>

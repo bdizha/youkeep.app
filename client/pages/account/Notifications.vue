@@ -42,7 +42,7 @@
                             <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                    :md="{ span: 12 }"
                                    :lg="{ span: 12 }">
-                                <a-switch v-model="canSendSms" size="default" default-checked/>
+                                <a-switch v-model="canSendSms" size="large" default-checked/>
                             </a-col>
                         </a-row>
                         <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
@@ -56,7 +56,7 @@
                             <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                    :md="{ span: 12 }"
                                    :lg="{ span: 12 }">
-                                <a-switch v-model="canSendApp" size="default" default-checked/>
+                                <a-switch v-model="canSendApp" size="large" default-checked/>
                             </a-col>
                         </a-row>
                     </a-card>
@@ -77,7 +77,7 @@
                             <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                    :md="{ span: 12 }"
                                    :lg="{ span: 12 }">
-                                <a-switch v-model="canSendEmail" size="default" default-checked/>
+                                <a-switch v-model="canSendEmail" size="large" default-checked/>
                             </a-col>
                         </a-row>
                     </a-card>
@@ -86,7 +86,7 @@
             <a-row type="flex" justify="end">
                 <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 6 }" :lg="{ span: 6 }">
                     <a-button block @click="onPost"
-                             size="default"
+                             size="large"
                               type="secondary"
                               html-type="submit"
                               class="r-btn-secondary">

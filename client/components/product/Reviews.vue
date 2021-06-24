@@ -22,7 +22,7 @@
               <a-button class="r-btn-bordered-grey"
                         block
                         type="secondary"
-                        size="default"
+                        size="large"
               >
                 {{ product.rating + '/' + 5 }}
               </a-button>

@@ -11,7 +11,7 @@
       >
         <a-form-item label="Notes">
           <a-input type="textarea"
-                   size="default"
+                   size="large"
                    placeholder="Your delivery instructions"
                    v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]"
           >
@@ -29,7 +29,7 @@
                  :sm="{ span: 12 }"
                  :md="{ span: 18 }" :lg="{ span: 18 }"
           >
-            <a-button size="default"
+            <a-button size="large"
                       type="secondary"
                       html-type="button"
                       class="r-btn-bordered-secondary"

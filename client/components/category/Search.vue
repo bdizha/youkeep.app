@@ -2,7 +2,7 @@
   <div class="r-search-wrapper" style="width: 100%">
     <a-auto-complete
       class="r-search"
-      size="default"
+      size="large"
       style="width: 100%"
       :placeholder="'Search ' + store.name + ' ...'"
       option-label-prop="title"
@@ -33,7 +33,7 @@
           slot="suffix"
           style="margin-right: -12px"
           class="search-btn"
-          size="default"
+          size="large"
           type="secondary"
         >
           <a-icon type="search"/>

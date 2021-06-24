@@ -4,7 +4,7 @@
            :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <div class="r-gradient r-p-12" :class="{'r-hide-lg': !hasCategories}">
+      <div class="r-pv-12" :class="{'r-hide-lg': !hasCategories}">
         <r-search class="r-hide-lg" :class="{'r-pb-12': hasCategories}"></r-search>
         <r-category-arrows v-if="hasCategories"></r-category-arrows>
       </div>
@@ -13,7 +13,7 @@
                :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
-          <r-store-catalog :columns="3" :span="3"></r-store-catalog>
+          <r-store-catalog :has-card="true" :columns="3" :span="3"></r-store-catalog>
           <r-product-flush :columns="3"></r-product-flush>
         </a-col>
       </a-row>
@@ -28,7 +28,14 @@
           </div>
         </a-col>
       </a-row>
-      <r-category-actions v-if="hasCategories"></r-category-actions>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+           :md="{ span: 24 }"
+           :lg="{ span: 24 }"
+    >
+      <div class="r-pv-12" v-if="hasCategories">
+        <r-category-arrows></r-category-arrows>
+      </div>
     </a-col>
   </a-row>
 </template>

@@ -46,19 +46,21 @@
             :key="index" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 6 }"
             :lg="{span: 6}"
           >
-            <a-card hoverable>
-              <div slot="cover">
-                <nuxt-link
-                  :to="banner.route" style="display: block; width: 100%;"
-                >
-                  <r-avatar shape="square"
-                            :size="100"
-                            unit="%"
-                            :src="banner.photo"
-                  />
-                </nuxt-link>
-              </div>
-            </a-card>
+            <nuxt-link
+              :to="banner.route" style="display: block; width: 100%;"
+            >
+              <a-card class="r-card-category r-spin-holder" hoverable>
+                <a-card-meta>
+                  <template slot="description">
+                    <r-avatar shape="square"
+                              :size="100"
+                              unit="%"
+                              :src="banner.photo"
+                    />
+                  </template>
+                </a-card-meta>
+              </a-card>
+            </nuxt-link>
           </a-col>
         </a-row>
       </div>

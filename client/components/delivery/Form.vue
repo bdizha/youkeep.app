@@ -30,7 +30,7 @@
                       slot="suffix"
                       style="margin-right: -12px"
                       class="r-btn-secondary"
-                      size="default"
+                      size="large"
                       type="secondary"
             >
               Let's go

@@ -15,7 +15,7 @@
                  :md="{ span: 24 }"
                  :lg="{ span: 24 }"
           >
-            <r-store-shop-now size="default"></r-store-shop-now>
+            <r-store-shop-now size="large"></r-store-shop-now>
           </a-col>
         </a-row>
       </a-empty>

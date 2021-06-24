@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="r-p-24" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-row v-if="hasStores && !processes.isTray" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"

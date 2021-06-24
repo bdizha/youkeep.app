@@ -11,14 +11,14 @@
                 <r-store-photo slot="cover" :store="store"></r-store-photo>
               </div>
             </a-col>
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+            <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
               <r-store-meta :store="store"></r-store-meta>
             </a-col>
             <a-col v-if="false" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
               <a-button
                 block
                 class="r-btn-primary"
-                size="default"
+                size="large"
                 icon="check-circle"
                 type="secondary"
               >

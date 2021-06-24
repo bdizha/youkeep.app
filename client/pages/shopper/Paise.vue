@@ -11,7 +11,7 @@
                 Paise for Shoppers
               </h4>
               <h1 class="r-heading">
-                <span class="r-text-primary">Shop more,</span><br>
+                <span class="r-text-primary">Shop More,</span><br>
                 <span>Earn more</span>
               </h1>
               <h4 class="r-heading-light">
@@ -62,7 +62,7 @@
                         block
                         type="secondary"
                         class="r-btn-secondary"
-                        size="default">
+                        size="large">
                         Get started
                       </a-button>
                     </nuxt-link>

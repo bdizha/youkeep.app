@@ -47,6 +47,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
 
             $this->storeCategories = StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
+                ->whereIn('category_id', [1971])
                 ->orderBy('store_categories.updated_at', "ASC")
                 ->take(12)
                 ->get();

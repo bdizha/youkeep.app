@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-slider" type="flex" justify="center" align="middle">
-    <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col class="r-" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <VueSlickCarousel v-show="hasCategories" v-bind="settings">
         <nuxt-link :prefetch="true" class="r-slider-item r-text-view-more"
                    :class="'r-slider-item-' + size"
@@ -39,7 +39,7 @@ export default {
   name: 'r-category-arrows',
   props: {
     columns: { type: Number, required: false, default: 8 },
-    size: { type: Number, required: false, default: 36 },
+    size: { type: Number, required: false, default: 72 },
   },
   data () {
     return {

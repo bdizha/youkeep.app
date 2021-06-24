@@ -4,7 +4,7 @@
            :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <div class="r-margin-out-12">
+      <div class="r-ph-24">
         <r-category-slider></r-category-slider>
       </div>
     </a-col>
@@ -15,7 +15,6 @@
       <div class="r-grey-shadow">
         <r-category-list v-if="hasCategories" :is-flush="true" :columns="6" :limit="12"></r-category-list>
       </div>
-      <r-steps></r-steps>
     </a-col>
   </a-row>
 </template>

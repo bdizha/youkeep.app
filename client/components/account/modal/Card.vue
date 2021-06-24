@@ -26,7 +26,7 @@
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
           <a-form-item label="Card number">
             <a-input type="text"
-                     size="default"
+                     size="large"
                      placeholder="1234 1234 1234 1234"
                      v-decorator="['card_number', { rules: [{ required: true, message: 'Please enter card number' }] }]"
             >
@@ -37,7 +37,7 @@
         <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
           <a-form-item label="Expiration">
             <a-input type="text"
-                     size="default"
+                     size="large"
                      placeholder="MM / YY"
                      v-decorator="['expire_at', { rules: [{ required: true, message: 'Please enter expiration' }] }]"
             >
@@ -48,7 +48,7 @@
         <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
           <a-form-item label="CVC">
             <a-input type="text"
-                     size="default"
+                     size="large"
                      placeholder="CVC"
                      v-decorator="['cvc', { rules: [{ required: true, message: 'Please enter CVC' }] }]"
             >
@@ -61,14 +61,14 @@
           <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
           >
-            <a-button block @click="onReturn" size="default" class="r-btn-bordered-grey">
+            <a-button block @click="onReturn" size="large" class="r-btn-bordered-grey">
               Back
             </a-button>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
           >
-            <a-button block @click="onPost" size="default" type="secondary" html-type="submit"
+            <a-button block @click="onPost" size="large" type="secondary" html-type="submit"
                       class="r-btn-secondary"
             >
               Save

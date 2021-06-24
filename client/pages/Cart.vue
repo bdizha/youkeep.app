@@ -20,7 +20,7 @@
                                     <div class="gutter-box">
                                         <a-avatar
                                                 shape="square"
-                                                size="default"
+                                                size="large"
                                                 slot="avatar"
                                                 :src="'/storage/product/' + item.thumbnail">
                                         </a-avatar>
@@ -66,7 +66,7 @@
                                     empty.
                                 </h4>
                                 <nuxt-link :to="'/store/' + store.slug">
-                                    <a-button size="default" class="ant-btn-primary r-btn-black">
+                                    <a-button size="large" class="ant-btn-primary r-btn-black">
                                         <a-icon type="shopping"/>
                                         Shop now
                                     </a-button>

@@ -18,7 +18,7 @@
           <a-col class="gutter-row" :span="24">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
-                <nuxt-link class="r-text-primary r-text-view-more"
+                <nuxt-link class="r-text-primary"
                              :to="'/help'">
                   Help center
                 </nuxt-link>

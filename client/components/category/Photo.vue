@@ -6,7 +6,7 @@
            :xs="{span:8}" :sm="{span:8}" :md="{span:8}" :lg="{span:8}"
     >
       <r-avatar shape="square"
-                :size="99"
+                :size="size"
                 :src="photo"
                 src-placeholder="/assets/icon_default.png"
       />
@@ -19,10 +19,10 @@ export default {
   props: {
     category: { type: Object, required: true, default: {} },
     start: { type: Number, required: true, default: 1 },
+    size: { type: Number, false: true, default: 90 }
   },
   data () {
     return {
-      size: 80,
       styles: null
     }
   },

@@ -62,7 +62,7 @@
           </a-row>
         </a-col>
         <a-col
-          style="background: url(/images/content/90.png) no-repeat; background-size: cover; padding-bottom: 600px;"
+          style="background: url(/images/content/hero-01.png) no-repeat; background-size: contain; padding-bottom: 600px;"
           :xs="{ span: 24 }" :sm="{ span: 24 }"
           :md="{ span: 12 }"
           :lg="{ span: 12 }"
@@ -352,7 +352,7 @@
                          :lg="{ span: 12 }"
                   >
                     <a-button block @click="onRegister"
-                              size="default"
+                              size="large"
                               class="r-btn-secondary"
                               type="secondary"
                     >

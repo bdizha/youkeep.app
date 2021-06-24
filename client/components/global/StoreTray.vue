@@ -10,7 +10,7 @@
         </a-col>
         <a-col :span="12" style="text-align: right;">
           <a-select
-            size="default"
+            size="large"
             labelInValue
             :defaultValue="sortOptions[0]"
             style="width: 160px;"

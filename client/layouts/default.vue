@@ -1,7 +1,7 @@
 <template>
   <a-layout class="r-layout__default">
     <r-header></r-header>
-    <a-layout-content :class="{'r-spin__active' :processes.isFixed}">
+    <a-layout-content :class="{'r-spin__active' :false}">
       <a-layout>
         <a-layout-content>
           <nuxt />

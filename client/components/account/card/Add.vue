@@ -3,7 +3,7 @@
     <a-col :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 6 }" :lg="{ span: 6 }">
       <a-button @click="onModal"
                 block
-                size="default"
+                size="large"
                 type="secondary"
                 html-type="button"
                 class="r-btn-secondary"

@@ -16,7 +16,7 @@
                   </h4>
                   <h1 class="r-heading">
                     <span class="r-text-secondary">Sell more,</span><br>
-                    <span>Pay less</span>
+                    <span>Pay Less</span>
                   </h1>
                   <p class="r-text-normal">
                     Unlike other buy-now-pay-later plans, Paise lets shoppers use their existing credit card for
@@ -86,7 +86,7 @@
                         block
                         type="secondary"
                         class="r-btn-secondary"
-                        size="default">
+                        size="large">
                         Get started
                       </a-button>
                     </nuxt-link>

@@ -2,7 +2,7 @@
   <a-row type="flex r-store-item-line" justify="center" align="middle">
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-auto-complete
-        size="default"
+        size="large"
         style="width: 100%"
         :placeholder="'Search or switch your store...'"
         option-label-prop="title"

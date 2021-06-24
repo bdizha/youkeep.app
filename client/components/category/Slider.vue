@@ -11,7 +11,7 @@
               v-if="c.id != category.id"
               v-for="(c, index) in categories"
               :key="index"
-              style="display: block; width: 100%;"
+              :has-card="hasCard"
               :category="c"
             ></r-category-bundle>
             <template #prevArrow="arrowOption">
@@ -38,6 +38,7 @@ export default {
   props: {
     size: { type: Number, required: false, default: 150 },
     columns: { type: Number, required: false, default: 3 },
+    hasCard: { type: Boolean, required: false, default: true }
   },
   data () {
     return {
@@ -73,7 +74,7 @@ export default {
             }
           }
         ]
-      },
+      }
     }
   },
   computed: {
@@ -83,7 +84,7 @@ export default {
       store: 'shop/store',
       hasProducts: 'base/hasProducts',
       hasCategories: 'base/hasCategories',
-      processes: 'base/processes',
+      processes: 'base/processes'
     })
   },
   created () {

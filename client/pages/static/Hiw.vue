@@ -61,7 +61,7 @@
             </a-col>
           </a-row>
         </a-col>
-        <a-col style="background: url(/images/content/1.png) no-repeat; background-size: cover; padding-bottom: 600px;"
+        <a-col style="background: url(/client/static/images/content/hero-02.png) no-repeat; background-size: cover; padding-bottom: 600px;"
                :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 12 }"
                :lg="{ span: 12 }"

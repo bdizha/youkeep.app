@@ -25,7 +25,7 @@
           </a-form-item>
           <a-form-item label="Account password">
             <a-input type="password"
-                     size="default"
+                     size="large"
                      placeholder="Your account password"
                      v-decorator="['password', { rules: [{ required: true, message: 'Please enter your account password' }] }]"
             >
@@ -34,7 +34,7 @@
           </a-form-item>
           <a-form-item label="Confirm password">
             <a-input type="password"
-                     size="default"
+                     size="large"
                      placeholder="Confirm password"
                      v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm account password' }] }]"
             >

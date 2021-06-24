@@ -80,13 +80,13 @@ a.r-text-link {
 }
 
 a.r-text-logo {
-    color: #FFFFFF;
+    color: @white;
     font-weight: bold;
     font-size: 21px;
 }
 
 .r-text-white {
-    color: #FFFFFF;
+    color: @white;
 }
 
 .r-text-primary {
@@ -170,7 +170,7 @@ a.r-text-logo {
         }
 
         .r-text-link {
-            color: #FFFFFF;
+            color: @white;
         }
     }
 
@@ -424,7 +424,7 @@ x {
 
     .r-store-active {
         background: #F50A2B !important;
-        color: #FFFFFF;
+        color: @white;
         position: absolute;
         top: -9px;
         bottom: -9px;
@@ -597,7 +597,7 @@ x {
 
         &:hover {
             background: @secondary-color;
-            color: #FFFFFF;
+            color: @white;
             border: 1px solid #FDBAC4;
         }
     }
@@ -696,7 +696,7 @@ x {
     position: absolute;
     top: -60px;
     left: 0;
-    color: #FFFFFF;
+    color: @white;
     margin: 0;
     height: 24px;
     z-index: 11;
@@ -777,7 +777,7 @@ x {
             }
 
             .r-cart-count {
-                color: #FFFFFF;
+                color: @white;
             }
         }
     }
@@ -813,7 +813,7 @@ x {
         &:focus,
         &.r-btn-icon__active {
             opacity: 1;
-            color: #FFFFFF;
+            color: @white;
             background: @secondary-color;
         }
     }
@@ -844,7 +844,7 @@ x {
     .r-product-cart-text {
         font-size: 15px;
         font-weight: 700;
-        color: #FFFFFF;
+        color: @white;
     }
 
     .r-product-qnty {
@@ -856,7 +856,7 @@ x {
         margin-left: -45px;
         left: 50%;
         top: 25%;
-        color: #FFFFFF;
+        color: @white;
         @media (max-width: 768px) {
             width: 60px;
             margin-left: -30px;
@@ -900,7 +900,7 @@ x {
                 background-color: @secondary-color;
 
                 &:after {
-                    border-color: #FFFFFF;
+                    border-color: @white;
                 }
             }
         }
@@ -915,7 +915,7 @@ x {
 
                 &:after {
                     background-color: @secondary-color;
-                    border-color: #FFFFFF;
+                    border-color: @white;
                 }
             }
         }
@@ -1000,7 +1000,7 @@ x {
                     background-color: transparent;
 
                     &:after {
-                        border-color: #FFFFFF;
+                        border-color: @white;
                     }
                 }
             }
@@ -1011,11 +1011,11 @@ x {
                 box-shadow: #eefaff 0px 1px 3px 0px;
 
                 .ant-checkbox-inner {
-                    border-color: #FFFFFF;
+                    border-color: @white;
 
                     &:after {
                         background-color: @secondary-color;
-                        border-color: #FFFFFF;
+                        border-color: @white;
                     }
                 }
             }
@@ -1036,7 +1036,7 @@ x {
         &:focus,
         &.r-btn-icon__active {
             opacity: 1;
-            color: #FFFFFF;
+            color: @white;
             background: @secondary-color;
         }
     }
@@ -1067,22 +1067,23 @@ x {
         font-weight: 600;
     }
 
-    background: rgba(255, 255, 255, 0.09);
-    color: #FFFFFF;
+    background: @secondary-color;
+    color: @white;
     border-color: rgba(255, 255, 255, 0.045);
     opacity: 1;
 
     &:hover {
-        border-color: #FFFFFF;
-        color: #FFFFFF;
-        background: rgba(255, 255, 255, 0.03);
-        opacity: 1;
+        opacity: 0.9;
+        border-color: @primary-color;
+        color: @white;
+        background: @primary-color;
     }
 
     &:focus {
         opacity: 0.9;
-        border-color: #3C444C;
-        background: rgba(255, 255, 255, 0.03);
+        border-color: @primary-color;
+        color: @white;
+        background: @primary-color;
     }
 }
 
@@ -1092,7 +1093,7 @@ x {
     }
 
     background: @secondary-color;
-    color: #FFFFFF;
+    color: @white;
     border-color: @secondary-color;
     opacity: 1;
 
@@ -1120,7 +1121,7 @@ x {
             &:hover {
                 color: @secondary-color;
                 background: rgba(255, 255, 255, 1);
-                border-color: #FFFFFF;
+                border-color: @white;
             }
         }
     }
@@ -1129,16 +1130,20 @@ x {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
 
         .r-store-text {
-            font-weight: 800;
+            font-weight: 700;
             text-align: center;
+            font-size: 15px;
         }
 
         .r-store-slogan {
             font-weight: 500;
             text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
             @media (max-width: 768px) {
                 font-weight: 400;
-                font-size: 18px;
+                font-size: 16px;
             }
         }
 
@@ -1203,7 +1208,7 @@ x {
 
         &:hover {
             background: #F50A2B15;
-            color: #FFFFFF;
+            color: @white;
             border: 1px solid #FDBAC415;
         }
     }
@@ -1411,7 +1416,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
     &:hover {
         background: #F50A2B;
-        color: #FFFFFF;
+        color: @white;
     }
 }
 
@@ -1488,7 +1493,7 @@ xxl	≥1600px, could be a span value or an object containing above props
                     .ant-avatar-icon {
                         background: @secondary-color;
                         border-color: #1B9BD933;
-                        color: #FFFFFF;
+                        color: @white;
                     }
 
                     .r-text-link {
@@ -1548,7 +1553,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
     .r-cart-total {
         overflow: hidden;
-        color: #FFFFFF;
+        color: @white;
         font-size: 24px;
         font-weight: 600;
     }
@@ -1561,11 +1566,11 @@ xxl	≥1600px, could be a span value or an object containing above props
 
         &:hover {
             background: @secondary-color;
-            color: #FFFFFF;
+            color: @white;
         }
 
         h4.r-heading {
-            color: #FFFFFF;
+            color: @white;
         }
     }
 
@@ -1578,11 +1583,11 @@ xxl	≥1600px, could be a span value or an object containing above props
 
             &:hover {
                 background: @secondary-color;
-                color: #FFFFFF;
+                color: @white;
             }
 
             h4.r-heading {
-                color: #FFFFFF;
+                color: @white;
             }
         }
     }
@@ -1599,7 +1604,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .r-bg-white {
-    background-color: #FFFFFF;
+    background-color: @white;
 }
 
 
@@ -1642,7 +1647,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
     .r-cart-total {
         overflow: hidden;
-        color: #FFFFFF;
+        color: @white;
         font-size: 24px;
         font-weight: 600;
     }
@@ -1655,11 +1660,11 @@ xxl	≥1600px, could be a span value or an object containing above props
 
         &:hover {
             background: @secondary-color;
-            color: #FFFFFF;
+            color: @white;
         }
 
         h4.r-heading {
-            color: #FFFFFF;
+            color: @white;
         }
     }
 
@@ -1672,11 +1677,11 @@ xxl	≥1600px, could be a span value or an object containing above props
 
             &:hover {
                 background: @secondary-color;
-                color: #FFFFFF;
+                color: @white;
             }
 
             h4.r-heading {
-                color: #FFFFFF;
+                color: @white;
             }
         }
     }
@@ -1693,7 +1698,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .r-bg-white {
-    background-color: #FFFFFF;
+    background-color: @white;
 }
 
 
@@ -2259,10 +2264,10 @@ h4.r-heading-light {
 
 .ant-layout-header.r-switch-primary {
     background: #F50A2B url("/images/art-white.svg") repeat scroll 0% 0% !important;
-    color: #FFFFFF;
+    color: @white;
 
     .ant-menu {
-        color: #FFFFFF;
+        color: @white;
         background: transparent;
     }
 }
@@ -2324,7 +2329,7 @@ h4.r-heading-light {
         line-height: 30px;
 
         &.r-text-white {
-            color: #FFFFFF;
+            color: @white;
         }
 
         &.router-link-exact-active,
@@ -2349,13 +2354,13 @@ h4.r-heading-light {
         position: relative;
 
         .anticon {
-            color: #FFFFFF;
+            color: @white;
         }
     }
 
     .ant-menu-submenu-title {
         .anticon {
-            color: #FFFFFF;
+            color: @white;
         }
     }
 
@@ -2382,11 +2387,11 @@ h4.r-heading-light {
     justify-content: flex-start;
 
     .r-nav-item{
-        color: #FFFFFF;
+        color: @white;
     }
 
     .ant-menu-submenu-title {
-        color: #FFFFFF;
+        color: @white;
         border: 1px solid transparent;
         border-radius: @border-radius-base;
         overflow: hidden;
@@ -2670,7 +2675,7 @@ h4.r-heading-light {
     }
 
     .ant-radio-button-wrapper-checked {
-        color: #FFFFFF;
+        color: @white;
         background: @secondary-color;
         border-color: #FDBAC4;
     }
@@ -2924,7 +2929,7 @@ h4.r-heading-light {
 }
 
 .ant-modal-close {
-    color: #FFFFFF;
+    color: @white;
     right: -60px;
 
     &:focus {
@@ -3100,7 +3105,7 @@ h4.r-heading-light {
 
 .r-btn-bordered-accent {
     border: 1px solid #FFFFFF;
-    color: #FFFFFF;
+    color: @white;
     background: transparent !important;
 
     &:hover {
@@ -3117,7 +3122,7 @@ h4.r-heading-light {
 
     &:hover {
         border: 1px solid #FDBAC4;
-        color: #FFFFFF;
+        color: @white;
         background: #F50A2B !important;
     }
 }
@@ -3129,7 +3134,7 @@ h4.r-heading-light {
 
     &:hover {
         border: 1px solid @secondary-color;
-        color: #FFFFFF;
+        color: @white;
         background: @secondary-color !important;
     }
 }
@@ -3141,14 +3146,14 @@ h4.r-heading-light {
 
     &:hover {
         border: 1px solid @secondary-color;
-        color: #FFFFFF;
+        color: @white;
         background: @secondary-color !important;
     }
 }
 
 .r-btn-bordered-white {
     border: 1px solid #FFFFFF;
-    color: #FFFFFF;
+    color: @white;
     background: #3C444C;
 
     &:hover {
@@ -3165,7 +3170,7 @@ h4.r-heading-light {
 
     &:hover {
         border: 1px solid #3C444C;
-        color: #FFFFFF;
+        color: @white;
         background: #3C444C !important;
     }
 }
@@ -3266,8 +3271,8 @@ h4.r-heading-light {
     &.r-avatar-store {
         border: 6px solid #FFFFFF;
         box-shadow: rgba(12, 12, 13, 0.12) 0px 2px 4px 0px;
-        margin: 24px auto auto;
-        background-color: #FFFFFF;
+        margin: 6px 0;
+        background-color: @white;
 
         img {
             display: block;
@@ -3435,13 +3440,13 @@ h4.r-heading-light {
     .ant-collapse-item {
         > .ant-collapse-header {
             border: none;
-            padding: 12px 36px 12px 0;
+            padding: 12px 24px;
             font-weight: 600;
             color: rgb(60, 68, 76);
             font-size: 15px;
 
             .ant-collapse-arrow {
-                right: 0 !important;
+                right: 24px;
                 left: auto;
                 font-size: 15px !important;
                 background: #FAFBFC;
@@ -3451,6 +3456,10 @@ h4.r-heading-light {
                 border-radius: @border-radius-base;
                 overflow: hidden;
             }
+        }
+
+        .ant-collapse-content{
+            padding: 0 24px;
         }
 
         .ant-collapse-item {
@@ -3656,7 +3665,7 @@ h4.r-heading-light {
 .ant-collapse-content {
     overflow: hidden;
     color: #3C444C;
-    background-color: #FFFFFF;
+    background-color: @white;
     border: none;
 
     > .ant-collapse-content-box {
@@ -3764,7 +3773,7 @@ h4.r-heading-light {
     }
 
     .r-page-white {
-        background-color: #FFFFFF;
+        background-color: @white;
     }
 
     .r-page-skin {
@@ -3841,7 +3850,7 @@ h4.r-heading-light {
     position: relative;
     width: 100%;
     height: auto;
-    background-color: #FFFFFF;
+    background-color: @white;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -4218,11 +4227,11 @@ h4.r-heading-light {
 .r-search-btn {
     background-color: #F50A2BE6;
     border-color: #FDBAC4;
-    color: #FFFFFF;
+    color: @white;
 
     &:hover {
         background-color: @secondary-color;
-        color: #FFFFFF;
+        color: @white;
     }
 }
 
@@ -4333,7 +4342,7 @@ h4.r-heading-light {
         &:hover {
             border-bottom: 1px solid @secondary-color;
             fill: #FFFFFF;
-            color: #FFFFFF;
+            color: @white;
             background-color: @secondary-color;
         }
     }
@@ -4347,7 +4356,7 @@ h4.r-heading-light {
         &:hover {
             border-bottom: 1px solid @secondary-color;
             fill: #FFFFFF;
-            color: #FFFFFF;
+            color: @white;
             background-color: @secondary-color;
         }
     }
@@ -4355,7 +4364,7 @@ h4.r-heading-light {
 
 .r-store-item-line {
     border-bottom: 1px solid rgb(236, 236, 236, 1);
-    padding: 12px 24px;
+    padding: 12px 0;
 
     .r-store-actions {
         padding: 12px 0;
@@ -4543,7 +4552,7 @@ h4.r-heading-light {
 
 .r-switch-primary {
     .ant-menu-submenu-title {
-        color: #FFFFFF;
+        color: @white;
 
         &:hover {
             color: @secondary-color;
@@ -4555,7 +4564,7 @@ h4.r-heading-light {
             color: @secondary-color;
 
             &:hover {
-                color: #FFFFFF;
+                color: @white;
             }
         }
     }
@@ -4598,7 +4607,7 @@ h4.r-heading-light {
     vertical-align: middle;
     text-align: center;
     padding: 12px;
-    background-color: #FFFFFF;
+    background-color: @white;
     overflow: hidden;
     margin: 45px auto 30px;
     border-radius: @border-radius-base;
@@ -4822,7 +4831,7 @@ h4.r-heading-light {
     .r-layout-menu {
         .r-nav-item {
             &.r-nav-item__menu {
-                color: #FFFFFF;
+                color: @white;
             }
         }
     }
@@ -5073,7 +5082,7 @@ h4.r-heading-light {
     background-color: #3C444C;
     background-repeat: repeat;
     padding: 24px;
-    color: #FFFFFF;
+    color: @white;
 }
 
 .r-art-primary {
@@ -5253,6 +5262,8 @@ h4.r-heading-light {
     &.r-layout__store,
     &.r-layout__default {
         padding-top: 58px;
+        overflow-y: auto;
+        overflow-x: hidden;
 
         .ant-layout-sider {
             background: #FFFFFF;
@@ -5739,7 +5750,7 @@ h4.r-heading-light {
 
     &:hover {
         background: @secondary-color;
-        color: #FFFFFF;
+        color: @white;
     }
 }
 
@@ -5899,7 +5910,7 @@ h4.r-heading-light {
     h2,
     h3,
     h4{
-        color: #FFFFFF;
+        color: @white;
     }
 }
 
@@ -5937,6 +5948,17 @@ h4.r-heading-light {
     .r-arrow-prev {
         left: -30px;
         margin-top: -21px;
+    }
+}
+
+.r-catalog-store{
+    .r-slider {
+        .slick-list {
+            padding: 0;
+            .slick-slide {
+                padding: 4px 0;
+            }
+        }
     }
 }
 
@@ -5992,7 +6014,7 @@ h4.r-heading-light {
 .r-text-slider {
     font-size: 15px;
     font-weight: 600;
-    line-height: 36px;
+    line-height: 72px;
     text-overflow: ellipsis;
     overflow: hidden;
 }
@@ -6054,7 +6076,7 @@ h4.r-heading-light {
 .ant-tooltip-inner {
     background: @secondary-color;
     font-size: 15px;
-    color: #FFFFFF;
+    color: @white;
 }
 
 .ant-tooltip-arrow {
@@ -6304,7 +6326,7 @@ h4.r-heading-light {
 
 .r-gradient {
     .r-nav-item{
-        color: #FFFFFF;
+        color: @white;
     }
     .r-slider-item {
         background: rgba(0, 0, 0, 0.06);
@@ -6317,14 +6339,14 @@ h4.r-heading-light {
             background: transparent;
             font-size: 15px;
             font-weight: 400;
-            color: #FFFFFF;
+            color: @white;
         }
 
         &:hover {
             border: none;
-            color: #FFFFFF;
+            color: @white;
             .r-text-slider {
-                color: #FFFFFF;
+                color: @white;
             }
             background: rgba(0, 0, 0, 0.15);
         }
@@ -6482,7 +6504,7 @@ h4.r-heading-light {
     }
 
     &.r-icon__white {
-        background-color: #FFFFFF;
+        background-color: @white;
     }
 
     &.r-icon__primary {
@@ -6535,16 +6557,20 @@ h4.r-heading-light {
         background: transparent;
         border-radius: @border-radius-base;
         overflow: hidden;
+        .ant-select-selection__rendered {
+            line-height: 36px;
+        }
     }
 
     &.ant-select {
         .ant-input {
             background: rgba(255,255, 255, 0.3);;
             border-color: #1B9BD9;
-            color: #FFFFFF;
+            color: @white;
+            height: 36px;
 
             &::placeholder {
-                color: #FFFFFF;
+                color: @white;
                 font-size: 15px;
             }
 
@@ -6813,7 +6839,7 @@ a:hover {
     &:hover,
     &.r-filter-item__active {
         background-color: @secondary-color;
-        color: #FFFFFF;
+        color: @white;
     }
 }
 

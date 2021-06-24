@@ -6,16 +6,16 @@
            :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <h3 class="r-heading">
-        <span class="r-text-secondary">Get</span> vverything your <span class="r-text-primary">heart</span> desires
-      </h3>
+      <h1 class="r-heading">
+        <span class="r-text-secondary">Get</span> everything your <span class="r-text-primary">heart</span> desires
+      </h1>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 12 }"
            :md="{ span: span }"
            :lg="{ span: span }"
     >
       <a-button block
-                size="default"
+                size="large"
                 type="secondary"
                 class="r-btn-secondary"
       >

@@ -1,22 +1,20 @@
 <template>
-  <a-card class="r-card-category r-spin-holder" hoverable>
-    <nuxt-link class="r-text-primary r-text-view-more" :to="category.route">
-      <r-category-photo v-if="category.photos !== undefined" :category="category" :start="0"></r-category-photo>
-      <a-card-meta>
-        <template slot="description">
-          <a-row type="flex" justify="center" align="middle">
-            <a-col class="r-p-24 r-text-center" :span="24">
-              <h4 class="r-heading r-text-view-more" style="margin-bottom: 0;">
-                {{ category.name }}
-              </h4>
-            </a-col>
-          </a-row>
-        </template>
-      </a-card-meta>
-      <r-category-photo v-if="category.photos !== undefined" :category="category" :start="3"></r-category-photo>
-    </nuxt-link>
-    <r-spinner :is-absolute="true"></r-spinner>
-  </a-card>
+  <nuxt-link class="r-text-primary" :to="category.route">
+    <a-row class="r-text-center" type="flex" justify="center" align="middle">
+      <a-col v-if="hasCard" :span="24">
+        <a-card class="r-card-category r-spin-holder" hoverable>
+          <a-card-meta>
+            <template slot="description">
+              <r-category-photos :size="81" :category="category"></r-category-photos>
+            </template>
+          </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col v-if="!hasCard" :span="24">
+        <r-category-photos :size="75" :category="category"></r-category-photos>
+      </a-col>
+    </a-row>
+  </nuxt-link>
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -26,6 +24,7 @@ export default {
   components: {},
   props: {
     category: { type: Object, required: false, default: null },
+    hasCard: { type: Boolean, required: false, default: true }
   },
   data () {
     return {}

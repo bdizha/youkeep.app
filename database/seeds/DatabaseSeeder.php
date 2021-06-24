@@ -137,6 +137,7 @@ class DatabaseSeeder extends Seeder
             'external_url' => $values['external_url']
         ];
 
+        $values['is_active'] = true;
         $values['store_id'] = $this->storeId;
 
         unset($values['dimensions'], $values['photos'], $values['artist']);

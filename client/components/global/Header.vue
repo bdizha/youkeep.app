@@ -19,7 +19,7 @@
         </nuxt-link>
       </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__search">
-        <r-search></r-search>
+        <r-search size="default"></r-search>
       </r-nav-item>
       <r-nav-item class="r-hide-sm">
         <r-nav></r-nav>
@@ -32,7 +32,6 @@
       <r-nav-item class="r-nav-item__text">
         <div v-on:click="onModalClose">
           <a-button v-on:click="onModalClose"
-                    size="default"
                     class="r-btn-dark"
                     type="secondary"
                     html-type="button"

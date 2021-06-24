@@ -5,6 +5,7 @@
         <VueSlickCarousel v-bind="settings">
           <nuxt-link class="r-store-arrow"
                      v-for="(store, index) in stores.data"
+                     v-if="store"
                      :key="store.id"
                      :to="store.route"
           >

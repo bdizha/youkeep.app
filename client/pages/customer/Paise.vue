@@ -11,8 +11,8 @@
                 Paise for Customers
               </h4>
               <h1 class="r-heading">
-                <span class="r-text-secondary">Shop more,</span><br>
-                <span>Pay less</span>
+                <span class="r-text-secondary">Shop More,</span><br>
+                <span>Pay Less</span>
               </h1>
               <h3 class="r-heading-light">
                Paise is a better way to make or receive payments.
@@ -62,7 +62,7 @@
                         block
                         type="secondary"
                         class="r-btn-secondary"
-                        size="default">
+                        size="large">
                         Get started
                       </a-button>
                     </nuxt-link>

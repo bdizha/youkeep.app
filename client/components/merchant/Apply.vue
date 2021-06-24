@@ -28,7 +28,7 @@
               label="Full name"
             >
               <a-input
-                size="default"
+                size="large"
                 placeholder="Your full name"
                 v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
               >
@@ -43,7 +43,7 @@
               label="Role title"
             >
               <a-input
-                size="default"
+                size="large"
                 placeholder="Your role number"
                 v-decorator="['role', { rules: [{ required: true, message: 'Please enter your role title' }] }]"
               >
@@ -58,7 +58,7 @@
               label="Phone number"
             >
               <a-input
-                size="default"
+                size="large"
                 placeholder="Your phone number"
                 v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your phone number' }] }]"
               >
@@ -73,7 +73,7 @@
               label="Business email"
             >
               <a-input type="email"
-                       size="default"
+                       size="large"
                        placeholder="Your company email"
                        v-decorator="['email', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
               >
@@ -88,7 +88,7 @@
               label="Business website"
             >
               <a-input type="text"
-                       size="default"
+                       size="large"
                        placeholder="Your company website"
                        v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
               >
@@ -105,7 +105,7 @@
               <a-select
                 labelInValue
                 :defaultValue="platforms[0]"
-                size="default"
+                size="large"
                 @change="onPlatform"
                 style="min-width: 100%;"
               >
@@ -127,7 +127,7 @@
               <a-select
                 labelInValue
                 :defaultValue="industries[0]"
-                size="default"
+                size="large"
                 @change="onIndustry"
                 style="min-width: 100%;"
               >
@@ -147,7 +147,7 @@
               label="Business website"
             >
               <a-input type="text"
-                       size="default"
+                       size="large"
                        placeholder="Your company website"
                        v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
               >
@@ -162,7 +162,7 @@
               label="Average order value"
             >
               <a-input type="text"
-                       size="default"
+                       size="large"
                        placeholder="Your average order value"
                        v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
               >
@@ -179,7 +179,7 @@
               <a-select
                 labelInValue
                 :defaultValue="annual_sales_range[0]"
-                size="default"
+                size="large"
                 @change="onAnnualSales"
                 style="min-width: 100%;"
               >
@@ -197,7 +197,7 @@
           label="Notes"
         >
           <a-input type="textarea"
-                   size="default"
+                   size="large"
                    placeholder="Your message"
                    v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]"
           >

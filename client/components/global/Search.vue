@@ -2,7 +2,7 @@
   <div class="r-search-wrapper" style="width: 100%">
     <a-auto-complete
       class="r-search"
-      size="default"
+      size="large"
       style="width: 100%"
       :placeholder="placeholder"
       option-label-prop="title"
@@ -33,7 +33,7 @@
           slot="suffix"
           style="margin-right: -12px"
           class="r-btn-secondary"
-          size="default"
+          :size="size"
           type="secondary"
         >
           <a-icon type="search"/>
@@ -47,6 +47,9 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-search',
+  props: {
+    size: { type: String, required: false, default: 'large' }
+  },
   data () {
     return {
       payload: {
@@ -57,7 +60,7 @@ export default {
   },
   computed: {
     placeholder () {
-      return 'Search ' + (this.hasStore ? this.store.name : '') + '...'
+      return 'Search products ' + (this.hasStore ? ' at ' + this.store.name : '') + '...'
     },
     ...mapGetters({
       store: 'base/store',

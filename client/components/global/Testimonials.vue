@@ -14,7 +14,7 @@
         <a-button class="r-btn--grey"
                   block
                   type="secondary"
-                  size="default"
+                  size="large"
         >
           Explore More
           <a-icon type="right"/>

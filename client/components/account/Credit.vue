@@ -18,7 +18,7 @@
                 <a-col :xs="{ span: 12 }"
                        :sm="{ span: 12 }" :lg="{ span: 12 }"
                 >
-                  <a-switch disabled size="default" default-checked>
+                  <a-switch disabled size="large" default-checked>
                     <a-icon slot="checkedChildren" type="check"/>
                     <a-icon slot="unCheckedChildren" type="close"/>
                   </a-switch>

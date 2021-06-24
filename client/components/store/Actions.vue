@@ -9,7 +9,7 @@
           <a-button @click="onDrawer" class="r-btn-bordered-secondary"
                     block
                     type="secondary"
-                    size="default"
+                    size="large"
           >
             <a-icon type="shop"></a-icon>
             Catalog

@@ -125,7 +125,7 @@
                 <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                   <a-col :xs="{ span: 24 }" :sm="{ span: 6 }" :lg="{ span: 6 }">
                     <nuxt-link class="r-same-height r-footer-link" to="/shopper">
-                      <a-button block class="r-btn-bordered-white" size="default">
+                      <a-button block class="r-btn-bordered-white" size="large">
                         Become a shopper
                       </a-button>
                     </nuxt-link>

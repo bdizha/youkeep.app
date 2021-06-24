@@ -22,7 +22,7 @@
     >
       <a-form-item label="Current password">
         <a-input type="password"
-                 size="default"
+                 size="large"
                  placeholder="Current password"
                  v-decorator="['current_password', { rules: [{ required: true, message: 'Please enter new password' }] }]"
         >
@@ -31,7 +31,7 @@
       </a-form-item>
       <a-form-item label="New password">
         <a-input type="password"
-                 size="default"
+                 size="large"
                  placeholder="New password"
                  v-decorator="['password', { rules: [{ required: true, message: 'Please enter new password' }] }]"
         >
@@ -40,7 +40,7 @@
       </a-form-item>
       <a-form-item label="Confirm new password">
         <a-input type="password"
-                 size="default"
+                 size="large"
                  placeholder="Confirm new password"
                  v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm new password' }] }]"
         >
@@ -52,14 +52,14 @@
           <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
           >
-            <a-button block @click="onReturn" size="default" class="r-btn-bordered-grey">
+            <a-button block @click="onReturn" size="large" class="r-btn-bordered-grey">
               Back
             </a-button>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
           >
-            <a-button block @click="onPost" size="default" type="secondary" html-type="submit"
+            <a-button block @click="onPost" size="large" type="secondary" html-type="submit"
                       class="r-btn-secondary"
             >
               Save

@@ -58,7 +58,7 @@
                         block
                         type="secondary"
                         class="r-btn-secondary"
-                        size="default">
+                        size="large">
                         See openings
                       </a-button>
                     </nuxt-link>

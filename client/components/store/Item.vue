@@ -1,17 +1,17 @@
 <template>
   <div class="r-store-item-line">
-    <a-row type="flex" justify="center" align="middle">
-      <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-        <nuxt-link :to="store.route" class="r-store-item">
-          <r-avatar
-            class="r-avatar-store"
-            shape="square"
-            :size="72"
-            :src="store.photo_url"
-            src-placeholder="/assets/icon_default.png"
-          />
-          <r-store-meta :store="store"></r-store-meta>
-        </nuxt-link>
+    <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+      <a-col :xs="{span: 12}" :sm="{span: 10}" :md="{span: 9}" :lg="{span: 8}">
+        <r-avatar
+          class="r-avatar-store"
+          shape="square"
+          :size="size"
+          :src="store.photo_url"
+          src-placeholder="/assets/icon_default.png"
+        />
+      </a-col>
+      <a-col :xs="{span: 12}" :sm="{span: 14}" :md="{span: 15}" :lg="{span: 16}">
+        <r-store-meta :store="store"></r-store-meta>
       </a-col>
     </a-row>
   </div>
@@ -23,7 +23,8 @@ export default {
   props: {
     store: { type: Object, required: false },
     hasActions: { type: Boolean, required: false, default: true },
-    isShow: { type: Boolean, required: false, default: false },
+    size: { type: Number, required: false, default: 90 },
+    isShow: { type: Boolean, required: false, default: false }
   },
   data () {
     return {

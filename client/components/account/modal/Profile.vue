@@ -23,14 +23,14 @@
     >
       <a-form-item label="Your full name">
         <a-input
-          size="default"
+          size="large"
           placeholder="Your full name"
           v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
         />
       </a-form-item>
       <a-form-item label="Email address">
         <a-input
-          size="default"
+          size="large"
           placeholder="Your email address"
           v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
         />
@@ -41,7 +41,7 @@
         >
           <a-form-item label="Mobile number">
             <a-input
-              size="default"
+              size="large"
               placeholder="Your mobile number"
               v-decorator="['phone_number', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
             >
@@ -54,7 +54,7 @@
         >
           <a-form-item label="Your birth date">
             <a-date-picker
-              size="default"
+              size="large"
               :format="dateFormat"
               placeholder="Your birth date"
               v-decorator="['birth_date', { rules: [{ required: true, message: 'Please enter your birth date' }] }]"
@@ -67,14 +67,14 @@
           <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
           >
-            <a-button block @click="onReturn" size="default" class="r-btn-bordered-grey">
+            <a-button block @click="onReturn" size="large" class="r-btn-bordered-grey">
               Back
             </a-button>
           </a-col>
           <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
           >
-            <a-button block @click="onPost" size="default" type="secondary" html-type="submit"
+            <a-button block @click="onPost" size="large" type="secondary" html-type="submit"
                       class="r-btn-secondary"
             >
               Save

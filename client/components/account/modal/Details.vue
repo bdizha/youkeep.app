@@ -21,14 +21,14 @@
     >
       <a-form-item label="Your full name">
         <a-input
-          size="default"
+          size="large"
           placeholder="Your full name"
           v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
         />
       </a-form-item>
       <a-form-item label="Email address">
         <a-input
-          size="default"
+          size="large"
           placeholder="Your email address"
           v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
         />
@@ -39,7 +39,7 @@
         >
           <a-form-item label="Mobile number">
             <a-input
-              size="default"
+              size="large"
               placeholder="Your mobile number"
               v-decorator="['phone_number', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
             >
@@ -52,7 +52,7 @@
         >
           <a-form-item label="Your birth date">
             <a-date-picker
-              size="default"
+              size="large"
               :format="dateFormat"
               placeholder="Your birth date"
               v-decorator="['birth_date', { rules: [{ required: true, message: 'Please enter your birth date' }] }]"

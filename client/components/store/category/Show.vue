@@ -5,11 +5,11 @@
            :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <div class="r-gradient r-p-12" :class="{'r-hide-lg': !hasCategories}">
+      <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
+      <div class="r-p-12" :class="{'r-hide-lg': !hasCategories}">
         <r-search class="r-hide-lg" :class="{'r-pb-12': hasCategories}"></r-search>
         <r-category-arrows v-if="hasCategories"></r-category-arrows>
       </div>
-      <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
       <a-row type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
@@ -30,8 +30,15 @@
             <r-category-list :columns="6"></r-category-list>
           </div>
         </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <div class="r-pv-12" v-if="hasCategories">
+            <r-category-arrows></r-category-arrows>
+          </div>
+        </a-col>
       </a-row>
-      <r-category-actions v-if="hasCategories"></r-category-actions>
     </a-col>
   </a-row>
 </template>

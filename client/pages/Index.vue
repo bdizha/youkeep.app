@@ -16,26 +16,26 @@
                        :md="{ span: 24 }"
                        :lg="{ span: 24 }"
                 >
-                  <h4 class="r-heading-light r-text-uppercase">
+                  <h3 class="r-heading-light r-text-uppercase">
                     It's shopping time!
-                  </h4>
+                  </h3>
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ span: 24 }"
                        :lg="{ span: 24 }"
                 >
                   <h1 class="r-heading r-text-secondary">
-                    <span class="r-text-primary">Shop more,</span><br>
-                    <span class="r-text-secondary">Pay less.</span>
+                    <span class="r-text-primary">Shop More,</span><br>
+                    <span class="r-text-secondary">Pay Less.</span>
                   </h1>
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
+                       :md="{ span: 15 }"
+                       :lg="{ span: 16 }"
                 >
-                  <p class="r-text-normal">
-                    Yes, as long as you shop it with Shopple, you are fully powered.
-                  </p>
+                  <h4 class="r-heading-light">
+                    Yes, as long as you shop it with Shopple, you are fully powered to buy what your heart desires.
+                  </h4>
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ span: 12 }"
@@ -43,14 +43,14 @@
                 >
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
+                       :md="{ span: 16 }"
+                       :lg="{ span: 15 }"
                 >
                   <r-delivery-form></r-delivery-form>
                 </a-col>
               </a-row>
             </a-col>
-            <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
+            <a-col class="r-pv-48 r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                    :md="{ span: 12 }"
                    :lg="{ span: 12 }"
             >
@@ -58,7 +58,7 @@
                 <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 16 }"
                        :lg="{ span: 16 }"
                 >
-                  <h3 class="r-heading-light">
+                  <h3 class="r-heading-light r-text-secondary r-text-uppercase">
                     Shop everywhere, anytime!
                   </h3>
                 </a-col>
@@ -76,14 +76,28 @@
             </a-col>
           </a-row>
         </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+          <div class="r-ph-24">
+            <r-category-banners></r-category-banners>
+          </div>
+        </a-col>
       </a-row>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <r-category-banners></r-category-banners>
+      <r-category-arrows v-if="hasCategories"></r-category-arrows>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <r-welcome></r-welcome>
-      <r-testimonials></r-testimonials>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+      <div class="r-ph-24">
+        <r-steps></r-steps>
+      </div>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+      <div class="r-ph-24">
+        <r-testimonials></r-testimonials>
+      </div>
     </a-col>
   </a-row>
 </template>

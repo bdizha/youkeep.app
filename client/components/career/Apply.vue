@@ -42,14 +42,14 @@
           <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
-                <nuxt-link class="r-text-primary r-text-view-more"
+                <nuxt-link class="r-text-primary"
                            :to="'/career/openings'"
                 >
                   Jop openings
                 </nuxt-link>
               </a-breadcrumb-item>
               <a-breadcrumb-item>
-                <nuxt-link class="r-text-primary r-text-view-more"
+                <nuxt-link class="r-text-primary"
                            :to="'/career/' + position.slug"
                 >
                   {{ position.title }}
@@ -88,7 +88,7 @@
                       action="/career/resume"
                       v-decorator="['resume', { rules: [{ required: true, message: 'Please upload your resume/CV' }] }]"
                     >
-                      <a-button size="default">
+                      <a-button size="large">
                         <a-icon type="paper-clip"/>
                         Attach resume/CV
                       </a-button>
@@ -101,7 +101,7 @@
                     >
                       <a-form-item label="Full name">
                         <a-input
-                          size="default"
+                          size="large"
                           placeholder="Your full name"
                           v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
                         >
@@ -114,7 +114,7 @@
                     >
                       <a-form-item label="Your mobile">
                         <a-input
-                          size="default"
+                          size="large"
                           placeholder="Your mobile"
                           v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile' }] }]"
                         >
@@ -127,7 +127,7 @@
                     >
                       <a-form-item label="Email address">
                         <a-input type="email"
-                                 size="default"
+                                 size="large"
                                  placeholder="Your email address"
                                  v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
                         >
@@ -140,7 +140,7 @@
                     >
                       <a-form-item label="Current company">
                         <a-input
-                          size="default"
+                          size="large"
                           placeholder="Your current company"
                           v-decorator="['company', { rules: [{ required: true, message: 'Please enter your current company' }] }]"
                         >
@@ -153,7 +153,7 @@
                     >
                       <a-form-item label="Linkedin URL">
                         <a-input
-                          size="default"
+                          size="large"
                           placeholder="Your Linkedin URL"
                           v-decorator="['public_url', { rules: [{ required: false, message: 'Please enter your public URL' }] }]"
                         >
@@ -166,7 +166,7 @@
                     >
                       <a-form-item label="Other URL">
                         <a-input
-                          size="default"
+                          size="large"
                           placeholder="Your other URL"
                           v-decorator="['url_url', { rules: [{ required: false, message: 'Please enter your other URL' }] }]"
                         >

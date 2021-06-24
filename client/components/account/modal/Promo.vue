@@ -23,7 +23,7 @@
       </a-form-item>
       <a-form-item label="Your promo code">
         <a-input type="text"
-                 size="default"
+                 size="large"
                  placeholder="Promo code"
                  v-decorator="['promo_code', { rules: [{ required: true, message: 'Please enter promo code' }] }]"
         >
@@ -34,7 +34,7 @@
         <a-col :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onReturn"
-                      size="default"
+                      size="large"
                       type="secondary"
                       html-type="button"
                       class="r-btn-bordered-grey"
@@ -46,7 +46,7 @@
         <a-col :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
           <a-form-item :wrapper-col="{ span: 24 }">
             <a-button block @click="onPost"
-                      size="default"
+                      size="large"
                       type="secondary"
                       html-type="submit"
                       class="r-btn-secondary"

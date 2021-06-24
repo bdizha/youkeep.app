@@ -14,7 +14,7 @@
             <a-select
               labelInValue
               :defaultValue="sortOptions[0]"
-              size="default"
+              size="large"
               @change="onSort"
               style="min-width: 100%;"
             >
