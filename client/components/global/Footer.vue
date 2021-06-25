@@ -10,7 +10,7 @@
         </a-col>
       </a-row>
       <a-layout-footer v-if="hasFooter">
-        <a-row class="r-bg-white" type="flex" justify="center">
+        <a-row type="flex" justify="center">
           <a-col v-if="false" style="background: url(/images/content/11.png) no-repeat;background-size: cover;"
                  class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 24 }"
@@ -18,95 +18,133 @@
           >
             <div style="padding-bottom: 300px;"></div>
           </a-col>
-          <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+          <a-col class="r-ph-24 r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
             <a-row type="flex" justify="start" align="top">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 6 }">
-                <a-card title="It's shopping time" :bordered="false" style="width: 100%;">
-                  <a-row type="flex" justify="start" align="middle">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                      <nuxt-link class="r-text-center" to="/">
-                        <img src="/images/icon-06.svg?v=1"
-                             alt="Shopple - Online shop"
-                             class="r-footer-logo /"
-                        >
-                      </nuxt-link>
-                    </a-col>
-                  </a-row>
-                  <a-row type="flex" justify="start" align="middle">
-                    <a-col :xs="{ span: 18 }" :sm="{ span: 16 }" :lg="{ span: 16 }">
-                      <nuxt-link :to="$route.path" @click.native="onModal('delivery')"
-                                 class="r-footer-link r-pt-24"
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 4 }">
+                <a-row type="flex" justify="start" align="middle">
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                    <nuxt-link class="r-text-center" to="/">
+                      <img src="/images/icon-06.svg?v=1"
+                           alt="Shopple - Online shop"
+                           class="r-footer-logo /"
                       >
-                        Enter delivery address
-                      </nuxt-link>
-                    </a-col>
-                  </a-row>
-                </a-card>
+                    </nuxt-link>
+                  </a-col>
+                </a-row>
+                <a-row type="flex" justify="start" align="middle">
+                  <a-col :xs="{ span: 18 }" :sm="{ span: 16 }" :lg="{ span: 16 }">
+                    <nuxt-link :to="$route.path" @click.native="onModal('delivery')"
+                               class="r-footer-link r-pt-24"
+                    >
+                      Enter delivery address
+                    </nuxt-link>
+                  </a-col>
+                </a-row>
               </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 18 }">
-                <a-row :gutter="[24,24]" type="flex" justify="start" align="top">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 20 }">
+                <a-row :gutter="[24,6]" type="flex" justify="start" align="top">
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
-                    <a-card title="Shoppers" :bordered="false" style="width: 100%;">
-                      <div class="r-footer-link">
-                        <nuxt-link to="/shopper">Become a shopper</nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/shopper/paise">Paise for shoppers</nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/help">Help center</nuxt-link>
-                      </div>
-                    </a-card>
+                    <a-row :gutter="[24,6]" type="flex" justify="start" align="top">
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <h4 class="r-heading r-text-uppercase">
+                          For Shoppers
+                        </h4>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/shopper">Become a Shopper</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/shopper/hiw">How it Works</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/help">Shopper Center</nuxt-link>
+                        </div>
+                      </a-col>
+                    </a-row>
                   </a-col>
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
-                    <a-card title="Customers" :bordered="false" style="width: 100%;">
-                      <div class="r-footer-link">
-                        <nuxt-link to="/customer">Join Shopple</nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/customer/paise">Paise for customers</nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/hiw">How it works</nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/help">Help center</nuxt-link>
-                      </div>
-                    </a-card>
+                    <a-row :gutter="[24,6]" type="flex" justify="start" align="top">
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <h4 class="r-heading r-text-uppercase">
+                          For Customers
+                        </h4>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/customer">Join Shopple</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/customer/hiw">How it Works</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/help">Customer Center</nuxt-link>
+                        </div>
+                      </a-col>
+                    </a-row>
                   </a-col>
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
-                    <a-card title="Merchants" :bordered="false" style="width: 100%;">
-                      <div class="r-footer-link">
-                        <nuxt-link to="/merchant">Become a merchant</nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/merchant/paise">Paise for businesses</nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/merchant/resources">Resources</nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/help">Merchant center</nuxt-link>
-                      </div>
-                    </a-card>
+                    <a-row :gutter="[24,6]" type="flex" justify="start" align="top">
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <h4 class="r-heading r-text-uppercase">
+                          For Merchants
+                        </h4>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/merchant">Become a Merchant</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/merchant/hiw">How it Works</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/help">Merchant Center</nuxt-link>
+                        </div>
+                      </a-col>
+                    </a-row>
                   </a-col>
                   <a-col :xs="{ span: 12}" :md="{ span: 12 }" :lg="{ span: 6 }">
-                    <a-card title="Company" :bordered="false" style="width: 100%;">
-                      <div class="r-footer-link">
-                        <nuxt-link to="/about-us">About us</nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/stores/its-shopping-time" @click.native="onModal('store')">
-                          Shop directory
-                        </nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/careers">Careers</nuxt-link>
-                      </div>
-                      <div class="r-footer-link">
-                        <nuxt-link to="/contact-us">Contact us</nuxt-link>
-                      </div>
-                    </a-card>
+                    <a-row :gutter="[24,6]" type="flex" justify="start" align="top">
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <h4 class="r-heading r-text-uppercase">
+                          Company
+                        </h4>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/about-us">About Us</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <div style="cursor:pointer;" @click="onModal('store')">
+                            Shop Directory
+                          </div>
+                        </div>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/careers">Careers</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :xs="{ span: 24}" :md="{ span: 24 }" :lg="{ span: 24 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/contact-us">Contact Us</nuxt-link>
+                        </div>
+                      </a-col>
+                    </a-row>
                   </a-col>
                 </a-row>
               </a-col>
@@ -115,24 +153,27 @@
         </a-row>
         <a-row type="flex" justify="center" align="middle" class="r-bg-dark">
           <a-col class="r-p-24 r-footer-center-sm" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-            <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-              <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 6 }">
-                                <span class="r-same-height r-text-white">
-                                    Interested in making extra money?
-                                </span>
+            <a-row :gutter="[24,6]" type="flex" justify="start" align="middle">
+              <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 4 }">
+                <span class="r-same-height r-text-white">
+                    Interested in making extra money?
+                </span>
               </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 18 }">
-                <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 20 }">
+                <a-row :gutter="[24,6]" type="flex" justify="start" align="middle">
                   <a-col :xs="{ span: 24 }" :sm="{ span: 6 }" :lg="{ span: 6 }">
                     <nuxt-link class="r-same-height r-footer-link" to="/shopper">
-                      <a-button block class="r-btn-bordered-white" size="large">
-                        Become a shopper
+                      <a-button block
+                                class="r-btn-bordered-secondary"
+                                size="large"
+                      >
+                        Become a Shopper
                       </a-button>
                     </nuxt-link>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
                     <div class="r-text-white r-same-height">
-                      &copy; Shopple 2020
+                      &copy; Shopple 2021
                     </div>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">

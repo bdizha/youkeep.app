@@ -8,14 +8,16 @@
               <a-row type="flex" justify="start" align="middle">
                 <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ offset: 3, span: 9 }"
-                       :lg="{ offset: 3, span: 9 }">
+                       :lg="{ offset: 3, span: 9 }"
+                >
                   <r-space></r-space>
                   <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" s="r" :md="{ span: 24 }"
                            :lg="{ span: 16 }"
-                           style="text-align: left;">
+                           style="text-align: left;"
+                    >
                       <h4 class="r-heading-light r-text-uppercase">
-                        How does Paise work?
+                        How does Shopple work?
                       </h4>
                       <h1 class="r-heading r-text-secondary">
                         <span class="r-text-secondary">Shop More,</span><br>
@@ -26,7 +28,8 @@
                   <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                            :lg="{ span: 24 }"
-                           style="text-align: left;">
+                           style="text-align: left;"
+                    >
                       <h4 class="r-heading-light">
                         We're a better way to shopping. Pay in 3 installments with zero interest
                         when you pay on time.
@@ -35,25 +38,30 @@
                   </a-row>
                   <a-row type="flex" justify="start" align="middle">
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
-                           :lg="{ span: 18 }">
+                           :lg="{ span: 18 }"
+                    >
                       <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"
-                               :lg="{ span: 12 }">
+                               :lg="{ span: 12 }"
+                        >
                           <a-button class="r-btn-secondary"
                                     block
                                     type="secondary"
-                                    size='default'>
+                                    size="default"
+                          >
                             Sign up
                           </a-button>
                         </a-col>
                         <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                                :md="{ span: 12 }"
-                               :lg="{ span: 12 }">
+                               :lg="{ span: 12 }"
+                        >
                           <a-button class="r-btn-bordered-purple"
                                     block
                                     type="secondary"
-                                    size='default'>
+                                    size="default"
+                          >
                             Shop directory
                           </a-button>
                         </a-col>
@@ -65,7 +73,8 @@
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
                   <div class="r-page-header-photo">
                     <div class="r-page-white"
-                         style="background-image: url('/images/welcome-02.jpg')">
+                         style="background-image: url('/images/welcome-02.jpg')"
+                    >
                     </div>
                   </div>
                 </a-col>
@@ -82,7 +91,7 @@
 export default {
   name: 'r-resource-show',
   props: {},
-  data() {
+  data () {
     return {
       modal: {
         current: null,
@@ -90,9 +99,9 @@ export default {
       },
     }
   },
-  mounted() {
-    this.modal = this.$store.state.modal;
+  mounted () {
+    this.modal = this.$store.state.modal
   },
   methods: {},
-};
+}
 </script>

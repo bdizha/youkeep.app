@@ -13,13 +13,15 @@
     </a-row>
     <a-row v-if="hasData" type="flex" justify="center" align="middle">
       <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48"
-             style="background: #FFFFFF;">
+             style="background: #FFFFFF;"
+      >
         <a-row :gutter="0" class="r-help-breadcrumbs">
           <a-col class="gutter-row" :span="24">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
                 <nuxt-link class="r-text-primary"
-                             :to="'/help'">
+                           :to="'/help'"
+                >
                   Help center
                 </nuxt-link>
               </a-breadcrumb-item>
@@ -39,7 +41,8 @@
               </template>
               <a-collapse-panel
                 v-for="(faq, f) in faqs" :key="f"
-                :header="faq.question">
+                :header="faq.question"
+              >
                 <p v-html="faq.answer"></p>
               </a-collapse-panel>
             </a-collapse>
@@ -50,45 +53,45 @@
   </r-page>
 </template>
 <script>
-  export default {
-    name: 'r-help-show',
-    props: {},
-    data() {
-      return {
-        faqs: [],
-        group: null,
-        hasData: false
-      }
-    },
-    mounted() {
-      this.modal = this.$store.state.modal;
+export default {
+  name: 'r-help-show',
+  props: {},
+  data () {
+    return {
+      faqs: [],
+      group: null,
+      hasData: false
+    }
+  },
+  mounted () {
+    this.modal = this.$store.state.modal
 
-      this.modal.isVisible = true;
-      this.$store.dispatch('app/onModal', modal);
+    this.modal.isVisible = true
+    this.$store.dispatch('app/onModal', modal)
 
-      // this.payload();
-    },
-    methods: {
-      payload() {
-        let params = {};
-        let path = this.$route.path;
-        let $this = this;
+    // this.payload();
+  },
+  methods: {
+    payload () {
+      let params = {}
+      let path = this.$route.path
+      let $this = this
 
-        axios.get(path, params)
-          .then(response => {
-            console.log("setting help data >> before");
-            console.log(response.data);
+      axios.get(path, params)
+        .then(response => {
+          console.log('setting help data >> before')
+          console.log(response.data)
 
-            $this.faqs = response.data.faqs;
-            $this.group = response.data.group;
-            $this.hasData = true;
+          $this.faqs = response.data.faqs
+          $this.group = response.data.group
+          $this.hasData = true
 
-            console.log("setting help data >> after");
-          })
-          .catch(e => {
-            console.log(e);
-          });
-      }
-    },
-  };
+          console.log('setting help data >> after')
+        })
+        .catch(e => {
+          console.log(e)
+        })
+    }
+  },
+}
 </script>

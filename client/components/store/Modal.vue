@@ -13,7 +13,7 @@
       </a-col>
       <a-col class="r-text-left" :xs="{ span: 24 }">
         <p class="r-text-normal">
-          Simply choose Paise at checkout.
+          Simply choose Shopple at checkout.
         </p>
       </a-col>
     </a-row>

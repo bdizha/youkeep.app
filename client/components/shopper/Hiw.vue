@@ -108,7 +108,7 @@
                               </p>
                               <p class="r-text-normal">
                                 <a-icon class="r-text-primary" slot="prefix" type="check"/>
-                                New payment options like <a href="https://paise.shop" target="_blank">Paise</a>
+                                New payment options like <a href="https://paise.shop" target="_blank">Shopple</a>
                               </p>
                             </a-col>
                           </a-row>

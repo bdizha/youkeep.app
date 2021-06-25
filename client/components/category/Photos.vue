@@ -34,7 +34,6 @@ export default {
   },
   created () {
   },
-  methods: {
-  }
+  methods: {}
 }
 </script>

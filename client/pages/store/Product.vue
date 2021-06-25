@@ -7,21 +7,21 @@ export default {
   name: 'r-store-product',
   components: {},
   props: {},
-  async asyncData({store, params}) {
-    let route = `/product/${params.slug}`;
-    params.route = route;
-    params.with = ['category', 'breadcrumbs'];
-    await store.dispatch('base/onProduct', params);
+  async asyncData ({ store, params }) {
+    let route = `/product/${params.slug}`
+    params.route = route
+    params.with = ['category', 'breadcrumbs']
+    await store.dispatch('base/onProduct', params)
   },
-  data() {
+  data () {
     return {}
   },
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    async payload() {
+    async payload () {
     }
   }
-};
+}
 </script>

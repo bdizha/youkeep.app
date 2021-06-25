@@ -20,7 +20,8 @@
     <a-row class="r-mv-48">
       <a-col :lg="{span: 12}">
         <a-row class="r-radius-right-white" type="flex"
-               justify="space-around" align="middle">
+               justify="space-around" align="middle"
+        >
           <a-col :lg="{span: 18 , offset: 6}" class="r-page-padding">
             <h2 class="r-heading r-text-secondary">
               Who we are
@@ -93,7 +94,8 @@
       <a-col :lg="{span: 12}">
         <div class="r-page-photo-bg" style="padding-bottom: calc(100% / (16 / 9));">
           <div class="r-page-header-abs"
-               style="background: url(/images/steps/red/step-02.svg) no-repeat;">
+               style="background: url(/images/steps/red/step-02.svg) no-repeat;"
+          >
           </div>
         </div>
       </a-col>
@@ -101,20 +103,20 @@
   </r-page>
 </template>
 <script>
-  export default {
-    name: 'r-shop-rules',
-    props: {},
-    data() {
-      return {
-        modal: {
-          current: null,
-          message: null,
-        },
-      }
-    },
-    mounted() {
-      this.modal = this.$store.state.modal;
-    },
-    methods: {},
-  };
+export default {
+  name: 'r-shop-rules',
+  props: {},
+  data () {
+    return {
+      modal: {
+        current: null,
+        message: null,
+      },
+    }
+  },
+  mounted () {
+    this.modal = this.$store.state.modal
+  },
+  methods: {},
+}
 </script>

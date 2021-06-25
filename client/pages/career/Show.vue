@@ -4,23 +4,24 @@
       <a-col :xs="{ span: 24 }"
              :sm="{ span: 24 }"
              :md="{ span: 12 }"
-             :lg="{ span: 12 }">
-       <a-card>
-         <nuxt-link to="/career/openings">
-           <h3 class="r-heading">
-             <a-icon type="left"/>
-             Back to openings
-           </h3>
-         </nuxt-link>
-         <h4 class="r-heading">
-           <a-icon type="solution"/>
-           {{ position.type_formatted }}
-         </h4>
-         <h4 class="r-heading-light">
-           <a-icon type="bank"/>
-           {{ position.department }}
-         </h4>
-       </a-card>
+             :lg="{ span: 12 }"
+      >
+        <a-card>
+          <nuxt-link to="/career/openings">
+            <h3 class="r-heading">
+              <a-icon type="left"/>
+              Back to openings
+            </h3>
+          </nuxt-link>
+          <h4 class="r-heading">
+            <a-icon type="solution"/>
+            {{ position.type_formatted }}
+          </h4>
+          <h4 class="r-heading-light">
+            <a-icon type="bank"/>
+            {{ position.department }}
+          </h4>
+        </a-card>
       </a-col>
       <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
         <a-row type="flex" justify="center" align="middle">
@@ -28,7 +29,8 @@
             <a-breadcrumb class="r-mb-24">
               <a-breadcrumb-item>
                 <nuxt-link class="r-text-primary"
-                           :to="'/career/openings'">
+                           :to="'/career/openings'"
+                >
                   Jop openings
                 </nuxt-link>
               </a-breadcrumb-item>
@@ -53,7 +55,8 @@
                 <a :href="'/career/' + position.slug + '/apply'">
                   <a-button block
                             class="r-btn-secondary"
-                            size="large" type="secondary">
+                            size="large" type="secondary"
+                  >
                     Apply for this job
                   </a-button>
                 </a>
@@ -66,35 +69,35 @@
   </r-page>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-shopper-show',
   props: {},
-  data() {
+  data () {
     return {}
   },
-  async asyncData({store, params, query}) {
+  async asyncData ({ store, params, query }) {
     try {
-      let path = `/career/${params.slug}`;
-      await store.dispatch('base/onPosition', {'route': path});
+      let path = `/career/${params.slug}`
+      await store.dispatch('base/onPosition', { 'route': path })
 
     } catch (e) {
-      console.error('onStore errors');
-      console.log(e);
+      console.error('onStore errors')
+      console.log(e)
     }
   },
   computed: mapGetters({
     position: 'base/position',
     modal: 'base/modal'
   }),
-  created() {
+  created () {
   },
   methods: {
-    async payload() {
-      let path = this.$route.path;
-      await this.$store.dispatch('base/onPosition', {'route': path});
+    async payload () {
+      let path = this.$route.path
+      await this.$store.dispatch('base/onPosition', { 'route': path })
     },
   }
-};
+}
 </script>

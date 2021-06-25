@@ -2292,11 +2292,6 @@ h4.r-heading-light {
     padding: 0;
     border-top: 1px solid rgb(236, 236, 236, 1);
 
-    .r-same-height {
-        display: inline-block;
-        line-height: 36px;
-    }
-
     .ant-card {
         color: #3C444C;
         background: transparent;
@@ -2314,7 +2309,6 @@ h4.r-heading-light {
     }
 
     .ant-card-body {
-        color: #FFF !important;
         padding: 0;
     }
 
@@ -5528,7 +5522,8 @@ h4.r-heading-light {
         &.ant-steps-item-process,
         &.ant-steps-item-finish {
             color: @secondary-color;
-            background: linear-gradient(90deg, #f50a2b15 0%, #FFF 75%, #f50a2b15 100%);
+            background: linear-gradient(225deg, #f50a2b15, #1B9BD915);
+
             border-color: @secondary-color;
 
             .ant-steps-item-content {
@@ -5552,8 +5547,7 @@ h4.r-heading-light {
 
         &.ant-steps-item-active {
             color: @primary-color;
-            background: linear-gradient(90deg, #1B9BD915 0%, #FFF 75%, #1B9BD915 100%);
-            background-size: 90%;
+            background: linear-gradient(225deg, #1B9BD915, #f50a2b15);
 
             .ant-steps-item-content {
                 background: transparent url(/assets/icon_arrows.svg) no-repeat;
@@ -5893,7 +5887,7 @@ h4.r-heading-light {
 }
 
 .r-bg-primary-light {
-    background: #FFF6F6;
+    background: linear-gradient(225deg, #1B9BD915, #f50a2b15);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_white.svg) repeat;
@@ -5901,7 +5895,7 @@ h4.r-heading-light {
 }
 
 .r-bg-secondary-light {
-    background: #f2fbff;
+    background: linear-gradient(225deg, #f50a2b15, #1B9BD915);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_white.svg) repeat;
@@ -5909,7 +5903,7 @@ h4.r-heading-light {
 }
 
 .r-bg-grey-light{
-    background: #FAFBFC;
+    background: linear-gradient(225deg, #FFFFFF15, #1B9BD915);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_white.svg) repeat;
@@ -5917,7 +5911,7 @@ h4.r-heading-light {
 }
 
 .r-bg-secondary {
-    background: #1B9BD9;
+    background: linear-gradient(225deg, #1B9BD999, #f50a2b99);
     p.r-text-normal,
     h1,
     h2,

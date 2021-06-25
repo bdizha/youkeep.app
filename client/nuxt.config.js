@@ -83,6 +83,7 @@ module.exports = {
     '~components/account',
     '~components/merchant',
     '~components/shopper',
+    '~components/customer',
     '~plugins/i18n',
     '~plugins/axios',
     '~plugins/ant-design-vue',

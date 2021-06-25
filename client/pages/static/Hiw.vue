@@ -61,10 +61,11 @@
             </a-col>
           </a-row>
         </a-col>
-        <a-col style="background: url(/client/static/images/content/hero-02.png) no-repeat; background-size: cover; padding-bottom: 600px;"
-               :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 12 }"
-               :lg="{ span: 12 }"
+        <a-col
+          style="background: url(/client/static/images/content/hero-02.png) no-repeat; background-size: cover; padding-bottom: 600px;"
+          :xs="{ span: 24 }" :sm="{ span: 24 }"
+          :md="{ span: 12 }"
+          :lg="{ span: 12 }"
         >
         </a-col>
       </a-row>
@@ -91,7 +92,7 @@
                      class="r-text-center"
               >
                 <h2 class="r-heading">
-                  How our shopping service works
+                  How our Shopping Service Works
                 </h2>
               </a-col>
               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -100,9 +101,9 @@
                      class="r-text-center"
               >
                 <p class="r-text-normal">
-                  Real humans. Perfect books. Your Bookkeeping services imports bank statements and prepares marketplace
-                  statements every month. Questions? Your Shopple bookkeeper works in-house, and they’re backed by our
-                  Client Research Team to provide you with informed answers to complex questions.
+                  Real humans. Better shopping. Our shoppers handle all your shopping and delivery experience for you at
+                  a very low cost. We partner shoppers and the nearest stores to provide our customers with fast
+                  deliveries and better services.
                 </p>
               </a-col>
             </a-row>
@@ -111,11 +112,15 @@
                  :lg="{ span: 16 }"
           >
             <a-tabs type="card">
-              <a-tab-pane key="1" tab="For Businesses"
+              <a-tab-pane key="1" tab="For Customers"
+              >
+                <r-customer-hiw></r-customer-hiw>
+              </a-tab-pane>
+              <a-tab-pane key="2" tab="For Merchants"
               >
                 <r-merchant-hiw></r-merchant-hiw>
               </a-tab-pane>
-              <a-tab-pane key="2" tab="For Shoppers"
+              <a-tab-pane key="3" tab="For Shoppers"
               >
                 <r-shopper-hiw></r-shopper-hiw>
               </a-tab-pane>
@@ -132,8 +137,7 @@ export default {
   name: 'r-hiw',
   props: {},
   data () {
-    return {
-    }
+    return {}
   },
   created () {
     this.$store.dispatch('base/onDownload', false)

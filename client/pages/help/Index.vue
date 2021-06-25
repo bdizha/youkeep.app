@@ -90,8 +90,7 @@ export default {
     await this.$store.dispatch('base/onFaqs', {})
   },
   data () {
-    return {
-    }
+    return {}
   }
 }
 </script>

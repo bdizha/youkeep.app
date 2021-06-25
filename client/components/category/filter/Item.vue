@@ -27,7 +27,9 @@
     </a-col>
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-row :gutter="[12, 12]" type="flex" justify="start" align="middle">
-        <a-col v-if="counter < filter.items.length" :xs="{ span: 12 }" :sm="{ span: limit < counter ? 12 : 24 }" :lg="{ span: limit < counter ? 12 : 24 }">
+        <a-col v-if="counter < filter.items.length" :xs="{ span: 12 }" :sm="{ span: limit < counter ? 12 : 24 }"
+               :lg="{ span: limit < counter ? 12 : 24 }"
+        >
           <a-button
             block
             @click="onIncrement"

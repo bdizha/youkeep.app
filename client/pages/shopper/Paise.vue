@@ -3,22 +3,23 @@
     <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
-             :lg="{ span: 12 }">
+             :lg="{ span: 12 }"
+      >
         <a-card>
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
-                Paise for Shoppers
+                Shopple for Shoppers
               </h4>
               <h1 class="r-heading">
                 <span class="r-text-primary">Shop More,</span><br>
                 <span>Earn more</span>
               </h1>
               <h4 class="r-heading-light">
-                All your earnings are automatically added into your Paise wallet.
+                All your earnings are automatically added into your Shopple wallet.
               </h4>
               <p class="r-text-normal">
-                Unlike other buy-now-pay-later plans, Paise lets shoppers use their existing credit card for
+                Unlike other buy-now-pay-later plans, Shopple lets shoppers use their existing credit card for
                 the easiest most intuitive checkout.
               </p>
             </template>
@@ -35,17 +36,20 @@
     </a-row>
     <a-row class="r-mt-48" type="flex" justify="start">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
-             style="text-align: left;">
+             style="text-align: left;"
+      >
         <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-card>
               <div slot="cover" class="r-card-cover-secondary r-p-24">
                 <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
                   <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
                          :md="{ span: 24 }"
-                         :lg="{ span: 24 }">
+                         :lg="{ span: 24 }"
+                  >
                     <h3 class="r-heading">
                       We're a better way to accept payments.
                     </h3>
@@ -56,13 +60,15 @@
                   </a-col>
                   <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                          :md="{ span: 12 }"
-                         :lg="{ span: 12 }">
+                         :lg="{ span: 12 }"
+                  >
                     <nuxt-link to="/career/openings">
                       <a-button
                         block
                         type="secondary"
                         class="r-btn-secondary"
-                        size="large">
+                        size="large"
+                      >
                         Get started
                       </a-button>
                     </nuxt-link>
@@ -76,10 +82,12 @@
     </a-row>
     <a-row class="r-mt-48" type="flex" justify="start">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
-             style="text-align: left;">
+             style="text-align: left;"
+      >
         <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
+                 style="text-align: left;"
+          >
             <a-card>
               <div slot="cover" class="r-card-cover-primary r-p-24">
                 <a-card>
@@ -89,30 +97,36 @@
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 8 }">
                           <div class="r-icon r-icon__primary r-icon-stroke">
                             <svg class="Icon " width="80" height="70" viewBox="0 0 40 35"
-                                 xmlns="http://www.w3.org/2000/svg">
+                                 xmlns="http://www.w3.org/2000/svg"
+                            >
                               <defs>
                                 <clipPath id="MarketIconClipPath">
                                   <path
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#1B9BD9" class="Icon__blendBackground"></path>
+                                    fill="#1B9BD9" class="Icon__blendBackground"
+                                  ></path>
                                 </clipPath>
                               </defs>
                               <path
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#1B9BD9" class="Icon__blendBackground"></path>
+                                fill="#1B9BD9" class="Icon__blendBackground"
+                              ></path>
                               <path
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                fill="#F50A2B" class="Icon__blendForeground"></path>
+                                fill="#F50A2B" class="Icon__blendForeground"
+                              ></path>
                               <g clip-path="url(#MarketIconClipPath)">
                                 <path
                                   d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                  fill="#F50A2B" class="Icon__blendForeground"></path>
+                                  fill="#F50A2B" class="Icon__blendForeground"
+                                ></path>
                               </g>
                             </svg>
                           </div>
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 14 }" :lg="{ span: 14 }"
-                               style="text-align: left;">
+                               style="text-align: left;"
+                        >
                           <h4 class="r-heading r-text-primary">
                             Zero interest payments
                           </h4>
@@ -131,7 +145,8 @@
             </a-card>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
+                 style="text-align: left;"
+          >
             <a-card>
               <div slot="cover" class="r-card-cover-primary r-p-24">
                 <a-card>
@@ -141,30 +156,36 @@
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 8 }">
                           <div class="r-icon r-icon__primary r-icon-stroke">
                             <svg class="Icon " width="80" height="70" viewBox="0 0 40 35"
-                                 xmlns="http://www.w3.org/2000/svg">
+                                 xmlns="http://www.w3.org/2000/svg"
+                            >
                               <defs>
                                 <clipPath id="MarketIconClipPath">
                                   <path
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#1B9BD9" class="Icon__blendBackground"></path>
+                                    fill="#1B9BD9" class="Icon__blendBackground"
+                                  ></path>
                                 </clipPath>
                               </defs>
                               <path
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#1B9BD9" class="Icon__blendBackground"></path>
+                                fill="#1B9BD9" class="Icon__blendBackground"
+                              ></path>
                               <path
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                fill="#F50A2B" class="Icon__blendForeground"></path>
+                                fill="#F50A2B" class="Icon__blendForeground"
+                              ></path>
                               <g clip-path="url(#MarketIconClipPath)">
                                 <path
                                   d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                  fill="#F50A2B" class="Icon__blendForeground"></path>
+                                  fill="#F50A2B" class="Icon__blendForeground"
+                                ></path>
                               </g>
                             </svg>
                           </div>
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 14 }" :lg="{ span: 14 }"
-                               style="text-align: left;">
+                               style="text-align: left;"
+                        >
                           <h4 class="r-heading r-text-primary">
                             Higher conversion rate
                           </h4>
@@ -183,7 +204,8 @@
             </a-card>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
+                 style="text-align: left;"
+          >
             <a-card>
               <div slot="cover" class="r-card-cover-primary r-p-24">
                 <a-card>
@@ -193,30 +215,36 @@
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 8 }">
                           <div class="r-icon r-icon__primary r-icon-stroke">
                             <svg class="Icon " width="80" height="70" viewBox="0 0 40 35"
-                                 xmlns="http://www.w3.org/2000/svg">
+                                 xmlns="http://www.w3.org/2000/svg"
+                            >
                               <defs>
                                 <clipPath id="MarketIconClipPath">
                                   <path
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#1B9BD9" class="Icon__blendBackground"></path>
+                                    fill="#1B9BD9" class="Icon__blendBackground"
+                                  ></path>
                                 </clipPath>
                               </defs>
                               <path
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#1B9BD9" class="Icon__blendBackground"></path>
+                                fill="#1B9BD9" class="Icon__blendBackground"
+                              ></path>
                               <path
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                fill="#F50A2B" class="Icon__blendForeground"></path>
+                                fill="#F50A2B" class="Icon__blendForeground"
+                              ></path>
                               <g clip-path="url(#MarketIconClipPath)">
                                 <path
                                   d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                  fill="#F50A2B" class="Icon__blendForeground"></path>
+                                  fill="#F50A2B" class="Icon__blendForeground"
+                                ></path>
                               </g>
                             </svg>
                           </div>
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 14 }" :lg="{ span: 14 }"
-                               style="text-align: left;">
+                               style="text-align: left;"
+                        >
                           <h4 class="r-heading r-text-primary">
                             Higher average order rate
                           </h4>
@@ -236,7 +264,8 @@
             </a-card>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
+                 style="text-align: left;"
+          >
             <a-card>
               <div slot="cover" class="r-card-cover-primary r-p-24">
                 <a-card>
@@ -246,30 +275,36 @@
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 8 }">
                           <div class="r-icon r-icon__primary r-icon-stroke">
                             <svg class="Icon " width="80" height="70" viewBox="0 0 40 35"
-                                 xmlns="http://www.w3.org/2000/svg">
+                                 xmlns="http://www.w3.org/2000/svg"
+                            >
                               <defs>
                                 <clipPath id="MarketIconClipPath">
                                   <path
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#1B9BD9" class="Icon__blendBackground"></path>
+                                    fill="#1B9BD9" class="Icon__blendBackground"
+                                  ></path>
                                 </clipPath>
                               </defs>
                               <path
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#1B9BD9" class="Icon__blendBackground"></path>
+                                fill="#1B9BD9" class="Icon__blendBackground"
+                              ></path>
                               <path
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                fill="#F50A2B" class="Icon__blendForeground"></path>
+                                fill="#F50A2B" class="Icon__blendForeground"
+                              ></path>
                               <g clip-path="url(#MarketIconClipPath)">
                                 <path
                                   d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                  fill="#F50A2B" class="Icon__blendForeground"></path>
+                                  fill="#F50A2B" class="Icon__blendForeground"
+                                ></path>
                               </g>
                             </svg>
                           </div>
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 14 }" :lg="{ span: 14 }"
-                               style="text-align: left;">
+                               style="text-align: left;"
+                        >
                           <h4 class="r-heading r-text-primary">
                             More qualified customers
                           </h4>
@@ -289,7 +324,8 @@
             </a-card>
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }"
-                 style="text-align: left;">
+                 style="text-align: left;"
+          >
             <a-card>
               <div slot="cover" class="r-card-cover-primary r-p-24">
                 <a-card>
@@ -299,30 +335,36 @@
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 10 }" :lg="{ span: 8 }">
                           <div class="r-icon r-icon__primary r-icon-stroke">
                             <svg class="Icon " width="80" height="70" viewBox="0 0 40 35"
-                                 xmlns="http://www.w3.org/2000/svg">
+                                 xmlns="http://www.w3.org/2000/svg"
+                            >
                               <defs>
                                 <clipPath id="MarketIconClipPath">
                                   <path
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#1B9BD9" class="Icon__blendBackground"></path>
+                                    fill="#1B9BD9" class="Icon__blendBackground"
+                                  ></path>
                                 </clipPath>
                               </defs>
                               <path
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#1B9BD9" class="Icon__blendBackground"></path>
+                                fill="#1B9BD9" class="Icon__blendBackground"
+                              ></path>
                               <path
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                fill="#F50A2B" class="Icon__blendForeground"></path>
+                                fill="#F50A2B" class="Icon__blendForeground"
+                              ></path>
                               <g clip-path="url(#MarketIconClipPath)">
                                 <path
                                   d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                  fill="#F50A2B" class="Icon__blendForeground"></path>
+                                  fill="#F50A2B" class="Icon__blendForeground"
+                                ></path>
                               </g>
                             </svg>
                           </div>
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 14 }" :lg="{ span: 14 }"
-                               style="text-align: left;">
+                               style="text-align: left;"
+                        >
                           <h4 class="r-heading r-text-primary">
                             Highest approval rating
                           </h4>
@@ -352,7 +394,7 @@
 export default {
   name: 'r-shopper-paise',
   props: {},
-  data() {
+  data () {
     return {
       banner: 'art-03.png',
       modal: {
@@ -361,9 +403,9 @@ export default {
       },
     }
   },
-  mounted() {
-    this.modal = this.$store.state.modal;
+  mounted () {
+    this.modal = this.$store.state.modal
   },
   methods: {},
-};
+}
 </script>

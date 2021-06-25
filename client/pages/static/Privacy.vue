@@ -1,6 +1,6 @@
 <template>
   <a-row type="flex" justify="center">
-    <a-col class="r-page-padding" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 18}" :lg="{span: 16}" >
+    <a-col class="r-page-padding" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 18}" :lg="{span: 16}">
       <a-row type="flex" justify="center">
         <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
           <h1 class="r-heading">
@@ -77,7 +77,8 @@
               address, how you interact with our Services, and information about your computer configuration to resolve
               questions you may have about our Services and to follow up with you about your experience. We may also
               offer
-              various Internet chat services, for example, to speak with an Shopple support representative. Internet Chat
+              various Internet chat services, for example, to speak with an Shopple support representative. Internet
+              Chat
               transmissions are encrypted but you should not supply more Personal Information, including tax data, than
               is
               required to address your specific issue. A transcript of the session may be retained to resolve questions
@@ -130,9 +131,11 @@
               our company, or to respond to a court order, subpoena, search warrant, or other law enforcement request.
             </p>
 
-            <p><em>Protection of Shopple and Others</em>. We may share account information, Personal Information and Usage
+            <p><em>Protection of Shopple and Others</em>. We may share account information, Personal Information and
+              Usage
               Data when we believe it is appropriate to enforce or apply our products’ Terms of Service and other
-              agreements; or protect the rights, property, or safety of Shopple, our Services, our users, or others. This
+              agreements; or protect the rights, property, or safety of Shopple, our Services, our users, or others.
+              This
               includes exchanging information with other companies and organizations for fraud protection and credit
               risk
               reduction. This does not include selling, renting, sharing, or otherwise disclosing Personal Information
@@ -161,14 +164,16 @@
 
             <p>You may choose to sync certain Shopple Services with information from other marketplace accounts. To sync
               your
-              marketplace account information, we must access your online account with your marketplace institution. We will
+              marketplace account information, we must access your online account with your marketplace institution. We
+              will
               request your user name, password, and any other login data that you have set up with your marketplace
               institution to enable access. We use this information to update and maintain the account information you
               download, to assist with the download process, and to enhance the Services we may provide in the
               future.</p>
 
             <p>We work with other companies or developers to offer you products and services and you may choose to sync,
-              link or connect other third party services with your Shopple Service. Sometimes Shopple may let you know about
+              link or connect other third party services with your Shopple Service. Sometimes Shopple may let you know
+              about
               the service or product, or another company may let you know about a Shopple service or product. It will be
               clear who is referring the service or product, and who is providing the service or product. If you choose
               to
@@ -250,7 +255,8 @@
               you, and let you know about products and services that may interest you, unless you have opted out of
               receiving marketing communications. We may also continue to use some of your information for business
               purposes and to improve our offerings or in some cases to develop new ones. We will retain and use your
-              information as required by applicable regulations and Shopple’s records and information management policies
+              information as required by applicable regulations and Shopple’s records and information management
+              policies
               to
               comply with our legal and reporting obligations, resolve disputes, enforce our agreements, complete any
               outstanding transactions and for the detection and prevention of fraud.</p>
@@ -316,7 +322,8 @@
             <p><strong>9. COLLECTION AND USE OF CHILDREN’S PERSONAL INFORMATION. We do not knowingly collect information
               from minors.</strong></p>
 
-            <p>Shopple Services are intended for and directed to adults. Our Services are not directed to minors and we do
+            <p>Shopple Services are intended for and directed to adults. Our Services are not directed to minors and we
+              do
               not knowingly collect Personal Information from minors<strong>.</strong></p>
 
             <p><strong>10. YOUR CALIFORNIA PRIVACY RIGHTS.</strong></p>

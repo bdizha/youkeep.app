@@ -1,10 +1,12 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18}"
-           :lg="{span: 18}">
+           :lg="{span: 18}"
+    >
       <a-form v-if="hasForm" class="ant-form ant-form-vertical"
               @submit="apply"
-              :form="formApply">
+              :form="formApply"
+      >
         <a-form-item v-if="step == 0">
           <a-row type="flex" justify="start" align="middle">
             <a-col class="r-text-left" :xs="{ span: 24 }">
@@ -55,7 +57,8 @@
             v-model="application.first_name"
             size="large"
             placeholder="Your first name"
-            v-decorator="['first_name', { rules: [{ required: true, message: 'Please enter your first name' }] }]">
+            v-decorator="['first_name', { rules: [{ required: true, message: 'Please enter your first name' }] }]"
+          >
             <a-icon slot="prefix" type="user"/>
           </a-input>
         </a-form-item>
@@ -64,7 +67,8 @@
             v-model="application.last_name"
             size="large"
             placeholder="Your last name"
-            v-decorator="['last_name', { rules: [{ required: true, message: 'Please enter your last name' }] }]">
+            v-decorator="['last_name', { rules: [{ required: true, message: 'Please enter your last name' }] }]"
+          >
             <a-icon slot="prefix" type="mail"/>
           </a-input>
         </a-form-item>
@@ -83,7 +87,8 @@
             v-model="application.mobile"
             size="large"
             placeholder="Your mobile number"
-            v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
+            v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
+          >
             <a-icon slot="prefix" type="mobile"/>
           </a-input>
         </a-form-item>
@@ -92,7 +97,8 @@
             v-model="application.email"
             size="large"
             placeholder="Your email address"
-            v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please confirm your email' }] }]">
+            v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please confirm your email' }] }]"
+          >
             <a-icon slot="prefix" type="mail"/>
           </a-input>
         </a-form-item>
@@ -101,7 +107,8 @@
             Are you 18 or older?
           </h2>
           <a-radio-group
-            v-model="application.age">
+            v-model="application.age"
+          >
             <a-row>
               <a-col :span="24">
                 <a-radio>Yes</a-radio>
@@ -125,7 +132,8 @@
             v-model="application.address_line_1"
             size="large"
             placeholder="Your address line 1"
-            v-decorator="['address_line_1', { rules: [{ required: true, message: 'Please enter your address line 1' }] }]">
+            v-decorator="['address_line_1', { rules: [{ required: true, message: 'Please enter your address line 1' }] }]"
+          >
             <a-icon slot="prefix" type="environment"/>
           </a-input>
         </a-form-item>
@@ -134,7 +142,8 @@
             v-model="application.address_line_2"
             size="large"
             placeholder="Your address line 2"
-            v-decorator="['address_line_2', { rules: [{ required: false, message: 'Please enter your address line 2' }] }]">
+            v-decorator="['address_line_2', { rules: [{ required: false, message: 'Please enter your address line 2' }] }]"
+          >
             <a-icon slot="prefix" type="environment"/>
           </a-input>
         </a-form-item>
@@ -143,7 +152,8 @@
             v-model="application.post_code"
             size="large"
             placeholder="Your post code"
-            v-decorator="['post_code', { rules: [{ required: true, message: 'Please enter your post code' }] }]">
+            v-decorator="['post_code', { rules: [{ required: true, message: 'Please enter your post code' }] }]"
+          >
             <a-icon slot="prefix" type="environment"/>
           </a-input>
         </a-form-item>
@@ -152,7 +162,8 @@
             v-model="application.city"
             size="large"
             placeholder="Your city"
-            v-decorator="['city', { rules: [{ required: true, message: 'Please enter your city' }] }]">
+            v-decorator="['city', { rules: [{ required: true, message: 'Please enter your city' }] }]"
+          >
             <a-icon slot="prefix" type="environment"/>
           </a-input>
         </a-form-item>
@@ -161,7 +172,8 @@
             v-model="application.province"
             size="large"
             placeholder="Your province"
-            v-decorator="['province', { rules: [{ required: true, message: 'Please enter your province' }] }]">
+            v-decorator="['province', { rules: [{ required: true, message: 'Please enter your province' }] }]"
+          >
             <a-icon slot="prefix" type="environment"/>
           </a-input>
         </a-form-item>
@@ -173,7 +185,8 @@
             We will send this size shirt to you once you are approved!
           </p>
           <a-radio-group
-            v-model="application.size" @change="onSize">
+            v-model="application.size" @change="onSize"
+          >
             <a-row>
               <a-col v-for="(size, s) in sizes" :key="s + 1" :span="24">
                 <a-radio :value="size.key">
@@ -194,7 +207,8 @@
             Monday?
           </h2>
           <a-radio-group
-            v-model="application.is_flexible">
+            v-model="application.is_flexible"
+          >
             <a-row>
               <a-col :span="24">
                 <a-radio>Yes</a-radio>
@@ -213,7 +227,8 @@
             * Please note that smoking is prohibited while on the job, shopping and delivering orders.
           </p>
           <a-radio-group
-            v-model="application.is_smoker">
+            v-model="application.is_smoker"
+          >
             <a-row>
               <a-col :span="24">
                 <a-radio>Yes</a-radio>
@@ -245,7 +260,8 @@
               <a-button @click="onBack"
                         :size="'default'"
                         type="default"
-                        class="r-btn-secondary">
+                        class="r-btn-secondary"
+              >
                 <a-icon type="left"/>
                 Back
               </a-button>
@@ -254,7 +270,8 @@
               <a-button @click="onStep"
                         :size="'default'"
                         type="secondary" html-type="button"
-                        class="ant-btn r-btn-secondary">
+                        class="ant-btn r-btn-secondary"
+              >
                 {{ step == 11 ? 'Submit' : 'Continue' }}
                 <a-icon type="right"/>
               </a-button>
@@ -269,12 +286,12 @@
 export default {
   name: 'r-customer-apply',
   props: {
-    maskClosable: {type: Boolean, required: false, default: false},
-    closable: {type: Boolean, required: false, default: false},
+    maskClosable: { type: Boolean, required: false, default: false },
+    closable: { type: Boolean, required: false, default: false },
   },
-  data() {
+  data () {
     return {
-      formApply: this.$form.createForm(this, {name: 'form_apply'}),
+      formApply: this.$form.createForm(this, { name: 'form_apply' }),
       isShowing: false,
       hasData: false,
       formSize: null,
@@ -334,73 +351,73 @@ export default {
         slug: 'all'
       },
       redirectTo: ''
-    };
+    }
   },
-  created() {
+  created () {
   },
   computed: {
-    hasBack() {
-      return this.step > 0;
+    hasBack () {
+      return this.step > 0
     }
   },
   methods: {
-    onSize() {
+    onSize () {
     },
-    onStep() {
+    onStep () {
       if (this.step == this.last) {
-        return false;
+        return false
       }
-      this.step += 1;
+      this.step += 1
 
       if (this.step == 11) {
-        this.isSuccessful = true;
-        this.modal.message = 'Thank you, ' + this.application.first_name + '. We\'ve sent you a confirmation email to ' + this.application.email + '.';
+        this.isSuccessful = true
+        this.modal.message = 'Thank you, ' + this.application.first_name + '. We\'ve sent you a confirmation email to ' + this.application.email + '.'
 
         setTimeout(function () {
           // $this.modal.message = null;
-        }, 2400);
+        }, 2400)
       }
     },
-    onBack() {
+    onBack () {
       if (this.step == 0) {
-        return false;
+        return false
       }
-      this.step -= 1;
+      this.step -= 1
     },
-    apply(event) {
-      event.preventDefault();
+    apply (event) {
+      event.preventDefault()
 
       this.formApply.validateFields((err, values) => {
         if (!err) {
-          console.log('Logging user...', values);
+          console.log('Logging user...', values)
 
-          this.isProcessing = true;
+          this.isProcessing = true
 
-          let params = Object.assign({}, values);
-          let $this = this;
+          let params = Object.assign({}, values)
+          let $this = this
 
-          let path = '/apply';
+          let path = '/apply'
           HTTP.post(path, params)
             .then(response => {
-              console.log('Response');
-              console.log('Redirecting to >>>: ', $this.redirectTo + " => " + $this.store.slug);
-              $this.isSuccessful = true;
-              $this.modal.message = 'Welcome back. It\'s shopping time.';
+              console.log('Response')
+              console.log('Redirecting to >>>: ', $this.redirectTo + ' => ' + $this.store.slug)
+              $this.isSuccessful = true
+              $this.modal.message = 'Welcome back. It\'s shopping time.'
 
               setTimeout(function () {
-                window.location.href = $this.redirectTo;
-                $this.modal.message = null;
-              }, 2400);
+                window.location.href = $this.redirectTo
+                $this.modal.message = null
+              }, 2400)
             })
             .catch(e => {
-              $this.isSuccessful = false;
-            });
+              $this.isSuccessful = false
+            })
         } else {
-          this.isSuccessful = false;
-          console.error(err);
+          this.isSuccessful = false
+          console.error(err)
         }
-      });
+      })
     }
   },
-};
+}
 </script>

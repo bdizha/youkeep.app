@@ -16,7 +16,7 @@
               Add a promo code
             </h3>
             <p class="r-text-normal">
-              You can add as many promo codes into your Paise account.
+              You can add as many promo codes into your Shopple account.
             </p>
           </a-col>
         </a-row>

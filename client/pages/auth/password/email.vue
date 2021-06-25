@@ -10,7 +10,8 @@
             <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
             <div class="col-md-7">
               <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" type="email" name="email"
-                     class="form-control">
+                     class="form-control"
+              >
               <has-error :form="form" field="email"/>
             </div>
           </div>
@@ -31,8 +32,8 @@
 
 <script>
 export default {
-  head() {
-    return {title: this.$t('reset_password')}
+  head () {
+    return { title: this.$t('reset_password') }
   },
 
   data: () => ({
@@ -43,9 +44,9 @@ export default {
   }),
 
   methods: {
-    async send() {
-      const {data} = await this.form.post('/password/email');
-      this.status = data.status;
+    async send () {
+      const { data } = await this.form.post('/password/email')
+      this.status = data.status
       this.form.reset()
     }
   }

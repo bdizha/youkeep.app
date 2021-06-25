@@ -7,35 +7,43 @@
             <a-row class="r-bg-primary-light" style="margin-right: 20px; padding: 20px;">
               <a-col :span="24">
                 <a-collapse accordion="true" bordered="true" expandIconPosition="right"
-                            :defaultActiveKey="1">
+                            :defaultActiveKey="1"
+                >
                   <a-collapse-panel class="r-checkout-icon r-checkout-icon-address" :key="1"
-                                    header="Delivery address">
+                                    header="Delivery address"
+                  >
                     <r-account-address-list></r-account-address-list>
                     <a-row class="r-mv-24" :gutter="24" type="flex" justify="start" align="middle">
                       <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                             :md="{ span: 18 }" :lg="{ span: 18 }">
+                             :md="{ span: 18 }" :lg="{ span: 18 }"
+                      >
                         <r-account-address-add></r-account-address-add>
                       </a-col>
                       <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                             :md="{ span: 6 }" :lg="{ span: 6 }">
+                             :md="{ span: 6 }" :lg="{ span: 6 }"
+                      >
                         <a-button block type="secondary" html-type="button"
-                                  class="r-btn-secondary">
+                                  class="r-btn-secondary"
+                        >
                           Proceed
                         </a-button>
                       </a-col>
                     </a-row>
                   </a-collapse-panel>
                   <a-collapse-panel class="r-checkout-icon r-checkout-icon-notes" :key="2"
-                                    header="Delivery instructions">
+                                    header="Delivery instructions"
+                  >
                     <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
                             class="ant-form ant-form-vertical"
                             @submit="saveContact"
-                            :form="formContact">
+                            :form="formContact"
+                    >
                       <a-form-item label="Notes">
                         <a-input type="textarea"
                                  size="large"
                                  placeholder="Your delivery instructions"
-                                 v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]">
+                                 v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]"
+                        >
                         </a-input>
                       </a-form-item>
                       <a-form-item label="What if you're not around?">
@@ -44,22 +52,27 @@
                         to theft or damage due to temperature sensitivity.
                       </a-form-item>
                       <a-row class="r-mv-24" :gutter="24" type="flex"
-                             justify="start">
+                             justify="start"
+                      >
                         <a-col class="r-text-left" :xs="{ span: 12 }"
                                :sm="{ span: 12 }"
-                               :md="{ span: 18 }" :lg="{ span: 18 }">
+                               :md="{ span: 18 }" :lg="{ span: 18 }"
+                        >
                           <a-button size="large"
                                     type="secondary"
                                     html-type="button"
-                                    class="r-btn-bordered-grey">
+                                    class="r-btn-bordered-grey"
+                          >
                             Skip
                           </a-button>
                         </a-col>
                         <a-col class="r-text-right" :xs="{ span: 12 }"
                                :sm="{ span: 12 }"
-                               :md="{ span: 6 }" :lg="{ span: 6 }">
+                               :md="{ span: 6 }" :lg="{ span: 6 }"
+                        >
                           <a-button block type="secondary" html-type="submit"
-                                    class="r-btn-secondary">
+                                    class="r-btn-secondary"
+                          >
                             Proceed
                           </a-button>
                         </a-col>
@@ -69,36 +82,45 @@
                     <r-notice v-if="isSuccessful"></r-notice>
                   </a-collapse-panel>
                   <a-collapse-panel class="r-checkout-icon r-checkout-icon-contact" :key="3"
-                                    header="Your mobile number">
+                                    header="Your mobile number"
+                  >
                     <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
                             class="ant-form ant-form-vertical"
                             @submit="saveMobile"
-                            :form="formMobile">
+                            :form="formMobile"
+                    >
                       <a-form-item :wrapper-col="{ xs: {span: 24},  lg: {span: 12} }"
-                                   label="We use your number to text or call you about your order.">
+                                   label="We use your number to text or call you about your order."
+                      >
                         <a-input
                           size="large"
                           placeholder="Your mobile number name"
-                          v-decorator="['name', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
+                          v-decorator="['name', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
+                        >
                         </a-input>
                       </a-form-item>
                       <a-row class="r-mv-24" :gutter="24" type="flex"
-                             justify="start">
+                             justify="start"
+                      >
                         <a-col class="r-text-left" :xs="{ span: 12 }"
                                :sm="{ span: 12 }"
-                               :md="{ span: 18 }" :lg="{ span: 18 }">
+                               :md="{ span: 18 }" :lg="{ span: 18 }"
+                        >
                           <a-button size="large"
                                     type="secondary"
                                     html-type="button"
-                                    class="r-btn-bordered-grey">
+                                    class="r-btn-bordered-grey"
+                          >
                             Skip
                           </a-button>
                         </a-col>
                         <a-col class="r-text-right" :xs="{ span: 12 }"
                                :sm="{ span: 12 }"
-                               :md="{ span: 6 }" :lg="{ span: 6 }">
+                               :md="{ span: 6 }" :lg="{ span: 6 }"
+                        >
                           <a-button block type="secondary" html-type="button"
-                                    class="r-btn-secondary">
+                                    class="r-btn-secondary"
+                          >
                             Proceed
                           </a-button>
                         </a-col>
@@ -108,17 +130,21 @@
                     <r-notice v-if="isSuccessful"></r-notice>
                   </a-collapse-panel>
                   <a-collapse-panel class="r-checkout-icon r-checkout-icon-payment" :key="4"
-                                    header="Payment">
+                                    header="Payment"
+                  >
                     <r-account-card-list></r-account-card-list>
                     <a-row class="r-mv-24" :gutter="24" type="flex" justify="end">
                       <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                             :md="{ span: 18 }" :lg="{ span: 18 }">
+                             :md="{ span: 18 }" :lg="{ span: 18 }"
+                      >
                         <r-account-card-add></r-account-card-add>
                       </a-col>
                       <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                             :md="{ span: 6 }" :lg="{ span: 6 }">
+                             :md="{ span: 6 }" :lg="{ span: 6 }"
+                      >
                         <a-button block type="secondary" html-type="button"
-                                  class="r-btn-secondary">
+                                  class="r-btn-secondary"
+                        >
                           Place order
                         </a-button>
                       </a-col>
@@ -132,28 +158,33 @@
             <a-row class="r-bg-primary-light">
               <a-col class="r-p-24" :span="24">
                 <a-form class="ant-form ant-form-vertical"
-                        :form="formCart">
+                        :form="formCart"
+                >
                   <a-form-item :wrapper-col="{ span: 24 }">
                     <a-button block disabled
                               type="secondary"
                               html-type="submit"
-                              class="ant-btn ant-btn-secondary">
+                              class="ant-btn ant-btn-secondary"
+                    >
                       Place order
                     </a-button>
                   </a-form-item>
                   <a-form-item :wrapper-col="{ xs: {span: 24},  lg: {span: 12} }"
-                               label="We use your number to text or call you about your order.">
+                               label="We use your number to text or call you about your order."
+                  >
                     <a-input
                       size="large"
                       placeholder="Your mobile number name"
-                      v-decorator="['name', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]">
+                      v-decorator="['name', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
+                    >
                     </a-input>
                   </a-form-item>
                   <a-form-item label="Coupon">
                     <a-input
                       size="large"
                       placeholder="Enter your coupon code"
-                      v-decorator="['coupon', { rules: [{ required: false, message: 'Please enter your coupon' }] }]">
+                      v-decorator="['coupon', { rules: [{ required: false, message: 'Please enter your coupon' }] }]"
+                    >
                     </a-input>
                   </a-form-item>
                   <a-form-item>
@@ -198,11 +229,11 @@ const columns = [
     key: 'value',
     width: '24%',
   }
-];
+]
 
 export default {
   name: 'r-checkout',
-  data() {
+  data () {
     return {
       cart: {
         items: [],
@@ -215,32 +246,32 @@ export default {
       summary: [],
       columns,
       formLayout: 'horizontal',
-      formNote: this.$form.createForm(this, {name: 'form_notes'}),
-      formMobile: this.$form.createForm(this, {name: 'form_mobile'}),
-      formContact: this.$form.createForm(this, {name: 'form_contact'}),
-      formCart: this.$form.createForm(this, {name: 'form_cart'}),
-    };
+      formNote: this.$form.createForm(this, { name: 'form_notes' }),
+      formMobile: this.$form.createForm(this, { name: 'form_mobile' }),
+      formContact: this.$form.createForm(this, { name: 'form_contact' }),
+      formCart: this.$form.createForm(this, { name: 'form_cart' }),
+    }
   },
-  mounted() {
-    this.cart = this.$store.state.cart;
-    this.summary = this.cart.summary;
+  mounted () {
+    this.cart = this.$store.state.cart
+    this.summary = this.cart.summary
   },
   methods: {
-    processCart() {
+    processCart () {
       // submit the order record
     },
-    next() {
+    next () {
 
     },
-    saveDeliverySchedule() {
+    saveDeliverySchedule () {
 
     },
-    saveMobile() {
+    saveMobile () {
 
     },
-    saveContact() {
+    saveContact () {
 
     }
   },
-};
+}
 </script>

@@ -8,15 +8,15 @@ export default {
   name: 'r-category',
   components: {},
   props: {},
-  data() {
+  data () {
     return {}
   },
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    async payload() {
+    async payload () {
     }
   }
-};
+}
 </script>

@@ -161,7 +161,7 @@
                  :lg="{ span: 16 }"
           >
             <p class="r-text-normal">
-              That's because Shopple is seamlessly integrated into Paise checkout and your money shows up
+              That's because Shopple is seamlessly integrated into Shopple checkout and your money shows up
               in your Shopple account after your sale closes. Plus, Shopple offers a host of seller tools
               and resources to enhance your fun and profits.
             </p>

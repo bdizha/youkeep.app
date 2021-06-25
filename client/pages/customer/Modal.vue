@@ -2,7 +2,8 @@
   <r-modal-template :mask-closable="maskClosable"
                     :closable="closable"
                     :current="current"
-                    style="position: relative;">
+                    style="position: relative;"
+  >
     <r-shopper-apply></r-shopper-apply>
   </r-modal-template>
 </template>
@@ -10,16 +11,16 @@
 export default {
   name: 'r-customer-modal',
   props: {
-    maskClosable: {type: Boolean, required: false, default: false},
-    closable: {type: Boolean, required: false, default: false},
+    maskClosable: { type: Boolean, required: false, default: false },
+    closable: { type: Boolean, required: false, default: false },
   },
-  data() {
+  data () {
     return {
       current: 'shopper',
-    };
+    }
   },
-  created() {
+  created () {
   },
   methods: {},
-};
+}
 </script>

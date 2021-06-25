@@ -2,7 +2,7 @@
   <defs>
     <style>
       .cls-1 {
-      clip-path: url(#clip-Paise_Icon_1);
+      clip-path: url(#clip-Shopple_Icon_1);
       }
 
       .cls-2 {
@@ -29,11 +29,11 @@
       fill: #FFFFFF;
       }
     </style>
-    <clipPath id="clip-Paise_Icon_1">
+    <clipPath id="clip-Shopple_Icon_1">
       <rect width="1000" height="1000"/>
     </clipPath>
   </defs>
-  <g id="Paise_Icon_1" data-name="Paise_Icon – 1" class="cls-1">
+  <g id="Shopple_Icon_1" data-name="Shopple_Icon – 1" class="cls-1">
     <g id="Path_3113" data-name="Path 3113" class="cls-2" transform="translate(98 159)">
       <path class="cls-6" d="M55,28h0Z"/>
       <path class="cls-7" d="M 0 28 L 55 28 L 0 28 Z"/>

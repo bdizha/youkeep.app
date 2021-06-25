@@ -8,8 +8,8 @@ export default {
   components: {},
   props: {},
   async asyncData ({ store, params, query }) {
-    console.log('>>>> params', params);
-    console.log('>>>> query', query);
+    console.log('>>>> params', params)
+    console.log('>>>> query', query)
 
     const payload = {
       route: `/category/${params.slug}/${params.level}`,
@@ -22,15 +22,15 @@ export default {
 
     await store.dispatch('base/onCategory', payload)
   },
-  data() {
+  data () {
     return {}
   },
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    async payload() {
+    async payload () {
     }
   }
-};
+}
 </script>

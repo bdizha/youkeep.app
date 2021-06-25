@@ -1,19 +1,22 @@
 <template>
-  <a-row :gutter="24" v-if='cart.count > 0' type="flex"
-         justify="center">
+  <a-row :gutter="24" v-if="cart.count > 0" type="flex"
+         justify="center"
+  >
     <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :lg="{ span: 24 }">
+           :lg="{ span: 24 }"
+    >
       <a-table bordered
                :pagination="false"
                :show-header="false"
                :hoverable="false"
                :columns="columns"
-               :dataSource="cart.summary"/>
+               :dataSource="cart.summary"
+      />
     </a-col>
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 const columns = [
   {
@@ -27,28 +30,28 @@ const columns = [
     key: 'value',
     width: '36%',
   }
-];
+]
 
 export default {
   props: {
     name: 'r-checkout-items'
   },
-  data() {
+  data () {
     return {
       columns,
-    };
+    }
   },
   computed: mapGetters({
     cart: 'cart/cart'
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
+    payload () {
     },
-    onStep() {
-      this.$store.dispatch('base/onModal', modal);
+    onStep () {
+      this.$store.dispatch('base/onModal', modal)
     }
   },
 }

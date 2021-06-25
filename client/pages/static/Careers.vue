@@ -104,7 +104,7 @@
                              :lg="{ span: 24 }"
                       >
                         <h2 class="r-heading">
-                          We continue to prioritize quality shopping services.
+                          We continue to prioritize quality shopping services
                         </h2>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"

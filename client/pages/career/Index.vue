@@ -3,7 +3,8 @@
     <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
              :md="{ span: 12 }"
-             :lg="{ span: 12 }">
+             :lg="{ span: 12 }"
+      >
         <a-card>
           <a-card-meta>
             <template slot="description">
@@ -31,17 +32,20 @@
     </a-row>
     <a-row class="r-mt-48" type="flex" justify="start">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
-             style="text-align: left;">
+             style="text-align: left;"
+      >
         <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-card>
               <div slot="cover" class="r-card-cover-secondary r-p-24">
                 <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                   <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
                          :md="{ span: 24 }"
-                         :lg="{ span: 24 }">
+                         :lg="{ span: 24 }"
+                  >
                     <h3 class="r-heading">
                       Yes, we're hiring now
                     </h3>
@@ -52,25 +56,29 @@
                   </a-col>
                   <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                          :md="{ span: 12 }"
-                         :lg="{ span: 12 }">
+                         :lg="{ span: 12 }"
+                  >
                     <nuxt-link to="/career/openings">
                       <a-button
                         block
                         type="secondary"
                         class="r-btn-secondary"
-                        size="large">
+                        size="large"
+                      >
                         See openings
                       </a-button>
                     </nuxt-link>
                   </a-col>
                   <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
                          :md="{ span: 12 }"
-                         :lg="{ span: 12 }">
+                         :lg="{ span: 12 }"
+                  >
                     <nuxt-link to="/contact-us">
                       <a-button class="r-btn-bordered-grey"
                                 block
                                 type="secondary"
-                                size='default'>
+                                size="default"
+                      >
                         Contact us
                       </a-button>
                     </nuxt-link>
@@ -84,11 +92,13 @@
     </a-row>
     <a-row class="r-mt-48" type="flex" justify="start">
       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
-             style="text-align: left;">
+             style="text-align: left;"
+      >
         <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-card>
               <a-card-meta>
                 <template slot="description">
@@ -113,7 +123,8 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-card>
               <a-card-meta>
                 <template slot="description">
@@ -136,7 +147,8 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-card>
               <a-card-meta>
                 <template slot="description">
@@ -160,7 +172,8 @@
           </a-col>
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"
-                 :lg="{ span: 12 }">
+                 :lg="{ span: 12 }"
+          >
             <a-card>
               <a-card-meta>
                 <template slot="description">
@@ -189,13 +202,13 @@
   </r-page>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 import axios from 'axios'
 
 export default {
   name: 'r-career',
   props: {},
-  data() {
+  data () {
     return {
       banner: 'art-04.png',
       departments: [],
@@ -210,29 +223,29 @@ export default {
   computed: mapGetters({
     modal: 'base/modal'
   }),
-  created() {
-    this.payload();
+  created () {
+    this.payload()
   },
   methods: {
-    payload() {
-      let params = {};
-      let path = this.$route.path;
-      let $this = this;
+    payload () {
+      let params = {}
+      let path = this.$route.path
+      let $this = this
 
       axios.get(path, params)
         .then(response => {
-          console.log("setting positions >> before");
-          console.log(response.data);
+          console.log('setting positions >> before')
+          console.log(response.data)
 
-          $this.departments = response.data.departments;
-          $this.hasData = true;
+          $this.departments = response.data.departments
+          $this.hasData = true
 
-          console.log("setting positions >> after");
+          console.log('setting positions >> after')
         })
         .catch(e => {
-          console.log(e);
-        });
+          console.log(e)
+        })
     }
   }
-};
+}
 </script>

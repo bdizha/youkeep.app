@@ -55,7 +55,8 @@
               subscription has not been terminated during such period), Shopple will perform certain year-end
               bookkeeping
               activities at that time as part of your subscription, including making year-end annual adjustments and
-              providing a trial balance and standard full-year marketplace statements for your tax returns. If you are not
+              providing a trial balance and standard full-year marketplace statements for your tax returns. If you are
+              not
               a
               Shopple Bookkeeping customer for the quarter following the calendar year end, Shopple will not perform
               such
@@ -118,7 +119,8 @@
 
             <p>If you are a Shopple Bookkeeping customer, you acknowledge and agree that in performing the Services,
               Shopple
-              must use, record, classify and reconcile your marketplace transactions and other data to prepare your books.
+              must use, record, classify and reconcile your marketplace transactions and other data to prepare your
+              books.
               For
               example, depending upon the Services, Shopple may have to: (a) import transactions from your books in
               order to

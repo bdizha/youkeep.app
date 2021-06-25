@@ -4,7 +4,8 @@
       <a-col :xs="{ span: 24 }"
              :sm="{ span: 24 }"
              :md="{ span: 24 }"
-             :lg="{ span: 24 }">
+             :lg="{ span: 24 }"
+      >
         <a-card>
           <a-card-meta>
             <template slot="description">
@@ -22,11 +23,13 @@
       <a-col :xs="{ span: 24 }"
              :sm="{ span: 24 }"
              :md="{ span: 10 }"
-             :lg="{ span: 8 }">
+             :lg="{ span: 8 }"
+      >
         <a-card>
           <a-list :data-source="departments">
             <a-list-item slot="renderItem"
-                         slot-scope="item, index">
+                         slot-scope="item, index"
+            >
               <template>
                 <span v-on:click="onDepartment(item)">
                   {{ item.name }}
@@ -43,7 +46,8 @@
               <a-card-meta>
                 <a-empty
                   image="/images/icon_pattern_grey.svg"
-                  :imageStyle="{ height: '81px',}">
+                  :imageStyle="{ height: '81px',}"
+                >
                   <span slot="description">Sorry. There aren't any job openings currently.</span>
                   <a-button size="large" class="ant-btn-primary r-btn-secondary">Shop now</a-button>
                 </a-empty>
@@ -55,7 +59,8 @@
                 class="r-p-24 r-mb-48"
                 v-for="(position, index) in positions"
                 v-if="!department || position.department_type === department.id"
-                :key="index">
+                :key="index"
+        >
           <a-row>
             <a-col class="gutter-row" :sm="{ span: 24 }" :lg="{ span: 24 }">
               <a :href="'/career/' + position.slug">
@@ -65,12 +70,14 @@
           </a-row>
           <a-row>
             <a-col class="gutter-row" :xs="{ span: 14 }" :sm="{ span: 16 }"
-                   :lg="{ span: 18 }">
+                   :lg="{ span: 18 }"
+            >
               <a :href="'/career/' + position.slug">
                 <a-row>
                   <a-col class="gutter-row" :xs="{ span: 24 }"
                          :sm="{ span: 12 }"
-                         :lg="{ span: 24 }">
+                         :lg="{ span: 24 }"
+                  >
                     <h4 class="r-text-normal">{{
                         position.city.name
                       }}
@@ -78,7 +85,8 @@
                   </a-col>
                   <a-col class="gutter-row" :xs="{ span: 24 }"
                          :sm="{ span: 12 }"
-                         :lg="{ span: 24 }">
+                         :lg="{ span: 24 }"
+                  >
                     <h4 class="r-text-primary r-text-capitalize">
                       {{ position.type_formatted }}
                     </h4>
@@ -86,7 +94,8 @@
                   <a-col v-on:click="onDepartment(department)" class="r-text-secondary r-text-capitalize"
                          :xs="{ span: 24 }"
                          :sm="{ span: 12 }"
-                         :lg="{ span: 24 }">
+                         :lg="{ span: 24 }"
+                  >
                     {{ position.department }}
                   </a-col>
                 </a-row>
@@ -94,11 +103,14 @@
             </a-col>
             <a-col class="r-padding-24 gutter-row r-text-right" :xs="{ span: 10 }"
                    :sm="{ span: 8 }"
-                   :lg="{ span: 6 }">
+                   :lg="{ span: 6 }"
+            >
               <a class="r-same-height"
-                 :href="'/career/' + position.slug + '/apply'">
+                 :href="'/career/' + position.slug + '/apply'"
+              >
                 <a-button type="secondary"
-                          class="r-btn-secondary" size="large">
+                          class="r-btn-secondary" size="large"
+                >
                   Apply
                 </a-button>
               </a>
@@ -110,12 +122,12 @@
   </r-page>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-career-list',
   props: {},
-  data() {
+  data () {
     return {
       department: null
     }
@@ -125,20 +137,20 @@ export default {
     positions: 'base/positions',
     modal: 'base/modal'
   }),
-  created() {
+  created () {
   },
-  mounted() {
-    this.payload();
+  mounted () {
+    this.payload()
   },
   methods: {
-    async payload() {
-      const {data} = await this.$store.dispatch('base/onCareers', {});
+    async payload () {
+      const { data } = await this.$store.dispatch('base/onCareers', {})
     },
-    onDepartment(department) {
-      this.department = department;
+    onDepartment (department) {
+      this.department = department
 
       console.log('department', department)
     }
   }
-};
+}
 </script>

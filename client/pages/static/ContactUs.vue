@@ -77,7 +77,7 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col  class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
+    <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
            :lg="{ span: 16 }"
     >
       <a-row type="flex" justify="start">
@@ -123,9 +123,7 @@ export default {
       banner: 'art-05.png',
     }
   },
-  computed: mapGetters({
-  }),
-  methods: {
-  },
+  computed: mapGetters({}),
+  methods: {},
 }
 </script>

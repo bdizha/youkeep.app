@@ -1,6 +1,7 @@
 <template>
   <a-row :class="{'r-store-item-line': isStore}" type="flex" justify="center"
-         align="middle">
+         align="middle"
+  >
     <a-col @click="onModal" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-row v-if="hasModal" type="flex" justify="center">
         <a-col class="r-text-left" :xs="{ span: 24 }">
@@ -12,14 +13,16 @@
       <a-form :class="{'r-form-white': !hasModal && !isStore}"
               class="ant-form ant-form-vertical"
               @submit="onModal"
-              :form="form">
+              :form="form"
+      >
         <a-auto-complete
-            :value="hasAddress ? address.address_line : ''"
-            :size="size"
-            style="width: 100%"
-            :placeholder="'Enter your address...'"
-            option-label-prop="title"
-            @search="handleSearch">
+          :value="hasAddress ? address.address_line : ''"
+          :size="size"
+          style="width: 100%"
+          :placeholder="'Enter your address...'"
+          option-label-prop="title"
+          @search="handleSearch"
+        >
           <a-input>
             <a-icon slot="prefix" type="environment"/>
             <a-button v-if="hasSubmit"
@@ -27,7 +30,8 @@
                       style="margin-right: -12px"
                       class="r-btn-secondary"
                       size="large"
-                      type="secondary">
+                      type="secondary"
+            >
               Let's go
             </a-button>
           </a-input>
@@ -37,19 +41,19 @@
   </a-row>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   components: {},
   props: {
-    hasModal: {type: Boolean, required: false, default: false},
-    isStore: {type: Boolean, required: false, default: false},
-    hasSubmit: {type: Boolean, required: false, default: true},
-    size: {type: String, required: false, default: 'default'},
+    hasModal: { type: Boolean, required: false, default: false },
+    isStore: { type: Boolean, required: false, default: false },
+    hasSubmit: { type: Boolean, required: false, default: true },
+    size: { type: String, required: false, default: 'default' },
   },
-  data() {
+  data () {
     return {
-      form: this.$form.createForm(this, {name: 'form_delivery'})
+      form: this.$form.createForm(this, { name: 'form_delivery' })
     }
   },
   computed: mapGetters({
@@ -58,24 +62,24 @@ export default {
     hasAddress: 'address/hasAddress',
   }),
   methods: {
-    handleSearch(value) {
-      this.dataSource = value ? this.onSearch(value) : [];
+    handleSearch (value) {
+      this.dataSource = value ? this.onSearch(value) : []
     },
-    async onSearch(term) {
+    async onSearch (term) {
       await this.$store.dispatch('address/onSearch', {
         term: term
-      });
+      })
     },
-    onModal() {
+    onModal () {
       if (!this.hasModal) {
-        let modal = {};
-        modal.isVisible = true;
-        modal.isClosable = true;
-        modal.current = 'delivery';
+        let modal = {}
+        modal.isVisible = true
+        modal.isClosable = true
+        modal.current = 'delivery'
 
-        this.$store.dispatch('base/onModal', modal);
+        this.$store.dispatch('base/onModal', modal)
       }
     },
   },
-};
+}
 </script>

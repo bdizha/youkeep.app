@@ -2,7 +2,8 @@
   <r-modal-template :mask-closable="maskClosable"
                     :closable="closable"
                     current="delivery"
-                    style="position: relative;">
+                    style="position: relative;"
+  >
     <r-notice process="isSuccess"></r-notice>
     <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
     <template v-if="hasForm">
@@ -13,26 +14,26 @@
   </r-modal-template>
 </template>
 <script>
-import {mapGetters} from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
   props: {
-    maskClosable: {type: Boolean, required: false, default: false},
-    closable: {type: Boolean, required: false, default: false},
+    maskClosable: { type: Boolean, required: false, default: false },
+    closable: { type: Boolean, required: false, default: false },
   },
-  data() {
-    return {};
+  data () {
+    return {}
   },
-  created() {
-    this.onAddresses();
+  created () {
+    this.onAddresses()
   },
   computed: mapGetters({
     hasForm: 'base/hasForm',
   }),
   methods: {
-    async onAddresses() {
-      await this.$store.dispatch('account/onAddresses');
+    async onAddresses () {
+      await this.$store.dispatch('account/onAddresses')
     }
   },
-};
+}
 </script>

@@ -2,7 +2,8 @@
   <a-row type="flex" justify="center" align="middle">
     <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-collapse v-if="hasCategory"
-                  default-active-key="1" expandIconPosition="right">
+                  default-active-key="1" expandIconPosition="right"
+      >
         <a-collapse-panel class="r-collapse-panel" key="1" header="You're shopping at">
           <r-store-item v-if="hasStore" :store="store"></r-store-item>
         </a-collapse-panel>

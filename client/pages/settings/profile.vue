@@ -1,14 +1,16 @@
 <template>
   <card :title="$t('your_info')">
     <form @submit.prevent="update" @keydown="form.onKeydown($event)">
-      <alert-success :form="form" :message="$t('info_updated')" />
+      <alert-success :form="form" :message="$t('info_updated')"/>
 
       <!-- Name -->
       <div class="form-group row">
         <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
         <div class="col-md-7">
-          <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" type="text" name="name" class="form-control">
-          <has-error :form="form" field="name" />
+          <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" type="text" name="name"
+                 class="form-control"
+          >
+          <has-error :form="form" field="name"/>
         </div>
       </div>
 
@@ -16,8 +18,10 @@
       <div class="form-group row">
         <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
         <div class="col-md-7">
-          <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" type="email" name="email" class="form-control">
-          <has-error :form="form" field="email" />
+          <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" type="email" name="email"
+                 class="form-control"
+          >
+          <has-error :form="form" field="email"/>
         </div>
       </div>
 

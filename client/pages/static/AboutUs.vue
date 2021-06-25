@@ -37,7 +37,7 @@
                     Changing how people experience shopping and buy what they desire is just getting started.
                   </p>
                   <p class="r-text-normal">
-                    Shopple powers the whole shopping experience for shppers around the world. We specialize
+                    Shopple powers the whole shopping experience for shppers around the world. We specialize in
                     online shopping, order tracking, and marketplace services focused on delivering a customer
                     experience of unparalleled quality.
                   </p>
@@ -84,7 +84,7 @@
                            :lg="{ span: 24 }"
                     >
                       <h2 class="r-heading">
-                        We continue to prioritize quality shopping services.
+                        We continue to prioritize quality shopping services
                       </h2>
                     </a-col>
                     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -211,6 +211,11 @@
                             <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                                    :lg="{ span: 24 }"
                             >
+                              <h4 class="r-text-secondary r-text-uppercase">Ready to join us?</h4>
+                            </a-col>
+                            <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
                               <p class="r-text-normal">
                                 Ready to join a team of bold and passionate builders to do your best work yet? We're a
                                 team of innovative players and come join if you want to play an important role in
@@ -223,7 +228,7 @@
                             >
                               <nuxt-link to="/career/openings">
                                 <a-button type="secondary"
-                                          class="r-btn-bordered-secondary"
+                                          class="r-btn-secondary"
                                           size="large"
                                           html-type="submit"
                                 >

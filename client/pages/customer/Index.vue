@@ -94,7 +94,7 @@
                          :md="{ span: 10 }"
                          :lg="{ span: 8 }"
                   >
-                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/17.svg'" :size="90"
+                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/18.png'" :size="90"
                     ></r-avatar>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -140,7 +140,7 @@
                          :md="{ span: 10 }"
                          :lg="{ span: 8 }"
                   >
-                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/12.svg'" :size="90"
+                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/19.png'" :size="90"
                     ></r-avatar>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -164,7 +164,8 @@
                          :lg="{ span: 24 }"
                   >
                     <p class="r-text-normal">
-                      Want to add something to your order? We think we're flexible enough to get it delivered too in the shortest time possible.
+                      Want to add something to your order? We think we're flexible enough to get it delivered too in the
+                      shortest time possible.
                     </p>
                   </a-col>
                 </a-row>
@@ -184,7 +185,7 @@
                          :md="{ span: 10 }"
                          :lg="{ span: 8 }"
                   >
-                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/13.svg'" :size="90"
+                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/20.png'" :size="90"
                     ></r-avatar>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -201,7 +202,7 @@
                          :lg="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Delivery to your doorstep.
+                      Get deliveries to your doorstep
                     </h2>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -230,7 +231,7 @@
                          :md="{ span: 10 }"
                          :lg="{ span: 8 }"
                   >
-                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/14.svg'" :size="90"
+                    <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/21.png'" :size="90"
                     ></r-avatar>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -247,7 +248,7 @@
                          :lg="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      We take in order instructions
+                      We take in order your instructions
                     </h2>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -280,32 +281,34 @@
           <a-card class="r-bg-secondary-light">
             <a-card-meta>
               <template slot="description">
-                <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="center">
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                    <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                      Give it a go again!
-                    </h4>
-                  </a-col>
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                    <p class="r-text-normal">
-                      Shopple is committed to providing you with exceptional service, efficient and speedy
-                      deliverie,
-                      and Shopple Shoppers you can trust.
-                      Anything you want to shop - it’s on the way.
-                    </p>
-                  </a-col>
-                  <a-col :xs="{ span: 24 }" :md="{ span: 12 }"
-                         :lg="{ span: 12 }"
-                  >
-                    <a-button block @click="onRegister"
-                              size="large"
-                              class="r-btn-secondary"
-                              type="secondary"
+                <div class="r-mv-48">
+                  <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="center">
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                      <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                        Give it a go again!
+                      </h4>
+                    </a-col>
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+                      <p class="r-text-normal">
+                        Shopple is committed to providing you with exceptional service, efficient and speedy
+                        deliveries,
+                        and Shopple Shoppers you can trust.
+                        Anything you want to shop - it’s on the way.
+                      </p>
+                    </a-col>
+                    <a-col :xs="{ span: 24 }" :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
                     >
-                      Get started
-                    </a-button>
-                  </a-col>
-                </a-row>
+                      <a-button block @click="onRegister"
+                                size="large"
+                                class="r-btn-secondary"
+                                type="secondary"
+                      >
+                        Get started
+                      </a-button>
+                    </a-col>
+                  </a-row>
+                </div>
               </template>
             </a-card-meta>
           </a-card>
