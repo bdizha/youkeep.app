@@ -8,10 +8,10 @@
     >
       <a-row type="flex" :gutter="[12,12]" justify="start" align="middle">
         <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-          <r-auth-actions-login :size="'default'" :instruction="'Have an account?'"></r-auth-actions-login>
+          <r-auth-actions-login size="large" :instruction="'Have an account?'"></r-auth-actions-login>
         </a-col>
         <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-          <r-auth-actions-register :size="'default'" :instruction="'New here?'"></r-auth-actions-register>
+          <r-auth-actions-register size="large" :instruction="'New here?'"></r-auth-actions-register>
         </a-col>
       </a-row>
     </a-col>

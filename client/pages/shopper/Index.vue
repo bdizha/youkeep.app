@@ -63,7 +63,7 @@
             :md="{ span: 12 }"
             :lg="{ span: 12 }"
           >
-            <r-avatar class="r-avatar-block" data-src="/images/content/hero-01.png" :size="450"
+            <r-avatar class="r-avatar-auto" data-src="/images/content/hero-01.png" :size="450"
             ></r-avatar>
           </a-col>
         </a-row>
@@ -336,21 +336,22 @@
                     </p>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                         :md="{ span: 18 }"
-                         :lg="{ span: 16 }"
+                         :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
 
                   >
-                    <a-list :data-source="requirements">
-                      <a-list-item slot="renderItem" slot-scope="item, index">
-                        <a-icon type="check"></a-icon>
-                        <div class="r-list-item-text">
-                          {{ item }}
-                        </div>
-                      </a-list-item>
-                    </a-list>
+                    <p v-for="(item, index) in requirements"
+                       :key="index"
+                       class="r-text-normal"
+                    >
+                      <a-icon class="r-text-primary" slot="prefix" type="check"/>
+                      <span class="r-list-item-text">
+                        {{ item }}
+                      </span>
+                    </p>
                   </a-col>
-                  <a-col :xs="{ span: 24 }" :md="{ span: 12 }"
-                         :lg="{ span: 12 }"
+                  <a-col :xs="{ span: 24 }" :md="{ span: 24 }"
+                         :lg="{ span: 24 }"
                   >
                     <a-button block @click="onRegister"
                               size="large"

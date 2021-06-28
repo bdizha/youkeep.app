@@ -3,7 +3,7 @@
             block
             type="secondary" class="r-btn-bordered-secondary"
             icon="check-circle"
-            :size="'default'"
+            size="large"
   >
     Follow
   </a-button>

@@ -12,15 +12,19 @@
       <a-row>
         <a-col :xs="{ span: 24 }">
           <a-form-item>
-            <a-row type="flex" justify="center">
+            <a-row :gutter=[24,24] type="flex" justify="center">
               <a-col class="r-text-left" :xs="{ span: 24 }">
                 <h2 class="r-heading r-text-secondary">
                   Request a Shopple account
                 </h2>
-                <h3 v-show="hasAddress" class="r-heading">
+              </a-col>
+              <a-col v-if="hasAddress" class="r-text-left" :xs="{ span: 24 }">
+                <h3 class="r-heading">
                   <a-icon slot="prefix" type="environment"/>
                   Available in <span class="r-text-secondary">{{ address.city }}</span>!
                 </h3>
+              </a-col>
+              <a-col :xs="{ span: 24 }">
                 <p class="r-text-small">
                   This will just take a few steps to complete. Why don't you help us set up your
                   shopping account details in 3 just under minutes.
@@ -63,19 +67,19 @@
               <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
                   <a-radio :value="1">
-                    I'm a business
+                    I'm a Business
                   </a-radio>
                 </a-col>
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
                   <a-radio :value="2">
-                    I'm a shopper
+                    I'm a Shopper
                   </a-radio>
                 </a-col>
               </a-row>
             </a-radio-group>
           </a-form-item>
           <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button block :size="'default'" type="secondary" html-type="submit"
+            <a-button block size="large" type="secondary" html-type="submit"
                       class="r-btn-secondary"
             >
               Request an invite

@@ -7,7 +7,7 @@
     <a-row :gutter="[24,24]" type="flex" justify="center">
       <a-col class="r-text-left" :xs="{ span: 24 }">
         <h2 class="r-heading r-text-secondary">
-          Sign in
+          Sign In
         </h2>
       </a-col>
       <a-col class="r-text-left" :xs="{ span: 24 }">
@@ -15,54 +15,56 @@
           Sign in to your account with your email address.
         </div>
       </a-col>
-    </a-row>
-    <a-form v-if="hasForm"
-            class="ant-form ant-form-vertical"
-            @submit="onPost"
-            :form="form"
-    >
-      <a-form-item label="Email address">
-        <a-input
-          size="large"
-          placeholder="Your email address"
-          v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please enter your email address' }] }]"
+      <a-col :xs="{ span: 24 }">
+        <a-form v-if="hasForm"
+                class="ant-form ant-form-vertical"
+                @submit="onPost"
+                :form="form"
         >
-          <a-icon slot="prefix" type="mail"/>
-        </a-input>
-      </a-form-item>
-      <a-form-item label="Password">
-        <a-input type="password"
-                 size="large"
-                 placeholder="Your Password"
-                 v-decorator="['password', { rules: [{ required: true, message: 'Please enter your password' }] }]"
-        >
-          <a-icon slot="prefix" type="lock"/>
-        </a-input>
-      </a-form-item>
-      <a-form-item :wrapper-col="{ span: 24 }">
-        <a-button block @click="onPost" :size="'default'" type="secondary" html-type="submit"
-                  class="r-btn-secondary"
-        >
-          Login
-        </a-button>
-      </a-form-item>
-      <a-form-item>
-        <a-row type="flex" justify="center">
-          <a-col :sm="{ span: 24 }" :lg="{ span: 18 }">
-            <span class="r-inline-text">Don't have an account?</span>
-            <a class="r-inline-text r-text-primary" v-on:click="onModal('register', $event)" href="/">
-              Sign up
-            </a><br/>
-            <span class="r-inline-text ">Forgot your password?</span>
-            <a class="r-inline-text r-text-primary" v-on:click="onModal('password-request', $event)"
-               href="/"
+          <a-form-item label="Email address">
+            <a-input
+              size="large"
+              placeholder="Your email address"
+              v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please enter your email address' }] }]"
             >
-              Reset it
-            </a>
-          </a-col>
-        </a-row>
-      </a-form-item>
-    </a-form>
+              <a-icon slot="prefix" type="mail"/>
+            </a-input>
+          </a-form-item>
+          <a-form-item label="Password">
+            <a-input type="password"
+                     size="large"
+                     placeholder="Your Password"
+                     v-decorator="['password', { rules: [{ required: true, message: 'Please enter your password' }] }]"
+            >
+              <a-icon slot="prefix" type="lock"/>
+            </a-input>
+          </a-form-item>
+          <a-form-item :wrapper-col="{ span: 24 }">
+            <a-button block @click="onPost" size="large" type="secondary" html-type="submit"
+                      class="r-btn-secondary"
+            >
+              Login
+            </a-button>
+          </a-form-item>
+          <a-form-item>
+            <a-row type="flex" justify="center">
+              <a-col :sm="{ span: 24 }" :lg="{ span: 18 }">
+                <span class="r-inline-text">Don't have an Account?</span>
+                <a class="r-inline-text r-text-primary" v-on:click="onModal('register', $event)" href="/">
+                  Sign up
+                </a><br/>
+                <span class="r-inline-text ">Forgot your Password?</span>
+                <a class="r-inline-text r-text-primary" v-on:click="onModal('password-request', $event)"
+                   href="/"
+                >
+                  Reset it
+                </a>
+              </a-col>
+            </a-row>
+          </a-form-item>
+        </a-form>
+      </a-col>
+    </a-row>
     <r-notice :process="process"></r-notice>
     <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
   </r-modal-template>

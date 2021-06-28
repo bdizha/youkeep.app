@@ -5,7 +5,7 @@ import Cookies from 'js-cookie'
 export const state = () => ({
   stores: [],
   store: {},
-  category: {has_categories: false, has_products: false},
+  category: { has_categories: false, has_products: false },
   categories: [],
   products: [],
   product: {},
@@ -37,94 +37,94 @@ export const getters = {
 
 // mutations
 export const mutations = {
-  setStores(state, stores) {
-    console.log('stores...', stores);
-    state.stores = stores;
+  setStores (state, stores) {
+    console.log('stores...', stores)
+    state.stores = stores
   },
-  setStore(state, store) {
-    console.log('store...', store);
-    state.store = store;
+  setStore (state, store) {
+    console.log('store...', store)
+    state.store = store
   },
-  setProduct(state, product) {
-    state.product = product;
+  setProduct (state, product) {
+    state.product = product
   },
-  setProducts(state, products) {
-    state.products = products;
+  setProducts (state, products) {
+    state.products = products
   },
-  setStoreTray(state, hasStoreTray) {
-    state.hasStoreTray = hasStoreTray;
+  setStoreTray (state, hasStoreTray) {
+    state.hasStoreTray = hasStoreTray
   },
-  setFilters(state, filters) {
-    state.filters = filters;
+  setFilters (state, filters) {
+    state.filters = filters
   },
-  setSort(state, sort) {
-    state.sort = sort;
+  setSort (state, sort) {
+    state.sort = sort
   },
-  setSearch(state, search) {
-    state.search = search;
+  setSearch (state, search) {
+    state.search = search
   },
-  setCategory(state, category) {
-    state.category = category;
+  setCategory (state, category) {
+    state.category = category
   },
-  setCategories(state, categories) {
-    state.categories = categories;
+  setCategories (state, categories) {
+    state.categories = categories
   },
-  FETCH_STORE_SUCCESS(state, data) {
-    state.stores = data.stores;
-    state.store = data.stores[0];
+  FETCH_STORE_SUCCESS (state, data) {
+    state.stores = data.stores
+    state.store = data.stores[0]
 
-    console.log('stores', state.stores);
+    console.log('stores', state.stores)
   },
-  FETCH_STORES_SUCCESS(state, data) {
-    state.stores = data.stores;
-    state.store = data.stores[0];
+  FETCH_STORES_SUCCESS (state, data) {
+    state.stores = data.stores
+    state.store = data.stores[0]
 
-    console.log('stores', state.stores);
+    console.log('stores', state.stores)
   },
-  FETCH_CATEGORY_SUCCESS(state, data) {
-    state.category = data.category;
+  FETCH_CATEGORY_SUCCESS (state, data) {
+    state.category = data.category
   },
-  FETCH_PRODUCTS_SUCCESS(state, data) {
-    state.products = data.products;
+  FETCH_PRODUCTS_SUCCESS (state, data) {
+    state.products = data.products
   },
-  FETCH_CATEGORIES_SUCCESS(state, data) {
-    state.categories = data.categories;
+  FETCH_CATEGORIES_SUCCESS (state, data) {
+    state.categories = data.categories
   },
-  FETCH_STORE_FAILURE(state, data) {
+  FETCH_STORE_FAILURE (state, data) {
     state.errors = null
   },
 }
 
 // actions
 export const actions = {
-  onStores({commit}, payload) {
+  onStores ({ commit }, payload) {
     commit('setStores', payload)
   },
-  onProduct({commit}, payload) {
+  onProduct ({ commit }, payload) {
     commit('setProduct', payload)
   },
-  onProducts({commit}, payload) {
+  onProducts ({ commit }, payload) {
     commit('setProducts', payload)
   },
-  onFilters({commit}, payload) {
+  onFilters ({ commit }, payload) {
     commit('setFilters', payload)
   },
-  onSort({commit}, payload) {
+  onSort ({ commit }, payload) {
     commit('setSort', payload)
   },
-  onSearch({commit}, payload) {
+  onSearch ({ commit }, payload) {
     commit('setSearch', payload)
   },
-  onCategories({commit}, payload) {
+  onCategories ({ commit }, payload) {
     commit('setCategories', payload)
   },
-  onCategory({commit}, payload) {
+  onCategory ({ commit }, payload) {
     commit('setCategory', payload)
   },
 
-  async fetchStores({commit}) {
+  async fetchStores ({ commit }) {
     try {
-      const {data} = await axios.get('/stores')
+      const { data } = await axios.get('/stores')
 
       commit('FETCH_STORE_SUCCESS', data)
     } catch (e) {
@@ -132,27 +132,27 @@ export const actions = {
     }
   },
 
-  async fetchProducts({commit}, payload) {
+  async fetchProducts ({ commit }, payload) {
     try {
-      const {data} = await axios.get('/products', payload)
+      const { data } = await axios.get('/products', payload)
       commit('FETCH_PRODUCTS_SUCCESS', data)
     } catch (e) {
       commit('FETCH_STORE_FAILURE', e)
     }
   },
 
-  async fetchCategories({commit}, payload) {
+  async fetchCategories ({ commit }, payload) {
     try {
-      const {data} = await axios.get(payload)
+      const { data } = await axios.get(payload)
       commit('FETCH_CATEGORIES_SUCCESS', data)
     } catch (e) {
       commit('FETCH_STORE_FAILURE', e)
     }
   },
 
-  async fetchCategory({commit}, path) {
+  async fetchCategory ({ commit }, path) {
     try {
-      const {data} = await axios.get(path);
+      const { data } = await axios.get(path)
       commit('FETCH_CATEGORY_SUCCESS', data)
     } catch (e) {
       commit('FETCH_STORE_FAILURE', e)

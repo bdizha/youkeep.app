@@ -33,7 +33,8 @@ export function scrollBehavior (to, from, savedPosition) {
     position = { x: 0, y: 0 }
   } else if (to.matched.some(r => r.components.default.options.scrollToTop)) {
     position = { x: 0, y: 0 }
-  } if (to.hash) {
+  }
+  if (to.hash) {
     position = { selector: to.hash }
   }
 

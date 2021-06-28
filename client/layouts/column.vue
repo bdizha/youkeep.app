@@ -3,13 +3,14 @@
     <r-header></r-header>
     <a-layout-sider v-model="collapsed"
                     :trigger="null"
-                    collapsible>
+                    collapsible
+    >
       <r-menu></r-menu>
     </a-layout-sider>
     <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
       <a-layout>
         <a-layout-content>
-          <nuxt />
+          <nuxt/>
         </a-layout-content>
       </a-layout>
       <r-footer></r-footer>
@@ -18,25 +19,26 @@
   </a-layout>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
+
 export default {
   data: () => ({
     collapsed: true,
   }),
-  created() {
-    this.onStores();
+  created () {
+    this.onStores()
   },
   computed: mapGetters({
     processes: 'base/processes'
   }),
   methods: {
-    async onStores() {
+    async onStores () {
       let params = {
         category_id: null,
         limit: process.env.APP_LIMIT
-      };
+      }
 
-      await this.$store.dispatch('base/onStores', params);
+      await this.$store.dispatch('base/onStores', params)
     }
   }
 }

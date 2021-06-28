@@ -258,7 +258,7 @@
           <a-row type="flex" justify="start" align="middle">
             <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onBack"
-                        :size="'default'"
+                        size="large"
                         type="default"
                         class="r-btn-secondary"
               >
@@ -268,7 +268,7 @@
             </a-col>
             <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onStep"
-                        :size="'default'"
+                        size="large"
                         type="secondary" html-type="button"
                         class="ant-btn r-btn-secondary"
               >

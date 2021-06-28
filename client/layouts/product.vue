@@ -3,7 +3,8 @@
     <r-header></r-header>
     <a-layout-sider v-model="collapsed"
                     :trigger="null"
-                    collapsible>
+                    collapsible
+    >
       <r-product-menu></r-product-menu>
     </a-layout-sider>
     <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
@@ -13,7 +14,7 @@
   </a-layout>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   data: () => ({
@@ -22,7 +23,7 @@ export default {
   computed: mapGetters({
     processes: 'base/processes'
   }),
-  mounted() {
+  mounted () {
   },
   methods: {}
 }

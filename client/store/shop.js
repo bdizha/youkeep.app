@@ -1,5 +1,5 @@
 import axios from 'axios'
-import Cookies from "js-cookie";
+import Cookies from 'js-cookie'
 
 // state
 const state = () => ({
@@ -54,152 +54,152 @@ const getters = {
 
 // mutations
 const mutations = {
-  setCategory(state, category) {
-    state.category = category;
+  setCategory (state, category) {
+    state.category = category
   },
-  setProduct(state, product) {
-    state.product = product;
+  setProduct (state, product) {
+    state.product = product
   },
-  setStore(state, store) {
-    state.store = store;
-    state.hasStore = store.id != undefined;
+  setStore (state, store) {
+    state.store = store
+    state.hasStore = store.id != undefined
 
-    console.log('response: store data: ', state.store);
+    console.log('response: store data: ', state.store)
 
-    Cookies.set('store', store, {expires: 365});
+    Cookies.set('store', store, { expires: 365 })
   },
-  setNotice(state, notice) {
-    state.notice = notice;
-    state.hasNotice = notice !== null;
+  setNotice (state, notice) {
+    state.notice = notice
+    state.hasNotice = notice !== null
 
-    console.log('response: state.hasNotice data: ', state.hasNotice);
-    console.log('response: state.notice data: ', state.notice);
+    console.log('response: state.hasNotice data: ', state.hasNotice)
+    console.log('response: state.notice data: ', state.notice)
   },
-  setHasNotice(state, hasNotice) {
-    state.hasNotice = hasNotice;
+  setHasNotice (state, hasNotice) {
+    state.hasNotice = hasNotice
   },
-  setFilters(state, filters) {
-    state.filters = filters;
+  setFilters (state, filters) {
+    state.filters = filters
   },
-  setFilter(state, filter) {
-    state.filters[filter.key] = filter.value;
+  setFilter (state, filter) {
+    state.filters[filter.key] = filter.value
   },
-  setSort(state, sort) {
-    state.sort = sort;
+  setSort (state, sort) {
+    state.sort = sort
   },
-  setSearch(state, search) {
-    state.search = search;
-    state.hasSearched = true;
+  setSearch (state, search) {
+    state.search = search
+    state.hasSearched = true
 
-    Cookies.set('store_search', search, {expires: 365});
+    Cookies.set('store_search', search, { expires: 365 })
   },
-  setProcess(state, process) {
-    state.processes[process.key] = process.value;
+  setProcess (state, process) {
+    state.processes[process.key] = process.value
   }
 }
 
 // actions
 const actions = {
-  async onStore({dispatch, commit}, route) {
-    console.log('response: route store', route);
+  async onStore ({ dispatch, commit }, route) {
+    console.log('response: route store', route)
     try {
-      dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
+      dispatch('base/onProcess', { key: 'isCategories', value: true }, { root: true })
 
       // console.log('route: ', route);
-      let params = {};
+      let params = {}
 
-      await axios.post(route, params).then(({data}) => {
-        let store = data.store;
-        commit('setStore', store);
+      await axios.post(route, params).then(({ data }) => {
+        let store = data.store
+        commit('setStore', store)
 
         if (store.categories != undefined) {
-          let categories = store.categories;
-          dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true})
+          let categories = store.categories
+          dispatch('base/onProcess', { key: 'isCategories', value: false }, { root: true })
         }
 
-        console.log('onStore', store);
-      });
+        console.log('onStore', store)
+      })
 
     } catch (e) {
-      console.error('onStore errors');
-      console.log(e);
+      console.error('onStore errors')
+      console.log(e)
     }
   },
-  async onCategories({dispatch, commit, state}, payload) {
+  async onCategories ({ dispatch, commit, state }, payload) {
     try {
-      dispatch('base/onProcess', {key: 'isCategories', value: true}, {root: true});
-      dispatch('base/onProcess', {key: 'isCategory', value: false}, {root: true});
+      dispatch('base/onProcess', { key: 'isCategories', value: true }, { root: true })
+      dispatch('base/onProcess', { key: 'isCategory', value: false }, { root: true })
 
-      return await axios.post('/categories', payload).then(({data}) => {
-        let categories = data.categories;
+      return await axios.post('/categories', payload).then(({ data }) => {
+        let categories = data.categories
 
-        dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
-        dispatch('base/onProcess', {key: 'isCategories', value: false}, {root: true});
+        dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
+        dispatch('base/onProcess', { key: 'isCategories', value: false }, { root: true })
 
-        return categories;
-      });
+        return categories
+      })
     } catch (e) {
-      console.error('onCategories errors');
-      console.log(e);
+      console.error('onCategories errors')
+      console.log(e)
     }
   },
-  async onProducts({dispatch, commit}, payload) {
+  async onProducts ({ dispatch, commit }, payload) {
 
     try {
-      return await axios.post('/products', payload).then(({data}) => {
-        console.log('response: onProducts data: ', data);
-        let products = data;
+      return await axios.post('/products', payload).then(({ data }) => {
+        console.log('response: onProducts data: ', data)
+        let products = data
 
-        dispatch('base/onProcess', {key: 'isFixed', value: false}, {root: true});
+        dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
 
-        return products;
-      });
+        return products
+      })
 
     } catch (e) {
-      console.error('onProducts errors');
-      console.log(e);
+      console.error('onProducts errors')
+      console.log(e)
     }
   },
-  onFilters({dispatch, commit}, payload) {
+  onFilters ({ dispatch, commit }, payload) {
     commit('setFilters', payload)
   },
-  onSort({dispatch, commit}, payload) {
+  onSort ({ dispatch, commit }, payload) {
     commit('setSort', payload)
   },
-  onNotice({dispatch, commit}, payload) {
-    commit('setNotice', payload);
+  onNotice ({ dispatch, commit }, payload) {
+    commit('setNotice', payload)
     // commit('setHasNotice', false);
   },
-  async onSearch({dispatch, commit}, payload) {
+  async onSearch ({ dispatch, commit }, payload) {
 
     try {
-      commit('setProcess', {key: 'isSearching', value: true});
+      commit('setProcess', { key: 'isSearching', value: true })
 
-      await axios.post('/search', payload).then(({data}) => {
+      await axios.post('/search', payload).then(({ data }) => {
         // console.log('response: onSearch data: ', data);
 
-        let search = data;
-        commit('setSearch', search);
-        console.log('response: onSearch: ', search);
-        commit('setProcess', {key: 'isSearching', value: false});
-      });
+        let search = data
+        commit('setSearch', search)
+        console.log('response: onSearch: ', search)
+        commit('setProcess', { key: 'isSearching', value: false })
+      })
 
     } catch (e) {
-      console.error('onSearch errors');
-      console.log(e);
+      console.error('onSearch errors')
+      console.log(e)
     }
   },
-  async onInit({dispatch, commit, state}, payload) {
-    const store = Cookies.get('store');
+  async onInit ({ dispatch, commit, state }, payload) {
+    const store = Cookies.get('store')
 
-    console.log('Found store', JSON.parse(store));
+    console.log('Found store', JSON.parse(store))
     if (store) {
-      commit('setStore', JSON.parse(store));
+      commit('setStore', JSON.parse(store))
     }
 
-    const search = Cookies.get('store_search');
+    const search = Cookies.get('store_search')
     if (search) {
-      commit('setSearch', JSON.parse(search));
+      commit('setSearch', JSON.parse(search))
     }
   }
 }

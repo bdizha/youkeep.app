@@ -18,7 +18,7 @@
           <r-rate :rating="product.rating"></r-rate>
           <r-product-price :is-showing="true" :product="product"></r-product-price>
           <r-product-types :is-showing="true" :product="product"></r-product-types>
-          <r-product-actions :is-showing="true" :size="'default'" :product="product"></r-product-actions>
+          <r-product-actions :is-showing="true" size="large" :product="product"></r-product-actions>
         </a-col>
       </a-row>
     </a-card>

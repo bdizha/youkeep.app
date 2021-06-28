@@ -3,18 +3,19 @@
     <r-header></r-header>
     <a-layout-sider v-model="collapsed"
                     :trigger="null"
-                    collapsible>
+                    collapsible
+    >
       <r-category-menu></r-category-menu>
     </a-layout-sider>
     <a-layout-content class="r-layout-content__store" :class="{'r-spin__active' :processes.isFixed}">
-      <nuxt />
+      <nuxt/>
       <r-spinner :is-absolute="false"></r-spinner>
     </a-layout-content>
     <r-bottom></r-bottom>
   </a-layout>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   data: () => ({
@@ -23,7 +24,7 @@ export default {
   computed: mapGetters({
     processes: 'base/processes'
   }),
-  mounted() {
+  mounted () {
   },
   methods: {}
 }

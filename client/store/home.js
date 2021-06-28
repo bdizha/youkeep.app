@@ -21,69 +21,69 @@ export const getters = {
 
 // mutations
 export const mutations = {
-  FETCH_HOME_SUCCESS(state, data) {
+  FETCH_HOME_SUCCESS (state, data) {
 
-    console.log('...', data);
+    console.log('...', data)
 
-    state.sliderCategories = data.slider_categories;
-    state.featuredCategories = data.featured_categories;
-    state.mainCategories = data.main_categories;
-    state.testimonials = data.testimonials;
+    state.sliderCategories = data.slider_categories
+    state.featuredCategories = data.featured_categories
+    state.mainCategories = data.main_categories
+    state.testimonials = data.testimonials
 
-    console.log('mainCategories', state.mainCategories);
-    console.log('featuredCategories', state.featuredCategories);
-    console.log('sliderCategories', state.sliderCategories);
+    console.log('mainCategories', state.mainCategories)
+    console.log('featuredCategories', state.featuredCategories)
+    console.log('sliderCategories', state.sliderCategories)
   },
-  FETCH_SLIDER_CATEGORIES_SUCCESS(state, slider) {
-    state.sliderCategories = slider.slider_categories;
-    console.log('sliderCategories', state.sliderCategories);
+  FETCH_SLIDER_CATEGORIES_SUCCESS (state, slider) {
+    state.sliderCategories = slider.slider_categories
+    console.log('sliderCategories', state.sliderCategories)
   },
-  FETCH_MAIN_CATEGORIES_SUCCESS(state, main) {
-    state.mainCategories = main.main_categories;
-    console.log('mainCategories', state.mainCategories);
+  FETCH_MAIN_CATEGORIES_SUCCESS (state, main) {
+    state.mainCategories = main.main_categories
+    console.log('mainCategories', state.mainCategories)
   },
-  FETCH_FEATURED_CATEGORIES_SUCCESS(state, featured) {
-    state.featuredCategories = featured.featured_categories;
-    console.log('featuredCategories', state.featuredCategories);
+  FETCH_FEATURED_CATEGORIES_SUCCESS (state, featured) {
+    state.featuredCategories = featured.featured_categories
+    console.log('featuredCategories', state.featuredCategories)
   },
 
-  FETCH_HOME_FAILURE(state, data) {
+  FETCH_HOME_FAILURE (state, data) {
     state.errors = null
   },
 }
 
 // actions
 export const actions = {
-  async fetchHome({commit}) {
+  async fetchHome ({ commit }) {
     try {
-      const {data} = await axios.get('/welcome')
+      const { data } = await axios.get('/welcome')
 
       commit('FETCH_HOME_SUCCESS', data)
     } catch (e) {
       commit('FETCH_HOME_FAILURE', e)
     }
   },
-  async fetchMainCategories({commit}) {
+  async fetchMainCategories ({ commit }) {
     try {
-      const {data} = await axios.get('/home/main')
+      const { data } = await axios.get('/home/main')
 
       commit('FETCH_MAIN_CATEGORIES_SUCCESS', data)
     } catch (e) {
       commit('FETCH_HOME_FAILURE', e)
     }
   },
-  async fetchFeaturedCategories({commit}) {
+  async fetchFeaturedCategories ({ commit }) {
     try {
-      const {data} = await axios.get('/home/featured')
+      const { data } = await axios.get('/home/featured')
 
       commit('FETCH_FEATURED_CATEGORIES_SUCCESS', data)
     } catch (e) {
       commit('FETCH_HOME_FAILURE', e)
     }
   },
-  async fetchSliderCategories({commit}) {
+  async fetchSliderCategories ({ commit }) {
     try {
-      const {data} = await axios.get('/home/slider')
+      const { data } = await axios.get('/home/slider')
 
       commit('FETCH_SLIDER_CATEGORIES_SUCCESS', data)
     } catch (e) {

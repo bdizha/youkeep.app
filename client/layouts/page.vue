@@ -4,7 +4,7 @@
     <a-layout-content :class="{'r-has-data': true}">
       <a-layout>
         <a-layout-content>
-          <nuxt />
+          <nuxt/>
         </a-layout-content>
       </a-layout>
       <r-footer></r-footer>
@@ -13,11 +13,11 @@
   </a-layout>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   data: () => ({}),
-  created() {
+  created () {
   },
   computed: mapGetters({
     processes: 'base/processes'

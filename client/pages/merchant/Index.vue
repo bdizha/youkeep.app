@@ -27,7 +27,7 @@
                          :lg="{ span: 24 }"
                   >
                     <h1 class="r-heading">
-                      Become a verified merchant today
+                      Become a <span class="r-text-secondary">verified</span> merchant today!
                     </h1>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
@@ -59,7 +59,7 @@
             :md="{ span: 12 }"
             :lg="{ span: 12 }"
           >
-            <r-avatar class="r-avatar-block" data-src="/images/content/hero-02.png" :size="450"
+            <r-avatar class="r-avatar-auto" data-src="/images/content/hero-02.png" :size="450"
             ></r-avatar>
           </a-col>
         </a-row>

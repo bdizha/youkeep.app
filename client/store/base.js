@@ -11,7 +11,7 @@ const state = () => ({
   category: {},
   product: {},
   products: [],
-  menuCategory: {name: 'All Categories', slug: null},
+  menuCategory: { name: 'All Categories', slug: null },
   hasMenuCategory: false,
   categories: [],
   hasProducts: false,

@@ -10,7 +10,7 @@
       >
         <template slot="buildOptionText" slot-scope="props">
           <a-button class="r-btn-bordered-grey"
-                    type="secondary" :size="'default'"
+                    type="secondary" size="large"
           >
             {{ props.value }}
           </a-button>

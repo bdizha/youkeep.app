@@ -4,7 +4,7 @@
            :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <r-steps></r-steps>
+      <r-shopper-steps></r-shopper-steps>
     </a-col>
     <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
@@ -223,7 +223,7 @@
                   <template slot="description">
                     <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/shopper-01.png'" shape="circle" :size="90"
+                        <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/18.png'" shape="circle" :size="90"
                         ></r-avatar>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
@@ -240,7 +240,7 @@
                   <template slot="description">
                     <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/shopper-02.png'" shape="circle" :size="90"
+                        <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/21.png'" shape="circle" :size="90"
                         ></r-avatar>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
@@ -257,7 +257,7 @@
                   <template slot="description">
                     <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/shopper-03.png'" shape="circle" :size="90"
+                        <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/19.png'" shape="circle" :size="90"
                         ></r-avatar>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">

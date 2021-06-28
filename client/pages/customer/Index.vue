@@ -3,7 +3,7 @@
     <a-col style="background: #FFFFFF;" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <div class="r-mt-48 r-ph-24">
+      <div class="r-mv-48 r-ph-24">
         <a-row :gutter="[96,48]" type="flex" justify="start" align="middle">
           <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                  :md="{ span: 12 }"

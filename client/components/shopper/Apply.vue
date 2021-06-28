@@ -1,28 +1,30 @@
 <template>
   <a-row type="flex" justify="center" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18}"
-           :lg="{span: 18}"
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24}"
+           :lg="{span: 24}"
     >
-      <a-form :class="{'r-hidden' :isSuccessful}" class="ant-form ant-form-vertical"
+      <a-form :class="{'r-hidden' :isSuccessful}" class="ant-form"
               @submit="apply"
               :form="formApply"
       >
         <a-form-item v-if="step == 0">
-          <a-row type="flex" justify="start" align="middle">
+          <a-row :gutter="[24, 24]" type="flex" justify="start" align="middle">
             <a-col class="r-text-left" :xs="{ span: 24 }">
               <h2 class="r-heading r-text-secondary">
-                Shopper application
+                Shopper Application at Shopple:
               </h2>
+            </a-col>
+            <a-col class="r-text-left" :xs="{ span: 24 }">
               <p v-if="false" class="r-text-normal">
                 Sign in to your account with your email address.
               </p>
             </a-col>
-          </a-row>
-          <a-row type="flex" justify="start" align="middle">
             <a-col class="r-text-left" :xs="{ span: 24 }">
               <h3 class="r-heading">
                 What is Shopple?
               </h3>
+            </a-col>
+            <a-col class="r-text-left" :xs="{ span: 24 }">
               <p class="r-text-normal">
                 Shopple is a fast growing startup that is improving lives by giving people more time to
                 spend
@@ -31,12 +33,12 @@
                 delivered on-demand as soon as 1 hour later.
               </p>
             </a-col>
-          </a-row>
-          <a-row type="flex" justify="start" align="middle">
             <a-col class="r-text-left" :xs="{ span: 24 }">
               <h3 class="r-heading">
                 What is a Shopple shopper?
               </h3>
+            </a-col>
+            <a-col class="r-text-left" :xs="{ span: 24 }">
               <p class="r-text-normal">
                 Shopple Shoppers carefully select member's shopping using the Shopple app and deliver
                 them
@@ -48,7 +50,7 @@
           </a-row>
         </a-form-item>
         <a-form-item v-if="step == 1">
-          <h2 class="r-title">
+          <h2 class="r-heading">
             Start by telling us a little bit about yourself!
           </h2>
         </a-form-item>
@@ -258,7 +260,7 @@
           <a-row :gutter="0" type="flex" justify="start" align="middle">
             <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onBack"
-                        :size="'default'"
+                        size="large"
                         type="default"
               >
                 <a-icon type="left"/>
@@ -267,7 +269,7 @@
             </a-col>
             <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
               <a-button @click="onStep"
-                        :size="'default'"
+                        size="large"
                         type="secondary"
                         html-type="button"
                         class="r-btn-secondary"

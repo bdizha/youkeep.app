@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 
 // state
 export const state = () => ({
-  accept: "*.doc,*.pdf,*.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  accept: '*.doc,*.pdf,*.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   user: {},
   isLoggedIn: false,
   isSpinning: false,
@@ -50,76 +50,76 @@ export const getters = {
 
 // mutations
 export const mutations = {
-  setModal(state, modal) {
-    state.modal = modal;
-    state.isSpinning = false;
-    state.isDark = false;
-    state.isRaised = false;
+  setModal (state, modal) {
+    state.modal = modal
+    state.isSpinning = false
+    state.isDark = false
+    state.isRaised = false
     // console.trace();
   },
-  setSpin(state, isSpinning) {
-    state.isSpinning = isSpinning;
+  setSpin (state, isSpinning) {
+    state.isSpinning = isSpinning
   },
-  setDownload(state, hasDownload) {
-    state.hasDownload = hasDownload;
+  setDownload (state, hasDownload) {
+    state.hasDownload = hasDownload
   },
-  setSubscribe(state, hasSubscribe) {
-    state.hasSubscribe = hasSubscribe;
+  setSubscribe (state, hasSubscribe) {
+    state.hasSubscribe = hasSubscribe
   },
-  setDrawer(state, drawer) {
-    state.drawer = drawer;
+  setDrawer (state, drawer) {
+    state.drawer = drawer
   },
-  setDark(state, isDark) {
-    state.isDark = isDark;
+  setDark (state, isDark) {
+    state.isDark = isDark
   },
-  setRaise(state, isRaised) {
-    state.isRaised = isRaised;
+  setRaise (state, isRaised) {
+    state.isRaised = isRaised
   },
-  setFooter(state, hasFooter) {
-    state.hasFooter = hasFooter;
+  setFooter (state, hasFooter) {
+    state.hasFooter = hasFooter
   },
-  setUser(state, user) {
-    state.user = user;
+  setUser (state, user) {
+    state.user = user
   },
-  setStoreTray(state, hasStoreTray) {
-    state.hasStoreTray = hasStoreTray;
+  setStoreTray (state, hasStoreTray) {
+    state.hasStoreTray = hasStoreTray
   },
 }
 
 // actions
 export const actions = {
-  onModal({commit}, payload) {
+  onModal ({ commit }, payload) {
     commit('setModal', payload)
   },
-  onSpin({commit}, payload) {
+  onSpin ({ commit }, payload) {
     commit('setSpin', payload)
   },
-  onDownload({commit}, payload) {
+  onDownload ({ commit }, payload) {
     commit('setDownload', payload)
   },
-  onSubscribe({commit}, payload) {
+  onSubscribe ({ commit }, payload) {
     commit('setSubscribe', payload)
   },
-  onDrawer({commit}, payload) {
+  onDrawer ({ commit }, payload) {
     commit('setDrawer', payload)
   },
-  onDark({commit}, payload) {
+  onDark ({ commit }, payload) {
     commit('setDark', payload)
   },
-  onRaise({commit}, payload) {
+  onRaise ({ commit }, payload) {
     commit('setRaise', payload)
   },
-  onFooter({commit}, payload) {
+  onFooter ({ commit }, payload) {
     commit('setFooter', payload)
   },
-  onSearch({commit}, payload) {
+  onSearch ({ commit }, payload) {
     commit('setSearch', payload)
   },
-  onUser({commit}, payload) {
+  onUser ({ commit }, payload) {
     commit('setUser', payload)
   },
-  onStoreTray({commit}, payload) {
-    commit('setStoreTray', payload);
+  onStoreTray ({ commit }, payload) {
+    commit('setStoreTray', payload)
 
     // if (this.hasStoreTray) {
     //   $('body').addClass('r-hide-body');

@@ -41,15 +41,21 @@ export default (context, inject) => {
 
   const callback = (entries, object) => {
     entries.forEach((entry, i) => {
-      if (!entry.isIntersecting) return
+      if (!entry.isIntersecting) {
+        return
+      }
 
       const a = entry.target
 
       // if external link, do nothing
-      if (!a.href || !a.href.startsWith(siteUrl)) return
+      if (!a.href || !a.href.startsWith(siteUrl)) {
+        return
+      }
 
       // if it should not be prefetched
-      if (a.hasAttribute('data-no-prefetch')) return
+      if (a.hasAttribute('data-no-prefetch')) {
+        return
+      }
 
       const path = a.href.replace(siteUrl, '')
 

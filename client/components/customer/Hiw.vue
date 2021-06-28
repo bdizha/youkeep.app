@@ -165,7 +165,7 @@
               in your Shopple account after your sale closes. Plus, Shopple offers a host of seller tools
               and resources to enhance your fun and profits.
             </p>
-            <a-button class="r-btn-primary"
+            <a-button class="r-btn-secondary"
                       type="primary"
                       to="/register"
                       size="large"
@@ -310,7 +310,7 @@
                            :md="{ span: 24 }"
                            :lg="{ span: 24 }"
                     >
-                      <a-button class="r-btn-primary"
+                      <a-button class="r-btn-secondary"
                                 type="primary"
                                 to="/register"
                                 size="large"
@@ -351,13 +351,13 @@
                   <template slot="description">
                     <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                        <r-avatar class="r-avatar-secondary" :dataSrc="'/images/content/customer-01.png'" shape="circle"
+                        <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/26.png'" shape="circle"
                                   :size="90"
                         ></r-avatar>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                         <h4 class="r-heading">
-                          Convenient payment options
+                          <span class="r-text-secondary">Convenient</span> payment options
                         </h4>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
@@ -376,13 +376,13 @@
                   <template slot="description">
                     <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                        <r-avatar class="r-avatar-secondary" :dataSrc="'/images/content/customer-02.png'" shape="circle"
+                        <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/24.png'" shape="circle"
                                   :size="90"
                         ></r-avatar>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                         <h4 class="r-heading">
-                          Fast access to your money
+                          <span class="r-text-secondary">Fast</span> access to your money
                         </h4>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
@@ -401,13 +401,13 @@
                   <template slot="description">
                     <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="start" align="middle">
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-                        <r-avatar class="r-avatar-secondary" :dataSrc="'/images/content/customer-03.png'" shape="circle"
+                        <r-avatar class="r-avatar-auto" :dataSrc="'/images/content/23.png'" shape="circle"
                                   :size="90"
                         ></r-avatar>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
                         <h4 class="r-heading">
-                          Fraud detection & reduction
+                          <span class="r-text-secondary">Secure</span> and reliable platform
                         </h4>
                       </a-col>
                       <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">

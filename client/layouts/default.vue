@@ -4,7 +4,7 @@
     <a-layout-content :class="{'r-spin__active' :false}">
       <a-layout>
         <a-layout-content>
-          <nuxt />
+          <nuxt/>
         </a-layout-content>
         <r-footer></r-footer>
       </a-layout>
@@ -14,11 +14,11 @@
   </a-layout>
 </template>
 <script>
-import {mapGetters} from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   data: () => ({}),
-  created() {
+  created () {
   },
   computed: mapGetters({
     processes: 'base/processes'
