@@ -39,6 +39,8 @@ class CategorySeeder extends DatabaseSeeder
             $categoryName = ucwords(strtolower($categoryName));
             $this->category = $this->setCategory($categoryName, null);
 
+            echo "Category slug: {$this->category->slug}\n";
+
             $this->linkCategories();
         });
     }
@@ -50,30 +52,31 @@ class CategorySeeder extends DatabaseSeeder
         'accessories' => 'accessories',
         'appliances-tech' => 'electronics',
         'audio' => 'electronics',
-        'shop-by-brand' => 'fashion',
+        'shop-by-brand' => 'clothing',
         'dining' => 'household-items',
         'decor' => 'household-items',
-        'exclusive-to-online' => 'premium',
+        'exclusive-to-online' => 'just-for-you',
         'offers' => 'promos',
-        'sale' => 'fashion',
+        'sale' => 'clothing',
         'promos' => 'promos',
-        'what-s-new' => ['premium','household-items'],
-        'ladies' => ['for-women', 'fashion'],
-        'for-ladies' => ['for-women', 'fashion'],
-        'clothes' => 'fashion',
-        'clothing' => 'fashion',
-        '3stripes' => 'fashion',
-        'outlet' => ['fashion', 'sport-outdoors'],
-        'shoes' => 'fashion',
-        'men' => ['for-men', 'fashion'],
-        'for-men' => ['for-men', 'fashion'],
-        'new-in' => ['premium','household-items'],
+        'what-s-new' => ['just-for-you','household-items'],
+        'ladies' => ['for-women', 'clothing'],
+        'for-ladies' => ['for-women', 'clothing'],
+        'clothes' => 'clothing',
+        'clothing' => ['just-for-you', 'clothing'],
+        '3stripes' => 'clothing',
+        'outlet' => ['clothing', 'sport-outdoors'],
+        'brands' => ['clothing', 'sport-outdoors'],
+        'shoes' => ['shoes', 'clothing'],
+        'men' => ['for-men', 'clothing'],
+        'for-men' => ['for-men', 'clothing'],
+        'new-in' => ['just-for-you','household-items'],
         'baby' => 'for-baby',
         'kids' => ['for-boys','for-girls'],
         'for-kids' => ['for-boys','for-girls'],
         'schoolgear' => ['for-boys','for-girls'],
-        'girls' => ['for-girls', 'fashion'],
-        'boys' => ['for-boys', 'fashion'],
+        'girls' => ['for-girls', 'clothing'],
+        'boys' => ['for-boys', 'clothing'],
         'beauty' => 'beauty-personal-care',
         'skincare' => 'beauty-personal-care',
         'mrp-co' => 'household-items',
@@ -81,9 +84,8 @@ class CategorySeeder extends DatabaseSeeder
         'cellular' => 'electronics',
         'gift-registry' => 'books-gifts',
         'add-gifts' => 'books-gifts',
-        'bags-accessories' => ['premium','fashion'],
-        'jeans' => 'fashion',
-        'brands' => 'household-items',
+        'bags-accessories' => ['just-for-you','clothing'],
+        'jeans' => 'clothing',
         'locally-made' => 'household-items',
         'tech' => 'electronics',
         'cellphones' => ['just-for-you', 'electronics'],
@@ -94,31 +96,30 @@ class CategorySeeder extends DatabaseSeeder
         'hot-deals' => 'household-items',
         'e-gift-cards-1' => 'books-gifts',
         '50-off' => 'art-crafts',
-        'women' => ['for-women','fashion'],
-        'for-women' => ['for-women','fashion'],
-        'fan-gear' => 'fashion',
+        'women' => ['for-women','clothing'],
+        'for-women' => ['for-women','clothing'],
+        'fan-gear' => 'clothing',
         'equipment' => 'household-items',
         'gaming' => 'electronics',
         'team-sports-catalogue' => 'sports',
-        'lingerie' => ['for-women','fashion'],
-        'footwear' => ['shoes', 'fashion'],
-        'denim' => ['just-for-you', 'fashion'],
-        'new-arrivals' => ['accessories', 'fashion'],
+        'lingerie' => ['for-women','clothing'],
+        'footwear' => ['shoes', 'clothing'],
+        'denim' => ['just-for-you', 'clothing'],
+        'new-arrivals' => ['accessories', 'clothing'],
         'specials' => 'household-items',
         'tech-accessories' => 'electronics',
-        'shop-the-look' => 'fashion',
-        'suit-shop' => 'fashion',
+        'shop-the-look' => 'clothing',
+        'suit-shop' => 'clothing',
         'sale-offers' => 'promos',
         'fragrance' => 'beauty-personal-care',
-        'exclusives' => 'exclusives',
-        'shop-local' => 'fashion',
+        'exclusives' => 'just-for-you',
+        'shop-local' => 'clothing',
         'how-to' => 'household-items',
         'soda-bloc' => 'just-for-you',
         'blog' => 'household-items',
         'release-calendar' => 'household-items',
         'exactcares' => 'household-items',
-        'fashion' => ['just-for-you', 'fashion'],
-        'new' => ['just-for-you', 'fashion'],
+        'new' => ['just-for-you', 'clothing'],
         'painting' => 'art-crafts',
         'printmaking' => 'art-crafts',
         'photography' => 'art-crafts',
@@ -161,30 +162,80 @@ class CategorySeeder extends DatabaseSeeder
             }
 
             foreach ($this->mappedNames as $mappedKey => $mappedName) {
-                if (in_array($categoryName, is_array($mappedName) ? $mappedName : [$mappedName])) {
-                    $query = Category::with('stores')
-                        ->where('slug', 'like', $mappedKey);
 
-                    $query->whereHas('stores', function ($query) {
-                        $query->where('level', '=', 1);
-                    });
+                $mappedName = is_array($mappedName) ? $mappedName : [$mappedName];
 
-                    $categories = $query->get();
+                if (in_array($categoryName, $mappedName)) {
 
-                    foreach ($categories as $category) {
-                        $categoryIds[] = $category->id;
+                    foreach($mappedName as $mappedName){
+                        $parentCategory = Category::with('stores')
+                            ->where('slug', 'like', $mappedName);
 
-                        $attributes = [
-                            'category_id' => $category->id,
-                            'level' => 1,
-                        ];
+                        $parentCategory->whereHas('stores', function ($query) {
+                            $query->where('level', '=', 0);
+                        });
 
-                        $values = [
-                            'parent_id' => $this->storeCategory->id
-                        ];
+                        $parentCategory = $parentCategory->first();
 
-                        // save store categories
-                        StoreCategory::updateOrCreate($attributes, $values);
+                        if(empty($parentCategory)){
+                            continue;
+                        }
+
+                        $parentStoreCategory = StoreCategory::where('category_id', $parentCategory->id)
+                            ->where('level', 0);
+
+                        $this->parentStoreCategory = $parentStoreCategory->first();
+
+                        if(empty($this->parentStoreCategory)){
+                            continue;
+                        }
+
+                        $this->parentStoreCategory->has_categories = true;
+                        $this->parentStoreCategory->has_products = true;
+                        $this->parentStoreCategory->save();
+
+                        $query = Category::with('stores')
+                            ->where('slug', 'like', $mappedKey);
+
+                        $query->whereHas('stores', function ($query) {
+                            $query->where('level', '=', 1)
+                                ->where('store_id', 71);
+                        });
+
+                        $categories = $query->get();
+
+                        foreach ($categories as $category) {
+                            $storeCategory = StoreCategory::where('category_id', $category->id)
+                                ->where('level', 1);
+
+                            $storeCategory = $storeCategory->first();
+
+                            // Find the child categories that should be linked
+                            if(!empty($storeCategory)){
+                                $childStoreCategories = StoreCategory::where('parent_id', $storeCategory->id)->with('category');
+                                $this->childStoreCategories = $childStoreCategories->get();
+
+                                foreach($this->childStoreCategories as $childStoreCategory){
+
+                                    echo "Inserting category mapping {$mappedName} => {$childStoreCategory->category->name}\n";
+
+                                    $categoryIds[] = $childStoreCategory->category_id;
+
+                                    $attributes = [
+                                        'category_id' => $childStoreCategory->category_id,
+                                        'level' => 1,
+                                        'store_id' => 24
+                                    ];
+
+                                    $values = [
+                                        'parent_id' => $this->parentStoreCategory->id
+                                    ];
+
+                                    // save store categories
+                                    StoreCategory::updateOrCreate($attributes, $values);
+                                }
+                            }
+                        }
                     }
                 }
             }

@@ -120,8 +120,8 @@ class DatabaseSeeder extends Seeder
             'category_id' => $category->id,
             'url' => $url,
             'level' => $this->level,
-            'has_products' => empty($this->level),
-            'has_categories' => empty($this->level),
+            'has_products' => 0,
+            'has_categories' => 0,
             'randomized_at' => date('Y-m-d'),
         ];
 

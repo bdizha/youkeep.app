@@ -1,5 +1,8 @@
 <ul class="menu__items" data-tag="items">
     <li class="menu-item has-arrow" data-ind="0" data-id="306">
+        <span class="menu-item__title" data-tag="title">Clothing</span>
+        <i class="menu-icon r-menu-icon--for-women"></i></li>
+    <li class="menu-item has-arrow" data-ind="0" data-id="306">
         <span class="menu-item__title" data-tag="title">For Women</span>
         <i class="menu-icon r-menu-icon--for-women"></i></li>
     <li class="menu-item has-arrow" data-ind="1" data-id="566">
@@ -39,13 +42,13 @@
         <span class="menu-item__title" data-tag="title">Pet products</span>
         <i class="menu-icon r-menu-icon--pet-products"></i></li>
     <li class="menu-item has-arrow" data-ind="13" data-id="5486">
-        <span class="menu-item__title" data-tag="title">Tools and Home Items</span>
+        <span class="menu-item__title" data-tag="title">Tools & Gardening</span>
         <i class="menu-icon r-menu-icon--stationery"></i></li>
     <li class="menu-item has-arrow" data-ind="14" data-id="17006">
         <span class="menu-item__title" data-tag="title">Just for you</span>
         <i class="menu-icon r-menu-icon--just-for-you"></i></li>
     <li class="menu-item has-arrow" data-ind="15" data-id="258">
-        <span class="menu-item__title" data-tag="title">Home and Kitchen</span>
+        <span class="menu-item__title" data-tag="title">Household Items</span>
         <i class="menu-icon r-menu-icon--household-items"></i></li>
     <li class="menu-item has-arrow" data-ind="17" data-id="62057">
         <span class="menu-item__title" data-tag="title">Groceries</span>

@@ -159,9 +159,7 @@
                               the way shoppers experience their shopping.
                             </p>
                             <p class="r-text-normal">
-                              If you take innovation intelligently and methodically, you're in the right place with
-                              unlimited
-                              possibilities.
+                              If you take innovation passionately, then you're in the right place.
                             </p>
                           </a-col>
                         </a-row>

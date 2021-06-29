@@ -192,8 +192,9 @@ class Controller extends BaseController
             if (isset($this->level)) {
                 $query->where('level', $this->level);
 
-                if($this->level === 0){
+                if($this->level == 0){
                     $query->where('has_products', true);
+                    $query->where('has_categories', true);
                 }
             }
 

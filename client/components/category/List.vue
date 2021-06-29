@@ -3,8 +3,8 @@
     <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-collapse v-if="hasCategories" default-active-key="0" expandIconPosition="right">
         <a-collapse-panel class="r-collapse-panel"
-                          v-if="index < limit"
                           v-for="(category, index) in categories"
+                          v-if="index < limit"
                           :key="category.id + '-category'"
                           :columns="columns"
                           :header="category.name"
