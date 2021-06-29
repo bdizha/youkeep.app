@@ -12,7 +12,7 @@
                     @click="onMinus"
                     block
                     type="secondary"
-                    size="large"
+                    size="default"
           >
             <a-icon class="r-icon-empty" type="minus"/>
           </a-button>
@@ -35,7 +35,7 @@
                     @click="onPlus"
                     block
                     type="secondary"
-                    size="large"
+                    size="default"
           >
             <a-icon class="r-icon-empty" type="plus"/>
           </a-button>
@@ -70,7 +70,7 @@ export default {
     hasAddToCart: { type: Boolean, required: false, default: false },
     hasActions: { type: Boolean, required: false, default: true },
     product: { type: Object, required: false, default: null },
-    size: { type: String, required: false, default: 'large' },
+    size: { type: String, required: false, default: 'default' },
     itemKey: { type: Number, required: false, default: null },
   },
   data () {

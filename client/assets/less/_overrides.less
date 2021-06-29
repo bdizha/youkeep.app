@@ -774,7 +774,6 @@ x {
 
         &.r-cart__active {
             .r-shopping-cart {
-                //background-image: url("/assets/icon_cart_on.svg");
                 color: @primary-color;
             }
 
@@ -1465,6 +1464,20 @@ xxl	≥1600px, could be a span value or an object containing above props
             overflow: hidden;
             color: #3C444C;
 
+            .ant-collapse {
+                .ant-collapse-item {
+                    .ant-collapse-header{
+                        .ant-collapse-arrow {
+                            right: 0;
+                        }
+                        padding: 12px 0;
+                    }
+                    .ant-collapse-content {
+                        padding: 0 4px;
+                    }
+                }
+            }
+
             .r-list-item,
             .r-account-item {
                 .r-text-link {
@@ -1854,6 +1867,19 @@ h4.r-heading-light {
         position: relative;
         overflow-y: auto;
         overflow-x: hidden;
+        .ant-collapse {
+            .ant-collapse-item {
+                .ant-collapse-header{
+                    padding: 12px 4px;
+                    .ant-collapse-arrow {
+                        right: 0;
+                    }
+                }
+                .ant-collapse-content {
+                    padding: 0 4px;
+                }
+            }
+        }
     }
 
     &.r-modal-store-tray {
@@ -2094,9 +2120,9 @@ h4.r-heading-light {
 
     .r-store-item-line {
         padding: 12px 0;
-
-        @media (max-width: 768px) {
-            padding: 12px;
+        display: block;
+        &:last-child{
+            padding: 12px 0;
         }
     }
 
@@ -2778,7 +2804,7 @@ h4.r-heading-light {
     line-height: 36px;
 
     .anticon {
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .ant-breadcrumb-separator {
@@ -2987,7 +3013,7 @@ h4.r-heading-light {
     overflow: hidden;
 
     .r-shopping-cart {
-        background-image: url("/assets/icon_cart_white.svg");
+        background-image: url("/assets/icon_cart_grey.svg");
         background-repeat: no-repeat;
         background-size: cover;
         height: 36px;
@@ -2998,10 +3024,6 @@ h4.r-heading-light {
         left: 0;
         bottom: 0;
         right: 0;
-
-        &.r-shopping-cart__active {
-            background-image: url("/assets/icon_cart_secondary.svg");
-        }
     }
 
     .r-cart-count {
@@ -3023,11 +3045,34 @@ h4.r-heading-light {
     }
 
     &.r-cart__active {
+        .r-cart-count {
+            color: @white;
+        }
+
         .r-shopping-cart {
             background-image: url("/assets/icon_cart_on.svg");
+        }
+    }
+}
 
+.r-layout-menu{
+    .r-cart {
+        color: #3C444C;
+        .r-shopping-cart {
+            background-image: url("/assets/icon_cart_white.svg");
+        }
+
+        .r-cart-count {
+            color: @secondary-color;
+        }
+
+        &.r-cart__active {
             .r-cart-count {
-                color: @primary-color;
+                color: @white;
+            }
+
+            .r-shopping-cart {
+                background-image: url("/assets/icon_cart_secondary.svg");
             }
         }
     }
@@ -3865,8 +3910,18 @@ h4.r-heading-light {
     }
 }
 
-.r-product,
 .r-product-show {
+    .ant-card-body{
+        padding: 0;
+        .r-slider{
+            .slick-list {
+                .slick-slide{
+                    padding: 0;
+                }
+            }
+        }
+    }
+
     .ant-avatar-image {
         margin: auto;
         display: block;

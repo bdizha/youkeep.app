@@ -1,15 +1,13 @@
 <template>
   <a-row type="flex" justify="center">
     <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row v-if="hasStores && !processes.isTray" type="flex" justify="start" align="middle">
+      <a-row :gutter="[24,24]" v-if="hasStores && !processes.isTray" type="flex" justify="start" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
-               v-for="(store, index) in stores.data"
-               :key="index"
         >
-          <nuxt-link :to="store.route">
-            <r-store-item :store="store"></r-store-item>
-          </nuxt-link>
+          <r-store-item
+            v-for="(store, index) in stores.data"
+            :key="index" :size="138" :store="store"></r-store-item>
         </a-col>
         <a-col v-if="!hasStores" :span="24">
           <a-empty image="/images/icon_pattern_grey.svg"

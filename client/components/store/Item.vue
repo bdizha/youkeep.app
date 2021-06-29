@@ -1,5 +1,5 @@
 <template>
-  <div class="r-store-item-line">
+  <nuxt-link class="r-store-item-line" :to="store.route">
     <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
       <a-col :xs="{span: 12}" :sm="{span: 10}" :md="{span: 9}" :lg="{span: 8}">
         <r-avatar
@@ -14,7 +14,7 @@
         <r-store-meta :store="store"></r-store-meta>
       </a-col>
     </a-row>
-  </div>
+  </nuxt-link>
 </template>
 <script>
 export default {

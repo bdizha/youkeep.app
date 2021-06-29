@@ -20,7 +20,7 @@
       >
         <div v-html="item.content"></div>
       </a-collapse-panel>
-      <a-collapse-panel :key="list.length" class="r-collapse-panel" header="You may also like">
+      <a-collapse-panel :key="list.length" class="r-collapse-panel" header="You may also like"dss>
         <r-store-list></r-store-list>
       </a-collapse-panel>
     </a-collapse>

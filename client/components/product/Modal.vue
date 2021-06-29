@@ -5,12 +5,14 @@
   >
     <a-row :gutter="[12,12]" type="flex" justify="center" align="middle">
       <a-col v-if="hasItem" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-        <h2 class="r-heading-light">
+        <h3 class="r-heading">
           {{ productItem.product.name }}
-        </h2>
-        <div class="r-product-summary">
+        </h3>
+      </a-col>
+      <a-col v-if="hasItem" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <h4 class="r-heading-light">
           Choose your product options below:
-        </div>
+        </h4>
       </a-col>
       <a-col class="r-product-modal" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
         <a-collapse :default-active-key="activeProductType" expandIconPosition="right">

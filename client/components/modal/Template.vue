@@ -27,7 +27,6 @@ export default {
   }),
   methods: {
     payload () {
-      let $this = this
     },
   },
 }
