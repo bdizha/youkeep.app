@@ -161,23 +161,27 @@ class Controller extends BaseController
                 ->toArray();
         }
 
-        if (!empty($this->category['id'])) {
+        $storeCategoryQuery = StoreCategory::with('category');
 
-//            dd([$this->level, $this->category['id']]);
-
-            $this->category['level'] = $this->level;
-
-            $this->storeCategory = StoreCategory::where('category_id', $this->category['id'])
-                ->where('level', $this->level)
-                ->first();
-
-            if (!empty($this->storeSlug)) {
-                $this->_setBreadcrumbs();
-                $this->category['breadcrumbs'] = $this->breadcrumbs;
-            }
-
-            ++$this->level;
+        if (!empty($this->parentId)) {
+            $storeCategoryQuery->where('parent_id', $this->parentId);
+            $this->level = 0;
         }
+        else{
+            $this->level = 0;
+        }
+
+        $this->storeCategories = $storeCategoryQuery->where('level', $this->level)
+            ->get();
+
+        // $this->category['level'] = $this->level;
+
+        if (!empty($this->storeSlug)) {
+            $this->_setBreadcrumbs();
+            $this->category['breadcrumbs'] = $this->breadcrumbs;
+        }
+
+        ++$this->level;
 
         $this->with = array_intersect($this->with, $this->relations);
 
@@ -347,11 +351,11 @@ class Controller extends BaseController
     /**
      * @return void
      */
-    protected function _setRoutes(): void
+    protected function _hidrateCategories(): void
     {
         $this->categories = array_map(function ($category) {
             return $this->_setCategoryRoute($category);
-        }, $this->categories);
+        }, $this->storeCategories);
     }
 
     /**
@@ -421,7 +425,7 @@ class Controller extends BaseController
      * @param $category
      * @return mixed
      */
-    protected function _setCategoryRoute($category)
+    protected function _setCategoryRoute($storeCategory)
     {
         $this->route = $category['route'];
 

@@ -10,41 +10,6 @@ class CategorySeeder extends DatabaseSeeder
 {
     protected $storeId = 24; // Shopple store
     protected $storeCategories = [4784, 4788, 4789];
-
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        $this->level = 0;
-        $this->fetchCategories();
-
-        die("fetchCategories >>> done");
-    }
-
-    private function fetchCategories()
-    {
-        $link = url("/api/home/categories");
-
-        $categoryNode = Goutte::request('GET', $link);
-        $categoryNodes = $categoryNode->filter('.menu__items .menu-item__title');
-
-        $categoryNodes->each(function ($node) {
-            echo __LINE__ . " <> \n";
-            $categoryName = $node->text();
-            echo __LINE__ . " <> \n";
-
-            $categoryName = ucwords(strtolower($categoryName));
-            $this->category = $this->setCategory($categoryName, null);
-
-            echo "Category slug: {$this->category->slug}\n";
-
-            $this->linkCategories();
-        });
-    }
-
     protected $mappedNames = [
         'furniture' => 'household-items',
         'bed-bath' => 'household-items',
@@ -59,7 +24,7 @@ class CategorySeeder extends DatabaseSeeder
         'offers' => 'promos',
         'sale' => 'clothing',
         'promos' => 'promos',
-        'what-s-new' => ['just-for-you','household-items'],
+        'what-s-new' => ['just-for-you', 'household-items'],
         'ladies' => ['for-women', 'clothing'],
         'for-ladies' => ['for-women', 'clothing'],
         'clothes' => 'clothing',
@@ -70,11 +35,11 @@ class CategorySeeder extends DatabaseSeeder
         'shoes' => ['shoes', 'clothing'],
         'men' => ['for-men', 'clothing'],
         'for-men' => ['for-men', 'clothing'],
-        'new-in' => ['just-for-you','household-items'],
+        'new-in' => ['just-for-you', 'household-items'],
         'baby' => 'for-baby',
-        'kids' => ['for-boys','for-girls'],
-        'for-kids' => ['for-boys','for-girls'],
-        'schoolgear' => ['for-boys','for-girls'],
+        'kids' => ['for-boys', 'for-girls'],
+        'for-kids' => ['for-boys', 'for-girls'],
+        'schoolgear' => ['for-boys', 'for-girls'],
         'girls' => ['for-girls', 'clothing'],
         'boys' => ['for-boys', 'clothing'],
         'beauty' => 'beauty-personal-care',
@@ -84,7 +49,7 @@ class CategorySeeder extends DatabaseSeeder
         'cellular' => 'electronics',
         'gift-registry' => 'books-gifts',
         'add-gifts' => 'books-gifts',
-        'bags-accessories' => ['just-for-you','clothing'],
+        'bags-accessories' => ['just-for-you', 'clothing'],
         'jeans' => 'clothing',
         'locally-made' => 'household-items',
         'tech' => 'electronics',
@@ -96,13 +61,12 @@ class CategorySeeder extends DatabaseSeeder
         'hot-deals' => 'household-items',
         'e-gift-cards-1' => 'books-gifts',
         '50-off' => 'art-crafts',
-        'women' => ['for-women','clothing'],
-        'for-women' => ['for-women','clothing'],
+        'women' => ['for-women', 'clothing'],
         'fan-gear' => 'clothing',
         'equipment' => 'household-items',
         'gaming' => 'electronics',
         'team-sports-catalogue' => 'sports',
-        'lingerie' => ['for-women','clothing'],
+        'lingerie' => ['for-women', 'clothing'],
         'footwear' => ['shoes', 'clothing'],
         'denim' => ['just-for-you', 'clothing'],
         'new-arrivals' => ['accessories', 'clothing'],
@@ -148,6 +112,40 @@ class CategorySeeder extends DatabaseSeeder
         'be-inspired' => 'household-items'
     ];
 
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $this->level = 0;
+        $this->fetchCategories();
+
+        die("fetchCategories >>> done");
+    }
+
+    private function fetchCategories()
+    {
+        $link = url("/api/home/categories");
+
+        $categoryNode = Goutte::request('GET', $link);
+        $categoryNodes = $categoryNode->filter('.menu__items .menu-item__title');
+
+        $categoryNodes->each(function ($node) {
+            echo __LINE__ . " <> \n";
+            $categoryName = $node->text();
+            echo __LINE__ . " <> \n";
+
+            $categoryName = ucwords(strtolower($categoryName));
+            $this->category = $this->setCategory($categoryName, null);
+
+            echo "Category slug: {$this->category->slug}\n";
+
+            $this->linkCategories();
+        });
+    }
+
     public function linkCategories()
     {
         $categoryName = $this->category->slug;
@@ -162,12 +160,10 @@ class CategorySeeder extends DatabaseSeeder
             }
 
             foreach ($this->mappedNames as $mappedKey => $mappedName) {
+                $mappedNames = is_array($mappedName) ? $mappedName : [$mappedName];
 
-                $mappedName = is_array($mappedName) ? $mappedName : [$mappedName];
-
-                if (in_array($categoryName, $mappedName)) {
-
-                    foreach($mappedName as $mappedName){
+                if (in_array($categoryName, $mappedNames)) {
+                    foreach ($mappedNames as $mappedName) {
                         $parentCategory = Category::with('stores')
                             ->where('slug', 'like', $mappedName);
 
@@ -177,7 +173,7 @@ class CategorySeeder extends DatabaseSeeder
 
                         $parentCategory = $parentCategory->first();
 
-                        if(empty($parentCategory)){
+                        if (empty($parentCategory)) {
                             continue;
                         }
 
@@ -186,13 +182,9 @@ class CategorySeeder extends DatabaseSeeder
 
                         $this->parentStoreCategory = $parentStoreCategory->first();
 
-                        if(empty($this->parentStoreCategory)){
+                        if (empty($this->parentStoreCategory)) {
                             continue;
                         }
-
-                        $this->parentStoreCategory->has_categories = true;
-                        $this->parentStoreCategory->has_products = true;
-                        $this->parentStoreCategory->save();
 
                         $query = Category::with('stores')
                             ->where('slug', 'like', $mappedKey);
@@ -211,13 +203,19 @@ class CategorySeeder extends DatabaseSeeder
                             $storeCategory = $storeCategory->first();
 
                             // Find the child categories that should be linked
-                            if(!empty($storeCategory)){
+                            if (!empty($storeCategory)) {
                                 $childStoreCategories = StoreCategory::where('parent_id', $storeCategory->id)->with('category');
                                 $this->childStoreCategories = $childStoreCategories->get();
 
-                                foreach($this->childStoreCategories as $childStoreCategory){
+                                foreach ($this->childStoreCategories as $key => $childStoreCategory) {
 
-                                    echo "Inserting category mapping {$mappedName} => {$childStoreCategory->category->name}\n";
+                                    if ($key == 0) {
+                                        $this->parentStoreCategory->has_categories = true;
+                                        $this->parentStoreCategory->has_products = true;
+                                        $this->parentStoreCategory->save();
+                                    }
+
+                                    echo "Inserting category mapping {$mappedName} => {$mappedKey} => {$childStoreCategory->category->name}\n";
 
                                     $categoryIds[] = $childStoreCategory->category_id;
 
@@ -235,6 +233,10 @@ class CategorySeeder extends DatabaseSeeder
                                     StoreCategory::updateOrCreate($attributes, $values);
                                 }
                             }
+                        }
+
+                        if($categoryName == 'for-men'){
+//                            dd([$this->parentStoreCategory]);
                         }
                     }
                 }

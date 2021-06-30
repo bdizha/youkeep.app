@@ -43,7 +43,9 @@ class ProductAdidasSeeder extends DatabaseSeeder
 
             echo ">>>>>> Fetching store > categories: " . $store->name . "\n";
             // This can only be run once
-//             $this->setCategories();
+             $this->setCategories();
+
+             dd('Done inserting categories >>>>');
 
             $this->storeCategories = StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
