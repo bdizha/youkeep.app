@@ -5,7 +5,7 @@
            :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
+      <r-category-breadcrumbs :breadcrumbs="category.breadcrumbs"></r-category-breadcrumbs>
       <div class="r-p-12" :class="{'r-hide-lg': !hasCategories}">
         <r-search class="r-hide-lg" :class="{'r-pb-12': hasCategories}"></r-search>
         <r-category-arrows v-if="hasCategories"></r-category-arrows>

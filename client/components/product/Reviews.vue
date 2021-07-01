@@ -42,9 +42,9 @@
         </span>
           </template>
           <a-list-item-meta :description="item.description">
-            <img slot="avatar"
-                 width="48"
-                 :src="item.avatar"
+            <r-avatar slot="avatar" class="r-avatar-auto" shape="square"
+                      :size="48"
+                      :src="item.avatar"
             />
             <div slot="title">
               <r-rate :rating="item.rating"></r-rate>
@@ -76,19 +76,6 @@ const TITLES = [
   'Material drawing, quality of norms ',
 ]
 
-const IMAGES = [
-  'https://ae01.alicdn.com/kf/U96edfff39fca4c71a64a00980ccb549a6.jpg',
-  'https://ae01.alicdn.com/kf/Hffaf401dfbf447f48affb31f5696c9a8n.jpg_480x480q90.jpg_.webp',
-  'https://ae01.alicdn.com/kf/HTB1cJ5AaIvrK1Rjy0Feq6ATmVXaf/Fog-Reef-Snow-Mountain-Lake-Pine-Forest-Wall-Art-Canvas-Painting-Nordic-Posters-And-Prints-Wall.jpg_50x50.jpg_.webp',
-  'https://ae01.alicdn.com/kf/HTB1eSAoXrY1gK0jSZTEq6xDQVXam/Fog-Reef-Snow-Mountain-Lake-Pine-Forest-Wall-Art-Canvas-Painting-Nordic-Posters-And-Prints-Wall.jpg_50x50.jpg_.webp',
-  'https://ae01.alicdn.com/kf/H3f219b59ef41420cad69b00419c7bab84.jpg_480x480q90.jpg_.webp',
-  'https://ae04.alicdn.com/kf/H9375e03a057a446da0bf419e542e74a8q.jpg_200x200.jpg',
-  'https://ae04.alicdn.com/kf/Hd1bc240cd7234552865e55b4f177318c7.jpg_200x200.jpg',
-  'https://ae04.alicdn.com/kf/HTB1YbLYeW1s3KVjSZFAq6x_ZXXaW.jpg_200x200.jpg',
-  'https://ae04.alicdn.com/kf/He72185b4955a49c18dde42f535d83185G.jpg_200x200.jpg',
-  'https://ae04.alicdn.com/kf/HTB1v7EnacfrK1Rjy0Fmq6xhEXXa3.jpg_200x200.jpg',
-]
-
 const REVIEWS = []
 
 const RATINGS = []
@@ -102,19 +89,6 @@ for (let i = 5; i >= 1; i--) {
   RATINGS.push({
     stars: i,
     value: value
-  })
-}
-
-for (let i = 0; i < 23; i++) {
-  let index = Math.floor(Math.random() * Math.floor(TITLES.length))
-
-  REVIEWS.push({
-    href: 'https://www.antdv.com/',
-    title: TITLES[index],
-    avatar: IMAGES[index],
-    rating: Math.floor(Math.random() * Math.floor(5)),
-    content:
-      'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
   })
 }
 
@@ -132,9 +106,8 @@ export default {
         current: 'product',
         product: null,
       },
-      reviews: REVIEWS,
+      reviews: [],
       ratings: RATINGS,
-      ratingTotal: ratingTotal,
       pagination: {
         onChange: page => {
           console.log(page)
@@ -149,6 +122,18 @@ export default {
     }
   },
   created () {
+    for (let i = 0; i < 23; i++) {
+      const index = Math.floor(Math.random() * Math.floor(this.product.photos.length))
+
+      this.reviews.push({
+        href: 'https://www.antdv.com/',
+        title: TITLES[index],
+        avatar: this.product.photos[index].image,
+        rating: Math.floor(Math.random() * Math.floor(5)),
+        content:
+          'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+      })
+    }
   },
   computed: {
     hasDiscount () {

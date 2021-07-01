@@ -43,27 +43,27 @@ class ProductAdidasSeeder extends DatabaseSeeder
 
             echo ">>>>>> Fetching store > categories: " . $store->name . "\n";
             // This can only be run once
-             $this->setCategories();
-
-             dd('Done inserting categories >>>>');
+//             $this->setCategories();
 
             $this->storeCategories = StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
-                ->whereIn('category_id', [1971])
+//                ->where('id', 16175)
                 ->orderBy('store_categories.updated_at', "ASC")
-                ->take(12)
+                ->take(300)
                 ->get();
+
+//            dd($this->storeCategories);
 
             // Get all the category products
             foreach ($this->storeCategories as $this->storeCategory) {
                 $this->category = $this->storeCategory->category;
 
+                $this->storeCategory->updated_at = date('Y-m-d H:i:s');
+                $this->storeCategory->save();
+
                 $category = $this->storeCategory->category;
                 echo ">>>>>>Category products: " . $store->name . ' >> ' . $category->name . "\n";
                 $this->processCategory($this->storeCategory);
-
-                $this->storeCategory->updated_at = date('Y-m-d H:i:s');
-                $this->storeCategory->save();
             }
 
         }
@@ -186,7 +186,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
 
     /**
      * @param $storeCategory
-     * @param $limit
+     * @param $page
      * @param $totalPages
      * @return void
      */
@@ -195,6 +195,10 @@ class ProductAdidasSeeder extends DatabaseSeeder
         $categoryUrl = $storeCategory->url;
         if(strpos($storeCategory->url, 'shop.adidas') === false){
             $categoryUrl = $this->domain . $categoryUrl;
+        }
+
+        if($storeCategory->level == 1 && strpos($storeCategory->url, 'all-products') === false){
+            $categoryUrl .= '/all-products/';
         }
 
         $categoryUrl .= "?page={$page}";
@@ -207,9 +211,10 @@ class ProductAdidasSeeder extends DatabaseSeeder
                 $productPageText = $nextPageNode->text();
 
                 $productPageText = str_replace(" ", "", $productPageText);
-                $productPageText = str_replace(" ", "", $productPageText);
                 $productPageText = str_replace("(", "", $productPageText);
                 $productPageText = str_replace(")", "", $productPageText);
+                $productPageText = str_replace(",", "", $productPageText);
+                $productPageText = str_replace(" ", "", $productPageText);
                 $productPageText = str_replace("products", "", trim($productPageText));
 
                 if(!empty($productPageText) && is_numeric($productPageText)){
@@ -225,7 +230,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
         echo "Total pages >>>>>>>>> {$totalPages}\n";
 
         $productItems = [];
-        $categoryNode->filter('.catalog-product__padding')->each(function ($node) use (&$productItems) {
+        $categoryNode->filter('.catalog-product__padding')->each(function ($node) use (&$productItems, $storeCategory) {
             $nameNode = $node->filter('.catalog--product-name');
             if ($nameNode->count() > 0) {
                 $productName = $nameNode->text();
@@ -234,6 +239,10 @@ class ProductAdidasSeeder extends DatabaseSeeder
             $urlNode = $node->filter('a');
             if ($urlNode->count() > 0) {
                 $productUrl = $urlNode->attr('href');
+            }
+
+            if (strpos($productUrl, $this->domain) === false) {
+                $productUrl = $this->domain . $productUrl;
             }
 
             $this->product = App\Product::where('external_url', $productUrl)->first();
@@ -247,10 +256,6 @@ class ProductAdidasSeeder extends DatabaseSeeder
                     $productPrice = str_replace('R', '', trim($productPrice));
                 }
 
-                if (strpos($productUrl, $this->domain) === false) {
-                    $productUrl = $this->domain . $productUrl;
-                }
-
                 $productItems[] = [
                     'name' => trim($productName),
                     'external_url' => $productUrl,
@@ -259,7 +264,8 @@ class ProductAdidasSeeder extends DatabaseSeeder
                 ];
             }
             else{
-                $this->setProductCategory();
+                echo ">>>>>Updating product: " . $this->product->name . "\n";
+                $this->setProductCategory($storeCategory);
             }
         });
 
@@ -288,7 +294,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
                 $productItem['summary'] = $summaryNode->attr('content');
             }
 
-            $productItem['description'] = $productNode->filter('.product-spec-review')->text();
+            $productItem['description'] = $productNode->filter('.product-spec-review')->count() > 0 ? $productNode->filter('.product-spec-review')->text() : 'Not set';
 
             $this->setProduct($productItem, $storeCategory);
 
@@ -328,7 +334,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
 
         foreach ($filterSets as $filterItem) {
             $name = $filterItem['name'];
-            echo ">>>>>>Inserting product type: {$name} with type: {$name} \n";
+//            echo ">>>>>>Inserting product type: {$name} with type: {$name} \n";
 
             $attributes = [
                 'name' => $name
@@ -337,7 +343,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
             $values = $filterItem;
 
             $productType = ProductType::updateOrCreate($attributes, $values);
-            echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
+//            echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
 
             $this->setProductVariant($filterItem, $productType);
         }

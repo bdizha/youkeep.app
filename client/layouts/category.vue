@@ -9,9 +9,9 @@
     </a-layout-sider>
     <a-layout-content class="r-layout-content__store" :class="{'r-spin__active' :processes.isFixed}">
       <nuxt/>
-      <r-spinner :is-absolute="false"></r-spinner>
     </a-layout-content>
     <r-bottom></r-bottom>
+    <r-spinner :is-absolute="false"></r-spinner>
   </a-layout>
 </template>
 <script>

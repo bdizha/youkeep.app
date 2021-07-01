@@ -16,8 +16,19 @@ class StoreCategory extends Model
         'breadcrumbs',
         'route',
         'name',
-        'photos'
+        'photos',
+        'photos',
+        'photo',
+        'filters',
+        'products',
     ];
+
+    protected $products = [];
+
+    /**
+     * @var string[]
+     */
+    private $ignoredPhotos = ['d2fda6827655f4795e9f288f7404358a069fe1ce'];
 
     /**
      * @return bool
@@ -25,11 +36,7 @@ class StoreCategory extends Model
     public function getRouteAttribute()
     {
         $route = '/category/' . $this->category->slug;
-
-        if(!empty($this->previous)){
-            $route .= '-' . $this->previous->id;
-        }
-
+        $route .= '--' . $this->id;
         $route .= $this->_encodeLevel($this->level);
 
         return $route;
@@ -117,18 +124,14 @@ class StoreCategory extends Model
      */
     public function getProductsAttribute()
     {
-        $this->products = [];
+        $products = Product::whereHas('categories', function ($query) {
+            $query->where('category_products.category_id', $this->id);
+        })
+            ->where('is_active', true)
+            ->orderBy('created_at', 'desc')
+            ->paginate(24);
 
-        if ($this->type == self::TYPE_CATALOG) {
-            $this->products = Product::whereHas('categories', function ($query) {
-                $query->where('category_products.category_id', $this->id);
-            })
-                ->where('is_active', true)
-                ->orderBy('created_at', 'desc')
-                ->paginate(24);
-        }
-
-        return $this->products;
+        return $products;
     }
 
     /**
@@ -137,7 +140,6 @@ class StoreCategory extends Model
     public function getPhotoAttribute()
     {
         $photos = $this->getPhotosAttribute();
-
         if (empty($photos)) {
             return null;
         }
@@ -161,6 +163,14 @@ class StoreCategory extends Model
     }
 
     /**
+     * Get the categories
+     */
+    public function categories()
+    {
+        return $this->hasMany('App\StoreCategory', 'parent_id', 'id');
+    }
+
+    /**
      * Get the parent
      */
     public function previous()
@@ -176,9 +186,9 @@ class StoreCategory extends Model
     private function getBreadcrumbs($storeCategory, $breadcrumbs)
     {
         $breadcrumbs[] = [
-            'id' => $storeCategory->category_id,
+            'id' => $storeCategory->id,
             'slug' => $storeCategory->category->slug,
-            'route' => $this->route,
+            'route' => $storeCategory->route,
             'name' => $storeCategory->category->name,
             'has_products' => $storeCategory->has_products,
             'has_categories' => $storeCategory->has_categories,
@@ -188,6 +198,7 @@ class StoreCategory extends Model
         if (empty($storeCategory->previous)) {
             return $breadcrumbs;
         }
+
         return $this->getBreadcrumbs($storeCategory->previous, $breadcrumbs);
     }
 
@@ -205,13 +216,9 @@ class StoreCategory extends Model
      */
     public function getBreadcrumbsAttribute()
     {
-        $breadcrumbs = [];
-
-        $breadcrumbs = $this->getBreadcrumbs($this, $breadcrumbs);
+        $breadcrumbs = $this->getBreadcrumbs($this, []);
 
         return array_reverse($breadcrumbs);
-
-        "/L" . str_pad(empty($this->level) ? 1 : $this->level, 6, STR_PAD_LEFT, "0");
     }
 
     /**

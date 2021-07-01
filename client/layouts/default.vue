@@ -8,9 +8,9 @@
         </a-layout-content>
         <r-footer></r-footer>
       </a-layout>
-      <r-spinner :is-absolute="false"></r-spinner>
     </a-layout-content>
     <r-bottom></r-bottom>
+    <r-spinner :is-absolute="false"></r-spinner>
   </a-layout>
 </template>
 <script>

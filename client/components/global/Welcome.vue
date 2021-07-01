@@ -30,8 +30,9 @@ export default {
       type: 2,
       has_store: true,
       category_id: null,
-      level: 0,
+      level: 1,
       limit: process.env.APP_LIMIT,
+      store_id: process.env.APP_STORE_ID,
       order_by: 'randomized_at',
       with: ['photos', 'breadcrumbs', 'categories']
     }

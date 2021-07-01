@@ -3,7 +3,7 @@
     <a-col :span="24">
       <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" type="flex" justify="center">
         <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: span}" :lg="{span: span}">
-          <a-pagination v-model="currentPage"
+          <a-pagination v-model="products.current_page"
                         :show-total="(total, range) => `${range[0]}-${range[1]} of ${total} items`"
                         :page-size="parseInt(products.per_page)"
                         @change="onChange"
@@ -87,8 +87,7 @@ export default {
   data () {
     return {
       sortOptions: SORTS,
-      payload: this.filters,
-      currentPage: 1
+      payload: this.filters
     }
   },
   computed: mapGetters({

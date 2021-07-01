@@ -3,7 +3,7 @@
     <r-store-notice v-if="hasNotice"></r-store-notice>
     <r-store-face :is-plain="true" :store="store"></r-store-face>
     <a-collapse default-active-key="1" expandIconPosition="right">
-      <a-collapse-panel key="1" class="r-collapse-panel" header="Delivery">
+      <a-collapse-panel key="01" class="r-collapse-panel" header="Delivery">
         <r-delivery-form size="default"
                          :is-store="true"
                          :has-submit="false"
@@ -14,13 +14,13 @@
         <r-spinner :is-absolute="true"></r-spinner>
       </a-collapse-panel>
       <a-collapse-panel v-for="(item, index) in list"
-                        :key="index"
+                        :key="index + '-item'"
                         class="r-collapse-panel"
                         :header="item.title"
       >
         <div v-html="item.content"></div>
       </a-collapse-panel>
-      <a-collapse-panel :key="list.length" class="r-collapse-panel" header="You may also like"dss>
+      <a-collapse-panel :key="list.length" class="r-collapse-panel" header="You may also like">
         <r-store-list></r-store-list>
       </a-collapse-panel>
     </a-collapse>

@@ -1,6 +1,6 @@
 <template>
   <a-row class="r-breadcrumbs">
-    <a-col class="r-p-24 r-pv-12" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+    <a-col class="r-ph-24 r-pv-12" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{span: 24}"
     >
       <a-breadcrumb v-if="!processes.isCategories">
@@ -12,7 +12,7 @@
             {{ store.name }}
           </nuxt-link>
         </a-breadcrumb-item>
-        <a-breadcrumb-item v-for="(breadcrumb, index) in category.breadcrumbs"
+        <a-breadcrumb-item v-for="(breadcrumb, index) in breadcrumbs"
                            :key="index"
         >
           <nuxt-link :to="breadcrumb.route">
@@ -29,7 +29,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-category-breadcrumbs',
   props: {
-    category: { type: Object, required: true, default: null },
+    breadcrumbs: { type: Array, required: true, default: () => [] },
     hasClass: { type: Boolean, required: false, default: true }
   },
   data () {
@@ -38,7 +38,7 @@ export default {
   computed: mapGetters({
     store: 'base/store',
     hasStore: 'base/hasStore',
-    processes: 'base/processes',
+    processes: 'base/processes'
   }),
   created () {
     this.payload()
@@ -46,9 +46,6 @@ export default {
   methods: {
     payload () {
 
-    },
-    onCategory (category) {
-      this.$store.dispatch('base/onCategory', category.route)
     }
   }
 }

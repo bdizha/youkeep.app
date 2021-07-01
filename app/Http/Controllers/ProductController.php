@@ -43,10 +43,10 @@ class ProductController extends Controller
        if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
-            $this->_setProducts();
+           $this->_setProducts();
 
-            $response = $this->products;
-            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
+           $response = $this->products;
+           Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
         }
 
         return response()->json($response, 200);
@@ -62,6 +62,7 @@ class ProductController extends Controller
     {
         $response = [];
         $this->slug = $request->get('slug', $slug);
+        $this->categoryId = $request->get('category_id', null);
         $this->limit = $request->get('limit', 3);
         $this->with = $request->get('with', ['categories', 'photos', 'breadcrumbs']);
 
@@ -79,28 +80,15 @@ class ProductController extends Controller
                 ->where('slug', $this->slug)
                 ->first();
 
-            if (!empty($this->product)) {
-                $storeProduct = StoreProduct::where('product_id', $this->product->id)
-                    ->with('store')
+            if (!empty($this->categoryId)) {
+                $this->category = StoreCategory::where('id', $this->categoryId)
                     ->first();
 
-                if (!empty($storeProduct)) {
-                    $this->store = $storeProduct->store;
-
-                    $this->categoryProduct = CategoryProduct::where('product_id', $this->product->id)
-                        ->first();
-
-                    if (!empty($this->categoryProduct)) {
-                        $this->storeCategory = StoreCategory::where('store_id', $this->store->id)
-                            ->where('category_id', $this->categoryProduct->category_id)
-                            ->orderBy('level', 'DESC')
-                            ->first();
-                    }
-                }
+                $this->store = $this->category->store;
             }
 
             $this->_setBreadcrumbs();
-            $this->product['breadcrumbs'] = $this->breadcrumbs;
+
             $categories = [];
 
             $productTypes = ProductLink::$types;
@@ -113,7 +101,7 @@ class ProductController extends Controller
                     $categories[] = [
                         'type' => $productType,
                         'name' => $name,
-                        'has_products' => $this->products->count() > 0
+                        'has_products' => false
                     ];
                 }
             }

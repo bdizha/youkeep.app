@@ -25,7 +25,7 @@ class CategoryController extends Controller
     {
         $level = 1;
         $response = [];
-        $this->limit = $request->get('limit', 24);
+        $this->limit = $request->get('limit', 6);
 
         $this->_setLevel($request, $level);
 
@@ -33,7 +33,7 @@ class CategoryController extends Controller
         $this->with = $request->get('with', []);
         $this->categoryType = $request->get('type', 2);
         $this->categoryId = $request->get('category_id', null);
-        $this->storeId = $request->get('store_id', null);
+        $this->storeId = $request->get('store_id', 24);
         $this->storeSlug = $request->get('store', null);
         $key = $this->_setCacheKey($request);
 
@@ -77,7 +77,6 @@ class CategoryController extends Controller
         } else {
             $this->_setCategories();
             $this->_setProducts();
-            $this->_setBreadcrumbs();
 
             $response['categories'] = $this->categories;
             $this->category['products'] = [];

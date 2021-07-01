@@ -1,32 +1,48 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
-    <a-col v-if="false" class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }"
+    <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }"
            :class="{'r-spin__active' :processes.isCategory}"
            :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <div class="r-gradient r-hide-lg r-p-12">
-        <r-search class="r-hide-lg" :class="{'r-pb-12': hasCategories}"></r-search>
-      </div>
-      <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
-      <a-row type="flex" justify="start" align="middle">
+      <a-row  type="flex" justify="start" align="middle">
+        <a-col class="r-hide-lg" :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <r-search class="r-p-24 r-pv-12" :class="{'r-pb-12': hasCategories}"></r-search>
+        </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
-          <r-category-slider :category="category"></r-category-slider>
-          <r-product-flush :columns="3"></r-product-flush>
+          <r-category-breadcrumbs :breadcrumbs="category.breadcrumbs"></r-category-breadcrumbs>
         </a-col>
       </a-row>
-      <r-product-list v-if="hasCategory" :filters="filters" :columns="columns"></r-product-list>
-      <a-row class="r-mt-48" type="flex" justify="start" align="middle">
-        <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
+      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+        <a-col v-if="hasCategories" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
-          <div class="r-margin-out">
-            <r-category-list :columns="6"></r-category-list>
-          </div>
+          <r-category-slider :category="category"></r-category-slider>
+        </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <r-product-flush :columns="3"></r-product-flush>
+        </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <r-product-list v-if="hasCategory" :filters="filters" :columns="columns"></r-product-list>
+        </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <r-category-list :columns="6"></r-category-list>
         </a-col>
       </a-row>
     </a-col>

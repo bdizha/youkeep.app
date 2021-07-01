@@ -5,9 +5,12 @@
   >
     <a-row :gutter="[12,12]" type="flex" justify="center" align="middle">
       <a-col v-if="hasItem" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-        <h3 class="r-heading">
+        <h4 class="r-heading">
           {{ productItem.product.name }}
-        </h3>
+        </h4>
+      </a-col>
+      <a-col v-if="hasItem" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <r-product-price :product="productItem.product"></r-product-price>
       </a-col>
       <a-col v-if="hasItem" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
         <h4 class="r-heading-light">
@@ -15,11 +18,11 @@
         </h4>
       </a-col>
       <a-col class="r-product-modal" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-        <a-collapse :default-active-key="activeProductType" expandIconPosition="right">
+        <a-collapse accordion :defaultActiveKey="1" expandIconPosition="right">
           <a-collapse-panel class="r-collapse-panel"
                             v-for="(productType, index) in productItem.product.types"
                             v-if="productType.is_required"
-                            :key="productType.name"
+                            :key="index.toString()"
           >
             <template slot="header">
               <span>{{ productType.name + ': ' }}</span>

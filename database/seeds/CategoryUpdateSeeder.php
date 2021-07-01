@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 
 class CategoryUpdateSeeder extends DatabaseSeeder
 {
-    protected $storesIds = [71]; //70, 12, 7, 8, 9, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
+    protected $storeIds = [71, 24]; //70, 12, 7, 8, 9, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
 
     /**
      * Run the database seeds.
@@ -19,11 +19,12 @@ class CategoryUpdateSeeder extends DatabaseSeeder
 //        $this->setHighlights();
 //        $this->setCategoryProducts();
 
-        foreach ($this->storesIds as $storesId) {
-            $this->storeId = $storesId;
+        foreach ($this->storeIds as $storeId) {
+            $this->storeId = $storeId;
 
             $this->storeCategories = \App\StoreCategory::with('category')
-                ->where('level', 0)
+                ->where('store_id', $storeId)
+                ->where('id', 14552)
                 ->orderBy('updated_at', 'ASC')
                 ->get();
 
@@ -36,13 +37,13 @@ class CategoryUpdateSeeder extends DatabaseSeeder
 
     public function setFilters($storeCategory = null, $hasProducts = false)
     {
-        echo "Updated category filter : {$storeCategory->url} >>>>> \n";
+        echo "Updated category filter : {$storeCategory->category->slug} >>>>> \n";
 
         if (empty($hasProducts)) {
             $hasItemField = 'has_categories';
             $query = StoreCategory::orderBy('created_at', 'DESC')
                 ->with('category')
-                ->whereIn('store_id', $this->storesIds);
+                ->whereIn('store_id', $this->storeIds);
 
             if (!empty($storeCategory->id) && empty($hasProducts)) {
                 $query->where('parent_id', $storeCategory->id);
@@ -52,7 +53,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
             $hasItems = $items->count() > 0;
         } else {
             $hasItemField = 'has_products';
-            $hasItems = count($storeCategory->category->photos) > 0;
+            $hasItems = count($storeCategory->photos) > 0;
 
             if ($hasItems) {
                 echo "Category has products: {$storeCategory->url} >>>>> \n";
@@ -61,7 +62,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
 
         if (!empty($storeCategory->id)) {
             $values = [
-                'product_count' => count($storeCategory->category->products),
+                'product_count' => count($storeCategory->products),
                 $hasItemField => $hasItems
             ];
 
@@ -77,7 +78,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
     {
         $stores = \App\Store::orderBy('created_at', 'DESC')
             ->where('is_active', true)
-            ->whereIn('id', $this->storesIds)
+            ->whereIn('id', $this->storeIds)
             ->get();
 
         foreach ($stores as $store) {

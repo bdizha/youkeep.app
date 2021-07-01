@@ -3,7 +3,7 @@
                     :closable="true"
                     current="category"
   >
-    <r-category-breadcrumbs :category="category"></r-category-breadcrumbs>
+    <r-category-breadcrumbs :breadcrumbs="category.breadcrumbs"></r-category-breadcrumbs>
     <a-card class="r-mt-24" title="Filter By">
       <r-category-menu></r-category-menu>
     </a-card>

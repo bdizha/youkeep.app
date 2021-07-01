@@ -9,37 +9,45 @@
              justify="start" align="top"
       >
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 18 }">
-          <a-card v-if="product" class="r-product-show">
-            <a-row :gutter="[0,24]" type="flex"
-                   justify="center" align="top"
-            >
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 16 }">
-                <r-product-photos :photos="product.photos" :product="product" :size="650"></r-product-photos>
-              </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }" :lg="{ span: 8 }">
-                <div class="r-p-24">
-                  <r-product-credit :is-showing="true" :product="product"></r-product-credit>
-                  <r-product-header :is-showing="true" :product="product"></r-product-header>
-                  <r-rate :rating="product.rating"></r-rate>
-                  <r-product-price :is-showing="true" :product="product"></r-product-price>
-                  <r-product-types v-if="productItem.key" :item-key="productItem.key"
-                                   :product-types="product.types" :product="product"
-                  ></r-product-types>
-                  <r-product-actions v-if="productItem.key"
-                                     :item-key="productItem.key" :is-showing="true"
-                                     :product="product"
-                  ></r-product-actions>
-                </div>
-              </a-col>
-            </a-row>
-            <r-product-info :product="product"></r-product-info>
-          </a-card>
-          <a-row class="r-mv-24" type="flex" justify="center">
-            <a-col class="r-ph-24" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+          <a-row :gutter="[24,24]" type="flex" justify="center">
+            <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+              <a-card v-if="product" class="r-product-show">
+                <a-row :gutter="[24,24]" type="flex"
+                       justify="center" align="top"
+                >
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 16 }">
+                    <r-product-photos :photos="product.photos" :product="product" :size="650"></r-product-photos>
+                  </a-col>
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }" :lg="{ span: 8 }">
+                    <div class="r-p-24">
+                      <r-product-credit :is-showing="true" :product="product"></r-product-credit>
+                      <r-product-header :is-showing="true" :product="product"></r-product-header>
+                      <r-rate :rating="product.rating"></r-rate>
+                      <r-product-price :is-showing="true" :product="product"></r-product-price>
+                      <r-product-types v-if="productItem.key" :item-key="productItem.key"
+                                       :product-types="product.types" :product="product"
+                      ></r-product-types>
+                      <r-product-actions v-if="productItem.key"
+                                         :item-key="productItem.key" :is-showing="true"
+                                         :product="product"
+                      ></r-product-actions>
+                    </div>
+                  </a-col>
+                </a-row>
+                <r-product-info :product="product"></r-product-info>
+              </a-card>
+            </a-col>
+            <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+              <div class="r-ph-24">
               <h3 class="r-heading r-text-black">
                 You may also like
               </h3>
+              </div>
+            </a-col>
+            <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+              <div class="r-ph-24">
               <p class="r-text-normal">Realtime product recommendations just for you</p>
+              </div>
             </a-col>
             <a-col class="r-hide-sm" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
               <div class="r-grey-shadow r-ph-24">

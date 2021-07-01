@@ -1,6 +1,6 @@
 <template>
   <a-row :class="{'r-spin__active' :processes.isProduct}"
-         class="r-mv-48 r-product-flush" type="flex" justify="start"
+         class="r-product-flush" type="flex" justify="start"
   >
     <a-col class="r-spin-holder" :span="24">
       <div class="r-slider">

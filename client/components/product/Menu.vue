@@ -3,7 +3,7 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <a-collapse default-active-key="store" expandIconPosition="right">
         <a-collapse-panel class="r-collapse-panel" key="store" header="You're shopping at">
-          <r-store-item v-if="hasStore" :store="store"></r-store-item>
+          <r-store-item v-if="hasStore" :store="store" :size="120"></r-store-item>
         </a-collapse-panel>
         <a-collapse-panel class="r-collapse-panel" v-if="hasCategories"
                           key="categories"

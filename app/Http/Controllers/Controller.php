@@ -33,6 +33,7 @@ class Controller extends BaseController
         $storeCategory = null,
         $product = null,
         $productId = null,
+        $categoryParentId = null,
         $productType = null,
         $storeId = null,
         $slug = null,
@@ -104,11 +105,6 @@ class Controller extends BaseController
         return $level;
     }
 
-    protected function _encodeLevel(): string
-    {
-        return "/L" . str_pad(empty($this->level) ? 1 : $this->level, 6, STR_PAD_LEFT, "0");
-    }
-
     /**
      * @param $records
      * @return array
@@ -150,78 +146,46 @@ class Controller extends BaseController
         }
 
         if (!empty($this->slug)) {
-            $this->category = Category::where('slug', $this->slug)
-                ->first()
-                ->toArray();
+            // Check for the existences of the parent category id
+            $slugParts = explode('--', $this->slug);
+
+            if(count($slugParts) > 0){
+                $this->categoryId = $slugParts[count($slugParts) - 1];
+            }
         }
 
         if (!empty($this->categoryId)) {
-            $this->category = Category::where('id', $this->categoryId)
+            $this->level++;
+            $this->category = StoreCategory::where('id', $this->categoryId)
                 ->first()
                 ->toArray();
         }
 
         $storeCategoryQuery = StoreCategory::with('category');
 
-        if (!empty($this->parentId)) {
-            $storeCategoryQuery->where('parent_id', $this->parentId);
-            $this->level = 0;
-        }
-        else{
-            $this->level = 0;
+        if (!empty($this->categoryId)) {
+            $storeCategoryQuery->where('parent_id', $this->categoryId);
         }
 
-        $this->storeCategories = $storeCategoryQuery->where('level', $this->level)
-            ->get();
+        $storeCategoryQuery->where('level', $this->level)
+            ->where('has_products', true);
 
-        // $this->category['level'] = $this->level;
-
-        if (!empty($this->storeSlug)) {
-            $this->_setBreadcrumbs();
-            $this->category['breadcrumbs'] = $this->breadcrumbs;
+        if($this->level === 1){
+            $storeCategoryQuery->where('has_categories', true);
         }
 
-        ++$this->level;
+        if (!empty($this->store->id)) {
+            $storeCategoryQuery->where('store_id', $this->store->id);
+        }
 
         $this->with = array_intersect($this->with, $this->relations);
 
-        $query = Category::with($this->with)
+        $storeCategoryQuery->orderBy($this->orderBy, 'DESC')
             ->take($this->limit);
 
-        $query->whereHas('stores', function ($query) {
-            if (!empty($this->storeCategory)) {
-                $query->where('parent_id', $this->storeCategory->id);
-            }
-
-            if (isset($this->level)) {
-                $query->where('level', $this->level);
-
-                if($this->level == 0){
-                    $query->where('has_products', true);
-                    $query->where('has_categories', true);
-                }
-            }
-
-            if ($this->categoryType == Category::TYPE_CATALOG) {
-                $query->where('store_categories.has_products', true);
-
-                if (empty($this->store->id) && empty($this->slug)) {
-                    $query->where('store_categories.has_categories', true);
-                }
-            }
-
-            if (!empty($this->store->id)) {
-                $query->where('store_categories.store_id', $this->store->id);
-            }
-        });
-
-        $query->orderBy($this->orderBy, 'DESC');
-
-        $this->categories = $query
+        $this->categories = $storeCategoryQuery
             ->get()
             ->toArray();
-
-        $this->_setRoutes();
 
         if ($this->categoryType === Category::TYPE_STORE) {
             $this->_setCategoryStores();
@@ -256,6 +220,11 @@ class Controller extends BaseController
         }
 
         if (!empty($this->categoryId)) {
+            $this->category = StoreCategory::where('id', $this->categoryId)
+                ->first();
+        }
+
+        if (!empty($this->categoryId)) {
             $query->whereHas('categories', function ($query) {
                 $query->where('category_products.category_id', $this->categoryId);
             });
@@ -274,7 +243,45 @@ class Controller extends BaseController
         if (!empty($query)) {
             $this->products = $query->orderBy($sort['column'], $sort['dir'])
                 ->paginate($this->limit);
+
+            $this->_setProductsRoutes();
         }
+    }
+
+    protected function _setBreadcrumbs(){
+        $breadcrumbs = [];
+
+        if(!empty($this->category)){
+            $breadcrumbs = $this->category->breadcrumbs;
+            $breadcrumbs[] = [
+                'id' => $this->product->id,
+                'slug' => $this->product->slug,
+                'route' => $this->category->route . $this->product->route,
+                'name' => $this->product->name,
+                'has_products' => false,
+                'has_categories' => false,
+                'categories' => [],
+            ];
+        }
+
+        $this->product->breadcrumbs = $breadcrumbs;
+    }
+
+    /**
+     * @return void
+     */
+    protected function _setProductsRoutes(): void
+    {
+        $products = json_decode($this->products->toJson());
+
+        $products->data = array_map(function ($product) {
+            $route = $this->category->route .  $product->route;
+
+            $product->route = $route;
+            return $product;
+        }, $products->data);
+
+        $this->products = $products;
     }
 
 
@@ -343,24 +350,6 @@ class Controller extends BaseController
     /**
      * @return void
      */
-    protected function _setBreadcrumbs()
-    {
-        $this->breadcrumbs = $this->storeCategory->breadcrumbs;
-    }
-
-    /**
-     * @return void
-     */
-    protected function _hidrateCategories(): void
-    {
-        $this->categories = array_map(function ($category) {
-            return $this->_setCategoryRoute($category);
-        }, $this->storeCategories);
-    }
-
-    /**
-     * @return void
-     */
     protected function _setFilters(): void
     {
         $types = ProductType::$types;
@@ -419,28 +408,5 @@ class Controller extends BaseController
         $this->stores = $query
             ->orderBy('created_at', 'DESC')
             ->paginate($this->limit);
-    }
-
-    /**
-     * @param $category
-     * @return mixed
-     */
-    protected function _setCategoryRoute($storeCategory)
-    {
-        $this->route = $category['route'];
-
-        $this->_setStoreRoute();
-        $this->route .= $this->_encodeLevel();
-
-        $category['route'] = $this->route;
-        $category['level'] = $this->level;
-
-        if (!empty($category['categories'])) {
-            $category['categories'] = array_map(function ($category) {
-                return $this->_setCategoryRoute($category);
-            }, $category['categories']);
-        }
-
-        return $category;
     }
 }

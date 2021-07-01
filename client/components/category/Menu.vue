@@ -5,7 +5,7 @@
                   default-active-key="1" expandIconPosition="right"
       >
         <a-collapse-panel class="r-collapse-panel" key="1" header="You're shopping at">
-          <r-store-item v-if="hasStore" :store="store"></r-store-item>
+          <r-store-item v-if="hasStore" :store="store" :size="120"></r-store-item>
         </a-collapse-panel>
         <a-collapse-panel class="r-collapse-panel" key="2" header="Price">
           <r-category-filter-price></r-category-filter-price>

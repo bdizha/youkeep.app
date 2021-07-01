@@ -119,7 +119,7 @@ class CategorySeeder extends DatabaseSeeder
      */
     public function run()
     {
-        $this->level = 0;
+        $this->level = 1;
         $this->fetchCategories();
 
         die("fetchCategories >>> done");
@@ -140,9 +140,10 @@ class CategorySeeder extends DatabaseSeeder
             $categoryName = ucwords(strtolower($categoryName));
             $this->category = $this->setCategory($categoryName, null);
 
-            echo "Category slug: {$this->category->slug}\n";
-
-            $this->linkCategories();
+            if($this->category->slug == 'for-women' || true){
+                echo "Category slug: {$this->category->slug}\n";
+                $this->linkCategories();
+            }
         });
     }
 
@@ -163,106 +164,145 @@ class CategorySeeder extends DatabaseSeeder
                 $mappedNames = is_array($mappedName) ? $mappedName : [$mappedName];
 
                 if (in_array($categoryName, $mappedNames)) {
+
                     foreach ($mappedNames as $mappedName) {
                         $parentCategory = Category::with('stores')
                             ->where('slug', 'like', $mappedName);
 
                         $parentCategory->whereHas('stores', function ($query) {
-                            $query->where('level', '=', 0);
+                            $query->where('level', '=', 1);
                         });
 
                         $parentCategory = $parentCategory->first();
+                        echo "Mapped category {$mappedName} vs {$mappedKey}\n";
 
                         if (empty($parentCategory)) {
+                            echo "Parent category not found {$mappedName}\n";
+
                             continue;
                         }
 
-                        $parentStoreCategory = StoreCategory::where('category_id', $parentCategory->id)
-                            ->where('level', 0);
-
-                        $this->parentStoreCategory = $parentStoreCategory->first();
+                        $this->parentStoreCategory = StoreCategory::where('category_id', $parentCategory->id)
+                            ->where('level', 1)
+                            ->first();
 
                         if (empty($this->parentStoreCategory)) {
+                            echo "Parent category not found {$mappedName}\n";
                             continue;
                         }
 
-                        $query = Category::with('stores')
+                        $mappedCategoryQuery = Category::with('stores')
                             ->where('slug', 'like', $mappedKey);
 
-                        $query->whereHas('stores', function ($query) {
+                        $mappedCategoryQuery->whereHas('stores', function ($query) {
                             $query->where('level', '=', 1)
                                 ->where('store_id', 71);
                         });
 
-                        $categories = $query->get();
+                        $mappedCategories = $mappedCategoryQuery->get();
 
-                        foreach ($categories as $category) {
-                            $storeCategory = StoreCategory::where('category_id', $category->id)
-                                ->where('level', 1);
+                        echo "Mapped category >>>>>> {$mappedCategories->count()}\n";
 
-                            $storeCategory = $storeCategory->first();
+//                        dd([$mappedCategories, $mappedKey]);
 
-                            // Find the child categories that should be linked
-                            if (!empty($storeCategory)) {
-                                $childStoreCategories = StoreCategory::where('parent_id', $storeCategory->id)->with('category');
-                                $this->childStoreCategories = $childStoreCategories->get();
+                        foreach ($mappedCategories as $parentCategory) {
 
-                                foreach ($this->childStoreCategories as $key => $childStoreCategory) {
+                            echo "Found child category {$parentCategory->slug}\n";
 
-                                    if ($key == 0) {
-                                        $this->parentStoreCategory->has_categories = true;
-                                        $this->parentStoreCategory->has_products = true;
-                                        $this->parentStoreCategory->save();
-                                    }
+                            // Get the level 1
+                            $fromStoreCategory = StoreCategory::where('category_id', $parentCategory->id)
+                                ->where('level', 1)->first();
 
-                                    echo "Inserting category mapping {$mappedName} => {$mappedKey} => {$childStoreCategory->category->name}\n";
-
-                                    $categoryIds[] = $childStoreCategory->category_id;
-
-                                    $attributes = [
-                                        'category_id' => $childStoreCategory->category_id,
-                                        'level' => 1,
-                                        'store_id' => 24
-                                    ];
-
-                                    $values = [
-                                        'parent_id' => $this->parentStoreCategory->id
-                                    ];
-
-                                    // save store categories
-                                    StoreCategory::updateOrCreate($attributes, $values);
-                                }
+                            // Find the child categories recursively that should be linked to the global category
+                            // Level 1
+                            if (!empty($fromStoreCategory)) {
+                                $this->_setMappedCategories($fromStoreCategory, $this->parentStoreCategory, 2, $mappedKey);
                             }
-                        }
-
-                        if($categoryName == 'for-men'){
-//                            dd([$this->parentStoreCategory]);
                         }
                     }
                 }
             }
 
-            $this->setCategoryProducts($categoryIds);
+//            dd([$this->parentStoreCategory->category]);
         }
     }
 
-    public function setCategoryProducts($categoryIds)
+    public function setCategoryProducts($fromStoreCategory, $toStoreCategory)
     {
-        $categoryProducts = CategoryProduct::whereIn('category_id', $categoryIds)
+        $categoryProducts = CategoryProduct::where('category_id', $fromStoreCategory->id)
             ->get();
 
         foreach ($categoryProducts as $categoryProduct) {
+            $this->_setCategoryProduct($toStoreCategory, $categoryProduct);
+            $this->_setCategoryProduct($this->parentStoreCategory, $categoryProduct);
+        }
+    }
+
+    /**
+     * @param $storeCategory
+     * @param array|object $parentStoreCategory
+     * @param integer $level
+     * @param string $mappedKey
+     * @return void
+     */
+    protected function _setMappedCategories($fromStoreCategory = null, $parentStoreCategory = null, $level = 1, string $mappedKey): void
+    {
+        // Here for example: adidas -> women -> get child categories like featured, clothing, accessories, shoes, etc
+
+        // Adidas -> Women -> Featured <=> Global -> For Women -> Featured
+        $fromChildStoreCategories = StoreCategory::where('parent_id', $fromStoreCategory->id)
+            ->with(['category', 'categories']);
+
+        foreach ($fromChildStoreCategories->get() as $key => $childStoreCategory) {
+            if ($key == 0) {
+                $this->parentStoreCategory->has_categories = true;
+                $this->parentStoreCategory->has_products = true;
+                $this->parentStoreCategory->save();
+            }
+
+            echo "Inserting category mapping {$parentStoreCategory->category->slug} => {$mappedKey} => {$childStoreCategory->category->name}\n";
+
             $attributes = [
-                'category_id' => $this->category->id,
-                'product_id' => $categoryProduct->product_id
+                'parent_id' => $parentStoreCategory->id,
+                'category_id' => $childStoreCategory->category_id,
+                'level' => $level,
+                'store_id' => 24
             ];
 
             $values = [
-                'category_id' => $this->category->id,
-                'product_id' => $categoryProduct->product_id
+                'parent_id' => $parentStoreCategory->id,
+                'category_id' => $childStoreCategory->category_id,
+                'level' => $level,
+                'store_id' => 24
             ];
 
-            \App\CategoryProduct::updateOrCreate($attributes, $values);
+            // save store categories
+            $toStoreCategory = StoreCategory::updateOrCreate($attributes, $values);
+
+            $this->setCategoryProducts($childStoreCategory, $toStoreCategory);
+
+            if(!empty($childStoreCategory->categories)){
+                $this->_setMappedCategories($childStoreCategory, $toStoreCategory, $level + 1, $mappedKey);
+            }
         }
+    }
+
+    /**
+     * @param $toStoreCategory
+     * @param $categoryProduct
+     */
+    protected function _setCategoryProduct($toStoreCategory, $categoryProduct): void
+    {
+        $attributes = [
+            'category_id' => $toStoreCategory->id,
+            'product_id' => $categoryProduct->product_id
+        ];
+
+        $values = [
+            'category_id' => $toStoreCategory->id,
+            'product_id' => $categoryProduct->product_id
+        ];
+
+        \App\CategoryProduct::updateOrCreate($attributes, $values);
     }
 }

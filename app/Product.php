@@ -363,7 +363,7 @@ class Product extends KModel
      */
     public function categories()
     {
-        return $this->belongsToMany('App\Category', 'category_products', 'product_id', 'category_id');
+        return $this->belongsToMany('App\StoreCategory', 'category_products', 'product_id', 'category_id');
     }
 
     /**

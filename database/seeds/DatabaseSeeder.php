@@ -131,7 +131,7 @@ class DatabaseSeeder extends Seeder
         return $category;
     }
 
-    protected function setProduct($values)
+    protected function setProduct($values, $storeCategory)
     {
         $attributes = [
             'external_url' => $values['external_url']
@@ -148,13 +148,13 @@ class DatabaseSeeder extends Seeder
 
         $this->setProductStore($values);
 
-        $this->setProductCategory();
+        $this->setProductCategory($storeCategory);
     }
 
-    protected function setProductCategory()
+    protected function setProductCategory($storeCategory)
     {
         $values = [
-            'category_id' => $this->storeCategory->category_id,
+            'category_id' => $storeCategory->id,
             'product_id' => $this->product->id
         ];
 
