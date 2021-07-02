@@ -1,11 +1,14 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
     <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-collapse v-if="hasCategories" default-active-key="0" expandIconPosition="right">
+      <a-collapse v-if="hasCategories"
+                  accordion
+                  :defaultActiveKey="1"
+                  expandIconPosition="right">
         <a-collapse-panel class="r-collapse-panel"
                           v-for="(category, index) in categories"
                           v-if="index < limit"
-                          :key="category.id + '-category'"
+                          :key="index.toString()"
                           :columns="columns"
                           :header="category.name"
         >

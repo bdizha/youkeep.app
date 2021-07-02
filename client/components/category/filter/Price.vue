@@ -2,7 +2,6 @@
   <a-row class="r-mv-24" type="flex" justify="start" align="middle">
     <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
       <a-slider range
-                :tooltipVisible="true"
                 :tip-formatter="formatter"
                 :min="price.min"
                 :max="price.max"
@@ -23,10 +22,12 @@ export default {
       price: {
         max: 2400,
         min: 33
-      },
+      }
     }
   },
-  computed: mapGetters({}),
+  computed: mapGetters({
+    filters: 'base/filters'
+  }),
   created () {
     this.payload()
   },
@@ -35,7 +36,16 @@ export default {
     },
     formatter (value) {
       return `R${value}`
+    },
+    async onFilter () {
+      this.filters.price_min = 15
+      this.filters.price_max = 2000000
+      await this.$store.dispatch('base/onFilters', this.filters)
+      await this.onProducts()
+    },
+    async onProducts () {
+      await this.$store.dispatch('base/onProducts', this.payload)
     }
-  },
+  }
 }
 </script>

@@ -18,7 +18,7 @@
                          :md="{ span: 24 }"
                          :lg="{ span: 24 }"
                   >
-                    <h4 class="r-heading-light r-text-primary r-text-uppercase r-text-primary">
+                    <h4 class="r-heading-light r-text-secondary r-text-uppercase r-text-secondary">
                       For customers
                     </h4>
                   </a-col>
@@ -43,14 +43,17 @@
                       front of you, it’s the all-in-one
                       marketplace you deserve.
                     </p>
+                    <p class="r-text-normal">
+                      Eliminate trips to the store, and save time! We can't wait for you to experience the #shopplelife!
+                    </p>
                   </a-col>
                   <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                          :md="{ span: 12 }"
                          :lg="{ span: 12 }"
                   >
-                    <a-button class="r-btn-primary"
+                    <a-button class="r-btn-secondary"
                               block
-                              type="primary"
+                              type="secondary"
                               to="/register"
                               size="large"
                               @click="onModal"
@@ -67,7 +70,7 @@
             :md="{ span: 12 }"
             :lg="{ span: 12 }"
           >
-            <r-avatar class="r-avatar-block" data-src="/images/content/hero-01.png" :size="450"
+            <r-avatar class="r-avatar-auto" data-src="/images/content/hero-01.png" :size="450"
             ></r-avatar>
           </a-col>
         </a-row>
@@ -271,11 +274,20 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
            :lg="{ span: 16 }"
     >
-      <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
+      <a-row :gutter="[48,24]" type="flex" justify="center" align="middle">
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
-          <h2 class="r-heading">
-            Think you know shopping <span class="r-text-primary">experience</span>?
-          </h2>
+          <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center">
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+              <h2 class="r-heading">
+                Think you know shopping <span class="r-text-secondary">experience</span>?
+              </h2>
+            </a-col>
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+              <p class="r-text-normal">
+                Hello! Shopple is an app that provides shopping delivery from your local store via a local community of reliable shoppers. Become a member, order from your phone or computer, and we'll bring your order straight to the location requested.
+              </p>
+            </a-col>
+          </a-row>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
           <a-card class="r-bg-secondary-light">

@@ -3,6 +3,7 @@
            :mask-closable="false"
            :after-close="onClose"
            :closable="modal.isClosable"
+           :width="360"
            v-model="modal.isVisible"
   >
     <template slot="footer">

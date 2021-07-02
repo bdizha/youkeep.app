@@ -159,17 +159,17 @@ export default {
       const { status } = await this.$store.dispatch('cart/onItem', productItem)
 
       if (status === 1) {
-        // this.$message.success('Item added to your bag');
+        this.$message.success(productItem.product.name + ' has been added to your shopping cart.', 6)
       } else if (status === 2) {
-        // this.$message.success('Item updated in your bag');
+        this.$message.success(productItem.product.name + ' has been updated in your shopping cart.', 6)
       } else if (status === 3) {
-        // this.$message.success('Item removed from your bag');
+        this.$message.success(productItem.product.name + ' has been removed from your shopping cart.', 6)
       }
     },
     async onInit () {
       if (!this.item.key) {
         const current = new Date()
-        let itemKey = current.getMilliseconds() * this.product.id
+        const itemKey = current.getMilliseconds() * this.product.id
 
         this.item.key = itemKey
         this.item.product = this.product

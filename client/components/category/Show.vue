@@ -36,7 +36,7 @@
                :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
-          <r-product-list v-if="hasCategory" :filters="filters" :columns="columns"></r-product-list>
+          <r-product-list v-if="hasCategory" :filters="payload" :columns="columns"></r-product-list>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
@@ -59,31 +59,32 @@ export default {
   },
   data () {
     return {
-      payload: {
-        route: null,
-        slug: null,
-        limit: process.env.APP_LIMIT,
-        with: []
-      }
+      filters: []
     }
   },
   computed: {
-    filters () {
+    payload () {
       return {
         limit: process.env.APP_LIMIT,
         category_id: this.hasCategory ? this.category.id : null,
         sort: 0,
-        page: 1
+        page: 1,
+        filters: [],
+        price_min: 0,
+        price_max: null
       }
     },
     ...mapGetters({
       category: 'base/category',
+      store: 'base/store',
       hasCategories: 'base/hasCategories',
       hasCategory: 'base/hasCategory',
       processes: 'base/processes'
     })
   },
   created () {
+    this.$store.dispatch('product/onPayload', this.payload)
+    this.$message.success('You\'re shopping in the ' + this.category.name + ' section at ' + this.store.name + '.', 6)
   },
   mounted () {
   },

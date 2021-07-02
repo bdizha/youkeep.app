@@ -5,20 +5,24 @@
                     current="store"
                     style="position: relative;"
   >
-    <a-row :gutter="[24,24]" type="flex" justify="center">
+    <a-row :gutter="[12,12]" type="flex" justify="center">
       <a-col class="r-text-left" :xs="{ span: 24 }">
         <h2 class="r-heading r-text-secondary">
-          Shop at your favourite store
+          Find your store
         </h2>
       </a-col>
       <a-col class="r-text-left" :xs="{ span: 24 }">
-        <p class="r-text-normal">
-          Simply choose Shopple at checkout.
+        <p class="r-text-normal" style="padding-bottom: 0">
+          Simply shop at your favorite shop.
         </p>
       </a-col>
+      <a-col class="r-text-left" :xs="{ span: 24 }">
+        <r-search></r-search>
+      </a-col>
+      <a-col class="r-text-left" :xs="{ span: 24 }">
+        <r-store-list></r-store-list>
+      </a-col>
     </a-row>
-    <r-search></r-search>
-    <r-store-list></r-store-list>
   </r-modal-template>
 </template>
 <script>

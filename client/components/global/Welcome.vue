@@ -4,9 +4,7 @@
            :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <div class="r-ph-24">
-        <r-category-slider></r-category-slider>
-      </div>
+      <r-category-slider></r-category-slider>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"

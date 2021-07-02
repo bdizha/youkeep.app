@@ -157,8 +157,10 @@ class Controller extends BaseController
         if (!empty($this->categoryId)) {
             $this->level++;
             $this->category = StoreCategory::where('id', $this->categoryId)
-                ->first()
-                ->toArray();
+                ->with('store')
+                ->first();
+
+            $this->store = $this->category->store;
         }
 
         $storeCategoryQuery = StoreCategory::with('category');
@@ -237,7 +239,7 @@ class Controller extends BaseController
         }
 
         if (!empty($this->store->id)) {
-            $query->where('store_id', $this->store->id);
+//            $query->where('store_id', $this->store->id);
         }
 
         if (!empty($query)) {

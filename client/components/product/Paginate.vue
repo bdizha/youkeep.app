@@ -86,32 +86,33 @@ export default {
   },
   data () {
     return {
-      sortOptions: SORTS,
-      payload: this.filters
+      sortOptions: SORTS
     }
   },
   computed: mapGetters({
     store: 'base/store',
+    payload: 'product/payload',
     hasProducts: 'base/hasProducts',
     products: 'base/products',
-    processes: 'base/processes',
+    processes: 'base/processes'
   }),
   created () {
   },
   methods: {
     async onChange (page, limit) {
-      this.payload.page = page
-      this.payload.limit = limit
-      await this.onProducts()
+      const payload = this.payload
+      payload.page = page
+      payload.limit = limit
+      await this.onProducts(payload)
     },
     async onSort (option) {
-      this.payload.sort = option.key
-      await this.onProducts()
-    },
-    async onProducts () {
+      const payload = this.payload
+      payload.sort = option.key
 
-      console.log('>>> 111')
-      await this.$store.dispatch('base/onProducts', this.payload)
+      await this.onProducts(payload)
+    },
+    async onProducts (payload) {
+      await this.$store.dispatch('base/onProducts', payload)
     }
   }
 }

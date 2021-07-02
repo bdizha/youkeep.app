@@ -1,7 +1,7 @@
 <template>
   <div class="r-store-face">
     <r-store-photos v-if="false" :store="store"></r-store-photos>
-    <a-card class="r-bg-grey-light">
+    <a-card class="r-bg-primary-light">
       <a-card-meta>
         <template slot="description">
           <a-row :gutter="[12, 12]" type="flex" justify="center" align="middle">

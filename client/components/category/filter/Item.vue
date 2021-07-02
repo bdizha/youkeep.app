@@ -58,29 +58,33 @@
   </a-row>
 </template>
 <script>
-import { mapState } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'r-category-filter-item',
   props: {
     filter: { type: Object, required: true, default: {} },
-    limit: { type: Number, required: false, default: 6 },
+    limit: { type: Number, required: false, default: 6 }
   },
   data () {
     return {
       selected: [],
-      counter: this.limit,
+      counter: this.limit
     }
   },
-  computed: mapState({
-    filters: 'base/filters'
-  }),
-  mounted () {
-
+  created () {
+    this.selected = this.payload.filters
+  },
+  computed: {
+    ...mapGetters({
+      payload: 'product/payload'
+    })
   },
   methods: {
-    onFilter () {
-      this.$store.dispatch('base/onFilters', this.selected)
+    async onFilter () {
+      const payload = this.payload
+      payload.filters = this.selected
+      await this.onProducts(payload)
     },
     onIncrement () {
       this.counter += this.limit
@@ -88,6 +92,9 @@ export default {
     onDecrement () {
       this.counter -= this.limit
     },
-  },
+    async onProducts (payload) {
+      await this.$store.dispatch('base/onProducts', payload)
+    }
+  }
 }
 </script>

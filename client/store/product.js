@@ -4,6 +4,15 @@ import axios from 'axios'
 const state = () => ({
   products: [],
   items: [],
+  payload: {
+    limit: 24,
+    category_id: null,
+    sort: 0,
+    page: 1,
+    filters: [],
+    price_min: 0,
+    price_max: null
+  },
   hasProducts: false,
   hasItems: false,
   variant: null,
@@ -11,13 +20,14 @@ const state = () => ({
   productType: null,
   item: null,
   hasProductType: null,
-  hasItem: null,
+  hasItem: null
 })
 
 // getters
 const getters = {
   products: state => state.products,
   items: state => state.items,
+  payload: state => state.payload,
   hasProducts: state => state.hasProducts,
   hasItems: state => state.hasItems,
   variant: state => state.variant,
@@ -25,7 +35,7 @@ const getters = {
   productType: state => state.productType,
   item: state => state.item,
   hasProductType: state => state.hasProductType,
-  hasItem: state => state.hasItem,
+  hasItem: state => state.hasItem
 }
 
 // mutations
@@ -33,6 +43,11 @@ const mutations = {
   setProducts (state, products) {
     state.products = products
     state.hasProducts = products.data.length > 0
+  },
+  setPayload (state, payload) {
+    state.payload = payload
+
+    console.log('setting payload', payload)
   },
   setItems (state, items) {
     state.items = items
@@ -75,6 +90,9 @@ const actions = {
 
       dispatch('base/onProcess', { key: 'isProduct', value: false }, { root: true })
     })
+  },
+  async onPayload ({ dispatch, commit }, payload) {
+    commit('setPayload', payload)
   },
   async onVariant ({ dispatch, commit }, payload) {
     commit('setVariant', payload)

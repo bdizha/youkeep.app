@@ -1,13 +1,14 @@
 <template>
   <a-row :gutter="[96,48]" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row style="background-color: #FFFFFF;" type="flex" justify="center" align="middle">
-        <a-col style="background-color: #FFFFFF;" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
+      <a-row type="flex" justify="center" align="middle">
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
-          <a-row style="background: url(/images/content/1_lighter.svg) no-repeat; background-size: cover;"
-                 type="flex" justify="start" align="top"
-          >
+          <a-card class="r-bg-secondary-light">
+            <a-card-meta>
+              <template slot="description">
+          <a-row type="flex" justify="start" align="middle">
             <a-col class="r-pv-48 r-ph-24" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }"
                    :lg="{ span: 12 }"
             >
@@ -54,34 +55,47 @@
                    :md="{ span: 12 }"
                    :lg="{ span: 12 }"
             >
-              <a-row :gutter="[24,24]" type="flex" align="middle" justify="space-between">
-                <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 16 }"
-                       :lg="{ span: 16 }"
-                >
-                  <h3 class="r-heading-light r-text-secondary r-text-uppercase">
-                    Shop everywhere, anytime!
-                  </h3>
-                </a-col>
-                <a-col class="r-text-center r-hide-sm" :xs="{ span: 9}" :sm="{ span: 10 }" :md="{ span: 8 }"
-                       :lg="{ span: 8 }"
-                >
-                  <r-store-shop-now></r-store-shop-now>
-                </a-col>
-                <a-col :xs="{ span: 24 }"
-                       :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
-                >
-                  <r-store-arrows></r-store-arrows>
-                </a-col>
-              </a-row>
+              <r-avatar class="r-avatar-auto" data-src="/images/content/hero-01.png" :size="450"
+              ></r-avatar>
             </a-col>
           </a-row>
+          </template>
+        </a-card-meta>
+      </a-card>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-          <div class="r-ph-24">
-            <r-category-banners></r-category-banners>
-          </div>
+          <r-category-banners></r-category-banners>
         </a-col>
       </a-row>
+    </a-col>
+    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+      <div class="r-ph-24">
+      <a-row :gutter="[24,24]" type="flex" align="middle" justify="space-between">
+        <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+            <a-row :gutter="[24,24]" type="flex" align="middle" justify="space-between">
+              <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 20 }"
+                     :lg="{ span: 20 }"
+              >
+                <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+                  Shop everywhere, anytime!
+                </h3>
+              </a-col>
+              <a-col class="r-text-center r-hide-sm" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 4 }"
+                     :lg="{ span: 4 }"
+              >
+                <r-store-shop-now></r-store-shop-now>
+              </a-col>
+            </a-row>
+        </a-col>
+        <a-col :xs="{ span: 24 }"
+               :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
+        >
+          <r-store-arrows></r-store-arrows>
+        </a-col>
+      </a-row>
+      </div>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <r-category-arrows v-if="hasCategories"></r-category-arrows>
@@ -95,9 +109,7 @@
       </div>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <div class="r-ph-24">
-        <r-testimonials></r-testimonials>
-      </div>
+      <r-testimonials></r-testimonials>
     </a-col>
   </a-row>
 </template>

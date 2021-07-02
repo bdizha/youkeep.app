@@ -46,11 +46,7 @@ const state = () => ({
   hasModal: false,
   hasStoreTray: false,
   reviews: [],
-  filters: {
-    selected: [],
-    price_min: 15,
-    price_max: 999999
-  },
+  filters: [],
   sort: null,
   search: {
     params: {
@@ -304,15 +300,6 @@ const actions = {
         commit('setProducts', data.products)
         commit('setStore', data.store)
 
-        // const payload = {
-        //   limit: process.env.APP_LIMIT,
-        //   category_id: data.category.id,
-        //   sort: 0,
-        //   page: 1
-        // };
-        //
-        // dispatch('onProducts', payload)
-
         dispatch('onProcess', { key: 'isProduct', value: false })
         dispatch('onProcess', { key: 'isCategory', value: false })
         dispatch('onProcess', { key: 'isFixed', value: false })
@@ -375,11 +362,12 @@ const actions = {
       console.error('onProduct errors')
       console.log(e)
     }
-  }
-  ,
-  async onProducts ({ dispatch, commit }, payload) {
+  },
+  async onProducts ({ dispatch, commit, state }, payload) {
     dispatch('onProcess', { key: 'isProduct', value: true })
     dispatch('onProcess', { key: 'isFixed', value: true })
+
+    dispatch('product/onPayload', payload, { root: true })
 
     try {
       await axios.post('/products', payload).then(({ data }) => {
@@ -387,13 +375,11 @@ const actions = {
         dispatch('onProcess', { key: 'isFixed', value: false })
         dispatch('onProcess', { key: 'isProduct', value: false })
       })
-
     } catch (e) {
       console.error('onProducts errors')
       console.log(e)
     }
-  }
-  ,
+  },
   async onPosition ({ dispatch, commit }, payload) {
     try {
       commit('setProcess', { key: 'isCareers', value: true })
@@ -527,7 +513,6 @@ const actions = {
   ,
   onNotice ({ dispatch, commit }, payload) {
     commit('setNotice', payload)
-    commit('setHasNotice', false)
   }
   ,
   async onInit ({ dispatch, commit, state }, payload) {

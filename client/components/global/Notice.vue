@@ -15,8 +15,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-notice',
   props: {
-    hasThanks: { type: Boolean, required: false, default: false },
-    process: { type: String, required: false, default: '' },
+    hasThanks: { type: Boolean, required: false, default: false }
   },
   data () {
     return {}
@@ -27,7 +26,12 @@ export default {
     processes: 'base/processes'
   }),
   created () {
+    this.$notification.open({
+      message: this.notice.title,
+      description: sdsd,
+      placement,
+    });
   },
-  methods: {},
+  methods: {}
 }
 </script>

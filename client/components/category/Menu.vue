@@ -12,7 +12,7 @@
         </a-collapse-panel>
         <a-collapse-panel class="r-collapse-panel"
                           v-for="(filter, index) in category.filters"
-                          v-if="filter.items.length > 0"
+                          v-if="filter.items.length > 1"
                           :key="filter.name"
                           :header="filter.name"
         >
