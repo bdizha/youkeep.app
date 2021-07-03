@@ -12,6 +12,9 @@
             <a-col class="r-pv-48 r-ph-24" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }"
                    :lg="{ span: 12 }"
             >
+              <a-card class="">
+                <a-card-meta>
+                  <template slot="description">
               <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                 <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                        :md="{ span: 24 }"
@@ -50,6 +53,9 @@
                   <r-delivery-form></r-delivery-form>
                 </a-col>
               </a-row>
+                  </template>
+                </a-card-meta>
+              </a-card>
             </a-col>
             <a-col class="r-pv-48 r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
                    :md="{ span: 12 }"

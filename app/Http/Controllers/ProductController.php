@@ -40,7 +40,7 @@ class ProductController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-       if (Cache::has($key) && false) {
+       if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
            $this->_setProducts();
@@ -72,41 +72,11 @@ class ProductController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key) && false) {
+        if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
+            $this->_setProduct();
 
-            $this->product = Product::where('is_active', true)
-                ->where('slug', $this->slug)
-                ->first();
-
-            if (!empty($this->categoryId)) {
-                $this->category = StoreCategory::where('id', $this->categoryId)
-                    ->first();
-
-                $this->store = $this->category->store;
-            }
-
-            $this->_setBreadcrumbs();
-
-            $categories = [];
-
-            $productTypes = ProductLink::$types;
-            foreach ($productTypes as $productType => $name) {
-                $this->productType = $productType;
-                $this->productId = $this->product->id;
-                $this->_setProducts();
-
-                if (!empty($this->products)) {
-                    $categories[] = [
-                        'type' => $productType,
-                        'name' => $name,
-                        'has_products' => false
-                    ];
-                }
-            }
-
-            $this->product->categories = $categories;
             $response['store'] = $this->store;
             $response['product'] = $this->product;
             $response['category'] = [];
@@ -116,5 +86,44 @@ class ProductController extends Controller
         }
 
         return response()->json($response, 200);
+    }
+
+    protected function _setProduct(): void
+    {
+        $this->product = Product::where('is_active', true)
+            ->where('slug', $this->slug)
+            ->first();
+
+        if (!empty($this->categoryId)) {
+            $this->category = StoreCategory::where('id', $this->categoryId)
+                ->first();
+
+            $this->store = $this->category->store;
+        }
+
+        $this->_setBreadcrumbs();
+        $this->_setProductCategories();
+    }
+
+    protected function _setProductCategories(): void
+    {
+        $categories = [];
+
+        $productTypes = ProductLink::$types;
+        foreach ($productTypes as $productType => $name) {
+            $this->productType = $productType;
+            $this->productId = $this->product->id;
+            $this->_setProducts();
+
+            if (!empty($this->products)) {
+                $categories[] = [
+                    'type' => $productType,
+                    'name' => $name,
+                    'has_products' => false
+                ];
+            }
+        }
+
+        $this->product->categories = $categories;
     }
 }

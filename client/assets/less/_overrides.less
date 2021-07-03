@@ -2133,7 +2133,6 @@ h4.r-heading-light {
 
     .r-store-item-line {
         padding: 12px 0;
-        display: block;
         &:last-child{
             padding: 12px 0;
         }
@@ -4483,6 +4482,7 @@ h4.r-heading-light {
 .r-store-item-line {
     border-bottom: 1px solid rgb(236, 236, 236, 1);
     padding: 12px 0;
+    display: block;
 
     .r-store-actions {
         padding: 12px 0;
@@ -6145,15 +6145,24 @@ h4.r-heading-light {
 .r-text-slider {
     font-size: 15px;
     font-weight: 600;
-    line-height: 72px;
+    line-height: 24px;
     text-overflow: ellipsis;
     overflow: hidden;
     color: @black;
 }
 
-.r-store-face {
-    r-text-slider{
-        line-height: 24px;
+.ant-col{
+    &:last-child{
+        .r-store-item-line{
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.r-slider{
+    .r-text-slider{
+        line-height: 72px;
     }
 }
 
@@ -6262,7 +6271,8 @@ h4.r-heading-light {
 
 .r-store-face,
 .r-store-item,
-.r-store-card {
+.r-store-card,
+.r-store-item-line{
     .r-store-text {
         font-weight: 600;
         font-size: 15px;
@@ -6275,19 +6285,14 @@ h4.r-heading-light {
     }
 
     .r-store-slogan {
-        font-weight: 400;
+        font-weight: 500;
         font-size: 15px;
         line-height: 24px;
-        color: #9c9c9c;
+        color: @black;
         display: block;
         overflow: hidden;
         height: 24px;
         text-overflow: ellipsis;
-
-        @media (max-width: 768px) {
-            font-size: 15px;
-            font-weight: 400;
-        }
     }
 
     .ant-card-body {

@@ -37,7 +37,7 @@ class CategoryController extends Controller
         $this->storeSlug = $request->get('store', null);
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key) && false) {
+        if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
             $this->_setCategories();
@@ -72,7 +72,7 @@ class CategoryController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key) && false) {
+        if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
             $this->_setCategories();
@@ -114,7 +114,7 @@ class CategoryController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key) && false) {
+        if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
             $this->_setCategories();
@@ -145,7 +145,7 @@ class CategoryController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key) && false) {
+        if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
             $query = Store::where('is_active', true);

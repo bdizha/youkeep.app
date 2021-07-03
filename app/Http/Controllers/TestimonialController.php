@@ -18,7 +18,7 @@ class TestimonialController extends Controller
     {
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key) && false) {
+        if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
             $testimonials = Testimonial::where('is_active', true)
