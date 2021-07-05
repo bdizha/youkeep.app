@@ -101,7 +101,7 @@ export default {
     async payload () {
     },
     onStoreTray () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = 'store'

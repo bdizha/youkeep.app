@@ -80,7 +80,7 @@ const actions = {
       commit('setAddress', address)
 
       setTimeout(() => {
-        let modal = {}
+        const modal = {}
         modal.isVisible = false
         modal.current = ''
 

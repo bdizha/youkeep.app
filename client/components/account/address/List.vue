@@ -66,7 +66,7 @@ export default {
       await this.$store.dispatch('account/onAddresses')
     },
     onModal (current, address) {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = current

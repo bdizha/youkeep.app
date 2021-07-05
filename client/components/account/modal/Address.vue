@@ -198,7 +198,7 @@ export default {
       })
     },
     onReturn () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = false
       modal.current = null
 

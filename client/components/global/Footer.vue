@@ -217,7 +217,7 @@ export default {
     payload () {
     },
     onModal (current) {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = current

@@ -1,9 +1,11 @@
 <template>
   <a-row type="flex" justify="center">
     <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row v-if="hasStores && !processes.isTray" type="flex" justify="start" align="middle">
+      <a-row :gutter="[12,12]" v-if="hasStores && !processes.isTray" type="flex" justify="start" align="middle">
         <a-col
           v-for="(store, index) in stores.data"
+          :class="{'r-last_item': index == totalCount - 1 }"
+          :test="hasStores"
           :key="index" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
@@ -33,14 +35,23 @@ export default {
       defaultCategory: { id: 0, label: 'Filter by category' }
     }
   },
-  computed: mapGetters({
-    store: 'base/store',
-    stores: 'base/stores',
-    categories: 'base/storeCategories',
-    hasStores: 'base/hasStores',
-    processes: 'base/processes',
-    search: 'base/search',
-  }),
+  computed: {
+    totalCount () {
+      let totalCount = 0
+      if (this.hasStores) {
+        totalCount = this.stores.data.length
+      }
+      return totalCount
+    },
+    ...mapGetters({
+      store: 'base/store',
+      stores: 'base/stores',
+      categories: 'base/storeCategories',
+      hasStores: 'base/hasStores',
+      processes: 'base/processes',
+      search: 'base/search'
+    })
+  },
   created () {
     this.payload()
   },

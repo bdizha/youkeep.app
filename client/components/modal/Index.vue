@@ -106,7 +106,7 @@ export default {
       let $this = this
     },
     onClose () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = false
       modal.isClosable = false
       modal.current = null

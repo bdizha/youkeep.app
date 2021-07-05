@@ -1,7 +1,7 @@
 <template>
   <div class="r-category-categories">
     <div class="r-category-filter">
-      <div class="r-category-menu-link"
+      <div class="r-item-shadow"
            @click="onCategory(selected)"
       >
         <a-icon :type="'left'"/>
@@ -14,7 +14,7 @@
            :key="index"
            class="r-category-filter r-category-filter-avatar"
       >
-        <nuxt-link class="r-category-menu-link"
+        <nuxt-link class="r-item-shadow"
                    :to="_category.route"
         >
           <r-avatar shape="circle"
@@ -60,7 +60,7 @@ export default {
   },
   data () {
     return {
-      selected: { name: 'All Categories', slug: null },
+      selected: { name: 'Shop By Category', slug: null },
       hasData: false,
       categories: []
     }

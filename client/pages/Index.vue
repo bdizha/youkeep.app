@@ -61,7 +61,7 @@
                    :md="{ span: 12 }"
                    :lg="{ span: 12 }"
             >
-              <r-avatar class="r-avatar-auto" data-src="/images/content/hero-01.png" :size="450"
+              <r-avatar class="r-avatar-auto" data-src="/images/content/32.png" :size="450"
               ></r-avatar>
             </a-col>
           </a-row>
@@ -124,7 +124,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-index',
-  layout: 'category',
+  layout: 'welcome',
   props: {},
   async asyncData ({ store }) {
     await store.dispatch('base/onReviews', {})
@@ -136,7 +136,7 @@ export default {
       testimonials: [],
       modal: {
         current: null,
-        isVisible: false,
+        isVisible: false
       },
       hasData: false
     }
@@ -151,7 +151,7 @@ export default {
   },
   methods: {
     onStoreTray () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = 'store'

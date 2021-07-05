@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     onProduct () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = 'product'

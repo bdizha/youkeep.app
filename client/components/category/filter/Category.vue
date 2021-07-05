@@ -1,78 +1,100 @@
 <template>
-  <a-row :gutter="[0, 12]" type="flex" justify="start" align="middle">
-    <a-col :span="24">
-      <a-collapse v-show="hasCategories"
-                  defaultActiveKey="0"
-                  accordion
-                  expandIconPosition="left"
+  <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
+    <a-col v-if="hasCategories" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+      <a-checkbox-group v-model="selected"
+                        @change="onFilter"
       >
-        <template v-if="false" #expandIcon="props">
-          <a-icon :type="hasMenuCategory ? 'down' : 'right'"/>
-        </template>
-        <a-collapse-panel class="r-collapse-panel"
-                          :header="menuCategory.name"
-        >
-          <div v-for="(category, index) in categories"
-          :key="index"
+        <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
+          <a-col v-for="(category, index) in categories"
+                 v-if="index < counter"
+                 :key="category.id"
+                 :xs="{span: 24}" :sm="{span: 24}" :md="{span:24 }" :lg="{span:24}"
           >
-            <nuxt-link :to="category.route" class="r-category-menu-link">
-              <r-avatar v-show="category.level > 0" shape="circle"
-                        :size="30"
-                        :src="category.photo"
-                        src-placeholder="/assets/icon_default.png"
-              />
-              {{ category.name }}
-            </nuxt-link>
-            <template v-if="category.has_categories">
-              <div v-for="(subCategory, index) in category.categories"
-                   :key="index"
-                   class="r-category-filter"
+            <a-tooltip placement="top">
+              <template slot="title">
+                <span>Select: {{ category.name }}</span>
+              </template>
+              <a-checkbox :style="'background: ' + category.name"
+                          :value="category.id"
               >
-                <nuxt-link :to="subCategory.route" class="r-category-menu-link">
-                  <r-avatar v-show="category.level > 0" shape="circle"
-                            :size="30"
-                            :src="category.photo"
-                            src-placeholder="/assets/icon_default.png"
-                  />
-                  {{ category.name }}
-                </nuxt-link>
-              </div>
-            </template>
-          </div>
-        </a-collapse-panel>
-      </a-collapse>
+                {{ category.name }}
+              </a-checkbox>
+            </a-tooltip>
+          </a-col>
+        </a-row>
+      </a-checkbox-group>
+    </a-col>
+    <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+      <a-row :gutter="[12, 12]" type="flex" justify="start" align="middle">
+        <a-col v-if="counter < categories.length" :xs="{ span: 12 }" :sm="{ span: limit < counter ? 12 : 24 }"
+               :lg="{ span: limit < counter ? 12 : 24 }"
+        >
+          <a-button
+            block
+            @click="onIncrement"
+            class="r-btn-bordered-secondary"
+            size="large"
+            icon="plus-circle"
+            type="secondary"
+          >
+            More
+          </a-button>
+        </a-col>
+        <a-col v-if="limit < counter" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
+          <a-button
+            block
+            @click="onDecrement"
+            class="r-btn-bordered-primary"
+            size="large"
+            icon="minus-circle"
+            type="secondary"
+          >
+            Less
+          </a-button>
+        </a-col>
+      </a-row>
     </a-col>
   </a-row>
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import axios from 'axios'
 
 export default {
   name: 'r-category-filter-category',
-  props: {},
+  props: {
+    limit: { type: Number, required: false, default: 6 }
+  },
   data () {
-    return {}
+    return {
+      selected: [],
+      counter: this.limit
+    }
+  },
+  created () {
+    this.selected = this.payload.category_ids
   },
   computed: mapGetters({
+    payload: 'product/payload',
     menuCategory: 'base/menuCategory',
-    hasMenuCategory: 'base/hasMenuCategory',
     categories: 'base/categories',
     processes: 'base/processes',
     hasCategories: 'base/hasCategories'
   }),
-  created () {
-    this.payload()
-  },
   methods: {
-    payload () {
+    async onFilter () {
+      const payload = this.payload
+      payload.category_ids = this.selected
+      await this.onProducts(payload)
     },
-    onClass (category) {
-      return `r-menu-icon r-menu-icon--${category.slug}`
+    onIncrement () {
+      this.counter += this.limit
     },
-    onCategory (category) {
-      this.$store.dispatch('base/onMenuCategory', category)
+    onDecrement () {
+      this.counter -= this.limit
+    },
+    async onProducts (payload) {
+      await this.$store.dispatch('base/onProducts', payload)
     }
-  },
+  }
 }
 </script>

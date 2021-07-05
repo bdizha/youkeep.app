@@ -1,43 +1,5 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
-    >
-      <div class="r-pv-12" :class="{'r-hide-lg': !hasCategories}">
-        <r-search class="r-hide-lg" :class="{'r-pb-12': hasCategories}"></r-search>
-        <r-category-arrows v-if="hasCategories"></r-category-arrows>
-      </div>
-      <a-row type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 24 }"
-               :lg="{ span: 24 }"
-        >
-          <r-store-catalog :has-card="true" :columns="3" :span="3"></r-store-catalog>
-          <r-product-flush :columns="3"></r-product-flush>
-        </a-col>
-      </a-row>
-      <r-product-list v-if="hasStore" :filters="filters" :columns="6"></r-product-list>
-      <a-row type="flex" justify="start" align="middle">
-        <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 24 }"
-               :lg="{ span: 24 }"
-        >
-          <div class="r-margin-out">
-            <r-category-list :columns="6"></r-category-list>
-          </div>
-        </a-col>
-      </a-row>
-    </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
-    >
-      <div class="r-pv-12" v-if="hasCategories">
-        <r-category-arrows></r-category-arrows>
-      </div>
-    </a-col>
-  </a-row>
+  <r-category-show></r-category-show>
 </template>
 <script>
 import { mapGetters } from 'vuex'

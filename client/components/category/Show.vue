@@ -70,6 +70,7 @@ export default {
         sort: 0,
         page: 1,
         filters: [],
+        category_ids: [],
         price_min: 0,
         price_max: null
       }

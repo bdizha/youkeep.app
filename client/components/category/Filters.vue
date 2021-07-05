@@ -25,7 +25,7 @@ export default {
     return {}
   },
   computed: mapGetters({
-    store: 'base/store',
+    store: 'base/store'
   }),
   created () {
     this.payload()
@@ -34,12 +34,12 @@ export default {
     payload () {
     },
     async onModal () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = 'category'
 
-      this.$store.dispatch('base/onModal', modal)
+      await this.$store.dispatch('base/onModal', modal)
     }
   },
   watch: {},

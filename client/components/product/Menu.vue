@@ -13,7 +13,7 @@
         </a-collapse-panel>
         <a-collapse-panel class="r-collapse-panel"
                           key="stores"
-                          header="You may also like"
+                          header="Popular Stores"
         >
           <r-product-list v-if="hasStore" :filters="filters" :span="24" :vertical="false" :columns="1"></r-product-list>
         </a-collapse-panel>

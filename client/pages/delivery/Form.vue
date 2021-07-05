@@ -72,7 +72,7 @@ export default {
     },
     onModal () {
       if (!this.hasModal) {
-        let modal = {}
+        const modal = {}
         modal.isVisible = true
         modal.isClosable = true
         modal.current = 'delivery'

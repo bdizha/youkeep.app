@@ -37,7 +37,7 @@ export default {
     payload () {
     },
     onModal () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = 'register'

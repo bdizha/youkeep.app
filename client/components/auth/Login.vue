@@ -147,7 +147,7 @@ export default {
     onModal (current, event) {
       event.preventDefault()
 
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = false
       modal.current = current

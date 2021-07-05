@@ -93,7 +93,7 @@ export default {
       await this.$store.dispatch('account/onCards')
     },
     onModal (current, card) {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = current

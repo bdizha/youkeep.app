@@ -1,30 +1,9 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
-    <a-col v-if="hasData" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-collapse v-if="hasCategory"
-                  default-active-key="1" expandIconPosition="right"
-      >
-        <a-collapse-panel class="r-collapse-panel" key="1" header="You're shopping at">
-          <r-store-item v-if="hasStore" :store="store" :size="120"></r-store-item>
-        </a-collapse-panel>
-        <a-collapse-panel class="r-collapse-panel" key="2" header="Price">
-          <r-category-filter-price></r-category-filter-price>
-        </a-collapse-panel>
-        <a-collapse-panel class="r-collapse-panel"
-                          v-for="(filter, index) in category.filters"
-                          v-if="filter.items.length > 1"
-                          :key="filter.name"
-                          :header="filter.name"
-        >
-          <r-category-filter-item :filter="filter"></r-category-filter-item>
-        </a-collapse-panel>
-      </a-collapse>
-      <r-category-filter-category></r-category-filter-category>
-    </a-col>
-  </a-row>
+  <r-store-menu :is-category="true" :is-store="true"></r-store-menu>
 </template>
 <script>
 import { mapGetters } from 'vuex'
+import RCategoryFilterCategory from './filter/Category'
 
 const DISCOUNTS = [10, 15, 20, 25, 30]
 const BRANDS = [10, 15, 20, 25, 30]
@@ -34,6 +13,7 @@ const FILTERS = {
 }
 export default {
   name: 'r-category-menu',
+  components: { RCategoryFilterCategory },
   props: {},
   data () {
     return {

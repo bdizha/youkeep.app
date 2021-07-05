@@ -95,7 +95,7 @@ const actions = {
 
       dispatch('account/onOrder', {}, { root: true })
 
-      let modal = {}
+      const modal = {}
       modal.isVisible = false
       modal.current = null
 

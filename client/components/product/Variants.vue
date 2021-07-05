@@ -78,7 +78,7 @@ export default {
       this.isVisible = true
       this.$store.dispatch('base/onPopover', { name: this.productType.name })
 
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = 'product'

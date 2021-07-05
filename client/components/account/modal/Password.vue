@@ -154,7 +154,7 @@ export default {
       })
     },
     async onReturn () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = false
       modal.current = null
       await this.$store.dispatch('base/onModal', modal)

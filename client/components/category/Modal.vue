@@ -3,10 +3,7 @@
                     :closable="true"
                     current="category"
   >
-    <r-category-breadcrumbs :breadcrumbs="category.breadcrumbs"></r-category-breadcrumbs>
-    <a-card class="r-mt-24" title="Filter By">
-      <r-category-menu></r-category-menu>
-    </a-card>
+    <r-store-menu :is-category="true" :is-store="false"></r-store-menu>
   </r-modal-template>
 </template>
 <script>

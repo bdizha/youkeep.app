@@ -29,7 +29,7 @@ export default {
     payload () {
     },
     onModal () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = !this.hasStoreTray
       modal.current = 'subscribe'
 

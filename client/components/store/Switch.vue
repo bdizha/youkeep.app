@@ -31,7 +31,7 @@ export default {
     payload () {
     },
     onStoreTray () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = !this.hasStoreTray
       modal.current = 'store'
 

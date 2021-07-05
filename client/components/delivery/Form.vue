@@ -1,43 +1,44 @@
 <template>
-  <a-row :class="{'r-store-item-line': isStore, 'r-border-none' : isStore}"
-         type="flex"
+  <a-row type="flex"
          justify="center"
          align="middle"
   >
     <a-col @click="onModal" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-      <a-row v-if="hasModal" type="flex" justify="center">
-        <a-col class="r-text-left" :xs="{ span: 24 }">
+      <a-row :gutter="[24,24]" type="flex" justify="start">
+        <a-col v-if="hasModal" class="r-text-left" :xs="{ span: 24 }">
           <h3 class="r-heading">
             Enter delivery address
           </h3>
         </a-col>
-      </a-row>
-      <a-form class="ant-form"
-              @submit="onModal"
-              :form="form"
-      >
-        <a-auto-complete
-          :value="hasAddress ? address.address_line : ''"
-          :size="size"
-          style="width: 100%"
-          :placeholder="'Enter your delivery address...'"
-          option-label-prop="title"
-          @search="handleSearch"
-        >
-          <a-input>
-            <a-icon slot="prefix" type="environment"/>
-            <a-button v-if="hasSubmit"
-                      slot="suffix"
-                      style="margin-right: -12px"
-                      class="r-btn-secondary"
-                      size="large"
-                      type="secondary"
+        <a-col class="r-text-left" :xs="{ span: 24 }">
+          <a-form class="ant-form"
+                  @submit="onModal"
+                  :form="form"
+          >
+            <a-auto-complete
+              :value="hasAddress ? address.address_line : ''"
+              :size="size"
+              style="width: 100%"
+              :placeholder="'Enter your delivery address...'"
+              option-label-prop="title"
+              @search="handleSearch"
             >
-              Let's go
-            </a-button>
-          </a-input>
-        </a-auto-complete>
-      </a-form>
+              <a-input>
+                <a-icon slot="prefix" type="environment"/>
+                <a-button v-if="hasSubmit"
+                          slot="suffix"
+                          style="margin-right: -12px"
+                          class="r-btn-secondary"
+                          size="large"
+                          type="secondary"
+                >
+                  Let's go
+                </a-button>
+              </a-input>
+            </a-auto-complete>
+          </a-form>
+        </a-col>
+      </a-row>
     </a-col>
   </a-row>
 </template>
@@ -74,7 +75,7 @@ export default {
     },
     onModal () {
       if (!this.hasModal) {
-        let modal = {}
+        const modal = {}
         modal.isVisible = true
         modal.isClosable = true
         modal.current = 'delivery'

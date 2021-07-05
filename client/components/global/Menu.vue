@@ -1,109 +1,31 @@
 <template>
-  <div :class="{'r-store-flex__has-notice': hasNotice}" class="r-store-flex">
-    <r-store-notice v-if="hasNotice"></r-store-notice>
-    <r-delivery-form v-if="!hasMenuCategory" size="large"
-                     :is-store="false"
-                     :has-submit="false"
-    ></r-delivery-form>
-    <r-category-filter-category></r-category-filter-category>
-    <a-list v-show="!hasMenuCategory" :data-source="links">
-      <a-list-item class="r-list-item" slot="renderItem"
-                   slot-scope="item, index"
-      >
-        <template v-if="!item.modal">
-          <nuxt-link class="r-text-link" :to="item.link">
-            <a-avatar shape="square" :icon="item.icon"/>
-            {{ item.label }}
-          </nuxt-link>
-        </template>
-        <template v-if="item.modal">
-          <nuxt-link :to="item.link"
-                     @click.native="onModal(item.modal)"
-                     class="r-text-link"
-          >
-            <a-avatar shape="square" :icon="item.icon"/>
-            {{ item.label }}
-          </nuxt-link>
-        </template>
-      </a-list-item>
-    </a-list>
-    <a-collapse v-show="!hasMenuCategory" default-active-key="1" expandIconPosition="right">
-      <a-collapse-panel class="r-collapse-panel" header="Popular stores">
-        <r-store-list></r-store-list>
-      </a-collapse-panel>
-    </a-collapse>
-  </div>
+  <a-row type="flex" justify="start">
+    <a-col :xs="{ span: 24 }">
+      <r-auth-actions></r-auth-actions>
+    </a-col>
+    <a-col :xs="{ span: 24 }">
+      <r-store-menu :is-home="true" :is-store="true"></r-store-menu>
+    </a-col>
+  </a-row>
 </template>
 <script>
 import { mapGetters } from 'vuex'
-
-const LINKS = [
-  {
-    label: 'Home',
-    icon: 'home',
-    link: '/',
-    modal: null
-  },
-  {
-    label: 'Explore',
-    icon: 'compass',
-    link: '/stores/its-shopping-time',
-  },
-  {
-    label: 'Rewards',
-    icon: 'gift',
-    link: '/rewards',
-    modal: null
-  },
-  {
-    label: 'My Orders',
-    icon: 'gift',
-    link: '/orders',
-    modal: null
-  },
-  {
-    label: 'Wishlist',
-    icon: 'heart',
-    link: '/wishlist',
-    modal: 'wishlist'
-  },
-  {
-    label: 'History',
-    icon: 'clock-circle',
-    link: '/timeline',
-    modal: 'timeline'
-  }
-]
 
 export default {
   name: 'r-menu',
   props: {},
   data () {
     return {
-      links: LINKS,
     }
   },
   computed: mapGetters({
-    user: 'auth/user',
-    flush: 'base/flush',
-    hasNotice: 'base/hasNotice',
-    hasMenuCategory: 'base/hasMenuCategory',
   }),
   created () {
     this.payload()
   },
   methods: {
     async payload () {
-    },
-    async onModal (current) {
-      let modal = {}
-      modal.isVisible = true
-      modal.isClosable = true
-      modal.current = current
-
-      this.$store.dispatch('base/onModal', modal)
     }
-  },
+  }
 }
 </script>
-

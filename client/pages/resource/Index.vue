@@ -180,7 +180,7 @@ export default {
   }),
   methods: {
     onModal (current) {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = current

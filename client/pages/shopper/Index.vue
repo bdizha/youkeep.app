@@ -396,7 +396,7 @@ export default {
   },
   methods: {
     onModal () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = 'shopper'

@@ -1,10 +1,10 @@
 <template>
-  <nuxt-link class="r-store-item-line" :to="store.route">
+  <nuxt-link class="r-item-shadow" :to="store.route">
     <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
       <a-col :xs="{span: 12}" :sm="{span: size > 90 ? 12 : 10}" :md="{span: size > 90 ? 10 : 9}" :lg="{span: size > 90 ? 10 : 8}">
         <r-avatar
           class="r-avatar-store"
-          shape="square"
+          shape="circle"
           :size="size"
           :src="store.photo_url"
           src-placeholder="/assets/icon_default.png"

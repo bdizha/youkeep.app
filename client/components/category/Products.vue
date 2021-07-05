@@ -20,8 +20,6 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-category-products',
@@ -29,7 +27,7 @@ export default {
   props: {
     columns: { type: Number, required: false, default: 3 },
     isVertical: { type: Boolean, required: false, default: true },
-    category: { type: Object, required: false },
+    category: { type: Object, required: false }
   },
   data () {
     return {
@@ -43,7 +41,8 @@ export default {
     this.payload = {
       category_id: this.category.id,
       limit: process.env.APP_LIMIT,
-      filters: []
+      filters: [],
+      category_ids: []
     }
 
     await this.onProducts()
@@ -51,7 +50,7 @@ export default {
   computed: {
     hasProducts () {
       return this.products.data.length > 0
-    },
+    }
   },
   methods: {
     async onProducts () {
@@ -63,4 +62,3 @@ export default {
   }
 }
 </script>
-

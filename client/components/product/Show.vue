@@ -40,7 +40,7 @@
             <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
               <div class="r-ph-24">
               <h3 class="r-heading r-text-black">
-                You may also like
+                Popular Stores
               </h3>
               </div>
             </a-col>

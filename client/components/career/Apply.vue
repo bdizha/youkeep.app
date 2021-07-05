@@ -241,7 +241,7 @@ export default {
   created () {
     this.accept = this.$store.state.accept
 
-    let modal = {}
+    const modal = {}
     modal.isVisible = false
     this.$store.dispatch('base/onModal', modal)
     this.payload()

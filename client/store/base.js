@@ -11,7 +11,7 @@ const state = () => ({
   category: {},
   product: {},
   products: [],
-  menuCategory: { name: 'All Categories', slug: null },
+  menuCategory: { name: 'Shop By Category', slug: null },
   hasMenuCategory: false,
   categories: [],
   hasProducts: false,
@@ -52,9 +52,10 @@ const state = () => ({
     params: {
       limit: 36,
       category_id: null,
+      category_ids: [],
       sort: 0,
       page: 1,
-      term: null,
+      term: null
     }
   },
   processes: {

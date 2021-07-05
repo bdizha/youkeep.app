@@ -81,14 +81,14 @@ export default {
     onModalClose () {
       this.$store.dispatch('base/onIsRaised', false)
 
-      let modal = {}
+      const modal = {}
       modal.isVisible = false
       modal.current = null
 
       this.$store.dispatch('base/onModal', modal)
     },
     onDelivery () {
-      let modal = {}
+      const modal = {}
       modal.isVisible = true
       modal.isClosable = true
       modal.current = 'delivery'

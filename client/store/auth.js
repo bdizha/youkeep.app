@@ -124,7 +124,7 @@ const actions = {
           }
 
           if (state.isLoggedIn && state.user.activated === 0) {
-            let modal = {}
+            const modal = {}
             modal.isVisible = true
             modal.isClosable = true
             modal.current = 'secure'
