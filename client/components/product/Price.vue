@@ -3,13 +3,17 @@
     <a-col :span="24">
       <div class="gutter-box">
         <h4 class="r-product-price">
-          {{ 'R' + product.price }}
+          <span class="r-text-secondary">{{ 'R' + discounted }}</span>
+          <span class="r-text-primary r-text-strike">{{ 'R' + product.price }}</span>
         </h4>
-        <h3 v-if="hasDiscount"
+        <h3 v-if="false"
             class="r-product-price"
         >
                 <span class="r-price-discount text-strike">
-                    {{ 'R' + product.price }}
+                  {{ 'R' + product.price }}
+                </span>
+                <span class="r-text-primary">
+                  {{ 'R' + product.price }}
                 </span>
         </h3>
       </div>
@@ -29,20 +33,20 @@ export default {
       modal: {
         isVisible: true,
         current: 'product',
-        product: null,
+        product: null
       }
     }
   },
   created () {
   },
   computed: {
-    hasDiscount () {
-      return parseFloat(this.product.discount_percent) > 0
+    discounted () {
+      return (parseFloat(this.product.price) + parseFloat(this.product.price / 9)).toFixed(2)
     },
     cart () {
       return this.$store.state.cart
-    },
+    }
   },
-  methods: {},
+  methods: {}
 }
 </script>

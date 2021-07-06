@@ -1,11 +1,11 @@
 <template>
   <a-row type="flex" justify="start" align="middle">
     <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-collapse :activeKey="'0'" expandIconPosition="right">
+      <a-collapse default-active-key="stores" expandIconPosition="right">
         <a-collapse-panel class="r-collapse-panel"
                           v-for="(category, index) in product.categories"
                           v-if="category.has_products"
-                          :key="index"
+                          :key="category.name"
                           :header="category.name"
         >
           <r-product-products :columns="columns"

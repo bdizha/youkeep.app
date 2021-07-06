@@ -8,64 +8,66 @@
           <a-card class="r-bg-secondary-light">
             <a-card-meta>
               <template slot="description">
-          <a-row type="flex" justify="start" align="middle">
-            <a-col class="r-pv-48 r-ph-24" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }"
-                   :lg="{ span: 12 }"
-            >
-              <a-card class="">
-                <a-card-meta>
-                  <template slot="description">
-              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 24 }"
-                       :lg="{ span: 24 }"
-                >
-                  <h3 class="r-heading-light r-text-uppercase">
-                    It's shopping time!
-                  </h3>
-                </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 24 }"
-                       :lg="{ span: 24 }"
-                >
-                  <h1 class="r-heading r-text-secondary">
-                    <span class="r-text-primary">Shop More,</span><br>
-                    <span class="r-text-secondary">Pay Less.</span>
-                  </h1>
-                </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 15 }"
-                       :lg="{ span: 16 }"
-                >
-                  <h4 class="r-heading-light">
-                    Yes, as long as you shop it with Shopple, you are fully powered to buy what your heart desires.
-                  </h4>
-                </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
-                >
-                </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 16 }"
-                       :lg="{ span: 15 }"
-                >
-                  <r-delivery-form></r-delivery-form>
-                </a-col>
-              </a-row>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-            <a-col class="r-pv-48 r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                   :md="{ span: 12 }"
-                   :lg="{ span: 12 }"
-            >
-              <r-avatar class="r-avatar-auto" data-src="/images/content/32.png" :size="450"
-              ></r-avatar>
-            </a-col>
-          </a-row>
-          </template>
+                <div class="r-pv-48">
+                  <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+                    <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                    >
+                      <a-card>
+                        <a-card-meta>
+                          <template slot="description">
+                            <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                     :md="{ span: 24 }"
+                                     :lg="{ span: 24 }"
+                              >
+                                <h3 class="r-heading-light r-text-uppercase">
+                                  It's shopping time!
+                                </h3>
+                              </a-col>
+                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                     :md="{ span: 24 }"
+                                     :lg="{ span: 24 }"
+                              >
+                                <h1 class="r-heading r-text-secondary">
+                                  <span class="r-text-primary">Shop More,</span><br>
+                                  <span class="r-text-secondary">Pay Less.</span>
+                                </h1>
+                              </a-col>
+                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                     :md="{ span: 15 }"
+                                     :lg="{ span: 16 }"
+                              >
+                                <h4 class="r-heading-light">
+                                  Yes, as long as you shop it with Shopple, you are fully powered to buy what your heart desires.
+                                </h4>
+                              </a-col>
+                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                     :md="{ span: 12 }"
+                                     :lg="{ span: 12 }"
+                              >
+                              </a-col>
+                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                     :md="{ span: 16 }"
+                                     :lg="{ span: 15 }"
+                              >
+                                <r-delivery-form></r-delivery-form>
+                              </a-col>
+                            </a-row>
+                          </template>
+                        </a-card-meta>
+                      </a-card>
+                    </a-col>
+                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                           :md="{ span: 12 }"
+                           :lg="{ span: 12 }"
+                    >
+                      <r-avatar class="r-avatar-auto" data-src="/images/content/32.png" :size="450"
+                      ></r-avatar>
+                    </a-col>
+                  </a-row>
+                </div>
+              </template>
         </a-card-meta>
       </a-card>
         </a-col>

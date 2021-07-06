@@ -38,7 +38,7 @@ export default {
   computed: mapGetters({
     hasProducts: 'base/hasProducts',
     products: 'base/products',
-    processes: 'base/processes',
+    processes: 'base/processes'
   }),
   created () {
   },

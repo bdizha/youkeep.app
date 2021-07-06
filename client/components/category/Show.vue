@@ -5,7 +5,7 @@
            :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <a-row  type="flex" justify="start" align="middle">
+      <a-row v-if="hasCategories"  type="flex" justify="start" align="middle">
         <a-col class="r-hide-lg" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }"
@@ -19,12 +19,69 @@
           <r-category-breadcrumbs :breadcrumbs="category.breadcrumbs"></r-category-breadcrumbs>
         </a-col>
       </a-row>
-      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-        <a-col v-if="hasCategories" :xs="{ span: 24 }" :sm="{ span: 24 }"
+      <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
+        <a-col v-if="!hasCategories && !processes.isCategories" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
-          <r-category-slider :category="category"></r-category-slider>
+          <a-row  type="flex" justify="start" align="middle">
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                   :md="{ span: 24 }"
+                   :lg="{ span: 24 }"
+            >
+              <a-card class="r-bg-primary-light">
+                <a-card-meta>
+                  <template slot="description">
+                    <div class="r-mv-48">
+                      <a-row :gutter="[48,48]"  type="flex" justify="start" align="middle">
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                               :md="{ span: 8 }"
+                               :lg="{ span: 6 }"
+                        >
+                          <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <h4 class="r-heading-light r-text-uppercase r-text-primary">
+                                Coming soon!
+                              </h4>
+                            </a-col>
+                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                   :md="{ span: 24 }"
+                                   :lg="{ span: 24 }"
+                            >
+                              <h1 class="r-heading">
+                                Everything your <span class="r-text-primary">heart</span> desires!
+                              </h1>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                               :md="{ span: 16 }"
+                               :lg="{ span: 18 }"
+                        >
+                          <r-category-banners></r-category-banners>
+                        </a-col>
+                      </a-row>
+                    </div>
+                  </template>
+                </a-card-meta>
+              </a-card>
+            </a-col>
+            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                   :md="{ span: 24 }"
+                   :lg="{ span: 24 }"
+            >
+              <r-category-flush></r-category-flush>
+            </a-col>
+          </a-row>
+        </a-col>
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 24 }"
+               :lg="{ span: 24 }"
+        >
+          <r-category-slider></r-category-slider>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
@@ -36,7 +93,7 @@
                :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
-          <r-product-list v-if="hasCategory" :filters="payload" :columns="columns"></r-product-list>
+          <r-product-list :filters="payload" :columns="columns"></r-product-list>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
@@ -50,10 +107,11 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
+import RCategoryFlush from './Flush'
 
 export default {
   name: 'r-category-show',
-  components: {},
+  components: { RCategoryFlush },
   props: {
     columns: { type: Number, required: false, default: 6 }
   },

@@ -48,6 +48,8 @@ const mutations = {
   setPayload (state, payload) {
     state.payload = payload
 
+    console.trace()
+
     console.log('setting payload', payload)
   },
   setItems (state, items) {

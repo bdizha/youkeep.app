@@ -49,7 +49,7 @@
                         header="Catalog">
         <r-store-catalog></r-store-catalog>
       </a-collapse-panel>
-      <a-collapse-panel v-if="!isHome && !isCategory" v-for="(item, index) in list"
+      <a-collapse-panel v-if="isStore" v-for="(item, index) in list"
                         :key="index + '-item'"
                         class="r-collapse-panel"
                         :header="item.title"
@@ -61,17 +61,28 @@
                         header="Popular Stores">
         <r-store-list></r-store-list>
       </a-collapse-panel>
+      <a-collapse-panel v-if="hasStore && isProduct"
+                        class="r-collapse-panel"
+                        key="products"
+                        header="Related Products"
+      >
+        <div class="r-margin-out">
+          <r-product-list :filters="filters"
+                          :span="24"
+                          :vertical="false" :columns="1"></r-product-list>
+        </div>
+      </a-collapse-panel>
     </a-collapse>
-    <a-rowv v-if="isStore" class="r-mb-48" type="flex" justify="center">
+    <a-row v-if="isStore" class="r-mb-48" type="flex" justify="center">
       <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-        <div class="r-store-text-light">
+        <h4 class="r-store-text-light">
           Shopple is an independent shopping service that is not necessarily affiliated with,
           endorsed or sponsored by the stores listed here but it enables you to get the deliveries
           you
           want.
-        </div>
+        </h4>
       </a-col>
-    </a-rowv>
+    </a-row>
     </a-col>
   </a-row>
 </template>
@@ -83,11 +94,24 @@ export default {
   props: {
     isHome: { type: Boolean, required: false, default: false },
     isCategory: { type: Boolean, required: false, default: false },
-    isStore: { type: Boolean, required: false, default: true }
+    isStore: { type: Boolean, required: false, default: true },
+    isProduct: { type: Boolean, required: false, default: false }
   },
   data () {
     return {
+      filters: {
+        limit: process.env.APP_LIMIT,
+        store_id: this.hasStore ? this.store.id : null,
+        category_id: null,
+        sort: 0,
+        page: 1
+      },
       list: []
+    }
+  },
+  async fetch () {
+    if (this.isProduct) {
+      await this.onProducts()
     }
   },
   computed: {
@@ -95,9 +119,11 @@ export default {
       let activeKey = 'links'
 
       if (this.isStore) {
-        activeKey = 'address'
+        activeKey = 'delivery'
       } else if (this.isCategory) {
         activeKey = 'category'
+      } else if (this.isProduct) {
+        activeKey = 'products'
       }
       return activeKey
     },
@@ -106,13 +132,26 @@ export default {
       category: 'base/category',
       hasCategories: 'base/hasCategories',
       hasNotice: 'base/hasNotice',
-      store: 'base/store'
+      store: 'base/store',
+      hasStore: 'base/hasStore'
     })
   },
   created () {
-    this.payload()
+    if (this.isStore) {
+      this.payload()
+    }
   },
   methods: {
+    async onProducts () {
+      console.log('filters', this.filters)
+
+      const categoryParts = this.$route.params.category.split('--')
+
+      console.log('category paths', categoryParts)
+      console.log('categoryParts[1]', categoryParts[1])
+      this.filters.category_id = (categoryParts[1] !== undefined) ? categoryParts[1] : null
+      await this.$store.dispatch('base/onProducts', this.filters)
+    },
     payload () {
       this.list = [
         {

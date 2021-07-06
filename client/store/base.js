@@ -333,14 +333,13 @@ const actions = {
       console.error('onCategories errors')
       console.log(e)
     }
-  }
-  ,
+  },
   async onProduct ({ dispatch, commit, state }, params) {
     dispatch('onProcess', { key: 'isProduct', value: true })
     dispatch('onProcess', { key: 'isFixed', value: true })
 
     try {
-      let route = params.route
+      const route = params.route
 
       await axios.post(route, params).then(({ data }) => {
         commit('setStore', data.store)
@@ -351,16 +350,15 @@ const actions = {
 
         dispatch('onProcess', { key: 'isFixed', value: false })
 
-        let defaultVariant = product.default_variant
-        let productType = defaultVariant.product_type
+        const defaultVariant = data.product.default_variant
+        const productType = defaultVariant.product_type
 
         dispatch('product/onVariant', defaultVariant, { root: true })
         dispatch('product/onProductType', productType, { root: true })
         dispatch('onProcess', { key: 'isProduct', value: false })
       })
-
     } catch (e) {
-      console.error('onProduct errors')
+      console.error('onProduct errors', e)
       console.log(e)
     }
   },
@@ -377,7 +375,7 @@ const actions = {
         dispatch('onProcess', { key: 'isProduct', value: false })
       })
     } catch (e) {
-      console.error('onProducts errors')
+      console.error('onProducts errors', e)
       console.log(e)
     }
   },

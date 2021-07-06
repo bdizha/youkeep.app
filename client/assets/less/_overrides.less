@@ -127,8 +127,7 @@ a.r-text-logo {
     font-size: 15px;
 }
 
-.text-strike {
-    color: #3C444C;
+.r-text-strike {
     text-decoration: line-through;
 }
 
@@ -1231,7 +1230,7 @@ x {
     .r-product-price {
         font-size: 15px;
         text-align: right;
-        font-weight: 600;
+        font-weight: 500;
         display: inline-block;
         width: auto;
         margin: 0;
@@ -1436,9 +1435,9 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .r-product-price {
-    font-size: 18px;
+    font-size: 16px;
     text-align: right;
-    font-weight: 700;
+    font-weight: 500;
     display: inline-block;
     width: auto;
     margin: 0;
@@ -2795,7 +2794,8 @@ h4.r-heading-light {
 
     .ant-breadcrumb-link {
         &:hover,
-        .nuxt-link-exact-active {
+        &.router-link-exact-active,
+        &.nuxt-link-exact-active {
             color: @secondary-color;
         }
     }

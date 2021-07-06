@@ -139,8 +139,7 @@ class Controller extends BaseController
             $this->store = Store::where('slug', $this->storeSlug)
                 ->first();
         }
-
-        if (!empty($this->storeId)) {
+        else if (!empty($this->storeId)) {
             $this->store = Store::where('id', $this->storeId)
                 ->first();
         }
@@ -277,7 +276,7 @@ class Controller extends BaseController
         $products = json_decode($this->products->toJson());
 
         $products->data = array_map(function ($product) {
-            $route = $this->category->route .  $product->route;
+            $route = (!empty($this->category->route) ? $this->category->route : null) .  $product->route;
 
             $product->route = $route;
             return $product;
