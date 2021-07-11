@@ -68,6 +68,28 @@ class ProductAdidasSeeder extends DatabaseSeeder
 
         }
         die("Well done.");
+
+    }
+
+    /**
+     * @param array $store
+     */
+    private function _setBanners(array $store)
+    {
+        if (!empty($categoryBanner['photo'])) {
+            $photoName = $this->getFileExt($categoryBanner['photo']);
+
+            Storage::disk('store')->put($photoName, file_get_contents($categoryBanner['photo']));
+            $categoryBanner['photo'] = $photoName;
+        }
+
+        $attributes = [
+            'url' => $store['url']
+        ];
+
+        $store = \App\Store::updateOrCreate($attributes, $store);
+
+        echo "Updated store :: " . $store['name'] . "\n";
     }
 
     public function setCategories($categoryNodes = null, $level = 1, $parentStoreCategory = null)

@@ -20,18 +20,20 @@ class StoreController extends Controller
      */
     public function index(Request $request)
     {
-        $this->limit = $request->get('limit', 24);
+        $this->limit = $request->get('limit', 120);
         $this->term = $request->get('term', null);
 
         $this->categoryId = $request->get('category_id', null);
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key)) {
+        if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
             $this->_setStores();
             $response = $this->stores;
+
+
 
              Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
         }

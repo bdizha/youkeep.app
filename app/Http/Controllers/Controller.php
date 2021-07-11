@@ -392,7 +392,7 @@ class Controller extends BaseController
     protected function _setStores()
     {
         $query = Store::where('is_active', true);
-        $this->without = ['categories'];
+//        $this->without = ['categories'];
 
         if (!empty($this->term)) {
             $query->where('name', 'like', '%' . $this->term . '%');
@@ -400,10 +400,6 @@ class Controller extends BaseController
 
         if (!empty($this->categoryId)) {
             $query->where('category_id', $this->categoryId);
-        }
-
-        if (!empty($this->limit)) {
-            $query->limit($this->limit);
         }
 
         $this->stores = $query

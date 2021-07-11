@@ -7,7 +7,7 @@
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <h3 class="r-store-slogan">
-        {{ store.description.substr(0, 36) }}
+        {{ store.description !== 'Coming soon' ? store.description.substr(0, 60) : store.name }}
       </h3>
     </a-col>
   </a-row>

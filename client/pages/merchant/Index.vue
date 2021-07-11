@@ -3,78 +3,70 @@
     <a-col style="background: #FFFFFF;" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <a-card class="r-bg-primary-light">
-        <a-card-meta>
-          <template slot="description">
-            <div class="r-mv-48">
-              <a-row :gutter="[96,96]" type="flex" justify="start" align="middle">
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
-                >
-                  <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }"
-                           :lg="{ span: 15 }"
-                    >
-                      <a-card>
-                        <a-card-meta>
-                          <template slot="description">
-                            <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                     :md="{ span: 24 }"
-                                     :lg="{ span: 24 }"
-                              >
-                                <h4 class="r-heading-light r-text-primary r-text-uppercase r-text-primary">
-                                  For Merchants
-                                </h4>
-                              </a-col>
-                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                     :md="{ span: 24 }"
-                                     :lg="{ span: 24 }"
-                              >
-                                <h1 class="r-heading">
-                                  Become a <span class="r-text-secondary">verified</span> merchant today!
-                                </h1>
-                              </a-col>
-                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                     :md="{ span: 24 }"
-                                     :lg="{ span: 24 }"
-                              >
-                                <p class="r-text-normal">
-                                  Join the Shopple Merchant Program and start promoting Shopple in-store today and watch your
-                                  sales run wild!
-                                </p>
-                              </a-col>
-                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                     :md="{ span: 12 }"
-                                     :lg="{ span: 12 }"
-                              >
-                                <a-button block @click="onModal('merchant')"
-                                          class="r-btn-secondary r-margin-top-24"
-                                          size="large" type="secondary"
-                                >
-                                  Become a Merchant
-                                </a-button>
-                              </a-col>
-                            </a-row>
-                          </template>
-                        </a-card-meta>
-                      </a-card>
-                    </a-col>
-                  </a-row>
-                </a-col>
-                <a-col
-                  :xs="{ span: 24 }" :sm="{ span: 24 }"
-                  :md="{ span: 12 }"
-                  :lg="{ span: 12 }"
-                >
-                  <r-avatar class="r-avatar-auto" data-src="/images/content/32.png" :size="300"></r-avatar>
-                </a-col>
-              </a-row>
-            </div>
-          </template>
-        </a-card-meta>
-      </a-card>
+      <a-row :gutter="[96,96]" type="flex" justify="start" align="middle">
+        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+               :md="{ span: 12 }"
+               :lg="{ span: 12 }"
+        >
+          <a-card class="r-bg-primary-light">
+            <a-card-meta>
+              <template slot="description">
+                <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }"
+                         :lg="{ span: 15 }"
+                  >
+                    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                             :md="{ span: 24 }"
+                             :lg="{ span: 24 }"
+                      >
+                        <h4 class="r-heading-light r-text-primary r-text-uppercase r-text-primary">
+                          For Merchants
+                        </h4>
+                      </a-col>
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                             :md="{ span: 24 }"
+                             :lg="{ span: 24 }"
+                      >
+                        <h1 class="r-heading">
+                          Become a <span class="r-text-secondary">verified</span> merchant today!
+                        </h1>
+                      </a-col>
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                             :md="{ span: 24 }"
+                             :lg="{ span: 24 }"
+                      >
+                        <p class="r-text-normal">
+                          Join the Shopple Merchant Program and start promoting Shopple in-store today and watch your
+                          sales run wild!
+                        </p>
+                      </a-col>
+                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                             :md="{ span: 12 }"
+                             :lg="{ span: 12 }"
+                      >
+                        <a-button block @click="onModal('merchant')"
+                                  class="r-btn-secondary r-margin-top-24"
+                                  size="large" type="secondary"
+                        >
+                          Become a Merchant
+                        </a-button>
+                      </a-col>
+                    </a-row>
+                  </a-col>
+                </a-row>
+              </template>
+            </a-card-meta>
+          </a-card>
+        </a-col>
+        <a-col
+          :xs="{ span: 24 }" :sm="{ span: 24 }"
+          :md="{ span: 12 }"
+          :lg="{ span: 12 }"
+        >
+          <r-avatar class="r-p-48 r-avatar-block" data-src="/images/content/32.png" :size="300"></r-avatar>
+        </a-col>
+      </a-row>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
            :lg="{ span: 16 }"

@@ -74,6 +74,8 @@
     <r-account-modal-stores v-if="isCurrent('account-stores')"
                             v-bind:key="'account-stores'" class="r-animate"
     ></r-account-modal-stores>
+    <r-store-gallery v-if="isCurrent('store-gallery')"
+                     v-bind:key="'store-gallery'"></r-store-gallery>
   </a-modal>
 </template>
 <script>

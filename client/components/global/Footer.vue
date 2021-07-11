@@ -164,7 +164,7 @@
                   <a-col :xs="{ span: 24 }" :sm="{ span: 6 }" :lg="{ span: 6 }">
                     <nuxt-link class="r-same-height r-footer-link" to="/shopper">
                       <a-button block
-                                class="r-btn-bordered-secondary"
+                                class="r-btn-bordered-white"
                                 size="large"
                       >
                         Become a Shopper

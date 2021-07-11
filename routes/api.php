@@ -17,6 +17,7 @@ Route::get('/', 'HomeController@index')->name('welcome');
 Route::get('/art', 'HomeController@art')->name('art');
 Route::get('/welcome', 'HomeController@home')->name('home');
 Route::get('/home/categories', 'HomeController@categories')->name('categories');
+Route::get('/home/stores', 'HomeController@stores')->name('stores');
 
 Route::group(['middleware' => 'auth:api'], function () {
     Route::get('/home', 'HomeController@home')->name('home');

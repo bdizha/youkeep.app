@@ -20,7 +20,7 @@
         </a-col>
       </a-row>
       <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-        <a-col v-if="!hasCategories && !processes.isCategories" :xs="{ span: 24 }" :sm="{ span: 24 }"
+        <a-col v-if="!hasCategories && !processes.isCategories && !hasProducts" :xs="{ span: 24 }" :sm="{ span: 24 }"
                :md="{ span: 24 }"
                :lg="{ span: 24 }"
         >
@@ -29,42 +29,48 @@
                    :md="{ span: 24 }"
                    :lg="{ span: 24 }"
             >
-              <a-card class="r-bg-primary-light">
+              <a-card class="r-bg-secondary-light">
                 <a-card-meta>
                   <template slot="description">
-                    <div class="r-mv-48">
-                      <a-row :gutter="[48,48]"  type="flex" justify="start" align="middle">
+                      <a-row :gutter="[24,24]"  type="flex" justify="start" align="middle">
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                                :md="{ span: 8 }"
                                :lg="{ span: 6 }"
                         >
-                          <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                   :md="{ span: 24 }"
-                                   :lg="{ span: 24 }"
-                            >
-                              <h4 class="r-heading-light r-text-uppercase r-text-primary">
-                                Coming soon!
-                              </h4>
-                            </a-col>
-                            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                   :md="{ span: 24 }"
-                                   :lg="{ span: 24 }"
-                            >
-                              <h1 class="r-heading">
-                                Everything your <span class="r-text-primary">heart</span> desires!
-                              </h1>
-                            </a-col>
-                          </a-row>
+                          <a-card>
+                            <a-card-meta>
+                              <template slot="description">
+                                <div class="r-mv-48">
+                                <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                         :md="{ span: 24 }"
+                                         :lg="{ span: 24 }"
+                                  >
+                                    <h4 class="r-heading-light r-text-uppercase r-text-primary">
+                                      Coming soon!
+                                    </h4>
+                                  </a-col>
+                                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                         :md="{ span: 24 }"
+                                         :lg="{ span: 24 }"
+                                  >
+                                    <h1 class="r-heading">
+                                      Everything your <span class="r-text-primary">heart</span> desires at <span class="r-text-secondary">{{ store.name }}!</span>
+                                    </h1>
+                                  </a-col>
+                                </a-row>
+                                </div>
+                              </template>
+                            </a-card-meta>
+                          </a-card>
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                                :md="{ span: 16 }"
                                :lg="{ span: 18 }"
                         >
-                          <r-category-banners></r-category-banners>
+                          <r-store-photos :store="store"></r-store-photos>
                         </a-col>
                       </a-row>
-                    </div>
                   </template>
                 </a-card-meta>
               </a-card>
@@ -107,11 +113,9 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import RCategoryFlush from './Flush'
 
 export default {
   name: 'r-category-show',
-  components: { RCategoryFlush },
   props: {
     columns: { type: Number, required: false, default: 6 }
   },
@@ -136,7 +140,10 @@ export default {
     ...mapGetters({
       category: 'base/category',
       store: 'base/store',
+      hasStore: 'base/hasStore',
+      isStore: 'base/isStore',
       hasCategories: 'base/hasCategories',
+      hasProducts: 'base/hasProducts',
       hasCategory: 'base/hasCategory',
       processes: 'base/processes'
     })

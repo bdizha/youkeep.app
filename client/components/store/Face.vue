@@ -1,34 +1,34 @@
 <template>
   <div class="r-store-face">
     <r-store-photos v-if="false" :store="store"></r-store-photos>
-    <a-card class="r-bg-primary-light">
-      <a-card-meta>
-        <template slot="description">
-          <a-row :gutter="[12, 12]" type="flex" justify="center" align="middle">
-            <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-              <div class="r-store-avatar">
-                <r-store-rate v-if="false" :store="store"></r-store-rate>
-                <r-store-photo slot="cover" :store="store"></r-store-photo>
-              </div>
-            </a-col>
-            <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-              <r-store-meta :store="store"></r-store-meta>
-            </a-col>
-            <a-col v-if="false" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-              <a-button
-                block
-                class="r-btn-primary"
-                size="large"
-                icon="check-circle"
-                type="secondary"
-              >
-                Follow
-              </a-button>
-            </a-col>
-          </a-row>
-        </template>
-      </a-card-meta>
-    </a-card>
+    <a-row :gutter="[12, 12]" type="flex" justify="center" align="middle">
+      <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <a-card class="r-bg-primary-light" :style="getPhotoCoverStyle()">
+        <a-card-meta>
+          <template slot="description">
+            <div class="r-store-avatar">
+              <r-store-rate v-if="false" :store="store"></r-store-rate>
+              <r-store-photo slot="cover" :store="store"></r-store-photo>
+            </div>
+          </template>
+        </a-card-meta>
+        </a-card>
+      </a-col>
+      <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <r-store-meta :store="store"></r-store-meta>
+      </a-col>
+      <a-col v-if="false" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+        <a-button
+          block
+          class="r-btn-primary"
+          size="large"
+          icon="check-circle"
+          type="secondary"
+        >
+          Follow
+        </a-button>
+      </a-col>
+    </a-row>
   </div>
 </template>
 <script>
@@ -50,6 +50,9 @@ export default {
   },
   methods: {
     onDrawer () {
+    },
+    getPhotoCoverStyle () {
+      return 'background-image: url(' + (this.store.photo_cover ? this.store.photo_cover_url : '/assets/icon_default.png') + ');background-size: contain;'
     }
   }
 }

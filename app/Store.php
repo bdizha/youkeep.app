@@ -96,24 +96,8 @@ class Store extends Model
     {
         $photos = [];
 
-        foreach ($this->product_photos as $photo) {
-            if (count($photos) > 5) break;
-
-            if (!in_array($photo->thumb, $this->ignoredPhotos)) {
-                if (file_exists(public_path('storage/product/' . $photo->thumb)) && !empty($photo->thumb)) {
-                    $photos[] = url('/storage/product/' . $photo->thumb);
-                }
-            }
-        }
-
-        if (count($photos) >= 6) {
-            $photos = Arr::random($photos, min(6, count($photos)));
-        } else {
-            $photosShortfall = count($photos) - 6;
-            while ($photosShortfall > 0) {
-                $photos[] = url('/storage/product/icon_default.png');
-                $photosShortfall--;
-            }
+        foreach ($this->store_photos as $storePhoto) {
+            $photos[] = url('/storage/store/' . $storePhoto->photo);
         }
 
         return $photos;
@@ -124,18 +108,19 @@ class Store extends Model
      */
     public function getContentFormattedAttribute()
     {
-        $parts = unserialize($this->content);
-
-        if (empty($parts)) {
-            return null;
+        $content = 'Coming soon!';
+        if(!empty($this->content)){
+            $content = $this->content;
         }
 
-        $content = null;
-        foreach ($parts as $key => $value) {
-            $content .= "{$value}<br/>";
-        }
+        return $content;
+    }
 
-        return 'Coming soon!';
+    /**
+     * Get the store photos
+     */
+    public function store_photos(){
+        return $this->hasMany('App\StorePhoto');
     }
 
     /**

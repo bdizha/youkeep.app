@@ -49,7 +49,7 @@ export default {
     category: 'base/category',
     hasNotice: 'base/hasNotice',
     hasCategories: 'base/hasCategories',
-    hasShop: 'base/hasShop'
+    isStore: 'base/isStore'
   }),
   created () {
     this.payload()

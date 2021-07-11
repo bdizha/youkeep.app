@@ -43,4 +43,14 @@ class HomeController extends Controller
     {
         return view('art');
     }
+
+    /**
+     * Show the stores.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function stores(Request $request)
+    {
+        return view('stores');
+    }
 }

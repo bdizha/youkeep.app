@@ -1,6 +1,6 @@
 <template>
   <a-layout-header :class="{'r-switch-primary': isDark}" class="r-header">
-    <r-layout-menu v-if="!modal.isVisible && !isRaised && !hasShop">
+    <r-layout-menu v-if="!modal.isVisible && !isRaised && !isStore">
       <r-nav-item>
         <a-icon @click="onDrawer('menu')" type="menu"/>
       </r-nav-item>
@@ -55,7 +55,7 @@ export default {
     }
   },
   computed: mapGetters({
-    hasShop: 'base/hasShop',
+    isStore: 'base/isStore',
     cart: 'cart/cart',
     modal: 'base/modal',
     address: 'account/address',

@@ -30,6 +30,9 @@ export default {
   data () {
     return {}
   },
+  created () {
+    this.payload()
+  },
   computed: {
     filters () {
       return {
@@ -46,11 +49,9 @@ export default {
       hasCategories: 'base/hasCategories'
     })
   },
-  created () {
-    this.payload()
-  },
   methods: {
     async payload () {
+      await this.$store.dispatch('base/onIsStore', true)
     }
   }
 }

@@ -2,14 +2,19 @@
   <a-row type="flex" justify="center" align="middle">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
     <r-store-notice v-if="hasNotice"></r-store-notice>
-    <r-store-face :is-plain="true" v-if="isStore && !isHome" :store="store"></r-store-face>
-    <a-collapse accordion
+      <a-collapse accordion
                 :default-active-key="activeKey"
                 expandIconPosition="right">
+      <a-collapse-panel v-if="isStore"
+                        key="store"
+                        class="r-collapse-panel"
+                        :header="'Welcome to ' + store.name">
+        <r-store-face :is-plain="true" v-if="isStore && !isHome" :store="store"></r-store-face>
+      </a-collapse-panel>
       <a-collapse-panel v-if="isHome"
                         key="links"
                         class="r-collapse-panel"
-                        header="Quick Links">
+                        header="Best of Shopple">
         <r-quick-links></r-quick-links>
       </a-collapse-panel>
       <a-collapse-panel v-if="isStore" key="delivery"
@@ -115,16 +120,17 @@ export default {
     }
   },
   computed: {
-    activeKey () {
+    activeKey: function () {
       let activeKey = 'links'
 
       if (this.isStore) {
-        activeKey = 'delivery'
+        activeKey = 'store'
       } else if (this.isCategory) {
         activeKey = 'category'
       } else if (this.isProduct) {
         activeKey = 'products'
       }
+
       return activeKey
     },
     ...mapGetters({

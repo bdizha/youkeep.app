@@ -1,16 +1,18 @@
 <template>
-  <nuxt-link class="r-item-shadow" :to="store.route">
+  <nuxt-link class="r-item-shadow"
+             :to="store.route">
     <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-      <a-col :xs="{span: 12}" :sm="{span: size > 90 ? 12 : 10}" :md="{span: size > 90 ? 10 : 9}" :lg="{span: size > 90 ? 10 : 8}">
+      <a-col :style="getPhotoCoverStyle()"
+        :xs="{span: 24}" :sm="{span: 24}" :md="{span: 10}" :lg="{span: 10}">
         <r-avatar
           class="r-avatar-store"
-          shape="circle"
+          shape="square"
           :size="size"
           :src="store.photo_url"
           src-placeholder="/assets/icon_default.png"
         />
       </a-col>
-      <a-col :xs="{span: 12}" :sm="{span: size > 90 ? 12 : 14}" :md="{span: size > 90 ? 14 : 15}" :lg="{span: size > 90 ? 14 : 16}">
+      <a-col :xs="{span: 24}" :sm="{span:24}" :md="{span: 14}" :lg="{span: 14}">
         <r-store-meta :store="store"></r-store-meta>
       </a-col>
     </a-row>
@@ -41,6 +43,9 @@ export default {
     onSearch () {
       this.isSearching = true
     },
+    getPhotoCoverStyle () {
+      return 'background-image: url(' + (this.store.photo_cover ? this.store.photo_cover_url : '/assets/icon_default.png') + ');background-size: contain;'
+    }
   }
 }
 </script>

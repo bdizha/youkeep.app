@@ -16,7 +16,7 @@ const state = () => ({
   position: {},
   storeCategories: [],
   hasStores: false,
-  hasShop: false,
+  isStore: false,
   notice: null,
   hasNotice: false,
   hasForm: true,
@@ -79,7 +79,7 @@ const state = () => ({
 
 // getters
 const getters = {
-  hasShop: state => state.hasShop,
+  isStore: state => state.isStore,
   notice: state => state.notice,
   hasNotice: state => state.hasNotice,
   hasForm: state => state.hasForm,
@@ -226,8 +226,8 @@ const mutations = {
   setIsRaised (state, isRaised) {
     state.isRaised = isRaised
   },
-  setHasShop (state, hasShop) {
-    state.hasShop = hasShop
+  setIsStore (state, isStore) {
+    state.isStore = isStore
   },
   setErrors (state, errors) {
     state.errors = errors
@@ -249,7 +249,7 @@ const actions = {
     commit('setSearch', payload)
   },
   onHasShop ({ dispatch, commit }, payload) {
-    commit('setHasShop', payload)
+    commit('setIsStore', payload)
   },
   onHasDownload ({ dispatch, commit }, payload) {
     commit('setHasDownload', payload)

@@ -3,7 +3,6 @@
                     :mask-closable="false"
                     :closable="true"
                     current="store"
-                    style="position: relative;"
   >
     <a-row :gutter="[12,12]" type="flex" justify="center">
       <a-col class="r-text-left" :xs="{ span: 24 }">

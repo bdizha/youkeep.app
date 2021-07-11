@@ -3,7 +3,7 @@
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
       <div v-if="hasStores" :class="padding" class="r-slider">
         <VueSlickCarousel v-bind="settings">
-          <nuxt-link class="r-store-arrow"
+          <nuxt-link class="r-store-arrow sdaDS"
                      v-for="(store, index) in stores.data"
                      v-if="store"
                      :key="store.id"

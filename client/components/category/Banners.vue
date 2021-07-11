@@ -1,10 +1,12 @@
 <template>
-  <a-row type="flex" justify="center">
+  <a-row class="r-mt-48" type="flex" justify="center">
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
            :md="{ span: 24 }"
            :lg="{ span: 24 }"
     >
-      <div class="r-ph-24 r-mt-48">
+        <a-card>
+          <a-card-meta>
+            <template slot="description">
         <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]" type="flex"
                justify="center"
         >
@@ -23,7 +25,9 @@
             </nuxt-link>
           </a-col>
         </a-row>
-      </div>
+            </template>
+          </a-card-meta>
+        </a-card>
     </a-col>
   </a-row>
 </template>
