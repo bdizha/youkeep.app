@@ -1,73 +1,106 @@
 <template>
-  <a-row class="r-mt-48" type="flex" justify="center">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
-    >
-        <a-card>
-          <a-card-meta>
-            <template slot="description">
-        <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]" type="flex"
-               justify="center"
-        >
-          <a-col
-            v-for="(banner, index) in banners"
-            :key="index" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 6 }"
-            :lg="{span: 6}"
-          >
-            <nuxt-link
-              :to="banner.route" style="display: block; width: 100%;"
-            >
-              <r-avatar class="r-avatar-block" shape="square"
-                        :size="300"
-                        :src="banner.photo"
-              />
-            </nuxt-link>
-          </a-col>
-        </a-row>
-            </template>
-          </a-card-meta>
-        </a-card>
+  <a-row class="r-banner-flush" type="flex" justify="start"
+  >
+    <a-col class="r-spin-holder" :span="24">
+      <div v-if="hasBanners" class="r-slider">
+        <VueSlickCarousel v-bind="settings">
+          <a-card v-for="(banner, index) in banners" :key="index"
+                  hoverable class="r-banner">
+            <div slot="cover">
+              <nuxt-link :to="banner.route"
+                         style="display: block; width: 100%;"
+              >
+                <r-avatar shape="square"
+                          :size="size"
+                          :dataSrc="banner.photo_url"
+                />
+              </nuxt-link>
+            </div>
+          </a-card>
+          <template #prevArrow="arrowOption">
+            <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
+              <a-icon type="left"/>
+            </div>
+          </template>
+          <template #nextArrow="arrowOption">
+            <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
+              <a-icon type="right"/>
+            </div>
+          </template>
+        </VueSlickCarousel>
+      </div>
     </a-col>
   </a-row>
 </template>
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'r-category-banners',
+  components: {},
   props: {
-    columns: { type: Number, required: false, default: 1 }
+    columns: { type: Number, required: false, default: 3 },
+    size: { type: Number, required: false, default: 300 },
+    filters: {
+      type: Object,
+      required: false,
+      default: () => {
+        return {
+          has_banners: true,
+          order_by: 'updated_at'
+        }
+      }
+    }
+  },
+  async fetch () {
+    await this.onBanners()
   },
   data () {
     return {
-      hasData: false,
-      banners: [
-        {
-          route: '/category/L0000001/popular-products',
-          photo: '/banners/mini/100_Percent_Original_Goods.png'
-        },
-        {
-          route: '/category/L0000001/discounts',
-          photo: '/banners/mini/Discounts.png'
-        },
-        {
-          route: '/category/L0000001/famous-brands',
-          photo: '/banners/mini/Famous_Brands.png'
-        },
-        {
-          route: '/category/L0000001/fast-delivery',
-          photo: '/banners/mini/Fast_Delivery.png'
-        }
-      ]
+      settings: {
+        'slidesToShow': this.columns,
+        'slidesToScroll': 1,
+        'infinite': true,
+        'dots': false,
+        responsive: [
+          {
+            'breakpoint': 1024,
+            'settings': {
+              'slidesToShow': this.columns,
+              'slidesToScroll': 1,
+              'infinite': true,
+              'dots': false,
+              'gap': 24
+            }
+          },
+          {
+            'breakpoint': 600,
+            'settings': {
+              'slidesToShow': this.columns / 3,
+              'slidesToScroll': 1,
+              'initialSlide': 1,
+              'gap': 12
+            }
+          },
+          {
+            'breakpoint': 480,
+            'settings': {
+              'slidesToShow': 1,
+              'slidesToScroll': 1,
+              'gap': 12
+            }
+          }
+        ]
+      }
     }
   },
-  computed: {},
-  created () {
-    this.payload()
-  },
-  mounted () {
-  },
+  computed: mapGetters({
+    banners: 'base/banners',
+    hasBanners: 'base/hasBanners'
+  }),
   methods: {
-    async payload () {
+    async onBanners () {
+      await this.$store.dispatch('base/onBanners', this.filters)
     }
   }
 }

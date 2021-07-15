@@ -206,22 +206,6 @@ class Category extends Model
     }
 
     /**
-     * Get the store category
-     */
-    public function category()
-    {
-        return $this->belongsTo('App\Category', 'id', 'category_id');
-    }
-
-    /**
-     * Get the store category
-     */
-    public function store_category()
-    {
-        return $this->belongsTo('App\StoreCategory', 'category_id', 'id');
-    }
-
-    /**
      * Get the categories
      */
     public function categories()

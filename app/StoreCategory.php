@@ -5,6 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 
+/**
+ * Class StoreCategory
+ * @package App
+ */
 class StoreCategory extends Model
 {
     /**
@@ -17,10 +21,9 @@ class StoreCategory extends Model
         'route',
         'name',
         'photos',
-        'photos',
         'photo',
         'filters',
-        'products',
+        'products'
     ];
 
     protected $products = [];
@@ -171,6 +174,14 @@ class StoreCategory extends Model
     }
 
     /**
+     * Get the categories
+     */
+    public function banners()
+    {
+        return $this->hasMany('App\Banner');
+    }
+
+    /**
      * Get the parent
      */
     public function previous()
@@ -181,9 +192,10 @@ class StoreCategory extends Model
     /**
      * @param $storeCategory
      * @param $breadcrumbs
+     * @param int $limit
      * @return mixed
      */
-    private function getBreadcrumbs($storeCategory, $breadcrumbs)
+    private function getBreadcrumbs($storeCategory, $breadcrumbs, $limit = 3)
     {
         $breadcrumbs[] = [
             'id' => $storeCategory->id,
@@ -195,11 +207,19 @@ class StoreCategory extends Model
             'categories' => [],
         ];
 
-        if (empty($storeCategory->previous)) {
+        if (empty($storeCategory->previous->id)) {
             return $breadcrumbs;
         }
 
-        return $this->getBreadcrumbs($storeCategory->previous, $breadcrumbs);
+        $limit--;
+        if($limit === 0){
+            return $breadcrumbs;
+        }
+        else if ($limit < 0){
+            dd($limit);
+        }
+
+        return $this->getBreadcrumbs($storeCategory->previous, $breadcrumbs, $limit);
     }
 
     /**

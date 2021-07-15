@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Address;
+use App\Banner;
 use App\Category;
 use App\Product;
 use App\ProductType;
@@ -27,7 +28,7 @@ class Controller extends BaseController
         $relations = [],
         $with = [],
         $orderBy = null,
-        $breadcrumbs = [],
+        $banners = [],
         $categoryId = null,
         $category = null,
         $storeCategory = null,
@@ -193,6 +194,20 @@ class Controller extends BaseController
         }
 
         $this->categories = $this->_pruneRelations($this->categories);
+    }
+
+    /**
+     * Get categories by criteria
+     **/
+    protected function _setBanners(): void
+    {
+        $categoryBannerQuery = Banner::orderBy($this->orderBy, 'DESC')
+            ->where('is_active', true)
+            ->take($this->limit);
+
+        $this->banners = $categoryBannerQuery
+            ->get()
+            ->toArray();
     }
 
     /**
@@ -392,7 +407,6 @@ class Controller extends BaseController
     protected function _setStores()
     {
         $query = Store::where('is_active', true);
-//        $this->without = ['categories'];
 
         if (!empty($this->term)) {
             $query->where('name', 'like', '%' . $this->term . '%');

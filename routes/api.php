@@ -95,6 +95,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::get('/locations', 'LocationController@index')->name('modal.index');
     Route::get('/locations/{search}', 'LocationController@lookup')->name('modal.lookup');
     Route::post('/locations/address', 'LocationController@address')->name('modal.address');
+    Route::post('/banners', 'CategoryController@banners')->name('category.banners');
     Route::post('/categories', 'CategoryController@index')->name('category.index');
     Route::get('/categories', 'CategoryController@index')->name('category.index');
     Route::post('/category', 'CategoryController@flush')->name('category.flush');

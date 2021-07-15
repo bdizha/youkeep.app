@@ -37,38 +37,32 @@
                                :md="{ span: 8 }"
                                :lg="{ span: 6 }"
                         >
-                          <a-card>
-                            <a-card-meta>
-                              <template slot="description">
-                                <div class="r-mv-48">
-                                <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                         :md="{ span: 24 }"
-                                         :lg="{ span: 24 }"
-                                  >
-                                    <h4 class="r-heading-light r-text-uppercase r-text-primary">
-                                      Coming soon!
-                                    </h4>
-                                  </a-col>
-                                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                         :md="{ span: 24 }"
-                                         :lg="{ span: 24 }"
-                                  >
-                                    <h1 class="r-heading">
-                                      Everything your <span class="r-text-primary">heart</span> desires at <span class="r-text-secondary">{{ store.name }}!</span>
-                                    </h1>
-                                  </a-col>
-                                </a-row>
-                                </div>
-                              </template>
-                            </a-card-meta>
-                          </a-card>
+                          <div class="r-mv-48">
+                            <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                     :md="{ span: 24 }"
+                                     :lg="{ span: 24 }"
+                              >
+                                <h4 class="r-heading-light r-text-uppercase r-text-primary">
+                                  Coming soon!
+                                </h4>
+                              </a-col>
+                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                                     :md="{ span: 24 }"
+                                     :lg="{ span: 24 }"
+                              >
+                                <h1 class="r-heading">
+                                  Everything your <span class="r-text-primary">heart</span> desires at <span class="r-text-secondary">{{ store.name }}!</span>
+                                </h1>
+                              </a-col>
+                            </a-row>
+                          </div>
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                                :md="{ span: 16 }"
                                :lg="{ span: 18 }"
                         >
-                          <r-store-photos :store="store"></r-store-photos>
+                          <r-category-banners></r-category-banners>
                         </a-col>
                       </a-row>
                   </template>
@@ -113,9 +107,11 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
+import RCategoryBanners from './Banners'
 
 export default {
   name: 'r-category-show',
+  components: { RCategoryBanners },
   props: {
     columns: { type: Number, required: false, default: 6 }
   },

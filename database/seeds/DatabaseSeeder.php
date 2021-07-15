@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     protected $storeCategory = null;
     protected $filterBrand = null;
     protected $product = null;
-    protected $level = -1;
+    protected $level = 1;
 
     /**
      * Run the database seeds.
@@ -110,8 +110,7 @@ class DatabaseSeeder extends Seeder
         $attributes = [
             'store_id' => $this->storeId,
             'category_id' => $category->id,
-            'url' => $url,
-            'level' => $this->level,
+            'url' => $url
         ];
 
         /* Add in the store category link */
@@ -144,11 +143,25 @@ class DatabaseSeeder extends Seeder
 
         $this->product = \App\Product::updateOrCreate($attributes, $values);
 
-        echo ">>>>>Inserting product: " . $this->product->name . "\n";
+        echo ">>>>>Inserting product: " . $this->product->name . " ::: {$this->product->external_url}\n";
 
         $this->setProductStore($values);
 
         $this->setProductCategory($storeCategory);
+    }
+
+    /**
+     * @param $photo
+     * @return string
+     */
+    protected function getFileExt($photo)
+    {
+        $ext = 'jpg';
+        if (strpos($photo, 'png') !== FALSE) {
+            $ext = 'png';
+        }
+        $photoName = sha1($photo) . ".{$ext}";
+        return $photoName;
     }
 
     protected function setProductCategory($storeCategory)
@@ -335,5 +348,53 @@ class DatabaseSeeder extends Seeder
         ];
 
         \App\StoreProduct::updateOrCreate($values, $values);
+    }
+
+    protected function setCategoryBanner($storeCategory, $photo)
+    {
+        $photoName = $this->getFileExt($photo);
+
+        try{
+            $isActive = false;
+            $storagePath = storage_path('app/public/category');
+            $filePath = "{$storagePath}/{$photoName}";
+
+            if (!file_exists($filePath)) {
+                exec("wget {$photo} -O {$filePath}");
+            } else {
+                echo "<<<<<< Product photo skipped: " . $filePath . "\n";
+            }
+
+            if (file_exists($filePath)) {
+                list($width, $height) = getimagesize($filePath);
+
+                $dimensionRatio = ($width / $height);
+                if ($dimensionRatio !== 1 || $width < 300) {
+                    echo ">>>>>> Product photo is not suited : " . $photo . "\n";
+                }
+                else{
+                    $isActive = true;
+                    echo ">>>>>> Product photo is suited : " . $photo . "\n";
+                }
+            }
+
+            $attributes = [
+                'photo' => $photoName,
+                'store_category_id' => $storeCategory->id
+            ];
+
+            $values = [
+                'photo' => $photoName,
+                'store_category_id' => $storeCategory->id,
+                'is_active' => $isActive
+            ];
+
+            \App\Banner::updateOrCreate($attributes, $values);
+
+            echo ">>>>> Inserting category banner: " . $storeCategory->category->name . " ::: {$photo}\n";
+        }
+        catch (Exception $e){
+            echo ">>>>> >>>>>> Failed category banner: " . $e->getMessage() . " ::: {$photo}\n";
+        }
     }
 }

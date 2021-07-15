@@ -29,20 +29,39 @@ class CategoryController extends Controller
 
         $this->_setLevel($request, $level);
 
-        $this->orderBy = $request->get('order_by', 'randomized_at');
-        $this->with = $request->get('with', []);
-        $this->categoryType = $request->get('type', 2);
-        $this->categoryId = $request->get('category_id', null);
-        $this->storeId = $request->get('store_id', 24);
-        $this->storeSlug = $request->get('store', null);
-        $key = $this->_setCacheKey($request);
+        $key = $this->_setParams($request);
 
-        if (Cache::has($key)) {
+        if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
             $this->_setCategories();
             $response['categories'] = $this->categories;
             $response['store'] = $this->store;
+
+            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
+        }
+
+        return response()->json($response, 200);
+    }
+
+    /**
+     * Find store banners
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function banners(Request $request)
+    {
+        $response = [];
+        $this->limit = $request->get('limit', 24);
+
+        $key = $this->_setParams($request);
+
+        if (Cache::has($key) && false) {
+            $response = Cache::get($key, []);
+        } else {
+            $this->_setBanners();
+            $response['banners'] = $this->banners;
 
             Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
         }
@@ -72,7 +91,7 @@ class CategoryController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key)) {
+        if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
             $this->_setCategories();
@@ -114,7 +133,7 @@ class CategoryController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key)) {
+        if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
             $this->_setCategories();
@@ -145,7 +164,7 @@ class CategoryController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key)) {
+        if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
             $query = Store::where('is_active', true);
@@ -180,5 +199,22 @@ class CategoryController extends Controller
     {
         $level = $request->get('level', $level);
         $this->level = (integer)$this->_decodeLevel($level);
+    }
+
+    /**
+     * @param Request $request
+     * @return string
+     */
+    protected function _setParams(Request $request): string
+    {
+        $this->orderBy = $request->get('order_by', 'randomized_at');
+        $this->with = $request->get('with', []);
+        $this->hasBanners = $request->get('has_banners', false);
+        $this->categoryType = $request->get('type', 2);
+        $this->categoryId = $request->get('category_id', null);
+        $this->storeId = $request->get('store_id', null);
+        $this->storeSlug = $request->get('store', null);
+        $key = $this->_setCacheKey($request);
+        return $key;
     }
 }

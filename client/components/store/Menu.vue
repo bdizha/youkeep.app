@@ -5,11 +5,13 @@
       <a-collapse accordion
                 :default-active-key="activeKey"
                 expandIconPosition="right">
-      <a-collapse-panel v-if="isStore"
+      <a-collapse-panel v-if="isStore && hasStore"
                         key="store"
                         class="r-collapse-panel"
                         :header="'Welcome to ' + store.name">
-        <r-store-face :is-plain="true" v-if="isStore && !isHome" :store="store"></r-store-face>
+        <r-store-face :is-plain="true"
+                      v-if="isStore && !isHome"
+                      :store="store"></r-store-face>
       </a-collapse-panel>
       <a-collapse-panel v-if="isHome"
                         key="links"
@@ -54,7 +56,7 @@
                         header="Catalog">
         <r-store-catalog></r-store-catalog>
       </a-collapse-panel>
-      <a-collapse-panel v-if="isStore" v-for="(item, index) in list"
+      <a-collapse-panel v-if="isStore && hasStore" v-for="(item, index) in list"
                         :key="index + '-item'"
                         class="r-collapse-panel"
                         :header="item.title"
@@ -166,7 +168,7 @@ export default {
         },
         {
           title: 'Contact',
-          content: this.store.phone
+          content: this.store ? this.store.phone : null
         },
         {
           title: 'Description',

@@ -8,17 +8,17 @@
           <a-card class="r-bg-secondary-light">
             <a-card-meta>
               <template slot="description">
-                <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-                  <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 12 }"
-                         :lg="{ span: 12 }"
+                <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+                  <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 8 }"
+                         :lg="{ span: 8 }"
                   >
-                    <div class="r-pv-48">
+                    <div class="r-mv-48">
                       <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
                                :md="{ span: 24 }"
                                :lg="{ span: 24 }"
                         >
-                          <h3 class="r-heading-light r-text-uppercase">
+                          <h3 class="r-heading-light r-text-primary r-text-uppercase">
                             It's shopping time!
                           </h3>
                         </a-col>
@@ -26,49 +26,38 @@
                                :md="{ span: 24 }"
                                :lg="{ span: 24 }"
                         >
-                          <h1 class="r-heading r-text-secondary">
-                            <span class="r-text-primary">Shop More,</span><br>
-                            <span class="r-text-secondary">Pay Less.</span>
+                          <h1 class="r-heading">
+                            Shop <span class="r-text-primary">More,</span><br>
+                            Pay <span class="r-text-secondary">Less.</span>
                           </h1>
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 15 }"
-                               :lg="{ span: 16 }"
+                               :md="{ span: 24 }"
+                               :lg="{ span: 24 }"
                         >
-                          <h4 class="r-heading-light">
+                          <p class="r-text-normal">
                             Yes, as long as you shop it with Shopple, you are fully powered to buy what your heart desires.
-                          </h4>
+                          </p>
                         </a-col>
                         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 12 }"
-                               :lg="{ span: 12 }"
-                        >
-                        </a-col>
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 16 }"
-                               :lg="{ span: 15 }"
+                               :md="{ span: 24 }"
+                               :lg="{ span: 24 }"
                         >
                           <r-delivery-form></r-delivery-form>
                         </a-col>
                       </a-row>
                     </div>
                   </a-col>
-                  <a-col class="r-bg-white" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                         :md="{ span: 12 }"
-                         :lg="{ span: 12 }"
+                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
+                         :md="{ span: 16 }"
+                         :lg="{ span: 16 }"
                   >
-                    <div class="r-p-48">
-                      <r-avatar class="r-avatar-auto" data-src="/images/content/32.png" :size="450"
-                      ></r-avatar>
-                    </div>
+                    <r-category-banners></r-category-banners>
                   </a-col>
                 </a-row>
               </template>
             </a-card-meta>
           </a-card>
-        </a-col>
-        <a-col v-if="false" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-          <r-category-banners></r-category-banners>
         </a-col>
         <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
           <a-card>

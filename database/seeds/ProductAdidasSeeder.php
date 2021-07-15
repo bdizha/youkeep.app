@@ -71,27 +71,6 @@ class ProductAdidasSeeder extends DatabaseSeeder
 
     }
 
-    /**
-     * @param array $store
-     */
-    private function _setBanners(array $store)
-    {
-        if (!empty($categoryBanner['photo'])) {
-            $photoName = $this->getFileExt($categoryBanner['photo']);
-
-            Storage::disk('store')->put($photoName, file_get_contents($categoryBanner['photo']));
-            $categoryBanner['photo'] = $photoName;
-        }
-
-        $attributes = [
-            'url' => $store['url']
-        ];
-
-        $store = \App\Store::updateOrCreate($attributes, $store);
-
-        echo "Updated store :: " . $store['name'] . "\n";
-    }
-
     public function setCategories($categoryNodes = null, $level = 1, $parentStoreCategory = null)
     {
         if (empty($categoryNodes)) {
@@ -250,6 +229,57 @@ class ProductAdidasSeeder extends DatabaseSeeder
 
         echo "Fetching category url >>>>>>>>> {$categoryUrl}\n";
         echo "Total pages >>>>>>>>> {$totalPages}\n";
+
+        if($categoryNode->filter('.cat-banner img.hidden-xs')->count() > 0){
+            $photo = $categoryNode->filter('.cat-banner img.hidden-xs')->eq(0)->attr('src');
+            $this->setCategoryBanner($storeCategory, $photo);
+        }
+
+        $categoryNode->filter('.widget-static-block a')->each(function ($node) use (&$storeCategory) {
+            $externalUrl = $node->attr('href');
+            $externalUrl = trim($externalUrl, "/");
+
+            $photoNode = $node->filter('img');
+            if($photoNode->count() > 0){
+                $photo = $photoNode->attr('src');
+
+                if(!empty($externalUrl)){
+                    $_storeCategories = StoreCategory::where('url', $externalUrl)
+                        ->get();
+
+                    foreach($_storeCategories as $_storeCategory){
+                        $this->setCategoryBanner($_storeCategory, $photo);
+                    }
+                }
+            }
+        });
+
+        $categoryNode->filter('.image-spot a')->each(function ($node) use (&$storeCategory) {
+            $externalUrl = $node->attr('href');
+            $externalUrl = trim($externalUrl, "/");
+
+            $photoNode = $node->filter('.desktop-bg');
+            if($photoNode->count() > 0){
+                $photoStyle = $photoNode->attr('style');
+
+                preg_match('/\((.*?)\)/s', $photoStyle, $match);
+
+                if(!empty($match[1])){
+                    $photo = $match[1];
+                    echo $externalUrl . "\n";
+                    $this->setCategoryBanner($storeCategory, $photo);
+                }
+
+                if(!empty($externalUrl)){
+                    $_storeCategories = StoreCategory::where('url', $externalUrl)
+                        ->get();
+
+                    foreach($_storeCategories as $_storeCategory){
+                        $this->setCategoryBanner($_storeCategory, $photo);
+                    }
+                }
+            }
+        });
 
         $productItems = [];
         $categoryNode->filter('.catalog-product__padding')->each(function ($node) use (&$productItems, $storeCategory) {

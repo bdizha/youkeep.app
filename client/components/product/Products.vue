@@ -47,7 +47,7 @@ export default {
   computed: {
     hasProducts () {
       return this.products.data != undefined && this.products.data.length > 0
-    },
+    }
   },
   methods: {
     async onProducts () {
@@ -59,4 +59,3 @@ export default {
   }
 }
 </script>
-

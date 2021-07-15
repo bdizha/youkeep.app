@@ -13,8 +13,10 @@ const state = () => ({
   products: [],
   menuCategory: { name: 'Shop By Category', slug: null },
   hasMenuCategory: false,
+  banners: [],
   categories: [],
   hasProducts: false,
+  hasBanners: false,
   departments: [],
   positions: [],
   position: {},
@@ -98,7 +100,9 @@ const getters = {
   positions: state => state.positions,
   position: state => state.position,
   categories: state => state.categories,
+  banners: state => state.banners,
   storeCategories: state => state.storeCategories,
+  hasBanners: state => state.hasBanners,
   hasCategories: state => state.hasCategories,
   hasProducts: state => state.hasProducts,
   hasCategory: state => state.hasCategory,
@@ -160,6 +164,10 @@ const mutations = {
     state.category = category
     state.hasCategory = category != null
   },
+  setBanners (state, banners) {
+    state.banners = banners
+    state.hasBanners = banners !== undefined && banners.length > 0
+  },
   setCategories (state, categories) {
     state.categories = categories
     state.hasCategories = categories !== undefined && categories.length > 0
@@ -220,6 +228,7 @@ const mutations = {
     Cookies.set('search', search, { expires: 365 })
   },
   setProcess (state, process) {
+    console.trace()
     state.processes[process.key] = process.value
   },
   setHasForm (state, hasForm) {
@@ -331,6 +340,19 @@ const actions = {
       })
     } catch (e) {
       console.error('onCategories errors')
+      console.log(e)
+    }
+  },
+  async onBanners ({ dispatch, commit, state }, payload) {
+    try {
+      commit('setBanners', [])
+
+      await axios.post('/banners', payload).then(({ data }) => {
+
+        commit('setBanners', data.banners)
+      })
+    } catch (e) {
+      console.error('onBanners errors')
       console.log(e)
     }
   },

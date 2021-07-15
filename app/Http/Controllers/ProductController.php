@@ -40,7 +40,7 @@ class ProductController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-       if (Cache::has($key)) {
+       if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
            $this->_setProducts();

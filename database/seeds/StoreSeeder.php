@@ -29,7 +29,7 @@ class StoreSeeder extends Seeder
      * @param $photo
      * @return string
      */
-    private function getFileExt($photo)
+    protected function getFileExt($photo)
     {
         $ext = 'jpg';
         if (strpos($photo, 'png') !== FALSE) {
