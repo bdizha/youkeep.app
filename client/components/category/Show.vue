@@ -44,7 +44,7 @@
                                      :lg="{ span: 24 }"
                               >
                                 <h4 class="r-heading-light r-text-uppercase r-text-primary">
-                                  Coming soon!
+                                  {{ store.description}}
                                 </h4>
                               </a-col>
                               <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"

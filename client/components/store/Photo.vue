@@ -11,7 +11,7 @@ export default {
   name: 'r-store-photo',
   props: {
     store: { type: Object, required: false, default: null },
-    size: { type: Number, required: false, default: 120 },
+    size: { type: Number, required: false, default: 150 },
     isShowing: { type: Boolean, required: false, default: false }
   },
   data () {

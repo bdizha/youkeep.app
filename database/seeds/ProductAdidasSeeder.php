@@ -158,8 +158,6 @@ class ProductAdidasSeeder extends DatabaseSeeder
             'randomized_at' => date('Y-m-d'),
         ];
 
-//        echo ">>>>>Updating lookup category :" . $category->name . "\n";
-
         return $this->storeCategory = StoreCategory::updateOrCreate($attributes, $values);
     }
 
@@ -198,6 +196,10 @@ class ProductAdidasSeeder extends DatabaseSeeder
             $categoryUrl = $this->domain . $categoryUrl;
         }
 
+        $categoryNode = Goutte::request('GET', $categoryUrl);
+        $this->fetchCategoryBanners($categoryNode, $storeCategory);
+
+        // Reprocess the url to get the actual categories
         if($storeCategory->level == 1 && strpos($storeCategory->url, 'all-products') === false){
             $categoryUrl .= '/all-products/';
         }
@@ -229,57 +231,6 @@ class ProductAdidasSeeder extends DatabaseSeeder
 
         echo "Fetching category url >>>>>>>>> {$categoryUrl}\n";
         echo "Total pages >>>>>>>>> {$totalPages}\n";
-
-        if($categoryNode->filter('.cat-banner img.hidden-xs')->count() > 0){
-            $photo = $categoryNode->filter('.cat-banner img.hidden-xs')->eq(0)->attr('src');
-            $this->setCategoryBanner($storeCategory, $photo);
-        }
-
-        $categoryNode->filter('.widget-static-block a')->each(function ($node) use (&$storeCategory) {
-            $externalUrl = $node->attr('href');
-            $externalUrl = trim($externalUrl, "/");
-
-            $photoNode = $node->filter('img');
-            if($photoNode->count() > 0){
-                $photo = $photoNode->attr('src');
-
-                if(!empty($externalUrl)){
-                    $_storeCategories = StoreCategory::where('url', $externalUrl)
-                        ->get();
-
-                    foreach($_storeCategories as $_storeCategory){
-                        $this->setCategoryBanner($_storeCategory, $photo);
-                    }
-                }
-            }
-        });
-
-        $categoryNode->filter('.image-spot a')->each(function ($node) use (&$storeCategory) {
-            $externalUrl = $node->attr('href');
-            $externalUrl = trim($externalUrl, "/");
-
-            $photoNode = $node->filter('.desktop-bg');
-            if($photoNode->count() > 0){
-                $photoStyle = $photoNode->attr('style');
-
-                preg_match('/\((.*?)\)/s', $photoStyle, $match);
-
-                if(!empty($match[1])){
-                    $photo = $match[1];
-                    echo $externalUrl . "\n";
-                    $this->setCategoryBanner($storeCategory, $photo);
-                }
-
-                if(!empty($externalUrl)){
-                    $_storeCategories = StoreCategory::where('url', $externalUrl)
-                        ->get();
-
-                    foreach($_storeCategories as $_storeCategory){
-                        $this->setCategoryBanner($_storeCategory, $photo);
-                    }
-                }
-            }
-        });
 
         $productItems = [];
         $categoryNode->filter('.catalog-product__padding')->each(function ($node) use (&$productItems, $storeCategory) {
@@ -331,6 +282,33 @@ class ProductAdidasSeeder extends DatabaseSeeder
     }
 
     /**
+     * @param $categoryNode
+     * @param $storeCategory
+     * @return mixed
+     */
+    private function fetchCategoryBanners($categoryNode, $storeCategory)
+    {
+        $categoryNode->filter('.placement a')->each(function ($node) use (&$storeCategory) {
+            $externalUrl = $node->attr('href');
+            $externalUrl = trim($externalUrl, "/");
+
+            $photoNode = $node->filter('img');
+            if ($photoNode->count() > 0) {
+                $photo = $photoNode->attr('src');
+
+                if (!empty($externalUrl)) {
+                    $_storeCategories = StoreCategory::where('url', $externalUrl)
+                        ->get();
+
+                    foreach ($_storeCategories as $_storeCategory) {
+                        $this->setCategoryBanner($_storeCategory, $photo);
+                    }
+                }
+            }
+        });
+    }
+
+    /**
      * @param $productItems
      * @param $category
      * @param $productType
@@ -346,7 +324,10 @@ class ProductAdidasSeeder extends DatabaseSeeder
                 $productItem['summary'] = $summaryNode->attr('content');
             }
 
-            $productItem['description'] = $productNode->filter('.product-spec-review')->count() > 0 ? $productNode->filter('.product-spec-review')->text() : 'Not set';
+            $productItem['description'] = 'Not set';
+            if($productNode->filter('.product-spec-review')->count() > 0){
+                $productItem['description'] = $productNode->filter('.product-spec-review')->text();
+            }
 
             $this->setProduct($productItem, $storeCategory);
 

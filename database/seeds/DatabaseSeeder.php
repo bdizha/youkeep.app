@@ -35,49 +35,14 @@ class DatabaseSeeder extends Seeder
     protected function setSearchLookup($storeCategory): void
     {
         $products = Product::whereHas('categories', function ($query) use ($storeCategory) {
-            $query->where('category_products.category_id', $storeCategory->category_id);
+            $query->where('category_products.category_id', $storeCategory->id);
         })
+            ->where('is_active', true)
             ->get();
 
-        $category = $storeCategory->category;
+       $this->setLookupCategory($storeCategory, $products);
 
-        $attributes = [
-            'route' => $category->route . '/' . $storeCategory->level_padded
-        ];
-
-        $values = [
-            'title' => $category->name,
-            'type' => Lookup::TYPE_CATEGORY,
-            'item_id' => $category->id,
-            'order' => 1,
-            'store_id' => $storeCategory->store_id,
-            'photo' => $category->photo,
-            'count' => $products->count(),
-        ];
-
-        echo ">>>>>Inserting lookup category :" . $category->name . "\n";
-
-        Lookup::updateOrCreate($attributes, $values);
-
-        foreach ($products as $product) {
-            $attributes = [
-                'route' => "/product/" . $product->slug
-            ];
-
-            $values = [
-                'title' => $product->name,
-                'type' => Lookup::TYPE_PRODUCT,
-                'item_id' => $product->id,
-                'order' => 1,
-                'store_id' => $storeCategory->store_id,
-                'photo' => $product->photo,
-                'count' => 1,
-            ];
-
-            echo ">>>>>Inserting lookup product :" . $product->name . "\n";
-
-            Lookup::updateOrCreate($attributes, $values);
-        }
+       $this->setLookupProducts($products, $storeCategory);
     }
 
     /**
@@ -368,13 +333,14 @@ class DatabaseSeeder extends Seeder
             if (file_exists($filePath)) {
                 list($width, $height) = getimagesize($filePath);
 
-                $dimensionRatio = ($width / $height);
-                if ($dimensionRatio !== 1 || $width < 300) {
-                    echo ">>>>>> Product photo is not suited : " . $photo . "\n";
-                }
-                else{
+                $dimensionRatio = $width > $height ? ($height / $width) : ($width / $height);
+
+                if ($dimensionRatio <= 1 && $dimensionRatio >= 0.60 && $width > 300) {
                     $isActive = true;
                     echo ">>>>>> Product photo is suited : " . $photo . "\n";
+                }
+                else{
+                    echo ">>>>>> Product photo is not suited : " . $photo . "\n";
                 }
             }
 
@@ -395,6 +361,61 @@ class DatabaseSeeder extends Seeder
         }
         catch (Exception $e){
             echo ">>>>> >>>>>> Failed category banner: " . $e->getMessage() . " ::: {$photo}\n";
+        }
+    }
+
+    /**
+     * @param $storeCategory
+     * @param $products
+     * @return void
+     */
+    protected function setLookupCategory($storeCategory, $products): void
+    {
+        $category = $storeCategory->category;
+
+        $attributes = [
+            'route' => $storeCategory->route
+        ];
+
+        $values = [
+            'title' => $category->name,
+            'type' => Lookup::TYPE_CATEGORY,
+            'item_id' => $storeCategory->id,
+            'order' => 1,
+            'store_id' => $storeCategory->store_id,
+            'photo' => $category->photo,
+            'count' => $products->count(),
+        ];
+
+        echo ">>>>>Inserting lookup category :" . $category->name . "\n";
+
+        Lookup::updateOrCreate($attributes, $values);
+    }
+
+    /**
+     * @param $products
+     * @param $storeCategory
+     */
+    protected function setLookupProducts($products, $storeCategory): void
+    {
+        foreach ($products as $product) {
+            $attributes = [
+                'route' => $product->route
+            ];
+
+            $values = [
+                'title' => $product->name,
+                'type' => Lookup::TYPE_PRODUCT,
+                'item_id' => $product->id,
+                'order' => 1,
+                'store_id' => $storeCategory->store_id,
+                'photo' => $product->photo,
+                'count' => 1,
+            ];
+
+            echo ">>>>>Inserting lookup product :" . $product->name . "\n";
+
+            Lookup::updateOrCreate($attributes, $values);
         }
     }
 }

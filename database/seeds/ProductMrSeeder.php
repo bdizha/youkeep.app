@@ -46,7 +46,7 @@ class ProductMrSeeder extends DatabaseSeeder
             $this->storeCategories = StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
                 ->orderBy('store_categories.updated_at', "ASC")
-                ->limit(24)
+                ->limit(1000)
                 ->get();
 
             echo ">>>>>> Setting category to parent relations categories: " . $store->name . "\n";
@@ -108,19 +108,17 @@ class ProductMrSeeder extends DatabaseSeeder
                     ->where('id', '!=', $storeCategory->id)
                     ->first();
 
-                if(!empty($parentStoreCategory)){
-                    $categoryAttributes = [
-                        'id' => $storeCategory->id
-                    ];
+                $categoryAttributes = [
+                    'id' => $storeCategory->id
+                ];
 
-                    $categoryValues = [
-                        'level' => $level,
-                        'parent_id' => $parentStoreCategory->id
-                    ];
+                $categoryValues = [
+                    'level' => $level,
+                    'parent_id' => $parentStoreCategory->id ?? null
+                ];
 
-                    echo "Updated parent {$parentStoreCategory->category->name} category for {$storeCategory->slug} >>>>> \n";
-                    StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
-                }
+                echo "Updated store category {$storeCategory->category->name} :: {$storeCategory->slug} >>>>> \n";
+                StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
             }
         }
     }
@@ -367,56 +365,7 @@ class ProductMrSeeder extends DatabaseSeeder
         $categoryUrl = $storeCategory->url . '?limit=' . $limit;
         $categoryNode = Goutte::request('GET', $categoryUrl);
 
-        if($categoryNode->filter('.cat-banner img.hidden-xs')->count() > 0){
-            $photo = $categoryNode->filter('.cat-banner img.hidden-xs')->eq(0)->attr('src');
-            $this->setCategoryBanner($storeCategory, $photo);
-        }
-
-        $categoryNode->filter('.widget-static-block a')->each(function ($node) use (&$storeCategory) {
-            $externalUrl = $node->attr('href');
-            $externalUrl = trim($externalUrl, "/");
-
-            $photoNode = $node->filter('img');
-            if($photoNode->count() > 0){
-                $photo = $photoNode->attr('src');
-
-                if(!empty($externalUrl)){
-                    $_storeCategories = StoreCategory::where('url', $externalUrl)
-                        ->get();
-
-                    foreach($_storeCategories as $_storeCategory){
-                        $this->setCategoryBanner($_storeCategory, $photo);
-                    }
-                }
-            }
-        });
-
-        $categoryNode->filter('.image-spot a')->each(function ($node) use (&$storeCategory) {
-            $externalUrl = $node->attr('href');
-            $externalUrl = trim($externalUrl, "/");
-
-            $photoNode = $node->filter('.desktop-bg');
-            if($photoNode->count() > 0){
-                $photoStyle = $photoNode->attr('style');
-
-                preg_match('/\((.*?)\)/s', $photoStyle, $match);
-
-                if(!empty($match[1])){
-                    $photo = $match[1];
-                    echo $externalUrl . "\n";
-                    $this->setCategoryBanner($storeCategory, $photo);
-                }
-
-                if(!empty($externalUrl)){
-                    $_storeCategories = StoreCategory::where('url', $externalUrl)
-                        ->get();
-
-                    foreach($_storeCategories as $_storeCategory){
-                        $this->setCategoryBanner($_storeCategory, $photo);
-                    }
-                }
-            }
-        });
+        $storeCategory = $this->fetchCategoryBanners($categoryNode, $storeCategory);
 
         $productItems = [];
         $categoryNode->filter('.products-grid li.item')->each(function ($node) use (&$productItems) {
@@ -470,5 +419,65 @@ class ProductMrSeeder extends DatabaseSeeder
         $description = $this->getProductDescription($productNode->html());
 
         dd($description);
+    }
+
+    /**
+     * @param $categoryNode
+     * @param $storeCategory
+     * @return mixed
+     */
+    private function fetchCategoryBanners($categoryNode, $storeCategory)
+    {
+        if ($categoryNode->filter('.cat-banner img.hidden-xs')->count() > 0) {
+            $photo = $categoryNode->filter('.cat-banner img.hidden-xs')->eq(0)->attr('src');
+            $this->setCategoryBanner($storeCategory, $photo);
+        }
+
+        $categoryNode->filter('.widget-static-block a')->each(function ($node) use (&$storeCategory) {
+            $externalUrl = $node->attr('href');
+            $externalUrl = trim($externalUrl, "/");
+
+            $photoNode = $node->filter('img');
+            if ($photoNode->count() > 0) {
+                $photo = $photoNode->attr('src');
+
+                if (!empty($externalUrl)) {
+                    $_storeCategories = StoreCategory::where('url', $externalUrl)
+                        ->get();
+
+                    foreach ($_storeCategories as $_storeCategory) {
+                        $this->setCategoryBanner($_storeCategory, $photo);
+                    }
+                }
+            }
+        });
+
+        $categoryNode->filter('.image-spot a')->each(function ($node) use (&$storeCategory) {
+            $externalUrl = $node->attr('href');
+            $externalUrl = trim($externalUrl, "/");
+
+            $photoNode = $node->filter('.desktop-bg');
+            if ($photoNode->count() > 0) {
+                $photoStyle = $photoNode->attr('style');
+
+                preg_match('/\((.*?)\)/s', $photoStyle, $match);
+
+                if (!empty($match[1])) {
+                    $photo = $match[1];
+                    echo $externalUrl . "\n";
+                    $this->setCategoryBanner($storeCategory, $photo);
+                }
+
+                if (!empty($externalUrl)) {
+                    $_storeCategories = StoreCategory::where('url', $externalUrl)
+                        ->get();
+
+                    foreach ($_storeCategories as $_storeCategory) {
+                        $this->setCategoryBanner($_storeCategory, $photo);
+                    }
+                }
+            }
+        });
+        return $storeCategory;
     }
 }
