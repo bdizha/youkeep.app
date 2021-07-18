@@ -1,10 +1,10 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-button @click="onModal" class="r-btn-bordered-grey"
-                block
+  <a-row align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-button :size="size" block
+                class="r-btn-bordered-grey"
                 type="secondary"
-                :size="size"
+                @click="onModal"
       >
         <a-icon type="control"/>
         Filters

@@ -1,13 +1,13 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col v-if="category" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <nuxt-link @click.native="onCategory(category)" class="r-same-height r-text-view-more"
-                 :to="category.route"
+  <a-row align="middle" justify="start" type="flex">
+    <a-col v-if="category" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <nuxt-link :to="category.route" class="r-same-height r-text-view-more"
+                 @click.native="onCategory(category)"
       >
-        <a-button class="r-btn-bordered-secondary"
+        <a-button :size="size"
                   block
+                  class="r-btn-bordered-secondary"
                   type="secondary"
-                  :size="size"
         >
           See all
           <a-icon type="right"/>

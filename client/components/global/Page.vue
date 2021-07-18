@@ -1,6 +1,6 @@
 <template>
-  <a-row type="flex" justify="center">
-    <a-col class="r-margin-out-sm" :xs="{ span: 24 }" :sm="{ span: 18 }" :md="{ span: 18 }" :lg="{ span: 16 }">
+  <a-row justify="center" type="flex">
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 18 }" :xs="{ span: 24 }" class="r-margin-out-sm">
       <slot/>
     </a-col>
   </a-row>

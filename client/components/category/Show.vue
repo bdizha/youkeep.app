@@ -1,103 +1,105 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :class="{'r-spin__active' :processes.isCategory}"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row align="middle" justify="start" type="flex">
+    <a-col :class="{'r-spin__active' :processes.isCategory}" :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+           class="r-spin-holder r-categories"
     >
-      <a-row v-if="hasCategories"  type="flex" justify="start" align="middle">
-        <a-col class="r-hide-lg" :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+      <a-row v-if="hasCategories" align="middle" justify="start" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+               class="r-hide-lg"
         >
-          <r-search class="r-p-24 r-pv-12" :class="{'r-pb-12': hasCategories}"></r-search>
+          <r-search :class="{'r-pb-12': hasCategories}" class="r-p-24 r-pv-12"></r-search>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
           <r-category-breadcrumbs :breadcrumbs="category.breadcrumbs"></r-category-breadcrumbs>
         </a-col>
       </a-row>
-      <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-        <a-col v-if="!hasCategories && !processes.isCategories && !hasProducts" :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+      <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+        <a-col v-if="!hasCategories && !processes.isCategories && !hasProducts" :lg="{ span: 24 }" :md="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
-          <a-row  type="flex" justify="start" align="middle">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                   :md="{ span: 24 }"
-                   :lg="{ span: 24 }"
+          <a-row align="middle" justify="start" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
             >
               <a-card class="r-bg-secondary-light">
                 <a-card-meta>
                   <template slot="description">
-                      <a-row :gutter="[24,24]"  type="flex" justify="start" align="middle">
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 8 }"
-                               :lg="{ span: 6 }"
-                        >
-                          <div class="r-mv-48">
-                            <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                     :md="{ span: 24 }"
-                                     :lg="{ span: 24 }"
-                              >
-                                <h4 class="r-heading-light r-text-uppercase r-text-primary">
-                                  {{ store.description}}
-                                </h4>
-                              </a-col>
-                              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                     :md="{ span: 24 }"
-                                     :lg="{ span: 24 }"
-                              >
-                                <h1 class="r-heading">
-                                  Everything your <span class="r-text-primary">heart</span> desires at <span class="r-text-secondary">{{ store.name }}!</span>
-                                </h1>
-                              </a-col>
-                            </a-row>
-                          </div>
-                        </a-col>
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 16 }"
-                               :lg="{ span: 18 }"
-                        >
-                          <r-category-banners></r-category-banners>
-                        </a-col>
-                      </a-row>
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                      <a-col :lg="{ span: 6 }" :md="{ span: 8 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <div class="r-mv-48">
+                          <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                              <h4 class="r-heading-light r-text-uppercase r-text-primary">
+                                {{ store.description }}
+                              </h4>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                              <h1 class="r-heading">
+                                Everything your <span class="r-text-primary">heart</span> desires at <span
+                                class="r-text-secondary"
+                              >{{ store.name }}!</span>
+                              </h1>
+                            </a-col>
+                          </a-row>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 18 }" :md="{ span: 16 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <r-category-banners></r-category-banners>
+                      </a-col>
+                    </a-row>
                   </template>
                 </a-card-meta>
               </a-card>
             </a-col>
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                   :md="{ span: 24 }"
-                   :lg="{ span: 24 }"
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
             >
               <r-category-flush></r-category-flush>
             </a-col>
           </a-row>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
           <r-category-slider></r-category-slider>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
           <r-product-flush :columns="3"></r-product-flush>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
-          <r-product-list :filters="payload" :columns="columns"></r-product-list>
+          <r-product-list :columns="columns" :filters="payload"></r-product-list>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
           <r-category-list :columns="6"></r-category-list>
         </a-col>

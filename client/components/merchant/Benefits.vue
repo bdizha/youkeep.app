@@ -2,24 +2,24 @@
   <a-card class="r-bg-secondary-light">
     <a-card-meta>
       <template slot="description">
-        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                 :md="{ span: 24 }"
-                 :lg="{ span: 24 }"
+        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                 :sm="{ span: 24 }"
+                 :xs="{ span: 24 }"
           >
             <h4 class="r-heading-light r-text-uppercase r-text-secondary">
               Benefits for Merchants
             </h4>
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24}" :lg="{ span: 24 }">
+          <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
             <h2 class="r-heading">
               <span class="r-text-secondary">Customer</span>
               <span>service is our game:</span>
             </h2>
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                 :md="{ span: 24 }"
-                 :lg="{ span: 24 }"
+          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                 :sm="{ span: 24 }"
+                 :xs="{ span: 24 }"
 
           >
             <a-list :data-source="benefits">

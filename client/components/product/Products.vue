@@ -1,12 +1,12 @@
 <template>
-  <div class="" :class="{'r-product-flush': isFlush()}">
+  <div :class="{'r-product-flush': isFlush()}" class="">
     <a-row v-if="hasProducts" :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]"
-           type="flex" justify="start"
-           align="middle"
+           align="middle" justify="start"
+           type="flex"
     >
       <a-col v-for="(product, index) in products.data" :key="index"
-             :xs="{span: isVertical ? 12 : 24}"
-             :sm="{span: isVertical ? 12 : 24}" :md="{span: 24 / columns}" :lg="{span: 24 / columns}"
+             :lg="{span: 24 / columns}"
+             :md="{span: 24 / columns}" :sm="{span: isVertical ? 12 : 24}" :xs="{span: isVertical ? 12 : 24}"
       >
         <r-product-item :isVertical="isVertical" :product="product"></r-product-item>
       </a-col>
@@ -14,8 +14,6 @@
   </div>
 </template>
 <script>
-import axios from 'axios'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-product-products',

@@ -1,12 +1,12 @@
 <template>
   <VueSlickCarousel v-bind="settings">
-    <div class="r-page-header-photo"
-         v-for="(image, index) in images"
+    <div v-for="(image, index) in images"
          :key="index + '-image'"
+         class="r-page-header-photo"
     >
       <img :src="'/assets/' + image"/>
-      <div class="r-page-white"
-           :style="{backgroundImage: 'url(' + '/assets/' + image + ')'}"
+      <div :style="{backgroundImage: 'url(' + '/assets/' + image + ')'}"
+           class="r-page-white"
       >
       </div>
     </div>

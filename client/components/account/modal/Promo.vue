@@ -1,17 +1,17 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
                     :current="formName"
+                    :mask-closable="maskClosable"
                     style="position: relative;"
   >
     <a-form v-show="hasForm"
+            :form="formPromo"
             class="ant-form ant-form-vertical"
             @submit="onPost"
-            :form="formPromo"
     >
       <a-form-item>
-        <a-row type="flex" justify="center">
-          <a-col class="r-text-left" :xs="{ span: 24 }">
+        <a-row justify="center" type="flex">
+          <a-col :xs="{ span: 24 }" class="r-text-left">
             <h3 class="r-heading">
               Add a promo code
             </h3>
@@ -22,34 +22,34 @@
         </a-row>
       </a-form-item>
       <a-form-item label="Your promo code">
-        <a-input type="text"
-                 size="large"
+        <a-input v-decorator="['promo_code', { rules: [{ required: true, message: 'Please enter promo code' }] }]"
                  placeholder="Promo code"
-                 v-decorator="['promo_code', { rules: [{ required: true, message: 'Please enter promo code' }] }]"
+                 size="large"
+                 type="text"
         >
           <a-icon slot="prefix" type="lock"/>
         </a-input>
       </a-form-item>
-      <a-row class="r-mt-24" :gutter="12" type="flex" justify="end">
-        <a-col :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
+      <a-row :gutter="12" class="r-mt-24" justify="end" type="flex">
+        <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 6 }" :xs="{ span: 6 }">
           <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button block @click="onReturn"
+            <a-button block class="r-btn-bordered-grey"
+                      html-type="button"
                       size="large"
                       type="secondary"
-                      html-type="button"
-                      class="r-btn-bordered-grey"
+                      @click="onReturn"
             >
               Back
             </a-button>
           </a-form-item>
         </a-col>
-        <a-col :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: 6 }" :lg="{ span: 6 }">
+        <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 6 }" :xs="{ span: 6 }">
           <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button block @click="onPost"
+            <a-button block class="r-btn-secondary"
+                      html-type="submit"
                       size="large"
                       type="secondary"
-                      html-type="submit"
-                      class="r-btn-secondary"
+                      @click="onPost"
             >
               Redeem
             </a-button>
@@ -58,7 +58,7 @@
       </a-row>
     </a-form>
     <r-notice process="isSuccess"></r-notice>
-    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
   </r-modal-template>
 </template>
 <script>

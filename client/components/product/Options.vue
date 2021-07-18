@@ -2,10 +2,10 @@
   <a-radio-group v-model="selected"
                  @change="onSelect"
   >
-    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
+    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
       <a-col v-for="(variant, index) in productType.variants"
              :key="variant.id"
-             :xs="{span: 12}" :sm="{span: 12}" :md="{span: 8 }" :lg="{span: 8}"
+             :lg="{span: 8}" :md="{span: 8 }" :sm="{span: 12}" :xs="{span: 12}"
       >
         <a-tooltip placement="top">
           <template slot="title">

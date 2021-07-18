@@ -1,12 +1,12 @@
 <template>
-  <a-row class="r-mb-24" type="flex" justify="start" align="middle">
+  <a-row align="middle" class="r-mb-24" justify="start" type="flex">
     <a-col :span="24">
       <r-product-variants v-for="(productType, index) in productTypes"
                           v-if="productType.is_required"
                           :key="index"
-                          :product="product"
-                          :item-key="itemKey"
                           :header="productType.name"
+                          :item-key="itemKey"
+                          :product="product"
                           :product-type="productType"
       ></r-product-variants>
     </a-col>

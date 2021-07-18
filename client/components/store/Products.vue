@@ -1,22 +1,22 @@
 <template>
-  <a-row type="flex" justify="center">
-    <a-col v-if="category" class="r-p-24" :span="24">
-      <a-row :gutter="[24,24]" type="flex" justify="center">
-        <a-col :xs="{span: 24}" :sm="{span: 16}" :md="{span: 18}" :lg="{span: 20}">
+  <a-row justify="center" type="flex">
+    <a-col v-if="category" :span="24" class="r-p-24">
+      <a-row :gutter="[24,24]" justify="center" type="flex">
+        <a-col :lg="{span: 20}" :md="{span: 18}" :sm="{span: 16}" :xs="{span: 24}">
           <h3 class="r-heading-light">
             {{ category.name }}
           </h3>
         </a-col>
-        <a-col class="r-text-right" :xs="{span: 24}"
-               :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}"
+        <a-col :lg="{span: 4}" :md="{span: 6}"
+               :sm="{span: 8}" :xs="{span: 24}" class="r-text-right"
         >
           <div class="r-same-height">
             <a-select
-              labelInValue
               :defaultValue="sortOptions[0]"
+              labelInValue
               size="large"
-              @change="onSort"
               style="min-width: 100%;"
+              @change="onSort"
             >
               <a-select-option v-for="(s, index) in sortOptions"
                                :key="index"
@@ -29,8 +29,8 @@
         </a-col>
       </a-row>
       <a-row :gutter="[24,24]" class="r-product-cards">
-        <a-col v-for="(product, index) in category.products" :key="index" :xs="{span: 24}"
-               :sm="{span: 8}" :md="{span: 6}" :lg="{span: 4}"
+        <a-col v-for="(product, index) in category.products" :key="index" :lg="{span: 4}"
+               :md="{span: 6}" :sm="{span: 8}" :xs="{span: 24}"
         >
           <r-product-item :product="product"></r-product-item>
         </a-col>

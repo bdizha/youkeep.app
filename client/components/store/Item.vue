@@ -1,18 +1,20 @@
 <template>
-  <nuxt-link class="r-item-shadow"
-             :to="store.route">
-    <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-      <a-col :style="getPhotoCoverStyle()"
-        :xs="{span: 24}" :sm="{span: 24}" :md="{span: 10}" :lg="{span: 10}">
+  <nuxt-link :to="store.route"
+             class="r-item-shadow"
+  >
+    <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+      <a-col :lg="{span: 10}"
+             :md="{span: 10}" :sm="{span: 24}" :style="getPhotoCoverStyle()" :xs="{span: 24}"
+      >
         <r-avatar
-          class="r-avatar-store"
-          shape="square"
           :size="size"
           :src="store.photo_url"
+          class="r-avatar-store"
+          shape="square"
           src-placeholder="/assets/icon_default.png"
         />
       </a-col>
-      <a-col :xs="{span: 24}" :sm="{span:24}" :md="{span: 14}" :lg="{span: 14}">
+      <a-col :lg="{span: 14}" :md="{span: 14}" :sm="{span:24}" :xs="{span: 24}">
         <r-store-meta :store="store"></r-store-meta>
       </a-col>
     </a-row>

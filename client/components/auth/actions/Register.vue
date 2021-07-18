@@ -1,15 +1,15 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
-      <label v-show="instruction" for="r-user-register" class="r-text-sm r-text-label">{{ instruction }}</label>
-      <a-button id="r-user-register" v-on:click="onModal"
+      <label v-show="instruction" class="r-text-sm r-text-label" for="r-user-register">{{ instruction }}</label>
+      <a-button id="r-user-register" :size="size"
                 block
-                :size="size"
-                type="secondary"
                 class="r-btn-bordered-primary"
+                type="secondary"
+                v-on:click="onModal"
       >
         <a-icon type="user"/>
         Sign up

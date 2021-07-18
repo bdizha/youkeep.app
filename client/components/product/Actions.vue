@@ -1,56 +1,56 @@
 <template>
-  <a-row :gutter="[24, 24]" type="flex" justify="center" align="middle">
-    <a-col v-if="isEnabled || hasActions" :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :lg="{ span: hasAddToCart ? 24 : 24 }"
+  <a-row :gutter="[24, 24]" align="middle" justify="center" type="flex">
+    <a-col v-if="isEnabled || hasActions" :lg="{ span: hasAddToCart ? 24 : 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
-      <a-row type="flex" justify="center" align="middle">
-        <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: !isShowing ? 8 : 8 }"
-               :lg="{ span: !isShowing ? 8 : 8 }"
+      <a-row align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: !isShowing ? 8 : 8 }" :md="{ span: !isShowing ? 8 : 8 }" :sm="{ span: 8 }" :xs="{ span: 12 }"
+               class="r-text-left"
         >
           <a-button :class="{'r-btn-bordered-secondary': isEnabled}"
                     :disabled="!isEnabled && !hasActions"
-                    @click="onMinus"
+                    :size="size"
                     block
                     type="secondary"
-                    :size="size"
+                    @click="onMinus"
           >
             <a-icon class="r-icon-empty" type="minus"/>
           </a-button>
         </a-col>
-        <a-col class="r-text-center" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: !isShowing ? 8 : 8 }"
-               :lg="{ span: !isShowing ? 8 : 8 }"
+        <a-col :lg="{ span: !isShowing ? 8 : 8 }" :md="{ span: !isShowing ? 8 : 8 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+               class="r-text-center"
         >
           <div class="r-text-center r-action-height">
-            <div class="r-cart" :class="{'r-cart__active': productItem.quantity > 0}">
+            <div :class="{'r-cart__active': productItem.quantity > 0}" class="r-cart">
               <div class="r-shopping-cart"></div>
               <span class="r-cart-count">{{ productItem.quantity }}</span>
             </div>
           </div>
         </a-col>
-        <a-col class="r-text-right" :xs="{ span: 6 }" :sm="{ span: 6 }" :md="{ span: !isShowing ? 8 : 8 }"
-               :lg="{ span: !isShowing ? 8 : 8 }"
+        <a-col :lg="{ span: !isShowing ? 8 : 8 }" :md="{ span: !isShowing ? 8 : 8 }" :sm="{ span: 6 }" :xs="{ span: 6 }"
+               class="r-text-right"
         >
           <a-button :class="{'r-btn-bordered-primary': isEnabled}"
                     :disabled="!isEnabled && !hasActions"
-                    @click="onPlus"
+                    :size="size"
                     block
                     type="secondary"
-                    :size="size"
+                    @click="onPlus"
           >
             <a-icon class="r-icon-empty" type="plus"/>
           </a-button>
         </a-col>
       </a-row>
     </a-col>
-    <a-col v-if="hasAddToCart" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col v-if="hasAddToCart" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row>
         <a-col :span="24">
-          <a-button class="r-btn-secondary"
-                    :disabled="!isEnabled"
-                    @click="onClose"
-                    block
-                    type="secondary"
+          <a-button :disabled="!isEnabled"
                     :size="size"
+                    block
+                    class="r-btn-secondary"
+                    type="secondary"
+                    @click="onClose"
           >
             <a-icon type="shopping"/>
             Add to cart

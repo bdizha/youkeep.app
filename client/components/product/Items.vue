@@ -1,11 +1,11 @@
 <template>
-  <a-row type="flex" v-if="category" justify="center" align="middle">
+  <a-row v-if="category" align="middle" justify="center" type="flex">
     <a-col :span="24">
-      <a-carousel :infinite="false"
-                  :slides-to-show="6"
-                  :arrows="true"
+      <a-carousel :arrows="true"
                   :dots="false"
+                  :infinite="false"
                   :responsive="responsive"
+                  :slides-to-show="6"
       >
         <r-product-item v-for="(product, index) in category.products"
                         :key="index"

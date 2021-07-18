@@ -1,12 +1,12 @@
 <template>
-  <a-row type="flex" justify="end">
-    <a-col :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 6 }" :lg="{ span: 6 }">
-      <a-button v-on:click="onModal"
-                block
+  <a-row justify="end" type="flex">
+    <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 8 }" :xs="{ span: 12 }">
+      <a-button block
+                class="r-btn-bordered-secondary"
+                html-type="button"
                 size="large"
                 type="secondary"
-                html-type="button"
-                class="r-btn-bordered-secondary"
+                v-on:click="onModal"
       >
         Add new
       </a-button>

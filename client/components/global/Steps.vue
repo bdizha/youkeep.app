@@ -19,9 +19,9 @@
                   <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <div class="r-step-avatar">
                       <r-avatar
+                        :key="index"
+                        :size="72" :src="'/images/content/step-0' + (index + 1) + '.png?v=1'"
                         class="r-avatar-auto"
-                        :key="index" :size="72"
-                        :src="'/images/content/step-0' + (index + 1) + '.png?v=1'"
                         shape="square"
                         src-placeholder="/assets/icon_default.png"
                         unit="px"

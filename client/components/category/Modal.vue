@@ -1,6 +1,6 @@
 <template>
-  <r-modal-template :mask-closable="true"
-                    :closable="true"
+  <r-modal-template :closable="true"
+                    :mask-closable="true"
                     current="category"
   >
     <r-store-menu :is-category="true" :is-store="false"></r-store-menu>

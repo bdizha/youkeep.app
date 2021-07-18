@@ -1,40 +1,40 @@
 <template>
-  <a-row class="r-reviews r-mt-24" type="flex" justify="start" align="middle">
+  <a-row align="middle" class="r-reviews r-mt-24" justify="start" type="flex">
     <a-col :span="24">
-      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-          <a-row v-for="(rate, index) in ratings" :gutter="[24,24]"
-                 :key="index"
-                 type="flex"
-                 justify="start" align="top"
+      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <a-row v-for="(rate, index) in ratings" :key="index"
+                 :gutter="[24,24]"
+                 align="top"
+                 justify="start" type="flex"
           >
-            <a-col :xs="{ span: 8 }" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
+            <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 8 }">
               {{ rate.stars + ' star' + (rate.stars > 1 ? 's' : '') }}
             </a-col>
-            <a-col :xs="{ span: 16 }" :sm="{ span: 16 }" :md="{ span: 16 }" :lg="{ span: 16 }">
+            <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 16 }" :xs="{ span: 16 }">
               <a-progress :percent="Math.floor(rate.value * 100 / ratingTotal)"/>
             </a-col>
           </a-row>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
-          <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-            <a-col class="r-text-right" :xs="{ span: 8 }" :sm="{ span: 8 }" :md="{ span: 6 }" :lg="{ span: 6 }">
-              <a-button class="r-btn-bordered-grey"
-                        block
-                        type="secondary"
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 8 }" :xs="{ span: 8 }" class="r-text-right">
+              <a-button block
+                        class="r-btn-bordered-grey"
                         size="large"
+                        type="secondary"
               >
                 {{ product.rating + '/' + 5 }}
               </a-button>
             </a-col>
-            <a-col class="r-text-left" :xs="{ span: 15 }" :sm="{ span: 16 }" :md="{ span: 18 }" :lg="{ span: 18 }">
+            <a-col :lg="{ span: 18 }" :md="{ span: 18 }" :sm="{ span: 16 }" :xs="{ span: 15 }" class="r-text-left">
               <r-rate :rating="product.rating"></r-rate>
             </a-col>
           </a-row>
         </a-col>
       </a-row>
-      <a-list class="r-mv-24" item-layout="vertical" size="large" :pagination="pagination" :data-source="reviews">
-        <a-list-item slot="renderItem" key="item.title" slot-scope="item, index">
+      <a-list :data-source="reviews" :pagination="pagination" class="r-mv-24" item-layout="vertical" size="large">
+        <a-list-item key="item.title" slot="renderItem" slot-scope="item, index">
           <template v-for="{ type, text } in actions" slot="actions">
         <span :key="type">
           <a-icon :type="type" style="margin-right: 8px"/>
@@ -42,9 +42,9 @@
         </span>
           </template>
           <a-list-item-meta :description="item.description">
-            <r-avatar slot="avatar" class="r-avatar-auto" shape="square"
-                      :size="48"
-                      :src="item.avatar"
+            <r-avatar slot="avatar" :size="48" :src="item.avatar"
+                      class="r-avatar-auto"
+                      shape="square"
             />
             <div slot="title">
               <r-rate :rating="item.rating"></r-rate>

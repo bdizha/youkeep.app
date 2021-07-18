@@ -43,7 +43,7 @@
         </div>
       </a-col>
     </a-row>
-    <a-row type="flex" justify="center" align="middle">
+    <a-row :gutter="24" type="flex" justify="center" align="middle">
       <a-col :xs="{ span: 12 }">
         <a-card title="DELIVERY ADDRESS" style="width: 100%;">
           <p class="r-text-normal">Batanayi Matuku</p>
@@ -71,7 +71,7 @@
         </a-card>
       </a-col>
     </a-row>
-    <a-row type="flex" justify="center" align="middle">
+    <a-row :gutter="24" type="flex" justify="center" align="middle">
       <a-col :xs="{ span: 12 }">
         <a-card title="PAYMENT METHOD" style="width: 100%;">
           <p class="r-text-normal">Credit & Debit Card</p>
@@ -101,7 +101,7 @@ const columns = [
     title: 'Product Image',
     dataIndex: 'photo',
     key: 'photo',
-    scopedSlots: { customRender: 'photo' },
+    scopedSlots: { customRender: 'photo' }
   },
   { title: 'Product Name', dataIndex: 'title', key: 'title' },
   { title: 'Variant', dataIndex: 'variant', key: 'variant' },
@@ -174,8 +174,8 @@ export default {
           key: '1',
           name: 'Edward King 1',
           age: '32',
-          address: 'London, Park Lane no. 1',
-        },
+          address: 'London, Park Lane no. 1'
+        }
       ],
       count: 2,
       columns,
@@ -186,6 +186,6 @@ export default {
     toggleDirection () {
       this.isVertical = !this.isVertical
     }
-  },
+  }
 }
 </script>

@@ -14,12 +14,12 @@
            :key="index"
            class="r-category-filter r-category-filter-avatar"
       >
-        <nuxt-link class="r-item-shadow"
-                   :to="_category.route"
+        <nuxt-link :to="_category.route"
+                   class="r-item-shadow"
         >
-          <r-avatar shape="circle"
-                    :size="24"
+          <r-avatar :size="24"
                     :src="_category.photo"
+                    shape="circle"
                     src-placeholder="/assets/icon_default.png"
           />
           {{ _category.name }}

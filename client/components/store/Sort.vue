@@ -1,10 +1,10 @@
 <template>
   <a-select
-    labelInValue
     :defaultValue="sortOptions[0]"
+    labelInValue
     size="large"
-    @change="onSort"
     style="min-width: 100%;"
+    @change="onSort"
   >
     <a-select-option v-for="(s, index) in sortOptions"
                      :key="index"

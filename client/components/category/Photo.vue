@@ -1,13 +1,13 @@
 <template>
-  <a-row :gutter="[12,12]" type="flex" justify="center" align="middle">
+  <a-row :gutter="[12,12]" align="middle" justify="center" type="flex">
     <a-col v-for="(photo, index) in category.photos"
            v-if="(index + 1) > start && index < start + 3"
            :key="index"
-           :xs="{span:8}" :sm="{span:8}" :md="{span:8}" :lg="{span:8}"
+           :lg="{span:8}" :md="{span:8}" :sm="{span:8}" :xs="{span:8}"
     >
-      <r-avatar shape="square"
-                :size="size"
+      <r-avatar :size="size"
                 :src="photo"
+                shape="square"
                 src-placeholder="/assets/icon_default.png"
       />
     </a-col>

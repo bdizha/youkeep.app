@@ -1,6 +1,6 @@
 <template>
-  <r-modal-template :mask-closable="false"
-                    :closable="true"
+  <r-modal-template :closable="true"
+                    :mask-closable="false"
                     current="store-gallery"
   >
     <r-store-photos></r-store-photos>

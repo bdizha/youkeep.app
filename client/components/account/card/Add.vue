@@ -1,12 +1,12 @@
 <template>
-  <a-row type="flex" justify="end">
-    <a-col :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 6 }" :lg="{ span: 6 }">
-      <a-button @click="onModal"
-                block
+  <a-row justify="end" type="flex">
+    <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 8 }" :xs="{ span: 12 }">
+      <a-button block
+                class="r-btn-secondary"
+                html-type="button"
                 size="large"
                 type="secondary"
-                html-type="button"
-                class="r-btn-secondary"
+                @click="onModal"
       >
         Add new
       </a-button>
@@ -23,7 +23,7 @@ export default {
         current: null,
         isVisible: false,
         category: null,
-        address: null,
+        address: null
       }
     }
   },

@@ -5,6 +5,7 @@ use App\StoreCategory;
 use Illuminate\Database\Seeder;
 use App\Category;
 use App\Store;
+use Illuminate\Support\Str;
 
 class CategorySeeder extends DatabaseSeeder
 {
@@ -130,19 +131,51 @@ class CategorySeeder extends DatabaseSeeder
         $link = url("/api/home/categories");
 
         $categoryNode = Goutte::request('GET', $link);
-        $categoryNodes = $categoryNode->filter('.menu__items .menu-item__title');
+        $categoryNodes = $categoryNode->filter('.dropdown');
 
         $categoryNodes->each(function ($node) {
             echo __LINE__ . " <> \n";
-            $categoryName = $node->text();
-            echo __LINE__ . " <> \n";
 
-            $categoryName = ucwords(strtolower($categoryName));
-            $this->category = $this->setCategory($categoryName, null);
+            if($node->filter('.dropdown-toggle')->count()){
+                $categoryName = $node->filter('.dropdown-toggle')->text();
+                echo __LINE__ . " <> \n";
 
-            if($this->category->slug == 'for-women' || true){
-                echo "Category slug: {$this->category->slug}\n";
-                $this->linkCategories();
+                $this->parentStoreCategory = null;
+                $this->level = 1;
+
+                $categoryName = Str::slug($categoryName, " ");
+                $categoryName = ucwords(strtolower($categoryName));
+                $this->setCategory($categoryName, null);
+
+                $parentStoreCategory = $this->storeCategory;
+
+                // 2nd level categories
+                $secondaryCategoryNodes = $node->filter('.displaytablecell');
+                $secondaryCategoryNodes->each(function ($node) use($categoryName, $parentStoreCategory) {
+
+                    if($node->filter('.dropdownsubmenutitle')->count() > 0){
+                        $this->level = 2;
+
+                        $this->parentStoreCategory = $parentStoreCategory;
+                        $categoryName = $node->filter('.dropdownsubmenutitle')->text();
+                        $categoryName = Str::slug($categoryName, " ");
+                        $categoryName = ucwords(strtolower($categoryName));
+
+                        $this->setCategory($categoryName, null);
+
+                        $this->parentStoreCategory = $this->storeCategory;
+
+                        // 3rd level categories
+                        $tertiaryCategoryNodes = $node->filter('a.dropdown-toggle');
+                        $tertiaryCategoryNodes->each(function ($node) {
+                            $this->level = 3;
+                            $categoryName = $node->text();
+                            $categoryName = Str::slug($categoryName, " ");
+                            $categoryName = ucwords(strtolower($categoryName));
+                            $this->setCategory($categoryName, null);
+                        });
+                    }
+                });
             }
         });
     }
@@ -151,8 +184,6 @@ class CategorySeeder extends DatabaseSeeder
     {
         $categoryName = $this->category->slug;
         $categoryParts = explode("-", $categoryName);
-
-        $categoryIds = [];
 
         $ignoredWords = ['for'];
         foreach ($categoryParts as $categoryPart) {

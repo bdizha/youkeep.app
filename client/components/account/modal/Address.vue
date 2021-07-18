@@ -1,13 +1,13 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
                     :current="formName"
+                    :mask-closable="maskClosable"
                     style="position: relative;"
   >
     <r-notice process="isSuccess"></r-notice>
-    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
-    <a-row v-show="hasForm" type="flex" justify="center">
-      <a-col class="r-text-left" :xs="{ span: 24 }">
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
+    <a-row v-show="hasForm" justify="center" type="flex">
+      <a-col :xs="{ span: 24 }" class="r-text-left">
         <h3 class="r-heading">
           {{ hasAddress ? 'Edit' : 'Add' }} an address
         </h3>
@@ -17,96 +17,96 @@
       </a-col>
     </a-row>
     <a-form v-show="hasForm"
+            :form="form"
             class="ant-form ant-form-vertical"
             @submit="onPost"
-            :form="form"
     >
       <a-form-item label="Address Line 1">
         <a-input
-          size="large"
           v-decorator="['address_line', { rules: [{ required: true, message: 'Please enter your Address line 1' }] }]"
+          size="large"
         />
       </a-form-item>
       <a-form-item label="Address line 1 (optional)">
         <a-input
-          size="large"
           v-decorator="['address_line_2', { rules: [] }]"
+          size="large"
         />
       </a-form-item>
       <a-form-item label="Suburb">
         <a-input
-          size="large"
           v-decorator="['suburb', { rules: [{ required: true, message: 'Please enter your suburb' }] }]"
+          size="large"
         />
       </a-form-item>
-      <a-row class="r-mt-24" :gutter="24" type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 16 }">
+      <a-row :gutter="24" align="middle" class="r-mt-24" justify="start" type="flex">
+        <a-col :lg="{ span: 16 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
           <a-form-item label="City">
             <a-input
-              size="large"
               v-decorator="['city', { rules: [{ required: true, message: 'Please enter your city' }] }]"
+              size="large"
             />
           </a-form-item>
         </a-col>
-        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 8 }">
+        <a-col :lg="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
           <a-form-item label="Postal Code">
             <a-input
-              size="large"
               v-decorator="['postal_code', { rules: [{ required: true, message: 'Please enter your postal code' }] }]"
+              size="large"
             />
           </a-form-item>
         </a-col>
       </a-row>
-      <a-row class="r-mt-24" type="flex" justify="center" align="middle">
-        <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 12 }"
-               :md="{ span: 12 }"
-               :lg="{ span: 12 }"
+      <a-row align="middle" class="r-mt-24" justify="center" type="flex">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+               :xs="{ span: 24 }"
+               class="r-text-left"
         >
           <div class="r-text-normal r-same-height">
             Set as default
           </div>
         </a-col>
-        <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }"
-               :md="{ span: 12 }"
-               :lg="{ span: 12 }"
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+               :xs="{ span: 24 }"
+               class="r-text-right"
         >
-          <a-switch v-model="isDefault" size="small" :default-checked="isDefault"/>
+          <a-switch v-model="isDefault" :default-checked="isDefault" size="small"/>
         </a-col>
       </a-row>
-      <a-row class="r-mt-24" :gutter="24" type="flex" justify="end">
-        <a-col v-if="hasAddress" :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }"
-               :lg="{ span: 8 }"
+      <a-row :gutter="24" class="r-mt-24" justify="end" type="flex">
+        <a-col v-if="hasAddress" :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 8 }"
+               :xs="{ span: 24 }"
         >
           <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button block @click="onDelete"
+            <a-button block class="r-btn-bordered-primary"
+                      html-type="button"
                       size="large"
                       type="secondary"
-                      html-type="button"
-                      class="r-btn-bordered-primary"
+                      @click="onDelete"
             >
               Delete
             </a-button>
           </a-form-item>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
+        <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
           <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button block @click="onReturn"
+            <a-button block class="r-btn-bordered-grey"
+                      html-type="button"
                       size="large"
                       type="secondary"
-                      html-type="button"
-                      class="r-btn-bordered-grey"
+                      @click="onReturn"
             >
               Back
             </a-button>
           </a-form-item>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 8 }" :md="{ span: 8 }" :lg="{ span: 8 }">
+        <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
           <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button block @click="onPost"
+            <a-button block class=" r-btn-secondary"
+                      html-type="submit"
                       size="large"
                       type="secondary"
-                      html-type="submit"
-                      class=" r-btn-secondary"
+                      @click="onPost"
             >
               Save
             </a-button>

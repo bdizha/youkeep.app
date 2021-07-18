@@ -1,10 +1,10 @@
 <template>
-  <a-form class="ant-form ant-form-vertical r-mb-24"
-          :form="form"
+  <a-form :form="form"
+          class="ant-form ant-form-vertical r-mb-24"
   >
     <a-input
-      placeholder="Add a coupon code"
       v-decorator="['coupon', { rules: [{ required: false, message: 'Please enter your coupon' }] }]"
+      placeholder="Add a coupon code"
     >
     </a-input>
   </a-form>

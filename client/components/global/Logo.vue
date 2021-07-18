@@ -1,6 +1,6 @@
 <template>
   <nuxt-link class="r-logo" to="/">
-    <img src="~/assets/icon_white.svg" :alt="title"/>
+    <img :alt="title" src="~/assets/icon_white.svg"/>
   </nuxt-link>
 </template>
 <script>

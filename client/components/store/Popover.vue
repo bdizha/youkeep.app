@@ -1,17 +1,17 @@
 <template>
   <a-popover
-    title="Never miss at item!"
-    trigger="click"
     :visible="clicked"
     placement="top"
+    title="Never miss at item!"
+    trigger="click"
     @visibleChange="handleClickChange"
   >
     <div slot="content">
-      <a-row :gutter="[12,12]" type="flex" justify="center" align="middle">
-        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+      <a-row :gutter="[12,12]" align="middle" justify="center" type="flex">
+        <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
           <r-store-item :store="store"></r-store-item>
         </a-col>
-        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+        <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
           <r-store-actions :store="store"></r-store-actions>
         </a-col>
       </a-row>

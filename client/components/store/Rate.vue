@@ -1,9 +1,9 @@
 <template>
   <a-button
     block
-    type="secondary" class="r-btn-bordered-primary"
-    icon="star"
+    class="r-btn-bordered-primary" icon="star"
     size="large"
+    type="secondary"
   >{{ store.rate.toFixed(1) + ' rate' }}
   </a-button>
 </template>

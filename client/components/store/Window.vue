@@ -1,6 +1,6 @@
 <template>
-  <a-row class="r-mt-24" :class="{'r-is-empty': false}" type="flex" justify="start" align="middle">
-    <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row :class="{'r-is-empty': false}" align="middle" class="r-mt-24" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
       <r-store-face :store="store"></r-store-face>
     </a-col>
   </a-row>

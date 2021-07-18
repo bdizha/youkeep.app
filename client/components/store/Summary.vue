@@ -1,7 +1,7 @@
 <template>
-  <a-row type="flex" justify="start" :gutter="0">
-    <a-col class="r-p-24 gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row :gutter="0" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+           class="r-p-24 gutter-row"
     >
       <h4 class="r-heading-light">
         {{ store.description }}

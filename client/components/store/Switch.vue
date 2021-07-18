@@ -1,9 +1,9 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
-      <a-button block @click="onStoreTray" class="r-btn-secondary">
+      <a-button block class="r-btn-secondary" @click="onStoreTray">
         {{ hasStore ? store.name : 'Switch Store' }}
         <a-icon type="down"/>
       </a-button>

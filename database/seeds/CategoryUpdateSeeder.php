@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 
 class CategoryUpdateSeeder extends DatabaseSeeder
 {
-    protected $storeIds = [71, 24]; //70, 12, 7, 8, 9, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
+    protected $storeIds = [71, 24, 70, 12, 7, 8, 9, 69, 68, 67, 66, 65, 61, 34, 50, 64, 63, 62, 29];
 
     /**
      * Run the database seeds.
@@ -16,15 +16,11 @@ class CategoryUpdateSeeder extends DatabaseSeeder
      */
     public function run()
     {
-//        $this->setHighlights();
-//        $this->setCategoryProducts();
-
         foreach ($this->storeIds as $storeId) {
             $this->storeId = $storeId;
 
             $this->storeCategories = \App\StoreCategory::with('category')
                 ->where('store_id', $storeId)
-                ->where('id', 14552)
                 ->orderBy('updated_at', 'ASC')
                 ->get();
 

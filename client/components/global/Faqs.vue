@@ -4,7 +4,7 @@
            style="min-height: 200px;background: #FFFFFF;"
     >
       <a-col :span="24">
-        <a-row type="flex" justify="space-around" align="middle">
+        <a-row align="middle" justify="space-around" type="flex">
           <a-col :lg="{span: 10, offset: 2}" class="r-page-padding">
             <h1 class="r-heading">
               <span class="r-text-secondary">Frequently Asked Questions</span>
@@ -26,19 +26,19 @@
     </a-row>
     <a-row>
       <a-col :lg="{span: 12}">
-        <a-row style="background: #FFFFFF; border-radius: 0 12px 12px 0;overflow: hidden;margin-top: 48px;"
-               type="flex"
-               justify="space-around" align="middle"
+        <a-row align="middle"
+               justify="space-around"
+               style="background: #FFFFFF; border-radius: 0 12px 12px 0;overflow: hidden;margin-top: 48px;" type="flex"
         >
           <a-col :lg="{span: 20 , offset: 4}" class="r-page-padding">
-            <div style="margin-bottom: 24px;" v-for="(faqSection, fs) in sections" :key="fs+1">
+            <div v-for="(faqSection, fs) in sections" :key="fs+1" style="margin-bottom: 24px;">
               <h2 class="r-heading r-text-secondary">
                 {{ faqSection.name }}
               </h2>
-              <a-collapse accordion :expandIconPosition="'right'" bordered="false"
-                          v-for="(faq, f) in faqSection.faqs" :key="f" :defaultActiveKey="fs+1"
+              <a-collapse v-for="(faq, f) in faqSection.faqs" :key="f" :defaultActiveKey="fs+1"
+                          :expandIconPosition="'right'" accordion bordered="false"
               >
-                <a-collapse-panel :header="faq.question" :key="f">
+                <a-collapse-panel :key="f" :header="faq.question">
                   <p v-html="faq.answer"></p>
                 </a-collapse-panel>
               </a-collapse>

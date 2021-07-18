@@ -1,12 +1,12 @@
 <template>
   <a-drawer :class="'r-drawer-' + drawer.current"
             :placement="drawer.placement"
-            @close="onClose"
             :visible="drawer.isVisible"
+            @close="onClose"
   >
-    <div style="margin-right: 45px;" slot="title">
-      <a-row type="flex" justify="start" align="middle">
-        <a-col @click="onClose" :xs="{span: 6}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 6}">
+    <div slot="title" style="margin-right: 45px;">
+      <a-row align="middle" justify="start" type="flex">
+        <a-col :lg="{span: 6}" :md="{span: 6}" :sm="{span: 6}" :xs="{span: 6}" @click="onClose">
           <r-nav-item v-if="drawer.current == 'cart'" class="r-nav-item">
             <r-cart-count></r-cart-count>
           </r-nav-item>
@@ -14,11 +14,11 @@
             <r-logo :is-icon="true"></r-logo>
           </r-nav-item>
         </a-col>
-        <a-col class="r-text-right"
-               :xs="{span: 18}"
-               :sm="{span: 18}"
+        <a-col :lg="{span: 18}"
                :md="{span: 12}"
-               :lg="{span: 18}"
+               :sm="{span: 18}"
+               :xs="{span: 18}"
+               class="r-text-right"
         >
           <r-nav-item class="r-nav-item">
             <h4 class="r-heading">Hi, {{ isLoggedIn ? user.first_name : 'Guest' }}</h4>

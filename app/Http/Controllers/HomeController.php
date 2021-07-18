@@ -41,7 +41,7 @@ class HomeController extends Controller
      */
     public function categories(Request $request)
     {
-        return view('art');
+        return view('stores.root');
     }
 
     /**

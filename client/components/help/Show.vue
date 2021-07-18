@@ -1,5 +1,5 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
+  <a-row align="middle" justify="center" type="flex">
     <a-col :span="24">
       <r-help-list></r-help-list>
     </a-col>

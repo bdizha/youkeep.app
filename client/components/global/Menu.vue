@@ -1,5 +1,5 @@
 <template>
-  <a-row type="flex" justify="start">
+  <a-row justify="start" type="flex">
     <a-col :xs="{ span: 24 }">
       <r-auth-actions></r-auth-actions>
     </a-col>
@@ -15,11 +15,9 @@ export default {
   name: 'r-menu',
   props: {},
   data () {
-    return {
-    }
+    return {}
   },
-  computed: mapGetters({
-  }),
+  computed: mapGetters({}),
   created () {
     this.payload()
   },

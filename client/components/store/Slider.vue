@@ -1,11 +1,11 @@
 <template>
-  <a-row class="r-slider" type="flex" justify="center" align="middle">
-    <a-col class="r-store-slider " :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row align="middle" class="r-slider" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-store-slider ">
       <VueSlickCarousel v-if="category != null && category.stores.length > 0" v-bind="settings">
-        <nuxt-link class="r-text-view-more"
-                   v-for="(store, index) in category.stores"
+        <nuxt-link v-for="(store, index) in category.stores"
                    :key="store.id"
                    :to="store.route"
+                   class="r-text-view-more"
         >
           <r-store-face :store="store"></r-store-face>
         </nuxt-link>

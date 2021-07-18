@@ -1,17 +1,17 @@
 <template>
-  <a-row :gutter="[24,48]" type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row :gutter="[24,48]" align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <r-category-slider></r-category-slider>
     </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <div class="r-grey-shadow">
-        <r-category-list v-if="hasCategories" :is-flush="true" :columns="6" :limit="12"></r-category-list>
+        <r-category-list v-if="hasCategories" :columns="6" :is-flush="true" :limit="12"></r-category-list>
       </div>
     </a-col>
   </a-row>

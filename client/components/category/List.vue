@@ -1,21 +1,22 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-spin-holder r-categories">
       <a-collapse v-if="hasCategories"
-                  accordion
                   :defaultActiveKey="1"
-                  expandIconPosition="right">
-        <a-collapse-panel class="r-collapse-panel"
-                          v-for="(category, index) in categories"
+                  accordion
+                  expandIconPosition="right"
+      >
+        <a-collapse-panel v-for="(category, index) in categories"
                           v-if="index < limit"
                           :key="index.toString()"
                           :columns="columns"
                           :header="category.name"
+                          class="r-collapse-panel"
         >
-          <r-category-item :isVertical="isVertical"
+          <r-category-item :category="category"
                            :columns="columns"
                            :is-flush="isFlush"
-                           :category="category"
+                           :isVertical="isVertical"
           ></r-category-item>
         </a-collapse-panel>
       </a-collapse>

@@ -136,6 +136,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::get('/store/{store}/category/{slug}/{level}', 'CategoryController@store')->name('store.category.show');
     Route::post('/store/{store}/category/{slug}/{level}', 'CategoryController@store')->name('store.category.show.post');
     Route::post('/category/{slug}', 'CategoryController@show')->name('category.show.post');
+    Route::post('/store/catalog/map', 'StoreController@catalogMap')->name('store.catalog.map');
 
     Route::get('/category/{slug}/{level}', 'CategoryController@show')->name('category.show.level');
     Route::post('/category/{slug}/{level}', 'CategoryController@show')->name('category.show.level.post');

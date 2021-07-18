@@ -1,15 +1,15 @@
 <template>
-  <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
-    <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-      <a-checkbox-group :class="{'r-filter-color': filter.type == 2}"
-                        v-model="selected"
+  <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+    <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
+      <a-checkbox-group v-model="selected"
+                        :class="{'r-filter-color': filter.type == 2}"
                         @change="onFilter"
       >
-        <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
+        <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
           <a-col v-for="(item, index) in filter.items"
                  v-if="index < counter"
                  :key="filter.id"
-                 :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24 / filter.per_row }" :lg="{span: 24 / filter.per_row}"
+                 :lg="{span: 24 / filter.per_row}" :md="{span: 24 / filter.per_row }" :sm="{span: 24}" :xs="{span: 24}"
           >
             <a-tooltip placement="top">
               <template slot="title">
@@ -25,30 +25,30 @@
         </a-row>
       </a-checkbox-group>
     </a-col>
-    <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-      <a-row :gutter="[12, 12]" type="flex" justify="start" align="middle">
-        <a-col v-if="counter < filter.items.length" :xs="{ span: 12 }" :sm="{ span: limit < counter ? 12 : 24 }"
-               :lg="{ span: limit < counter ? 12 : 24 }"
+    <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
+      <a-row :gutter="[12, 12]" align="middle" justify="start" type="flex">
+        <a-col v-if="counter < filter.items.length" :lg="{ span: limit < counter ? 12 : 24 }" :sm="{ span: limit < counter ? 12 : 24 }"
+               :xs="{ span: 12 }"
         >
           <a-button
             block
-            @click="onIncrement"
             class="r-btn-bordered-secondary"
-            size="large"
             icon="plus-circle"
+            size="large"
             type="secondary"
+            @click="onIncrement"
           >
             More
           </a-button>
         </a-col>
-        <a-col v-if="limit < counter" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
+        <a-col v-if="limit < counter" :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
           <a-button
             block
-            @click="onDecrement"
             class="r-btn-bordered-primary"
-            size="large"
             icon="minus-circle"
+            size="large"
             type="secondary"
+            @click="onDecrement"
           >
             Less
           </a-button>
@@ -58,7 +58,7 @@
   </a-row>
 </template>
 <script>
-import { mapGetters, mapState } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-category-filter-item',

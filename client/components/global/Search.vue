@@ -1,11 +1,11 @@
 <template>
   <div class="r-search-wrapper" style="width: 100%">
     <a-auto-complete
+      :placeholder="placeholder"
       class="r-search"
+      option-label-prop="title"
       size="large"
       style="width: 100%"
-      :placeholder="placeholder"
-      option-label-prop="title"
       @search="handleSearch"
     >
       <template slot="dataSource">
@@ -13,10 +13,10 @@
                          :key="item.route"
                          :title="item.title"
         >
-          <nuxt-link class="r-text-link" :to="item.route">
+          <nuxt-link :to="item.route" class="r-text-link">
             <div class="r-search-item-avatar">
-              <a-avatar class="r-lazy" shape="circle" :size="36"
-                        :src="item.photo"
+              <a-avatar :size="36" :src="item.photo" class="r-lazy"
+                        shape="circle"
                         src-placeholder="/assets/icon_default.png"
               />
             </div>
@@ -31,9 +31,9 @@
       <a-input>
         <a-button
           slot="suffix"
-          style="margin-right: -12px"
-          class="r-btn-secondary"
           :size="size"
+          class="r-btn-secondary"
+          style="margin-right: -12px"
           type="secondary"
         >
           <a-icon type="search"/>

@@ -60,6 +60,31 @@ class StoreController extends Controller
         ], 200);
     }
 
+    /**
+     * Find  banners
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function catalogMap(Request $request)
+    {
+        $response = [];
+        $this->limit = $request->get('limit', 24);
+
+        $key = $this->_setParams($request);
+
+        if (Cache::has($key) && false) {
+            $response = Cache::get($key, []);
+        } else {
+            $this->_setCatalogMap();
+            $response['catalog_map'] = $this->catalogMap;
+
+            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
+        }
+
+        return response()->json($response, 200);
+    }
+
     public function search(Request $request)
     {
         $term = $request->get('term', 24);

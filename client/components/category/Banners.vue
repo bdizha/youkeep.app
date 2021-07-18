@@ -1,18 +1,19 @@
 <template>
-  <a-row class="r-banner-flush" type="flex" justify="start"
+  <a-row class="r-banner-flush" justify="start" type="flex"
   >
-    <a-col class="r-spin-holder" :span="24">
+    <a-col :span="24" class="r-spin-holder">
       <div v-if="hasBanners" class="r-slider">
         <VueSlickCarousel v-bind="settings">
           <a-card v-for="(banner, index) in banners" :key="index"
-                  hoverable class="r-banner">
+                  class="r-banner" hoverable
+          >
             <div slot="cover">
               <nuxt-link :to="banner.route"
                          style="display: block; width: 100%;"
               >
-                <r-avatar shape="square"
+                <r-avatar :dataSrc="banner.photo_url"
                           :size="size"
-                          :dataSrc="banner.photo_url"
+                          shape="square"
                 />
               </nuxt-link>
             </div>

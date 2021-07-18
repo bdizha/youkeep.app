@@ -2,8 +2,8 @@
   <div class="r-product-cards">
     <VueSlickCarousel v-if="hasData" v-bind="settings">
       <r-product-item v-for="(product, index) in products.data"
-                      :isVertical="false"
                       :key="index"
+                      :isVertical="false"
                       :product="product"
       ></r-product-item>
       <template #prevArrow="arrowOption">

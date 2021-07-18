@@ -3,8 +3,8 @@
     <a-col :span="24">
       <r-category-header :category="category" :store="store"></r-category-header>
       <a-row :gutter="0" class="r-product-cards">
-        <a-col class="r-spin-holder" :span="24">
-          <r-product-items v-if="hasData" :columns="columns" :category="category"></r-product-items>
+        <a-col :span="24" class="r-spin-holder">
+          <r-product-items v-if="hasData" :category="category" :columns="columns"></r-product-items>
         </a-col>
       </a-row>
     </a-col>

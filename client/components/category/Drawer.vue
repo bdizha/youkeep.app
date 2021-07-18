@@ -1,7 +1,7 @@
 <template>
   <r-drawer-template
-    placement="left"
     current="category-menu"
+    placement="left"
   >
     <r-category-menu></r-category-menu>
   </r-drawer-template>

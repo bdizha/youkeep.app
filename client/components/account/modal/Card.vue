@@ -1,13 +1,13 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
                     :current="formName"
+                    :mask-closable="maskClosable"
                     style="position: relative;"
   >
     <r-notice process="isSuccess"></r-notice>
-    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
-    <a-row v-show="hasForm" type="flex" justify="center">
-      <a-col class="r-text-left" :xs="{ span: 24 }">
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
+    <a-row v-show="hasForm" justify="center" type="flex">
+      <a-col :xs="{ span: 24 }" class="r-text-left">
         <h3 class="r-heading">
           {{ hasCard ? 'Edit' : 'Add' }}
           payment card
@@ -18,58 +18,58 @@
       </a-col>
     </a-row>
     <a-form v-show="hasForm"
+            :form="form"
             class="ant-form ant-form-vertical"
             @submit="onPost"
-            :form="form"
     >
-      <a-row :gutter="24" type="flex" justify="center">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+      <a-row :gutter="24" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <a-form-item label="Card number">
-            <a-input type="text"
-                     size="large"
+            <a-input v-decorator="['card_number', { rules: [{ required: true, message: 'Please enter card number' }] }]"
                      placeholder="1234 1234 1234 1234"
-                     v-decorator="['card_number', { rules: [{ required: true, message: 'Please enter card number' }] }]"
+                     size="large"
+                     type="text"
             >
               <a-icon slot="prefix" type="lock"/>
             </a-input>
           </a-form-item>
         </a-col>
-        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
           <a-form-item label="Expiration">
-            <a-input type="text"
-                     size="large"
+            <a-input v-decorator="['expire_at', { rules: [{ required: true, message: 'Please enter expiration' }] }]"
                      placeholder="MM / YY"
-                     v-decorator="['expire_at', { rules: [{ required: true, message: 'Please enter expiration' }] }]"
+                     size="large"
+                     type="text"
             >
               <a-icon slot="prefix" type="clock-circle"/>
             </a-input>
           </a-form-item>
         </a-col>
-        <a-col :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
           <a-form-item label="CVC">
-            <a-input type="text"
-                     size="large"
+            <a-input v-decorator="['cvc', { rules: [{ required: true, message: 'Please enter CVC' }] }]"
                      placeholder="CVC"
-                     v-decorator="['cvc', { rules: [{ required: true, message: 'Please enter CVC' }] }]"
+                     size="large"
+                     type="text"
             >
             </a-input>
           </a-form-item>
         </a-col>
       </a-row>
       <a-form-item class="r-mt-48">
-        <a-row :gutter="24" type="flex" justify="center">
-          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+        <a-row :gutter="24" justify="center" type="flex">
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+                 class="r-text-left"
           >
-            <a-button block @click="onReturn" size="large" class="r-btn-bordered-grey">
+            <a-button block class="r-btn-bordered-grey" size="large" @click="onReturn">
               Back
             </a-button>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+                 class="r-text-left"
           >
-            <a-button block @click="onPost" size="large" type="secondary" html-type="submit"
-                      class="r-btn-secondary"
+            <a-button block class="r-btn-secondary" html-type="submit" size="large" type="secondary"
+                      @click="onPost"
             >
               Save
             </a-button>
@@ -86,14 +86,14 @@ export default {
   name: 'r-account-card',
   props: {
     maskClosable: { type: Boolean, required: false, default: false },
-    closable: { type: Boolean, required: false, default: false },
+    closable: { type: Boolean, required: false, default: false }
   },
   data () {
     return {
       fields: ['card_number', 'expire_at', 'csv'],
       form: this.$form.createForm(this, { name: 'form_account_card' }),
       formName: 'account-card',
-      message: null,
+      message: null
     }
   },
   computed: mapGetters({
@@ -104,7 +104,7 @@ export default {
     hasCard: 'card/hasCard',
     processes: 'base/processes',
     hasForm: 'base/hasForm',
-    isValid: 'form/isValid',
+    isValid: 'form/isValid'
   }),
   created () {
   },

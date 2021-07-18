@@ -1,37 +1,35 @@
 <template>
-  <r-account>
-    <a-row type="flex" justify="center" align="middle">
-      <a-col class="gutter-row" :xs="{ span: 24 }"
-             :sm="{ span: 24 }" :lg="{ span: 24 }"
-      >
-        <a-card title="YOUR ORDERS" style="width: 100%;">
+  <a-row align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }" class="gutter-row"
+    >
+      <a-card style="width: 100%;" title="YOUR ORDERS">
                     <span class="r-text-small">
                         Here you can manage all your orders.
                     </span>
-        </a-card>
-        <a-table bordered :dataSource="data" :columns="columns">
-          <template slot="action" slot-scope="text, record">
-            <a-row :gutter="24" type="flex" justify="center" align="middle">
-              <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-                <nuxt-link to="/account/order/A-52062240">
-                  <a-button block size="small" class="r-btn-bordered-primary" type="secondary">
-                    Order
-                  </a-button>
-                </nuxt-link>
-              </a-col>
-              <a-col :xs="{span: 12}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-                <nuxt-link to="/account/order/A-52062240/invoice">
-                  <a-button block size="small" type="secondary" class="r-btn-bordered-secondary">
-                    Invoice
-                  </a-button>
-                </nuxt-link>
-              </a-col>
-            </a-row>
-          </template>
-        </a-table>
-      </a-col>
-    </a-row>
-  </r-account>
+      </a-card>
+      <a-table :columns="columns" :dataSource="data" bordered>
+        <template slot="action" slot-scope="text, record">
+          <a-row :gutter="24" align="middle" justify="center" type="flex">
+            <a-col :lg="{span: 12}" :md="{span: 12}" :sm="{span: 12}" :xs="{span: 12}">
+              <nuxt-link to="/account/order/A-52062240">
+                <a-button block class="r-btn-bordered-primary" size="small" type="secondary">
+                  Order
+                </a-button>
+              </nuxt-link>
+            </a-col>
+            <a-col :lg="{span: 12}" :md="{span: 12}" :sm="{span: 12}" :xs="{span: 12}">
+              <nuxt-link to="/account/order/A-52062240/invoice">
+                <a-button block class="r-btn-bordered-secondary" size="small" type="secondary">
+                  Invoice
+                </a-button>
+              </nuxt-link>
+            </a-col>
+          </a-row>
+        </template>
+      </a-table>
+    </a-col>
+  </a-row>
 </template>
 <script>
 const columns = [
@@ -42,7 +40,6 @@ const columns = [
   { title: 'Total Cost', dataIndex: 'total_cost', key: 'total_cost' },
   { title: 'View', dataIndex: '', key: 'x', scopedSlots: { customRender: 'action' } },
 ]
-
 const data = [
   {
     timelime: 1,
@@ -66,8 +63,8 @@ const data = [
     total_cost: 'R 2 360.00',
   },
 ]
-
 export default {
+  name: 'r-account-order-list',
   components: {},
   data () {
     return {
@@ -115,10 +112,11 @@ export default {
       this.dataSource = [...dataSource, newData]
       this.count = count + 1
     },
-  },
+  }
 }
 </script>
 <style>
+
 .editable-cell {
   position: relative;
 }

@@ -1,28 +1,28 @@
 <template>
   <div class="r-store-face">
     <r-store-photos v-if="false" :store="store"></r-store-photos>
-    <a-row :gutter="[12, 12]" type="flex" justify="center" align="middle">
-      <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-        <a-card class="r-bg-primary-light" :style="getPhotoCoverStyle()">
-        <a-card-meta>
-          <template slot="description">
-            <div class="r-store-avatar">
-              <r-store-rate v-if="false" :store="store"></r-store-rate>
-              <r-store-photo slot="cover" :store="store"></r-store-photo>
-            </div>
-          </template>
-        </a-card-meta>
+    <a-row :gutter="[12, 12]" align="middle" justify="center" type="flex">
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-text-center">
+        <a-card :style="getPhotoCoverStyle()" class="r-bg-primary-light">
+          <a-card-meta>
+            <template slot="description">
+              <div class="r-store-avatar">
+                <r-store-rate v-if="false" :store="store"></r-store-rate>
+                <r-store-photo slot="cover" :store="store"></r-store-photo>
+              </div>
+            </template>
+          </a-card-meta>
         </a-card>
       </a-col>
-      <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-text-center">
         <r-store-meta :store="store"></r-store-meta>
       </a-col>
-      <a-col v-if="false" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <a-col v-if="false" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <a-button
           block
           class="r-btn-primary"
-          size="large"
           icon="check-circle"
+          size="large"
           type="secondary"
         >
           Follow

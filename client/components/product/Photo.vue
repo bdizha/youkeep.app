@@ -1,7 +1,7 @@
 <template>
-  <r-avatar shape="square"
-            :size="size"
+  <r-avatar :size="size"
             :src="product.thumbnail_url"
+            shape="square"
   />
 </template>
 <script>

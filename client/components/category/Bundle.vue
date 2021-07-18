@@ -1,17 +1,17 @@
 <template>
-  <nuxt-link class="r-text-primary" :to="category.route">
-    <a-row class="r-text-center" type="flex" justify="center" align="middle">
+  <nuxt-link :to="category.route" class="r-text-primary">
+    <a-row align="middle" class="r-text-center" justify="center" type="flex">
       <a-col v-if="hasCard" :span="24">
         <a-card class="r-card-category r-spin-holder" hoverable>
           <a-card-meta>
             <template slot="description">
-              <r-category-photos :size="81" :category="category"></r-category-photos>
+              <r-category-photos :category="category" :size="81"></r-category-photos>
             </template>
           </a-card-meta>
         </a-card>
       </a-col>
       <a-col v-if="!hasCard" :span="24">
-        <r-category-photos :size="75" :category="category"></r-category-photos>
+        <r-category-photos :category="category" :size="75"></r-category-photos>
       </a-col>
     </a-row>
   </nuxt-link>

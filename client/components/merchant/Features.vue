@@ -1,14 +1,14 @@
 <template>
   <div class="r-mt-48 r-text-left">
-    <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-      <a-col class="r-text-center" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-          <a-col class="r-text-center" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+    <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}" class="r-text-center">
+        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}" class="r-text-center">
             <h2 class="r-heading">
               Elevate your shopping experience
             </h2>
           </a-col>
-          <a-col class="r-text-center" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}" class="r-text-center">
             <p class="r-text-normal">
               Partner with us to introduce "Delayed Payments" service to your customers and multiply sales.
             </p>
@@ -17,32 +17,32 @@
       </a-col>
       <a-col v-for="(feature, index) in features"
              :key="index"
-             :xs="{ span: 24 }" :sm="{ span: 12 }" :md="{ span: 8 }" :lg="{ span: 8 }"
+             :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 24 }"
       >
         <a-card class="r-card-secondary">
           <a-card-meta>
             <template slot="description">
-              <r-circles theme="secondary" align="top"></r-circles>
-              <r-circles theme="secondary" align="bottom"></r-circles>
-              <a-row class="r-text-center" :gutter="[24,24]" type="flex" justify="center"
-                     align="middle"
+              <r-circles align="top" theme="secondary"></r-circles>
+              <r-circles align="bottom" theme="secondary"></r-circles>
+              <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="center"
+                     type="flex"
               >
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{span: 24}">
+                <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <div class="r-icon r-icon-secondary">
                     <a-icon :type="feature.icon"/>
                   </div>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{span: 24}">
+                <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <h4 class="r-heading-light  r-text-secondary r-text-uppercase">
                     {{ feature.heading }}
                   </h4>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{span: 24}">
+                <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <h3 class="r-heading">
                     {{ feature.title }}
                   </h3>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{span: 24}">
+                <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-center">
                     {{ feature.content }}
                   </p>

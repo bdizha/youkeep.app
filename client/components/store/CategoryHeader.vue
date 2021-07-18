@@ -1,28 +1,28 @@
 <template>
-  <a-row :gutter="[24,24]" class="r-mb-24" type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
-           :lg="{ span: 20 }"
+  <a-row :gutter="[24,24]" align="middle" class="r-mb-24" justify="start" type="flex">
+    <a-col :lg="{ span: 20 }" :md="{ span: 20 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <h3 class="r-heading">
         {{ category.name }}
       </h3>
     </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
-           :lg="{ span: 4 }"
+    <a-col :lg="{ span: 4 }" :md="{ span: 4 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <template v-if="isLast">
-        <nuxt-link class="r-same-height r-text-view-more"
-                   :to="category.route"
+        <nuxt-link :to="category.route"
+                   class="r-same-height r-text-view-more"
         >
-          <a-button class="r-hide-sm r-btn-bordered-secondary"
+          <a-button :size="size"
                     block
+                    class="r-hide-sm r-btn-bordered-secondary"
                     type="secondary"
-                    :size="size"
           >
             See all
             <a-icon type="right"/>
           </a-button>
-          <a-avatar class="r-hide-lg" shape="square" icon="right"/>
+          <a-avatar class="r-hide-lg" icon="right" shape="square"/>
         </nuxt-link>
       </template>
       <template v-if="!isLast">

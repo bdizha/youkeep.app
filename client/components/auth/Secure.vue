@@ -1,19 +1,19 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
                     :current="formName"
+                    :mask-closable="maskClosable"
                     style="position: relative;"
   >
     <a-form v-if="hasForm"
+            :form="form"
             class="ant-form ant-form-vertical"
             @submit="onPost"
-            :form="form"
     >
       <a-row>
         <a-col :xs="{ span: 24 }">
           <a-form-item>
-            <a-row type="flex" justify="center">
-              <a-col class="r-text-left" :xs="{ span: 24 }">
+            <a-row justify="center" type="flex">
+              <a-col :xs="{ span: 24 }" class="r-text-left">
                 <h3 v-if="user" class="r-heading ">
                   <span class="r-text-secondary">Welcome, </span>{{ user.name }}!
                 </h3>
@@ -24,26 +24,26 @@
             </a-row>
           </a-form-item>
           <a-form-item label="Account password">
-            <a-input type="password"
-                     size="large"
+            <a-input v-decorator="['password', { rules: [{ required: true, message: 'Please enter your account password' }] }]"
                      placeholder="Your account password"
-                     v-decorator="['password', { rules: [{ required: true, message: 'Please enter your account password' }] }]"
+                     size="large"
+                     type="password"
             >
               <a-icon slot="prefix" type="lock"/>
             </a-input>
           </a-form-item>
           <a-form-item label="Confirm password">
-            <a-input type="password"
-                     size="large"
+            <a-input v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm account password' }] }]"
                      placeholder="Confirm password"
-                     v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm account password' }] }]"
+                     size="large"
+                     type="password"
             >
               <a-icon slot="prefix" type="lock"/>
             </a-input>
           </a-form-item>
           <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button block size="large" type="secondary" html-type="submit"
-                      class="r-btn-secondary"
+            <a-button block class="r-btn-secondary" html-type="submit" size="large"
+                      type="secondary"
             >
               Secure me
             </a-button>
@@ -52,7 +52,7 @@
       </a-row>
     </a-form>
     <r-notice :process="process"></r-notice>
-    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
   </r-modal-template>
 </template>
 <script>

@@ -27,6 +27,7 @@ export default {
   },
   methods: {
     async payload () {
+      await this.$store.dispatch('base/onIsStore', false)
     }
   }
 }

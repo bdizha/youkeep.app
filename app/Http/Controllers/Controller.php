@@ -51,7 +51,8 @@ class Controller extends BaseController
         $limit = 24,
         $level = 1,
         $items = [],
-        $item = null;
+        $item = null,
+        $catalogMap = null;
 
 
     /**
@@ -208,6 +209,89 @@ class Controller extends BaseController
         $this->banners = $categoryBannerQuery
             ->get()
             ->toArray();
+    }
+
+    /**
+     * Get catalog mapping
+     **/
+    protected function _setCatalogMap($parent = null): void
+    {
+        $this->_setCatalogMapFrom();
+
+        $this->_setCatalogMapTo();
+    }
+
+    /**
+     * Get catalog mapping
+     **/
+    protected function _setCatalogMapFrom($parent = null): void
+    {
+        $storeCategoryQuery = StoreCategory::orderBy($this->orderBy, 'DESC')
+            ->where('store_id', 24);
+
+        if(!empty($parent->id)){
+            $storeCategoryQuery->where('parent_id', $parent->id);
+        }
+        else{
+            $storeCategoryQuery->where('level', 1);
+        }
+
+        $index = 'from';
+        $ownerCategories = $storeCategoryQuery
+            ->get();
+
+        foreach ($ownerCategories as $ownerCategory) {
+            $this->_processMapCategory($ownerCategory, $parent, $index);
+
+            $this->_setCatalogMapFrom($ownerCategory);
+        }
+    }
+
+    /**
+     * Get catalog mapping
+     **/
+    protected function _setCatalogMapTo($parent = null): void
+    {
+        $storeCategoryQuery = StoreCategory::orderBy($this->orderBy, 'DESC')
+            ->where('store_id', $this->storeId);
+
+        if(!empty($parent->id)){
+            $storeCategoryQuery->where('parent_id', $parent->id);
+        }
+        else{
+            $storeCategoryQuery->where('level', 1);
+        }
+
+        $index = 'to';
+        $ownerCategories = $storeCategoryQuery
+            ->get();
+
+        if(!empty($parent->id)){
+            $storeCategoryQuery->where('parent_id', $parent->id);
+        }
+
+        foreach ($ownerCategories as $ownerCategory) {
+            $this->_processMapCategory($ownerCategory, $parent, $index);
+            $this->_setCatalogMapTo($ownerCategory);
+        }
+    }
+
+    /**
+     * @param $ownerCategory
+     * @param $parent
+     * @param $index
+     */
+    protected function _processMapCategory(&$ownerCategory, $parent, $index = 'from'): void
+    {
+        $name = $ownerCategory->category->name;
+
+        $ownerCategory->title = !empty($parent->id) ? $parent->title . " > " . $name : $name;
+        $category = [
+            'title' => $ownerCategory->title,
+            'id' => $ownerCategory->id,
+        ];
+
+        $this->catalogMap[$index][] = $category;
     }
 
     /**
@@ -419,5 +503,22 @@ class Controller extends BaseController
         $this->stores = $query
             ->orderBy('created_at', 'DESC')
             ->paginate($this->limit);
+    }
+
+    /**
+     * @param Request $request
+     * @return string
+     */
+    protected function _setParams(Request $request): string
+    {
+        $this->orderBy = $request->get('order_by', 'randomized_at');
+        $this->with = $request->get('with', []);
+        $this->hasBanners = $request->get('has_banners', false);
+        $this->categoryType = $request->get('type', 2);
+        $this->categoryId = $request->get('category_id', null);
+        $this->storeId = $request->get('store_id', null);
+        $this->storeSlug = $request->get('store', null);
+        $key = $this->_setCacheKey($request);
+        return $key;
     }
 }

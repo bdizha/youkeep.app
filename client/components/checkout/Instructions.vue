@@ -1,19 +1,19 @@
 <template>
-  <a-row :gutter="24" type="flex"
-         justify="center"
+  <a-row :gutter="24" justify="center"
+         type="flex"
   >
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :lg="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
-      <a-form class="ant-form ant-form-vertical"
+      <a-form :form="form"
+              class="ant-form ant-form-vertical"
               @submit="onStep"
-              :form="form"
       >
         <a-form-item label="Notes">
-          <a-input type="textarea"
-                   size="large"
+          <a-input v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]"
                    placeholder="Your delivery instructions"
-                   v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]"
+                   size="large"
+                   type="textarea"
           >
           </a-input>
         </a-form-item>
@@ -22,27 +22,27 @@
           order after it has been delivered unattended, including any loss due
           to theft or damage due to temperature sensitivity.
         </a-form-item>
-        <a-row class="r-mv-24" :gutter="24" type="flex"
-               justify="start"
+        <a-row :gutter="24" class="r-mv-24" justify="start"
+               type="flex"
         >
-          <a-col class="r-text-left" :xs="{ span: 12 }"
+          <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
                  :sm="{ span: 12 }"
-                 :md="{ span: 18 }" :lg="{ span: 18 }"
+                 :xs="{ span: 12 }" class="r-text-left"
           >
-            <a-button size="large"
-                      type="secondary"
+            <a-button class="r-btn-bordered-secondary"
                       html-type="button"
-                      class="r-btn-bordered-secondary"
+                      size="large"
+                      type="secondary"
             >
               Skip
             </a-button>
           </a-col>
-          <a-col class="r-text-right" :xs="{ span: 12 }"
+          <a-col :lg="{ span: 6 }" :md="{ span: 6 }"
                  :sm="{ span: 12 }"
-                 :md="{ span: 6 }" :lg="{ span: 6 }"
+                 :xs="{ span: 12 }" class="r-text-right"
           >
-            <a-button block type="secondary" html-type="submit"
-                      class="r-btn-secondary"
+            <a-button block class="r-btn-secondary" html-type="submit"
+                      type="secondary"
             >
               Proceed
             </a-button>

@@ -1,16 +1,16 @@
 <template>
-  <a-row :gutter="24" v-if="cart.count > 0" type="flex"
-         justify="center"
+  <a-row v-if="cart.count > 0" :gutter="24" justify="center"
+         type="flex"
   >
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :lg="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
-      <a-table bordered
+      <a-table :columns="columns"
+               :dataSource="cart.summary"
+               :hoverable="false"
                :pagination="false"
                :show-header="false"
-               :hoverable="false"
-               :columns="columns"
-               :dataSource="cart.summary"
+               bordered
       />
     </a-col>
   </a-row>

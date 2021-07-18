@@ -1,19 +1,19 @@
 <template>
-  <a-row :class="{'r-is-empty': false}" type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row :class="{'r-is-empty': false}" align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-category-header :category="category"
                          :columns="columns"
-                         :is-showing="isShowing"
                          :has-product="hasProduct"
+                         :is-showing="isShowing"
                          :store="store"
       ></r-category-header>
-      <a-row type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <a-row align="middle" justify="start" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <r-category-products
-            :isVertical="isVertical"
-            :is-flush="isFlush"
-            :columns="columns"
             :category="category"
+            :columns="columns"
+            :is-flush="isFlush"
+            :isVertical="isVertical"
           ></r-category-products>
         </a-col>
       </a-row>

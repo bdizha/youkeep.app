@@ -1,10 +1,10 @@
 <template>
-  <a-row class="r-store-categories" type="flex" justify="start" :gutter="0">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row :gutter="0" class="r-store-categories" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-store-category v-for="(category, index) in category.categories"
                         :key="index + 1"
-                        :columns="columns"
                         :category="category"
+                        :columns="columns"
       >
       </r-store-category>
     </a-col>

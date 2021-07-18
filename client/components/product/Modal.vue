@@ -1,28 +1,28 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
                     :current="modal"
+                    :mask-closable="maskClosable"
   >
-    <a-row :gutter="[12,12]" type="flex" justify="center" align="middle">
-      <a-col v-if="hasItem" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-row :gutter="[12,12]" align="middle" justify="center" type="flex">
+      <a-col v-if="hasItem" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <h4 class="r-heading">
           {{ productItem.product.name }}
         </h4>
       </a-col>
-      <a-col v-if="hasItem" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <a-col v-if="hasItem" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <r-product-price :product="productItem.product"></r-product-price>
       </a-col>
-      <a-col v-if="hasItem" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <a-col v-if="hasItem" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <h4 class="r-heading-light">
           Choose your product options below:
         </h4>
       </a-col>
-      <a-col class="r-product-modal" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-        <a-collapse accordion :defaultActiveKey="1" expandIconPosition="right">
-          <a-collapse-panel class="r-collapse-panel"
-                            v-for="(productType, index) in productItem.product.types"
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-product-modal">
+        <a-collapse :defaultActiveKey="1" accordion expandIconPosition="right">
+          <a-collapse-panel v-for="(productType, index) in productItem.product.types"
                             v-if="productType.is_required"
                             :key="index.toString()"
+                            class="r-collapse-panel"
           >
             <template slot="header">
               <span>{{ productType.name + ': ' }}</span>
@@ -36,22 +36,22 @@
                 <span class="r-text-normal">(selected)</span>
               </template>
             </template>
-            <r-product-options :product-item="productItem"
-                               :product="product"
+            <r-product-options :product="product"
+                               :product-item="productItem"
                                :product-type="productType"
             ></r-product-options>
           </a-collapse-panel>
         </a-collapse>
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-        <r-product-actions :is-showing="false"
-                           :has-add-to-cart="true"
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+        <r-product-actions :has-add-to-cart="true"
+                           :is-showing="false"
                            :item-key="productItem.key"
                            :product="product"
         ></r-product-actions>
       </a-col>
     </a-row>
-    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
   </r-modal-template>
 </template>
 <script>

@@ -1,13 +1,13 @@
 <template>
-  <a-row class="r-store-arrows" type="flex" justify="center" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row align="middle" class="r-store-arrows" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <div v-if="hasStores" :class="padding" class="r-slider">
         <VueSlickCarousel v-bind="settings">
-          <nuxt-link class="r-store-arrow sdaDS"
-                     v-for="(store, index) in stores.data"
+          <nuxt-link v-for="(store, index) in stores.data"
                      v-if="store"
                      :key="store.id"
                      :to="store.route"
+                     class="r-store-arrow sdaDS"
           >
             <r-store-face :store="store"></r-store-face>
           </nuxt-link>

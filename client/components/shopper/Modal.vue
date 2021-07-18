@@ -1,8 +1,8 @@
 <template>
-  <r-modal-template :css-class="'r-modal-shopper'"
-                    :mask-closable="true"
-                    :closable="true"
+  <r-modal-template :closable="true"
+                    :css-class="'r-modal-shopper'"
                     :current="current"
+                    :mask-closable="true"
   >
     <r-shopper-apply></r-shopper-apply>
   </r-modal-template>

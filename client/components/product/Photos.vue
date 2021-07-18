@@ -6,9 +6,9 @@
            :product="product"
            class="ant-avatar ant-avatar-square ant-avatar-image"
       >
-        <r-avatar class="r-avatar-block" shape="square"
-                  :size="600"
-                  :src="photo.image"
+        <r-avatar :size="600" :src="photo.image"
+                  class="r-avatar-block"
+                  shape="square"
         />
       </div>
       <template #prevArrow="arrowOption">

@@ -1,34 +1,34 @@
 <template>
   <r-page>
-    <a-row type="flex" justify="center" align="middle">
+    <a-row align="middle" justify="center" type="flex">
       <a-col :span="24">
-        <a-row type="flex" justify="center" align="middle" class="r-art-primary">
-          <a-col :xs="{span: 24}" :sm="{span: 24}" :lg="{span: 12}"
+        <a-row align="middle" class="r-art-primary" justify="center" type="flex">
+          <a-col :lg="{span: 12}" :sm="{span: 24}" :xs="{span: 24}"
                  class="r-mv-48 r-text-center"
           >
-            <a-row type="flex" justify="center" align="middle">
-              <a-col :xs="{span: 24}" :sm="{span: 24}" :lg="{span: 24}">
+            <a-row align="middle" justify="center" type="flex">
+              <a-col :lg="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
                 <h1 class="r-heading r-text-white">
                   {{ position.title }}
                 </h1>
               </a-col>
             </a-row>
-            <a-row type="flex" justify="center" align="middle">
-              <a-col :xs="{span: 8}" :sm="{span: 8}" :lg="{span: 6}">
+            <a-row align="middle" justify="center" type="flex">
+              <a-col :lg="{span: 6}" :sm="{span: 8}" :xs="{span: 8}">
                 <h3 class="r-heading r-text-white">
                   <a-icon type="environment"/>
                   <br>
                   {{ position.city.name }}
                 </h3>
               </a-col>
-              <a-col :xs="{span: 8}" :sm="{span: 8}" :lg="{span: 6}">
+              <a-col :lg="{span: 6}" :sm="{span: 8}" :xs="{span: 8}">
                 <h3 class="r-heading r-text-white">
                   <a-icon type="solution"/>
                   <br>
                   {{ position.type_formatted }}
                 </h3>
               </a-col>
-              <a-col :xs="{span: 8}" :sm="{span: 8}" :lg="{span: 6}">
+              <a-col :lg="{span: 6}" :sm="{span: 8}" :xs="{span: 8}">
                 <h3 class="r-heading r-text-white">
                   <a-icon type="bank"/>
                   <br>
@@ -38,12 +38,12 @@
             </a-row>
           </a-col>
         </a-row>
-        <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48">
+        <a-row align="middle" justify="center" type="flex">
+          <a-col :lg="{span: 12}" :md="{span: 16}" :xs="{span: 24}" class="r-p-48">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
-                <nuxt-link class="r-text-primary"
-                           :to="'/career/openings'"
+                <nuxt-link :to="'/career/openings'"
+                           class="r-text-primary"
                 >
                   Jop openings
                 </nuxt-link>
@@ -56,14 +56,14 @@
             </a-breadcrumb>
           </a-col>
         </a-row>
-        <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-bg-white r-p-48">
-            <a-row class="" type="flex" justify="start" align="middle">
+        <a-row align="middle" justify="center" type="flex">
+          <a-col :lg="{span: 12}" :md="{span: 16}" :xs="{span: 24}" class="r-bg-white r-p-48">
+            <a-row align="middle" class="" justify="start" type="flex">
               <a-col :lg="{span: 24}">
                 <article class="r-article" v-html="position.description"></article>
               </a-col>
             </a-row>
-            <a-row class="r-mt-48" type="flex" justify="start" align="middle">
+            <a-row align="middle" class="r-mt-48" justify="start" type="flex">
               <a-col :lg="{span: 24}" class="">
                 <a :href="'/career/' + position.slug + '/apply'">
                   <a-button size="large" type="secondary">

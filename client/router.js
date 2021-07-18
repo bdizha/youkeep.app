@@ -24,8 +24,8 @@ const routes = [
   { path: '/store/:slug', name: 'store.show', component: page('store/Show.vue'), },
   { path: '/category/:slug', name: 'category.show', component: page('category/Show.vue') },
   { path: '/category/:slug/:level', name: 'category.show.level', component: page('category/Show.vue') },
-  { path: '/product/:slug', name: 'product.show', component: page('store/Product.vue'), },
-  { path: '/category/:category/:level/product/:slug', name: 'category.product.show', component: page('store/Product.vue'), },
+  { path: '/product/:slug', name: 'product.show', component: page('store/Invoice.vue'), },
+  { path: '/category/:category/:level/product/:slug', name: 'category.product.show', component: page('store/Invoice.vue'), },
   { path: '/shopper', name: 'shopper', component: page('shopper/Index.vue') },
   { path: '/shopper/hiw', name: 'shopper-paise', component: page('shopper/Hiw.vue') },
   { path: '/customer', name: 'customer', component: page('customer/Index.vue') },
@@ -54,6 +54,62 @@ const routes = [
       { path: '', redirect: { name: 'settings.profile' } },
       { path: 'profile', name: 'settings.profile', component: page('settings/profile.vue') },
       { path: 'password', name: 'settings.password', component: page('settings/password.vue') }
+    ]
+  },
+  {
+    path: '/account/store',
+    component: page('account/store/Index.vue'),
+    children: [
+      {
+        path: ':slug',
+        redirect: { name: 'account.store.show' },
+        component: page('account/store/Show.vue'),
+        children: [
+          {
+            path: 'catalog-map',
+            name: 'account.store.catalog-map',
+            component: page('account/store/CatalogMap.vue')
+          },
+          {
+            path: 'category',
+            name: 'account.store.category',
+            component: page('account/store/category/Index.vue'),
+            children: [
+              {
+                path: ':category',
+                name: 'account.store.show',
+                component: page('account/store/category/Show.vue'),
+                children: [
+                  {
+                    path: ':product',
+                    name: 'account.store.category',
+                    component: page('account/store/category/Invoice.vue')
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            path: 'orders',
+            name: 'account.store.order',
+            component: page('account/store/order/Index.vue'),
+            children: [
+              {
+                path: ':order',
+                name: 'account.store.order.show',
+                component: page('account/store/order/Show.vue'),
+                children: [
+                  {
+                    path: ':invoice',
+                    name: 'account.store.order.invoice',
+                    component: page('account/store/order/Invoice.vue')
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     ]
   }
 ]

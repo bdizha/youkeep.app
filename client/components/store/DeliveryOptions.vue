@@ -1,5 +1,5 @@
 <template>
-  <a-radio-group :size="size" v-model="deliveryOption">
+  <a-radio-group v-model="deliveryOption" :size="size">
     <a-radio-button :value="1">DELIVERY</a-radio-button>
     <a-radio-button :value="2">PICKUP</a-radio-button>
   </a-radio-group>

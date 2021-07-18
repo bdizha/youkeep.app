@@ -1,23 +1,23 @@
 <template>
-  <a-row :gutter="[24,24]" type="flex" justify="center"
-         align="middle"
+  <a-row :gutter="[24,24]" align="middle" justify="center"
+         type="flex"
   >
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <h1 class="r-heading">
         <span class="r-text-secondary">Get</span> everything your <span class="r-text-primary">heart</span> desires
       </h1>
     </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 12 }"
-           :md="{ span: span }"
-           :lg="{ span: span }"
+    <a-col :lg="{ span: span }" :md="{ span: span }"
+           :sm="{ span: 12 }"
+           :xs="{ span: 24 }"
     >
       <a-button block
+                class="r-btn-secondary"
                 size="large"
                 type="secondary"
-                class="r-btn-secondary"
       >
         <a-icon type="clock-circle"/>
         Coming soon

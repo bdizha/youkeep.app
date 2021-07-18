@@ -1,14 +1,14 @@
 <template>
-  <a-row :gutter="16" type="flex" justify="start" align="middle">
+  <a-row :gutter="16" align="middle" justify="start" type="flex">
     <a-col :span="24">
       <a-list :data-source="links">
-        <a-list-item class="r-list-item" slot="renderItem" slot-scope="item, index">
-          <nuxt-link v-if="item.link" class="r-text-link" :to="item.link">
-            <a-avatar shape="square" :icon="item.icon"/>
+        <a-list-item slot="renderItem" slot-scope="item, index" class="r-list-item">
+          <nuxt-link v-if="item.link" :to="item.link" class="r-text-link">
+            <a-avatar :icon="item.icon" shape="square"/>
             {{ item.label }}
           </nuxt-link>
-          <nuxt-link v-else-if="!item.link" @click.native="onLogout" class="r-text-normal" to="/">
-            <a-avatar shape="square" :icon="item.icon"/>
+          <nuxt-link v-else-if="!item.link" class="r-text-normal" to="/" @click.native="onLogout">
+            <a-avatar :icon="item.icon" shape="square"/>
             {{ item.label }}
           </nuxt-link>
         </a-list-item>
@@ -17,8 +17,8 @@
           </div>
         </template>
       </a-list>
-      <r-spinner :is-absolute="true"
-                 v-if="(processes.isRunning)"
+      <r-spinner v-if="(processes.isRunning)"
+                 :is-absolute="true"
       ></r-spinner>
     </a-col>
   </a-row>
@@ -116,6 +116,6 @@ export default {
 
       this.$store.dispatch('auth/onLogout', payload)
     }
-  },
+  }
 }
 </script>

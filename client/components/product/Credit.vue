@@ -1,8 +1,8 @@
 <template>
-  <a-row type="flex" justify="start" align="top">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row align="top" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <div class="r-credit">
         <template v-if="!product.is_great_value">

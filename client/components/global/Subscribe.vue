@@ -2,9 +2,9 @@
   <a-card class="r-bg-secondary-light">
     <a-card-meta>
       <template slot="description">
-        <a-row class="r-text-center" type="flex" justify="start" align="middle">
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                 :lg="{ span: 24 }"
+        <a-row align="middle" class="r-text-center" justify="start" type="flex">
+          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <div class="r-subscribe-title">
               <h2 class="r-same-height r-heading">
@@ -16,36 +16,36 @@
               By clicking on "Subscribe" you declare your consent to
               the
               advertising
-              emails. <a class="r-text-secondary" target="_blank" href="/privacy">Privacy
+              emails. <a class="r-text-secondary" href="/privacy" target="_blank">Privacy
               statement</a>
             </p>
           </a-col>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" ::md="{ span: 24 }" :lg="{ span: 24 }"
+          <a-col ::md="{ span: 24 }" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                  class="r-text-left"
           >
             <a-form v-if="!hasForm || true"
-                    class="ant-form ant-form-vertical r-form-white"
                     :form="form"
+                    class="ant-form ant-form-vertical r-form-white"
                     @submit="onPost"
             >
-              <a-row type="flex" justify="start" :gutter="[24,24]">
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }" class="r-text-left">
-                  <a-row class="r-mt-24" :gutter="24" type="flex" justify="start" align="middle">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+              <a-row :gutter="[24,24]" justify="start" type="flex">
+                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-text-left">
+                  <a-row :gutter="24" align="middle" class="r-mt-24" justify="start" type="flex">
+                    <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <a-form-item label="First name">
-                        <a-input size="large"
+                        <a-input v-decorator="['full_name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
                                  placeholder="Your full name"
-                                 v-decorator="['full_name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
+                                 size="large"
                         >
                           <a-icon slot="prefix" type="user"/>
                         </a-input>
                       </a-form-item>
                     </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+                    <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <a-form-item label="Email address">
-                        <a-input size="large"
+                        <a-input v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please enter your email address' }] }]"
                                  placeholder="Your email address"
-                                 v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please enter your email address' }] }]"
+                                 size="large"
                         >
                           <a-icon slot="prefix" type="mail"/>
                         </a-input>
@@ -54,16 +54,16 @@
                   </a-row>
                   <a-form-item>
                     <a-radio-group v-model="userType"
-                                   @change="onUserType"
-                                   name="type" :default-value="1"
+                                   :default-value="1"
+                                   name="type" @change="onUserType"
                     >
-                      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                        <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                           <a-radio :value="1">
                             I'm a business
                           </a-radio>
                         </a-col>
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+                        <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                           <a-radio :value="2">
                             I'm a shopper
                           </a-radio>
@@ -73,12 +73,12 @@
                   </a-form-item>
                 </a-col>
               </a-row>
-              <a-row type="flex" justify="end">
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
-                  <a-button block type="secondary"
-                            class="r-btn-secondary"
-                            size="large"
+              <a-row justify="end" type="flex">
+                <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <a-button block class="r-btn-secondary"
                             html-type="submit"
+                            size="large"
+                            type="secondary"
                   >
                     Yes, please
                     <a-icon type="right"/>
@@ -87,7 +87,7 @@
               </a-row>
             </a-form>
             <r-notice process="isSuccess"></r-notice>
-            <r-spinner v-if="false" process="isRunning" :is-absolute="true"></r-spinner>
+            <r-spinner v-if="false" :is-absolute="true" process="isRunning"></r-spinner>
           </a-col>
         </a-row>
       </template>

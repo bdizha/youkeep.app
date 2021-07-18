@@ -1,11 +1,11 @@
 <template>
-  <a-row type="flex" :justify="justify" align="middle">
-    <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: span}">
-      <a-button @click="onModal"
+  <a-row :justify="justify" align="middle" type="flex">
+    <a-col :lg="{span: span}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
+      <a-button :size="size"
                 block
                 class="r-btn-secondary"
                 type="secondary"
-                :size="size"
+                @click="onModal"
       >
         <a-icon type="shop"></a-icon>
         Find your store

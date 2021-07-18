@@ -1,47 +1,47 @@
 <template>
   <a-layout-header class="r-hide-lg r-layout-bottom">
-    <a-row type="flex" justify="space-around">
-      <a-col :xs="{ span: 6 }" :sm="{ span: 6 }"
-             :md="{ span: 6 }"
-             :lg="{ span: 6 }"
+    <a-row justify="space-around" type="flex">
+      <a-col :lg="{ span: 6 }" :md="{ span: 6 }"
+             :sm="{ span: 6 }"
+             :xs="{ span: 6 }"
       >
-        <div @click="onDrawer('store-menu')" class="r-nav-item r-nav-item__menu">
+        <div class="r-nav-item r-nav-item__menu" @click="onDrawer('store-menu')">
           <a-icon style="font-size: 18px;" type="compass"/>
           <span class="r-icon-text">
                                 Explore
                             </span>
         </div>
       </a-col>
-      <a-col :xs="{ span: 6 }"
-             :sm="{ span: 6 }"
+      <a-col :lg="{ span: 6 }"
              :md="{ span: 6 }"
-             :lg="{ span: 6 }"
+             :sm="{ span: 6 }"
+             :xs="{ span: 6 }"
       >
-        <div @click="onDrawer('store-right')" class="r-nav-item r-nav-item__menu">
+        <div class="r-nav-item r-nav-item__menu" @click="onDrawer('store-right')">
           <a-icon style="font-size: 18px;" type="shop"/>
           <span class="r-icon-text">
                                 Stores
                             </span>
         </div>
       </a-col>
-      <a-col :xs="{ span: 6 }"
-             :sm="{ span: 6 }"
+      <a-col :lg="{ span: 6 }"
              :md="{ span: 6 }"
-             :lg="{ span: 6 }"
+             :sm="{ span: 6 }"
+             :xs="{ span: 6 }"
       >
-        <div @click="onDrawer('store-right')" class="r-nav-item r-nav-item__menu">
+        <div class="r-nav-item r-nav-item__menu" @click="onDrawer('store-right')">
           <a-icon style="font-size: 18px;" type="gift"/>
           <span class="r-icon-text">
                                 List
                             </span>
         </div>
       </a-col>
-      <a-col :xs="{ span: 6 }" :sm="{ span: 6 }"
-             :md="{ span: 6 }"
-             :lg="{ span: 6 }"
+      <a-col :lg="{ span: 6 }" :md="{ span: 6 }"
+             :sm="{ span: 6 }"
+             :xs="{ span: 6 }"
       >
-        <div @click="onDrawer('store-account')"
-             class="r-nav-item r-nav-item__menu"
+        <div class="r-nav-item r-nav-item__menu"
+             @click="onDrawer('store-account')"
         >
           <a-icon style="font-size: 18px;" type="bars"/>
           <span class="r-icon-text">

@@ -1,7 +1,7 @@
 <template>
-  <div class="ant-avatar ant-avatar-image"
-       :class="shapeClass()"
+  <div :class="shapeClass()"
        :style="style()"
+       class="ant-avatar ant-avatar-image"
   >
     <img :src="dataSrc"/>
   </div>

@@ -25,7 +25,7 @@ class CategoryController extends Controller
     {
         $level = 1;
         $response = [];
-        $this->limit = $request->get('limit', 6);
+        $this->limit = $request->get('limit', 24);
 
         $this->_setLevel($request, $level);
 
@@ -199,22 +199,5 @@ class CategoryController extends Controller
     {
         $level = $request->get('level', $level);
         $this->level = (integer)$this->_decodeLevel($level);
-    }
-
-    /**
-     * @param Request $request
-     * @return string
-     */
-    protected function _setParams(Request $request): string
-    {
-        $this->orderBy = $request->get('order_by', 'randomized_at');
-        $this->with = $request->get('with', []);
-        $this->hasBanners = $request->get('has_banners', false);
-        $this->categoryType = $request->get('type', 2);
-        $this->categoryId = $request->get('category_id', null);
-        $this->storeId = $request->get('store_id', null);
-        $this->storeSlug = $request->get('store', null);
-        $key = $this->_setCacheKey($request);
-        return $key;
     }
 }

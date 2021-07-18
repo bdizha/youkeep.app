@@ -1,23 +1,23 @@
 <template>
-  <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <a-form v-show="hasForm"
+              :form="form"
               class="ant-form ant-form-vertical"
               @submit="onSubmit"
-              :form="form"
       >
         <a-form-item>
         </a-form-item>
         <a-form-item label="Select a reason">
           <a-select
-            labelInValue
             :defaultValue="categories[0]"
+            labelInValue
             size="large"
-            @change="onCategory"
             style="min-width: 100%;"
+            @change="onCategory"
           >
             <a-select-option v-for="(option, index) in categories"
                              :key="index"
@@ -29,50 +29,50 @@
         </a-form-item>
         <a-form-item label="Name">
           <a-input
-            size="large"
-            placeholder="Your full name"
             v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
+            placeholder="Your full name"
+            size="large"
           >
             <a-icon slot="prefix" type="mail"/>
           </a-input>
         </a-form-item>
         <a-form-item label="Mobile">
           <a-input
-            size="large"
-            placeholder="Your mobile number"
             v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
+            placeholder="Your mobile number"
+            size="large"
           >
             <a-icon slot="prefix" type="mobile"/>
           </a-input>
         </a-form-item>
         <a-form-item label="Email address">
-          <a-input type="email"
-                   size="large"
+          <a-input v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
                    placeholder="Your email address"
-                   v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
+                   size="large"
+                   type="email"
           >
             <a-icon slot="prefix" type="user"/>
           </a-input>
         </a-form-item>
         <a-form-item label="Notes">
-          <a-input type="textarea"
-                   size="large"
+          <a-input v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]"
                    placeholder="Your message"
-                   v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]"
+                   size="large"
+                   type="textarea"
           >
             <a-icon slot="prefix" type="user"/>
           </a-input>
         </a-form-item>
-        <a-row type="flex" justify="center">
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                 :md="{ span: 24 }"
-                 :lg="{ span: 24 }"
+        <a-row justify="center" type="flex">
+          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                 :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-button block
-                      @click="onSubmit" size="large"
+                      class="r-btn-primary" html-type="submit"
+                      size="large"
                       type="primary"
-                      html-type="submit"
-                      class="r-btn-primary"
+                      @click="onSubmit"
             >
               Send
               <a-icon type="right"></a-icon>
@@ -81,7 +81,7 @@
         </a-row>
       </a-form>
       <r-notice :process="current"></r-notice>
-      <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+      <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
     </a-col>
   </a-row>
 </template>

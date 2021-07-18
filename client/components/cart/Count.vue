@@ -1,7 +1,7 @@
 <template>
-  <div @click="onDrawer('cart')"
+  <div :class="{'r-cart__active': cart.count > 0}"
        class="r-cart"
-       :class="{'r-cart__active': cart.count > 0}"
+       @click="onDrawer('cart')"
   >
     <div class="r-shopping-cart"></div>
     <span class="r-cart-count">{{ cart.count }}</span>

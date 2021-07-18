@@ -7,10 +7,7 @@ export default {
   layout: 'category',
   components: {},
   props: {},
-  async asyncData ({ store, params, query }) {
-    console.log('>>>> params', params)
-    console.log('>>>> query', query)
-
+  async asyncData ({ store, params }) {
     const payload = {
       route: `/category/${params.slug}/${params.level}`,
       slug: params.slug,

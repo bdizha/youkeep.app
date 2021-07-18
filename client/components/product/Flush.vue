@@ -1,8 +1,8 @@
 <template>
   <a-row :class="{'r-spin__active' :processes.isProduct}"
-         class="r-product-flush" type="flex" justify="start"
+         class="r-product-flush" justify="start" type="flex"
   >
-    <a-col class="r-spin-holder" :span="24">
+    <a-col :span="24" class="r-spin-holder">
       <div class="r-slider">
         <VueSlickCarousel v-if="hasProducts" v-bind="settings">
           <r-product-item v-for="(product, index) in products.data" :key="index"

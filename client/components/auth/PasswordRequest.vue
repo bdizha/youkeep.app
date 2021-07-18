@@ -1,16 +1,16 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
                     :current="formName"
+                    :mask-closable="maskClosable"
                     style="position: relative;"
   >
-    <a-row :gutter="[24,24]" type="flex" justify="center">
-      <a-col class="r-text-left" :xs="{ span: 24 }">
+    <a-row :gutter="[24,24]" justify="center" type="flex">
+      <a-col :xs="{ span: 24 }" class="r-text-left">
         <h2 class="r-heading r-text-secondary">
           Request password
         </h2>
       </a-col>
-      <a-col class="r-text-left" :xs="{ span: 24 }">
+      <a-col :xs="{ span: 24 }" class="r-text-left">
         <p class="r-text-small">
           Enter the email address associated with your Shopple Account and we will send you
           instructions to reset your password.
@@ -18,27 +18,27 @@
       </a-col>
     </a-row>
     <a-form v-if="hasForm"
+            :form="form"
             class="ant-form ant-form-vertical"
             @submit="onPost"
-            :form="form"
     >
       <a-form-item label="Email address">
         <a-input
-          size="large"
-          placeholder="Your email address"
           v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
+          placeholder="Your email address"
+          size="large"
         />
       </a-form-item>
       <a-form-item :wrapper-col="{ span: 24 }">
-        <a-button block @click="onPost" size="large" type="secondary" html-type="submit"
-                  class="r-btn-secondary"
+        <a-button block class="r-btn-secondary" html-type="submit" size="large" type="secondary"
+                  @click="onPost"
         >
           Send password
         </a-button>
       </a-form-item>
     </a-form>
     <r-notice :process="process"></r-notice>
-    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
   </r-modal-template>
 </template>
 <script>

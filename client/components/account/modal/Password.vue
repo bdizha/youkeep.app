@@ -1,13 +1,13 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
                     :current="formName"
+                    :mask-closable="maskClosable"
                     style="position: relative;"
   >
     <r-notice :process="'isSubmit'"></r-notice>
-    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
-    <a-row v-show="hasForm" type="flex" justify="center">
-      <a-col class="r-text-left" :xs="{ span: 24 }">
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
+    <a-row v-show="hasForm" justify="center" type="flex">
+      <a-col :xs="{ span: 24 }" class="r-text-left">
         <h3 class="r-heading">
           Edit password
         </h3>
@@ -16,51 +16,51 @@
         </p>
       </a-col>
     </a-row>
-    <a-form v-show="hasForm" class="ant-form ant-form-vertical"
+    <a-form v-show="hasForm" :form="form"
+            class="ant-form ant-form-vertical"
             @submit="onPost"
-            :form="form"
     >
       <a-form-item label="Current password">
-        <a-input type="password"
-                 size="large"
+        <a-input v-decorator="['current_password', { rules: [{ required: true, message: 'Please enter new password' }] }]"
                  placeholder="Current password"
-                 v-decorator="['current_password', { rules: [{ required: true, message: 'Please enter new password' }] }]"
+                 size="large"
+                 type="password"
         >
           <a-icon slot="prefix" type="lock"/>
         </a-input>
       </a-form-item>
       <a-form-item label="New password">
-        <a-input type="password"
-                 size="large"
+        <a-input v-decorator="['password', { rules: [{ required: true, message: 'Please enter new password' }] }]"
                  placeholder="New password"
-                 v-decorator="['password', { rules: [{ required: true, message: 'Please enter new password' }] }]"
+                 size="large"
+                 type="password"
         >
           <a-icon slot="prefix" type="lock"/>
         </a-input>
       </a-form-item>
       <a-form-item label="Confirm new password">
-        <a-input type="password"
-                 size="large"
+        <a-input v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm new password' }] }]"
                  placeholder="Confirm new password"
-                 v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm new password' }] }]"
+                 size="large"
+                 type="password"
         >
           <a-icon slot="prefix" type="lock"/>
         </a-input>
       </a-form-item>
       <a-form-item class="r-mt-48">
-        <a-row :gutter="24" type="flex" justify="center">
-          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+        <a-row :gutter="24" justify="center" type="flex">
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+                 class="r-text-left"
           >
-            <a-button block @click="onReturn" size="large" class="r-btn-bordered-grey">
+            <a-button block class="r-btn-bordered-grey" size="large" @click="onReturn">
               Back
             </a-button>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+                 class="r-text-left"
           >
-            <a-button block @click="onPost" size="large" type="secondary" html-type="submit"
-                      class="r-btn-secondary"
+            <a-button block class="r-btn-secondary" html-type="submit" size="large" type="secondary"
+                      @click="onPost"
             >
               Save
             </a-button>

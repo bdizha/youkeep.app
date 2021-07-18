@@ -1,23 +1,23 @@
 <template>
-  <a-row type="flex" justify="center">
-    <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row :gutter="[12,12]" v-if="hasStores && !processes.isTray" type="flex" justify="start" align="middle">
+  <a-row justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }">
+      <a-row v-if="hasStores && !processes.isTray" :gutter="[12,12]" align="middle" justify="start" type="flex">
         <a-col
           v-for="(store, index) in stores.data"
+          :key="index"
           :class="{'r-last_item': index == totalCount - 1 }"
-          :test="hasStores"
-          :key="index" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+          :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :test="hasStores"
+          :xs="{ span: 24 }"
         >
           <r-store-item :size="90" :store="store"></r-store-item>
         </a-col>
         <a-col v-if="!hasStores" :span="24">
-          <a-empty image="/images/icon_pattern_grey.svg"
-                   description="No stores were found! Please try other store categories."
+          <a-empty description="No stores were found! Please try other store categories."
+                   image="/images/icon_pattern_grey.svg"
           />
         </a-col>
       </a-row>
-      <r-spinner :is-absolute="true" process="isCategories" v-if="processes.isRunning"></r-spinner>
+      <r-spinner v-if="processes.isRunning" :is-absolute="true" process="isCategories"></r-spinner>
     </a-col>
   </a-row>
 </template>

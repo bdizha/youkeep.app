@@ -1,21 +1,21 @@
 <template>
-  <r-modal-template :mask-closable="true"
-                    :closable="true"
+  <r-modal-template :closable="true"
+                    :mask-closable="true"
                     current="wishlist"
   >
-    <a-row type="flex" justify="center">
-      <a-col class="r-text-left" :xs="{ span: 24 }">
+    <a-row justify="center" type="flex">
+      <a-col :xs="{ span: 24 }" class="r-text-left">
         <h3 class="r-heading">
           Your shopping list
         </h3>
       </a-col>
     </a-row>
-    <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]" class="r-product-cards"
-           type="flex" justify="start" align="middle"
+    <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]" align="middle"
+           class="r-product-cards" justify="start" type="flex"
     >
-      <a-col class="r-p-24" v-for="(product, index) in products" :key="index"
-             :xs="{span: 12}"
-             :sm="{span: 12}" :md="{span: 6}" :lg="{span: 4}"
+      <a-col v-for="(product, index) in products" :key="index" :lg="{span: 4}"
+             :md="{span: 6}"
+             :sm="{span: 12}" :xs="{span: 12}" class="r-p-24"
       >
         <r-product-item :product="product"></r-product-item>
       </a-col>

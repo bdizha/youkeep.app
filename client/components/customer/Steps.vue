@@ -1,6 +1,6 @@
 <template>
-  <a-row class="r-mt-48" type="flex" justify="center" align="top">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row align="top" class="r-mt-48" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-steps v-model="currentStep" :current="currentStep" direction="horizontal">
         <a-step v-for="(step, index) in steps"
                 :key="index"
@@ -19,9 +19,9 @@
                   <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <div class="r-step-avatar">
                       <r-avatar
+                        :key="index"
+                        :size="72" :src="'/images/content/step-0' + (index + 1) + '.png?v=1'"
                         class="r-avatar-auto"
-                        :key="index" :size="72"
-                        :src="'/images/content/step-0' + (index + 1) + '.png?v=1'"
                         shape="square"
                         src-placeholder="/assets/icon_default.png"
                         unit="px"

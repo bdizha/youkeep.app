@@ -1,19 +1,19 @@
 <template>
   <a-layout-header class="r-header r-store-header">
-    <a-row style="width: 100%;" type="flex" justify="start" align="middle">
-      <a-col type="flex" :span="24">
-        <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
-                 :md="{ span: 6 }"
-                 :lg="{ span: 6 }"
+    <a-row align="middle" justify="start" style="width: 100%;" type="flex">
+      <a-col :span="24" type="flex">
+        <a-row align="middle" justify="center" type="flex">
+          <a-col :lg="{ span: 6 }" :md="{ span: 6 }"
+                 :sm="{ span: 12 }"
+                 :xs="{ span: 12 }"
           >
             <div class="r-nav-item r-nav-item__logo">
               <r-logo :is-icon="true"></r-logo>
             </div>
           </a-col>
-          <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
-                 :md="{ span: 18 }"
-                 :lg="{ span: 18 }"
+          <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
+                 :sm="{ span: 12 }"
+                 :xs="{ span: 12 }"
           >
             <div class="r-layout-menu">
               <div v-if="hasStore" class="r-nav-item">

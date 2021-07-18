@@ -1,19 +1,20 @@
 <template>
-  <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
+  <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
     <a-col v-for="(item, index) in links"
-           :key="index" :span="24">
+           :key="index" :span="24"
+    >
       <template v-if="!item.modal">
-        <nuxt-link class="r-item-shadow" :to="item.link">
-          <a-avatar shape="square" size="30" :icon="item.icon"/>
+        <nuxt-link :to="item.link" class="r-item-shadow">
+          <a-avatar :icon="item.icon" shape="square" size="30"/>
           {{ item.label }}
         </nuxt-link>
       </template>
       <template v-if="item.modal">
         <nuxt-link :to="item.link"
-                   @click.native="onModal(item.modal)"
                    class="r-item-shadow"
+                   @click.native="onModal(item.modal)"
         >
-          <a-avatar shape="square" :icon="item.icon"/>
+          <a-avatar :icon="item.icon" shape="square"/>
           {{ item.label }}
         </nuxt-link>
       </template>

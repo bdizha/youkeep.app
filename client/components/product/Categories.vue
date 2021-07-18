@@ -1,22 +1,22 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col class="r-spin-holder r-categories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-spin-holder r-categories">
       <a-collapse default-active-key="stores" expandIconPosition="right">
-        <a-collapse-panel class="r-collapse-panel"
-                          v-for="(category, index) in product.categories"
+        <a-collapse-panel v-for="(category, index) in product.categories"
                           v-if="category.has_products"
                           :key="category.name"
                           :header="category.name"
+                          class="r-collapse-panel"
         >
           <r-product-products :columns="columns"
                               :is-vertical="isVertical"
-                              :type="category.type"
                               :product="product"
+                              :type="category.type"
           >
           </r-product-products>
         </a-collapse-panel>
-        <a-collapse-panel class="r-collapse-panel"
-                          key="stores"
+        <a-collapse-panel key="stores"
+                          class="r-collapse-panel"
                           header="Explore similar stores"
         >
           <r-store-list></r-store-list>

@@ -1,16 +1,16 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24}"
-           :lg="{span: 24}"
+  <a-row align="middle" justify="start" type="flex">
+    <a-col :lg="{span: 24}" :md="{ span: 24}" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
+              :form="formApply"
               class="ant-form ant-form-vertical"
               @submit="onApply"
-              :form="formApply"
       >
         <a-form-item>
-          <a-row class="r-mt-48" type="flex" justify="center">
-            <a-col class="r-text-left" :xs="{ span: 24 }">
+          <a-row class="r-mt-48" justify="center" type="flex">
+            <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
                 Shopple merchant application
               </h2>
@@ -20,94 +20,94 @@
             </a-col>
           </a-row>
         </a-form-item>
-        <a-row :gutter="24" type="flex" justify="start" align="middle">
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+        <a-row :gutter="24" align="middle" justify="start" type="flex">
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-form-item
               label="Full name"
             >
               <a-input
-                size="large"
-                placeholder="Your full name"
                 v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
+                placeholder="Your full name"
+                size="large"
               >
                 <a-icon slot="prefix" type="user"/>
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-form-item
               label="Role title"
             >
               <a-input
-                size="large"
-                placeholder="Your role number"
                 v-decorator="['role', { rules: [{ required: true, message: 'Please enter your role title' }] }]"
+                placeholder="Your role number"
+                size="large"
               >
                 <a-icon slot="prefix" type="audit"/>
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-form-item
               label="Phone number"
             >
               <a-input
-                size="large"
-                placeholder="Your phone number"
                 v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your phone number' }] }]"
+                placeholder="Your phone number"
+                size="large"
               >
                 <a-icon slot="prefix" type="phone"/>
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-form-item
               label="Business email"
             >
-              <a-input type="email"
-                       size="large"
+              <a-input v-decorator="['email', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
                        placeholder="Your company email"
-                       v-decorator="['email', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+                       size="large"
+                       type="email"
               >
                 <a-icon slot="prefix" type="mail"/>
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-form-item
               label="Business website"
             >
-              <a-input type="text"
-                       size="large"
+              <a-input v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
                        placeholder="Your company website"
-                       v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+                       size="large"
+                       type="text"
               >
                 <a-icon slot="prefix" type="link"/>
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-form-item
               label="Platform"
             >
               <a-select
-                labelInValue
                 :defaultValue="platforms[0]"
+                labelInValue
                 size="large"
-                @change="onPlatform"
                 style="min-width: 100%;"
+                @change="onPlatform"
               >
                 <a-select-option v-for="(option, index) in platforms"
                                  :key="index"
@@ -118,18 +118,18 @@
               </a-select>
             </a-form-item>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-form-item
               label="Business industry"
             >
               <a-select
-                labelInValue
                 :defaultValue="industries[0]"
+                labelInValue
                 size="large"
-                @change="onIndustry"
                 style="min-width: 100%;"
+                @change="onIndustry"
               >
                 <a-select-option v-for="(option, index) in industries"
                                  :key="index"
@@ -140,48 +140,48 @@
               </a-select>
             </a-form-item>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-form-item
               label="Business website"
             >
-              <a-input type="text"
-                       size="large"
+              <a-input v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
                        placeholder="Your company website"
-                       v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+                       size="large"
+                       type="text"
               >
                 <a-icon slot="prefix" type="link"/>
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-form-item
               label="Average order value"
             >
-              <a-input type="text"
-                       size="large"
+              <a-input v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
                        placeholder="Your average order value"
-                       v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+                       size="large"
+                       type="text"
               >
                 <a-icon slot="prefix" type="dollar"/>
               </a-input>
             </a-form-item>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-left"
           >
             <a-form-item
               label="Business annual sales"
             >
               <a-select
-                labelInValue
                 :defaultValue="annual_sales_range[0]"
+                labelInValue
                 size="large"
-                @change="onAnnualSales"
                 style="min-width: 100%;"
+                @change="onAnnualSales"
               >
                 <a-select-option v-for="(option, index) in annual_sales_range"
                                  :key="index"
@@ -196,28 +196,28 @@
         <a-form-item
           label="Notes"
         >
-          <a-input type="textarea"
-                   size="large"
+          <a-input v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]"
                    placeholder="Your message"
-                   v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]"
+                   size="large"
+                   type="textarea"
           >
             <a-icon slot="prefix" type="user"/>
           </a-input>
         </a-form-item>
         <a-form-item class="r-mt-48">
-          <a-row :gutter="24" type="flex" justify="center">
-            <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                   :md="{ span: 12 }"
-                   :lg="{ span: 12 }"
+          <a-row :gutter="24" justify="center" type="flex">
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                   :xs="{ span: 12 }"
+                   class="r-text-left"
             >
             </a-col>
-            <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                   :md="{ span: 12 }"
-                   :lg="{ span: 12 }"
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                   :xs="{ span: 12 }"
+                   class="r-text-left"
             >
-              <a-button block @click="onApply" size="large" type="secondary"
-                        html-type="submit"
-                        class="r-btn-secondary"
+              <a-button block class="r-btn-secondary" html-type="submit" size="large"
+                        type="secondary"
+                        @click="onApply"
               >
                 Submit
               </a-button>

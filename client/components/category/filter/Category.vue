@@ -1,14 +1,14 @@
 <template>
-  <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
-    <a-col v-if="hasCategories" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+  <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+    <a-col v-if="hasCategories" :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
       <a-checkbox-group v-model="selected"
                         @change="onFilter"
       >
-        <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
+        <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
           <a-col v-for="(category, index) in categories"
                  v-if="index < counter"
                  :key="category.id"
-                 :xs="{span: 24}" :sm="{span: 24}" :md="{span:24 }" :lg="{span:24}"
+                 :lg="{span:24}" :md="{span:24 }" :sm="{span: 24}" :xs="{span: 24}"
           >
             <a-tooltip placement="top">
               <template slot="title">
@@ -24,30 +24,30 @@
         </a-row>
       </a-checkbox-group>
     </a-col>
-    <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-      <a-row :gutter="[12, 12]" type="flex" justify="start" align="middle">
-        <a-col v-if="counter < categories.length" :xs="{ span: 12 }" :sm="{ span: limit < counter ? 12 : 24 }"
-               :lg="{ span: limit < counter ? 12 : 24 }"
+    <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
+      <a-row :gutter="[12, 12]" align="middle" justify="start" type="flex">
+        <a-col v-if="counter < categories.length" :lg="{ span: limit < counter ? 12 : 24 }" :sm="{ span: limit < counter ? 12 : 24 }"
+               :xs="{ span: 12 }"
         >
           <a-button
             block
-            @click="onIncrement"
             class="r-btn-bordered-secondary"
-            size="large"
             icon="plus-circle"
+            size="large"
             type="secondary"
+            @click="onIncrement"
           >
             More
           </a-button>
         </a-col>
-        <a-col v-if="limit < counter" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
+        <a-col v-if="limit < counter" :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
           <a-button
             block
-            @click="onDecrement"
             class="r-btn-bordered-primary"
-            size="large"
             icon="minus-circle"
+            size="large"
             type="secondary"
+            @click="onDecrement"
           >
             Less
           </a-button>

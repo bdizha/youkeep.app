@@ -72,10 +72,15 @@ class DatabaseSeeder extends Seeder
         $category = \App\Category::updateOrCreate($attributes, $values);
         $this->categories[] = $category->id;
 
+        $arrows = str_pad("", 6 * $this->level, ">");
+
+        echo "{$arrows} Category updated: {$category->slug}\n";
+
         $attributes = [
             'store_id' => $this->storeId,
             'category_id' => $category->id,
-            'url' => $url
+            'level' => $this->level,
+            'parent_id' => $this->parentStoreCategory->id ?? null
         ];
 
         /* Add in the store category link */
@@ -84,8 +89,9 @@ class DatabaseSeeder extends Seeder
             'category_id' => $category->id,
             'url' => $url,
             'level' => $this->level,
-            'has_products' => 0,
-            'has_categories' => 0,
+            'parent_id' => $this->parentStoreCategory->id ?? null,
+            'has_products' => $this->storeId == 24 ? 1 : 0,
+            'has_categories' => $this->storeId == 24 ? 1 : 0,
             'randomized_at' => date('Y-m-d'),
         ];
 
@@ -325,6 +331,11 @@ class DatabaseSeeder extends Seeder
             $filePath = "{$storagePath}/{$photoName}";
 
             if (!file_exists($filePath)) {
+
+                if(strpos($filePath, "http") === false){
+                    $filePath = "https:" . $filePath;
+                }
+
                 exec("wget {$photo} -O {$filePath}");
             } else {
                 echo "<<<<<< Product photo skipped: " . $filePath . "\n";

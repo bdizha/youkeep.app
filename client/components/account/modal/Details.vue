@@ -1,11 +1,11 @@
 <template>
-  <r-modal :mask-closable="maskClosable"
-           :closable="closable"
+  <r-modal :closable="closable"
            :current="current"
+           :mask-closable="maskClosable"
            style="position: relative;"
   >
-    <a-row type="flex" justify="center">
-      <a-col class="r-text-left" :xs="{ span: 24 }">
+    <a-row justify="center" type="flex">
+      <a-col :xs="{ span: 24 }" class="r-text-left">
         <h2 class="r-heading r-text-secondary">
           Edit account details
         </h2>
@@ -15,65 +15,65 @@
       </a-col>
     </a-row>
     <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
+            :form="formRequest"
             class="ant-form ant-form-vertical"
             @submit="onSave"
-            :form="formRequest"
     >
       <a-form-item label="Your full name">
         <a-input
-          size="large"
-          placeholder="Your full name"
           v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
+          placeholder="Your full name"
+          size="large"
         />
       </a-form-item>
       <a-form-item label="Email address">
         <a-input
-          size="large"
-          placeholder="Your email address"
           v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
+          placeholder="Your email address"
+          size="large"
         />
       </a-form-item>
-      <a-row :gutter="24" type="flex" justify="center">
-        <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
-               :lg="{ span: 12 }"
+      <a-row :gutter="24" justify="center" type="flex">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+               class="r-text-left"
         >
           <a-form-item label="Mobile number">
             <a-input
-              size="large"
-              placeholder="Your mobile number"
               v-decorator="['phone_number', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
+              placeholder="Your mobile number"
+              size="large"
             >
               <a-icon slot="prefix" type="mobile"/>
             </a-input>
           </a-form-item>
         </a-col>
-        <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
-               :lg="{ span: 12 }"
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+               class="r-text-left"
         >
           <a-form-item label="Your birth date">
             <a-date-picker
-              size="large"
+              v-decorator="['birth_date', { rules: [{ required: true, message: 'Please enter your birth date' }] }]"
               :format="dateFormat"
               placeholder="Your birth date"
-              v-decorator="['birth_date', { rules: [{ required: true, message: 'Please enter your birth date' }] }]"
+              size="large"
             />
           </a-form-item>
         </a-col>
       </a-row>
       <a-form-item class="r-mt-48">
-        <a-row :gutter="24" type="flex" justify="center">
-          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+        <a-row :gutter="24" justify="center" type="flex">
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+                 class="r-text-left"
           >
-            <a-button block @click="onCancel" size="large" class="r-btn-bordered-primary">
+            <a-button block class="r-btn-bordered-primary" size="large" @click="onCancel">
               Cancel
             </a-button>
           </a-col>
-          <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 12 }"
-                 :lg="{ span: 12 }"
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+                 class="r-text-left"
           >
-            <a-button block @click="onSave" size="large" type="secondary" html-type="submit"
-                      class="r-btn-secondary"
+            <a-button block class="r-btn-secondary" html-type="submit" size="large" type="secondary"
+                      @click="onSave"
             >
               Save
             </a-button>

@@ -1,12 +1,12 @@
 <template>
   <div class="r-cart-drawer">
-    <r-drawer-template placement="right"
-                       current="cart"
+    <r-drawer-template current="cart"
+                       placement="right"
     >
-      <a-row type="flex" justify="start" align="middle">
+      <a-row align="middle" justify="start" type="flex">
         <a-col :span="24" class="r-cart-body">
           <template v-if="cart.count > 0">
-            <a-row type="flex" justify="start" align="middle">
+            <a-row align="middle" justify="start" type="flex">
               <a-col :span="24">
                 <div class="r-bg-primary-light r-p-24" style="margin: -24px -24px 24px;">
                   <h4 class="r-heading-light r-text-primary">

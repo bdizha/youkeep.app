@@ -1,32 +1,32 @@
 <template>
-  <a-row :gutter="[24,24]" type="flex" justify="center"
-         align="middle"
+  <a-row :gutter="[24,24]" align="middle" justify="center"
+         type="flex"
   >
-    <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 20 }" :lg="{ span: 20 }">
+    <a-col :lg="{ span: 20 }" :md="{ span: 20 }" :sm="{ span: 24 }" :xs="{ span: 24}">
       <h3 class="r-heading-light r-text-left">
         What our customers say...
       </h3>
     </a-col>
-    <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 4 }"
-           :lg="{ span: 4}"
+    <a-col :lg="{ span: 4}" :md="{ span: 4 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+           class="r-text-right"
     >
       <nuxt-link to="/testimonials">
-        <a-button class="r-btn--grey"
-                  block
-                  type="secondary"
+        <a-button block
+                  class="r-btn--grey"
                   size="large"
+                  type="secondary"
         >
           Explore More
           <a-icon type="right"/>
         </a-button>
       </nuxt-link>
     </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row class="r-slider r-slider-testimonials" type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-row align="middle" class="r-slider r-slider-testimonials" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <VueSlickCarousel v-if="hasReviews" v-bind="settings">
-            <a-card class="r-bg-primary-light" v-for="(review, index) in reviews"
-                    :key="index + '-review'"
+            <a-card v-for="(review, index) in reviews" :key="index + '-review'"
+                    class="r-bg-primary-light"
             >
               <a-card-meta>
                 <template slot="description">

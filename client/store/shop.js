@@ -5,6 +5,8 @@ import Cookies from 'js-cookie'
 const state = () => ({
   store: {},
   hasStore: false,
+  catalogMap: {},
+  hasCatalogMap: false,
   category: {},
   product: {},
   products: [],
@@ -37,6 +39,8 @@ const state = () => ({
 const getters = {
   store: state => state.store,
   hasStore: state => state.hasStore,
+  catalogMap: state => state.catalogMap,
+  hasCatalogMap: state => state.hasCatalogMap,
   notice: state => state.notice,
   hasNotice: state => state.hasNotice,
   category: state => state.category,
@@ -62,11 +66,15 @@ const mutations = {
   },
   setStore (state, store) {
     state.store = store
-    state.hasStore = store.id != undefined
+    state.hasStore = store.id !== undefined
 
     console.log('response: store data: ', state.store)
 
     Cookies.set('store', store, { expires: 365 })
+  },
+  setCatalogMap (state, catalogMap) {
+    state.catalogMap = catalogMap
+    state.hasCatalogMap = catalogMap !== undefined
   },
   setNotice (state, notice) {
     state.notice = notice
@@ -125,13 +133,30 @@ const actions = {
       console.log(e)
     }
   },
+  async onCatalogMap ({ dispatch, commit }, payload) {
+    console.log('response: route onCatalogMap', payload)
+    try {
+      dispatch('base/onProcess', { key: 'isCategories', value: true }, { root: true })
+
+      await axios.post('/store/catalog/map', payload).then(({ data }) => {
+        const catalogMap = data.catalog_map
+        commit('setCatalogMap', catalogMap)
+
+        dispatch('base/onProcess', { key: 'isCategories', value: false }, { root: true })
+        console.log('onCatalogMap', catalogMap)
+      })
+    } catch (e) {
+      console.error('onCatalogMap errors')
+      console.log(e)
+    }
+  },
   async onCategories ({ dispatch, commit, state }, payload) {
     try {
       dispatch('base/onProcess', { key: 'isCategories', value: true }, { root: true })
       dispatch('base/onProcess', { key: 'isCategory', value: false }, { root: true })
 
       return await axios.post('/categories', payload).then(({ data }) => {
-        let categories = data.categories
+        const categories = data.categories
 
         dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
         dispatch('base/onProcess', { key: 'isCategories', value: false }, { root: true })
@@ -144,17 +169,15 @@ const actions = {
     }
   },
   async onProducts ({ dispatch, commit }, payload) {
-
     try {
       return await axios.post('/products', payload).then(({ data }) => {
         console.log('response: onProducts data: ', data)
-        let products = data
+        const products = data
 
         dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
 
         return products
       })
-
     } catch (e) {
       console.error('onProducts errors')
       console.log(e)

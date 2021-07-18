@@ -1,5 +1,5 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
+  <a-row align="middle" justify="center" type="flex">
     <a-col :span="24">
       <div class="gutter-box">
         <h4 class="r-product-price">
@@ -12,7 +12,7 @@
                 <span class="r-price-discount text-strike">
                   {{ 'R' + product.price }}
                 </span>
-                <span class="r-text-primary">
+          <span class="r-text-primary">
                   {{ 'R' + product.price }}
                 </span>
         </h3>

@@ -1,14 +1,14 @@
 <template>
-  <a-row class="r-product-flush" type="flex" justify="start"
+  <a-row class="r-product-flush" justify="start" type="flex"
   >
     <a-col :span="24">
       <div class="r-slider">
         <VueSlickCarousel v-bind="settings">
           <r-avatar v-for="(photo, index) in store.photos"
                     :key="index"
-                    shape="square"
                     :size="300"
                     :src="photo"
+                    shape="square"
           />
           <template #prevArrow="arrowOption">
             <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
@@ -33,7 +33,10 @@ export default {
   components: {},
   props: {
     columns: { type: Number, required: false, default: 3 },
-    store: { type: Object, required: false, defaut: () => {} }
+    store: {
+      type: Object, required: false, defaut: () => {
+      }
+    }
   },
   data () {
     return {

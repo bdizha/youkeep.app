@@ -1,6 +1,6 @@
 <template>
-  <r-drawer-template placement="right"
-                     current="store"
+  <r-drawer-template current="store"
+                     placement="right"
   >
     <r-store-window :has-actions="false" :store="store"></r-store-window>
     <a-collapse default-active-key="1" expandIconPosition="right">

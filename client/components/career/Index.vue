@@ -1,79 +1,79 @@
 <template>
   <r-page>
-    <a-row type="flex" justify="center" align="middle">
-      <a-col :xs="{span: 24}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48 r-mv-48">
-        <a-row type="flex" justify="space-around" align="middle">
+    <a-row align="middle" justify="center" type="flex">
+      <a-col :lg="{span: 12}" :md="{span: 16}" :xs="{span: 24}" class="r-p-48 r-mv-48">
+        <a-row align="middle" justify="space-around" type="flex">
           <a-col :span="24">
             <h1 class="r-heading r-text-secondary">
               Current job openings at Shopple
             </h1>
           </a-col>
         </a-row>
-        <a-row class="r-mt-48" v-if="hasData" type="flex" justify="center" align="left">
-          <a-col class="r-career r-text-left" v-for="(department, d) in departments" :key="d"
-                 :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }"
+        <a-row v-if="hasData" align="left" class="r-mt-48" justify="center" type="flex">
+          <a-col v-for="(department, d) in departments" :key="d" :lg="{ span: 24 }"
+                 :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-career r-text-left"
           >
             <a-row class="r-margin-top-24">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+              <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                 <h3 class="r-heading r-text-capitalize r-text-secondary">{{ department.name }}</h3>
               </a-col>
             </a-row>
-            <a-row class="r-mv-12" v-for="(position, p) in department.positions" :key="p">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+            <a-row v-for="(position, p) in department.positions" :key="p" class="r-mv-12">
+              <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                 <a-card>
-                  <a-row type="flex" justify="start" align="middle">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :lg="{ span: 24 }"
+                  <a-row align="middle" justify="start" type="flex">
+                    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
                     >
                       <a-row>
-                        <a-col :sm="{ span: 24 }" :lg="{ span: 24 }">
+                        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }">
                           <a :href="'/career/' + position.slug">
                             <h4 class="r-heading">{{ position.title }}</h4>
                           </a>
                         </a-col>
                       </a-row>
                       <a-row>
-                        <a-col :xs="{ span: 14 }" :sm="{ span: 16 }"
-                               :lg="{ span: 18 }"
+                        <a-col :lg="{ span: 18 }" :sm="{ span: 16 }"
+                               :xs="{ span: 14 }"
                         >
                           <a :href="'/career/' + position.slug">
                             <a-row>
-                              <a-col :xs="{ span: 24 }"
+                              <a-col :lg="{ span: 24 }"
                                      :sm="{ span: 12 }"
-                                     :lg="{ span: 24 }"
+                                     :xs="{ span: 24 }"
                               >
                                 <h4 class="r-text-normal">{{
                                     position.city.name
                                   }}
                                 </h4>
                               </a-col>
-                              <a-col :xs="{ span: 24 }"
+                              <a-col :lg="{ span: 24 }"
                                      :sm="{ span: 12 }"
-                                     :lg="{ span: 24 }"
+                                     :xs="{ span: 24 }"
                               >
                                 <h4 class="r-text-primary r-text-capitalize">
                                   {{ position.type_formatted }}
                                 </h4>
                               </a-col>
-                              <a-col class="r-text-secondary r-text-capitalize"
-                                     :xs="{ span: 24 }"
+                              <a-col :lg="{ span: 24 }"
                                      :sm="{ span: 12 }"
-                                     :lg="{ span: 24 }"
+                                     :xs="{ span: 24 }"
+                                     class="r-text-secondary r-text-capitalize"
                               >
                                 {{ position.department }}
                               </a-col>
                             </a-row>
                           </a>
                         </a-col>
-                        <a-col class="r-padding-24 gutter-row r-text-right" :xs="{ span: 10 }"
-                               :sm="{ span: 8 }"
-                               :lg="{ span: 6 }"
+                        <a-col :lg="{ span: 6 }" :sm="{ span: 8 }"
+                               :xs="{ span: 10 }"
+                               class="r-padding-24 gutter-row r-text-right"
                         >
-                          <a class="r-same-height"
-                             :href="'/career/' + position.slug + '/apply'"
+                          <a :href="'/career/' + position.slug + '/apply'"
+                             class="r-same-height"
                           >
-                            <a-button type="secondary"
-                                      class="r-btn-secondary" size="large"
+                            <a-button class="r-btn-secondary"
+                                      size="large" type="secondary"
                             >
                               Apply
                             </a-button>
@@ -87,14 +87,14 @@
             </a-row>
           </a-col>
         </a-row>
-        <a-row v-if="hasData && departments.length == 0" type="flex" justify="center">
+        <a-row v-if="hasData && departments.length == 0" justify="center" type="flex">
           <a-col :span="24">
             <a-empty
-              image="/images/icon_pattern_grey.svg"
               :imageStyle="{ height: '81px',}"
+              image="/images/icon_pattern_grey.svg"
             >
               <span slot="description">Sorry. There aren't any job openings currently.</span>
-              <a-button size="large" class="ant-btn-primary r-btn-secondary">Shop now</a-button>
+              <a-button class="ant-btn-primary r-btn-secondary" size="large">Shop now</a-button>
             </a-empty>
           </a-col>
         </a-row>

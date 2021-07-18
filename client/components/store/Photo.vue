@@ -1,9 +1,9 @@
 <template>
-  <r-avatar class="r-avatar-store"
-            shape="square"
-            :size="size"
-            src-placeholder="/assets/icon_default.png"
+  <r-avatar :size="size"
             :src="store.photo_url"
+            class="r-avatar-store"
+            shape="square"
+            src-placeholder="/assets/icon_default.png"
   />
 </template>
 <script>

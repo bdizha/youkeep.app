@@ -1,24 +1,24 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
                     :current="formName"
+                    :mask-closable="maskClosable"
                     style="position: relative;"
   >
     <a-form v-if="hasForm"
+            :form="form"
             class="ant-form ant-form-vertical"
             @submit="onPost"
-            :form="form"
     >
       <a-row>
         <a-col :xs="{ span: 24 }">
           <a-form-item>
-            <a-row :gutter=[24,24] type="flex" justify="center">
-              <a-col class="r-text-left" :xs="{ span: 24 }">
+            <a-row :gutter=[24,24] justify="center" type="flex">
+              <a-col :xs="{ span: 24 }" class="r-text-left">
                 <h2 class="r-heading r-text-secondary">
                   Request a Shopple account
                 </h2>
               </a-col>
-              <a-col v-if="hasAddress" class="r-text-left" :xs="{ span: 24 }">
+              <a-col v-if="hasAddress" :xs="{ span: 24 }" class="r-text-left">
                 <h3 class="r-heading">
                   <a-icon slot="prefix" type="environment"/>
                   Available in <span class="r-text-secondary">{{ address.city }}</span>!
@@ -34,43 +34,43 @@
           </a-form-item>
           <a-form-item label="Name">
             <a-input
-              size="large"
-              placeholder="Your full name"
               v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
+              placeholder="Your full name"
+              size="large"
             >
               <a-icon slot="prefix" type="user"/>
             </a-input>
           </a-form-item>
           <a-form-item label="Your mobile number">
             <a-input
-              size="large"
-              placeholder="Your mobile number"
               v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
+              placeholder="Your mobile number"
+              size="large"
             >
               <a-icon slot="prefix" type="mobile"/>
             </a-input>
           </a-form-item>
           <a-form-item label="Email address">
-            <a-input type="email"
-                     size="large"
+            <a-input v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
                      placeholder="Your email address"
-                     v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
+                     size="large"
+                     type="email"
             >
               <a-icon slot="prefix" type="mail"/>
             </a-input>
           </a-form-item>
           <a-form-item>
             <a-radio-group v-model="userType"
-                           @change="onUserType"
-                           name="type" :default-value="1"
+                           :default-value="1"
+                           name="type" @change="onUserType"
             >
-              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-radio :value="1">
                     I'm a Business
                   </a-radio>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 12 }">
+                <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-radio :value="2">
                     I'm a Shopper
                   </a-radio>
@@ -79,18 +79,18 @@
             </a-radio-group>
           </a-form-item>
           <a-form-item :wrapper-col="{ span: 24 }">
-            <a-button block size="large" type="secondary" html-type="submit"
-                      class="r-btn-secondary"
+            <a-button block class="r-btn-secondary" html-type="submit" size="large"
+                      type="secondary"
             >
               Request an invite
             </a-button>
           </a-form-item>
           <a-form-item>
-            <a-row type="flex" justify="center" align="middle">
-              <a-col :sm="{ span: 24 }" :lg="{ span: 18 }">
+            <a-row align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 18 }" :sm="{ span: 24 }">
                 <span class="r-inline-text">Already have an account?</span>
-                <a class="r-inline-text" v-on:click="onModal('login', $event)"
-                   href=""
+                <a class="r-inline-text" href=""
+                   v-on:click="onModal('login', $event)"
                 >
                   Login
                 </a>
@@ -101,7 +101,7 @@
       </a-row>
     </a-form>
     <r-notice :process="process"></r-notice>
-    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
   </r-modal-template>
 </template>
 <script>

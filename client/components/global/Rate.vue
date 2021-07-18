@@ -1,9 +1,9 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }"
-           :sm="{ span: 24 }" :lg="{ span: 24 }"
+  <a-row align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }"
+           :sm="{ span: 24 }" :xs="{ span: 24 }"
     >
-      <a-rate size="small" :default-value="rating"/>
+      <a-rate :default-value="rating" size="small"/>
     </a-col>
   </a-row>
 </template>

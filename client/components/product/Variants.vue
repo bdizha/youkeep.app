@@ -1,14 +1,14 @@
 <template>
-  <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-    <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+    <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
       <a-button block
-                size="large"
                 class="r-btn-bordered-grey"
+                size="large"
                 @click="onShow"
       >
-        <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
-          <a-col class="r-text-left r-text-capitalize" :xs="{span: 18}" :sm="{span: 18}" :md="{span: 18}"
-                 :lg="{span: 18}"
+        <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+          <a-col :lg="{span: 18}" :md="{span: 18}" :sm="{span: 18}" :xs="{span: 18}"
+                 class="r-text-left r-text-capitalize"
           >
             <span>{{ productType.name + ': ' }}</span>
             <span v-if="!isSelected" class="r-text-primary">
@@ -21,7 +21,7 @@
               <span class="r-text-normal">(selected)</span>
             </template>
           </a-col>
-          <a-col class="r-text-right" :xs="{span: 6}" :sm="{span: 6}" :md="{span: 6}" :lg="{span: 6}">
+          <a-col :lg="{span: 6}" :md="{span: 6}" :sm="{span: 6}" :xs="{span: 6}" class="r-text-right">
             <a-icon type="right"/>
           </a-col>
         </a-row>

@@ -1,7 +1,7 @@
 <template>
   <a-row>
     <a-col :span="24">
-      <a-row type="flex" justify="start" align="middle">
+      <a-row align="middle" justify="start" type="flex">
         <a-col :span="24">
           <h4 class="r-product-text">
             {{ product.name }}
@@ -39,6 +39,6 @@ export default {
 
       this.$store.dispatch('base/onProduct', this.product)
     }
-  },
+  }
 }
 </script>

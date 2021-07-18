@@ -1,7 +1,7 @@
 <template>
   <r-drawer-template
-    placement="right"
     current="account"
+    placement="right"
   >
     <r-account-menu></r-account-menu>
   </r-drawer-template>

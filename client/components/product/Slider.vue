@@ -1,9 +1,9 @@
 <template>
-  <a-row class="r-slider" type="flex" justify="start" style="margin-bottom: 24px;">
-    <a-col class="r-spin-holder" :span="24">
+  <a-row class="r-slider" justify="start" style="margin-bottom: 24px;" type="flex">
+    <a-col :span="24" class="r-spin-holder">
       <VueSlickCarousel
-        v-bind="settings"
         v-if="products.length > 0"
+        v-bind="settings"
       >
         <r-product-item v-for="(product, index) in products"
                         :key="index"
@@ -20,7 +20,7 @@
           </div>
         </template>
       </VueSlickCarousel>
-      <r-spinner :is-absolute="true" process="isCategories" v-if="processes.isCategory"></r-spinner>
+      <r-spinner v-if="processes.isCategory" :is-absolute="true" process="isCategories"></r-spinner>
     </a-col>
   </a-row>
 </template>

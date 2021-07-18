@@ -7,6 +7,8 @@ const state = () => ({
   hasCards: false,
   address: {},
   hasAddress: false,
+  stores: [],
+  hasStores: false,
   hasAddresses: false,
   addresses: [],
   coupons: [],
@@ -24,6 +26,8 @@ const state = () => ({
 const getters = {
   cards: state => state.cards,
   hasCards: state => state.cards.length > 0,
+  stores: state => state.stores,
+  hasStores: state => state.stores.length > 0,
   address: state => state.address,
   hasAddress: state => state.hasSearched,
   hasAddresses: state => state.addresses.length > 0,
@@ -52,6 +56,9 @@ const mutations = {
   },
   setCards (state, data) {
     state.cards = data.cards
+  },
+  setStores (state, data) {
+    state.stores = data.stores
   },
   setAddresses (state, data) {
     state.addresses = data.addresses
@@ -84,6 +91,17 @@ const actions = {
   async onProcess ({ dispatch, commit, state }, payload) {
     try {
       commit('setProcess', payload)
+    } catch (e) {
+      commit('setErrors', e)
+    }
+  },
+  async onStores ({ commit }) {
+    try {
+      const { data } = await axios.get('/account/stores')
+
+      console.log(data, 'data onStores >>>>')
+
+      commit('setStores', data)
     } catch (e) {
       commit('setErrors', e)
     }

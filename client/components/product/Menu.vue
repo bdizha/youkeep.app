@@ -8,8 +8,7 @@ export default {
   data () {
     return {}
   },
-  computed: {
-  },
+  computed: {},
   created () {
   },
   mounted () {

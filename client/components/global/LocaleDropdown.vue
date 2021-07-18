@@ -1,7 +1,7 @@
 <template>
   <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" role="button"
-       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+    <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle"
+       data-toggle="dropdown" href="#" role="button"
     >
       {{ locales[locale] }}
     </a>

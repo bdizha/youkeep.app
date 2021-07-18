@@ -1,8 +1,8 @@
 <template>
-  <a-row :gutter="[24, 24]" type="flex" justify="start" align="top">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 12 }"
-           :lg="{ span: 12 }"
+  <a-row :gutter="[24, 24]" align="top" justify="start" type="flex">
+    <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <h4 class="r-heading-light">
         DELIVERY INFORMATION
@@ -19,9 +19,9 @@
         ready for pickup.
       </p>
     </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 12 }"
-           :lg="{ span: 12 }"
+    <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <h4 class="r-heading-light">
         RETURNS INFORMATION

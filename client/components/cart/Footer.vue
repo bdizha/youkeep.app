@@ -1,8 +1,8 @@
 <template>
-  <div class="r-cart-footer" :class="{'r-cart-footer__empty': cart.total > 0}">
-    <a-row v-if="cart.total > 0" :gutter="[24, 24]" type="flex" justify="start" align="middle">
-      <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-             :lg="{ span: 12 }"
+  <div :class="{'r-cart-footer__empty': cart.total > 0}" class="r-cart-footer">
+    <a-row v-if="cart.total > 0" :gutter="[24, 24]" align="middle" justify="start" type="flex">
+      <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+             class="r-text-left"
       >
         <nuxt-link to="/checkout">
           <h4 class="r-heading r-text-white">
@@ -10,14 +10,14 @@
           </h4>
         </nuxt-link>
       </a-col>
-      <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
-             :lg="{ span: 12 }"
+      <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+             class="r-text-right"
       >
         <nuxt-link to="/checkout">
           <a-button block
+                    class="r-cart-btn"
                     size="large"
                     type="secondary"
-                    class="r-cart-btn"
           >
             <a-icon type="shopping-cart"/>
             Checkout
@@ -25,15 +25,15 @@
         </nuxt-link>
       </a-col>
     </a-row>
-    <a-row v-if="cart.total == 0" type="flex" justify="start" align="middle">
-      <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
-             :lg="{ span: 24 }"
+    <a-row v-if="cart.total == 0" align="middle" justify="start" type="flex">
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+             class="r-text-center"
       >
         <nuxt-link to="/">
           <a-button block
+                    class="r-cart-btn"
                     size="large"
                     type="secondary"
-                    class="r-cart-btn"
           >
             <a-icon type="shopping-cart"/>
             Shop now

@@ -1,9 +1,9 @@
 <template>
-  <a-button @click="onModal"
-            block
-            type="secondary" class="r-btn-bordered-secondary"
-            icon="check-circle"
-            size="large"
+  <a-button block
+            class="r-btn-bordered-secondary"
+            icon="check-circle" size="large"
+            type="secondary"
+            @click="onModal"
   >
     Follow
   </a-button>

@@ -1,14 +1,14 @@
 <template>
-  <a-row :gutter="[48,48]" type="flex" justify="start" align="top">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 9 }"
-           :lg="{ span: 9 }"
+  <a-row :gutter="[48,48]" align="top" justify="start" type="flex">
+    <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <a-card>
         <a-card-meta>
           <template slot="description">
-            <a-collapse class="r-collapse-faqs" v-model="activeKey"
-                        accordion
+            <a-collapse v-model="activeKey" accordion
+                        class="r-collapse-faqs"
                         expandIconPosition="left"
             >
               <template #expandIcon="props">
@@ -17,12 +17,12 @@
               <a-collapse-panel
                 v-for="(faqCategory, index) in faqs"
                 :key="(index + 1).toString()"
-                class="r-collapse-panel"
                 :header="faqCategory.name"
+                class="r-collapse-panel"
               >
                 <a-list :data-source="faqCategory.faqs">
-                  <a-list-item @click="setFaq(faq, faqCategory)" slot="renderItem"
-                               slot-scope="faq, index"
+                  <a-list-item slot="renderItem" slot-scope="faq, index"
+                               @click="setFaq(faq, faqCategory)"
                   >
                     {{ faq.question }}
                   </a-list-item>
@@ -33,56 +33,56 @@
         </a-card-meta>
       </a-card>
     </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 15 }" :lg="{span: 15}"
+    <a-col :lg="{span: 15}" :md="{ span: 15 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
     >
-      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle"
+      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex"
       >
         <a-col v-for="(faqCategory, index) in faqs"
-               :key="index"
                v-if="faqCategory == currentCategory"
-               :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{span: 24}"
+               :key="index"
+               :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
         >
-          <a-row :gutter="[24,24]" type="flex" justify="start" align="middle"
+          <a-row :gutter="[24,24]" align="middle" justify="start" type="flex"
           >
             <a-col v-for="(faq, index) in faqCategory.faqs"
                    :key="index"
-                   :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{span: 24}"
+                   :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
             >
               <a-card class="r-card-faqs">
                 <a-card-meta>
                   <template slot="description">
-                    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle"
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex"
                     >
                       <a-col v-if="faq == currentFaq"
-                             class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                             :md="{ span: 24 }"
-                             :lg="{ span: 24 }"
+                             :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                             class="r-text-left"
                       >
-                        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle"
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex"
                         >
-                          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                                 class="r-text-left"
                           >
                             <h3 class="r-heading r-text-primary">
                               {{ faq.question }}
                             </h3>
                           </a-col>
-                          <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                                 class="r-text-left"
                           >
                             <p class="r-text-normal" v-html="faq.answer">
                             </p>
                           </a-col>
                         </a-row>
                       </a-col>
-                      <a-col v-if="faq != currentFaq" class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                             :md="{ span: 24 }"
-                             :lg="{ span: 24 }"
+                      <a-col v-if="faq != currentFaq" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                             class="r-text-left"
                       >
-                        <h4 @click="setFaq(faq, faqCategory)"
-                            class="r-heading" style="cursor: pointer"
+                        <h4 class="r-heading"
+                            style="cursor: pointer" @click="setFaq(faq, faqCategory)"
                         >
                           {{ faq.question }}
                         </h4>

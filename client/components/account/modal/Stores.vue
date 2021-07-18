@@ -1,11 +1,11 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
                     :current="current"
+                    :mask-closable="maskClosable"
                     style="position: relative;"
   >
-    <a-row type="flex" justify="center">
-      <a-col class="r-text-left" :xs="{ span: 24 }">
+    <a-row justify="center" type="flex">
+      <a-col :xs="{ span: 24 }" class="r-text-left">
         <h3 class="r-heading">
           Your stores history
         </h3>

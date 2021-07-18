@@ -1,6 +1,6 @@
 <template>
-  <r-drawer-template placement="left"
-                     current="store-menu"
+  <r-drawer-template current="store-menu"
+                     placement="left"
   >
     <r-store-menu :is-home="true" :is-store="false"></r-store-menu>
   </r-drawer-template>

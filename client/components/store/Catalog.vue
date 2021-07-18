@@ -1,10 +1,18 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col :class="{'r-ph-12': hasCard}" v-if="hasCategories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <r-category-slider :has-card="hasCard" :columns="columns"></r-category-slider>
+  <a-row align="middle" justify="start" type="flex">
+    <a-col v-if="hasCategories" :class="{'r-ph-12': hasCard}" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-category-slider :columns="columns" :has-card="hasCard"></r-category-slider>
     </a-col>
-    <a-col class="r-ph-24" v-if="!hasCategories" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col v-if="!hasCategories" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-ph-24">
       <r-category-empty></r-category-empty>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-ph-24">
+      <a-button block class="r-btn-secondary" html-type="button"
+                type="secondary"
+                @click="onCatalogMap"
+      >
+        Configure Catalog Map
+      </a-button>
     </a-col>
   </a-row>
 </template>
@@ -35,6 +43,15 @@ export default {
   },
   methods: {
     payload () {
+    },
+    onCatalogMap () {
+      const modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = 'store-catalog-map'
+      this.$store.dispatch('base/onModal', modal)
+
+      this.$store.dispatch('base/onProduct', this.product)
     }
   }
 }

@@ -1,27 +1,27 @@
 <template>
-  <a-row :gutter="24" v-if="cart.count > 0" type="flex"
-         justify="center"
+  <a-row v-if="cart.count > 0" :gutter="24" justify="center"
+         type="flex"
   >
-    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
-           :lg="{ span: 12 }"
+    <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+           :xs="{ span: 12 }"
     >
-      <a-button block v-on:click="onSave()"
+      <a-button block class="r-btn-bordered-secondary"
                 size="small"
-                class="r-btn-bordered-secondary"
+                v-on:click="onSave()"
       >
         <a-icon type="check-circle"/>
         Save cart
       </a-button>
     </a-col>
-    <a-col :xs="{ span: 12 }" :sm="{ span: 12 }"
-           :lg="{ span: 12 }"
+    <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+           :xs="{ span: 12 }"
     >
       <a-popconfirm
-        @confirm="onClear"
         title="Are you sure you would like to clear your cart?"
+        @confirm="onClear"
       >
-        <a-icon slot="icon" type="question-circle-o" class="r-text-secondary"/>
-        <a-button block size="large" class="r-btn-bordered-primary">
+        <a-icon slot="icon" class="r-text-secondary" type="question-circle-o"/>
+        <a-button block class="r-btn-bordered-primary" size="large">
           <a-icon type="delete"/>
           Clear all
         </a-button>

@@ -1,9 +1,9 @@
 <template>
-  <a-row type="flex" justify="start" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{span: 24}">
-      <a-menu theme="light"
+  <a-row align="middle" justify="start" type="flex">
+    <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-menu :defaultSelectedKeys="['2']"
               mode="horizontal"
-              :defaultSelectedKeys="['2']"
+              theme="light"
       >
         <a-sub-menu>
           <div slot="title">
@@ -14,11 +14,11 @@
           </div>
         </a-sub-menu>
         <a-sub-menu>
-          <div v-if="!isLoggedIn" @click="onModal" slot="title">
+          <div v-if="!isLoggedIn" slot="title" @click="onModal">
             <a-icon type="user"/>
             Sign in
           </div>
-          <div v-if="isLoggedIn" @click="onDrawer" slot="title">
+          <div v-if="isLoggedIn" slot="title" @click="onDrawer">
             <a-icon type="user"/>
             Account
           </div>

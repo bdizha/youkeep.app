@@ -1,17 +1,17 @@
 <template>
-  <a-row class="r-slider" type="flex" justify="center" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row align="middle" class="r-slider" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <VueSlickCarousel v-if="hasData" v-bind="settings">
-        <nuxt-link class="r-slider-item r-text-view-more"
-                   v-for="(category, index) in categories"
+        <nuxt-link v-for="(category, index) in categories"
                    :key="category.id"
                    :to="category.route"
+                   class="r-slider-item r-text-view-more"
         >
-          <r-avatar shape="circle"
-                    size="36"
-                    :data-src="category.photo"
-                    src="/assets/icon_default.png"
+          <r-avatar :data-src="category.photo"
                     :style="'background-image: url(/' + category.photo + ');'"
+                    shape="circle"
+                    size="36"
+                    src="/assets/icon_default.png"
           >
           </r-avatar>
           <div class="r-text-slider">

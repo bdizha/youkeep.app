@@ -1,40 +1,40 @@
 <template>
-  <a-row type="flex" justify="center">
+  <a-row justify="center" type="flex">
     <a-col :span="24">
-      <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" type="flex" justify="center">
-        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: span}" :lg="{span: span}">
+      <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" justify="center" type="flex">
+        <a-col :lg="{span: span}" :md="{span: span}" :sm="{span: 24}" :xs="{span: 24}">
           <a-pagination v-model="products.current_page"
                         :page-size="parseInt(products.per_page)"
-                        @change="onChange"
                         :total="products.total"
                         show-less-items
+                        @change="onChange"
           >
             <template slot="buildOptionText" slot-scope="props">
               <a-button class="r-btn-bordered-grey"
-                        type="secondary" size="large"
+                        size="large" type="secondary"
               >
                 {{ props.value }}
               </a-button>
             </template>
           </a-pagination>
         </a-col>
-        <a-col class="r-text-center" :xs="{span: 24}"
-               :sm="{span: 24}" :md="{span: span === 24 ? span : (24-span) / 2}"
-               :lg="{span: span === 24 ? span : (24-span) / 2}"
+        <a-col :lg="{span: span === 24 ? span : (24-span) / 2}" :md="{span: span === 24 ? span : (24-span) / 2}"
+               :sm="{span: 24}" :xs="{span: 24}"
+               class="r-text-center"
         >
           <r-category-filters></r-category-filters>
         </a-col>
-        <a-col class="r-text-right" :xs="{span: 24}"
-               :sm="{span: 24}" :md="{span: span === 24 ? span : (24-span) / 2}"
-               :lg="{span: span === 24 ? span : (24-span) / 2}"
+        <a-col :lg="{span: span === 24 ? span : (24-span) / 2}" :md="{span: span === 24 ? span : (24-span) / 2}"
+               :sm="{span: 24}" :xs="{span: 24}"
+               class="r-text-right"
         >
           <div class="r-same-height">
             <a-select
-              labelInValue
               :defaultValue="sortOptions[0]"
+              labelInValue
               size="large"
-              @change="onSort"
               style="min-width: 100%;"
+              @change="onSort"
             >
               <a-select-option v-for="(s, index) in sortOptions"
                                :key="index"

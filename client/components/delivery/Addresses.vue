@@ -1,22 +1,22 @@
 <template>
-  <a-row class="r-mt-24" type="flex" justify="center">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <div class="r-account-item"
-           v-for="address in search.data"
-           :class="{'r-account-item__active': address.is_default}"
+  <a-row class="r-mt-24" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <div v-for="address in search.data"
            :key="'address-' + address.id"
+           :class="{'r-account-item__active': address.is_default}"
+           class="r-account-item"
            v-on:click="onSelect(address)"
       >
-        <a-row type="flex" justify="center" align="middle" :gutter="[12,12]">
-          <a-col :xs="{ span: 20 }"
-                 :sm="{ span: 20 }" :lg="{ span: 20 }"
+        <a-row :gutter="[12,12]" align="middle" justify="center" type="flex">
+          <a-col :lg="{ span: 20 }"
+                 :sm="{ span: 20 }" :xs="{ span: 20 }"
           >
             <span v-html="onItemLabel(address)"></span>
           </a-col>
-          <a-col class="r-text-right" :xs="{ span: 4 }"
-                 :sm="{ span: 4 }" :lg="{ span: 4 }"
+          <a-col :lg="{ span: 4 }" :sm="{ span: 4 }"
+                 :xs="{ span: 4 }" class="r-text-right"
           >
-            <a-avatar shape="square" icon="check"/>
+            <a-avatar icon="check" shape="square"/>
           </a-col>
         </a-row>
       </div>

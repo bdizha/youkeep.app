@@ -101,7 +101,7 @@ const columns = [
     title: 'Product Image',
     dataIndex: 'photo',
     key: 'photo',
-    scopedSlots: { customRender: 'photo' },
+    scopedSlots: { customRender: 'photo' }
   },
   { title: 'Product Name', dataIndex: 'title', key: 'title' },
   { title: 'Variant', dataIndex: 'variant', key: 'variant' },
@@ -174,8 +174,8 @@ export default {
           key: '1',
           name: 'Edward King 1',
           age: '32',
-          address: 'London, Park Lane no. 1',
-        },
+          address: 'London, Park Lane no. 1'
+        }
       ],
       count: 2,
       columns,
@@ -186,6 +186,6 @@ export default {
     toggleDirection () {
       this.isVertical = !this.isVertical
     }
-  },
+  }
 }
 </script>

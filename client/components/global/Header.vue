@@ -2,7 +2,7 @@
   <a-layout-header :class="{'r-switch-primary': isDark}" class="r-header">
     <r-layout-menu v-if="!modal.isVisible && !isRaised && !isStore">
       <r-nav-item>
-        <a-icon @click="onDrawer('menu')" type="menu"/>
+        <a-icon type="menu" @click="onDrawer('menu')"/>
       </r-nav-item>
       <r-nav-item class="r-nav-item__logo r-p-r-0">
         <r-logo></r-logo>
@@ -23,10 +23,10 @@
     <r-layout-menu v-if="modal.isVisible || isRaised" class="r-layout-menu r-layout-menu-modal">
       <r-nav-item class="r-nav-item__text">
         <div v-on:click="onModalClose">
-          <a-button v-on:click="onModalClose"
-                    class="r-btn-dark"
-                    type="secondary"
+          <a-button class="r-btn-dark"
                     html-type="button"
+                    type="secondary"
+                    v-on:click="onModalClose"
           >
             <a-icon type="left"/>
             Back
@@ -34,7 +34,7 @@
         </div>
       </r-nav-item>
       <r-nav-item class="r-nav-item__logo">
-        <div v-on:click="onModalClose" class="r-logo">
+        <div class="r-logo" v-on:click="onModalClose">
           <r-logo :is-icon="true"></r-logo>
         </div>
       </r-nav-item>

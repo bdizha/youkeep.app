@@ -1,22 +1,22 @@
 <template>
-  <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <r-category-photo v-if="category.photos !== undefined" :category="category" :start="0"></r-category-photo>
     </a-col>
-    <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+           class="r-text-center"
     >
       <h4 class="r-heading">
         {{ category.name }}
       </h4>
     </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <r-category-photo v-if="category.photos !== undefined" :category="category" :start="3"></r-category-photo>
     </a-col>

@@ -1,8 +1,8 @@
 <template>
-  <a-row type="flex" justify="center">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <a-row class="r-slider r-slider-banners">
         <a-col :span="24">
@@ -16,10 +16,10 @@
                   :to="cateogry.route"
                   style="display: block; width: 100%;"
                 >
-                  <r-avatar shape="square"
-                            :size="100"
-                            unit="%"
+                  <r-avatar :size="100"
                             :src="cateogry.photo"
+                            shape="square"
+                            unit="%"
                   />
                 </nuxt-link>
               </div>

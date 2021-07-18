@@ -2,7 +2,7 @@
   <a-card class="r-bg-primary-light">
     <a-card-meta>
       <template slot="description">
-        <a-row class="r-m-48" type="flex" justify="center">
+        <a-row class="r-m-48" justify="center" type="flex">
           <a-col :span="24">
             <h2 class="r-heading r-text-secondary">
               Download the Shopple app
@@ -12,15 +12,15 @@
             </p>
           </a-col>
         </a-row>
-        <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-            <a-button block size="large" type="secondary" class="r-btn-secondary">
+        <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+          <a-col :lg="{span: 12}" :md="{span: 12}" :sm="{span: 12}" :xs="{span: 24}">
+            <a-button block class="r-btn-secondary" size="large" type="secondary">
               <a-icon type="apple"/>
               Coming soon
             </a-button>
           </a-col>
-          <a-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 12}">
-            <a-button block size="large" type="secondary" class="r-btn-secondary">
+          <a-col :lg="{span: 12}" :md="{span: 12}" :sm="{span: 12}" :xs="{span: 24}">
+            <a-button block class="r-btn-secondary" size="large" type="secondary">
               <a-icon type="android"/>
               Coming soon
             </a-button>

@@ -30,7 +30,7 @@ export default {
       message: this.notice.title,
       description: sdsd,
       placement,
-    });
+    })
   },
   methods: {}
 }

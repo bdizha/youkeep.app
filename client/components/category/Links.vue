@@ -1,11 +1,12 @@
 <template>
-  <a-row :gutter="[12,12]" type="flex" justify="start" align="middle">
+  <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
     <a-col v-for="(category, index) in categories"
-           :key="index" :span="24">
+           :key="index" :span="24"
+    >
       <nuxt-link :to="category.route" class="r-item-shadow">
-        <r-avatar shape="circle"
-                  :size="30"
+        <r-avatar :size="30"
                   :src="category.photo"
+                  shape="circle"
                   src-placeholder="/assets/icon_default.png"
         />
         {{ category.name }}

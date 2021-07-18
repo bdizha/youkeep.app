@@ -1,7 +1,7 @@
 <template>
-  <a-row type="flex" justify="center">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
-      <a-card v-if="hasTitle" class="r-mb-24" title="YOUR DELIVERY ADDRESSES" style="width: 100%;">
+  <a-row justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-card v-if="hasTitle" class="r-mb-24" style="width: 100%;" title="YOUR DELIVERY ADDRESSES">
         <div class="r-text-small">
           <template v-if="hasAddresses">
             Here you can manage all your address.
@@ -11,27 +11,27 @@
           </template>
         </div>
       </a-card>
-      <div class="r-account-item"
-           v-for="address in addresses"
-           :class="{'r-account-item__active': address.is_default}"
+      <div v-for="address in addresses"
            :key="'address-' + address.id"
+           :class="{'r-account-item__active': address.is_default}"
+           class="r-account-item"
            v-on:click="onModal('account-address', address)"
       >
-        <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-          <a-col :xs="{ span: 16 }"
-                 :sm="{ span: 16 }" :lg="{ span: 16 }"
+        <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+          <a-col :lg="{ span: 16 }"
+                 :sm="{ span: 16 }" :xs="{ span: 16 }"
           >
             <span v-html="onItemLabel(address)"></span>
           </a-col>
-          <a-col class="r-text-right" :xs="{ span: 4 }"
-                 :sm="{ span: 4 }" :lg="{ span: 4 }"
+          <a-col :lg="{ span: 4 }" :sm="{ span: 4 }"
+                 :xs="{ span: 4 }" class="r-text-right"
           >
-            <a-switch v-model="address.is_default" size="small" :default-checked="address.is_default"/>
+            <a-switch v-model="address.is_default" :default-checked="address.is_default" size="small"/>
           </a-col>
-          <a-col class="r-text-right" :xs="{ span: 4 }"
-                 :sm="{ span: 4 }" :lg="{ span: 4 }"
+          <a-col :lg="{ span: 4 }" :sm="{ span: 4 }"
+                 :xs="{ span: 4 }" class="r-text-right"
           >
-            <a-avatar :size="30" shape="square" icon="edit"/>
+            <a-avatar :size="30" icon="edit" shape="square"/>
           </a-col>
         </a-row>
       </div>

@@ -1,18 +1,18 @@
 <template>
-  <a-row :class="{'r-spin__active': processes.isProducts}" type="flex" justify="center">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row :class="{'r-spin__active': processes.isProducts}" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <a-row v-if="hasCategories" class="r-slider">
         <a-col :span="24">
           <VueSlickCarousel v-bind="settings">
             <r-category-bundle
-              v-if="c.id != category.id"
               v-for="(c, index) in categories"
+              v-if="c.id != category.id"
               :key="index"
-              :has-card="hasCard"
               :category="c"
+              :has-card="hasCard"
             ></r-category-bundle>
             <template #prevArrow="arrowOption">
               <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">

@@ -45,7 +45,9 @@ class ProductMrSeeder extends DatabaseSeeder
 
             $this->storeCategories = StoreCategory::where('store_id', $this->storeId)
                 ->with('category')
+                ->orderBy('level', 'ASC')
                 ->orderBy('store_categories.updated_at', "ASC")
+//                ->where('id', 18844)
                 ->limit(1000)
                 ->get();
 
@@ -86,6 +88,7 @@ class ProductMrSeeder extends DatabaseSeeder
 
         $categoryUrl = str_replace("en_za/", "", $storeCategory->url);
         $categoryUrl = str_replace("shop/", "", $categoryUrl);
+        $categoryUrl = str_replace("com//", "com/", $categoryUrl);
 
         $urlParts = explode('/', $categoryUrl);
 
@@ -116,11 +119,21 @@ class ProductMrSeeder extends DatabaseSeeder
                     'level' => $level,
                     'parent_id' => $parentStoreCategory->id ?? null
                 ];
-
-                echo "Updated store category {$storeCategory->category->name} :: {$storeCategory->slug} >>>>> \n";
-                StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
             }
         }
+        else{
+            $categoryAttributes = [
+                'id' => $storeCategory->id
+            ];
+
+            $categoryValues = [
+                'level' => 1,
+                'parent_id' => null
+            ];
+        }
+
+        echo "Updated store category {$storeCategory->category->name} :: {$storeCategory->slug} >>>>> \n";
+        StoreCategory::updateOrCreate($categoryAttributes, $categoryValues);
     }
 
     public function setCategories($categoryLink)
@@ -140,7 +153,9 @@ class ProductMrSeeder extends DatabaseSeeder
 
             echo "Category >>>> {$categoryName}\n";
 
-            $this->setCategory($categoryName, $categoryLink);
+            if(strlen($categoryName) > 2){
+                $this->setCategory($categoryName, $categoryLink);
+            }
         });
     }
 
@@ -428,7 +443,7 @@ class ProductMrSeeder extends DatabaseSeeder
      */
     private function fetchCategoryBanners($categoryNode, $storeCategory)
     {
-        if ($categoryNode->filter('.cat-banner img.hidden-xs')->count() > 0) {
+        if ($categoryNode->filter('.cat-banner img')->count() > 0) {
             $photo = $categoryNode->filter('.cat-banner img.hidden-xs')->eq(0)->attr('src');
             $this->setCategoryBanner($storeCategory, $photo);
         }

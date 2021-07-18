@@ -1,12 +1,12 @@
 <template>
-  <a-row class="r-mv-24" type="flex" justify="start" align="middle">
-    <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-      <a-slider range
-                :tip-formatter="formatter"
-                :min="price.min"
-                :max="price.max"
+  <a-row align="middle" class="r-mv-24" justify="start" type="flex">
+    <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
+      <a-slider :default-value="[100,2000]"
                 :included="false"
-                :default-value="[100,2000]"
+                :max="price.max"
+                :min="price.min"
+                :tip-formatter="formatter"
+                range
       />
     </a-col>
   </a-row>

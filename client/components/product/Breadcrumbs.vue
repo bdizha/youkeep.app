@@ -1,7 +1,7 @@
 <template>
   <a-row class="r-breadcrumbs">
-    <a-col class="r-p-24 r-pv-12" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-           :lg="{span: 24}"
+    <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+           class="r-p-24 r-pv-12"
     >
       <a-breadcrumb v-if="!processes.isProduct">
         <a-icon slot="separator" type="right"/>

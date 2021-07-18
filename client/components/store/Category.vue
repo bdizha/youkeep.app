@@ -1,12 +1,12 @@
 <template>
-  <a-row :class="{'r-is-empty': false}" type="flex" justify="start" align="middle">
-    <a-col class="r-p-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+  <a-row :class="{'r-is-empty': false}" align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
       <r-store-category-header :category="category" justify="end"></r-store-category-header>
-      <a-row class="r-slider r-product-cards" type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :lg="{ span: 24 }">
+      <a-row align="middle" class="r-slider r-product-cards" justify="start" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <r-store-slider
-            :columns="columns"
             :category="category"
+            :columns="columns"
           ></r-store-slider>
         </a-col>
       </a-row>
