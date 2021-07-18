@@ -1,6 +1,6 @@
 <template>
-  <a-layout-header :class="{'r-switch-primary': isDark}" class="r-header">
-    <r-layout-menu v-if="!modal.isVisible && !isRaised && !isStore">
+  <a-layout-header :class="{'r-header__dark': isDark}" class="r-header">
+    <r-layout-menu v-if="!modal.isVisible && !isRaised">
       <r-nav-item>
         <a-icon type="menu" @click="onDrawer('menu')"/>
       </r-nav-item>
@@ -51,7 +51,7 @@ export default {
   data () {
     return {
       formStore: this.$form.createForm(this, { name: 'form_store' }),
-      deliveryOption: 1,
+      deliveryOption: 1
     }
   },
   computed: mapGetters({
@@ -68,10 +68,7 @@ export default {
     hasStoreTray: 'base/hasStoreTray',
     isDark: 'base/isDark',
     isRaised: 'base/isRaised',
-    search: 'base/search',
-    isSearching: 'base/isSearching',
-    hasCategories: 'base/hasCategories',
-    isLoggedIn: 'auth/isLoggedIn',
+    search: 'base/search'
   }),
   created () {
     console.log('How many stores have we got?', this.stores.length)
@@ -95,7 +92,7 @@ export default {
       this.$store.dispatch('base/onModal', modal)
     },
     onDrawer (current) {
-      let drawer = {}
+      const drawer = {}
       drawer.current = current
       drawer.placement = 'left'
       drawer.isVisible = true
@@ -104,18 +101,14 @@ export default {
 
       this.$store.dispatch('base/onDrawer', drawer)
     },
-    onSearch () {
-      let isSearching = !this.isSearching
-      this.$store.dispatch('onSearch', isSearching)
-    },
     async onStores () {
-      let payload = {
+      const payload = {
         category_id: null,
         limit: process.env.APP_LIMIT
       }
 
       await this.$store.dispatch('base/onStores', payload)
     }
-  },
+  }
 }
 </script>

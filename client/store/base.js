@@ -257,7 +257,7 @@ const mutations = {
   },
   setPopover (state, popover) {
     state.popover = popover
-  },
+  }
 }
 
 // actions
@@ -283,7 +283,7 @@ const actions = {
   onPopover ({ dispatch, commit }, payload) {
     commit('setPopover', payload)
   },
-  async onMenuCategory ({ dispatch, commit, state }, category) {
+  onMenuCategory ({ dispatch, commit, state }, category) {
     try {
       commit('setMenuCategory', category)
     } catch (e) {
@@ -297,7 +297,7 @@ const actions = {
       dispatch('onProcess', { key: 'isProduct', value: true })
       dispatch('onProcess', { key: 'isFixed', value: true })
 
-      let route = params.route
+      const route = params.route
 
       commit('setCategories', [])
       commit('setStores', [])
@@ -314,13 +314,11 @@ const actions = {
         dispatch('onProcess', { key: 'isCategory', value: false })
         dispatch('onProcess', { key: 'isFixed', value: false })
       })
-
     } catch (e) {
       console.error('onCategory errors')
       console.log(e)
     }
-  }
-  ,
+  },
   async onCategories ({ dispatch, commit, state }, payload) {
     try {
       dispatch('onProcess', { key: 'isFixed', value: true })
@@ -408,12 +406,10 @@ const actions = {
       commit('setPosition', data.position)
 
       commit('setProcess', { key: 'isCareers', value: false })
-
     } catch (e) {
       console.error('on error: ', e)
     }
-  }
-  ,
+  },
   async onCareers ({ dispatch, commit }, payload) {
     try {
       commit('setProcess', { key: 'isCareers', value: true })
@@ -422,12 +418,10 @@ const actions = {
       commit('setPositions', data.positions)
 
       commit('setProcess', { key: 'isCareers', value: false })
-
     } catch (e) {
       console.error('on error: ', e)
     }
-  }
-  ,
+  },
   async onStoreCategories ({ dispatch, commit }, payload) {
     try {
       commit('setProcess', { key: 'isRunning', value: true })
@@ -435,7 +429,6 @@ const actions = {
       commit('setStoreCategories', data.categories)
 
       commit('setProcess', { key: 'isRunning', value: false })
-
     } catch (e) {
       console.error('on error: ', e)
     }
@@ -450,8 +443,7 @@ const actions = {
       commit('setFilter', { key: 'stores', value: stores })
       commit('setProcess', { key: 'isTray', value: false })
     })
-  }
-  ,
+  },
   async onFaqs ({ dispatch, commit }, payload) {
     commit('setProcess', { key: 'isTray', value: true })
 
@@ -461,8 +453,7 @@ const actions = {
       commit('setFaqs', faqs)
       commit('setProcess', { key: 'isTray', value: false })
     })
-  }
-  ,
+  },
   async onReviews ({ dispatch, commit, state }, payload) {
     try {
       commit('setProcess', { key: 'isRunning', value: true })
@@ -471,37 +462,29 @@ const actions = {
         commit('setReviews', data.testimonials)
         commit('setProcess', { key: 'isRunning', value: false })
       })
-
     } catch (e) {
       console.error('on error: ', e)
     }
-  }
-  ,
+  },
   onIsFixed ({ commit }) {
     commit('setProcess', { key: 'isFixed', value: true })
     commit('setProcess', { key: 'isFixed', value: false })
-  }
-  ,
+  },
   async onProcess ({ dispatch, commit, state }, payload) {
     commit('setProcess', payload)
-  }
-  ,
+  },
   async onHasForm ({ dispatch, commit, state }, payload) {
     commit('setHasForm', payload)
-  }
-  ,
+  },
   onFooter ({ dispatch, commit, state }, payload) {
     commit('setHasFooter', payload)
-  }
-  ,
+  },
   onDownload ({ dispatch, commit, state }, payload) {
     commit('setHasDownload', payload)
-  }
-  ,
+  },
   onSubscribe ({ dispatch, commit, state }, payload) {
     commit('setHasSubscribe', payload)
-  }
-  ,
+  },
   onModal ({ dispatch, commit, state }, payload) {
     commit('setProcess', { key: 'isRunning', value: true })
     commit('setProcess', { key: 'isFixed', value: true })
@@ -512,8 +495,7 @@ const actions = {
       commit('setProcess', { key: 'isRunning', value: false })
       commit('setProcess', { key: 'isFixed', value: false })
     }, 300)
-  }
-  ,
+  },
   onDrawer ({ dispatch, commit, state }, payload) {
     commit('setProcess', { key: 'isRunning', value: true })
     commit('setProcess', { key: 'isFixed', value: true })
@@ -522,24 +504,19 @@ const actions = {
     commit('setProcess', { key: 'isFixed', value: false })
 
     commit('setHasOverlay', state.hasDrawer)
-  }
-  ,
+  },
   onIsRaised ({ dispatch, commit }, payload) {
     commit('setIsRaised', payload)
-  }
-  ,
+  },
   onIsDark ({ dispatch, commit }, payload) {
     commit('setIsDark', payload)
-  }
-  ,
+  },
   onIsStore ({ dispatch, commit }, payload) {
     commit('setIsStore', payload)
-  }
-  ,
+  },
   onNotice ({ dispatch, commit }, payload) {
     commit('setNotice', payload)
-  }
-  ,
+  },
   async onInit ({ dispatch, commit, state }, payload) {
     const search = Cookies.get('search')
     if (search) {

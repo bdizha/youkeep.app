@@ -151,6 +151,13 @@ a.r-text-logo {
 
 .ant-layout-header {
     &.r-header {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
         height: 60px !important;
         padding: 12px !important;
         margin-bottom: 0;
@@ -164,14 +171,151 @@ a.r-text-logo {
         flex: 0 0 auto;
         display: flex;
         line-height: 1 !important;
-        background: @black;
+        background: @white;
+
+        .r-text-link {
+            color: @black;
+        }
+
+        .r-search-wrapper {
+            padding-right: 48px;
+        }
+
+        .r-search {
+            width: 100%;
+        }
+
+        .ant-select-auto-complete {
+            background: transparent;
+
+            .ant-select-selection {
+                background: transparent;
+                border-radius: @border-radius-base;
+                overflow: hidden;
+
+                .ant-select-selection__rendered {
+                    line-height: 36px;
+                }
+            }
+
+            &.ant-select {
+                .ant-input {
+                    background: rgba(255, 255, 255, 0.3);;
+                    border-color: #1B9BD9;
+                    color: @black;
+                    height: 36px;
+
+                    &::placeholder {
+                        color: @black;
+                        font-size: 15px;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        background: rgba(255, 255, 255, 0.999);
+
+                        &.ant-select {
+                            .ant-input {
+                                background: rgba(255, 255, 255, 0.999);
+                                border-color: #F50A2B;
+                                color: @white;
+                            }
+                        }
+
+                        &::placeholder {
+                            color: @white;
+                        }
+                    }
+                }
+            }
+        }
+
+        .r-header-search {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .r-nav-item {
+            color: @black;
+        }
+
+        .ant-menu-submenu-title {
+            color: @black;
+            border: 1px solid transparent;
+            border-radius: @border-radius-base;
+            overflow: hidden;
+            text-transform: capitalize;
+
+            &:hover {
+                border: 1px solid @black;
+            }
+        }
+
+        &.r-header__dark{
+            background: @black;
+            .ant-menu-submenu-title {
+                color: @white;
+            }
+
+            .r-nav-item {
+                color: @white;
+            }
+
+            .ant-menu-submenu-title {
+                color: @white;
+                &:hover {
+                    border: 1px solid @white;
+                }
+            }
+            .ant-select-auto-complete {
+                background: transparent;
+
+                .ant-select-selection {
+                    background: transparent;
+                    border-radius: @border-radius-base;
+                    overflow: hidden;
+
+                    .ant-select-selection__rendered {
+                        line-height: 36px;
+                    }
+                }
+
+                &.ant-select {
+                    .ant-input {
+                        background: rgba(255, 255, 255, 0.3);;
+                        border-color: #1B9BD9;
+                        color: @white;
+                        height: 36px;
+
+                        &::placeholder {
+                            color: @white;
+                            font-size: 15px;
+                        }
+
+                        &:hover,
+                        &:focus {
+                            background: rgba(255, 255, 255, 0.999);
+
+                            &.ant-select {
+                                .ant-input {
+                                    background: rgba(255, 255, 255, 0.999);
+                                    border-color: #F50A2B;
+                                    color: @black;
+                                }
+                            }
+
+                            &::placeholder {
+                                color: @black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         @media (max-width: 768px) {
             padding: 12px 0 !important;
-        }
-
-        .r-text-link {
-            color: @white;
         }
     }
 
@@ -2284,16 +2428,6 @@ h4.r-heading-light {
     top: 60px !important;
 }
 
-.ant-layout-header.r-switch-primary {
-    background: #F50A2B url("/images/art-white.svg") repeat scroll 0% 0% !important;
-    color: @white;
-
-    .ant-menu {
-        color: @white;
-        background: transparent;
-    }
-}
-
 .ant-menu {
     background: transparent !important;
 }
@@ -2382,38 +2516,6 @@ h4.r-heading-light {
 
     .ant-badge-bordered {
         .ant-badge-icon {
-            border: 1px solid #FFFFFF;
-        }
-    }
-}
-
-.r-header-search {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-}
-
-.r-header {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-
-    .r-nav-item {
-        color: @white;
-    }
-
-    .ant-menu-submenu-title {
-        color: @white;
-        border: 1px solid transparent;
-        border-radius: @border-radius-base;
-        overflow: hidden;
-        text-transform: capitalize;
-
-        &:hover {
             border: 1px solid #FFFFFF;
         }
     }
@@ -4636,26 +4738,6 @@ h4.r-heading-light {
     }
 }
 
-.r-switch-primary {
-    .ant-menu-submenu-title {
-        color: @white;
-
-        &:hover {
-            color: @secondary-color;
-        }
-    }
-
-    .r-has-store-tray {
-        .ant-menu-submenu-title {
-            color: @secondary-color;
-
-            &:hover {
-                color: @white;
-            }
-        }
-    }
-}
-
 .ant-layout {
     .ant-layout-has-sider {
         > .ant-layout-content {
@@ -4906,24 +4988,6 @@ h4.r-heading-light {
 
     &.r-nav-item__search {
         flex-grow: 1;
-    }
-}
-
-.r-switch-primary {
-    .r-cart {
-        color: #FFFFFF !important;
-    }
-
-    .r-layout-menu {
-        .r-nav-item {
-            &.r-nav-item__menu {
-                color: @white;
-            }
-        }
-    }
-
-    .ant-btn {
-        border: 1px solid #FFFFFF;
     }
 }
 
@@ -6664,63 +6728,6 @@ h4.r-heading-light {
 
     .anticon {
         opacity: 0.45;
-    }
-}
-
-.r-header {
-    .r-search-wrapper {
-        padding-right: 48px;
-    }
-}
-
-.r-search {
-    width: 100%;
-}
-
-.r-header {
-    .ant-select-auto-complete {
-        background: transparent;
-
-        .ant-select-selection {
-            background: transparent;
-            border-radius: @border-radius-base;
-            overflow: hidden;
-
-            .ant-select-selection__rendered {
-                line-height: 36px;
-            }
-        }
-
-        &.ant-select {
-            .ant-input {
-                background: rgba(255, 255, 255, 0.3);;
-                border-color: #1B9BD9;
-                color: @white;
-                height: 36px;
-
-                &::placeholder {
-                    color: @white;
-                    font-size: 15px;
-                }
-
-                &:hover,
-                &:focus {
-                    background: rgba(255, 255, 255, 0.999);
-
-                    &.ant-select {
-                        .ant-input {
-                            background: rgba(255, 255, 255, 0.999);
-                            border-color: #F50A2B;
-                            color: @black;
-                        }
-                    }
-
-                    &::placeholder {
-                        color: @black;
-                    }
-                }
-            }
-        }
     }
 }
 

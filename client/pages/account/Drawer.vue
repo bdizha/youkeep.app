@@ -19,6 +19,6 @@ export default {
   methods: {
     payload () {
     }
-  },
+  }
 }
 </script>

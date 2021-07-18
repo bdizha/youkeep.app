@@ -26,7 +26,7 @@
                                :md="{ span: 24 }"
                                :lg="{ span: 24 }"
                         >
-                          <h1 class="r-heading">
+                          <h1 class="r-heading r-text-uppercase">
                             Shop <span class="r-text-primary">More,</span><br>
                             Pay <span class="r-text-secondary">Less.</span>
                           </h1>
@@ -101,9 +101,7 @@
       <r-welcome></r-welcome>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <div class="r-ph-24">
         <r-steps></r-steps>
-      </div>
     </a-col>
     <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
       <r-testimonials></r-testimonials>
@@ -136,9 +134,10 @@ export default {
     store: 'base/store',
     category: 'base/category',
     categories: 'shop/categories',
-    hasCategories: 'base/hasCategories',
+    hasCategories: 'base/hasCategories'
   }),
-  mounted () {
+  async created () {
+    await  this.payload();
   },
   methods: {
     onStoreTray () {
@@ -148,6 +147,9 @@ export default {
       modal.current = 'store'
 
       this.$store.dispatch('base/onModal', modal)
+    },
+    payload () {
+      this.$store.dispatch('base/onIsDark', true)
     }
   }
 }
