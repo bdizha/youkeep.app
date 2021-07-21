@@ -136,8 +136,7 @@ export default {
     categories: 'shop/categories',
     hasCategories: 'base/hasCategories'
   }),
-  async created () {
-    await  this.payload();
+  created () {
   },
   methods: {
     onStoreTray () {
@@ -147,9 +146,6 @@ export default {
       modal.current = 'store'
 
       this.$store.dispatch('base/onModal', modal)
-    },
-    payload () {
-      this.$store.dispatch('base/onIsDark', true)
     }
   }
 }

@@ -14,17 +14,17 @@ class MerchantController extends Controller
 
 
     /**
-     * Show the merchant page
+     * Show the seller page
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('merchant.index', ['component' => 'merchant']);
+        return view('seller.index', ['component' => 'seller']);
     }
 
     /**
-     * Save account merchant
+     * Save account seller
      *
      * @return \Illuminate\Http\Response
      */
@@ -44,13 +44,13 @@ class MerchantController extends Controller
         }
         $values['user_id'] = $userId;
 
-        // save account merchant
+        // save account seller
         $merchant = Merchant::updateOrCreate($attributes, $values);
 
-        session('merchant', $merchant);
+        session('seller', $merchant);
 
         return response()->json([
-            'merchant' => $merchant
+            'seller' => $merchant
         ], 200);
     }
 }

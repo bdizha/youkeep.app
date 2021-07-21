@@ -4,7 +4,7 @@
       <a-col class="gutter-row" :xs="{ span: 24 }"
              :sm="{ span: 24 }" :lg="{ span: 24 }"
       >
-        <r-account-store-list></r-account-store-list>
+        <r-account-store-category-list></r-account-store-category-list>
       </a-col>
     </a-row>
   </r-account>

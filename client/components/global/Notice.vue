@@ -27,9 +27,7 @@ export default {
   }),
   created () {
     this.$notification.open({
-      message: this.notice.title,
-      description: sdsd,
-      placement,
+      message: this.notice.title
     })
   },
   methods: {}

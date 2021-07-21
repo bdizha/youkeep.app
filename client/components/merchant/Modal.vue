@@ -16,7 +16,7 @@ export default {
   },
   data () {
     return {
-      current: 'merchant',
+      current: 'seller',
     }
   },
   mounted () {

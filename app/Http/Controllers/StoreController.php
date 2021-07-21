@@ -27,7 +27,7 @@ class StoreController extends Controller
 
         $key = $this->_setCacheKey($request);
 
-        if (Cache::has($key) && false) {
+        if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
             $this->_setStores();
@@ -73,7 +73,7 @@ class StoreController extends Controller
 
         $key = $this->_setParams($request);
 
-        if (Cache::has($key) && false) {
+        if (Cache::has($key)) {
             $response = Cache::get($key, []);
         } else {
             $this->_setCatalogMap();

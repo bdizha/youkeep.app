@@ -1,6 +1,6 @@
 <template>
   <a-layout class="r-layout__store">
-    <r-header></r-header>
+    <r-header :is-icon="false"></r-header>
     <a-layout-sider v-model="collapsed"
                     :trigger="null"
                     collapsible
@@ -19,7 +19,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   data: () => ({
-    collapsed: false,
+    collapsed: false
   }),
   computed: mapGetters({
     processes: 'base/processes'

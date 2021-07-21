@@ -78,7 +78,7 @@ const state = () => ({
   hasSubscribe: true,
   redirectTo: null,
   popover: { name: null },
-  errors: [],
+  errors: []
 })
 
 // getters
@@ -437,10 +437,8 @@ const actions = {
     commit('setProcess', { key: 'isTray', value: true })
 
     await axios.post('/shops', payload).then(({ data }) => {
-      const stores = data
-
-      commit('setStores', stores)
-      commit('setFilter', { key: 'stores', value: stores })
+      commit('setStores', data)
+      commit('setFilter', { key: 'stores', value: data })
       commit('setProcess', { key: 'isTray', value: false })
     })
   },
@@ -517,7 +515,7 @@ const actions = {
   onNotice ({ dispatch, commit }, payload) {
     commit('setNotice', payload)
   },
-  async onInit ({ dispatch, commit, state }, payload) {
+  onInit ({ dispatch, commit, state }, payload) {
     const search = Cookies.get('search')
     if (search) {
       commit('setSearch', JSON.parse(search))

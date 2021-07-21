@@ -40,7 +40,7 @@
                                :md="{ span: 12 }"
                                :lg="{ span: 12 }"
                         >
-                          <a-button @click="onModal('merchant')" class="r-btn-secondary"
+                          <a-button @click="onModal('seller')" class="r-btn-secondary"
                                     block
                                     type="secondary"
                                     size="default"
@@ -157,7 +157,7 @@
           <a-col class="r-padding-bottom-48" :xs="{ span: 24 }" :md="{ span: 12 }"
                  :lg="{ span: 12 }"
           >
-            <a-button @click="onModal('merchant')" size="large" type="secondary">
+            <a-button @click="onModal('seller')" size="large" type="secondary">
               Become a Merchant
             </a-button>
           </a-col>

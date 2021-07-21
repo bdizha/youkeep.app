@@ -1,97 +1,161 @@
 <template>
-  <a-row :gutter="16" align="middle" justify="start" type="flex">
-    <a-col :span="24">
-      <a-list :data-source="links">
-        <a-list-item slot="renderItem" slot-scope="item, index" class="r-list-item">
-          <nuxt-link v-if="item.link" :to="item.link" class="r-text-link">
-            <a-avatar :icon="item.icon" shape="square"/>
-            {{ item.label }}
-          </nuxt-link>
-          <nuxt-link v-else-if="!item.link" class="r-text-normal" to="/" @click.native="onLogout">
-            <a-avatar :icon="item.icon" shape="square"/>
-            {{ item.label }}
-          </nuxt-link>
-        </a-list-item>
-        <template slot="footer">
-          <div class="r-list-item ant-list-item">
-          </div>
-        </template>
-      </a-list>
-      <r-spinner v-if="(processes.isRunning)"
-                 :is-absolute="true"
-      ></r-spinner>
+  <a-row align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-collapse accordion
+                  :default-active-key="menu.currentMenuKey"
+                  expandIconPosition="right"
+      >
+        <a-collapse-panel v-for="(item) in menuItems"
+                          :key="item.key"
+                          :header="item.heading"
+                          class="r-collapse-panel"
+        >
+          <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+            <a-col v-for="(item, index) in item.links"
+                   :key="index" :span="24"
+            >
+              <template v-if="item.link !== null">
+                <nuxt-link :to="item.link" class="r-item-shadow">
+                  <a-avatar :icon="item.icon" shape="square" :size="30"/>
+                  {{ item.label }}
+                </nuxt-link>
+              </template>
+              <template v-if="!item.link">
+                <div class="r-item-shadow"
+                           @click="onLogout"
+                >
+                  <a-avatar :icon="item.icon" shape="square"/>
+                  {{ item.label }}
+                </div>
+              </template>
+            </a-col>
+          </a-row>
+        </a-collapse-panel>
+        <a-collapse-panel header="Quick Links" class="r-collapse-panel"
+        >
+          <r-quick-links></r-quick-links>
+        </a-collapse-panel>
+      </a-collapse>
+      <a-row class="r-mb-48" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
+          <h4 class="r-store-text-light">
+            Shopple is an independent shopping service that is not necessarily affiliated with,
+            endorsed or sponsored by the stores listed here but it enables you to get the deliveries
+            you
+            want.
+          </h4>
+        </a-col>
+      </a-row>
     </a-col>
   </a-row>
 </template>
 <script>
 import { mapGetters } from 'vuex'
 
-const LINKS = [
+const MENU = [
   {
-    label: 'Your account',
-    icon: 'profile',
-    link: '/account/profile'
+    heading: 'Manage Account',
+    key: 'account',
+    links: [
+      {
+        label: 'Your Account',
+        icon: 'profile',
+        link: '/account/profile'
+      },
+      {
+        label: 'Your Stores',
+        icon: 'shop',
+        link: '/account/store'
+      },
+      {
+        label: 'Your Orders',
+        icon: 'clock-circle',
+        link: '/account/order'
+      },
+      // {
+      //     label: 'Invite friends',
+      //     icon: 'user-add',
+      //     link: '/account/invite'
+      // },
+      {
+        label: 'Your Addresses',
+        icon: 'environment',
+        link: '/account/address'
+      },
+      {
+        label: 'Payment Methods',
+        icon: 'wallet',
+        link: '/account/payment'
+      },
+      {
+        label: 'Your Billing',
+        icon: 'credit-card',
+        link: '/account/credit'
+      },
+      {
+        label: 'Notifications',
+        icon: 'bell',
+        link: '/account/notifications'
+      },
+      // { In cases for shoppers show this
+      //   label: 'Your Products',
+      //   icon: 'profile',
+      //   link: '/account/product'
+      // },
+      {
+        label: 'Your Settings',
+        icon: 'profile',
+        link: '/account/settings'
+      },
+      {
+        label: 'Logout',
+        icon: 'logout',
+        link: null
+      }
+    ]
   },
   {
-    label: 'Your orders',
-    icon: 'clock-circle',
-    link: '/account/orders'
-  },
-  {
-    label: 'Your transactions',
-    icon: 'credit-card',
-    link: '/account/credit'
-  },
-  // {
-  //     label: 'Invite friends',
-  //     icon: 'user-add',
-  //     link: '/account/invite'
-  // },
-  {
-    label: 'Your addresses',
-    icon: 'environment',
-    link: '/account/location'
-  },
-  {
-    label: 'Payment methods',
-    icon: 'wallet',
-    link: '/account/payment'
-  },
-  {
-    label: 'Notifications',
-    icon: 'bell',
-    link: '/account/notifications'
-  },
-  {
-    label: 'Your stores',
-    icon: 'shop',
-    link: '/account/stores'
-  },
-  {
-    label: 'Your products',
-    icon: 'profile',
-    link: '/account/products'
-  },
-  {
-    label: 'How it works',
-    icon: 'bulb',
-    link: '/hiw'
-  },
-  {
-    label: 'Your help',
-    icon: 'question-circle',
-    link: '/help'
-  },
-  {
-    label: 'Logout',
-    icon: 'logout',
-    link: null
-  },
+    heading: 'Shopple Services ',
+    key: 'services',
+    links: [
+      {
+        label: 'Shopple+',
+        icon: 'plus',
+        link: '/hiw'
+      },
+      {
+        label: 'Waykipa Couriers',
+        icon: 'shopping-cart',
+        link: '/account/service/waykipa'
+      },
+      {
+        label: 'Shopple Credit',
+        icon: 'credit-card',
+        link: '/account/service/paise'
+      },
+      {
+        label: 'Your help',
+        icon: 'question-circle',
+        link: '/help'
+      },
+      {
+        label: 'Privacy Policy',
+        icon: 'security',
+        link: '/privacy'
+      },
+      {
+        label: 'Logout',
+        icon: 'logout',
+        link: null
+      }
+    ]
+  }
 ]
 export default {
+  name: 'r-account-menu',
   data () {
     return {
-      links: LINKS,
+      menuItems: MENU,
       store: null,
       placement: 'right',
       redirectTo: '/'
@@ -99,6 +163,8 @@ export default {
   },
   computed: mapGetters({
     processes: 'base/processes',
+    menu: 'account/menu',
+    hasMenu: 'account/hasMenu'
   }),
   created () {
     this.payload()
@@ -107,13 +173,11 @@ export default {
     payload () {
     },
     onLogout () {
-      let payload = {
+      const payload = {
         redirectTo: this.redirectTo,
         params: {}
       }
-
       this.$message.success('Your browsing session has been successfully closed off. Good bye!')
-
       this.$store.dispatch('auth/onLogout', payload)
     }
   }

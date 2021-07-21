@@ -1,11 +1,11 @@
 <template>
-  <a-layout-header :class="{'r-header__dark': isDark}" class="r-header">
+  <a-layout-header :class="{'r-header__dark': isDark || isRaised}" class="r-header">
     <r-layout-menu v-if="!modal.isVisible && !isRaised">
       <r-nav-item>
         <a-icon type="menu" @click="onDrawer('menu')"/>
       </r-nav-item>
       <r-nav-item class="r-nav-item__logo r-p-r-0">
-        <r-logo></r-logo>
+        <r-logo :is-icon="isIcon"></r-logo>
       </r-nav-item>
       <r-nav-item class="r-hide-sm r-nav-item__store-switch">
         <r-store-switch></r-store-switch>
@@ -48,6 +48,9 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-header',
+  props: {
+    isIcon: { type: Boolean, required: false, default: true }
+  },
   data () {
     return {
       formStore: this.$form.createForm(this, { name: 'form_store' }),

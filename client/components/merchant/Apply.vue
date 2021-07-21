@@ -395,7 +395,7 @@ export default {
 
           console.log('Request params...', params)
 
-          let path = '/merchant/store'
+          let path = '/seller/store'
           HTTP.post(path, params)
             .then(response => {
               if ((response.status == 422 || response.status == 500) && response.data.errors != undefined) {

@@ -4,10 +4,12 @@ import axios from 'axios'
 const state = () => ({
   current: null,
   errors: [],
+  result: null,
+  hasResult: false,
   isValid: true,
   processes: {
     isRunning: false,
-    isSuccess: false,
+    isSuccess: false
   }
 })
 
@@ -15,6 +17,8 @@ const state = () => ({
 const getters = {
   current: state => state.current,
   errors: state => state.errors,
+  result: state => state.result,
+  hasResult: state => state.hasResult,
   isValid: state => state.isValid,
   processes: state => state.processes
 }
@@ -30,9 +34,16 @@ const mutations = {
   setErrors (state, errors) {
     state.errors = errors
   },
+  setResult (state, result) {
+    state.result = result
+    state.hasResult = result !== null
+  },
+  setHasResult (state, hasResult) {
+    state.hasResult = hasResult
+  },
   setProcess (state, process) {
     state.processes[process.key] = process.value
-  },
+  }
 }
 
 // actions
@@ -52,11 +63,11 @@ const actions = {
     dispatch('base/onHasForm', true, { root: true })
     dispatch('onIsValid', true)
 
-    return await axios.post(route, params).then(({ data }) => {
+    return axios.post(route, params).then(({ data }) => {
       console.log('response: form onPost data::', data)
       console.log('response: form onPost data::', data)
 
-      dispatch('base/onNotice', message, { root: true })
+      dispatch('base/onResult', message, { root: true })
 
       dispatch('base/onHasForm', false, { root: true })
       dispatch('base/onProcess', { key: 'isSuccess', value: true }, { root: true })
@@ -79,7 +90,7 @@ const actions = {
         dispatch('base/onHasForm', true, { root: true })
         dispatch('base/onProcess', { key: 'isSuccess', value: false }, { root: true })
 
-        dispatch('base/onNotice', null, { root: true })
+        dispatch('base/onResult', null, { root: true })
       }, 4500)
 
       return { data }
@@ -100,12 +111,15 @@ const actions = {
   onIsValid ({ dispatch, commit, state }, payload) {
     commit('setIsValid', payload)
   },
-  async onProcess ({ dispatch, commit, state }, payload) {
+  onProcess ({ dispatch, commit, state }, payload) {
     try {
       commit('setProcess', payload)
     } catch (e) {
       commit('setErrors', e)
     }
+  },
+  onResult ({ dispatch, commit }, payload) {
+    commit('setResult', payload)
   }
 }
 

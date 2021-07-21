@@ -3,7 +3,6 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import RCategoryFilterCategory from './filter/Category'
 
 const DISCOUNTS = [10, 15, 20, 25, 30]
 const BRANDS = [10, 15, 20, 25, 30]
@@ -13,7 +12,6 @@ const FILTERS = {
 }
 export default {
   name: 'r-category-menu',
-  components: { RCategoryFilterCategory },
   props: {},
   data () {
     return {
@@ -32,7 +30,7 @@ export default {
     category: 'base/category',
     hasCategory: 'base/hasCategory',
     filters: 'base/filters',
-    hasCategories: 'base/hasCategories',
+    hasCategories: 'base/hasCategories'
   }),
   created () {
   },
@@ -64,9 +62,8 @@ export default {
     },
     formatter (value) {
       return 'R' + value
-    },
+    }
   },
-  watch: {},
+  watch: {}
 }
 </script>
-

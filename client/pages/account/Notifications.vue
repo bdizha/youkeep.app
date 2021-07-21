@@ -117,7 +117,7 @@ import { mapGetters } from 'vuex'
 export default {
   props: {
     maskClosable: { type: Boolean, required: false, default: true },
-    closable: { type: Boolean, required: false, default: true },
+    closable: { type: Boolean, required: false, default: true }
   },
   data () {
     return {
@@ -133,7 +133,7 @@ export default {
     user: 'auth/user',
     current: 'form/current',
     processes: 'base/processes',
-    hasForm: 'base/hasForm',
+    hasForm: 'base/hasForm'
   }),
   created () {
     this.canSendApp = Boolean(this.user.can_send_app)
@@ -149,19 +149,19 @@ export default {
 
       this.form.validateFields((error, values) => {
         if (!error) {
-          let params = {
+          const params = {
             can_send_sms: this.canSendSms,
             can_send_app: this.canSendApp,
-            can_send_email: this.canSendEmail,
+            can_send_email: this.canSendEmail
           }
 
-          let payload = {
-            params: params,
+          const payload = {
+            params,
             route: '/account/settings/store',
             current: this.formName,
             message: this.message,
             hasUser: true,
-            canRedirect: false,
+            canRedirect: false
           }
 
           this.$store.dispatch('form/onPost', payload)
@@ -174,7 +174,7 @@ export default {
       modal.isClosable = true
       modal.current = current
       this.$store.dispatch('base/onModal', modal)
-    },
-  },
+    }
+  }
 }
 </script>

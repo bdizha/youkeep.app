@@ -95,7 +95,7 @@ export default {
         {
           heading: 'Reliable',
           title: 'Track & analyse every transaction',
-          content: 'Easily manage customer data, order management, and reconciliation in the merchant portal.',
+          content: 'Easily manage customer data, order management, and reconciliation in the seller portal.',
           icon: 'calculator'
         }
       ]

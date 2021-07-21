@@ -132,9 +132,9 @@ a.r-text-logo {
 }
 
 .r-text-light {
-    font-family: Inter, 'Avenir', 'Avenir Book', 'Calibre', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    color: #3C444C99;
+    font-family: 'Avenir', 'Avenir Book', Inter, 'Calibre', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #3C444CBD;
 }
 
 .ant-layout {
@@ -1620,42 +1620,6 @@ xxl	≥1600px, could be a span value or an object containing above props
         .ant-drawer-content {
             overflow: hidden;
             color: @black;
-
-            .r-item-shadow,
-            .r-list-item,
-            .r-account-item {
-                .r-text-link {
-                    color: @black;
-                    opacity: 0.87;
-                }
-
-                .ant-avatar-icon {
-                    opacity: 0.81;
-                    color: @black;
-                    margin-right: 6px;
-                    background: #FFFFFF;
-
-                    .anticon {
-                        margin-right: 0;
-                    }
-                }
-
-                &.router-link-exact-active,
-                &:hover {
-                    opacity: 0.96;
-
-                    .ant-avatar-icon {
-                        background: @secondary-color;
-                        border-color: #1B9BD933;
-                        color: @white;
-                    }
-
-                    .r-text-link {
-                        color: #1B9BD9;
-                        opacity: 0.96;
-                    }
-                }
-            }
         }
 
         .ant-drawer-wrapper-body {
@@ -1665,6 +1629,56 @@ xxl	≥1600px, could be a span value or an object containing above props
 
         @media (max-width: 360px) {
             width: 100% !important;
+        }
+    }
+}
+
+.ant-collapse{
+    .r-item-shadow,
+    .r-list-item,
+    .r-account-item {
+        .r-text-link {
+            color: @black;
+            opacity: 0.87;
+        }
+
+        .ant-avatar-icon {
+            color: @black;
+            margin-right: 6px;
+            background: #FFFFFF;
+            border: 1px solid #FAFBFC;
+
+            .anticon {
+                margin-right: 0;
+            }
+        }
+
+        &.router-link-exact-active{
+            background: #eefaff;
+
+            .ant-avatar-icon {
+                opacity: 1;
+                background: #ffe6e6;
+                border: 1px solid #1B9BD9A9;
+                color: @secondary-color;
+            }
+
+            .r-text-link {
+                color: #1B9BD9;
+                opacity: 0.96;
+            }
+        }
+
+        &:hover {
+            background: #ffe6e6;
+
+            .ant-avatar-icon {
+                opacity: 1;
+                background: #eefaff;
+                border: 1px solid #1B9BD9A9;
+                border-color: @primary-color;
+                color: @primary-color;
+            }
         }
     }
 }
@@ -1966,7 +1980,7 @@ h4.r-heading {
 
 label {
     &.r-heading-light {
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 400;
         line-height: 18px;
     }
@@ -2539,9 +2553,9 @@ h4.r-heading-light {
     padding: 0;
     display: block;
     cursor: pointer;
-    border-radius: 100%;
+    border-radius: 0;
     height: 36px;
-    width: 36px;
+    width: auto;
     text-align: center;
     overflow: hidden;
 
@@ -2549,16 +2563,15 @@ h4.r-heading-light {
         height: 36px;
         width: auto;
         display: block;
-        border-radius: 100%;
+        border-radius: 0;
         overflow: hidden;
-        background: linear-gradient(to right, #1B9BD9 0, #F50A2B 100%) no-repeat;
     }
 
     &.r-logo__icon {
-        height: 36px;
+        width: 36px;
 
         img {
-            height: 36px;
+            width: 36px;
         }
     }
 }
@@ -2712,12 +2725,10 @@ h4.r-heading-light {
 
 .r-text-light,
 .r-store-text-light {
-    color: @black;
-    font-weight: 400;
     font-size: 15px;
     line-height: 21px;
     @media (max-width: 768px) {
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 
@@ -3437,6 +3448,12 @@ h4.r-heading-light {
         background: none;
         width: 100% !important;
         height: 100% !important;
+    }
+}
+
+.r-modal-content{
+    .ant-form-item-label{
+        display: none;
     }
 }
 
@@ -5408,9 +5425,12 @@ h4.r-heading-light {
     }
 }
 
+.ant-card-head-title{
+    font-size: 18px;
+}
+
 .ant-layout {
-    &.r-layout__store,
-    &.r-layout__default {
+    &.r-layout__store{
         padding-top: 60px;
         overflow-y: auto;
         overflow-x: hidden;
@@ -5446,6 +5466,33 @@ h4.r-heading-light {
 
         &.ant-layout-has-sider > .ant-layout-content {
             overflow: hidden;
+        }
+    }
+    &.r-layout__default {
+        padding-top: 60px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        .ant-layout-sider {
+            background: #FFFFFF;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            flex: 0 0 360px !important;
+            max-width: 360px !important;
+            min-width: 360px !important;
+            width: 360px !important;
+            overflow: auto;
+            height: 100vh;
+            position: fixed;
+            left: 0px;
+            top: 60px;
+            @media (max-width: 768px) {
+                flex: 0 0 100%;
+                max-width: 100%;
+                min-width: 100%;
+                width: 100%;
+                display: none;
+            }
         }
     }
 }
@@ -5583,172 +5630,173 @@ h4.r-heading-light {
 
 }
 
-
-.ant-steps-horizontal {
-    .ant-steps-item-icon {
-        margin: 0px;
-        top: 24px;
-        position: absolute;
-        left: 24px;
-    }
-
-    .ant-steps-item-tail {
-        &:after {
-            content: none;
-            display: none;
-        }
-    }
-
-    &:not(.ant-steps-label-vertical) {
-        .ant-steps-item {
-            margin-right: 24px;
-            @media (max-width: 768px) {
-                margin-right: 0;
-            }
-
-            &:last-child {
-                flex: 1;
-            }
-        }
-    }
-
-    .ant-steps-item {
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
-        margin: 24px 0;
-        border-radius: @border-radius-base;
-        background: #FFFFFF;
-
+.r-steps{
+    .ant-steps-horizontal {
         .ant-steps-item-icon {
-            display: none;
+            margin: 0px;
+            top: 24px;
+            position: absolute;
+            left: 24px;
         }
 
-        .r-steps-item-icon {
-            width: 36px;
-            height: 36px;
-            margin-right: 8px;
-            font-size: 16px;
-            line-height: 34px;
-            text-align: center;
-            background: @black;
-            color: @white;
-            border: 1px solid @secondary-color;
-            border-radius: 32px;
-            transition: background-color 0.3s, border-color 0.3s;
-            display: inline-block;
-            font-weight: 700;
+        .ant-steps-item-tail {
+            &:after {
+                content: none;
+                display: none;
+            }
         }
 
-        > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
-            padding: 0;
-            text-align: left;
-            white-space: normal;
-            line-height: 21px;
-            width: 100%;
-            display: none;
+        &:not(.ant-steps-label-vertical) {
+            .ant-steps-item {
+                margin-right: 24px;
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                }
+
+                &:last-child {
+                    flex: 1;
+                }
+            }
         }
 
-        overflow: visible;
+        .ant-steps-item {
+            box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+            margin: 24px 0;
+            border-radius: @border-radius-base;
+            background: #FFFFFF;
 
-        &:not(.ant-steps-item-process) {
             .ant-steps-item-icon {
-                background-color: transparent;
-            }
-        }
-
-        &.ant-steps-item-wait {
-            color: @black;
-            background: #FFFFFF url(/images/icon_arrows.svg) repeat;
-
-            .r-steps-item-icon {
-                background: #FFFFFF;
-                border-color: @black;
-                color: @black;
-            }
-
-            .r-heading {
-                color: @black;
-            }
-
-            > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
-                background-color: @black;
-            }
-        }
-
-        &.ant-steps-item-process,
-        &.ant-steps-item-finish {
-            color: @secondary-color;
-            background: linear-gradient(225deg, #f50a2b15, #1B9BD915);
-
-            border-color: @secondary-color;
-
-            .ant-steps-item-content {
-                background: transparent url(/assets/icon_arrows.svg) no-repeat;
+                display: none;
             }
 
             .r-steps-item-icon {
+                width: 36px;
+                height: 36px;
+                margin-right: 8px;
+                font-size: 16px;
+                line-height: 34px;
+                text-align: center;
+                background: @black;
+                color: @white;
                 border: 1px solid @secondary-color;
-                color: @white;
-                background: @secondary-color;
+                border-radius: 32px;
+                transition: background-color 0.3s, border-color 0.3s;
+                display: inline-block;
+                font-weight: 700;
             }
 
-            .r-heading {
+            > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+                padding: 0;
+                text-align: left;
+                white-space: normal;
+                line-height: 21px;
+                width: 100%;
+                display: none;
+            }
+
+            overflow: visible;
+
+            &:not(.ant-steps-item-process) {
+                .ant-steps-item-icon {
+                    background-color: transparent;
+                }
+            }
+
+            &.ant-steps-item-wait {
+                color: @black;
+                background: #FFFFFF url(/images/icon_arrows.svg) repeat;
+
+                .r-steps-item-icon {
+                    background: #FFFFFF;
+                    border-color: @black;
+                    color: @black;
+                }
+
+                .r-heading {
+                    color: @black;
+                }
+
+                > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+                    background-color: @black;
+                }
+            }
+
+            &.ant-steps-item-process,
+            &.ant-steps-item-finish {
                 color: @secondary-color;
+                background: linear-gradient(225deg, #f50a2b15, #1B9BD915);
+
+                border-color: @secondary-color;
+
+                .ant-steps-item-content {
+                    background: transparent url(/assets/icon_arrows.svg) no-repeat;
+                }
+
+                .r-steps-item-icon {
+                    border: 1px solid @secondary-color;
+                    color: @white;
+                    background: @secondary-color;
+                }
+
+                .r-heading {
+                    color: @secondary-color;
+                }
+
+                > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+                    background-color: @secondary-color;
+                }
             }
 
-            > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
-                background-color: @secondary-color;
-            }
-        }
-
-        &.ant-steps-item-active {
-            color: @primary-color;
-            background: linear-gradient(225deg, #1B9BD915, #f50a2b15);
-
-            .ant-steps-item-content {
-                background: transparent url(/assets/icon_arrows.svg) no-repeat;
-            }
-
-            .r-steps-item-icon {
-                border: 1px solid @primary-color;
-                color: @white;
-                background: @primary-color;
-            }
-
-            .r-heading {
+            &.ant-steps-item-active {
                 color: @primary-color;
+                background: linear-gradient(225deg, #1B9BD915, #f50a2b15);
+
+                .ant-steps-item-content {
+                    background: transparent url(/assets/icon_arrows.svg) no-repeat;
+                }
+
+                .r-steps-item-icon {
+                    border: 1px solid @primary-color;
+                    color: @white;
+                    background: @primary-color;
+                }
+
+                .r-heading {
+                    color: @primary-color;
+                }
+
+                > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+                    background-color: @primary-color;
+                }
             }
 
-            > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
-                background-color: @primary-color;
-            }
-        }
+            .ant-steps-item-container {
+                position: relative;
+                overflow: hidden;
 
-        .ant-steps-item-container {
-            position: relative;
-            overflow: hidden;
+                .ant-steps-item-content {
+                    padding: 24px;
 
-            .ant-steps-item-content {
-                padding: 24px;
-
-                .ant-avatar-square {
-                    border-radius: 0;
-
-                    img {
+                    .ant-avatar-square {
                         border-radius: 0;
-                    }
-                }
 
-                .ant-steps-item-description {
-                    text-align: left;
-
-                    .ant-avatar {
-                        background: transparent;
+                        img {
+                            border-radius: 0;
+                        }
                     }
 
-                    max-width: 100%;
-                }
+                    .ant-steps-item-description {
+                        text-align: left;
 
-                display: block;
+                        .ant-avatar {
+                            background: transparent;
+                        }
+
+                        max-width: 100%;
+                    }
+
+                    display: block;
+                }
             }
         }
     }
@@ -6415,6 +6463,9 @@ h4.r-heading-light {
     background: #FFFFFF;
     border-radius: @border-radius-base;
     margin: 0 3px;
+    .ant-table-pagination.ant-pagination{
+        margin: 24px;
+    }
 }
 
 .r-store-item {

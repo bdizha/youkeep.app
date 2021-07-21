@@ -133,7 +133,7 @@ export default {
     }
   },
   computed: {
-    activeKey: function () {
+    activeKey () {
       let activeKey = 'links'
 
       if (this.isStore) {
@@ -166,8 +166,6 @@ export default {
 
       const categoryParts = this.$route.params.category.split('--')
 
-      console.log('category paths', categoryParts)
-      console.log('categoryParts[1]', categoryParts[1])
       this.filters.category_id = (categoryParts[1] !== undefined) ? categoryParts[1] : null
       await this.$store.dispatch('base/onProducts', this.filters)
     },

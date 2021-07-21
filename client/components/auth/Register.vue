@@ -15,7 +15,7 @@
             <a-row :gutter=[24,24] justify="center" type="flex">
               <a-col :xs="{ span: 24 }" class="r-text-left">
                 <h2 class="r-heading r-text-secondary">
-                  Request a Shopple account
+                  Get started shopping on Shopple
                 </h2>
               </a-col>
               <a-col v-if="hasAddress" :xs="{ span: 24 }" class="r-text-left">
@@ -25,9 +25,9 @@
                 </h3>
               </a-col>
               <a-col :xs="{ span: 24 }">
-                <p class="r-text-small">
+                <p class="r-text-light">
                   This will just take a few steps to complete. Why don't you help us set up your
-                  shopping account details in 3 just under minutes.
+                  shopping account <detail></detail>s in 3 just under minutes.
                 </p>
               </a-col>
             </a-row>
@@ -41,22 +41,22 @@
               <a-icon slot="prefix" type="user"/>
             </a-input>
           </a-form-item>
-          <a-form-item label="Your mobile number">
-            <a-input
-              v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
-              placeholder="Your mobile number"
-              size="large"
-            >
-              <a-icon slot="prefix" type="mobile"/>
-            </a-input>
-          </a-form-item>
-          <a-form-item label="Email address">
-            <a-input v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
-                     placeholder="Your email address"
+          <a-form-item label="Email">
+            <a-input v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email' }] }]"
+                     placeholder="Your email"
                      size="large"
                      type="email"
             >
               <a-icon slot="prefix" type="mail"/>
+            </a-input>
+          </a-form-item>
+          <a-form-item label="Password">
+            <a-input v-decorator="['password', { rules: [{ required: true, message: 'Please enter your password' }] }]"
+                     placeholder="Your password"
+                     size="large"
+                     type="password"
+            >
+              <a-icon slot="prefix" type="lock"/>
             </a-input>
           </a-form-item>
           <a-form-item>
@@ -65,12 +65,12 @@
                            name="type" @change="onUserType"
             >
               <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-radio :value="1">
                     I'm a Business
                   </a-radio>
                 </a-col>
-                <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-radio :value="2">
                     I'm a Shopper
                   </a-radio>
@@ -82,7 +82,7 @@
             <a-button block class="r-btn-secondary" html-type="submit" size="large"
                       type="secondary"
             >
-              Request an invite
+              Request an account
             </a-button>
           </a-form-item>
           <a-form-item>
@@ -100,7 +100,7 @@
         </a-col>
       </a-row>
     </a-form>
-    <r-notice :process="process"></r-notice>
+    <r-result v-if="hasResult"></r-result>
     <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
   </r-modal-template>
 </template>
@@ -111,16 +111,15 @@ export default {
   name: 'r-register',
   props: {
     maskClosable: { type: Boolean, required: false, default: false },
-    closable: { type: Boolean, required: false, default: false },
+    closable: { type: Boolean, required: false, default: false }
   },
   data () {
     return {
-      process: 'isSuccess',
       formName: 'register',
-      fields: ['name', 'mobile', 'email'],
+      fields: ['name', 'email', 'password'],
       form: this.$form.createForm(this, { name: 'form_register' }),
-      message: 'Thank you for successfully signing up with Shopple. Enjoy your shopping!',
-      userType: 1,
+      message: null,
+      userType: 1
     }
   },
   computed: mapGetters({
@@ -131,6 +130,8 @@ export default {
     processes: 'base/processes',
     isValid: 'form/isValid',
     hasForm: 'base/hasForm',
+    result: 'form/result',
+    hasResult: 'form/hasResult'
   }),
   created () {
     this.payload()
@@ -143,39 +144,43 @@ export default {
 
       this.form.validateFields((errors, values) => {
         if (!errors) {
-          let params = Object.assign({}, values)
+          const params = Object.assign({}, values)
           this.onRegister(params)
         }
       })
     },
     async onRegister (params) {
       params.type = this.userType
-      params.password = '@%Chang3m3#'
-      params.password_confirmation = params.password
 
-      let payload = {
-        params: params,
+      const payload = {
+        params,
         route: '/register',
         current: this.formName,
         message: this.message,
         form: this.form,
         fields: this.fields,
         hasUser: true,
-        canRedirect: false,
+        canRedirect: false
       }
-      let $this = this
 
-      await this.$store.dispatch('auth/onPost', payload).catch(error => {
-        try {
-          let data = error.response.data
-          if (data.errors !== undefined) {
-            $this.setErrors(data.errors, $this)
-          }
-        } catch (e) {
+      const $this = this
+
+      await this.$store.dispatch('auth/onPost', payload).catch((error) => {
+        const data = error.response.data
+        if (data.errors !== undefined) {
+          $this.setErrors(data.errors, $this)
         }
-      }).then(response => {
+      }).then((response) => {
         setTimeout(() => {
           if ($this.isValid) {
+            const message = {
+              title: 'Thank you for signing up',
+              content: `Thank you for signing up with us, ${$this.user.name}. We sent a verification email to<br>
+                        ${$this.user.email}<br>
+                        Click the link inside to get started!`
+            }
+
+            $this.$store.dispatch('form/onResult', message)
             $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Shopple.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
@@ -199,14 +204,14 @@ export default {
       $this.errors = errors
       $this.fields.forEach(function (field) {
         if ($this.errors[field] !== undefined) {
-          let value = $this.form.getFieldValue(field)
-          let fields = {}
+          const value = $this.form.getFieldValue(field)
+          const fields = {}
           fields[field] = {
-            'value': value,
+            value,
             'errors': [
               {
                 'message': $this.errors[field][0],
-                'field': field
+                field
               }
             ]
           }
@@ -215,6 +220,6 @@ export default {
         }
       })
     }
-  },
+  }
 }
 </script>

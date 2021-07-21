@@ -45,7 +45,7 @@
                              :md="{ span: 12 }"
                              :lg="{ span: 12 }"
                       >
-                        <a-button block @click="onModal('merchant')"
+                        <a-button block @click="onModal('seller')"
                                   class="r-btn-secondary r-margin-top-24"
                                   size="large" type="secondary"
                         >
@@ -133,7 +133,7 @@
                                      :md="{ span: 12 }"
                                      :lg="{ span: 12 }"
                               >
-                                <a-button block @click="onModal('merchant')"
+                                <a-button block @click="onModal('seller')"
                                           class="r-btn-secondary r-margin-top-24"
                                           size="default"
                                           type="secondary"
@@ -285,7 +285,7 @@
                                  :md="{ span: 12 }"
                                  :lg="{ span: 12 }"
                           >
-                            <a-button block @click="onModal('merchant')"
+                            <a-button block @click="onModal('seller')"
                                       class="r-btn-secondary r-margin-top-24"
                                       size="default"
                                       type="secondary"
