@@ -5,7 +5,7 @@
         <a-row align="middle" justify="space-around" type="flex">
           <a-col :span="24">
             <h1 class="r-heading r-text-secondary">
-              Current job openings at Shopple
+              Current job openings at Spazamall
             </h1>
           </a-col>
         </a-row>

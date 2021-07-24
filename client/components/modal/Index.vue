@@ -11,7 +11,7 @@
         <a-col :span="24">
           <h4 class="r-heading r-text-secondary r-text-center">
             <a-icon type="gift"/>
-            <span>FREE Deliveries For 1 Week with Shopple <br></span>
+            <span>FREE Deliveries For 1 Week with Spazamall <br></span>
           </h4>
         </a-col>
       </a-row>

@@ -1,14 +1,14 @@
 <template>
   <div :class="'r-testimonials'">
-    <a-row type="flex" justify="center" :gutter="16">
-      <a-col class="gutter-row" :xs="{ span: 24 }" :md="{ span: 18 }" :lg="{ span: 12 }">
+    <a-row :gutter="16" justify="center" type="flex">
+      <a-col :lg="{ span: 12 }" :md="{ span: 18 }" :xs="{ span: 24 }" class="gutter-row">
         <h2 class="r-heading r-text-secondary  text-center">
           What our customers say
         </h2>
         <VueSlickCarousel v-if="testimonials.length > 0" v-bind="settings">
           <div class="r-testimonial">
-            <img class="r-testimonial-photo"
-                 :src="'/images/Shopple/testimonials/0' + index + '.jpg'"
+            <img :src="'/images/Spazamall/testimonials/0' + index + '.jpg'"
+                 class="r-testimonial-photo"
                  style="opacity: 1;"
             >
             <h4 class="r-heading">

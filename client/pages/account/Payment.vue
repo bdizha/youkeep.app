@@ -1,8 +1,8 @@
 <template>
   <r-account>
-    <a-row type="flex" justify="start" align="middle">
-      <a-col class="gutter-row" :xs="{ span: 24 }"
-             :sm="{ span: 24 }" :lg="{ span: 24 }"
+    <a-row align="middle" justify="start" type="flex">
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+             :xs="{ span: 24 }" class="gutter-row"
       >
         <r-account-card-list></r-account-card-list>
         <r-account-card-add></r-account-card-add>

@@ -3,7 +3,7 @@
     <defs>
         <style>
             .cls-1 {
-            clip-path: url(#clip-Shopple);
+            clip-path: url(#clip-Spazamall);
             }
 
             .cls-2 {
@@ -38,11 +38,11 @@
             fill: none;
             }
         </style>
-        <clipPath id="clip-Shopple">
+        <clipPath id="clip-Spazamall">
             <rect width="1000" height="1000"/>
         </clipPath>
     </defs>
-    <g id="Shopple" class="cls-1">
+    <g id="Spazamall" class="cls-1">
         <rect class="cls-8" width="1000" height="1000"/>
         <g id="Group_1925" data-name="Group 1925">
             <g id="Group_1924" data-name="Group 1924" transform="translate(6 3.21)">

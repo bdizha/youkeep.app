@@ -2,15 +2,16 @@
   <div class="row">
     <div class="col-lg-8 m-auto">
       <card :title="$t('reset_password')">
-        <form @submit.prevent="send" @keydown="form.onKeydown($event)">
+        <form @keydown="form.onKeydown($event)" @submit.prevent="send">
           <alert-success :form="form" :message="status"/>
 
           <!-- Email -->
           <div class="form-group row">
             <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
             <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" type="email" name="email"
-                     class="form-control"
+              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control"
+                     name="email"
+                     type="email"
               >
               <has-error :form="form" field="email"/>
             </div>

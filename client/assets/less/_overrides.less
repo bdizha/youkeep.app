@@ -54,7 +54,15 @@ h3 {
 }
 
 .r-text-primary {
-    color: #F50A2B !important;
+    color: #FBD13E !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: @black;
+}
+
+.r-text-red{
+    color: #EE1C25;
 }
 
 .r-text-grey {
@@ -109,7 +117,7 @@ a.r-text-logo {
     .anticon {
         color: @secondary-color;
         font-size: 16px;
-        background: #1B9BD912;
+        background: #FBD13E30;
         border-radius: 100%;
         height: 30px;
         width: 30px;
@@ -142,7 +150,7 @@ a.r-text-logo {
 }
 
 .r-bg-primary {
-    background-color: #FFEFEF;
+    background-color: #FBD13E99;
 }
 
 .r-bg-white {
@@ -201,7 +209,7 @@ a.r-text-logo {
             &.ant-select {
                 .ant-input {
                     background: rgba(255, 255, 255, 0.3);;
-                    border-color: #1B9BD9;
+                    border-color: #3B9CFF;
                     color: @black;
                     height: 36px;
 
@@ -217,7 +225,7 @@ a.r-text-logo {
                         &.ant-select {
                             .ant-input {
                                 background: rgba(255, 255, 255, 0.999);
-                                border-color: #F50A2B;
+                                border-color: #FBD13E;
                                 color: @white;
                             }
                         }
@@ -258,6 +266,10 @@ a.r-text-logo {
                 color: @white;
             }
 
+            a.r-text-link{
+                color: @white;
+            }
+
             .r-nav-item {
                 color: @white;
             }
@@ -284,7 +296,7 @@ a.r-text-logo {
                 &.ant-select {
                     .ant-input {
                         background: rgba(255, 255, 255, 0.3);;
-                        border-color: #1B9BD9;
+                        border-color: #3B9CFF;
                         color: @white;
                         height: 36px;
 
@@ -300,7 +312,7 @@ a.r-text-logo {
                             &.ant-select {
                                 .ant-input {
                                     background: rgba(255, 255, 255, 0.999);
-                                    border-color: #F50A2B;
+                                    border-color: #FBD13E;
                                     color: @black;
                                 }
                             }
@@ -474,7 +486,7 @@ a.r-text-logo {
             }
 
             &:hover {
-                background: #eefaff;
+                background: #fbf0c8;
             }
         }
     }
@@ -568,7 +580,7 @@ x {
     }
 
     .r-store-active {
-        background: #F50A2B !important;
+        background: #FBD13E !important;
         color: @white;
         position: absolute;
         top: -9px;
@@ -619,19 +631,19 @@ x {
 
 .ant-select-focused {
     .ant-select-selection {
-        border-color: #F50A2B !important;
+        border-color: #FBD13E !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 }
 
 .ant-select-selection {
     &:focus {
-        border-color: #F50A2B !important;
+        border-color: #FBD13E !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 
     &:active {
-        border-color: #F50A2B !important;
+        border-color: #FBD13E !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 }
@@ -640,7 +652,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #F50A2B !important;
+            border-right: 3px solid #FBD13E !important;
         }
 
         font-size: 15px !important;
@@ -659,7 +671,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #F50A2B !important;
+            border-right: 3px solid #FBD13E !important;
         }
 
         font-size: 15px !important;
@@ -678,7 +690,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #F50A2B !important;
+            border-right: 3px solid #FBD13E !important;
         }
 
         font-size: 15px !important;
@@ -843,7 +855,7 @@ x {
 
 .ant-rate {
     font-size: 21px;
-    color: #1B9BD9;
+    color: #3B9CFF;
     @media (max-width: 768px) {
         font-size: 18px;
     }
@@ -894,8 +906,8 @@ x {
         font-size: 15px;
         text-align: left;
         padding: 0 12px;
-        color: #F50A2B;
-        background: #FFEFEF;
+        color: @secondary-color;
+        background: #e7f2fd;
         border-radius: 6px;
     }
 }
@@ -1201,16 +1213,16 @@ x {
 }
 
 .r-btn-primary {
-    background: #F50A2B !important;
+    background: #FBD13E !important;
     color: #FFFFFF !important;
-    border-color: #F50A2B !important;
+    border-color: #FBD13E !important;
     font-weight: 600;
     opacity: 1;
 
     &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #F50A2B;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #FBD13E;
         opacity: 1;
-        border-color: #F50A2B;
+        border-color: #FBD13E;
     }
 
     &:focus {
@@ -1263,8 +1275,8 @@ x {
 
     &:focus {
         opacity: 0.9;
-        border-color: #F50A2B;
-        background: #F50A2B !important;
+        border-color: #FBD13E;
+        background: #FBD13E !important;
     }
 }
 
@@ -1279,7 +1291,7 @@ x {
             &:hover {
                 color: @secondary-color;
                 background: rgba(255, 255, 255, 1);
-                border-color: @white;
+                border-color: @primary-color;
             }
         }
     }
@@ -1365,16 +1377,16 @@ x {
         line-height: 36px;
 
         &:hover {
-            background: #F50A2B15;
+            background: #fbf0c8;
             color: @white;
             border: 1px solid #FDBAC415;
         }
     }
 
     .r-product-price {
-        font-size: 15px;
+        font-size: 18px;
         text-align: right;
-        font-weight: 500;
+        font-weight: 700;
         display: inline-block;
         width: auto;
         margin: 0;
@@ -1534,7 +1546,7 @@ xxl	≥1600px, could be a span value or an object containing above props
     cursor: pointer;
 
     &:hover {
-        color: #F50A2B !important;
+        color: #FBD13E !important;
     }
 
     .anticon {
@@ -1573,15 +1585,15 @@ xxl	≥1600px, could be a span value or an object containing above props
     font-weight: 900;
 
     &:hover {
-        background: #F50A2B;
+        background: #FBD13E;
         color: @white;
     }
 }
 
 .r-product-price {
-    font-size: 16px;
+    font-size: 18px;
     text-align: right;
-    font-weight: 500;
+    font-weight: 700;
     display: inline-block;
     width: auto;
     margin: 0;
@@ -1641,6 +1653,9 @@ xxl	≥1600px, could be a span value or an object containing above props
             color: @black;
             opacity: 0.87;
         }
+        a{
+            font-weight: 500;
+        }
 
         .ant-avatar-icon {
             color: @black;
@@ -1654,30 +1669,29 @@ xxl	≥1600px, could be a span value or an object containing above props
         }
 
         &.router-link-exact-active{
-            background: #eefaff;
+            background: #fbf0c8;
 
             .ant-avatar-icon {
                 opacity: 1;
-                background: #ffe6e6;
-                border: 1px solid #1B9BD9A9;
+                background: #fbf0c8;
+                border-color: @secondary-color;
                 color: @secondary-color;
             }
 
             .r-text-link {
-                color: #1B9BD9;
+                color: #3B9CFF;
                 opacity: 0.96;
             }
         }
 
         &:hover {
-            background: #ffe6e6;
+            background: #d1e7fd;
 
             .ant-avatar-icon {
                 opacity: 1;
-                background: #eefaff;
-                border: 1px solid #1B9BD9A9;
-                border-color: @primary-color;
-                color: @primary-color;
+                background: #d1e7fd;
+                border-color: @secondary-color;
+                color: @secondary-color;
             }
         }
     }
@@ -1728,7 +1742,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
     .r-cart-btn {
         border: 1px solid #FFFFFF;
-        color: #F50A2BAC;
+        color: #FBD13EAC;
         width: 100%;
         text-align: center;
 
@@ -1747,7 +1761,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
         .r-cart-btn {
             background: #FFFFFF;
-            color: #1B9BD9AC;
+            color: #3B9CFFAC;
 
             &:hover {
                 background: @secondary-color;
@@ -1821,7 +1835,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
     .r-cart-btn {
         border: 1px solid #FFFFFF;
-        color: #1B9BD9AC;
+        color: #3B9CFFAC;
         width: 100%;
         text-align: center;
 
@@ -1840,7 +1854,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
         .r-cart-btn {
             background: #FFFFFF;
-            color: #1B9BD9AC;
+            color: #3B9CFFAC;
 
             &:hover {
                 background: @secondary-color;
@@ -2009,7 +2023,7 @@ h4.r-heading-light {
 .ant-modal-footer {
     padding: 24px !important;
     border-top: 1px solid @secondary-color !important;
-    background: #eefaff;
+    background: #fbf0c8;
 }
 
 .ant-modal {
@@ -2327,11 +2341,11 @@ h4.r-heading-light {
 }
 
 .ant-form-shadow-secondary {
-    box-shadow: 0 12px 15px 6px #F50A2B22, 0 8px 28px 6px #F50A2B33, 0 12px 15px -6px #F50A2B44;
+    box-shadow: 0 12px 15px 6px #FBD13E22, 0 8px 28px 6px #FBD13E33, 0 12px 15px -6px #FBD13E44;
 }
 
 .ant-form-shadow-primary {
-    box-shadow: 0 12px 15px 6px #F50A2B22, 0 8px 28px 6px #F50A2B33, 0 12px 15px -6px #F50A2B44;
+    box-shadow: 0 12px 15px 6px #FBD13E22, 0 8px 28px 6px #FBD13E33, 0 12px 15px -6px #FBD13E44;
 }
 
 .r-inline-text {
@@ -2395,37 +2409,37 @@ h4.r-heading-light {
     }
 
     > .ant-menu-item-active {
-        color: #F50A2B !important;
+        color: #FBD13E !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-submenu-active {
-        color: #F50A2B !important;
+        color: #FBD13E !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-item-open {
-        color: #F50A2B !important;
+        color: #FBD13E !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-submenu-open {
-        color: #F50A2B !important;
+        color: #FBD13E !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-item-selected {
-        color: #F50A2B !important;
+        color: #FBD13E !important;
         border-bottom: 2px solid transparent;
         border-radius: @border-radius-base;
 
         > a {
-            color: #F50A2B !important;
+            color: #FBD13E !important;
         }
     }
 
     > .ant-menu-submenu-selected {
-        color: #F50A2B !important;
+        color: #FBD13E !important;
         border-bottom: 2px solid transparent !important;
     }
 }
@@ -2675,8 +2689,8 @@ h4.r-heading-light {
 
         .ant-avatar-icon {
             color: @secondary-color;
-            background: #FFEFEF;
-            border-color: #F50A2B33;
+            background: #FBD13E99;
+            border-color: #FBD13E33;
         }
     }
 
@@ -3191,20 +3205,20 @@ h4.r-heading-light {
 
     &:hover {
         border: 1px solid #FFFFFF !important;
-        color: #F50A2B !important;
+        color: #FBD13E !important;
         background: @white !important;
     }
 }
 
 .r-btn-primary-bordered {
     border: 1px solid #FDBAC4 !important;
-    color: #F50A2B !important;
+    color: #FBD13E !important;
     background: transparent !important;
 
     &:hover {
         border: 1px solid #FDBAC4 !important;
         color: #FFFFFF !important;
-        background: #F50A2B !important;
+        background: #FBD13E !important;
     }
 }
 
@@ -3241,14 +3255,14 @@ h4.r-heading-light {
 }
 
 .r-btn-bordered-primary {
-    border: 1px solid #F50A2B36;
+    border: 1px solid #FBD13E36;
     color: @secondary-color;
     background: transparent !important;
 
     &:hover {
         border: 1px solid #FDBAC4;
-        color: @white;
-        background: #F50A2B !important;
+        color: @secondary-color;
+        background: @primary-color !important;
     }
 }
 
@@ -3282,9 +3296,9 @@ h4.r-heading-light {
     background: transparent;
 
     &:hover {
+        background: @primary-color !important;
         border: 1px solid @secondary-color;
-        color: @black;
-        background: @white !important;
+        color: @secondary-color;
     }
 }
 
@@ -3306,7 +3320,7 @@ h4.r-heading-light {
     right: 24px;
 
     .ant-btn {
-        background: #F50A2B !important;
+        background: #FBD13E !important;
         color: #FFFFFF !important;
     }
 }
@@ -3388,11 +3402,11 @@ h4.r-heading-light {
 
 .ant-avatar {
     &.r-avatar-primary {
-        border: 1px solid #f50a2b66;
+        border: 1px solid #FBD13E66;
     }
 
     &.r-avatar-secondary {
-        border: 1px solid #1B9BD966;
+        border: 1px solid #3B9CFF66;
     }
 
     &.r-avatar-store {
@@ -3616,7 +3630,7 @@ h4.r-heading-light {
             .ant-collapse-arrow {
                 color: @secondary-color;
                 fill: @secondary-color;
-                background: #eefaff;
+                background: #fbf0c8;
             }
         }
     }
@@ -3668,7 +3682,7 @@ h4.r-heading-light {
                 .ant-collapse-arrow {
                     color: @secondary-color;
                     fill: @secondary-color;
-                    background: #eefaff;
+                    background: #fbf0c8;
                 }
             }
         }
@@ -3760,7 +3774,7 @@ h4.r-heading-light {
         &:hover,
         &.r-checkout-item__active {
             &:before {
-                background-color: #FFEFEF;
+                background-color: #FBD13E99;
             }
 
             &.r-checkout-item-address {
@@ -3913,12 +3927,12 @@ h4.r-heading-light {
 }
 
 .r-bg-dark {
-    background: linear-gradient(to right, @secondary-color 0, @black 100%) no-repeat;
+    background: @secondary-color url(/images/icon_pattern_dark.svg) repeat;
 }
 
 .r-page-art-primary {
     background-image: url(/images/art-primary-02.svg);
-    background-color: #F50A2B18;
+    background-color: #f7f3dc;
 }
 
 .r-page-header-photo {
@@ -3939,7 +3953,7 @@ h4.r-heading-light {
         bottom: 0;
         right: 0;
         z-index: 999;
-        background: transparent url(/images/icon_pattern_light.svg) repeat;
+        background: transparent url(/images/icon_pattern_white.svg) repeat;
     }
 
     .r-page-skin,
@@ -3955,11 +3969,11 @@ h4.r-heading-light {
     }
 
     .r-page-white {
-        background-color: #FFEFEF;
+        background-color: #FBD13E99;
     }
 
     .r-page-secondary {
-        background-color: #eefaff;
+        background-color: #fbf0c8;
     }
 
     .r-page-white {
@@ -4429,7 +4443,7 @@ h4.r-heading-light {
 }
 
 .r-search-btn {
-    background-color: #F50A2BE6;
+    background-color: #FBD13EE6;
     border-color: #FDBAC4;
     color: @white;
 
@@ -4535,13 +4549,13 @@ h4.r-heading-light {
 
 .ant-avatar-icon {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.18);
-    background: #FFFFFF url(/assets/icon_pattern_light.svg) repeat;
+    background: #FFFFFF url(/assets/icon_pattern_white.svg) repeat;
 
     &.r-avatar-primary {
         border-bottom: 1px solid #FAAEBB;
         fill: @secondary-color;
         color: @secondary-color;
-        background-color: #FFEFEF;
+        background-color: #FBD13E99;
 
         &:hover {
             border-bottom: 1px solid @secondary-color;
@@ -4555,7 +4569,7 @@ h4.r-heading-light {
         border-bottom: 1px solid #B3DDFA;
         fill: @secondary-color;
         color: @secondary-color;
-        background-color: #eefaff;
+        background-color: #fbf0c8;
 
         &:hover {
             border-bottom: 1px solid @secondary-color;
@@ -4834,7 +4848,7 @@ h4.r-heading-light {
 }
 
 .ant-avatar {
-    background: transparent url(/assets/icon_pattern_light.svg) repeat;
+    background: transparent url(/assets/icon_pattern_white.svg) repeat;
 
     > img {
         border-radius: @border-radius-base;
@@ -5091,6 +5105,13 @@ h4.r-heading-light {
     }
 }
 
+.r-mv-96 {
+    margin: 96px 0;
+    @media (max-width: 768px) {
+        margin: 48px 0;
+    }
+}
+
 .r-line-bottom {
     border-bottom: 1px solid rgb(236, 236, 236, 1);
 }
@@ -5254,7 +5275,7 @@ h4.r-heading-light {
 
 .r-art-primary {
     background-image: url(/images/art-white.svg);
-    background-color: #F50A2BDD;
+    background-color: #FBD13EDD;
     background-repeat: repeat;
     padding: 24px;
     background-size: 0.6% !important;
@@ -5273,7 +5294,7 @@ h4.r-heading-light {
 }
 
 .r-art-primary-light {
-    background: #FFEFEF url(/images/art-primary.svg) repeat scroll 0% 0% !important;
+    background: #FBD13E99 url(/images/art-primary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -5282,7 +5303,7 @@ h4.r-heading-light {
 }
 
 .r-art-primary-secondary {
-    background: #FFEFEF url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
+    background: #FBD13E99 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -5300,7 +5321,7 @@ h4.r-heading-light {
 }
 
 .r-art-secondary-light {
-    background: #FFEFEF url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
+    background: #FBD13E99 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -5309,7 +5330,7 @@ h4.r-heading-light {
 }
 
 .r-subscribe {
-    background: transparent url(/assets/icon_pattern_light.svg) repeat;
+    background: transparent url(/assets/icon_pattern_white.svg) repeat;
     padding: 48px 0;
 
     .r-subscribe-title {
@@ -5626,10 +5647,6 @@ h4.r-heading-light {
     text-transform: uppercase;
 }
 
-.ant-steps-vertical {
-
-}
-
 .r-steps{
     .ant-steps-horizontal {
         .ant-steps-item-icon {
@@ -5724,7 +5741,7 @@ h4.r-heading-light {
             &.ant-steps-item-process,
             &.ant-steps-item-finish {
                 color: @secondary-color;
-                background: linear-gradient(225deg, #f50a2b15, #1B9BD915);
+                background: linear-gradient(225deg, #fbf0c8, #d1e7fd);
 
                 border-color: @secondary-color;
 
@@ -5749,7 +5766,7 @@ h4.r-heading-light {
 
             &.ant-steps-item-active {
                 color: @primary-color;
-                background: linear-gradient(225deg, #1B9BD915, #f50a2b15);
+                background: linear-gradient(225deg, #d1e7fd, #FBD13E36);
 
                 .ant-steps-item-content {
                     background: transparent url(/assets/icon_arrows.svg) no-repeat;
@@ -5828,7 +5845,7 @@ h4.r-heading-light {
                 color: @secondary-color;
             }
 
-            background: #FFEFEF;
+            background: #FBD13E99;
         }
     }
 }
@@ -5869,7 +5886,7 @@ h4.r-heading-light {
     .ant-card {
         .r-shopper-icon {
             color: @secondary-color;
-            background: #FFEFEF;
+            background: #FBD13E99;
             height: 168px;
             width: 168px;
             padding: 24px;
@@ -6095,23 +6112,23 @@ h4.r-heading-light {
 }
 
 .r-bg-primary-light {
-    background: linear-gradient(225deg, #1B9BD915, #f50a2b15);
+    background: #e7f2fd;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_white.svg) repeat;
+        background: transparent url(/images/icon_pattern_primary.svg) repeat;
     }
 }
 
 .r-bg-secondary-light {
-    background: linear-gradient(225deg, #f50a2b15, #1B9BD915);
+    background: #f7f3dc;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_white.svg) repeat;
+        background: transparent url(/images/icon_pattern_secondary.svg) repeat;
     }
 }
 
 .r-bg-grey-light {
-    background: linear-gradient(225deg, #FFFFFF15, #1B9BD915);
+    background: linear-gradient(225deg, #FFFFFF15, #d1e7fd);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_white.svg) repeat;
@@ -6119,14 +6136,14 @@ h4.r-heading-light {
 }
 
 .r-bg-secondary {
-    background: linear-gradient(225deg, #1B9BD999, #f50a2b99);
+    background: #FBD13E;
 
     p.r-text-normal,
     h1,
     h2,
     h3,
     h4 {
-        color: @white;
+        color: #3B9CFF;
     }
 }
 
@@ -6182,7 +6199,7 @@ h4.r-heading-light {
 }
 
 .r-gradient {
-    background: linear-gradient(to right, #1B9BD9 0, #F50A2B 100%) no-repeat;
+    background: linear-gradient(to right, #3B9CFF 0, #FBD13E 100%) no-repeat;
 
     .r-slider {
         margin: 0 -12px;
@@ -6596,7 +6613,7 @@ h4.r-heading-light {
     }
 
     .r-slider .slick-prev, .r-slider .slick-next {
-        color: #1B9BD9;
+        color: #3B9CFF;
         background: #FFFFFF;
         border: 1px solid transparent;
         top: 50%;
@@ -6733,8 +6750,8 @@ h4.r-heading-light {
     margin: auto;
     border-radius: 50%;
     overflow: hidden;
-    color: #F50A2B;
-    background: #FFEFEF url(/images/icon_pattern_white.svg) repeat;
+    color: #FBD13E;
+    background: #FBD13E99 url(/images/icon_pattern_white.svg) repeat;
     border-color: @secondary-color;
     text-align: center;
     box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
@@ -6751,7 +6768,7 @@ h4.r-heading-light {
     }
 
     &.r-icon__primary {
-        color: #F50A2B;
+        color: #FBD13E;
         background: #FFF6F6;
     }
 
@@ -6839,7 +6856,7 @@ h4.r-heading-light {
 
     .ant-select-dropdown-menu-item {
         position: relative;
-        border-bottom: 1px solid #eefaff;
+        border-bottom: 1px solid #fbf0c8;
 
         &:last-child {
             border: none;
@@ -6885,7 +6902,7 @@ h4.r-heading-light {
         &.ant-select-dropdown-menu-item-selected,
         &:hover {
             color: @secondary-color;
-            background-color: #eefaff;
+            background-color: #fbf0c8;
         }
     }
 }
@@ -6932,8 +6949,8 @@ a:hover {
 
     &:hover {
         .ant-avatar-icon {
-            background: #FFEFEF;
-            border-color: #F50A2B33;
+            background: #FBD13E99;
+            border-color: #FBD13E33;
             color: @secondary-color;
         }
     }
@@ -7101,7 +7118,7 @@ a:hover {
 
 .slick-dots li.slick-active button:before {
     opacity: .96;
-    color: #F50A2B
+    color: #FBD13E
 }
 
 .r-slick-thumb {

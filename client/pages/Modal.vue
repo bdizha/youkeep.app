@@ -1,16 +1,16 @@
 <template>
-  <a-modal :class="cssClass"
-           :mask-closable="maskClosable"
+  <a-modal v-model="hasModal"
            :after-close="onClose"
+           :class="cssClass"
            :closable="closable"
-           v-model="hasModal"
+           :mask-closable="maskClosable"
   >
     <template slot="footer">
-      <a-row type="flex" justify="center" align="middle">
-        <a-col class="gutter-row" :span="24">
+      <a-row align="middle" justify="center" type="flex">
+        <a-col :span="24" class="gutter-row">
           <h4 class="r-heading r-text-secondary r-text-center">
             <a-icon type="gift"/>
-            <span>FREE Deliveries For 1 Week with Shopple <br></span>
+            <span>FREE Deliveries For 1 Week with Spazamall <br></span>
           </h4>
         </a-col>
       </a-row>

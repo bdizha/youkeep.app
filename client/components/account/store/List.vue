@@ -1,5 +1,5 @@
 <template>
-  <a-table class="r-grey-shadow" :columns="columns" :dataSource="stores.data" bordered>
+  <a-table :columns="columns" :dataSource="stores.data" bordered class="r-grey-shadow">
     <template slot="photo" slot-scope="photo">
       <r-avatar :size="90"
                 :src="photo"
@@ -15,7 +15,8 @@
             <a-button block
                       class="r-btn-bordered-primary"
                       size="small"
-                      type="secondary">
+                      type="secondary"
+            >
               View
             </a-button>
           </nuxt-link>
@@ -23,8 +24,9 @@
         <a-col :lg="{span: 12}" :md="{span: 12}" :sm="{span: 12}" :xs="{span: 12}">
           <a-button block class="r-btn-bordered-secondary"
                     size="small"
+                    type="secondary"
                     @click="onModal(slug)"
-                    type="secondary">
+          >
             Config Map
           </a-button>
         </a-col>
@@ -47,8 +49,7 @@ const COLUMNS = [
 
 export default {
   name: 'r-account-store-list',
-  props: {
-  },
+  props: {},
   data () {
     return {
       dataSource: [],

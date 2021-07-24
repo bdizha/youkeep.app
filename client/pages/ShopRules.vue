@@ -1,17 +1,17 @@
 <template>
   <r-page>
-    <a-row type="flex" justify="center" align="middle">
+    <a-row align="middle" justify="center" type="flex">
       <a-col :span="24">
-        <a-row type="flex" justify="space-around" align="middle">
+        <a-row align="middle" justify="space-around" type="flex">
           <a-col :lg="{span: 9 , offset: 3}" class="r-page-padding">
             <h1 class="r-heading">
               <span class="r-text-secondary">Shop</span>
               <span class="">Rules</span>
             </h1>
           </a-col>
-          <a-col :xs="{span: 24}" :lg="{span: 12}" class="r-p-lg-48" style="position: relative;">
+          <a-col :lg="{span: 12}" :xs="{span: 24}" class="r-p-lg-48" style="position: relative;">
             <div class="r-page-header-photo r-page-art-primary">
-              <img alt="Couple orders online" src="/images/Shopple/shop-rules-02.png">
+              <img alt="Couple orders online" src="/images/Spazamall/shop-rules-02.png">
             </div>
           </a-col>
         </a-row>
@@ -19,15 +19,15 @@
     </a-row>
     <a-row class="r-mv-48">
       <a-col :lg="{span: 12}">
-        <a-row class="r-radius-right-white" type="flex"
-               justify="space-around" align="middle"
+        <a-row align="middle" class="r-radius-right-white"
+               justify="space-around" type="flex"
         >
           <a-col :lg="{span: 18 , offset: 6}" class="r-page-padding">
             <h2 class="r-heading r-text-secondary">
               Who we are
             </h2>
             <p class="r-text-normal">
-              Nice to know, we are Shopple, an online supermakert service. We are the
+              Nice to know, we are Spazamall, an online supermakert service. We are the
               only store in South Africa that is only online, which means that our customers are at the
               center of our business, in fact, we focus on our customers and how best we can serve them.
 
@@ -51,9 +51,9 @@
         </a-row>
       </a-col>
     </a-row>
-    <a-row type="flex" justify="space-around" align="middle" class="r-mv-48">
+    <a-row align="middle" class="r-mv-48" justify="space-around" type="flex">
       <a-col :lg="{span: 12}" class="r-radius-right-white">
-        <a-row type="flex" justify="space-around" align="middle">
+        <a-row align="middle" justify="space-around" type="flex">
           <a-col :lg="{span: 18 , offset: 6}" class="r-page-padding">
             <h2 class="r-heading r-text-secondary">
               We believe in our customers
@@ -69,10 +69,10 @@
               cash register.
             </p>
             <p class="r-text-normal">
-              Shopple thinks it can be done differently: faster, easier and cheaper. The idea is
+              Spazamall thinks it can be done differently: faster, easier and cheaper. The idea is
               simple. We
               arrange
-              the shopping, so that you have more time for fun things. At Shopple you can order all
+              the shopping, so that you have more time for fun things. At Spazamall you can order all
               shopping
               within a few minutes. So toilet paper, fresh, chips and ice cream, but also organic
               eggs, tender

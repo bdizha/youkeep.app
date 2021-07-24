@@ -50,11 +50,11 @@
             <a-row justify="center" type="flex">
               <a-col :lg="{ span: 18 }" :sm="{ span: 24 }">
                 <span class="r-inline-text">Don't have an Account?</span>
-                <a class="r-inline-text r-text-primary" href="/" v-on:click="onModal('register', $event)">
+                <a class="r-inline-text r-text-secondary" href="/" v-on:click="onModal('register', $event)">
                   Sign up
                 </a><br/>
                 <span class="r-inline-text ">Forgot your Password?</span>
-                <a class="r-inline-text r-text-primary" href="/"
+                <a class="r-inline-text r-text-secondary" href="/"
                    v-on:click="onModal('password-request', $event)"
                 >
                   Reset it
@@ -86,7 +86,7 @@ export default {
       errors: [],
       process: 'isSuccess',
       redirectTo: '',
-      message: 'Thank you for successfully confirming your credentials! Please wait a little more, and pay less with Shopple',
+      message: 'Thank you for successfully confirming your credentials! Please wait a little more, and pay less with Spazamall',
     }
   },
   computed: mapGetters({
@@ -137,7 +137,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your shopping with Shopple.')
+            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your shopping with Spazamall.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

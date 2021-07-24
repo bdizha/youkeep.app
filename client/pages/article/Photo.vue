@@ -1,8 +1,8 @@
 <template>
   <div class="r-article-photo-holder">
     <div slot="cover"
-         class="r-article-photo"
          :style="'background-image: url(/storage/article/' + article.photo + ')'"
+         class="r-article-photo"
     >
     </div>
   </div>

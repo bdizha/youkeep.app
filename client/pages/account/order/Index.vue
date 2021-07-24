@@ -6,14 +6,12 @@
 <script>
 export default {
   components: {},
-  async asyncData  ({ store }) {
+  async asyncData ({ store }) {
     await store.dispatch('account/onMenu', { currentItem: 'order.index' })
   },
   data () {
-    return {
-    }
+    return {}
   },
-  methods: {
-  }
+  methods: {}
 }
 </script>

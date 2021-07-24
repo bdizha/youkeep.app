@@ -1,11 +1,11 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
+                    :mask-closable="maskClosable"
                     current="delivery"
                     style="position: relative;"
   >
     <r-notice process="isSuccess"></r-notice>
-    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
     <template v-if="hasForm">
       <r-delivery-form :has-modal="true" :has-submit="false"></r-delivery-form>
       <r-delivery-addresses></r-delivery-addresses>

@@ -1,7 +1,7 @@
 <template>
   <a-form-item v-if="errors.length > 0">
-    <a-row type="flex" justify="center">
-      <a-col class="r-text-left" :xs="{ span: 24 }">
+    <a-row justify="center" type="flex">
+      <a-col :xs="{ span: 24 }" class="r-text-left">
         <h4 class="r-heading r-text-secondary">
           Oops! Please correct the following errors:
         </h4>

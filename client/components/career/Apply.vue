@@ -126,10 +126,11 @@
                            class="r-text-left"
                     >
                       <a-form-item label="Email address">
-                        <a-input v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
-                                 placeholder="Your email address"
-                                 size="large"
-                                 type="email"
+                        <a-input
+                          v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
+                          placeholder="Your email address"
+                          size="large"
+                          type="email"
                         >
                         </a-input>
                       </a-form-item>
@@ -175,10 +176,11 @@
                     </a-col>
                   </a-row>
                   <a-form-item label="Cover letter">
-                    <a-textarea v-decorator="['cover_letter', { rules: [{ required: true, message: 'Please enter your cover letter' }] }]"
-                                :auto-size="{ minRows: 2, maxRows: 6 }"
-                                placeholder="Your cover letter"
-                                type="textarea"
+                    <a-textarea
+                      v-decorator="['cover_letter', { rules: [{ required: true, message: 'Please enter your cover letter' }] }]"
+                      :auto-size="{ minRows: 2, maxRows: 6 }"
+                      placeholder="Your cover letter"
+                      type="textarea"
                     >
                     </a-textarea>
                   </a-form-item>

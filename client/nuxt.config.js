@@ -12,7 +12,7 @@ module.exports = {
   env: {
     apiUrl: process.env.APP_URL + '/api',
     appUrl: process.env.APP_URL,
-    appName: process.env.APP_NAME || 'Shopple',
+    appName: process.env.APP_NAME || 'Spazamall',
     appLocale: process.env.APP_LOCALE || 'en',
     githubAuth: !!process.env.GITHUB_CLIENT_ID
   },
@@ -54,7 +54,7 @@ module.exports = {
   },
 
   loading: {
-    color: '#f50a2b',
+    color: '#FBD13E',
     height: '3px'
   },
 

@@ -1,8 +1,8 @@
 <template>
   <r-account>
-    <a-row type="flex" justify="center" align="middle">
-      <a-col class="r-margin-vertical-24" :xs="{ span: 24 }"
-             :sm="{ span: 24 }" :lg="{ span: 24 }"
+    <a-row align="middle" justify="center" type="flex">
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+             :xs="{ span: 24 }" class="r-margin-vertical-24"
       >
         <h2 class="r-heading r-text-secondary">
           ORDER #202511935 placed on 27 July 2019 12:59
@@ -12,40 +12,40 @@
         </h4>
       </a-col>
     </a-row>
-    <a-row type="flex" justify="center" align="middle">
+    <a-row align="middle" justify="center" type="flex">
       <a-col :xs="{ span: 24 }">
-        <a-card title="ORDER TIMELINE" style="width: 100%;">
+        <a-card style="width: 100%;" title="ORDER TIMELINE">
           <a-steps :direction="isVertical ? 'vertical' : 'horizontal'" size="large">
-            <a-step title="Order received"
-                    :description="isVertical ? 'We are awaiting payment for your order' : ''"
+            <a-step :description="isVertical ? 'We are awaiting payment for your order' : ''"
+                    title="Order received"
             />
-            <a-step title="Order is being processed"
-                    :description="isVertical ? 'Your order is being prepared by our operations team' : ''"
+            <a-step :description="isVertical ? 'Your order is being prepared by our operations team' : ''"
+                    title="Order is being processed"
             />
-            <a-step title="Parcel is en-route"
-                    :description="isVertical ? 'Your order has been dispatched to our courier partner' : ''"
+            <a-step :description="isVertical ? 'Your order has been dispatched to our courier partner' : ''"
+                    title="Parcel is en-route"
             />
-            <a-step title="Order delivered"
-                    :description="isVertical ? 'Your order has been delivered!' : ''"
+            <a-step :description="isVertical ? 'Your order has been delivered!' : ''"
+                    title="Order delivered"
             />
           </a-steps>
         </a-card>
       </a-col>
     </a-row>
-    <a-row :gutter="16" type="flex" justify="right">
+    <a-row :gutter="16" justify="right" type="flex">
       <a-col :xs="{ span: 24 }">
         <div style="text-align: right; width: 100%; margin-bottom: 20px;">
-          <a-button @click="toggleDirection" type="secondary" html-type="submit"
-                    class="r-btn-secondary"
+          <a-button class="r-btn-secondary" html-type="submit" type="secondary"
+                    @click="toggleDirection"
           >
             {{ isVertical ? 'Less' : 'Detailed' }} Timeline
           </a-button>
         </div>
       </a-col>
     </a-row>
-    <a-row :gutter="24" type="flex" justify="center" align="middle">
+    <a-row :gutter="24" align="middle" justify="center" type="flex">
       <a-col :xs="{ span: 12 }">
-        <a-card title="DELIVERY ADDRESS" style="width: 100%;">
+        <a-card style="width: 100%;" title="DELIVERY ADDRESS">
           <p class="r-text-normal">Batanayi Matuku</p>
           <p class="r-text-normal">Respublica</p>
           <p class="r-text-normal">10 Muswel Road Bryastan, Johannesburg, South</p>
@@ -58,7 +58,7 @@
         </a-card>
       </a-col>
       <a-col :xs="{ span: 12 }">
-        <a-card title="BILLING ADDRESS" style="width: 100%;">
+        <a-card style="width: 100%;" title="BILLING ADDRESS">
           <p class="r-text-normal">Batanayi Matuku</p>
           <p class="r-text-normal">Respublica</p>
           <p class="r-text-normal">10 Muswel Road Bryastan, Johannesburg, South</p>
@@ -71,25 +71,25 @@
         </a-card>
       </a-col>
     </a-row>
-    <a-row :gutter="24" type="flex" justify="center" align="middle">
+    <a-row :gutter="24" align="middle" justify="center" type="flex">
       <a-col :xs="{ span: 12 }">
-        <a-card title="PAYMENT METHOD" style="width: 100%;">
+        <a-card style="width: 100%;" title="PAYMENT METHOD">
           <p class="r-text-normal">Credit & Debit Card</p>
         </a-card>
       </a-col>
       <a-col :xs="{ span: 12 }">
-        <a-card title="DELIVERY METHOD" style="width: 100%;">
-          <p class="r-text-normal">Shopple </p>
+        <a-card style="width: 100%;" title="DELIVERY METHOD">
+          <p class="r-text-normal">Spazamall </p>
         </a-card>
       </a-col>
     </a-row>
-    <a-table bordered :dataSource="data" :columns="columns">
+    <a-table :columns="columns" :dataSource="data" bordered>
       <template slot="photo" slot-scope="photo">
         <a-avatar
-          shape="square" size="large"
+          slot="avatar" :src="photo"
+          shape="square"
+          size="large"
           style="width: 56px; height: 56px; border-radius: 0px;"
-          slot="avatar"
-          :src="photo"
         />
       </template>
     </a-table>

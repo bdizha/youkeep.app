@@ -18,25 +18,27 @@
                   <span class="r-text-secondary">Welcome, </span>{{ user.name }}!
                 </h3>
                 <p class="r-text-small">
-                  Enter and confirm new credentials to secure your Shopple account.
+                  Enter and confirm new credentials to secure your Spazamall account.
                 </p>
               </a-col>
             </a-row>
           </a-form-item>
           <a-form-item label="Account password">
-            <a-input v-decorator="['password', { rules: [{ required: true, message: 'Please enter your account password' }] }]"
-                     placeholder="Your account password"
-                     size="large"
-                     type="password"
+            <a-input
+              v-decorator="['password', { rules: [{ required: true, message: 'Please enter your account password' }] }]"
+              placeholder="Your account password"
+              size="large"
+              type="password"
             >
               <a-icon slot="prefix" type="lock"/>
             </a-input>
           </a-form-item>
           <a-form-item label="Confirm password">
-            <a-input v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm account password' }] }]"
-                     placeholder="Confirm password"
-                     size="large"
-                     type="password"
+            <a-input
+              v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm account password' }] }]"
+              placeholder="Confirm password"
+              size="large"
+              type="password"
             >
               <a-icon slot="prefix" type="lock"/>
             </a-input>
@@ -70,7 +72,7 @@ export default {
       formName: 'secure',
       fields: ['password', 'password_confirmation'],
       form: this.$form.createForm(this, { name: 'form_secure' }),
-      message: 'Thank you for successfully securing your Shopple account! Please wait while we setup your account.',
+      message: 'Thank you for successfully securing your Spazamall account! Please wait while we setup your account.',
       userType: 1,
     }
   },
@@ -129,7 +131,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you, your account is now secured. Enjoy your shopping with Shopple.')
+            $this.$message.success('Thank you, your account is now secured. Enjoy your shopping with Spazamall.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

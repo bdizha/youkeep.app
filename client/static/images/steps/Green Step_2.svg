@@ -107,7 +107,7 @@
             }
 
             .cls-26 {
-            stroke: #1B9BD9;
+            stroke: #3B9CFF;
             stroke-miterlimit: 10;
             stroke-width: 1.099px;
             }
@@ -129,7 +129,7 @@
             }
 
             .cls-32 {
-            fill: #f50a2b;
+            fill: #FBD13E;
             }
         </style>
         <clipPath id="clip-Green_Step_2_">

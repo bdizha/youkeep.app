@@ -8,32 +8,32 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str1 {stroke:#1B9BD9;stroke-width:20.16;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
-    .str0 {stroke:#1B9BD9;stroke-width:20.16;stroke-miterlimit:22.9256}
-    .str2 {stroke:#F50A2B;stroke-width:20.16;stroke-miterlimit:22.9256}
-    .str3 {stroke:#FFEFEF;stroke-width:20.16;stroke-miterlimit:22.9256}
-    .str4 {stroke:#F0BECA;stroke-width:7.68;stroke-miterlimit:22.9256}
+    .str1 {stroke:#3B9CFF;stroke-width:20.16;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str0 {stroke:#3B9CFF;stroke-width:20.16;stroke-miterlimit:22.9256}
+    .str2 {stroke:#FBD13E;stroke-width:20.16;stroke-miterlimit:22.9256}
+    .str3 {stroke:#fcebad;stroke-width:20.16;stroke-miterlimit:22.9256}
+    .str4 {stroke:#FBD13E;stroke-width:7.68;stroke-miterlimit:22.9256}
     .fil9 {fill:none}
     .fil16 {fill:#F3FAFE}
     .fil13 {fill:#CFDBE2}
     .fil4 {fill:#C0C6CB}
     .fil5 {fill:#8BA1BB}
-    .fil2 {fill:#1B9BD9}
-    .fil14 {fill:#1B9BD9}
-    .fil17 {fill:#98C9E5}
-    .fil6 {fill:#EEFAFF}
-    .fil18 {fill:#EEFAFF}
-    .fil12 {fill:#F0BECA}
-    .fil8 {fill:#F0BECA}
-    .fil11 {fill:#F50A2B}
-    .fil10 {fill:#F50A2B}
-    .fil15 {fill:#FFEFEF}
-    .fil7 {fill:#FFEFEF}
-    .fil3 {fill:#EEFAFF;fill-opacity:0.501961}
-    .fil19 {fill:#1B9BD9;fill-opacity:0.600000}
-    .fil0 {fill:#EEFAFF;fill-opacity:0.600000}
-    .fil20 {fill:#F50A2B;fill-opacity:0.600000}
-    .fil1 {fill:#FFEFEF;fill-opacity:0.600000}
+    .fil2 {fill:#3B9CFF}
+    .fil14 {fill:#3B9CFF}
+    .fil17 {fill:#b8dbff}
+    .fil6 {fill:#FBD13E}
+    .fil18 {fill:#FBD13E}
+    .fil12 {fill:#FBD13E}
+    .fil8 {fill:#FBD13E}
+    .fil11 {fill:#FBD13E}
+    .fil10 {fill:#FBD13E}
+    .fil15 {fill:#fcebad}
+    .fil7 {fill:#fcebad}
+    .fil3 {fill:#fbf0c8;fill-opacity:0.501961}
+    .fil19 {fill:#3B9CFF;fill-opacity:0.600000}
+    .fil0 {fill:#fbf0c8;fill-opacity:0.600000}
+    .fil20 {fill:#FBD13E;fill-opacity:0.600000}
+    .fil1 {fill:#fcebad;fill-opacity:0.600000}
    ]]>
   </style>
  </defs>

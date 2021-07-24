@@ -1,22 +1,22 @@
 <template>
-  <a-row :gutter="24" v-if="cart.count > 0" type="flex"
-         justify="center"
+  <a-row v-if="cart.count > 0" :gutter="24" justify="center"
+         type="flex"
   >
-    <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 24 }"
-           :lg="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+           class="gutter-row"
     >
       <r-account-card-list :has-title="false"></r-account-card-list>
-      <a-row class="r-margin-vertical-24" :gutter="24" type="flex" justify="end">
-        <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-               :md="{ span: 18 }" :lg="{ span: 18 }"
+      <a-row :gutter="24" class="r-margin-vertical-24" justify="end" type="flex">
+        <a-col :lg="{ span: 18 }" :md="{ span: 18 }" :sm="{ span: 12 }"
+               :xs="{ span: 12 }" class="r-text-left"
         >
           <r-account-card-add></r-account-card-add>
         </a-col>
-        <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
-               :md="{ span: 6 }" :lg="{ span: 6 }"
+        <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }"
+               :xs="{ span: 12 }" class="gutter-row"
         >
-          <a-button block type="secondary" html-type="button"
-                    class="r-btn-secondary"
+          <a-button block class="r-btn-secondary" html-type="button"
+                    type="secondary"
           >
             Place order
           </a-button>

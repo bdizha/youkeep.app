@@ -4,7 +4,7 @@
       <card :title="$t('settings')" class="settings-card">
         <ul class="nav flex-column nav-pills">
           <li v-for="tab in tabs" :key="tab.route" class="nav-item">
-            <nuxt-link :to="{ name: tab.route }" class="nav-link" active-class="active">
+            <nuxt-link :to="{ name: tab.route }" active-class="active" class="nav-link">
               <fa :icon="tab.icon" fixed-width/>
               {{ tab.name }}
             </nuxt-link>
@@ -14,7 +14,7 @@
     </div>
 
     <div class="col-md-9">
-      <transition name="fade" mode="out-in">
+      <transition mode="out-in" name="fade">
         <router-view/>
       </transition>
     </div>

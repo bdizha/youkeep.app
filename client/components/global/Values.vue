@@ -12,7 +12,7 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                     Our values
                   </h4>
                 </a-col>

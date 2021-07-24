@@ -1,26 +1,26 @@
 <template>
-  <a-row type="flex" justify="center">
-    <a-col class="r-page-padding" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 18}" :lg="{span: 16}">
-      <a-row :gutter="[24,24]" type="flex" justify="center">
-        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+  <a-row justify="center" type="flex">
+    <a-col :lg="{span: 16}" :md="{span: 18}" :sm="{span: 24}" :xs="{span: 24}" class="r-page-padding">
+      <a-row :gutter="[24,24]" justify="center" type="flex">
+        <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
           <h1 class="r-heading">
             Terms of Service
           </h1>
         </a-col>
-        <a-col :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+        <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
           <article class="r-article">
 
-            <!-- NOTE: this page is a business-critical part of the Shopple service.  Any changes should be reviewed by legal and made with extreme care.  -->
+            <!-- NOTE: this page is a business-critical part of the Spazamall service.  Any changes should be reviewed by legal and made with extreme care.  -->
 
             <p>Date posted: May 12, 2021</p>
 
-            <h1 id="Shopple-subscription-agreement">Shopple Subscription Agreement</h1>
+            <h1 id="Spazamall-subscription-agreement">Spazamall Subscription Agreement</h1>
 
-            <p>This Shopple Subscription Agreement (these “<strong>terms</strong>” or this “<strong>agreement</strong>”)
+            <p>This Spazamall Subscription Agreement (these “<strong>terms</strong>” or this “<strong>agreement</strong>”)
               is
-              made between you (either an individual or, if you are using Shopple on behalf of an entity, that entity)
+              made between you (either an individual or, if you are using Spazamall on behalf of an entity, that entity)
               and
-              Shopple.com, Inc. It governs your access to and use of Shopple’s services, products, software, and
+              Spazamall.com, Inc. It governs your access to and use of Spazamall’s services, products, software, and
               websites (the “<strong>Services</strong>”).
             </p>
 
@@ -40,10 +40,10 @@
 
             <h3 id="11-we-provide-bookkeeping-services">1.1. We provide bookkeeping services</h3>
 
-            <p>Shopple’s bookkeeping services are a solution for bookkeeping and marketplace organization. Shopple’s
+            <p>Spazamall’s bookkeeping services are a solution for bookkeeping and marketplace organization. Spazamall’s
               bookkeeping
               services and any related communications with us are not a substitute for and do not include legal, tax,
-              marketplace, real estate, healthcare, or accounting advice. Shopple is not a public accounting firm. For
+              marketplace, real estate, healthcare, or accounting advice. Spazamall is not a public accounting firm. For
               more
               about what the Services do and do not include, and how you can use them, please see our <a
                 href="/terms"
@@ -51,14 +51,14 @@
 
             <h3 id="12-certain-year-end-services">1.2 Certain Year-End Services</h3>
 
-            <p>If you are a Shopple Bookkeeping customer for the quarter following the calendar year end (i.e., your
-              subscription has not been terminated during such period), Shopple will perform certain year-end
+            <p>If you are a Spazamall Bookkeeping customer for the quarter following the calendar year end (i.e., your
+              subscription has not been terminated during such period), Spazamall will perform certain year-end
               bookkeeping
               activities at that time as part of your subscription, including making year-end annual adjustments and
               providing a trial balance and standard full-year marketplace statements for your tax returns. If you are
               not
               a
-              Shopple Bookkeeping customer for the quarter following the calendar year end, Shopple will not perform
+              Spazamall Bookkeeping customer for the quarter following the calendar year end, Spazamall will not perform
               such
               year-end bookkeeping activities and bears no responsibility or liability with respect to any failure to
               perform such activities on your behalf.</p>
@@ -86,13 +86,13 @@
 
             <h3 id="15-unauthorized-uses-of-the-services">1.5. Unauthorized uses of the Services</h3>
 
-            <p>You will only use the Services in accordance with the <a href="/terms">Shopple Acceptable Use
+            <p>You will only use the Services in accordance with the <a href="/terms">Spazamall Acceptable Use
               Policy</a>. We may suspend or terminate provision of the Services, in whole or in part, where we believe
               it is
               being used in a manner that breaches this agreement (including the Acceptable Use Policy) or creates risk
               of
-              personal injury, property damage, or legal liability for Shopple, you or any third party, or may cause
-              Shopple to
+              personal injury, property damage, or legal liability for Spazamall, you or any third party, or may cause
+              Spazamall to
               lose the services of one of our third-party service providers. You represent and warrant that any
               information
               you provide to us about your (or, if you are acting on behalf of another, that person’s) business,
@@ -109,7 +109,7 @@
 
             <p>All facilities used to store and process Customer Data will adhere to reasonable security standards no
               less
-              protective than the security standards at facilities where Shopple stores and processes its own
+              protective than the security standards at facilities where Spazamall stores and processes its own
               information of a
               similar type. As part of providing the Services, we may transfer, store and process Customer Data in the
               United States. By using the Services, you consent to this transfer, processing and storage of Customer
@@ -117,25 +117,26 @@
 
             <h3 id="18-exclusivity">1.8. Exclusivity</h3>
 
-            <p>If you are a Shopple Bookkeeping customer, you acknowledge and agree that in performing the Services,
-              Shopple
+            <p>If you are a Spazamall Bookkeeping customer, you acknowledge and agree that in performing the Services,
+              Spazamall
               must use, record, classify and reconcile your marketplace transactions and other data to prepare your
               books.
               For
-              example, depending upon the Services, Shopple may have to: (a) import transactions from your books in
+              example, depending upon the Services, Spazamall may have to: (a) import transactions from your books in
               order to
               reconcile your bank accounts, (b) categorize transactions in your books to expense accounts and to balance
               sheet accounts for amortization purposes and/or (c) sync your payroll data via the Gusto sync. Any
-              modifications made by you or on your behalf (e.g., by a third party service provider other than Shopple)
+              modifications made by you or on your behalf (e.g., by a third party service provider other than Spazamall)
               to your
-              books may adversely impact Services previously performed by Shopple, causing Shopple to have to re-perform
+              books may adversely impact Services previously performed by Spazamall, causing Spazamall to have to
+              re-perform
               such
               Services in order to correct any resulting inconsistencies or inaccuracies or to confirm that there are no
               such inconsistencies or inaccuracies. To avoid these types of situations that are undesirable not only for
-              Shopple, but also for you, you hereby appoint Shopple as your exclusive third-party bookkeeper. If you
+              Spazamall, but also for you, you hereby appoint Spazamall as your exclusive third-party bookkeeper. If you
               engage
               another third-party service provider to make changes to your books, or you otherwise make changes to your
-              books directly, while you have engaged Shopple to provide the Services, Shopple reserves the right to
+              books directly, while you have engaged Spazamall to provide the Services, Spazamall reserves the right to
               terminate
               your subscription at any time upon written notice without a refund of prepaid fees for unelapsed months of
               the
@@ -143,22 +144,25 @@
 
             <h2 id="2-tax-and-cfo-services">2. Tax and CFO Services</h2>
 
-            <p>Notwithstanding anything to the contrary herein, if your Order Form shows that you’ve purchased Shopple’s
+            <p>Notwithstanding anything to the contrary herein, if your Order Form shows that you’ve purchased
+              Spazamall’s
               tax
               preparation service or R&amp;D tax credit services, your use of such service is governed by the <a
                 href="/terms"
-              >Shopple tax terms</a>.</p>
+              >Spazamall tax terms</a>.</p>
 
-            <p>Notwithstanding anything to the contrary herein, if your Order Form shows that you’ve purchased Shopple’s
+            <p>Notwithstanding anything to the contrary herein, if your Order Form shows that you’ve purchased
+              Spazamall’s
               CFO
-              services, your use of that service is governed by the <a href="/hiw">Shopple CFO services terms</a>.
+              services, your use of that service is governed by the <a href="/hiw">Spazamall CFO services terms</a>.
             </p>
 
             <h2 id="3-non-disclosure-and-confidentiality">3. Non-Disclosure and Confidentiality</h2>
 
             <h3 id="31-obligations">3.1. Obligations</h3>
 
-            <p>Subject to Section 3.2 (Disclosure of Confidential Information) the recipient (that is, Shopple and you)
+            <p>Subject to Section 3.2 (Disclosure of Confidential Information) the recipient (that is, Spazamall and
+              you)
               will
               use the other party’s Confidential Information only to exercise rights and fulfill obligations under this
               agreement. Customer Data is your Confidential Information. The recipient will use reasonable care to
@@ -168,7 +172,7 @@
               Delegates who need to know it and who have a legal obligation to keep it confidential. The recipient will
               ensure that its Delegates are also subject to the same non-disclosure and use obligations.</p>
 
-            <p>Upon request, Shopple will execute a separate agreement reflecting these non-disclosure and
+            <p>Upon request, Spazamall will execute a separate agreement reflecting these non-disclosure and
               confidentiality
               obligations for your records.</p>
 
@@ -198,14 +202,16 @@
 
             <h2 id="4-payment">4. Payment</h2>
 
-            <p>Shopple will collect payment for the fees automatically via ACH. Fees are exclusive of taxes, which
+            <p>Spazamall will collect payment for the fees automatically via ACH. Fees are exclusive of taxes, which
               you’re
-              responsible for if applicable. You hereby authorize Shopple or its payment processor to initiate entries
+              responsible for if applicable. You hereby authorize Spazamall or its payment processor to initiate entries
               to your
-              business bank checking accounts on file with Shopple (using your business address on file) in order to pay
-              amounts that you owe to Shopple (including for any Renewal Terms as those payments come due), and, if
+              business bank checking accounts on file with Spazamall (using your business address on file) in order to
+              pay
+              amounts that you owe to Spazamall (including for any Renewal Terms as those payments come due), and, if
               necessary,
-              to initiate adjustments for any transactions credited or debited in error. Shopple may immediately suspend
+              to initiate adjustments for any transactions credited or debited in error. Spazamall may immediately
+              suspend
               provision of the Services if your account is past due. Except to the extent expressly set forth in this
               Section 4 (Payment), all payments are non-refundable and non-creditable.</p>
 
@@ -222,12 +228,13 @@
             <h3 id="52-automatic-renewal">5.2. Automatic renewal</h3>
 
             <p>Upon the end of the Initial Term and any Renewal Term, your subscription will automatically renew for the
-              same duration as the Initial Term and at Shopple’s then-list price unless you give us notice (via
-              support@Shopple.com) at least (a) seven (7) days for monthly or quarterly subscriptions; or (b) thirty
+              same duration as the Initial Term and at Spazamall’s then-list price unless you give us notice (via
+              support@Spazamall.com) at least (a) seven (7) days for monthly or quarterly subscriptions; or (b) thirty
               (30) days
               for annual subscriptions, in each case, prior to the end of the then-current Initial Term or Renewal Term,
               as
-              applicable. If Shopple increases your subscription fees in connection with a renewal, we will provide you
+              applicable. If Spazamall increases your subscription fees in connection with a renewal, we will provide
+              you
               with
               thirty (30) days’ advance notice of such increase to the email address associated with your account. If
               you do
@@ -249,7 +256,8 @@
 
             <p>In the event your subscription ends, we will try to transfer to you the “master administrator” status for
               the
-              Intuit Quickbooks Online account that was maintained for you by Shopple, so that you can elect to maintain
+              Intuit Quickbooks Online account that was maintained for you by Spazamall, so that you can elect to
+              maintain
               that
               subscription with Intuit or export your data.</p>
 
@@ -270,7 +278,7 @@
               interest
               in that Feedback.</p>
 
-            <h2 id="7-using-Shopple-services-on-behalf-of-others">7. Using Shopple Services on Behalf of Others</h2>
+            <h2 id="7-using-Spazamall-services-on-behalf-of-others">7. Using Spazamall Services on Behalf of Others</h2>
 
             <p>If you are using the Services on behalf of another individual or entity, you represent and warrant that
               you
@@ -278,9 +286,9 @@
 
             <h2 id="8-warranty-disclaimer">8. Warranty Disclaimer</h2>
 
-            <p>TO THE FULLEST EXTENT PERMITTED BY LAW, Shopple, ITS AFFILIATES, AND ITS AND THEIR SUPPLIERS AND
+            <p>TO THE FULLEST EXTENT PERMITTED BY LAW, Spazamall, ITS AFFILIATES, AND ITS AND THEIR SUPPLIERS AND
               DISTRIBUTORS
-              (THE “<strong>Shopple ENTITIES</strong>”) MAKE NO WARRANTIES, EITHER EXPRESS OR IMPLIED, ABOUT THE
+              (THE “<strong>Spazamall ENTITIES</strong>”) MAKE NO WARRANTIES, EITHER EXPRESS OR IMPLIED, ABOUT THE
               SERVICES. THE
               SERVICES ARE PROVIDED “AS IS.” NO WARRANTY IS MADE THAT THE SERVICES OR RESULTS OF USE OF THE SERVICES
               WILL
@@ -290,7 +298,7 @@
               WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IF THE EXCLUSIONS
               FOR
               IMPLIED WARRANTIES DO NOT APPLY TO YOU UNDER APPLICABLE LAW, ANY IMPLIED WARRANTIES ARE LIMITED TO 60 DAYS
-              FROM THE DATE OF PURCHASE OR DELIVERY OF THE SERVICE, WHICHEVER IS SOONER. THE Shopple ENTITIES DISCLAIM
+              FROM THE DATE OF PURCHASE OR DELIVERY OF THE SERVICE, WHICHEVER IS SOONER. THE Spazamall ENTITIES DISCLAIM
               ANY
               REPRESENTATIONS OR WARRANTIES THAT YOUR USE OF THE SERVICES WILL SATISFY OR ENSURE COMPLIANCE WITH ANY
               LEGAL
@@ -298,24 +306,24 @@
 
             <h2 id="9-limitation-of-liability">9. Limitation of Liability</h2>
 
-            <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE ENTIRE LIABILITY OF THE Shopple ENTITIES FOR ALL
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE ENTIRE LIABILITY OF THE Spazamall ENTITIES FOR ALL
               CLAIMS
               RELATING TO THE SERVICES AND THIS AGREEMENT SHALL BE LIMITED TO THE AMOUNT YOU PAID FOR THE SERVICES
               DURING
               THE TWELVE (12) MONTHS PRIOR TO SUCH CLAIM OR ONE HUNDRED US DOLLARS, WHICHEVER IS GREATER. SUBJECT TO
-              APPLICABLE LAW, THE Shopple ENTITIES ARE NOT LIABLE FOR ANY OF THE FOLLOWING: (A) INDIRECT, SPECIAL,
+              APPLICABLE LAW, THE Spazamall ENTITIES ARE NOT LIABLE FOR ANY OF THE FOLLOWING: (A) INDIRECT, SPECIAL,
               INCIDENTAL,
               PUNITIVE, OR CONSEQUENTIAL DAMAGES; (B) DAMAGES RELATING TO LOSS OF USE, DATA, BUSINESS, REVENUES, OR
               PROFITS.
-              THE ABOVE LIMITATIONS APPLY EVEN IF THE Shopple ENTITIES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH
+              THE ABOVE LIMITATIONS APPLY EVEN IF THE Spazamall ENTITIES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH
               DAMAGES.
-              THIS AGREEMENT SETS FORTH THE ENTIRE LIABILITY OF THE Shopple ENTITIES AND YOUR EXCLUSIVE REMEDY WITH
+              THIS AGREEMENT SETS FORTH THE ENTIRE LIABILITY OF THE Spazamall ENTITIES AND YOUR EXCLUSIVE REMEDY WITH
               RESPECT TO
               THE SERVICES AND THEIR USE.</p>
 
             <h2 id="10-indemnification">10. Indemnification</h2>
 
-            <p>You shall defend and indemnify the Shopple Entities from and against all damages, losses, liabilities,
+            <p>You shall defend and indemnify the Spazamall Entities from and against all damages, losses, liabilities,
               claims,
               demands, actions, suits, judgements, settlements, costs and expenses, including all attorneys’ fees, that
               arise from or relate to: (a) your use of and our provision of the Services (except to the extent arising
@@ -332,16 +340,18 @@
 
             <h3 id="111-judicial-forum-for-disputes">11.1. Judicial forum for disputes</h3>
 
-            <p>Except as set forth in Section 11.5 (Arbitration), you and Shopple agree that any and all claims relating
+            <p>Except as set forth in Section 11.5 (Arbitration), you and Spazamall agree that any and all claims
+              relating
               to
               these terms or the Services may only be brought in the federal or state courts of South Africa,
-              the Western Cape Government, subject to the mandatory arbitration provisions below. Both you and Shopple
+              the Western Cape Government, subject to the mandatory arbitration provisions below. Both you and Spazamall
               consent to venue and
               personal jurisdiction in such courts.</p>
 
             <h3 id="112-notice-of-disputes">11.2. Notice of disputes</h3>
 
-            <p>If you have a dispute with Shopple, you will promptly send written notice to: Shopple.com, Inc., PO Box
+            <p>If you have a dispute with Spazamall, you will promptly send written notice to: Spazamall.com, Inc., PO
+              Box
               7775
               #86889, South Africa, the Western Cape Government Graphigem Inc.</p>
 
@@ -360,7 +370,7 @@
 
             <h3 id="115-arbitration">11.5. Arbitration</h3>
 
-            <p>You and Shopple agree to resolve any and all claims relating to this agreement or the Services through
+            <p>You and Spazamall agree to resolve any and all claims relating to this agreement or the Services through
               final
               and binding arbitration, except as set forth below. The <a href="https://www.adr.org/index.php">American
                 Arbitration Association</a> (AAA) will administer the arbitration under its Commercial Arbitration
@@ -377,13 +387,13 @@
 
             <h3 id="117-no-class-actions">11.7. NO CLASS ACTIONS</h3>
 
-            <p>You may only resolve disputes related to or arising from the Services with the Shopple Entities on an
+            <p>You may only resolve disputes related to or arising from the Services with the Spazamall Entities on an
               individual basis and will not bring a claim in a class, consolidated, or representative action.</p>
 
             <h3 id="118-30-day-opt-out-period">11.8. 30-day opt-out period</h3>
 
             <p>If you don’t wish to be bound by these arbitration provisions (including its waiver of class and
-              representative claims), you must notify us by emailing <a href="mailto:arbitration-opt-out@Shopple.com">arbitration-opt-out@Shopple.com</a>
+              representative claims), you must notify us by emailing <a href="mailto:arbitration-opt-out@Spazamall.com">arbitration-opt-out@Spazamall.com</a>
               no later than 30 days after the first acceptance date of any version of this agreement containing an
               arbitration provision (unless a longer period is required by applicable law). An opt-out notice does not
               revoke any previous arbitration agreement between us.</p>
@@ -392,7 +402,7 @@
               resolution
               agreement</h3>
 
-            <p>If Shopple makes any changes to this Section 11 (or successor section and not including Section 11.2
+            <p>If Spazamall makes any changes to this Section 11 (or successor section and not including Section 11.2
               (Notice of
               Disputes)), you may reject any such change by notifying us via the procedure set forth in Section 11.8
               (30-day
@@ -406,7 +416,7 @@
 
             <h3 id="121-updates-to-this-agreement">12.1. Updates to this agreement</h3>
 
-            <p>Shopple may make nonmaterial changes to these terms at any time without notice, but we will provide
+            <p>Spazamall may make nonmaterial changes to these terms at any time without notice, but we will provide
               advance
               notice of any material changes to them. Other than changes made under Section 11.9 (Future changes to this
               dispute resolution agreement), the changes to the terms will not apply retroactively and will become
@@ -415,7 +425,7 @@
               new
               version of these terms has a material negative impact on you, then you may object to the change by
               notifying
-              us (via support@Shopple.com) within 30 days after we provide you with notice of the changes. If you so
+              us (via support@Spazamall.com) within 30 days after we provide you with notice of the changes. If you so
               notify
               us, then you will remain governed by the terms in effect immediately before the change until the end of
               your
@@ -434,7 +444,7 @@
 
             <p>You may not assign this agreement, or your rights or obligations under it, in whole or in part and any
               such
-              assignment is void. Shopple may freely assign this agreement, or its rights and obligations under it, in
+              assignment is void. Spazamall may freely assign this agreement, or its rights and obligations under it, in
               whole
               or in part.</p>
 
@@ -447,7 +457,7 @@
 
             <h3 id="125-entire-agreement-amendments">12.5. Entire agreement; amendments</h3>
 
-            <p>This agreement, together with your Order Form, constitutes the entire agreement between you and Shopple
+            <p>This agreement, together with your Order Form, constitutes the entire agreement between you and Spazamall
               with
               respect to its subject matter, and supersedes any and all prior agreements, discussions, negotiations, and
               offers. Except as specifically stated otherwise in the agreement, any amendment to the agreement must be
@@ -461,7 +471,7 @@
 
             <h3 id="127-third-party-beneficiaries">12.7. Third-party beneficiaries</h3>
 
-            <p>Shopple’s Affiliates and Shopple’s and its Affiliates’ suppliers and distributors are intended third
+            <p>Spazamall’s Affiliates and Spazamall’s and its Affiliates’ suppliers and distributors are intended third
               party
               beneficiaries of Sections 8 - 10 (inclusive). Except as expressly set forth in the foregoing, there are no
               third party beneficiaries to these terms.</p>
@@ -501,7 +511,8 @@
 
             <p>“<strong>Order Form</strong>” means the ordering document or website page for the Services.</p>
 
-            <p>“<strong>Shopple</strong>”, “<strong>we</strong>”, and “<strong>us</strong>” means Shopple.com, Inc.</p>
+            <p>“<strong>Spazamall</strong>”, “<strong>we</strong>”, and “<strong>us</strong>” means Spazamall.com, Inc.
+            </p>
 
 
           </article>

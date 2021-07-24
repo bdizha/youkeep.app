@@ -1,7 +1,7 @@
 <template>
   <div>
     <r-page>
-      <a-row type="flex" justify="center" align="middle">
+      <a-row align="middle" justify="center" type="flex">
         <a-col :span="8">
           <h1>Help</h1>
         </a-col>

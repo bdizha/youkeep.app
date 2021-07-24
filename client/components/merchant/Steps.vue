@@ -1,5 +1,5 @@
 <template>
-  <a-row align="top" class="r-mt-48" justify="center" type="flex">
+  <a-row class="r-steps r-mt-48" align="top" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-steps v-model="currentStep" :current="currentStep" direction="horizontal">
         <a-step v-for="(step, index) in steps"
@@ -65,11 +65,11 @@ export default {
       steps: [
         {
           title: 'You setup.',
-          description: 'Create a Shopple account and list your product catalog on the Shopple marketplace today.'
+          description: 'Create a Spazamall account and list your product catalog on the Spazamall marketplace today.'
         },
         {
           title: 'We sell.',
-          description: 'Your item sells, you ship your item to the buyer. and money is deposited to your Shopple account.'
+          description: 'Your item sells, you ship your item to the buyer. and money is deposited to your Spazamall account.'
         },
         {
           title: 'You enjoy.',

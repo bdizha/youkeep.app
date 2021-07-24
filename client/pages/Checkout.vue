@@ -1,48 +1,49 @@
 <template>
   <div class="r-checkout">
-    <a-row style="margin-top: 125px;" type="flex" justify="center" align="middle">
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }" :lg="{ span: 18 }">
+    <a-row align="middle" justify="center" style="margin-top: 125px;" type="flex">
+      <a-col :lg="{ span: 18 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <a-row>
-          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }" :lg="{ span: 16 }">
+          <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
             <a-row class="r-bg-primary-light" style="margin-right: 20px; padding: 20px;">
               <a-col :span="24">
-                <a-collapse accordion="true" bordered="true" expandIconPosition="right"
-                            :defaultActiveKey="1"
+                <a-collapse :defaultActiveKey="1" accordion="true" bordered="true"
+                            expandIconPosition="right"
                 >
-                  <a-collapse-panel class="r-checkout-icon r-checkout-icon-address" :key="1"
+                  <a-collapse-panel :key="1" class="r-checkout-icon r-checkout-icon-address"
                                     header="Delivery address"
                   >
                     <r-account-address-list></r-account-address-list>
-                    <a-row class="r-mv-24" :gutter="24" type="flex" justify="start" align="middle">
-                      <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                             :md="{ span: 18 }" :lg="{ span: 18 }"
+                    <a-row :gutter="24" align="middle" class="r-mv-24" justify="start" type="flex">
+                      <a-col :lg="{ span: 18 }" :md="{ span: 18 }" :sm="{ span: 12 }"
+                             :xs="{ span: 12 }" class="r-text-left"
                       >
                         <r-account-address-add></r-account-address-add>
                       </a-col>
-                      <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                             :md="{ span: 6 }" :lg="{ span: 6 }"
+                      <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }"
+                             :xs="{ span: 12 }" class="r-text-right"
                       >
-                        <a-button block type="secondary" html-type="button"
-                                  class="r-btn-secondary"
+                        <a-button block class="r-btn-secondary" html-type="button"
+                                  type="secondary"
                         >
                           Proceed
                         </a-button>
                       </a-col>
                     </a-row>
                   </a-collapse-panel>
-                  <a-collapse-panel class="r-checkout-icon r-checkout-icon-notes" :key="2"
+                  <a-collapse-panel :key="2" class="r-checkout-icon r-checkout-icon-notes"
                                     header="Delivery instructions"
                   >
                     <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
+                            :form="formContact"
                             class="ant-form ant-form-vertical"
                             @submit="saveContact"
-                            :form="formContact"
                     >
                       <a-form-item label="Notes">
-                        <a-input type="textarea"
-                                 size="large"
-                                 placeholder="Your delivery instructions"
-                                 v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]"
+                        <a-input
+                          v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]"
+                          placeholder="Your delivery instructions"
+                          size="large"
+                          type="textarea"
                         >
                         </a-input>
                       </a-form-item>
@@ -51,27 +52,27 @@
                         order after it has been delivered unattended, including any loss due
                         to theft or damage due to temperature sensitivity.
                       </a-form-item>
-                      <a-row class="r-mv-24" :gutter="24" type="flex"
-                             justify="start"
+                      <a-row :gutter="24" class="r-mv-24" justify="start"
+                             type="flex"
                       >
-                        <a-col class="r-text-left" :xs="{ span: 12 }"
+                        <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
                                :sm="{ span: 12 }"
-                               :md="{ span: 18 }" :lg="{ span: 18 }"
+                               :xs="{ span: 12 }" class="r-text-left"
                         >
-                          <a-button size="large"
-                                    type="secondary"
+                          <a-button class="r-btn-bordered-grey"
                                     html-type="button"
-                                    class="r-btn-bordered-grey"
+                                    size="large"
+                                    type="secondary"
                           >
                             Skip
                           </a-button>
                         </a-col>
-                        <a-col class="r-text-right" :xs="{ span: 12 }"
+                        <a-col :lg="{ span: 6 }" :md="{ span: 6 }"
                                :sm="{ span: 12 }"
-                               :md="{ span: 6 }" :lg="{ span: 6 }"
+                               :xs="{ span: 12 }" class="r-text-right"
                         >
-                          <a-button block type="secondary" html-type="submit"
-                                    class="r-btn-secondary"
+                          <a-button block class="r-btn-secondary" html-type="submit"
+                                    type="secondary"
                           >
                             Proceed
                           </a-button>
@@ -81,45 +82,45 @@
                     <r-spinner v-if="isProcessing" :is-absolute="true"></r-spinner>
                     <r-notice v-if="isSuccessful"></r-notice>
                   </a-collapse-panel>
-                  <a-collapse-panel class="r-checkout-icon r-checkout-icon-contact" :key="3"
+                  <a-collapse-panel :key="3" class="r-checkout-icon r-checkout-icon-contact"
                                     header="Your mobile number"
                   >
                     <a-form :class="{'r-hidden' :isProcessing || isSuccessful}"
+                            :form="formMobile"
                             class="ant-form ant-form-vertical"
                             @submit="saveMobile"
-                            :form="formMobile"
                     >
                       <a-form-item :wrapper-col="{ xs: {span: 24},  lg: {span: 12} }"
                                    label="We use your number to text or call you about your order."
                       >
                         <a-input
-                          size="large"
-                          placeholder="Your mobile number name"
                           v-decorator="['name', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
+                          placeholder="Your mobile number name"
+                          size="large"
                         >
                         </a-input>
                       </a-form-item>
-                      <a-row class="r-mv-24" :gutter="24" type="flex"
-                             justify="start"
+                      <a-row :gutter="24" class="r-mv-24" justify="start"
+                             type="flex"
                       >
-                        <a-col class="r-text-left" :xs="{ span: 12 }"
+                        <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
                                :sm="{ span: 12 }"
-                               :md="{ span: 18 }" :lg="{ span: 18 }"
+                               :xs="{ span: 12 }" class="r-text-left"
                         >
-                          <a-button size="large"
-                                    type="secondary"
+                          <a-button class="r-btn-bordered-grey"
                                     html-type="button"
-                                    class="r-btn-bordered-grey"
+                                    size="large"
+                                    type="secondary"
                           >
                             Skip
                           </a-button>
                         </a-col>
-                        <a-col class="r-text-right" :xs="{ span: 12 }"
+                        <a-col :lg="{ span: 6 }" :md="{ span: 6 }"
                                :sm="{ span: 12 }"
-                               :md="{ span: 6 }" :lg="{ span: 6 }"
+                               :xs="{ span: 12 }" class="r-text-right"
                         >
-                          <a-button block type="secondary" html-type="button"
-                                    class="r-btn-secondary"
+                          <a-button block class="r-btn-secondary" html-type="button"
+                                    type="secondary"
                           >
                             Proceed
                           </a-button>
@@ -129,21 +130,21 @@
                     <r-spinner v-if="isProcessing" :is-absolute="true"></r-spinner>
                     <r-notice v-if="isSuccessful"></r-notice>
                   </a-collapse-panel>
-                  <a-collapse-panel class="r-checkout-icon r-checkout-icon-payment" :key="4"
+                  <a-collapse-panel :key="4" class="r-checkout-icon r-checkout-icon-payment"
                                     header="Payment"
                   >
                     <r-account-card-list></r-account-card-list>
-                    <a-row class="r-mv-24" :gutter="24" type="flex" justify="end">
-                      <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                             :md="{ span: 18 }" :lg="{ span: 18 }"
+                    <a-row :gutter="24" class="r-mv-24" justify="end" type="flex">
+                      <a-col :lg="{ span: 18 }" :md="{ span: 18 }" :sm="{ span: 12 }"
+                             :xs="{ span: 12 }" class="r-text-left"
                       >
                         <r-account-card-add></r-account-card-add>
                       </a-col>
-                      <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }"
-                             :md="{ span: 6 }" :lg="{ span: 6 }"
+                      <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }"
+                             :xs="{ span: 12 }" class="gutter-row"
                       >
-                        <a-button block type="secondary" html-type="button"
-                                  class="r-btn-secondary"
+                        <a-button block class="r-btn-secondary" html-type="button"
+                                  type="secondary"
                         >
                           Place order
                         </a-button>
@@ -154,17 +155,17 @@
               </a-col>
             </a-row>
           </a-col>
-          <a-col :xs="{ span: 24 }" :lg="{ span: 8 }">
+          <a-col :lg="{ span: 8 }" :xs="{ span: 24 }">
             <a-row class="r-bg-primary-light">
-              <a-col class="r-p-24" :span="24">
-                <a-form class="ant-form ant-form-vertical"
-                        :form="formCart"
+              <a-col :span="24" class="r-p-24">
+                <a-form :form="formCart"
+                        class="ant-form ant-form-vertical"
                 >
                   <a-form-item :wrapper-col="{ span: 24 }">
-                    <a-button block disabled
-                              type="secondary"
+                    <a-button block class="ant-btn ant-btn-secondary"
+                              disabled
                               html-type="submit"
-                              class="ant-btn ant-btn-secondary"
+                              type="secondary"
                     >
                       Place order
                     </a-button>
@@ -173,17 +174,17 @@
                                label="We use your number to text or call you about your order."
                   >
                     <a-input
-                      size="large"
-                      placeholder="Your mobile number name"
                       v-decorator="['name', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
+                      placeholder="Your mobile number name"
+                      size="large"
                     >
                     </a-input>
                   </a-form-item>
                   <a-form-item label="Coupon">
                     <a-input
-                      size="large"
-                      placeholder="Enter your coupon code"
                       v-decorator="['coupon', { rules: [{ required: false, message: 'Please enter your coupon' }] }]"
+                      placeholder="Enter your coupon code"
+                      size="large"
                     >
                     </a-input>
                   </a-form-item>
@@ -194,12 +195,12 @@
               </a-col>
             </a-row>
             <a-row>
-              <a-col class="r-checkout-footer" :span="24">
+              <a-col :span="24" class="r-checkout-footer">
                 <p class="r-text-normal">
-                  By placing your order, you agree to be bound by the Shopple Terms of
+                  By placing your order, you agree to be bound by the Spazamall Terms of
                   <nuxt-link target="_blank" to="/service">Service</nuxt-link>
                   and
-                  <nuxt-link to="_blank" href="/privacy">Privacy Policy</nuxt-link>
+                  <nuxt-link href="/privacy" to="_blank">Privacy Policy</nuxt-link>
                   .
                 </p>
                 <p class="r-text-normal">

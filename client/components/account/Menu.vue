@@ -1,8 +1,8 @@
 <template>
   <a-row align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-collapse accordion
-                  :default-active-key="menu.currentMenuKey"
+      <a-collapse :default-active-key="menu.currentMenuKey"
+                  accordion
                   expandIconPosition="right"
       >
         <a-collapse-panel v-for="(item) in menuItems"
@@ -16,13 +16,13 @@
             >
               <template v-if="item.link !== null">
                 <nuxt-link :to="item.link" class="r-item-shadow">
-                  <a-avatar :icon="item.icon" shape="square" :size="30"/>
+                  <a-avatar :icon="item.icon" :size="30" shape="square"/>
                   {{ item.label }}
                 </nuxt-link>
               </template>
               <template v-if="!item.link">
                 <div class="r-item-shadow"
-                           @click="onLogout"
+                     @click="onLogout"
                 >
                   <a-avatar :icon="item.icon" shape="square"/>
                   {{ item.label }}
@@ -31,7 +31,7 @@
             </a-col>
           </a-row>
         </a-collapse-panel>
-        <a-collapse-panel header="Quick Links" class="r-collapse-panel"
+        <a-collapse-panel class="r-collapse-panel" header="Quick Links"
         >
           <r-quick-links></r-quick-links>
         </a-collapse-panel>
@@ -39,7 +39,7 @@
       <a-row class="r-mb-48" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
           <h4 class="r-store-text-light">
-            Shopple is an independent shopping service that is not necessarily affiliated with,
+            Spazamall is an independent shopping service that is not necessarily affiliated with,
             endorsed or sponsored by the stores listed here but it enables you to get the deliveries
             you
             want.
@@ -115,11 +115,11 @@ const MENU = [
     ]
   },
   {
-    heading: 'Shopple Services ',
+    heading: 'Spazamall Services ',
     key: 'services',
     links: [
       {
-        label: 'Shopple+',
+        label: 'Spazamall+',
         icon: 'plus',
         link: '/hiw'
       },
@@ -129,7 +129,7 @@ const MENU = [
         link: '/account/service/waykipa'
       },
       {
-        label: 'Shopple Credit',
+        label: 'Spazamall Credit',
         icon: 'credit-card',
         link: '/account/service/paise'
       },

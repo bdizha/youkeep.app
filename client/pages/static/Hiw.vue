@@ -1,40 +1,40 @@
 <template>
-  <a-row :gutter="[96,96]" type="flex" justify="center" align="middle">
-    <a-col style="background: #FFFFFF;" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+           style="background: #FFFFFF;"
     >
-      <a-row :gutter="[96,96]" type="flex" justify="start" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 12 }"
-               :lg="{ span: 12 }"
+      <a-row :gutter="[96,96]" align="middle" justify="start" type="flex">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
-          <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 16 }"
-                   :lg="{ span: 15 }"
+          <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+            <a-col :lg="{ span: 15 }" :md="{ span: 16 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
             >
-              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 24 }"
-                       :lg="{ span: 24 }"
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
-                  <h4 class="r-heading-light r-text-primary r-text-uppercase r-text-primary">
+                  <h4 class="r-heading-light r-text-secondary r-text-uppercase r-text-primary">
                     Meet our
                   </h4>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 24 }"
-                       :lg="{ span: 24 }"
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <h1 class="r-heading">
                     Powerful marketplace to experience shopping better.
                   </h1>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 24 }"
-                       :lg="{ span: 24 }"
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <p class="r-text-normal">
-                    Get the benefits of Shopple products at a price you can afford and enjoy from the widest product
+                    Get the benefits of Spazamall products at a price you can afford and enjoy from the widest product
                     catalog on the market.
                   </p>
                   <p class="r-text-normal">
@@ -43,15 +43,15 @@
                     marketplace you deserve.
                   </p>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
-                  <a-button class="r-btn-primary"
-                            block
-                            type="primary"
-                            to="/register"
+                  <a-button block
+                            class="r-btn-primary"
                             size="large"
+                            to="/register"
+                            type="primary"
                             @click="onModal"
                   >
                     Get started today!
@@ -62,42 +62,42 @@
           </a-row>
         </a-col>
         <a-col
-          style="background: url(/client/static/images/content/hero-02.png) no-repeat; background-size: cover; padding-bottom: 600px;"
-          :xs="{ span: 24 }" :sm="{ span: 24 }"
-          :md="{ span: 12 }"
           :lg="{ span: 12 }"
+          :md="{ span: 12 }" :sm="{ span: 24 }"
+          :xs="{ span: 24 }"
+          style="background: url(/client/static/images/content/hero-02.png) no-repeat; background-size: cover; padding-bottom: 600px;"
         >
         </a-col>
       </a-row>
     </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <div class="r-ph-24 r-mt-48">
-        <a-row :gutter="[24,24]" type="flex" justify="center" align="top">
-          <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
-                 :lg="{ span: 16 }"
+        <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
+          <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-center"
           >
-            <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                     :md="{ span: 24 }"
-                     :lg="{ span: 24 }"
+            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
                      class="r-text-center"
               >
                 <r-avatar :dataSrc="`/images/icon_pattern_dark.svg`" :size="75"></r-avatar>
               </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                     :md="{ span: 24 }"
-                     :lg="{ span: 24 }"
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
                      class="r-text-center"
               >
                 <h2 class="r-heading">
                   How our Shopping Service Works
                 </h2>
               </a-col>
-              <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                     :md="{ span: 18 }"
-                     :lg="{ span: 16 }"
+              <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
                      class="r-text-center"
               >
                 <p class="r-text-normal">
@@ -108,8 +108,8 @@
               </a-col>
             </a-row>
           </a-col>
-          <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
-                 :lg="{ span: 16 }"
+          <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-center"
           >
             <a-tabs type="card">
               <a-tab-pane key="1" tab="For Customers"

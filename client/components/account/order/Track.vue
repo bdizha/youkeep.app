@@ -24,8 +24,7 @@
 export default {
   name: 'r-account-order-track',
   data () {
-    return {
-    }
+    return {}
   },
   created () {
   },

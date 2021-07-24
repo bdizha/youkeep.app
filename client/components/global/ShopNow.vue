@@ -11,14 +11,15 @@
                     <a-row :gutter="[24,24]" justify="start" type="flex">
                       <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}" class="r-text-left">
                         <h2 class="r-heading">
-                          Join thousands of <span :class="setClass('r-text')">stores</span> who trust Shopple with
+                          Join thousands of <span :class="setClass('r-text')">stores</span> who trust Spazamall with
                           their
                           marketplaces.
                         </h2>
                       </a-col>
                       <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}" class="r-text-left">
                         <p class="r-text-normal">
-                          See what running a business is like with Shopple on your books. Try us for free - we'll do one
+                          See what running a business is like with Spazamall on your books. Try us for free - we'll do
+                          one
                           month
                           of
                           your

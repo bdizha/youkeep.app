@@ -1,12 +1,12 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
-    <a-col class="r-store-page" :xs="{ span: 24 }"
-           :sm="{ span: 24 }" :lg="{ span: 24 }"
+  <a-row align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }" class="r-store-page"
     >
-      <a-row type="flex" justify="center" align="middle">
-        <a-col class="gutter-row"
-               :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+      <a-row align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="gutter-row"
         >
           <a-layout>
             <a-layout-content class="r-min-height-256 r-layout-column">

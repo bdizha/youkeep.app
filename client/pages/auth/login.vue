@@ -2,13 +2,14 @@
   <div class="row">
     <div class="col-lg-8 m-auto">
       <card :title="$t('login')">
-        <form @submit.prevent="login" @keydown="form.onKeydown($event)">
+        <form @keydown="form.onKeydown($event)" @submit.prevent="login">
           <!-- Email -->
           <div class="form-group row">
             <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
             <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" type="email" name="email"
-                     class="form-control"
+              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control"
+                     name="email"
+                     type="email"
               >
               <has-error :form="form" field="email"/>
             </div>
@@ -18,8 +19,8 @@
           <div class="form-group row">
             <label class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
             <div class="col-md-7">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" type="password"
-                     name="password" class="form-control"
+              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control"
+                     name="password" type="password"
               >
               <has-error :form="form" field="password"/>
             </div>

@@ -25,7 +25,7 @@
     .str4 {stroke:#0069CD;stroke-width:18.63;stroke-miterlimit:22.9256}
     .str3 {stroke:#00AEEF;stroke-width:18.63;stroke-miterlimit:22.9256}
     .str1 {stroke:#00AEEF;stroke-width:18.63;stroke-miterlimit:22.9256}
-    .str2 {stroke:#F50A2B;stroke-width:18.63;stroke-miterlimit:22.9256}
+    .str2 {stroke:#FBD13E;stroke-width:18.63;stroke-miterlimit:22.9256}
     .fil46 {fill:none}
     .fil23 {fill:#0069CD}
     .fil34 {fill:#0069CD}
@@ -54,12 +54,12 @@
     .fil1 {fill:#EA4334}
     .fil0 {fill:#EBF6FE}
     .fil24 {fill:#F0AE7B}
-    .fil42 {fill:#F50A2B}
-    .fil19 {fill:#F50A2B}
+    .fil42 {fill:#FBD13E}
+    .fil19 {fill:#FBD13E}
     .fil28 {fill:#F68374}
     .fil4 {fill:#FABC05}
     .fil22 {fill:#FED6B0}
-    .fil18 {fill:#FFEFEF}
+    .fil18 {fill:#fcebad}
     .fil29 {fill:white}
     .fil45 {fill:white}
     .fil10 {fill:url(#id0)}

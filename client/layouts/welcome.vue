@@ -21,6 +21,9 @@ export default {
   data: () => ({
     collapsed: false
   }),
+  async serverPrefetch  () {
+    await this.$store.dispatch('base/onIsDark', true)
+  },
   computed: mapGetters({
     processes: 'base/processes'
   }),

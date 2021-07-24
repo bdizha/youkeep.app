@@ -346,7 +346,7 @@ class DatabaseSeeder extends Seeder
 
                 $dimensionRatio = $width > $height ? ($height / $width) : ($width / $height);
 
-                if ($dimensionRatio <= 1 && $dimensionRatio >= 0.60 && $width > 300) {
+                if ($dimensionRatio <= 1 && $dimensionRatio >= 0.60 || ($width > 300 && $height > 300)) {
                     $isActive = true;
                     echo ">>>>>> Product photo is suited : " . $photo . "\n";
                 }

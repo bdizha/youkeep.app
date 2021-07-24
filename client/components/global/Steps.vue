@@ -1,5 +1,5 @@
 <template>
-  <a-row align="top" justify="center" type="flex">
+  <a-row class="r-steps" align="top" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-steps v-model="currentStep" :current="currentStep" direction="horizontal">
         <a-step v-for="(step, index) in steps"

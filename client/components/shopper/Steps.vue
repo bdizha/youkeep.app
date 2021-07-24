@@ -65,11 +65,11 @@ export default {
       steps: [
         {
           title: 'You setup.',
-          description: 'Create a Shopple account and list your product catalog on the Shopple marketplace today.'
+          description: 'Create a Spazamall account and list your product catalog on the Spazamall marketplace today.'
         },
         {
           title: 'You shop.',
-          description: 'Your item sells, you ship your item to the buyer. and money is deposited to your Shopple account.'
+          description: 'Your item sells, you ship your item to the buyer. and money is deposited to your Spazamall account.'
         },
         {
           title: 'You deliver.',

@@ -1,13 +1,13 @@
 <template>
   <r-account>
-    <a-row type="flex" justify="start" align="middle">
-      <a-col class="gutter-row" :xs="{ span: 24 }"
-             :sm="{ span: 24 }" :lg="{ span: 24 }"
+    <a-row align="middle" justify="start" type="flex">
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+             :xs="{ span: 24 }" class="gutter-row"
       >
         <a-card title="INVITE A FRIEND">
-          <a-row type="flex" justify="start" align="start">
-            <a-col class="r-store-page" :xs="{ span: 24 }"
-                   :sm="{ span: 24 }" :lg="{ span: 12 }"
+          <a-row align="start" justify="start" type="flex">
+            <a-col :lg="{ span: 12 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }" class="r-store-page"
             >
               <h4 class="r-heading-light">
                 Bring 1 friend, get R100!
@@ -17,15 +17,15 @@
         </a-card>
       </a-col>
     </a-row>
-    <a-row class="r-mt-24" :gutter="24" type="flex" justify="end">
-      <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 18 }" :lg="{ span: 18 }">
+    <a-row :gutter="24" class="r-mt-24" justify="end" type="flex">
+      <a-col :lg="{ span: 18 }" :md="{ span: 18 }" :sm="{ span: 12 }" :xs="{ span: 12 }" class="gutter-row">
 
       </a-col>
-      <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 12 }" :md="{ span: 6 }" :lg="{ span: 6 }">
-        <a-button block type="secondary"
-                  :class="'r-btn-black'"
-                  size="large"
+      <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 12 }" class="gutter-row">
+        <a-button :class="'r-btn-black'" block
                   html-type="button"
+                  size="large"
+                  type="secondary"
         >
           Invite
         </a-button>

@@ -12,10 +12,10 @@
           <a-row class="r-mt-48" justify="center" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
-                Shopple merchant application
+                Spazamall merchant application
               </h2>
               <p class="r-text-normal">
-                Contact us to learn more about Shopple and checkout financing
+                Contact us to learn more about Spazamall and checkout financing
               </p>
             </a-col>
           </a-row>
@@ -72,10 +72,11 @@
             <a-form-item
               label="Business email"
             >
-              <a-input v-decorator="['email', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
-                       placeholder="Your company email"
-                       size="large"
-                       type="email"
+              <a-input
+                v-decorator="['email', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+                placeholder="Your company email"
+                size="large"
+                type="email"
               >
                 <a-icon slot="prefix" type="mail"/>
               </a-input>
@@ -87,10 +88,11 @@
             <a-form-item
               label="Business website"
             >
-              <a-input v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
-                       placeholder="Your company website"
-                       size="large"
-                       type="text"
+              <a-input
+                v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+                placeholder="Your company website"
+                size="large"
+                type="text"
               >
                 <a-icon slot="prefix" type="link"/>
               </a-input>
@@ -146,10 +148,11 @@
             <a-form-item
               label="Business website"
             >
-              <a-input v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
-                       placeholder="Your company website"
-                       size="large"
-                       type="text"
+              <a-input
+                v-decorator="['url', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+                placeholder="Your company website"
+                size="large"
+                type="text"
               >
                 <a-icon slot="prefix" type="link"/>
               </a-input>
@@ -161,10 +164,11 @@
             <a-form-item
               label="Average order value"
             >
-              <a-input v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
-                       placeholder="Your average order value"
-                       size="large"
-                       type="text"
+              <a-input
+                v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
+                placeholder="Your average order value"
+                size="large"
+                type="text"
               >
                 <a-icon slot="prefix" type="dollar"/>
               </a-input>

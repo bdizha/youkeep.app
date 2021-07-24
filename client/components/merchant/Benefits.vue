@@ -43,10 +43,10 @@ export default {
   data () {
     return {
       benefits: [
-        'Enable more buying customers and increase recurring orders with Shopple.',
-        'Maximize in-store impact with Shopple signage and online training for retail associates.',
-        'We’ll ship you an activation kit to promote Shopple in-store.',
-        'No obligations and risk with partnering with Shopple.',
+        'Enable more buying customers and increase recurring orders with Spazamall.',
+        'Maximize in-store impact with Spazamall signage and online training for retail associates.',
+        'We’ll ship you an activation kit to promote Spazamall in-store.',
+        'No obligations and risk with partnering with Spazamall.',
       ]
     }
   },

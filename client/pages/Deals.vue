@@ -1,5 +1,5 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
+  <a-row align="middle" justify="center" type="flex">
     <a-col v-for="(product, index) in products" :key="index + 1" :span="6">
       <r-product :product="product"></r-product>
     </a-col>

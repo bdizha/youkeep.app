@@ -10,10 +10,11 @@
               @submit="onStep"
       >
         <a-form-item label="Notes">
-          <a-input v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]"
-                   placeholder="Your delivery instructions"
-                   size="large"
-                   type="textarea"
+          <a-input
+            v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your delivery instructions.' }] }]"
+            placeholder="Your delivery instructions"
+            size="large"
+            type="textarea"
           >
           </a-input>
         </a-form-item>

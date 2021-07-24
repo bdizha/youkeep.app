@@ -8,27 +8,27 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str20 {stroke:#1B9BD9;stroke-width:20;stroke-miterlimit:22.9256}
-    .str18 {stroke:#F50A2B;stroke-width:20;stroke-miterlimit:22.9256}
-    .str19 {stroke:#FFEFEF;stroke-width:20;stroke-miterlimit:22.9256}
-    .str0 {stroke:#F50A2B;stroke-width:7.62;stroke-miterlimit:22.9256}
-    .str11 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str12 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str13 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str8 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str4 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str1 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str10 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str3 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str9 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str2 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str5 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str6 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str7 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str14 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str15 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str17 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str16 {stroke:#F50A2B;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str20 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256}
+    .str18 {stroke:#FBD13E;stroke-width:20;stroke-miterlimit:22.9256}
+    .str19 {stroke:#fcebad;stroke-width:20;stroke-miterlimit:22.9256}
+    .str0 {stroke:#FBD13E;stroke-width:7.62;stroke-miterlimit:22.9256}
+    .str11 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str12 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str13 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str8 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str4 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str1 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str10 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str3 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str9 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str2 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str5 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str6 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str7 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str14 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str15 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str17 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str16 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
     .fil14 {fill:none}
     .fil7 {fill:#E5EEEA}
     .fil10 {fill:#E8D6A9}
@@ -42,24 +42,24 @@
     .fil26 {fill:#CFDBE2}
     .fil20 {fill:#97B4BB}
     .fil23 {fill:#76B3CD}
-    .fil24 {fill:#434435}
+    .fil24 {fill:#3B9CFF}
     .fil12 {fill:#5D9FAD}
     .fil19 {fill:#47858C}
     .fil22 {fill:#2A363C}
     .fil21 {fill:#107984}
-    .fil28 {fill:#1B9BD9}
-    .fil3 {fill:#1B9BD9}
-    .fil27 {fill:#98C9E5}
-    .fil4 {fill:#98C9E5}
-    .fil30 {fill:#EEFAFF}
-    .fil29 {fill:#EEFAFF}
-    .fil25 {fill:#F0BECA}
-    .fil2 {fill:#F0BECA}
-    .fil15 {fill:#F50A2B}
-    .fil1 {fill:#F50A2B}
-    .fil13 {fill:#FFEFEF}
-    .fil16 {fill:#F50A2B;fill-rule:nonzero}
-    .fil0 {fill:#EEFAFF;fill-opacity:0.600000}
+    .fil28 {fill:#3B9CFF}
+    .fil3 {fill:#3B9CFF}
+    .fil27 {fill:#b8dbff}
+    .fil4 {fill:#b8dbff}
+    .fil30 {fill:#FBD13E}
+    .fil29 {fill:#FBD13E}
+    .fil25 {fill:#FBD13E}
+    .fil2 {fill:#fcebad}
+    .fil15 {fill:#FBD13E}
+    .fil1 {fill:#FBD13E}
+    .fil13 {fill:#fcebad}
+    .fil16 {fill:#FBD13E;fill-rule:nonzero}
+    .fil0 {fill:#fbf0c8;fill-opacity:0.600000}
    ]]>
   </style>
  </defs>

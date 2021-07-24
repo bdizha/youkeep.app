@@ -7,13 +7,14 @@
         </div>
       </card>
       <card v-else :title="$t('register')">
-        <form @submit.prevent="register" @keydown="form.onKeydown($event)">
+        <form @keydown="form.onKeydown($event)" @submit.prevent="register">
           <!-- Name -->
           <div class="form-group row">
             <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
             <div class="col-md-7">
-              <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" type="text" name="name"
-                     class="form-control"
+              <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control"
+                     name="name"
+                     type="text"
               >
               <has-error :form="form" field="name"/>
             </div>
@@ -23,8 +24,9 @@
           <div class="form-group row">
             <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
             <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" type="email" name="email"
-                     class="form-control"
+              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control"
+                     name="email"
+                     type="email"
               >
               <has-error :form="form" field="email"/>
             </div>
@@ -34,8 +36,8 @@
           <div class="form-group row">
             <label class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
             <div class="col-md-7">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" type="password"
-                     name="password" class="form-control"
+              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control"
+                     name="password" type="password"
               >
               <has-error :form="form" field="password"/>
             </div>
@@ -46,9 +48,9 @@
             <label class="col-md-3 col-form-label text-md-right">{{ $t('confirm_password') }}</label>
             <div class="col-md-7">
               <input v-model="form.password_confirmation"
-                     :class="{ 'is-invalid': form.errors.has('password_confirmation') }" type="password"
+                     :class="{ 'is-invalid': form.errors.has('password_confirmation') }" class="form-control"
                      name="password_confirmation"
-                     class="form-control"
+                     type="password"
               >
               <has-error :form="form" field="password_confirmation"/>
             </div>

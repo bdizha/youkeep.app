@@ -24,7 +24,7 @@
                 <a-row align="middle" justify="start" type="flex">
                   <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <nuxt-link class="r-text-center" to="/">
-                      <img alt="Shopple - Online shop"
+                      <img alt="Spazamall - Online shop"
                            class="r-footer-logo /"
                            src="/images/icon-06.svg?v=1"
                       >
@@ -76,7 +76,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/customer">Join Shopple</nuxt-link>
+                          <nuxt-link to="/customer">Join Spazamall</nuxt-link>
                         </div>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
@@ -173,7 +173,7 @@
                   </a-col>
                   <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
                     <div class="r-text-white r-same-height">
-                      &copy; Shopple 2021
+                      &copy; Spazamall 2021
                     </div>
                   </a-col>
                   <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 24 }">

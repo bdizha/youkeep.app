@@ -1,7 +1,7 @@
 <template>
-  <a-row class="r-stickyss r-sticky-138" id="r-slider-left" :gutter="16" type="flex" justify="center">
-    <a-col class="gutter-row" :xs="{ span: 24 }"
-           :sm="{ span: 18 }" :lg="{ span: 18 }"
+  <a-row id="r-slider-left" :gutter="16" class="r-stickyss r-sticky-138" justify="center" type="flex">
+    <a-col :lg="{ span: 18 }" :sm="{ span: 18 }"
+           :xs="{ span: 24 }" class="gutter-row"
     >
       <a-layout>
         <r-account-left-menu></r-account-left-menu>

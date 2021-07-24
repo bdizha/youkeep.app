@@ -2,25 +2,25 @@
   <r-article-template v-if="hasData" :article="null">
     <a-row :gutter="0">
       <a-col class="r-p-24">
-        <a-row class="r-mv-48" type="flex" justify="center" align="middle">
-          <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
-                 :lg="{ span: 16 }"
+        <a-row align="middle" class="r-mv-48" justify="center" type="flex">
+          <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                 class="r-text-center"
           >
             <h4 class="r-heading-light r-text-uppercase">
               A better way to shop.
             </h4>
             <h1 class="r-heading r-text-secondary">
-              Shopple blog
+              Spazamall blog
             </h1>
           </a-col>
         </a-row>
         <a-row :gutter="[24,24]" class="r-product-cards">
-          <a-col class="gutter-row" v-if="articles.length > 0"
-                 v-for="(article, index) in articles"
-                 :key="index" :xs="{span:24}" :sm="{span:12}" :md="{span:8}"
-                 :lg="{span:6}"
+          <a-col v-for="(article, index) in articles" v-if="articles.length > 0"
+                 :key="index"
+                 :lg="{span:6}" :md="{span:8}" :sm="{span:12}" :xs="{span:24}"
+                 class="gutter-row"
           >
-            <r-article-item :size="24" v-if="hasData" :article="article"></r-article-item>
+            <r-article-item v-if="hasData" :article="article" :size="24"></r-article-item>
           </a-col>
         </a-row>
       </a-col>

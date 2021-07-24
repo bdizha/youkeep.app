@@ -33,9 +33,10 @@
                   <a-row :gutter="24" align="middle" class="r-mt-24" justify="start" type="flex">
                     <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <a-form-item label="First name">
-                        <a-input v-decorator="['full_name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
-                                 placeholder="Your full name"
-                                 size="large"
+                        <a-input
+                          v-decorator="['full_name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
+                          placeholder="Your full name"
+                          size="large"
                         >
                           <a-icon slot="prefix" type="user"/>
                         </a-input>
@@ -43,9 +44,10 @@
                     </a-col>
                     <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <a-form-item label="Email address">
-                        <a-input v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please enter your email address' }] }]"
-                                 placeholder="Your email address"
-                                 size="large"
+                        <a-input
+                          v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please enter your email address' }] }]"
+                          placeholder="Your email address"
+                          size="large"
                         >
                           <a-icon slot="prefix" type="mail"/>
                         </a-input>

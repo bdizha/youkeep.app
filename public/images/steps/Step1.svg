@@ -34,7 +34,7 @@
       }
 
       .cls-15, .cls-8 {
-        fill: #f50a2b;
+        fill: #FBD13E;
       }
 
       .cls-10, .cls-9 {
@@ -97,7 +97,7 @@
         filter: url(#Rectangle_505);
       }
         .cls-00{
-        fill: #eefaff;
+        fill: #FBD13E45;
         }
     </style>
     <filter id="Rectangle_505" x="-42" y="-31" width="2885" height="1511" filterUnits="userSpaceOnUse">

@@ -1,14 +1,14 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
-    <a-col class="gutter-row" :span="24">
-      <r-store-window :columns="6"
-                      :category="category"
+  <a-row align="middle" justify="center" type="flex">
+    <a-col :span="24" class="gutter-row">
+      <r-store-window :category="category"
+                      :columns="6"
       >
       </r-store-window>
       <r-store-categories></r-store-categories>
       <a-empty v-show="!hasStores"
-               image="/images/icon_pattern_grey.svg"
                description="This store is coming soon. Please try other available stores."
+               image="/images/icon_pattern_grey.svg"
       />
     </a-col>
   </a-row>

@@ -1,16 +1,16 @@
 <template>
   <div class="r-status-update">
-    <a-row v-if="hasResult" type="flex" justify="center" align="middle">
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-             :lg="{ span: 24 }"
+    <a-row v-if="hasResult" align="middle" justify="center" type="flex">
+      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+             :xs="{ span: 24 }"
       >
         <h4 class="r-heading r-text-secondary">
           <a-icon type="check-circle"/>
           <span>{{ result.title }}</span>
         </h4>
       </a-col>
-      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-             :lg="{ span: 24 }"
+      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+             :xs="{ span: 24 }"
       >
         <p class="r-text-normal" v-html="result.content"></p>
       </a-col>
@@ -22,8 +22,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-result',
-  props: {
-  },
+  props: {},
   data () {
     return {}
   },

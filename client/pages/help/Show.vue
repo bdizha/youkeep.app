@@ -2,8 +2,8 @@
   <r-page>
     <a-row class="r-art-primary">
       <a-col :span="24">
-        <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :sm="{span: 18}" :lg="{span: 18}" class="r-page-padding r-text-center">
+        <a-row align="middle" justify="center" type="flex">
+          <a-col :lg="{span: 18}" :sm="{span: 18}" :xs="{span: 24}" class="r-page-padding r-text-center">
             <h1 class="r-heading r-text-white">
               Help center
             </h1>
@@ -11,16 +11,16 @@
         </a-row>
       </a-col>
     </a-row>
-    <a-row v-if="hasData" type="flex" justify="center" align="middle">
-      <a-col :xs="{span: 24}" :sm="{span: 18}" :md="{span: 16}" :lg="{span: 12}" class="r-p-48"
+    <a-row v-if="hasData" align="middle" justify="center" type="flex">
+      <a-col :lg="{span: 12}" :md="{span: 16}" :sm="{span: 18}" :xs="{span: 24}" class="r-p-48"
              style="background: #FFFFFF;"
       >
         <a-row :gutter="0" class="r-help-breadcrumbs">
-          <a-col class="gutter-row" :span="24">
+          <a-col :span="24" class="gutter-row">
             <a-breadcrumb class="r-same-height">
               <a-breadcrumb-item>
-                <nuxt-link class="r-text-primary"
-                           :to="'/help'"
+                <nuxt-link :to="'/help'"
+                           class="r-text-primary"
                 >
                   Help center
                 </nuxt-link>
@@ -33,9 +33,9 @@
             </a-breadcrumb>
           </a-col>
         </a-row>
-        <a-row :gutter="16" type="flex" justify="start" align="middle">
-          <a-col class="gutter-row" :span="24">
-            <a-collapse accordion :expandIconPosition="'right'" :defaultActiveKey="fs+1">
+        <a-row :gutter="16" align="middle" justify="start" type="flex">
+          <a-col :span="24" class="gutter-row">
+            <a-collapse :defaultActiveKey="fs+1" :expandIconPosition="'right'" accordion>
               <template #expandIcon="props">
                 <a-icon :type="props.isActive ? 'minus' : 'plus'"/>
               </template>

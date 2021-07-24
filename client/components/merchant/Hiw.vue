@@ -15,8 +15,8 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <h3 class="r-heading-light r-text-uppercase r-text-primary">
-            Shopple for business
+          <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+            Spazamall for business
           </h3>
         </a-col>
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -32,7 +32,7 @@
                :xs="{ span: 24 }"
         >
           <p class="r-text-normal">
-            Whether it’s small online shops or retail brands, Shopple for Business gives you an easy
+            Whether it’s small online shops or retail brands, Spazamall for Business gives you an easy
             way to
             manage your selling channel needs. Built for retail shops, it offers a clear view into
             product
@@ -84,7 +84,7 @@
                                    :sm="{ span: 24 }"
                                    :xs="{ span: 24 }"
                             >
-                              <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                              <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                                 Get paid
                               </h4>
                             </a-col>
@@ -101,7 +101,7 @@
                                    :xs="{ span: 24 }"
                             >
                               <p class="r-text-normal">
-                                Get paid for what you sell on Shopple, on your own website, or in online
+                                Get paid for what you sell on Spazamall, on your own website, or in online
                                 classifieds and forums.
                               </p>
                             </a-col>
@@ -144,8 +144,8 @@
                  :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-            <h3 class="r-heading-light r-text-uppercase r-text-primary">
-              Sell online at Shopple
+            <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+              Sell online at Spazamall
             </h3>
           </a-col>
           <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
@@ -153,7 +153,7 @@
                  :xs="{ span: 24 }"
           >
             <h2 class="r-heading">
-              Shopple is the best way to get paid for whatever you sell on its marketplace.
+              Spazamall is the best way to get paid for whatever you sell on its marketplace.
             </h2>
           </a-col>
           <a-col :lg="{ span: 16 }" :md="{ span: 12 }"
@@ -161,8 +161,8 @@
                  :xs="{ span: 24 }"
           >
             <p class="r-text-normal">
-              That's because Shopple is seamlessly integrated into Shopple checkout and your money shows up
-              in your Shopple account after your sale closes. Plus, Shopple offers a host of seller tools
+              That's because Spazamall is seamlessly integrated into Spazamall checkout and your money shows up
+              in your Spazamall account after your sale closes. Plus, Spazamall offers a host of seller tools
               and resources to enhance your fun and profits.
             </p>
             <a-button class="r-btn-primary"
@@ -195,8 +195,8 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h3 class="r-heading-light r-text-uppercase r-text-primary">
-                        The Shopple Platform
+                      <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+                        The Spazamall Platform
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -212,7 +212,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Forget about spending hours learning new software. The Shopple platform makes it
+                        Forget about spending hours learning new software. The Spazamall platform makes it
                         super simple to view your marketplaces, update information, or track your inventory in real
                         time.
                       </p>
@@ -225,7 +225,7 @@
                          :key="index"
                          class="r-text-normal"
                       >
-                        <a-icon slot="prefix" class="r-text-primary" type="check"/>
+                        <a-icon slot="prefix" class="r-text-secondary" type="check"/>
                         {{ feature.content }}
                       </p>
                     </a-col>
@@ -282,7 +282,7 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h3 class="r-heading-light r-text-uppercase r-text-primary">
+                      <h3 class="r-heading-light r-text-secondary r-text-uppercase">
                         E-commerce specialists
                       </h3>
                     </a-col>
@@ -299,7 +299,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Shopple gives you a dedicated e-commerce expert supported by a team of knowledgeable
+                        Spazamall gives you a dedicated e-commerce expert supported by a team of knowledgeable
                         small
                         business
                         experts. We’re here to take the guesswork out of running your own business - for
@@ -342,7 +342,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                Why thousands of retailers <span class="r-text-primary">choose</span> Shopple
+                Why thousands of retailers <span class="r-text-primary">choose</span> Spazamall
               </h2>
             </a-col>
             <a-col :lg="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -362,7 +362,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          Accept all major credit cards - your customers don't even need a Shopple account.
+                          Accept all major credit cards - your customers don't even need a Spazamall account.
                         </p>
                       </a-col>
                     </a-row>
@@ -387,7 +387,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          When an order is completed, the money usually shows up in your Shopple account in minutes.
+                          When an order is completed, the money usually shows up in your Spazamall account in minutes.
                         </p>
                       </a-col>
                     </a-row>
@@ -434,7 +434,7 @@ export default {
   data () {
     return {
       features: [
-        { content: 'Access Shopple via mobile or desktop - we go where you go' },
+        { content: 'Access Spazamall via mobile or desktop - we go where you go' },
         { content: 'Quickly answer categorization requests from your team' },
         { content: 'Contact your team with our simple messaging feature' },
         { content: 'Get operating support at any time within our work ours' }

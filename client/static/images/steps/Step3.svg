@@ -15,7 +15,7 @@
             }
 
             .cls-13, .cls-4 {
-            fill: #f50a2b;
+            fill: #FBD13E;
             }
 
             .cls-4 {
@@ -55,7 +55,7 @@
             }
 
             .cls-12, .cls-22 {
-            fill: #1B9BD9;
+            fill: #3B9CFF;
             }
 
             .cls-12, .cls-15 {
@@ -63,7 +63,7 @@
             }
 
             .cls-14, .cls-15 {
-            fill: #1B9BD9;
+            fill: #3B9CFF;
             }
 
             .cls-16 {
@@ -91,7 +91,7 @@
             }
 
             .cls-23 {
-            fill: #1B9BD9;
+            fill: #3B9CFF;
             }
 
             .cls-24 {
@@ -121,7 +121,7 @@
             filter: url(#Rectangle_472);
             }
             .cls-00{
-            fill: #eefaff;
+            fill: #fbf0c8;
             }
         </style>
         <filter id="Rectangle_472" x="-30" y="-27" width="2873" height="1502" filterUnits="userSpaceOnUse">

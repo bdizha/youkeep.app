@@ -1,43 +1,43 @@
 <template>
-  <a-row :gutter="[48,96]" type="flex" justify="center" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-           :lg="{ span: 24 }"
+  <a-row :gutter="[48,96]" align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
-      <a-row style="background: #FFFFFF" type="flex" justify="start" align="middle">
-        <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ span: 12 }"
-               :lg="{ span: 12 }"
+      <a-row align="middle" justify="start" style="background: #FFFFFF" type="flex">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+               class="r-p-48"
         >
-          <a-row type="flex" justify="end" align="middle">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
-                   :lg="{ span: 16 }"
+          <a-row align="middle" justify="end" type="flex">
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
             >
-              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 24 }"
-                       :lg="{ span: 24 }"
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
-                  <h4 class="r-heading-light r-text-primary r-text-uppercase">
-                    Careers at Shopple
+                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                    Careers at Spazamall
                   </h4>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 24 }"
-                       :lg="{ span: 24 }"
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <h1 class="r-heading">
                     Be part of something bigger
                   </h1>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 24 }"
-                       :lg="{ span: 24 }"
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <p class="r-text-normal">
                     Changing how people experience shopping and buy what they desire is just getting started.
                   </p>
                   <p class="r-text-normal">
-                    Shopple powers the whole shopping experience for shppers around the world. We specialize in
+                    Spazamall powers the whole shopping experience for shppers around the world. We specialize in
                     online shopping, order tracking, and marketplace services focused on delivering a customer
                     experience of unparalleled quality.
                   </p>
@@ -46,60 +46,60 @@
             </a-col>
           </a-row>
         </a-col>
-        <a-col class="r-pv-48"
-               style="background: url(/images/content/7.svg) no-repeat; background-size: cover; padding-bottom: 600px;"
-               :xs="{ span: 24 }" :sm="{ span: 24 }"
+        <a-col :lg="{ span: 12 }"
                :md="{ span: 12 }"
-               :lg="{ span: 12 }"
+               :sm="{ span: 24 }" :xs="{ span: 24 }"
+               class="r-pv-48"
+               style="background: url(/images/content/7.svg) no-repeat; background-size: cover; padding-bottom: 600px;"
         >
         </a-col>
       </a-row>
     </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
-          <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-            <a-col :xs="{ span: 24 }" :sm="{  span: 24 }"
-                   :md="{ span: 18 }"
-                   :lg="{ span: 16 }"
+          <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                   :sm="{  span: 24 }"
+                   :xs="{ span: 24 }"
             >
-              <a-row class="r-text-left" type="flex" justify="center" align="middle">
-                <a-col class="r-ph-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
+              <a-row align="middle" class="r-text-left" justify="center" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                       class="r-ph-24"
                 >
-                  <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center" align="middle">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 24 }"
-                           :lg="{ span: 24 }"
+                  <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
                     >
-                      <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                      <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                         Our objective
                       </h4>
                     </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 24 }"
-                           :lg="{ span: 24 }"
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
                     >
                       <h2 class="r-heading">
                         To transform the way shopping is experienced around the world
                       </h2>
                     </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                           :md="{ span: 24 }"
-                           :lg="{ span: 24 }"
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Shopple’s mission is to bring the best shopping tools directly to the customers and retailers.
-                        Shopple
+                        Spazamall’s mission is to bring the best shopping tools directly to the customers and retailers.
+                        Spazamall
                         should always be
                         transparent and easily accessible. Shopping freedom should be for all of us.
                       </p>
                       <p class="r-text-normal">
                         Historically, finest services have been known to be complicated, expensive and difficult to
                         access.
-                        Shopple is
+                        Spazamall is
                         here to make better shopping services easily accessible to everyone.
                       </p>
                     </a-col>
@@ -110,52 +110,52 @@
           </a-row>
         </a-col>
 
-        <a-col :xs="{ span: 24 }" :sm="{  span: 24 }"
-               :md="{ span: 18 }"
-               :lg="{ span: 16 }"
+        <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+               :sm="{  span: 24 }"
+               :xs="{ span: 24 }"
         >
           <r-values></r-values>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
-          <a-row type="flex" justify="center" align="middle">
-            <a-col :xs="{ span: 24 }" :sm="{  span: 24 }"
-                   :md="{ span: 18 }"
-                   :lg="{ span: 16 }"
+          <a-row align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                   :sm="{  span: 24 }"
+                   :xs="{ span: 24 }"
             >
-              <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
+              <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <a-card class="r-bg-primary-light">
                     <a-card-meta>
                       <template slot="description">
-                        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                               Innovative
                             </h4>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <h2 class="r-heading">
                               Transforming
                               the way shopping is <span class="r-text-secondary">experienced</span>
                             </h2>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <p class="r-text-normal">
-                              Shopple is a consumer centric platform that transforms
+                              Spazamall is a consumer centric platform that transforms
                               the way shoppers experience their shopping.
                             </p>
                             <p class="r-text-normal">
@@ -167,36 +167,36 @@
                     </a-card-meta>
                   </a-card>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <a-card class="r-bg-primary-light">
                     <a-card-meta>
                       <template slot="description">
-                        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                               Dynamic
                             </h4>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <h2 class="r-heading">
                               Together, we can <span class="r-text-secondary">change</span> the world for the better
                             </h2>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <p class="r-text-normal">
-                              At Shopple, we are building a shopping experience that helps millions of people be
+                              At Spazamall, we are building a shopping experience that helps millions of people be
                               effortlessly in
                               control of their shopping experience.
                             </p>
@@ -209,33 +209,33 @@
                     </a-card-meta>
                   </a-card>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <a-card class="r-bg-primary-light">
                     <a-card-meta>
                       <template slot="description">
-                        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                               Progressive
                             </h4>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <h2 class="r-heading">
                               We <span class="r-text-secondary">celebrate</span> mistakes and doing more experiments
                             </h2>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <p class="r-text-normal">
                               You want to create bright ideas, achieve great work & cash out.
@@ -251,33 +251,33 @@
                     </a-card-meta>
                   </a-card>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <a-card class="r-bg-primary-light">
                     <a-card-meta>
                       <template slot="description">
-                        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                               Collaborative
                             </h4>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <h2 class="r-heading">
-                              Shopple as a specialist house with a <span class="r-text-secondary">diverse</span> team
+                              Spazamall as a specialist house with a <span class="r-text-secondary">diverse</span> team
                             </h2>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <p class="r-text-normal">
                               Great work mates
@@ -296,18 +296,18 @@
                     </a-card-meta>
                   </a-card>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{  span: 24 }"
-                       :md="{ span: 24 }"
-                       :lg="{ span: 24 }"
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{  span: 24 }"
+                       :xs="{ span: 24 }"
                 >
-                  <a-row :gutter="[48,48]" type="flex" justify="start" align="middle">
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                           :lg="{ span: 12 }"
+                  <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
                     >
-                      <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center" align="middle">
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 24 }"
-                               :lg="{ span: 24 }"
+                      <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
                         >
                           <h2 class="r-heading">
                             We’re <span class="r-text-primary">excited</span> to meet you!
@@ -315,21 +315,21 @@
                         </a-col>
                       </a-row>
                     </a-col>
-                    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                           :lg="{ span: 12 }"
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
                     >
                       <a-card class="r-bg-secondary-light">
                         <a-card-meta>
                           <template slot="description">
                             <div class="r-mv-48">
-                              <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-                                <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                                       :lg="{ span: 24 }"
+                              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                       class="r-text-center"
                                 >
                                   <h3 class="r-text-secondary r-text-uppercase">Ready to join us?</h3>
                                 </a-col>
-                                <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                                       :lg="{ span: 21 }"
+                                <a-col :lg="{ span: 21 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                       class="r-text-center"
                                 >
                                   <p class="r-text-normal">
                                     Ready to join a team of bold and passionate builders to do your best work yet? We're
@@ -339,14 +339,14 @@
                                     fintech.
                                   </p>
                                 </a-col>
-                                <a-col class="r-text-center" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18 }"
-                                       :lg="{ span: 16 }"
+                                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                       class="r-text-center"
                                 >
                                   <nuxt-link to="/career/openings">
-                                    <a-button type="secondary"
-                                              class="r-btn-secondary"
-                                              size="large"
+                                    <a-button class="r-btn-secondary"
                                               html-type="submit"
+                                              size="large"
+                                              type="secondary"
                                     >
                                       See job openings
                                     </a-button>
@@ -364,7 +364,7 @@
             </a-col>
           </a-row>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <r-locations></r-locations>
         </a-col>
       </a-row>

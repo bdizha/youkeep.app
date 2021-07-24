@@ -1,5 +1,5 @@
 <template>
-  <a-row type="flex" justify="center" :gutter="16" style="padding-top: 48px;">
+  <a-row :gutter="16" justify="center" style="padding-top: 48px;" type="flex">
     <a-col v-for="(card, index) in cards" :key="index" :span="columns">
       <a-card :loading="true" title="Please wait...">
       </a-card>

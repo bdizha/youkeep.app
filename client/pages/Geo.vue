@@ -1,7 +1,7 @@
 <template>
-  <a-form class="ant-form ant-form-vertical"
+  <a-form :form="formAddress"
+          class="ant-form ant-form-vertical"
           @submit="saveAddress"
-          :form="formAddress"
   >
     <a-form-item label="Address Line 1">
       <a-input
@@ -20,7 +20,7 @@
     </a-form-item>
     <a-form-item label="Post Code">
       <a-row>
-        <a-col :xs="{ span: 12 }" :lg="{ span: 6 }">
+        <a-col :lg="{ span: 6 }" :xs="{ span: 12 }">
           <a-input
             v-decorator="['post_code', { rules: [{ required: true, message: 'Post code is required' }] }]"
           />
@@ -28,8 +28,8 @@
       </a-row>
     </a-form-item>
     <a-form-item :wrapper-col="{ span: 24 }">
-      <a-button type="secondary" html-type="submit"
-                class="r-btn-secondary"
+      <a-button class="r-btn-secondary" html-type="submit"
+                type="secondary"
       >
         Proceed
       </a-button>

@@ -26,7 +26,8 @@
     </a-col>
     <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
       <a-row :gutter="[12, 12]" align="middle" justify="start" type="flex">
-        <a-col v-if="counter < categories.length" :lg="{ span: limit < counter ? 12 : 24 }" :sm="{ span: limit < counter ? 12 : 24 }"
+        <a-col v-if="counter < categories.length" :lg="{ span: limit < counter ? 12 : 24 }"
+               :sm="{ span: limit < counter ? 12 : 24 }"
                :xs="{ span: 12 }"
         >
           <a-button

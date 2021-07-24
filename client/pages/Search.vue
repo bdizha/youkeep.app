@@ -1,11 +1,11 @@
 <template>
   <r-store-template v-if="hasData" :category="category">
-    <a-row :gutter="16" type="flex" justify="start" align="middle">
+    <a-row :gutter="16" align="middle" justify="start" type="flex">
       <a-col :xs="{ span: 24 }">
         <r-store-products :category="category"
                           :colums="6"
-                          :store="store"
                           :products="products"
+                          :store="store"
         ></r-store-products>
       </a-col>
     </a-row>

@@ -1,50 +1,50 @@
 <template>
-  <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-    <a-col class="gutter-row" :xs="{ span: 24 }"
-           :sm="{ span: 24 }" :lg="{ span: 24 }"
+  <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }" class="gutter-row"
     >
-      <a-row type="flex" justify="start" align="middle">
-        <a-col class="gutter-row" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+      <a-row align="middle" justify="start" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="gutter-row"
         >
           <a-card title="ACCOUNT CREDIT">
-            <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-              <a-col :xs="{ span: 20 }"
-                     :sm="{ span: 20 }" :lg="{ span: 20 }"
+            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 20 }"
+                     :sm="{ span: 20 }" :xs="{ span: 20 }"
               >
-                <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">Account status:</label>
                   </a-col>
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
-                    <a-switch disabled size="large" default-checked>
+                    <a-switch default-checked disabled size="large">
                       <a-icon slot="checkedChildren" type="check"/>
                       <a-icon slot="unCheckedChildren" type="close"/>
                     </a-switch>
                   </a-col>
                 </a-row>
-                <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">Account balance:</label>
                   </a-col>
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">R0.00</label>
                   </a-col>
                 </a-row>
               </a-col>
-              <a-col :xs="{ span: 4 }"
-                     :sm="{ span: 4 }" :lg="{ span: 4 }"
+              <a-col :lg="{ span: 4 }"
+                     :sm="{ span: 4 }" :xs="{ span: 4 }"
               >
-                <a-button v-on:click="onModal('account-credit', $event)" block size="small"
-                          type="secondary" class="r-btn-bordered-grey"
+                <a-button block class="r-btn-bordered-grey" size="small"
+                          type="secondary" v-on:click="onModal('account-credit', $event)"
                 >
                   Add credit
                 </a-button>
@@ -54,48 +54,48 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col class="gutter-row" :xs="{ span: 24 }"
-           :sm="{ span: 24 }" :lg="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }" class="gutter-row"
     >
-      <a-row type="flex" justify="start" align="middle">
-        <a-col class="gutter-row" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+      <a-row align="middle" justify="start" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="gutter-row"
         >
           <a-card title="ACCOUNT PROMOS">
-            <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-              <a-col :xs="{ span: 20 }"
-                     :sm="{ span: 20 }" :lg="{ span: 20 }"
+            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 20 }"
+                     :sm="{ span: 20 }" :xs="{ span: 20 }"
               >
-                <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">Free shipping</label>
                   </a-col>
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     R375.00
                   </a-col>
                 </a-row>
-                <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">Eat as you go</label>
                   </a-col>
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     R1000.00
                   </a-col>
                 </a-row>
               </a-col>
-              <a-col :xs="{ span: 4 }"
-                     :sm="{ span: 4 }" :lg="{ span: 4 }"
+              <a-col :lg="{ span: 4 }"
+                     :sm="{ span: 4 }" :xs="{ span: 4 }"
               >
-                <a-button v-on:click="onModal('account-promo', $event)" block size="small"
-                          type="secondary" class="r-btn-bordered-grey"
+                <a-button block class="r-btn-bordered-grey" size="small"
+                          type="secondary" v-on:click="onModal('account-promo', $event)"
                 >
                   Add promo
                 </a-button>
@@ -111,7 +111,7 @@
 export default {
   components: {},
   layout: 'account',
-  async asyncData  ({ store }) {
+  async asyncData ({ store }) {
     await store.dispatch('account/onMenu', { currentItem: 'account' })
   },
   data () {

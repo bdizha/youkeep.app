@@ -15,7 +15,7 @@
             <a-row :gutter=[24,24] justify="center" type="flex">
               <a-col :xs="{ span: 24 }" class="r-text-left">
                 <h2 class="r-heading r-text-secondary">
-                  Get started shopping on Shopple
+                  Get started shopping on Spazamall
                 </h2>
               </a-col>
               <a-col v-if="hasAddress" :xs="{ span: 24 }" class="r-text-left">
@@ -27,7 +27,9 @@
               <a-col :xs="{ span: 24 }">
                 <p class="r-text-light">
                   This will just take a few steps to complete. Why don't you help us set up your
-                  shopping account <detail></detail>s in 3 just under minutes.
+                  shopping account
+                  <detail></detail>
+                  s in 3 just under minutes.
                 </p>
               </a-col>
             </a-row>
@@ -181,7 +183,7 @@ export default {
             }
 
             $this.$store.dispatch('form/onResult', message)
-            $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Shopple.')
+            $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Spazamall.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

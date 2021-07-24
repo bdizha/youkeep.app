@@ -1,7 +1,7 @@
 <template>
-  <r-modal-template :mask-closable="maskClosable"
-                    :closable="closable"
+  <r-modal-template :closable="closable"
                     :current="current"
+                    :mask-closable="maskClosable"
                     style="position: relative;"
   >
     <r-shopper-apply></r-shopper-apply>

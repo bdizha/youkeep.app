@@ -1,44 +1,44 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18}"
-           :lg="{span: 18}"
+  <a-row align="middle" justify="center" type="flex">
+    <a-col :lg="{span: 18}" :md="{ span: 18}" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
-      <a-form v-if="hasForm" class="ant-form ant-form-vertical"
+      <a-form v-if="hasForm" :form="formApply"
+              class="ant-form ant-form-vertical"
               @submit="apply"
-              :form="formApply"
       >
         <a-form-item v-if="step == 0">
-          <a-row type="flex" justify="start" align="middle">
-            <a-col class="r-text-left" :xs="{ span: 24 }">
+          <a-row align="middle" justify="start" type="flex">
+            <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
-                Shopple shopper application
+                Spazamall shopper application
               </h2>
               <p v-if="false" class="r-text-normal">
                 Sign in to your account with your email address.
               </p>
             </a-col>
           </a-row>
-          <a-row type="flex" justify="start" align="middle">
-            <a-col class="r-text-left" :xs="{ span: 24 }">
+          <a-row align="middle" justify="start" type="flex">
+            <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is Shopple?
+                What is Spazamall?
               </h3>
               <p class="r-text-normal">
-                Shopple is a fast growing startup that is improving lives by giving people more time to
+                Spazamall is a fast growing startup that is improving lives by giving people more time to
                 spend
-                with their families! Our Shopple members order shopping via the Shopple app and can have
+                with their families! Our Spazamall members order shopping via the Spazamall app and can have
                 them
                 delivered on-demand as soon as 1 hour later.
               </p>
             </a-col>
           </a-row>
-          <a-row type="flex" justify="start" align="middle">
-            <a-col class="r-text-left" :xs="{ span: 24 }">
+          <a-row align="middle" justify="start" type="flex">
+            <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is a Shopple shopper?
+                What is a Spazamall shopper?
               </h3>
               <p class="r-text-normal">
-                Our Shopple Shoppers carefully select member's shopping using the Shopple app and deliver
+                Our Spazamall Shoppers carefully select member's shopping using the Spazamall app and deliver
                 them
                 during a specified, delivery window. Our shoppers enjoy an interactive and fun culture
                 all
@@ -55,9 +55,9 @@
         <a-form-item v-if="step == 1" label="First name">
           <a-input
             v-model="application.first_name"
-            size="large"
-            placeholder="Your first name"
             v-decorator="['first_name', { rules: [{ required: true, message: 'Please enter your first name' }] }]"
+            placeholder="Your first name"
+            size="large"
           >
             <a-icon slot="prefix" type="user"/>
           </a-input>
@@ -65,9 +65,9 @@
         <a-form-item v-if="step == 1" label="Last name">
           <a-input
             v-model="application.last_name"
-            size="large"
-            placeholder="Your last name"
             v-decorator="['last_name', { rules: [{ required: true, message: 'Please enter your last name' }] }]"
+            placeholder="Your last name"
+            size="large"
           >
             <a-icon slot="prefix" type="mail"/>
           </a-input>
@@ -77,7 +77,7 @@
             What are your contact details?
           </h2>
           <p class="r-text-normal">
-            By entering your email addrress and mobile number you are opting in to receive automated Shopple
+            By entering your email addrress and mobile number you are opting in to receive automated Spazamall
             Application
             Notifications. Message and data rates may apply.
           </p>
@@ -85,9 +85,9 @@
         <a-form-item v-if="step == 2" label="Mobile number">
           <a-input
             v-model="application.mobile"
-            size="large"
-            placeholder="Your mobile number"
             v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
+            placeholder="Your mobile number"
+            size="large"
           >
             <a-icon slot="prefix" type="mobile"/>
           </a-input>
@@ -95,9 +95,9 @@
         <a-form-item v-if="step == 2" label="Email address">
           <a-input
             v-model="application.email"
-            size="large"
-            placeholder="Your email address"
             v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please confirm your email' }] }]"
+            placeholder="Your email address"
+            size="large"
           >
             <a-icon slot="prefix" type="mail"/>
           </a-input>
@@ -130,9 +130,9 @@
         <a-form-item v-if="step == 4" label="Address line 1">
           <a-input
             v-model="application.address_line_1"
-            size="large"
-            placeholder="Your address line 1"
             v-decorator="['address_line_1', { rules: [{ required: true, message: 'Please enter your address line 1' }] }]"
+            placeholder="Your address line 1"
+            size="large"
           >
             <a-icon slot="prefix" type="environment"/>
           </a-input>
@@ -140,9 +140,9 @@
         <a-form-item v-if="step == 4" label="Address line 2 (optional)">
           <a-input
             v-model="application.address_line_2"
-            size="large"
-            placeholder="Your address line 2"
             v-decorator="['address_line_2', { rules: [{ required: false, message: 'Please enter your address line 2' }] }]"
+            placeholder="Your address line 2"
+            size="large"
           >
             <a-icon slot="prefix" type="environment"/>
           </a-input>
@@ -150,9 +150,9 @@
         <a-form-item v-if="step == 5" label="Post code">
           <a-input
             v-model="application.post_code"
-            size="large"
-            placeholder="Your post code"
             v-decorator="['post_code', { rules: [{ required: true, message: 'Please enter your post code' }] }]"
+            placeholder="Your post code"
+            size="large"
           >
             <a-icon slot="prefix" type="environment"/>
           </a-input>
@@ -160,9 +160,9 @@
         <a-form-item v-if="step == 5" label="City">
           <a-input
             v-model="application.city"
-            size="large"
-            placeholder="Your city"
             v-decorator="['city', { rules: [{ required: true, message: 'Please enter your city' }] }]"
+            placeholder="Your city"
+            size="large"
           >
             <a-icon slot="prefix" type="environment"/>
           </a-input>
@@ -170,9 +170,9 @@
         <a-form-item v-if="step == 6" label="Province">
           <a-input
             v-model="application.province"
-            size="large"
-            placeholder="Your province"
             v-decorator="['province', { rules: [{ required: true, message: 'Please enter your province' }] }]"
+            placeholder="Your province"
+            size="large"
           >
             <a-icon slot="prefix" type="environment"/>
           </a-input>
@@ -254,23 +254,23 @@
             </a-row>
           </a-radio-group>
         </a-form-item>
-        <a-form-item @click="onStep" :wrapper-col="{ span: 24 }">
-          <a-row type="flex" justify="start" align="middle">
-            <a-col class="r-text-left" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
-              <a-button @click="onBack"
+        <a-form-item :wrapper-col="{ span: 24 }" @click="onStep">
+          <a-row align="middle" justify="start" type="flex">
+            <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }" class="r-text-left">
+              <a-button class="r-btn-secondary"
                         size="large"
                         type="default"
-                        class="r-btn-secondary"
+                        @click="onBack"
               >
                 <a-icon type="left"/>
                 Back
               </a-button>
             </a-col>
-            <a-col class="r-text-right" :xs="{ span: 12 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
-              <a-button @click="onStep"
-                        size="large"
-                        type="secondary" html-type="button"
-                        class="ant-btn r-btn-secondary"
+            <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }" class="r-text-right">
+              <a-button class="ant-btn r-btn-secondary"
+                        html-type="button"
+                        size="large" type="secondary"
+                        @click="onStep"
               >
                 {{ step == 11 ? 'Submit' : 'Continue' }}
                 <a-icon type="right"/>

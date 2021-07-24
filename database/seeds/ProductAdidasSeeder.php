@@ -200,81 +200,81 @@ class ProductAdidasSeeder extends DatabaseSeeder
         $this->fetchCategoryBanners($categoryNode, $storeCategory);
 
         // Reprocess the url to get the actual categories
-        if($storeCategory->level == 1 && strpos($storeCategory->url, 'all-products') === false){
-            $categoryUrl .= '/all-products/';
-        }
-
-        $categoryUrl .= "?page={$page}";
-        $categoryNode = Goutte::request('GET', $categoryUrl);
-
-        if($page == 1){
-            $nextPageNode = $categoryNode->filter('.current-path--total')->eq(0);
-
-            if($nextPageNode->count() > 0){
-                $productPageText = $nextPageNode->text();
-
-                $productPageText = str_replace(" ", "", $productPageText);
-                $productPageText = str_replace("(", "", $productPageText);
-                $productPageText = str_replace(")", "", $productPageText);
-                $productPageText = str_replace(",", "", $productPageText);
-                $productPageText = str_replace(" ", "", $productPageText);
-                $productPageText = str_replace("products", "", trim($productPageText));
-
-                if(!empty($productPageText) && is_numeric($productPageText)){
-                    $totalProducts = trim($productPageText);
-                    $totalPages = ceil(($totalProducts/$this->perPage));
-
-                    echo "Total products >>>>>>>>> {$totalProducts}\n";
-                }
-            }
-        }
-
-        echo "Fetching category url >>>>>>>>> {$categoryUrl}\n";
-        echo "Total pages >>>>>>>>> {$totalPages}\n";
-
-        $productItems = [];
-        $categoryNode->filter('.catalog-product__padding')->each(function ($node) use (&$productItems, $storeCategory) {
-            $nameNode = $node->filter('.catalog--product-name');
-            if ($nameNode->count() > 0) {
-                $productName = $nameNode->text();
-            }
-
-            $urlNode = $node->filter('a');
-            if ($urlNode->count() > 0) {
-                $productUrl = $urlNode->attr('href');
-            }
-
-            if (strpos($productUrl, $this->domain) === false) {
-                $productUrl = $this->domain . $productUrl;
-            }
-
-            $this->product = App\Product::where('external_url', $productUrl)->first();
-
-            if(!empty($productUrl) && empty($this->product->id)){
-                $productPrice = null;
-                $priceNode = $node->filter('.catalog-product--price');
-
-                if ($priceNode->count() > 0) {
-                    $productPrice = $priceNode->text();
-                    $productPrice = str_replace('R', '', trim($productPrice));
-                }
-
-                $productItems[] = [
-                    'name' => trim($productName),
-                    'external_url' => $productUrl,
-                    'price' => $this->setPrice($productPrice),
-                    'discount' => $this->setPrice($productPrice),
-                ];
-            }
-            else{
-                echo ">>>>>Updating product: " . $this->product->name . "\n";
-                $this->setProductCategory($storeCategory);
-            }
-        });
-
-        if (!empty($productItems)) {
-            $this->setProducts($productItems, $storeCategory);
-        }
+//        if($storeCategory->level == 1 && strpos($storeCategory->url, 'all-products') === false){
+//            $categoryUrl .= '/all-products/';
+//        }
+//
+//        $categoryUrl .= "?page={$page}";
+//        $categoryNode = Goutte::request('GET', $categoryUrl);
+//
+//        if($page == 1){
+//            $nextPageNode = $categoryNode->filter('.current-path--total')->eq(0);
+//
+//            if($nextPageNode->count() > 0){
+//                $productPageText = $nextPageNode->text();
+//
+//                $productPageText = str_replace(" ", "", $productPageText);
+//                $productPageText = str_replace("(", "", $productPageText);
+//                $productPageText = str_replace(")", "", $productPageText);
+//                $productPageText = str_replace(",", "", $productPageText);
+//                $productPageText = str_replace(" ", "", $productPageText);
+//                $productPageText = str_replace("products", "", trim($productPageText));
+//
+//                if(!empty($productPageText) && is_numeric($productPageText)){
+//                    $totalProducts = trim($productPageText);
+//                    $totalPages = ceil(($totalProducts/$this->perPage));
+//
+//                    echo "Total products >>>>>>>>> {$totalProducts}\n";
+//                }
+//            }
+//        }
+//
+//        echo "Fetching category url >>>>>>>>> {$categoryUrl}\n";
+//        echo "Total pages >>>>>>>>> {$totalPages}\n";
+//
+//        $productItems = [];
+//        $categoryNode->filter('.catalog-product__padding')->each(function ($node) use (&$productItems, $storeCategory) {
+//            $nameNode = $node->filter('.catalog--product-name');
+//            if ($nameNode->count() > 0) {
+//                $productName = $nameNode->text();
+//            }
+//
+//            $urlNode = $node->filter('a');
+//            if ($urlNode->count() > 0) {
+//                $productUrl = $urlNode->attr('href');
+//            }
+//
+//            if (strpos($productUrl, $this->domain) === false) {
+//                $productUrl = $this->domain . $productUrl;
+//            }
+//
+//            $this->product = App\Product::where('external_url', $productUrl)->first();
+//
+//            if(!empty($productUrl) && empty($this->product->id)){
+//                $productPrice = null;
+//                $priceNode = $node->filter('.catalog-product--price');
+//
+//                if ($priceNode->count() > 0) {
+//                    $productPrice = $priceNode->text();
+//                    $productPrice = str_replace('R', '', trim($productPrice));
+//                }
+//
+//                $productItems[] = [
+//                    'name' => trim($productName),
+//                    'external_url' => $productUrl,
+//                    'price' => $this->setPrice($productPrice),
+//                    'discount' => $this->setPrice($productPrice),
+//                ];
+//            }
+//            else{
+//                echo ">>>>>Updating product: " . $this->product->name . "\n";
+//                $this->setProductCategory($storeCategory);
+//            }
+//        });
+//
+//        if (!empty($productItems)) {
+//            $this->setProducts($productItems, $storeCategory);
+//        }
 
         if($totalPages > $page){
             $this->fetchCategoryProducts($storeCategory,  $page + 1, $totalPages);

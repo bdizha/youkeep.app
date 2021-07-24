@@ -16,7 +16,7 @@
                :xs="{ span: 24 }"
         >
           <h3 class="r-heading-light r-text-uppercase r-text-secondary">
-            Shopple for shoppers
+            Spazamall for shoppers
           </h3>
         </a-col>
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -32,7 +32,7 @@
                :xs="{ span: 24 }"
         >
           <p class="r-text-normal">
-            With Shopple, your financial info and purchases are better protected. You save time shopping online and
+            With Spazamall, your financial info and purchases are better protected. You save time shopping online and
             sending money. And you get more ways to cover your payments.
           </p>
           <a-button class="r-btn-secondary"
@@ -83,7 +83,7 @@
                                    :xs="{ span: 24 }"
                             >
                               <h2 class="r-heading">
-                                Shopple gives you the flexibility to shop however you like.
+                                Spazamall gives you the flexibility to shop however you like.
                               </h2>
                             </a-col>
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -99,16 +99,16 @@
                                    :xs="{ span: 24 }"
                             >
                               <p class="r-text-normal">
-                                <a-icon slot="prefix" class="r-text-primary" type="check"/>
+                                <a-icon slot="prefix" class="r-text-secondary" type="check"/>
                                 Your bank account
                               </p>
                               <p class="r-text-normal">
-                                <a-icon slot="prefix" class="r-text-primary" type="check"/>
+                                <a-icon slot="prefix" class="r-text-secondary" type="check"/>
                                 Your debit or credit card
                               </p>
                               <p class="r-text-normal">
-                                <a-icon slot="prefix" class="r-text-primary" type="check"/>
-                                New payment options like <a href="https://paise.shop" target="_blank">Shopple</a>
+                                <a-icon slot="prefix" class="r-text-secondary" type="check"/>
+                                New payment options like <a href="https://paise.shop" target="_blank">Spazamall</a>
                               </p>
                             </a-col>
                           </a-row>
@@ -165,8 +165,8 @@
                                    :sm="{ span: 24 }"
                                    :xs="{ span: 24 }"
                             >
-                              <h4 class="r-heading-light r-text-primary r-text-uppercase">
-                                Buy online at Shopple
+                              <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                                Buy online at Spazamall
                               </h4>
                             </a-col>
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -174,7 +174,7 @@
                                    :xs="{ span: 24 }"
                             >
                               <h2 class="r-heading">
-                                Shopple is the best way to find and purchase whatever your haert desires.
+                                Spazamall is the best way to find and purchase whatever your haert desires.
                               </h2>
                             </a-col>
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -182,7 +182,7 @@
                                    :xs="{ span: 24 }"
                             >
                               <p class="r-text-normal">
-                                Shopple partners with trusted and local stores that ensures faster deliveries in less
+                                Spazamall partners with trusted and local stores that ensures faster deliveries in less
                                 than an hour for some lucky shoppers like you. Shoppers is created to offer you the best
                                 shopping experience on the online market.
                               </p>
@@ -214,7 +214,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                Why millions of shoppers <span class="r-text-secondary">choose</span> Shopple
+                Why millions of shoppers <span class="r-text-secondary">choose</span> Spazamall
               </h2>
             </a-col>
             <a-col :lg="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

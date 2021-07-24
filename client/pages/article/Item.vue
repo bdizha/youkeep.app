@@ -1,6 +1,6 @@
 <template>
-  <a-card :style="'background-image: url(/storage/article/' + article.photo + ');'"
-          v-if="article" class="r-article r-article-cover"
+  <a-card v-if="article"
+          :style="'background-image: url(/storage/article/' + article.photo + ');'" class="r-article r-article-cover"
   >
     <r-article-photo :article="article"></r-article-photo>
     <a-card-meta>

@@ -1,5 +1,5 @@
 <template>
-  <a-layout-header :class="{'r-header__dark': isDark || isRaised}" class="r-header">
+  <a-layout-header :class="{'r-header__dark': isDark}" class="r-header">
     <r-layout-menu v-if="!modal.isVisible && !isRaised">
       <r-nav-item>
         <a-icon type="menu" @click="onDrawer('menu')"/>

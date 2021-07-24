@@ -1,8 +1,8 @@
 <template>
-  <a-row type="flex" justify="center" align="middle">
+  <a-row align="middle" justify="center" type="flex">
     <a-col :xs="{ span: 24 }">
-      <a-card title="Catalog Map" style="width: 100%;">
-        <a-table bordered :dataSource="dataSource" :columns="columns">
+      <a-card style="width: 100%;" title="Catalog Map">
+        <a-table :columns="columns" :dataSource="dataSource" bordered>
         </a-table>
       </a-card>
     </a-col>
@@ -16,7 +16,7 @@ const COLUMNS = [
     key: 'from',
     scopedSlots: {}
   },
-  { title: 'Shopple Category', dataIndex: 'to', key: 'to' }
+  { title: 'Spazamall Category', dataIndex: 'to', key: 'to' }
 ]
 
 const CATEGORY_MAPS = [

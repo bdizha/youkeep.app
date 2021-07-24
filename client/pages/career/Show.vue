@@ -1,10 +1,10 @@
 <template>
   <r-page>
-    <a-row :gutter="[24,24]" type="flex" justify="start" align="top">
-      <a-col :xs="{ span: 24 }"
-             :sm="{ span: 24 }"
+    <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
+      <a-col :lg="{ span: 12 }"
              :md="{ span: 12 }"
-             :lg="{ span: 12 }"
+             :sm="{ span: 24 }"
+             :xs="{ span: 24 }"
       >
         <a-card>
           <nuxt-link to="/career/openings">
@@ -23,13 +23,13 @@
           </h4>
         </a-card>
       </a-col>
-      <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }">
-        <a-row type="flex" justify="center" align="middle">
-          <a-col :xs="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
+      <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }" class="gutter-row">
+        <a-row align="middle" justify="center" type="flex">
+          <a-col :lg="{span: 24}" :md="{span: 24}" :xs="{span: 24}">
             <a-breadcrumb class="r-mb-24">
               <a-breadcrumb-item>
-                <nuxt-link class="r-text-primary"
-                           :to="'/career/openings'"
+                <nuxt-link :to="'/career/openings'"
+                           class="r-text-primary"
                 >
                   Jop openings
                 </nuxt-link>
@@ -41,8 +41,8 @@
               </a-breadcrumb-item>
             </a-breadcrumb>
           </a-col>
-          <a-col :xs="{span: 24}" :md="{span: 24}" :lg="{span: 24}" class="r-padding-48">
-            <a-row class="" type="flex" justify="start" align="middle">
+          <a-col :lg="{span: 24}" :md="{span: 24}" :xs="{span: 24}" class="r-padding-48">
+            <a-row align="middle" class="" justify="start" type="flex">
               <a-col :lg="{span: 24}">
                 <a-card>
                   <h2 class="r-heading r-text-secondary">{{ position.title }}</h2>
@@ -50,7 +50,7 @@
                 </a-card>
               </a-col>
             </a-row>
-            <a-row class="r-mt-24" type="flex" justify="start" align="middle">
+            <a-row align="middle" class="r-mt-24" justify="start" type="flex">
               <a-col :lg="{span: 24}" class="">
                 <a :href="'/career/' + position.slug + '/apply'">
                   <a-button block

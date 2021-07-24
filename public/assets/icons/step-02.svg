@@ -1,6 +1,6 @@
 <svg id="Main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <defs>
-        <style>.cls-1{fill:#1B9BD9;}.cls-2{fill: #FFEFEF;}</style>
+        <style>.cls-1{fill:#3B9CFF;}.cls-2{fill: #FBD13E99;}</style>
     </defs>
     <path class="cls-1" d="M1,2.5v20H13V20.73h-.5V22h-11V3h11v8.41H13V2.5Z"/>
     <polygon class="cls-2" points="11.52 7 11.52 11.41 8.62 11.41 8.62 20 2.52 20 2.52 7 11.52 7"/>

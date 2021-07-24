@@ -1,7 +1,7 @@
 <template>
   <r-account>
-    <a-row type="flex" justify="center">
-      <a-col class="r-text-left" :xs="{ span: 24 }">
+    <a-row justify="center" type="flex">
+      <a-col :xs="{ span: 24 }" class="r-text-left">
         <h3 class="r-heading">
           Your products history
         </h3>

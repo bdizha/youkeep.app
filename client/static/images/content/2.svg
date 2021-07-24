@@ -8,12 +8,12 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str5 {stroke:#1B9BD9;stroke-width:20;stroke-miterlimit:22.9256;stroke-opacity:0.450980}
-    .str2 {stroke:#F50A2B;stroke-width:20;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
-    .str1 {stroke:#1B9BD9;stroke-width:20;stroke-miterlimit:22.9256}
-    .str4 {stroke:#EEFAFF;stroke-width:20;stroke-miterlimit:22.9256}
-    .str0 {stroke:#F50A2B;stroke-width:20;stroke-miterlimit:22.9256}
-    .str3 {stroke:#FFEFEF;stroke-width:20;stroke-miterlimit:22.9256}
+    .str5 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256;stroke-opacity:0.450980}
+    .str2 {stroke:#FBD13E;stroke-width:20;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str1 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256}
+    .str4 {stroke:#fbf0c8;stroke-width:20;stroke-miterlimit:22.9256}
+    .str0 {stroke:#FBD13E;stroke-width:20;stroke-miterlimit:22.9256}
+    .str3 {stroke:#fcebad;stroke-width:20;stroke-miterlimit:22.9256}
     .fil15 {fill:none}
     .fil5 {fill:none}
     .fil11 {fill:#F3FAFE}
@@ -21,22 +21,22 @@
     .fil13 {fill:#C0C6CB}
     .fil14 {fill:#8BA1BB}
     .fil19 {fill:#666364}
-    .fil10 {fill:#1B9BD9}
-    .fil9 {fill:#98C9E5}
-    .fil21 {fill:#98C9E5}
-    .fil8 {fill:#EEFAFF}
-    .fil16 {fill:#F0BECA}
-    .fil20 {fill:#F0BECA}
-    .fil6 {fill:#F50A2B}
-    .fil18 {fill:#F50A2B}
-    .fil7 {fill:#FFEFEF}
-    .fil0 {fill:#FFEFEF}
-    .fil22 {fill:#1B9BD9;fill-opacity:0.450980}
+    .fil10 {fill:#3B9CFF}
+    .fil9 {fill:#b8dbff}
+    .fil21 {fill:#b8dbff}
+    .fil8 {fill:#FBD13E}
+    .fil16 {fill:#FBD13E}
+    .fil20 {fill:#FBD13E}
+    .fil6 {fill:#FBD13E}
+    .fil18 {fill:#FBD13E}
+    .fil7 {fill:#fcebad}
+    .fil0 {fill:#fcebad}
+    .fil22 {fill:#3B9CFF;fill-opacity:0.450980}
     .fil12 {fill:#F28295;fill-opacity:0.501961}
-    .fil1 {fill:#1B9BD9;fill-opacity:0.600000}
-    .fil4 {fill:#EEFAFF;fill-opacity:0.600000}
-    .fil2 {fill:#F50A2B;fill-opacity:0.600000}
-    .fil3 {fill:#FFEFEF;fill-opacity:0.600000}
+    .fil1 {fill:#3B9CFF;fill-opacity:0.600000}
+    .fil4 {fill:#fbf0c8;fill-opacity:0.600000}
+    .fil2 {fill:#FBD13E;fill-opacity:0.600000}
+    .fil3 {fill:#fcebad;fill-opacity:0.600000}
    ]]>
   </style>
  </defs>

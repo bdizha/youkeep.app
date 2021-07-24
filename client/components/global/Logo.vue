@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="r-logo" :class="{'r-logo__icon': isIcon}" to="/">
+  <nuxt-link :class="{'r-logo__icon': isIcon}" class="r-logo" to="/">
     <img v-if="isIcon" :alt="title" src="~/assets/icon.png"/>
     <img v-if="!isIcon" :alt="title" src="~/assets/logo.png"/>
   </nuxt-link>

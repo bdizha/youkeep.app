@@ -5,7 +5,7 @@
     >
       <template v-if="!item.modal">
         <nuxt-link :to="item.link" class="r-item-shadow">
-          <a-avatar :icon="item.icon" shape="square" :size="30"/>
+          <a-avatar :icon="item.icon" :size="30" shape="square"/>
           {{ item.label }}
         </nuxt-link>
       </template>

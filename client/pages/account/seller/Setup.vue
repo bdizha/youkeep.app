@@ -1,65 +1,65 @@
 <template>
-  <a-row type="flex" justify="center" align="middle" :gutter="[48,48]">
-    <a-col class="gutter-row" :xs="{ span: 24 }"
-           :sm="{ span: 12 }" :lg="{ span: 12 }"
+  <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+           :xs="{ span: 24 }" class="gutter-row"
     >
-      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-        <a-col class="gutter-row" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="gutter-row"
         >
           <r-account-seller-tabs></r-account-seller-tabs>
         </a-col>
-        <a-col class="gutter-row" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="gutter-row"
         >
           <a-card title="Business Information">
-            <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-              <a-col class="gutter-row" :xs="{ span: 24 }"
-                     :sm="{ span: 24 }" :lg="{ span: 24 }"
+            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+                     :xs="{ span: 24 }" class="gutter-row"
               >
-              <r-account-seller-business></r-account-seller-business>
+                <r-account-seller-business></r-account-seller-business>
               </a-col>
             </a-row>
           </a-card>
         </a-col>
-        <a-col v-if="false" class="gutter-row" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+        <a-col v-if="false" :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="gutter-row"
         >
           <a-card title="Seller Information">
-            <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-              <a-col :xs="{ span: 20 }"
-                     :sm="{ span: 20 }" :lg="{ span: 20 }"
+            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 20 }"
+                     :sm="{ span: 20 }" :xs="{ span: 20 }"
               >
-                <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">Free shipping</label>
                   </a-col>
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     R375.00
                   </a-col>
                 </a-row>
-                <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">Eat as you go</label>
                   </a-col>
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     R1000.00
                   </a-col>
                 </a-row>
               </a-col>
-              <a-col :xs="{ span: 4 }"
-                     :sm="{ span: 4 }" :lg="{ span: 4 }"
+              <a-col :lg="{ span: 4 }"
+                     :sm="{ span: 4 }" :xs="{ span: 4 }"
               >
-                <a-button v-on:click="onModal('account-promo', $event)" block size="small"
-                          type="secondary" class="r-btn-bordered-grey"
+                <a-button block class="r-btn-bordered-grey" size="small"
+                          type="secondary" v-on:click="onModal('account-promo', $event)"
                 >
                   Add promo
                 </a-button>
@@ -67,44 +67,44 @@
             </a-row>
           </a-card>
         </a-col>
-        <a-col v-if="false" class="gutter-row" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+        <a-col v-if="false" :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="gutter-row"
         >
           <a-card title="Billing Information">
-            <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-              <a-col :xs="{ span: 20 }"
-                     :sm="{ span: 20 }" :lg="{ span: 20 }"
+            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 20 }"
+                     :sm="{ span: 20 }" :xs="{ span: 20 }"
               >
-                <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">Free shipping</label>
                   </a-col>
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     R375.00
                   </a-col>
                 </a-row>
-                <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">Eat as you go</label>
                   </a-col>
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     R1000.00
                   </a-col>
                 </a-row>
               </a-col>
-              <a-col :xs="{ span: 4 }"
-                     :sm="{ span: 4 }" :lg="{ span: 4 }"
+              <a-col :lg="{ span: 4 }"
+                     :sm="{ span: 4 }" :xs="{ span: 4 }"
               >
-                <a-button v-on:click="onModal('account-promo', $event)" block size="small"
-                          type="secondary" class="r-btn-bordered-grey"
+                <a-button block class="r-btn-bordered-grey" size="small"
+                          type="secondary" v-on:click="onModal('account-promo', $event)"
                 >
                   Add promo
                 </a-button>
@@ -112,44 +112,44 @@
             </a-row>
           </a-card>
         </a-col>
-        <a-col v-if="false" class="gutter-row" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+        <a-col v-if="false" :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="gutter-row"
         >
           <a-card title="Service Information">
-            <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-              <a-col :xs="{ span: 20 }"
-                     :sm="{ span: 20 }" :lg="{ span: 20 }"
+            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 20 }"
+                     :sm="{ span: 20 }" :xs="{ span: 20 }"
               >
-                <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">Free shipping</label>
                   </a-col>
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     R375.00
                   </a-col>
                 </a-row>
-                <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     <label class="r-heading-light">Eat as you go</label>
                   </a-col>
-                  <a-col :xs="{ span: 12 }"
-                         :sm="{ span: 12 }" :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }"
+                         :sm="{ span: 12 }" :xs="{ span: 12 }"
                   >
                     R1000.00
                   </a-col>
                 </a-row>
               </a-col>
-              <a-col :xs="{ span: 4 }"
-                     :sm="{ span: 4 }" :lg="{ span: 4 }"
+              <a-col :lg="{ span: 4 }"
+                     :sm="{ span: 4 }" :xs="{ span: 4 }"
               >
-                <a-button v-on:click="onModal('account-promo', $event)" block size="small"
-                          type="secondary" class="r-btn-bordered-grey"
+                <a-button block class="r-btn-bordered-grey" size="small"
+                          type="secondary" v-on:click="onModal('account-promo', $event)"
                 >
                   Add promo
                 </a-button>

@@ -1,29 +1,29 @@
 <template>
   <r-account>
     <r-notice process="isSuccess"></r-notice>
-    <r-spinner process="isRunning" :is-absolute="true"></r-spinner>
-    <a-form v-show="hasForm" class="ant-form ant-form-vertical"
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
+    <a-form v-show="hasForm" :form="form"
+            class="ant-form ant-form-vertical"
             @submit="onPost"
-            :form="form"
     >
-      <a-row type="flex" justify="center" align="middle">
-        <a-col class="r-store-page" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+      <a-row align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="r-store-page"
         >
-          <a-card class="r-mb-24" title="MOBILE NUMBER" style="width: 100%;">
-            <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-              <a-col :xs="{ span: 20 }"
-                     :sm="{ span: 20 }" :lg="{ span: 20 }"
+          <a-card class="r-mb-24" style="width: 100%;" title="MOBILE NUMBER">
+            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 20 }"
+                     :sm="{ span: 20 }" :xs="{ span: 20 }"
               >
                 <label class="r-heading-light">
                   We use your number to text or call you about your order.
                 </label>
               </a-col>
-              <a-col :xs="{ span: 4 }"
-                     :sm="{ span: 4 }" :lg="{ span: 4 }"
+              <a-col :lg="{ span: 4 }"
+                     :sm="{ span: 4 }" :xs="{ span: 4 }"
               >
-                <a-button v-on:click="onModal('account-profile')" block size="small"
-                          type="secondary" class="r-btn-bordered-secondary"
+                <a-button block class="r-btn-bordered-secondary" size="small"
+                          type="secondary" v-on:click="onModal('account-profile')"
                 >
                   Change
                 </a-button>
@@ -32,77 +32,77 @@
           </a-card>
         </a-col>
       </a-row>
-      <a-row type="flex" justify="center" align="middle">
-        <a-col class="r-store-page" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+      <a-row align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="r-store-page"
         >
-          <a-card class="r-mb-24" title="ORDER NOTIFICATIONS" style="width: 100%;">
-            <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-              <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                     :md="{ span: 12 }"
-                     :lg="{ span: 12 }"
+          <a-card class="r-mb-24" style="width: 100%;" title="ORDER NOTIFICATIONS">
+            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                     :xs="{ span: 24 }"
+                     class="r-text-left"
               >
                 <p class="r-text-normal">
                   Send an SMS message
                 </p>
               </a-col>
-              <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                     :md="{ span: 12 }"
-                     :lg="{ span: 12 }"
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                     :xs="{ span: 24 }"
+                     class="r-text-right"
               >
-                <a-switch v-model="canSendSms" size="large" default-checked/>
+                <a-switch v-model="canSendSms" default-checked size="large"/>
               </a-col>
             </a-row>
-            <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-              <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                     :md="{ span: 12 }"
-                     :lg="{ span: 12 }"
+            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                     :xs="{ span: 24 }"
+                     class="r-text-left"
               >
                 <p class="r-text-normal">
                   Send app message
                 </p>
               </a-col>
-              <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                     :md="{ span: 12 }"
-                     :lg="{ span: 12 }"
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                     :xs="{ span: 24 }"
+                     class="r-text-right"
               >
-                <a-switch v-model="canSendApp" size="large" default-checked/>
+                <a-switch v-model="canSendApp" default-checked size="large"/>
               </a-col>
             </a-row>
           </a-card>
         </a-col>
       </a-row>
-      <a-row type="flex" justify="center" align="middle">
-        <a-col class="r-store-page" :xs="{ span: 24 }"
-               :sm="{ span: 24 }" :lg="{ span: 24 }"
+      <a-row align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="r-store-page"
         >
-          <a-card class="r-mb-24" title="EMAIL NOTIFICATIONS" style="width: 100%;">
-            <a-row type="flex" justify="center" align="middle" :gutter="[0,12]">
-              <a-col class="r-text-left" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                     :md="{ span: 12 }"
-                     :lg="{ span: 12 }"
+          <a-card class="r-mb-24" style="width: 100%;" title="EMAIL NOTIFICATIONS">
+            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                     :xs="{ span: 24 }"
+                     class="r-text-left"
               >
                 <p class="r-text-normal">
                   Send subscriptions/promotional emails
                 </p>
               </a-col>
-              <a-col class="r-text-right" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                     :md="{ span: 12 }"
-                     :lg="{ span: 12 }"
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                     :xs="{ span: 24 }"
+                     class="r-text-right"
               >
-                <a-switch v-model="canSendEmail" size="large" default-checked/>
+                <a-switch v-model="canSendEmail" default-checked size="large"/>
               </a-col>
             </a-row>
           </a-card>
         </a-col>
       </a-row>
-      <a-row type="flex" justify="end">
-        <a-col class="gutter-row" :xs="{ span: 12 }" :sm="{ span: 8 }" :md="{ span: 6 }" :lg="{ span: 6 }">
-          <a-button block @click="onPost"
+      <a-row justify="end" type="flex">
+        <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 8 }" :xs="{ span: 12 }" class="gutter-row">
+          <a-button block class="r-btn-secondary"
+                    html-type="submit"
                     size="large"
                     type="secondary"
-                    html-type="submit"
-                    class="r-btn-secondary"
+                    @click="onPost"
           >
             Save
           </a-button>

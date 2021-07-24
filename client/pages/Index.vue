@@ -1,56 +1,57 @@
 <template>
-  <a-row :gutter="[96,48]" type="flex" justify="center">
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row type="flex" justify="center" align="middle">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+  <a-row :gutter="[96,48]" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-row align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
           <a-card class="r-bg-secondary-light">
             <a-card-meta>
               <template slot="description">
-                <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                  <a-col :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 8 }"
-                         :lg="{ span: 8 }"
+                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                  <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }"
+                         :xs="{ span: 24}"
                   >
                     <div class="r-mv-48">
-                      <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 24 }"
-                               :lg="{ span: 24 }"
+                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
                         >
-                          <h3 class="r-heading-light r-text-primary r-text-uppercase">
+                          <h3 class="r-heading-light r-text-secondary r-text-uppercase">
                             It's shopping time!
                           </h3>
                         </a-col>
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 24 }"
-                               :lg="{ span: 24 }"
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading r-text-uppercase">
                             Shop <span class="r-text-primary">More,</span><br>
                             Pay <span class="r-text-secondary">Less.</span>
                           </h1>
                         </a-col>
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 24 }"
-                               :lg="{ span: 24 }"
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            Yes, as long as you shop it with Shopple, you are fully powered to buy what your heart desires.
+                            Yes, as long as you shop it with Spazamall, you are fully powered to buy what your heart
+                            desires.
                           </p>
                         </a-col>
-                        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                               :md="{ span: 24 }"
-                               :lg="{ span: 24 }"
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
                         >
                           <r-delivery-form></r-delivery-form>
                         </a-col>
                       </a-row>
                     </div>
                   </a-col>
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                         :md="{ span: 16 }"
-                         :lg="{ span: 16 }"
+                  <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
                   >
                     <r-category-banners></r-category-banners>
                   </a-col>
@@ -59,31 +60,31 @@
             </a-card-meta>
           </a-card>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <a-card>
             <a-card-meta>
               <template slot="description">
-                <a-row :gutter="[24,24]" type="flex" align="middle" justify="space-between">
-                  <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 24 }"
-                         :lg="{ span: 24 }"
+                <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                         class="r-text-left"
                   >
-                    <a-row :gutter="[24,24]" type="flex" align="middle" justify="space-between">
-                      <a-col class="r-text-left" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 20 }"
-                             :lg="{ span: 20 }"
+                    <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                      <a-col :lg="{ span: 20 }" :md="{ span: 20 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                             class="r-text-left"
                       >
                         <h3 class="r-heading-light r-text-secondary r-text-uppercase">
                           Shop everywhere, anytime!
                         </h3>
                       </a-col>
-                      <a-col class="r-text-center r-hide-sm" :xs="{ span: 24}" :sm="{ span: 24 }" :md="{ span: 4 }"
-                             :lg="{ span: 4 }"
+                      <a-col :lg="{ span: 4 }" :md="{ span: 4 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                             class="r-text-center r-hide-sm"
                       >
                         <r-store-shop-now></r-store-shop-now>
                       </a-col>
                     </a-row>
                   </a-col>
-                  <a-col :xs="{ span: 24 }"
-                         :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }"
+                  <a-col :lg="{ span: 24 }"
+                         :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                   >
                     <r-store-arrows></r-store-arrows>
                   </a-col>
@@ -94,16 +95,7 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <r-category-arrows v-if="hasCategories"></r-category-arrows>
-    </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <r-welcome></r-welcome>
-    </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-        <r-steps></r-steps>
-    </a-col>
-    <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-testimonials></r-testimonials>
     </a-col>
   </a-row>

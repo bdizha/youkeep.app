@@ -1,35 +1,35 @@
 <template>
-  <a-row :class="{'r-store-item-line': isStore}" type="flex" justify="center"
-         align="middle"
+  <a-row :class="{'r-store-item-line': isStore}" align="middle" justify="center"
+         type="flex"
   >
-    <a-col @click="onModal" :xs="{span: 24}" :sm="{span: 24}" :md="{span: 24}" :lg="{span: 24}">
-      <a-row v-if="hasModal" type="flex" justify="center">
-        <a-col class="r-text-left" :xs="{ span: 24 }">
+    <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}" @click="onModal">
+      <a-row v-if="hasModal" justify="center" type="flex">
+        <a-col :xs="{ span: 24 }" class="r-text-left">
           <h3 class="r-heading">
             Enter delivery address
           </h3>
         </a-col>
       </a-row>
       <a-form :class="{'r-form-white': !hasModal && !isStore}"
+              :form="form"
               class="ant-form ant-form-vertical"
               @submit="onModal"
-              :form="form"
       >
         <a-auto-complete
-          :value="hasAddress ? address.address_line : ''"
-          :size="size"
-          style="width: 100%"
           :placeholder="'Enter your address...'"
+          :size="size"
+          :value="hasAddress ? address.address_line : ''"
           option-label-prop="title"
+          style="width: 100%"
           @search="handleSearch"
         >
           <a-input>
             <a-icon slot="prefix" type="environment"/>
             <a-button v-if="hasSubmit"
                       slot="suffix"
-                      style="margin-right: -12px"
                       class="r-btn-secondary"
                       size="large"
+                      style="margin-right: -12px"
                       type="secondary"
             >
               Let's go

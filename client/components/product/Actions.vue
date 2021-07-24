@@ -4,7 +4,8 @@
            :xs="{ span: 24 }"
     >
       <a-row align="middle" justify="center" type="flex">
-        <a-col :lg="{ span: !isShowing ? 8 : 8 }" :md="{ span: !isShowing ? 8 : 8 }" :sm="{ span: 8 }" :xs="{ span: 12 }"
+        <a-col :lg="{ span: !isShowing ? 8 : 8 }" :md="{ span: !isShowing ? 8 : 8 }" :sm="{ span: 8 }"
+               :xs="{ span: 12 }"
                class="r-text-left"
         >
           <a-button :class="{'r-btn-bordered-secondary': isEnabled}"
@@ -17,7 +18,8 @@
             <a-icon class="r-icon-empty" type="minus"/>
           </a-button>
         </a-col>
-        <a-col :lg="{ span: !isShowing ? 8 : 8 }" :md="{ span: !isShowing ? 8 : 8 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+        <a-col :lg="{ span: !isShowing ? 8 : 8 }" :md="{ span: !isShowing ? 8 : 8 }" :sm="{ span: 12 }"
+               :xs="{ span: 12 }"
                class="r-text-center"
         >
           <div class="r-text-center r-action-height">

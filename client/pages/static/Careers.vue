@@ -1,61 +1,61 @@
 <template>
-  <a-row type="flex" justify="center">
-    <a-col class="r-mt-24" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }" :lg="{ span: 24 }">
-      <a-row :gutter="[48,48]" type="flex" justify="center" align="middle">
-        <a-col style="background: #1B9BD915" class="r-relative" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+  <a-row justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-mt-24">
+      <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-relative"
+               style="background: #d1e7fd"
         >
           <div class="r-mv-48" style="padding-bottom: 240px">
-            <a-row :gutter="[24,24]" type="flex" justify="center" align="middle">
-              <a-col :xs="{ span: 24 }" :sm="{  span: 24 }"
-                     :md="{ span: 18 }"
-                     :lg="{ span: 16 }"
+            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                     :sm="{  span: 24 }"
+                     :xs="{ span: 24 }"
               >
-                <a-row :gutter="[96,96]" type="flex" justify="start" align="middle">
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                         :md="{ span: 12 }"
-                         :lg="{ span: 12 }"
+                <a-row :gutter="[96,96]" align="middle" justify="start" type="flex">
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
                   >
-                    <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-                             :lg="{ span: 24 }"
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
                       >
-                        <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
-                            <h4 class="r-heading-light r-text-primary r-text-uppercase">
-                              Meet Shopple
+                            <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                              Meet Spazamall
                             </h4>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <h1 class="r-heading">
-                              Partner with Shopple for shopping services you can leverage on.
+                              Partner with Spazamall for shopping services you can leverage on.
                             </h1>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 24 }"
-                                 :lg="{ span: 24 }"
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
                             <p class="r-text-normal">
                               Clients in collections with the republic or SARS? Dealing with messy or non-existent
-                              books? Shopple can produce years of outstanding marketplaces quickly, so you can focus
+                              books? Spazamall can produce years of outstanding marketplaces quickly, so you can focus
                               on getting your clients current and compliant.
                             </p>
                           </a-col>
-                          <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                                 :md="{ span: 12 }"
-                                 :lg="{ span: 12 }"
+                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
                           >
-                            <a-button class="r-btn-primary"
-                                      block
-                                      type="primary"
-                                      to="/register"
+                            <a-button block
+                                      class="r-btn-primary"
                                       size="large"
+                                      to="/register"
+                                      type="primary"
                             >
                               Get started today!
                             </a-button>
@@ -64,11 +64,11 @@
                       </a-col>
                     </a-row>
                   </a-col>
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                         :md="{ span: 12 }"
-                         :lg="{ span: 12 }"
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
                   >
-                    <r-avatar class="r-avatar-block" :dataSrc="'/images/content/37.png'" :size="600"
+                    <r-avatar :dataSrc="'/images/content/37.png'" :size="600" class="r-avatar-block"
                     ></r-avatar>
                   </a-col>
                 </a-row>
@@ -77,42 +77,42 @@
           </div>
           <r-wave fill="#FFFFFF"></r-wave>
         </a-col>
-        <a-col style="background: #FFFFFF" :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 24 }"
-               :lg="{ span: 24 }"
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+               style="background: #FFFFFF"
         >
           <div style="padding-bottom: 180px">
-            <a-row class="r-mt-48" type="flex" justify="start" align="middle">
-              <a-col :xs="{ span: 24 }" :sm="{  span: 24 }"
-                     :md="{ span: 18 }"
-                     :lg="{ span: 16 }"
+            <a-row align="middle" class="r-mt-48" justify="start" type="flex">
+              <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                     :sm="{  span: 24 }"
+                     :xs="{ span: 24 }"
               >
-                <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center" align="middle">
-                  <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }"
-                         :lg="{ span: 12 }"
+                <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
                   >
-                    <a-row class="r-text-left" :gutter="[24,24]" type="flex" justify="center" align="middle">
-                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                             :md="{ span: 24 }"
-                             :lg="{ span: 24 }"
+                    <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
                       >
-                        <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                        <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                           Our story
                         </h4>
                       </a-col>
-                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                             :md="{ span: 24 }"
-                             :lg="{ span: 24 }"
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
                       >
                         <h2 class="r-heading">
                           We continue to prioritize quality shopping services
                         </h2>
                       </a-col>
-                      <a-col :xs="{ span: 24 }" :sm="{ span: 24 }"
-                             :md="{ span: 24 }"
-                             :lg="{ span: 24 }"
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          Shopple’s mission is to bring the best marketplace tools directly to the stores.
+                          Spazamall’s mission is to bring the best marketplace tools directly to the stores.
                           Finances
                           should always be
                           transparent and easily accessible. marketplace freedom should be for all of us.
@@ -120,7 +120,7 @@
                         <p class="r-text-normal">
                           Historically, finest services have been known to be complicated, expensive and difficult to
                           access.
-                          Shopple is
+                          Spazamall is
                           here to make better shopping services easily accessible to everyone.
                         </p>
                       </a-col>
@@ -133,53 +133,53 @@
           </div>
         </a-col>
       </a-row>
-      <a-row type="flex" justify="start" align="middle">
-        <a-col class="r-p-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-               :md="{ offset: 3, span: 9 }"
-               :lg="{ offset: 3, span: 9 }"
+      <a-row align="middle" justify="start" type="flex">
+        <a-col :lg="{ offset: 3, span: 9 }" :md="{ offset: 3, span: 9 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+               class="r-p-48"
         >
-          <a-row type="flex" justify="start" align="middle">
-            <a-col class="r-pv-48" :xs="{ span: 24 }" :sm="{ span: 24 }"
-                   :md="{ span: 24 }"
-                   :lg="{ span: 24 }"
+          <a-row align="middle" justify="start" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+                   class="r-pv-48"
                    style="text-align: left;"
             >
               <h1 class="r-heading">
-                <span class="r-text-secondary">Shopple careers</span>
+                <span class="r-text-secondary">Spazamall careers</span>
               </h1>
               <p class="r-text-normal">
-                Shopple is a consumer centric shopping platform that exists to transform
+                Spazamall is a consumer centric shopping platform that exists to transform
                 the way shoppers find and make purchases by offering simple and
                 convenient shopping and payment methods.
               </p>
             </a-col>
           </a-row>
-          <a-row class="r-mb-48" type="flex" justify="start" align="middle">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 20 }"
-                   :lg="{ span: 18 }"
+          <a-row align="middle" class="r-mb-48" justify="start" type="flex">
+            <a-col :lg="{ span: 18 }" :md="{ span: 20 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
             >
-              <a-row class="r-mt-24" :gutter="[24,24]" type="flex" justify="start" align="middle">
-                <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
+              <a-row :gutter="[24,24]" align="middle" class="r-mt-24" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 24 }"
+                       class="gutter-row"
                 >
-                  <a-button type="secondary"
-                            class="ant-btn ant-btn-secondary r-btn-black"
+                  <a-button class="ant-btn ant-btn-secondary r-btn-black"
                             size="large"
+                            type="secondary"
                             @click="onModal"
                   >
                     See openings
                   </a-button>
                 </a-col>
-                <a-col class="gutter-row" :xs="{ span: 24 }" :sm="{ span: 12 }"
-                       :md="{ span: 12 }"
-                       :lg="{ span: 12 }"
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 24 }"
+                       class="gutter-row"
                 >
                   <nuxt-link class="r-inline-block" to="/contact-us">
-                    <a-button class="r-btn-bordered-grey"
-                              block
-                              type="secondary"
+                    <a-button block
+                              class="r-btn-bordered-grey"
                               size="large"
+                              type="secondary"
                     >
                       Contact us
                     </a-button>
@@ -189,7 +189,7 @@
             </a-col>
           </a-row>
         </a-col>
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{ span: 12 }">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <div class="r-page-header-photo">
             <div class="r-page-white"
                  style="background-image: url('/images/hiw.jpg')"
@@ -199,18 +199,18 @@
         </a-col>
       </a-row>
       <a-row class="r-mv-48" type="flex">
-        <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 12 }" :lg="{span: 12}">
-          <a-row type="flex" justify="start"
-                 class="r-radius-right-white r-text-center"
+        <a-col :lg="{span: 12}" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <a-row class="r-radius-right-white r-text-center" justify="start"
+                 type="flex"
           >
-            <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 18, offset:6 }"
-                   :lg="{span: 18, offset:6}" class="r-p-48"
+            <a-col :lg="{span: 18, offset:6}" :md="{ span: 18, offset:6 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }" class="r-p-48"
             >
-              <a-row :gutter="[24,24]" type="flex" justify="start"
-                     class="r-radius-right-white"
+              <a-row :gutter="[24,24]" class="r-radius-right-white" justify="start"
+                     type="flex"
               >
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                       :lg="{span: 8}"
+                <a-col :lg="{span: 8}" :md="{ span: 8 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <div class="r-icon r-icon-primary">
                     <a-icon type="qrcode"/>
@@ -219,8 +219,8 @@
                     A diverse team culture
                   </h4>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                       :lg="{span: 8}"
+                <a-col :lg="{span: 8}" :md="{ span: 8 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <div class="r-icon r-icon-primary">
                     <a-icon type="usergroup-add"/>
@@ -229,8 +229,8 @@
                     A fast growing company
                   </h4>
                 </a-col>
-                <a-col :xs="{ span: 24 }" :sm="{ span: 24 }" :md="{ span: 8 }"
-                       :lg="{span: 8}"
+                <a-col :lg="{span: 8}" :md="{ span: 8 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
                   <div class="r-icon r-icon-primary">
                     <a-icon type="deployment-unit"/>
@@ -244,71 +244,71 @@
           </a-row>
         </a-col>
       </a-row>
-      <a-row type="flex" justify="center" :gutter="24">
-        <a-col class="r-p-48" :xs="{ span: 24 }" :md="{ span: 18 }"
-               :lg="{ span: 18 }"
+      <a-row :gutter="24" justify="center" type="flex">
+        <a-col :lg="{ span: 18 }" :md="{ span: 18 }" :xs="{ span: 24 }"
+               class="r-p-48"
         >
-          <a-row type="flex" justify="center">
-            <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-p-48">
+          <a-row justify="center" type="flex">
+            <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }" class="r-p-48">
               <h2 class="r-heading r-text-secondary">
-                Working at Shopple
+                Working at Spazamall
               </h2>
               <p class="r-text-normal">
                 Work with people who are tech-savvys, font-fanatics, word-wizards, data enthusiasts and
                 of course, beer experts (yes, we're an online shop with big dreams). We work hard, think
                 big, and play well.
-                And we do it together, because at the Mother Shopple, we’re family.
+                And we do it together, because at the Mother Spazamall, we’re family.
               </p>
               <p class="r-text-normal">
                 Nothing great has ever been built in a day, and it definitely wasn’t built in a flash.
-                At Shopple, we’re building something great, something unimaginable at this juncture. We
+                At Spazamall, we’re building something great, something unimaginable at this juncture. We
                 provide our service as a token of appreciation to the society that serves us.
               </p>
             </a-col>
-            <a-col :xs="{ span: 24 }" :sm="{ span: 12 }" :lg="{ span: 12 }" class="r-p-48">
+            <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }" class="r-p-48">
               <h2 class="r-heading r-text-secondary">
-                Why work with Shopple?
+                Why work with Spazamall?
               </h2>
-              <a-row class="r-mb-48" type="flex" justify="start" align="middle">
+              <a-row align="middle" class="r-mb-48" justify="start" type="flex">
                 <a-col :span="24">
-                  <a-checkbox checked="true" :value="1">
+                  <a-checkbox :value="1" checked="true">
                     Unlimited coffee
                   </a-checkbox>
                 </a-col>
                 <a-col :span="24">
-                  <a-checkbox checked="true" :value="1">
+                  <a-checkbox :value="1" checked="true">
                     Dog Fridays
                   </a-checkbox>
                 </a-col>
                 <a-col :span="24">
-                  <a-checkbox checked="true" :value="1">
+                  <a-checkbox :value="1" checked="true">
                     Unlimited coffee
                   </a-checkbox>
                 </a-col>
                 <a-col :span="24">
-                  <a-checkbox checked="true" :value="1">
+                  <a-checkbox :value="1" checked="true">
                     Growth opportunities
                   </a-checkbox>
                 </a-col>
                 <a-col :span="24">
-                  <a-checkbox checked="true" :value="1">
+                  <a-checkbox :value="1" checked="true">
                     Coworkers all over the RSA
                   </a-checkbox>
                 </a-col>
                 <a-col :span="24">
-                  <a-checkbox checked="true" :value="1">
+                  <a-checkbox :value="1" checked="true">
                     Unlimited snacks and pool games
                   </a-checkbox>
                 </a-col>
                 <a-col :span="24">
-                  <a-checkbox checked="true" :value="1">
+                  <a-checkbox :value="1" checked="true">
                     A casual dress code
                   </a-checkbox>
                 </a-col>
               </a-row>
               <nuxt-link class="r-inline-block" to="/career/openings">
-                <a-button type="secondary"
-                          class="r-btn-secondary" size="large"
+                <a-button class="r-btn-secondary"
+                          size="large" type="secondary"
                 >
                   See openings
                 </a-button>

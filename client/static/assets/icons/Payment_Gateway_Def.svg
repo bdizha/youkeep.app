@@ -1,6 +1,6 @@
 <svg id="Main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
     <defs>
-        <style>.cls-1{fill: #FFEFEF;}.cls-2{fill:#1B9BD9;}</style>
+        <style>.cls-1{fill: #FBD13E99;}.cls-2{fill:#3B9CFF;}</style>
     </defs>
     <rect class="cls-1" y="14.9" width="24" height="4.08"/>
     <path class="cls-2" d="M24,15.12H0V0H24ZM.5,14.62h23V.5H.5Z"/>

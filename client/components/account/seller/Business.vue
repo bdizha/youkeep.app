@@ -1,7 +1,7 @@
 <template>
-  <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-    <a-col class="gutter-row" :xs="{ span: 24 }"
-           :sm="{ span: 24 }" :lg="{ span: 24 }"
+  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }" class="gutter-row"
     >
       <a-form v-if="hasForm"
               :form="form"
@@ -14,35 +14,37 @@
               <a-row :gutter=[24,24] justify="center" type="flex">
                 <a-col :xs="{ span: 24 }">
                   <p class="r-text-light">
-                    We may verify this address by sending you a postcard containing a verification code. Make sure your address is entered correctly, because you cannot change it till you complete registration.
+                    We may verify this address by sending you a postcard containing a verification code. Make sure your
+                    address is entered correctly, because you cannot change it till you complete registration.
                   </p>
                 </a-col>
               </a-row>
             </a-form-item>
             <a-form-item label="Company registration number">
-              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                <a-col class="gutter-row" :xs="{ span: 12 }"
-                       :sm="{ span: 12 }" :lg="{ span: 12 }"
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 12 }" class="gutter-row"
                 >
-              <a-input
-                v-decorator="['registration', { rules: [{ required: true, message: 'Please enter your company reg #' }] }]"
-                placeholder="Your company registration number"
-                size="large"
-              >
-                <a-icon slot="prefix" type="user"/>
-              </a-input>
+                  <a-input
+                    v-decorator="['registration', { rules: [{ required: true, message: 'Please enter your company reg #' }] }]"
+                    placeholder="Your company registration number"
+                    size="large"
+                  >
+                    <a-icon slot="prefix" type="user"/>
+                  </a-input>
                 </a-col>
               </a-row>
             </a-form-item>
             <a-form-item label="Phone number for verification">
-              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                <a-col class="gutter-row" :xs="{ span: 12 }"
-                       :sm="{ span: 12 }" :lg="{ span: 12 }"
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 12 }" class="gutter-row"
                 >
-                  <a-input v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your phone number for verification' }] }]"
-                           placeholder="Your primary business phone"
-                           size="large"
-                           type="text"
+                  <a-input
+                    v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your phone number for verification' }] }]"
+                    placeholder="Your primary business phone"
+                    size="large"
+                    type="text"
                   >
                     <a-icon slot="prefix" type="mail"/>
                   </a-input>
@@ -50,25 +52,27 @@
               </a-row>
             </a-form-item>
             <a-form-item label="Primary contact person">
-              <a-row :gutter="[24,24]" type="flex" justify="start" align="middle">
-                <a-col class="gutter-row" :xs="{ span: 12 }"
-                       :sm="{ span: 12 }" :lg="{ span: 12 }"
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 12 }" class="gutter-row"
                 >
-                  <a-input v-decorator="['first_name', { rules: [{ required: true, message: 'Please contact first name' }] }]"
-                           placeholder="First name"
-                           size="large"
-                           type="text"
+                  <a-input
+                    v-decorator="['first_name', { rules: [{ required: true, message: 'Please contact first name' }] }]"
+                    placeholder="First name"
+                    size="large"
+                    type="text"
                   >
                     <a-icon slot="prefix" type="user"/>
                   </a-input>
                 </a-col>
-                <a-col class="gutter-row" :xs="{ span: 12 }"
-                       :sm="{ span: 12 }" :lg="{ span: 12 }"
+                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 12 }" class="gutter-row"
                 >
-                  <a-input v-decorator="['last_name', { rules: [{ required: true, message: 'Please contact last name' }] }]"
-                           placeholder="Last name"
-                           size="large"
-                           type="text"
+                  <a-input
+                    v-decorator="['last_name', { rules: [{ required: true, message: 'Please contact last name' }] }]"
+                    placeholder="Last name"
+                    size="large"
+                    type="text"
                   >
                     <a-icon slot="prefix" type="user"/>
                   </a-input>
@@ -76,9 +80,9 @@
               </a-row>
             </a-form-item>
             <a-form-item :wrapper-col="{ span: 24 }">
-              <a-row :gutter="[24,24]" type="flex" justify="end" align="middle">
-                <a-col class="gutter-row" :xs="{ span: 12 }"
-                       :sm="{ span: 12 }" :lg="{ span: 12 }"
+              <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 12 }" class="gutter-row"
                 >
                   <a-button block class="r-btn-secondary" html-type="submit" size="large"
                             type="secondary"
@@ -173,7 +177,7 @@ export default {
             }
 
             $this.$store.dispatch('form/onResult', message)
-            $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Shopple.')
+            $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Spazamall.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

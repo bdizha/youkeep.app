@@ -43,7 +43,7 @@
                                    :sm="{ span: 24 }"
                                    :xs="{ span: 24 }"
                             >
-                              <h4 class="r-heading-light r-text-uppercase r-text-primary">
+                              <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                                 {{ store.description }}
                               </h4>
                             </a-col>

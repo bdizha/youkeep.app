@@ -39,9 +39,10 @@
         </a-input>
       </a-form-item>
       <a-form-item label="Confirm new password">
-        <a-input v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm new password' }] }]"
-                 placeholder="Confirm new password"
-                 type="password"
+        <a-input
+          v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm new password' }] }]"
+          placeholder="Confirm new password"
+          type="password"
         >
           <a-icon slot="prefix" type="lock"/>
         </a-input>
@@ -118,7 +119,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you. Enjoy your shopping with Shopple.')
+            $this.$message.success('Thank you. Enjoy your shopping with Spazamall.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

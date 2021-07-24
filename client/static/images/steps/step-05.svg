@@ -132,7 +132,7 @@
 
             .cls-33 {
             fill: #FFFFFF;
-            stroke: #1B9BD9;
+            stroke: #3B9CFF;
             stroke-miterlimit: 10;
             stroke-width: 1.099px;
             }
@@ -158,7 +158,7 @@
             }
 
             .cls-39 {
-            fill: #1B9BD9;
+            fill: #3B9CFF;
             }
 
             .cls-40 {

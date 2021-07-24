@@ -21,10 +21,11 @@
             @submit="onPost"
     >
       <a-form-item label="Current password">
-        <a-input v-decorator="['current_password', { rules: [{ required: true, message: 'Please enter new password' }] }]"
-                 placeholder="Current password"
-                 size="large"
-                 type="password"
+        <a-input
+          v-decorator="['current_password', { rules: [{ required: true, message: 'Please enter new password' }] }]"
+          placeholder="Current password"
+          size="large"
+          type="password"
         >
           <a-icon slot="prefix" type="lock"/>
         </a-input>
@@ -39,10 +40,11 @@
         </a-input>
       </a-form-item>
       <a-form-item label="Confirm new password">
-        <a-input v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm new password' }] }]"
-                 placeholder="Confirm new password"
-                 size="large"
-                 type="password"
+        <a-input
+          v-decorator="['password_confirmation', { rules: [{ required: true, message: 'Please confirm new password' }] }]"
+          placeholder="Confirm new password"
+          size="large"
+          type="password"
         >
           <a-icon slot="prefix" type="lock"/>
         </a-input>
