@@ -354,10 +354,10 @@
                   >
                     <p v-for="(item, index) in requirements"
                        :key="index"
-                       class="r-text-normal"
+                       class="r-checked-item"
                     >
-                      <a-icon slot="prefix" class="r-text-secondary" type="check"/>
-                      <span class="r-list-item-text">
+                      <a-icon slot="prefix" class="r-checked-item-icon" type="check"/>
+                      <span class="r-checked-item-text">
                         {{ item }}
                       </span>
                     </p>

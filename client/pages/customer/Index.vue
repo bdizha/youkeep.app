@@ -55,7 +55,7 @@
                               size="large"
                               to="/register"
                               type="secondary"
-                              @click="onModal"
+                              @click="onRegister"
                     >
                       Get started today!
                     </a-button>
@@ -69,7 +69,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card style="background: url(/images/content/5.svg) no-repeat; background-size: cover;"
+          <a-card style="background: #fbf0c8 url(/images/content/5.svg) no-repeat; background-size: cover;"
           >
             <a-card-meta style="padding-bottom: 420px;">
               <template slot="description">
@@ -92,10 +92,86 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card style="background: url(/images/content/2.svg) no-repeat; background-size: cover;"
-          >
-            <a-card-meta style="padding-bottom: 900px;">
+              <a-card>
+                <a-card-meta>
+                  <template slot="description">
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                      <a-col class="r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
+                             :sm="{ span: 12 }"
+                             :xs="{ span: 12 }"
+                      >
+                        <r-avatar :size="90" class="r-avatar-auto" data-src="/images/content/frame-02.png"></r-avatar>
+                      </a-col>
+                      <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
+                             :sm="{ span: 12 }"
+                             :xs="{ span: 12 }"
+                      >
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                              Get what your heart desires
+                            </h4>
+                          </a-col>
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <p class="r-text-normal">
+                              Shop your go-to products from your favorite stores. We deliver from local
+                              and
+                              global retailers you love - like Adidas and more.
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                    </a-row>
+                  </template>
+                </a-card-meta>
+              </a-card>
+        </a-col>
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-card>
+            <a-card-meta>
               <template slot="description">
+                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                  <a-col class="r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
+                         :sm="{ span: 12 }"
+                         :xs="{ span: 12 }"
+                  >
+                    <r-avatar :size="90" class="r-avatar-auto" data-src="/images/content/frame-01.png"></r-avatar>
+                  </a-col>
+                  <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
+                         :sm="{ span: 12 }"
+                         :xs="{ span: 12 }"
+                  >
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                          Get realtime order updates
+                        </h4>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <p class="r-text-normal">
+                          Want to add something to your order? We think we're flexible enough to get it delivered too in
+                          the
+                          shortest time possible.
+                        </p>
+                      </a-col>
+                    </a-row>
+                  </a-col>
+                </a-row>
               </template>
             </a-card-meta>
           </a-card>
@@ -104,92 +180,20 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <a-card>
-                <a-card-meta>
-                  <template slot="description">
-              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                    Shop it
-                  </h4>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <h2 class="r-heading">
-                    Get what your heart desires
-                  </h2>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <p class="r-text-normal">
-                    Shop your go-to products from your favorite stores. That’s why we deliver from local
-                    and
-                    global retailers you love - like Adidas and more.
-                  </p>
-                </a-col>
-              </a-row>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <a-card>
-                <a-card-meta>
-                  <template slot="description">
-              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                    Track it
-                  </h4>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <h2 class="r-heading">
-                    Get realtime order updates
-                  </h2>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <p class="r-text-normal">
-                    Want to add something to your order? We think we're flexible enough to get it delivered too in
-                    the
-                    shortest time possible.
-                  </p>
-                </a-col>
-              </a-row>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <a-card>
-                <a-card-meta>
-                  <template slot="description">
+          <a-card>
+            <a-card-meta>
+              <template slot="description">
+                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                  <a-col class="r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
+                         :sm="{ span: 12 }"
+                         :xs="{ span: 12 }"
+                  >
+                    <r-avatar :size="90" class="r-avatar-auto" data-src="/images/content/frame-05.png"></r-avatar>
+                  </a-col>
+                  <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
+                         :sm="{ span: 12 }"
+                         :xs="{ span: 12 }"
+                  >
                     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                              :sm="{ span: 24 }"
@@ -197,16 +201,8 @@
 
                       >
                         <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                          Get it
-                        </h4>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <h2 class="r-heading">
                           Get deliveries to your doorstep
-                        </h2>
+                        </h4>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                              :sm="{ span: 24 }"
@@ -218,17 +214,30 @@
                         </p>
                       </a-col>
                     </a-row>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <a-card>
-                <a-card-meta>
-                  <template slot="description">
+                  </a-col>
+                </a-row>
+              </template>
+            </a-card-meta>
+          </a-card>
+        </a-col>
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-card>
+            <a-card-meta>
+              <template slot="description">
+                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                  <a-col class="r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
+                         :sm="{ span: 12 }"
+                         :xs="{ span: 12 }"
+                  >
+                    <r-avatar :size="90" class="r-avatar-auto" data-src="/images/content/frame-06.png"></r-avatar>
+                  </a-col>
+                  <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
+                         :sm="{ span: 12 }"
+                         :xs="{ span: 12 }"
+                  >
                     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                              :sm="{ span: 24 }"
@@ -236,16 +245,8 @@
 
                       >
                         <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                          Love it
+                          We take in order instructions
                         </h4>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <h2 class="r-heading">
-                          We take in order your instructions
-                        </h2>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                              :sm="{ span: 24 }"
@@ -258,11 +259,11 @@
                         </p>
                       </a-col>
                     </a-row>
-                  </template>
-                </a-card-meta>
-              </a-card>
-            </a-col>
-          </a-row>
+                  </a-col>
+                </a-row>
+              </template>
+            </a-card-meta>
+          </a-card>
         </a-col>
       </a-row>
     </a-col>

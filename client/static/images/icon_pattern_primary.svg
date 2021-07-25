@@ -8,8 +8,8 @@
   <style type="text/css">
    <![CDATA[
     .str0 {stroke:none;stroke-width:2.83;stroke-miterlimit:22.9256}
-    .fil0 {fill:#3B9CFF06}
-    .fil1 {fill:#3B9CFF09}
+    .fil0 {fill:none}
+    .fil1 {fill:#edf5fd}
    ]]>
   </style>
  </defs>

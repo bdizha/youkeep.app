@@ -1,160 +1,52 @@
 <template>
   <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-    <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }" class="gutter-row"
     >
       <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
-          <r-account-seller-tabs></r-account-seller-tabs>
+          <a-steps :current="currentStep">
+            <a-step v-for="(step, index) in steps"
+                    :key="index"
+                    :title="step.title">
+            </a-step>
+          </a-steps>
         </a-col>
-        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+        <a-col v-if="currentStep == 0" :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
           <a-card title="Business Information">
-            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
-                     :xs="{ span: 24 }" class="gutter-row"
-              >
-                <r-account-seller-business></r-account-seller-business>
-              </a-col>
-            </a-row>
+            <r-account-seller-business></r-account-seller-business>
           </a-card>
         </a-col>
-        <a-col v-if="false" :lg="{ span: 24 }" :sm="{ span: 24 }"
+        <a-col v-if="currentStep == 1" :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
           <a-card title="Seller Information">
-            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 20 }"
-                     :sm="{ span: 20 }" :xs="{ span: 20 }"
-              >
-                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    <label class="r-heading-light">Free shipping</label>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    R375.00
-                  </a-col>
-                </a-row>
-                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    <label class="r-heading-light">Eat as you go</label>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    R1000.00
-                  </a-col>
-                </a-row>
-              </a-col>
-              <a-col :lg="{ span: 4 }"
-                     :sm="{ span: 4 }" :xs="{ span: 4 }"
-              >
-                <a-button block class="r-btn-bordered-grey" size="small"
-                          type="secondary" v-on:click="onModal('account-promo', $event)"
-                >
-                  Add promo
-                </a-button>
-              </a-col>
-            </a-row>
+            <r-account-seller-account></r-account-seller-account>
           </a-card>
         </a-col>
-        <a-col v-if="false" :lg="{ span: 24 }" :sm="{ span: 24 }"
+        <a-col v-if="currentStep == 2" :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
           <a-card title="Billing Information">
-            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 20 }"
-                     :sm="{ span: 20 }" :xs="{ span: 20 }"
-              >
-                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    <label class="r-heading-light">Free shipping</label>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    R375.00
-                  </a-col>
-                </a-row>
-                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    <label class="r-heading-light">Eat as you go</label>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    R1000.00
-                  </a-col>
-                </a-row>
-              </a-col>
-              <a-col :lg="{ span: 4 }"
-                     :sm="{ span: 4 }" :xs="{ span: 4 }"
-              >
-                <a-button block class="r-btn-bordered-grey" size="small"
-                          type="secondary" v-on:click="onModal('account-promo', $event)"
-                >
-                  Add promo
-                </a-button>
-              </a-col>
-            </a-row>
+            <r-account-seller-billing></r-account-seller-billing>
           </a-card>
         </a-col>
-        <a-col v-if="false" :lg="{ span: 24 }" :sm="{ span: 24 }"
+        <a-col v-if="currentStep == 3" :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
-          <a-card title="Service Information">
-            <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 20 }"
-                     :sm="{ span: 20 }" :xs="{ span: 20 }"
-              >
-                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    <label class="r-heading-light">Free shipping</label>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    R375.00
-                  </a-col>
-                </a-row>
-                <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    <label class="r-heading-light">Eat as you go</label>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }"
-                         :sm="{ span: 12 }" :xs="{ span: 12 }"
-                  >
-                    R1000.00
-                  </a-col>
-                </a-row>
-              </a-col>
-              <a-col :lg="{ span: 4 }"
-                     :sm="{ span: 4 }" :xs="{ span: 4 }"
-              >
-                <a-button block class="r-btn-bordered-grey" size="small"
-                          type="secondary" v-on:click="onModal('account-promo', $event)"
-                >
-                  Add promo
-                </a-button>
-              </a-col>
-            </a-row>
+          <a-card title="Store Information">
+            <r-account-seller-store></r-account-seller-store>
+          </a-card>
+        </a-col>
+        <a-col v-if="currentStep == 4" :lg="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }" class="gutter-row"
+        >
+          <a-card title="Confirmation">
+            <r-account-seller-show></r-account-seller-show>
           </a-card>
         </a-col>
       </a-row>
@@ -162,20 +54,31 @@
   </a-row>
 </template>
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  components: {},
   layout: 'column',
   data () {
     return {
-      currentStep: 'business',
-      formLayout: 'horizontal',
-      formCoupon: this.$form.createForm(this, { name: 'form_coupon' }),
-      modal: {
-        current: null,
-        isVisible: false
-      }
+      steps: [
+        {
+          title: 'Business Information'
+        },
+        {
+          title: 'Seller Information'
+        },
+        {
+          title: 'Billing Information'
+        },
+        {
+          title: 'Store Setup'
+        }
+      ]
     }
   },
+  computed: mapGetters({
+    currentStep: 'account/currentStep'
+  }),
   methods: {
     onModal (current) {
       this.modal.isVisible = true

@@ -68,17 +68,17 @@ const routes = [
   },
   {
     path: '/account/store/:slug',
-    name: 'account.store',
+    name: 'account.store.show',
     component: page('account/store/Show.vue')
   },
   {
     path: '/account/seller',
-    name: 'account.store',
+    name: 'account.seller',
     component: page('account/seller/Index.vue')
   },
   {
     path: '/account/seller/setup',
-    name: 'account.seller',
+    name: 'account.seller.setup',
     component: page('account/seller/Setup.vue')
   }
 ]

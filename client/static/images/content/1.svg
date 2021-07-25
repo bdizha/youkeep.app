@@ -19,7 +19,7 @@
     .fil18 {fill:#B5ABA7}
     .fil16 {fill:#8BA1BB}
     .fil7 {fill:#3B9CFF}
-    .fil6 {fill:#b8dbff}
+    .fil6 {fill:#e7f2fd}
     .fil10 {fill:none}
     .fil8 {fill:none}
     .fil12 {fill:#FBD13E}
@@ -28,9 +28,9 @@
     .fil5 {fill:none}
     .fil9 {fill:none}
     .fil17 {fill:white}
-    .fil3 {fill:none;fill-opacity:0.600000}
-    .fil1 {fill:none;fill-opacity:0.600000}
-    .fil2 {fill:none;fill-opacity:0.600000}
+    .fil3 {fill:none;fill-opacity:1}
+    .fil1 {fill:none;fill-opacity:1}
+    .fil2 {fill:none;fill-opacity:1}
    ]]>
   </style>
  </defs>

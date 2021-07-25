@@ -10,6 +10,10 @@
     }
 }
 
+.ant-input-lg{
+    font-size: 15px;
+}
+
 .ant-input::-moz-placeholder {
     font-style: normal;
 }
@@ -221,7 +225,6 @@ a.r-text-logo {
                     &:hover,
                     &:focus {
                         background: rgba(255, 255, 255, 0.999);
-
                         &.ant-select {
                             .ant-input {
                                 background: rgba(255, 255, 255, 0.999);
@@ -518,8 +521,14 @@ x {
 }
 
 .ant-form {
-    label {
-        font-weight: 600;
+    .ant-form-item-label{
+        padding-bottom: 3px;
+        label {
+            font-weight: 600;
+            padding-bottom: 0;
+            display: block;
+            font-size: 13px;
+        }
     }
 }
 
@@ -1213,9 +1222,9 @@ x {
 }
 
 .r-btn-primary {
-    background: #FBD13E !important;
-    color: #FFFFFF !important;
-    border-color: #FBD13E !important;
+    background: @primary-color !important;
+    color: @white;
+    border-color: @primary-color !important;
     font-weight: 600;
     opacity: 1;
 
@@ -1245,16 +1254,51 @@ x {
     &:hover {
         opacity: 0.9;
         border-color: @primary-color;
-        color: @white;
+        color: @secondary-color;
         background: @primary-color;
     }
 
     &:focus {
         opacity: 0.9;
         border-color: @primary-color;
-        color: @white;
+        color: @secondary-color;
         background: @primary-color;
     }
+}
+
+.r-btn-grey {
+    span {
+        font-weight: 600;
+    }
+
+    background: #eee;
+    color: @black;
+    border-color: @black;
+    opacity: 1;
+
+    &:hover {
+        opacity: 0.9;
+        border-color: @black;
+        color: @white;
+        background: @black;
+    }
+
+    &:focus {
+        opacity: 0.9;
+        border-color: @black;
+        color: @white;
+        background: @black;
+    }
+}
+
+
+
+.r-btn--grey {
+    background: @white !important;
+    color: @black;
+    border-color: #ECECEC !important;
+    font-weight: 600;
+    text-shadow: none !important;
 }
 
 .r-btn-secondary {
@@ -1325,14 +1369,6 @@ x {
             }
         }
     }
-}
-
-.r-btn--grey {
-    background: @white !important;
-    color: @black;
-    border-color: #ECECEC !important;
-    font-weight: 600;
-    text-shadow: none !important;
 }
 
 .ant-col-flex {
@@ -1694,6 +1730,27 @@ xxl	≥1600px, could be a span value or an object containing above props
                 color: @secondary-color;
             }
         }
+    }
+}
+
+.r-checked-item{
+    padding-left: 45px;
+    position: relative;
+    .r-checked-item-icon{
+        font-size: 18px;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        padding: 6px;
+        border-radius: 100%;
+        background: #fbf0c8;
+        border-color: @secondary-color;
+        color: @secondary-color;
+    }
+    .r-checked-item-text{
+        font-size: 15px;
+        min-height: 30px;
+        display: block;
     }
 }
 
@@ -2323,11 +2380,6 @@ h4.r-heading-light {
 
 .r-model-item-active {
     height: auto;
-}
-
-.ant-form label {
-    padding-bottom: 6px;
-    display: block;
 }
 
 .ant-form-white {
@@ -3255,12 +3307,12 @@ h4.r-heading-light {
 }
 
 .r-btn-bordered-primary {
-    border: 1px solid #FBD13E36;
+    border: 1px solid @primary-color;
     color: @secondary-color;
     background: transparent !important;
 
     &:hover {
-        border: 1px solid #FDBAC4;
+        border: 1px solid @primary-color;
         color: @secondary-color;
         background: @primary-color !important;
     }
@@ -4453,10 +4505,6 @@ h4.r-heading-light {
     }
 }
 
-.ant-card {
-    background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
-}
-
 .r-store-items {
     background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
 
@@ -5647,6 +5695,35 @@ h4.r-heading-light {
     text-transform: uppercase;
 }
 
+.ant-steps-item-finish {
+    .ant-steps-item-icon {
+        border-color: @secondary-color;
+    }
+}
+
+.ant-steps-item {
+    > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+        font-weight: 600;
+        font-size: 14px;
+    }
+    &.ant-steps-item-finish{
+        .ant-steps-item-icon {
+            background: @secondary-color;
+        }
+    }
+    &.ant-steps-item-process{
+        > .ant-steps-item-container > .ant-steps-item-content > {
+            .ant-steps-item-title {
+                color: @secondary-color;
+            }
+        }
+        .ant-steps-item-icon {
+            border-color: @secondary-color;
+            background: @secondary-color;
+        }
+    }
+}
+
 .r-steps{
     .ant-steps-horizontal {
         .ant-steps-item-icon {
@@ -5741,7 +5818,7 @@ h4.r-heading-light {
             &.ant-steps-item-process,
             &.ant-steps-item-finish {
                 color: @secondary-color;
-                background: linear-gradient(225deg, #fbf0c8, #d1e7fd);
+                background: #e7f2fd;
 
                 border-color: @secondary-color;
 
@@ -5766,7 +5843,7 @@ h4.r-heading-light {
 
             &.ant-steps-item-active {
                 color: @primary-color;
-                background: linear-gradient(225deg, #d1e7fd, #FBD13E36);
+                background: #fbf0c8;
 
                 .ant-steps-item-content {
                     background: transparent url(/assets/icon_arrows.svg) no-repeat;
@@ -6112,18 +6189,18 @@ h4.r-heading-light {
 }
 
 .r-bg-primary-light {
-    background: #e7f2fd;
-
-    .ant-card-body {
-        background: transparent url(/images/icon_pattern_primary.svg) repeat;
-    }
-}
-
-.r-bg-secondary-light {
     background: #f7f3dc;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_secondary.svg) repeat;
+    }
+}
+
+.r-bg-secondary-light {
+    background: #e7f2fd;
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_primary.svg) repeat;
     }
 }
 
@@ -6136,14 +6213,20 @@ h4.r-heading-light {
 }
 
 .r-bg-secondary {
-    background: #FBD13E;
+    background: linear-gradient(225deg, @secondary-color, @secondary-color);
+
+    .ant-card-body {
+        background: none;
+    }
 
     p.r-text-normal,
-    h1,
-    h2,
     h3,
     h4 {
-        color: #3B9CFF;
+        color: @white;
+    }
+    h1,
+    h2{
+        color: @primary-color;
     }
 }
 

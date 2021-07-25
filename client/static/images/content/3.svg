@@ -20,7 +20,7 @@
     .fil5 {fill:#8BA1BB}
     .fil2 {fill:#3B9CFF}
     .fil14 {fill:#3B9CFF}
-    .fil17 {fill:#b8dbff}
+    .fil17 {fill:#e7f2fd}
     .fil6 {fill:#FBD13E}
     .fil18 {fill:#FBD13E}
     .fil12 {fill:#FBD13E}
@@ -29,11 +29,11 @@
     .fil10 {fill:#FBD13E}
     .fil15 {fill:#fcebad}
     .fil7 {fill:#fcebad}
-    .fil3 {fill:#fbf0c8;fill-opacity:0.501961}
-    .fil19 {fill:#3B9CFF;fill-opacity:0.600000}
-    .fil0 {fill:#fbf0c8;fill-opacity:0.600000}
-    .fil20 {fill:#FBD13E;fill-opacity:0.600000}
-    .fil1 {fill:#fcebad;fill-opacity:0.600000}
+    .fil3 {fill:none;fill-opacity:0.501961}
+    .fil19 {fill:#3B9CFF;fill-opacity:1}
+    .fil0 {fill:none;fill-opacity:1}
+    .fil20 {fill:#FBD13E;fill-opacity:1}
+    .fil1 {fill:#fcebad;fill-opacity:1}
    ]]>
   </style>
  </defs>

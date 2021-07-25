@@ -7,7 +7,7 @@ const state = () => ({
   hasCards: false,
   address: {},
   hasAddress: false,
-  currentStep: false,
+  currentStep: 0,
   menu: {
     currentMenuKey: 'account'
   },
@@ -35,6 +35,7 @@ const getters = {
   hasStores: state => state.hasStores > 0,
   address: state => state.address,
   hasAddress: state => state.hasSearched,
+  currentStep: state => state.currentStep,
   menu: state => state.menu,
   hasMenu: state => state.hasMenu,
   hasAddresses: state => state.addresses.length > 0,
@@ -74,6 +75,9 @@ const mutations = {
   setAddress (state, data) {
     state.address = data.address
   },
+  setCurrentStep (state, currentStep) {
+    state.currentStep = currentStep
+  },
   setMenu (state, menu) {
     state.menu = menu
     state.hasMenu = menu !== null
@@ -99,6 +103,11 @@ const actions = {
     state.hasAddress = payload !== null
 
     console.log(payload, 'data onAddress >>>>')
+  },
+  onCurrentStep ({ dispatch, commit, state }, payload) {
+    commit('setCurrentStep', payload)
+
+    console.log(payload, 'data onCurrentStep >>>>')
   },
   onMenu ({ dispatch, commit, state }, payload) {
     commit('setMenu', payload)

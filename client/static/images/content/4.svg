@@ -49,8 +49,8 @@
     .fil21 {fill:#107984}
     .fil28 {fill:#3B9CFF}
     .fil3 {fill:#3B9CFF}
-    .fil27 {fill:#b8dbff}
-    .fil4 {fill:#b8dbff}
+    .fil27 {fill:#e7f2fd}
+    .fil4 {fill:#e7f2fd}
     .fil30 {fill:#FBD13E}
     .fil29 {fill:#FBD13E}
     .fil25 {fill:#FBD13E}
@@ -59,7 +59,7 @@
     .fil1 {fill:#FBD13E}
     .fil13 {fill:#fcebad}
     .fil16 {fill:#FBD13E;fill-rule:nonzero}
-    .fil0 {fill:#fbf0c8;fill-opacity:0.600000}
+    .fil0 {fill:none;fill-opacity:1}
    ]]>
   </style>
  </defs>

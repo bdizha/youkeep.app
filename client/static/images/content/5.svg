@@ -33,16 +33,16 @@
     .fil30 {fill:#3B9CFF}
     .fil13 {fill:#3B9CFF}
     .fil7 {fill:#3B9CFF}
-    .fil17 {fill:#b8dbff}
-    .fil3 {fill:#b8dbff}
+    .fil17 {fill:#e7f2fd}
+    .fil3 {fill:#e7f2fd}
     .fil10 {fill:#fcebad}
     .fil14 {fill:#FBD13E}
     .fil2 {fill:#fcebad}
     .fil34 {fill:#FBD13E}
     .fil8 {fill:#FBD13E}
     .fil16 {fill:#FBD13E}
-    .fil0 {fill:none;fill-opacity:0.600000}
-    .fil1 {fill:#fbf0c8;fill-opacity:0.800000}
+    .fil0 {fill:none;fill-opacity:1}
+    .fil1 {fill:none;fill-opacity:0.800000}
     .fil33 {fill:#3B9CFF}
    ]]>
   </style>

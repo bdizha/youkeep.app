@@ -121,26 +121,26 @@ export default {
       mapPropsToFields: () => {
         return {
           name: this.$form.createFormField({
-            value: this.user.name,
+            value: this.user.name
           }),
           email: this.$form.createFormField({
-            value: this.user.email,
+            value: this.user.email
           }),
           phone_number: this.$form.createFormField({
-            value: this.user.phone_number,
+            value: this.user.phone_number
           }),
           birth_date: this.$form.createFormField({
-            value: moment(this.user.birth_date, this.dateFormat),
-          }),
+            value: moment(this.user.birth_date, this.dateFormat)
+          })
         }
-      },
+      }
     })
   },
   methods: {
     onCancel () {
       this.modal.isVisible = false
       this.modal.current = null
-      this.$store.dispatch('app/onModal', modal)
+      this.$store.dispatch('app/onModal', this.modal)
     },
     onSave (event) {
       event.preventDefault()

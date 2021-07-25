@@ -11,9 +11,9 @@
     .str5 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256;stroke-opacity:0.450980}
     .str2 {stroke:#FBD13E;stroke-width:20;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
     .str1 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256}
-    .str4 {stroke:#fbf0c8;stroke-width:20;stroke-miterlimit:22.9256}
+    .str4 {stroke:none;stroke-width:20;stroke-miterlimit:22.9256}
     .str0 {stroke:#FBD13E;stroke-width:20;stroke-miterlimit:22.9256}
-    .str3 {stroke:#fcebad;stroke-width:20;stroke-miterlimit:22.9256}
+    .str3 {stroke:none;stroke-width:20;stroke-miterlimit:22.9256}
     .fil15 {fill:none}
     .fil5 {fill:none}
     .fil11 {fill:#F3FAFE}
@@ -22,28 +22,28 @@
     .fil14 {fill:#8BA1BB}
     .fil19 {fill:#666364}
     .fil10 {fill:#3B9CFF}
-    .fil9 {fill:#b8dbff}
-    .fil21 {fill:#b8dbff}
+    .fil9 {fill:#e7f2fd}
+    .fil21 {fill:#e7f2fd}
     .fil8 {fill:#FBD13E}
     .fil16 {fill:#FBD13E}
     .fil20 {fill:#FBD13E}
     .fil6 {fill:#FBD13E}
     .fil18 {fill:#FBD13E}
-    .fil7 {fill:#fcebad}
-    .fil0 {fill:#fcebad}
-    .fil22 {fill:#3B9CFF;fill-opacity:0.450980}
-    .fil12 {fill:#F28295;fill-opacity:0.501961}
-    .fil1 {fill:#3B9CFF;fill-opacity:0.600000}
-    .fil4 {fill:#fbf0c8;fill-opacity:0.600000}
-    .fil2 {fill:#FBD13E;fill-opacity:0.600000}
-    .fil3 {fill:#fcebad;fill-opacity:0.600000}
+    .fil7 {fill:#fbf0c8}
+    .fil0 {fill:#fbf0c8}
+    .fil22 {fill:#3B9CFF;fill-opacity:1}
+    .fil12 {fill:#3B9CFF;}
+    .fil1 {fill:#3B9CFF;fill-opacity:1}
+    .fil4 {fill:none;fill-opacity:1}
+    .fil2 {fill:#FBD13E;fill-opacity:1}
+    .fil3 {fill:none;fill-opacity:1}
    ]]>
   </style>
  </defs>
     <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
         <g id="_2048505006992">
-   <rect class="fil0" x="6076.22" y="19828.77" width="4966.2" height="3990.64"/>
+   <rect class="fil15" x="6076.22" y="19828.77" width="4966.2" height="3990.64"/>
             <polygon class="fil1" points="42121.66,0 38846.12,0 38846.12,4268.92 42121.66,4268.92 "/>
             <polygon class="fil2" points="38846.12,4268.92 42121.66,4268.92 42121.66,14217.25 38846.12,14217.25 "/>
             <polygon class="fil1" points="42121.66,14217.25 38846.12,14217.25 38846.12,23847.78 42121.66,23847.78 "/>

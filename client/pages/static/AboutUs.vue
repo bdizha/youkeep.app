@@ -214,7 +214,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h2 class="r-heading">
-                            We’re <span class="r-text-primary">excited</span> to meet you!
+                            We’re <span class="r-text-secondary">excited</span> to meet you!
                           </h2>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -276,7 +276,7 @@
                                        :xs="{ span: 24 }"
                                 >
                                   <h2 class="r-heading">
-                                    We help stores <span class="r-text-primary">achieve</span> their sales goals:
+                                    We help stores <span class="r-text-secondary">achieve</span> their sales goals:
                                   </h2>
                                 </a-col>
                                 <a-col v-for="(promise, index) in promises"

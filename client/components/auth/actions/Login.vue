@@ -8,7 +8,7 @@
       <a-button id="r-user-login"
                 :size="size"
                 block
-                class="r-btn-secondary"
+                class="r-btn-bordered-primary"
                 type="secondary"
                 v-on:click="onModal"
       >

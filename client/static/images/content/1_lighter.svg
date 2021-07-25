@@ -28,9 +28,9 @@
     .fil5 {fill:none}
     .fil9 {fill:none}
     .fil17 {fill:white}
-    .fil3 {fill:none;fill-opacity:0.600000}
-    .fil1 {fill:none;fill-opacity:0.600000}
-    .fil2 {fill:none;fill-opacity:0.600000}
+    .fil3 {fill:none;fill-opacity:1}
+    .fil1 {fill:none;fill-opacity:1}
+    .fil2 {fill:none;fill-opacity:1}
    ]]>
   </style>
  </defs>

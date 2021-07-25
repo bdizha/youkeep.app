@@ -20,14 +20,14 @@
                 </a-col>
               </a-row>
             </a-form-item>
-            <a-form-item label="Company registration number">
+            <a-form-item label="Company Registration Number">
               <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                 <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
                        :xs="{ span: 12 }" class="gutter-row"
                 >
                   <a-input
-                    v-decorator="['registration', { rules: [{ required: true, message: 'Please enter your company reg #' }] }]"
-                    placeholder="Your company registration number"
+                    v-decorator="['registration', { rules: [{ required: true, message: 'Please enter Company Registration Number' }] }]"
+                    placeholder="Company Registration Number"
                     size="large"
                   >
                     <a-icon slot="prefix" type="user"/>
@@ -35,14 +35,14 @@
                 </a-col>
               </a-row>
             </a-form-item>
-            <a-form-item label="Phone number for verification">
+            <a-form-item label="Phone Number for Verification">
               <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                 <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
                        :xs="{ span: 12 }" class="gutter-row"
                 >
                   <a-input
-                    v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your phone number for verification' }] }]"
-                    placeholder="Your primary business phone"
+                    v-decorator="['phone', { rules: [{ required: true, message: 'Please enter Phone Number for verification' }] }]"
+                    placeholder="Phone Number for Verification"
                     size="large"
                     type="text"
                   >
@@ -51,13 +51,13 @@
                 </a-col>
               </a-row>
             </a-form-item>
-            <a-form-item label="Primary contact person">
+            <a-form-item label="Primary Contact Person">
               <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                 <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
                        :xs="{ span: 12 }" class="gutter-row"
                 >
                   <a-input
-                    v-decorator="['first_name', { rules: [{ required: true, message: 'Please contact first name' }] }]"
+                    v-decorator="['first_name', { rules: [{ required: true, message: 'Please enter Contact\'s First Name' }] }]"
                     placeholder="First name"
                     size="large"
                     type="text"
@@ -69,7 +69,7 @@
                        :xs="{ span: 12 }" class="gutter-row"
                 >
                   <a-input
-                    v-decorator="['last_name', { rules: [{ required: true, message: 'Please contact last name' }] }]"
+                    v-decorator="['last_name', { rules: [{ required: true, message: 'Please enter Contact\'s First Name' }] }]"
                     placeholder="Last name"
                     size="large"
                     type="text"
@@ -112,6 +112,8 @@ export default {
   data () {
     return {
       formName: 'business',
+      nextStep: 1,
+      prevStep: null,
       fields: ['registration', 'phone', 'contact_name'],
       form: this.$form.createForm(this, { name: 'form_business' }),
       message: null,
@@ -138,14 +140,16 @@ export default {
     onPost (event) {
       event.preventDefault()
 
+      this.onNextStep()
+
       this.form.validateFields((errors, values) => {
         if (!errors) {
           const params = Object.assign({}, values)
-          this.onRegister(params)
+          this.onForm(params)
         }
       })
     },
-    async onRegister (params) {
+    async onForm (params) {
       params.type = this.userType
 
       const payload = {
@@ -168,19 +172,17 @@ export default {
         }
       }).then((response) => {
         setTimeout(() => {
-          if ($this.isValid) {
-            const message = {
-              title: 'Thank you for signing up',
-              content: `Thank you for signing up with us, ${$this.user.name}. We sent a verification email to<br>
+          $this.onNextStep()
+
+          const message = {
+            title: 'Thank you for signing up',
+            content: `Thank you for signing up with us, ${$this.user.name}. We sent a verification email to<br>
                         ${$this.user.email}<br>
                         Click the link inside to get started!`
-            }
-
-            $this.$store.dispatch('form/onResult', message)
-            $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Spazamall.')
-          } else {
-            $this.$message.error('Oops, the submitted form was invalid.')
           }
+
+          $this.$store.dispatch('form/onResult', message)
+          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Spazamall.')
         }, 600)
       })
     },
@@ -192,6 +194,12 @@ export default {
       modal.isClosable = false
       modal.current = current
       this.$store.dispatch('base/onModal', modal)
+    },
+    onNextStep () {
+      this.$store.dispatch('account/onCurrentStep', this.nextStep)
+    },
+    onPrevStep () {
+      this.$store.dispatch('account/onCurrentStep', this.prevStep)
     },
     onUserType (e) {
       this.userType = e.target.value

@@ -7,7 +7,7 @@
       <label v-show="instruction" class="r-text-sm r-text-label" for="r-user-register">{{ instruction }}</label>
       <a-button id="r-user-register" :size="size"
                 block
-                class="r-btn-bordered-primary"
+                class="r-btn-bordered-secondary"
                 type="secondary"
                 v-on:click="onModal"
       >

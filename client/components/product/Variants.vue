@@ -50,10 +50,10 @@ export default {
     ...mapState({
       productItem (state) {
         return state.product.items.find(item => item.key === this.itemKey)
-      },
+      }
     }),
     ...mapGetters({
-      popover: 'base/popover',
+      popover: 'base/popover'
     }),
     isSelected () {
       return this.productItem !== undefined && this.productItem.productTypes.includes(this.productType.type)
@@ -63,13 +63,13 @@ export default {
         return { name: null }
       }
 
-      let variant = this.productItem.variants.find(variant => variant.product_type.type === this.productType.type)
+      const variant = this.productItem.variants.find(variant => variant.product_type.type === this.productType.type)
       if (variant === undefined) {
         return { name: '>>>>' }
       }
 
       return variant
-    },
+    }
   },
   mounted () {
   },
@@ -83,7 +83,7 @@ export default {
       modal.isClosable = true
       modal.current = 'product'
       this.$store.dispatch('base/onModal', modal)
-    },
-  },
+    }
+  }
 }
 </script>

@@ -14,11 +14,19 @@ class User extends Authenticatable
     const TYPE_MERCHANT = 3;
     const TYPE_ADMIN = 4;
 
+    const IDENTITY_TYPE_PASSPORT = 1;
+    const IDENTITY_TYPE_NATIONAL_ID = 2;
+
     public static $types = [
         self::TYPE_SHOPPER => 'Shopper',
         self::TYPE_ARTIST => 'Artist',
         self::TYPE_MERCHANT => 'Merchant',
         self::TYPE_ADMIN => 'Admin'
+    ];
+
+    public static $identity_types = [
+        self::IDENTITY_TYPE_PASSPORT => 'Passport',
+        self::IDENTITY_TYPE_NATIONAL_ID => 'National ID'
     ];
 
     /**
@@ -99,5 +107,21 @@ class User extends Authenticatable
     public function cards()
     {
         return $this->hasMany('App\Cards');
+    }
+
+    /**
+     * Get the related merchants
+     */
+    public function merchants()
+    {
+        return $this->hasMany('App\Merchant');
+    }
+
+    /**
+     * Get the related stores
+     */
+    public function stores()
+    {
+        return $this->hasMany('App\Stores');
     }
 }
