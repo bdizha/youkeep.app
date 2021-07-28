@@ -1,11 +1,27 @@
-<svg id="Layer_1" data-name="Layer 1" width="360" height="360" xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 1080 1080">
-    <defs>
-        <style>.cls-1{fill:#FFFFFF;opacity: 0.75}</style>
-    </defs>
-    <path class="cls-1"
-          d="M762.53,934.92a.94.94,0,0,1-.1.1,10,10,0,0,0-.44-13.87l-4.45-4.34-.26-.25-7.66-6.94a277.49,277.49,0,0,0-28.78-381L486,315.88,329,173.74l-12.43-11.26a10,10,0,0,1-1-13.75l.33-.37.34-.36a5.44,5.44,0,0,1,.42-.41l4.3-4.21a9,9,0,0,1,1.17-1A356.13,356.13,0,0,1,569.52,43.13h3.08A356,356,0,0,1,822.75,148a10,10,0,0,1,0,14.14l-.41.4L600.73,384.15,738.49,508.93a303.79,303.79,0,0,1,24,426Z"/>
-    <path class="cls-1" d="M315.82,148.36l-.33.37.23-.27A.94.94,0,0,1,315.82,148.36Z"/>
-    <path class="cls-1"
-          d="M765,928.25a10,10,0,0,1-2.58,6.77l-.34.36-.09.08-.35.34L757.4,940a10.08,10.08,0,0,1-1.18,1c-65.54,62.52-150.74,96.76-240.57,96.76l-4.93,0c-91.51-1.28-178.9-37.82-246.07-102.89L263,933.24c-.91-.84-1.81-1.69-2.69-2.57a10,10,0,0,1,0-14.14l.41-.41,218-218L338.69,570a301.43,301.43,0,0,1-23.2-421.29,10,10,0,0,0,1,13.75L329,173.74a274.92,274.92,0,0,0,27.51,376.7L724.61,887l25,22.65,7.66,6.94.26.25,4.45,4.34A10,10,0,0,1,765,928.25Z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="119.062mm" height="121.059mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+     viewBox="0 0 168.35 171.18"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:none;stroke-width:2.83;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil2 {fill:#FBD13E;opacity: 0.15}
+    .fil1 {fill:#FBD13E;opacity: 0.15}
+   ]]>
+  </style>
+ </defs>
+    <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+        <g id="_2161426273280">
+   <circle class="fil0" cx="84.18" cy="85.59" r="84.18"/>
+            <g>
+    <path class="fil2 str0" d="M36.99 59.69l71.59 54.49 -7.68 1.91c-20.65,5.13 -42.17,-0.42 -57.18,-15.65 -10.75,-10.9 -16.7,-25.41 -16.76,-40.71 -0.15,-38.3 36.41,-65.62 73.23,-56.58l7.65 1.88 -70.85 54.66z"/>
+                <path class="fil1 str0" d="M131.37 111.51l-70.85 -54.66 7.65 -1.88c36.82,-9.04 73.39,18.28 73.23,56.58 -0.06,15.31 -6.01,29.81 -16.76,40.72 -15.01,15.23 -36.53,20.77 -57.18,15.64l-7.69 -1.91 71.59 -54.49z"/>
+   </g>
+  </g>
+ </g>
 </svg>

@@ -96,7 +96,7 @@
           <a-input
             v-model="application.email"
             v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please confirm your email' }] }]"
-            placeholder="Your email address"
+            placeholder="Your Email Address"
             size="large"
           >
             <a-icon slot="prefix" type="mail"/>

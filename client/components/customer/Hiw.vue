@@ -4,7 +4,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <r-customer-steps></r-customer-steps>
+      <r-tabs active-key="customer" theme="primary"></r-tabs>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
@@ -67,7 +67,7 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <r-avatar :dataSrc="'/images/content/hero-01.png'" :size="300" class="r-avatar-block"
+                      <r-avatar :dataSrc="'/images/content/screen-01-primary.png'" :size="300" class="r-avatar-block"
                       ></r-avatar>
                     </a-col>
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -248,7 +248,7 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <r-avatar :dataSrc="'/images/content/hero-02.png'" :size="300" class="r-avatar-block"
+                  <r-avatar :dataSrc="'/images/content/screen-02-primary.png'" :size="300" class="r-avatar-block"
                   ></r-avatar>
                 </a-col>
               </a-row>
@@ -270,7 +270,7 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <r-avatar :dataSrc="'/images/content/hero-01.png'" :size="300" class="r-avatar-block"
+                  <r-avatar :dataSrc="'/images/content/screen-03-primary.png'" :size="300" class="r-avatar-block"
                   ></r-avatar>
                 </a-col>
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -351,7 +351,7 @@
                   <template slot="description">
                     <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/26.png'" :size="90" class="r-avatar-auto"
+                        <r-avatar :dataSrc="'/images/content/customer-01.svg'" :size="90" class="r-avatar-auto"
                                   shape="circle"
                         ></r-avatar>
                       </a-col>
@@ -376,7 +376,7 @@
                   <template slot="description">
                     <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/24.png'" :size="90" class="r-avatar-auto"
+                        <r-avatar :dataSrc="'/images/content/customer-02.svg'" :size="90" class="r-avatar-auto"
                                   shape="circle"
                         ></r-avatar>
                       </a-col>
@@ -401,7 +401,7 @@
                   <template slot="description">
                     <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/23.png'" :size="90" class="r-avatar-auto"
+                        <r-avatar :dataSrc="'/images/content/customer-03.svg'" :size="90" class="r-avatar-auto"
                                   shape="circle"
                         ></r-avatar>
                       </a-col>

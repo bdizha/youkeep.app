@@ -24,7 +24,7 @@
       <a-form-item label="Email Address">
         <a-input
           v-decorator="['email', { rules: [{ required: true, email: 'Invalid email address', message: 'Please enter your email address' }] }]"
-          placeholder="Your email address"
+          placeholder="Your Email Address"
         >
           <a-icon slot="prefix" type="user"/>
         </a-input>

@@ -1,147 +1,38 @@
 <template>
+  <a-card title="Welcome to Spazamall!">
   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
     <a-col :xs="{ span: 24 }">
-      <p class="r-text-light">
-        Please note you are required to provide accurate information to keep on our records. Click here
-        if you would like to read our privacy policy. We take the security of your information very seriously.
-      </p>
-    </a-col>
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }" class="gutter-row"
-    >
-      <a-form v-if="hasForm"
-              :form="form"
-              class="ant-form ant-form-vertical"
-              @submit="onPost"
-      >
-        <a-row>
-          <a-col :xs="{ span: 24 }">
-            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-form-item label="Country of citizenship">
-                  <a-input
-                    v-decorator="['registration', { rules: [{ required: true, message: 'Please enter your company reg #' }] }]"
-                    placeholder="Your company registration number"
+      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+        <a-col :xs="{ span: 24 }">
+          <p class="r-text-light">
+            Congratulations. You've successfully setup your business account.
+            Read how to setup your store here.
+          </p>
+        </a-col>
+        <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+               :xs="{ span: 12 }" class="gutter-row"
+        >
+          <a-button block class="r-btn-grey"
                     size="large"
-                  >
-                    <a-icon slot="prefix" type="user"/>
-                  </a-input>
-                </a-form-item>
-              </a-col>
-            </a-row>
-          </a-col>
-          <a-col :xs="{ span: 24 }">
-            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-form-item label="Country of birth">
-                  <a-input
-                    v-decorator="['registration', { rules: [{ required: true, message: 'Please enter your company reg #' }] }]"
-                    placeholder="Your company registration number"
-                    size="large"
-                  >
-                    <a-icon slot="prefix" type="user"/>
-                  </a-input>
-                </a-form-item>
-              </a-col>
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-form-item label="Date of birth">
-                  <a-input
-                    v-decorator="['registration', { rules: [{ required: true, message: 'Please enter your company reg #' }] }]"
-                    placeholder="Your company registration number"
-                    size="large"
-                  >
-                    <a-icon slot="prefix" type="user"/>
-                  </a-input>
-                </a-form-item>
-              </a-col>
-            </a-row>
-          </a-col>
-          <a-col :xs="{ span: 24 }">
-            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-form-item label="Proof of identity">
-                  <a-input
-                    v-decorator="['registration', { rules: [{ required: true, message: 'Please enter your company reg #' }] }]"
-                    placeholder="Your company registration number"
-                    size="large"
-                  >
-                    <a-icon slot="prefix" type="user"/>
-                  </a-input>
-                </a-form-item>
-              </a-col>
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-form-item label="Date of expiry">
-                  <a-input
-                    v-decorator="['registration', { rules: [{ required: true, message: 'Please enter your company reg #' }] }]"
-                    placeholder="Your company registration number"
-                    size="large"
-                  >
-                    <a-icon slot="prefix" type="user"/>
-                  </a-input>
-                </a-form-item>
-              </a-col>
-            </a-row>
-          </a-col>
-          <a-col :xs="{ span: 24 }">
-            <a-form-item label="Country of issue">
-              <a-input
-                v-decorator="['first_name', { rules: [{ required: true, message: 'Please contact first name' }] }]"
-                placeholder="First name"
-                size="large"
-                type="text"
-              >
-                <a-icon slot="prefix" type="user"/>
-              </a-input>
-            </a-form-item>
-            <a-col :xs="{ span: 24 }">
-              <a-form-item label="Residential address">
-                <a-input
-                  v-decorator="['first_name', { rules: [{ required: true, message: 'Please contact first name' }] }]"
-                  placeholder="First name"
-                  size="large"
-                  type="text"
-                >
-                  <a-icon slot="prefix" type="user"/>
-                </a-input>
-              </a-form-item>
-            </a-col>
-          </a-col>
-          <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
-                 class="gutter-row"
+                    type="secondary"
+                    @click="onPrevStep"
           >
-            <a-button block class="r-btn-secondary"
-                      size="large"
-                      type="secondary"
-                      @click="onPrevStep"
-            >
-              Previous
-            </a-button>
-          </a-col>
-          <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
-                 class="gutter-row"
+            Previous
+          </a-button>
+        </a-col>
+        <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+               class="gutter-row"
+        >
+          <a-button block class="r-btn-secondary" html-type="submit" size="large"
+                    type="secondary"
           >
-            <a-button block class="r-btn-secondary" html-type="submit" size="large"
-                      type="secondary"
-            >
-              Next
-            </a-button>
-          </a-col>
-        </a-row>
-      </a-form>
-      <r-result v-if="hasResult"></r-result>
-      <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
+            Goto Dashboard
+          </a-button>
+        </a-col>
+      </a-row>
     </a-col>
   </a-row>
+  </a-card>
 </template>
 <script>
 import { mapGetters } from 'vuex'

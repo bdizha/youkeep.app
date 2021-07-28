@@ -1,22 +1,6 @@
 <template>
   <a-row class="r-account-list" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-card v-if="hasTitle" class="r-mb-24" style="width: 100%;" title="PAYMENT METHODS">
-        <a-row align="middle" justify="start" type="flex">
-          <a-col :lg="{ span: 12 }" :sm="{ span: 24 }"
-                 :xs="{ span: 24 }" class="r-store-page"
-          >
-            <div class="r-text-small">
-              <template v-if="hasCards">
-                Here you can manage all your payment cards.
-              </template>
-              <template v-if="!hasCards">
-                Your payment card is currently not set.
-              </template>
-            </div>
-          </a-col>
-        </a-row>
-      </a-card>
       <div v-for="card in cards"
            :key="'address-' + card.id"
            :class="{'r-account-item__active': card.is_default}"
@@ -71,6 +55,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
+  name: 'r-account-card-list',
   props: {
     hasTitle: { type: Boolean, required: false, default: true }
   },

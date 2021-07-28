@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Address;
 use App\Banner;
 use App\Category;
+use App\Country;
 use App\Product;
 use App\ProductType;
 use App\ProductVariant;
@@ -52,7 +53,8 @@ class Controller extends BaseController
         $level = 1,
         $items = [],
         $item = null,
-        $catalogMap = null;
+        $catalogMap = null,
+        $countries = [];
 
 
     /**
@@ -520,5 +522,14 @@ class Controller extends BaseController
         $this->storeSlug = $request->get('store', null);
         $key = $this->_setCacheKey($request);
         return $key;
+    }
+
+    /**
+     * @return void
+     */
+    protected function _setCountries()
+    {
+        $this->countries = Country::orderBy('name', 'ASC')
+            ->get();
     }
 }

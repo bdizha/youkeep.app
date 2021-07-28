@@ -1,16 +1,16 @@
 <template>
-  <a-tabs type="card">
-    <a-tab-pane key="1" tab="For Customers"
+  <a-tabs type="card" v-model="activeKey">
+    <a-tab-pane key="customer" tab="For Customers"
     >
-      <r-customer-hiw></r-customer-hiw>
+      <r-customer-steps></r-customer-steps>
     </a-tab-pane>
-    <a-tab-pane key="2" tab="For Merchants"
+    <a-tab-pane key="merchant" tab="For Merchants"
     >
-      <r-merchant-hiw></r-merchant-hiw>
+      <r-merchant-steps></r-merchant-steps>
     </a-tab-pane>
-    <a-tab-pane key="3" tab="For Shoppers"
+    <a-tab-pane key="shopper" tab="For Shoppers"
     >
-      <r-shopper-hiw></r-shopper-hiw>
+      <r-shopper-steps></r-shopper-steps>
     </a-tab-pane>
   </a-tabs>
 </template>
@@ -19,10 +19,12 @@
 export default {
   name: 'r-tabs',
   props: {
-    tab: { type: String, required: false, default: '1' }
+    activeKey: { type: String, required: false, default: 'customer' }
   },
   data () {
-    return {}
+    return {
+      activeTab: 'customer'
+    }
   },
   created () {
     this.payload()
@@ -30,6 +32,6 @@ export default {
   methods: {
     payload () {
     }
-  },
+  }
 }
 </script>

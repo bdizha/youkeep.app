@@ -17,37 +17,22 @@
         <a-col v-if="currentStep == 0" :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
-          <a-card title="Business Information">
-            <r-account-seller-business></r-account-seller-business>
-          </a-card>
+          <r-account-seller-business></r-account-seller-business>
         </a-col>
         <a-col v-if="currentStep == 1" :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
-          <a-card title="Seller Information">
-            <r-account-seller-account></r-account-seller-account>
-          </a-card>
+          <r-account-seller-account></r-account-seller-account>
         </a-col>
         <a-col v-if="currentStep == 2" :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
-          <a-card title="Billing Information">
-            <r-account-seller-billing></r-account-seller-billing>
-          </a-card>
+          <r-account-seller-billing></r-account-seller-billing>
         </a-col>
         <a-col v-if="currentStep == 3" :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
-          <a-card title="Store Information">
-            <r-account-seller-store></r-account-seller-store>
-          </a-card>
-        </a-col>
-        <a-col v-if="currentStep == 4" :lg="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }" class="gutter-row"
-        >
-          <a-card title="Confirmation">
-            <r-account-seller-show></r-account-seller-show>
-          </a-card>
+          <r-account-seller-store></r-account-seller-store>
         </a-col>
       </a-row>
     </a-col>
@@ -71,7 +56,7 @@ export default {
           title: 'Billing Information'
         },
         {
-          title: 'Store Setup'
+          title: 'Confirmation'
         }
       ]
     }

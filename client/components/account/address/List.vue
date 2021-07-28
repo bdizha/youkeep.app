@@ -1,16 +1,11 @@
 <template>
   <a-row justify="center" type="flex">
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-card v-if="hasTitle" class="r-mb-24" style="width: 100%;" title="YOUR DELIVERY ADDRESSES">
-        <div class="r-text-small">
-          <template v-if="hasAddresses">
-            Here you can manage all your address.
-          </template>
-          <template v-if="!hasAddresses">
-            Your delivery address is currently not set
-          </template>
-        </div>
-      </a-card>
+    <a-col v-if="!hasAddresses" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <p class="r-text-normal">
+        {{ emptyTitle }}
+      </p>
+    </a-col>
+    <a-col v-if="hasAddresses" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <div v-for="address in addresses"
            :key="'address-' + address.id"
            :class="{'r-account-item__active': address.is_default}"
@@ -42,8 +37,9 @@
 import { mapGetters } from 'vuex'
 
 export default {
+  name: 'r-account-address-list',
   props: {
-    hasTitle: { type: Boolean, required: false, default: true },
+    emptyTitle: { type: String, required: false, default: 'Your Delivery Address is currently not set.' }
   },
   data () {
     return {
@@ -53,7 +49,7 @@ export default {
   computed: mapGetters({
     modal: 'base/modal',
     addresses: 'account/addresses',
-    hasAddresses: 'account/hasAddresses',
+    hasAddresses: 'account/hasAddresses'
   }),
   created () {
     this.payload()

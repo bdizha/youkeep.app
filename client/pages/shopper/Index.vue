@@ -65,16 +65,8 @@
                 :sm="{ span: 24 }"
                 :xs="{ span: 24 }"
               >
-                <a-card>
-                  <a-card-meta>
-                    <template slot="description">
-                      <div class="r-p-48">
-                        <r-avatar :size="450" class="r-avatar-block" data-src="/images/content/hero-01.png"
-                        ></r-avatar>
-                      </div>
-                    </template>
-                  </a-card-meta>
-                </a-card>
+                <r-avatar :size="450" class="r-avatar-block" data-src="/images/content/screen-02-primary.png"
+                ></r-avatar>
               </a-col>
             </a-row>
           </template>
@@ -84,243 +76,118 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-steps></r-steps>
+      <r-shopper-steps></r-shopper-steps>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <a-card class="r-bg-primary">
+        <a-card-meta>
+          <template slot="description">
+            <div class="r-mv-24">
+              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+              <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
+                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+                    Why shop with Spazamall?
+                  </h3>
+                </a-col>
+                <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <h2 class="r-heading">
+                    Think you know shopping <span class="r-text-secondary">experience</span>?
+                  </h2>
+                </a-col>
+                <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <p class="r-text-normal">
+                    Spazamall is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
+                    hot food, household essentials and more.
+                  </p>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-button block class="r-btn-secondary"
+                            size="large"
+                            type="secondary"
+                            @click="onRegister"
+                  >
+                    Get started today!
+                  </a-button>
+                </a-col>
+              </a-row>
+                </a-col>
+              </a-row>
+            </div>
+          </template>
+        </a-card-meta>
+      </a-card>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
       <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-        <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-               :sm="{ span: 12 }"
-               :xs="{ span: 12 }"
+         <a-col v-for="(feature, index) in features"
+                :key="index"
+                :lg="{ span: 12 }" :md="{ span: 12 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-secondary-light">
-            <a-card-meta>
-              <template slot="description">
+           <a-card>
+             <a-card-meta>
+               <template slot="description">
                 <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 8 }" :md="{ span: 10 }"
+                  <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
                          :sm="{ span: 12 }"
                          :xs="{ span: 12 }"
                   >
-                    <r-avatar :dataSrc="'/images/content/22.png'" :size="90" class="r-avatar-auto"
+                    <r-avatar :dataSrc="feature.image" :size="150" class="r-avatar-auto"
                     ></r-avatar>
                   </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                  <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                      Do it
-                    </h4>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <h2 class="r-heading">
-                      Set your schedule
-                    </h2>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <p class="r-text-normal">
-                      Work part time or full time - any time.
-                      Set your own hours for a completely flexible schedule. We offer during operating hours: 8am-9pm.
-                    </p>
+                          <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                          <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+                            {{ feature.heading }}
+                          </h3>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                              <h3 class="r-heading">
+                                {{ feature.title }}
+                              </h3>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                              <h4 class="r-heading-light">
+                                {{ feature.content }}
+                              </h4>
+                            </a-col>
+                          </a-row>
                   </a-col>
                 </a-row>
-              </template>
-            </a-card-meta>
-          </a-card>
+               </template>
+             </a-card-meta>
+           </a-card>
         </a-col>
-        <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
+         <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                :sm="{ span: 12 }"
                :xs="{ span: 12 }"
         >
           <a-card class="r-bg-secondary-light">
-            <a-card-meta>
-              <template slot="description">
-                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 8 }" :md="{ span: 10 }"
-                         :sm="{ span: 12 }"
-                         :xs="{ span: 12 }"
-                  >
-                    <r-avatar :dataSrc="'/images/content/23.png'" :size="90" class="r-avatar-auto"
-                    ></r-avatar>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                      Shop it
-                    </h4>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <h2 class="r-heading">
-                      Get shopping requests
-                    </h2>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <p class="r-text-normal">
-                      Shop your go-to products from your favorite stores. That’s why we deliver from local
-                      and
-                      global retailers you love - like Adidas and more.
-                    </p>
-                  </a-col>
-                </a-row>
-              </template>
-            </a-card-meta>
-          </a-card>
-        </a-col>
-        <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-               :sm="{ span: 12 }"
-               :xs="{ span: 12 }"
-        >
-          <a-card class="r-bg-secondary-light">
-            <a-card-meta>
-              <template slot="description">
-                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 8 }" :md="{ span: 10 }"
-                         :sm="{ span: 12 }"
-                         :xs="{ span: 12 }"
-                  >
-                    <r-avatar :dataSrc="'/images/content/24.png'" :size="90" class="r-avatar-auto"
-                    ></r-avatar>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                      Deliver it
-                    </h4>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <h2 class="r-heading">
-                      Set new delivery record
-                    </h2>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <p class="r-text-normal">
-                      Get tips from other shoppers, attend launch parties, and get a free Spazamall membership and enjoy
-                      many discounts at favourite stores.
-                    </p>
-                  </a-col>
-                </a-row>
-              </template>
-            </a-card-meta>
-          </a-card>
-        </a-col>
-        <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-               :sm="{ span: 12 }"
-               :xs="{ span: 12 }"
-        >
-          <a-card class="r-bg-secondary-light">
-            <a-card-meta>
-              <template slot="description">
-                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 8 }" :md="{ span: 10 }"
-                         :sm="{ span: 12 }"
-                         :xs="{ span: 12 }"
-                  >
-                    <r-avatar :dataSrc="'/images/content/25.png'" :size="90" class="r-avatar-auto"
-                    ></r-avatar>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-
-                  >
-                    <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                      Earn it
-                    </h4>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <h2 class="r-heading">
-                      Earn as you shop
-                    </h2>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-
-                  >
-                    <p class="r-text-normal">
-                      Experienced shoppers make an average of R45/hr.
-                      * Paychecks are delivered every week on a set day.
-                    </p>
-                  </a-col>
-                </a-row>
-              </template>
-            </a-card-meta>
-          </a-card>
-        </a-col>
-        <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
-               :sm="{ span: 12 }"
-               :xs="{ span: 12 }"
-        >
-          <a-card class="r-bg-secondary-light">
-            <a-card-meta>
-              <template slot="description">
-                <div class="r-mv-24">
-                  <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
-                    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                        Why partner with Spazamall?
-                      </h4>
-                    </a-col>
-                    <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <h2 class="r-heading">
-                        Think you know shopping <span class="r-text-secondary">experience</span>?
-                      </h2>
-                    </a-col>
-                    <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <p class="r-text-normal">
-                        Spazamall is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
-                        hot food,
-                        household items and more.
-                      </p>
-                    </a-col>
-                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <a-button block class="r-btn-secondary"
-                                size="large"
-                                type="secondary"
-                                @click="onRegister"
-                      >
-                        Get started
-                      </a-button>
-                    </a-col>
-                  </a-row>
-                </div>
-              </template>
-            </a-card-meta>
-          </a-card>
-        </a-col>
-        <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-               :sm="{ span: 12 }"
-               :xs="{ span: 12 }"
-        >
-          <a-card>
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
@@ -401,13 +268,33 @@ export default {
         'Insulated cooler bag',
         'Knowledge of product selection',
         'Ability to lift 24+ pounds'
+      ],
+      features: [
+        {
+          heading: 'Shop It',
+          title: 'Set your shopping schedule',
+          content: 'Work part time or full time - any time. Set your own hours for a completely flexible schedule. We offer during operating hours: 8am-9pm.',
+          image: '/images/content/customer-01.svg'
+        },
+        {
+          heading: 'Deliver It',
+          title: 'Get nearby delivery requests',
+          content: 'Shop your go-to products from your favorite stores. That’s why we deliver from local and global retailers you love - like Adidas and more.',
+          image: '/images/content/customer-02.svg'
+        },
+        {
+          heading: 'Get Paid',
+          title: 'Earn more with every delivery',
+          content: 'Experienced shoppers make an average of R45/hr. * Paychecks are delivered every week on a set day.',
+          image: '/images/content/customer-03.svg'
+        }
       ]
     }
   },
   created () {
   },
   methods: {
-    onModal () {
+    onRegister () {
       const modal = {}
       modal.isVisible = true
       modal.isClosable = true

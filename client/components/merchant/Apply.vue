@@ -32,7 +32,7 @@
                 placeholder="Your full name"
                 size="large"
               >
-                <a-icon slot="prefix" type="user"/>
+                <a-icon slot="prefix" type="user" />
               </a-input>
             </a-form-item>
           </a-col>
@@ -47,7 +47,7 @@
                 placeholder="Your role number"
                 size="large"
               >
-                <a-icon slot="prefix" type="audit"/>
+                <a-icon slot="prefix" type="audit" />
               </a-input>
             </a-form-item>
           </a-col>
@@ -62,7 +62,7 @@
                 placeholder="Your phone number"
                 size="large"
               >
-                <a-icon slot="prefix" type="phone"/>
+                <a-icon slot="prefix" type="phone" />
               </a-input>
             </a-form-item>
           </a-col>
@@ -78,7 +78,7 @@
                 size="large"
                 type="email"
               >
-                <a-icon slot="prefix" type="mail"/>
+                <a-icon slot="prefix" type="mail" />
               </a-input>
             </a-form-item>
           </a-col>
@@ -94,7 +94,7 @@
                 size="large"
                 type="text"
               >
-                <a-icon slot="prefix" type="link"/>
+                <a-icon slot="prefix" type="link" />
               </a-input>
             </a-form-item>
           </a-col>
@@ -105,8 +105,8 @@
               label="Platform"
             >
               <a-select
-                :defaultValue="platforms[0]"
-                labelInValue
+                :default-value="platforms[0]"
+                label-in-value
                 size="large"
                 style="min-width: 100%;"
                 @change="onPlatform"
@@ -127,8 +127,8 @@
               label="Business industry"
             >
               <a-select
-                :defaultValue="industries[0]"
-                labelInValue
+                :default-value="industries[0]"
+                label-in-value
                 size="large"
                 style="min-width: 100%;"
                 @change="onIndustry"
@@ -154,7 +154,7 @@
                 size="large"
                 type="text"
               >
-                <a-icon slot="prefix" type="link"/>
+                <a-icon slot="prefix" type="link" />
               </a-input>
             </a-form-item>
           </a-col>
@@ -170,7 +170,7 @@
                 size="large"
                 type="text"
               >
-                <a-icon slot="prefix" type="dollar"/>
+                <a-icon slot="prefix" type="dollar" />
               </a-input>
             </a-form-item>
           </a-col>
@@ -181,8 +181,8 @@
               label="Business annual sales"
             >
               <a-select
-                :defaultValue="annual_sales_range[0]"
-                labelInValue
+                :default-value="annual_sales_range[0]"
+                label-in-value
                 size="large"
                 style="min-width: 100%;"
                 @change="onAnnualSales"
@@ -205,7 +205,7 @@
                    size="large"
                    type="textarea"
           >
-            <a-icon slot="prefix" type="user"/>
+            <a-icon slot="prefix" type="user" />
           </a-input>
         </a-form-item>
         <a-form-item class="r-mt-48">
@@ -213,8 +213,7 @@
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
                    :xs="{ span: 12 }"
                    class="r-text-left"
-            >
-            </a-col>
+            />
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
                    :xs="{ span: 12 }"
                    class="r-text-left"
@@ -348,10 +347,10 @@ const ANNUAL_SALES_RANGE = [
   }
 ]
 export default {
-  name: 'r-merchant-apply',
+  name: 'RMerchantApply',
   props: {
     maskClosable: { type: Boolean, required: false, default: false },
-    closable: { type: Boolean, required: false, default: false },
+    closable: { type: Boolean, required: false, default: false }
   },
   data () {
     return {
@@ -374,10 +373,10 @@ export default {
       redirectTo: ''
     }
   },
+  computed: {},
   mounted () {
     this.modal = this.$store.state.modal
   },
-  computed: {},
   methods: {
     onApply (event) {
       event.preventDefault()
@@ -389,26 +388,26 @@ export default {
           this.isProcessing = true
 
           console.log('Making request...', values)
-          let $this = this
+          const $this = this
 
-          values['industry'] = this.industry
-          values['platform'] = this.platform
-          values['annual_sales'] = this.annual_sales
+          values.industry = this.industry
+          values.platform = this.platform
+          values.annual_sales = this.annual_sales
 
-          let params = Object.assign({}, values)
+          const params = Object.assign({}, values)
 
           console.log('Request params...', params)
 
-          let path = '/seller/store'
+          const path = '/seller/store'
           HTTP.post(path, params)
-            .then(response => {
+            .then((response) => {
               if ((response.status == 422 || response.status == 500) && response.data.errors != undefined) {
                 $this.onError(response, $this)
               } else {
                 $this.onResponse(response, $this)
               }
             })
-            .catch(e => {
+            .catch((e) => {
               $this.isProcessing = false
               $this.hasError = true
               console.log('Errors', e)
@@ -428,18 +427,18 @@ export default {
       }, 3000)
     },
     onError (response, $this) {
-      let errors = response.data.errors
+      const errors = response.data.errors
 
       this.fields.forEach(function (field) {
         if (errors[field] != undefined) {
-          let value = $this.formApply.getFieldValue(field)
-          let fields = {}
+          const value = $this.formApply.getFieldValue(field)
+          const fields = {}
           fields[field] = {
-            'value': value,
+            value,
             'errors': [
               {
                 'notes': errors[field][0],
-                'field': field
+                field
               }
             ]
           }
@@ -461,7 +460,7 @@ export default {
     },
     onPlatform (platform) {
       this.platform = platform.key
-    },
-  },
+    }
+  }
 }
 </script>

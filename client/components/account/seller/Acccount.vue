@@ -1,181 +1,235 @@
 <template>
-  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-    <a-col :xs="{ span: 24 }">
-      <p class="r-text-light">
-        Please note you are required to provide accurate information to keep on our records. Click here
-        if you would like to read our privacy policy. We take the security of your information very seriously.
-      </p>
-    </a-col>
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }" class="gutter-row"
-    >
-      <a-form v-if="hasForm"
-              :form="form"
-              class="ant-form ant-form-vertical"
-              @submit="onPost"
+  <a-form v-if="hasForm"
+          :form="form"
+          class="ant-form ant-form-vertical"
+          @submit="onPost"
+  >
+    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+             :xs="{ span: 24 }" class="gutter-row"
       >
-        <a-row>
-          <a-col :xs="{ span: 24 }">
+        <a-card title="Seller Information">
+          <a-row :gutter="[24,0]">
+            <a-col :xs="{ span: 24 }">
+              <p class="r-text-light">
+                Please note you are required to provide accurate information to keep on our records. Click here
+                if you would like to read our privacy policy. We take the security of your information very seriously.
+              </p>
+            </a-col>
+            <a-col :xs="{ span: 24 }">
               <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                 <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
                        :xs="{ span: 12 }" class="gutter-row"
                 >
                   <a-form-item label="Country of Citizenship">
-                  <a-input
-                    v-decorator="['citizenship_country', { rules: [{ required: true, message: 'Please enter Country of Citizenship' }] }]"
-                    placeholder="Country of Citizenship"
-                    size="default"
-                  >
-                    <a-icon slot="prefix" type="user"/>
-                  </a-input>
+                    <a-select
+                      :defaultValue="1"
+                      labelInValue
+                      v-decorator="['citizenship_country', { rules: [{ required: true, message: 'Please enter Country of Citizenship' }] }]"
+                      placeholder="Country of Citizenship"
+                      size="default"
+                      style="min-width: 100%;"
+                      @change="onCitizenshipCountry"
+                    >
+                      <a-select-option v-for="(country, index) in countries"
+                                       :key="index"
+                                       :value="country.id"
+                      >
+                        <span class="r-sort-value">{{ country.name }}</span>
+                      </a-select-option>
+                    </a-select>
                   </a-form-item>
                 </a-col>
               </a-row>
-          </a-col>
-          <a-col :xs="{ span: 24 }">
-            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-form-item label="Country of Birth">
-                  <a-input
-                    v-decorator="['birth_country', { rules: [{ required: true, message: 'Please enter Country of Birth' }] }]"
-                    placeholder="Country of Birth"
-                    size="default"
-                  >
-                    <a-icon slot="prefix" type="user"/>
-                  </a-input>
-                </a-form-item>
-              </a-col>
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-form-item label="Date of Birth">
-                  <a-date-picker
-                    v-decorator="['birth_date', { rules: [{ required: true, message: 'Please enter Date of Birth' }] }]"
-                    :format="dateFormat"
-                    placeholder="Date of Birth"
-                    size="default"
-                  />
-                </a-form-item>
-              </a-col>
-            </a-row>
-          </a-col>
-          <a-col :xs="{ span: 24 }">
-            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                         :xs="{ span: 12 }" class="gutter-row"
-                  >
-                    <a-form-item label="Type of Identity">
-                      <a-select
-                        :defaultValue="identityTypes[0]"
-                        labelInValue
-                        size="default"
-                        style="min-width: 100%;"
-                        @change="onIdentityType"
+            </a-col>
+            <a-col :xs="{ span: 24 }">
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 12 }" class="gutter-row"
+                >
+                  <a-form-item label="Country of Birth">
+                    <a-select
+                      :defaultValue="1"
+                      labelInValue
+                      v-decorator="['birth_country', { rules: [{ required: true, message: 'Please enter Country of Birth' }] }]"
+                      placeholder="Country of Birth"
+                      size="default"
+                      style="min-width: 100%;"
+                      @change="onBirthCountry"
+                    >
+                      <a-select-option v-for="(country, index) in countries"
+                                       :key="index"
+                                       :value="country.id"
                       >
-                        <a-select-option v-for="(option, index) in identityTypes"
-                                         :key="index"
-                                         :value="option.key"
+                        <span class="r-sort-value">{{ country.name }}</span>
+                      </a-select-option>
+                    </a-select>
+                  </a-form-item>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 12 }" class="gutter-row"
+                >
+                  <a-form-item label="Date of Birth">
+                    <a-date-picker
+                      v-decorator="['birth_date', { rules: [{ required: true, message: 'Please enter Date of Birth' }] }]"
+                      :format="dateFormat"
+                      placeholder="Date of Birth"
+                      size="default"
+                    />
+                  </a-form-item>
+                </a-col>
+              </a-row>
+            </a-col>
+            <a-col :xs="{ span: 24 }">
+              <a-row :gutter="[24,0]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 12 }" class="gutter-row"
+                >
+                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                    <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                           :xs="{ span: 12 }" class="gutter-row"
+                    >
+                      <a-form-item label="Type of Identity">
+                        <a-select
+                          :defaultValue="identityTypes[0]"
+                          labelInValue
+                          size="default"
+                          style="min-width: 100%;"
+                          @change="onIdentityType"
                         >
-                          <span class="r-sort-value">{{ option.label }}</span>
-                        </a-select-option>
-                      </a-select>
-                    </a-form-item>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                         :xs="{ span: 12 }" class="gutter-row"
-                  >
-                    <a-form-item label="Number">
-                      <a-input
-                        v-decorator="['identity_number', { rules: [{ required: true, message: 'Please enter Identity Number' }] }]"
-                        placeholder="Identity Number"
-                        size="default"
-                        type="text"
+                          <a-select-option v-for="(option, index) in identityTypes"
+                                           :key="index"
+                                           :value="option.key"
+                          >
+                            <span class="r-sort-value">{{ option.label }}</span>
+                          </a-select-option>
+                        </a-select>
+                      </a-form-item>
+                    </a-col>
+                    <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                           :xs="{ span: 12 }" class="gutter-row"
+                    >
+                      <a-form-item label="Number">
+                        <a-input
+                          v-decorator="['identity_number', { rules: [{ required: true, message: 'Please enter Identity Number' }] }]"
+                          placeholder="Identity Number"
+                          size="default"
+                          type="text"
+                        >
+                          <a-icon slot="prefix" type="user"/>
+                        </a-input>
+                      </a-form-item>
+                    </a-col>
+                  </a-row>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                       :xs="{ span: 12 }" class="gutter-row"
+                >
+                  <a-form-item label="Date of Expiry">
+                    <a-date-picker
+                      v-decorator="['document_expire_at', { rules: [{ required: true, message: 'Please enter Date of Expiry' }] }]"
+                      :format="dateFormat"
+                      placeholder="Date of Expiry"
+                      size="default"
+                    />
+                  </a-form-item>
+                </a-col>
+                <a-col :xs="{ span: 12 }">
+                  <a-form-item label="Country of Issue">
+                    <a-select
+                      :defaultValue="1"
+                      labelInValue
+                      v-decorator="['issuing_country', { rules: [{ required: true, message: 'Please enter Country of Issue' }] }]"
+                      placeholder="Country of Issue"
+                      size="default"
+                      style="min-width: 100%;"
+                      @change="onIssuingCountry"
+                    >
+                      <a-select-option v-for="(country, index) in countries"
+                                       :key="index"
+                                       :value="country.id"
                       >
-                        <a-icon slot="prefix" type="user"/>
-                      </a-input>
-                    </a-form-item>
-                  </a-col>
-                </a-row>
-              </a-col>
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-form-item label="Date of Expiry">
-                  <a-date-picker
-                    v-decorator="['document_expire_at', { rules: [{ required: true, message: 'Please enter Date of Expiry' }] }]"
-                    :format="dateFormat"
-                    placeholder="Date of Expiry"
-                    size="default"
-                  />
-                </a-form-item>
-              </a-col>
-            </a-row>
+                        <span class="r-sort-value">{{ country.name }}</span>
+                      </a-select-option>
+                    </a-select>
+                  </a-form-item>
+                </a-col>
+              </a-row>
+            </a-col>
+            <a-col :xs="{ span: 12 }">
+              <a-form-item label="Mobile Number">
+                <a-input
+                  v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your Mobile Number for verification' }] }]"
+                  placeholder="Your Mobile Number"
+                  size="default"
+                  type="text"
+                >
+                  <a-icon slot="prefix" type="mail"/>
+                </a-input>
+              </a-form-item>
+            </a-col>
+          </a-row>
+        </a-card>
+      </a-col>
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+             :xs="{ span: 24 }" class="gutter-row"
+      >
+        <a-card title="Business Address">
+          <a-row :gutter="[24,24]">
+            <a-col :xs="{ span: 24 }">
+              <r-account-address-list empty-title="Your Business Address is currently not set."></r-account-address-list>
+            </a-col>
+            <a-col :xs="{ span: 24 }">
+              <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                <a-col v-if="false" :lg="{ span: 8 }" :sm="{ span: 8 }"
+                       :xs="{ span: 12 }" class="gutter-row"
+                >
+                  <a-button block class="r-btn-bordered-primary" html-type="submit" size="small"
+                            type="secondary"
+                  >
+                    View All Addresses
+                  </a-button>
+                </a-col>
+                <a-col :lg="{ span: 8 }" :sm="{ span: 8 }"
+                       :xs="{ span: 12 }" class="gutter-row"
+                >
+                  <r-account-address-add></r-account-address-add>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </a-card>
+      </a-col>
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+             class="gutter-row"
+      >
+        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+          <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                 :xs="{ span: 12 }" class="gutter-row"
+          >
+            <a-button block class="r-btn-grey"
+                      size="large"
+                      type="secondary"
+                      @click="onPrevStep"
+            >
+              Previous
+            </a-button>
           </a-col>
-          <a-col :xs="{ span: 12 }">
-            <a-form-item label="Country of Issue">
-              <a-input
-                v-decorator="['issuing_country', { rules: [{ required: true, message: 'Please enter Country of Issue' }] }]"
-                placeholder="Country of Issue"
-                size="default"
-                type="text"
-              >
-                <a-icon slot="prefix" type="user"/>
-              </a-input>
-            </a-form-item>
-          </a-col>
-          <a-col :xs="{ span: 24 }">
-            <r-account-address-modal></r-account-address-modal>
-          </a-col>
-          <a-col :xs="{ span: 24 }">
-            <a-form-item label="Mobile Number">
-              <a-input
-                v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your Mobile Number for verification' }] }]"
-                placeholder="Your primary account phone"
-                size="default"
-                type="text"
-              >
-                <a-icon slot="prefix" type="mail"/>
-              </a-input>
-            </a-form-item>
-          </a-col>
-          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+          <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
                  class="gutter-row"
           >
-            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-button block class="r-btn-grey"
-                          size="default"
-                          type="secondary"
-                          @click="onPrevStep"
-                >
-                  Previous
-                </a-button>
-              </a-col>
-              <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
-                     class="gutter-row"
-              >
-                <a-button block class="r-btn-secondary" html-type="submit" size="default"
-                          type="secondary"
-                >
-                  Next
-                </a-button>
-              </a-col>
-            </a-row>
+            <a-button block class="r-btn-secondary" html-type="submit" size="large"
+                      type="secondary"
+            >
+              Next
+            </a-button>
           </a-col>
         </a-row>
-      </a-form>
-      <r-result v-if="hasResult"></r-result>
-      <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
-    </a-col>
-  </a-row>
+      </a-col>
+    </a-row>
+    <r-result v-if="hasResult"></r-result>
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
+  </a-form>
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -218,7 +272,9 @@ export default {
     isValid: 'form/isValid',
     hasForm: 'base/hasForm',
     result: 'form/result',
-    hasResult: 'form/hasResult'
+    hasResult: 'form/hasResult',
+    countries: 'base/countries',
+    hasCountries: 'base/hasCountries'
   }),
   created () {
     this.payload()
@@ -292,6 +348,12 @@ export default {
     },
     onUserType (e) {
       this.userType = e.target.value
+    },
+    onBirthCountry () {
+    },
+    onCitizenshipCountry () {
+    },
+    onIssuingCountry () {
     },
     onIdentityType (identityType) {
       this.selectedIdentityType = identityType

@@ -25,7 +25,7 @@
 body,
 html {
     font-size: 15px;
-    background: #FAFBFC url(/images/icon_pattern_bg.svg);
+    background: #F3F6F9;
     background-repeat: repeat;
     height: 100%;
 }
@@ -63,6 +63,7 @@ h3 {
 
 h1, h2, h3, h4, h5, h6 {
     color: @black;
+    font-family: 'Avenir', 'Avenir Book', Inter, 'Calibre', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .r-text-red{
@@ -121,7 +122,7 @@ a.r-text-logo {
     .anticon {
         color: @secondary-color;
         font-size: 16px;
-        background: #FBD13E30;
+        background: #FBF2D3;
         border-radius: 100%;
         height: 30px;
         width: 30px;
@@ -147,14 +148,6 @@ a.r-text-logo {
     font-family: 'Avenir', 'Avenir Book', Inter, 'Calibre', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
     color: #3C444CBD;
-}
-
-.ant-layout {
-    background: transparent !important;
-}
-
-.r-bg-primary {
-    background-color: #FBD13E99;
 }
 
 .r-bg-white {
@@ -372,7 +365,7 @@ a.r-text-logo {
 }
 
 .r-layout-bottom {
-    background: #FAFBFC;
+    background: #F3F6F9;
     height: 63px !important;
     padding: 12px !important;
     margin-bottom: 0;
@@ -916,7 +909,7 @@ x {
         text-align: left;
         padding: 0 12px;
         color: @secondary-color;
-        background: #e7f2fd;
+        background: #E3EEFD;
         border-radius: 6px;
     }
 }
@@ -1223,19 +1216,19 @@ x {
 
 .r-btn-primary {
     background: @primary-color !important;
-    color: @white;
+    color: @secondary-color;
     border-color: @primary-color !important;
     font-weight: 600;
     opacity: 1;
 
     &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #FBD13E;
+        background: @secondary-color;
         opacity: 1;
-        border-color: #FBD13E;
+        border-color: @secondary-color;
     }
 
     &:focus {
-        background: @secondary-color !important;
+        background: @secondary-color;
         opacity: 0.9;
         border-color: @secondary-color;
     }
@@ -1248,7 +1241,7 @@ x {
 
     background: @secondary-color;
     color: @white;
-    border-color: rgba(255, 255, 255, 0.045);
+    border-color: @white;
     opacity: 1;
 
     &:hover {
@@ -1474,7 +1467,7 @@ x {
             border-bottom: 1px solid transparent !important;
 
             &.ant-collapse-item-active {
-                background: #FAFBFC;
+                background: #F3F6F9;
             }
         }
     }
@@ -1697,7 +1690,7 @@ xxl	≥1600px, could be a span value or an object containing above props
             color: @black;
             margin-right: 6px;
             background: #FFFFFF;
-            border: 1px solid #FAFBFC;
+            border: 1px solid #F3F6F9;
 
             .anticon {
                 margin-right: 0;
@@ -1941,63 +1934,63 @@ xxl	≥1600px, could be a span value or an object containing above props
 
 
 h1.r-heading {
-    font-weight: 800;
+    font-weight: 900;
     @media (min-width: 768px) {
-        font-size: 36px;
-        line-height: 42px;
+        font-size: 42px;
+        line-height: 54px;
         margin: 0;
         letter-spacing: -0.99px;
     }
 
     @media (max-width: 768px) {
         font-weight: 700;
-        font-size: 36px;
-        line-height: 42px;
+        font-size: 39px;
+        line-height: 48px;
         margin: 0;
     }
 }
 
 h2.r-heading {
     font-weight: 800;
-    font-size: 27px;
+    font-size: 33px;
     margin: 0;
-    line-height: 36px;
+    line-height: 42px;
 
     @media (max-width: 768px) {
-        font-size: 27px;
+        font-size: 30px;
         line-height: 36px;
     }
 }
 
 h2.r-heading-light {
     font-weight: 300;
-    line-height: 30px;
-    font-size: 27px;
+    line-height: 42px;
+    font-size: 36px;
     margin-top: 0;
 
     @media (max-width: 768px) {
         font-weight: 200;
-        font-size: 27px;
-        line-height: 30px;
+        font-size: 30px;
+        line-height: 39px;
     }
 }
 
 h3.r-heading-light {
     font-weight: 300;
-    line-height: 27px;
-    font-size: 24px;
+    line-height: 36px;
+    font-size: 30px;
     margin-bottom: 0;
 
     @media (min-width: 768px) {
-        font-size: 21px;
-        line-height: 24px;
+        font-size: 27px;
+        line-height: 33px;
     }
 }
 
 h3.r-heading {
-    font-weight: 600;
-    font-size: 21px;
-    line-height: 27px;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 33px;
     margin: 0;
 
     &.r-text-capitalize {
@@ -2045,6 +2038,7 @@ h3.r-heading {
 
 h4.r-heading {
     font-size: 18px;
+    line-height: 21px;
     font-weight: 600;
     margin: 0;
 }
@@ -2059,6 +2053,7 @@ label {
 
 h4.r-heading-light {
     font-size: 18px;
+    line-height: 21px;
     font-weight: 300;
     margin: 0;
 
@@ -3585,7 +3580,7 @@ h4.r-heading-light {
                 transform: translateY(-50%);
                 color: @black;
                 fill: @secondary-color;
-                background: #FAFBFC;
+                background: #F3F6F9;
 
                 > * {
                     line-height: 1;
@@ -3653,7 +3648,7 @@ h4.r-heading-light {
                 right: 24px;
                 left: auto;
                 font-size: 15px !important;
-                background: #FAFBFC;
+                background: #F3F6F9;
                 height: 30px;
                 width: 30px;
                 line-height: 36px;
@@ -3702,7 +3697,7 @@ h4.r-heading-light {
                     right: 0;
                     left: auto;
                     font-size: 15px !important;
-                    background: #FAFBFC;
+                    background: #F3F6F9;
                     height: 30px;
                     width: 30px;
                     line-height: 36px;
@@ -3775,7 +3770,7 @@ h4.r-heading-light {
             left: 0;
             background-repeat: no-repeat;
             background-position: center;
-            background-color: #FAFBFC;
+            background-color: #F3F6F9;
             height: 30px;
             width: 30px;
             line-height: 36px;
@@ -3984,7 +3979,7 @@ h4.r-heading-light {
 
 .r-page-art-primary {
     background-image: url(/images/art-primary-02.svg);
-    background-color: #f7f3dc;
+    background-color: #FBF2D3;
 }
 
 .r-page-header-photo {
@@ -4175,7 +4170,7 @@ h4.r-heading-light {
             }
 
             .ant-tabs-nav {
-                background: #0B85EA15;
+                background: #E3EEFD;
                 border-radius: @border-radius-base;
 
                 .ant-tabs-tab {
@@ -4836,7 +4831,7 @@ h4.r-heading-light {
     border-radius: @border-radius-base;
     overflow: hidden;
     box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
-    background-color: #FAFBFC;
+    background-color: #F3F6F9;
 }
 
 .r-store-cover {
@@ -5287,7 +5282,7 @@ h4.r-heading-light {
 }
 
 .r-art-grey {
-    background-color: #FAFBFC;
+    background-color: #F3F6F9;
     background-repeat: repeat;
     padding: 0 24px 24px;
     @media (max-width: 768px) {
@@ -5489,7 +5484,7 @@ h4.r-heading-light {
     padding: 12px;
 
     &:hover {
-        background: #FAFBFC;
+        background: #F3F6F9;
         color: @secondary-color;
     }
 }
@@ -5818,7 +5813,7 @@ h4.r-heading-light {
             &.ant-steps-item-process,
             &.ant-steps-item-finish {
                 color: @secondary-color;
-                background: #e7f2fd;
+                background: #E3EEFD;
 
                 border-color: @secondary-color;
 
@@ -6189,18 +6184,20 @@ h4.r-heading-light {
 }
 
 .r-bg-primary-light {
-    background: #f7f3dc;
+    background: #FBF2D3;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_secondary.svg) repeat;
+        background: transparent url(/images/icon_pattern_secondary_large.svg) no-repeat;
+        background-size: 65%;
     }
 }
 
 .r-bg-secondary-light {
-    background: #e7f2fd;
+    background: #E3EEFD;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_primary.svg) repeat;
+        background: transparent url(/images/icon_pattern_primary_large.svg) no-repeat;
+        background-size: 65%;
     }
 }
 
@@ -6212,8 +6209,26 @@ h4.r-heading-light {
     }
 }
 
+.r-bg-primary {
+    background: @primary-color url(/images/icon_pattern_secondary_large.svg) no-repeat;
+
+    .ant-card-body {
+        background: none;
+    }
+
+    p.r-text-normal,
+    h3,
+    h4 {
+        color: @secondary-color;
+    }
+    h1,
+    h2{
+        color: @secondary-color;
+    }
+}
+
 .r-bg-secondary {
-    background: linear-gradient(225deg, @secondary-color, @secondary-color);
+    background: @secondary-color url(/images/icon_pattern_primary_large.svg) repeat;
 
     .ant-card-body {
         background: none;
@@ -6899,8 +6914,9 @@ h4.r-heading-light {
     }
 }
 
-.ant-input {
-    background: #FFFFFF;
+.ant-input,
+.ant-select-selection{
+    background: #F3F6F9;
 }
 
 
@@ -6957,7 +6973,7 @@ h4.r-heading-light {
         }
 
         .r-search-item-avatar {
-            background: #FAFBFC;
+            background: #F3F6F9;
             border-radius: @border-radius-base;
             overflow: hidden;
             position: absolute;
@@ -7008,7 +7024,7 @@ h4.r-heading-light {
 .ant-avatar-icon {
     font-size: 15px;
     color: @secondary-color;
-    background: #FAFBFC;
+    background: #F3F6F9;
     box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
 }
 
@@ -7026,7 +7042,7 @@ a:hover {
     .ant-avatar-icon {
         color: @black;
         margin-right: 6px;
-        background: #FAFBFC;
+        background: #F3F6F9;
         box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
     }
 

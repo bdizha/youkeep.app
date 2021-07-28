@@ -6,6 +6,8 @@ const state = () => ({
   store: {},
   hasStore: false,
   stores: { data: [] },
+  countries: [],
+  hasCountries: false,
   faqs: [],
   faq: { data: [] },
   category: {},
@@ -91,8 +93,10 @@ const getters = {
   hasStore: state => state.hasStore,
   stores: state => state.stores,
   faqs: state => state.faqs,
+  countries: state => state.countries,
   hasStores: state => state.hasStores,
   hasFaqs: state => state.hasFaqs,
+  hasCountries: state => state.hasCountries,
   menuCategory: state => state.menuCategory,
   hasMenuCategory: state => state.hasMenuCategory,
   category: state => state.category,
@@ -155,6 +159,10 @@ const mutations = {
   setFaqs (state, faqs) {
     state.faqs = faqs
     state.hasFaqs = faqs !== undefined && faqs.length > 0
+  },
+  setCountries (state, countries) {
+    state.countries = countries
+    state.hasCountries = countries !== undefined && countries.length > 0
   },
   setMenuCategory (state, category) {
     state.menuCategory = category
@@ -450,6 +458,13 @@ const actions = {
 
       commit('setFaqs', faqs)
       commit('setProcess', { key: 'isTray', value: false })
+    })
+  },
+  async onCountries ({ dispatch, commit }, payload) {
+    await axios.post('/countries', payload).then(({ data }) => {
+      const countries = data
+
+      commit('setCountries', countries)
     })
   },
   async onReviews ({ dispatch, commit, state }, payload) {

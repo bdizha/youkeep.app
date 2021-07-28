@@ -18,16 +18,16 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <h4 class="r-heading-light r-text-secondary r-text-uppercase r-text-primary">
-                      Meet our
-                    </h4>
+                    <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+                     For Merchants
+                    </h3>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
                     <h1 class="r-heading">
-                      Powerful marketplace to experience shopping better.
+                      Enable a better shopping experience to your customers
                     </h1>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -115,7 +115,7 @@
           <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                  class="r-text-center"
           >
-            <r-tabs tab="1"></r-tabs>
+            <r-merchant-hiw></r-merchant-hiw>
           </a-col>
         </a-row>
       </div>

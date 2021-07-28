@@ -1,8 +1,6 @@
 <template>
   <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-           style="background: #FFFFFF;"
-    >
+    <a-col class="r-bg-primary" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <div class="r-mv-48 r-ph-24">
         <a-row :gutter="[96,96]" align="middle" justify="start" type="flex">
           <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -68,7 +66,7 @@
             :sm="{ span: 24 }"
             :xs="{ span: 24 }"
           >
-            <r-avatar :size="450" class="r-avatar-block" data-src="/images/content/hero-02.png"
+            <r-avatar :size="450" class="r-avatar-block" data-src="/images/content/screen-02-primary.png"
             ></r-avatar>
           </a-col>
         </a-row>
@@ -115,7 +113,7 @@
           <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                  class="r-text-center"
           >
-            <r-tabs tab="2"></r-tabs>
+            <r-shopper-hiw></r-shopper-hiw>
           </a-col>
         </a-row>
       </div>
@@ -125,7 +123,7 @@
 <script>
 
 export default {
-  name: 'r-hiw',
+  name: 'r-shopper-hiwsd',
   props: {},
   data () {
     return {}

@@ -10,11 +10,11 @@ const state = () => ({
   fields: [],
   processes: {
     isRunning: false,
-    isSuccess: false,
+    isSuccess: false
   },
   token: null,
   isLoggedIn: false,
-  errors: [],
+  errors: []
 })
 
 // getters
@@ -75,11 +75,11 @@ const actions = {
   async onPost ({ commit, dispatch, state }, payload) {
     console.log('response: onPost', payload)
 
-    let form = payload.form
-    let fields = payload.fields
-    let current = payload.current
-    let hasUser = payload.hasUser
-    let canRedirect = payload.canRedirect
+    const form = payload.form
+    const fields = payload.fields
+    const current = payload.current
+    const hasUser = payload.hasUser
+    const canRedirect = payload.canRedirect
 
     commit('setCurrent', current)
     commit('setFields', fields)
@@ -87,7 +87,7 @@ const actions = {
 
     await dispatch('form/onPost', payload, { root: true }).then(({ data }) => {
       if (hasUser === true) {
-        let user = data.user
+        const user = data.user
         commit('setUser', user)
 
         console.log('response: after user::', state.user)
@@ -96,7 +96,7 @@ const actions = {
 
       if (canRedirect) {
         setTimeout(() => {
-          dispatch('onRoute', state.redirectTo, { root: true }).catch(error => {
+          dispatch('onRoute', state.redirectTo, { root: true }).catch((error) => {
           })
         }, 4500)
       }
@@ -108,14 +108,13 @@ const actions = {
     try {
       console.log(payload, 'onUser >>>> data')
 
-      let meta = payload.meta
+      const meta = payload.meta
       store.dispatch('auth/onRedirect', to.path)
 
       // only send to the server when not logged in
       if (!state.isLoggedIn) {
-
         await axios.get('/user').then(({ data }) => {
-          let user = data.user
+          const user = data.user
           commit('setUser', user)
           commit('setIsLogged', user !== undefined && user !== null)
 
@@ -132,7 +131,6 @@ const actions = {
           }
         })
       }
-
     } catch (e) {
       Cookies.remove('token')
       Cookies.remove('user')
@@ -155,7 +153,7 @@ const actions = {
         setTimeout(() => {
           dispatch('base/onProcess', { key: 'isRunning', value: false }, { root: true })
 
-          let drawer = {
+          const drawer = {
             current: null,
             isVisible: false
           }
@@ -196,16 +194,16 @@ const actions = {
     commit('setProcess', payload)
   },
   async onForm ({ dispatch, commit, state }, payload) {
-    let form = payload.form
-    let fields = payload.fields
+    const form = payload.form
+    const fields = payload.fields
 
     console.log('response: onPost state.user::', state.user)
     console.log('response: onPost fields::', fields)
 
-    let mapFields = {}
+    const mapFields = {}
     fields.forEach(function (field) {
       mapFields[field] = form.createFormField({
-        value: state.user[field],
+        value: state.user[field]
       })
     })
 

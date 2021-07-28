@@ -73,9 +73,12 @@ export default {
     isRaised: 'base/isRaised',
     search: 'base/search'
   }),
-  created () {
-    console.log('How many stores have we got?', this.stores.length)
-    this.onStores()
+  async created () {
+    await this.onCountries()
+    console.log('Fetching countries >>>> ')
+
+    await this.onStores()
+    console.log('Fetching stores >>>> ')
   },
   methods: {
     onModalClose () {
@@ -111,6 +114,13 @@ export default {
       }
 
       await this.$store.dispatch('base/onStores', payload)
+    },
+    async onCountries () {
+      const payload = {
+        limit: null
+      }
+
+      await this.$store.dispatch('base/onCountries', payload)
     }
   }
 }

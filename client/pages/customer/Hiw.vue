@@ -27,7 +27,7 @@
                          :xs="{ span: 24 }"
                   >
                     <h1 class="r-heading">
-                      Powerful marketplace to experience shopping better.
+                      Powerful marketplace for your online shop
                     </h1>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -69,7 +69,7 @@
             :sm="{ span: 24 }"
             :xs="{ span: 24 }"
           >
-            <r-avatar :size="450" class="r-avatar-auto" data-src="/images/content/32.png"
+            <r-avatar :size="450" class="r-avatar-auto" data-src="/images/content/customer-01.png"
             ></r-avatar>
           </a-col>
         </a-row>
@@ -116,7 +116,7 @@
           <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                  class="r-text-center"
           >
-            <r-tabs tab="3"></r-tabs>
+            <r-shopper-hiw></r-shopper-hiw>
           </a-col>
         </a-row>
       </div>

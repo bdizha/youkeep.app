@@ -1,6 +1,6 @@
 <template>
   <a-row justify="end" type="flex">
-    <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 8 }" :xs="{ span: 12 }">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-button block
                 class="r-btn-secondary"
                 html-type="button"
@@ -15,6 +15,7 @@
 </template>
 <script>
 export default {
+  name: 'r-account-card-add',
   props: {},
   data () {
     return {
