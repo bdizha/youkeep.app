@@ -63,7 +63,7 @@ h3 {
 
 h1, h2, h3, h4, h5, h6 {
     color: @black;
-    font-family: 'Avenir', 'Avenir Book', Inter, 'Calibre', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: @font-family;
 }
 
 .r-text-red{
@@ -136,8 +136,33 @@ a.r-text-logo {
     font-weight: 300;
 }
 
+h1.r-text-x-large{
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 48px;
+    padding: 0;
+    margin: 0;
+}
+
+.r-text-large{
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.r-text-medium{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
 .r-text-small {
     font-size: 15px;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
 }
 
 .r-text-strike {
@@ -205,8 +230,8 @@ a.r-text-logo {
 
             &.ant-select {
                 .ant-input {
-                    background: rgba(255, 255, 255, 0.3);;
-                    border-color: #3B9CFF;
+                    background: rgba(0, 0, 0, 0.09);
+                    border-color: @primary-color;
                     color: @black;
                     height: 36px;
 
@@ -217,10 +242,10 @@ a.r-text-logo {
 
                     &:hover,
                     &:focus {
-                        background: rgba(255, 255, 255, 0.999);
+                        background: @white;
                         &.ant-select {
                             .ant-input {
-                                background: rgba(255, 255, 255, 0.999);
+                                background: @white;
                                 border-color: #FBD13E;
                                 color: @white;
                             }
@@ -256,8 +281,54 @@ a.r-text-logo {
             }
         }
 
+        .r-layout-menu{
+            .r-cart {
+                color: @secondary-color;
+                .r-shopping-cart {
+                    background-image: url("/assets/icon_cart_primary.svg");
+                }
+
+                .r-cart-count {
+                    color: @secondary-color;
+                }
+
+                &.r-cart__active {
+                    .r-cart-count {
+                        color: @white;
+                    }
+
+                    .r-shopping-cart {
+                        background-image: url("/assets/icon_cart_secondary.svg");
+                    }
+                }
+            }
+        }
+
         &.r-header__dark{
-            background: @black;
+            .r-layout-menu{
+                .r-cart {
+                    color: @secondary-color;
+                    .r-shopping-cart {
+                        background-image: url("/assets/icon_cart_white.svg");
+                    }
+
+                    .r-cart-count {
+                        color: @secondary-color;
+                    }
+
+                    &.r-cart__active {
+                        .r-cart-count {
+                            color: @secondary-color;
+                        }
+
+                        .r-shopping-cart {
+                            background-image: url("/assets/icon_cart_primary.svg");
+                        }
+                    }
+                }
+            }
+
+            background: @secondary-color;
             .ant-menu-submenu-title {
                 color: @white;
             }
@@ -291,8 +362,8 @@ a.r-text-logo {
 
                 &.ant-select {
                     .ant-input {
-                        background: rgba(255, 255, 255, 0.3);;
-                        border-color: #3B9CFF;
+                        background: rgba(0, 0, 0, 0.09);
+                        border-color: @secondary-color;
                         color: @white;
                         height: 36px;
 
@@ -308,7 +379,7 @@ a.r-text-logo {
                             &.ant-select {
                                 .ant-input {
                                     background: rgba(255, 255, 255, 0.999);
-                                    border-color: #FBD13E;
+                                    border-color: @secondary-color;
                                     color: @black;
                                 }
                             }
@@ -1222,12 +1293,14 @@ x {
     opacity: 1;
 
     &:hover {
+        color: #FFFFFF;
         background: @secondary-color;
         opacity: 1;
         border-color: @secondary-color;
     }
 
     &:focus {
+        color: #FFFFFF;
         background: @secondary-color;
         opacity: 0.9;
         border-color: @secondary-color;
@@ -1305,13 +1378,13 @@ x {
     opacity: 1;
 
     &:hover {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), @secondary-color;
-        opacity: 1;
+        color: @primary-color;
+        background: @secondary-color;
         border-color: @secondary-color;
     }
 
     &:focus {
-        opacity: 0.9;
+        color: @primary-color;
         border-color: #FBD13E;
         background: #FBD13E !important;
     }
@@ -1736,7 +1809,7 @@ xxl	≥1600px, could be a span value or an object containing above props
         top: 0px;
         padding: 6px;
         border-radius: 100%;
-        background: #fbf0c8;
+        background: @primary-color;
         border-color: @secondary-color;
         color: @secondary-color;
     }
@@ -1744,6 +1817,14 @@ xxl	≥1600px, could be a span value or an object containing above props
         font-size: 15px;
         min-height: 30px;
         display: block;
+    }
+}
+
+.r-bg-primary-light{
+    .r-checked-item-icon{
+        background: @secondary-color;
+        border-color: @primary-color;
+        color: @primary-color;
     }
 }
 
@@ -1937,7 +2018,7 @@ h1.r-heading {
     font-weight: 900;
     @media (min-width: 768px) {
         font-size: 42px;
-        line-height: 54px;
+        line-height: 48px;
         margin: 0;
         letter-spacing: -0.99px;
     }
@@ -1945,7 +2026,7 @@ h1.r-heading {
     @media (max-width: 768px) {
         font-weight: 700;
         font-size: 39px;
-        line-height: 48px;
+        line-height: 45px;
         margin: 0;
     }
 }
@@ -1964,33 +2045,33 @@ h2.r-heading {
 
 h2.r-heading-light {
     font-weight: 300;
-    line-height: 42px;
+    line-height: 36px;
     font-size: 36px;
     margin-top: 0;
 
     @media (max-width: 768px) {
         font-weight: 200;
-        font-size: 30px;
+        font-size: 33px;
         line-height: 39px;
     }
 }
 
 h3.r-heading-light {
-    font-weight: 300;
-    line-height: 36px;
-    font-size: 30px;
+    font-weight: 400;
+    line-height: 33px;
+    font-size: 27px;
     margin-bottom: 0;
 
     @media (min-width: 768px) {
-        font-size: 27px;
-        line-height: 33px;
+        font-size: 24px;
+        line-height: 27px;
     }
 }
 
 h3.r-heading {
     font-weight: 700;
-    font-size: 27px;
-    line-height: 33px;
+    font-size: 24px;
+    line-height: 27px;
     margin: 0;
 
     &.r-text-capitalize {
@@ -2052,13 +2133,14 @@ label {
 }
 
 h4.r-heading-light {
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 21px;
+    line-height: 24px;
     font-weight: 300;
     margin: 0;
 
     &.r-heading-small {
-        font-size: 15px;
+        font-size: 18px;
+        line-height: 21px;
     }
 }
 
@@ -3246,14 +3328,14 @@ h4.r-heading-light {
 }
 
 .r-btn-white-bordered {
-    border: 1px solid #FFFFFF !important;
-    color: #FFFFFF !important;
+    border: 1px solid @primary-color !important;
+    color: @primary-color !important;
     background: transparent !important;
 
     &:hover {
-        border: 1px solid #FFFFFF !important;
-        color: #FBD13E !important;
-        background: @white !important;
+        border: 1px solid @white !important;
+        color: @white !important;
+        background: @primary-color !important;
     }
 }
 
@@ -3270,15 +3352,15 @@ h4.r-heading-light {
 }
 
 .r-btn-white {
-    border: 1px solid #FFFFFF !important;
-    color: #ECECEC !important;
-    background: transparent !important;
-}
-
-.r-btn-secondary {
     border: 1px solid @secondary-color !important;
-    color: #FFFFFF !important;
-    background: @secondary-color !important;
+    color: @secondary-color !important;
+    background: @white !important;
+
+    &:hover {
+        border: 1px solid @secondary-color !important;
+        color: @secondary-color !important;
+        background: @primary-color !important;
+    }
 }
 
 .r-btn-bordered {
@@ -3479,6 +3561,7 @@ h4.r-heading-light {
     }
 
     &.r-avatar-auto {
+        display: inline-block;
         background: none;
         width: auto !important;
         position: relative;
@@ -4166,7 +4249,7 @@ h4.r-heading-light {
 
             .ant-tabs-tab-active {
                 background: @primary-color !important;
-                color: @white;
+                color: @secondary-color;
             }
 
             .ant-tabs-nav {
@@ -6187,7 +6270,7 @@ h4.r-heading-light {
     background: #FBF2D3;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_secondary_large.svg) no-repeat;
+        background: transparent url(/images/icon_pattern_primary_large.svg) no-repeat;
         background-size: 65%;
     }
 }
@@ -6196,31 +6279,31 @@ h4.r-heading-light {
     background: #E3EEFD;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_primary_large.svg) no-repeat;
+        background: transparent url(/images/icon_pattern_secondary_large.svg) no-repeat;
         background-size: 65%;
     }
 }
 
 .r-bg-grey-light {
-    background: linear-gradient(225deg, #FFFFFF15, #d1e7fd);
+    background: @gray;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_white.svg) repeat;
+        background: transparent url(/images/icon_pattern_light_large.svg) no-repeat;
+        background-size: 65%;
     }
 }
 
 .r-bg-primary {
-    background: @primary-color url(/images/icon_pattern_secondary_large.svg) no-repeat;
+    background: @primary-color url(/images/icon_pattern_dark_large.svg) no-repeat;
 
     .ant-card-body {
         background: none;
     }
 
-    p.r-text-normal,
+    .r-text-normal,
+    .r-text-medium,
     h3,
-    h4 {
-        color: @secondary-color;
-    }
+    h4,
     h1,
     h2{
         color: @secondary-color;
@@ -6228,20 +6311,19 @@ h4.r-heading-light {
 }
 
 .r-bg-secondary {
-    background: @secondary-color url(/images/icon_pattern_primary_large.svg) repeat;
+    background: @secondary-color url(/images/icon_pattern_dark_large.svg) repeat;
 
     .ant-card-body {
         background: none;
     }
 
-    p.r-text-normal,
+    .r-text-normal,
+    .r-text-medium,
     h3,
-    h4 {
-        color: @white;
-    }
+    h4,
     h1,
     h2{
-        color: @primary-color;
+        color: @white;
     }
 }
 
@@ -7122,7 +7204,7 @@ a:hover {
 
             &:before {
                 content: "";
-                background-color: rgba(0, 0, 0, 0.3);
+                background-color: rgba(0, 0, 0, 0.09);
                 position: absolute;
                 left: 0;
                 right: 0;

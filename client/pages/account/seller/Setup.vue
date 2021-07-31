@@ -10,7 +10,8 @@
           <a-steps :current="currentStep">
             <a-step v-for="(step, index) in steps"
                     :key="index"
-                    :title="step.title">
+                    :title="step.title"
+            >
             </a-step>
           </a-steps>
         </a-col>

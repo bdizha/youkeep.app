@@ -23,7 +23,7 @@ export default {
         },
         {
           title: 'Get It',
-          content: 'Sit back and wait for your delivery to arrive at your doorstep.'
+          content: 'Sit back and wait for your delivery to arrive at your doorstep fast.'
         }
       ]
     }

@@ -90,11 +90,11 @@ return [
             'url' => env('APP_URL') . '/storage/category',
             'visibility' => 'public',
         ],
-        'ingredient' => [
+        'banner' => [
             'driver' => 'local',
-            'root' => storage_path('app/public/ingredient'),
-            'where' => storage_path('app/public/ingredient'),
-            'url' => env('APP_URL') . '/storage/ingredient',
+            'root' => storage_path('app/public/banner'),
+            'where' => storage_path('app/public/banner'),
+            'url' => env('APP_URL') . '/storage/banner',
             'visibility' => 'public',
         ],
         'position' => [

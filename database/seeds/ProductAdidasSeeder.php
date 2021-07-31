@@ -288,6 +288,20 @@ class ProductAdidasSeeder extends DatabaseSeeder
      */
     private function fetchCategoryBanners($categoryNode, $storeCategory)
     {
+
+        $images = [
+            "client/static/banners/basic/05.png",
+            "client/static/banners/classic/01.png",
+            "client/static/banners/classic/02.png",
+            "client/static/banners/classic/03.png",
+            "client/static/banners/classic/04.png",
+            "client/static/banners/standard/01.png",
+            "client/static/banners/standard/02.png",
+            "client/static/banners/standard/03.png",
+            "client/static/banners/standard/04.png",
+            "client/static/banners/standard/05.png"
+        ];
+
         $categoryNode->filter('.placement a')->each(function ($node) use (&$storeCategory) {
             $externalUrl = $node->attr('href');
             $externalUrl = trim($externalUrl, "/");

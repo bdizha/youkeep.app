@@ -3,86 +3,85 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-row :gutter="[48, 48]" align="middle" justify="start" type="flex">
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <div class="r-mv-96">
-            <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-              <a-col :lg="{ span: 15 }" :md="{ span: 16 }" :sm="{ span: 24 }"
+      <a-card class="r-bg-secondary-light">
+        <a-card-meta>
+          <template slot="description">
+            <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
+                <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                  <a-col :lg="{ span: 15 }" :md="{ span: 16 }" :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <h4 class="r-heading-light r-text-secondary r-text-uppercase r-text-secondary">
-                      For customers
-                    </h4>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <h1 class="r-heading">
-                      It's shopping time!
-                    </h1>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <p class="r-text-normal">
-                      Order everything from clothes to household essentials for delivery to your door.
-                    </p>
-                    <p class="r-text-normal">
-                      With online shopping platform, tens of thousands of product categories, and millions of products
-                      in
-                      front of you, it’s the all-in-one
-                      marketplace you deserve.
-                    </p>
-                    <p class="r-text-normal">
-                      Eliminate trips to the store, and save time! We can't wait for you to experience the #shopplelife!
-                    </p>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <a-button block
-                              class="r-btn-secondary"
-                              size="large"
-                              to="/register"
-                              type="secondary"
-                              @click="onRegister"
-                    >
-                      Get started today!
-                    </a-button>
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <h4 class="r-heading-light r-text-secondary r-text-uppercase r-text-secondary">
+                          For customers
+                        </h4>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <h1 class="r-heading">
+                          It's <span class="r-text-primary">shopping</span> time!
+                        </h1>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <p class="r-text-medium">
+                          Order everything from clothes to household essentials for delivery to your door.
+                        </p>
+                        <p class="r-text-normal">
+                          With online shopping platform, tens of thousands of product categories, and millions of products
+                          in
+                          front of you, it’s the all-in-one
+                          marketplace you deserve.
+                        </p>
+                        <p class="r-text-normal">
+                          Eliminate trips to the store, and save time! We can't wait for you to experience the #shopplelife!
+                        </p>
+                      </a-col>
+                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-button block
+                                  class="r-btn-secondary"
+                                  size="large"
+                                  to="/register"
+                                  type="secondary"
+                                  @click="onRegister"
+                        >
+                          Get started today!
+                        </a-button>
+                      </a-col>
+                    </a-row>
                   </a-col>
                 </a-row>
               </a-col>
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <r-avatar :size="450" class="r-avatar-auto" data-src="/images/content/screen-01-primary.png"
+                ></r-avatar>
+              </a-col>
             </a-row>
-          </div>
-        </a-col>
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a-card style="background: #fbf0c8 url(/images/content/5.svg) no-repeat; background-size: cover;"
-          >
-            <a-card-meta style="padding-bottom: 420px;">
-              <template slot="description">
-              </template>
-            </a-card-meta>
-          </a-card>
-        </a-col>
-      </a-row>
+          </template>
+        </a-card-meta>
+      </a-card>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-steps></r-steps>
+      <r-customer-steps></r-customer-steps>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
@@ -92,45 +91,45 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-              <a-card>
-                <a-card-meta>
-                  <template slot="description">
+          <a-card>
+            <a-card-meta>
+              <template slot="description">
+                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                  <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }"
+                         :xs="{ span: 12 }"
+                         class="r-text-center"
+                  >
+                    <r-avatar :size="90" class="r-avatar-auto" data-src="/images/content/frame-02.png"></r-avatar>
+                  </a-col>
+                  <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
+                         :sm="{ span: 12 }"
+                         :xs="{ span: 12 }"
+                  >
                     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                      <a-col class="r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
-                             :sm="{ span: 12 }"
-                             :xs="{ span: 12 }"
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
                       >
-                        <r-avatar :size="90" class="r-avatar-auto" data-src="/images/content/frame-02.png"></r-avatar>
+                        <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                          Get what your heart desires
+                        </h4>
                       </a-col>
-                      <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
-                             :sm="{ span: 12 }"
-                             :xs="{ span: 12 }"
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
                       >
-                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                 :sm="{ span: 24 }"
-                                 :xs="{ span: 24 }"
-                          >
-                            <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                              Get what your heart desires
-                            </h4>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                 :sm="{ span: 24 }"
-                                 :xs="{ span: 24 }"
-                          >
-                            <p class="r-text-normal">
-                              Shop your go-to products from your favorite stores. We deliver from local
-                              and
-                              global retailers you love - like Adidas and more.
-                            </p>
-                          </a-col>
-                        </a-row>
+                        <p class="r-text-normal">
+                          Shop your go-to products from your favorite stores. We deliver from local
+                          and
+                          global retailers you love - like Adidas and more.
+                        </p>
                       </a-col>
                     </a-row>
-                  </template>
-                </a-card-meta>
-              </a-card>
+                  </a-col>
+                </a-row>
+              </template>
+            </a-card-meta>
+          </a-card>
         </a-col>
         <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                :sm="{ span: 24 }"
@@ -140,9 +139,9 @@
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col class="r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
-                         :sm="{ span: 12 }"
+                  <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }"
                          :xs="{ span: 12 }"
+                         class="r-text-center"
                   >
                     <r-avatar :size="90" class="r-avatar-auto" data-src="/images/content/frame-01.png"></r-avatar>
                   </a-col>
@@ -184,9 +183,9 @@
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col class="r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
-                         :sm="{ span: 12 }"
+                  <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }"
                          :xs="{ span: 12 }"
+                         class="r-text-center"
                   >
                     <r-avatar :size="90" class="r-avatar-auto" data-src="/images/content/frame-05.png"></r-avatar>
                   </a-col>
@@ -228,9 +227,9 @@
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col class="r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
-                         :sm="{ span: 12 }"
+                  <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }"
                          :xs="{ span: 12 }"
+                         class="r-text-center"
                   >
                     <r-avatar :size="90" class="r-avatar-auto" data-src="/images/content/frame-06.png"></r-avatar>
                   </a-col>
@@ -275,7 +274,7 @@
           <a-row :gutter="[24,24]" class="r-text-left" justify="center" type="flex">
             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
               <h2 class="r-heading">
-                Think you know shopping <span class="r-text-secondary">experience</span>?
+                Spazamall online <span class="r-text-secondary">experience</span>?
               </h2>
             </a-col>
             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

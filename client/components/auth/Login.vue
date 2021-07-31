@@ -26,7 +26,7 @@
               placeholder="Your Email Address"
               size="large"
             >
-              <a-icon slot="prefix" type="mail" />
+              <a-icon slot="prefix" type="mail"/>
             </a-input>
           </a-form-item>
           <a-form-item label="Password">
@@ -35,7 +35,7 @@
                      size="large"
                      type="password"
             >
-              <a-icon slot="prefix" type="lock" />
+              <a-icon slot="prefix" type="lock"/>
             </a-input>
           </a-form-item>
           <a-form-item :wrapper-col="{ span: 24 }">
@@ -64,8 +64,8 @@
         </a-form>
       </a-col>
     </a-row>
-    <r-notice :process="process" />
-    <r-spinner :is-absolute="true" process="isRunning" />
+    <r-notice :process="process"/>
+    <r-spinner :is-absolute="true" process="isRunning"/>
   </r-modal-template>
 </template>
 <script>

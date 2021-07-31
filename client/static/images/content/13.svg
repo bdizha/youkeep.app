@@ -9,11 +9,11 @@
             <g id="Card-2" transform="translate(523.000000, 992.000000)">
                 <g id="Icon-/-Amazon-Custom" transform="translate(54.000000, 46.000000)">
                     <g id="Amazon_Custom" transform="translate(0.000000, 9.000000)">
-                        <ellipse id="Oval" fill="#B1D7EA" cx="24.235" cy="18.8927981" rx="5.3946"
+                        <ellipse id="Oval" fill="#FBD13E" cx="24.235" cy="18.8927981" rx="5.3946"
                                  ry="5.33624557"></ellipse>
-                        <ellipse id="Oval" fill="#B1D7EA" cx="52.7842" cy="32.9837072" rx="5.3946"
+                        <ellipse id="Oval" fill="#FBD13E" cx="52.7842" cy="32.9837072" rx="5.3946"
                                  ry="5.33624557"></ellipse>
-                        <circle id="Oval" fill="#B1D7EA"
+                        <circle id="Oval" fill="#FBD13E"
                                 transform="translate(38.472016, 47.081873) rotate(-45.000000) translate(-38.472016, -47.081873) "
                                 cx="38.4720161" cy="47.0818726" r="5.36545237"></circle>
                         <g id="Group" fill="#3B9CFF">

@@ -27,7 +27,7 @@
                         retail associates.
                       </p>
                       <p class="r-text-normal">
-                        We’ll ship you an activation kit to promote Spazamall in-store.
+                        We’ll ship you an activation kit to promote Spazamall online.
                       </p>
                     </a-col>
                   </a-row>
@@ -148,7 +148,7 @@
               Become a verified merchant today
             </h2>
             <p class="r-text-normal">
-              Join the Spazamall Merchant Program and start promoting Spazamall in-store today and watch your
+              Join the Spazamall Merchant Program and start promoting Spazamall online today and watch your
               sales run wild!
             </p>
           </a-col>

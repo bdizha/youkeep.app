@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-mt-48" justify="center" type="flex">
+  <a-row justify="center" type="flex">
     <a-col :span="24">
       <a-row v-if="hasDownload && false" class="r-mb-24" justify="center" type="flex">
         <a-col v-if="hasDownload && false" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

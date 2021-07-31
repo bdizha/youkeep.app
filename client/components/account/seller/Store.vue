@@ -1,37 +1,37 @@
 <template>
   <a-card title="Welcome to Spazamall!">
-  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-    <a-col :xs="{ span: 24 }">
-      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-        <a-col :xs="{ span: 24 }">
-          <p class="r-text-light">
-            Congratulations. You've successfully setup your business account.
-            Read how to setup your store here.
-          </p>
-        </a-col>
-        <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-               :xs="{ span: 12 }" class="gutter-row"
-        >
-          <a-button block class="r-btn-grey"
-                    size="large"
-                    type="secondary"
-                    @click="onPrevStep"
+    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+      <a-col :xs="{ span: 24 }">
+        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+          <a-col :xs="{ span: 24 }">
+            <p class="r-text-light">
+              Congratulations. You've successfully setup your business account.
+              Read how to setup your store here.
+            </p>
+          </a-col>
+          <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                 :xs="{ span: 12 }" class="gutter-row"
           >
-            Previous
-          </a-button>
-        </a-col>
-        <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
-               class="gutter-row"
-        >
-          <a-button block class="r-btn-secondary" html-type="submit" size="large"
-                    type="secondary"
+            <a-button block class="r-btn-grey"
+                      size="large"
+                      type="secondary"
+                      @click="onPrevStep"
+            >
+              Previous
+            </a-button>
+          </a-col>
+          <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+                 class="gutter-row"
           >
-            Goto Dashboard
-          </a-button>
-        </a-col>
-      </a-row>
-    </a-col>
-  </a-row>
+            <a-button block class="r-btn-secondary" html-type="submit" size="large"
+                      type="secondary"
+            >
+              Goto Dashboard
+            </a-button>
+          </a-col>
+        </a-row>
+      </a-col>
+    </a-row>
   </a-card>
 </template>
 <script>

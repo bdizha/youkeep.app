@@ -38,7 +38,7 @@ class Banner extends Model
      */
     public function getPhotoUrlAttribute()
     {
-        return url('/storage/category/' . $this->photo);
+        return url('/storage/banner/' . $this->photo);
     }
 
     /**

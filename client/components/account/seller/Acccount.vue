@@ -23,9 +23,9 @@
                 >
                   <a-form-item label="Country of Citizenship">
                     <a-select
+                      v-decorator="['citizenship_country', { rules: [{ required: true, message: 'Please enter Country of Citizenship' }] }]"
                       :defaultValue="1"
                       labelInValue
-                      v-decorator="['citizenship_country', { rules: [{ required: true, message: 'Please enter Country of Citizenship' }] }]"
                       placeholder="Country of Citizenship"
                       size="default"
                       style="min-width: 100%;"
@@ -49,9 +49,9 @@
                 >
                   <a-form-item label="Country of Birth">
                     <a-select
+                      v-decorator="['birth_country', { rules: [{ required: true, message: 'Please enter Country of Birth' }] }]"
                       :defaultValue="1"
                       labelInValue
-                      v-decorator="['birth_country', { rules: [{ required: true, message: 'Please enter Country of Birth' }] }]"
                       placeholder="Country of Birth"
                       size="default"
                       style="min-width: 100%;"
@@ -137,9 +137,9 @@
                 <a-col :xs="{ span: 12 }">
                   <a-form-item label="Country of Issue">
                     <a-select
+                      v-decorator="['issuing_country', { rules: [{ required: true, message: 'Please enter Country of Issue' }] }]"
                       :defaultValue="1"
                       labelInValue
-                      v-decorator="['issuing_country', { rules: [{ required: true, message: 'Please enter Country of Issue' }] }]"
                       placeholder="Country of Issue"
                       size="default"
                       style="min-width: 100%;"
@@ -177,7 +177,8 @@
         <a-card title="Business Address">
           <a-row :gutter="[24,24]">
             <a-col :xs="{ span: 24 }">
-              <r-account-address-list empty-title="Your Business Address is currently not set."></r-account-address-list>
+              <r-account-address-list empty-title="Your Business Address is currently not set."
+              ></r-account-address-list>
             </a-col>
             <a-col :xs="{ span: 24 }">
               <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">

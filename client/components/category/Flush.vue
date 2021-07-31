@@ -56,27 +56,27 @@ export default {
       categories: [
         {
           route: '/category/L0000001/beauty',
-          photo: '/banners/long/beauty.png'
+          photo: '/banners/cover/beauty.png'
         },
         {
           route: '/category/L0000001/electronics',
-          photo: '/banners/long/electronics.png'
+          photo: '/banners/cover/electronics.png'
         },
         {
           route: '/category/L0000001/toys',
-          photo: '/banners/long/toy.png'
+          photo: '/banners/cover/toy.png'
         },
         {
           route: '/category/L0000001/him',
-          photo: '/banners/long/him.png'
+          photo: '/banners/cover/him.png'
         },
         {
           route: '/category/L0000001/her',
-          photo: '/banners/long/her.png'
+          photo: '/banners/cover/her.png'
         },
         {
           route: '/category/L0000001/shoes',
-          photo: '/banners/long/shoes.png'
+          photo: '/banners/cover/shoes.png'
         }
       ],
       settings: {

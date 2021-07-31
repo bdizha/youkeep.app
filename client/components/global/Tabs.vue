@@ -1,5 +1,5 @@
 <template>
-  <a-tabs type="card" v-model="activeKey">
+  <a-tabs v-model="activeKey" type="card">
     <a-tab-pane key="customer" tab="For Customers"
     >
       <r-customer-steps></r-customer-steps>
@@ -23,7 +23,6 @@ export default {
   },
   data () {
     return {
-      activeTab: 'customer'
     }
   },
   created () {

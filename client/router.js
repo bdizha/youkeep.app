@@ -30,7 +30,7 @@ const routes = [
   { path: '/shopper/hiw', name: 'shopper-paise', component: page('shopper/Hiw.vue') },
   { path: '/customer', name: 'customer', component: page('customer/Index.vue') },
   { path: '/customer/hiw', name: 'customer-paise', component: page('customer/Hiw.vue') },
-  { path: '/seller', name: 'merchant', component: page('seller/Index.vue') },
+  { path: '/seller', name: 'seller', component: page('seller/Index.vue') },
   { path: '/merchant', name: 'merchant', component: page('merchant/Index.vue') },
   { path: '/merchant/hiw', name: 'merchant-paise', component: page('merchant/Hiw.vue') },
   { path: '/merchant/resources', name: 'resource', component: page('resource/Index.vue') },

@@ -1,33 +1,39 @@
 <template>
-  <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
-      <a-col v-for="(step, index) in steps"
-             :key="index"
-             :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 8}" class="r-text-center">
-        <a-card class="r-bg-primary">
-        <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
-          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <r-avatar
-              :key="index"
-              :size="210" :src="'/images/content/step-0' + (index + 1) + '-' + theme + '.png?v=1'"
-              class="r-avatar-block"
-              shape="square"
-              src-placeholder="/assets/icon_default.png"
-              unit="px"
-            />
-          </a-col>
-          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <h3 class="r-heading r-text-secondary">
-              {{ step.title }}
-            </h3>
-          </a-col>
-          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <h4 class="r-heading-light">
-              {{ step.content }}
-            </h4>
-          </a-col>
-        </a-row>
-        </a-card>
-      </a-col>
+  <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+        <a-col v-for="(step, index) in steps"
+               :key="index"
+               :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+        >
+          <a-card @click="setCurrentStep(index)"
+                  :class="{'r-bg-primary': index === currentStep, 'r-bg-white': index !== currentStep}">
+            <a-row :gutter="[24,12]" align="top" justify="center" type="flex">
+              <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <h3 class="r-heading">
+                  {{ (index + 1) }}{{ '.' }} {{ step.title }}
+                </h3>
+              </a-col>
+              <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <p class="r-text-medium">
+                  {{ step.content }}
+                </p>
+              </a-col>
+            </a-row>
+          </a-card>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-avatar v-for="(step, index) in steps"
+                v-if="index === currentStep"
+                :key="index" :size="300" :src="'/images/content/step-0' + (index + 1) + '-secondary.svg'"
+                class="r-avatar-block"
+                shape="square"
+                src-placeholder="/assets/icon_default.png"
+                unit="px"
+      />
+    </a-col>
   </a-row>
 </template>
 <script>
@@ -35,9 +41,12 @@ export default {
   name: 'r-steps',
   props: {
     size: { type: Number, required: false, default: 24 },
-    theme: { type: String, required: false, default: 'primary' },
+    theme: { type: String, required: false, default: 'secondary' },
     title: { type: String, required: false, default: null },
-    steps: { type: Array, required: true, default: () => { } }
+    steps: {
+      type: Array, required: true, default: () => {
+      }
+    }
   },
   data () {
     return {
@@ -66,6 +75,9 @@ export default {
       }
 
       return theme
+    },
+    setCurrentStep (currentStep) {
+      this.currentStep = currentStep
     }
   }
 }

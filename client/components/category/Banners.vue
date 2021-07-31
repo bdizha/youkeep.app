@@ -7,16 +7,18 @@
           <a-card v-for="(banner, index) in banners" :key="index"
                   class="r-banner" hoverable
           >
-            <div slot="cover">
-              <nuxt-link :to="banner.route"
-                         style="display: block; width: 100%;"
-              >
-                <r-avatar :dataSrc="banner.photo_url"
-                          :size="size"
-                          shape="square"
-                />
-              </nuxt-link>
-            </div>
+            <nuxt-link :to="banner.route"
+                       style="display: block; width: 100%;"
+            >
+              <r-avatar
+                :key="index"
+                :size="size" :src="banner.photo_url"
+                class="r-avatar-block"
+                shape="square"
+                src-placeholder="/assets/icon_default.png"
+                unit="px"
+              />
+            </nuxt-link>
           </a-card>
           <template #prevArrow="arrowOption">
             <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
@@ -40,8 +42,8 @@ export default {
   name: 'r-category-banners',
   components: {},
   props: {
-    columns: { type: Number, required: false, default: 3 },
-    size: { type: Number, required: false, default: 300 },
+    columns: { type: Number, required: false, default: 2 },
+    size: { type: Number, required: false, default: 450 },
     filters: {
       type: Object,
       required: false,

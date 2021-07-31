@@ -22,7 +22,7 @@
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
-        <r-account-address-add></r-account-address-add>
+          <r-account-address-add></r-account-address-add>
         </a-col>
       </a-col>
     </a-row>

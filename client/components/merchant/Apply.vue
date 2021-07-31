@@ -32,7 +32,7 @@
                 placeholder="Your full name"
                 size="large"
               >
-                <a-icon slot="prefix" type="user" />
+                <a-icon slot="prefix" type="user"/>
               </a-input>
             </a-form-item>
           </a-col>
@@ -47,7 +47,7 @@
                 placeholder="Your role number"
                 size="large"
               >
-                <a-icon slot="prefix" type="audit" />
+                <a-icon slot="prefix" type="audit"/>
               </a-input>
             </a-form-item>
           </a-col>
@@ -62,7 +62,7 @@
                 placeholder="Your phone number"
                 size="large"
               >
-                <a-icon slot="prefix" type="phone" />
+                <a-icon slot="prefix" type="phone"/>
               </a-input>
             </a-form-item>
           </a-col>
@@ -78,7 +78,7 @@
                 size="large"
                 type="email"
               >
-                <a-icon slot="prefix" type="mail" />
+                <a-icon slot="prefix" type="mail"/>
               </a-input>
             </a-form-item>
           </a-col>
@@ -94,7 +94,7 @@
                 size="large"
                 type="text"
               >
-                <a-icon slot="prefix" type="link" />
+                <a-icon slot="prefix" type="link"/>
               </a-input>
             </a-form-item>
           </a-col>
@@ -154,7 +154,7 @@
                 size="large"
                 type="text"
               >
-                <a-icon slot="prefix" type="link" />
+                <a-icon slot="prefix" type="link"/>
               </a-input>
             </a-form-item>
           </a-col>
@@ -170,7 +170,7 @@
                 size="large"
                 type="text"
               >
-                <a-icon slot="prefix" type="dollar" />
+                <a-icon slot="prefix" type="dollar"/>
               </a-input>
             </a-form-item>
           </a-col>
@@ -205,7 +205,7 @@
                    size="large"
                    type="textarea"
           >
-            <a-icon slot="prefix" type="user" />
+            <a-icon slot="prefix" type="user"/>
           </a-input>
         </a-form-item>
         <a-form-item class="r-mt-48">

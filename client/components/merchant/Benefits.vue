@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-secondary-light">
+  <a-card class="r-bg-primary-light">
     <a-card-meta>
       <template slot="description">
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
@@ -13,7 +13,7 @@
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
             <h2 class="r-heading">
-              <span class="r-text-secondary">Customer</span>
+              <span class="r-text-primary">Customer</span>
               <span>service is our game:</span>
             </h2>
           </a-col>
@@ -22,14 +22,15 @@
                  :xs="{ span: 24 }"
 
           >
-            <a-list :data-source="benefits">
-              <a-list-item slot="renderItem" slot-scope="item, index">
-                <a-icon type="check"></a-icon>
-                <div class="r-list-item-text">
-                  {{ item }}
-                </div>
-              </a-list-item>
-            </a-list>
+            <p v-for="(item, index) in benefits"
+               :key="index"
+               class="r-checked-item"
+            >
+              <a-icon slot="prefix" class="r-checked-item-icon" type="check"/>
+              <span class="r-checked-item-text">
+                        {{ item }}
+                      </span>
+            </p>
           </a-col>
         </a-row>
       </template>
@@ -45,7 +46,7 @@ export default {
       benefits: [
         'Enable more buying customers and increase recurring orders with Spazamall.',
         'Maximize in-store impact with Spazamall signage and online training for retail associates.',
-        'We’ll ship you an activation kit to promote Spazamall in-store.',
+        'We’ll ship you an activation kit to promote Spazamall online.',
         'No obligations and risk with partnering with Spazamall.',
       ]
     }

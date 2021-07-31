@@ -4,94 +4,94 @@
           class="ant-form ant-form-vertical"
           @submit="onPost"
   >
-  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }" class="gutter-row"
-    >
-      <a-card title="Payment Card Details">
-        <a-row :gutter="[24,24]">
-          <a-col :xs="{ span: 24 }">
-            <r-account-card-list empty-title="Your Cards List is currently not set."></r-account-card-list>
-          </a-col>
-          <a-col :xs="{ span: 24 }">
-            <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-              <a-col v-if="false" :lg="{ span: 8 }" :sm="{ span: 8 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-button block class="r-btn-bordered-primary" html-type="submit" size="small"
-                          type="secondary"
+    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+             :xs="{ span: 24 }" class="gutter-row"
+      >
+        <a-card title="Payment Card Details">
+          <a-row :gutter="[24,24]">
+            <a-col :xs="{ span: 24 }">
+              <r-account-card-list empty-title="Your Cards List is currently not set."></r-account-card-list>
+            </a-col>
+            <a-col :xs="{ span: 24 }">
+              <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                <a-col v-if="false" :lg="{ span: 8 }" :sm="{ span: 8 }"
+                       :xs="{ span: 12 }" class="gutter-row"
                 >
-                  View All Cards
-                </a-button>
-              </a-col>
-              <a-col :lg="{ span: 8 }" :sm="{ span: 8 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <r-account-card-add></r-account-card-add>
-              </a-col>
-            </a-row>
+                  <a-button block class="r-btn-bordered-primary" html-type="submit" size="small"
+                            type="secondary"
+                  >
+                    View All Cards
+                  </a-button>
+                </a-col>
+                <a-col :lg="{ span: 8 }" :sm="{ span: 8 }"
+                       :xs="{ span: 12 }" class="gutter-row"
+                >
+                  <r-account-card-add></r-account-card-add>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </a-card>
+      </a-col>
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
+             :xs="{ span: 24 }" class="gutter-row"
+      >
+        <a-card title="Billing Address">
+          <a-row :gutter="[24,24]">
+            <a-col :xs="{ span: 24 }">
+              <r-account-address-list empty-title="Your Billing Address is currently not set."></r-account-address-list>
+            </a-col>
+            <a-col :xs="{ span: 24 }">
+              <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                <a-col v-if="false" :lg="{ span: 8 }" :sm="{ span: 8 }"
+                       :xs="{ span: 12 }" class="gutter-row"
+                >
+                  <a-button block class="r-btn-bordered-primary" html-type="submit" size="small"
+                            type="secondary"
+                  >
+                    View All Addresses
+                  </a-button>
+                </a-col>
+                <a-col :lg="{ span: 8 }" :sm="{ span: 8 }"
+                       :xs="{ span: 12 }" class="gutter-row"
+                >
+                  <r-account-address-add></r-account-address-add>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </a-card>
+      </a-col>
+      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+             class="gutter-row"
+      >
+        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+          <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
+                 :xs="{ span: 12 }" class="gutter-row"
+          >
+            <a-button block class="r-btn-grey"
+                      size="large"
+                      type="secondary"
+                      @click="onPrevStep"
+            >
+              Previous
+            </a-button>
+          </a-col>
+          <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+                 class="gutter-row"
+          >
+            <a-button block class="r-btn-secondary" html-type="submit" size="large"
+                      type="secondary"
+            >
+              Next
+            </a-button>
           </a-col>
         </a-row>
-      </a-card>
-    </a-col>
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }" class="gutter-row"
-    >
-      <a-card title="Billing Address">
-        <a-row :gutter="[24,24]">
-          <a-col :xs="{ span: 24 }">
-            <r-account-address-list empty-title="Your Billing Address is currently not set."></r-account-address-list>
-          </a-col>
-          <a-col :xs="{ span: 24 }">
-            <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-              <a-col v-if="false" :lg="{ span: 8 }" :sm="{ span: 8 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <a-button block class="r-btn-bordered-primary" html-type="submit" size="small"
-                          type="secondary"
-                >
-                  View All Addresses
-                </a-button>
-              </a-col>
-              <a-col :lg="{ span: 8 }" :sm="{ span: 8 }"
-                     :xs="{ span: 12 }" class="gutter-row"
-              >
-                <r-account-address-add></r-account-address-add>
-              </a-col>
-            </a-row>
-          </a-col>
-        </a-row>
-      </a-card>
-    </a-col>
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-           class="gutter-row"
-    >
-      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-        <a-col :lg="{ span: 12 }" :sm="{ span: 12 }"
-               :xs="{ span: 12 }" class="gutter-row"
-        >
-          <a-button block class="r-btn-grey"
-                    size="large"
-                    type="secondary"
-                    @click="onPrevStep"
-          >
-            Previous
-          </a-button>
-        </a-col>
-        <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
-               class="gutter-row"
-        >
-          <a-button block class="r-btn-secondary" html-type="submit" size="large"
-                    type="secondary"
-          >
-            Next
-          </a-button>
-        </a-col>
-      </a-row>
-    </a-col>
-  </a-row>
-  <r-result v-if="hasResult"></r-result>
-  <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
+      </a-col>
+    </a-row>
+    <r-result v-if="hasResult"></r-result>
+    <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
   </a-form>
 </template>
 <script>
