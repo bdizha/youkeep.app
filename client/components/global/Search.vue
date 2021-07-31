@@ -32,7 +32,7 @@
         <a-button
           slot="suffix"
           :size="size"
-          class="r-btn-white"
+          class="r-btn-primary"
           style="margin-right: -12px"
           type="secondary"
         >

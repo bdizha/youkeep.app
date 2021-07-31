@@ -4,7 +4,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <r-tabs active-key="customer" theme="primary"></r-tabs>
+      <h1>{{ 'Please bring some content here!' }}</h1>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"

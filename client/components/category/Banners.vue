@@ -4,7 +4,7 @@
     <a-col :span="24" class="r-spin-holder">
       <div v-if="hasBanners" class="r-slider">
         <VueSlickCarousel v-bind="settings">
-          <a-card v-for="(banner, index) in banners" :key="index"
+          <div v-for="(banner, index) in banners" :key="index"
                   class="r-banner" hoverable
           >
             <nuxt-link :to="banner.route"
@@ -19,7 +19,7 @@
                 unit="px"
               />
             </nuxt-link>
-          </a-card>
+          </div>
           <template #prevArrow="arrowOption">
             <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
               <a-icon type="left"/>

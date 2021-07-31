@@ -26,7 +26,7 @@
                     <nuxt-link class="r-text-center" to="/">
                       <img alt="Spazamall - Online shop"
                            class="r-footer-logo /"
-                           src="/images/icon-06.svg?v=1"
+                           src="/images/logo_secondary.svg"
                       >
                     </nuxt-link>
                   </a-col>

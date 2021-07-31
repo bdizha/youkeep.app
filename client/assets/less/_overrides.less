@@ -1122,6 +1122,7 @@ x {
     border: none;
     border-radius: @border-radius-base;
     box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    background: @white;
 
     .ant-checkbox {
         .ant-checkbox-inner {
@@ -3328,26 +3329,26 @@ h4.r-heading-light {
 }
 
 .r-btn-white-bordered {
-    border: 1px solid @primary-color !important;
-    color: @primary-color !important;
+    border: 1px solid @white !important;
+    color: @white !important;
     background: transparent !important;
 
     &:hover {
-        border: 1px solid @white !important;
-        color: @white !important;
+        border: 1px solid @primary-color !important;
+        color: @primary-color !important;
         background: @primary-color !important;
     }
 }
 
 .r-btn-primary-bordered {
-    border: 1px solid #FDBAC4 !important;
-    color: #FBD13E !important;
+    border: 1px solid @primary-color !important;
+    color: @primary-color !important;
     background: transparent !important;
 
     &:hover {
-        border: 1px solid #FDBAC4 !important;
-        color: #FFFFFF !important;
-        background: #FBD13E !important;
+        border: 1px solid @primary-color !important;
+        color: @white !important;
+        background: @primary-color !important;
     }
 }
 

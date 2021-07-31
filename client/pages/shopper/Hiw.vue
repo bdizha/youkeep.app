@@ -56,7 +56,7 @@
                               size="large"
                               to="/register"
                               type="primary"
-                              @click="onModal"
+                              @click="onRegister"
                     >
                       Get started today!
                     </a-button>
@@ -91,7 +91,9 @@
                    :xs="{ span: 24 }"
                    class="r-text-center"
             >
-              <r-avatar :dataSrc="`/images/icon_pattern_dark.svg`" :size="75"></r-avatar>
+              <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                Real humans. Better shopping.
+              </h4>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                    :sm="{ span: 24 }"
@@ -107,21 +109,27 @@
                    :xs="{ span: 24 }"
                    class="r-text-center"
             >
-              <p class="r-text-normal">
-                Real humans. Better shopping. Our shoppers handle all your shopping and delivery experience for you at
-                a very low cost. We partner shoppers and the nearest stores to provide our customers with fast
-                deliveries and better services.
+              <p class="r-text-medium">
+                Our shoppers handle all your shopping and delivery experience for you at
+                a very low cost. We partner shoppers and the nearest stores to provide our customers with fastest
+                deliveries on the market.
               </p>
             </a-col>
           </a-row>
         </a-col>
-        <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-               class="r-text-center"
-        >
-          <r-shopper-hiw></r-shopper-hiw>
-        </a-col>
       </a-row>
     </a-col>
+      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+             :xs="{ span: 24 }"
+             class="r-text-center"
+      >
+        <r-tabs active-key="shopper" theme="shopper"></r-tabs>
+      </a-col>
+      <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+             class="r-text-center"
+      >
+        <r-shopper-hiw ></r-shopper-hiw>
+      </a-col>
       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
              :xs="{ span: 24 }"
       >
@@ -192,7 +200,7 @@ export default {
       modal.isVisible = true
       modal.isClosable = false
       modal.current = 'register'
-      this.$store.dispatch('base/onModal', modal)
+      this.$store.dispatch('base/onRegister', modal)
     }
   },
 }

@@ -114,13 +114,19 @@
               </a-col>
             </a-row>
           </a-col>
-          <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                 class="r-text-center"
-          >
-            <r-merchant-hiw></r-merchant-hiw>
-          </a-col>
         </a-row>
       </div>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+           class="r-text-center"
+    >
+      <r-tabs active-key="merchant" theme="merchant"></r-tabs>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+           class="r-text-center"
+    >
+      <r-merchant-hiw ></r-merchant-hiw>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"

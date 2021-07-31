@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-button block class="r-btn-secondary" @click="onStoreTray">
+      <a-button block :class="{ 'r-btn-white-bordered': isDark, 'r-btn-secondary-bordered': !isDark }" @click="onStoreTray">
         {{ hasStore ? store.name : 'Switch Store' }}
         <a-icon type="down"/>
       </a-button>
@@ -22,7 +22,8 @@ export default {
   computed: mapGetters({
     hasStore: 'base/hasStore',
     store: 'base/store',
-    hasStoreTray: 'base/hasStoreTray'
+    hasStoreTray: 'base/hasStoreTray',
+    isDark: 'base/isDark'
   }),
   created () {
     this.payload()
@@ -38,6 +39,6 @@ export default {
       this.$store.dispatch('base/onModal', modal)
     }
   },
-  watch: {},
+  watch: {}
 }
 </script>

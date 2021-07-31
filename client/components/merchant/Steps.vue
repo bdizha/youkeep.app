@@ -1,5 +1,12 @@
 <template>
-  <r-steps :steps="steps" theme="primary"></r-steps>
+  <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+           class="r-text-center"
+    >
+      <r-steps :steps="steps" :size="size" theme="secondary"></r-steps>
+    </a-col>
+  </a-row>
 </template>
 <script>
 export default {

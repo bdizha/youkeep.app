@@ -1,4 +1,9 @@
 <template>
+  <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: size }" :md="{ span: size }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
   <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
@@ -35,6 +40,8 @@
       />
     </a-col>
   </a-row>
+    </a-col>
+  </a-row>
 </template>
 <script>
 export default {
@@ -44,7 +51,9 @@ export default {
     theme: { type: String, required: false, default: 'secondary' },
     title: { type: String, required: false, default: null },
     steps: {
-      type: Array, required: true, default: () => {
+      type: Array,
+      required: true,
+      default: () => {
       }
     }
   },

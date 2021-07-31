@@ -2,15 +2,15 @@
   <a-tabs v-model="activeKey" type="card">
     <a-tab-pane key="customer" tab="For Customers"
     >
-      <r-customer-steps></r-customer-steps>
+      <r-customer-steps :size="16"></r-customer-steps>
     </a-tab-pane>
     <a-tab-pane key="merchant" tab="For Merchants"
     >
-      <r-merchant-steps></r-merchant-steps>
+      <r-merchant-steps :size="16"></r-merchant-steps>
     </a-tab-pane>
     <a-tab-pane key="shopper" tab="For Shoppers"
     >
-      <r-shopper-steps></r-shopper-steps>
+      <r-shopper-steps :size="16"></r-shopper-steps>
     </a-tab-pane>
   </a-tabs>
 </template>

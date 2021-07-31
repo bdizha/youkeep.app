@@ -1,11 +1,5 @@
 <template>
   <a-row :gutter="[48,96]" align="middle" justify="start" type="flex">
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-           class="r-text-center"
-    >
-      <r-tabs active-key="merchant" theme="primary"></r-tabs>
-    </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
