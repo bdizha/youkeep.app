@@ -5,7 +5,7 @@
       <div v-if="hasBanners" class="r-slider">
         <VueSlickCarousel v-bind="settings">
           <div v-for="(banner, index) in banners" :key="index"
-                  class="r-banner" hoverable
+               class="r-banner" hoverable
           >
             <nuxt-link :to="banner.route"
                        style="display: block; width: 100%;"

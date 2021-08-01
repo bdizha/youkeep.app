@@ -123,9 +123,9 @@
              :xs="{ span: 24 }"
              class="r-text-center"
       >
-        <r-tabs active-key="shopper" theme="shopper"></r-tabs>
+        <r-tabs active-key="shopper" theme="shopper" title="Spazamall connects shoppers to customers."></r-tabs>
       </a-col>
-      <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
              class="r-text-center"
       >
         <r-shopper-hiw ></r-shopper-hiw>

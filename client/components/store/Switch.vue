@@ -3,7 +3,9 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-button block :class="{ 'r-btn-white-bordered': isDark, 'r-btn-secondary-bordered': !isDark }" @click="onStoreTray">
+      <a-button :class="{ 'r-btn-white-bordered': isDark, 'r-btn-secondary-bordered': !isDark }" block
+                @click="onStoreTray"
+      >
         {{ hasStore ? store.name : 'Switch Store' }}
         <a-icon type="down"/>
       </a-button>

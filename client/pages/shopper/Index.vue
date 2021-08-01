@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary-light">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -29,7 +29,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading r-text-uppercase">
-                          <span class="r-text-primary">More</span> flexible,<br>
+                          <span class="r-text-secondary">More</span> flexible,<br>
                           <span class="r-text-secondary">Less</span> intrusive.
                         </h1>
                       </a-col>
@@ -37,6 +37,10 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
+                        <p class="r-text-medium">
+                          Earn up to R55/hr or more shopping for Spazamall members.
+                          Deliver things people love, from the stores they trust.
+                        </p>
                         <p class="r-text-normal">
                           Earn up to R55/hr or more shopping for Spazamall members.
                           Deliver things people love, from the stores they trust.
@@ -47,7 +51,7 @@
                              :xs="{ span: 24 }"
                       >
                         <a-button block
-                                  class="r-btn-secondary"
+                                  class="r-btn-primary"
                                   size="large"
                                   to="/register"
                                   type="secondary"
@@ -73,7 +77,7 @@
         </a-card-meta>
       </a-card>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
       <r-shopper-steps></r-shopper-steps>
@@ -219,14 +223,54 @@
                     </a-col>
                     <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <h2 class="r-heading r-text-white">
-                        Think you know <span class="r-text-primary">shopping</span> better?
+                        <span class="r-text-primary">Discover</span> new customers. <span class="r-text-primary">Start</span> selling.
                       </h2>
                     </a-col>
-                    <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <p class="r-text-large r-text-white">
-                        Spazamall is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
-                        hot food, household essentials and more.
-                      </p>
+                    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                      <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
+                        <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
+                          <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <h4 class="r-heading r-text-white">
+                                Create an account
+                              </h4>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <p class="r-text-medium r-text-white">
+                                Add your company details and category preferences.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                        <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
+                          <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <h4 class="r-heading r-text-white">
+                                Discover new products
+                              </h4>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <p class="r-text-medium r-text-white">
+                                Seamleassly find products that meet your unique needs.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                        <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
+                          <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <h4 class="r-heading r-text-white">
+                                Connect with suppliers
+                              </h4>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <p class="r-text-medium r-text-white">
+                                Request a sample, start a conversation, or save to review later.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                      </a-row>
                     </a-col>
                     <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
                            :xs="{ span: 24 }"

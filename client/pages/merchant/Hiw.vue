@@ -78,47 +78,6 @@
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
-    >
-      <div class="r-ph-24 r-mt-48">
-        <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
-          <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                 class="r-text-center"
-          >
-            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-                     class="r-text-center"
-              >
-                <r-avatar :dataSrc="`/images/icon_pattern_dark.svg`" :size="75"></r-avatar>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-                     class="r-text-center"
-              >
-                <h2 class="r-heading">
-                  How our Shopping Service Works
-                </h2>
-              </a-col>
-              <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-                     class="r-text-center"
-              >
-                <p class="r-text-normal">
-                  Real humans. Better shopping. Our shoppers handle all your shopping and delivery experience for you at
-                  a very low cost. We partner shoppers and the nearest stores to provide our customers with fast
-                  deliveries and better services.
-                </p>
-              </a-col>
-            </a-row>
-          </a-col>
-        </a-row>
-      </div>
-    </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
            class="r-text-center"
     >
       <r-tabs active-key="merchant" theme="merchant"></r-tabs>
@@ -146,7 +105,7 @@
                  :xs="{ span: 24 }"
           >
             <h3 class="r-heading-light r-text-primary r-text-uppercase">
-              Sell online at Spazamall
+              <span class="r-text-white">Sell</span> online at Spazamall?
             </h3>
           </a-col>
           <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
@@ -154,7 +113,7 @@
                  :xs="{ span: 24 }"
           >
             <h2 class="r-heading">
-              Spazamall is the <span class="r-text-primary">best</span> way to get <span class="r-text-primary">paid</span> for whatever you sell on its marketplace.
+              Spazamall <span class="r-text-primary">makes</span> your products visible to millions of customers.
             </h2>
           </a-col>
           <a-col :lg="{ span: 18 }" :md="{ span: 12 }"

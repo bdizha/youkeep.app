@@ -35,7 +35,8 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          Accept all major credit cards - your customers don't even need a Spazamall account to place an order.
+                          Accept all major credit cards - your customers don't even need a Spazamall account to place an
+                          order.
                         </p>
                       </a-col>
                     </a-row>

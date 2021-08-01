@@ -19,11 +19,11 @@
 export default {
   name: 'r-tabs',
   props: {
-    activeKey: { type: String, required: false, default: 'customer' }
+    title: { type: String, required: false, default: 'Spazamall connects shoppers to sellers.' },
+    activeKey: { type: String, required: false, default: 'customer' },
   },
   data () {
-    return {
-    }
+    return {}
   },
   created () {
     this.payload()

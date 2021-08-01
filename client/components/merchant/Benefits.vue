@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-primary-light">
+  <a-card class="r-bg-white">
     <a-card-meta>
       <template slot="description">
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
@@ -13,7 +13,7 @@
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
             <h2 class="r-heading">
-              <span class="r-text-primary">Customer</span>
+              <span class="r-text-secondary">Customer</span>
               <span>service is our game:</span>
             </h2>
           </a-col>
@@ -26,7 +26,7 @@
                :key="index"
                class="r-checked-item"
             >
-              <a-icon slot="prefix" class="r-checked-item-icon" type="check"/>
+              <a-icon class="r-checked-item-icon" type="check"/>
               <span class="r-checked-item-text">
                         {{ item }}
                       </span>

@@ -514,7 +514,7 @@ h1.r-text-x-large{
 }
 
 .ant-drawer-header {
-    background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
+    background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
     padding: 12px;
 
     .r-nav-item {
@@ -873,7 +873,7 @@ x {
     .ant-avatar-image {
         box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
         padding: 0;
-        background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
+        background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
         line-height: 100%;
         width: 100% !important;
     }
@@ -1801,6 +1801,9 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .r-checked-item{
+    &h4{
+        display: inline-block;
+    }
     padding-left: 45px;
     position: relative;
     .r-checked-item-icon{
@@ -1821,11 +1824,21 @@ xxl	≥1600px, could be a span value or an object containing above props
     }
 }
 
-.r-bg-primary-light{
+.r-bg-primary-light,
+.r-bg-primary{
     .r-checked-item-icon{
         background: @secondary-color;
-        border-color: @primary-color;
+        border-color: @secondary-color;
         color: @primary-color;
+    }
+}
+
+.r-bg-secondary-light,
+.r-bg-secondary{
+    .r-checked-item-icon{
+        background: @primary-color;
+        border-color: @primary-color;
+        color: @secondary-color;
     }
 }
 
@@ -2742,7 +2755,7 @@ h4.r-heading-light {
 }
 
 .r-footer-logo {
-    height: 45px;
+    height: 30px;
 }
 
 .r-bordered {
@@ -4424,7 +4437,7 @@ h4.r-heading-light {
 .r-product-flush {
     .ant-card {
         overflow: hidden;
-        background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
+        background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
 
         .ant-card-body {
             overflow: hidden;
@@ -4585,7 +4598,7 @@ h4.r-heading-light {
 }
 
 .r-store-items {
-    background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
+    background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
 
     .ant-carousel {
         .slick-slide {
@@ -4676,7 +4689,7 @@ h4.r-heading-light {
 
 .ant-avatar-icon {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.18);
-    background: #FFFFFF url(/assets/icon_pattern_white.svg) repeat;
+    background: #FFFFFF url(/images/icon_pattern_white.svg) repeat;
 
     &.r-avatar-primary {
         border-bottom: 1px solid #FAAEBB;
@@ -4975,7 +4988,7 @@ h4.r-heading-light {
 }
 
 .ant-avatar {
-    background: transparent url(/assets/icon_pattern_white.svg) repeat;
+    background: transparent url(/images/icon_pattern_white.svg) repeat;
 
     > img {
         border-radius: @border-radius-base;
@@ -5457,7 +5470,7 @@ h4.r-heading-light {
 }
 
 .r-subscribe {
-    background: transparent url(/assets/icon_pattern_white.svg) repeat;
+    background: transparent url(/images/icon_pattern_white.svg) repeat;
     padding: 48px 0;
 
     .r-subscribe-title {
@@ -6496,7 +6509,7 @@ h4.r-heading-light {
     }
 
     &:hover {
-        background: #FFFFFF url(/assets/icon_pattern_grey.svg) repeat;
+        background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
 
         .ant-avatar {
             border-color: #FDBAC4;

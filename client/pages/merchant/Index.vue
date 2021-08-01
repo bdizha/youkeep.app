@@ -27,7 +27,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading">
-                          Become a <span class="r-text-white">verified</span> merchant today!
+                          Become a <span class="r-text-primary">verified</span> seller today!
                         </h1>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -35,9 +35,13 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium r-text-white">
-                          Join the Spazamall Merchant Program and start promoting Spazamall online today and watch
+                          Join the Spazamall Seller Platform and start promoting Spazamall online today and watch
                           your
                           sales run wild!
+                        </p>
+                        <p class="r-text-normal">Built for retail shops, it offers a clear view into
+                          product
+                          purchase activity with automated billing, expensing, and reporting.
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -292,45 +296,100 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-primary">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
-            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                <div class="r-mv-48">
+            <div class="r-mv-24">
+              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 16 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
                   <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
                     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <h3 class="r-heading-light r-text-secondary r-text-uppercase">
-                        Want to start making more sells with Spazamall?
+                      <h3 class="r-heading-light r-text-primary r-text-uppercase">
+                        Want to make more sells with Spazamall?
                       </h3>
                     </a-col>
-                    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <h2 class="r-heading">
-                        Think you know <span class="r-text-white">shopping</span> experience?
+                    <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                      <h2 class="r-heading r-text-white">
+                        <span class="r-text-primary">Discover</span> new customers. <span class="r-text-primary">Start</span> selling.
                       </h2>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <p class="r-text-medium r-text-secondary">
-                        Apply to be a Spazamall Merchant today and start achieving your goals.
-                      </p>
+                      <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
+                        <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
+                          <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <h4 class="r-heading r-text-primary r-checked-item">
+                                <a-icon class="r-checked-item-icon" type="check"/>
+                                <span class="r-checked-item-text">
+                                Create an account
+                                </span>
+                              </h4>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <p class="r-text-medium r-text-white">
+                                Apply to be a Spazamall Merchant today and start achieving your goals.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                        <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
+                          <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <h4 class="r-heading r-text-primary r-checked-item">
+                                <a-icon class="r-checked-item-icon" type="check"/>
+                                <span class="r-checked-item-text">
+                                 Setup your store
+                                </span>
+                              </h4>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <p class="r-text-medium r-text-white">
+                                Your products are showcased on our platform to relevant customers.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                        <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
+                          <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <h4 class="r-heading r-text-primary r-checked-item">
+                                <a-icon class="r-checked-item-icon" type="check"/>
+                                <span class="r-checked-item-text">
+                                Start accepting orders
+                                </span>
+                              </h4>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                              <p class="r-text-medium r-text-white">
+                                Seamleassly sell products that meet your customer unique demands.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                      </a-row>
                     </a-col>
-                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                    <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
                            :xs="{ span: 24 }"
                     >
-                      <a-button class="r-btn-secondary" size="large"
+                      <a-button block class="r-btn-primary"
+                                size="large"
                                 type="secondary"
                                 @click="onRegister"
                       >
-                        Become a Merchant
+                        Get started today!
                       </a-button>
                     </a-col>
                   </a-row>
-                </div>
-              </a-col>
-            </a-row>
+                </a-col>
+              </a-row>
+            </div>
           </template>
         </a-card-meta>
       </a-card>

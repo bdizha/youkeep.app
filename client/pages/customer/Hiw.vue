@@ -109,7 +109,7 @@
                      class="r-text-center"
               >
                 <p class="r-text-normal">
-                  Real humans. Better shopping. Our shoppers handle all your shopping and delivery experience for you at
+                  Our shoppers handle all your shopping and delivery experience for you at
                   a very low cost. We partner shoppers and the nearest stores to provide our customers with fast
                   deliveries and better services.
                 </p>
@@ -166,15 +166,6 @@
                 Whether it’s small online shops or retail brands, Spazamall for Business gives you an easy
                 way to
                 manage your selling channel needs.
-              </p>
-            </a-col>
-            <a-col :lg="{ span: 15 }" :md="{ span: 15 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <p class="r-text-normal">Built for retail shops, it offers a clear view into
-                product
-                purchase activity with automated billing, expensing, and reporting.
               </p>
             </a-col>
             <a-col :lg="{ span: 15 }" :md="{ span: 15 }"

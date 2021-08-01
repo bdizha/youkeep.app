@@ -24,7 +24,8 @@
                   <template slot="description">
                     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                       <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/customer-02.svg'" :size="90" class="r-avatar-auto" shape="circle"
+                        <r-avatar :dataSrc="'/images/content/customer-02.svg'" :size="90" class="r-avatar-auto"
+                                  shape="circle"
                         ></r-avatar>
                       </a-col>
                       <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -41,7 +42,8 @@
                   <template slot="description">
                     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                       <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/customer-03.svg'" :size="90" class="r-avatar-auto" shape="circle"
+                        <r-avatar :dataSrc="'/images/content/customer-03.svg'" :size="90" class="r-avatar-auto"
+                                  shape="circle"
                         ></r-avatar>
                       </a-col>
                       <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -58,7 +60,8 @@
                   <template slot="description">
                     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                       <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                        <r-avatar :dataSrc="'/images/content/customer-06.svg'" :size="90" class="r-avatar-auto" shape="circle"
+                        <r-avatar :dataSrc="'/images/content/customer-06.svg'" :size="90" class="r-avatar-auto"
+                                  shape="circle"
                         ></r-avatar>
                       </a-col>
                       <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -109,7 +112,9 @@
                                  :xs="{ span: 24 }"
                           >
                             <h3 class="r-heading">
-                              Spazamall <span class="r-text-primary">gives</span> you the flexibility to <span class="r-text-secondary">shop</span> however you like.
+                              Spazamall <span class="r-text-primary">gives</span> you the flexibility to <span
+                              class="r-text-secondary"
+                            >shop</span> however you like.
                             </h3>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -145,7 +150,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <r-avatar  data-src="/images/content/screen-02-secondary.png" :size="300" class="r-avatar-block"
+                    <r-avatar :size="300" class="r-avatar-block" data-src="/images/content/screen-02-secondary.png"
                     ></r-avatar>
                   </a-col>
                 </a-row>
@@ -172,7 +177,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <r-avatar data-src="/images/content/screen-01-secondary.png" :size="300" class="r-avatar-block"
+                    <r-avatar :size="300" class="r-avatar-block" data-src="/images/content/screen-01-secondary.png"
                     ></r-avatar>
                   </a-col>
                   <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -198,7 +203,9 @@
                                  :xs="{ span: 24 }"
                           >
                             <h3 class="r-heading">
-                              Spazamall is the best way to <span class="r-text-secondary">find</span> and <span class="r-text-primary">purchase</span> whatever your haert desires.
+                              Spazamall is the best way to <span class="r-text-secondary">find</span> and <span
+                              class="r-text-primary"
+                            >purchase</span> whatever your haert desires.
                             </h3>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
