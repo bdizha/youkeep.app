@@ -91,11 +91,18 @@ module.exports = {
     '~plugins/vue-slick-carousel'
   ],
 
-  modules: [
-    '@nuxtjs/router',
-    'nuxt-lazy-load'
+  buildModules: [
+    '@nuxt/image'
   ],
 
+  modules: [
+    '@nuxtjs/router',
+    '@nuxt/image'
+  ],
+
+  image: {
+    domains: ['https://images.unsplash.com', 'https://source.unsplash.com', 'https://spazamall.s3.af-south-1.amazonaws.com']
+  },
   hooks: {
     'build:done' () {
       const modulesToClear = ['vue', 'vue/dist/vue.runtime.common.prod']
@@ -110,5 +117,5 @@ module.exports = {
     loaders: {
       less: { javascriptEnabled: true }
     }
-  },
+  }
 }

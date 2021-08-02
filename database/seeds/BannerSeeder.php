@@ -51,6 +51,10 @@ class BannerSeeder extends DatabaseSeeder
 
             Storage::disk('s3')->put($photoName, file_get_contents($photoPath));
 
+            $currentUrl = Storage::disk('s3')->url($photoName);
+
+            dd($currentUrl);
+
             echo "Banner inserted: " . public_path('storage/banner/' . $photoName) . "\n";
 
             $banner->photo = $photoName;
