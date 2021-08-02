@@ -4,7 +4,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <r-steps :size="size" :steps="steps" theme="secondary" :title="title"></r-steps>
+      <r-steps :size="size" :steps="steps" :title="title" :content="content" theme="secondary"></r-steps>
     </a-col>
   </a-row>
 </template>
@@ -19,6 +19,8 @@ export default {
     return {
       currentStep: 0,
       title: 'Spazamall connects sellers to customers.',
+      content: 'Spazamall partners with local stores and showcases your products to our customers with fast\n' +
+        'deliveries and a better shopping service.',
       steps: [
         {
           title: 'List It',

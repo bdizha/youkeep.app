@@ -317,7 +317,8 @@
                     </a-col>
                     <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <h2 class="r-heading r-text-white">
-                        <span class="r-text-primary">Discover</span> new customers. <span class="r-text-primary">Start</span> selling.
+                        <span class="r-text-primary">Discover</span> new customers. <span class="r-text-primary"
+                      >Start</span> selling.
                       </h2>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

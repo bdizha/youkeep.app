@@ -29,7 +29,7 @@ const routes = [
   { path: '/shopper', name: 'shopper', component: page('shopper/Index.vue') },
   { path: '/shopper/hiw', name: 'shopper-paise', component: page('shopper/Hiw.vue') },
   { path: '/customer', name: 'customer', component: page('customer/Index.vue') },
-  { path: '/customer/hiw', name: 'customer-paise', component: page('customer/Hiw.vue') },
+  { path: '/customer/membership', name: 'customer-membership', component: page('customer/Membership.vue') },
   { path: '/seller', name: 'seller', component: page('seller/Index.vue') },
   { path: '/merchant', name: 'merchant', component: page('merchant/Index.vue') },
   { path: '/merchant/hiw', name: 'merchant-paise', component: page('merchant/Hiw.vue') },

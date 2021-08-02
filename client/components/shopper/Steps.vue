@@ -4,7 +4,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <r-steps :size="size" :steps="steps" theme="secondary" :title="title"></r-steps>
+      <r-steps :size="size" :steps="steps" :title="title" :content="content" theme="secondary"></r-steps>
     </a-col>
   </a-row>
 </template>
@@ -12,13 +12,15 @@
 export default {
   name: 'r-shopper-steps',
   props: {
-    size: { type: Number, required: false, default: 24 },
+    size: { type: Number, required: false, default: 16 },
     hasMore: { type: Boolean, required: false, default: false }
   },
   data () {
     return {
       currentStep: 0,
       title: 'Spazamall connects shoppers to customers.',
+      content: 'We partner with shoppers and the nearest stores to provide our customers with fast\n' +
+        'deliveries and better services.',
       steps: [
         {
           title: 'Shop It',

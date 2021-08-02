@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary-light">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -19,9 +19,9 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <h4 class="r-heading-light r-text-secondary r-text-uppercase r-text-secondary">
+                        <h3 class="r-heading-light r-text-primary r-text-uppercase">
                           For customers
-                        </h4>
+                        </h3>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                              :sm="{ span: 24 }"
@@ -36,10 +36,16 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Order everything from clothes to household essentials for delivery to your door.
+                          Order everything from clothes to household essentials for delivery to your door. Get your next delivery in a few hour today.
                         </p>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
                         <p class="r-text-normal">
-                          With online shopping platform, tens of thousands of product categories, and millions of products
+                          With online shopping platform, tens of thousands of product categories, and millions of
+                          products
                           in
                           front of you, it’s the all-in-one
                           marketplace you deserve.
@@ -50,13 +56,13 @@
                              :xs="{ span: 24 }"
                       >
                         <a-button block
-                                  class="r-btn-secondary"
+                                  class="r-btn-primary"
                                   size="large"
                                   to="/register"
                                   type="secondary"
                                   @click="onRegister"
                         >
-                          Get started today!
+                          Start shopping today!
                         </a-button>
                       </a-col>
                     </a-row>
@@ -104,7 +110,8 @@
                          :xs="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Eliminate trips to the shopping mall, and save yourself <span class="r-text-primary">time</span> and <span class="r-text-secondary">money!</span>
+                      Eliminate trips to the shopping mall, and save yourself <span class="r-text-primary">time</span>
+                      and <span class="r-text-secondary">money!</span>
                     </h2>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -112,12 +119,14 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      We can't wait for you to <span class="r-text-secondary">experience</span> all the Spazamall offers today.
+                      We can't wait for you to <span class="r-text-secondary">experience</span> all the Spazamall offers
+                      today.
                     </p>
                     <p class="r-text-normal">
                       Shop your go-to products from your favorite stores. We deliver from local
                       and
-                      global retailers you love - like Adidas and more. Brand new fashion items, household stuff, and more.
+                      global retailers you love - like Adidas and more. Brand new fashion items, household stuff, and
+                      more.
                     </p>
                   </a-col>
                 </a-row>
@@ -165,7 +174,9 @@
                          :xs="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Enjoy the <span class="r-text-secondary">fastest</span> deliveries from our local and <span class="r-text-primary">reliable</span> shoppers.
+                      Enjoy the <span class="r-text-secondary">fastest</span> deliveries from our local and <span
+                      class="r-text-primary"
+                    >reliable</span> shoppers.
                     </h2>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -214,7 +225,9 @@
                          :xs="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Spazamall offers the <span class="r-text-primary">best</span> shopping <span class="r-text-secondary">experience</span> on the market today!
+                      Spazamall offers the <span class="r-text-primary">best</span> shopping <span
+                      class="r-text-secondary"
+                    >experience</span> on the market today!
                     </h2>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -222,7 +235,8 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      Spazamall shopping is the <span class="r-text-primary">best</span> shopping experience on the market.
+                      Spazamall shopping is the <span class="r-text-primary">best</span> shopping experience on the
+                      market.
                     </p>
                     <p class="r-text-normal">
                       Shop your go-to products from your favorite stores. Our shoppers help you get everything you
@@ -269,10 +283,10 @@
                        :xs="{ span: 24 }"
                 >
                   <h2 class="r-heading">
-                    Anything you want to <span class="r-text-primary">shop</span> - it’s on the way.
+                    <span class="r-text-primary">Anything</span> you want to <span class="r-text-primary">shop</span> - it’s on the way.
                   </h2>
                 </a-col>
-                <a-col :lg="{ span: 18 }" :md="{ span: 12 }"
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
@@ -280,6 +294,11 @@
                     Become a member, order from your phone or computer, and we'll bring your order
                     straight to the location requested.
                   </p>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
                   <a-button class="r-btn-primary"
                             size="large"
                             to="/register"

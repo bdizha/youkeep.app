@@ -6,27 +6,27 @@
           <a-col :lg="{span: 16}" :md="{span: 18}" :sm="{span: 24}" :xs="{span: 24}" class="r-text-center">
             <a-row :gutter="[24,24]" justify="start" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                     class="r-text-left"
+                     class="r-text-center"
               >
-                <h4 class="r-heading-light r-text-uppercase">
+                <h3 class="r-heading-light r-text-uppercase r-text-primary">
                   Where we're located
-                </h4>
+                </h3>
               </a-col>
               <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
-                     class="r-text-left"
+                     class="r-text-center"
               >
                 <a-row :gutter="[24,24]" justify="start" type="flex">
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                         class="r-text-left"
+                         class="r-text-center"
                   >
-                    <h2 class="r-heading">
-                      <a-icon type="environment"/>
+                    <h3 class="r-heading">
+                      <a-icon type="environment" class="r-text-primary"/>
                       Johannesburg, <br>
                       South Africa
-                    </h2>
+                    </h3>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                         class="r-text-left"
+                         class="r-text-center"
                   >
                     <p class="r-text-normal">
                       <nuxt-link class="r-text-white" to="mailto:info@shopple.app">info@shopple.app
@@ -36,20 +36,20 @@
                 </a-row>
               </a-col>
               <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
-                     class="r-text-left"
+                     class="r-text-center"
               >
                 <a-row :gutter="[24,24]" justify="start" type="flex">
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                         class="r-text-left"
+                         class="r-text-center"
                   >
-                    <h2 class="r-heading">
-                      <a-icon type="environment"/>
+                    <h3 class="r-heading">
+                      <a-icon type="environment" class="r-text-primary"/>
                       London, <br>
                       United Kingdom
-                    </h2>
+                    </h3>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                         class="r-text-left"
+                         class="r-text-center"
                   >
                     <p class="r-text-normal">
                       <nuxt-link class="r-text-white" to="mailto:info@shopple.app">Coming soon</nuxt-link>
@@ -58,20 +58,22 @@
                 </a-row>
               </a-col>
               <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
-                     class="r-text-left"
+                     class="r-text-center"
               >
                 <a-row :gutter="[24,24]" justify="start" type="flex">
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                         class="r-text-left"
+                         class="r-text-center"
                   >
-                    <h2 class="r-heading">
-                      <a-icon type="environment"/>
-                      Sydney, <br>
-                      Australia
-                    </h2>
+                    <h3 class="r-heading">
+                     <div class="r-icon-item">
+                       <a-icon type="environment" class="r-text-primary"/>
+                       Sydney, <br>
+                       Australia
+                     </div>
+                    </h3>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                         class="r-text-left"
+                         class="r-text-center"
                   >
                     <p class="r-text-normal">
                       <nuxt-link class="r-text-white" to="mailto:info@shopple.app">Coming soon</nuxt-link>

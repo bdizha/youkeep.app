@@ -156,6 +156,8 @@ h1.r-text-x-large{
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
+    padding: 0;
+    margin: 0;
 }
 
 .r-text-small {
@@ -230,7 +232,7 @@ h1.r-text-x-large{
 
             &.ant-select {
                 .ant-input {
-                    background: rgba(0, 0, 0, 0.09);
+                    background: #3893f0;
                     border-color: @primary-color;
                     color: @black;
                     height: 36px;
@@ -362,8 +364,8 @@ h1.r-text-x-large{
 
                 &.ant-select {
                     .ant-input {
-                        background: rgba(0, 0, 0, 0.09);
-                        border-color: @secondary-color;
+                        background: #3893f0;
+                        border-color: #3b89d9;
                         color: @white;
                         height: 36px;
 
@@ -374,11 +376,11 @@ h1.r-text-x-large{
 
                         &:hover,
                         &:focus {
-                            background: rgba(255, 255, 255, 0.999);
+                            background: rgba(255, 255, 255, 0.9);
 
                             &.ant-select {
                                 .ant-input {
-                                    background: rgba(255, 255, 255, 0.999);
+                                    background: rgba(255, 255, 255, 0.9);
                                     border-color: @secondary-color;
                                     color: @black;
                                 }
@@ -1801,10 +1803,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .r-checked-item{
-    &h4{
-        display: inline-block;
-    }
-    padding-left: 45px;
+    padding-left: 39px;
     position: relative;
     .r-checked-item-icon{
         font-size: 18px;
@@ -1821,6 +1820,12 @@ xxl	≥1600px, could be a span value or an object containing above props
         font-size: 15px;
         min-height: 30px;
         display: block;
+    }
+}
+
+h4{
+    &.r-checked-item {
+        display: inline-block;
     }
 }
 
@@ -2029,16 +2034,15 @@ xxl	≥1600px, could be a span value or an object containing above props
 
 
 h1.r-heading {
-    font-weight: 900;
+    font-weight: 800;
     @media (min-width: 768px) {
-        font-size: 42px;
-        line-height: 48px;
+        font-size: 45px;
+        line-height: 51px;
         margin: 0;
-        letter-spacing: -0.99px;
     }
 
     @media (max-width: 768px) {
-        font-weight: 700;
+        font-weight: 800;
         font-size: 39px;
         line-height: 45px;
         margin: 0;
@@ -2046,19 +2050,19 @@ h1.r-heading {
 }
 
 h2.r-heading {
-    font-weight: 800;
-    font-size: 33px;
+    font-weight: 700;
+    font-size: 36px;
     margin: 0;
-    line-height: 42px;
+    line-height: 39px;
 
     @media (max-width: 768px) {
-        font-size: 30px;
+        font-size: 33px;
         line-height: 36px;
     }
 }
 
 h2.r-heading-light {
-    font-weight: 300;
+    font-weight: 400;
     line-height: 36px;
     font-size: 36px;
     margin-top: 0;
@@ -2083,7 +2087,7 @@ h3.r-heading-light {
 }
 
 h3.r-heading {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 24px;
     line-height: 27px;
     margin: 0;
@@ -2108,25 +2112,6 @@ h3.r-heading {
             text-transform: uppercase;
             font-size: 18px;
             color: @black;
-        }
-    }
-}
-
-.r-store-categories {
-    h3.r-heading {
-        font-weight: 700;
-        font-size: 21px;
-
-        @media (min-width: 768px) {
-            line-height: 36px;
-            &.r-same-height {
-                line-height: 36px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            font-weight: 600;
-            font-size: 18px;
         }
     }
 }
@@ -2166,6 +2151,25 @@ h4.r-heading-light {
 .r-text-tip-secondary {
     font-weight: 300;
     color: @secondary-color;
+}
+
+.r-store-categories {
+    h3.r-heading {
+        font-weight: 600;
+        font-size: 21px;
+
+        @media (min-width: 768px) {
+            line-height: 36px;
+            &.r-same-height {
+                line-height: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            font-weight: 600;
+            font-size: 18px;
+        }
+    }
 }
 
 .ant-modal-footer {
@@ -4413,8 +4417,8 @@ h4.r-heading-light {
     border-radius: @border-radius-base;
 
     &.ant-card-hoverable {
-        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+        -webkit-box-shadow: 0 1px 3px 0 #3893f0;
+        box-shadow: 0 1px 3px 0 #3893f0;
 
         &:hover {
             -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.21);
@@ -6307,6 +6311,46 @@ h4.r-heading-light {
     }
 }
 
+.r-circle{
+    background: @primary-color;
+    color: @white;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    overflow: hidden;
+    display: block;
+}
+
+h3.r-step-heading{
+    font-size: 21px;
+    font-weight: 700;
+    height: 30px;
+    padding-left: 42px;
+    line-height: 30px;
+    position: relative;
+    .r-circle{
+        font-size: 21px;
+        font-weight: 800;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 100%;
+        overflow: hidden;
+    }
+}
+
+.r-bg-primary-light{
+    .r-circle{
+        background: @primary-color;
+    }
+}
+
+.r-bg-secondary-light{
+    .r-circle{
+        background: @secondary-color;
+    }
+}
+
 .r-bg-primary {
     background: @primary-color url(/images/icon_pattern_dark_large.svg) no-repeat;
 
@@ -6316,6 +6360,7 @@ h4.r-heading-light {
 
     .r-text-normal,
     .r-text-medium,
+    .r-text-large,
     h3,
     h4,
     h1,
@@ -6333,6 +6378,7 @@ h4.r-heading-light {
 
     .r-text-normal,
     .r-text-medium,
+    .r-text-large,
     h3,
     h4,
     h1,
@@ -6476,7 +6522,7 @@ h4.r-heading-light {
     border-radius: 36px @border-radius-base @border-radius-base 36px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.09);
+    box-shadow: 0 1px 3px 0 #3893f0;
     background: #FFF;
 
     &.r-slider-item-36 {
@@ -7218,7 +7264,7 @@ a:hover {
 
             &:before {
                 content: "";
-                background-color: rgba(0, 0, 0, 0.09);
+                background-color: #3893f0;
                 position: absolute;
                 left: 0;
                 right: 0;

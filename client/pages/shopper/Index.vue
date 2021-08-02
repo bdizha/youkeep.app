@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary-light">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -20,17 +20,17 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <h4 class="r-heading-light r-text-secondary r-text-uppercase r-text-secondary">
+                        <h3 class="r-heading-light r-text-primary r-text-uppercase">
                           For shoppers
-                        </h4>
+                        </h3>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading r-text-uppercase">
-                          <span class="r-text-secondary">More</span> flexible,<br>
-                          <span class="r-text-secondary">Less</span> intrusive.
+                          <span class="r-text-primary">More</span> flexible,<br>
+                          <span class="r-text-primary">Less</span> intrusive.
                         </h1>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -41,6 +41,11 @@
                           Earn up to R55/hr or more shopping for Spazamall members.
                           Deliver things people love, from the stores they trust.
                         </p>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
                         <p class="r-text-normal">
                           Earn up to R55/hr or more shopping for Spazamall members.
                           Deliver things people love, from the stores they trust.
@@ -69,7 +74,7 @@
                 :sm="{ span: 24 }"
                 :xs="{ span: 24 }"
               >
-                <r-avatar :size="450" class="r-avatar-block" data-src="/images/content/screen-02-secondary.png"
+                <r-avatar :size="450" class="r-avatar-auto" data-src="/images/content/screen-02-secondary.png"
                 ></r-avatar>
               </a-col>
             </a-row>
@@ -85,65 +90,91 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-        <a-col v-for="(feature, index) in features"
-               :key="index"
-               :lg="{ span: 8 }" :md="{ span: 8 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a-card>
-            <a-card-meta>
-              <template slot="description">
-          <a-row :gutter="[12,24]" align="top" justify="start" type="flex">
-            <a-col :lg="{ span: 4 }" :md="{ span: 6 }"
-                   :sm="{ span: 12 }"
-                   :xs="{ span: 12 }"
-            >
-              <r-avatar :dataSrc="feature.image" :size="60" class="r-avatar-block"
-              ></r-avatar>
-            </a-col>
-            <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
+      <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+            Deliver the orders people need
+          </h4>
+        </a-col>
+        <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <h2 class="r-heading">
+            It’s <span class="r-text-secondary">quick</span> and <span class="r-text-primary">easy</span> to earn
+            <span class="r-text-secondary">anytime</span>, anywhere you go.
+          </h2>
+        </a-col>
+        <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <p class="r-text-medium">
+            With Spazamall, you don’t have to worry about which store to go to or where your next ride will take you.
+          </p>
+        </a-col>
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
+            <a-col v-for="(feature, index) in features"
+                   :key="index"
+                   :lg="{ span: 8 }" :md="{ span: 8 }"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-row :gutter="[24,12]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <h3 class="r-heading r-text-secondary r-text-uppercase">
-                    {{ feature.heading }}
-                  </h3>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <h4 class="r-heading">
-                    {{ feature.title }}
-                  </h4>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <p class="r-text-normal">
-                    {{ feature.content }}
-                  </p>
-                </a-col>
-              </a-row>
+              <a-card class="r-bg-primary-light">
+                <a-card-meta>
+                  <template slot="description">
+                    <a-row :gutter="[12,24]" align="top" justify="start" type="flex">
+                      <a-col :lg="{ span: 6 }" :md="{ span: 6 }"
+                             :sm="{ span: 12 }"
+                             :xs="{ span: 12 }"
+                      >
+                        <r-avatar :dataSrc="feature.image" :size="60" class="r-avatar-block"
+                        ></r-avatar>
+                      </a-col>
+                      <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-row :gutter="[24,12]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                              {{ feature.heading }}
+                            </h4>
+                          </a-col>
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <h4 class="r-heading">
+                              {{ feature.title }}
+                            </h4>
+                          </a-col>
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <p class="r-text-normal">
+                              {{ feature.content }}
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                    </a-row>
+                  </template>
+                </a-card-meta>
+              </a-card>
             </a-col>
           </a-row>
-              </template>
-            </a-card-meta>
-          </a-card>
         </a-col>
+      </a-row>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <a-row :gutter="[24,24]" class="r-text-center" justify="start" type="flex">
         <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
                :sm="{ span: 12 }"
                :xs="{ span: 12 }"
         >
-          <a-card class="">
+          <a-card class="r-bg-secondary-light">
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
@@ -223,7 +254,8 @@
                     </a-col>
                     <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <h2 class="r-heading r-text-white">
-                        <span class="r-text-primary">Discover</span> new customers. <span class="r-text-primary">Start</span> selling.
+                        It’s <span class="r-text-primary">quick</span> and <span class="r-text-primary">easy</span> to
+                        earn on your time in your car, anytime.
                       </h2>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -231,13 +263,14 @@
                         <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
                           <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
                             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <h4 class="r-heading r-text-white">
-                                Create an account
+                              <h4 class="r-heading r-text-primary r-checked-item">
+                                <a-icon class="r-checked-item-icon" type="check"/>
+                                Earn with Every Order
                               </h4>
                             </a-col>
                             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                               <p class="r-text-medium r-text-white">
-                                Add your company details and category preferences.
+                                Get paid the full amount for every order you deliver + keep 100% of your tips.
                               </p>
                             </a-col>
                           </a-row>
@@ -245,13 +278,14 @@
                         <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
                           <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
                             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <h4 class="r-heading r-text-white">
-                                Discover new products
+                              <h4 class="r-heading r-text-primary r-checked-item">
+                                <a-icon class="r-checked-item-icon" type="check"/>
+                                Be Your Own Boss
                               </h4>
                             </a-col>
                             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                               <p class="r-text-medium r-text-white">
-                                Seamleassly find products that meet your unique needs.
+                                Drive as little or as much as you want, anytime you want, anywhere you go.
                               </p>
                             </a-col>
                           </a-row>
@@ -259,13 +293,14 @@
                         <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
                           <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
                             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <h4 class="r-heading r-text-white">
-                                Connect with suppliers
+                              <h4 class="r-heading r-text-primary r-checked-item">
+                                <a-icon class="r-checked-item-icon" type="check"/>
+                                Local Pickup Location
                               </h4>
                             </a-col>
                             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                               <p class="r-text-medium r-text-white">
-                                Request a sample, start a conversation, or save to review later.
+                                One pickup location with free, reserved parking. No tickets, no headaches.
                               </p>
                             </a-col>
                           </a-row>

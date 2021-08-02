@@ -49,14 +49,9 @@ class BannerSeeder extends DatabaseSeeder
         try{
             $photoPath = __DIR__ . '/../../' . $photo;
 
-            if (!file_exists(public_path('storage/banner/' . $photoName))) {
-                Storage::disk('banner')->put($photoName, file_get_contents($photoPath));
+            Storage::disk('s3')->put($photoName, file_get_contents($photoPath));
 
-                echo "Banner inserted: " . public_path('storage/banner/' . $photoName) . "\n";
-            }
-            else{
-                echo ">>>>> Skipping banner: " . $banner->photo . " ::: {$photo}\n";
-            }
+            echo "Banner inserted: " . public_path('storage/banner/' . $photoName) . "\n";
 
             $banner->photo = $photoName;
             $banner->save();

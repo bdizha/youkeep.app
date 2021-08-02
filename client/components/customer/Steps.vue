@@ -4,7 +4,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <r-steps :size="size" :steps="steps" theme="secondary" :title="title"></r-steps>
+      <r-steps :size="size" :steps="steps" :title="title" :content="content" theme="secondary"></r-steps>
     </a-col>
   </a-row>
 </template>
@@ -19,17 +19,19 @@ export default {
     return {
       currentStep: 0,
       title: 'Spazamall connects customers to sellers.',
+      content: 'Our shoppers handle all your shopping and delivery experience for you at\n' +
+        'a very low cost.',
       steps: [
         {
-          title: 'Find It',
-          content: 'Shop better at your favorite stores around the world, anytime.'
+          title: 'Add products to your cart',
+          content: 'Get fashion, gadgets & other items from our marketplace.'
         },
         {
-          title: 'Shop It',
+          title: 'Set your pickup or delivery time',
           content: 'It\'s shopping time! We handle all your shopping experience and more.'
         },
         {
-          title: 'Get It',
+          title: 'Get your items delivered to you',
           content: 'Sit back and wait for your delivery to arrive at your doorstep fast.'
         }
       ]

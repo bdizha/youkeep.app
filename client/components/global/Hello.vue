@@ -9,8 +9,6 @@
               class="ant-form ant-form-vertical"
               @submit="onSubmit"
       >
-        <a-form-item>
-        </a-form-item>
         <a-form-item label="Select a reason">
           <a-select
             :defaultValue="categories[0]"
@@ -69,7 +67,8 @@
                  class="r-text-left"
           >
             <a-button block
-                      class="r-btn-primary" html-type="submit"
+                      class="r-btn-secondary"
+                      html-type="submit"
                       size="large"
                       type="primary"
                       @click="onSubmit"
@@ -80,8 +79,6 @@
           </a-col>
         </a-row>
       </a-form>
-      <r-notice :process="current"></r-notice>
-      <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
     </a-col>
   </a-row>
 </template>
