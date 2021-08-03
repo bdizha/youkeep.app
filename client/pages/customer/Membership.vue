@@ -261,8 +261,8 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                    Spazamall<span class="r-text-white">+</span> for customers
+                  <h3 class="r-heading-light r-text-uppercase">
+                    Why <span class="r-text-primary">Spazamall+</span> for customers?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 16 }" :md="{ span: 18 }"

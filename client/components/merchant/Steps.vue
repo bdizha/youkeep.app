@@ -19,8 +19,7 @@ export default {
     return {
       currentStep: 0,
       title: 'Spazamall connects sellers to customers.',
-      content: 'Spazamall partners with local stores and showcases your products to our customers with fast\n' +
-        'deliveries and a better shopping service.',
+      content: 'Spazamall offers stores likes yours to sell products to our customers with the most convenient shopping tools on the market.',
       steps: [
         {
           title: 'List It',

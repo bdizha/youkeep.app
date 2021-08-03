@@ -44,7 +44,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          Spazamall powers the whole shopping experience for shppers around the world.
+                          Spazamall powers the whole shopping experience for shoppers around the world.
                         </p>
                       </a-col>
                     </a-row>
@@ -126,7 +126,7 @@
           <a-card class="r-bg-secondary-light">
             <a-card-meta>
               <template slot="description">
-                <div class="r-mv-48">
+                <div class="r-mv-24">
                   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
@@ -197,7 +197,7 @@
               <a-card class="r-bg-primary-light">
                 <a-card-meta>
                   <template slot="description">
-                    <div class="r-mv-48">
+                    <div class="r-mv-24">
                       <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="center" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
@@ -251,7 +251,7 @@
                   <a-card class="r-bg-primary-light">
                     <a-card-meta>
                       <template slot="description">
-                        <div class="r-mv-48">
+                        <div class="r-mv-24">
                           <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                    :xs="{ span: 24 }"

@@ -1,5 +1,5 @@
 <template>
-  <a-tabs v-model="activeKey" type="card">
+  <a-tabs v-model="selectedKey" type="card">
     <a-tab-pane key="customer" tab="For Customers"
     >
       <r-customer-steps :size="16"></r-customer-steps>
@@ -20,10 +20,12 @@ export default {
   name: 'r-tabs',
   props: {
     title: { type: String, required: false, default: 'Spazamall connects shoppers to sellers.' },
-    activeKey: { type: String, required: false, default: 'customer' },
+    activeKey: { type: String, required: false, default: 'customer' }
   },
   data () {
-    return {}
+    return {
+      selectedKey: this.activeKey
+    }
   },
   created () {
     this.payload()

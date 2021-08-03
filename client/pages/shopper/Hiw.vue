@@ -21,7 +21,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                          Meet our
+                          Get Paid to Shop
                         </h4>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -29,7 +29,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading">
-                          Powerful <span class="r-text-primary">marketplace</span> to experience shopping better.
+                          It’s <span class="r-text-primary">quick</span> & <span class="r-text-secondary">easy</span> to earn on your time in your car, anywhere.
                         </h1>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -37,16 +37,16 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Get the benefits of Spazamall products at a price you can afford and enjoy from the widest
-                          product
-                          catalog on the market.
+                          Active Spazamall shoppers handle all the shopping and delivery experiences for Spazamall customers at a steady rate.
                         </p>
-                        <p class="r-text-medium">
-                          With online shopping platform, tens of thousands of product categories, and millions of
-                          products
-                          in
-                          front of you, it’s the all-in-one
-                          marketplace you deserve.
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <p class="r-text-normal">
+                          We partner shoppers and the nearest stores to provide our customers with the fastest
+                          deliveries on the market.
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -82,52 +82,11 @@
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
-    >
-      <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
-        <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-               class="r-text-center"
-        >
-          <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-                   class="r-text-center"
-            >
-              <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                Real humans. Better shopping.
-              </h4>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-                   class="r-text-center"
-            >
-              <h2 class="r-heading">
-                How our Shopping Service Works
-              </h2>
-            </a-col>
-            <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-                   class="r-text-center"
-            >
-              <p class="r-text-medium">
-                Our shoppers handle all your shopping and delivery experience for you at
-                a very low cost. We partner shoppers and the nearest stores to provide our customers with fastest
-                deliveries on the market.
-              </p>
-            </a-col>
-          </a-row>
-        </a-col>
-      </a-row>
-    </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
            class="r-text-center"
     >
       <r-tabs active-key="shopper" theme="shopper" title="Spazamall connects shoppers to customers."></r-tabs>
     </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
            class="r-text-center"
     >
       <r-shopper-hiw></r-shopper-hiw>
@@ -147,7 +106,7 @@
                   <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
                     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <h3 class="r-heading-light r-text-uppercase">
-                        Why Spazamall for shoppers?
+                        Why <span class="r-text-primary">Spazamall</span> for shoppers?
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

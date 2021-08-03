@@ -95,7 +95,7 @@
            class="r-text-center"
     >
       <a-card class="r-bg-secondary">
-        <div class="r-mv-48">
+        <div class="r-mv-24">
           <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                    :sm="{ span: 24 }"
@@ -108,7 +108,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                    <span class="r-text-white">Sell</span> online at Spazamall?
+                    Why <span class="r-text-white">Sell</span> online at Spazamall?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
@@ -132,9 +132,6 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <p class="r-text-normal">Plus, Spazamall offers a host of seller tools
-                    and resources to enhance your fun and profits.
-                  </p>
                   <a-button class="r-btn-primary"
                             size="large"
                             to="/register"

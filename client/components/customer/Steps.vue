@@ -19,20 +19,20 @@ export default {
     return {
       currentStep: 0,
       title: 'Spazamall connects customers to sellers.',
-      content: 'Our shoppers handle all your shopping and delivery experience for you at\n' +
+      content: 'Our shoppers handle all your order collection and delivery experience as well as returns for you at\n' +
         'a very low cost.',
       steps: [
         {
-          title: 'Add products to your cart',
-          content: 'Get fashion, gadgets & other items from our marketplace.'
+          title: 'Add It',
+          content: 'Add products to your cart with ease and control. Buy fashion, gadgets & other items from our marketplace.'
         },
         {
-          title: 'Set your pickup or delivery time',
-          content: 'It\'s shopping time! We handle all your shopping experience and more.'
+          title: 'Shop It',
+          content: 'Set your pickup or delivery time. It\'s shopping time! We handle all your shopping experience and more. '
         },
         {
-          title: 'Get your items delivered to you',
-          content: 'Sit back and wait for your delivery to arrive at your doorstep fast.'
+          title: 'Enjoy It',
+          content: 'Get your items delivered to you. Sit back and wait for your delivery to arrive at your doorstep fast.'
         }
       ]
     }

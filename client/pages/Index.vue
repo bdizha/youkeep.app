@@ -12,7 +12,7 @@
                   <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
                   >
-                    <div class="r-mv-48">
+                    <div class="r-mv-24">
                       <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"

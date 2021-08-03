@@ -15,7 +15,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                Why thousands of retailers <span class="r-text-primary">choose</span> Spazamall
+                Why 1000s of retailers <span class="r-text-primary">choose</span> Spazamall
               </h2>
             </a-col>
             <a-col :lg="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -35,8 +35,8 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          Accept all major credit cards - your customers don't even need a Spazamall account to place an
-                          order.
+                          Accept all major credit cards - your customers don't even need an account to place an
+                          order on the Spazamall marketplace.
                         </p>
                       </a-col>
                     </a-row>
@@ -61,7 +61,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          When an order is completed, the money usually shows up in your Spazamall account in minutes.
+                          When an order is completed, the money shows up in your Spazamall account in with every order you receive.
                         </p>
                       </a-col>
                     </a-row>
@@ -87,7 +87,7 @@
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
                           Automatic fraud screening and our Seller Protection Policy help keep you and your customers
-                          safe.
+                          safe and insured.
                         </p>
                       </a-col>
                     </a-row>
@@ -139,10 +139,18 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <p class="r-text-normal">
-                      Whether it’s small online shops or retail brands, Spazamall for Business gives you an easy
+                    <p class="r-text-medium">
+                     Spazamall for Business gives you an easy
                       way to
-                      manage your selling channel needs. Built for retail shops, it offers a clear view into
+                      manage your selling channel needs.
+                    </p>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <p class="r-text-normal">
+                      Built for retail shops, it offers a clear view into
                       product
                       purchase activity with automated billing, expensing, and reporting.
                     </p>
@@ -201,7 +209,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <p class="r-text-normal">
+                    <p class="r-text-medium">
                       Get paid for what you sell on Spazamall, on your own website, or in online
                       classifieds and forums.
                     </p>
@@ -210,16 +218,16 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <p class="r-text-normal">
-                      <a-icon type="check"></a-icon>
+                    <p class="r-checked-item">
+                      <a-icon class="r-checked-item-icon" type="check"></a-icon>
                       Setup is simple
                     </p>
-                    <p class="r-text-normal">
-                      <a-icon type="check"></a-icon>
+                    <p class="r-checked-item">
+                      <a-icon class="r-checked-item-icon" type="check"></a-icon>
                       Getting paid online is affordable - our rates are competitive
                     </p>
-                    <p class="r-text-normal">
-                      <a-icon type="check"></a-icon>
+                    <p class="r-checked-item">
+                      <a-icon class="r-checked-item-icon" type="check"></a-icon>
                       In minutes you’ll be up and running, able to accept payments
                     </p>
                   </a-col>
@@ -270,8 +278,17 @@
                          :xs="{ span: 24 }"
                   >
                     <h3 class="r-heading">
-                      Get one-on-one <span class="r-text-secondary">support</span> when you need it
+                      Get one-on-one <span class="r-text-secondary">support</span> anytime
                     </h3>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <p class="r-text-medium">
+                      We’re here to take the guesswork out of running your own business - for
+                      good.
+                    </p>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                          :sm="{ span: 24 }"
@@ -281,8 +298,7 @@
                       Spazamall gives you a dedicated e-commerce expert supported by a team of knowledgeable
                       small
                       business
-                      experts. We’re here to take the guesswork out of running your own business - for
-                      good.
+                      experts.
                     </p>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"

@@ -97,6 +97,7 @@ module.exports = {
 
   modules: [
     '@nuxtjs/router',
+    'nuxt-lazy-load',
     '@nuxt/image'
   ],
 

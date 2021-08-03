@@ -1,8 +1,16 @@
 <template>
   <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <h2 class="r-heading">
+        Why 1000s of retailers <span class="r-text-primary">choose</span> Spazamall?
+      </h2>
+    </a-col>
     <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-           :sm="{ span: 12 }"
-           :xs="{ span: 12 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <a-card class="r-bg-primary-light">
         <a-card-meta>
@@ -39,8 +47,8 @@
       </a-card>
     </a-col>
     <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-           :sm="{ span: 12 }"
-           :xs="{ span: 12 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <a-card class="r-bg-primary-light">
         <a-card-meta>
@@ -77,8 +85,8 @@
       </a-card>
     </a-col>
     <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-           :sm="{ span: 12 }"
-           :xs="{ span: 12 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
     >
       <a-card class="r-bg-primary-light">
         <a-card-meta>

@@ -262,7 +262,7 @@
            class="r-text-center"
     >
       <a-card class="r-bg-secondary">
-        <div class="r-mv-48">
+        <div class="r-mv-24">
           <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                    :sm="{ span: 24 }"

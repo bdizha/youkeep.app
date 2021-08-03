@@ -10,7 +10,7 @@
    <![CDATA[
     .str20 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256}
     .str18 {stroke:#FBD13E;stroke-width:20;stroke-miterlimit:22.9256}
-    .str19 {stroke:#fcebad;stroke-width:20;stroke-miterlimit:22.9256}
+    .str19 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256}
     .str0 {stroke:#FBD13E;stroke-width:7.62;stroke-miterlimit:22.9256}
     .str11 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
     .str12 {stroke:#FBD13E;stroke-width:4.17;stroke-miterlimit:22.9256}
@@ -54,10 +54,10 @@
     .fil30 {fill:#FBD13E}
     .fil29 {fill:#FBD13E}
     .fil25 {fill:#FBD13E}
-    .fil2 {fill:#fcebad}
+    .fil2 {fill:#3B9CFF}
     .fil15 {fill:#FBD13E}
     .fil1 {fill:#FBD13E}
-    .fil13 {fill:#fcebad}
+    .fil13 {fill:#3B9CFF}
     .fil16 {fill:#FBD13E;fill-rule:nonzero}
     .fil0 {fill:none;fill-opacity:1}
    ]]>

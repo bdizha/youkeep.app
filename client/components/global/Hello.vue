@@ -13,7 +13,7 @@
           <a-select
             :defaultValue="categories[0]"
             labelInValue
-            size="large"
+            size="default"
             style="min-width: 100%;"
             @change="onCategory"
           >
@@ -29,7 +29,7 @@
           <a-input
             v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
             placeholder="Your full name"
-            size="large"
+            size="default"
           >
             <a-icon slot="prefix" type="mail"/>
           </a-input>
@@ -38,7 +38,7 @@
           <a-input
             v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
             placeholder="Your mobile number"
-            size="large"
+            size="default"
           >
             <a-icon slot="prefix" type="mobile"/>
           </a-input>
@@ -46,7 +46,7 @@
         <a-form-item label="Email address">
           <a-input v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
                    placeholder="Your Email Address"
-                   size="large"
+                   size="default"
                    type="email"
           >
             <a-icon slot="prefix" type="user"/>
@@ -55,7 +55,7 @@
         <a-form-item label="Notes">
           <a-input v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]"
                    placeholder="Your message"
-                   size="large"
+                   size="default"
                    type="textarea"
           >
             <a-icon slot="prefix" type="user"/>

@@ -41,7 +41,7 @@
                     <a-row :gutter="[24,12]" align="top" justify="center" type="flex">
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <h3 class="r-heading r-step-heading"
-                          :class="{'r-text-primary': index === currentStep, 'r-text-secondary': index !== currentStep}"
+                          :class="{'r-text-secondary': index === currentStep, 'r-text-primary': index !== currentStep}"
                         >
                           <span class="r-circle">{{ (index + 1) }}</span>{{ step.title }}
                         </h3>
@@ -59,7 +59,9 @@
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
               <r-avatar v-for="(step, index) in steps"
                         v-if="index === currentStep"
-                        :key="index" :size="300" :src="'/images/content/step-0' + (index + 1) + '-secondary.svg'"
+                        :key="index"
+                        :size="300"
+                        :data-src="'/images/content/step-0' + (index + 1) + '-secondary.svg'"
                         class="r-avatar-block"
                         shape="square"
                         src-placeholder="/assets/icon_default.png"

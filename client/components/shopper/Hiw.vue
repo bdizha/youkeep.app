@@ -111,11 +111,11 @@
                                  :sm="{ span: 24 }"
                                  :xs="{ span: 24 }"
                           >
-                            <h3 class="r-heading">
+                            <h4 class="r-heading">
                               Spazamall <span class="r-text-primary">gives</span> you the flexibility to <span
                               class="r-text-secondary"
                             >shop</span> however you like.
-                            </h3>
+                            </h4>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                  :sm="{ span: 24 }"
