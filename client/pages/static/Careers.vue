@@ -80,57 +80,54 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                style="background: #FFFFFF"
         >
-          <div style="padding-bottom: 180px">
-            <a-row align="middle" class="r-mt-48" justify="start" type="flex">
-              <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-                     :sm="{  span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
-                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                          Our story
-                        </h4>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <h2 class="r-heading">
-                          We continue to prioritize quality shopping services
-                        </h2>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <p class="r-text-normal">
-                          Spazamall’s mission is to bring the best marketplace tools directly to the stores.
-                          Finances
-                          should always be
-                          transparent and easily accessible. marketplace freedom should be for all of us.
-                        </p>
-                        <p class="r-text-normal">
-                          Historically, finest services have been known to be complicated, expensive and difficult to
-                          access.
-                          Spazamall is
-                          here to make better shopping services easily accessible to everyone.
-                        </p>
-                      </a-col>
-                    </a-row>
-                  </a-col>
-                </a-row>
-              </a-col>
-            </a-row>
-            <r-wave></r-wave>
-          </div>
+          <a-row align="middle" justify="start" type="flex">
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                   :sm="{  span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                        Our story
+                      </h4>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h2 class="r-heading">
+                        We continue to prioritize quality shopping services
+                      </h2>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <p class="r-text-normal">
+                        Spazamall’s mission is to bring the best marketplace tools directly to the stores.
+                        Finances
+                        should always be
+                        transparent and easily accessible. Marketplace freedom should be for all of us.
+                      </p>
+                      <p class="r-text-normal">
+                        Historically, finest services have been known to be complicated, expensive and difficult to
+                        access.
+                        Spazamall is
+                        here to make better shopping services easily accessible to everyone.
+                      </p>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
         </a-col>
       </a-row>
       <a-row align="middle" justify="start" type="flex">

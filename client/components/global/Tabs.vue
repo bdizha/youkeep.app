@@ -4,9 +4,9 @@
     >
       <r-customer-steps :size="16"></r-customer-steps>
     </a-tab-pane>
-    <a-tab-pane key="merchant" tab="For Merchants"
+    <a-tab-pane key="seller" tab="For Sellers"
     >
-      <r-merchant-steps :size="16"></r-merchant-steps>
+      <r-seller-steps :size="16"></r-seller-steps>
     </a-tab-pane>
     <a-tab-pane key="shopper" tab="For Shoppers"
     >

@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary-light">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -19,7 +19,7 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <h3 class="r-heading-light r-text-primary r-text-uppercase">
+                        <h3 class="r-heading-light r-text-secondary r-text-uppercase">
                           Talk to us
                         </h3>
                       </a-col>
@@ -53,7 +53,7 @@
                             </h4>
                             <p class="r-text-medium">
                               <span>Then apply </span>
-                              <nuxt-link class="r-text-primary" target="_blank" to="/careers">here</nuxt-link>
+                              <nuxt-link class="r-text-secondary" target="_blank" to="/careers">here</nuxt-link>
                             </p>
                           </a-col>
                           <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
@@ -65,7 +65,7 @@
                             </h4>
                             <p class="r-text-medium">
                               <span>Check out the </span>
-                              <nuxt-link class="r-text-primary" target="_blank" to="/help">Help center</nuxt-link>
+                              <nuxt-link class="r-text-secondary" target="_blank" to="/help">Help center</nuxt-link>
                             </p>
                           </a-col>
                           <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
@@ -76,7 +76,7 @@
                               Email
                             </h4>
                             <p class="r-text-medium">
-                              <a class="r-text-primary" href="mailto:info@Spazamall.app" target="_blank">info@Spazamall.app</a>
+                              <a class="r-text-secondary" href="mailto:info@Spazamall.app" target="_blank">info@Spazamall.app</a>
                             </p>
                           </a-col>
                         </a-row>

@@ -14,7 +14,7 @@
              :xs="{ span: 24 }"
       >
         <h3 class="r-heading">
-          We make handling your <span class="r-text-secondary">marketplaces</span> more human
+          We make <span class="r-text-secondary">marketplaces</span> more human.
         </h3>
       </a-col>
       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
@@ -27,8 +27,8 @@
                  :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-            <div class="r-item-avatar r-text-medium">
-              <r-avatar :dataSrc="'/images/icons/' + value.image" :size="45"></r-avatar>
+            <div class="r-avatar-item">
+              <r-avatar class="r-avatar-item-icon" :dataSrc="'/images/icons/' + value.image" :size="42"></r-avatar>
               {{ value.title }}
             </div>
           </a-col>
@@ -54,7 +54,7 @@ export default {
           image: 'about-02.svg'
         },
         {
-          title: 'We hold ourselves to high standards',
+          title: 'We keep high standards',
           image: 'about-03.svg'
         }
       ]

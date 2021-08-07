@@ -34,14 +34,13 @@
                        :key="index"
                        :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                 >
-                  <a-card
-                    :class="{'r-bg-secondary-light': index === currentStep, 'r-bg-white-light': index !== currentStep}"
+                  <a-card :class="getBgClass(index)"
                     @click="setCurrentStep(index)"
                   >
                     <a-row :gutter="[24,12]" align="top" justify="center" type="flex">
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <h3 class="r-heading r-step-heading"
-                          :class="{'r-text-secondary': index === currentStep, 'r-text-primary': index !== currentStep}"
+                            :class="{'r-text-secondary': index === currentStep, 'r-text-dark': index !== currentStep}"
                         >
                           <span class="r-circle">{{ (index + 1) }}</span>{{ step.title }}
                         </h3>
@@ -61,7 +60,7 @@
                         v-if="index === currentStep"
                         :key="index"
                         :size="300"
-                        :data-src="'/images/content/step-0' + (index + 1) + '-secondary.svg'"
+                        :data-src="'/images/content/step-' + userType + '-0' + (index + 1) + '-' + theme + '.png'"
                         class="r-avatar-block"
                         shape="square"
                         src-placeholder="/assets/icon_default.png"
@@ -80,6 +79,7 @@ export default {
   props: {
     size: { type: Number, required: false, default: 16 },
     theme: { type: String, required: false, default: 'secondary' },
+    userType: { type: String, required: false, default: 'customer' },
     title: { type: String, required: false, default: null },
     content: { type: String, required: false, default: null },
     steps: {
@@ -116,6 +116,12 @@ export default {
       }
 
       return theme
+    },
+    getBgClass (index) {
+      if (index === this.currentStep) {
+        return 'r-bg-' + this.theme + '-light'
+      }
+      return 'r-bg-grey'
     },
     setCurrentStep (currentStep) {
       this.currentStep = currentStep

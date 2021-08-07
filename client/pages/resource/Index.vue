@@ -17,7 +17,7 @@
                            style="text-align: left;"
                     >
                       <h4 class="r-heading">
-                        For merchants
+                        For sellers
                       </h4>
                       <h1 class="r-heading">
                         <span class="r-text-secondary">Enable more buying customers and increase recurring orders with Spazamall.</span>
@@ -145,10 +145,10 @@
         <a-row justify="center" type="flex">
           <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }" class="r-padding-vertical-48">
             <h2 class="r-heading r-text-secondary">
-              Become a verified merchant today
+              Become a verified seller today
             </h2>
             <p class="r-text-normal">
-              Join the Spazamall Merchant Program and start promoting Spazamall online today and watch your
+              Join the Spazamall Seller Program and start promoting Spazamall online today and watch your
               sales run wild!
             </p>
           </a-col>
@@ -158,7 +158,7 @@
                  class="r-padding-bottom-48"
           >
             <a-button size="large" type="secondary" @click="onModal('seller')">
-              Become a Merchant
+              Become a Seller
             </a-button>
           </a-col>
         </a-row>

@@ -71,7 +71,11 @@ h3 {
 }
 
 .r-text-primary {
-    color: #FBD13E !important;
+    color: @primary-color;
+}
+
+.r-text-dark{
+    color: @black;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -113,10 +117,6 @@ a.r-text-logo {
     font-size: 21px;
 }
 
-.r-text-primary {
-    color: @secondary-color;
-}
-
 .r-text-secondary {
     color: @secondary-color !important;
 }
@@ -131,7 +131,7 @@ a.r-text-logo {
     .anticon {
         color: @secondary-color;
         font-size: 16px;
-        background: #FBF2D3;
+        background: @primary-color-light;
         border-radius: 100%;
         height: 30px;
         width: 30px;
@@ -272,7 +272,7 @@ h1.r-text-x-large{
                         &.ant-select {
                             .ant-input {
                                 background: @white;
-                                border-color: #FBD13E;
+                                border-color: @primary-color;
                                 color: @white;
                             }
                         }
@@ -1006,7 +1006,7 @@ x {
         text-align: left;
         padding: 0 12px;
         color: @secondary-color;
-        background: #E3EEFD;
+        background: @secondary-color-light;
         border-radius: 6px;
     }
 }
@@ -1412,7 +1412,7 @@ x {
 
     &:focus {
         color: @primary-color;
-        border-color: #FBD13E;
+        border-color: @primary-color;
         background: #FBD13E !important;
     }
 }
@@ -1714,7 +1714,7 @@ xxl	≥1600px, could be a span value or an object containing above props
     font-weight: 900;
 
     &:hover {
-        background: #FBD13E;
+        background: @primary-color;
         color: @white;
     }
 }
@@ -1835,6 +1835,30 @@ xxl	≥1600px, could be a span value or an object containing above props
     color: @secondary-color;
 }
 
+.r-avatar-item-icon{
+    border-radius: 100%;
+    background: transparent;
+    border-color: @secondary-color;
+    color: @secondary-color;
+}
+
+.r-avatar-item{
+    padding-left: 57px;
+    position: relative;
+    line-height: 42px;
+    font-size: 18px;
+    min-height: 42px;
+    display: block;
+    margin-bottom: 3px;
+
+    .r-avatar-item-icon{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -21px;
+    }
+}
+
 .r-checked-item{
     padding-left: 39px;
     position: relative;
@@ -1843,7 +1867,8 @@ xxl	≥1600px, could be a span value or an object containing above props
     .r-checked-item-icon{
         position: absolute;
         left: 0;
-        top: 6px;
+        top: 50%;
+        margin-top: -15px;
     }
 
     .r-checked-item-text{
@@ -2148,14 +2173,14 @@ h3.r-heading {
 }
 
 h4.r-heading {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 24px;
     font-weight: 600;
     margin: 0;
 
     @media (max-width: 768px) {
-        font-size: 21px;
-        line-height: 27px;
+        font-size: 18px;
+        line-height: 24px;
     }
 }
 
@@ -4116,7 +4141,7 @@ label {
 
 .r-page-art-primary {
     background-image: url(/images/art-primary-02.svg);
-    background-color: #FBF2D3;
+    background-color: @primary-color-light;
 }
 
 .r-page-header-photo {
@@ -4307,15 +4332,17 @@ label {
             }
 
             .ant-tabs-nav {
-                background: #E3EEFD;
-                border-radius: @border-radius-base;
+                background: @secondary-color-light;
+                border-radius: @border-radius-30;
 
                 .ant-tabs-tab {
                     border: none !important;
                     background: transparent;
-                    font-size: 18px;
-                    border-radius: @border-radius-base;
+                    font-size: 15px;
+                    font-weight: 600;
+                    border-radius: @border-radius-30;
                     margin-right: 24px;
+                    text-transform: uppercase;
 
                     &:last-child {
                         margin-right: 0;
@@ -5950,7 +5977,7 @@ label {
             &.ant-steps-item-process,
             &.ant-steps-item-finish {
                 color: @secondary-color;
-                background: #E3EEFD;
+                background: @secondary-color-light;
 
                 border-color: @secondary-color;
 
@@ -6321,7 +6348,7 @@ label {
 }
 
 .r-bg-primary-light {
-    background: #FBF2D3;
+    background: @primary-color-light;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_primary_large.svg) no-repeat;
@@ -6330,7 +6357,7 @@ label {
 }
 
 .r-bg-secondary-light {
-    background: #E3EEFD;
+    background: @secondary-color-light;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_secondary_large.svg) no-repeat;
@@ -6348,7 +6375,7 @@ label {
 }
 
 .r-circle{
-    background: @primary-color;
+    background: @black;
     color: @white;
     height: 30px;
     width: 30px;
@@ -6384,6 +6411,12 @@ h3.r-step-heading{
 .r-bg-secondary-light{
     .r-circle{
         background: @secondary-color;
+    }
+}
+
+.r-bg-grey{
+    .r-circle{
+        background: @black;
     }
 }
 
@@ -7026,7 +7059,7 @@ h3.r-step-heading{
     margin: auto;
     border-radius: 50%;
     overflow: hidden;
-    color: #FBD13E;
+    color: @primary-color;
     background: #FBD13E99 url(/images/icon_pattern_white.svg) repeat;
     border-color: @secondary-color;
     text-align: center;
@@ -7044,7 +7077,7 @@ h3.r-step-heading{
     }
 
     &.r-icon__primary {
-        color: #FBD13E;
+        color: @primary-color;
         background: #FFF6F6;
     }
 

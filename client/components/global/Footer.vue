@@ -95,22 +95,22 @@
                     <a-row :gutter="[24,6]" align="top" justify="start" type="flex">
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <h4 class="r-heading r-text-uppercase">
-                          For Merchants
+                          For Sellers
                         </h4>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/merchant">Become a Merchant</nuxt-link>
+                          <nuxt-link to="/seller">Become a Seller</nuxt-link>
                         </div>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/merchant/hiw">How it Works</nuxt-link>
+                          <nuxt-link to="/seller/hiw">How it Works</nuxt-link>
                         </div>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/help">Merchant Center</nuxt-link>
+                          <nuxt-link to="/help">Seller Center</nuxt-link>
                         </div>
                       </a-col>
                     </a-row>

@@ -1,5 +1,5 @@
 <template>
-  <a-row :gutter="[48,96]" align="middle" justify="center" type="flex">
+  <a-row class="r-bg-white" :gutter="[48,96]" align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
@@ -89,7 +89,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary-light">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -101,7 +101,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                    <h4 class="r-heading-light r-text-primary r-text-uppercase">
                       Get what your heart desires
                     </h4>
                   </a-col>
@@ -111,7 +111,7 @@
                   >
                     <h2 class="r-heading">
                       Eliminate trips to the shopping mall, and save yourself <span class="r-text-primary">time</span>
-                      and <span class="r-text-secondary">money!</span>
+                      and <span class="r-text-primary">money!</span>
                     </h2>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -119,9 +119,14 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      We can't wait for you to <span class="r-text-secondary">experience</span> all the Spazamall offers
+                      We can't wait for you to <span class="r-text-primary">experience</span> all the Spazamall offers
                       today.
                     </p>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
                     <p class="r-text-normal">
                       Shop your go-to products from your favorite stores. We deliver from local
                       and
@@ -146,7 +151,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-primary-light">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -154,7 +159,7 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <r-avatar :size="450" class="r-avatar-block" data-src="/shoppers/16_primary.png"
+                <r-avatar :size="450" class="r-avatar-block" data-src="/shoppers/16_secondary.png"
                 ></r-avatar>
               </a-col>
               <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
@@ -165,7 +170,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                    <h4 class="r-heading-light r-text-primary r-text-uppercase">
                       Get realtime order updates
                     </h4>
                   </a-col>
@@ -174,9 +179,9 @@
                          :xs="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Enjoy the <span class="r-text-secondary">fastest</span> deliveries from our local and <span
+                      Enjoy the <span class="r-text-primary">fastest</span> deliveries from our local and <span
                       class="r-text-primary"
-                    >reliable</span> shoppers.
+                    >reliable</span> stores.
                     </h2>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -188,10 +193,15 @@
                       the
                       shortest time possible.
                     </p>
-                    <p class="r-text-text">
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <p class="r-text-normal">
                       Spazamall is committed to providing you with exceptional service, efficient and speedy
                       deliveries,
-                      and Spazamall Shoppers you can trust.
+                      and Spazamall stores you can trust.
                     </p>
                   </a-col>
                 </a-row>
@@ -204,7 +214,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary-light">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -216,7 +226,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                    <h4 class="r-heading-light r-text-primary r-text-uppercase">
                       We take in order instructions
                     </h4>
                   </a-col>
@@ -226,7 +236,7 @@
                   >
                     <h2 class="r-heading">
                       Spazamall offers the <span class="r-text-primary">best</span> shopping <span
-                      class="r-text-secondary"
+                      class="r-text-primary"
                     >experience</span> on the market today!
                     </h2>
                   </a-col>
@@ -238,6 +248,11 @@
                       Spazamall shopping is the <span class="r-text-primary">best</span> shopping experience on the
                       market.
                     </p>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
                     <p class="r-text-normal">
                       Shop your go-to products from your favorite stores. Our shoppers help you get everything you
                       need.
@@ -275,7 +290,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                    <span class="r-text-white">Buy</span> online at Spazamall?
+                    You want to <span class="r-text-white">Buy</span> online at Spazamall?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
@@ -291,8 +306,8 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Become a member, order from your phone or computer, and we'll bring your order
-                    straight to the location requested.
+                    Start shopping today, with a peace of mind, order from your phone or computer, and we'll bring your order
+                    straight to you the way you like it.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }"

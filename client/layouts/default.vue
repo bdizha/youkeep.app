@@ -3,7 +3,7 @@
     <r-header></r-header>
     <a-layout-content :class="{'r-spin__active' :false}">
       <a-layout>
-        <a-layout-content>
+        <a-layout-content class="r-bg-white">
           <nuxt/>
         </a-layout-content>
         <r-footer></r-footer>

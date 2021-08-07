@@ -116,8 +116,6 @@ export default {
     hasFaqs: 'base/hasFaqs'
   }),
   created () {
-    // this.currentFaq = this.faqs[0].faqs[0]
-    // this.currentCategory = this.faqs[0]
   },
   methods: {
     setFaq (faq, currentCategory) {

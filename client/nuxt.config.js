@@ -81,7 +81,7 @@ module.exports = {
     '~components/store',
     '~components/cart',
     '~components/account',
-    '~components/merchant',
+    '~components/seller',
     '~components/shopper',
     '~components/customer',
     '~plugins/i18n',

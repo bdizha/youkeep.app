@@ -4,7 +4,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <r-steps :size="size" :steps="steps" :title="title" :content="content" theme="secondary"></r-steps>
+      <r-steps user-type="customer" :size="size" :steps="steps" :title="title" :content="content" theme="secondary"></r-steps>
     </a-col>
   </a-row>
 </template>

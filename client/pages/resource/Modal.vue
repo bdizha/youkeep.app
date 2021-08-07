@@ -4,7 +4,7 @@
                     :mask-closable="maskClosable"
                     style="position: relative;"
   >
-    <r-merchant-apply></r-merchant-apply>
+    <r-seller-apply></r-seller-apply>
   </r-modal-template>
 </template>
 <script>

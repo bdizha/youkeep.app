@@ -174,7 +174,7 @@
                :sm="{ span: 12 }"
                :xs="{ span: 12 }"
         >
-          <a-card class="r-bg-secondary-light">
+          <a-card class="r-bg-primary-light">
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
@@ -183,9 +183,9 @@
                          :xs="{ span: 24 }"
 
                   >
-                    <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+                    <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                       Join us
-                    </h3>
+                    </h4>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                          :sm="{ span: 24 }"

@@ -56,7 +56,7 @@
 export default {
   name: 'r-shop-now',
   props: {
-    fill: { type: String, required: false, default: '#E3EEFD' },
+    fill: { type: String, required: false, default: '#E7F2FC' },
     theme: { type: String, required: false, default: 'primary' }
   },
   data () {
