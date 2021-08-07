@@ -4,7 +4,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <r-steps user-type="customer" :size="size" :steps="steps" :title="title" :content="content" theme="secondary"></r-steps>
+      <r-steps user-type="customer" :has-more="hasMore" :size="size" :steps="steps" :title="title" :content="content" theme="secondary"></r-steps>
     </a-col>
   </a-row>
 </template>
@@ -13,7 +13,7 @@ export default {
   name: 'r-customer-steps',
   props: {
     size: { type: Number, required: false, default: 16 },
-    hasMore: { type: Boolean, required: false, default: false }
+    hasMore: { type: Boolean, required: false, default: true }
   },
   data () {
     return {
@@ -28,11 +28,11 @@ export default {
         },
         {
           title: 'Shop It',
-          content: 'Set your pickup or delivery time. It\'s shopping time! We handle all your shopping experience and more. '
+          content: 'Set your pickup or delivery time. It\'s shopping time! We handle all your shopping experience and more benefits. '
         },
         {
           title: 'Enjoy It',
-          content: 'Get your items delivered to you. Sit back and wait for your delivery to arrive at your doorstep fast.'
+          content: 'Get your items delivered to you. Sit back and wait for your delivery to arrive at your doorstep fast and easy.'
         }
       ]
     }

@@ -3,7 +3,7 @@
          type="flex"
   >
     <a-col :lg="{ span: 20 }" :md="{ span: 20 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-      <h3 class="r-heading-light r-text-left">
+      <h3 class="r-heading-light r-text-secondary">
         What our customers say...
       </h3>
     </a-col>
@@ -12,7 +12,7 @@
     >
       <nuxt-link to="/testimonials">
         <a-button block
-                  class="r-btn--grey"
+                  class="r-btn-primary"
                   size="large"
                   type="secondary"
         >

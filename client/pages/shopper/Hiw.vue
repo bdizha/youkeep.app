@@ -3,10 +3,10 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary-light">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
-            <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
+            <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
               <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
@@ -20,7 +20,7 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                        <h4 class="r-heading-light r-text-primary r-text-uppercase">
                           Get Paid to Shop
                         </h4>
                       </a-col>
@@ -29,7 +29,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading">
-                          It’s <span class="r-text-primary">quick</span> & <span class="r-text-secondary">easy</span> to earn on your time in your car, anywhere.
+                          It’s <span class="r-text-primary">quick</span> & <span class="r-text-primary">easy</span> to earn on your time in your car, anywhere.
                         </h1>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -72,7 +72,7 @@
                 :sm="{ span: 24 }"
                 :xs="{ span: 24 }"
               >
-                <r-avatar :size="450" class="r-avatar-block" data-src="/images/content/screen-02-secondary.png"
+                <r-avatar :size="450" class="r-avatar-block" data-src="/images/content/screen-02-primary.png"
                 ></r-avatar>
               </a-col>
             </a-row>

@@ -4,9 +4,17 @@
     <a-layout-content :class="{'r-spin__active' :false}">
       <a-layout>
         <a-layout-content class="r-bg-white">
-          <nuxt/>
+          <a-row :gutter="[48,0]" justify="center" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+              <div class="r-p-24">
+                <nuxt/>
+              </div>
+            </a-col>
+            <a-col v-if="hasFooter" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+              <r-footer></r-footer>
+            </a-col>
+          </a-row>
         </a-layout-content>
-        <r-footer></r-footer>
       </a-layout>
     </a-layout-content>
     <r-bottom></r-bottom>

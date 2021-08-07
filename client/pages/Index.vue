@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="[96,48]" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-row align="middle" justify="center" type="flex">
+      <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
@@ -92,6 +92,9 @@
               </template>
             </a-card-meta>
           </a-card>
+        </a-col>
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+            <r-customer-steps :size="24" :has-more="false"></r-customer-steps>
         </a-col>
       </a-row>
     </a-col>

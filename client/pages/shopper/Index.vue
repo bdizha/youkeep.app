@@ -74,7 +74,7 @@
                 :sm="{ span: 24 }"
                 :xs="{ span: 24 }"
               >
-                <r-avatar :size="450" class="r-avatar-auto" data-src="/images/content/screen-02-secondary.png"
+                <r-avatar :size="450" class="r-avatar-auto" data-src="/shoppers/16_secondary.png"
                 ></r-avatar>
               </a-col>
             </a-row>

@@ -31,7 +31,6 @@ const routes = [
   { path: '/customer', name: 'customer', component: page('customer/Index.vue') },
   { path: '/customer/membership', name: 'customer-membership', component: page('customer/Membership.vue') },
   { path: '/seller', name: 'seller', component: page('seller/Index.vue') },
-  { path: '/seller', name: 'seller', component: page('seller/Index.vue') },
   { path: '/seller/hiw', name: 'seller-paise', component: page('seller/Hiw.vue') },
   { path: '/seller/resources', name: 'resource', component: page('resource/Index.vue') },
   { path: '/seller/resource/:slug', name: 'resource-show', component: page('resource/Show.vue') },

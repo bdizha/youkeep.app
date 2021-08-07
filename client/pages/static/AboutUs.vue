@@ -28,9 +28,8 @@
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading">
-                          We believe in <span class="r-text-secondary"> better</span> shopping <span
-                          class="r-text-secondary"
-                        >experience</span> for everyone.
+                          We believe shopping <span class="r-text-secondary">experience</span> should be
+                          <span class="r-text-secondary">better</span> for everyone.
                         </h1>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -114,8 +113,11 @@
               >
                 <p class="r-text-normal">
                   Historically, finest services have been known to be complicated, expensive and difficult to
-                  access. We partner up with sellers of all sizes and help them, run, and grow their businesses with easy tools.
+                  access.
                 </p>
+              <p class="r-text-normal">
+                We partner up with sellers of all sizes and help them, run, and grow their businesses with easy tools.
+              </p>
               </a-col>
             </a-row>
           </a-card>

@@ -139,7 +139,7 @@
                             </p>
                             <p class="r-checked-item">
                               <a-icon slot="prefix" class="r-checked-item-icon" type="check"/>
-                              New payment options like <a href="https://paise.shop" target="_blank">Spazamall</a>
+                              New payment options like <nuxt-link to="/customer/membership">Spazamall+</nuxt-link>
                             </p>
                           </a-col>
                         </a-row>

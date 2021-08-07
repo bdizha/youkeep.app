@@ -274,7 +274,7 @@
                     Give it a try! <span class="r-text-primary">Cancel</span> anytime.
                   </h2>
                 </a-col>
-                <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
