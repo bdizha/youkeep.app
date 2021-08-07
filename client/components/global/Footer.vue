@@ -162,46 +162,48 @@
               </a-row>
             </a-col>
             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-              <a-card class="r-bg-secondary">
-                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex" class="r-footer-center-sm">
-                  <a-col :lg="{ span: 4 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+              <div class="r-mt-24">
+                <a-card class="r-bg-secondary r-card-stretch">
+                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex" class="r-footer-center-sm">
+                    <a-col :lg="{ span: 4 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}">
                 <span class="r-same-height r-text-white">
                     Interested in extra money?
                 </span>
-                  </a-col>
-                  <a-col :lg="{ span: 20 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                      <a-col :lg="{ span: 6 }" :sm="{ span: 6 }" :xs="{ span: 24 }">
-                        <nuxt-link class="r-same-height r-footer-link" to="/shopper">
-                          <a-button block
-                                    class="r-btn-bordered-white"
-                                    size="large"
-                          >
-                            Become a Shopper
-                          </a-button>
-                        </nuxt-link>
-                      </a-col>
-                      <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
-                        <div class="r-text-white r-same-height">
-                          &copy; Spazamall 2021
-                        </div>
-                      </a-col>
-                      <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
-                        <div class="r-text-white r-same-height">
-                          All Rights Reserved
-                        </div>
-                      </a-col>
-                      <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
-                        <nuxt-link class="r-text-white" to="/privacy">
-                          Privacy
-                        </nuxt-link>
-                        <span class="r-text-white">~</span>
-                        <nuxt-link class="r-text-white r-same-height" to="/terms">Terms</nuxt-link>
-                      </a-col>
-                    </a-row>
-                  </a-col>
-                </a-row>
-              </a-card>
+                    </a-col>
+                    <a-col :lg="{ span: 20 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                        <a-col :lg="{ span: 6 }" :sm="{ span: 6 }" :xs="{ span: 24 }">
+                          <nuxt-link class="r-same-height r-footer-link" to="/shopper">
+                            <a-button block
+                                      class="r-btn-bordered-white"
+                                      size="large"
+                            >
+                              Become a Shopper
+                            </a-button>
+                          </nuxt-link>
+                        </a-col>
+                        <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
+                          <div class="r-text-white r-same-height">
+                            &copy; Spazamall 2021
+                          </div>
+                        </a-col>
+                        <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
+                          <div class="r-text-white r-same-height">
+                            All Rights Reserved
+                          </div>
+                        </a-col>
+                        <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
+                          <nuxt-link class="r-text-white" to="/privacy">
+                            Privacy
+                          </nuxt-link>
+                          <span class="r-text-white">~</span>
+                          <nuxt-link class="r-text-white r-same-height" to="/terms">Terms</nuxt-link>
+                        </a-col>
+                      </a-row>
+                    </a-col>
+                  </a-row>
+                </a-card>
+              </div>
             </a-col>
           </a-row>
         </div>

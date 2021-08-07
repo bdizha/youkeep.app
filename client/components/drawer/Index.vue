@@ -1,10 +1,12 @@
 <template>
-  <a-drawer :class="'r-drawer-' + drawer.current"
+  <a-drawer :class="{'r-drawer__dark': isDark}"
             :placement="drawer.placement"
             :visible="drawer.isVisible"
             @close="onClose"
   >
     <div slot="title" style="margin-right: 45px;">
+      <a-layout-header class="r-header">
+        <r-layout-menu>
       <a-row align="middle" justify="start" type="flex">
         <a-col :lg="{span: 6}" :md="{span: 6}" :sm="{span: 6}" :xs="{span: 6}" @click="onClose">
           <r-nav-item v-if="drawer.current == 'cart'" class="r-nav-item">
@@ -25,6 +27,8 @@
           </r-nav-item>
         </a-col>
       </a-row>
+        </r-layout-menu>
+      </a-layout-header>
     </div>
     <r-auth-actions v-if="drawer.current !== 'cart'"></r-auth-actions>
     <r-category-drawer v-if="isCurrent('category')"
@@ -65,6 +69,7 @@ export default {
     this.payload()
   },
   computed: mapGetters({
+    isDark: 'base/isDark',
     drawer: 'base/drawer',
     user: 'auth/user',
     isLoggedIn: 'auth/isLoggedIn',

@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary r-card-stretch">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -73,7 +73,7 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <r-avatar :size="450" class="r-avatar-auto" data-src="/images/content/screen-01-primary.png"
+                <r-avatar :size="450" class="r-avatar-block" data-src="/images/content/screen-01-primary.png"
                 ></r-avatar>
               </a-col>
             </a-row>
@@ -89,7 +89,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary r-card-stretch">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -151,7 +151,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary r-card-stretch">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -214,7 +214,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary r-card-stretch">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -276,7 +276,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary r-card-stretch">
         <div class="r-mv-24">
           <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }"

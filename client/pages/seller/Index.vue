@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="[48,96]" align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary r-card-stretch">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,96]" align="middle" justify="start" type="flex">
@@ -124,7 +124,7 @@
                       >
                         <h3 class="r-heading-light">
                           <span class="r-text-secondary">Partner</span> with us and <span class="r-text-secondary"
-                        >grow</span> your business today!
+                        >grow</span> your business.
                         </h3>
                       </a-col>
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -319,7 +319,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary r-card-stretch">
         <a-card-meta>
           <template slot="description">
             <div class="r-mv-24">

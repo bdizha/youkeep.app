@@ -32,6 +32,7 @@ export default {
   created () {
   },
   computed: mapGetters({
+    hasFooter: 'base/hasFooter',
     processes: 'base/processes'
   }),
   methods: {}

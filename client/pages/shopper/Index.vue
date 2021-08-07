@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary r-card-stretch">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -74,7 +74,7 @@
                 :sm="{ span: 24 }"
                 :xs="{ span: 24 }"
               >
-                <r-avatar :size="450" class="r-avatar-auto" data-src="/shoppers/16_secondary.png"
+                <r-avatar :size="450" class="r-avatar-block" data-src="/shoppers/16_secondary.png"
                 ></r-avatar>
               </a-col>
             </a-row>
@@ -237,7 +237,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary">
+      <a-card class="r-bg-secondary r-card-stretch">
         <a-card-meta>
           <template slot="description">
             <div class="r-mv-24">

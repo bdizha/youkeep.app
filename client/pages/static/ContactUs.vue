@@ -89,7 +89,7 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <r-avatar :size="450" class="r-avatar-auto" data-src="/images/content/7.svg"
+                <r-avatar :size="450" class="r-avatar-block" data-src="/images/content/7.svg"
                 ></r-avatar>
               </a-col>
             </a-row>

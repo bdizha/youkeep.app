@@ -53,7 +53,7 @@
                           @click="setCurrentStep(index)"
                   >
                     <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
-                      <a-col :lg="{ span: hasMore ? 24 : 12 }" :md="{ span: hasMore ? 24 : 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+                      <a-col :lg="{ span: hasMore ? 24 : 12 }" :md="{ span: hasMore ? 24 : 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                       >
                         <a-row :gutter="[12,12]" align="top" justify="center" type="flex">
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -70,7 +70,9 @@
                           </a-col>
                         </a-row>
                       </a-col>
-                      <a-col v-if="!hasMore" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 12 }"
+                      <a-col :class="{ 'r-hide-lg': hasMore }"
+                             v-if="(index === currentStep || !hasMore)"
+                             :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                       >
                         <r-avatar :size="240"
                                   :data-src="'/images/content/step-' + userType + '-0' + (index + 1) + '-' + theme + '.png'"
@@ -85,7 +87,7 @@
                 </a-col>
               </a-row>
             </a-col>
-            <a-col v-if="hasMore" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+            <a-col class="r-hide-sm" v-if="hasMore" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
               <r-avatar v-for="(step, index) in steps"
                         v-if="index === currentStep"
                         :key="index"

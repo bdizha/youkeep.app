@@ -202,7 +202,7 @@ h1.r-text-x-large{
 }
 
 .r-bg-white {
-    background: #FFFFFF;
+    background: @white;
 }
 
 .ant-layout-header {
@@ -420,7 +420,7 @@ h1.r-text-x-large{
         }
 
         @media (max-width: 768px) {
-            padding: 12px 0 !important;
+            padding: 12px !important;
         }
     }
 
@@ -456,7 +456,7 @@ h1.r-text-x-large{
 }
 
 .r-bg-right {
-    background: #FFFFFF;
+    background: @white;
     left: auto;
     right: -12px;
 }
@@ -512,7 +512,7 @@ h1.r-text-x-large{
 }
 
 .r-radius-right-white {
-    background: #FFFFFF;
+    background: @white;
     border-radius: 0 12px 12px 0;
     overflow: hidden;
     @media (max-width: 768px) {
@@ -535,33 +535,8 @@ h1.r-text-x-large{
     }
 }
 
-.ant-layout-sider {
+.ant-layout-slider {
     padding: 0px;
-}
-
-.ant-drawer-header {
-    background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
-    padding: 12px;
-
-    .r-nav-item {
-        display: block;
-    }
-}
-
-.ant-drawer-title {
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 36px;
-    height: 36px;
-    display: block;
-
-    h4.r-heading {
-        font-size: 16px;
-        margin-bottom: 0;
-        color: @black;
-        line-height: 36px;
-        height: 36px;
-    }
 }
 
 .r-drawer-content {
@@ -714,7 +689,7 @@ x {
 }
 
 .ant-btn.r-btn-icon {
-    background: #FFFFFF;
+    background: @white;
     color: @black;
     width: 100%;
 
@@ -849,7 +824,7 @@ x {
         max-width: 240px;
         border-radius: @border-radius-base;
         padding: 6px 24px;
-        background: #FFFFFF;
+        background: @white;
         width: 100%;
         text-align: center;
         font-size: 24px;
@@ -983,7 +958,7 @@ x {
         height: 24px;
         line-height: 36px;
         font-weight: 600;
-        background: #FFFFFF;
+        background: @white;
         color: @secondary-color;
         overflow: hidden;
         border-radius: @border-radius-base 0 0 6px;
@@ -1073,7 +1048,7 @@ x {
 
     .r-btn-icon {
         opacity: 0.7;
-        background: #FFFFFF;
+        background: @white;
         color: @secondary-color;
         border: 1px solid @secondary-color;
 
@@ -1133,7 +1108,7 @@ x {
 }
 
 .r-product-actions {
-    background: #FFFFFF;
+    background: @white;
     border-radius: @border-radius-base;
 }
 
@@ -1298,7 +1273,7 @@ x {
 
     .r-btn-icon {
         opacity: 0.7;
-        background: #FFFFFF;
+        background: @white;
         color: @secondary-color;
         border: 1px solid #FDBAC4;
 
@@ -1320,14 +1295,14 @@ x {
     opacity: 1;
 
     &:hover {
-        color: #FFFFFF;
+        color: @white;
         background: @secondary-color;
         opacity: 1;
         border-color: @secondary-color;
     }
 
     &:focus {
-        color: #FFFFFF;
+        color: @white;
         background: @secondary-color;
         opacity: 0.9;
         border-color: @secondary-color;
@@ -1705,7 +1680,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .ant-drawer-close {
-    background: #FFFFFF;
+    background: @white;
     color: @black;
     width: 60px;
     height: 60px;
@@ -1716,6 +1691,53 @@ xxl	≥1600px, could be a span value or an object containing above props
     &:hover {
         background: @primary-color;
         color: @white;
+    }
+}
+
+.ant-drawer-header {
+    background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
+    padding: 12px;
+
+    .r-nav-item {
+        display: block;
+    }
+}
+
+.ant-drawer-title {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 36px;
+    height: 36px;
+    display: block;
+
+    h4.r-heading {
+        font-size: 16px;
+        margin-bottom: 0;
+        color: @black;
+        line-height: 36px;
+        height: 36px;
+    }
+}
+
+.r-drawer__dark{
+    .ant-layout-header{
+        background: @secondary-color;
+    }
+
+    .ant-drawer-title {
+        h4.r-heading {
+            color: @white;
+        }
+    }
+
+    .ant-drawer-close {
+        background: @white;
+        color: @black;
+
+        &:hover {
+            background: @primary-color;
+            color: @secondary-color;
+        }
     }
 }
 
@@ -1789,7 +1811,7 @@ xxl	≥1600px, could be a span value or an object containing above props
         .ant-avatar-icon {
             color: @black;
             margin-right: 6px;
-            background: #FFFFFF;
+            background: @white;
             border: 1px solid #F3F6F9;
 
             .anticon {
@@ -1946,7 +1968,7 @@ h4{
     }
 
     .r-cart-btn {
-        border: 1px solid #FFFFFF;
+        border: 1px solid @white;
         color: #FBD13EAC;
         width: 100%;
         text-align: center;
@@ -1965,7 +1987,7 @@ h4{
         background: @secondary-color;
 
         .r-cart-btn {
-            background: #FFFFFF;
+            background: @white;
             color: #3B9CFFAC;
 
             &:hover {
@@ -2039,7 +2061,7 @@ h4{
     }
 
     .r-cart-btn {
-        border: 1px solid #FFFFFF;
+        border: 1px solid @white;
         color: #3B9CFFAC;
         width: 100%;
         text-align: center;
@@ -2058,7 +2080,7 @@ h4{
         background: @secondary-color;
 
         .r-cart-btn {
-            background: #FFFFFF;
+            background: @white;
             color: #3B9CFFAC;
 
             &:hover {
@@ -2434,7 +2456,7 @@ label {
         .r-product-cart-text {
             //font-size: 15px;
             //font-weight: 700;
-            //filter: #FFFFFF;
+            //filter: @white;
         }
 
         .r-product-qnty {
@@ -2446,7 +2468,7 @@ label {
             //margin-left: -45px;
             //left: 50%;
             //top: 25%;
-            //filter: #FFFFFF;
+            //filter: @white;
             //@media (max-width: 768px) {
             //  width: 60px;
             //  margin-left: -30px;
@@ -2539,7 +2561,7 @@ label {
 }
 
 .ant-form-white {
-    background: #FFFFFF;
+    background: @white;
     padding: 60px 24px;
     border-radius: 8px;
 
@@ -2680,7 +2702,7 @@ label {
 }
 
 .ant-layout-footer {
-    background: #FFFFFF;
+    background: @white;
     border-top: 1px solid rgb(236, 236, 236, 1);
     padding: 0;
 
@@ -2739,7 +2761,7 @@ label {
 
     .ant-badge-bordered {
         .ant-badge-icon {
-            border: 1px solid #FFFFFF;
+            border: 1px solid @white;
         }
     }
 }
@@ -2786,7 +2808,7 @@ label {
 }
 
 .r-shape-bottom {
-    fill: #FFFFFF;
+    fill: @white;
 
     svg {
         width: 100%;
@@ -2982,7 +3004,7 @@ label {
 
     .ant-radio-button-wrapper {
         color: @secondary-color;
-        background: #FFFFFF;
+        background: @white;
         border: 1px solid #FDBAC4;
         width: 50%;
         text-align: center;
@@ -3053,7 +3075,7 @@ label {
     .ant-message-notice-content {
         padding: 6px 12px;
         color: @secondary-color;
-        background: #FFFFFF;
+        background: @white;
         border: 1px solid @secondary-color;
         font-size: 15px;
         -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.125);
@@ -3174,7 +3196,7 @@ label {
     height: 100%;
     z-index: 9;
     position: fixed;
-    background: #FFFFFF;
+    background: @white;
     display: none;
 
     .ant-spin-spinning {
@@ -3203,7 +3225,7 @@ label {
     height: 100%;
     z-index: 999;
     position: absolute;
-    background: #FFFFFF;
+    background: @white;
     display: none;
 
     .ant-spin-spinning {
@@ -3438,12 +3460,12 @@ label {
 }
 
 .r-btn-bordered-accent {
-    border: 1px solid #FFFFFF;
+    border: 1px solid @white;
     color: @white;
     background: transparent !important;
 
     &:hover {
-        border: 1px solid #FFFFFF;
+        border: 1px solid @white;
         color: @secondary-color;
         background: @white !important;
     }
@@ -3486,7 +3508,7 @@ label {
 }
 
 .r-btn-bordered-white {
-    border: 1px solid #FFFFFF;
+    border: 1px solid @white;
     color: @white;
     background: transparent;
 
@@ -3687,7 +3709,7 @@ label {
 
         &.r-collapse-panel {
             border-top: 1px solid rgb(236, 236, 236, 1);
-            background: #FFFFFF;
+            background: @white;
 
             &:first-child {
                 border-top: none;
@@ -4345,9 +4367,10 @@ label {
     }
 }
 
-.ant-tabs .ant-tabs-top-content, .ant-tabs .ant-tabs-bottom-content {
+.ant-tabs .ant-tabs-top-content,
+.ant-tabs .ant-tabs-bottom-content {
     background: transparent;
-    padding: 0 24px;
+    padding: 0;
 }
 
 .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab {
@@ -4616,7 +4639,7 @@ label {
     }
 
     .ant-cart {
-        background: #FFFFFF;
+        background: @white;
     }
 
     .r-store-description {
@@ -4709,7 +4732,7 @@ label {
 }
 
 .r-slider-left {
-    background: #FFFFFF;
+    background: @white;
     width: 100%;
     padding: 0 24px;
     border-right: 1px solid rgb(236, 236, 236, 1);
@@ -4738,7 +4761,7 @@ label {
 
 .r-store-row {
     padding: 12px 0;
-    background: #FFFFFF;
+    background: @white;
 }
 
 .ant-avatar-icon {
@@ -4753,7 +4776,7 @@ label {
 
         &:hover {
             border-bottom: 1px solid @secondary-color;
-            fill: #FFFFFF;
+            fill: @white;
             color: @white;
             background-color: @secondary-color;
         }
@@ -4767,7 +4790,7 @@ label {
 
         &:hover {
             border-bottom: 1px solid @secondary-color;
-            fill: #FFFFFF;
+            fill: @white;
             color: @white;
             background-color: @secondary-color;
         }
@@ -4924,7 +4947,7 @@ label {
 }
 
 .r-sticky {
-    background: #FFFFFF;
+    background: @white;
     z-index: 999;
     transition: box-shadow 300ms ease-in-out 0s;
 
@@ -4942,7 +4965,7 @@ label {
             top: 138px;
             bottom: 0;
             left: 0;
-            background: #FFFFFF;
+            background: @white;
             padding-left: 24px;
             @media (min-width: 767px) {
                 width: 312px;
@@ -4978,7 +5001,7 @@ label {
     top: -6px;
     display: block;
     bottom: -6px;
-    border: 6px solid #FFFFFF;
+    border: 6px solid @white;
     border-radius: @border-radius-base;
     overflow: hidden;
     box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
@@ -5216,8 +5239,13 @@ label {
     }
 }
 
+.r-card-stretch {
+    margin: -24px -24px 0;
+    border-radius: 0 !important;
+}
+
 .r-reviews {
-    background: #FFFFFF;
+    background: @white;
 
     .r-card-review {
 
@@ -5451,7 +5479,7 @@ label {
 }
 
 .r-art-white-primary {
-    background: #FFFFFF;
+    background: @white;
     padding: 24px;
     background-size: 36% !important;
     @media (max-width: 768px) {
@@ -5651,7 +5679,7 @@ label {
         overflow-x: hidden;
 
         .ant-layout-sider {
-            background: #FFFFFF;
+            background: @white;
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
             z-index: 1000;
             flex: 0 0 360px !important;
@@ -5689,7 +5717,7 @@ label {
         overflow-x: hidden;
 
         .ant-layout-sider {
-            background: #FFFFFF;
+            background: @white;
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
             z-index: 1000;
             flex: 0 0 360px !important;
@@ -5792,7 +5820,7 @@ label {
         height: 36px;
         line-height: 36px;
         width: 100%;
-        background: #FFFFFF;
+        background: @white;
 
         .r-menu-delivery-body {
             position: relative;
@@ -5903,7 +5931,7 @@ label {
             box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
             margin: 24px 0;
             border-radius: @border-radius-base;
-            background: #FFFFFF;
+            background: @white;
 
             .ant-steps-item-icon {
                 display: none;
@@ -5947,7 +5975,7 @@ label {
                 background: #FFFFFF url(/images/icon_arrows.svg) repeat;
 
                 .r-steps-item-icon {
-                    background: #FFFFFF;
+                    background: @white;
                     border-color: @black;
                     color: @black;
                 }
@@ -6091,7 +6119,7 @@ label {
         box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
         padding: 12px;
         border-radius: @border-radius-base;
-        background: #FFFFFF;
+        background: @white;
 
         .ant-avatar-image {
             height: auto !important;
@@ -6141,14 +6169,14 @@ label {
 }
 
 .r-background-white {
-    background: #FFFFFF;
+    background: @white;
 }
 
 .r-career-openings {
 }
 
 .r-message {
-    background: #FFFFFF;
+    background: @white;
     color: @secondary-color;
     display: block;
     margin: auto;
@@ -6327,7 +6355,7 @@ label {
 }
 
 .r-bg-white {
-    background: #FFFFFF;
+    background: @white;
 }
 
 .r-bg-primary-light {
@@ -6769,7 +6797,7 @@ h3.r-step-heading{
 
 .r-grey-shadow {
     box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
-    background: #FFFFFF;
+    background: @white;
     border-radius: @border-radius-base;
     margin: 0 3px;
     .ant-table-pagination.ant-pagination{
@@ -6783,7 +6811,7 @@ h3.r-step-heading{
         left: 0px;
         top: 0;
         padding: 6px;
-        border: 6px solid #FFFFFF;
+        border: 6px solid @white;
         box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
 
         img {
@@ -6814,7 +6842,7 @@ h3.r-step-heading{
 
 .r-store-card {
     .ant-card-cover {
-        background: #FFFFFF;
+        background: @white;
         border-radius: 100%;
         overflow: hidden;
         padding: 12px;
@@ -6906,7 +6934,7 @@ h3.r-step-heading{
 
     .r-slider .slick-prev, .r-slider .slick-next {
         color: #3B9CFF;
-        background: #FFFFFF;
+        background: @white;
         border: 1px solid transparent;
         top: 50%;
     }
@@ -6923,7 +6951,7 @@ h3.r-step-heading{
 .r-store-card {
     .ant-avatar-circle {
         padding: 12px;
-        border: 6px solid #FFFFFF;
+        border: 6px solid @white;
         box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
 
         @media (max-width: 768px) {
@@ -6962,7 +6990,7 @@ h3.r-step-heading{
     .ant-radio-wrapper {
         margin-right: 0;
         padding: 0px 12px;
-        background: #FFFFFF;
+        background: @white;
         box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
         border-radius: @border-radius-base;
         overflow: hidden;
@@ -6975,7 +7003,7 @@ h3.r-step-heading{
 .r-account-item {
     margin: 0 0 24px;
     padding: 12px;
-    background: #FFFFFF;
+    background: @white;
     box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
     border-radius: @border-radius-base;
     overflow: hidden;
@@ -7116,13 +7144,13 @@ h3.r-step-heading{
 
 .r-form-white {
     .ant-input {
-        background: #FFFFFF;
+        background: @white;
     }
 
     .ant-select-auto-complete {
         &.ant-select {
             .ant-input {
-                background: #FFFFFF;
+                background: @white;
             }
         }
     }
