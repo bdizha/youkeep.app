@@ -185,10 +185,19 @@ h1.r-text-x-large{
 }
 
 .r-text-small {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 18px;
     padding: 0;
     margin: 0;
+}
+
+.r-text-help{
+    font-size: 14px;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+    display: block;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .r-text-strike {
@@ -246,7 +255,7 @@ h1.r-text-x-large{
 
             .ant-select-selection {
                 background: transparent;
-                border-radius: @border-radius-base;
+                border-radius: @border-radius;
                 overflow: hidden;
 
                 .ant-select-selection__rendered {
@@ -298,7 +307,7 @@ h1.r-text-x-large{
         .ant-menu-submenu-title {
             color: @black;
             border: 1px solid transparent;
-            border-radius: @border-radius-base;
+            border-radius: @border-radius;
             overflow: hidden;
             text-transform: capitalize;
 
@@ -378,7 +387,7 @@ h1.r-text-x-large{
 
                 .ant-select-selection {
                     background: transparent;
-                    border-radius: @border-radius-base;
+                    border-radius: @border-radius;
                     overflow: hidden;
 
                     .ant-select-selection__rendered {
@@ -507,8 +516,21 @@ h1.r-text-x-large{
     }
 }
 
+.r-mb-0{
+    margin-bottom: 0 !important;
+}
+
+.r-pb-0{
+    padding-bottom: 0 !important;
+}
+
 .r-divider {
-    padding: 12px 0;
+    padding: 12px;
+}
+
+.r-divider-top {
+    padding: 12px 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .r-radius-right-white {
@@ -540,7 +562,7 @@ h1.r-text-x-large{
 }
 
 .r-drawer-content {
-    background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
+    background: @white url(/images/icon_pattern_grey.svg) repeat;
 
     .ant-list-split {
         .ant-list-item {
@@ -561,7 +583,7 @@ h1.r-text-x-large{
 }
 
 .r-reviews {
-    background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
+    background: @white url(/images/icon_pattern_grey.svg) repeat;
 
     .ant-list-split {
         .ant-list-item {
@@ -586,6 +608,9 @@ x {
 }
 
 .ant-form {
+    label {
+        font-size: 16px;
+    }
     .ant-form-item-label{
         padding-bottom: 3px;
         label {
@@ -593,6 +618,12 @@ x {
             padding-bottom: 0;
             display: block;
             font-size: 13px;
+        }
+    }
+
+    .r-text-small{
+        .ant-checkbox + span {
+            font-size: 14px;
         }
     }
 }
@@ -612,9 +643,9 @@ x {
 
 .ant-btn {
     font-weight: 400;
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
     padding: 0 12px;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     text-transform: uppercase;
     font-size: 15px;
     text-align: center;
@@ -628,7 +659,7 @@ x {
     &.ant-btn-lg {
         padding: 0 24px;
         font-size: 15px;
-        border-radius: @border-radius-base;
+        border-radius: @border-radius;
         @media (max-width: 768px) {
             padding: 0 12px;
             font-size: 15px;
@@ -699,7 +730,7 @@ x {
 }
 
 .ant-select-selection {
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     border: 1px solid transparent;
 }
 
@@ -801,7 +832,7 @@ x {
         margin: 0;
         line-height: 36px;
         height: 36px;
-        border-radius: @border-radius-base;
+        border-radius: @border-radius;
     }
 
     .ant-menu-submenu-title {
@@ -822,14 +853,14 @@ x {
         display: block;
         margin: auto;
         max-width: 240px;
-        border-radius: @border-radius-base;
+        border-radius: @border-radius;
         padding: 6px 24px;
         background: @white;
         width: 100%;
         text-align: center;
         font-size: 24px;
         font-weight: 600;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
 
         &:hover {
             background: @secondary-color;
@@ -872,9 +903,9 @@ x {
 
 .r-card-category {
     .ant-avatar-image {
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
         padding: 0;
-        background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
+        background: @white url(/images/icon_pattern_grey.svg) repeat;
         line-height: 100%;
         width: 100% !important;
     }
@@ -882,7 +913,7 @@ x {
 
 .r-category-filter {
     .ant-avatar-image {
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
     }
 }
 
@@ -918,7 +949,7 @@ x {
 .ant-pagination-prev,
 .ant-pagination-item,
 .ant-pagination-next{
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     border: 1px solid transparent;
     .ant-pagination-item-link {
         font-size: 15px;
@@ -961,7 +992,7 @@ x {
         background: @white;
         color: @secondary-color;
         overflow: hidden;
-        border-radius: @border-radius-base 0 0 6px;
+        border-radius: @border-radius 0 0 6px;
 
         @media (max-width: 768px) {
             padding: 0px 9px;
@@ -1032,7 +1063,7 @@ x {
         line-height: 36px;
         width: 36px;
         text-align: center;
-        border-radius: @border-radius-base;
+        border-radius: @border-radius;
         font-size: 15px;
 
         @media (max-width: 768px) {
@@ -1109,21 +1140,21 @@ x {
 
 .r-product-actions {
     background: @white;
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
 }
 
 .ant-checkbox-wrapper,
 .r-item-shadow{
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
     padding: 12px;
     width: 100%;
     border: none;
-    border-radius: @border-radius-base;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    border-radius: @border-radius;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     background: @white;
+    text-align: left;
 
     .ant-checkbox {
         .ant-checkbox-inner {
@@ -1167,20 +1198,40 @@ x {
     }
 }
 
+.r-shadow-none{
+    .ant-checkbox-wrapper,
+    .r-item-shadow {
+        padding: 0;
+        width: 100%;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background: @white;
+    }
+}
+
 .ant-radio-wrapper {
-    white-space: nowrap;
+    background: @grey;
+    white-space: initial;
     overflow: hidden;
     text-overflow: ellipsis;
     display: block;
-    padding: 12px;
+    padding: 12px 12px 12px 48px;
     width: 100%;
     border: none;
-    border-radius: @border-radius-base;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    border-radius: @border-radius;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
+    position: relative;
 
     .ant-radio {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        margin-top: -12px;
         .ant-radio-inner {
+            border-color: @black;
             &:after {
+                background: @black;
             }
         }
 
@@ -1189,23 +1240,31 @@ x {
             box-shadow: #eefaff 0px 1px 3px 0px;
 
             &:after {
+                border: 1px solid @secondary-color;
             }
 
             .ant-radio-inner {
+                border-color: @secondary-color;
 
                 &:after {
+                    background: @secondary-color;
                 }
             }
         }
     }
 
+    &.ant-radio-wrapper-checked,
     &:hover {
+        background: @secondary-color-light;
         .ant-radio {
-            box-shadow: #eefaff 0px 1px 3px 0px;
+            &:after {
+                border: 1px solid @secondary-color;
+            }
 
             .ant-radio-inner {
-
+                border-color: @secondary-color;
                 &:after {
+                    background: @secondary-color;
                 }
             }
         }
@@ -1216,7 +1275,7 @@ x {
     .ant-checkbox-wrapper {
         padding: 6px;
         text-align: center;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
 
         .ant-checkbox {
             .ant-checkbox-inner {
@@ -1451,8 +1510,6 @@ x {
 
 .ant-drawer-body {
     .r-cart-footer {
-        .ant-btn {
-        }
     }
 
     h4.r-heading,
@@ -1474,7 +1531,7 @@ x {
 
     .r-product-qnty {
         width: 36px;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
         cursor: pointer;
         text-align: center;
         height: 36px;
@@ -1695,7 +1752,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .ant-drawer-header {
-    background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
+    background: @white url(/images/icon_pattern_grey.svg) repeat;
     padding: 12px;
 
     .r-nav-item {
@@ -1720,7 +1777,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 }
 
 .r-drawer__dark{
-    .ant-layout-header{
+    .ant-drawer-header{
         background: @secondary-color;
     }
 
@@ -1732,7 +1789,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
     .ant-drawer-close {
         background: @white;
-        color: @black;
+        color: @secondary-color;
 
         &:hover {
             background: @primary-color;
@@ -1852,7 +1909,7 @@ xxl	≥1600px, could be a span value or an object containing above props
     padding: 6px;
     font-size: 18px;
     border-radius: 100%;
-    background: @primary-color;
+    background: @primary-color-light;
     border-color: @secondary-color;
     color: @secondary-color;
 }
@@ -2527,10 +2584,6 @@ label {
         }
     }
 
-    @media (max-width: 768px) {
-        padding: 24px 12px;
-    }
-
     .r-notice {
         position: relative;
         min-height: 300px;
@@ -2661,7 +2714,7 @@ label {
     > .ant-menu-item-selected {
         color: #FBD13E !important;
         border-bottom: 2px solid transparent;
-        border-radius: @border-radius-base;
+        border-radius: @border-radius;
 
         > a {
             color: #FBD13E !important;
@@ -2695,9 +2748,10 @@ label {
 }
 
 .ant-card {
+    font-size: initial;
     &.ant-card-bordered {
         border: none;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
     }
 }
 
@@ -2833,7 +2887,7 @@ label {
 }
 
 .r-bordered {
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
 }
 
 .r-bordered-top {
@@ -2921,7 +2975,7 @@ label {
     border-bottom: 1px solid rgb(236, 236, 236, 1);
     font-size: 15px;
     font-weight: 600;
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
     overflow: hidden;
     display: block;
     margin: 1px 6px;
@@ -3027,6 +3081,10 @@ label {
         .ant-radio-button-wrapper {
             padding: 0 8px;
         }
+    }
+
+    span.ant-radio + * {
+        padding: 0;
     }
 }
 
@@ -3402,7 +3460,7 @@ label {
 
 .ant-badge-bordered {
     .ant-badge-icon {
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
         color: @black;
         background: transparent;
     }
@@ -3496,7 +3554,7 @@ label {
 }
 
 .r-btn-bordered-grey {
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     color: @black;
     background: @white !important;
 
@@ -3520,7 +3578,7 @@ label {
 }
 
 .ant-btn-default {
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     color: @black;
     background: transparent !important;
 
@@ -3628,7 +3686,7 @@ label {
 
     &.r-avatar-store {
         border: none;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
         background-color: transparent;
         display: block;
         margin: auto;
@@ -3682,11 +3740,10 @@ label {
         height: 100% !important;
     }
 }
-
-.r-modal-content{
-    .ant-form-item-label{
-        display: none;
-    }
+.ant-form-explain, .ant-form-extra {
+    clear: both;
+    color: rgba(0,0,0,.3);
+    font-size: 14px;
 }
 
 .r-modal-category {
@@ -3823,7 +3880,7 @@ label {
                 height: 30px;
                 width: 30px;
                 line-height: 36px;
-                border-radius: @border-radius-base;
+                border-radius: @border-radius;
                 overflow: hidden;
             }
         }
@@ -3872,7 +3929,7 @@ label {
                     height: 30px;
                     width: 30px;
                     line-height: 36px;
-                    border-radius: @border-radius-base;
+                    border-radius: @border-radius;
                     overflow: hidden;
                 }
             }
@@ -3945,7 +4002,7 @@ label {
             height: 30px;
             width: 30px;
             line-height: 36px;
-            border-radius: @border-radius-base;
+            border-radius: @border-radius;
             overflow: hidden;
         }
 
@@ -4183,7 +4240,7 @@ label {
         width: 180px;
         height: 180px;
         margin: auto;
-        border-radius: @border-radius-base;
+        border-radius: @border-radius;
     }
 
     .r-page-white {
@@ -4264,7 +4321,7 @@ label {
     right: 48px;
     bottom: 48px;
     margin: auto;
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
 }
 
 .r-page-photo-bg {
@@ -4444,7 +4501,7 @@ label {
 .r-category-photos {
     width: 202px;
     height: 202px;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     display: block;
     margin: 0 auto 24px;
     border-right: none;
@@ -4453,7 +4510,7 @@ label {
     .r-category-photo {
         height: 100px;
         width: 100px;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
         margin: 0;
         position: relative;
         padding: 6px;
@@ -4487,7 +4544,7 @@ label {
 }
 
 .ant-card {
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
 
     &.ant-card-hoverable {
         -webkit-box-shadow: 0 1px 3px 0 #3893f0;
@@ -4514,7 +4571,7 @@ label {
 .r-product-flush {
     .ant-card {
         overflow: hidden;
-        background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
+        background: @white url(/images/icon_pattern_grey.svg) repeat;
 
         .ant-card-body {
             overflow: hidden;
@@ -4675,7 +4732,7 @@ label {
 }
 
 .r-store-items {
-    background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
+    background: @white url(/images/icon_pattern_grey.svg) repeat;
 
     .ant-carousel {
         .slick-slide {
@@ -4706,7 +4763,7 @@ label {
     line-height: 24px;
     text-align: center;
     padding: 12px;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     width: 100%;
     display: block;
     font-weight: 600;
@@ -4766,7 +4823,7 @@ label {
 
 .ant-avatar-icon {
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.18);
-    background: #FFFFFF url(/images/icon_pattern_white.svg) repeat;
+    background: @white url(/images/icon_pattern_white.svg) repeat;
 
     &.r-avatar-primary {
         border-bottom: 1px solid #FAAEBB;
@@ -4807,7 +4864,7 @@ label {
 
         .ant-avatar {
             > img {
-                border-radius: @border-radius-base;
+                border-radius: @border-radius;
                 overflow: hidden;
             }
         }
@@ -4982,7 +5039,7 @@ label {
     }
 
     .ant-avatar-square {
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
     }
 }
 
@@ -5002,9 +5059,9 @@ label {
     display: block;
     bottom: -6px;
     border: 6px solid @white;
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
     overflow: hidden;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     background-color: #F3F6F9;
 }
 
@@ -5026,7 +5083,7 @@ label {
     background-color: @white;
     overflow: hidden;
     margin: 45px auto 30px;
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px;
     height: 122px;
     width: 122px;
@@ -5068,7 +5125,7 @@ label {
     background: transparent url(/images/icon_pattern_white.svg) repeat;
 
     > img {
-        border-radius: @border-radius-base;
+        border-radius: @border-radius;
         overflow: hidden;
     }
 }
@@ -5076,7 +5133,7 @@ label {
 .r-steps {
     .r-step-right {
         background: #eefaff url(/images/icon_pattern_secondary.svg) repeat;;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
         padding: 48px 24px;
         text-align: center;
     }
@@ -5093,7 +5150,7 @@ label {
 
     .ant-avatar {
         background: #eefaff url(/images/icon_pattern_secondary.svg) repeat;;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
         border-radius: 50%;
         display: inline-block;
 
@@ -5199,7 +5256,7 @@ label {
 
 .r-banners {
     padding: 24px 0;
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
 }
 
@@ -5470,7 +5527,7 @@ label {
 }
 
 .r-art-white {
-    background: #FFFFFF url('/images/art-grey.svg') repeat !important;
+    background: @white url('/images/art-grey.svg') repeat !important;
     padding: 24px;
     background-size: 36% !important;
     @media (max-width: 768px) {
@@ -5507,7 +5564,7 @@ label {
 }
 
 .r-art-secondary {
-    background: #FFFFFF url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
+    background: @white url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -5928,9 +5985,9 @@ label {
         }
 
         .ant-steps-item {
-            box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+            box-shadow: @shadow-color 0px 1px 3px 0px;
             margin: 24px 0;
-            border-radius: @border-radius-base;
+            border-radius: @border-radius;
             background: @white;
 
             .ant-steps-item-icon {
@@ -5972,7 +6029,7 @@ label {
 
             &.ant-steps-item-wait {
                 color: @black;
-                background: #FFFFFF url(/images/icon_arrows.svg) repeat;
+                background: @white url(/images/icon_arrows.svg) repeat;
 
                 .r-steps-item-icon {
                     background: @white;
@@ -6116,9 +6173,9 @@ label {
 
 .r-steps {
     .ant-card-cover {
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
         padding: 12px;
-        border-radius: @border-radius-base;
+        border-radius: @border-radius;
         background: @white;
 
         .ant-avatar-image {
@@ -6206,8 +6263,8 @@ label {
     display: block;
     text-align: center;
     font-size: 15px;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     margin-top: 0px;
     top: 50%;
 
@@ -6599,7 +6656,7 @@ h3.r-step-heading{
     text-align: center;
     color: @black;
     z-index: 99;
-    border-radius: 36px @border-radius-base @border-radius-base 36px;
+    border-radius: 36px @border-radius @border-radius 36px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 1px 3px 0 #3893f0;
@@ -6624,7 +6681,7 @@ h3.r-step-heading{
         position: absolute;
         left: 0;
         top: 0;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
         background-size: cover;
         background-repeat: no-repeat;
 
@@ -6635,7 +6692,7 @@ h3.r-step-heading{
     }
 
     &:hover {
-        background: #FFFFFF url(/images/icon_pattern_grey.svg) repeat;
+        background: @white url(/images/icon_pattern_grey.svg) repeat;
 
         .ant-avatar {
             border-color: #FDBAC4;
@@ -6685,7 +6742,7 @@ h3.r-step-heading{
     text-align: left;
     color: @black;
     z-index: 99;
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
     position: relative;
     line-height: 72px;
 }
@@ -6796,9 +6853,9 @@ h3.r-step-heading{
 }
 
 .r-grey-shadow {
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
     background: @white;
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
     margin: 0 3px;
     .ant-table-pagination.ant-pagination{
         margin: 24px;
@@ -6812,7 +6869,7 @@ h3.r-step-heading{
         top: 0;
         padding: 6px;
         border: 6px solid @white;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
 
         img {
             display: block;
@@ -6824,12 +6881,12 @@ h3.r-step-heading{
             width: calc(100% - 12px);
             margin: auto;
             height: auto;
-            border-radius: @border-radius-base;
+            border-radius: @border-radius;
         }
     }
 
     .ant-avatar-square {
-        border-radius: @border-radius-base;
+        border-radius: @border-radius;
     }
 }
 
@@ -6848,7 +6905,7 @@ h3.r-step-heading{
         padding: 12px;
         width: 96px;
         height: 96px;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
         display: inline-block;
 
         .ant-avatar {
@@ -6952,7 +7009,7 @@ h3.r-step-heading{
     .ant-avatar-circle {
         padding: 12px;
         border: 6px solid @white;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
 
         @media (max-width: 768px) {
             max-width: 99px;
@@ -6969,7 +7026,7 @@ h3.r-step-heading{
             width: calc(100% - 24px);
             margin: auto;
             height: auto;
-            border-radius: @border-radius-base;
+            border-radius: @border-radius;
         }
     }
 }
@@ -6986,26 +7043,12 @@ h3.r-step-heading{
     }
 }
 
-.ant-radio-group {
-    .ant-radio-wrapper {
-        margin-right: 0;
-        padding: 0px 12px;
-        background: @white;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
-        border-radius: @border-radius-base;
-        overflow: hidden;
-        font-size: 15px;
-        height: 45px;
-        line-height: 45px;
-    }
-}
-
 .r-account-item {
     margin: 0 0 24px;
     padding: 12px;
     background: @white;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
-    border-radius: @border-radius-base;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
+    border-radius: @border-radius;
     overflow: hidden;
     font-size: 15px;
     position: relative;
@@ -7028,7 +7071,7 @@ h3.r-step-heading{
             font-size: 24px;
             color: @secondary-color;
             border: 1px solid #FDBAC4;
-            border-radius: @border-radius-base;
+            border-radius: @border-radius;
 
             svg {
                 height: 24px;
@@ -7074,7 +7117,7 @@ h3.r-step-heading{
     background: #FBD13E99 url(/images/icon_pattern_white.svg) repeat;
     border-color: @secondary-color;
     text-align: center;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
 
     @media (min-width: 768px) {
         svg {
@@ -7159,7 +7202,7 @@ h3.r-step-heading{
 .r-delivery {
     .ant-select-selection {
         background: transparent;
-        border-radius: @border-radius-base;
+        border-radius: @border-radius;
         overflow: hidden;
     }
 }
@@ -7196,7 +7239,7 @@ h3.r-step-heading{
 
         .r-search-item-avatar {
             background: #F3F6F9;
-            border-radius: @border-radius-base;
+            border-radius: @border-radius;
             overflow: hidden;
             position: absolute;
             left: 12px;
@@ -7247,7 +7290,7 @@ h3.r-step-heading{
     font-size: 15px;
     color: @secondary-color;
     background: #F3F6F9;
-    box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+    box-shadow: @shadow-color 0px 1px 3px 0px;
 }
 
 a:hover {
@@ -7265,7 +7308,7 @@ a:hover {
         color: @black;
         margin-right: 6px;
         background: #F3F6F9;
-        box-shadow: rgba(12, 12, 13, 0.09) 0px 1px 3px 0px;
+        box-shadow: @shadow-color 0px 1px 3px 0px;
     }
 
     &:hover {
@@ -7319,7 +7362,7 @@ a:hover {
 .r-filter-item {
     width: 100%;
     height: 36px;
-    border-radius: @border-radius-base;
+    border-radius: @border-radius;
     background: #F7F8F9;
     display: block;
     opacity: 0.45;

@@ -4,9 +4,8 @@
   >
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
-           class="r-pv-12 r-p-24"
     >
-      <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
         <a-col :lg="{span: 12}" :md="{span: 12}" :sm="{span: 12}" :xs="{span: 12}">
           <r-auth-actions-login :instruction="'Have an account?'" size="large"></r-auth-actions-login>
         </a-col>

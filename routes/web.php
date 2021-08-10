@@ -14,3 +14,16 @@
 Route::get('{path}', function () {
     return file_get_contents(public_path('_nuxt/index.html'));
 })->where('path', '(.*)');
+
+Auth::routes();
+
+Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
+Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+
+Route::group([ 'prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'middleware' => 'setlocale'], function() {
+    Auth::routes();
+    Route::get('/home', 'HomeController@index')->name('home');
+});
+
+Route::get('/home', 'HomeController@index')->name('home');

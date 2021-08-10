@@ -216,9 +216,8 @@ export default {
   },
   async asyncData ({ store, params, query }) {
     try {
-      let path = `/career/${params.slug}`
+      const path = `/career/${params.slug}`
       await store.dispatch('base/onPosition', { 'route': path })
-
     } catch (e) {
       console.error('onStore errors')
       console.log(e)
@@ -233,7 +232,7 @@ export default {
   },
   methods: {
     async payload () {
-      let path = this.$route.path
+      const path = this.$route.path
       await this.$store.dispatch('base/onPosition', { 'route': path })
     },
     onSend (event) {
@@ -266,7 +265,7 @@ export default {
           console.error(err)
         }
       })
-    },
+    }
   }
 }
 </script>

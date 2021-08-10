@@ -62,7 +62,7 @@ export default {
     current: 'auth/current',
     processes: 'base/processes',
     isValid: 'form/isValid',
-    hasForm: 'base/hasForm',
+    hasForm: 'base/hasForm'
   }),
   created () {
   },

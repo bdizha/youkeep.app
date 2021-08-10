@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -14,43 +13,16 @@ class HomeController extends Controller
      */
     public function __construct()
     {
+        $this->middleware('auth');
     }
 
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index(Request $request)
+    public function index()
     {
-        $response = ['user' => null];
-        if (Auth::check()) {
-            $user = Auth::user();
-            $response = [
-                'user' => $user
-            ];
-            session('user', $user);
-        }
-        return response()->json($response, 200);
-    }
-
-    /**
-     * Show the art categories.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function categories(Request $request)
-    {
-        return view('stores.root');
-    }
-
-    /**
-     * Show the stores.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function stores(Request $request)
-    {
-        return view('stores');
+        return view('home');
     }
 }

@@ -5,30 +5,28 @@
             @close="onClose"
   >
     <div slot="title" style="margin-right: 45px;">
-      <a-layout-header class="r-header">
-        <r-layout-menu>
-      <a-row align="middle" justify="start" type="flex">
-        <a-col :lg="{span: 6}" :md="{span: 6}" :sm="{span: 6}" :xs="{span: 6}" @click="onClose">
-          <r-nav-item v-if="drawer.current == 'cart'" class="r-nav-item">
-            <r-cart-count></r-cart-count>
-          </r-nav-item>
-          <r-nav-item v-if="drawer.current != 'cart'" class="r-nav-item__logo">
-            <r-logo :is-icon="true"></r-logo>
-          </r-nav-item>
-        </a-col>
-        <a-col :lg="{span: 18}"
-               :md="{span: 12}"
-               :sm="{span: 18}"
-               :xs="{span: 18}"
-               class="r-text-right"
-        >
-          <r-nav-item class="r-nav-item">
-            <h4 class="r-heading">Hi, {{ isLoggedIn ? user.first_name : 'Guest' }}</h4>
-          </r-nav-item>
-        </a-col>
-      </a-row>
-        </r-layout-menu>
-      </a-layout-header>
+      <r-layout-menu>
+        <a-row align="middle" justify="start" type="flex">
+          <a-col :lg="{span: 6}" :md="{span: 6}" :sm="{span: 6}" :xs="{span: 6}" @click="onClose">
+            <r-nav-item v-if="drawer.current == 'cart'" class="r-nav-item">
+              <r-cart-count></r-cart-count>
+            </r-nav-item>
+            <r-nav-item v-if="drawer.current != 'cart'" class="r-nav-item__logo">
+              <r-logo :is-icon="true"></r-logo>
+            </r-nav-item>
+          </a-col>
+          <a-col :lg="{span: 18}"
+                 :md="{span: 12}"
+                 :sm="{span: 18}"
+                 :xs="{span: 18}"
+                 class="r-text-right"
+          >
+            <r-nav-item class="r-nav-item">
+              <h4 class="r-heading">Hi, {{ isLoggedIn ? user.first_name : 'Guest' }}</h4>
+            </r-nav-item>
+          </a-col>
+        </a-row>
+      </r-layout-menu>
     </div>
     <r-auth-actions v-if="drawer.current !== 'cart'"></r-auth-actions>
     <r-category-drawer v-if="isCurrent('category')"

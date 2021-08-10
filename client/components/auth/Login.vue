@@ -64,7 +64,6 @@
         </a-form>
       </a-col>
     </a-row>
-    <r-notice :process="process"/>
     <r-spinner :is-absolute="true" process="isRunning"/>
   </r-modal-template>
 </template>

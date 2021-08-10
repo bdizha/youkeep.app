@@ -31,7 +31,7 @@
                           <nuxt-link to="/">
                             <img alt="Spazamall - Online shop"
                                  class="r-footer-logo /"
-                                 src="/images/logo_dark.svg"
+                                 src="/images/icon_pattern_dark.svg"
                             >
                           </nuxt-link>
                         </a-col>
@@ -163,7 +163,7 @@
             </a-col>
             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
               <div class="r-mt-24">
-                <a-card class="r-bg-secondary r-card-stretch">
+                <a-card class="r-bg-secondary">
                   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex" class="r-footer-center-sm">
                     <a-col :lg="{ span: 4 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}">
                 <span class="r-same-height r-text-white">

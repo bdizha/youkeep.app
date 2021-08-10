@@ -98,7 +98,7 @@ const actions = {
         setTimeout(() => {
           dispatch('onRoute', state.redirectTo, { root: true }).catch((error) => {
           })
-        }, 4500)
+        }, 3000)
       }
 
       console.log('response: completing onPost::', state.user)
