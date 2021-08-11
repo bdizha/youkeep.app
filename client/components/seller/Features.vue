@@ -65,7 +65,7 @@ export default {
         {
           heading: 'Fast',
           title: 'Make Delayed Payments',
-          content: 'Online or in-store, Spazamall means more flexibility at checkout.',
+          content: 'Online or in-store, Graphigem means more flexibility at checkout.',
           icon: 'credit-card'
         },
         {
@@ -83,13 +83,13 @@ export default {
         {
           heading: 'Inclusive',
           title: 'Process all major cards',
-          content: 'Spazamall is the only Delayed Payments solution that accepts Amex and Discover along with Visa.',
+          content: 'Graphigem is the only Delayed Payments solution that accepts Amex and Discover along with Visa.',
           icon: 'shopping-cart'
         },
         {
           heading: 'Robust',
           title: 'Get involved in our community',
-          content: 'Introduce your brand to millions of existing Spazamall customers in our marketplace.',
+          content: 'Introduce your brand to millions of existing Graphigem customers in our marketplace.',
           icon: 'bank'
         },
         {

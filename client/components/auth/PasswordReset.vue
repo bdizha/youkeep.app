@@ -119,7 +119,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you. Enjoy your shopping with Spazamall.')
+            $this.$message.success('Thank you. Enjoy your shopping with Graphigem.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

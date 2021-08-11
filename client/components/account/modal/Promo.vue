@@ -16,7 +16,7 @@
               Add a promo code
             </h3>
             <p class="r-text-normal">
-              You can add as many promo codes into your Spazamall account.
+              You can add as many promo codes into your Graphigem account.
             </p>
           </a-col>
         </a-row>

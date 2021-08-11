@@ -31,7 +31,7 @@
                 Find the stores that you want
               </h4>
               <p class="r-text-normal">
-                Spazamall helps customers discover stores, purchase products, and more. Whatever your business sells, we
+                Graphigem helps customers discover stores, purchase products, and more. Whatever your business sells, we
                 help you grow.
               </p>
             </template>

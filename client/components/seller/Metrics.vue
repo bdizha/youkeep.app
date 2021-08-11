@@ -5,7 +5,7 @@
            :xs="{ span: 24 }"
     >
       <h2 class="r-heading">
-        Why 1000s of retailers <span class="r-text-secondary">choose</span> Spazamall?
+        Why 1000s of retailers <span class="r-text-secondary">choose</span> Graphigem?
       </h2>
     </a-col>
     <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
@@ -115,7 +115,7 @@
                      :xs="{ span: 24 }"
               >
                 <h4 class="r-heading">
-                  <span class="r-text-secondary">Increase</span> in sales volume
+                  <span class="r-text-secondary">Increase</span> in business volume
                 </h4>
               </a-col>
             </a-row>

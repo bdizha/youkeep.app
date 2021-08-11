@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="[48,96]" align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,96]" align="middle" justify="start" type="flex">
@@ -36,7 +36,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Get the benefits of the Spazamall platform at a price you can afford and enjoy the best return on investment (ROI) on the market.
+                          Get the benefits of the Graphigem platform at a price you can afford and enjoy the best return on investment (ROI) on the market.
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -44,7 +44,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          With an online shopping platform, millions of customers, and tons of selling tools on Spazamall, it’s the all-in-one
+                          With an online shopping platform, millions of customers, and tons of selling tools on Graphigem, it’s the all-in-one
                           marketplace you deserve.
                         </p>
                       </a-col>
@@ -94,7 +94,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <div class="r-mv-24">
           <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -108,7 +108,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                    Why <span class="r-text-white">Sell</span> online at Spazamall?
+                    Why <span class="r-text-white">Sell</span> online at Graphigem?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
@@ -116,7 +116,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h2 class="r-heading">
-                    Spazamall <span class="r-text-primary">makes</span> your products visible to millions of customers.
+                    Graphigem <span class="r-text-primary">makes</span> your products visible to millions of customers.
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 12 }"
@@ -124,8 +124,8 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    That's because Spazamall is seamlessly integrated into your realtime catalog and your money shows up
-                    in your Spazamall account with every sale.
+                    That's because Graphigem is seamlessly integrated into your realtime catalog and your money shows up
+                    in your Graphigem account with every sale.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 12 }"

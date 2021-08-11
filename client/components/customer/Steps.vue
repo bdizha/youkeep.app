@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       currentStep: 0,
-      title: 'Spazamall connects customers to sellers.',
+      title: 'Graphigem connects customers to sellers.',
       content: 'Our shoppers handle all your order collection and delivery experience as well as returns for you at\n' +
         'a very low cost.',
       steps: [

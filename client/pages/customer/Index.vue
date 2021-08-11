@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -89,7 +89,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -119,7 +119,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      We can't wait for you to <span class="r-text-primary">experience</span> all the Spazamall offers
+                      We can't wait for you to <span class="r-text-primary">experience</span> all the Graphigem offers
                       today.
                     </p>
                   </a-col>
@@ -151,7 +151,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -199,9 +199,9 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-normal">
-                      Spazamall is committed to providing you with exceptional service, efficient and speedy
+                      Graphigem is committed to providing you with exceptional service, efficient and speedy
                       deliveries,
-                      and Spazamall stores you can trust.
+                      and Graphigem stores you can trust.
                     </p>
                   </a-col>
                 </a-row>
@@ -214,7 +214,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
@@ -235,7 +235,7 @@
                          :xs="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Spazamall offers the <span class="r-text-primary">best</span> shopping <span
+                      Graphigem offers the <span class="r-text-primary">best</span> shopping <span
                       class="r-text-primary"
                     >experience</span> on the market today!
                     </h2>
@@ -245,7 +245,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      Spazamall shopping is the <span class="r-text-primary">best</span> shopping experience on the
+                      Graphigem shopping is the <span class="r-text-primary">best</span> shopping experience on the
                       market.
                     </p>
                   </a-col>
@@ -276,7 +276,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <div class="r-mv-24">
           <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -290,7 +290,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                    You want to <span class="r-text-white">Buy</span> online at Spazamall?
+                    You want to <span class="r-text-white">Buy</span> online at Graphigem?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 18 }"

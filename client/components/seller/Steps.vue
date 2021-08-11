@@ -18,16 +18,16 @@ export default {
   data () {
     return {
       currentStep: 0,
-      title: 'Spazamall connects sellers to customers.',
-      content: 'Spazamall offers stores likes yours to sell products to our customers with the most convenient shopping tools on the market.',
+      title: 'Graphigem connects sellers to customers.',
+      content: 'Graphigem offers stores likes yours to sell products to our customers with the most convenient shopping tools on the market.',
       steps: [
         {
           title: 'List It',
-          content: 'Create a Spazamall account and list your product catalog on the Spazamall marketplace today.'
+          content: 'Create a Graphigem account and list your product catalog on the Graphigem marketplace today.'
         },
         {
           title: 'Sell It',
-          content: 'Your item sells, you ship your item to the buyer. and money is deposited to your Spazamall account.'
+          content: 'Your item sells, you ship your item to the buyer. and money is deposited to your Graphigem account.'
         },
         {
           title: 'Get Paid',

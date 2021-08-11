@@ -48,6 +48,10 @@ const routes = [
   { path: '/career/openings', name: 'career-list', component: page('career/Index.vue') },
   { path: '/career/:slug', name: 'career-show', component: page('career/Show.vue') },
   { path: '/career/:slug/apply', name: 'career-apply', component: page('career/Apply.vue') },
+  { path: '/fund', name: 'fund', component: page('static/Fund.vue') },
+  { path: '/approach', name: 'approach', component: page('static/Approach.vue') },
+  { path: '/partners', name: 'fund', component: page('static/Partners') },
+  { path: '/framework', name: 'fund', component: page('static/Framework') },
   {
     path: '/settings',
     component: page('settings/Index.vue'),

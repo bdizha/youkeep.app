@@ -9,17 +9,17 @@
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
-                Spazamall for Shoppers
+                Graphigem for Shoppers
               </h4>
               <h1 class="r-heading">
                 <span class="r-text-primary">Shop More,</span><br>
                 <span>Earn more</span>
               </h1>
               <h4 class="r-heading-light">
-                All your earnings are automatically added into your Spazamall wallet.
+                All your earnings are automatically added into your Graphigem wallet.
               </h4>
               <p class="r-text-normal">
-                Unlike other buy-now-pay-later plans, Spazamall lets shoppers use their existing credit card for
+                Unlike other buy-now-pay-later plans, Graphigem lets shoppers use their existing credit card for
                 the easiest most intuitive checkout.
               </p>
             </template>
@@ -261,7 +261,7 @@
                             Higher average order rate
                           </h4>
                           <p class="r-text-normal">
-                            Spazamall is the only buy-now-pay-later plan that lets shoppers set up payment plans with
+                            Graphigem is the only buy-now-pay-later plan that lets shoppers set up payment plans with
                             their
                             existing credit card without interest charges or fees. This keeps their payments small so
                             they
@@ -325,7 +325,7 @@
                             More qualified customers
                           </h4>
                           <p class="r-text-normal">
-                            Unlike other buy-now-pay-later plans, Spazamall isn’t new financing. Spazamall lets online
+                            Unlike other buy-now-pay-later plans, Graphigem isn’t new financing. Graphigem lets online
                             shoppers
                             set up monthly payments at checkout with their existing credit so they don’t need to carry
                             new
@@ -392,11 +392,11 @@
                             thousands
                             of
                             customers
-                            and a monthly expansion to new cities, Spazamall was named the fastest growing retail
+                            and a monthly expansion to new cities, Graphigem was named the fastest growing retail
                             platform
                             company in
                             South Africa in 2020.
-                            Spazamall thinks it can be done differently: faster, easier and cheaper. The idea is
+                            Graphigem thinks it can be done differently: faster, easier and cheaper. The idea is
                             simple.</p>
                         </a-col>
                       </a-row>

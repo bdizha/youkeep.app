@@ -4,7 +4,7 @@
            :sm="{ span: 12 }" :xs="{ span: 24 }"
     >
       <div v-if="true" style="width: 100%; margin: 90px 0;">
-        <img :alt="title" style="height: 36px;" src="/images/addtrack.png"/>
+        <img alt="Addtract" style="height: 36px;" src="/images/addtrack.png"/>
       </div>
       <a-card class="r-mt-48" title="Thank You For Signing Up!">
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">

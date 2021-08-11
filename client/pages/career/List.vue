@@ -10,7 +10,7 @@
           <a-card-meta>
             <template slot="description">
               <h2 class="r-heading r-text-secondary">
-                <span v-if="!department">Current job openings at Spazamall</span>
+                <span v-if="!department">Current job openings at Graphigem</span>
                 <span v-if="department" v-on:click="onDepartment(null)">
                   <a-icon type="left"/>
                   {{ department.name }}

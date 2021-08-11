@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="[48,96]" align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,96]" align="middle" justify="start" type="flex">
@@ -36,9 +36,9 @@
                       >
                         <p class="r-text-medium">
                           <span class="r-text-primary">
-                          Join the Spazamall Seller Platform and start promoting Spazamall online today and watch
+                          Join the Graphigem Seller Platform and start promoting Graphigem online today and watch
                           your
-                          sales run wild.
+                          business run wild.
                           </span>
                         </p>
                       </a-col>
@@ -116,7 +116,7 @@
                              class="r-text-left"
                       >
                         <h4 class="r-heading r-text-uppercase r-text-secondary">
-                          Launch Spazamall Online
+                          Launch Graphigem Online
                         </h4>
                       </a-col>
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -131,17 +131,17 @@
                              class="r-text-left"
                       >
                         <p class="r-text-medium">
-                          <span class="r-text-secondary">36%</span> increase in online and in-store sales with Spazamall+ and more payment options.
+                          <span class="r-text-secondary">36%</span> increase in online and in-store business with Graphigem+ and more payment options.
                         </p>
                       </a-col>
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                              class="r-text-left"
                       >
                         <p class="r-text-normal">
-                          Join the Spazamall Seller Program and start promoting Spazamall online and in-store
+                          Join the Graphigem Seller Program and start promoting Graphigem online and in-store
                           today and
                           watch your
-                          sales run wild!
+                          business run wild!
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -200,7 +200,7 @@
                              class="r-text-left"
                       >
                         <p class="r-text-medium">
-                          <span class="r-text-secondary">24%</span> of Spazamall shoppers use their existing credit card to pay over time at no cost.
+                          <span class="r-text-secondary">24%</span> of Graphigem shoppers use their existing credit card to pay over time at no cost.
                         </p>
                       </a-col>
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -256,7 +256,7 @@
                              class="r-text-left"
                       >
                         <h4 class="r-heading r-text-uppercase r-text-secondary">
-                          <span class="r-text-secondary">Increase</span> sales conversion
+                          <span class="r-text-secondary">Increase</span> business conversion
                         </h4>
                       </a-col>
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -278,7 +278,7 @@
                              class="r-text-left"
                       >
                         <p class="r-text-normal">
-                          Our widest customer base is waiting to buy your products on Spazamall. We partner up with
+                          Our widest customer base is waiting to buy your products on Graphigem. We partner up with
                           growing businesses like yours.
                         </p>
                       </a-col>
@@ -319,7 +319,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <div class="r-mv-24">
@@ -354,7 +354,7 @@
                             </a-col>
                             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                               <p class="r-text-medium r-text-white">
-                                Choose to be a Spazamall Seller today and start achieving your goals.
+                                Choose to be a Graphigem Seller today and start achieving your goals.
                               </p>
                             </a-col>
                           </a-row>

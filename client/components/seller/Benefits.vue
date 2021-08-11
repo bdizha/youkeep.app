@@ -18,13 +18,13 @@
             </h2>
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <p class="r-text-medium">Plus, Spazamall offers a host of seller tools
+            <p class="r-text-medium">Plus, Graphigem offers a host of seller tools
               and resources to enhance your fun and profits.
             </p>
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
             <p class="r-text-normal">
-              Spazamall enables sellers to satisfy their customers with ease and control at a minimum pay-as-you earn model.
+              Graphigem enables sellers to satisfy their customers with ease and control at a minimum pay-as-you earn model.
             </p>
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -54,10 +54,10 @@ export default {
   data () {
     return {
       benefits: [
-        'Enable more buying customers and increase recurring orders with Spazamall.',
-        'Maximize in-store impact with Spazamall signage and online training for retail associates.',
-        'We’ll ship you an activation kit to promote Spazamall online.',
-        'No obligations and risk with partnering with Spazamall.'
+        'Enable more buying customers and increase recurring orders with Graphigem.',
+        'Maximize in-store impact with Graphigem signage and online training for retail associates.',
+        'We’ll ship you an activation kit to promote Graphigem online.',
+        'No obligations and risk with partnering with Graphigem.'
       ]
     }
   },

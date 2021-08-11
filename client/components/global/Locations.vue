@@ -4,7 +4,7 @@
       <template slot="description">
         <a-row class="r-mv-48" justify="center" type="flex">
           <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
-            <a-row :gutter="[24,24]" justify="end" type="flex">
+            <a-row :gutter="[24,24]" justify="center" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-text-center"
               >
                 <h3 class="r-heading-light r-text-uppercase r-text-primary">
@@ -27,8 +27,8 @@
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                         >
-                          <a class="r-text-white" href="mailto:info@spazamall.co.za">
-                            info@spazamall.co.za
+                          <a class="r-text-white" href="mailto:info@graphigem.com">
+                            info@graphigem.com
                           </a>
                         </a-col>
                       </a-row>
@@ -48,8 +48,8 @@
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                         >
-                          <a class="r-text-white" href="mailto:info@spazamall.co.za">
-                            info@spazamall.co.za
+                          <a class="r-text-white" href="mailto:info@graphigem.com">
+                            info@graphigem.com
                           </a>
                         </a-col>
                       </a-row>
@@ -69,8 +69,8 @@
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                         >
-                          <a class="r-text-white" href="mailto:info@spazamall.co.za">
-                            info@spazamall.co.za
+                          <a class="r-text-white" href="mailto:info@graphigem.com">
+                            Coming soon
                           </a>
                         </a-col>
                       </a-row>

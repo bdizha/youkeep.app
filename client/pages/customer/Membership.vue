@@ -2,7 +2,7 @@
   <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <a-card-meta>
           <template slot="description">
             <a-row :gutter="[96,96]" align="middle" justify="start" type="flex">
@@ -20,7 +20,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h3 class="r-heading-light r-text-white r-text-uppercase">
-                          Meet Spazamall<span class="r-text-primary">+</span>
+                          Meet Graphigem<span class="r-text-primary">+</span>
                         </h3>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -46,7 +46,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Get the benefits of Spazamall+ with every purchase you make
+                          Get the benefits of Graphigem+ with every purchase you make
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -117,7 +117,7 @@
                       >
                         <h3 class="r-heading">
                           Free <span class="r-text-primary">next-day</span> & <span class="r-text-secondary"
-                        >two-day</span> shipping on items from Spazamall.
+                        >two-day</span> shipping on items from Graphigem.
                         </h3>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -249,7 +249,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <a-card class="r-bg-secondary r-card-stretch">
+      <a-card class="r-bg-secondary">
         <div class="r-mv-24">
           <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 12 }" :md="{ span: 16 }"
@@ -262,7 +262,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-uppercase">
-                    Why <span class="r-text-primary">Spazamall+</span> for customers?
+                    Why <span class="r-text-primary">Graphigem+</span> for customers?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
@@ -312,7 +312,7 @@ export default {
       features: [
         { content: 'No R450 order minimum required' },
         { content: 'Huge assortment of eligible items' },
-        { content: 'Items shipped by Spazamall shoppers for free' }
+        { content: 'Items shipped by Graphigem shoppers for free' }
       ],
       benefits: [
         { content: 'Up to 180,000 items available' },

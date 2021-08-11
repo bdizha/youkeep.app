@@ -19,7 +19,7 @@
 export default {
   name: 'r-tabs',
   props: {
-    title: { type: String, required: false, default: 'Spazamall connects shoppers to sellers.' },
+    title: { type: String, required: false, default: 'Graphigem connects shoppers to sellers.' },
     activeKey: { type: String, required: false, default: 'customer' }
   },
   data () {

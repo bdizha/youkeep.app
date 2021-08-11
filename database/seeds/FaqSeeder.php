@@ -25,9 +25,9 @@ class FaqSeeder extends Seeder
             $category = $node->filter('span')->text();
 
             if (!in_array($category, $categories)) {
-                $category = str_replace('Shipt', 'Spazamall', $category);
-                $category = str_replace('SHIPT', 'Spazamall', $category);
-                $category = str_replace('shipt', 'Spazamall', $category);
+                $category = str_replace('Shipt', 'Graphigem', $category);
+                $category = str_replace('SHIPT', 'Graphigem', $category);
+                $category = str_replace('shipt', 'Graphigem', $category);
 
                 $categories[] = $category;
                 $category = count($categories) - 1;
@@ -41,12 +41,12 @@ class FaqSeeder extends Seeder
                 $question = $node->filter('a')->eq(0)->text();
                 $answer = $node->filter('article')->html();
 
-                $question = str_replace('Shipt', 'Spazamall', $question);
-                $question = str_replace('SHIPT', 'Spazamall', $question);
+                $question = str_replace('Shipt', 'Graphigem', $question);
+                $question = str_replace('SHIPT', 'Graphigem', $question);
                 $question = str_replace('shipt', 'kkart', $question);
 
-                $answer = str_replace('Shipt', 'Spazamall', $answer);
-                $answer = str_replace('SHIPT', 'Spazamall', $answer);
+                $answer = str_replace('Shipt', 'Graphigem', $answer);
+                $answer = str_replace('SHIPT', 'Graphigem', $answer);
                 $answer = str_replace('shipt', 'kkart', $answer);
                 $answer = str_replace('kkart.com', 'kkart.co.za', $answer);
 

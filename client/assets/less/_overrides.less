@@ -74,6 +74,10 @@ h3 {
     color: @primary-color;
 }
 
+.r-text-blue {
+    color: @blue-color;
+}
+
 .r-text-dark{
     color: @black;
 }
@@ -84,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .r-text-red{
-    color: #EE1C25;
+    color: @red-color;
 }
 
 .r-text-grey {
@@ -125,7 +129,6 @@ a.r-text-logo {
 .ant-list-item{
     font-size: 15px;
     line-height: 21px;
-    color: @black;
     font-weight: 400;
 
     .anticon {
@@ -215,28 +218,17 @@ h1.r-text-x-large{
 }
 
 .ant-layout-header {
+    padding: 0;
     &.r-header {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        height: 60px !important;
-        padding: 12px !important;
-        margin-bottom: 0;
+        height: auto;
         position: fixed;
         top: 0;
-        left: 0;
         width: 100%;
         z-index: 1001;
         transition: background 0.25s ease;
-        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .05), inset 0 -1px 0 rgba(0, 0, 0, .1);
-        flex: 0 0 auto;
-        display: flex;
+        box-shadow: none;
         line-height: 1 !important;
-        background: @white;
+        background: transparent;
 
         .r-text-link {
             color: @black;
@@ -1439,15 +1431,15 @@ x {
     opacity: 1;
 
     &:hover {
-        color: @primary-color;
-        background: @secondary-color;
-        border-color: @secondary-color;
+        color: @secondary-color !important;
+        background: @primary-color !important;
+        border-color: @primary-color;
     }
 
     &:focus {
-        color: @primary-color;
-        border-color: @primary-color;
-        background: #FBD13E !important;
+        color: @secondary-color !important;
+        border-color: @primary-color !important;
+        background: @primary-color !important;
     }
 }
 
@@ -1977,7 +1969,16 @@ h4{
     .r-checked-item-icon{
         background: @primary-color;
         border-color: @primary-color;
-        color: @secondary-color;
+        color: @blue-color;
+    }
+}
+
+.r-bg-blue-light,
+.r-bg-blue{
+    .r-checked-item-icon{
+        background: @primary-color;
+        border-color: @blue-color;
+        color: @blue-color;
     }
 }
 
@@ -2071,6 +2072,10 @@ h4{
 
 .r-bg-white {
     background-color: @white;
+}
+
+.r-bg-dark-grey {
+    background: #4b555e;
 }
 
 
@@ -2759,6 +2764,10 @@ label {
     background: @white;
     border-top: 1px solid rgb(236, 236, 236, 1);
     padding: 0;
+    background-color: #3D4852;
+    background-image: url("/images/icon_grey_light_large.svg");
+    background-repeat: no-repeat;
+    background-position: right bottom;
 
     .ant-card-head {
         font-weight: 600;
@@ -2769,12 +2778,17 @@ label {
 
     .r-text-normal {
         margin-bottom: 6px;
+        color: #FFFFFF;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #FFFFFF;
     }
 
     a {
         display: inline-block;
         font-weight: 400;
-        color: #3C444CE0;
+        color: #FFFFFF;
         line-height: 30px;
 
         &.r-text-white {
@@ -2883,7 +2897,7 @@ label {
 }
 
 .r-footer-logo {
-    height: 45px;
+    height: 36px;
 }
 
 .r-bordered {
@@ -5769,7 +5783,7 @@ label {
         }
     }
     &.r-layout__default {
-        padding-top: 60px;
+        padding-top: 108px;
         overflow-y: auto;
         overflow-x: hidden;
 
@@ -6433,6 +6447,15 @@ label {
     }
 }
 
+.r-bg-blue-light {
+    background: @blue-color-light;
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_blue_large.svg) no-repeat;
+        background-size: 65%;
+    }
+}
+
 .r-bg-grey-light {
     background: @gray;
 
@@ -6508,6 +6531,24 @@ h3.r-step-heading{
 
 .r-bg-secondary {
     background: @secondary-color url(/images/icon_pattern_dark_large.svg) repeat;
+
+    .ant-card-body {
+        background: none;
+    }
+
+    .r-text-normal,
+    .r-text-medium,
+    .r-text-large,
+    h3,
+    h4,
+    h1,
+    h2{
+        color: @white;
+    }
+}
+
+.r-bg-blue{
+    background: @blue-color url(/images/icon_pattern_dark_large.svg) repeat;
 
     .ant-card-body {
         background: none;

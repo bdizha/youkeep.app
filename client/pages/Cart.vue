@@ -71,7 +71,7 @@
               <a-empty :image-style="{
                                       height: '60px',
                                     }"
-                       image="/images/Spazamall/icon_black_light.svg"
+                       image="/images/Graphigem/icon_black_light.svg"
               >
                 <h4 slot="description" class="r-heading r-text-black">
                   Your shopping cart is

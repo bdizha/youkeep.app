@@ -7,20 +7,37 @@
       >
         <a-sub-menu>
           <div slot="title">
-            <nuxt-link class="r-text-link" to="/help">
-              <a-icon type="question-circle"/>
-              Help center
+            <nuxt-link class="r-text-link" to="/about-us">
+              About
             </nuxt-link>
           </div>
         </a-sub-menu>
         <a-sub-menu>
-          <div v-if="!isLoggedIn" slot="title" @click="onModal">
-            <a-icon type="user"/>
-            Sign in
+          <div slot="title">
+            <nuxt-link class="r-text-link" to="/zero-sum">
+              ZeroSum Fund
+            </nuxt-link>
           </div>
-          <div v-if="isLoggedIn" slot="title" @click="onDrawer">
-            <a-icon type="user"/>
-            Account
+        </a-sub-menu>
+        <a-sub-menu>
+          <div slot="title">
+            <nuxt-link class="r-text-link" to="/approach">
+              Approach
+            </nuxt-link>
+          </div>
+        </a-sub-menu>
+        <a-sub-menu>
+          <div slot="title">
+            <nuxt-link class="r-text-link" to="/partners">
+              Partners
+            </nuxt-link>
+          </div>
+        </a-sub-menu>
+        <a-sub-menu>
+          <div slot="title">
+            <nuxt-link class="r-text-link" to="/partners">
+              Contact
+            </nuxt-link>
           </div>
         </a-sub-menu>
       </a-menu>

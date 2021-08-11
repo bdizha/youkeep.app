@@ -17,7 +17,7 @@
                            style="text-align: left;"
                     >
                       <h4 class="r-heading-light r-text-uppercase">
-                        How does Spazamall work?
+                        How does Graphigem work?
                       </h4>
                       <h1 class="r-heading r-text-secondary">
                         <span class="r-text-secondary">Shop More,</span><br>
@@ -89,19 +89,40 @@
 </template>
 <script>
 export default {
-  name: 'r-paise',
   props: {},
   data () {
     return {
       modal: {
         current: null,
         message: null,
-      },
+        potfolios: [
+          {
+            title: 'Addtract',
+            slug: 'addtract',
+            content: 'B2B that connects businesses to businesses in Africa.'
+          },
+          {
+            title: 'Brickcent',
+            slug: 'brickcent',
+            content: 'A B2B platforom that connects businesses to suppliers in Africa.'
+          },
+          {
+            title: 'Finkipa',
+            slug: 'finkipa',
+            content: 'Affordable financial services tools for growing businesses.'
+          },
+          {
+            title: 'Waykipa',
+            slug: 'waykipa',
+            content: 'Local and regional logistic services for ecommerce businesses.'
+          }
+        ]
+      }
     }
   },
   mounted () {
     this.modal = this.$store.state.modal
   },
-  methods: {},
+  methods: {}
 }
 </script>

@@ -66,7 +66,7 @@ export default {
   data () {
     return {
       modal: 'product',
-      message: 'Thank you for successfully signing up with Spazamall. Enjoy your shopping!'
+      message: 'Thank you for successfully signing up with Graphigem. Enjoy your shopping!'
     }
   },
   computed: {

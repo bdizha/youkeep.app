@@ -12,10 +12,10 @@
           <a-row class="r-mt-48" justify="center" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
-                Spazamall seller application
+                Graphigem seller application
               </h2>
               <p class="r-text-normal">
-                Contact us to learn more about Spazamall and checkout financing
+                Contact us to learn more about Graphigem and checkout financing
               </p>
             </a-col>
           </a-row>
@@ -392,7 +392,7 @@ export default {
 
           values.industry = this.industry
           values.platform = this.platform
-          values.annual_sales = this.annual_sales
+          values.annual_business = this.annual_sales
 
           const params = Object.assign({}, values)
 
@@ -455,8 +455,8 @@ export default {
     onIndustry (industry) {
       this.industry = industry.key
     },
-    onAnnualSales (annual_sales) {
-      this.annual_sales = annual_sales.key
+    onAnnualbusiness (annual_sales) {
+      this.annual_business = annual_sales.key
     },
     onPlatform (platform) {
       this.platform = platform.key

@@ -171,7 +171,7 @@
           <a-row :gutter="[24,0]">
             <a-col :xs="{ span: 24 }">
               <p class="r-text-light">
-                Contact us to learn more about Spazamall and checkout financing options we've got in store for sellers
+                Contact us to learn more about Graphigem and checkout financing options we've got in store for sellers
                 like you.
               </p>
             </a-col>
@@ -459,7 +459,7 @@ export default {
           }
 
           $this.$store.dispatch('form/onResult', message)
-          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Spazamall.')
+          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your shopping with Graphigem.')
         }, 600)
       })
     },
@@ -504,8 +504,8 @@ export default {
     onIndustry (industry) {
       this.industry = industry.key
     },
-    onAnnualSales (annual_sales) {
-      this.annual_sales = annual_sales.key
+    onAnnualbusiness (annual_sales) {
+      this.annual_business = annual_sales.key
     },
     onPlatform (platform) {
       this.platform = platform.key

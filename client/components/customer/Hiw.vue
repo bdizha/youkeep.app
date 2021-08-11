@@ -15,7 +15,7 @@ export default {
   data () {
     return {
       features: [
-        { content: 'Access Spazamall via mobile or desktop - we go where you go' },
+        { content: 'Access Graphigem via mobile or desktop - we go where you go' },
         { content: 'Quickly answer categorization requests from your team' },
         { content: 'Contact your team with our simple messaging feature' },
         { content: 'Get operating support at any time within our work ours' }

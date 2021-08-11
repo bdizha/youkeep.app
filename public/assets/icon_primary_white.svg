@@ -2,7 +2,7 @@
   <defs>
     <style>
       .cls-1 {
-      clip-path: url(#clip-Spazamall_Icon_1);
+      clip-path: url(#clip-Graphigem_Icon_1);
       }
 
       .cls-2 {
@@ -29,11 +29,11 @@
       fill: #FFFFFF;
       }
     </style>
-    <clipPath id="clip-Spazamall_Icon_1">
+    <clipPath id="clip-Graphigem_Icon_1">
       <rect width="1000" height="1000"/>
     </clipPath>
   </defs>
-  <g id="Spazamall_Icon_1" data-name="Spazamall_Icon – 1" class="cls-1">
+  <g id="Graphigem_Icon_1" data-name="Graphigem_Icon – 1" class="cls-1">
     <g id="Path_3113" data-name="Path 3113" class="cls-2" transform="translate(98 159)">
       <path class="cls-6" d="M55,28h0Z"/>
       <path class="cls-7" d="M 0 28 L 55 28 L 0 28 Z"/>

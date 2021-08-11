@@ -79,7 +79,7 @@
       </a-col>
       <a-col :xs="{ span: 12 }">
         <a-card style="width: 100%;" title="DELIVERY METHOD">
-          <p class="r-text-normal">Spazamall </p>
+          <p class="r-text-normal">Graphigem </p>
         </a-card>
       </a-col>
     </a-row>

@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 
 class CategorySeeder extends DatabaseSeeder
 {
-    protected $storeId = 24; // Spazamall store
+    protected $storeId = 24; // Graphigem store
     protected $storeCategories = [4784, 4788, 4789];
     protected $mappedNames = [
         'furniture' => 'household-items',
