@@ -40,7 +40,7 @@
                           {{ partner.content }}
                         </p>
                       </a-col>
-                      <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
+                      <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
                              :sm="{ span: 12 }"
                              :xs="{ span: 12 }"
                       >
@@ -115,7 +115,7 @@
                     </a-col>
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                            :sm="{ span: 12 }"
-                           :xs="{ span: 12 }"
+                           :xs="{ span: 24 }"
                     >
                       <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -138,7 +138,7 @@
                     </a-col>
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                            :sm="{ span: 12 }"
-                           :xs="{ span: 12 }"
+                           :xs="{ span: 24 }"
                     >
                       <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"

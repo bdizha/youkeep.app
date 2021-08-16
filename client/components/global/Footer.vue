@@ -15,7 +15,7 @@
             <r-locations></r-locations>
           </a-col>
           <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <div class="r-p-24 r-mt-48">
+            <div class="r-p-24 r-mt-48 r-pull-both-24">
               <a-row :gutter="[24,24]" justify="center" type="flex">
                 <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-row :gutter="[24,24]" justify="center" type="flex">
@@ -48,7 +48,7 @@
                         </a-col>
                         <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                           <a-row :gutter="[24,12]" align="top" justify="start" type="flex">
-                            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :xs="{ span: 12}">
+                            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :xs="{ span: 24}">
                               <a-row :gutter="[12,6]" align="top" justify="start" type="flex">
                                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                   <h4 class="r-heading r-text-uppercase">
@@ -72,7 +72,7 @@
                                 </a-col>
                               </a-row>
                             </a-col>
-                            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :xs="{ span: 12}">
+                            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :xs="{ span: 24}">
                               <a-row :gutter="[24,6]" align="top" justify="start" type="flex">
                                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                   <h4 class="r-heading r-text-uppercase">
@@ -124,7 +124,7 @@
                             <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
                               <nuxt-link class="r-same-height r-footer-link" to="/contact-us">
                                 <a-button block
-                                          class="r-btn-bordered-white"
+                                          class="r-btn-blue-bordered"
                                           size="large"
                                 >
                                   Contact Us

@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-blue r-border-none">
+          <a-card class="r-bg-blue r-pull-both-24 r-border-none r-card-r-128">
             <a-row :gutter="[48,48]" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                 <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
@@ -73,16 +73,16 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
+          <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="center" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <h3 class="r-heading-light">
-                <span class="r-text-blue">Innovate</span> <span class="r-text-secondary">alongside</span> Graphigem.
+              <h3 class="r-heading-light r-text-blue">
+                Innovate alongside Graphigem.
               </h3>
             </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+            <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
@@ -107,7 +107,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark r-border-none">
+          <a-card class="r-bg-blue-light r-pull-both-24 r-border-none">
             <div class="r-mv-48">
               <a-row class="r-text-center" :gutter="[24,24]" align="middle" justify="center" type="flex">
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -150,40 +150,42 @@
                   <a-row :gutter="[24,24]" class="r-text-left" align="middle" justify="start" type="flex">
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                     >
-                      <a-card class="r-bg-blue-light">
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                                 :sm="{ span: 24 }"
-                                 :xs="{ span: 24 }"
-                          >
-                            <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                              <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                     :xs="{ span: 24}"
-                              >
-                                <r-avatar data-src="/images/content/illustration-13.svg" :size="120" class="r-avatar-auto"
-                                ></r-avatar>
-                              </a-col>
-                              <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                     :xs="{ span: 24}"
-                              >
-                                <p class="r-text-medium r-text-blue">
-                                  Define outcomes and align stakeholders.
-                                </p>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                                 class="r-text-left"
-                          >
-                            <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                              >
+                      <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                            <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                   :xs="{ span: 24}"
+                            >
+                              <r-avatar data-src="/images/content/illustration-13.svg" :size="120" class="r-avatar-auto"
+                              ></r-avatar>
+                            </a-col>
+                            <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                   :xs="{ span: 24}"
+                            >
+                              <p class="r-text-medium r-text-blue">
+                                Define outcomes and align stakeholders.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                               class="r-text-left"
+                        >
+                          <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                            >
+                              <a-card class="r-bg-blue-light">
                                 <h4 class="r-heading-light r-text-uppercase r-text-blue">
                                   Envision It
                                 </h4>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                              >
+                              </a-card>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                            >
+                              <a-card class="r-bg-blue-light">
                                 <p class="r-text-normal r-text-dark">
                                   To solve any problem, you have to understand what the problem actually is. This is
                                   especially
@@ -192,28 +194,30 @@
                                   in your
                                   evaluation.
                                 </p>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                        </a-row>
-                      </a-card>
+                              </a-card>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                      </a-row>
                     </a-col>
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 6 }" :xs="{ span: 24}"
                     >
-                      <a-card class="r-bg-blue-light">
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                                 class="r-text-left"
-                          >
-                            <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                              >
+                      <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                               class="r-text-left"
+                        >
+                          <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                            >
+                              <a-card class="r-bg-secondary-light">
                                 <h4 class="r-heading-light r-text-uppercase r-text-secondary">
                                   Apply It
                                 </h4>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                              >
+                              </a-card>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                            >
+                              <a-card class="r-bg-secondary-light">
                                 <p class="r-text-normal r-text-dark">
                                   We don't take a brief, disappear, and then come back with brilliance. We go on a journey
                                   of
@@ -221,126 +225,130 @@
                                   something
                                   everyone loves.
                                 </p>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                                 :sm="{ span: 24 }"
-                                 :xs="{ span: 24 }"
-                          >
-                            <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                              <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                     :xs="{ span: 24}"
-                              >
-                                <r-avatar data-src="/images/content/illustration-11.svg" :size="120" class="r-avatar-auto"
-                                ></r-avatar>
-                              </a-col>
-                              <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                     :xs="{ span: 24}"
-                              >
-                                <p class="r-text-medium r-text-secondary">
-                                  Pilot a set of enabling technologies
-                                </p>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                        </a-row>
-                      </a-card>
+                              </a-card>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                            <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                   :xs="{ span: 24}"
+                            >
+                              <r-avatar data-src="/images/content/illustration-11.svg" :size="120" class="r-avatar-auto"
+                              ></r-avatar>
+                            </a-col>
+                            <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                   :xs="{ span: 24}"
+                            >
+                              <p class="r-text-medium r-text-secondary">
+                                Pilot a set of enabling technologies
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                      </a-row>
                     </a-col>
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                     >
-                      <a-card class="r-bg-blue-light">
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                                 :sm="{ span: 24 }"
-                                 :xs="{ span: 24 }"
-                          >
-                            <a-row :gutter="[12,12]" align="middle" justify="space-between" type="flex">
-                              <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                     :xs="{ span: 24}"
-                              >
-                                <r-avatar data-src="/images/content/illustration-10.svg" :size="120" class="r-avatar-auto"
-                                ></r-avatar>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                                     class="r-text-center"
-                              >
-                                <p class="r-text-medium r-text-green">
-                                  Expand pilots to full desired scope.
-                                </p>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                                 class="r-text-left"
-                          >
-                            <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                              >
+                      <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <a-row :gutter="[12,12]" align="middle" justify="space-between" type="flex">
+                            <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                   :xs="{ span: 24}"
+                            >
+                              <r-avatar data-src="/images/content/illustration-10.svg" :size="120" class="r-avatar-auto"
+                              ></r-avatar>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                                   class="r-text-center"
+                            >
+                              <p class="r-text-medium r-text-green">
+                                Expand pilots to full desired scope.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                               class="r-text-left"
+                        >
+                          <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                            >
+                              <a-card class="r-bg-green-light">
                                 <h4 class="r-heading-light r-text-uppercase r-text-green">
                                   Evaluate It
                                 </h4>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                              >
+                              </a-card>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                            >
+                              <a-card class="r-bg-green-light">
                                 <p class="r-text-normal r-text-dark">
                                   Complex problems need diverse teams. We create teams with an unusual depth and breadth
                                   of
-                                  expertise, so they can cover all angles on a problem, and find the best way through. Reciprocity works magic across all teams.
+                                  expertise, so they can cover all angles on a problem, and find the best way through.
                                 </p>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                        </a-row>
-                      </a-card>
+                              </a-card>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                      </a-row>
                     </a-col>
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                     >
-                      <a-card class="r-bg-blue-light">
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col :lg="{ span: 12 }" :md="{ span: 1126 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                                 class="r-text-left"
-                          >
-                            <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                              >
+                      <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                        <a-col :lg="{ span: 12 }" :md="{ span: 1126 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                               class="r-text-left"
+                        >
+                          <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                            >
+                              <a-card class="r-bg-primary-light">
                                 <h4 class="r-heading-light r-text-uppercase r-text-primary">
                                   Iterate It
                                 </h4>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                              >
+                              </a-card>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                            >
+                              <a-card class="r-bg-primary-light">
                                 <p class="r-text-normal r-text-dark">
                                   Part of our job is to keep everyone moving. We get our projects moving. We keep our
                                   clients
                                   and partners moving. We keep ourselves motivated. The world doesn't stop; neither do we.
                                 </p>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                                 :sm="{ span: 24 }"
-                                 :xs="{ span: 24 }"
-                          >
-                            <a-row :gutter="[12,12]" align="middle" justify="space-between" type="flex">
-                              <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                     :xs="{ span: 24}"
-                              >
-                                <r-avatar data-src="/images/content/illustration-12.svg" :size="120" class="r-avatar-auto"
-                                ></r-avatar>
-                              </a-col>
-                              <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }"
-                                     :sm="{ span: 24 }"
-                                     :xs="{ span: 24 }"
-                              >
-                                <p class="r-text-medium r-text-primary">
-                                  Continually refine production solutions.
-                                </p>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                        </a-row>
-                      </a-card>
+                              </a-card>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <a-row :gutter="[12,12]" align="middle" justify="space-between" type="flex">
+                            <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                   :xs="{ span: 24}"
+                            >
+                              <r-avatar data-src="/images/content/illustration-12.svg" :size="120" class="r-avatar-auto"
+                              ></r-avatar>
+                            </a-col>
+                            <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                              <p class="r-text-medium r-text-primary">
+                                Continually refine production solutions.
+                              </p>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                      </a-row>
                     </a-col>
                   </a-row>
                 </a-col>

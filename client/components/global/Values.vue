@@ -1,11 +1,11 @@
 <template>
-  <a-card class="r-bg-blue">
+  <a-card class="r-bg-blue-light">
     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
              :sm="{ span: 24 }"
              :xs="{ span: 24 }"
       >
-        <h4 class="r-heading-light r-text-primary r-text-uppercase">
+        <h4 class="r-heading-light r-text-blue r-text-uppercase">
           Our values
         </h4>
       </a-col>
@@ -14,7 +14,7 @@
              :xs="{ span: 24 }"
       >
         <h3 class="r-heading">
-          We establish and accelerate <span class="r-text-primary">business</span> success.
+          We establish and accelerate <span class="r-text-blue">business</span> success through three <span class="r-text-blue">values</span>:
         </h3>
       </a-col>
       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
@@ -29,7 +29,7 @@
           >
             <div class="r-avatar-item">
               <r-avatar class="r-avatar-item-icon" :dataSrc="'/images/icons/' + value.image" :size="42"></r-avatar>
-              <span class="r-text-white">{{ value.title }}</span>
+              <span class="r-text-blue">{{ value.title }}</span>
             </div>
           </a-col>
         </a-row>

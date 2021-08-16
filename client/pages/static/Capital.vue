@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-secondary r-border-none">
+          <a-card class="r-bg-secondary r-pull-both-24 r-border-none r-card-r-128">
             <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
@@ -42,7 +42,7 @@
                             No great solution is developed in a vacuum. Experience and domain knowledge is crucial.
                           </p>
                         </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
@@ -79,11 +79,11 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <h3 class="r-heading-light">
-                <span class="r-text-blue">Innovate</span> <span class="r-text-secondary">alongside</span> Graphigem.
-              </h3>
+              <h2 class="r-heading-light">
+                <span class="r-text-blue">Innovate</span> <span class="r-text-blue">alongside</span> Graphigem.
+              </h2>
             </a-col>
-            <a-col :lg="{ span: 18 }" :md="{ span: 21 }"
+            <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >

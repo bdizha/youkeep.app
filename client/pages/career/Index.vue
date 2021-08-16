@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark r-border-none">
+          <a-card class="r-bg-dark r-pull-both-24 r-border-none r-card-r-128">
             <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
@@ -76,13 +76,13 @@
       <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
         <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-secondary">
+          <a-card class="r-bg-secondary-light">
             <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                <h4 class="r-heading-light r-text-secondary r-text-uppercase">
                   Our objective
                 </h4>
               </a-col>
@@ -91,7 +91,8 @@
                      :xs="{ span: 24 }"
               >
                 <h3 class="r-heading">
-                  To transform the way business is <span class="r-text-primary">experienced</span> around the world
+                  To enable <span class="r-text-secondary">businesses</span> to build a modern innovation
+                  <span class="r-text-secondary">strategy</span>.
                 </h3>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -132,7 +133,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark">
+          <a-card class="r-bg-primary-light">
             <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
@@ -175,7 +176,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark">
+          <a-card class="r-bg-green-light">
             <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
@@ -210,7 +211,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark">
+          <a-card class="r-bg-secondary-light">
             <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
@@ -246,7 +247,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark">
+          <a-card class="r-bg-blue-light">
             <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"

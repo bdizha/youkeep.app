@@ -4,7 +4,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-dark">
+      <a-card class="r-bg-green-light">
         <div class="r-mv-48">
           <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
@@ -39,7 +39,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-dark">
+      <a-card class="r-bg-blue-light">
         <div class="r-mv-48">
           <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"

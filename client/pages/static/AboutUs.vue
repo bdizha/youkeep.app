@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-dark r-border-none">
+      <a-card class="r-bg-dark r-pull-both-24 r-border-none r-card-r-128">
         <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
           <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
@@ -48,7 +48,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          We facilitate the whole incubation experience for startups around the African continent.
+                          We facilitate the whole incubation experience for startups around the African continent. Reciprocity works magic across all teams.
                         </p>
                       </a-col>
                     </a-row>

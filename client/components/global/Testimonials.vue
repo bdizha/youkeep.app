@@ -72,8 +72,8 @@ export default {
           {
             'breakpoint': 900,
             'settings': {
-              'slidesToShow': 2,
-              'slidesToScroll': 2,
+              'slidesToShow': 1,
+              'slidesToScroll': 1,
               'dots': false
             }
           },
