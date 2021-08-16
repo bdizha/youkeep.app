@@ -344,7 +344,7 @@
                           </h4>
                           <p class="r-text-normal">
                             Pay later on your terms.
-                            Start shopping with interest free monthly payments. It’s a more responsible way to shop.</p>
+                            Start business with interest free monthly payments. It’s a more responsible way to shop.</p>
                         </a-col>
                       </a-row>
                     </template>

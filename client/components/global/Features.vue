@@ -77,10 +77,10 @@
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading">
-                Effortless shopping anywhere
+                Effortless business anywhere
               </h4>
               <p class="r-text-normal">
-                We're changing how shopping is experienced. Get new products served to you based on your liking and
+                We're changing how business is experienced. Get new products served to you based on your liking and
                 preferences.
               </p>
             </template>
@@ -126,7 +126,7 @@
               </h4>
               <p class="r-text-normal">
                 Easily checkout with a one-click option and complete your order fast. Make sure you get the best
-                shopping experience anytime.
+                business experience anytime.
               </p>
             </template>
           </a-card-meta>

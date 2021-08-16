@@ -43,7 +43,7 @@
                           >
                             <p class="r-text-normal">
                               Clients in collections with the republic or SARS? Dealing with messy or non-existent
-                              books? Graphigem can produce years of outstanding marketplaces quickly, so you can focus
+                              books? Graphigem can produce years of outstanding businesses quickly, so you can focus
                               on getting your clients current and compliant.
                             </p>
                           </a-col>
@@ -145,9 +145,9 @@
                 <span class="r-text-secondary">Graphigem careers</span>
               </h1>
               <p class="r-text-normal">
-                Graphigem is a consumer centric shopping platform that exists to transform
+                Graphigem is a consumer centric business platform that exists to transform
                 the way shoppers find and make purchases by offering simple and
-                convenient shopping and payment methods.
+                convenient business and payment methods.
               </p>
             </a-col>
           </a-row>

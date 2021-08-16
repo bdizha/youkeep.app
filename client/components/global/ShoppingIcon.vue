@@ -1,9 +1,9 @@
 <template>
-  <div class="r-shopping-cart"></div>
+  <div class="r-business-cart"></div>
 </template>
 <script>
 export default {
-  name: 'r-shopping-icon',
+  name: 'r-business-icon',
   props: {},
   data () {
     return {}

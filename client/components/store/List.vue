@@ -76,7 +76,7 @@ export default {
       this.fetchStores()
     },
     async onStore (store) {
-      await this.$store.dispatch('base/onNotice', 'Enjoy your shopping at ' + store.name)
+      await this.$store.dispatch('base/onNotice', 'Enjoy your business at ' + store.name)
       await this.$store.dispatch('shop/onStore', store.route)
     }
   }

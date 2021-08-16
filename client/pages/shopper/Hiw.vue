@@ -37,7 +37,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Active Graphigem shoppers handle all the shopping and delivery experiences for Graphigem customers at a steady rate.
+                          Active Graphigem shoppers handle all the business and delivery experiences for Graphigem customers at a steady rate.
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -116,7 +116,7 @@
                     </a-col>
                     <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <p class="r-text-medium">
-                        Graphigem is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
+                        Graphigem is a membership-based business marketplace, enabling delivery of trendy fashion items,
                         hot food, household essentials and more.
                       </p>
                     </a-col>

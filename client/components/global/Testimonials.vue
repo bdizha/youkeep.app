@@ -2,46 +2,35 @@
   <a-row :gutter="[24,24]" align="middle" justify="center"
          type="flex"
   >
-    <a-col :lg="{ span: 20 }" :md="{ span: 20 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-      <h3 class="r-heading-light r-text-secondary">
-        What our customers say...
+    <a-col class="r-text-center" :lg="{ span: 20 }" :md="{ span: 20 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+      <h3 class="r-heading-light">
+        What our partners say...
       </h3>
-    </a-col>
-    <a-col :lg="{ span: 4}" :md="{ span: 4 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-           class="r-text-right"
-    >
-      <nuxt-link to="/testimonials">
-        <a-button block
-                  class="r-btn-primary"
-                  size="large"
-                  type="secondary"
-        >
-          Explore More
-          <a-icon type="right"/>
-        </a-button>
-      </nuxt-link>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row align="middle" class="r-slider r-slider-testimonials" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <VueSlickCarousel v-if="hasReviews" v-bind="settings">
             <a-card v-for="(review, index) in reviews" :key="index + '-review'"
-                    class="r-bg-primary-light"
+                    class="r-bg-blue-light"
             >
-              <a-card-meta>
-                <template slot="description">
-                  <h4 class="r-heading r-text-secondary">
+              <a-row :gutter="[12,12]" align="middle" justify="center"
+                     type="flex"
+              >
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+                  <h3 class="r-heading-light r-text-blue">
                     {{ review.author }}
-                  </h4>
+                  </h3>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
                   <p class="r-text-normal">
                     {{ review.content }}
                   </p>
-                  <r-rate :rating="review.rating"></r-rate>
-                  <h4 class="r-heading-light">
+                  <p class="r-text-medium r-text-blue">
                     {{ review.company }}
-                  </h4>
-                </template>
-              </a-card-meta>
+                  </p>
+                </a-col>
+              </a-row>
             </a-card>
             <template #prevArrow="arrowOption">
               <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
@@ -105,13 +94,13 @@ export default {
             }
           }
         ]
-      },
+      }
     }
   },
   computed: mapGetters({
     reviews: 'base/reviews',
     processes: 'base/processes',
-    hasReviews: 'base/hasReviews',
+    hasReviews: 'base/hasReviews'
   }),
   created () {
   },

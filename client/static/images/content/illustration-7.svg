@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="82.59mm" height="76.0663mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 6729.76 6198.18"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str2 {stroke:#00C2FF;stroke-width:262.16;stroke-miterlimit:22.9256}
+    .str0 {stroke:#3A9CFF;stroke-width:262.16;stroke-miterlimit:22.9256}
+    .str3 {stroke:#5AEEBC;stroke-width:262.16;stroke-miterlimit:22.9256}
+    .str1 {stroke:#FBD13D;stroke-width:262.16;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil1 {fill:#00C2FF}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <line class="fil0 str0" x1="3371.54" y1="2372.72" x2="3356.76" y2= "3574.83" />
+  <line class="fil0 str1" x1="3629.64" y1="3686.72" x2="5922.99" y2= "1360.67" />
+  <path class="fil1" d="M269.28 5461.02c-10.8,59.17 -3.22,422.53 -3.28,532.56 -0.03,69.38 -8.52,98.31 24.24,151.24 24.42,39.46 67.53,52.19 130.28,52.03l5804.39 -0.15c74.46,0 223.37,23.04 236.99,-112.64 9.84,-98.08 0.81,-250.1 0.81,-353.99 0,-377.92 9.83,-3813.95 -4.52,-3866.98 -41.34,-5.21 -93.5,-2.06 -136.18,-2.11 -94.64,-0.1 -100.53,-10.98 -101.65,33.52 -2.22,88.24 0.82,182.12 0.82,271.12 0,419.67 10.32,3739.53 -6.54,3782.99 -47.76,18.52 -1263.4,6.54 -1425.19,6.54 -402.91,0 -4232.41,10.12 -4275.35,-6.54 -28.32,-73.02 14.37,-412.09 -9.84,-480.01 -6.05,-8.65 -20.04,-8.99 -27.93,-9.96 -3.64,-0.46 -22.88,-0.15 -27.76,-0.11l-179.27 2.48z"/>
+  <path class="fil1" d="M266 133.76l1.78 3827.67 211.73 2.07c29.11,0 24.73,5.6 28.78,-22.82l-0.77 -1816.66c0,-206.06 -14.44,-1821.84 6.55,-1875.95l5669.23 -6.55c21.8,0 12.95,-0.58 31.31,6.55 13,33.53 4.53,73.89 7.9,109.99 34.21,17.03 193.16,10.17 238.73,5.39l1.44 -229.69c0,-81.72 -52.07,-133.76 -133.77,-133.76l-5929.16 0c-81.7,0 -133.76,52.04 -133.76,133.76z"/>
+  <ellipse class="fil0 str1" transform="matrix(0.830094 -0.0152677 0.0188424 1.02445 3363.95 3965.58)" rx="457.27" ry="381.42"/>
+  <ellipse class="fil0 str2" transform="matrix(0.830094 -0.0152677 0.0188424 1.02445 6219.12 1116.41)" rx="457.27" ry="381.42"/>
+  <line class="fil0 str3" x1="3007.25" y1="2204.22" x2="772.28" y2= "4434.14" />
+  <ellipse class="fil0 str3" transform="matrix(0.830094 -0.0152677 0.0188424 1.02445 510.635 4717.03)" rx="457.27" ry="381.42"/>
+  <ellipse class="fil0 str0" transform="matrix(0.830094 -0.0152677 0.0188424 1.02445 3364.35 1981.97)" rx="457.27" ry="381.42"/>
+ </g>
+</svg>

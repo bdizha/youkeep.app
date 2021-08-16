@@ -1,124 +1,243 @@
 <template>
-  <r-page>
-    <a-row justify="center" type="flex">
-      <a-col :span="24" class="gutter-row">
-        <div class="r-bg-primary-light">
-          <a-row justify="center" type="flex">
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-              <a-row align="middle" justify="start" type="flex">
-                <a-col :lg="{ offset: 3, span: 9 }" :md="{ offset: 3, span: 9 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                       class="r-p-48"
-                >
-                  <r-space></r-space>
-                  <a-row align="middle" justify="start" type="flex">
-                    <a-col :lg="{ span: 16 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                           s="r"
-                           style="text-align: left;"
-                    >
-                      <h4 class="r-heading-light r-text-uppercase">
-                        How does Graphigem work?
-                      </h4>
-                      <h1 class="r-heading r-text-secondary">
-                        <span class="r-text-secondary">Shop More,</span><br>
-                        <span class="r-text-secondary">Pay Less.</span>
-                      </h1>
-                    </a-col>
-                  </a-row>
-                  <a-row align="middle" justify="start" type="flex">
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                           style="text-align: left;"
-                    >
-                      <h4 class="r-heading-light">
-                        We're a better way to shopping. Pay in 3 installments with zero interest
-                        when you pay on time.
-                      </h4>
-                    </a-col>
-                  </a-row>
-                  <a-row align="middle" justify="start" type="flex">
-                    <a-col :lg="{ span: 18 }" :md="{ span: 20 }" :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
+  <a-row :gutter="[96,96]" justify="center" type="flex">
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-card class="r-bg-secondary">
+            <a-card-meta>
+              <template slot="description">
+                <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                         :xs="{ span: 24}"
+                  >
+                    <div class="r-mv-48">
                       <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
-                               class="gutter-row"
                         >
-                          <a-button block
-                                    class="r-btn-secondary"
-                                    size="default"
-                                    type="secondary"
-                          >
-                            Sign up
-                          </a-button>
+                          <h3 class="r-heading-light r-text-primary r-text-uppercase">
+                            Our Portfolio
+                          </h3>
                         </a-col>
-                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
-                               class="gutter-row"
                         >
-                          <a-button block
-                                    class="r-btn-bordered-purple"
-                                    size="default"
-                                    type="secondary"
-                          >
-                            Shop directory
-                          </a-button>
+                          <h2 class="r-heading r-text-uppercase">
+                            What we are doing
+                          </h2>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-medium">
+                            To create and improve breakthrough digital services, we field compact, multi-disciplinary
+                            teams who work closely with the client and each other.
+                          </p>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-normal">
+                            These teams scale their size and capability based on the nature and phase of the product.
+                          </p>
                         </a-col>
                       </a-row>
-                    </a-col>
-                  </a-row>
-                  <r-space></r-space>
-                </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                  <div class="r-page-header-photo">
-                    <div class="r-page-white"
-                         style="background-image: url('/images/welcome-02.jpg')"
-                    >
                     </div>
-                  </div>
+                  </a-col>
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                         :xs="{ span: 24}"
+                  >
+                    <r-avatar data-src="/images/content/illustration-10.svg" :size="300" class="r-avatar-block"
+                    ></r-avatar>
+                  </a-col>
+                </a-row>
+              </template>
+            </a-card-meta>
+          </a-card>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col v-if="false" :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <h4 class="r-heading-light r-text-uppercase">
+                    <span class="r-text-blue">We treat all good problems with respect</span>
+                  </h4>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <p class="r-text-medium">
+                    Clients are a source of good problems. If we solve a client's problem right, we improve both the
+                    client's life and their customer's life.
+                  </p>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <p class="r-text-normal">
+                    These are around creating sustained behaviour change in large populations, or transforming
+                    businesses to be more competitive in a digital-first landscape.
+                  </p>
                 </a-col>
               </a-row>
             </a-col>
           </a-row>
-        </div>
-      </a-col>
-    </a-row>
-    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-      <a-col v-for="(portfolio, index) in potfolios"
-             :key="index"
-             :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }"
-             :xs="{ span: 12 }"
-      >
-        <a-card class="r-bg-secondary">
-          <r-avatar :size="300" class="r-avatar-block"
-                    :data-src="'/portfolio/' + (portfolio.slug) + '/logo_white.png'"
-          ></r-avatar>
-          <div v-if="false" class="r-portfolio-overlay">
-                      <span>
-                        {{ portfolio.title }}
-                      </span>
-          </div>
-        </a-card>
-      </a-col>
-    </a-row>
-  </r-page>
+        </a-col>
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-card class="r-bg-secondary-light">
+            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <h3 class="r-heading-light r-text-uppercase">
+                  <span class="r-text-secondary">Value making</span>
+                </h3>
+              </a-col>
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <p class="r-text-medium">
+                  Good problems come in all shapes and sizes. They can be small and modest, or grand and ambitious.
+                  Because of our <span class="r-text-secondary">track record</span> and history, the problems we have
+                  been working on have been getting
+                  bigger, and more complex.
+                </p>
+              </a-col>
+            </a-row>
+          </a-card>
+        </a-col>
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-card class="r-bg-blue-light">
+            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <h3 class="r-heading-light r-text-uppercase">
+                  <span class="r-text-blue">Success scaling</span>
+                </h3>
+              </a-col>
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <p class="r-text-medium">
+                  Everything we do is based on <span class="r-text-blue">capital inclusion</span>.
+                  Sometimes we find our own good problems, and these lead us to create products, services or ideas we
+                  can share with the right client at the right time.
+                </p>
+              </a-col>
+            </a-row>
+          </a-card>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <h3 class="r-heading-light">
+                    We invest our <span class="r-text-secondary">time,</span> <span class="r-text-green">capabilities</span>, <span class="r-text-primary">capital</span> and <span class="r-text-blue">resources</span> to craft ideas into realities.
+                  </h3>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <p class="r-text-medium">
+                    Accelerating the transformation of digital technologies into valuable businesses.
+                  </p>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </a-col>
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <r-portfolio></r-portfolio>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-testimonials></r-testimonials>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-contact-us></r-contact-us>
+    </a-col>
+  </a-row>
 </template>
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  name: 'r-paise',
+  layout: 'single',
   props: {},
+  async asyncData ({ store }) {
+    await store.dispatch('base/onReviews', {})
+  },
   data () {
     return {
+      banner: 'art-01.png',
+      isProcessing: true,
+      testimonials: [],
       modal: {
         current: null,
-        message: null,
-      },
+        isVisible: false
+      }
     }
   },
-  mounted () {
-    this.modal = this.$store.state.modal
+  computed: mapGetters({
+    store: 'base/store',
+    category: 'base/category',
+    categories: 'shop/categories',
+    hasCategories: 'base/hasCategories'
+  }),
+  created () {
   },
-  methods: {},
+  methods: {
+  }
 }
 </script>

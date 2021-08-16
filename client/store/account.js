@@ -18,7 +18,7 @@ const state = () => ({
   addresses: [],
   coupons: [],
   profile: [],
-  shoppingLists: [],
+  businessLists: [],
   error: {},
   isLoggedIn: false,
   processes: {
@@ -43,7 +43,7 @@ const getters = {
   processes: state => state.processes,
   coupons: state => state.coupons,
   profile: state => state.profile,
-  shoppingLists: state => state.shoppingLists,
+  businessLists: state => state.businessLists,
   isLoggedIn: state => state.isLoggedIn,
   error: state => state.error
 }
@@ -88,8 +88,8 @@ const mutations = {
   setProfile (state, data) {
     state.profile = data.profile
   },
-  setShoppingLists (state, data) {
-    state.shoppingLists = data.shoppingLists
+  setbusinessLists (state, data) {
+    state.businessLists = data.businessLists
   },
   setErrors (state, data) {
     state.errors = null

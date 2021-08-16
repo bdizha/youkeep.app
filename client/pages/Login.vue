@@ -9,7 +9,7 @@ export default {
       modal: {
         isVisible: false,
         current: null,
-        message: 'Welcome back. It\'s shopping time!',
+        message: 'Welcome back. It\'s business time!',
       }
     }
   },

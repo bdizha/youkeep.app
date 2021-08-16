@@ -95,7 +95,7 @@
                 <h4 class="r-heading-light">
                   Customers want to buy more of your products. And now they've a more
                   flexible
-                  shopping option with Graphigem
+                  business option with Graphigem
                 </h4>
               </a-col>
             </a-row>
@@ -137,7 +137,7 @@
         </a-row>
       </a-col>
     </a-row>
-    <r-steps :has-title="true" :has-wave="false" heading="Graphigem shopping experience"></r-steps>
+    <r-steps :has-title="true" :has-wave="false" heading="Graphigem business experience"></r-steps>
     <a-row class="r-text-center" justify="center" type="flex">
       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24 }"
              class="r-padding-48"

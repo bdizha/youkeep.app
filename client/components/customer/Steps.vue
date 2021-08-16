@@ -28,7 +28,7 @@ export default {
         },
         {
           title: 'Shop It',
-          content: 'Set your pickup or delivery time. It\'s shopping time! We handle all your shopping experience and more benefits. '
+          content: 'Set your pickup or delivery time. It\'s business time! We handle all your business experience and more benefits. '
         },
         {
           title: 'Enjoy It',

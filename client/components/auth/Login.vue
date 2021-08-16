@@ -135,7 +135,7 @@ export default {
       }).then((response) => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your shopping with Graphigem.')
+            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your business with Graphigem.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

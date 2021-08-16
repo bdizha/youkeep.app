@@ -24,7 +24,7 @@
         >
           <div class="r-text-center r-action-height">
             <div :class="{'r-cart__active': productItem.quantity > 0}" class="r-cart">
-              <div class="r-shopping-cart"></div>
+              <div class="r-business-cart"></div>
               <span class="r-cart-count">{{ productItem.quantity }}</span>
             </div>
           </div>
@@ -54,7 +54,7 @@
                     type="secondary"
                     @click="onClose"
           >
-            <a-icon type="shopping"/>
+            <a-icon type="business"/>
             Add to cart
           </a-button>
         </a-col>
@@ -161,11 +161,11 @@ export default {
       const { status } = await this.$store.dispatch('cart/onItem', productItem)
 
       if (status === 1) {
-        this.$message.success(productItem.product.name + ' has been added to your shopping cart.', 6)
+        this.$message.success(productItem.product.name + ' has been added to your business cart.', 6)
       } else if (status === 2) {
-        this.$message.success(productItem.product.name + ' has been updated in your shopping cart.', 6)
+        this.$message.success(productItem.product.name + ' has been updated in your business cart.', 6)
       } else if (status === 3) {
-        this.$message.success(productItem.product.name + ' has been removed from your shopping cart.', 6)
+        this.$message.success(productItem.product.name + ' has been removed from your business cart.', 6)
       }
     },
     async onInit () {

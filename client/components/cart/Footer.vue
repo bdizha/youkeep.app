@@ -19,7 +19,7 @@
                     size="large"
                     type="secondary"
           >
-            <a-icon type="shopping-cart"/>
+            <a-icon type="business-cart"/>
             Checkout
           </a-button>
         </nuxt-link>
@@ -35,7 +35,7 @@
                     size="large"
                     type="secondary"
           >
-            <a-icon type="shopping-cart"/>
+            <a-icon type="business-cart"/>
             Shop now
           </a-button>
         </nuxt-link>

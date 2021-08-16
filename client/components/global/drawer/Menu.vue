@@ -2,7 +2,7 @@
   <r-drawer-template current="store-menu"
                      placement="left"
   >
-    <r-store-menu :is-home="true" :is-store="false"></r-store-menu>
+    <r-quick-links></r-quick-links>
   </r-drawer-template>
 </template>
 <script>

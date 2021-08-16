@@ -31,7 +31,7 @@
                            style="text-align: left;"
                     >
                       <h4 class="r-heading-light">
-                        We're a better way to shopping. Pay in 3 installments with zero interest
+                        We're a better way to business. Pay in 3 installments with zero interest
                         when you pay on time.
                       </h4>
                     </a-col>

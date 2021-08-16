@@ -8,7 +8,7 @@
 
             .cls-2 {
             fill: none;
-            stroke: #3C444C;
+            stroke: #3D4852;
             stroke-linecap: square;
             stroke-linejoin: round;
             stroke-width: 40px;

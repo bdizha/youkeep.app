@@ -19,7 +19,7 @@ export default {
     return {
       currentStep: 0,
       title: 'Graphigem connects sellers to customers.',
-      content: 'Graphigem offers stores likes yours to sell products to our customers with the most convenient shopping tools on the market.',
+      content: 'Graphigem offers stores likes yours to sell products to our customers with the most convenient business tools on the market.',
       steps: [
         {
           title: 'List It',

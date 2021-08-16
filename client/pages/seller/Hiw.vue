@@ -44,7 +44,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          With an online shopping platform, millions of customers, and tons of selling tools on Graphigem, it’s the all-in-one
+                          With an online business platform, millions of customers, and tons of selling tools on Graphigem, it’s the all-in-one
                           marketplace you deserve.
                         </p>
                       </a-col>

@@ -74,12 +74,12 @@
                        image="/images/Graphigem/icon_black_light.svg"
               >
                 <h4 slot="description" class="r-heading r-text-black">
-                  Your shopping cart is
+                  Your business cart is
                   empty.
                 </h4>
                 <nuxt-link :to="'/store/' + store.slug">
                   <a-button class="ant-btn-primary r-btn-black" size="large">
-                    <a-icon type="shopping"/>
+                    <a-icon type="business"/>
                     Shop now
                   </a-button>
                 </nuxt-link>
@@ -128,7 +128,7 @@
           >
             <nuxt-link to="/checkout">
               <a-button block class="r-btn-bordered-white" size="small" type="secondary">
-                <a-icon type="shopping-cart"/>
+                <a-icon type="business-cart"/>
                 Checkout
               </a-button>
             </nuxt-link>

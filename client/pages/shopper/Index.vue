@@ -38,7 +38,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Earn up to R55/hr or more shopping for Graphigem members.
+                          Earn up to R55/hr or more business for Graphigem members.
                           Deliver things people love, from the stores they trust.
                         </p>
                       </a-col>
@@ -47,7 +47,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          Earn up to R55/hr or more shopping for Graphigem members.
+                          Earn up to R55/hr or more business for Graphigem members.
                           Deliver things people love, from the stores they trust.
                         </p>
                       </a-col>
@@ -197,7 +197,7 @@
                   </a-col>
                   <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <p class="r-text-normal">
-                      Graphigem is a membership-based shopping marketplace, enabling delivery of trendy fashion items,
+                      Graphigem is a membership-based business marketplace, enabling delivery of trendy fashion items,
                       hot food, household items and more.
                     </p>
                   </a-col>
@@ -351,7 +351,7 @@ export default {
       features: [
         {
           heading: 'Shop',
-          title: 'Set your shopping schedule',
+          title: 'Set your business schedule',
           content: 'Work part time or full time - any time. Set your own hours for a completely flexible schedule. We only push order requests within our operating hours: 8am-9pm.',
           image: '/images/content/customer-01.svg'
         },

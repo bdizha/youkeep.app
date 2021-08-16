@@ -28,7 +28,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading">
-                          It's <span class="r-text-primary">shopping</span> time!
+                          It's <span class="r-text-primary">business</span> time!
                         </h1>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -44,7 +44,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          With online shopping platform, tens of thousands of product categories, and millions of
+                          With online business platform, tens of thousands of product categories, and millions of
                           products
                           in
                           front of you, it’s the all-in-one
@@ -62,7 +62,7 @@
                                   type="secondary"
                                   @click="onRegister"
                         >
-                          Start shopping today!
+                          Start business today!
                         </a-button>
                       </a-col>
                     </a-row>
@@ -110,7 +110,7 @@
                          :xs="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Eliminate trips to the shopping mall, and save yourself <span class="r-text-primary">time</span>
+                      Eliminate trips to the business mall, and save yourself <span class="r-text-primary">time</span>
                       and <span class="r-text-primary">money!</span>
                     </h2>
                   </a-col>
@@ -235,7 +235,7 @@
                          :xs="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Graphigem offers the <span class="r-text-primary">best</span> shopping <span
+                      Graphigem offers the <span class="r-text-primary">best</span> business <span
                       class="r-text-primary"
                     >experience</span> on the market today!
                     </h2>
@@ -245,7 +245,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      Graphigem shopping is the <span class="r-text-primary">best</span> shopping experience on the
+                      Graphigem business is the <span class="r-text-primary">best</span> business experience on the
                       market.
                     </p>
                   </a-col>
@@ -306,7 +306,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Start shopping today, with a peace of mind, order from your phone or computer, and we'll bring your order
+                    Start business today, with a peace of mind, order from your phone or computer, and we'll bring your order
                     straight to you the way you like it.
                   </p>
                 </a-col>

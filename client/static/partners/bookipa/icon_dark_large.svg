@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="23.8126mm" height="23.8972mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 224.82 225.62"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str1 {stroke:#3D4852;stroke-width:0.8;stroke-miterlimit:22.9256}
+    .str0 {stroke:#3D4852;stroke-width:1.89;stroke-miterlimit:22.9256}
+    .fil0 {fill:none}
+    .fil1 {fill:#3D4852}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2685471969456">
+   <rect class="fil0" x="0" y="0.4" width="224.82" height="224.82"/>
+   <g>
+    <path class="fil1 str0" d="M61.45 1.12c25.57,0 57.38,18.59 57.38,54.62 0,39.12 -27.05,56.07 -57.38,56.07l43.21 -54.81 -43.21 -55.88z"/>
+    <path class="fil1 str0" d="M61.45 113.69c25.57,0 57.38,18.59 57.38,54.62 0,39.12 -27.05,56.07 -57.38,56.07l43.21 -54.81 -43.21 -55.88z"/>
+    <polygon class="fil1 str1" points="41.17,6.97 51.88,0.4 34.62,0.4 34.62,19.91 "/>
+    <polygon class="fil1 str1" points="41.17,218.65 51.88,225.22 34.62,225.22 34.62,205.71 "/>
+   </g>
+   <polygon class="fil1" points="160.93,114.22 190.2,27.85 103.19,114.11 189.92,201.32 "/>
+  </g>
+ </g>
+</svg>

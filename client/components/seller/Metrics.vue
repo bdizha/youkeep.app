@@ -27,7 +27,7 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <h1 class="r-text-x-large">
+                <h1 class="r-text-xlarge">
                   <a-icon class="r-text-primary" type="up"/>
                   <span class="r-number r-icon-effect-secondary">36</span>
                   <span class="r-subscript r-text-secondary">%</span>
@@ -65,7 +65,7 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <h1 class="r-text-x-large">
+                <h1 class="r-text-xlarge">
                   <a-icon class="r-text-primary" type="up"/>
                   <span class="r-number r-icon-effect-secondary">48</span>
                   <span class="r-subscript r-text-secondary">%</span>
@@ -104,7 +104,7 @@
                      :xs="{ span: 24 }"
 
               >
-                <h1 class="r-text-x-large">
+                <h1 class="r-text-xlarge">
                   <a-icon class="r-text-primary" type="up"/>
                   <span class="r-number r-icon-effect-secondary">24</span>
                   <span class="r-subscript r-text-secondary">%</span>

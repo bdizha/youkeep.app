@@ -67,7 +67,7 @@
                  class="r-text-left"
           >
             <a-button block
-                      class="r-btn-secondary"
+                      class="r-btn-blue"
                       html-type="submit"
                       size="large"
                       type="primary"

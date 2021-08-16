@@ -28,19 +28,6 @@
         </a-row>
       </r-layout-menu>
     </div>
-    <r-auth-actions v-if="drawer.current !== 'cart'"></r-auth-actions>
-    <r-category-drawer v-if="isCurrent('category')"
-                       v-bind:key="'category'" class="r-animate"
-    ></r-category-drawer>
-    <r-cart-drawer v-if="isCurrent('cart')"
-                   v-bind:key="'cart'" class="r-animate"
-    ></r-cart-drawer>
-    <r-store-drawer v-if="isCurrent('store')"
-                    v-bind:key="'store'" class="r-animate"
-    ></r-store-drawer>
-    <r-account-drawer v-if="isCurrent('account')"
-                      v-bind:key="'category'" class="r-animate"
-    ></r-account-drawer>
     <r-drawer-menu v-if="isCurrent('menu')"
                    v-bind:key="'menu'" class="r-animate"
     ></r-drawer-menu>

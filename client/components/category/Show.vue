@@ -148,7 +148,7 @@ export default {
   },
   created () {
     this.$store.dispatch('product/onPayload', this.payload)
-    this.$message.success('You\'re shopping in the ' + this.category.name + ' section at ' + this.store.name + '.', 6)
+    this.$message.success('You\'re business in the ' + this.category.name + ' section at ' + this.store.name + '.', 6)
   },
   mounted () {
   },

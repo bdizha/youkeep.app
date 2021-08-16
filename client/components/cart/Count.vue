@@ -3,7 +3,7 @@
        class="r-cart"
        @click="onDrawer('cart')"
   >
-    <div class="r-shopping-cart"></div>
+    <div class="r-business-cart"></div>
     <span class="r-cart-count">{{ cart.count }}</span>
   </div>
 </template>

@@ -223,7 +223,7 @@
                           >
                             <p class="r-text-normal">
                               Graphigem is created to offer you the best
-                              shopping experience on the online market.
+                              business experience on the online market.
                             </p>
                           </a-col>
                         </a-row>

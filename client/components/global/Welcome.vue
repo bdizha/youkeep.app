@@ -39,7 +39,7 @@ export default {
   },
   data () {
     return {
-      title: 'It\'s shopping time!',
+      title: 'It\'s business time!',
       payload: {}
     }
   },

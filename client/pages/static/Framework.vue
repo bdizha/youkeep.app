@@ -37,7 +37,7 @@
                 them.
               </p>
               <p class="r-text-normal">
-                We offer an advanced online shopping site that collects and supplies through private
+                We offer an advanced online business site that collects and supplies through private
                 shops and chains across the country, leveraging the short-term advantage. Instead
                 of
                 distant logistics centers, every customer receives a super fast delivery from a
@@ -53,7 +53,7 @@
                 service team is waiting to give you super personal and courteous service across many
                 platforms. You just have to make a reservation at a super convenient and advanced
                 interface,
-                enjoy our super-worthy offers and your shopping experience with us.
+                enjoy our super-worthy offers and your business experience with us.
               </p>
             </a-col>
           </a-row>
@@ -70,7 +70,7 @@
                 Evalute
               </h2>
               <p class="r-text-normal">
-                online shopping is part of it, but there are more fun things to do. Yet we are often in
+                online business is part of it, but there are more fun things to do. Yet we are often in
                 the
                 shop and we do more and more ourselves. We fill the cart, select the most
                 beautiful
@@ -83,8 +83,8 @@
                 Graphigem thinks it can be done differently: faster, easier and cheaper. The idea is
                 simple. We
                 arrange
-                the shopping, so that you have more time for fun things. At Graphigem you can order all
-                shopping
+                the business, so that you have more time for fun things. At Graphigem you can order all
+                business
                 within a few minutes. So toilet paper, fresh, chips and ice cream, but also organic
                 eggs, tender
                 steak and fresh vegetables.</p>

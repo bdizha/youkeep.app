@@ -8,9 +8,9 @@
               Where does Graphigem deliver?
             </h1>
             <p class="r-text-normal">
-              In more and more cities in the South Africa, we deliver all your shopping conveniently
+              In more and more cities in the South Africa, we deliver all your business conveniently
               at
-              home for the lowest price. At this moment you can have Graphigem deliver your shopping in
+              home for the lowest price. At this moment you can have Graphigem deliver your business in
               more than 20 places. And we are expanding quickly, new cities are added every month! Do
               we already deliver in your area?
             </p>

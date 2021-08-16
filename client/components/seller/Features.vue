@@ -5,7 +5,7 @@
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}" class="r-text-center">
             <h2 class="r-heading">
-              Elevate your shopping experience
+              Elevate your business experience
             </h2>
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}" class="r-text-center">
@@ -84,7 +84,7 @@ export default {
           heading: 'Inclusive',
           title: 'Process all major cards',
           content: 'Graphigem is the only Delayed Payments solution that accepts Amex and Discover along with Visa.',
-          icon: 'shopping-cart'
+          icon: 'business-cart'
         },
         {
           heading: 'Robust',

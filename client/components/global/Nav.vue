@@ -6,39 +6,29 @@
               theme="light"
       >
         <a-sub-menu>
-          <div slot="title">
-            <nuxt-link class="r-text-link" to="/about-us">
-              About
-            </nuxt-link>
-          </div>
+          <nuxt-link v slot="title" class="r-text-link" to="/about-us">
+            About
+          </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <div slot="title">
-            <nuxt-link class="r-text-link" to="/zero-sum">
-              ZeroSum Fund
-            </nuxt-link>
-          </div>
+          <nuxt-link slot="title" class="r-text-link" to="/capital">
+            Zerosum Capital
+          </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <div slot="title">
-            <nuxt-link class="r-text-link" to="/approach">
-              Approach
-            </nuxt-link>
-          </div>
+          <nuxt-link slot="title" class="r-text-link" to="/approach">
+            Approach
+          </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <div slot="title">
-            <nuxt-link class="r-text-link" to="/partners">
-              Partners
-            </nuxt-link>
-          </div>
+          <nuxt-link slot="title" class="r-text-link" to="/partners">
+            Partners
+          </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <div slot="title">
-            <nuxt-link class="r-text-link" to="/partners">
-              Contact
-            </nuxt-link>
-          </div>
+          <nuxt-link slot="title" class="r-text-link" to="/contact-us">
+            Contact
+          </nuxt-link>
         </a-sub-menu>
       </a-menu>
     </a-col>

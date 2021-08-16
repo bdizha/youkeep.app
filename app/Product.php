@@ -162,7 +162,7 @@ class Product extends KModel
 
     public function getColorCodeAttribute()
     {
-        return !empty($this->product_type->color) && !empty(self::$color_codes[$this->product_type->color]) ? strtoupper(self::$color_codes[$this->product_type->color]) : '#3C444C';
+        return !empty($this->product_type->color) && !empty(self::$color_codes[$this->product_type->color]) ? strtoupper(self::$color_codes[$this->product_type->color]) : '#3D4852';
     }
 
     public function getPriceWholeAttribute()

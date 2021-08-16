@@ -1,46 +1,46 @@
 <template>
-  <a-layout-header :class="{'r-header__dark': isDark}" class="r-header">
-  <a-row align="middle" justify="center" type="flex">
-    <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-     <a-card class="r-mv-12 r-bg-white">
-       <r-layout-menu v-if="!modal.isVisible && !isRaised">
-         <r-nav-item>
-           <a-icon type="menu" @click="onDrawer('menu')"/>
-         </r-nav-item>
-         <r-nav-item class="r-nav-item__logo r-p-r-0">
-           <r-logo :is-icon="isIcon"></r-logo>
-         </r-nav-item>
-         <r-nav-item class="r-hide-sm r-nav-item__search">
-         </r-nav-item>
-         <r-nav-item class="r-hide-sm">
-           <r-nav></r-nav>
-         </r-nav-item>
-       </r-layout-menu>
-       <r-layout-menu v-if="modal.isVisible || isRaised" class="r-layout-menu r-layout-menu-modal">
-         <r-nav-item class="r-nav-item__text">
-           <div v-on:click="onModalClose">
-             <a-button class="r-btn-dark"
-                       html-type="button"
-                       type="secondary"
-                       v-on:click="onModalClose"
-             >
-               <a-icon type="left"/>
-               Back
-             </a-button>
-           </div>
-         </r-nav-item>
-         <r-nav-item class="r-nav-item__logo">
-           <div class="r-logo" v-on:click="onModalClose">
-             <r-logo :is-icon="true"></r-logo>
-           </div>
-         </r-nav-item>
-       </r-layout-menu>
-       <r-drawer></r-drawer>
-       <r-modal></r-modal>
-     </a-card>
+  <a-row :gutter="[24,24]" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <div class="r-header">
+        <a-card :class="{'r-bg-dark': isDark, 'r-bg-white': !isDark}">
+          <r-layout-menu v-if="!modal.isVisible && !isRaised">
+            <r-nav-item>
+              <a-icon type="menu" @click="onDrawer('menu')"/>
+            </r-nav-item>
+            <r-nav-item class="r-nav-item__logo r-p-r-0">
+              <r-logo :is-icon="isIcon"></r-logo>
+            </r-nav-item>
+            <r-nav-item class="r-hide-sm r-nav-item__search">
+            </r-nav-item>
+            <r-nav-item class="r-hide-sm">
+              <r-nav></r-nav>
+            </r-nav-item>
+          </r-layout-menu>
+          <r-layout-menu v-if="modal.isVisible || isRaised" class="r-layout-menu r-layout-menu-modal">
+            <r-nav-item class="r-nav-item__text">
+              <div v-on:click="onModalClose">
+                <a-button class="r-btn-dark"
+                          html-type="button"
+                          type="secondary"
+                          v-on:click="onModalClose"
+                >
+                  <a-icon type="left"/>
+                  Back
+                </a-button>
+              </div>
+            </r-nav-item>
+            <r-nav-item class="r-nav-item__logo">
+              <div class="r-logo" v-on:click="onModalClose">
+                <r-logo :is-icon="true"></r-logo>
+              </div>
+            </r-nav-item>
+          </r-layout-menu>
+          <r-drawer></r-drawer>
+          <r-modal></r-modal>
+        </a-card>
+      </div>
     </a-col>
   </a-row>
-  </a-layout-header>
 </template>
 <script>
 import { mapGetters } from 'vuex'

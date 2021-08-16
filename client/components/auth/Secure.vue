@@ -131,7 +131,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you, your account is now secured. Enjoy your shopping with Graphigem.')
+            $this.$message.success('Thank you, your account is now secured. Enjoy your business with Graphigem.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

@@ -372,7 +372,7 @@
             }
 
             .text-grey-darkest {
-                color: #3d4852;
+                color: #3D4852;
             }
 
             .text-grey-darker {

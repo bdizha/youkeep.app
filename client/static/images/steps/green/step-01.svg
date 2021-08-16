@@ -42,7 +42,7 @@
 
             .cls-9 {
             fill: none;
-            stroke: #3C444C;
+            stroke: #3D4852;
             stroke-width: 0.893px;
             }
 
@@ -354,8 +354,8 @@
                   transform="translate(931.626 -68.987)"/>
             <rect id="Rectangle_298" data-name="Rectangle 298" class="cls-3" width="260.277" height="27.39"
                   transform="translate(463.39 170.634)"/>
-            <text id="Shopping_List" data-name="Shopping List" class="cls-22" transform="translate(473.846 188.792)">
-                <tspan x="0" y="0">Shopping List</tspan>
+            <text id="business_List" data-name="business List" class="cls-22" transform="translate(473.846 188.792)">
+                <tspan x="0" y="0">business List</tspan>
             </text>
         </g>
     </g>

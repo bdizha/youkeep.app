@@ -4,10 +4,12 @@
            :key="index" :span="24"
     >
       <template v-if="!item.modal">
-        <nuxt-link :to="item.link" class="r-item-shadow">
-          <a-avatar :icon="item.icon" :size="30" shape="square"/>
-          {{ item.label }}
-        </nuxt-link>
+        <div class="r-item-shadow r-checked-item">
+          <nuxt-link :to="item.link">
+            <a-avatar class="r-checked-item-icon" :icon="item.icon" :size="30" shape="square"/>
+            {{ item.label }}
+          </nuxt-link>
+        </div>
       </template>
       <template v-if="item.modal">
         <nuxt-link :to="item.link"
@@ -25,38 +27,38 @@
 const LINKS = [
   {
     label: 'Home',
-    icon: 'home',
+    icon: 'bank',
     link: '/',
     modal: null
   },
   {
-    label: 'Explore',
-    icon: 'compass',
-    link: '/stores/its-shopping-time'
+    label: 'About Graphigem',
+    icon: 'bulb',
+    link: '/about-us'
   },
   {
-    label: 'Rewards',
-    icon: 'gift',
-    link: '/rewards',
+    label: 'Zerosum Capital',
+    icon: 'global',
+    link: '/capital',
     modal: null
   },
   {
-    label: 'My Orders',
-    icon: 'gift',
-    link: '/orders',
+    label: 'Approach',
+    icon: 'build',
+    link: '/approach',
     modal: null
   },
   {
-    label: 'Wishlist',
-    icon: 'heart',
-    link: '/wishlist',
-    modal: 'wishlist'
+    label: 'Partners',
+    icon: 'rocket',
+    link: '/partners',
+    modal: null
   },
   {
-    label: 'History',
-    icon: 'clock-circle',
-    link: '/timeline',
-    modal: 'timeline'
+    label: 'Contact',
+    icon: 'mail',
+    link: '/contact-us',
+    modal: null
   }
 ]
 

@@ -7,7 +7,7 @@
                image="/images/icon_default.png"
       >
         <h4 slot="description" class="r-heading-light r-text-primary">
-          Your shopping cart is
+          Your business cart is
           empty.
         </h4>
         <a-row align="middle" justify="center" type="flex">

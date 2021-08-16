@@ -26,7 +26,7 @@
               <p class="r-text-normal">
                 Graphigem is a fast growing startup that is improving lives by giving people more time to
                 spend
-                with their families! Our Graphigem members order shopping via the Graphigem app and can have
+                with their families! Our Graphigem members order business via the Graphigem app and can have
                 them
                 delivered on-demand as soon as 1 hour later.
               </p>
@@ -38,7 +38,7 @@
                 What is a Graphigem shopper?
               </h3>
               <p class="r-text-normal">
-                Our Graphigem Shoppers carefully select member's shopping using the Graphigem app and deliver
+                Our Graphigem Shoppers carefully select member's business using the Graphigem app and deliver
                 them
                 during a specified, delivery window. Our shoppers enjoy an interactive and fun culture
                 all
@@ -224,7 +224,7 @@
             Do you smoke in your vehicle?
           </h2>
           <p class="r-text-light">
-            * Please note that smoking is prohibited while on the job, shopping and delivering orders.
+            * Please note that smoking is prohibited while on the job, business and delivering orders.
           </p>
           <a-radio-group
             v-model="application.is_smoker"
@@ -402,7 +402,7 @@ export default {
               console.log('Response')
               console.log('Redirecting to >>>: ', $this.redirectTo + ' => ' + $this.store.slug)
               $this.isSuccessful = true
-              $this.modal.message = 'Welcome back. It\'s shopping time.'
+              $this.modal.message = 'Welcome back. It\'s business time.'
 
               setTimeout(function () {
                 window.location.href = $this.redirectTo
