@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark r-pull-both-24 r-border-none r-card-r-128">
+          <a-card class="r-bg-secondary r-pull-both-24 r-border-none r-card-r-128">
             <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
@@ -28,10 +28,10 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h2 class="r-heading">
-                            We enable <span class="r-text-primary">businesses</span> to
-                            <span class="r-text-green">solve</span> problems for their <span class="r-text-blue">customers</span>.
-                          </h2>
+                          <h1 class="r-heading">
+                            <span class="r-text-green">Revolutionise</span> your <span class="r-text-primary">business</span>
+                            <span class="r-text-green">solutions</span>.
+                          </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"

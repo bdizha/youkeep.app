@@ -1,13 +1,13 @@
 <template>
   <a-row :gutter="[96,96]" justify="center" type="flex">
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-secondary">
-            <a-card-meta>
-              <template slot="description">
+          <a-card class="r-bg-secondary r-pull-both-24 r-border-none r-card-r-128">
+            <a-row :gutter="[48,48]" justify="center" type="flex">
+              <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                 <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
                   <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
@@ -57,8 +57,8 @@
                     ></r-avatar>
                   </a-col>
                 </a-row>
-              </template>
-            </a-card-meta>
+              </a-col>
+            </a-row>
           </a-card>
         </a-col>
       </a-row>
@@ -179,7 +179,9 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light">
-                    We invest our <span class="r-text-secondary">time,</span> <span class="r-text-green">capabilities</span>, <span class="r-text-primary">capital</span> and <span class="r-text-blue">resources</span> to craft ideas into realities.
+                    We invest our <span class="r-text-secondary">time,</span> <span class="r-text-green"
+                  >capabilities</span>, <span class="r-text-primary">capital</span> and <span class="r-text-blue">resources</span>
+                    to craft ideas into realities.
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -237,7 +239,6 @@ export default {
   }),
   created () {
   },
-  methods: {
-  }
+  methods: {}
 }
 </script>

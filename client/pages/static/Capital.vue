@@ -28,11 +28,11 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h2 class="r-heading">
-                            <span class="r-text-white">inventing</span> in
+                          <h1 class="r-heading">
+                            <span class="r-text-white">Investing</span> in
                             <span class="r-text-green">growing</span>
                             <span class="r-text-primary">businesses.</span>
-                          </h2>
+                          </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"

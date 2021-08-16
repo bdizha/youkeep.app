@@ -28,11 +28,10 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h3 class="r-heading">
-                            Building <span class="r-text-green">innovation</span>
-                            and adding <span class="r-text-blue">value</span>
-                            to the world's <span class="r-text-primary">economy.</span>
-                          </h3>
+                          <h1 class="r-heading">
+                            Building <span class="r-text-green">innovation</span>,<br>
+                            adding <span class="r-text-blue">business</span> <span class="r-text-primary">value</span>.
+                          </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
@@ -194,7 +193,6 @@ export default {
   props: {},
   async asyncData ({ store }) {
     await store.dispatch('base/onReviews', {})
-    await store.dispatch('base/onIsDark', false)
   },
   data () {
     return {

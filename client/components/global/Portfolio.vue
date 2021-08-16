@@ -89,7 +89,7 @@
                      :xs="{ span: 24}"
               >
                 <div class="r-partner-item-content">
-                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                  <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
