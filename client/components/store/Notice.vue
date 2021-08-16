@@ -1,5 +1,5 @@
 <template>
-  <div v-if="hasNotice" class="r-store-notice">
+  <div class="r-notice">
     <div class="r-status-update">
       <h4 class="r-heading-light r-text-uppercase">
         <a-icon type="check-circle"/>
@@ -26,6 +26,6 @@ export default {
   }),
   created () {
   },
-  methods: {},
+  methods: {}
 }
 </script>

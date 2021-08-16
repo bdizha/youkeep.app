@@ -132,7 +132,7 @@ export default {
           name: 'form_account_card',
           mapPropsToFields: () => {
             return mapFields
-          },
+          }
         })
       })
     },

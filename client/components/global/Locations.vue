@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-blue-light r-pull-both-24 r-border-none">
+  <a-card class="r-bg-blue-light r-pull-h-24 r-border-none">
     <a-row class="r-mv-48" justify="center" type="flex">
       <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
         <a-row :gutter="[24,24]" justify="center" type="flex">

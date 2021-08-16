@@ -1,4 +1,5 @@
 <template>
+  <a-card class="r-bg-dark r-border-none r-pull-h-24">
   <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
     <a-col class="r-text-center" :lg="{ span: 12 }" :md="{ span: 12 }"
            :sm="{ span: 24 }"
@@ -27,7 +28,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-dark">
+      <a-card class="r-bg-dark r-border-none r-pull-h-24 r-pull-b-24">
         <a-collapse accordion
                     v-model="currentStep"
                     expandIconPosition="right"
@@ -71,7 +72,7 @@
               >
                 <r-avatar :size="240"
                           :data-src="'/images/content/' + step.image + '.svg'"
-                          class="r-avatar-auto"
+                          class="r-avatar-block"
                           shape="square"
                           src-placeholder="/assets/icon_default.png"
                           unit="px"
@@ -83,6 +84,7 @@
       </a-card>
     </a-col>
   </a-row>
+  </a-card>
 </template>
 <script>
 export default {

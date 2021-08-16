@@ -68,13 +68,13 @@ export default {
       let $this = this
     },
     async onClose (event) {
-      let drawer = {}
+      const drawer = {}
       drawer.isVisible = false
       drawer.placement = 'left'
       drawer.current = null
 
       await this.$store.dispatch('base/onDrawer', drawer)
     }
-  },
+  }
 }
 </script>

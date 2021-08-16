@@ -1,12 +1,18 @@
 <template>
-  <div v-if="hasNotice" class="r-store-notice">
-    <div class="r-status-update">
-      <h4 class="r-heading r-text-secondary">
-        <a-icon type="check-circle"/>
-        <span>{{ notice }} </span>
-      </h4>
-      <h3 v-if="hasThanks" class="r-heading-light r-text-uppercase">Thank you!</h3>
-    </div>
+  <div class="r-notice">
+    <a-card class="r-bg-blue">
+      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+        <a-col :xs="{ span: 24 }" class="r-text-center">
+          <h4 class="r-heading-light r-text-white">
+            <a-icon type="check-circle"/>
+            <span>{{ notice }} </span>
+          </h4>
+        </a-col>
+        <a-col v-if="hasThanks" :xs="{ span: 24 }" class="r-text-center">
+          <h3 class="r-heading-light r-text-uppercase">Thank you!</h3>
+        </a-col>
+      </a-row>
+    </a-card>
   </div>
 </template>
 <script>
@@ -26,9 +32,11 @@ export default {
     processes: 'base/processes'
   }),
   created () {
-    this.$notification.open({
-      message: this.notice.title
-    })
+    if (this.hasNotice) {
+      this.$notification.open({
+        message: this.notice
+      })
+    }
   },
   methods: {}
 }

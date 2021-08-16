@@ -9,139 +9,134 @@
           <r-subscribe></r-subscribe>
         </a-col>
       </a-row>
-      <a-layout-footer>
         <a-row :gutter="[24, 24]" justify="center" type="flex">
           <a-col v-if="hasLocations" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
             <r-locations></r-locations>
           </a-col>
           <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <div class="r-p-24 r-mt-48 r-pull-both-24">
-              <a-row :gutter="[24,24]" justify="center" type="flex">
-                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                  <a-row :gutter="[24,24]" justify="center" type="flex">
-                    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-                        <a-col class="r-footer-center-sm" :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <nuxt-link to="/">
-                                <img alt="Graphigem - Venture Catalysts"
-                                     class="r-footer-logo /"
-                                     src="/images/logo_dark.svg"
-                                >
-                              </nuxt-link>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <h4 class="r-heading">
-                                Grow your business.
-                              </h4>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <p class="r-text-normal">
-                                Graphigem is an African venture catalyst firm that envisions, executes and transforms
-                                innovative products into profitable businesses.
-                              </p>
-                            </a-col>
-                          </a-row>
-                        </a-col>
-                        <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                          <a-row :gutter="[24,12]" align="top" justify="start" type="flex">
-                            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :xs="{ span: 24}">
-                              <a-row :gutter="[12,6]" align="top" justify="start" type="flex">
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                  <h4 class="r-heading r-text-uppercase">
-                                    For Partners
-                                  </h4>
-                                </a-col>
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                  <div class="r-footer-link">
-                                    <nuxt-link to="/partners">Become a Partner</nuxt-link>
-                                  </div>
-                                </a-col>
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                  <div class="r-footer-link">
-                                    <nuxt-link to="/approach">Approach</nuxt-link>
-                                  </div>
-                                </a-col>
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                  <div class="r-footer-link">
-                                    <nuxt-link to="/capital">Zerosum Capital</nuxt-link>
-                                  </div>
-                                </a-col>
-                              </a-row>
-                            </a-col>
-                            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :xs="{ span: 24}">
-                              <a-row :gutter="[24,6]" align="top" justify="start" type="flex">
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                  <h4 class="r-heading r-text-uppercase">
-                                    Company
-                                  </h4>
-                                </a-col>
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                  <div class="r-footer-link">
-                                    <nuxt-link to="/about-us">About Us</nuxt-link>
-                                  </div>
-                                </a-col>
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                  <div class="r-footer-link">
-                                    <nuxt-link to="/portfolio">Portfolio</nuxt-link>
-                                  </div>
-                                </a-col>
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                  <div class="r-footer-link">
-                                    <nuxt-link to="/careers">Careers</nuxt-link>
-                                  </div>
-                                </a-col>
-                              </a-row>
-                            </a-col>
-                          </a-row>
-                        </a-col>
-                      </a-row>
-                    </a-col>
-                  </a-row>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                  <div class="r-mt-24">
-                    <a-card class="r-bg-darker">
-                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex" class="r-footer-center-sm">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                          <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-                            <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
-                              <nuxt-link class="r-text-white" to="/privacy">
-                                Privacy
-                              </nuxt-link>
-                              <span class="r-text-white">~</span>
-                              <nuxt-link class="r-text-white r-same-height" to="/terms">Terms</nuxt-link>
-                            </a-col>
-                            <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
-                              <div class="r-text-white r-same-height">
-                                &copy; Graphigem 2021
-                                All Rights Reserved
-                              </div>
-                            </a-col>
-                            <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
-                              <nuxt-link class="r-same-height r-footer-link" to="/contact-us">
-                                <a-button block
-                                          class="r-btn-blue-bordered"
-                                          size="large"
-                                >
-                                  Contact Us
-                                </a-button>
-                              </nuxt-link>
-                            </a-col>
-                          </a-row>
-                        </a-col>
-                      </a-row>
-                    </a-card>
-                  </div>
-                </a-col>
-              </a-row>
+            <div class="r-footer-center-sm r-mv-24">
+            <a-row :gutter="[24,24]" justify="center" type="flex">
+              <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-row :gutter="[24,24]" justify="center" type="flex">
+                  <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                    <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
+                      <a-col class="r-footer-center-sm" :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                            <nuxt-link to="/">
+                              <img alt="Graphigem - Venture Catalysts"
+                                   class="r-footer-logo /"
+                                   src="/images/logo_dark.svg"
+                              >
+                            </nuxt-link>
+                          </a-col>
+                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                            <h4 class="r-heading">
+                              Grow your business.
+                            </h4>
+                          </a-col>
+                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                            <p class="r-text-normal">
+                              Graphigem is an African venture catalyst firm that envisions, executes and transforms
+                              innovative products into profitable businesses.
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                      <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <a-row :gutter="[24,48]" align="top" justify="start" type="flex">
+                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :xs="{ span: 24}">
+                            <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <h4 class="r-heading r-text-uppercase">
+                                  For Partners
+                                </h4>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <div class="r-footer-link">
+                                  <nuxt-link to="/partners">Become a Partner</nuxt-link>
+                                </div>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <div class="r-footer-link">
+                                  <nuxt-link to="/approach">Approach</nuxt-link>
+                                </div>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <div class="r-footer-link">
+                                  <nuxt-link to="/capital">Zerosum Capital</nuxt-link>
+                                </div>
+                              </a-col>
+                            </a-row>
+                          </a-col>
+                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :xs="{ span: 24}">
+                            <a-row :gutter="[24,12]" align="top" justify="start" type="flex">
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <h4 class="r-heading r-text-uppercase">
+                                  Company
+                                </h4>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <div class="r-footer-link">
+                                  <nuxt-link to="/about-us">About Us</nuxt-link>
+                                </div>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <div class="r-footer-link">
+                                  <nuxt-link to="/portfolio">Portfolio</nuxt-link>
+                                </div>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <div class="r-footer-link">
+                                  <nuxt-link to="/careers">Careers</nuxt-link>
+                                </div>
+                              </a-col>
+                            </a-row>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                    </a-row>
+                  </a-col>
+                </a-row>
+              </a-col>
+              <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <div class="r-mt-24">
+                  <a-card class="r-bg-dark">
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex" class="r-footer-center-sm">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                          <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
+                            <div class="r-text-white">
+                              &copy; Graphigem Group 2021
+                            </div>
+                          </a-col>
+                          <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
+                            <div class="r-text-white">
+                              All Rights Reserved
+                            </div>
+                          </a-col>
+                          <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
+                            <nuxt-link class="r-same-height r-footer-link" to="/contact-us">
+                              <a-button block
+                                        class="r-btn-blue-bordered"
+                                        size="large"
+                              >
+                                Contact Us
+                              </a-button>
+                            </nuxt-link>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                    </a-row>
+                  </a-card>
+                </div>
+              </a-col>
+            </a-row>
             </div>
           </a-col>
         </a-row>
-      </a-layout-footer>
     </a-col>
   </a-row>
 </template>

@@ -1,5 +1,18 @@
 <template>
   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+    <a-col v-show="hasForm" :xs="{ span: 24 }" class="r-text-left">
+      <h2 class="r-heading">
+        <span class="r-text-blue">Get</span> in touch today!
+      </h2>
+    </a-col>
+    <a-col v-show="hasForm" :xs="{ span: 24 }" class="r-text-left">
+      <p class="r-text-normal">
+        How can we help? Just a quick note: try visiting our
+        <nuxt-link to="/help">Help center</nuxt-link>
+        that maybe of help only for general queries that we frequently receive from
+        our customers.
+      </p>
+    </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
@@ -13,7 +26,7 @@
           <a-select
             :defaultValue="categories[0]"
             labelInValue
-            size="default"
+            size="large"
             style="min-width: 100%;"
             @change="onCategory"
           >
@@ -29,7 +42,7 @@
           <a-input
             v-decorator="['name', { rules: [{ required: true, message: 'Please enter your full name' }] }]"
             placeholder="Your full name"
-            size="default"
+            size="large"
           >
             <a-icon slot="prefix" type="mail"/>
           </a-input>
@@ -38,7 +51,7 @@
           <a-input
             v-decorator="['mobile', { rules: [{ required: true, message: 'Please enter your mobile number' }] }]"
             placeholder="Your mobile number"
-            size="default"
+            size="large"
           >
             <a-icon slot="prefix" type="mobile"/>
           </a-input>
@@ -46,7 +59,7 @@
         <a-form-item label="Email address">
           <a-input v-decorator="['email', { rules: [{ required: true, message: 'Please enter your email address' }] }]"
                    placeholder="Your Email Address"
-                   size="default"
+                   size="large"
                    type="email"
           >
             <a-icon slot="prefix" type="user"/>
@@ -55,7 +68,7 @@
         <a-form-item label="Notes">
           <a-input v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]"
                    placeholder="Your message"
-                   size="default"
+                   size="large"
                    type="textarea"
           >
             <a-icon slot="prefix" type="user"/>
@@ -79,6 +92,8 @@
           </a-col>
         </a-row>
       </a-form>
+      <r-notice v-show="!hasForm" process="isSuccess"></r-notice>
+      <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
     </a-col>
   </a-row>
 </template>
@@ -87,19 +102,19 @@ import { mapGetters } from 'vuex'
 
 const CATEGORIES = [
   {
-    label: 'I\'m looking to outsource my bookkeeping/tax filing',
+    label: 'I\'m looking to raise capital',
     key: 1
   },
   {
-    label: 'I want assistance with doing my own bookkeeping',
+    label: 'I want to partner with Graphigem',
     key: 2
   },
   {
-    label: 'I\'ve questions about doing my own bookkeeping',
+    label: 'I\'ve questions about cloud technology',
     key: 3
   },
   {
-    label: 'I\'ve a general/other query',
+    label: 'I\'ve a general query',
     key: 4
   }
 ]
@@ -127,19 +142,23 @@ export default {
     onSubmit (event) {
       event.preventDefault()
 
+      const $this = this
       this.hasError = false
-      this.form.validateFields((error, values) => {
+      this.form.validateFields(async (error, values) => {
         if (!error) {
           const params = Object.assign({}, values)
 
           params.category_id = this.category_id
           params.is_active = true
 
+          $this.form = $this.$form.createForm($this, { name: 'form_contact' })
+
+          await this.$store.dispatch('base/onNotice', this.message)
+
           const payload = {
-            params: params,
+            params,
             route: '/contact-us',
-            current: this.current,
-            message: this.message
+            current: this.current
           }
 
           this.$store.dispatch('form/onPost', payload)

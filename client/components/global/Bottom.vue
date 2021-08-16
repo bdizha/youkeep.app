@@ -59,7 +59,7 @@ export default {
   name: 'r-bottom',
   components: {},
   props: {
-    isShow: { type: Boolean, required: false },
+    isShow: { type: Boolean, required: false }
   },
   data () {
     return {}

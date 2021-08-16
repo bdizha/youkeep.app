@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     onDrawer (current) {
-      let drawer = {}
+      const drawer = {}
       drawer.isVisible = true
       drawer.current = current
 

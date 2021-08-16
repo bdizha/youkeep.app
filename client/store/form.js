@@ -48,13 +48,13 @@ const mutations = {
 
 // actions
 const actions = {
+  // eslint-disable-next-line require-await
   async onPost ({ dispatch, commit, state }, payload) {
     console.log('response: form onPost', payload)
 
-    let params = payload.params
-    let route = payload.route
-    let current = payload.current
-    let message = payload.message
+    const params = payload.params
+    const route = payload.route
+    const current = payload.current
 
     commit('setCurrent', current)
 
@@ -67,8 +67,6 @@ const actions = {
       console.log('response: form onPost data::', data)
       console.log('response: form onPost data::', data)
 
-      dispatch('base/onResult', message, { root: true })
-
       dispatch('base/onHasForm', false, { root: true })
       dispatch('base/onProcess', { key: 'isSuccess', value: true }, { root: true })
 
@@ -77,8 +75,8 @@ const actions = {
       }, 300)
 
       setTimeout(() => {
-        let isRegistering = current === 'register'
-        let modal = {
+        const isRegistering = current === 'register'
+        const modal = {
           current: isRegistering ? 'secure' : null,
           isVisible: isRegistering
         }
@@ -91,10 +89,10 @@ const actions = {
         dispatch('base/onProcess', { key: 'isSuccess', value: false }, { root: true })
 
         dispatch('base/onResult', null, { root: true })
-      }, 4500)
+      }, 12000)
 
       return { data }
-    }).catch(error => {
+    }).catch((error) => {
       setTimeout(() => {
         dispatch('form/onIsValid', false, { root: true })
 

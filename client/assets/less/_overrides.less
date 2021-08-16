@@ -364,33 +364,7 @@ h1.r-text-xlarge-light {
                 }
             }
         }
-    }
 
-    .r-layout-menu {
-        .r-cart {
-            color: @secondary-color;
-
-            .r-business-cart {
-                background-image: url("/assets/icon_cart_primary.svg");
-            }
-
-            .r-cart-count {
-                color: @secondary-color;
-            }
-
-            &.r-cart__active {
-                .r-cart-count {
-                    color: @white;
-                }
-
-                .r-business-cart {
-                    background-image: url("/assets/icon_cart_secondary.svg");
-                }
-            }
-        }
-    }
-
-    &.r-header-dark {
         .r-layout-menu {
             .r-cart {
                 color: @secondary-color;
@@ -415,8 +389,6 @@ h1.r-text-xlarge-light {
             }
         }
 
-        background: @secondary-color;
-
         .ant-menu-submenu-title {
             color: @white;
         }
@@ -427,6 +399,9 @@ h1.r-text-xlarge-light {
 
         .r-nav-item {
             color: @white;
+            .anticon-menu{
+                font-size: 18px;
+            }
         }
 
         .ant-menu-submenu-title {
@@ -478,6 +453,30 @@ h1.r-text-xlarge-light {
                             color: @black;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .r-layout-menu {
+        .r-cart {
+            color: @secondary-color;
+
+            .r-business-cart {
+                background-image: url("/assets/icon_cart_primary.svg");
+            }
+
+            .r-cart-count {
+                color: @secondary-color;
+            }
+
+            &.r-cart__active {
+                .r-cart-count {
+                    color: @white;
+                }
+
+                .r-business-cart {
+                    background-image: url("/assets/icon_cart_secondary.svg");
                 }
             }
         }
@@ -1841,6 +1840,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 .ant-drawer-header {
     background: @white url(/images/icon_pattern_grey.svg) repeat;
     padding: 12px;
+    border-radius: 0;
 
     .r-nav-item {
         display: block;
@@ -2389,14 +2389,16 @@ h4.r-heading {
     font-weight: 600;
     margin: 0;
 
-    &.r-text-uppercase {
-        font-size: 18px;
-    }
-
     @media (max-width: 768px) {
         font-weight: 500;
         font-size: 18px;
         line-height: 24px;
+    }
+
+    &.r-text-uppercase {
+        @media (max-width: 768px) {
+            font-size: 21px;
+        }
     }
 }
 
@@ -3029,7 +3031,7 @@ label {
 }
 
 .r-footer-logo {
-    height: 36px;
+    height: 30px;
 }
 
 .r-bordered {
@@ -6766,6 +6768,15 @@ label {
     background: @white;
 }
 
+.r-bg-blue-light {
+    background: @blue-color-light;
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_blue_large.svg) no-repeat;
+        background-size: 65%;
+    }
+}
+
 .r-bg-primary-light {
     background: @primary-color-light;
 
@@ -6780,15 +6791,6 @@ label {
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_secondary_large.svg) no-repeat;
-        background-size: 65%;
-    }
-}
-
-.r-bg-blue-light {
-    background: @blue-color-light;
-
-    .ant-card-body {
-        background: transparent url(/images/icon_pattern_blue_large.svg) no-repeat;
         background-size: 65%;
     }
 }
@@ -7762,11 +7764,19 @@ a:hover {
     &.r-layout-content {
         padding: 0;
         @media (max-width: 768px) {
-            padding: 24px 24px 0;
+            padding: 0 24px 0;
 
-            .r-pull-both-24 {
+            .r-pull-t-24 {
+                margin-top: -24px;
+            }
+
+            .r-pull-h-24 {
                 margin-left: -24px;
                 margin-right: -24px;
+            }
+
+            .r-pull-b-24{
+                margin-bottom: -24px;
             }
         }
     }

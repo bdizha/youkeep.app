@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-blue r-pull-both-24 r-border-none r-card-r-128">
+          <a-card class="r-bg-blue r-pull-h-24 r-border-none r-card-r-128">
             <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
@@ -113,19 +113,6 @@
           <a-card class="r-bg-blue-light">
             <div class="r-mv-48">
               <a-row :gutter="[24,24]" justify="center" type="flex">
-                <a-col :xs="{ span: 24 }" class="r-text-left">
-                  <h2 class="r-heading">
-                    <span class="r-text-blue">Get</span> in touch today!
-                  </h2>
-                </a-col>
-                <a-col :xs="{ span: 24 }" class="r-text-left">
-                  <p class="r-text-normal">
-                    How can we help? Just a quick note: try visiting our
-                    <nuxt-link to="/help">Help center</nuxt-link>
-                    that maybe of help only for general queries that we frequently receive from
-                    our customers.
-                  </p>
-                </a-col>
                 <a-col :xs="{ span: 24 }" class="r-text-left">
                   <r-hello></r-hello>
                 </a-col>

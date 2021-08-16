@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-secondary r-pull-both-24 r-border-none r-card-r-128">
+          <a-card class="r-bg-secondary r-pull-h-24 r-border-none r-card-r-128">
             <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
