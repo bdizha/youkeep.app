@@ -8,7 +8,7 @@
            :xs="{ span: 24}"
     >
       <a-card class="r-card-partner"
-              :class="{'r-bg-white': !isCurrent(index), 'r-bg-dark r-pull-h-24': isCurrent(index)}"
+              :class="{'r-bg-white': !isCurrent(index), 'r-bg-dark r-pull-h-24 r-border-none': isCurrent(index)}"
       >
         <a-row align="middle" justify="start" type="flex">
           <a-col v-if="!isCurrent(index)" :lg="{ span: 24 }" :md="{ span: 24 }"
