@@ -348,6 +348,7 @@ h1.r-text-xlarge-light {
 
     .r-bg-dark {
         .ant-menu-submenu-title {
+            border: none;
             a {
                 color: @white;
 
@@ -359,7 +360,7 @@ h1.r-text-xlarge-light {
 
             &:hover {
                 a {
-                    border-color: @blue-color;
+                    border-color: transparent;
                     color: @blue-color;
                 }
             }
@@ -399,8 +400,10 @@ h1.r-text-xlarge-light {
 
         .r-nav-item {
             color: @white;
-            padding: 0;
-            
+            @media (max-width: 768px) {
+                padding: 0;
+            }
+
             .anticon-menu{
                 font-size: 18px;
             }
@@ -408,10 +411,6 @@ h1.r-text-xlarge-light {
 
         .ant-menu-submenu-title {
             color: @white;
-
-            &:hover {
-                border: 1px solid @white;
-            }
         }
 
         .ant-select-auto-complete {
@@ -4098,6 +4097,10 @@ label {
             &.r-collapse-panel {
                 border-top: 1px solid rgba(255, 255, 255, 0.15);
                 background: @black;
+
+                &:first-child {
+                    border-top: none;
+                }
             }
 
             > .ant-collapse-header {
@@ -4305,6 +4308,16 @@ label {
     &:hover {
         .r-partner-item-meta {
             display: block;
+        }
+    }
+}
+
+.ant-card {
+    .ant-avatar-square{
+        border-radius: 0 !important;
+
+        img {
+            border-radius: 0 !important;
         }
     }
 }
@@ -7768,7 +7781,7 @@ a:hover {
         @media (max-width: 768px) {
             padding: 0 24px 0;
 
-            .r-pull-t-24 {
+            .r-pull-top-24 {
                 margin-top: -24px;
             }
 

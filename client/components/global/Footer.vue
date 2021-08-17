@@ -112,12 +112,12 @@
                               &copy; Graphigem Group 2021
                             </div>
                           </a-col>
-                          <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
+                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
                             <div class="r-text-white">
                               All Rights Reserved
                             </div>
                           </a-col>
-                          <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
+                          <a-col :lg="{ span: 4 }" :md="{ span: 4 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
                             <nuxt-link class="r-same-height r-footer-link" to="/contact-us">
                               <a-button block
                                         class="r-btn-blue-bordered"
