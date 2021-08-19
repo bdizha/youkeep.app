@@ -9,17 +9,17 @@
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
-                Graphigem for Shoppers
+                Brickcent for Shoppers
               </h4>
               <h1 class="r-heading">
                 <span class="r-text-primary">Shop More,</span><br>
                 <span>Earn more</span>
               </h1>
               <h4 class="r-heading-light">
-                All your earnings are automatically added into your Graphigem wallet.
+                All your earnings are automatically added into your Brickcent wallet.
               </h4>
               <p class="r-text-normal">
-                Unlike other buy-now-pay-later plans, Graphigem lets shoppers use their existing credit card for
+                Unlike other buy-now-pay-later plans, Brickcent lets shoppers use their existing credit card for
                 the easiest most intuitive checkout.
               </p>
             </template>
@@ -104,25 +104,25 @@
                                   <path
                                     class="Icon__blendBackground"
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#3B9CFF"
+                                    fill="#1D9CD3"
                                   ></path>
                                 </clipPath>
                               </defs>
                               <path
                                 class="Icon__blendBackground"
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#3B9CFF"
+                                fill="#1D9CD3"
                               ></path>
                               <path
                                 class="Icon__blendForeground"
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                fill="#FBD13E"
+                                fill="#F56F45"
                               ></path>
                               <g clip-path="url(#MarketIconClipPath)">
                                 <path
                                   class="Icon__blendForeground"
                                   d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                  fill="#FBD13E"
+                                  fill="#F56F45"
                                 ></path>
                               </g>
                             </svg>
@@ -167,25 +167,25 @@
                                   <path
                                     class="Icon__blendBackground"
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#3B9CFF"
+                                    fill="#1D9CD3"
                                   ></path>
                                 </clipPath>
                               </defs>
                               <path
                                 class="Icon__blendBackground"
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#3B9CFF"
+                                fill="#1D9CD3"
                               ></path>
                               <path
                                 class="Icon__blendForeground"
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                fill="#FBD13E"
+                                fill="#F56F45"
                               ></path>
                               <g clip-path="url(#MarketIconClipPath)">
                                 <path
                                   class="Icon__blendForeground"
                                   d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                  fill="#FBD13E"
+                                  fill="#F56F45"
                                 ></path>
                               </g>
                             </svg>
@@ -230,25 +230,25 @@
                                   <path
                                     class="Icon__blendBackground"
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#3B9CFF"
+                                    fill="#1D9CD3"
                                   ></path>
                                 </clipPath>
                               </defs>
                               <path
                                 class="Icon__blendBackground"
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#3B9CFF"
+                                fill="#1D9CD3"
                               ></path>
                               <path
                                 class="Icon__blendForeground"
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                fill="#FBD13E"
+                                fill="#F56F45"
                               ></path>
                               <g clip-path="url(#MarketIconClipPath)">
                                 <path
                                   class="Icon__blendForeground"
                                   d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                  fill="#FBD13E"
+                                  fill="#F56F45"
                                 ></path>
                               </g>
                             </svg>
@@ -261,7 +261,7 @@
                             Higher average order rate
                           </h4>
                           <p class="r-text-normal">
-                            Graphigem is the only buy-now-pay-later plan that lets shoppers set up payment plans with
+                            Brickcent is the only buy-now-pay-later plan that lets shoppers set up payment plans with
                             their
                             existing credit card without interest charges or fees. This keeps their payments small so
                             they
@@ -294,25 +294,25 @@
                                   <path
                                     class="Icon__blendBackground"
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#3B9CFF"
+                                    fill="#1D9CD3"
                                   ></path>
                                 </clipPath>
                               </defs>
                               <path
                                 class="Icon__blendBackground"
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#3B9CFF"
+                                fill="#1D9CD3"
                               ></path>
                               <path
                                 class="Icon__blendForeground"
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                fill="#FBD13E"
+                                fill="#F56F45"
                               ></path>
                               <g clip-path="url(#MarketIconClipPath)">
                                 <path
                                   class="Icon__blendForeground"
                                   d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                  fill="#FBD13E"
+                                  fill="#F56F45"
                                 ></path>
                               </g>
                             </svg>
@@ -325,7 +325,7 @@
                             More qualified customers
                           </h4>
                           <p class="r-text-normal">
-                            Unlike other buy-now-pay-later plans, Graphigem isn’t new financing. Graphigem lets online
+                            Unlike other buy-now-pay-later plans, Brickcent isn’t new financing. Brickcent lets online
                             shoppers
                             set up monthly payments at checkout with their existing credit so they don’t need to carry
                             new
@@ -358,25 +358,25 @@
                                   <path
                                     class="Icon__blendBackground"
                                     d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                    fill="#3B9CFF"
+                                    fill="#1D9CD3"
                                   ></path>
                                 </clipPath>
                               </defs>
                               <path
                                 class="Icon__blendBackground"
                                 d="M24 34V23a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11a1 1 0 0 1-1 1H8a3 3 0 0 1-3-3V11a6 6 0 0 1 6-6h18a6 6 0 0 1 6 6v21a3 3 0 0 1-3 3h-7a1 1 0 0 1-1-1z"
-                                fill="#3B9CFF"
+                                fill="#1D9CD3"
                               ></path>
                               <path
                                 class="Icon__blendForeground"
                                 d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                fill="#FBD13E"
+                                fill="#F56F45"
                               ></path>
                               <g clip-path="url(#MarketIconClipPath)">
                                 <path
                                   class="Icon__blendForeground"
                                   d="M30 0a4 4 0 0 1 3.2 1.6L39 9.35A4 4 0 1 1 32.13 13h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26a4 4 0 0 1-7.74 0h-.26A4 4 0 1 1 1 9.35l5.93-7.78A4 4 0 0 1 10.11 0H30z"
-                                  fill="#FBD13E"
+                                  fill="#F56F45"
                                 ></path>
                               </g>
                             </svg>
@@ -392,11 +392,11 @@
                             thousands
                             of
                             customers
-                            and a monthly expansion to new cities, Graphigem was named the fastest growing retail
+                            and a monthly expansion to new cities, Brickcent was named the fastest growing retail
                             platform
                             company in
                             South Africa in 2020.
-                            Graphigem thinks it can be done differently: faster, easier and cheaper. The idea is
+                            Brickcent thinks it can be done differently: faster, easier and cheaper. The idea is
                             simple.</p>
                         </a-col>
                       </a-row>

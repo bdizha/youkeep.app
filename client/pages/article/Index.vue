@@ -10,7 +10,7 @@
               A better way to shop.
             </h4>
             <h1 class="r-heading r-text-secondary">
-              Graphigem blog
+              Brickcent blog
             </h1>
           </a-col>
         </a-row>

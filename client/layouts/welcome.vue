@@ -30,7 +30,7 @@ export default {
     collapsed: false
   }),
   async serverPrefetch  () {
-    await this.$store.dispatch('base/onIsDark', true)
+    await this.$store.dispatch('base/onIsDark', false)
   },
   computed: mapGetters({
     hasFooter: 'base/hasFooter',

@@ -35,7 +35,8 @@
               <h2 class="r-heading r-text-secondary">
                 {{ faqSection.name }}
               </h2>
-              <a-collapse v-for="(faq, f) in faqSection.faqs" :key="f" :defaultActiveKey="fs+1"
+              <a-collapse v-for="(faq, f) in faqSection.faqs" :key="f"
+                          :defaultActiveKey="fs+1"
                           :expandIconPosition="'right'" accordion bordered="false"
               >
                 <a-collapse-panel :key="f" :header="faq.question">

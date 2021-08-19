@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark r-pull-h-24 r-border-none r-card-r-128">
+          <a-card class="r-bg-secondary r-pull-h-24 r-border-none r-card-r-128">
             <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
@@ -20,7 +20,7 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h3 class="r-heading-light r-text-primary r-text-uppercase">
+                          <h3 class="r-heading-light r-text-uppercase">
                             Our Approach
                           </h3>
                         </a-col>
@@ -29,8 +29,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading">
-                            Building <span class="r-text-green">innovation</span>,<br>
-                            adding <span class="r-text-blue">business</span> <span class="r-text-primary">value</span>.
+                            How <span class="r-text-primary">investing</span> with Brickcent works
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -38,8 +37,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium">
-                            Graphigem Group helps you move faster and achieve success with early stage
-                            investment opportunities supported by our Partner Network.
+                            A smart, affordable way to invest in the property market.
                           </p>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -47,8 +45,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            As we envision a world where machines do more and more work that people used to do, our
-                            minds naturally turn to those who would be displaced by technological advance.
+                            Our assets drive your returns. We pair our extensive network and expertise with the collective buying power of our investor community to acquire high-quality assets ranging from debt to equity, commercial to residential, and more.
                           </p>
                         </a-col>
                       </a-row>
@@ -57,7 +54,7 @@
                   <a-col class="r-text-center" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
                   >
-                    <r-avatar data-src="/images/content/illustration-1.png" :size="300"
+                    <r-avatar data-src="/images/content/illustration-14-primary.svg" :size="300"
                               class="r-avatar-auto"
                     ></r-avatar>
                   </a-col>
@@ -74,18 +71,18 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+          <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+              <a-row class="r-text-center" :gutter="[24,24]" align="middle" justify="center" type="flex">
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-uppercase">
-                    <span class="r-text-blue">Learning how to fly</span>
+                    <span class="r-text-blue">How it works</span>
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -93,8 +90,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Clients are a source of good problems. If we solve a client's problem right, we improve both the
-                    client's life and their customer's life.
+                    Quality assets. Low fees. Smart technology.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -102,82 +98,123 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-normal">
-                    These are around creating sustained behaviour change in large populations, or transforming
-                    businesses to be more competitive in a digital-first landscape.
+                    We blend our investment expertise with smart technology to provide our 150,000 investors with the buying power and investment opportunities traditionally reserved for billion dollar institutions.
                   </p>
                 </a-col>
               </a-row>
             </a-col>
           </a-row>
         </a-col>
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-green-light">
-            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-icon class="r-text-green" style="font-size: 45px" :size="200" type="bank"/>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <h4 class="r-heading-light r-text-green r-text-uppercase">
-                  <span>Value making</span>
-                </h4>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <p class="r-text-medium">
-                  We observe, conceive, create and pilot breakthrough digital products for clients with complex consumer
-                  behaviour needs.
-                </p>
-              </a-col>
-            </a-row>
-          </a-card>
-        </a-col>
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a-card class="r-bg-blue-light">
-            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-icon class="r-text-blue" style="font-size: 45px" :size="200" type="dollar"/>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <h4 class="r-heading-light r-text-blue r-text-uppercase">
-                  <span>Success scaling</span>
-                </h4>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <p class="r-text-medium">
-                  We constantly evaluate, maintain and analyse working solutions to find opportunities for continuous
-                  improvement.
-                </p>
-              </a-col>
-            </a-row>
-          </a-card>
+          <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+            <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+              <a-card class="r-bg-secondary-light">
+                <a-row class="r-text-center" :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                         :xs="{ span: 24}"
+                  >
+                    <r-avatar data-src="/images/content/step-1.svg" :size="120" class="r-avatar-auto"
+                    ></r-avatar>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                  >
+                    <h4 class="r-heading">
+                      <span class="r-text-primary">Tell</span> us about your goals.
+                    </h4>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                  >
+                    <p class="r-text-normal r-text-dark">
+                      We hand-pick quality properties and divide them into 10,000 Bricks
+                    </p>
+                  </a-col>
+                </a-row>
+              </a-card>
+            </a-col>
+            <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+              <a-card class="r-bg-secondary-light">
+                <a-row class="r-text-center" :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                         :xs="{ span: 24}"
+                  >
+                    <r-avatar data-src="/images/content/step-2.svg" :size="120" class="r-avatar-auto"
+                    ></r-avatar>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                  >
+                    <h4 class="r-heading">
+                      <span class="r-text-secondary">Select</span> an investment plan.
+                    </h4>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                  >
+                    <p class="r-text-normal r-text-dark">
+                      Choose the Bricks you want to buy or let us choose for you with Auto Invest
+                    </p>
+                  </a-col>
+                </a-row>
+              </a-card>
+            </a-col>
+            <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+              <a-card class="r-bg-secondary-light">
+                <a-row class="r-text-center" :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                         :xs="{ span: 24}"
+                  >
+                    <r-avatar data-src="/images/content/step-3.svg" :size="120" class="r-avatar-auto"
+                    ></r-avatar>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                  >
+                    <h4 class="r-heading">
+                      <span class="r-text-primary">Invest</span> and monitor your portfolio.
+                    </h4>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                  >
+                    <p class="r-text-normal r-text-dark">
+                      Invest and monitor your portfolio over time either manually or automatically.
+                    </p>
+                  </a-col>
+                </a-row>
+              </a-card>
+            </a-col>
+            <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+              <a-card class="r-bg-secondary-light">
+                <a-row class="r-text-center" :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                         :xs="{ span: 24}"
+                  >
+                    <r-avatar data-src="/images/content/step-3.svg" :size="120" class="r-avatar-auto"
+                    ></r-avatar>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                  >
+                    <h4 class="r-heading">
+                      <span class="r-text-primary">Earn</span> returns over time.
+                    </h4>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                  >
+                    <p class="r-text-normal r-text-dark">
+                      Earn returns in line with property price changes when you sell your Bricks.
+                    </p>
+                  </a-col>
+                </a-row>
+              </a-card>
+            </a-col>
+          </a-row>
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-steps :steps="steps" :size="24"></r-steps>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+           class="r-text-center"
+    >
+      <r-tabs active-key="auto"></r-tabs>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-contact-us></r-contact-us>
@@ -206,7 +243,7 @@ export default {
       hasData: false,
       steps: [
         {
-          title: 'The Graphigem Way',
+          title: 'The Brickcent Way',
           image: 'illustration-2-primary',
           theme: 'blue',
           heading: 'We deliver value in five steps:',

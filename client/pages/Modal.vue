@@ -10,7 +10,7 @@
         <a-col :span="24" class="gutter-row">
           <h4 class="r-heading r-text-secondary r-text-center">
             <a-icon type="gift"/>
-            <span>FREE Deliveries For 1 Week with Graphigem <br></span>
+            <span>FREE Deliveries For 1 Week with Brickcent <br></span>
           </h4>
         </a-col>
       </a-row>

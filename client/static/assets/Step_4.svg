@@ -61,7 +61,7 @@
             }
 
             .cls-12, .cls-13, .cls-19 {
-            fill: #3B9CFF;
+            fill: #1D9CD3;
             }
 
             .cls-14 {
@@ -199,7 +199,7 @@
                               transform="translate(276.521 -343.789)"/>
                         <path id="Path_1011" data-name="Path 1011" class="cls-2"
                               d="M-238.782,951.138H15.534c19.056,0,34.447-18.322,34.447-41.042V368.482c0-22.72-15.391-16.124-34.447-16.124H-238.049c-19.055,0-34.446-6.6-34.446,16.124V910.1C-273.229,932.816-257.838,951.138-238.782,951.138Z"
-                              transform="translate(301.574 -295.768)" style="fill: #FBD13E99;"/>
+                              transform="translate(301.574 -295.768)" style="fill: #F56F4599;"/>
                         <text id="Enjoy" class="cls-9" transform="translate(58.097 151.028)">
                             <tspan x="0" y="0">Enjoy</tspan>
                         </text>

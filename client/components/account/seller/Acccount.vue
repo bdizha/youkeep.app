@@ -328,7 +328,7 @@ export default {
           }
 
           $this.$store.dispatch('form/onResult', message)
-          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Graphigem.')
+          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Brickcent.')
         }, 600)
       })
     },

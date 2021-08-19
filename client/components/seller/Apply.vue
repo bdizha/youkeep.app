@@ -12,10 +12,10 @@
           <a-row class="r-mt-48" justify="center" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
-                Graphigem seller application
+                Brickcent seller application
               </h2>
               <p class="r-text-normal">
-                Contact us to learn more about Graphigem and checkout financing
+                Contact us to learn more about Brickcent and checkout financing
               </p>
             </a-col>
           </a-row>

@@ -16,7 +16,7 @@ const COLUMNS = [
     key: 'from',
     scopedSlots: {}
   },
-  { title: 'Graphigem Category', dataIndex: 'to', key: 'to' }
+  { title: 'Brickcent Category', dataIndex: 'to', key: 'to' }
 ]
 
 const CATEGORY_MAPS = [

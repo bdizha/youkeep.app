@@ -29,7 +29,7 @@ class TestimonialSeeder extends Seeder
             ],
             [
                 'author' => 'Andre Bean',
-                'company' => 'PR Director @Graphigem',
+                'company' => 'PR Director @Brickcent',
                 'content' => 'After switching to Checkout.com from a previous provider, we saw a 16% boost in our online revenue.',
             ],
             [

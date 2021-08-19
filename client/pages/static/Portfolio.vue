@@ -137,7 +137,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-blue-light">
+          <a-card class="r-bg-secondary-light">
             <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
@@ -179,7 +179,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light">
-                    We invest our <span class="r-text-secondary">time,</span> <span class="r-text-green"
+                    We invest our <span class="r-text-secondary">time,</span> <span class="r-text-secondary"
                   >capabilities</span>, <span class="r-text-primary">capital</span> and <span class="r-text-blue">resources</span>
                     to craft ideas into realities.
                   </h3>

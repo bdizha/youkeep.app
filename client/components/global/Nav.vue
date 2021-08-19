@@ -11,18 +11,18 @@
           </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <nuxt-link slot="title" class="r-text-link" to="/capital">
-            Zerosum Capital
-          </nuxt-link>
-        </a-sub-menu>
-        <a-sub-menu>
           <nuxt-link slot="title" class="r-text-link" to="/approach">
-            Approach
+            How it works
           </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <nuxt-link slot="title" class="r-text-link" to="/partners">
-            Partners
+          <nuxt-link slot="title" class="r-text-link" to="/invest">
+            Invest
+          </nuxt-link>
+        </a-sub-menu>
+        <a-sub-menu>
+          <nuxt-link slot="title" class="r-text-link" to="/properties">
+            Properties
           </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>

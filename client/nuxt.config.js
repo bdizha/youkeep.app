@@ -12,7 +12,7 @@ module.exports = {
   env: {
     apiUrl: process.env.APP_URL + '/api',
     appUrl: process.env.APP_URL,
-    appName: process.env.APP_NAME || 'Graphigem',
+    appName: process.env.APP_NAME || 'Brickcent',
     appLocale: process.env.APP_LOCALE || 'en',
     githubAuth: !!process.env.GITHUB_CLIENT_ID
   },
@@ -54,7 +54,7 @@ module.exports = {
   },
 
   loading: {
-    color: '#FBD13E',
+    color: '#F56F45',
     height: '3px'
   },
 
@@ -84,6 +84,7 @@ module.exports = {
     '~components/seller',
     '~components/shopper',
     '~components/customer',
+    '~components/plan',
     '~plugins/i18n',
     '~plugins/axios',
     '~plugins/ant-design-vue',

@@ -18,16 +18,16 @@ export default {
   data () {
     return {
       currentStep: 0,
-      title: 'Graphigem connects sellers to customers.',
-      content: 'Graphigem offers stores likes yours to sell products to our customers with the most convenient business tools on the market.',
+      title: 'Brickcent connects sellers to customers.',
+      content: 'Brickcent offers stores likes yours to sell products to our customers with the most convenient business tools on the market.',
       steps: [
         {
           title: 'List It',
-          content: 'Create a Graphigem account and list your product catalog on the Graphigem marketplace today.'
+          content: 'Create a Brickcent account and list your product catalog on the Brickcent marketplace today.'
         },
         {
           title: 'Sell It',
-          content: 'Your item sells, you ship your item to the buyer. and money is deposited to your Graphigem account.'
+          content: 'Your item sells, you ship your item to the buyer. and money is deposited to your Brickcent account.'
         },
         {
           title: 'Get Paid',

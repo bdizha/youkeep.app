@@ -51,7 +51,7 @@
             }
 
             .cls-13 {
-            fill: #FBD13E;
+            fill: #F56F45;
             }
 
             .cls-14 {
@@ -67,7 +67,7 @@
             }
 
             .cls-16 {
-            fill: #ededed;
+            fill: #E9F5FA;
             }
 
             .cls-18 {
@@ -195,7 +195,7 @@
             }
 
             .cls-48 {
-            stroke: #3B9CFF;
+            stroke: #1D9CD3;
             stroke-width: 1.099px;
             }
         </style>

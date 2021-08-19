@@ -68,11 +68,11 @@
         </span>
       </h3>
       <p class="MsoNormal" align="center" style="text-align:center">
-        <a style="font-size:14px;font-family: arial,sans-serif, -apple-system, BlinkMacSystemFont,serif;color:#3B9CFF;font-weight:normal" href="{{ url('/terms') }}">
+        <a style="font-size:14px;font-family: arial,sans-serif, -apple-system, BlinkMacSystemFont,serif;color:#1D9CD3;font-weight:normal" href="{{ url('/terms') }}">
           Terms of Use
         </a>
         <span style="font-size:14px;font-family: arial,sans-serif, -apple-system, BlinkMacSystemFont,serif;color:#484848;font-weight:normal">~</span>
-        <a style="font-size:14px;font-family: arial,sans-serif, -apple-system, BlinkMacSystemFont,serif;color:#3B9CFF;font-weight:normal" href="{{ url('/privacy') }}">
+        <a style="font-size:14px;font-family: arial,sans-serif, -apple-system, BlinkMacSystemFont,serif;color:#1D9CD3;font-weight:normal" href="{{ url('/privacy') }}">
           Priviacy Policy
         </a>
       </p>

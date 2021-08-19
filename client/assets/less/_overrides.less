@@ -30,10 +30,6 @@ html {
     height: 100%;
 }
 
-.r-text-white {
-    color: @white;
-}
-
 a {
     color: @black;
 
@@ -119,6 +115,10 @@ a.r-text-logo {
     color: @white;
     font-weight: bold;
     font-size: 21px;
+}
+
+.r-text-white {
+    color: @white !important;
 }
 
 .r-text-secondary {
@@ -634,7 +634,7 @@ h1.r-text-xlarge-light {
             }
 
             &:hover {
-                background: #fbf0c8;
+                background: @primary-color-light;
             }
         }
     }
@@ -745,7 +745,7 @@ x {
     }
 
     .r-store-active {
-        background: #FBD13E !important;
+        background: #F56F45 !important;
         color: @white;
         position: absolute;
         top: -9px;
@@ -796,19 +796,19 @@ x {
 
 .ant-select-focused {
     .ant-select-selection {
-        border-color: #FBD13E !important;
+        border-color: #F56F45 !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 }
 
 .ant-select-selection {
     &:focus {
-        border-color: #FBD13E !important;
+        border-color: #F56F45 !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 
     &:active {
-        border-color: #FBD13E !important;
+        border-color: #F56F45 !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 }
@@ -817,7 +817,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #FBD13E !important;
+            border-right: 3px solid #F56F45 !important;
         }
 
         font-size: 15px !important;
@@ -836,7 +836,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #FBD13E !important;
+            border-right: 3px solid #F56F45 !important;
         }
 
         font-size: 15px !important;
@@ -855,7 +855,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #FBD13E !important;
+            border-right: 3px solid #F56F45 !important;
         }
 
         font-size: 15px !important;
@@ -1021,7 +1021,7 @@ x {
 
 .ant-rate {
     font-size: 21px;
-    color: #3B9CFF;
+    color: #1D9CD3;
     @media (max-width: 768px) {
         font-size: 18px;
     }
@@ -1625,7 +1625,7 @@ x {
         line-height: 36px;
 
         &:hover {
-            background: #fbf0c8;
+            background: @primary-color-light;
             color: @white;
             border: 1px solid #FDBAC415;
         }
@@ -1794,7 +1794,7 @@ xxl	≥1600px, could be a span value or an object containing above props
     cursor: pointer;
 
     &:hover {
-        color: #FBD13E !important;
+        color: #F56F45 !important;
     }
 
     .anticon {
@@ -1967,17 +1967,17 @@ xxl	≥1600px, could be a span value or an object containing above props
         }
 
         &.router-link-exact-active {
-            background: #fbf0c8;
+            background: @primary-color-light;
 
             .ant-avatar-icon {
                 opacity: 1;
-                background: #fbf0c8;
+                background: @primary-color-light;
                 border-color: @secondary-color;
                 color: @secondary-color;
             }
 
             .r-text-link {
-                color: #3B9CFF;
+                color: #1D9CD3;
                 opacity: 0.96;
             }
         }
@@ -2053,20 +2053,27 @@ h4 {
     }
 }
 
-.r-bg-primary-light,
 .r-bg-primary {
     .r-checked-item-icon {
         background: @secondary-color;
-        border-color: @secondary-color;
+        border-color: @primary-color;
+        color: @primary-color;
+    }
+}
+
+.r-bg-primary-light{
+    .r-checked-item-icon {
+        background: @secondary-color;
+        border-color: @primary-color;
         color: @primary-color;
     }
 }
 
 .r-bg-secondary-light {
     .r-checked-item-icon {
-        background: @secondary-color;
+        background: @primary-color;
         border-color: @secondary-color;
-        color: @primary-color;
+        color: @secondary-color;
     }
 }
 
@@ -2155,7 +2162,7 @@ h4 {
 
     .r-cart-btn {
         border: 1px solid @white;
-        color: #FBD13EAC;
+        color: #F56F45AC;
         width: 100%;
         text-align: center;
 
@@ -2174,7 +2181,7 @@ h4 {
 
         .r-cart-btn {
             background: @white;
-            color: #3B9CFFAC;
+            color: #1D9CD3AC;
 
             &:hover {
                 background: @secondary-color;
@@ -2251,7 +2258,7 @@ h4 {
 
     .r-cart-btn {
         border: 1px solid @white;
-        color: #3B9CFFAC;
+        color: #1D9CD3AC;
         width: 100%;
         text-align: center;
 
@@ -2270,7 +2277,7 @@ h4 {
 
         .r-cart-btn {
             background: @white;
-            color: #3B9CFFAC;
+            color: #1D9CD3AC;
 
             &:hover {
                 background: @secondary-color;
@@ -2303,35 +2310,35 @@ h1.r-heading {
     font-weight: 800;
     @media (min-width: 768px) {
         font-size: 45px;
-        line-height: 51px;
+        line-height: 60px;
         margin: 0;
     }
 
     @media (max-width: 768px) {
         font-weight: 700;
         font-size: 36px;
-        line-height: 39px;
+        line-height: 42px;
         margin: 0;
     }
 }
 
 h2.r-heading {
-    font-weight: 700;
-    font-size: 36px;
+    font-weight: 800;
+    font-size: 39px;
     margin: 0;
-    line-height: 39px;
+    line-height: 45px;
 
     @media (max-width: 768px) {
         font-weight: 600;
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 33px;
+        line-height: 39px;
     }
 }
 
 h2.r-heading-light {
     font-weight: 400;
-    line-height: 39px;
     font-size: 33px;
+    line-height: 39px;
     margin-top: 0;
 
     @media (max-width: 768px) {
@@ -2355,9 +2362,9 @@ h3.r-heading-light {
 }
 
 h3.r-heading {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 30px;
-    line-height: 36px;
+    line-height: 39px;
     margin: 0;
 
     &.r-text-capitalize {
@@ -2455,7 +2462,7 @@ label {
 .ant-modal-footer {
     padding: 24px !important;
     border-top: 1px solid @secondary-color !important;
-    background: #fbf0c8;
+    background: @primary-color-light;
 }
 
 .ant-modal {
@@ -2768,11 +2775,11 @@ label {
 }
 
 .ant-form-shadow-secondary {
-    box-shadow: 0 12px 15px 6px #FBD13E22, 0 8px 28px 6px #FBD13E33, 0 12px 15px -6px #FBD13E44;
+    box-shadow: 0 12px 15px 6px #F56F4522, 0 8px 28px 6px #F56F4533, 0 12px 15px -6px #F56F4544;
 }
 
 .ant-form-shadow-primary {
-    box-shadow: 0 12px 15px 6px #FBD13E22, 0 8px 28px 6px #FBD13E33, 0 12px 15px -6px #FBD13E44;
+    box-shadow: 0 12px 15px 6px #F56F4522, 0 8px 28px 6px #F56F4533, 0 12px 15px -6px #F56F4544;
 }
 
 .r-inline-text {
@@ -2836,37 +2843,37 @@ label {
     }
 
     > .ant-menu-item-active {
-        color: #FBD13E !important;
+        color: #F56F45 !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-submenu-active {
-        color: #FBD13E !important;
+        color: #F56F45 !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-item-open {
-        color: #FBD13E !important;
+        color: #F56F45 !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-submenu-open {
-        color: #FBD13E !important;
+        color: #F56F45 !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-item-selected {
-        color: #FBD13E !important;
+        color: #F56F45 !important;
         border-bottom: 2px solid transparent;
         border-radius: @border-radius;
 
         > a {
-            color: #FBD13E !important;
+            color: #F56F45 !important;
         }
     }
 
     > .ant-menu-submenu-selected {
-        color: #FBD13E !important;
+        color: #F56F45 !important;
         border-bottom: 2px solid transparent !important;
     }
 }
@@ -3118,8 +3125,8 @@ label {
 
                 .ant-avatar-icon {
                     color: @secondary-color;
-                    background: #FBD13E99;
-                    border-color: #FBD13E33;
+                    background: #F56F4599;
+                    border-color: #F56F4533;
                 }
             }
         }
@@ -3768,7 +3775,7 @@ label {
     right: 24px;
 
     .ant-btn {
-        background: #FBD13E !important;
+        background: #F56F45 !important;
         color: #FFFFFF !important;
     }
 }
@@ -3850,11 +3857,11 @@ label {
 
 .ant-avatar {
     &.r-avatar-primary {
-        border: 1px solid #FBD13E66;
+        border: 1px solid #F56F4566;
     }
 
     &.r-avatar-secondary {
-        border: 1px solid #3B9CFF66;
+        border: 1px solid #1D9CD366;
     }
 
     &.r-avatar-store {
@@ -4041,7 +4048,7 @@ label {
     .ant-collapse-item {
         > .ant-collapse-header {
             border: none;
-            padding: 24px;
+            padding: 24px 0;
             font-weight: 600;
             color: rgb(60, 68, 76);
             font-size: 15px;
@@ -4060,7 +4067,7 @@ label {
         }
 
         .ant-collapse-content {
-            padding: 0 24px;
+            padding: 0;
         }
 
         .ant-collapse-item {
@@ -4079,7 +4086,7 @@ label {
             .ant-collapse-arrow {
                 color: @secondary-color;
                 fill: @secondary-color;
-                background: #fbf0c8;
+                background: @primary-color-light;
             }
         }
     }
@@ -4219,7 +4226,7 @@ label {
                 .ant-collapse-arrow {
                     color: @secondary-color;
                     fill: @secondary-color;
-                    background: #fbf0c8;
+                    background: @primary-color-light;
                 }
             }
         }
@@ -4407,7 +4414,7 @@ label {
         &:hover,
         &.r-checkout-item__active {
             &:before {
-                background-color: #FBD13E99;
+                background-color: #F56F4599;
             }
 
             &.r-checkout-item-address {
@@ -4598,11 +4605,11 @@ label {
     }
 
     .r-page-white {
-        background-color: #FBD13E99;
+        background-color: #F56F4599;
     }
 
     .r-page-secondary {
-        background-color: #fbf0c8;
+        background-color: @secondary-color-light;
     }
 
     .r-page-white {
@@ -4748,12 +4755,12 @@ label {
             }
 
             .ant-tabs-tab-active {
-                background: @primary-color !important;
-                color: @secondary-color;
+                background: @secondary-color !important;
+                color: @white;
             }
 
             .ant-tabs-nav {
-                background: @secondary-color-light;
+                background: @primary-color-light;
                 border-radius: @border-radius-30;
 
                 .ant-tabs-tab {
@@ -4770,7 +4777,7 @@ label {
                     }
 
                     &:hover {
-                        background: @secondary-color;
+                        background: @primary-color;
                         color: @white;
                     }
                 }
@@ -5075,7 +5082,7 @@ label {
 }
 
 .r-search-btn {
-    background-color: #FBD13EE6;
+    background-color: #F56F45E6;
     border-color: #FDBAC4;
     color: @white;
 
@@ -5180,10 +5187,10 @@ label {
     background: @white url(/images/icon_pattern_white.svg) repeat;
 
     &.r-avatar-primary {
-        border-bottom: 1px solid #FAAEBB;
+        border-bottom: 1px solid @primary-color;
         fill: @secondary-color;
         color: @secondary-color;
-        background-color: #FBD13E99;
+        background-color: @primary-color-light;
 
         &:hover {
             border-bottom: 1px solid @secondary-color;
@@ -5194,10 +5201,10 @@ label {
     }
 
     &.r-avatar-secondary {
-        border-bottom: 1px solid #B3DDFA;
-        fill: @secondary-color;
-        color: @secondary-color;
-        background-color: #fbf0c8;
+        border-bottom: 1px solid @secondary-color;
+        fill: @primary-color;
+        color: @primary-color;
+        background-color: @secondary-color-light;
 
         &:hover {
             border-bottom: 1px solid @secondary-color;
@@ -5918,7 +5925,7 @@ label {
 
 .r-art-primary {
     background-image: url(/images/art-white.svg);
-    background-color: #FBD13EDD;
+    background-color: #F56F45DD;
     background-repeat: repeat;
     padding: 24px;
     background-size: 0.6% !important;
@@ -5937,7 +5944,7 @@ label {
 }
 
 .r-art-primary-light {
-    background: #FBD13E99 url(/images/art-primary.svg) repeat scroll 0% 0% !important;
+    background: #F56F4599 url(/images/art-primary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -5946,7 +5953,7 @@ label {
 }
 
 .r-art-primary-secondary {
-    background: #FBD13E99 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
+    background: #F56F4599 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -5964,7 +5971,7 @@ label {
 }
 
 .r-art-secondary-light {
-    background: #FBD13E99 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
+    background: #F56F4599 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -6441,7 +6448,7 @@ label {
 
             &.ant-steps-item-active {
                 color: @primary-color;
-                background: #fbf0c8;
+                background: @primary-color-light;
 
                 .ant-steps-item-content {
                     background: transparent url(/assets/icon_arrows.svg) no-repeat;
@@ -6520,7 +6527,7 @@ label {
                 color: @secondary-color;
             }
 
-            background: #FBD13E99;
+            background: #F56F4599;
         }
     }
 }
@@ -6561,7 +6568,7 @@ label {
     .ant-card {
         .r-shopper-icon {
             color: @secondary-color;
-            background: #FBD13E99;
+            background: #F56F4599;
             height: 168px;
             width: 168px;
             padding: 24px;
@@ -6787,7 +6794,7 @@ label {
     background: @blue-color-light;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_blue_large.svg) no-repeat;
+        background: transparent url(/images/icon_pattern_primary_large.svg) no-repeat;
         background-size: 65%;
     }
 }
@@ -6814,7 +6821,7 @@ label {
     background: @green-color-light;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_blue_large.svg) no-repeat;
+        background: transparent url(/images/icon_pattern_primary_large.svg) no-repeat;
         background-size: 65%;
     }
 }
@@ -7432,7 +7439,7 @@ h3.r-step-heading {
     }
 
     .r-slider .slick-prev, .r-slider .slick-next {
-        color: #3B9CFF;
+        color: #1D9CD3;
         background: @white;
         border: 1px solid transparent;
         top: 50%;
@@ -7556,7 +7563,7 @@ h3.r-step-heading {
     border-radius: 50%;
     overflow: hidden;
     color: @primary-color;
-    background: #FBD13E99 url(/images/icon_pattern_white.svg) repeat;
+    background: #F56F4599 url(/images/icon_pattern_white.svg) repeat;
     border-color: @secondary-color;
     text-align: center;
     box-shadow: @shadow-color 0px 1px 3px 0px;
@@ -7755,8 +7762,8 @@ a:hover {
 
     &:hover {
         .ant-avatar-icon {
-            background: #FBD13E99;
-            border-color: #FBD13E33;
+            background: #F56F4599;
+            border-color: #F56F4533;
             color: @secondary-color;
         }
     }
@@ -7944,7 +7951,7 @@ a:hover {
 
 .slick-dots li.slick-active button:before {
     opacity: .96;
-    color: #FBD13E
+    color: #F56F45
 }
 
 .r-slick-thumb {

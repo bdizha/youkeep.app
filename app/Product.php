@@ -22,8 +22,8 @@ class Product extends KModel
     ];
 
     public static $color_codes = [
-        1 => '#FBD13E',
-        2 => '#FBD13E45'
+        1 => '#F56F45',
+        2 => '#F56F4545'
     ];
 
     public static $sortOptions = [

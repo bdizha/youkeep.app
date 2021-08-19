@@ -20,14 +20,14 @@
                         For sellers
                       </h4>
                       <h1 class="r-heading">
-                        <span class="r-text-secondary">Enable more buying customers and increase recurring orders with Graphigem.</span>
+                        <span class="r-text-secondary">Enable more buying customers and increase recurring orders with Brickcent.</span>
                       </h1>
                       <p class="r-text-normal">
-                        Maximize in-store impact with Graphigem signage and online training for
+                        Maximize in-store impact with Brickcent signage and online training for
                         retail associates.
                       </p>
                       <p class="r-text-normal">
-                        We’ll ship you an activation kit to promote Graphigem online.
+                        We’ll ship you an activation kit to promote Brickcent online.
                       </p>
                     </a-col>
                   </a-row>
@@ -95,7 +95,7 @@
                 <h4 class="r-heading-light">
                   Customers want to buy more of your products. And now they've a more
                   flexible
-                  business option with Graphigem
+                  business option with Brickcent
                 </h4>
               </a-col>
             </a-row>
@@ -137,7 +137,7 @@
         </a-row>
       </a-col>
     </a-row>
-    <r-steps :has-title="true" :has-wave="false" heading="Graphigem business experience"></r-steps>
+    <r-steps :has-title="true" :has-wave="false" heading="Brickcent business experience"></r-steps>
     <a-row class="r-text-center" justify="center" type="flex">
       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24 }"
              class="r-padding-48"
@@ -148,7 +148,7 @@
               Become a verified seller today
             </h2>
             <p class="r-text-normal">
-              Join the Graphigem Seller Program and start promoting Graphigem online today and watch your
+              Join the Brickcent Seller Program and start promoting Brickcent online today and watch your
               business run wild!
             </p>
           </a-col>

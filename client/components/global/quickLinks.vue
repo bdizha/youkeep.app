@@ -32,26 +32,26 @@ const LINKS = [
     modal: null
   },
   {
-    label: 'About Graphigem',
+    label: 'About Brickcent',
     icon: 'bulb',
     link: '/about-us'
   },
   {
-    label: 'Zerosum Capital',
-    icon: 'global',
-    link: '/capital',
-    modal: null
-  },
-  {
-    label: 'Approach',
+    label: 'How it works',
     icon: 'build',
     link: '/approach',
     modal: null
   },
   {
-    label: 'Partners',
+    label: 'Invest',
+    icon: 'global',
+    link: '/invest',
+    modal: null
+  },
+  {
+    label: 'Properties',
     icon: 'rocket',
-    link: '/partners',
+    link: '/properties',
     modal: null
   },
   {

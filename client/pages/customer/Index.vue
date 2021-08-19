@@ -119,7 +119,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      We can't wait for you to <span class="r-text-primary">experience</span> all the Graphigem offers
+                      We can't wait for you to <span class="r-text-primary">experience</span> all the Brickcent offers
                       today.
                     </p>
                   </a-col>
@@ -199,9 +199,9 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-normal">
-                      Graphigem is committed to providing you with exceptional service, efficient and speedy
+                      Brickcent is committed to providing you with exceptional service, efficient and speedy
                       deliveries,
-                      and Graphigem stores you can trust.
+                      and Brickcent stores you can trust.
                     </p>
                   </a-col>
                 </a-row>
@@ -235,7 +235,7 @@
                          :xs="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Graphigem offers the <span class="r-text-primary">best</span> business <span
+                      Brickcent offers the <span class="r-text-primary">best</span> business <span
                       class="r-text-primary"
                     >experience</span> on the market today!
                     </h2>
@@ -245,7 +245,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      Graphigem business is the <span class="r-text-primary">best</span> business experience on the
+                      Brickcent business is the <span class="r-text-primary">best</span> business experience on the
                       market.
                     </p>
                   </a-col>
@@ -290,7 +290,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                    You want to <span class="r-text-white">Buy</span> online at Graphigem?
+                    You want to <span class="r-text-white">Buy</span> online at Brickcent?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 18 }"

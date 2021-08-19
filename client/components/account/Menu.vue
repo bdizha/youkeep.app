@@ -39,7 +39,7 @@
       <a-row class="r-mb-48" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
           <h4 class="r-store-text-light">
-            Graphigem is an independent business service that is not necessarily affiliated with,
+            Brickcent is an independent business service that is not necessarily affiliated with,
             endorsed or sponsored by the stores listed here but it enables you to get the deliveries
             you
             want.
@@ -115,11 +115,11 @@ const MENU = [
     ]
   },
   {
-    heading: 'Graphigem Services ',
+    heading: 'Brickcent Services ',
     key: 'services',
     links: [
       {
-        label: 'Graphigem+',
+        label: 'Brickcent+',
         icon: 'plus',
         link: '/hiw'
       },
@@ -129,7 +129,7 @@ const MENU = [
         link: '/account/service/waykipa'
       },
       {
-        label: 'Graphigem Credit',
+        label: 'Brickcent Credit',
         icon: 'credit-card',
         link: '/account/service/paise'
       },

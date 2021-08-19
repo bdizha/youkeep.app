@@ -30,7 +30,7 @@
                         >
                           <h1 class="r-heading">
                             <span class="r-text-white">Investing</span> in
-                            <span class="r-text-green">growing</span>
+                            <span class="r-text-secondary">growing</span>
                             <span class="r-text-primary">businesses.</span>
                           </h1>
                         </a-col>
@@ -80,7 +80,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading-light">
-                <span class="r-text-blue">Innovate</span> <span class="r-text-blue">alongside</span> Graphigem.
+                <span class="r-text-blue">Innovate</span> <span class="r-text-blue">alongside</span> Brickcent.
               </h2>
             </a-col>
             <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
@@ -114,7 +114,7 @@
                    :xs="{ span: 24 }"
             >
               <h3 class="r-heading-light r-text-blue r-text-uppercase">
-                Let's invest in you
+                Invest in property.
               </h3>
             </a-col>
             <a-col :lg="{ span: 21 }" :md="{ span: 24 }"

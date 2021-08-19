@@ -29,8 +29,8 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading">
-                            <span class="r-text-green">Revolutionise</span> your <span class="r-text-primary">business</span>
-                            <span class="r-text-green">solutions</span>.
+                            <span class="r-text-secondary">Revolutionise</span> your <span class="r-text-primary">business</span>
+                            <span class="r-text-secondary">solutions</span>.
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -38,7 +38,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium">
-                            It's really hard to build a business that lasts for many years. At Graphigem we are
+                            It's really hard to build a business that lasts for many years. At Brickcent we are
                             providing our partners an opportunity to re-invent their products and solutions at an
                             accelerated pace.
                           </p>
@@ -141,7 +141,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-blue-light">
+          <a-card class="r-bg-secondary-light">
             <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
@@ -184,7 +184,7 @@
                 >
                   <h4 class="r-heading-light r-text-uppercase">
                     <span class="r-text-blue">Relentless.</span>
-                    <span class="r-text-green">Courageous.</span>
+                    <span class="r-text-secondary">Courageous.</span>
                     <span class="r-text-primary">Ferocious</span>
                   </h4>
                 </a-col>

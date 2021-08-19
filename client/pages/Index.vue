@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-blue r-pull-h-24 r-border-none r-card-r-128">
+          <a-card class="r-bg-white r-pull-h-24 r-border-none r-card-r-128">
             <a-row :gutter="[48,48]" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                 <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
@@ -19,37 +19,48 @@
                                :xs="{ span: 24 }"
                         >
                           <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                            For Innovation
+                            Invest in property
                           </h3>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h2 class="r-heading r-text-uppercase">
-                            <span class="r-text-white">Envision.</span>
-                            <span class="r-text-green">Apply.</span>
-                            <span class="r-text-primary">Evaluate</span>
-                          </h2>
+                          <h1 class="r-heading r-text-uppercase">
+                            Invest <span class="r-text-primary">smart</span>,<br>
+                            Earn <span class="r-text-secondary">more</span>.
+                          </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium">
-                            Graphigem Group helps you move faster and achieve success with early stage
-                            investment opportunities supported by our Partner Network.
+                            Brickcent provides a simple and low cost way to access the property market.
                           </p>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <p class="r-text-medium">
-                            <span class="r-text-white">Innovation.</span>
-                            <span class="r-text-green">Investment.</span>
-                            <span class="r-text-primary">Revenue.</span>
+                          <p class="r-text-normal">
+                            Brickcent is designed to utilise technology to make high-quality real estate investments
+                            affordable to everyone. We combine state-of-the-art technology with in-house expertise to
+                            reduce fees and maximize your long-term return potential.
                           </p>
+                        </a-col>
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                               :sm="{ span: 12 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <a-button class="r-btn-primary"
+                                    @click="onModal"
+                                    block
+                                    size="large"
+                                    type="blue"
+                          >
+                            Get started
+                          </a-button>
                         </a-col>
                       </a-row>
                     </div>
@@ -57,7 +68,7 @@
                   <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
                   >
-                    <r-avatar data-src="/images/content/illustration-14-white.svg" :size="300" class="r-avatar-block"
+                    <r-avatar data-src="/images/content/illustration-14-primary.svg" :size="300" class="r-avatar-block"
                     ></r-avatar>
                   </a-col>
                 </a-row>
@@ -74,21 +85,24 @@
                :xs="{ span: 24 }"
         >
           <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="center" type="flex">
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <h3 class="r-heading-light r-text-blue">
-                Innovate alongside Graphigem.
-              </h3>
+              <h2 class="r-heading">
+                It’s the new, <span class="r-text-primary">easier</span> way to invest in <span
+                class="r-text-secondary"
+              >property</span>.
+              </h2>
             </a-col>
-            <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
               <p class="r-text-normal">
-                We enable your product to reach the customer with the help of our team's experiences of running
-                successful businesses in their respective career journeys.
+                Traditionally inventing in real estate hasn’t been available to most low income investors without either
+                meeting high net worth requirements or going through a complex and inefficient process, riddled with
+                high fees and outdated middlemen.
               </p>
             </a-col>
           </a-row>
@@ -97,7 +111,190 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <r-metrics></r-metrics>
+          <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <r-avatar data-src="/images/content/apartment-3.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                    <a-col :lg="{ span: 9 }" :md="{ span: 8 }"
+                           :sm="{ span: 12 }"
+                           :xs="{ span: 12 }"
+                    >
+                      <r-avatar data-src="/images/content/apartment-1.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                    <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
+                           :sm="{ span: 12 }"
+                           :xs="{ span: 12 }"
+                    >
+                      <r-avatar data-src="/images/content/apartment-2.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                  </a-row>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="center" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h3 class="r-heading">
+                        <span class="r-text-primary">Smarter</span> diversification
+                      </h3>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <p class="r-text-normal">
+                        Now you can diversify outside of the public markets with private real estate, allowing you to
+                        reduce risk and improve stability.
+                      </p>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="center" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h3 class="r-heading">
+                        <span class="r-text-primary">Better</span> quality for less
+                      </h3>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <p class="r-text-normal">
+                        The fees you pay affect your bottom line. Our proprietary software helps us reduce costs, which means we can charge lower fees, so you can maximize your returns.
+                      </p>
+                    </a-col>
+                  </a-row>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <r-avatar data-src="/images/content/apartment-11.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <r-avatar data-src="/images/content/apartment-14.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                    <a-col :lg="{ span: 9 }" :md="{ span: 8 }"
+                           :sm="{ span: 12 }"
+                           :xs="{ span: 12 }"
+                    >
+                      <r-avatar data-src="/images/content/apartment-12.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                    <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
+                           :sm="{ span: 12 }"
+                           :xs="{ span: 12 }"
+                    >
+                      <r-avatar data-src="/images/content/apartment-13.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                    <a-col :lg="{ span: 12 }" :md="{ span: 16 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <r-avatar data-src="/images/content/apartment-8.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                    <a-col :lg="{ span: 15 }" :md="{ span: 12 }"
+                           :sm="{ span: 12 }"
+                           :xs="{ span: 12 }"
+                    >
+                      <r-avatar data-src="/images/content/apartment-9.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                    <a-col :lg="{ span: 9 }" :md="{ span: 12 }"
+                           :sm="{ span: 12 }"
+                           :xs="{ span: 12 }"
+                    >
+                      <r-avatar data-src="/images/content/apartment-10.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                  </a-row>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="center" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h3 class="r-heading">
+                        <span class="r-text-primary">Unmatched</span> convenience
+                      </h3>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <p class="r-text-normal">
+                        Invest and manage your portfolio through our easy-to-use website and mobile app. Track your performance and watch as properties across the country are acquired, improved, and operated via dynamic asset updates.
+                      </p>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
         </a-col>
       </a-row>
     </a-col>
@@ -118,25 +315,16 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-blue r-text-uppercase">
-                    Build a business that lasts long
+                    It's easy to get started.
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <h2 class="r-heading">
-                    <span class="r-text-primary">Everything</span> we do is based on <span class="r-text-blue"
-                  >inclusion.</span>
-                  </h2>
-                </a-col>
-                <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
                   <p class="r-text-normal">
-                    As we envision a world where machines do more and more work that people used to do, our minds
-                    naturally turn to those who would be displaced by technological advance.
+                    Signing up with Brickcent is simple and only takes a few minutes. Earn any capital returns in line
+                    with property price changes when you sell your Bricks
                   </p>
                 </a-col>
               </a-row>
@@ -145,213 +333,81 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-row :gutter="[24,24]" class="r-text-left" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                >
-                  <a-card class="r-bg-blue-light">
-                    <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                 :xs="{ span: 24}"
-                          >
-                            <r-avatar data-src="/images/content/illustration-13.svg" :size="120" class="r-avatar-auto"
-                            ></r-avatar>
-                          </a-col>
-                          <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                 :xs="{ span: 24}"
-                          >
-                            <p class="r-text-medium">
-                              <span class="r-text-blue">Define</span> outcomes and align stakeholders.
-                            </p>
-                          </a-col>
-                        </a-row>
-                      </a-col>
-                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                             class="r-text-left"
-                      >
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                          >
-                            <a-card class="r-bg-white">
-                              <h4 class="r-heading-light r-text-uppercase r-text-blue">
-                                Envision It
-                              </h4>
-                            </a-card>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                          >
-                            <a-card class="r-bg-white">
-                              <p class="r-text-normal r-text-dark">
-                                To solve any problem, you have to understand what the problem actually is. This is
-                                especially
-                                true
-                                of big, complex problems. To really understand a problem, you have to be crystal clear
-                                in your
-                                evaluation.
-                              </p>
-                            </a-card>
-                          </a-col>
-                        </a-row>
-                      </a-col>
-                    </a-row>
-                  </a-card>
-                </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 6 }" :xs="{ span: 24}"
+              <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                       class="r-text-left"
                 >
                   <a-card class="r-bg-secondary-light">
-                    <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                             class="r-text-left"
+                    <a-row class="r-text-center" :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                             :xs="{ span: 24}"
                       >
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                          >
-                            <a-card class="r-bg-white">
-                              <h4 class="r-heading-light r-text-uppercase r-text-secondary">
-                                Apply It
-                              </h4>
-                            </a-card>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                          >
-                            <a-card class="r-bg-white">
-                              <p class="r-text-normal r-text-dark">
-                                We don't take a brief, disappear, and then come back with brilliance. We go on a journey
-                                of
-                                exploration and discovery, take our clients with us, and together we come back with
-                                something
-                                everyone loves.
-                              </p>
-                            </a-card>
-                          </a-col>
-                        </a-row>
+                        <r-avatar data-src="/images/content/step-1.svg" :size="120" class="r-avatar-auto"
+                        ></r-avatar>
                       </a-col>
-                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                       >
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                 :xs="{ span: 24}"
-                          >
-                            <r-avatar data-src="/images/content/illustration-11.svg" :size="120" class="r-avatar-auto"
-                            ></r-avatar>
-                          </a-col>
-                          <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                 :xs="{ span: 24}"
-                          >
-                            <p class="r-text-medium">
-                              <span class="r-text-secondary">Pilot</span> a set of enabling technologies
-                            </p>
-                          </a-col>
-                        </a-row>
+                        <h4 class="r-heading">
+                          <span class="r-text-primary">Tell</span> us about your goals.
+                        </h4>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                      >
+                         <p class="r-text-normal r-text-dark">
+                          We’ll suggest the strategy that best fits your goals.
+                        </p>
                       </a-col>
                     </a-row>
                   </a-card>
                 </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                       class="r-text-left"
                 >
-                  <a-card class="r-bg-green-light">
-                    <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
+                  <a-card class="r-bg-secondary-light">
+                    <a-row class="r-text-center" :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                             :xs="{ span: 24}"
                       >
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                 :xs="{ span: 24}"
-                          >
-                            <r-avatar data-src="/images/content/illustration-10.svg" :size="120" class="r-avatar-auto"
-                            ></r-avatar>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                                 class="r-text-center"
-                          >
-                            <p class="r-text-medium">
-                              <span class="r-text-green">Expand</span> pilots to full desired scope.
-                            </p>
-                          </a-col>
-                        </a-row>
+                        <r-avatar data-src="/images/content/step-2.svg" :size="120" class="r-avatar-auto"
+                        ></r-avatar>
                       </a-col>
-                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                             class="r-text-left"
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                       >
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                          >
-                            <a-card class="r-bg-white">
-                              <h4 class="r-heading-light r-text-uppercase r-text-green">
-                                Evaluate It
-                              </h4>
-                            </a-card>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                          >
-                            <a-card class="r-bg-white">
-                              <p class="r-text-normal r-text-dark">
-                                Complex problems need diverse teams. We create teams with an unusual depth and breadth
-                                of
-                                expertise, so they can cover all angles on a problem, and find the best way through.
-                              </p>
-                            </a-card>
-                          </a-col>
-                        </a-row>
+                        <h4 class="r-heading">
+                          <span class="r-text-secondary">Select</span> an investment plan.
+                        </h4>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                      >
+                         <p class="r-text-normal r-text-dark">
+                          Choose between the suggested strategy or pick yourself.
+                        </p>
                       </a-col>
                     </a-row>
                   </a-card>
                 </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                       class="r-text-left"
                 >
-                  <a-card class="r-bg-primary-light">
-                    <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                      <a-col :lg="{ span: 12 }" :md="{ span: 1126 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                             class="r-text-left"
+                  <a-card class="r-bg-secondary-light">
+                    <a-row class="r-text-center" :gutter="[24,24]" align="middle" justify="space-between" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                             :xs="{ span: 24}"
                       >
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                          >
-                            <a-card class="r-bg-white">
-                              <h4 class="r-heading-light r-text-uppercase r-text-primary">
-                                Iterate It
-                              </h4>
-                            </a-card>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
-                          >
-                            <a-card class="r-bg-white">
-                              <p class="r-text-normal r-text-dark">
-                                Part of our job is to keep everyone moving. We get our projects moving. We keep our
-                                clients
-                                and partners moving. We keep ourselves motivated. The world doesn't stop; neither do we.
-                              </p>
-                            </a-card>
-                          </a-col>
-                        </a-row>
+                        <r-avatar data-src="/images/content/step-3.svg" :size="120" class="r-avatar-auto"
+                        ></r-avatar>
                       </a-col>
-                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                       >
-                        <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
-                          <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                 :xs="{ span: 24}"
-                          >
-                            <r-avatar data-src="/images/content/illustration-12.svg" :size="120" class="r-avatar-auto"
-                            ></r-avatar>
-                          </a-col>
-                          <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }"
-                                 :sm="{ span: 24 }"
-                                 :xs="{ span: 24 }"
-                          >
-                            <p class="r-text-medium">
-                              Continually <span class="r-text-primary">refine</span> production solutions.
-                            </p>
-                          </a-col>
-                        </a-row>
+                        <h4 class="r-heading">
+                          <span class="r-text-primary">Earn</span> returns over time.
+                        </h4>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                      >
+                         <p class="r-text-normal r-text-dark">
+                          Continue to invest over time either manually or automatically.
+                        </p>
                       </a-col>
                     </a-row>
                   </a-card>
@@ -362,7 +418,7 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col v-if="false" :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-testimonials></r-testimonials>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -400,11 +456,11 @@ export default {
   created () {
   },
   methods: {
-    onStoreTray () {
+    onModal () {
       const modal = {}
       modal.isVisible = true
       modal.isClosable = true
-      modal.current = 'store'
+      modal.current = 'register'
 
       this.$store.dispatch('base/onModal', modal)
     }

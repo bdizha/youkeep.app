@@ -9,7 +9,7 @@ class Faq extends Model
     protected $table = 'faqs';
 
     public static $groups = [
-        0 => 'How Graphigem Works',
+        0 => 'How Brickcent Works',
         1 => 'Pricing',
         2 => 'Payments',
         3 => 'Ordering',
@@ -25,11 +25,11 @@ class Faq extends Model
             'group_ids' => [0, 5]
         ],
         1 => [
-            'name' => 'Graphigem Shopper Applicant FAQ',
+            'name' => 'Brickcent Shopper Applicant FAQ',
             'group_ids' => [6, 7]
         ],
         2 => [
-            'name' => 'FAQs about Graphigem',
+            'name' => 'FAQs about Brickcent',
             'group_ids' => [0, 1, 2, 3, 4]
         ]
     ];

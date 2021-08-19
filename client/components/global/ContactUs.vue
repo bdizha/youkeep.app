@@ -8,17 +8,14 @@
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-            <h2 class="r-heading">
+            <h3 class="r-heading">
               We’re <span class="r-text-primary">excited</span> to meet you!
-            </h2>
+            </h3>
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
           >
             <p class="r-text-normal">
-              Ready to join a team of bold and passionate builders to do your best work yet? We're a
-              team of innovative players and come join if you want to play an important role in
-              building the future of
-              innovation.
+              Are you ready to join the revolution of real estate investing?
             </p>
           </a-col>
         </a-row>
@@ -43,15 +40,14 @@
                 See job openings
               </a-button>
             </nuxt-link>
-            <nuxt-link v-if="!hasJobs" to="/contact-us">
-              <a-button class="r-btn-primary"
-                        block
-                        size="large"
-                        type="blue"
-              >
-                Say, Hello :)
-              </a-button>
-            </nuxt-link>
+            <a-button v-if="!hasJobs" class="r-btn-primary"
+                      @click="onModal"
+                      block
+                      size="large"
+                      type="blue"
+            >
+              Get started
+            </a-button>
           </a-col>
         </a-row>
       </a-col>

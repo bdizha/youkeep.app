@@ -1,5 +1,5 @@
 <template>
-  <a-card title="Welcome to Graphigem!">
+  <a-card title="Welcome to Brickcent!">
     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
       <a-col :xs="{ span: 24 }">
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
@@ -116,7 +116,7 @@ export default {
           }
 
           $this.$store.dispatch('form/onResult', message)
-          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Graphigem.')
+          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Brickcent.')
         }, 600)
       })
     },

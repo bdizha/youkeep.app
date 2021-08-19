@@ -11,7 +11,7 @@
           <a-row align="middle" justify="start" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
-                Graphigem shopper application
+                Brickcent shopper application
               </h2>
               <p v-if="false" class="r-text-normal">
                 Sign in to your account with your email address.
@@ -21,12 +21,12 @@
           <a-row align="middle" justify="start" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is Graphigem?
+                What is Brickcent?
               </h3>
               <p class="r-text-normal">
-                Graphigem is a fast growing startup that is improving lives by giving people more time to
+                Brickcent is a fast growing startup that is improving lives by giving people more time to
                 spend
-                with their families! Our Graphigem members order business via the Graphigem app and can have
+                with their families! Our Brickcent members order business via the Brickcent app and can have
                 them
                 delivered on-demand as soon as 1 hour later.
               </p>
@@ -35,10 +35,10 @@
           <a-row align="middle" justify="start" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is a Graphigem shopper?
+                What is a Brickcent shopper?
               </h3>
               <p class="r-text-normal">
-                Our Graphigem Shoppers carefully select member's business using the Graphigem app and deliver
+                Our Brickcent Shoppers carefully select member's business using the Brickcent app and deliver
                 them
                 during a specified, delivery window. Our shoppers enjoy an interactive and fun culture
                 all
@@ -77,7 +77,7 @@
             What are your contact details?
           </h2>
           <p class="r-text-normal">
-            By entering your email addrress and mobile number you are opting in to receive automated Graphigem
+            By entering your email addrress and mobile number you are opting in to receive automated Brickcent
             Application
             Notifications. Message and data rates may apply.
           </p>

@@ -3,66 +3,70 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-dark r-pull-h-24 r-border-none r-card-r-128">
+      <a-card class="r-bg-dark r-pull-h-24 r-border-none r-card-r-128"
+              style="background: url(/images/content/home-1.jpg) no-repeat;background-size: 100%"
+      >
         <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
           <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-            <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <h3 class="r-heading-light r-text-secondary r-text-uppercase">
-                          About us
-                        </h3>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <h1 class="r-heading">
-                          We believe in an <span class="r-text-secondary">inclusive</span> <span class="r-text-primary">economy</span>
-                          for <span class="r-text-blue">everyone</span>.
-                        </h1>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <p class="r-text-medium">
-                          Changing how startup businesses access venture capital in Africa. inventing its time, capital
-                          and resources to accelerate their ability to scale internationally.
-                        </p>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <p class="r-text-normal">
-                          We facilitate the whole incubation experience for startups around the African continent. Reciprocity works magic across all teams.
-                        </p>
-                      </a-col>
-                    </a-row>
-                  </a-col>
-                </a-row>
-              </a-col>
-              <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <r-avatar :size="450" class="r-avatar-block" data-src="/images/about-us.jpg"
-                ></r-avatar>
-              </a-col>
-            </a-row>
+            <div class="r-mv-96">
+              <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+                            It's not about us
+                          </h3>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <h2 class="r-heading r-text-dark">
+                            What is Brickcent?
+                          </h2>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-large r-text-dark">
+                            Brickcent is a <span class="r-text-primary">fractional</span> investment platform with the
+                            mission
+                            to make <span class="r-text-secondary">property</span> accessible for all South Africans.
+                          </p>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-normal r-text-dark">
+                            We believe home ownership should be a human right and aim to be the vital stepping stone in
+                            achieving the key to your own home.
+                          </p>
+                        </a-col>
+                      </a-row>
+                    </a-col>
+                  </a-row>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  &nbsp;
+                </a-col>
+              </a-row>
+            </div>
           </a-col>
         </a-row>
       </a-card>
@@ -74,30 +78,30 @@
       <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
         <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-secondary">
+          <a-card class="r-bg-secondary-light">
             <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                <h3 class="r-heading-light r-text-dark r-text-uppercase">
                   Our story
-                </h4>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <h3 class="r-heading">
-                  We prioritize accessible catalyst services.
                 </h3>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
+                <h4 class="r-heading">
+                  We prioritize an <span class="r-text-primary">inclusive</span> property market in Africa.
+                </h4>
+              </a-col>
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
                 <p class="r-text-medium">
-                  Graphigem’s mission is to bring the best business tools directly to the partners and
+                  Brickcent’s mission is to offer the best property investment opportunities in African to our
                   investors.
                 </p>
               </a-col>
@@ -106,15 +110,12 @@
                      :xs="{ span: 24 }"
               >
                 <p class="r-text-normal">
-                  Historically, early stage startup funding services have been known to be non-existent, complicated,
-                  expensive and difficult to
-                  access.
+                  With South African property prices growing over 40% within the last 10 years*, the dream of owning a
+                  home
+                  continues to be a dream for many.
                 </p>
-                <p class="r-text-normal">
-                  We partner up with startups of all sizes and help them, run, and grow their businesses within an
-                  effective
-                  <nuxt-link to="/approach" class="r-text-primary">Framework Model</nuxt-link>
-                  .
+                <p class="r-text-normal">We enable you to invest in the
+                  property market with as little as R2,400 in as fast as a few minutes from signup to purchase.
                 </p>
               </a-col>
             </a-row>
@@ -148,7 +149,7 @@
                    :xs="{ span: 24 }"
             >
               <h3 class="r-heading">
-                We help startups <span class="r-text-blue">achieve</span> their business goals:
+                We help South Africans <span class="r-text-blue">achieve</span> their investment goals:
               </h3>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -156,8 +157,8 @@
                    :xs="{ span: 24 }"
             >
               <p class="r-text-medium">
-                Graphigem is
-                here to make better venture catalyst services easily accessible to everyone.
+                To date, we have helped to make property possible for thousands of South Africans and are eager to
+                continue this journey!
               </p>
             </a-col>
           </a-row>
@@ -223,21 +224,21 @@ export default {
     return {
       promises: [
         {
-          title: 'Progressive',
-          content: 'You’re unique and your businesses should be too. We help match your product to reliable and established Network Partners that fit your business scalability and productivity needs. ',
-          theme: 'blue',
-          textTheme: 'blue'
+          title: 'Inclusion',
+          content: 'You’re unique and your businesses should be too. We help match your product to reliable and established property developers that fit your capital return goals . ',
+          theme: 'primary',
+          textTheme: 'secondary'
         },
         {
-          title: 'Relentless',
+          title: 'Transparency',
           content: 'Simplify to make better informed decisions while you accelerate your innovation pace. Technology transformation keeps shifting and we keep re-inventing.',
-          theme: 'green',
-          textTheme: 'green'
+          theme: 'secondary',
+          textTheme: 'primary'
         },
         {
-          title: 'Reliable',
-          content: 'We provide high-quality solutions that are essential to your business growth trajectory, and the freedom to reach out to your customers more effectively within a supportive ecosystem.',
-          theme: 'secondary',
+          title: 'Trust',
+          content: 'We provide high-quality solutions that are essential to your investment growth trajectory, and the freedom to reach out to our investment advisers more effectively as needed.',
+          theme: 'primary',
           textTheme: 'secondary'
         }
       ]

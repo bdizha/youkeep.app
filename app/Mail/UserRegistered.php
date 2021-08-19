@@ -37,15 +37,15 @@ class UserRegistered extends Mailable
      */
     public function build()
     {
-        return $this->subject("Graphigem - It's shopping time!")
+        return $this->subject("Brickcent - It's shopping time!")
             ->with([
                 'greeting' => $this->user->name
             ])
             ->with([
                 'introLines' => [
-                    'Graphigem is on a mission to simplify a weekly task for you: general shopping. Partnering with local stores, we\'ll make short work of your shopping list and bring your order right to your door.',
+                    'Brickcent is on a mission to simplify a weekly task for you: general shopping. Partnering with local stores, we\'ll make short work of your shopping list and bring your order right to your door.',
                     'Save time and money, skip the stress of parking and lines, and reorder your favorites with ease.',
-                    'We\'re Graphigem, and you\'re gonna love us!'
+                    'We\'re Brickcent, and you\'re gonna love us!'
                 ],
                 'actionUrl' => url('/'),
                 'actionText' => 'Shop now',

@@ -133,7 +133,7 @@ img {
 }
 
 .content-cell a {
-    color: #3B9CFF;
+    color: #1D9CD3;
 }
 
 .content-cell a.button {
@@ -227,12 +227,12 @@ img {
 }
 
 .yellow-bg{
-    background: #FBD13E;
-    color: #3B9CFF;
+    background: #F56F45;
+    color: #1D9CD3;
 }
 
 .blue-bg{
-    background: #3B9CFF;
+    background: #1D9CD3;
     color: #FFFFFF;
 }
 
@@ -263,11 +263,11 @@ img {
 
 .button-blue,
 .button-primary {
-    background-color: #3B9CFF;
-    border-top: 10px solid #3B9CFF;
-    border-right: 18px solid #3B9CFF;
-    border-bottom: 10px solid #3B9CFF;
-    border-left: 18px solid #3B9CFF;
+    background-color: #1D9CD3;
+    border-top: 10px solid #1D9CD3;
+    border-right: 18px solid #1D9CD3;
+    border-bottom: 10px solid #1D9CD3;
+    border-left: 18px solid #1D9CD3;
 }
 
 .button-green,

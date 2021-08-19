@@ -12,7 +12,7 @@
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <VueSlickCarousel v-if="hasReviews" v-bind="settings">
             <a-card v-for="(review, index) in reviews" :key="index + '-review'"
-                    class="r-bg-blue-light"
+                    class="r-bg-secondary-light"
             >
               <a-row :gutter="[12,12]" align="middle" justify="center"
                      type="flex"

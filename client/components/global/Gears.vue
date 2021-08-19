@@ -9,7 +9,7 @@
           <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
             >
-              <h3 class="r-heading-light r-text-green">
+              <h3 class="r-heading-light r-text-secondary">
                 This process takes time
               </h3>
             </a-col>
@@ -17,9 +17,9 @@
             >
               <p class="r-text-medium">
                 Not everyone wants to work this way. Some clients or agencies want to create a one-off <span
-                class="r-text-green"
+                class="r-text-secondary"
               >digital
-                      experience</span>, extract the <span class="r-text-green">immediate value</span>, and then move on
+                      experience</span>, extract the <span class="r-text-secondary">immediate value</span>, and then move on
                 to a new idea.
               </p>
             </a-col>
@@ -39,7 +39,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-blue-light">
+      <a-card class="r-bg-secondary-light">
         <div class="r-mv-48">
           <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"

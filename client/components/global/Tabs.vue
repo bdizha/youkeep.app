@@ -1,16 +1,16 @@
 <template>
   <a-tabs v-model="selectedKey" type="card">
-    <a-tab-pane key="customer" tab="For Customers"
+    <a-tab-pane key="auto" tab="Auto Invest"
     >
-      <r-customer-steps :size="16"></r-customer-steps>
+      <r-plan-auto :size="16"></r-plan-auto>
     </a-tab-pane>
-    <a-tab-pane key="seller" tab="For Sellers"
+    <a-tab-pane key="core" tab="Core Invest"
     >
-      <r-seller-steps :size="16"></r-seller-steps>
+      <r-plan-core :size="16"></r-plan-core>
     </a-tab-pane>
-    <a-tab-pane key="shopper" tab="For Shoppers"
+    <a-tab-pane key="prime" tab="Prime Invest"
     >
-      <r-shopper-steps :size="16"></r-shopper-steps>
+      <r-plan-prime :size="16"></r-plan-prime>
     </a-tab-pane>
   </a-tabs>
 </template>
@@ -19,7 +19,7 @@
 export default {
   name: 'r-tabs',
   props: {
-    title: { type: String, required: false, default: 'Graphigem connects shoppers to sellers.' },
+    title: { type: String, required: false, default: 'Brickcent connects investors to property.' },
     activeKey: { type: String, required: false, default: 'customer' }
   },
   data () {

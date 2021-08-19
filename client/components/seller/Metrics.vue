@@ -5,7 +5,7 @@
            :xs="{ span: 24 }"
     >
       <h2 class="r-heading">
-        Why 1000s of retailers <span class="r-text-secondary">choose</span> Graphigem?
+        Why 1000s of retailers <span class="r-text-secondary">choose</span> Brickcent?
       </h2>
     </a-col>
     <a-col :lg="{ span: 8 }" :md="{ span: 8 }"

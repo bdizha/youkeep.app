@@ -1,11 +1,11 @@
 <template>
-  <a-card class="r-bg-blue-light r-pull-h-24 r-border-none">
+  <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
     <a-row class="r-mv-48" justify="center" type="flex">
-      <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
+      <a-col :lg="{span: 16}" :md="{span: 18}" :sm="{span: 24}" :xs="{span: 24}">
         <a-row :gutter="[24,24]" justify="center" type="flex">
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-text-center"
           >
-            <h3 class="r-heading-light r-text-uppercase r-text-blue">
+            <h3 class="r-heading-light r-text-uppercase r-text-primary">
               Where we're located
             </h3>
           </a-col>
@@ -59,22 +59,22 @@ export default {
         {
           city: 'Cape Town',
           continent: 'Africa',
-          email: 'info@graphigem.com'
+          email: 'info@Brickcent.com'
         },
         {
           city: 'Johannesburg',
           continent: 'Africa',
-          email: 'info@graphigem.com'
+          email: 'info@Brickcent.com'
         },
         {
           city: 'Dubai',
           continent: 'Middle East',
-          email: 'partner@graphigem.com'
+          email: 'partner@Brickcent.com'
         },
         {
           city: 'Mumbai',
           continent: 'Asia',
-          email: 'partner@graphigem.com'
+          email: 'partner@Brickcent.com'
         }
       ]
     }

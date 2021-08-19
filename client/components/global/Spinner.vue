@@ -3,10 +3,10 @@
     <div class="ant-spin-spinning">
       <svg height="100%" viewBox="0 0 32 32" width="100%">
         <circle cx="16" cy="16" fill="none" r="14" stroke-width="4"
-                style="stroke: #FBD13E; opacity: 0.2;"
+                style="stroke: #F56F45; opacity: 0.2;"
         ></circle>
         <circle cx="16" cy="16" fill="none" r="14" stroke-width="4"
-                style="stroke: #FBD13E; stroke-dasharray: 80px; stroke-dashoffset: 60px;"
+                style="stroke: #F56F45; stroke-dasharray: 80px; stroke-dashoffset: 60px;"
         ></circle>
       </svg>
     </div>

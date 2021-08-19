@@ -106,7 +106,7 @@ const CATEGORIES = [
     key: 1
   },
   {
-    label: 'I want to partner with Graphigem',
+    label: 'I want to partner with Brickcent',
     key: 2
   },
   {

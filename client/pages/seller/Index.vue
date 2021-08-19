@@ -36,7 +36,7 @@
                       >
                         <p class="r-text-medium">
                           <span class="r-text-primary">
-                          Join the Graphigem Seller Platform and start promoting Graphigem online today and watch
+                          Join the Brickcent Seller Platform and start promoting Brickcent online today and watch
                           your
                           business run wild.
                           </span>
@@ -116,7 +116,7 @@
                              class="r-text-left"
                       >
                         <h4 class="r-heading r-text-uppercase r-text-secondary">
-                          Launch Graphigem Online
+                          Launch Brickcent Online
                         </h4>
                       </a-col>
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -131,14 +131,14 @@
                              class="r-text-left"
                       >
                         <p class="r-text-medium">
-                          <span class="r-text-secondary">36%</span> increase in online and in-store business with Graphigem+ and more payment options.
+                          <span class="r-text-secondary">36%</span> increase in online and in-store business with Brickcent+ and more payment options.
                         </p>
                       </a-col>
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                              class="r-text-left"
                       >
                         <p class="r-text-normal">
-                          Join the Graphigem Seller Program and start promoting Graphigem online and in-store
+                          Join the Brickcent Seller Program and start promoting Brickcent online and in-store
                           today and
                           watch your
                           business run wild!
@@ -200,7 +200,7 @@
                              class="r-text-left"
                       >
                         <p class="r-text-medium">
-                          <span class="r-text-secondary">24%</span> of Graphigem shoppers use their existing credit card to pay over time at no cost.
+                          <span class="r-text-secondary">24%</span> of Brickcent shoppers use their existing credit card to pay over time at no cost.
                         </p>
                       </a-col>
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -278,7 +278,7 @@
                              class="r-text-left"
                       >
                         <p class="r-text-normal">
-                          Our widest customer base is waiting to buy your products on Graphigem. We partner up with
+                          Our widest customer base is waiting to buy your products on Brickcent. We partner up with
                           growing businesses like yours.
                         </p>
                       </a-col>
@@ -354,7 +354,7 @@
                             </a-col>
                             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                               <p class="r-text-medium r-text-white">
-                                Choose to be a Graphigem Seller today and start achieving your goals.
+                                Choose to be a Brickcent Seller today and start achieving your goals.
                               </p>
                             </a-col>
                           </a-row>

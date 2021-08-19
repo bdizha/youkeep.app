@@ -81,7 +81,7 @@
                                     Email
                                   </h4>
                                   <p class="r-text-medium">
-                                    <a class="r-text-primary" href="mailto:info@Graphigem.app" target="_blank">info@Graphigem.app</a>
+                                    <a class="r-text-primary" href="mailto:info@Brickcent.app" target="_blank">info@Brickcent.app</a>
                                   </p>
                                 </a-col>
                               </a-row>
@@ -110,7 +110,7 @@
     >
       <a-row justify="start" type="flex">
         <a-col :lg="{span: 12}" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <a-card class="r-bg-blue-light">
+          <a-card class="r-bg-secondary-light">
             <div class="r-mv-48">
               <a-row :gutter="[24,24]" justify="center" type="flex">
                 <a-col :xs="{ span: 24 }" class="r-text-left">

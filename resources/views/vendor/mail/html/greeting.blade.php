@@ -1,7 +1,7 @@
 <tr>
   <td class="body" colspan="3" width="100%" cellpadding="0" cellspacing="0">
     <table border="0" cellspacing="0" cellpadding="0" width="100%"
-           style="width:100.0%;background:#FBD13E;border-collapse:collapse"
+           style="width:100.0%;background:#F56F45;border-collapse:collapse"
     >
       <tbody>
       <tr>

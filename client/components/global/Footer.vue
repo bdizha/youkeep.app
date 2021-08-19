@@ -26,52 +26,56 @@
                         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <nuxt-link to="/">
-                              <img alt="Graphigem - Venture Catalysts"
+                              <img alt="Brickcent - Fractional real estate investment."
                                    class="r-footer-logo /"
-                                   src="/images/logo_dark.svg"
+                                   src="/images/logo.png"
                               >
                             </nuxt-link>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <h4 class="r-heading">
-                              Grow your business.
+                              Invest in property.
                             </h4>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <p class="r-text-normal">
-                              Graphigem is an African venture catalyst firm that envisions, executes and transforms
-                              innovative products into profitable businesses.
+                              Brickcent is a fractional investment platform to make property accessible to everyone.
                             </p>
                           </a-col>
                         </a-row>
                       </a-col>
                       <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <a-row :gutter="[24,48]" align="top" justify="start" type="flex">
-                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :xs="{ span: 24}">
+                          <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :xs="{ span: 24}">
                             <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <h4 class="r-heading r-text-uppercase">
-                                  For Partners
+                                  Product
                                 </h4>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/partners">Become a Partner</nuxt-link>
+                                  <nuxt-link to="/approach">How it works</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/approach">Approach</nuxt-link>
+                                  <nuxt-link to="/invest/auto">Auto Invest</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/capital">Zerosum Capital</nuxt-link>
+                                  <nuxt-link to="/invest/core">Core Invest</nuxt-link>
+                                </div>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <div class="r-footer-link">
+                                  <nuxt-link to="/invest/prime">Prime Invest</nuxt-link>
                                 </div>
                               </a-col>
                             </a-row>
                           </a-col>
-                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :xs="{ span: 24}">
+                          <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :xs="{ span: 24}">
                             <a-row :gutter="[24,12]" align="top" justify="start" type="flex">
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <h4 class="r-heading r-text-uppercase">
@@ -80,17 +84,36 @@
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/about-us">About Us</nuxt-link>
+                                  <nuxt-link to="/about-us">About Brickcent</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/portfolio">Portfolio</nuxt-link>
+                                  <nuxt-link to="/news">News</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
                                   <nuxt-link to="/careers">Careers</nuxt-link>
+                                </div>
+                              </a-col>
+                            </a-row>
+                          </a-col>
+                          <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :xs="{ span: 24}">
+                            <a-row :gutter="[24,12]" align="top" justify="start" type="flex">
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <h4 class="r-heading r-text-uppercase">
+                                  Resources
+                                </h4>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <div class="r-footer-link">
+                                  <nuxt-link to="/help">Help Center</nuxt-link>
+                                </div>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                                <div class="r-footer-link">
+                                  <nuxt-link to="/articles">Articles</nuxt-link>
                                 </div>
                               </a-col>
                             </a-row>
@@ -109,7 +132,7 @@
                         <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
                           <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
                             <div class="r-text-white">
-                              &copy; Graphigem Group 2021
+                              &copy; Brickent 2021
                             </div>
                           </a-col>
                           <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }">

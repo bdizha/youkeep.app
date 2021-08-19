@@ -122,7 +122,7 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h4 class="r-heading r-text-uppercase r-text-green">
+                          <h4 class="r-heading r-text-uppercase r-text-secondary">
                             Execution:
                           </h4>
                         </a-col>

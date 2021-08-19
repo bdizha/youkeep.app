@@ -178,17 +178,17 @@ export default {
         {
           value: 1,
           label: 'shopper',
-          content: 'I would like shop at Graphigem for everyday items. like fashion, gadgets and more.'
+          content: 'I would like shop at Brickcent for everyday items. like fashion, gadgets and more.'
         },
         {
           value: 3,
           label: 'seller',
-          content: 'I would like to sell products to millions of Graphigem shoppers out there.'
+          content: 'I would like to sell products to millions of Brickcent shoppers out there.'
         },
         {
           value: 4,
           label: 'business',
-          content: 'We would like to do B2B transactions or partner up with Graphigem.'
+          content: 'We would like to do B2B transactions or partner up with Brickcent.'
         }
       ],
       nextStep: 1,
@@ -297,7 +297,7 @@ export default {
       }
 
       this.$store.dispatch('form/onResult', message)
-      this.$message.success('Thank you for signing up with us, ' + this.user.name + '. Enjoy your business with Graphigem.')
+      this.$message.success('Thank you for signing up with us, ' + this.user.name + '. Enjoy your business with Brickcent.')
     },
     onNextStep () {
       if (this.currentStep === 1) {

@@ -39,7 +39,7 @@
       <a-row justify="center" type="flex">
         <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" class="r-p-24">
           <p class="r-store-text-light">
-            Graphigem is an independent business service that is not necessarily affiliated with,
+            Brickcent is an independent business service that is not necessarily affiliated with,
             endorsed or sponsored by the stores listed here but it enables you to get the deliveries you
             want.
           </p>
