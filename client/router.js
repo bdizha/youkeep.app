@@ -49,7 +49,7 @@ const routes = [
   { path: '/career/:slug', name: 'career-show', component: page('career/Show.vue') },
   { path: '/career/:slug/apply', name: 'career-apply', component: page('career/Apply.vue') },
   { path: '/capital', name: 'fund', component: page('static/Capital.vue') },
-  { path: '/approach', name: 'approach', component: page('static/Approach.vue') },
+  { path: '/invest', name: 'invest', component: page('static/Invest.vue') },
   {
     path: '/settings',
     component: page('settings/Index.vue'),

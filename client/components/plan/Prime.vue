@@ -4,7 +4,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-white">
+      <a-card class="r-bg-white r-pull-h-24">
         <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
           <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                  :sm="{ span: 24 }"
@@ -15,16 +15,19 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <h3 class="r-heading-light r-text-primary">
-                  <span class="r-text-primary">Revolutionizing</span> the property industry.
-                </h3>
+                <div class="r-shade-secondary">
+                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                    Build smart credit line
+                  </h4>
+                </div>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
                 <p class="r-text-medium">
-                  Brickcent helps investors save money in line with the property market and it only takes minutes to
+                  Automatically build credit history. Brickcent helps investors save money in line with the property
+                  market and it only takes minutes to
                   invest.
                 </p>
               </a-col>
@@ -34,50 +37,66 @@
                  :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-            <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
+            <a-row :gutter="[48,24]" align="top" justify="start" type="flex">
               <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <a-collapse accordion
-                            :defaultActiveKey="activeKey"
-                            expandIconPosition="right"
-                >
-                  <a-collapse-panel v-for="(section, index) in sections"
-                                    :key="(index+1).toString()"
-                                    :class="'r-collapse-panel-light'"
-                                    class="r-collapse-panel"
+                <div class="r-pull-h-24">
+                  <a-collapse accordion
+                              @change="onSelect"
+                              :defaultActiveKey="activeKey"
+                              expandIconPosition="right"
                   >
-                    <template slot="header">
-                      <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                    <a-collapse-panel v-for="(section, index) in sections"
+                                      :key="(index+1).toString()"
+                                      :class="'r-collapse-panel-light'"
+                                      class="r-collapse-panel"
+                    >
+                      <template slot="header">
+                        <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                          >
+                            <p class="r-text-medium">
+                              {{ section.title }}
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </template>
+                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                        <a-col v-for="(item, index) in section.items"
+                               :key="index"
+                               :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                         >
-                          <p class="r-text-medium">
-                            {{ section.title }}
-                          </p>
+                          <div class="r-checked-item">
+                            <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                            {{ item.content }}
+                          </div>
                         </a-col>
-                      </a-row>                    </template>
-                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                      <a-col v-for="(item, index) in section.items"
-                             :key="index"
-                             :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                      >
-                        <div class="r-checked-item">
-                          <a-icon class="r-checked-item-icon" type="check"></a-icon>
-                          {{ item.content }}
-                        </div>
-                      </a-col>
-                    </a-row>
-                  </a-collapse-panel>
-                </a-collapse>
+                        <a-col class="r-hide-lg r-text-center" :lg="{ span: 12 }" :md="{ span: 12 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <r-avatar :data-src="'/images/content/' + section.image"
+                                    :size="300"
+                                    class="r-avatar-block"
+                          ></r-avatar>
+                        </a-col>
+                      </a-row>
+                    </a-collapse-panel>
+                  </a-collapse>
+                </div>
               </a-col>
-              <a-col class="r-text-center" :lg="{ span: 12 }" :md="{ span: 12 }"
+              <a-col class="r-hide-sm r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <r-avatar :data-src="'/images/content/illustration-16.svg'"
+                <r-avatar v-for="(section, index) in sections"
+                          :key="index"
+                          v-if="(index + 1 == activeKey)"
+                          :data-src="'/images/content/' + section.image"
                           :size="300"
-                          class="r-avatar-auto"
+                          class="r-avatar-block"
                 ></r-avatar>
               </a-col>
             </a-row>
@@ -155,9 +174,10 @@ export default {
       ]
     }
   },
+  computed: {},
   methods: {
     onSelect (value) {
-      console.log('selected value', value)
+      this.activeKey = value
     }
   }
 }

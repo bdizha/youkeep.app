@@ -1,30 +1,33 @@
 <template>
-  <a-row class="r-text-left" :gutter="[48,48]" align="middle" justify="center" type="flex">
+  <a-row class="r-text-left" :gutter="[48,48]" align="top" justify="center" type="flex">
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-white">
-        <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+      <a-card class="r-bg-white r-pull-h-24">
+        <a-row :gutter="[48,48]" align="top" justify="start" type="flex">
           <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                  :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+            <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <h3 class="r-heading-light r-text-secondary">
-                  Your portfolio, your way
-                </h3>
+                <div class="r-shade-secondary">
+                  <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                    Your portfolio, your way
+                  </h4>
+                </div>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
                 <p class="r-text-medium">
-                  Ideal if you’d like to be in control of which properties to invest in based on your own investment goals and are comfortable making those decisions.
+                  Ideal if you’d like to be in control of which properties to invest in based on your own investment
+                  goals and are comfortable making those decisions.
                 </p>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -39,47 +42,49 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <a-collapse accordion
-                            v-model="activeItem"
-                            expandIconPosition="right"
-                >
-                  <a-collapse-panel v-for="(section, index) in sections"
-                                    :key="index.toString()"
-                                    :class="'r-collapse-panel-light'"
-                                    class="r-collapse-panel"
+                <div class="r-pull-h-24">
+                  <a-collapse accordion
+                              :defaultActiveKey="activeKey"
+                              expandIconPosition="right"
                   >
-                    <template slot="header">
-                      <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                    <a-collapse-panel v-for="(section, index) in sections"
+                                      :key="(index + 1).toString()"
+                                      :class="'r-collapse-panel-light'"
+                                      class="r-collapse-panel"
+                    >
+                      <template slot="header">
+                        <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                          >
+                            <p class="r-text-medium">
+                              {{ section.title }}
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </template>
+                      <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
+                        <a-col v-for="(item, index) in section.items"
+                               :key="index"
+                               :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                         >
-                          <p class="r-text-medium">
-                            {{ section.title }}
-                          </p>
+                          <div class="r-checked-item">
+                            <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                            {{ item.content }}
+                          </div>
                         </a-col>
                       </a-row>
-                    </template>
-                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                      <a-col v-for="(item, index) in section.items"
-                             :key="index"
-                             :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                      >
-                        <div class="r-checked-item">
-                          <a-icon class="r-checked-item-icon" type="check"></a-icon>
-                          {{ item.content }}
-                        </div>
-                      </a-col>
-                    </a-row>
-                  </a-collapse-panel>
-                </a-collapse>
+                    </a-collapse-panel>
+                  </a-collapse>
+                </div>
               </a-col>
             </a-row>
           </a-col>
-          <a-col class="r-text-center" :lg="{ span: 12 }" :md="{ span: 12 }"
+          <a-col class="r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
                  :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
             <r-avatar :data-src="'/images/content/illustration-17.svg'" :size="300"
-                      class="r-avatar-auto"
+                      class="r-avatar-block"
             ></r-avatar>
           </a-col>
         </a-row>
@@ -96,13 +101,13 @@ export default {
   },
   data () {
     return {
-      activeItem: 0,
+      activeKey: 1,
       title: 'Brickcent connects customers to sellers.',
       content: 'Our shoppers handle all your order collection and delivery experience as well as returns for you at\n' +
         'a very low cost.',
       sections: [
         {
-          title: 'Invest Core - features:',
+          title: 'Invest Core features',
           items: [
             {
               content: 'Choose which properties to buy Bricks in'

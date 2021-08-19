@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+  <a-card class="r-bg-white r-pull-h-24 r-border-none">
     <a-row class="r-mv-48" justify="center" type="flex">
       <a-col :lg="{span: 16}" :md="{span: 18}" :sm="{span: 24}" :xs="{span: 24}">
         <a-row :gutter="[24,24]" justify="center" type="flex">
@@ -15,7 +15,7 @@
                      :key="index"
                      :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
               >
-                <a-card class="r-bg-white">
+                <a-card class="r-bg-secondary-light">
                   <div class="r-checked-item">
                     <a-icon class="r-checked-item-icon" type="environment"/>
                     <a-row :gutter="[6,6]" align="top" justify="start" type="flex">

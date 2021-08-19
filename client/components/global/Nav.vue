@@ -11,7 +11,7 @@
           </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <nuxt-link slot="title" class="r-text-link" to="/approach">
+          <nuxt-link slot="title" class="r-text-link" to="/invest">
             How it works
           </nuxt-link>
         </a-sub-menu>

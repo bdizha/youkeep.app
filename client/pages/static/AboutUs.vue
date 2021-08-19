@@ -15,49 +15,44 @@
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
+                  <a-card class="r-bg-white">
+                    <div class="r-mv-48">
+                      <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h3 class="r-heading-light r-text-secondary r-text-uppercase">
-                            It's not about us
-                          </h3>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <h2 class="r-heading r-text-dark">
-                            What is Brickcent?
-                          </h2>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <p class="r-text-large r-text-dark">
-                            Brickcent is a <span class="r-text-primary">fractional</span> investment platform with the
-                            mission
-                            to make <span class="r-text-secondary">property</span> accessible for all South Africans.
-                          </p>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <p class="r-text-normal r-text-dark">
-                            We believe home ownership should be a human right and aim to be the vital stepping stone in
-                            achieving the key to your own home.
-                          </p>
+                          <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                              <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+                                It's not about us
+                              </h3>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                              <h1 class="r-heading r-text-dark">
+                                How you invest is deeply individual.
+                              </h1>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                              <p class="r-text-medium r-text-dark">
+                                We created Brickcent to make your unique life better. We're on the mission to make <span
+                                class="r-text-secondary"
+                              >property</span> investments accessible and affordable for all South Africans like you.
+                              </p>
+                            </a-col>
+                          </a-row>
                         </a-col>
                       </a-row>
-                    </a-col>
-                  </a-row>
+                    </div>
+                  </a-card>
                 </a-col>
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                        :sm="{ span: 24 }"
@@ -71,142 +66,150 @@
         </a-row>
       </a-card>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{  span: 24 }"
            :xs="{ span: 24 }"
     >
       <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-        >
-          <a-card class="r-bg-secondary-light">
-            <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <h3 class="r-heading-light r-text-dark r-text-uppercase">
-                  Our story
-                </h3>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <h4 class="r-heading">
-                  We prioritize an <span class="r-text-primary">inclusive</span> property market in Africa.
-                </h4>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <p class="r-text-medium">
-                  Brickcent’s mission is to offer the best property investment opportunities in African to our
-                  investors.
-                </p>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <p class="r-text-normal">
-                  With South African property prices growing over 40% within the last 10 years*, the dream of owning a
-                  home
-                  continues to be a dream for many.
-                </p>
-                <p class="r-text-normal">We enable you to invest in the
-                  property market with as little as R2,400 in as fast as a few minutes from signup to purchase.
-                </p>
-              </a-col>
-            </a-row>
-          </a-card>
-        </a-col>
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-        >
-          <r-values></r-values>
-        </a-col>
-      </a-row>
-    </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-           :sm="{  span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-        <a-col :lg="{ span: 12 }" :md="{ span: 15 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="center" type="flex">
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <h4 class="r-heading-light r-text-uppercase">
-                <span class="r-text-blue">Our promise to you</span>
-              </h4>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <h3 class="r-heading">
-                We help South Africans <span class="r-text-blue">achieve</span> their investment goals:
-              </h3>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <p class="r-text-medium">
-                To date, we have helped to make property possible for thousands of South Africans and are eager to
-                continue this journey!
-              </p>
-            </a-col>
-          </a-row>
-        </a-col>
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                :sm="{  span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-            <a-col v-for="(promise, index) in promises"
-                   :key="index"
-                   :lg="{ span: 8 }" :md="{ span: 8 }"
+          <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-card :class="getBgClass(promise.theme)">
-                <a-card-meta>
-                  <template slot="description">
-                    <a-row :gutter="[12,12]" align="middle" class="r-text-left" justify="center"
-                           type="flex"
+              <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{  span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                    <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
+                           :sm="{  span: 24 }"
+                           :xs="{ span: 24 }"
                     >
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <h4 class="r-checked-item r-heading-light">
-                          <a-icon class="r-checked-item-icon" type="check"></a-icon>
-                          <span :class="getTextClass(promise.textTheme)">
-                            {{ promise.title }}
-                          </span>
-                        </h4>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <p class="r-text-normal">
-                          {{ promise.content }}
-                        </p>
-                      </a-col>
-                    </a-row>
-                  </template>
-                </a-card-meta>
-              </a-card>
+                      <h2 class="r-heading-light r-text-dark">
+                        Your property <span class="r-text-secondary">investment</span>
+                        <span class="r-text-primary">freedom</span> is the goal.
+                      </h2>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </a-col>
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <div class="r-p-24">
+                <r-avatar data-src="/images/content/happy-1.jpg" :size="300" class="r-avatar-block"
+                ></r-avatar>
+              </div>
             </a-col>
           </a-row>
         </a-col>
       </a-row>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 18 }"
+           :sm="{  span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <r-values></r-values>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{  span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <a-card class="r-bg-secondary-light r-pull-h-24">
+        <div class="r-mv-48">
+          <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                   :sm="{  span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 15 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="center" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h4 class="r-heading-light r-text-uppercase">
+                        <span class="r-text-blue">Our promise to you</span>
+                      </h4>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h3 class="r-heading">
+                        We help South Africans <span class="r-text-blue">achieve</span> their investment goals:
+                      </h3>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <p class="r-text-medium">
+                        To date, we have helped to make property possible for thousands of South Africans and are eager
+                        to
+                        continue this journey!
+                      </p>
+                    </a-col>
+                  </a-row>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{  span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                    <a-col v-for="(promise, index) in promises"
+                           :key="index"
+                           :lg="{ span: 8 }" :md="{ span: 8 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <a-card :class="getBgClass(promise.theme)">
+                        <a-card-meta>
+                          <template slot="description">
+                            <a-row :gutter="[12,12]" align="middle" class="r-text-left" justify="center"
+                                   type="flex"
+                            >
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                     :sm="{ span: 24 }"
+                                     :xs="{ span: 24 }"
+                              >
+                                <h3 class="r-checked-item r-heading-light">
+                          <span :class="getTextClass(promise.textTheme)">
+                          <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                            {{ promise.title }}
+                          </span>
+                                </h3>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                     :sm="{ span: 24 }"
+                                     :xs="{ span: 24 }"
+                              >
+                                <p class="r-text-normal">
+                                  {{ promise.content }}
+                                </p>
+                              </a-col>
+                            </a-row>
+                          </template>
+                        </a-card-meta>
+                      </a-card>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </div>
+      </a-card>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
@@ -237,7 +240,7 @@ export default {
         },
         {
           title: 'Trust',
-          content: 'We provide high-quality solutions that are essential to your investment growth trajectory, and the freedom to reach out to our investment advisers more effectively as needed.',
+          content: 'We provide high-quality solutions that are essential to your investment growth trajectory, and the freedom to reach out to our investment advisers more effectively.',
           theme: 'primary',
           textTheme: 'secondary'
         }
@@ -249,7 +252,7 @@ export default {
   },
   methods: {
     getBgClass (theme) {
-      return `r-bg-${theme}-light`
+      return `r-bg-white`
     },
     getTextClass (theme) {
       return `r-text-${theme}`

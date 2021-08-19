@@ -4,20 +4,22 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-white">
-        <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+      <a-card class="r-bg-white r-pull-">
+        <a-row :gutter="[48,48]" align="top" justify="start" type="flex">
           <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                  :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <h3 class="r-heading-light r-text-secondary">
-                  A smart, simple way to invest
-                </h3>
+                <div class="r-shade-primary">
+                  <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                    A smart way to invest
+                  </h4>
+                </div>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
@@ -40,12 +42,13 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
+                <div class="r-pull-h-24">
                 <a-collapse accordion
-                            v-model="activeItem"
+                            :defaultActiveKey="activeKey"
                             expandIconPosition="right"
                 >
                   <a-collapse-panel v-for="(section, index) in sections"
-                                    :key="index.toString()"
+                                    :key="(index + 1).toString()"
                                     :class="'r-collapse-panel-light'"
                                     class="r-collapse-panel"
                   >
@@ -72,15 +75,16 @@
                     </a-row>
                   </a-collapse-panel>
                 </a-collapse>
+                </div>
               </a-col>
             </a-row>
           </a-col>
-          <a-col class="r-text-center" :lg="{ span: 12 }" :md="{ span: 12 }"
+          <a-col class="r-text-center" :lg="{ span: 8 }" :md="{ span: 8 }"
                  :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
             <r-avatar :data-src="'/images/content/illustration-16.svg'" :size="300"
-                      class="r-avatar-auto"
+                      class="r-avatar-block"
             ></r-avatar>
           </a-col>
         </a-row>
@@ -97,13 +101,13 @@ export default {
   },
   data () {
     return {
-      activeItem: 0,
+      activeKey: 1,
       title: 'Brickcent connects customers to sellers.',
       content: 'Our shoppers handle all your order collection and delivery experience as well as returns for you at\n' +
         'a very low cost.',
       sections: [
         {
-          title: 'Incredible value for everyone',
+          title: 'Auto Invest features',
           items: [
             {
               content: 'Properties are chosen based on their growth potential'
@@ -123,7 +127,7 @@ export default {
           ]
         },
         {
-          title: 'AI powered investment mechanism',
+          title: 'AI powered investment option',
           items: [
             {
               content: 'Our specialist property team carefully select a range of high growth potential properties'

@@ -5,11 +5,11 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-white r-pull-h-24 r-border-none r-card-r-128">
-            <a-row :gutter="[48,48]" justify="center" type="flex">
-              <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+          <a-card class="r-bg-dark r-pull-h-24 r-border-none r-card-r-128">
+            <a-row :gutter="[48,48]" justify="start" type="flex">
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                  <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
                   >
                     <div class="r-mv-48">
@@ -19,7 +19,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                            Invest in property
+                            Think long term
                           </h3>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -35,19 +35,28 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <p class="r-text-medium">
-                            Brickcent provides a simple and low cost way to access the property market.
-                          </p>
+                          <div class="r-checked-item">
+                            <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                            <span class="r-text-medium">Auto returns at 10.00% annually</span>
+                          </div>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <p class="r-text-normal">
-                            Brickcent is designed to utilise technology to make high-quality real estate investments
-                            affordable to everyone. We combine state-of-the-art technology with in-house expertise to
-                            reduce fees and maximize your long-term return potential.
-                          </p>
+                          <div class="r-checked-item">
+                            <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                            <span class="r-text-medium">Own quality yield property Bricks</span>
+                          </div>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <div class="r-checked-item">
+                            <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                            <span class="r-text-medium">Smart way to invest in property</span>
+                          </div>
                         </a-col>
                         <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                                :sm="{ span: 12 }"
@@ -62,18 +71,23 @@
                             Get started
                           </a-button>
                         </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-normal">
+                            Brickcent is designed to utilise technology to make high-quality real estate investments
+                            affordable to everyone. We combine state-of-the-art technology with in-house expertise to
+                            reduce fees and maximize your long-term return potential.
+                          </p>
+                        </a-col>
                       </a-row>
                     </div>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24}"
-                  >
-                    <r-avatar data-src="/images/content/illustration-14-primary.svg" :size="300" class="r-avatar-block"
-                    ></r-avatar>
                   </a-col>
                 </a-row>
               </a-col>
             </a-row>
+            <div class="r-cover-image" style="background-image:url(/images/content/happy-2.jpg)"></div>
           </a-card>
         </a-col>
       </a-row>
@@ -149,16 +163,26 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="center" type="flex">
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                  <a-row class="r-text-left" :gutter="[24,24]" align="top" justify="start" type="flex">
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h3 class="r-heading">
-                        <span class="r-text-primary">Smarter</span> diversification
-                      </h3>
+                      <div class="r-shade-secondary">
+                        <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                          Make real progress
+                        </h4>
+                      </div>
                     </a-col>
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h2 class="r-heading-light r-text-dark">
+                        <span class="r-text-primary">Think</span> long term and earn quality returns
+                      </h2>
+                    </a-col>
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
@@ -175,26 +199,37 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+              <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="center" type="flex">
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                  <a-row class="r-text-left" :gutter="[24,24]" align="top" justify="end" type="flex">
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h3 class="r-heading">
-                        <span class="r-text-primary">Better</span> quality for less
-                      </h3>
+                      <div class="r-shade-primary">
+                        <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                          Build credit line
+                        </h4>
+                      </div>
                     </a-col>
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h2 class="r-heading-light r-text-dark">
+                        Keep <span class="r-text-primary">cash</span> available in your Bricks
+                      </h2>
+                    </a-col>
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        The fees you pay affect your bottom line. Our proprietary software helps us reduce costs, which means we can charge lower fees, so you can maximize your returns.
+                        The fees you pay affect your bottom line. Our proprietary software helps us reduce costs, which
+                        means we can charge lower fees, so you can maximize your returns.
                       </p>
                     </a-col>
                   </a-row>
@@ -273,22 +308,46 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="center" type="flex">
+                  <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="start" type="flex">
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h3 class="r-heading">
-                        <span class="r-text-primary">Unmatched</span> convenience
-                      </h3>
+                      <div class="r-shade-secondary">
+                        <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                          Smart auto-invest
+                        </h4>
+                      </div>
                     </a-col>
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h2 class="r-heading-light r-text-dark">
+                        A little every day quickly <span class="r-text-primary">adds</span> up
+                      </h2>
+                    </a-col>
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Invest and manage your portfolio through our easy-to-use website and mobile app. Track your performance and watch as properties across the country are acquired, improved, and operated via dynamic asset updates.
+                        Invest and manage your portfolio through our easy-to-use website and mobile app. Track your
+                        performance and watch as properties across the country are acquired, improved, and operated via
+                        dynamic asset updates.
                       </p>
+                    </a-col>
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                           :sm="{ span: 12 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <a-button class="r-btn-dark"
+                                @click="onModal"
+                                size="large"
+                                type="blue"
+                      >
+                        Get started
+                      </a-button>
                     </a-col>
                   </a-row>
                 </a-col>
@@ -353,7 +412,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                       >
-                         <p class="r-text-normal r-text-dark">
+                        <p class="r-text-normal r-text-dark">
                           We’ll suggest the strategy that best fits your goals.
                         </p>
                       </a-col>
@@ -379,7 +438,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                       >
-                         <p class="r-text-normal r-text-dark">
+                        <p class="r-text-normal r-text-dark">
                           Choose between the suggested strategy or pick yourself.
                         </p>
                       </a-col>
@@ -405,7 +464,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                       >
-                         <p class="r-text-normal r-text-dark">
+                        <p class="r-text-normal r-text-dark">
                           Continue to invest over time either manually or automatically.
                         </p>
                       </a-col>

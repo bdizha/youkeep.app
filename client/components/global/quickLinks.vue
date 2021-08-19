@@ -39,7 +39,7 @@ const LINKS = [
   {
     label: 'How it works',
     icon: 'build',
-    link: '/approach',
+    link: '/invest',
     modal: null
   },
   {

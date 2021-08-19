@@ -114,7 +114,7 @@
                    :xs="{ span: 24 }"
             >
               <h3 class="r-heading-light r-text-blue r-text-uppercase">
-                Invest in property.
+                Invest smart in property.
               </h3>
             </a-col>
             <a-col :lg="{ span: 21 }" :md="{ span: 24 }"

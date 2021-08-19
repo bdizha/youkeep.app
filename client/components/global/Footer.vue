@@ -28,13 +28,13 @@
                             <nuxt-link to="/">
                               <img alt="Brickcent - Fractional real estate investment."
                                    class="r-footer-logo /"
-                                   src="/images/logo.png"
+                                   src="/images/logo_dark.png"
                               >
                             </nuxt-link>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <h4 class="r-heading">
-                              Invest in property.
+                              Invest smart in property.
                             </h4>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -55,22 +55,22 @@
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/approach">How it works</nuxt-link>
+                                  <nuxt-link to="/invest">How it works</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/invest/auto">Auto Invest</nuxt-link>
+                                  <nuxt-link to="/invest#auto">Auto Invest</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/invest/core">Core Invest</nuxt-link>
+                                  <nuxt-link to="/invest#core">Core Invest</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/invest/prime">Prime Invest</nuxt-link>
+                                  <nuxt-link to="/invest#prime">Prime Invest</nuxt-link>
                                 </div>
                               </a-col>
                             </a-row>

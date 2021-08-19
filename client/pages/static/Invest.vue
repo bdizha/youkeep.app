@@ -21,7 +21,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h3 class="r-heading-light r-text-uppercase">
-                            Our Approach
+                            Invest in property
                           </h3>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -84,14 +84,6 @@
                   <h3 class="r-heading-light r-text-uppercase">
                     <span class="r-text-blue">How it works</span>
                   </h3>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <p class="r-text-medium">
-                    Quality assets. Low fees. Smart technology.
-                  </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                        :sm="{ span: 24 }"
