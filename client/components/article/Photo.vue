@@ -9,6 +9,7 @@
 </template>
 <script>
 export default {
+  name: 'r-article-photo',
   props: {
     article: { type: Object, required: true },
   },

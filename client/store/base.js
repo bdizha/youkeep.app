@@ -236,7 +236,7 @@ const mutations = {
     Cookies.set('search', search, { expires: 365 })
   },
   setProcess (state, process) {
-    console.trace()
+    // console.trace() TO DO
     state.processes[process.key] = process.value
   },
   setHasForm (state, hasForm) {

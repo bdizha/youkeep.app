@@ -49,6 +49,8 @@ const routes = [
   { path: '/career/:slug', name: 'career-show', meta: { isDark: false}, component: page('career/Show.vue') },
   { path: '/career/:slug/apply', name: 'career-apply', meta: { isDark: false}, component: page('career/Apply.vue') },
   { path: '/capital', name: 'fund', meta: { isDark: false}, component: page('static/Capital.vue') },
+  { path: '/articles', name: 'articles', meta: { isDark: false}, component: page('article/Index.vue') },
+  { path: '/article/:slug', name: 'article-show', meta: { isDark: false}, component: page('article/Show.vue') },
   { path: '/invest', name: 'invest', meta: { isDark: false}, component: page('static/Invest.vue') },
   {
     path: '/settings',

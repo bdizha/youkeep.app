@@ -72,6 +72,7 @@ module.exports = {
     '~components/auth',
     '~components/global',
     '~components/help',
+    '~components/article',
     '~components/product',
     '~components/category',
     '~components/delivery',
