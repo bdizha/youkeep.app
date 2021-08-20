@@ -2163,6 +2163,10 @@ h4 {
     top: 0;
     bottom: 0;
     height: 100%;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 .r-cart-body {
@@ -4788,6 +4792,26 @@ label {
         .ant-tabs-card-bar {
             border: none;
             margin: 0 0 48px;
+
+            .ant-tabs-tab-arrow-show {
+                .ant-tabs-tab-prev-icon-target,
+                .ant-tabs-tab-next-icon-target{
+                    font-size: 27px;
+                    line-height: 27px;
+                    padding: 6px;
+                    border-radius: @border-radius;
+                    color: @primary-color;
+                }
+            }
+
+            .ant-tabs-tab-btn-disabled{
+                &.ant-tabs-tab-arrow-show {
+                    .ant-tabs-tab-prev-icon-target,
+                    .ant-tabs-tab-next-icon-target{
+                        color: #F8A88F;
+                    }
+                }
+            }
 
             .ant-tabs-nav-container {
                 height: auto;

@@ -6,13 +6,13 @@
                :xs="{ span: 24 }"
         >
           <a-card class="r-bg-dark r-pull-h-24 r-border-none r-card-r-128">
-            <a-row :gutter="[48,48]" justify="start" type="flex">
-              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-                  <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24}"
-                  >
-                    <div class="r-mv-48">
+            <div class="r-mv-48">
+              <a-row :gutter="[48,48]" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24}"
+                    >
                       <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
@@ -82,11 +82,15 @@
                           </p>
                         </a-col>
                       </a-row>
-                    </div>
-                  </a-col>
-                </a-row>
-              </a-col>
-            </a-row>
+                    </a-col>
+                  </a-row>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <r-avatar data-src="/images/content/happy-2.jpg" :size="300" class="r-avatar-block"
+                  ></r-avatar>
+                </a-col>
+              </a-row>
+            </div>
             <div class="r-cover-image" style="background-image:url(/images/content/happy-2.jpg)"></div>
           </a-card>
         </a-col>

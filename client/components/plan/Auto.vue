@@ -4,7 +4,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-white r-pull-">
+      <a-card class="r-bg-white r-pull-h-24">
         <a-row :gutter="[48,48]" align="top" justify="start" type="flex">
           <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                  :sm="{ span: 24 }"
@@ -42,7 +42,6 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <div class="r-pull-h-24">
                 <a-collapse accordion
                             :defaultActiveKey="activeKey"
                             expandIconPosition="right"
@@ -75,7 +74,6 @@
                     </a-row>
                   </a-collapse-panel>
                 </a-collapse>
-                </div>
               </a-col>
             </a-row>
           </a-col>
