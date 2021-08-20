@@ -91,7 +91,7 @@
                 </a-col>
               </a-row>
             </div>
-            <div class="r-cover-image" style="background-image:url(/images/content/happy-2.jpg)"></div>
+            <div class="r-cover-image-half" style="background-image:url(/images/content/happy-2.jpg)"></div>
           </a-card>
         </a-col>
       </a-row>

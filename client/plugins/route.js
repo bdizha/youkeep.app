@@ -4,10 +4,14 @@ export default ({ app }) => {
     console.log('before each router...')
     app.store.dispatch('base/onProcess', { key: 'isFixed', value: true }, { root: true })
 
+    console.log('to  route', to)
+    console.log('from  route', from)
+
     const drawer = {}
     drawer.isVisible = false
     drawer.current = null
 
+    app.store.dispatch('base/onIsDark', to.meta.isDark, { root: true })
     app.store.dispatch('base/onDrawer', drawer, { root: true })
 
     next()

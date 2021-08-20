@@ -20,7 +20,7 @@
           >
             <p class="r-text-medium r-text-dark">
               Making property <span class="r-text-blue">investment</span>
-              accessible to everyone.
+              <span class="r-text-primary">accessible</span> to everyone.
             </p>
           </a-col>
         </a-row>
@@ -33,10 +33,8 @@
                  :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-           <div class="r-p-24">
-             <r-avatar data-src="/images/content/apartment-5.jpg" :size="300" class="r-avatar-block"
-             ></r-avatar>
-           </div>
+            <r-avatar data-src="/images/content/apartment-5.jpg" :size="300" class="r-avatar-block"
+            ></r-avatar>
           </a-col>
           <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                  :xs="{ span: 24 }"

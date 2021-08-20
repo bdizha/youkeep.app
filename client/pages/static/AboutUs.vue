@@ -1,67 +1,76 @@
 <template>
-  <a-row :gutter="[48,96]" align="middle" justify="center" type="flex">
+  <a-row :gutter="[48,0]" align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-dark r-pull-h-24 r-border-none r-card-r-128"
-              style="background: url(/images/content/home-1.jpg) no-repeat;background-size: 100%"
-      >
+      <a-card class="r-cover-image r-bg-dark r-pull-24 r-border-none r-card-r-128">
         <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
           <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-            <div class="r-mv-96">
-              <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <a-card class="r-bg-white">
-                    <div class="r-mv-48">
-                      <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+            <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <div class="r-mb-48-lg">
+                <a-card class="r-bg-dark r-pull-h-24 r-border-none-sm">
+                  <div class="r-mv-48">
+                  <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                   :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <h3 class="r-heading-light r-text-secondary r-text-uppercase">
-                                It's not about us
-                              </h3>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                   :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <h1 class="r-heading r-text-dark">
-                                How you invest is deeply individual.
-                              </h1>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                   :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <p class="r-text-medium r-text-dark">
-                                We created Brickcent to make your unique life better. We're on the mission to make <span
-                                class="r-text-secondary"
-                              >property</span> investments accessible and affordable for all South Africans like you.
-                              </p>
-                            </a-col>
-                          </a-row>
+                          <h3 class="r-heading-light r-text-secondary r-text-uppercase">
+                            It's not about us
+                          </h3>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <h1 class="r-heading">
+                            How you <span class="r-text-primary">invest</span> is deeply <span class="r-text-secondary">individual</span>.
+                          </h1>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-large">
+                            We created Brickcent to make your unique life better and flexible.
+                          </p>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-medium">
+                            We're on the mission to make <span
+                            class="r-text-secondary">property</span> investments
+                            <span class="r-text-primary">accessible</span> and
+                            <span class="r-text-secondary">affordable</span> for all South Africans like you.
+                          </p>
                         </a-col>
                       </a-row>
-                    </div>
-                  </a-card>
-                </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  &nbsp;
-                </a-col>
-              </a-row>
-            </div>
+                    </a-col>
+                    <a-col class="r-hide-lg" :lg="{ span: 12 }" :md="{ span: 12 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <r-avatar data-src="/images/content/home-1.jpg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+
+                  </a-row>
+                  </div>
+                </a-card>
+                </div>
+              </a-col>
+            </a-row>
           </a-col>
         </a-row>
       </a-card>
@@ -70,6 +79,8 @@
            :sm="{  span: 24 }"
            :xs="{ span: 24 }"
     >
+      <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+        <div class="r-mv-48">
       <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                :sm="{  span: 24 }"
@@ -103,26 +114,30 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <div class="r-p-24">
-                <r-avatar data-src="/images/content/happy-1.jpg" :size="300" class="r-avatar-block"
-                ></r-avatar>
-              </div>
+              <r-avatar data-src="/images/content/happy-1.jpg" :size="300" class="r-avatar-block"
+              ></r-avatar>
             </a-col>
           </a-row>
         </a-col>
       </a-row>
+        </div>
+      </a-card>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 18 }"
            :sm="{  span: 24 }"
            :xs="{ span: 24 }"
     >
+      <a-card class="r-bg-primary-light r-pull-h-24 r-border-none">
+        <div class="r-mv-48">
       <r-values></r-values>
+        </div>
+      </a-card>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{  span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary-light r-pull-h-24">
+      <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
         <div class="r-mv-48">
           <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
@@ -147,7 +162,9 @@
                            :xs="{ span: 24 }"
                     >
                       <h3 class="r-heading">
-                        We help South Africans <span class="r-text-blue">achieve</span> their investment goals:
+                        We help South Africans <span class="r-text-primary">achieve</span> their
+                        <span class="r-text-secondary">investment</span>
+                        <span class="r-text-primary">goals</span>:
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -220,7 +237,7 @@
 </template>
 <script>
 export default {
-  layout: 'single',
+  layout: 'default',
   name: 'r-about-us',
   props: {},
   data () {
