@@ -33,8 +33,9 @@ html {
 a {
     color: @black;
 
-    &:hover {
-        color: @secondary-color;
+    &:hover,
+    &.router-link-exact-active{
+        color: @primary-color;
     }
 
     &.r-text-white {
@@ -2073,8 +2074,8 @@ h4 {
 .r-bg-primary {
     .r-checked-item-icon {
         background: transparent;
-        border-color: @primary-color;
-        color: @primary-color;
+        border-color: @secondary-color;
+        color: @white;
     }
     .ant-collapse-content{
         color: @white;
@@ -2101,7 +2102,7 @@ h4 {
     .r-checked-item-icon {
         background: transparent;
         border-color: @primary-color;
-        color: @secondary-color;
+        color: @white;
     }
     .ant-collapse-content{
         color: @white;
@@ -3160,7 +3161,7 @@ label {
 
         .r-checked-item-icon {
             left: 12px;
-            line-height: 18px !important;
+            line-height: 14px !important;
         }
 
         a {

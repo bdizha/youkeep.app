@@ -70,60 +70,9 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
     >
-      <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-        >
-          <a-card class="r-bg-secondary-light">
-            <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                  Our objective
-                </h4>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <h3 class="r-heading">
-                  To enable <span class="r-text-secondary">businesses</span> to build a modern innovation
-                  <span class="r-text-secondary">strategy</span>.
-                </h3>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <p class="r-text-medium">
-                  Brickcent’s mission is to bring the best business tools directly to the customers and
-                  retailers.
-                </p>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <p class="r-text-normal">
-                  Our enviroment is always transparent and easily accessible. business freedom should be for all of us.
-                </p>
-                <p class="r-text-normal">
-                  Brickcent is
-                  here to make better venture catalyst services easily accessible to everyone.
-                </p>
-              </a-col>
-            </a-row>
-          </a-card>
-        </a-col>
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-        >
-          <r-values></r-values>
-        </a-col>
-      </a-row>
+      <r-values></r-values>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"

@@ -32,7 +32,7 @@ const LINKS = [
     modal: null
   },
   {
-    label: 'About Brickcent',
+    label: 'About Us',
     icon: 'bulb',
     link: '/about-us'
   },

@@ -84,7 +84,7 @@
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/about-us">About Brickcent</nuxt-link>
+                                  <nuxt-link to="/about-us">About Us</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">

@@ -15,7 +15,7 @@
                 Brickcent seller application
               </h2>
               <p class="r-text-normal">
-                Contact us to learn more about Brickcent and checkout financing
+                Contact us to learn more About Us and checkout financing
               </p>
             </a-col>
           </a-row>
