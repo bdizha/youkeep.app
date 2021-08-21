@@ -1,62 +1,10 @@
 <template>
   <a-row :gutter="[96,96]" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+      <a-row :gutter="[48,0]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-
-          <a-row v-if="false" :gutter="[24,24]" align="middle" justify="start" type="flex">
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <h3 class="r-heading-light r-text-uppercase">
-                Seller <span class="r-text-primary">Central</span>
-              </h3>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <h1 class="r-heading">
-                Become a <span class="r-text-primary">verified</span> seller today!
-              </h1>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <p class="r-text-medium">
-                          <span class="r-text-primary">
-                          Join the Addtract Seller Platform and start promoting Addtract online today and watch
-                          your
-                          business run wild.
-                          </span>
-              </p>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <p class="r-text-normal">Built for retail shops, it offers a clear view into
-                product
-                purchase activity with automated billing, expensing, and reporting.
-              </p>
-            </a-col>
-            <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <a-button block
-                        class="r-btn-primary"
-                        size="large"
-                        type="secondary" @click="onRegister('seller')"
-              >
-                Become a Seller
-              </a-button>
-            </a-col>
-          </a-row>
           <a-card class="r-bg-dark r-pull-h-24 r-border-none r-card-r-128">
             <div class="r-mv-48">
               <a-row :gutter="[48,48]" justify="start" type="flex">
@@ -79,7 +27,7 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h1 class="r-heading r-text-yellow r-text-uppercase">
+                          <h1 class="r-heading r-text-primary r-text-uppercase">
                             Get <span class="r-text-secondary">discovered</span> by
                             Africa's <span class="r-text-primary">leading</span>
                             <span class="r-text-secondary">retailers</span>
@@ -130,9 +78,11 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            Addtract is designed to utilise technology to make high-quality selling tools
-                            affordable to everyone. We combine state-of-the-art technology with in-house expertise to
-                            reduce fees and maximize your long-term business connections.
+                          <span class="r-text-white">
+                          Join the Addtract Seller Platform and start promoting your products online today and watch
+                          your
+                          sales run wild.
+                          </span>
                           </p>
                         </a-col>
                       </a-row>
@@ -148,12 +98,12 @@
             <div class="r-cover-image-half" style="background-image:url(/images/content/happy-2.jpg)"></div>
           </a-card>
         </a-col>
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <r-seller-steps></r-seller-steps>
+        </a-col>
       </a-row>
-    </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <r-seller-steps></r-seller-steps>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"

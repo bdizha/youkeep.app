@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
+    <defs>
+        <style>
+            .cls-1{fill:#FBD13E;}.cls-2{fill:none;stroke:#3B9CFF;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}.cls-3{fill:#3B9CFF;}
+        </style>
+    </defs>
+    <title>control-panel-orange</title>
+    <g id="Row_2" data-name="Row 2">
+        <rect class="cls-1" x="5.5" y="5.5" width="99" height="99"/>
+        <line class="cls-2" x1="18.63" y1="76.25" x2="55" y2="76.25"/>
+        <line class="cls-2" x1="59.67" y1="76.25" x2="90.37" y2="76.25"/>
+        <line class="cls-2" x1="18.63" y1="56.33" x2="48.55" y2="56.33"/>
+        <line class="cls-2" x1="55" y1="56.33" x2="90.37" y2="56.33"/>
+        <line class="cls-2" x1="18.63" y1="33.75" x2="51.11" y2="33.75"/>
+        <line class="cls-2" x1="59.67" y1="33.75" x2="90.37" y2="33.75"/>
+        <path class="cls-3"
+              d="M71.13,76.25h0a6.45,6.45,0,0,1-6.45,6.45H61.45A6.45,6.45,0,0,1,55,76.25h0a6.46,6.46,0,0,1,6.45-6.46h3.23A6.46,6.46,0,0,1,71.13,76.25Z"/>
+        <path class="cls-3"
+              d="M55,56.33h0a6.46,6.46,0,0,1-6.45,6.46H45.32a6.46,6.46,0,0,1-6.45-6.46h0a6.46,6.46,0,0,1,6.45-6.45h3.23A6.46,6.46,0,0,1,55,56.33Z"/>
+        <path class="cls-3"
+              d="M64.68,33.75h0a6.46,6.46,0,0,1-6.45,6.46H55a6.46,6.46,0,0,1-6.45-6.46h0A6.45,6.45,0,0,1,55,27.3h3.23A6.45,6.45,0,0,1,64.68,33.75Z"/>
+    </g>
+</svg>

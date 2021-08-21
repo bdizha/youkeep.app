@@ -1,0 +1,23 @@
+<svg id="Main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <defs>
+        <style>.cls-1{fill:#3B9CFF;}.cls-2{fill: #FBD13E99;}</style>
+    </defs>
+    <path class="cls-1" d="M1,2.5v20H13V20.73h-.5V22h-11V3h11v8.41H13V2.5Z"/>
+    <polygon class="cls-2" points="11.52 7 11.52 11.41 8.62 11.41 8.62 20 2.52 20 2.52 7 11.52 7"/>
+    <rect class="cls-1" x="1.4" y="4.75" width="11.25" height="0.5"/>
+    <path class="cls-1" d="M7,5.82a.31.31,0,0,0-.3.3.3.3,0,0,0,.3.3.29.29,0,0,0,.3-.3.3.3,0,0,0-.3-.3Z"/>
+    <path class="cls-1" d="M11,0H3L1,2.5V3H13V2.5ZM1.66,2.5l1.6-2h7.53l1.59,2Z"/>
+    <path class="cls-1" d="M1,22v.5L3,24h8l2-1.5V22Zm9.85,1.5H3.19l-1.33-1H12.19Z"/>
+    <polygon class="cls-1"
+             points="16.74 8 16.24 8 16.24 6.46 15.56 5.79 14.01 5.79 14.01 5.29 15.77 5.29 16.74 6.26 16.74 8"/>
+    <polygon class="cls-1"
+             points="18.39 8 17.89 8 17.89 5.64 16.39 4.15 14.01 4.15 14.01 3.65 16.59 3.65 18.39 5.43 18.39 8"/>
+    <polygon class="cls-1"
+             points="20.05 8 19.55 8 19.55 4.41 17.63 2.51 14.01 2.51 14.01 2.01 17.83 2.01 20.05 4.2 20.05 8"/>
+    <rect class="cls-2" x="8.3" y="13" width="14.69" height="2"/>
+    <path class="cls-1" d="M22.49,11.5v9H8.8v-9H22.49M23,11H8.3V21H23V11Z"/>
+    <rect class="cls-1" x="10.32" y="15.81" width="1.47" height="0.5"/>
+    <rect class="cls-1" x="13.26" y="15.81" width="3.67" height="0.5"/>
+    <rect class="cls-1" x="10.32" y="17.14" width="0.74" height="0.5"/>
+    <rect class="cls-1" x="12.52" y="17.14" width="2.94" height="0.5"/>
+</svg>

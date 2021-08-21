@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
+    <defs>
+        <style>
+            .cls-1{fill:#3B9CFF;}.cls-2,.cls-4{fill:none;stroke-linecap:round;stroke-width:2px;}.cls-2{stroke:#FBD13E;stroke-linejoin:round;}.cls-3{fill:#FBD13E;}.cls-4{stroke:#FBD13E;stroke-miterlimit:10;}
+        </style>
+    </defs>
+    <title>gain-control-orange</title>
+    <g id="Row_5" data-name="Row 5">
+        <path class="cls-1" d="M52.81,87.36a14.66,14.66,0,0,0-14.65,14.19h29.3A14.66,14.66,0,0,0,52.81,87.36Z"/>
+        <path class="cls-1"
+              d="M98.38,8.45H5.27v93.1h10V96.13l7.62-2.65A25.13,25.13,0,0,1,25.7,86.9l-3.47-7.27,8.31-8.3,7.27,3.46A32.62,32.62,0,0,1,44.39,72L47,64.4H58.81L61.46,72A25.13,25.13,0,0,1,68,74.79l7.27-3.46,8.3,8.3L80.15,86.9a33.2,33.2,0,0,1,2.77,6.58l7.61,2.65v5.42h8l-.12-93.1Z"/>
+        <line class="cls-2" x1="104.73" y1="100.55" x2="104.73" y2="48.52"/>
+        <circle class="cls-3" cx="14.97" cy="21.25" r="2.31"/>
+        <circle class="cls-3" cx="22" cy="21.25" r="2.31"/>
+        <circle class="cls-3" cx="28.93" cy="21.25" r="2.31"/>
+        <line class="cls-4" x1="14.97" y1="29.68" x2="90.19" y2="29.68"/>
+    </g>
+</svg>
