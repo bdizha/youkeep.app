@@ -99,7 +99,7 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h4 class="r-heading r-text-uppercase r-text-blue">
+                          <h4 class="r-heading r-text-uppercase r-text-yellow">
                             Vision:
                           </h4>
                         </a-col>
@@ -189,13 +189,13 @@ export default {
           solution: 'Empowering suppliers and retailers to be productive and successful. Suppliers can create free product profiles that detail all the key information buyers need to know when considering your product.'
         },
         {
-          title: 'Brickcent',
-          slug: 'brickcent',
+          title: 'Addtract',
+          slug: 'Addtract',
           content: 'A fractional investment platform to make property accessible to everyone.',
           problem: 'Traditionally inventing in real estate hasn’t been available to most ' +
             'low income investors without either meeting high net worth requirements or going through a complex and inefficient process, ' +
             'riddled with high fees and outdated middlemen.',
-          solution: 'Brickcent is designed to utilise technology to make high-quality real estate investments affordable to everyone. We combine state-of-the-art technology with in-house expertise to reduce fees and maximize your long-term return potential.\n'
+          solution: 'Addtract is designed to utilise technology to make high-quality selling tools affordable to everyone. We combine state-of-the-art technology with in-house expertise to reduce fees and maximize your long-term business connectons.\n'
         },
         {
           title: 'Finkipa',

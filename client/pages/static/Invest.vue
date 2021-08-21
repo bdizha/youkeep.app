@@ -29,7 +29,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading">
-                            How <span class="r-text-primary">investing</span> with Brickcent works
+                            How <span class="r-text-primary">investing</span> with Addtract works
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -82,7 +82,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-uppercase">
-                    <span class="r-text-blue">How it works</span>
+                    <span class="r-text-yellow">How it works</span>
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -235,7 +235,7 @@ export default {
       hasData: false,
       steps: [
         {
-          title: 'The Brickcent Way',
+          title: 'The Addtract Way',
           image: 'illustration-2-primary',
           theme: 'blue',
           heading: 'We deliver value in five steps:',

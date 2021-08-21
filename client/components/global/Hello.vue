@@ -2,7 +2,7 @@
   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
     <a-col v-show="hasForm" :xs="{ span: 24 }" class="r-text-left">
       <h2 class="r-heading">
-        <span class="r-text-blue">Get</span> in touch today!
+        <span class="r-text-yellow">Get</span> in touch today!
       </h2>
     </a-col>
     <a-col v-show="hasForm" :xs="{ span: 24 }" class="r-text-left">
@@ -106,7 +106,7 @@ const CATEGORIES = [
     key: 1
   },
   {
-    label: 'I want to partner with Brickcent',
+    label: 'I want to partner with Addtract',
     key: 2
   },
   {

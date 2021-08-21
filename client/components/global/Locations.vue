@@ -27,13 +27,13 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                       >
-                        <h4 class="r-heading r-text-blue">
+                        <h4 class="r-heading r-text-yellow">
                           {{ location.continent }}
                         </h4>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                       >
-                        <p class="r-text-normal r-text-blue">
+                        <p class="r-text-normal r-text-yellow">
                           {{ location.email }}
                         </p>
                       </a-col>
@@ -59,22 +59,22 @@ export default {
         {
           city: 'Cape Town',
           continent: 'Africa',
-          email: 'info@Brickcent.com'
+          email: 'info@Addtract.com'
         },
         {
           city: 'Johannesburg',
           continent: 'Africa',
-          email: 'info@Brickcent.com'
+          email: 'info@Addtract.com'
         },
         {
           city: 'Dubai',
           continent: 'Middle East',
-          email: 'partner@Brickcent.com'
+          email: 'partner@Addtract.com'
         },
         {
           city: 'Mumbai',
           continent: 'Asia',
-          email: 'partner@Brickcent.com'
+          email: 'partner@Addtract.com'
         }
       ]
     }

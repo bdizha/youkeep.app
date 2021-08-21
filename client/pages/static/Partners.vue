@@ -38,7 +38,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium">
-                            It's really hard to build a business that lasts for many years. At Brickcent we are
+                            It's really hard to build a business that lasts for many years. At Addtract we are
                             providing our partners an opportunity to re-invent their products and solutions at an
                             accelerated pace.
                           </p>
@@ -84,7 +84,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h4 class="r-heading-light r-text-uppercase">
-                    <span class="r-text-blue">We treat all good problems with respect</span>
+                    <span class="r-text-yellow">We treat all good problems with respect</span>
                   </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -148,7 +148,7 @@
                      :xs="{ span: 24 }"
               >
                 <h3 class="r-heading-light r-text-uppercase">
-                  <span class="r-text-blue">Success scaling</span>
+                  <span class="r-text-yellow">Success scaling</span>
                 </h3>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -156,7 +156,7 @@
                      :xs="{ span: 24 }"
               >
                 <p class="r-text-medium">
-                  Everything we do is based on <span class="r-text-blue">capital inclusion</span>.
+                  Everything we do is based on <span class="r-text-yellow">capital inclusion</span>.
                   Sometimes we find our own good problems, and these lead us to create products, services or ideas we
                   can share with the right client at the right time.
                 </p>
@@ -183,7 +183,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h4 class="r-heading-light r-text-uppercase">
-                    <span class="r-text-blue">Relentless.</span>
+                    <span class="r-text-yellow">Relentless.</span>
                     <span class="r-text-secondary">Courageous.</span>
                     <span class="r-text-primary">Ferocious</span>
                   </h4>
@@ -250,8 +250,8 @@ export default {
           content: 'B2B platform connecting retailers and suppliers for better product discovery.'
         },
         {
-          title: 'Brickcent',
-          slug: 'brickcent',
+          title: 'Addtract',
+          slug: 'Addtract',
           content: 'A fractional investment platform to make property accessible to everyone.'
         },
         {

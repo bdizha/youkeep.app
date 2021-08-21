@@ -26,20 +26,15 @@
                         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <nuxt-link to="/">
-                              <img alt="Brickcent - Fractional real estate investment."
+                              <img alt="Addtract - Fractional real estate investment."
                                    class="r-footer-logo /"
-                                   src="/images/logo_dark.png"
+                                   src="/images/logo_dark.svg"
                               >
                             </nuxt-link>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <h4 class="r-heading">
-                              Invest smart in property.
-                            </h4>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <p class="r-text-normal">
-                              Brickcent is a fractional investment platform to make property accessible to everyone.
+                              A B2B platform connecting retailers to suppliers for better product discovery.
                             </p>
                           </a-col>
                         </a-row>
@@ -50,7 +45,7 @@
                             <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <h4 class="r-heading r-text-uppercase">
-                                  Product
+                                  Our Platform
                                 </h4>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
@@ -60,17 +55,17 @@
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/invest#auto">Auto Invest</nuxt-link>
+                                  <nuxt-link to="/invest#prime">Inside the Product</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/invest#core">Core Invest</nuxt-link>
+                                  <nuxt-link to="/seller">For Sellers</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/invest#prime">Prime Invest</nuxt-link>
+                                  <nuxt-link to="/customer">For Buyers</nuxt-link>
                                 </div>
                               </a-col>
                             </a-row>
@@ -89,7 +84,7 @@
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/properties">Properties</nuxt-link>
+                                  <nuxt-link to="/brand">Our Brand</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">

@@ -80,7 +80,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading-light">
-                <span class="r-text-blue">Innovate</span> <span class="r-text-blue">alongside</span> Brickcent.
+                <span class="r-text-blue">Innovate</span> <span class="r-text-blue">alongside</span> Addtract.
               </h2>
             </a-col>
             <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
@@ -114,7 +114,7 @@
                    :xs="{ span: 24 }"
             >
               <h3 class="r-heading-light r-text-blue r-text-uppercase">
-                Invest smart in property.
+                Unprecedented product discovery.
               </h3>
             </a-col>
             <a-col :lg="{ span: 21 }" :md="{ span: 24 }"

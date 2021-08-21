@@ -18,7 +18,7 @@
                      type="flex"
               >
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                  <h3 class="r-heading-light r-text-blue">
+                  <h3 class="r-heading-light r-text-yellow">
                     {{ review.author }}
                   </h3>
                 </a-col>
@@ -26,7 +26,7 @@
                   <p class="r-text-normal">
                     {{ review.content }}
                   </p>
-                  <p class="r-text-medium r-text-blue">
+                  <p class="r-text-medium r-text-yellow">
                     {{ review.company }}
                   </p>
                 </a-col>

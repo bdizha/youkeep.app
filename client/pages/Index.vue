@@ -18,8 +18,8 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                            Think long term
+                          <h3 class="r-heading-light r-text-uppercase">
+                              Look no further
                           </h3>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -27,8 +27,9 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading r-text-uppercase">
-                            Invest <span class="r-text-primary">smart</span>,<br>
-                            Earn <span class="r-text-secondary">more</span>.
+                            <span class="r-text-primary">Innovative</span><br>
+                            <span class="r-text-yellow">Product</span><br>
+                            <span class="r-text-secondary">Discovery</span>
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -37,7 +38,7 @@
                         >
                           <div class="r-checked-item">
                             <a-icon class="r-checked-item-icon" type="check"></a-icon>
-                            <span class="r-text-medium">Auto returns at 10.00% annually</span>
+                            <span class="r-text-medium">Your categories</span>
                           </div>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -46,7 +47,7 @@
                         >
                           <div class="r-checked-item">
                             <a-icon class="r-checked-item-icon" type="check"></a-icon>
-                            <span class="r-text-medium">Own quality yield property Bricks</span>
+                            <span class="r-text-medium">Your schedule</span>
                           </div>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -55,7 +56,7 @@
                         >
                           <div class="r-checked-item">
                             <a-icon class="r-checked-item-icon" type="check"></a-icon>
-                            <span class="r-text-medium">Smart way to invest in property</span>
+                            <span class="r-text-medium">Your success</span>
                           </div>
                         </a-col>
                         <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -76,9 +77,9 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            Brickcent is designed to utilise technology to make high-quality real estate investments
+                            Addtract is designed to utilise technology to make high-quality selling tools
                             affordable to everyone. We combine state-of-the-art technology with in-house expertise to
-                            reduce fees and maximize your long-term return potential.
+                            reduce fees and maximize your long-term business connections.
                           </p>
                         </a-col>
                       </a-row>
@@ -377,7 +378,7 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <h3 class="r-heading-light r-text-blue r-text-uppercase">
+                  <h3 class="r-heading-light r-text-yellow r-text-uppercase">
                     It's easy to get started.
                   </h3>
                 </a-col>
@@ -386,7 +387,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-normal">
-                    Signing up with Brickcent is simple and only takes a few minutes. Earn any capital returns in line
+                    Signing up with Addtract is simple and only takes a few minutes. Earn any capital returns in line
                     with property price changes when you sell your Bricks
                   </p>
                 </a-col>

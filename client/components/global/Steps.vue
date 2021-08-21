@@ -17,7 +17,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light">
-                    <span class="r-text-blue">The Brickcent Framework Model</span>
+                    <span class="r-text-yellow">The Addtract Framework Model</span>
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"

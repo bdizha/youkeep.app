@@ -7,7 +7,7 @@ Vue.use(Router)
 const page = path => () => import(`~/pages/${path}`).then(m => m.default || m)
 
 const routes = [
-  { path: '/', name: 'index', meta: { isDark: false, isRaised: false}, component: page('Index.vue') },
+  { path: '/', name: 'index', meta: { isDark: true, isRaised: false}, component: page('Index.vue') },
 
   { path: '/login', name: 'login', meta: { isDark: false, isRaised: false}, component: page('auth/Login.vue') },
   { path: '/register', name: 'register', meta: { isDark: false, isRaised: false}, component: page('auth/Register.vue') },

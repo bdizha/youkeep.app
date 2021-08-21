@@ -20,7 +20,7 @@
                    :xs="{ span: 24 }"
             >
               <p class="r-text-medium r-text-dark">
-                Making property <span class="r-text-blue">investment</span>
+                Making property <span class="r-text-yellow">investment</span>
                 <span class="r-text-primary">accessible</span> to everyone.
               </p>
             </a-col>

@@ -1,85 +1,101 @@
 <template>
-  <a-row class="r-bg-white" :gutter="[48,96]" align="middle" justify="center" type="flex">
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <a-card class="r-bg-secondary">
-        <a-card-meta>
-          <template slot="description">
-            <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-                  <a-col :lg="{ span: 15 }" :md="{ span: 16 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                          For customers
-                        </h3>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <h1 class="r-heading">
-                          It's <span class="r-text-primary">business</span> time!
-                        </h1>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <p class="r-text-medium">
-                          Order everything from clothes to household essentials for delivery to your door. Get your next delivery in a few hour today.
-                        </p>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <p class="r-text-normal">
-                          With online business platform, tens of thousands of product categories, and millions of
-                          products
-                          in
-                          front of you, it’s the all-in-one
-                          marketplace you deserve.
-                        </p>
-                      </a-col>
-                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <a-button block
-                                  class="r-btn-primary"
-                                  size="large"
-                                  to="/register"
-                                  type="secondary"
-                                  @click="onRegister"
+  <a-row :gutter="[96,96]" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-card class="r-bg-dark r-pull-h-24 r-border-none r-card-r-128">
+            <div class="r-mv-48">
+              <a-row :gutter="[48,48]" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24}"
+                    >
+                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
                         >
-                          Start business today!
-                        </a-button>
-                      </a-col>
-                    </a-row>
-                  </a-col>
-                </a-row>
-              </a-col>
-              <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <r-avatar :size="450" class="r-avatar-block" data-src="/images/content/screen-01-primary.png"
-                ></r-avatar>
-              </a-col>
-            </a-row>
-          </template>
-        </a-card-meta>
-      </a-card>
+                          <h3 class="r-heading-light r-text-uppercase">
+                            Look no further
+                          </h3>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <h1 class="r-heading r-text-uppercase">
+                            <span class="r-text-primary">Innovative</span><br>
+                            <span class="r-text-yellow">Product</span><br>
+                            <span class="r-text-secondary">Discovery</span>
+                          </h1>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <div class="r-checked-item">
+                            <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                            <span class="r-text-medium">Your categories</span>
+                          </div>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <div class="r-checked-item">
+                            <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                            <span class="r-text-medium">Your schedule</span>
+                          </div>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <div class="r-checked-item">
+                            <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                            <span class="r-text-medium">Your success</span>
+                          </div>
+                        </a-col>
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                               :sm="{ span: 12 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <a-button class="r-btn-primary"
+                                    @click="onModal"
+                                    block
+                                    size="large"
+                                    type="blue"
+                          >
+                            Get started
+                          </a-button>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-normal">
+                            Addtract is designed to utilise technology to make high-quality selling tools
+                            affordable to everyone. We combine state-of-the-art technology with in-house expertise to
+                            reduce fees and maximize your long-term business connections.
+                          </p>
+                        </a-col>
+                      </a-row>
+                    </a-col>
+                  </a-row>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <r-avatar data-src="/images/content/happy-2.jpg" :size="300" class="r-avatar-block"
+                  ></r-avatar>
+                </a-col>
+              </a-row>
+            </div>
+            <div class="r-cover-image-half" style="background-image:url(/images/content/happy-2.jpg)"></div>
+          </a-card>
+        </a-col>
+      </a-row>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
@@ -119,7 +135,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      We can't wait for you to <span class="r-text-primary">experience</span> all the Brickcent offers
+                      We can't wait for you to <span class="r-text-primary">experience</span> all the Addtract offers
                       today.
                     </p>
                   </a-col>
@@ -199,9 +215,9 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-normal">
-                      Brickcent is committed to providing you with exceptional service, efficient and speedy
+                      Addtract is committed to providing you with exceptional service, efficient and speedy
                       deliveries,
-                      and Brickcent stores you can trust.
+                      and Addtract stores you can trust.
                     </p>
                   </a-col>
                 </a-row>
@@ -235,7 +251,7 @@
                          :xs="{ span: 24 }"
                   >
                     <h2 class="r-heading">
-                      Brickcent offers the <span class="r-text-primary">best</span> business <span
+                      Addtract offers the <span class="r-text-primary">best</span> business <span
                       class="r-text-primary"
                     >experience</span> on the market today!
                     </h2>
@@ -245,7 +261,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      Brickcent business is the <span class="r-text-primary">best</span> business experience on the
+                      Addtract business is the <span class="r-text-primary">best</span> business experience on the
                       market.
                     </p>
                   </a-col>
@@ -290,7 +306,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                    You want to <span class="r-text-white">Buy</span> online at Brickcent?
+                    You want to <span class="r-text-white">Buy</span> online at Addtract?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 18 }"

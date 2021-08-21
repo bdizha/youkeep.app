@@ -48,7 +48,7 @@
                                        :xs="{ span: 24 }"
                                 >
                                   <p class="r-text-large">
-                                    We created Brickcent to make your unique life better and flexible.
+                                    We created Addtract to make your unique life better and flexible.
                                   </p>
                                 </a-col>
                                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"

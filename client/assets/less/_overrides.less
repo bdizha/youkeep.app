@@ -75,6 +75,10 @@ h3 {
     color: @blue-color !important;
 }
 
+.r-text-yellow {
+    color: @yellow-color !important;
+}
+
 .r-text-dark {
     color: @black !important;
 }
@@ -756,7 +760,7 @@ x {
     }
 
     .r-store-active {
-        background: #F56F45 !important;
+        background: #3A9CFF !important;
         color: @white;
         position: absolute;
         top: -9px;
@@ -807,19 +811,19 @@ x {
 
 .ant-select-focused {
     .ant-select-selection {
-        border-color: #F56F45 !important;
+        border-color: #3A9CFF !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 }
 
 .ant-select-selection {
     &:focus {
-        border-color: #F56F45 !important;
+        border-color: #3A9CFF !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 
     &:active {
-        border-color: #F56F45 !important;
+        border-color: #3A9CFF !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 }
@@ -828,7 +832,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #F56F45 !important;
+            border-right: 3px solid #3A9CFF !important;
         }
 
         font-size: 15px !important;
@@ -847,7 +851,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #F56F45 !important;
+            border-right: 3px solid #3A9CFF !important;
         }
 
         font-size: 15px !important;
@@ -866,7 +870,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #F56F45 !important;
+            border-right: 3px solid #3A9CFF !important;
         }
 
         font-size: 15px !important;
@@ -1032,7 +1036,7 @@ x {
 
 .ant-rate {
     font-size: 21px;
-    color: #1D9CD3;
+    color: #00C2FF;
     @media (max-width: 768px) {
         font-size: 18px;
     }
@@ -1444,6 +1448,28 @@ x {
     }
 }
 
+.r-btn-yellow {
+    background: @yellow-color !important;
+    color: @primary-color;
+    border-color: @yellow-color !important;
+    font-weight: 600;
+    opacity: 1;
+
+    &:hover {
+        color: @yellow-color;
+        background: @primary-color;
+        opacity: 1;
+        border-color: @primary-color;
+    }
+
+    &:focus {
+        color: @yellow-color;
+        background: @primary-color;
+        opacity: 0.9;
+        border-color: @primary-color;
+    }
+}
+
 .r-btn-dark {
     span {
         font-weight: 600;
@@ -1805,7 +1831,7 @@ xxl	≥1600px, could be a span value or an object containing above props
     cursor: pointer;
 
     &:hover {
-        color: #F56F45 !important;
+        color: #3A9CFF !important;
     }
 
     .anticon {
@@ -1995,7 +2021,7 @@ xxl	≥1600px, could be a span value or an object containing above props
             }
 
             .r-text-link {
-                color: #1D9CD3;
+                color: #00C2FF;
                 opacity: 0.96;
             }
         }
@@ -2202,7 +2228,7 @@ h4 {
 
     .r-cart-btn {
         border: 1px solid @white;
-        color: #F56F45AC;
+        color: #3A9CFFAC;
         width: 100%;
         text-align: center;
 
@@ -2221,7 +2247,7 @@ h4 {
 
         .r-cart-btn {
             background: @white;
-            color: #1D9CD3AC;
+            color: #00C2FFAC;
 
             &:hover {
                 background: @secondary-color;
@@ -2298,7 +2324,7 @@ h4 {
 
     .r-cart-btn {
         border: 1px solid @white;
-        color: #1D9CD3AC;
+        color: #00C2FFAC;
         width: 100%;
         text-align: center;
 
@@ -2317,7 +2343,7 @@ h4 {
 
         .r-cart-btn {
             background: @white;
-            color: #1D9CD3AC;
+            color: #00C2FFAC;
 
             &:hover {
                 background: @secondary-color;
@@ -2822,11 +2848,11 @@ label {
 }
 
 .ant-form-shadow-secondary {
-    box-shadow: 0 12px 15px 6px #F56F4522, 0 8px 28px 6px #F56F4533, 0 12px 15px -6px #F56F4544;
+    box-shadow: 0 12px 15px 6px #3A9CFF22, 0 8px 28px 6px #3A9CFF33, 0 12px 15px -6px #3A9CFF44;
 }
 
 .ant-form-shadow-primary {
-    box-shadow: 0 12px 15px 6px #F56F4522, 0 8px 28px 6px #F56F4533, 0 12px 15px -6px #F56F4544;
+    box-shadow: 0 12px 15px 6px #3A9CFF22, 0 8px 28px 6px #3A9CFF33, 0 12px 15px -6px #3A9CFF44;
 }
 
 .r-inline-text {
@@ -2890,37 +2916,37 @@ label {
     }
 
     > .ant-menu-item-active {
-        color: #F56F45 !important;
+        color: #3A9CFF !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-submenu-active {
-        color: #F56F45 !important;
+        color: #3A9CFF !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-item-open {
-        color: #F56F45 !important;
+        color: #3A9CFF !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-submenu-open {
-        color: #F56F45 !important;
+        color: #3A9CFF !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-item-selected {
-        color: #F56F45 !important;
+        color: #3A9CFF !important;
         border-bottom: 2px solid transparent;
         border-radius: @border-radius;
 
         > a {
-            color: #F56F45 !important;
+            color: #3A9CFF !important;
         }
     }
 
     > .ant-menu-submenu-selected {
-        color: #F56F45 !important;
+        color: #3A9CFF !important;
         border-bottom: 2px solid transparent !important;
     }
 }
@@ -3822,7 +3848,7 @@ label {
     right: 24px;
 
     .ant-btn {
-        background: #F56F45 !important;
+        background: #3A9CFF !important;
         color: #FFFFFF !important;
     }
 }
@@ -3904,11 +3930,11 @@ label {
 
 .ant-avatar {
     &.r-avatar-primary {
-        border: 1px solid #F56F4566;
+        border: 1px solid #3A9CFF66;
     }
 
     &.r-avatar-secondary {
-        border: 1px solid #1D9CD366;
+        border: 1px solid #00C2FF66;
     }
 
     &.r-avatar-store {
@@ -4456,7 +4482,7 @@ label {
         &:hover,
         &.r-checkout-item__active {
             &:before {
-                background-color: #F56F4599;
+                background-color: #3A9CFF99;
             }
 
             &.r-checkout-item-address {
@@ -4647,7 +4673,7 @@ label {
     }
 
     .r-page-white {
-        background-color: #F56F4599;
+        background-color: #3A9CFF99;
     }
 
     .r-page-secondary {
@@ -5144,7 +5170,7 @@ label {
 }
 
 .r-search-btn {
-    background-color: #F56F45E6;
+    background-color: #3A9CFFE6;
     border-color: #FDBAC4;
     color: @white;
 
@@ -5999,7 +6025,7 @@ label {
 
 .r-art-primary {
     background-image: url(/images/art-white.svg);
-    background-color: #F56F45DD;
+    background-color: #3A9CFFDD;
     background-repeat: repeat;
     padding: 24px;
     background-size: 0.6% !important;
@@ -6018,7 +6044,7 @@ label {
 }
 
 .r-art-primary-light {
-    background: #F56F4599 url(/images/art-primary.svg) repeat scroll 0% 0% !important;
+    background: #3A9CFF99 url(/images/art-primary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -6027,7 +6053,7 @@ label {
 }
 
 .r-art-primary-secondary {
-    background: #F56F4599 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
+    background: #3A9CFF99 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -6045,7 +6071,7 @@ label {
 }
 
 .r-art-secondary-light {
-    background: #F56F4599 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
+    background: #3A9CFF99 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -6601,7 +6627,7 @@ label {
                 color: @secondary-color;
             }
 
-            background: #F56F4599;
+            background: #3A9CFF99;
         }
     }
 }
@@ -6642,7 +6668,7 @@ label {
     .ant-card {
         .r-shopper-icon {
             color: @secondary-color;
-            background: #F56F4599;
+            background: #3A9CFF99;
             height: 168px;
             width: 168px;
             padding: 24px;
@@ -7535,7 +7561,7 @@ h3.r-step-heading {
     }
 
     .r-slider .slick-prev, .r-slider .slick-next {
-        color: #1D9CD3;
+        color: #00C2FF;
         background: @white;
         border: 1px solid transparent;
         top: 50%;
@@ -7659,7 +7685,7 @@ h3.r-step-heading {
     border-radius: 50%;
     overflow: hidden;
     color: @primary-color;
-    background: #F56F4599 url(/images/icon_pattern_white.svg) repeat;
+    background: #3A9CFF99 url(/images/icon_pattern_white.svg) repeat;
     border-color: @secondary-color;
     text-align: center;
     box-shadow: @shadow-color 0px 1px 3px 0px;
@@ -7858,8 +7884,8 @@ a:hover {
 
     &:hover {
         .ant-avatar-icon {
-            background: #F56F4599;
-            border-color: #F56F4533;
+            background: #3A9CFF99;
+            border-color: #3A9CFF33;
             color: @secondary-color;
         }
     }
@@ -8056,7 +8082,7 @@ a:hover {
 
 .slick-dots li.slick-active button:before {
     opacity: .96;
-    color: #F56F45
+    color: #3A9CFF
 }
 
 .r-slick-thumb {

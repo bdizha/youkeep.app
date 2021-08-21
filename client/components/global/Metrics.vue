@@ -12,7 +12,7 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <h1 class="r-text-xlarge-light r-text-blue">
+                <h1 class="r-text-xlarge-light r-text-yellow">
                   6,500
                 </h1>
               </a-col>
@@ -22,7 +22,7 @@
               >
                 <h4 class="r-heading">
                   <span class="r-text-dark">Partner</span>
-                  <span class="r-text-blue">Applications</span>
+                  <span class="r-text-yellow">Applications</span>
                 </h4>
               </a-col>
             </a-row>
@@ -135,7 +135,7 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <h1 class="r-text-xlarge-light r-text-blue">
+                <h1 class="r-text-xlarge-light r-text-yellow">
                   15,000
                 </h1>
               </a-col>
@@ -145,7 +145,7 @@
               >
                 <h4 class="r-heading">
                   <span class="r-text-dark">Business</span>
-                  <span class="r-text-blue">Clients</span>
+                  <span class="r-text-yellow">Clients</span>
                 </h4>
               </a-col>
             </a-row>

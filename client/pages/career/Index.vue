@@ -48,7 +48,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            Brickcent empowers the whole startup experience for businesses in Africa. We specialize in
+                            Addtract empowers the whole startup experience for businesses in Africa. We specialize in
                             advisory, order tracking, and marketplace services focused on delivering a customer
                             experience of unparalleled quality.
                             No great solution is developed in a vacuum. Experience and domain knowledge is crucial.
@@ -112,7 +112,7 @@
                   >
                     <p class="r-text-normal">
                       If you take innovation passionately, then you're in the right place.
-                      Brickcent is a consumer centric platform that transforms
+                      Addtract is a consumer centric platform that transforms
                       the way shoppers experience their business.
                     </p>
                   </a-col>
@@ -149,7 +149,7 @@
               >
                 <p class="r-text-normal">
                   It's all about giving back our customers the control of their business.
-                  At Brickcent, we are building a business experience that helps millions of people be
+                  At Addtract, we are building a business experience that helps millions of people be
                   in control of their business experience.
                 </p>
               </a-col>
@@ -211,7 +211,7 @@
                      :xs="{ span: 24 }"
               >
                 <h4 class="r-heading">
-                  Brickcent as a specialist house with a <span class="r-text-blue">diverse</span>
+                  Addtract as a specialist house with a <span class="r-text-blue">diverse</span>
                   team
                 </h4>
               </a-col>
