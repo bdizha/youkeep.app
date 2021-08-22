@@ -99,7 +99,7 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h4 class="r-heading r-text-uppercase r-text-yellow">
+                          <h4 class="r-heading-light r-text-uppercase r-text-yellow">
                             Vision:
                           </h4>
                         </a-col>
@@ -122,7 +122,7 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h4 class="r-heading r-text-uppercase r-text-secondary">
+                          <h4 class="r-heading-light r-text-uppercase r-text-secondary">
                             Execution:
                           </h4>
                         </a-col>
@@ -145,7 +145,7 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h4 class="r-heading r-text-uppercase r-text-primary">
+                          <h4 class="r-heading-light r-text-uppercase r-text-primary">
                             Scale:
                           </h4>
                         </a-col>
@@ -183,7 +183,7 @@ export default {
       portfolio: [
         {
           title: 'Addtract',
-          slug: 'addtract',
+          slug: 'Addtract',
           content: 'B2B platform connecting retailers and suppliers for better product discovery.',
           problem: 'Retailers didn’t have a good mechanism to contact suppliers, and when they did get proposals, the suppliers often didn’t know what information the retailers needed to make a decision on their product.',
           solution: 'Empowering suppliers and retailers to be productive and successful. Suppliers can create free product profiles that detail all the key information buyers need to know when considering your product.'

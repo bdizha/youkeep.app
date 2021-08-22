@@ -16,7 +16,7 @@ const COLUMNS = [
     key: 'from',
     scopedSlots: {}
   },
-  { title: 'Brickcent Category', dataIndex: 'to', key: 'to' }
+  { title: 'Addtract Category', dataIndex: 'to', key: 'to' }
 ]
 
 const CATEGORY_MAPS = [

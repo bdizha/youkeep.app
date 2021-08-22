@@ -65,7 +65,7 @@ export default {
         {
           heading: 'Fast',
           title: 'Make Delayed Payments',
-          content: 'Online or in-store, Brickcent means more flexibility at checkout.',
+          content: 'Online or in-store, Addtract means more flexibility at checkout.',
           icon: 'credit-card'
         },
         {
@@ -83,13 +83,13 @@ export default {
         {
           heading: 'Inclusive',
           title: 'Process all major cards',
-          content: 'Brickcent is the only Delayed Payments solution that accepts Amex and Discover along with Visa.',
+          content: 'Addtract is the only Delayed Payments solution that accepts Amex and Discover along with Visa.',
           icon: 'business-cart'
         },
         {
           heading: 'Robust',
           title: 'Get involved in our community',
-          content: 'Introduce your brand to millions of existing Brickcent customers in our marketplace.',
+          content: 'Introduce your brand to millions of existing Addtract customers in our marketplace.',
           icon: 'bank'
         },
         {

@@ -36,7 +36,7 @@
                           </nuxt-link>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                          <h4 class="r-heading r-text-uppercase">
+                          <h4 class="r-heading-light r-text-uppercase">
                             It's shopping time!
                           </h4>
                         </a-col>
@@ -55,7 +55,7 @@
                         <a-col :lg="{ span: 6 }" :md="{ span: 12 }" :xs="{ span: 12}">
                           <a-row :gutter="[24,6]" align="top" justify="start" type="flex">
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                              <h4 class="r-heading r-text-uppercase">
+                              <h4 class="r-heading-light r-text-uppercase">
                                 For Shoppers
                               </h4>
                             </a-col>
@@ -79,7 +79,7 @@
                         <a-col :lg="{ span: 6 }" :md="{ span: 12 }" :xs="{ span: 12}">
                           <a-row :gutter="[24,6]" align="top" justify="start" type="flex">
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                              <h4 class="r-heading r-text-uppercase">
+                              <h4 class="r-heading-light r-text-uppercase">
                                 For Customers
                               </h4>
                             </a-col>
@@ -103,7 +103,7 @@
                         <a-col :lg="{ span: 6 }" :md="{ span: 12 }" :xs="{ span: 12}">
                           <a-row :gutter="[24,6]" align="top" justify="start" type="flex">
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                              <h4 class="r-heading r-text-uppercase">
+                              <h4 class="r-heading-light r-text-uppercase">
                                 For Sellers
                               </h4>
                             </a-col>
@@ -127,7 +127,7 @@
                         <a-col :lg="{ span: 6 }" :md="{ span: 12 }" :xs="{ span: 12}">
                           <a-row :gutter="[24,6]" align="top" justify="start" type="flex">
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                              <h4 class="r-heading r-text-uppercase">
+                              <h4 class="r-heading-light r-text-uppercase">
                                 Company
                               </h4>
                             </a-col>

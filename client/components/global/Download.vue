@@ -5,10 +5,10 @@
         <a-row class="r-m-48" justify="center" type="flex">
           <a-col :span="24">
             <h2 class="r-heading r-text-secondary">
-              Download the Brickcent app
+              Download the Addtract app
             </h2>
             <p class="r-text-normal">
-              The free Brickcent app is available for Android and iOS. Download it soon!
+              The free Addtract app is available for Android and iOS. Download it soon!
             </p>
           </a-col>
         </a-row>

@@ -11,7 +11,7 @@
           <a-row align="middle" justify="start" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
-                Brickcent shopper application
+                Addtract shopper application
               </h2>
               <p v-if="false" class="r-text-normal">
                 Sign in to your account with your email address.
@@ -21,12 +21,12 @@
           <a-row align="middle" justify="start" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is Brickcent?
+                What is Addtract?
               </h3>
               <p class="r-text-normal">
-                Brickcent is a fast growing startup that is improving lives by giving people more time to
+                Addtract is a fast growing startup that is improving lives by giving people more time to
                 spend
-                with their families! Our Brickcent members order business via the Brickcent app and can have
+                with their families! Our Addtract members order business via the Addtract app and can have
                 them
                 delivered on-demand as soon as 1 hour later.
               </p>
@@ -35,10 +35,10 @@
           <a-row align="middle" justify="start" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is a Brickcent shopper?
+                What is a Addtract shopper?
               </h3>
               <p class="r-text-normal">
-                Our Brickcent Shoppers carefully select member's business using the Brickcent app and deliver
+                Our Addtract Shoppers carefully select member's business using the Addtract app and deliver
                 them
                 during a specified, delivery window. Our shoppers enjoy an interactive and fun culture
                 all
@@ -77,7 +77,7 @@
             What are your contact details?
           </h2>
           <p class="r-text-normal">
-            By entering your email addrress and mobile number you are opting in to receive automated Brickcent
+            By entering your email addrress and mobile number you are opting in to receive automated Addtract
             Application
             Notifications. Message and data rates may apply.
           </p>

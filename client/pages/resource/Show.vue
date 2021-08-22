@@ -17,7 +17,7 @@
                            style="text-align: left;"
                     >
                       <h4 class="r-heading-light r-text-uppercase">
-                        How does Brickcent work?
+                        How does Addtract work?
                       </h4>
                       <h1 class="r-heading r-text-secondary">
                         <span class="r-text-secondary">Shop More,</span><br>

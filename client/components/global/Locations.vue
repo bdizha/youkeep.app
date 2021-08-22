@@ -15,7 +15,7 @@
                      :key="index"
                      :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
               >
-                <a-card class="r-bg-secondary-light">
+                <a-card class="r-bg-primary-light">
                   <div class="r-checked-item">
                     <a-icon class="r-checked-item-icon" type="environment"/>
                     <a-row :gutter="[6,6]" align="top" justify="start" type="flex">
@@ -27,13 +27,13 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                       >
-                        <h4 class="r-heading r-text-yellow">
+                        <h4 class="r-heading r-text-primary">
                           {{ location.continent }}
                         </h4>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                       >
-                        <p class="r-text-normal r-text-yellow">
+                        <p class="r-text-normal r-text-primary">
                           {{ location.email }}
                         </p>
                       </a-col>

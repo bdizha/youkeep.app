@@ -44,7 +44,7 @@
                           <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :xs="{ span: 24}">
                             <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <h4 class="r-heading r-text-uppercase">
+                                <h4 class="r-heading-light r-text-uppercase">
                                   Our Platform
                                 </h4>
                               </a-col>
@@ -73,7 +73,7 @@
                           <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :xs="{ span: 24}">
                             <a-row :gutter="[24,12]" align="top" justify="start" type="flex">
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <h4 class="r-heading r-text-uppercase">
+                                <h4 class="r-heading-light r-text-uppercase">
                                   Company
                                 </h4>
                               </a-col>
@@ -97,7 +97,7 @@
                           <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :xs="{ span: 24}">
                             <a-row :gutter="[24,12]" align="top" justify="start" type="flex">
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <h4 class="r-heading r-text-uppercase">
+                                <h4 class="r-heading-light r-text-uppercase">
                                   Resources
                                 </h4>
                               </a-col>

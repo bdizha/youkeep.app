@@ -119,7 +119,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you. Enjoy your business with Brickcent.')
+            $this.$message.success('Thank you. Enjoy your business with Addtract.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

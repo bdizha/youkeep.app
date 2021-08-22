@@ -14,14 +14,14 @@
                        class="gutter-row"
                 >
                   <h4 class="r-heading-light r-text-uppercase">
-                    Brickcent for Sellers
+                    Addtract for Sellers
                   </h4>
                   <h1 class="r-heading">
                     <span class="r-text-secondary">Sell more,</span><br>
                     <span>Pay Less</span>
                   </h1>
                   <p class="r-text-normal">
-                    Unlike other buy-now-pay-later plans, Brickcent lets shoppers use their existing credit card for
+                    Unlike other buy-now-pay-later plans, Addtract lets shoppers use their existing credit card for
                     the easiest most intuitive checkout.
                   </p>
                 </a-col>
@@ -84,7 +84,7 @@
                       We're a better way to achieve better sales.
                     </h3>
                     <p class="r-text-normal">
-                      Brickcent lets your customers pay for products in 3 installments with existing credit at zero
+                      Addtract lets your customers pay for products in 3 installments with existing credit at zero
                       interest.
                     </p>
                   </a-col>
@@ -242,7 +242,7 @@
                             Higher average order rate
                           </h4>
                           <p class="r-text-normal">
-                            Brickcent is the only buy-now-pay-later plan that lets shoppers set up payment plans with
+                            Addtract is the only buy-now-pay-later plan that lets shoppers set up payment plans with
                             their
                             existing credit card without interest charges or fees. This keeps their payments small so
                             they
@@ -288,7 +288,7 @@
                             More qualified customers
                           </h4>
                           <p class="r-text-normal">
-                            Unlike other buy-now-pay-later plans, Brickcent isn’t new financing. Brickcent lets online
+                            Unlike other buy-now-pay-later plans, Addtract isn’t new financing. Addtract lets online
                             shoppers
                             set up monthly payments at checkout with their existing credit so they don’t need to carry
                             new
@@ -337,11 +337,11 @@
                             thousands
                             of
                             customers
-                            and a monthly expansion to new cities, Brickcent was named the fastest growing retail
+                            and a monthly expansion to new cities, Addtract was named the fastest growing retail
                             platform
                             company in
                             South Africa in 2020.
-                            Brickcent thinks it can be done differently: faster, easier and cheaper. The idea is
+                            Addtract thinks it can be done differently: faster, easier and cheaper. The idea is
                             simple.</p>
                         </a-col>
                       </a-row>

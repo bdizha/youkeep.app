@@ -19,7 +19,7 @@
         <a-collapse-panel v-if="isHome"
                           key="links"
                           class="r-collapse-panel"
-                          header="Best of Brickcent"
+                          header="Best of Addtract"
         >
         </a-collapse-panel>
         <a-collapse-panel v-if="isStore" key="delivery"
@@ -93,7 +93,7 @@
       <a-row v-if="isStore" class="r-mb-48" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
           <h4 class="r-store-text-light">
-            Brickcent is an independent business service that is not necessarily affiliated with,
+            Addtract is an independent business service that is not necessarily affiliated with,
             endorsed or sponsored by the stores listed here but it enables you to get the deliveries
             you
             want.

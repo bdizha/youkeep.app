@@ -233,6 +233,8 @@ h1.r-text-xlarge-light {
 
 .r-bg-white {
     background: @white;
+    border-radius: @border-radius;
+
 }
 
 .ant-menu-submenu-title {
@@ -1428,7 +1430,7 @@ x {
 
 .r-btn-primary {
     background: @primary-color !important;
-    color: @white;
+    color: @white !important;
     border-color: @primary-color !important;
     font-weight: 600;
     opacity: 1;
@@ -1535,18 +1537,18 @@ x {
     }
 
     background: @secondary-color;
-    color: @white;
+    color: @white !important;
     border-color: @secondary-color;
     opacity: 1;
 
     &:hover {
-        color: @secondary-color !important;
+        color: @white !important;
         background: @primary-color !important;
         border-color: @primary-color;
     }
 
     &:focus {
-        color: @secondary-color !important;
+        color: @white !important;
         border-color: @primary-color !important;
         background: @primary-color !important;
     }
@@ -2041,7 +2043,7 @@ xxl	≥1600px, could be a span value or an object containing above props
 
 .r-checked-item-icon {
     padding: 6px;
-    font-size: 18px;
+    font-size: 14px;
     border-radius: 100%;
     background: transparent;
     border: 2px solid @secondary-color;
@@ -2076,6 +2078,10 @@ xxl	≥1600px, could be a span value or an object containing above props
     min-height: 30px;
     padding-left: 45px;
     position: relative;
+
+    .r-text-medium {
+        line-height: 30px;
+    }
 
     .r-checked-item-icon {
         position: absolute;
@@ -3612,6 +3618,9 @@ label {
     background-image: url(/images/icon_pattern_white.svg);
     background-repeat: no-repeat;
     background-position: center;
+    .ant-card-body {
+        background-image: none !important;
+    }
 }
 
 .r-bg-bag {
@@ -6903,8 +6912,7 @@ label {
     background: @primary-color-light;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_primary_large.svg) no-repeat;
-        background-size: 65%;
+        background: transparent url(/images/icon_pattern_primary_light.svg) no-repeat;
     }
 }
 
@@ -6912,8 +6920,7 @@ label {
     background: @secondary-color-light;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_secondary_large.svg) no-repeat;
-        background-size: 65%;
+        background: transparent url(/images/icon_pattern_secondary_light.svg) no-repeat;
     }
 }
 
@@ -6921,8 +6928,16 @@ label {
     background: @green-color-light;
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_primary_large.svg) no-repeat;
+        background: transparent url(/images/icon_pattern_green_light.svg) no-repeat;
         background-size: 65%;
+    }
+}
+
+.r-bg-yellow-light {
+    background: @gray;
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_yellow_light.svg) no-repeat;
     }
 }
 
@@ -6931,7 +6946,6 @@ label {
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_light_large.svg) no-repeat;
-        background-size: 65%;
     }
 }
 
@@ -6985,13 +6999,13 @@ h3.r-step-heading {
 
 .r-bg-yellow {
     .r-circle {
-        background: @black;
+        background: @primary-color;
         color: @yellow-color;
     }
 }
 
 .r-bg-primary {
-    background: @primary-color url(/images/icon_pattern_dark_large.svg) no-repeat;
+    background: @primary-color url(/images/icon_pattern_primary_large.svg) no-repeat;
 
     .ant-card-body {
         background: none;
@@ -7009,7 +7023,7 @@ h3.r-step-heading {
 }
 
 .r-bg-yellow {
-    background: @yellow-color url(/images/icon_pattern_dark_large.svg) no-repeat;
+    background: @yellow-color url(/images/icon_pattern_yellow_large.svg) no-repeat;
 
     .ant-card-body {
         background: none;
@@ -7027,7 +7041,7 @@ h3.r-step-heading {
 }
 
 .r-bg-secondary {
-    background: @secondary-color url(/images/icon_pattern_dark_large.svg) no-repeat;
+    background: @secondary-color url(/images/icon_pattern_secondary_large.svg) no-repeat;
 
     .ant-card-body {
         background: none;

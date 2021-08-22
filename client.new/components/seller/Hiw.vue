@@ -150,7 +150,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-normal">
-                      Built for retail shops, it offers a clear view into
+                      Built for retail businesses, it offers a clear view into
                       product
                       purchase activity with automated billing, expensing, and reporting.
                     </p>

@@ -4,20 +4,20 @@
       <a-row justify="center" type="flex">
         <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
           <h1 class="r-heading">
-            Brickcent Privacy Policy
+            Addtract Privacy Policy
           </h1>
         </a-col>
         <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
           <article class="r-article">
 
-            <!-- NOTE: this page is a business-critical part of the Brickcent service.  Any changes should be reviewed by legal and made with extreme care.  -->
+            <!-- NOTE: this page is a business-critical part of the Addtract service.  Any changes should be reviewed by legal and made with extreme care.  -->
 
-            <h1 id="Brickcent-privacy-statement">Brickcent Privacy Statement</h1>
+            <h1 id="Addtract-privacy-statement">Addtract Privacy Statement</h1>
 
-            <p>This Privacy Statement describes in greater detail the privacy practices of Brickcent.com, Inc.</p>
+            <p>This Privacy Statement describes in greater detail the privacy practices of Addtract.com, Inc.</p>
 
             <p>If you have questions or complaints regarding our Privacy Statement or practices, please contact us at
-              support@Brickcent.com.</p>
+              support@Addtract.com.</p>
 
             <p><strong>1. WHEN THIS PRIVACY STATEMENT APPLIES.</strong></p>
 
@@ -39,7 +39,7 @@
               call
               us for support, or give us feedback. We may also get information from other companies or third parties,
               such
-              as when you sync a third party account or service with your Brickcent Service, or when we may use service
+              as when you sync a third party account or service with your Addtract Service, or when we may use service
               providers to supplement the Personal Information you give us (e.g., validate your mailing address) to help
               us maintain the accuracy of your data and provide you with better service. Finally, we also collect
               content
@@ -77,7 +77,7 @@
               address, how you interact with our Services, and information about your computer configuration to resolve
               questions you may have about our Services and to follow up with you about your experience. We may also
               offer
-              various Internet chat services, for example, to speak with an Brickcent support representative. Internet
+              various Internet chat services, for example, to speak with an Addtract support representative. Internet
               Chat
               transmissions are encrypted but you should not supply more Personal Information, including tax data, than
               is
@@ -93,7 +93,7 @@
 
             <p><em>To Improve Services and Develop New Services</em>. We will use your information to personalize or
               customize your experience and the Service, develop new features or services, and to improve the overall
-              quality of Brickcent’s Services.</p>
+              quality of Addtract’s Services.</p>
 
             <p><em>Feedback</em>. We may use any information you volunteer in surveys you answer for us and combine them
               with answers from other customers in order to better understand our Services and how we may improve them.
@@ -131,10 +131,10 @@
               our company, or to respond to a court order, subpoena, search warrant, or other law enforcement request.
             </p>
 
-            <p><em>Protection of Brickcent and Others</em>. We may share account information, Personal Information and
+            <p><em>Protection of Addtract and Others</em>. We may share account information, Personal Information and
               Usage
               Data when we believe it is appropriate to enforce or apply our products’ Terms of Service and other
-              agreements; or protect the rights, property, or safety of Brickcent, our Services, our users, or others.
+              agreements; or protect the rights, property, or safety of Addtract, our Services, our users, or others.
               This
               includes exchanging information with other companies and organizations for fraud protection and credit
               risk
@@ -160,10 +160,10 @@
               opportunity to choose when your Personal Information may be shared with other third parties.</p>
 
             <p><strong>d) Syncing, Linking, Connecting Your Bank Account or Other Third Party Services with Your
-              Brickcent
+              Addtract
               Service.</strong></p>
 
-            <p>You may choose to sync certain Brickcent Services with information from other marketplace accounts. To
+            <p>You may choose to sync certain Addtract Services with information from other marketplace accounts. To
               sync
               your
               marketplace account information, we must access your online account with your marketplace institution. We
@@ -174,10 +174,10 @@
               future.</p>
 
             <p>We work with other companies or developers to offer you products and services and you may choose to sync,
-              link or connect other third party services with your Brickcent Service. Sometimes Brickcent may let you
+              link or connect other third party services with your Addtract Service. Sometimes Addtract may let you
               know
               about
-              the service or product, or another company may let you know about a Brickcent service or product. It will
+              the service or product, or another company may let you know about a Addtract service or product. It will
               be
               clear who is referring the service or product, and who is providing the service or product. If you choose
               to
@@ -201,7 +201,7 @@
             </p>
 
             <p><strong>3. WHAT YOU CAN DO TO MANAGE YOUR PRIVACY. You can view and edit information that identifies you
-              online through your Brickcent Service. How you can access and control information that identifies you will
+              online through your Addtract Service. How you can access and control information that identifies you will
               depend on which Services you use. You have a choice about the use of information that identifies you,
               marketing communications you receive from us, and our use of cookies and other tracking
               technologies.</strong></p>
@@ -221,7 +221,7 @@
             <p><strong>c) Cookies and Other Tracking Technologies.</strong> The following is a high level summary of our
               practices and your controls for cookies and other tracking technologies.</p>
 
-            <p>In accordance with applicable law, Brickcent and our service providers may use commonly-used tools to
+            <p>In accordance with applicable law, Addtract and our service providers may use commonly-used tools to
               recognize
               your visit and track your interactions with our Services such as cookies, web beacons, pixels, local
               shared
@@ -259,7 +259,7 @@
               you, and let you know about products and services that may interest you, unless you have opted out of
               receiving marketing communications. We may also continue to use some of your information for business
               purposes and to improve our offerings or in some cases to develop new ones. We will retain and use your
-              information as required by applicable regulations and Brickcent’s records and information management
+              information as required by applicable regulations and Addtract’s records and information management
               policies
               to
               comply with our legal and reporting obligations, resolve disputes, enforce our agreements, complete any
@@ -272,7 +272,7 @@
               you have determined that the Personal Information we collected about you is inaccurate or processed in
               violation of applicable law, you may also request that your Personal Information be corrected, amended, or
               deleted. Requests for access to your Personal Information and to have it corrected, amended, or deleted
-              should be sent to support@Brickcent.com.</p>
+              should be sent to support@Addtract.com.</p>
 
             <p><strong>5. SECURITY OF YOUR INFORMATION. Keeping your Information safe is important to us.</strong></p>
 
@@ -304,9 +304,9 @@
               contact us. We want your feedback and comments.</strong></p>
 
             <p><strong>a) Via Email.</strong> If you have questions or complaints regarding our Privacy Statement or
-              practices, please contact us by email at support@Brickcent.com.</p>
+              practices, please contact us by email at support@Addtract.com.</p>
 
-            <p><strong>b) Via Direct Mail.</strong> Brickcent.com, Inc., PO Box 7775 #86889, South Africa, California
+            <p><strong>b) Via Direct Mail.</strong> Addtract.com, Inc., PO Box 7775 #86889, South Africa, California
               94120-7775.</p>
 
             <p><strong>8. CHANGES TO OUR PRIVACY STATEMENTS. From time to time we may change or update our Privacy
@@ -326,7 +326,7 @@
             <p><strong>9. COLLECTION AND USE OF CHILDREN’S PERSONAL INFORMATION. We do not knowingly collect information
               from minors.</strong></p>
 
-            <p>Brickcent Services are intended for and directed to adults. Our Services are not directed to minors and
+            <p>Addtract Services are intended for and directed to adults. Our Services are not directed to minors and
               we
               do
               not knowingly collect Personal Information from minors<strong>.</strong></p>

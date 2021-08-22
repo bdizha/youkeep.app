@@ -6,7 +6,7 @@
           <a-row align="middle" justify="space-around" type="flex">
             <a-col :lg="{span: 9 , offset: 3}" class="r-page-padding">
               <h1 class="r-heading">
-                <span class="r-text-secondary">Brickcent Framework</span>
+                <span class="r-text-secondary">Addtract Framework</span>
               </h1>
               <h2 class="r-heading r-text-secondary">
                Envision
@@ -14,7 +14,7 @@
             </a-col>
             <a-col :lg="{span: 12}" :xs="{span: 24}" class="r-p-lg-48" style="position: relative;">
               <div class="r-page-header-photo r-page-art-primary">
-                <img alt="Couple orders online" src="/images/Brickcent/about-us.jpg">
+                <img alt="Couple orders online" src="/images/Addtract/about-us.jpg">
               </div>
             </a-col>
           </a-row>
@@ -30,7 +30,7 @@
                 Customer Centric
               </h2>
               <p class="r-text-normal">
-                Nice to know, we are Brickcent, an online supermakert service. We are the
+                Nice to know, we are Addtract, an online supermakert service. We are the
                 only store in South Africa that is only online, which means that our customers are at
                 the
                 center of our business, in fact, we focus on our customers and how best we can serve
@@ -80,10 +80,10 @@
                 cash register.
               </p>
               <p class="r-text-normal">
-                Brickcent thinks it can be done differently: faster, easier and cheaper. The idea is
+                Addtract thinks it can be done differently: faster, easier and cheaper. The idea is
                 simple. We
                 arrange
-                the business, so that you have more time for fun things. At Brickcent you can order all
+                the business, so that you have more time for fun things. At Addtract you can order all
                 business
                 within a few minutes. So toilet paper, fresh, chips and ice cream, but also organic
                 eggs, tender

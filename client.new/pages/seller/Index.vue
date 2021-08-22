@@ -46,7 +46,7 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <p class="r-text-normal">Built for retail shops, it offers a clear view into
+                        <p class="r-text-normal">Built for retail businesses, it offers a clear view into
                           product
                           purchase activity with automated billing, expensing, and reporting.
                         </p>
@@ -115,7 +115,7 @@
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                              class="r-text-left"
                       >
-                        <h4 class="r-heading r-text-uppercase r-text-secondary">
+                        <h4 class="r-heading-light r-text-uppercase r-text-secondary">
                           Launch Spazamall Online
                         </h4>
                       </a-col>
@@ -184,7 +184,7 @@
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                              class="r-text-left"
                       >
-                        <h4 class="r-heading r-text-uppercase r-text-secondary">
+                        <h4 class="r-heading-light r-text-uppercase r-text-secondary">
                           Get more buying shoppers
                         </h4>
                       </a-col>
@@ -255,7 +255,7 @@
                       <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                              class="r-text-left"
                       >
-                        <h4 class="r-heading r-text-uppercase r-text-secondary">
+                        <h4 class="r-heading-light r-text-uppercase r-text-secondary">
                           <span class="r-text-secondary">Increase</span> sales conversion
                         </h4>
                       </a-col>

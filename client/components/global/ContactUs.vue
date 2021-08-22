@@ -9,13 +9,13 @@
                  :xs="{ span: 24 }"
           >
             <h3 class="r-heading r-text-white">
-              Get your Brickcent account today!
+              Get your Addtract account today!
             </h3>
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
           >
             <p class="r-text-medium r-text-white">
-              Are you ready to join the revolution of real estate investing?
+              <span class="r-text-yellow">Discover</span> new buyers. Start selling today!
             </p>
           </a-col>
         </a-row>
@@ -34,7 +34,7 @@
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
           >
             <nuxt-link v-if="hasJobs" to="/career/openings">
-              <a-button class="r-btn-secondary"
+              <a-button class="r-btn-yellow"
                         block
                         size="large"
                         type="secondary"
@@ -42,7 +42,7 @@
                 See job openings
               </a-button>
             </nuxt-link>
-            <a-button v-if="!hasJobs" class="r-btn-secondary"
+            <a-button v-if="!hasJobs" class="r-btn-yellow"
                       @click="onModal"
                       block
                       size="large"

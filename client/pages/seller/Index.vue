@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark r-pull-h-24 r-border-none r-card-r-128">
+          <a-card class="r-bg-primary-light r-pull-h-24 r-border-none r-card-r-128">
             <div class="r-mv-48">
               <a-row :gutter="[48,48]" justify="start" type="flex">
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -20,7 +20,7 @@
                         >
                           <h3 class="r-heading-light r-text-uppercase">
                             <span class="r-text-yellow">Seller</span>
-                             <span class="r-text-primary">Central</span>
+                            <span class="r-text-primary">Central</span>
                           </h3>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -28,9 +28,9 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading r-text-primary r-text-uppercase">
-                            Get <span class="r-text-secondary">discovered</span> by
+                            Get <span class="r-text-primary">discovered</span> by
                             Africa's <span class="r-text-primary">leading</span>
-                            <span class="r-text-secondary">retailers</span>
+                            <span class="r-text-primary">retailers</span>
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -70,7 +70,7 @@
                                     size="large"
                                     type="blue"
                           >
-                            See addtract in actions
+                            See Addtract in actions
                           </a-button>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -89,19 +89,14 @@
                     </a-col>
                   </a-row>
                 </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                  <r-avatar data-src="/images/content/happy-2.jpg" :size="300" class="r-avatar-block"
+                <a-col style="z-index: 455" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <r-avatar data-src="/images/content/screen-02-secondary.png" :size="300" class="r-avatar-block"
                   ></r-avatar>
                 </a-col>
               </a-row>
             </div>
-            <div class="r-cover-image-half" style="background-image:url(/images/content/happy-2.jpg)"></div>
+            <div class="r-cover-image-half" style="background-image:none;background-color: #daecff"></div>
           </a-card>
-        </a-col>
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <r-seller-steps></r-seller-steps>
         </a-col>
       </a-row>
     </a-col>
@@ -110,329 +105,247 @@
     >
       <r-seller-metrics></r-seller-metrics>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-        <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a-card class="r-bg-secondary-light">
-            <a-card-meta>
-              <template slot="description">
-                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <r-avatar :size="90" class="r-avatar-auto" data-src="/images/features/feature-01.png"></r-avatar>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <a-row :gutter="[24,24]" justify="center" type="flex">
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <h4 class="r-heading r-text-uppercase r-text-secondary">
-                          Launch Addtract Online
-                        </h4>
-                      </a-col>
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <h3 class="r-heading-light">
-                          <span class="r-text-secondary">Partner</span> with us and <span class="r-text-secondary"
-                        >grow</span> your business.
-                        </h3>
-                      </a-col>
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <p class="r-text-medium">
-                          <span class="r-text-secondary">36%</span> increase in online and in-store business with Addtract+ and more payment options.
-                        </p>
-                      </a-col>
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <p class="r-text-normal">
-                          Join the Addtract Seller Program and start promoting Addtract online and in-store
-                          today and
-                          watch your
-                          business run wild!
-                        </p>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <a-button block class="r-btn-secondary r-margin-top-24"
-                                  size="large"
-                                  type="secondary"
-                                  @click="onRegister('seller')"
-                        >
-                          Get started today!
-                        </a-button>
-                      </a-col>
-                    </a-row>
-                  </a-col>
-                </a-row>
-              </template>
-            </a-card-meta>
-          </a-card>
-        </a-col>
-        <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a-card class="r-bg-secondary-light">
-            <a-card-meta>
-              <template slot="description">
-                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <r-avatar :size="90" class="r-avatar-auto" data-src="/images/features/feature-02.png"></r-avatar>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <a-row :gutter="[24,24]" justify="center" type="flex">
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <h4 class="r-heading r-text-uppercase r-text-secondary">
-                          Get more buying shoppers
-                        </h4>
-                      </a-col>
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <h3 class="r-heading-light">
-                          <span class="r-text-secondary">Let</span> more customers <span class="r-text-secondary"
-                        >discover</span> your products.
-                        </h3>
-                      </a-col>
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <p class="r-text-medium">
-                          <span class="r-text-secondary">24%</span> of Addtract shoppers use their existing credit card to pay over time at no cost.
-                        </p>
-                      </a-col>
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <p class="r-text-normal">
-                          If you want to boost your marketing channels for your online business, we're here to help.
-                          Absolutely zero
-                          integration
-                          required.
-                        </p>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <nuxt-link to="/seller/help">
-                          <a-button block
-                                    class="r-btn-primary"
-                                    size="large"
-                                    type="secondary"
-                          >
-                            Seller Help
-                          </a-button>
-                        </nuxt-link>
-                      </a-col>
-                    </a-row>
-                  </a-col>
-                </a-row>
-              </template>
-            </a-card-meta>
-          </a-card>
-        </a-col>
-        <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a-card class="r-bg-secondary-light">
-            <a-card-meta>
-              <template slot="description">
-                <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <r-avatar :size="90" class="r-avatar-auto" data-src="/images/features/feature-04.png"></r-avatar>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <a-row :gutter="[24,24]" justify="center" type="flex">
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <h4 class="r-heading r-text-uppercase r-text-secondary">
-                          <span class="r-text-secondary">Increase</span> business conversion
-                        </h4>
-                      </a-col>
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <h3 class="r-heading-light">
-                          <span class="r-text-secondary">Earn</span> more <span class="r-text-secondary">value</span> from
-                          returning customers.
-                        </h3>
-                      </a-col>
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <p class="r-text-medium">
-                          <span class="r-text-secondary">42%</span> of shoppers are more likely to make a purchase if offered the freedom of choice.
-                        </p>
-                      </a-col>
-                      <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                             class="r-text-left"
-                      >
-                        <p class="r-text-normal">
-                          Our widest customer base is waiting to buy your products on Addtract. We partner up with
-                          growing businesses like yours.
-                        </p>
-                      </a-col>
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                             :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <a-button block class="r-btn-secondary"
-                                  size="large"
-                                  type="secondary"
-                                  @click="onRegister('seller')"
-                        >
-                          Become a seller
-                        </a-button>
-                      </a-col>
-                    </a-row>
-                  </a-col>
-                </a-row>
-              </template>
-            </a-card-meta>
-          </a-card>
-        </a-col>
-      </a-row>
-    </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <r-seller-benefits></r-seller-benefits>
-        </a-col>
-      </a-row>
-    </a-col>
-
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary">
-        <a-card-meta>
-          <template slot="description">
-            <div class="r-mv-24">
-              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 16 }"
+      <r-seller-steps></r-seller-steps>
+      <a-card class="r-bg-primary-light">
+        <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
+          <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                 :sm="{ span: 24 }"
+                 :xs="{ span: 24 }"
+          >
+            <div class="r-mv-96">
+              <a-row :gutter="[48,48]" align="top" justify="center" type="flex">
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
-                    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                        Are you ready to sell more?
-                      </h3>
-                    </a-col>
-                    <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <h2 class="r-heading r-text-white">
-                        <span class="r-text-primary">Discover</span> new customers. <span class="r-text-primary"
-                      >Start</span> selling today!
-                      </h2>
-                    </a-col>
-                    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                      <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
-                        <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
-                          <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
-                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <a-icon class="r-checked-item-icon" type="check"/>
-                              <h4 class="r-heading r-text-primary">
-                                <span class="r-checked-item-text">
-                                Create an account
-                                </span>
-                              </h4>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <p class="r-text-medium r-text-white">
-                                Choose to be a Addtract Seller today and start achieving your goals.
-                              </p>
-                            </a-col>
-                          </a-row>
-                        </a-col>
-                        <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
-                          <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
-                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <a-icon class="r-checked-item-icon" type="check"/>
-                              <h4 class="r-heading r-text-primary">
-                                <span class="r-checked-item-text">
-                                 Setup your store
-                                </span>
-                              </h4>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <p class="r-text-medium r-text-white">
-                                Your products are showcased on our platform to relevant customers.
-                              </p>
-                            </a-col>
-                          </a-row>
-                        </a-col>
-                        <a-col :lg="{ span: 8 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
-                          <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
-                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <a-icon class="r-checked-item-icon" type="check"/>
-                              <h4 class="r-heading r-text-primary">
-                                <span class="r-checked-item-text">
-                                Start accepting orders
-                                </span>
-                              </h4>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <p class="r-text-medium r-text-white">
-                                Seamleassly sell products that meet your customer's unique demands.
-                              </p>
-                            </a-col>
-                          </a-row>
-                        </a-col>
-                      </a-row>
-                    </a-col>
-                    <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <a-button block class="r-btn-primary"
-                                size="large"
-                                type="secondary"
-                                @click="onRegister"
+                  <a-card class="r-bg-white">
+                    <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
+                      <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
                       >
-                        Get started today!
-                      </a-button>
-                    </a-col>
-                  </a-row>
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <a-icon class="r-text-primary" style="font-size: 75px" type="bulb"></a-icon>
+                          </a-col>
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <a-row :gutter="[24,24]" justify="center" type="flex">
+                              <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                     class="r-text-left"
+                              >
+                                <h4 class="r-heading-light r-text-primary">
+                                  Launch Addtract Online
+                                </h4>
+                              </a-col>
+                              <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                     class="r-text-left"
+                              >
+                                <p class="r-text-medium">
+                                  <span class="r-text-primary">36%</span> increase in online and in-store business with
+                                  Addtract+ and more payment options.
+                                </p>
+                              </a-col>
+                            </a-row>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                      <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <a-icon class="r-text-primary" style="font-size: 75px" type="build"></a-icon>
+                          </a-col>
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <a-row :gutter="[24,24]" justify="center" type="flex">
+                              <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                     class="r-text-left"
+                              >
+                                <h4 class="r-heading-light r-text-primary">
+                                  Get more buying retailers
+                                </h4>
+                              </a-col>
+                              <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                     class="r-text-left"
+                              >
+                                <p class="r-text-medium">
+                                  <span class="r-text-primary">24%</span> of Addtract retailers use their existing
+                                  credit
+                                  card
+                                  to pay over time at no cost.
+                                </p>
+                              </a-col>
+                            </a-row>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                      <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <a-icon class="r-text-primary" style="font-size: 75px" type="rocket"></a-icon>
+                          </a-col>
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <a-row :gutter="[24,24]" justify="center" type="flex">
+                              <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                     class="r-text-left"
+                              >
+                                <h4 class="r-heading-light r-text-primary">
+                                  <span class="r-text-primary">Increase</span> business traction
+                                </h4>
+                              </a-col>
+                              <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                     class="r-text-left"
+                              >
+                                <p class="r-text-medium">
+                                  <span class="r-text-primary">42%</span> of retailers are more likely to make a
+                                  purchase
+                                  if
+                                  offered the freedom of choice.
+                                </p>
+                              </a-col>
+                            </a-row>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                    </a-row>
+                  </a-card>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-card class="r-bg-white">
+                    <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
+                      <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <a-icon class="r-text-secondary" style="font-size: 75px" type="rocket"></a-icon>
+                          </a-col>
+                          <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                 class="r-text-left"
+                          >
+                            <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                              <span class="r-text-secondary">Partner</span> with us and <span class="r-text-secondary"
+                            >grow</span> your business.
+                            </h4>
+                          </a-col>
+                          <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                 class="r-text-left"
+                          >
+                            <p class="r-text-normal">
+                              Join the Addtract Seller Program and start promoting Addtract online and in-store
+                              today and
+                              watch your
+                              business run wild!
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                      <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <a-icon class="r-text-secondary" style="font-size: 75px" type="bulb"></a-icon>
+                          </a-col>
+                          <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                 class="r-text-left"
+                          >
+                            <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                              <span class="r-text-secondary">Let</span> more customers <span class="r-text-secondary"
+                            >discover</span> your products.
+                            </h4>
+                          </a-col>
+                          <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                 class="r-text-left"
+                          >
+                            <p class="r-text-normal">
+                              If you want to boost your marketing channels for your online business, we're here to help.
+                              Absolutely zero
+                              integration
+                              required.
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                      <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <a-icon class="r-text-secondary" style="font-size: 75px" type="build"></a-icon>
+                          </a-col>
+                          <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                 class="r-text-left"
+                          >
+                            <h4 class="r-heading-light r-text-secondary r-text-uppercase">
+                              <span class="r-text-secondary">Earn</span> more <span class="r-text-secondary"
+                            >value</span>
+                              from
+                              returning customers.
+                            </h4>
+                          </a-col>
+                          <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                                 class="r-text-left"
+                          >
+                            <p class="r-text-normal">
+                              Our widest customer base is waiting to buy your products on Addtract. We partner up with
+                              growing businesses like yours.
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                    </a-row>
+                  </a-card>
                 </a-col>
               </a-row>
             </div>
-          </template>
-        </a-card-meta>
+          </a-col>
+        </a-row>
       </a-card>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+          <r-seller-benefits></r-seller-benefits>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <r-contact-us></r-contact-us>
     </a-col>
   </a-row>
 </template>

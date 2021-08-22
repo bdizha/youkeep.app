@@ -12,7 +12,7 @@ module.exports = {
   env: {
     apiUrl: process.env.APP_URL + '/api',
     appUrl: process.env.APP_URL,
-    appName: process.env.APP_NAME || 'Brickcent',
+    appName: process.env.APP_NAME || 'Addtract',
     appLocale: process.env.APP_LOCALE || 'en',
     githubAuth: !!process.env.GITHUB_CLIENT_ID
   },

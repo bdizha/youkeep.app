@@ -246,7 +246,7 @@ export default {
       portfolios: [
         {
           title: 'Addtract',
-          slug: 'addtract',
+          slug: 'Addtract',
           content: 'B2B platform connecting retailers and suppliers for better product discovery.'
         },
         {

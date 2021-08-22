@@ -18,7 +18,7 @@
                   <span class="r-text-secondary">Welcome, </span>{{ user.name }}!
                 </h3>
                 <p class="r-text-small">
-                  Enter and confirm new credentials to secure your Brickcent account.
+                  Enter and confirm new credentials to secure your Addtract account.
                 </p>
               </a-col>
             </a-row>
@@ -72,7 +72,7 @@ export default {
       formName: 'secure',
       fields: ['password', 'password_confirmation'],
       form: this.$form.createForm(this, { name: 'form_secure' }),
-      message: 'Thank you for successfully securing your Brickcent account! Please wait while we setup your account.',
+      message: 'Thank you for successfully securing your Addtract account! Please wait while we setup your account.',
       userType: 1,
     }
   },
@@ -131,7 +131,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you, your account is now secured. Enjoy your business with Brickcent.')
+            $this.$message.success('Thank you, your account is now secured. Enjoy your business with Addtract.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

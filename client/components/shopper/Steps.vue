@@ -18,17 +18,17 @@ export default {
   data () {
     return {
       currentStep: 0,
-      title: 'Brickcent connects shoppers to customers.',
+      title: 'Addtract connects shoppers to customers.',
       content: 'We partner with shoppers and the nearest stores to provide our customers with fast\n' +
         'deliveries and better services.',
       steps: [
         {
           title: 'Shop It',
-          content: 'Create a Brickcent account and list your product catalog on the Brickcent marketplace today.'
+          content: 'Create a Addtract account and list your product catalog on the Addtract marketplace today.'
         },
         {
           title: 'Deliver It',
-          content: 'Your item sells, you ship your item to the buyer. and money is deposited to your Brickcent account.'
+          content: 'Your item sells, you ship your item to the buyer. and money is deposited to your Addtract account.'
         },
         {
           title: 'Get Paid',

@@ -10,7 +10,7 @@
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
             <p class="r-text-medium">
-              Check the confirmation email at {{ user ? '' : 'bata@Brickcent.com' }}
+              Check the confirmation email at {{ user ? '' : 'bata@Addtract.com' }}
             </p>
           </a-col>
           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

@@ -81,7 +81,7 @@
                                     Email
                                   </h4>
                                   <p class="r-text-medium">
-                                    <a class="r-text-primary" href="mailto:info@Brickcent.app" target="_blank">info@Brickcent.app</a>
+                                    <a class="r-text-primary" href="mailto:info@Addtract.app" target="_blank">info@Addtract.app</a>
                                   </p>
                                 </a-col>
                               </a-row>

@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       currentStep: 0,
-      title: 'Spazamall connects sellers to customers.',
+      title: 'Spazamall connects suppliers to retailers.',
       content: 'Spazamall offers stores likes yours to sell products to our customers with the most convenient shopping tools on the market.',
       steps: [
         {
