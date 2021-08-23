@@ -257,7 +257,7 @@ h1.r-text-xlarge-light {
 
     .ant-card {
         .ant-card-body {
-            padding: 12px;
+            padding: 12px 24px;
         }
     }
 
@@ -2106,10 +2106,11 @@ h4 {
 .r-bg-primary {
     .r-checked-item-icon {
         background: transparent;
-        border-color: @secondary-color;
+        border-color: @yellow-color;
         color: @white;
     }
-    .ant-collapse-content{
+    .ant-collapse-content,
+    .r-text-medium{
         color: @white;
     }
 }
@@ -2133,10 +2134,11 @@ h4 {
 .r-bg-secondary {
     .r-checked-item-icon {
         background: transparent;
-        border-color: @primary-color;
+        border-color: @yellow-color;
         color: @white;
     }
-    .ant-collapse-content{
+    .ant-collapse-content,
+    .r-text-medium{
         color: @white;
     }
 }
@@ -3793,13 +3795,19 @@ label {
 
 .r-btn-bordered-primary {
     border: 1px solid @primary-color;
-    color: @secondary-color;
+    color: @primary-color;
     background: transparent !important;
 
     &:hover {
         border: 1px solid @primary-color;
         color: @secondary-color;
         background: @primary-color !important;
+    }
+}
+
+.r-bg-dark {
+    .r-btn-bordered-primary{
+        color: @white;
     }
 }
 
@@ -3999,7 +4007,7 @@ label {
     &.r-avatar-block {
         background: none;
         width: 100% !important;
-        height: 100% !important;
+        height: auto !important;
     }
 }
 
@@ -7018,7 +7026,7 @@ h3.r-step-heading {
     h4,
     h1,
     h2 {
-        color: @secondary-color;
+        color: @white;
     }
 }
 

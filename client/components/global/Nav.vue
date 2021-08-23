@@ -11,24 +11,36 @@
           </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <nuxt-link slot="title" class="r-text-link" to="/invest">
-            How it works
+          <nuxt-link slot="title" class="r-text-link" to="/seller">
+            For Suppliers
           </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <nuxt-link slot="title" class="r-text-link" to="/invest">
-            Invest
+          <nuxt-link slot="title" class="r-text-link" to="/buyer">
+            For Buyers
           </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <nuxt-link slot="title" class="r-text-link" to="/properties">
-            Properties
+          <nuxt-link slot="title" class="r-text-link" to="/provider">
+            For Provider Services
           </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <nuxt-link slot="title" class="r-text-link" to="/contact-us">
-            Contact
-          </nuxt-link>
+          <div v-if="!isLoggedIn" @click="onModal" slot="title">
+            <a-button id="r-user-login"
+                      block
+                      class="r-btn-bordered-primary"
+                      type="secondary"
+                      v-on:click="onModal"
+            >
+              <a-icon type="user"/>
+              Sign in
+            </a-button>
+          </div>
+          <div v-if="isLoggedIn" @click="onDrawer" slot="title">
+            <a-icon type="user"/>
+            Account
+          </div>
         </a-sub-menu>
       </a-menu>
     </a-col>

@@ -25,45 +25,41 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-white">
-            <a-card-meta>
-              <template slot="description">
-                <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <r-avatar :dataSrc="'/images/content/12.svg'" :size="90" class="r-avatar-auto"
-                    ></r-avatar>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <h2 class="r-heading-light">
-                      <a-icon class="r-text-primary" type="up"/>
-                      <span class="r-number r-icon-effect-secondary">36</span>
-                      <span class="r-subscript r-text-secondary">%</span>
-                    </h2>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <p class="r-text-medium">
-                      <span class="r-text-secondary">Increase</span> in conversion rate
-                    </p>
-                  </a-col>
-                </a-row>
-              </template>
-            </a-card-meta>
+          <a-card class="r-bg-primary-light">
+            <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <r-avatar :dataSrc="'/images/content/12.svg'" :size="90" class="r-avatar-auto"
+                ></r-avatar>
+              </a-col>
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <h2 class="r-heading-light">
+                  <a-icon class="r-text-primary" type="up"/>
+                  <span class="r-number r-icon-effect-secondary">36</span>
+                  <span class="r-subscript r-text-primary">%</span>
+                </h2>
+              </a-col>
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <p class="r-text-medium">
+                  <span class="r-text-primary">Increase</span> in conversion rate
+                </p>
+              </a-col>
+            </a-row>
           </a-card>
         </a-col>
         <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-white">
+          <a-card class="r-bg-primary-light">
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
@@ -81,7 +77,7 @@
                     <h2 class="r-heading-light">
                       <a-icon class="r-text-primary" type="up"/>
                       <span class="r-number r-icon-effect-secondary">48</span>
-                      <span class="r-subscript r-text-secondary">%</span>
+                      <span class="r-subscript r-text-primary">%</span>
                     </h2>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -89,7 +85,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      <span class="r-text-secondary">Increase</span> in returning orders
+                      <span class="r-text-primary">Increase</span> in returning orders
                     </p>
                   </a-col>
                 </a-row>
@@ -101,7 +97,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-white">
+          <a-card class="r-bg-primary-light">
             <a-card-meta>
               <template slot="description">
                 <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
@@ -120,7 +116,7 @@
                     <h2 class="r-heading-light">
                       <a-icon class="r-text-primary" type="up"/>
                       <span class="r-number r-icon-effect-secondary">24</span>
-                      <span class="r-subscript r-text-secondary">%</span>
+                      <span class="r-subscript r-text-primary">%</span>
                     </h2>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -128,7 +124,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      <span class="r-text-secondary">Increase</span> in business volume
+                      <span class="r-text-primary">Increase</span> in business volume
                     </p>
                   </a-col>
                 </a-row>

@@ -1,5 +1,5 @@
 <template>
-  <a-row v-show="!hasMenuCategory && !isLoggedIn" align="middle" justify="center"
+  <a-row v-show="!isLoggedIn" align="middle" justify="center"
          type="flex"
   >
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"

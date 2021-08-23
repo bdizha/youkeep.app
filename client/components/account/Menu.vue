@@ -98,7 +98,7 @@ const MENU = [
         link: '/account/notifications'
       },
       // { In cases for shoppers show this
-      //   label: 'Your Products',
+      //   label: 'Your categories',
       //   icon: 'profile',
       //   link: '/account/product'
       // },

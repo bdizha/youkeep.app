@@ -36,7 +36,7 @@ const LINKS = [
     link: '/account/payment'
   },
   {
-    label: 'Your products',
+    label: 'Your categories',
     icon: 'profile',
     link: '/'
   },

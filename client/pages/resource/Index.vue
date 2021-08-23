@@ -93,7 +93,7 @@
                      style="text-align: left;"
               >
                 <h4 class="r-heading-light">
-                  Customers want to buy more of your products. And now they've a more
+                  Customers want to buy more of Your categories. And now they've a more
                   flexible
                   business option with Addtract
                 </h4>

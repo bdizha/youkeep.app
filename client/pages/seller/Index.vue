@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-primary-light r-pull-h-24 r-border-none r-card-r-128">
+          <a-card class="r-bg-primary r-pull-h-24 r-border-none r-card-r-128">
             <div class="r-mv-48">
               <a-row :gutter="[48,48]" justify="start" type="flex">
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -20,17 +20,16 @@
                         >
                           <h3 class="r-heading-light r-text-uppercase">
                             <span class="r-text-yellow">Seller</span>
-                            <span class="r-text-primary">Central</span>
+                            <span class="r-text-white">Central</span>
                           </h3>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h1 class="r-heading r-text-primary r-text-uppercase">
-                            Get <span class="r-text-primary">discovered</span> by
-                            Africa's <span class="r-text-primary">leading</span>
-                            <span class="r-text-primary">retailers</span>
+                          <h1 class="r-heading r-text-white r-text-uppercase">
+                            Get <span class="r-text-yellow">discovered</span> by
+                            Africa's leading <span class="r-text-yellow">retailers</span>
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -56,7 +55,7 @@
                                :xs="{ span: 24 }"
                         >
                           <div class="r-checked-item">
-                            <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                            <a-icon class="r-text-white r-checked-item-icon" type="check"></a-icon>
                             <span class="r-text-medium">Your success</span>
                           </div>
                         </a-col>
@@ -79,7 +78,7 @@
                         >
                           <p class="r-text-normal">
                           <span class="r-text-white">
-                          Join the Addtract Seller Platform and start promoting your products online today and watch
+                          Join the Addtract Seller Platform and start promoting Your categories online today and watch
                           your
                           sales run wild.
                           </span>
@@ -89,7 +88,7 @@
                     </a-col>
                   </a-row>
                 </a-col>
-                <a-col style="z-index: 455" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-col style="z-index: 455" :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <r-avatar data-src="/images/content/screen-02-secondary.png" :size="300" class="r-avatar-block"
                   ></r-avatar>
                 </a-col>
@@ -109,7 +108,7 @@
            :xs="{ span: 24 }"
     >
       <r-seller-steps></r-seller-steps>
-      <a-card class="r-bg-primary-light">
+      <a-card class="r-bg-primary-light r-pull-mh-24 r-border-none">
         <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
           <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                  :sm="{ span: 24 }"
@@ -246,13 +245,13 @@
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                  :xs="{ span: 24 }"
                           >
-                            <a-icon class="r-text-secondary" style="font-size: 75px" type="rocket"></a-icon>
+                            <a-icon class="r-text-primary" style="font-size: 75px" type="rocket"></a-icon>
                           </a-col>
                           <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                                  class="r-text-left"
                           >
-                            <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                              <span class="r-text-secondary">Partner</span> with us and <span class="r-text-secondary"
+                            <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                              <span class="r-text-primary">Partner</span> with us and <span class="r-text-primary"
                             >grow</span> your business.
                             </h4>
                           </a-col>
@@ -276,14 +275,14 @@
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                  :xs="{ span: 24 }"
                           >
-                            <a-icon class="r-text-secondary" style="font-size: 75px" type="bulb"></a-icon>
+                            <a-icon class="r-text-primary" style="font-size: 75px" type="bulb"></a-icon>
                           </a-col>
                           <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                                  class="r-text-left"
                           >
-                            <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                              <span class="r-text-secondary">Let</span> more customers <span class="r-text-secondary"
-                            >discover</span> your products.
+                            <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                              <span class="r-text-primary">Let</span> more customers <span class="r-text-primary"
+                            >discover</span> Your categories.
                             </h4>
                           </a-col>
                           <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -306,13 +305,13 @@
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                  :xs="{ span: 24 }"
                           >
-                            <a-icon class="r-text-secondary" style="font-size: 75px" type="build"></a-icon>
+                            <a-icon class="r-text-primary" style="font-size: 75px" type="build"></a-icon>
                           </a-col>
                           <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                                  class="r-text-left"
                           >
-                            <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                              <span class="r-text-secondary">Earn</span> more <span class="r-text-secondary"
+                            <h4 class="r-heading-light r-text-primary r-text-uppercase">
+                              <span class="r-text-primary">Earn</span> more <span class="r-text-primary"
                             >value</span>
                               from
                               returning customers.
@@ -322,7 +321,7 @@
                                  class="r-text-left"
                           >
                             <p class="r-text-normal">
-                              Our widest customer base is waiting to buy your products on Addtract. We partner up with
+                              Our widest customer base is waiting to buy Your categories on Addtract. We partner up with
                               growing businesses like yours.
                             </p>
                           </a-col>

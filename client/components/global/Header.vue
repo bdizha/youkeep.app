@@ -2,7 +2,7 @@
   <a-row :gutter="[24,24]" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <div class="r-header">
-        <a-card :class="{'r-bg-dark': isDark, 'r-bg-white': !isDark}">
+        <a-card class="r-pull-m-24 r-border-none-sm" :class="{'r-bg-dark': isDark, 'r-bg-white': !isDark}">
           <r-layout-menu v-if="!modal.isVisible && !isRaised">
             <r-nav-item>
               <a-icon type="menu" @click="onDrawer('menu')"/>

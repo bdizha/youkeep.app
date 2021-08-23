@@ -195,13 +195,13 @@ export default {
       steps: [
         {
           title: 'List It',
-          heading: 'Showcase your products',
+          heading: 'Showcase Your categories',
           content: 'Your brand profile is a customizable digital sell sheet that highlights key product, brand, and company details all in a single place.'
         },
         {
           title: 'Sell It',
           heading: 'Get discovered',
-          content: 'Buyers use Addtract to discover new products and manage their inbound submissions. Your products are placed in front of relevant buyers in your category.'
+          content: 'Buyers use Addtract to discover new products and manage their inbound submissions. Your categories are placed in front of relevant buyers in your category.'
         },
         {
           title: 'Get Paid',

@@ -28,7 +28,7 @@
                       >
                         <h1 class="r-heading">
                           <span class="r-text-primary">Enable</span> more customers to <span class="r-text-primary">discover</span>
-                          your products.
+                          Your categories.
                         </h1>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -116,7 +116,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h2 class="r-heading">
-                    Addtract <span class="r-text-primary">makes</span> your products visible to millions of customers.
+                    Addtract <span class="r-text-primary">makes</span> Your categories visible to millions of customers.
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 12 }"

@@ -7,7 +7,7 @@
     <a-row justify="center" type="flex">
       <a-col :xs="{ span: 24 }" class="r-text-left">
         <h3 class="r-heading">
-          Your products history
+          Your categories history
         </h3>
         <p class="r-text-normal">
           Find your entire product history below

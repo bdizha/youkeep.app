@@ -305,7 +305,7 @@
                                      :xs="{ span: 24 }"
                               >
                                 <h1 class="r-heading r-text-secondary">
-                                  Up-scale your products
+                                  Up-scale your sales
                                 </h1>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -317,29 +317,32 @@
                                          :sm="{ span: 24 }"
                                          :xs="{ span: 24 }"
                                   >
-                                    <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
-                                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                             :sm="{ span: 24 }"
-                                             :xs="{ span: 24 }"
-                                      >
-                                        <p class="r-text-medium r-text-secondary">
-                                          Brand Profile
-                                        </p>
-                                      </a-col>
-                                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                             :sm="{ span: 24 }"
-                                             :xs="{ span: 24 }"
-                                      >
-                                        <p class="r-text-normal r-text-dark">
-                                          Build visibility with leading retailers by highlighting key brand information that buyers look for.
-                                        </p>
-                                      </a-col>
-                                    </a-row>
+                                    <a-card class="r-bg-white">
+                                      <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+                                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                               :sm="{ span: 24 }"
+                                               :xs="{ span: 24 }"
+                                        >
+                                          <h4 class="r-heading-light r-text-secondary">
+                                            Brand Profile
+                                          </h4>
+                                        </a-col>
+                                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                               :sm="{ span: 24 }"
+                                               :xs="{ span: 24 }"
+                                        >
+                                          <p class="r-text-normal r-text-dark">
+                                            Build visibility with leading retailers by highlighting key brand information that buyers look for.
+                                          </p>
+                                        </a-col>
+                                      </a-row>
+                                    </a-card>
                                   </a-col>
                                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                          :sm="{ span: 24 }"
                                          :xs="{ span: 24 }"
                                   >
+                                    <a-card class="r-bg-white">
                                     <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                              :sm="{ span: 24 }"
@@ -358,11 +361,13 @@
                                         </p>
                                       </a-col>
                                     </a-row>
+                                    </a-card>
                                   </a-col>
                                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                          :sm="{ span: 24 }"
                                          :xs="{ span: 24 }"
                                   >
+                                    <a-card class="r-bg-white">
                                     <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                              :sm="{ span: 24 }"
@@ -381,6 +386,7 @@
                                         </p>
                                       </a-col>
                                     </a-row>
+                                    </a-card>
                                   </a-col>
                                   <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
                                          :sm="{ span: 12 }"
@@ -472,7 +478,7 @@
                           </a-col>
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <p class="r-text-medium">
-                              Your products are showcased on our platform to relevant customers.
+                              Your categories are showcased on our platform to relevant customers.
                             </p>
                           </a-col>
                         </a-row>
