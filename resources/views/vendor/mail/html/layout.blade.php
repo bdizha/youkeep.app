@@ -24,7 +24,7 @@
   }
 </style>
 <table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation"
-       style="width:100.0%;background:#f3f6f9;border-collapse:collapse"
+       style="width:100.0%;background:#e9f4ff;border-collapse:collapse"
 >
   <tr>
     <td class="height-60" valign="top">

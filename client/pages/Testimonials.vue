@@ -3,7 +3,7 @@
     <a-row :gutter="16" justify="center" type="flex">
       <a-col :lg="{ span: 12 }" :md="{ span: 18 }" :xs="{ span: 24 }" class="gutter-row">
         <h2 class="r-heading r-text-secondary  text-center">
-          What our customers say
+          What our buyers say
         </h2>
         <VueSlickCarousel v-if="testimonials.length > 0" v-bind="settings">
           <div class="r-testimonial">

@@ -91,7 +91,7 @@ export default {
         },
         {
           title: 'Supportive',
-          content: 'Connect with customers and each other.'
+          content: 'Connect with buyers and each other.'
         }
       ]
     }

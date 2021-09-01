@@ -8,7 +8,7 @@
       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
              :xs="{ span: 24 }" class="gutter-row"
       >
-        <a-card title="Seller Information">
+        <a-card title="Supplier Information">
           <a-row :gutter="[24,0]">
             <a-col :xs="{ span: 24 }">
               <p class="r-text-light">

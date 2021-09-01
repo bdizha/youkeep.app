@@ -19,7 +19,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                          For Sellers
+                          For Suppliers
                         </h3>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -27,7 +27,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading">
-                          <span class="r-text-primary">Enable</span> more customers to <span class="r-text-primary">discover</span>
+                          <span class="r-text-primary">Enable</span> more buyers to <span class="r-text-primary">discover</span>
                           Your categories.
                         </h1>
                       </a-col>
@@ -44,7 +44,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          With an online business platform, millions of customers, and tons of selling tools on Addtract, it’s the all-in-one
+                          With an online business platform, millions of buyers, and tons of selling tools on Addtract, it’s the all-in-one
                           marketplace you deserve.
                         </p>
                       </a-col>
@@ -116,7 +116,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h2 class="r-heading">
-                    Addtract <span class="r-text-primary">makes</span> Your categories visible to millions of customers.
+                    Addtract <span class="r-text-primary">makes</span> Your categories visible to millions of buyers.
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 12 }"

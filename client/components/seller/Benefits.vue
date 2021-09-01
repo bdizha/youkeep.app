@@ -11,7 +11,7 @@
                  :xs="{ span: 24 }"
           >
             <h4 class="r-heading-light r-text-uppercase r-text-primary">
-              Benefits for Sellers
+              Benefits For Suppliers
             </h4>
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -27,7 +27,7 @@
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
             <p class="r-text-normal">
-              Addtract enables sellers to satisfy their customers with ease and control at a minimum pay-as-you earn
+              Addtract enables sellers to satisfy their buyers with ease and control at a minimum pay-as-you earn
               model.
             </p>
           </a-col>
@@ -71,7 +71,7 @@ export default {
   data () {
     return {
       benefits: [
-        'Enable more buying customers and increase recurring orders with Addtract.',
+        'Enable more buying buyers and increase recurring orders with Addtract.',
         'Maximize in-store impact with Addtract signage and online training for retail associates.',
         'We’ll ship you an activation kit to promote Addtract online.',
         'No obligations and risk with partnering with Addtract.'

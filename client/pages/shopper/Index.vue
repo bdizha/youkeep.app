@@ -21,7 +21,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                          For shoppers
+                          Marketplace
                         </h3>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -192,7 +192,7 @@
                          :xs="{ span: 24 }"
                   >
                     <h3 class="r-heading">
-                      <span class="r-text-secondary">Requirements</span> for shoppers:
+                      <span class="r-text-secondary">Requirements</span> Marketplace:
                     </h3>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

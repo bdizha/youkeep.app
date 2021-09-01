@@ -171,7 +171,7 @@
           <a-row :gutter="[24,0]">
             <a-col :xs="{ span: 24 }">
               <p class="r-text-light">
-                Contact us to learn more About Us and checkout financing options we've got in store for sellers
+                Contact us to learn more About Us and checkout financing options we've got in store For Suppliers
                 like you.
               </p>
             </a-col>

@@ -96,18 +96,18 @@
               quality of Addtract’s Services.</p>
 
             <p><em>Feedback</em>. We may use any information you volunteer in surveys you answer for us and combine them
-              with answers from other customers in order to better understand our Services and how we may improve them.
+              with answers from other buyers in order to better understand our Services and how we may improve them.
               Answering any survey is optional.</p>
 
             <p><em>Research, Including Publishing or Sharing Combined Information from Many Users, But Only in a Way
               that
               Would Not Allow You or Any Other Person to be Identified</em>. Only in a way that would not allow you or
               any
-              other person to be identified, we may prepare and share information about our customers with third
+              other person to be identified, we may prepare and share information about our buyers with third
               parties,
               such as advertisers or partners, for research, academic, marketing and/or promotional purposes. For
               example,
-              we may share demographic data that describes the percentage of our customers who use mobile services or
+              we may share demographic data that describes the percentage of our buyers who use mobile services or
               who
               use a particular operating system. We or our third party partners may publicly report the aggregated
               findings of the research or analysis, but only in a way that would not allow you or any other person to be
@@ -140,7 +140,7 @@
               risk
               reduction. This does not include selling, renting, sharing, or otherwise disclosing Personal Information
               of
-              our customers for commercial purposes in violation of the commitments set forth in this Privacy Statement.
+              our buyers for commercial purposes in violation of the commitments set forth in this Privacy Statement.
             </p>
 
             <p><em>Reporting to Credit Bureaus</em>. We may share your information with credit bureaus, consumer
@@ -227,7 +227,7 @@
               shared
               objects, and similar technologies (collectively, “Cookies”). Sometimes this tracking is necessary in order
               for us to provide you the Service you requested. Other times, we combine Usage Data collected from Cookies
-              with that of other customers to improve your and other customers’ experience. You have control over some
+              with that of other buyers to improve your and other buyers’ experience. You have control over some
               of
               the Usage Data we collect from Cookies and how we use it. Information on changing your browser settings to
               opt out of Cookies can be found in your browser settings. If you opt-out and later delete your Cookies,

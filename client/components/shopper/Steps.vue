@@ -4,7 +4,8 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <r-steps user-type="shopper" :size="size" :steps="steps" :title="title" :content="content" theme="primary"></r-steps>
+      <r-steps user-type="shopper" :size="size" :steps="steps" :title="title" :content="content" theme="primary"
+      ></r-steps>
     </a-col>
   </a-row>
 </template>
@@ -18,21 +19,33 @@ export default {
   data () {
     return {
       currentStep: 0,
-      title: 'Addtract connects shoppers to customers.',
-      content: 'We partner with shoppers and the nearest stores to provide our customers with fast\n' +
-        'deliveries and better services.',
+      title: 'Addtract connects shoppers to buyers.',
+      content: 'We partner with manufactures and the nearest businesses to provide our buyers with fast\n' +
+        'deliveries and better checkout and credit line services.',
       steps: [
         {
-          title: 'Shop It',
-          content: 'Create a Addtract account and list your product catalog on the Addtract marketplace today.'
+          title: 'Not just a marketplace',
+          heading: 'Data. Insights. Clarity',
+          image: '/products/product-08.svg',
+          summary: 'Unlock new growth in new ways while defending marketing efficiency.',
+          content: 'Create an account and showcase or discover trending, streamlined, and relevant products on Addtract\'s B2B marketplace today. ' +
+            'Expand your customer base with key placements on our high-traffic website.'
         },
         {
-          title: 'Deliver It',
-          content: 'Your item sells, you ship your item to the buyer. and money is deposited to your Addtract account.'
+          title: 'Unified store management',
+          heading: 'Earn multichannel success',
+          image: '/products/product-09.svg',
+          summary: 'Increase your online revenue through data-driven cross-channel strategies proven to work.',
+          content: 'Boost awareness of your business and reach new audiences organically through our broad network of influencers. ' +
+            'Amplify product launches and promotions when you’re included in Addtract emails to our active user base.'
         },
         {
-          title: 'Get Paid',
-          content: 'Use the money as you like - shop online, send it to friends, or transfer it to your bank account.'
+          title: 'Adaptive payments methods',
+          heading: 'Credit for ecommerce growth',
+          image: '/products/product-10.svg',
+          summary: 'We know how difficult it can be to secure financing and free up working capital as a growing business. ',
+          content: 'Adaptive Checkout presents your buyers with the perfect pay-over-time option for them-whether that’s split pay, ' +
+            'installments, or both-with terms and rates you can customize per product and per price point to drive the results you’re looking for.'
         }
       ]
     }

@@ -1,12 +1,7 @@
 <template>
-  <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-           class="r-text-center"
-    >
-      <r-steps user-type="customer" :has-more="hasMore" :size="size" :steps="steps" :title="title" :content="content" theme="secondary"></r-steps>
-    </a-col>
-  </a-row>
+  <r-steps user-type="customer" :has-more="hasMore" :size="size" :steps="steps" :title="title" :content="content"
+           theme="secondary"
+  ></r-steps>
 </template>
 <script>
 export default {
@@ -18,21 +13,30 @@ export default {
   data () {
     return {
       currentStep: 0,
-      title: 'Addtract connects customers to sellers.',
-      content: 'Our shoppers handle all your order collection and delivery experience as well as returns for you at\n' +
+      title: 'Addtract connects buyers to the marketplace.',
+      content: 'Our checkout and payment tools handle all your order placement, collection and delivery experience as well as returns for you at\n' +
         'a very low cost.',
       steps: [
         {
-          title: 'Add It',
-          content: 'Add products to your cart with ease and control. Buy fashion, gadgets & other items from our marketplace.'
+          title: 'Discover It',
+          heading: 'Buying with Addtract is easy.',
+          image: '/steps/step-01-primary.svg',
+          summary: 'Pick, compare, save products to your favourite list all in a single place.',
+          content: 'Discover brands and products faster with a buyer homepage that highlights trends, collections, and more in a single place. <br /><br />Buying with Addtract is easy. Filter brand and product discovery by location, certifications, distribution, and more.'
         },
         {
           title: 'Shop It',
-          content: 'Set your pickup or delivery time. It\'s business time! We handle all your business experience and more benefits. '
+          heading: 'Sourcing without the searching',
+          image: '/steps/step-02-primary.svg',
+          summary: 'Add products to folders based on your interests to review later or share with your team.',
+          content: 'Discover brands and products faster with a buyer homepage that highlights trends, collections, and more in a single place. <br /><br />Review curated brands and products in your category with trending collections like diversity and sustainability.'
         },
         {
-          title: 'Enjoy It',
-          content: 'Get your items delivered to you. Sit back and wait for your delivery to arrive at your doorstep fast and easy.'
+          title: 'Confirm It',
+          heading: 'Streamlined checkout process',
+          image: '/steps/step-03-primary.svg',
+          summary: 'Enjoy flexible payment options with credit offering at your convenience. ',
+          content: 'Get your items scheduled for a delivery to your location. Sit back and wait for your delivery to arrive fast, secure and easy. <br /><br />Select the payment schedule that works for you, then confirm your loan. We’ll never charge more than you see up front.'
         }
       ]
     }

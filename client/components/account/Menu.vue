@@ -97,7 +97,7 @@ const MENU = [
         icon: 'bell',
         link: '/account/notifications'
       },
-      // { In cases for shoppers show this
+      // { In cases Marketplace show this
       //   label: 'Your categories',
       //   icon: 'profile',
       //   link: '/account/product'

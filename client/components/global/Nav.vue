@@ -11,7 +11,7 @@
           </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>
-          <nuxt-link slot="title" class="r-text-link" to="/seller">
+          <nuxt-link slot="title" class="r-text-link" to="/supplier">
             For Suppliers
           </nuxt-link>
         </a-sub-menu>
@@ -22,7 +22,7 @@
         </a-sub-menu>
         <a-sub-menu>
           <nuxt-link slot="title" class="r-text-link" to="/provider">
-            For Provider Services
+            Marketplace
           </nuxt-link>
         </a-sub-menu>
         <a-sub-menu>

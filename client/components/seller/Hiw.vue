@@ -35,7 +35,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          Accept all major credit cards - your customers don't even need an account to place an
+                          Accept all major credit cards - your buyers don't even need an account to place an
                           order on the Addtract marketplace.
                         </p>
                       </a-col>
@@ -86,7 +86,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          Automatic fraud screening and our Seller Protection Policy help keep you and your customers
+                          Automatic fraud screening and our Supplier Protection Policy help keep you and your buyers
                           safe and insured.
                         </p>
                       </a-col>

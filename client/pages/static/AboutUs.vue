@@ -8,7 +8,7 @@
                :sm="{  span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-cover-image r-bg-dark r-pull-24 r-border-none r-card-r-128">
+          <a-card class="r-cover-image r-bg-dark r-pull-24 r-border-none r-pt-81">
             <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }"

@@ -10,7 +10,7 @@
         How can we help? Just a quick note: try visiting our
         <nuxt-link to="/help">Help center</nuxt-link>
         that maybe of help only for general queries that we frequently receive from
-        our customers.
+        our buyers.
       </p>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"

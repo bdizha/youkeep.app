@@ -14,7 +14,7 @@
                        class="gutter-row"
                 >
                   <h4 class="r-heading-light r-text-uppercase">
-                    Addtract for Sellers
+                    Addtract For Suppliers
                   </h4>
                   <h1 class="r-heading">
                     <span class="r-text-secondary">Sell more,</span><br>
@@ -84,7 +84,7 @@
                       We're a better way to achieve better sales.
                     </h3>
                     <p class="r-text-normal">
-                      Addtract lets your customers pay for products in 3 installments with existing credit at zero
+                      Addtract lets your buyers pay for products in 3 installments with existing credit at zero
                       interest.
                     </p>
                   </a-col>
@@ -149,7 +149,7 @@
                           </h4>
                           <p class="r-text-normal">
                             50% of shoppers are more likely to make a purchase if offered the ability to pay in
-                            interest-free installment payments. Enroll more customers and offer them rewards for buying
+                            interest-free installment payments. Enroll more buyers and offer them rewards for buying
                             from
                             you.
                           </p>
@@ -285,7 +285,7 @@
                                style="text-align: left;"
                         >
                           <h4 class="r-heading r-text-secondary">
-                            More qualified customers
+                            More qualified buyers
                           </h4>
                           <p class="r-text-normal">
                             Unlike other buy-now-pay-later plans, Addtract isn’t new financing. Addtract lets online
@@ -336,7 +336,7 @@
                           <p class="r-text-normal">With hundreds of
                             thousands
                             of
-                            customers
+                            buyers
                             and a monthly expansion to new cities, Addtract was named the fastest growing retail
                             platform
                             company in

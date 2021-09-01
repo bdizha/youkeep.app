@@ -60,7 +60,7 @@
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                                 <div class="r-footer-link">
-                                  <nuxt-link to="/seller">For Sellers</nuxt-link>
+                                  <nuxt-link to="/supplier">For Suppliers</nuxt-link>
                                 </div>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">

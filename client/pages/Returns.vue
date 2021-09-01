@@ -28,8 +28,8 @@
               </h2>
               <p class="r-text-normal">
                 Nice to know, we are Addtract, an online supermakert service. We are the
-                only store in South Africa that is only online, which means that our customers are at the
-                center of our business, in fact, we focus on our customers and how best we can serve them.
+                only store in South Africa that is only online, which means that our buyers are at the
+                center of our business, in fact, we focus on our buyers and how best we can serve them.
 
               </p>
               <p class="r-text-normal">
@@ -40,7 +40,7 @@
                 and quality.
               </p>
               <p class="r-text-normal">
-                Our mission is to provide our customers with the best service on the market.
+                Our mission is to provide our buyers with the best service on the market.
                 Our professional shoppers are waiting to choose you super fresh and high quality
                 products, our couriers are waiting to get you the shipment super fast and our customer
                 service team is waiting to give you super personal and courteous service across many
@@ -56,7 +56,7 @@
           <a-row align="middle" justify="space-around" type="flex">
             <a-col :lg="{span: 18 , offset: 6}" class="r-page-padding">
               <h2 class="r-heading r-text-secondary">
-                We believe in our customers
+                We believe in our buyers
               </h2>
               <p class="r-text-normal">
                 online business is part of it, but there are more fun things to do. Yet we are often in

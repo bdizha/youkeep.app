@@ -8,7 +8,7 @@ body *:not(html):not(style):not(br):not(tr):not(code) {
 }
 
 body {
-    background-color: #F3F6F9;
+    background-color: #e9f4ff;
     color: #484848;
     height: 100%;
     hyphens: auto;
@@ -100,7 +100,7 @@ img {
 /* Layout */
 
 .wrapper {
-    background-color: #F3F6F9;
+    background-color: #e9f4ff;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -152,7 +152,7 @@ img {
 /* Body */
 
 .body {
-    background-color: #F3F6F9;
+    background-color: #e9f4ff;
     border-bottom: 1px solid #edeff2;
     border-top: 1px solid #edeff2;
     margin: 0;

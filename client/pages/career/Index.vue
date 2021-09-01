@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark r-pull-h-24 r-border-none r-card-r-128">
+          <a-card class="r-bg-dark r-pull-h-24 r-border-none r-pt-81">
             <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
@@ -148,7 +148,7 @@
                      :xs="{ span: 24 }"
               >
                 <p class="r-text-normal">
-                  It's all about giving back our customers the control of their business.
+                  It's all about giving back our buyers the control of their business.
                   At Addtract, we are building a business experience that helps millions of people be
                   in control of their business experience.
                 </p>

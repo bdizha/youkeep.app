@@ -262,7 +262,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-uppercase">
-                    Why <span class="r-text-primary">Addtract+</span> for customers?
+                    Why <span class="r-text-primary">Addtract+</span> For Buyers?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 16 }" :md="{ span: 18 }"

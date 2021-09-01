@@ -9,7 +9,7 @@
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
-                Addtract for Customers
+                Addtract For Buyers
               </h4>
               <h1 class="r-heading">
                 <span class="r-text-secondary">Shop More,</span><br>

@@ -17,10 +17,10 @@
                            style="text-align: left;"
                     >
                       <h4 class="r-heading">
-                        For sellers
+                        For Suppliers
                       </h4>
                       <h1 class="r-heading">
-                        <span class="r-text-secondary">Enable more buying customers and increase recurring orders with Addtract.</span>
+                        <span class="r-text-secondary">Enable more buying buyers and increase recurring orders with Addtract.</span>
                       </h1>
                       <p class="r-text-normal">
                         Maximize in-store impact with Addtract signage and online training for
@@ -93,7 +93,7 @@
                      style="text-align: left;"
               >
                 <h4 class="r-heading-light">
-                  Customers want to buy more of Your categories. And now they've a more
+                  buyers want to buy more of Your categories. And now they've a more
                   flexible
                   business option with Addtract
                 </h4>
@@ -148,7 +148,7 @@
               Become a verified seller today
             </h2>
             <p class="r-text-normal">
-              Join the Addtract Seller Program and start promoting Addtract online today and watch your
+              Join the Addtract Supplier Program and start promoting Addtract online today and watch your
               business run wild!
             </p>
           </a-col>
@@ -158,7 +158,7 @@
                  class="r-padding-bottom-48"
           >
             <a-button size="large" type="secondary" @click="onModal('seller')">
-              Become a Seller
+              Become a Supplier
             </a-button>
           </a-col>
         </a-row>

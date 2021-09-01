@@ -10,7 +10,7 @@
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}" class="r-text-center">
             <p class="r-text-normal">
-              Partner with us to introduce "Delayed Payments" service to your customers and multiply sales.
+              Partner with us to introduce "Delayed Payments" service to your buyers and multiply sales.
             </p>
           </a-col>
         </a-row>
@@ -71,12 +71,12 @@ export default {
         {
           heading: 'Transparent',
           title: 'Earn zero risk payments',
-          content: 'You get paid today. Your customers pay over time.',
+          content: 'You get paid today. Your buyers pay over time.',
           icon: 'safety'
         },
         {
           heading: 'Simple',
-          title: 'Put your customers first',
+          title: 'Put your buyers first',
           content: 'Interest-free installment plans with no hard credit check or impact on credit',
           icon: 'shop'
         },
@@ -89,7 +89,7 @@ export default {
         {
           heading: 'Robust',
           title: 'Get involved in our community',
-          content: 'Introduce your brand to millions of existing Addtract customers in our marketplace.',
+          content: 'Introduce your brand to millions of existing Addtract buyers in our marketplace.',
           icon: 'bank'
         },
         {

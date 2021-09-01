@@ -32,7 +32,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading">
-                          Our customers stories
+                          Our buyers stories
                         </h1>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
