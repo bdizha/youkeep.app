@@ -124,7 +124,7 @@ class CategoryUpdateSeeder extends DatabaseSeeder
         foreach ($products as $product) {
             foreach ($product->categories as $category) {
 
-                echo 'Updating category -> product link for ' . $category->name . "\n";
+                echo 'Updating category -> service link for ' . $category->name . "\n";
 
                 $product->updateAncestryIds($category);
             }

@@ -27,7 +27,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   props: {
-    name: 'r-product-modal-wishlist'
+    name: 'r-service-modal-wishlist'
   },
   data () {
     return {}

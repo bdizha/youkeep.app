@@ -11,8 +11,8 @@ viewBox="0 0 17127.66 11797.32"
     .str1 {stroke:#97CBFF;stroke-width:115.82;stroke-miterlimit:22.9256}
     .fil15 {fill:none}
     .fil5 {fill:#C4E1FF}
-    .fil4 {fill:#c4e1ff}
-    .fil3 {fill:#c4e1ff}
+    .fil4 {fill:#E5F2FF}
+    .fil3 {fill:#E5F2FF}
     .fil9 {fill:#FBD13E}
     .fil6 {fill:#B4DCFF;fill-rule:nonzero}
     .fil11 {fill:#FBD13E;fill-rule:nonzero}
@@ -20,7 +20,7 @@ viewBox="0 0 17127.66 11797.32"
     .fil12 {fill:#B4DCFF;fill-opacity:0.058824}
     .fil0 {fill:#B4DCFF;fill-opacity:0.200000}
     .fil1 {fill:#3B9CFF;fill-opacity:0.490196}
-    .fil2 {fill:#c4e1ff;fill-opacity:0.960784}
+    .fil2 {fill:#E5F2FF;fill-opacity:0.960784}
     .fil14 {fill:#00C2FF}
     .fil8 {fill:#3B9CFF}
     .fil13 {fill:#FBD13E}

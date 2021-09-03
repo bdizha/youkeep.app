@@ -100,7 +100,7 @@ const actions = {
     } else {
       fields.forEach(function (field) {
         mapFields[field] = form.createFormField({
-          value: null,
+          value: null
         })
       })
     }

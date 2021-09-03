@@ -17,9 +17,9 @@ Route::get('{path}', function () {
 
 Auth::routes();
 
-Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
-Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
-Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
+Route::get('email/verify', 'Auth\VerificationController@show')->name('confirmation.notice');
+Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('confirmation.verify');
+Route::get('email/resend', 'Auth\VerificationController@resend')->name('confirmation.resend');
 
 Route::group([ 'prefix' => '{locale}', 'where' => ['locale' => '[a-zA-Z]{2}'], 'middleware' => 'setlocale'], function() {
     Auth::routes();

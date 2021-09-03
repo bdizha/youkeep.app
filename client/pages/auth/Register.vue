@@ -7,16 +7,15 @@
 </template>
 <script>
 export default {
-  async asyncData ({ store, params }) {
+  data: () => ({
+  }),
+  created () {
     const modal = {}
     modal.isVisible = true
     modal.isClosable = false
     modal.current = 'register'
-
-    await store.dispatch('base/onModal', modal)
+    this.$store.dispatch('base/onModal', modal)
   },
-  data: () => ({
-  }),
   methods: {
   }
 }

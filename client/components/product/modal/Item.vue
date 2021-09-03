@@ -1,6 +1,6 @@
 <template>
   <r-modal-template :closable="true"
-                    :css-class="'r-modal-product'"
+                    :css-class="'r-modal-service'"
                     :mask-closable="true"
                     current="product"
                     style="position: relative;"
@@ -40,7 +40,7 @@
     <!--                </h3>-->
     <!--            </a-col>-->
     <!--        </a-row>-->
-    <!--        <r-category-item :columns="4" :has-product="true" :category="category"></r-category-item>-->
+    <!--        <r-category-item :columns="4" :has-service="true" :category="category"></r-category-item>-->
   </r-modal-template>
 </template>
 <script>

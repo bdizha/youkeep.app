@@ -22,7 +22,7 @@ export default {
           heading: 'Buying with Addtract is easy.',
           image: '/steps/step-01-primary.svg',
           summary: 'Pick, compare, save products to your favourite list all in a single place.',
-          content: 'Discover brands and products faster with a buyer homepage that highlights trends, collections, and more in a single place. <br /><br />Buying with Addtract is easy. Filter brand and product discovery by location, certifications, distribution, and more.'
+          content: 'Discover brands and products faster with a buyer homepage that highlights trends, collections, and more in a single place. <br /><br />Buying with Addtract is easy. Filter brand and service discovery by location, certifications, distribution, and more.'
         },
         {
           title: 'Shop It',

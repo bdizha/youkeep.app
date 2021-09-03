@@ -203,7 +203,7 @@ export default {
       promises: [
         {
           title: 'Inclusion',
-          content: 'You’re unique and your businesses should be too. We help match your product to reliable and established property developers that fit your capital return goals . ',
+          content: 'You’re unique and your businesses should be too. We help match your service to reliable and established property developers that fit your capital return goals . ',
           theme: 'secondary',
           textTheme: 'primary'
         },

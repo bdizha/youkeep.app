@@ -31,6 +31,8 @@
     <r-login v-if="isCurrent('login')"
              key="login" class="r-animate"
     ></r-login>
+    <r-verify v-if="isCurrent('verify')"
+              key="verify" class="r-animate"></r-verify>
     <r-register v-if="isCurrent('register')"
                 key="register" class="r-animate"
     ></r-register>

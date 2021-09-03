@@ -125,12 +125,12 @@ class Product extends KModel
 
     public function getThumbnailUrlAttribute()
     {
-        return url('/storage/product/' . $this->thumbnail);
+        return url('/storage/service/' . $this->thumbnail);
     }
 
     public function getPhotoUrlAttribute()
     {
-        return url('/storage/product/' . $this->photo);
+        return url('/storage/service/' . $this->photo);
     }
 
     public function getPhotosAttribute()
@@ -142,8 +142,8 @@ class Product extends KModel
         foreach ($photos as $photo) {
             $productPhotos[] = [
                 'id' => $photo->id,
-                'image' => url('/storage/product/' . $photo->image),
-                'thumb' => url('/storage/product/' . $photo->thumb),
+                'image' => url('/storage/service/' . $photo->image),
+                'thumb' => url('/storage/service/' . $photo->thumb),
             ];
         }
 
@@ -319,7 +319,7 @@ class Product extends KModel
      */
     public function getRouteAttribute()
     {
-        $route = '/product/' . $this->slug;
+        $route = '/service/' . $this->slug;
         return $route;
     }
 
@@ -343,7 +343,7 @@ class Product extends KModel
     }
 
     /**
-     * Get all the types for this product.
+     * Get all the types for this service.
      */
     public function product_types()
     {
@@ -375,7 +375,7 @@ class Product extends KModel
     }
 
     /**
-     * Get all product variants
+     * Get all service variants
      */
     public function variants()
     {
@@ -383,7 +383,7 @@ class Product extends KModel
     }
 
     /**
-     * Get all the photos for this product.
+     * Get all the photos for this service.
      */
     public function photos()
     {

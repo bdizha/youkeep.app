@@ -114,7 +114,7 @@ class DatabaseSeeder extends Seeder
 
         $this->product = \App\Product::updateOrCreate($attributes, $values);
 
-        echo ">>>>>Inserting product: " . $this->product->name . " ::: {$this->product->external_url}\n";
+        echo ">>>>>Inserting service: " . $this->product->name . " ::: {$this->product->external_url}\n";
 
         $this->setProductStore($values);
 
@@ -161,7 +161,7 @@ class DatabaseSeeder extends Seeder
 
             $type = $productTypeKeys[$typeName];
 
-            echo ">>>>>>Inserting product type: {$name} with type: {$typeName} \n";
+            echo ">>>>>>Inserting service type: {$name} with type: {$typeName} \n";
 
             $attributes = [
                 'name' => $name
@@ -173,7 +173,7 @@ class DatabaseSeeder extends Seeder
             ];
 
             $productType = \App\ProductType::updateOrCreate($attributes, $values);
-            echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
+            echo ">>>>>>Inserting {$productType->name} service variant: {$name} \n";
 
             $this->setProductVariant($filterItem, $productType);
         }
@@ -424,7 +424,7 @@ class DatabaseSeeder extends Seeder
                 'count' => 1,
             ];
 
-            echo ">>>>>Inserting lookup product :" . $product->name . "\n";
+            echo ">>>>>Inserting lookup service :" . $product->name . "\n";
 
             Lookup::updateOrCreate($attributes, $values);
         }

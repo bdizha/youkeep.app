@@ -27,8 +27,8 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h1 class="r-heading r-text-primary">
-                            <span class="r-text-secondary">Digitizing</span> your B2B <span class="r-text-primary">payments</span>, end to end.
+                          <h1 class="r-heading">
+                            <span class="r-text-secondary">Digitizing</span> end-to-end B2B <span class="r-text-primary">payments</span>.
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -36,8 +36,16 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium">
-                            Built for retail businesses, it offers a clear view into product purchase activity with:
-                            automated billing, expensing, and reporting. Let your buyers get what they need and want, online and in-stores. And you’ll earn long-term business connections.
+                            Addtract is the leading product discovery and sourcing platform where retailers and suppliers discover, connect, and grow their business.
+                          </p>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-normal">
+                            Join the Addtract Supplier Platform and start promoting your categories online today and watch
+                            your sales shoot through the roof.
                           </p>
                         </a-col>
                         <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
@@ -66,18 +74,6 @@
                               Get started
                             </a-button>
                           </nuxt-link>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <p class="r-text-normal">
-                          <span class="r-text-primary">
-                          Join the Addtract Supplier Platform and start promoting your categories online today and watch
-                          your
-                          sales run wild.
-                          </span>
-                          </p>
                         </a-col>
                       </a-row>
                     </a-col>
@@ -145,7 +141,8 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium">
-                            RangeMe is the leading product discovery and sourcing platform where retailers and suppliers discover, connect, and grow their business.
+                            Built for retail businesses, Addtract offers a clear view into product purchase activity with:
+                            automated billing, expensing, and reporting.
                           </p>
                         </a-col>
                         <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -176,7 +173,7 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
       <r-seller-benefits></r-seller-benefits>

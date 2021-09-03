@@ -32,13 +32,13 @@ class VerificationController extends Controller
     {
         if (! URL::hasValidSignature($request)) {
             return response()->json([
-                'status' => trans('verification.invalid'),
+                'status' => trans('confirmation.invalid'),
             ], 400);
         }
 
         if ($user->hasVerifiedEmail()) {
             return response()->json([
-                'status' => trans('verification.already_verified'),
+                'status' => trans('confirmation.already_verified'),
             ], 400);
         }
 
@@ -47,12 +47,12 @@ class VerificationController extends Controller
         event(new Verified($user));
 
         return response()->json([
-            'status' => trans('verification.verified'),
+            'status' => trans('confirmation.verified'),
         ]);
     }
 
     /**
-     * Resend the email verification notification.
+     * Resend the email confirmation notification.
      *
      * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\JsonResponse
@@ -65,18 +65,18 @@ class VerificationController extends Controller
 
         if (is_null($user)) {
             throw ValidationException::withMessages([
-                'email' => [trans('verification.user')],
+                'email' => [trans('confirmation.user')],
             ]);
         }
 
         if ($user->hasVerifiedEmail()) {
             throw ValidationException::withMessages([
-                'email' => [trans('verification.already_verified')],
+                'email' => [trans('confirmation.already_verified')],
             ]);
         }
 
         $user->sendEmailVerificationNotification();
 
-        return response()->json(['status' => trans('verification.sent')]);
+        return response()->json(['status' => trans('confirmation.sent')]);
     }
 }

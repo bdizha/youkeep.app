@@ -97,7 +97,7 @@ class ProductWoolworthsSeeder extends Seeder
     public function getProducts($category)
     {
         $categoryNode = Goutte::request('GET', 'http://Addtract.local/import-store-images');
-        $productNodes = $categoryNode->filter('.product-list__item');
+        $productNodes = $categoryNode->filter('.service-list__item');
 
         if ($productNodes->count()) {
             echo __LINE__ . " <> \n";
@@ -129,15 +129,15 @@ class ProductWoolworthsSeeder extends Seeder
                     }
                     echo __LINE__ . " <> \n";
 
-                    if (!empty($productPrice) && $node->filter('.product-card__img')->count()) {
+                    if (!empty($productPrice) && $node->filter('.service-card__img')->count()) {
                         echo __LINE__ . " <> \n";
                         // set the thumb
-                        $productThumbUrl = $node->filter('.product-card__img')->attr('src');
+                        $productThumbUrl = $node->filter('.service-card__img')->attr('src');
                         echo __LINE__ . " <> \n";
                         $productThumb = sha1($productThumbUrl) . ".jpeg";
                         echo "Product thumb: " . $productThumb . "\n";
 
-                        Storage::disk('product')->put($productThumb, file_get_contents($productThumbUrl));
+                        Storage::disk('service')->put($productThumb, file_get_contents($productThumbUrl));
 
                         $productNode = Goutte::request('GET', $productLink);
 
@@ -175,7 +175,7 @@ class ProductWoolworthsSeeder extends Seeder
                             echo "Product photo: " . $productPhoto . "\n";
 
                             echo __LINE__ . " <> \n";
-                            Storage::disk('product')->put($productPhoto, file_get_contents($productPhotoUrl));
+                            Storage::disk('service')->put($productPhoto, file_get_contents($productPhotoUrl));
 
 //                            dd([$productName, $productSummary, $productPrice, $productThumb, $productPhoto]);
 
@@ -247,7 +247,7 @@ class ProductWoolworthsSeeder extends Seeder
                                     $productThumbUrl = $productPhotoUrl . '?w=145&h=185&q=80';
                                     echo __LINE__ . " <> \n";
 
-                                    // set the product photo
+                                    // set the service photo
                                     $productPhoto = sha1($productPhotoUrl) . ".jpeg";
                                     echo "Product photo: " . $productThumb . "\n";
 
@@ -255,9 +255,9 @@ class ProductWoolworthsSeeder extends Seeder
                                     echo "Product thumb: " . $productThumb . "\n";
                                     echo "Product thumb url : " . $productThumbUrl . "\n";
 
-                                    Storage::disk('product')->put($productPhoto, file_get_contents($productPhotoUrl));
+                                    Storage::disk('service')->put($productPhoto, file_get_contents($productPhotoUrl));
 
-                                    Storage::disk('product')->put($productThumb, file_get_contents($productThumbUrl));
+                                    Storage::disk('service')->put($productThumb, file_get_contents($productThumbUrl));
 
                                     $values = [
                                         'image' => $productPhoto,
@@ -297,7 +297,7 @@ class ProductWoolworthsSeeder extends Seeder
 
         $product->updateAncestryIds($category);
 
-//        $product->updateCategories($categories);
+//        $service->updateCategories($categories);
 
         $values = [
             'store_id' => 1,

@@ -208,16 +208,16 @@ class ProductMrSeeder extends DatabaseSeeder
             $productPhotoUrl = $photo['large'];
             $productThumbUrl = $photo['thumb'];
 
-            // set the product photo
+            // set the service photo
             $productPhoto = sha1($productPhotoUrl) . ".jpeg";
             $productThumb = sha1($productThumbUrl) . ".jpeg";
 
-            if (!file_exists(public_path('storage/product/' . $productPhoto))) {
-                echo ">>>>>> Product photo inserted : " . public_path('storage/product/' . $productPhoto) . "\n";
-                Storage::disk('product')->put($productPhoto, file_get_contents($productPhotoUrl));
-                Storage::disk('product')->put($productThumb, file_get_contents($productThumbUrl));
+            if (!file_exists(public_path('storage/service/' . $productPhoto))) {
+                echo ">>>>>> Product photo inserted : " . public_path('storage/service/' . $productPhoto) . "\n";
+                Storage::disk('service')->put($productPhoto, file_get_contents($productPhotoUrl));
+                Storage::disk('service')->put($productThumb, file_get_contents($productThumbUrl));
             } else {
-                echo "<<<<<< Product photo skipped: " . public_path('storage/product/' . $productPhoto) . "\n";
+                echo "<<<<<< Product photo skipped: " . public_path('storage/service/' . $productPhoto) . "\n";
             }
 
             if (empty($key)) {
@@ -258,7 +258,7 @@ class ProductMrSeeder extends DatabaseSeeder
             }
 
             $productItem['description'] = '';
-            $productNode->filter('#accordion-product-tabs .panel')->each(function ($node) use (&$productItem) {
+            $productNode->filter('#accordion-service-tabs .panel')->each(function ($node) use (&$productItem) {
                 $description = null;
 
                 $titleNode = $node->filter('.panel-title a');
@@ -314,7 +314,7 @@ class ProductMrSeeder extends DatabaseSeeder
 
             $type = $productTypeKeys[$typeName];
 
-            echo ">>>>>>Inserting product type: {$name} with type: {$typeName} \n";
+            echo ">>>>>>Inserting service type: {$name} with type: {$typeName} \n";
 
             $attributes = [
                 'name' => $name
@@ -326,7 +326,7 @@ class ProductMrSeeder extends DatabaseSeeder
             ];
 
             $productType = \App\ProductType::updateOrCreate($attributes, $values);
-            echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
+            echo ">>>>>>Inserting {$productType->name} service variant: {$name} \n";
 
             $this->setProductVariant($filterItem, $productType);
         }
@@ -384,12 +384,12 @@ class ProductMrSeeder extends DatabaseSeeder
 
         $productItems = [];
         $categoryNode->filter('.products-grid li.item')->each(function ($node) use (&$productItems) {
-            $nameNode = $node->filter('.product-name');
+            $nameNode = $node->filter('.service-name');
             if ($nameNode->count() > 0) {
                 $productName = $nameNode->text();
             }
 
-            $urlNode = $node->filter('a.product-image');
+            $urlNode = $node->filter('a.service-image');
             if ($urlNode->count() > 0) {
                 $productUrl = $urlNode->attr('href');
             }

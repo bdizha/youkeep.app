@@ -247,7 +247,7 @@ export default {
         {
           title: 'Addtract',
           slug: 'Addtract',
-          content: 'B2B platform connecting retailers and suppliers for better product discovery.'
+          content: 'B2B platform connecting retailers and suppliers for better service discovery.'
         },
         {
           title: 'Addtract',

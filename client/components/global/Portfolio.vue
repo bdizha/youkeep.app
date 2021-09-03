@@ -184,9 +184,9 @@ export default {
         {
           title: 'Addtract',
           slug: 'Addtract',
-          content: 'B2B platform connecting retailers and suppliers for better product discovery.',
-          problem: 'Retailers didn’t have a good mechanism to contact suppliers, and when they did get proposals, the suppliers often didn’t know what information the retailers needed to make a decision on their product.',
-          solution: 'Empowering suppliers and retailers to be productive and successful. Suppliers can create free product profiles that detail all the key information buyers need to know when considering your product.'
+          content: 'B2B platform connecting retailers and suppliers for better service discovery.',
+          problem: 'Retailers didn’t have a good mechanism to contact suppliers, and when they did get proposals, the suppliers often didn’t know what information the retailers needed to make a decision on their service.',
+          solution: 'Empowering suppliers and retailers to be productive and successful. Suppliers can create free service profiles that detail all the key information buyers need to know when considering your service.'
         },
         {
           title: 'Addtract',

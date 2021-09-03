@@ -73,7 +73,7 @@ class ProductType extends Model
     }
 
     /**
-     * Get all of the products variants for this product type.
+     * Get all of the products variants for this service type.
      */
     public function variants()
     {

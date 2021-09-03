@@ -100,7 +100,7 @@ const MENU = [
       // { In cases Marketplace show this
       //   label: 'Your categories',
       //   icon: 'profile',
-      //   link: '/account/product'
+      //   link: '/account/service'
       // },
       {
         label: 'Your Settings',

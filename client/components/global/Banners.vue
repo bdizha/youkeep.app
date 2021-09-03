@@ -89,7 +89,7 @@ export default {
     let path = `/products`
     let $this = this
 
-    console.log('product path: ', path)
+    console.log('service path: ', path)
 
     await axios.post(path, params)
       .then(({ data }) => {

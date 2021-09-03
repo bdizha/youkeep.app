@@ -66,7 +66,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail');
     Route::post('password/reset', 'Auth\ResetPasswordController@reset');
 
-    Route::post('email/verify/{user}', 'Auth\VerificationController@verify')->name('verification.verify');
+    Route::post('email/verify/{user}', 'Auth\VerificationController@verify')->name('confirmation.verify');
     Route::post('email/resend', 'Auth\VerificationController@resend');
 
     Route::post('oauth/{driver}', 'Auth\OAuthController@redirectToProvider');
@@ -115,7 +115,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::get('/account/payment', 'AccountPaymentController@index')->name('account.payments');
     Route::get('/account/card', 'AccountPaymentController@cards')->name('account.cards');
     Route::post('/account/store', 'StoreController@index')->name('account.stores');
-    Route::get('/account/product', 'AccountController@products')->name('account.products');
+    Route::get('/account/service', 'AccountController@products')->name('account.products');
     Route::post('/account/card/store', 'AccountPaymentController@store')->name('account.card.store');
     Route::post('/account/card/delete', 'AccountPaymentController@delete')->name('account.card.delete');
     Route::post('/account/settings/store', 'AccountSettingsController@store')->name('account.settings.store');
@@ -143,6 +143,6 @@ Route::group(['middleware' => 'guest:api'], function () {
 
     Route::get('/category/{slug}/{level}', 'CategoryController@show')->name('category.show.level');
     Route::post('/category/{slug}/{level}', 'CategoryController@show')->name('category.show.level.post');
-    Route::get('/product/{slug}', 'ProductController@show')->name('product.get');
-    Route::post('/product/{slug}', 'ProductController@show')->name('product.show');
+    Route::get('/service/{slug}', 'ProductController@show')->name('service.get');
+    Route::post('/service/{slug}', 'ProductController@show')->name('service.show');
 });

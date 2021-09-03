@@ -238,7 +238,7 @@ class ProductMTGSeeder extends DatabaseSeeder
                 $productTypeKey = Str::plural($productTypeKey);
 
                 if (empty($productData[$productTypeKey])) {
-//                    echo __LINE__ . " Skipping product variant: {$productTypeKey} \n";
+//                    echo __LINE__ . " Skipping service variant: {$productTypeKey} \n";
                     continue;
                 }
 
@@ -278,15 +278,15 @@ class ProductMTGSeeder extends DatabaseSeeder
             $productPhotoUrl = $photo['large'];
             $productThumbUrl = $photo['thumb'];
 
-            // set the product photo
+            // set the service photo
             $productPhoto = sha1($productPhotoUrl) . ".jpeg";
             $productThumb = sha1($productThumbUrl) . ".jpeg";
 
-            if (!file_exists(public_path('storage/product/' . $productPhoto))) {
-                Storage::disk('product')->put($productPhoto, file_get_contents($productPhotoUrl));
-                Storage::disk('product')->put($productThumb, file_get_contents($productThumbUrl));
+            if (!file_exists(public_path('storage/service/' . $productPhoto))) {
+                Storage::disk('service')->put($productPhoto, file_get_contents($productPhotoUrl));
+                Storage::disk('service')->put($productThumb, file_get_contents($productThumbUrl));
             } else {
-                echo "Product photo skipped: " . public_path('storage/product/' . $productPhoto) . "\n";
+                echo "Product photo skipped: " . public_path('storage/service/' . $productPhoto) . "\n";
             }
 
             if (empty($key)) {
@@ -343,7 +343,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             $this->getProductDescription($productNode->text(), $description);
 
             $productNode = Goutte::request('GET', $productLink)
-                ->filter('#product-static-data');
+                ->filter('#service-static-data');
 
             $attributes = [
                 'name' => $productName,
@@ -361,17 +361,17 @@ class ProductMTGSeeder extends DatabaseSeeder
                 $productThumbUrl = $productItem['defaultImages'][0];
                 $productThumb = sha1($productThumbUrl) . ".jpeg";
 
-                if (!file_exists(public_path('storage/product/' . $productThumb))) {
-                    Storage::disk('product')->put($productThumb, file_get_contents($productThumbUrl));
+                if (!file_exists(public_path('storage/service/' . $productThumb))) {
+                    Storage::disk('service')->put($productThumb, file_get_contents($productThumbUrl));
                 } else {
-                    echo "Product photo skipped: " . public_path('storage/product/' . $productThumb) . "\n";
+                    echo "Product photo skipped: " . public_path('storage/service/' . $productThumb) . "\n";
                 }
 
                 // set the main photo
                 $productPhotoUrl = !empty($productData['images'][0]['large']) ? $productData['images'][0]['large'] : $productThumbUrl;
 
                 $productPhoto = sha1($productPhotoUrl) . ".jpeg";
-                Storage::disk('product')->put($productPhoto, file_get_contents($productPhotoUrl));
+                Storage::disk('service')->put($productPhoto, file_get_contents($productPhotoUrl));
 
                 $attributes['photo'] = $productPhoto;
                 $attributes['thumbnail'] = $productThumb;

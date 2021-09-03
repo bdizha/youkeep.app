@@ -20,7 +20,7 @@ export default {
           heading: 'Showcase your products',
           image: '/steps/step-01.svg',
           summary: 'Share your brand profile with buyers on and off of Addtract and track engagement.',
-          content: 'Your brand profile is a customizable digital sell sheet that highlights key product, brand, and company details all in a single place. <br /><br />Lead customers through the shopping journey with compelling tools like prequalification and dynamic price messaging, accelerating their path to purchase and encouraging bundling and upgrades. '
+          content: 'Your brand profile is a customizable digital sell sheet that highlights key service, brand, and company details all in a single place. <br /><br />Lead customers through the shopping journey with compelling tools like prequalification and dynamic price messaging, accelerating their path to purchase and encouraging bundling and upgrades. '
         },
         {
           title: 'Sell It',
@@ -34,7 +34,7 @@ export default {
           heading: 'Connect and do business',
           image: '/steps/step-03.svg',
           summary: 'Buyers connect with you directly on Addtract to start conversations, request samples, and discuss next steps.',
-          content: 'See what product details are driving buyer engagement, such as MSRP, margin, certifications, and popular search terms. <br /><br />Open up your business to an influx of new customers when you tap into our high lifetime value, highly engaged network of 6.2M+ customers and incorporate pay-over-time messaging in your marketing. '
+          content: 'See what service details are driving buyer engagement, such as MSRP, margin, certifications, and popular search terms. <br /><br />Open up your business to an influx of new customers when you tap into our high lifetime value, highly engaged network of 6.2M+ customers and incorporate pay-over-time messaging in your marketing. '
         }
       ]
     }

@@ -23,7 +23,7 @@ export default {
     this.payload()
   },
   computed: mapGetters({
-    modal: 'base/modal',
+    modal: 'base/modal'
   }),
   methods: {
     payload () {

@@ -159,7 +159,7 @@
             <a-col :xs="{ span: 12 }">
               <a-form-item label="Mobile Number">
                 <a-input
-                  v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your Mobile Number for verification' }] }]"
+                  v-decorator="['phone', { rules: [{ required: true, message: 'Please enter your Mobile Number for confirmation' }] }]"
                   placeholder="Your Mobile Number"
                   size="default"
                   type="text"

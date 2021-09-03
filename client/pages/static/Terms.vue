@@ -229,7 +229,7 @@
 
             <p>Upon the end of the Initial Term and any Renewal Term, your subscription will automatically renew for the
               same duration as the Initial Term and at Addtract’s then-list price unless you give us notice (via
-              support@Addtract.com) at least (a) seven (7) days for monthly or quarterly subscriptions; or (b) thirty
+              support@addtract.com) at least (a) seven (7) days for monthly or quarterly subscriptions; or (b) thirty
               (30) days
               for annual subscriptions, in each case, prior to the end of the then-current Initial Term or Renewal Term,
               as
@@ -393,7 +393,7 @@
             <h3 id="118-30-day-opt-out-period">11.8. 30-day opt-out period</h3>
 
             <p>If you don’t wish to be bound by these arbitration provisions (including its waiver of class and
-              representative claims), you must notify us by emailing <a href="mailto:arbitration-opt-out@Addtract.com">arbitration-opt-out@Addtract.com</a>
+              representative claims), you must notify us by emailing <a href="mailto:arbitration-opt-out@addtract.com">arbitration-opt-out@addtract.com</a>
               no later than 30 days after the first acceptance date of any version of this agreement containing an
               arbitration provision (unless a longer period is required by applicable law). An opt-out notice does not
               revoke any previous arbitration agreement between us.</p>
@@ -425,7 +425,7 @@
               new
               version of these terms has a material negative impact on you, then you may object to the change by
               notifying
-              us (via support@Addtract.com) within 30 days after we provide you with notice of the changes. If you so
+              us (via support@addtract.com) within 30 days after we provide you with notice of the changes. If you so
               notify
               us, then you will remain governed by the terms in effect immediately before the change until the end of
               your

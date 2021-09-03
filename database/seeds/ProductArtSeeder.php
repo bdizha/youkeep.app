@@ -167,15 +167,15 @@ class ProductArtSeeder extends DatabaseSeeder
             $productPhotoUrl = $photo['retina_url'];
             $productThumbUrl = $photo['url'];
 
-            // set the product photo
+            // set the service photo
             $productPhoto = sha1($productPhotoUrl) . ".jpeg";
             $productThumb = sha1($productThumbUrl) . ".jpeg";
 
-            if (!file_exists(public_path('storage/product/' . $productPhoto))) {
-                Storage::disk('product')->put($productPhoto, file_get_contents($productPhotoUrl));
-                Storage::disk('product')->put($productThumb, file_get_contents($productThumbUrl));
+            if (!file_exists(public_path('storage/service/' . $productPhoto))) {
+                Storage::disk('service')->put($productPhoto, file_get_contents($productPhotoUrl));
+                Storage::disk('service')->put($productThumb, file_get_contents($productThumbUrl));
             } else {
-                echo "Product photo skipped: " . public_path('storage/product/' . $productPhoto) . "\n";
+                echo "Product photo skipped: " . public_path('storage/service/' . $productPhoto) . "\n";
             }
 
             if (empty($key)) {
@@ -325,7 +325,7 @@ class ProductArtSeeder extends DatabaseSeeder
         $values['type'] = User::TYPE_ARTIST;
         $user = User::updateOrCreate($attributes, $values);
 
-        // Set product artist
+        // Set service artist
         $values = $values = [
             'user_id' => $user->id,
             'product_id' => $this->product->id,

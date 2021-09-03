@@ -62,10 +62,10 @@ return [
             'visibility' => 'public',
         ],
 
-        'product' => [
+        'service' => [
             'driver' => 'local',
-            'root' => storage_path('app/public/product'),
-            'url' => env('APP_URL') . '/storage/product',
+            'root' => storage_path('app/public/service'),
+            'url' => env('APP_URL') . '/storage/service',
             'visibility' => 'public',
         ],
 

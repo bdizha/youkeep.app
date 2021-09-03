@@ -131,7 +131,7 @@ export default {
         avatar: this.product.photos[index].image,
         rating: Math.floor(Math.random() * Math.floor(5)),
         content:
-          'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
+          'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their service prototypes beautifully and efficiently.',
       })
     }
   },

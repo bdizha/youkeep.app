@@ -13,7 +13,7 @@ class VerifyEmail extends Notification
 {
 
     /**
-     * Get the verification URL for the given notifiable.
+     * Get the confirmation URL for the given notifiable.
      *
      * @param  mixed  $notifiable
      * @return string
@@ -21,8 +21,8 @@ class VerifyEmail extends Notification
     protected function verificationUrl($notifiable)
     {
         return URL::temporarySignedRoute(
-            'verification.verify',
-            \Illuminate\Support\Carbon::now()->addMinutes(Config::get('auth.verification.expire', 60)),
+            'confirmation.verify',
+            \Illuminate\Support\Carbon::now()->addMinutes(Config::get('auth.confirmation.expire', 60)),
             [
                 'id' => $notifiable->getKey(),
                 'hash' => sha1($notifiable->getEmailForVerification()),

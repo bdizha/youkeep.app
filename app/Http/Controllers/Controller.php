@@ -415,7 +415,7 @@ class Controller extends BaseController
 
         $sort = $sortOptions[$sort];
 
-        $this->reviews = Review::whereHas('product', function ($query) {
+        $this->reviews = Review::whereHas('service', function ($query) {
             $query->where('reviews.product_id', $this->productId);
         })
             ->orderBy($sort['column'], $sort['dir'])

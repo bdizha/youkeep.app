@@ -139,7 +139,7 @@ class User extends Authenticatable implements JWTSubject
 
 
     /**
-     * Send the email verification notification.
+     * Send the email confirmation notification.
      *
      * @return void
      */

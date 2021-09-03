@@ -33,7 +33,7 @@ class ProductVariant extends Model
     ];
 
     /**
-     * The product of this variant
+     * The service of this variant
      */
     public function product()
     {
@@ -41,7 +41,7 @@ class ProductVariant extends Model
     }
 
     /**
-     * Get all of the product types for the product variant.
+     * Get all of the service types for the service variant.
      */
     public function product_type()
     {

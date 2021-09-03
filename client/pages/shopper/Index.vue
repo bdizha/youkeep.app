@@ -345,7 +345,7 @@ export default {
         'Valid RSA driver\'s license and auto insurance',
         'Thorough background check required',
         'Insulated cooler bag',
-        'Knowledge of product selection',
+        'Knowledge of service selection',
         'Ability to lift 24+ pounds'
       ],
       features: [

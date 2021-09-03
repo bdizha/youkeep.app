@@ -117,7 +117,7 @@ class Category extends Model
 
         foreach (ProductType::$types as $type => $name) {
             $productTypes = ProductType::whereHas('variants', function ($query) {
-                $query->whereHas('product', function ($query) {
+                $query->whereHas('service', function ($query) {
                     $query->whereHas('categories', function ($query) {
                         $query->where('category_products.category_id', $this->id);
                     });
@@ -157,8 +157,8 @@ class Category extends Model
             $photo = $product->thumbnail;
 
             if (!in_array($photo, $this->ignoredPhotos) && !empty($photo)) {
-                if (file_exists(public_path('storage/product/' . $photo))) {
-                    $photos[] = url('/storage/product/' . $photo);
+                if (file_exists(public_path('storage/service/' . $photo))) {
+                    $photos[] = url('/storage/service/' . $photo);
                 }
             }
         }

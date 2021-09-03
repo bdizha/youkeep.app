@@ -25,7 +25,7 @@
 body,
 html {
     font-size: 15px;
-    background: #e9f4ff;
+    background: @white;
     background-repeat: repeat;
     height: 100%;
 }
@@ -139,6 +139,7 @@ a.r-text-logo {
     font-size: 15px;
     line-height: 21px;
     font-weight: 400;
+    margin: 0;
 
     .anticon {
         color: @secondary-color;
@@ -329,12 +330,33 @@ h1.r-text-xlarge-light {
         color: @black;
     }
 
+    .ant-menu-submenu {
+        .r-sub-menu{
+            display: none;
+            margin: auto;
+            position: fixed;
+            height: auto;
+            top: 60px;
+            left: 0;
+            bottom: auto;
+            width: 100%;
+            z-index: 1001;
+        }
+
+        &:hover{
+            .r-sub-menu {
+                display: block;
+            }
+        }
+    }
+
     .ant-menu-submenu-title {
         color: @black;
         border: none;
         border-radius: @border-radius;
         overflow: hidden;
         text-transform: capitalize;
+        white-space: initial;
 
         a {
             border: 1px solid transparent;
@@ -353,6 +375,11 @@ h1.r-text-xlarge-light {
                 border: 1px solid @blue-color;
                 color: @blue-color;
             }
+        }
+
+        a.r-link-card{
+            border: none !important;
+            padding: 0;
         }
     }
 
@@ -2441,9 +2468,9 @@ h3.r-heading-light {
 }
 
 h3.r-heading {
-    font-weight: 800;
-    font-size: 30px;
-    line-height: 39px;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 36px;
     margin: 0;
 
     &.r-text-capitalize {
@@ -2455,9 +2482,9 @@ h3.r-heading {
 }
 
 h4.r-heading {
-    font-size: 21px;
-    line-height: 27px;
-    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
     margin: 0;
 }
 
@@ -2998,6 +3025,11 @@ label {
     @media (max-width: 768px) {
         text-align: center;
     }
+}
+
+.r-footer-text{
+    color: @black;
+    margin: 0;
 }
 
 .r-header-left--active {
@@ -4839,15 +4871,15 @@ label {
             }
 
             .ant-tabs-nav {
-                background: @primary-color-light;
-                border-radius: @border-radius-30;
+                background-image: linear-gradient(0deg, rgba(233, 244, 255,0.15) 36%, @primary-color-light 100%);
+                border-radius: @border-radius;
 
                 .ant-tabs-tab {
                     border: none !important;
                     background: transparent;
                     font-size: 15px;
                     font-weight: 600;
-                    border-radius: @border-radius-30;
+                    border-radius: @border-radius;
                     margin-right: 24px;
                     text-transform: uppercase;
 
@@ -4976,24 +5008,6 @@ label {
         &:nth-child(4) {
             border-left: none;
             border-bottom: none;
-        }
-    }
-}
-
-.r-category-items {
-}
-
-.ant-card {
-    border-radius: @border-radius;
-
-    &.ant-card-hoverable {
-        -webkit-box-shadow: 0 1px 3px 0 #3893f0;
-        box-shadow: 0 1px 3px 0 #3893f0;
-
-        &:hover {
-            -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.21);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.21);
-            border-color: rgb(236, 236, 236, 1);
         }
     }
 }
@@ -5904,6 +5918,18 @@ label {
     padding: 12px;
 }
 
+.r-inline-block{
+    width: auto !important;
+    display: inline-block !important;
+}
+
+.r-p-0 {
+    padding: 0 !important;
+    .ant-card-body{
+        padding: 0 !important;
+    }
+}
+
 .r-pr-24 {
     padding-right: 24px;
 }
@@ -5957,10 +5983,6 @@ label {
 
 .r-block {
     display: block;
-}
-
-.r-inline-block {
-    display: inline-block;
 }
 
 .r-mb-24 {
@@ -6891,18 +6913,18 @@ label {
 }
 
 .r-bg-primary-light {
-    background: @primary-color-light;
+    background-image: linear-gradient(0deg, rgba(233, 244, 255,0.15) 36%, @primary-color-light 100%);
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_primary_light.svg) no-repeat;
+        background: transparent url(/images/icon_pattern_primary_light.svg) no-repeat !important;
     }
 }
 
 .r-bg-secondary-light {
-    background: @secondary-color-light;
+    background-image: linear-gradient(0deg, rgba(226, 248, 255,0.15) 36%, @secondary-color-light 100%);
 
     .ant-card-body {
-        background: transparent url(/images/icon_pattern_secondary_light.svg) no-repeat;
+        background: transparent url(/images/icon_pattern_secondary_light.svg) no-repeat !important;
     }
 }
 
@@ -7888,6 +7910,31 @@ h3.r-step-heading {
 
 a:hover {
     color: @secondary-color;
+}
+
+.ant-card {
+    border-radius: @border-radius;
+
+    &.ant-card-hoverable {
+        -webkit-box-shadow: 0 1px 3px 0 @shadow-color;
+        box-shadow: 0 1px 3px 0 @shadow-color;
+        h4{
+            .anticon {
+                font-size: 14px;
+            }
+        }
+        &:hover {
+            -webkit-box-shadow: 0 2px 6px 0 @shadow-dark-color;
+            box-shadow: 0 2px 6px 0 @shadow-dark-color;
+
+            h4{
+                color: @primary-color !important;
+                .anticon {
+                    padding-left: 36px;
+                }
+            }
+        }
+    }
 }
 
 .r-list-item,

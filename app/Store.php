@@ -132,7 +132,7 @@ class Store extends Model
     }
 
     /**
-     * Get the related product photos
+     * Get the related service photos
      */
     public function product_photos()
     {

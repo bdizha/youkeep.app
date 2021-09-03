@@ -14,11 +14,11 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        echo ">>>> Start product photos update";
+        echo ">>>> Start service photos update";
 
         $this->_updateProductPhotos();
 
-        die("End product photos update <<<<");
+        die("End service photos update <<<<");
     }
 
     private function _updateProductPhotos()
@@ -45,8 +45,8 @@ class ProductSeeder extends Seeder
                 $totalPurges++;
             } else {
                 foreach ($photos as $photo) {
-                    $image = public_path('storage/product/' . $photo->image);
-                    $thumbnail = public_path('storage/product/' . $photo->thumb);
+                    $image = public_path('storage/service/' . $photo->image);
+                    $thumbnail = public_path('storage/service/' . $photo->thumb);
 
                     if (!file_exists($image) || !file_exists($thumbnail)) {
                         echo "Deleted photo {$photo->image}" . "\n";
@@ -63,6 +63,6 @@ class ProductSeeder extends Seeder
         }
 
         echo "<> Total deleted {$totalPurges} products\n";
-        echo "<> Total deleted {$totalPhotosPurges} product photos <>\n";
+        echo "<> Total deleted {$totalPhotosPurges} service photos <>\n";
     }
 }

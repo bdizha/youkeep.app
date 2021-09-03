@@ -234,7 +234,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
 //
 //        $productItems = [];
 //        $categoryNode->filter('.catalog-product__padding')->each(function ($node) use (&$productItems, $storeCategory) {
-//            $nameNode = $node->filter('.catalog--product-name');
+//            $nameNode = $node->filter('.catalog--service-name');
 //            if ($nameNode->count() > 0) {
 //                $productName = $nameNode->text();
 //            }
@@ -248,11 +248,11 @@ class ProductAdidasSeeder extends DatabaseSeeder
 //                $productUrl = $this->domain . $productUrl;
 //            }
 //
-//            $this->product = App\Product::where('external_url', $productUrl)->first();
+//            $this->service = App\Product::where('external_url', $productUrl)->first();
 //
-//            if(!empty($productUrl) && empty($this->product->id)){
+//            if(!empty($productUrl) && empty($this->service->id)){
 //                $productPrice = null;
-//                $priceNode = $node->filter('.catalog-product--price');
+//                $priceNode = $node->filter('.catalog-service--price');
 //
 //                if ($priceNode->count() > 0) {
 //                    $productPrice = $priceNode->text();
@@ -267,7 +267,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
 //                ];
 //            }
 //            else{
-//                echo ">>>>>Updating product: " . $this->product->name . "\n";
+//                echo ">>>>>Updating service: " . $this->service->name . "\n";
 //                $this->setProductCategory($storeCategory);
 //            }
 //        });
@@ -339,8 +339,8 @@ class ProductAdidasSeeder extends DatabaseSeeder
             }
 
             $productItem['description'] = 'Not set';
-            if($productNode->filter('.product-spec-review')->count() > 0){
-                $productItem['description'] = $productNode->filter('.product-spec-review')->text();
+            if($productNode->filter('.service-spec-review')->count() > 0){
+                $productItem['description'] = $productNode->filter('.service-spec-review')->text();
             }
 
             $this->setProduct($productItem, $storeCategory);
@@ -381,7 +381,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
 
         foreach ($filterSets as $filterItem) {
             $name = $filterItem['name'];
-//            echo ">>>>>>Inserting product type: {$name} with type: {$name} \n";
+//            echo ">>>>>>Inserting service type: {$name} with type: {$name} \n";
 
             $attributes = [
                 'name' => $name
@@ -390,7 +390,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
             $values = $filterItem;
 
             $productType = ProductType::updateOrCreate($attributes, $values);
-//            echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
+//            echo ">>>>>>Inserting {$productType->name} service variant: {$name} \n";
 
             $this->setProductVariant($filterItem, $productType);
         }
@@ -413,16 +413,16 @@ class ProductAdidasSeeder extends DatabaseSeeder
             $productThumbUrl = $node->attr('data-image');
             $productPhotoUrl = $node->attr('data-zoom-image');
 
-            // set the product photo
+            // set the service photo
             $productPhoto = sha1($productPhotoUrl) . ".jpeg";
             $productThumb = sha1($productThumbUrl) . ".jpeg";
 
-            if (!file_exists(public_path('storage/product/' . $productPhoto))) {
-                Storage::disk('product')->put($productPhoto, file_get_contents($productPhotoUrl));
-                Storage::disk('product')->put($productThumb, file_get_contents($productThumbUrl));
-                echo "Product photo inserted: " . public_path('storage/product/' . $productPhoto) . "\n";
+            if (!file_exists(public_path('storage/service/' . $productPhoto))) {
+                Storage::disk('service')->put($productPhoto, file_get_contents($productPhotoUrl));
+                Storage::disk('service')->put($productThumb, file_get_contents($productThumbUrl));
+                echo "Product photo inserted: " . public_path('storage/service/' . $productPhoto) . "\n";
             } else {
-                echo "Product photo skipped: " . public_path('storage/product/' . $productPhoto) . "\n";
+                echo "Product photo skipped: " . public_path('storage/service/' . $productPhoto) . "\n";
             }
 
             if (empty($key)) {

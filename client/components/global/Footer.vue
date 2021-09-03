@@ -1,5 +1,5 @@
 <template>
-  <a-row class="r-mt-96" justify="center" type="flex">
+  <a-row  justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row v-if="hasDownload && false" class="r-mb-24" justify="center" type="flex">
         <a-col v-if="hasDownload && false" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -9,152 +9,160 @@
           <r-subscribe></r-subscribe>
         </a-col>
       </a-row>
-        <a-row :gutter="[24, 24]" justify="center" type="flex">
-          <a-col v-if="hasLocations" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <r-locations></r-locations>
-          </a-col>
-          <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <div class="r-footer-center-sm r-mv-24">
-            <a-row :gutter="[24,24]" justify="center" type="flex">
-              <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                <a-row :gutter="[24,24]" justify="center" type="flex">
-                  <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                    <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-                      <a-col class="r-footer-center-sm" :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }"
-                             :xs="{ span: 24 }"
-                      >
-                        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <nuxt-link to="/">
-                              <img alt="Addtract - Fractional real estate investment."
-                                   class="r-footer-logo /"
-                                   src="/images/logo_dark.svg"
-                              >
-                            </nuxt-link>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <p class="r-text-normal">
-                              A B2B platform connecting retailers to suppliers for better product discovery.
-                            </p>
-                          </a-col>
-                        </a-row>
+      <a-row :gutter="[96, 96]" justify="center" type="flex">
+        <a-col v-if="hasLocations" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <r-locations></r-locations>
+        </a-col>
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <div class="r-footer-center-sm">
+            <a-row :gutter="[48,48]" justify="center" type="flex">
+              <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
+                  <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <nuxt-link to="/">
+                          <img alt="Addtract - B2B marketplace for suppliers and buyers in Africa."
+                               class="r-footer-logo /"
+                               src="/images/logo_dark.svg"
+                          >
+                        </nuxt-link>
                       </a-col>
-                      <a-col :lg="{ span: 16 }" :md="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                        <a-row :gutter="[24,48]" align="top" justify="start" type="flex">
-                          <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :xs="{ span: 24}">
-                            <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <h4 class="r-heading-light r-text-uppercase">
-                                  Our Platform
-                                </h4>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <div class="r-footer-link">
-                                  <nuxt-link to="/invest">How it works</nuxt-link>
-                                </div>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <div class="r-footer-link">
-                                  <nuxt-link to="/invest#prime">Inside the Product</nuxt-link>
-                                </div>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <div class="r-footer-link">
-                                  <nuxt-link to="/supplier">For Suppliers</nuxt-link>
-                                </div>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <div class="r-footer-link">
-                                  <nuxt-link to="/customer">For Buyers</nuxt-link>
-                                </div>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                          <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :xs="{ span: 24}">
-                            <a-row :gutter="[24,12]" align="top" justify="start" type="flex">
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <h4 class="r-heading-light r-text-uppercase">
-                                  Company
-                                </h4>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <div class="r-footer-link">
-                                  <nuxt-link to="/about-us">About Us</nuxt-link>
-                                </div>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <div class="r-footer-link">
-                                  <nuxt-link to="/brand">Our Brand</nuxt-link>
-                                </div>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <div class="r-footer-link">
-                                  <nuxt-link to="/careers">Careers</nuxt-link>
-                                </div>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                          <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :xs="{ span: 24}">
-                            <a-row :gutter="[24,12]" align="top" justify="start" type="flex">
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <h4 class="r-heading-light r-text-uppercase">
-                                  Resources
-                                </h4>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <div class="r-footer-link">
-                                  <nuxt-link to="/help">Help Center</nuxt-link>
-                                </div>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
-                                <div class="r-footer-link">
-                                  <nuxt-link to="/articles">Articles</nuxt-link>
-                                </div>
-                              </a-col>
-                            </a-row>
-                          </a-col>
-                        </a-row>
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <p class="r-text-normal">
+                          B2B marketplace for Africa.
+                        </p>
+                      </a-col>
+                    </a-row>
+                  </a-col>
+                  <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :xs="{ span: 24}">
+                    <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <h4 class="r-heading-light r-text-uppercase">
+                          Who we serve
+                        </h4>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/marketplace">Marketplace</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/buyer">Buyers</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/supplier">Suppliers</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/community">Community</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/help">Help Center</nuxt-link>
+                        </div>
+                      </a-col>
+                    </a-row>
+                  </a-col>
+                  <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :xs="{ span: 24}">
+                    <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <h4 class="r-heading-light r-text-uppercase">
+                          Solutions
+                        </h4>
+                      </a-col>
+                      <a-col v-for="(service, index) in services"
+                             :key="index"
+                             :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link :to="'/service/' + service.slug">
+                            {{ service.title }}
+                          </nuxt-link>
+                        </div>
+                      </a-col>
+                    </a-row>
+                  </a-col>
+                  <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :xs="{ span: 24}">
+                    <a-row :gutter="[24,12]" align="top" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <h4 class="r-heading-light r-text-uppercase">
+                          Company
+                        </h4>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/about-us">About Us</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/pricing">Pricing</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/brand">Brand</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/careers">Careers</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/news">Press</nuxt-link>
+                        </div>
                       </a-col>
                     </a-row>
                   </a-col>
                 </a-row>
               </a-col>
               <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                <div class="r-mt-24">
-                  <a-card class="r-bg-dark">
-                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex" class="r-footer-center-sm">
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                        <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-                          <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
-                            <div class="r-text-white">
-                              &copy; Brickent 2021
-                            </div>
-                          </a-col>
-                          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
-                            <div class="r-text-white">
-                              All Rights Reserved
-                            </div>
-                          </a-col>
-                          <a-col :lg="{ span: 4 }" :md="{ span: 4 }" :sm="{ span: 8 }" :xs="{ span: 24 }">
-                            <nuxt-link class="r-same-height r-footer-link" to="/contact-us">
-                              <a-button block
-                                        class="r-btn-blue-bordered"
-                                        size="large"
-                              >
-                                Contact Us
-                              </a-button>
-                            </nuxt-link>
-                          </a-col>
-                        </a-row>
+                <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                    <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                      <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
+                        <p class="r-footer-text">
+                          &copy; Addtract 2021
+                        </p>
+                      </a-col>
+                      <a-col class="r-text-left" :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
+                        <p class="r-footer-text">
+                          All Rights Reserved
+                        </p>
+                      </a-col>
+                      <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/terms">Terms of Use</nuxt-link> ~
+                          <nuxt-link to="/privacy">Privacy Policy</nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
+                        <nuxt-link class="r-footer-link" to="/contact-us">
+                          <a-button block
+                                    class="r-btn-blue-bordered"
+                                    size="small"
+                          >
+                            Contact Us
+                          </a-button>
+                        </nuxt-link>
                       </a-col>
                     </a-row>
-                  </a-card>
-                </div>
+                  </a-col>
+                </a-row>
               </a-col>
             </a-row>
-            </div>
-          </a-col>
-        </a-row>
+          </div>
+        </a-col>
+      </a-row>
     </a-col>
   </a-row>
 </template>
@@ -173,7 +181,8 @@ export default {
   computed: mapGetters({
     hasDownload: 'base/hasDownload',
     hasSubscribe: 'base/hasSubscribe',
-    hasFooter: 'base/hasFooter'
+    hasFooter: 'base/hasFooter',
+    services: 'content/services'
   }),
   created () {
     this.payload()

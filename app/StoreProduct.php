@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class StoreProduct extends Model
 {
     /**
-     * Get the store that has product
+     * Get the store that has service
      */
     public function store()
     {

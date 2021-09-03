@@ -9,7 +9,7 @@
                  :xs="{ span: 24 }"
           >
             <h3 class="r-heading r-text-white">
-              Get your Addtract account today!
+              {{ title }}
             </h3>
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -60,7 +60,8 @@
 export default {
   name: 'r-contact-us',
   props: {
-    hasJobs: { type: Boolean, required: false, default: false }
+    hasJobs: { type: Boolean, required: false, default: false },
+    title: { type: String, required: false, default: 'Get your Addtract account today!' }
   },
   data () {
     return {}

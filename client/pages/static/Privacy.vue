@@ -17,7 +17,7 @@
             <p>This Privacy Statement describes in greater detail the privacy practices of Addtract.com, Inc.</p>
 
             <p>If you have questions or complaints regarding our Privacy Statement or practices, please contact us at
-              support@Addtract.com.</p>
+              support@addtract.com.</p>
 
             <p><strong>1. WHEN THIS PRIVACY STATEMENT APPLIES.</strong></p>
 
@@ -272,7 +272,7 @@
               you have determined that the Personal Information we collected about you is inaccurate or processed in
               violation of applicable law, you may also request that your Personal Information be corrected, amended, or
               deleted. Requests for access to your Personal Information and to have it corrected, amended, or deleted
-              should be sent to support@Addtract.com.</p>
+              should be sent to support@addtract.com.</p>
 
             <p><strong>5. SECURITY OF YOUR INFORMATION. Keeping your Information safe is important to us.</strong></p>
 
@@ -304,7 +304,7 @@
               contact us. We want your feedback and comments.</strong></p>
 
             <p><strong>a) Via Email.</strong> If you have questions or complaints regarding our Privacy Statement or
-              practices, please contact us by email at support@Addtract.com.</p>
+              practices, please contact us by email at support@addtract.com.</p>
 
             <p><strong>b) Via Direct Mail.</strong> Addtract.com, Inc., PO Box 7775 #86889, South Africa, California
               94120-7775.</p>

@@ -27,7 +27,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   props: {
-    name: 'r-product-modal-timeline'
+    name: 'r-service-modal-timeline'
   },
   data () {
     return {}

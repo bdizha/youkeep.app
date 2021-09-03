@@ -53,7 +53,7 @@ class ProductController extends Controller
     }
 
     /**
-     * Find product by slug
+     * Find service by slug
      *
      * @param Request $request
      * @return \Illuminate\Http\Response
@@ -78,7 +78,7 @@ class ProductController extends Controller
             $this->_setProduct();
 
             $response['store'] = $this->store;
-            $response['product'] = $this->product;
+            $response['service'] = $this->product;
             $response['category'] = [];
             $response['categories'] = [];
 

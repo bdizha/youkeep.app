@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class CartProduct extends Model
 {
     /**
-     * Get the product that's in the cart.
+     * Get the service that's in the cart.
      */
     public function product()
     {
@@ -15,7 +15,7 @@ class CartProduct extends Model
     }
 
     /**
-     * Get the cart that has the product.
+     * Get the cart that has the service.
      */
     public function cart()
     {

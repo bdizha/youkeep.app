@@ -9,7 +9,7 @@ class ProductPhoto extends Model
 
 
     /**
-     * Get all of the products for the product type.
+     * Get all of the products for the service type.
      */
     public function product()
     {
