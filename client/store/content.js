@@ -163,30 +163,67 @@ export const state = () => ({
       row: 2
     }
   ],
-  service: null
+  service: null,
+  plans: [
+    {
+      title: 'Basic',
+      theme: 'primary',
+      heading: 'The core features for individuals and merchants',
+      price: 'Free',
+      frequency: null,
+      action: 'Continue for free',
+      features: [
+        'Unlimited public/private store integrations',
+        'Free for any type of merchant store requirements',
+        'Limited to 3,600 action calls / month',
+        'Limited to a total of 6GB of catalog storage',
+        'Access to technical and community support via email',
+        'Access to a comprehensive documentation',
+        'No setup fees, monthly fees, or hidden fees'
+      ]
+    },
+    {
+      title: 'Core',
+      theme: 'secondary',
+      heading: 'Merchant platform with simple, pay-as-you-go pricing',
+      price: 'ZAR4,500',
+      frequency: '/ integration / month',
+      action: 'Continue with merchant',
+      features: [
+        'Everything included in the Core plan, plus... ',
+        'Unlimited public/private store integrations',
+        'Limited to 9,000 action calls / month',
+        'Limited to a total of 60GB of catalog storage',
+        'Configurable to use your existing domain for your store',
+        'Free for experimental usage during your trial period',
+        'Access to comprehensive documentation'
+      ]
+    },
+    {
+      title: 'Enterprise',
+      theme: 'dark',
+      heading: 'Custom package for your business',
+      price: 'ZAR1,600',
+      frequency: '/ user / month',
+      action: 'Contact Sales',
+      features: [
+        'Everything included in the Merchant plan, plus... ',
+        'Available for businesses with large product catalog',
+        'Country-specific rates (delivery, processing fees)',
+        'Elastic multi-store AI powered capabilities',
+        'Elastic action calls / month based on demand',
+        '1 month trial for experimental use cases',
+        '24/7 access to premium technical support via all channels'
+      ]
+    }
+  ]
 })
 
 // getters
 export const getters = {
   services: state => state.services,
   service: state => state.service,
-  plans: [
-    {
-      title: 'Basic',
-      content: 'Free',
-      description: 'Build and test using our core set of products with up to 100 live items'
-    },
-    {
-      title: 'Core',
-      content: 'SaaS',
-      description: 'Launch your project with unlimited items and no contractual minimums'
-    },
-    {
-      title: 'Enterprise',
-      content: 'ZAR9000+ / month',
-      description: 'Get tailored solutions, volume pricing, and dedicated support for your team'
-    }
-  ]
+  plans: state => state.plans
 }
 
 // mutations

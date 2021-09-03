@@ -133,61 +133,9 @@
         </a-sub-menu>
         <a-sub-menu>
           <span slot="title" class="r-menu-text">
+            <nuxt-link to="/pricing">
             Pricing
-            <a-icon type="down" />
-            <div class="r-sub-menu">
-              <a-card class="r-bg-white r-pull-h-24 r-border-none">
-                <div class="r-mv-48">
-                  <a-row align="middle" justify="center" type="flex">
-                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-                           :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24}"
-                        >
-                          <h4 class="r-heading-light r-text-uppercase r-text-dark">
-                            Use cases
-                          </h4>
-                        </a-col>
-                        <a-col v-for="(beneficiary, index) in beneficiaries"
-                               :key="index"
-                               :lg="{ span: 8 }" :md="{ span: 8 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24}"
-                        >
-                          <nuxt-link class="r-link-card" :to="beneficiary.link">
-                            <a-card hoverable class="r-bg-primary-light">
-                              <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                       :sm="{ span: 24 }"
-                                       :xs="{ span: 24}"
-                                >
-                                  <h4 class="r-heading r-text-dark">
-                                    {{ beneficiary.title }}
-                                    <a-icon type="right" />
-                                  </h4>
-                                </a-col>
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                       :sm="{ span: 24 }"
-                                       :xs="{ span: 24}"
-                                >
-                                  <p class="r-text-normal r-text-dark">
-                                    {{ beneficiary.summary }}
-                                  </p>
-                                </a-col>
-                              </a-row>
-                            </a-card>
-                          </nuxt-link>
-                        </a-col>
-                      </a-row>
-                    </a-col>
-                  </a-row>
-                </div>
-              </a-card>
-            </div>
+            </nuxt-link>
           </span>
         </a-sub-menu>
         <a-sub-menu>

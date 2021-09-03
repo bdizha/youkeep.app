@@ -52,6 +52,7 @@ const routes = [
   { path: '/article/:slug', name: 'article-show', meta: { isDark: false, isRaised: true}, component: page('article/Show.vue') },
   { path: '/service', name: 'services', meta: { isDark: false, isRaised: true}, component: page('service/Index.vue') },
   { path: '/service/:slug', name: 'service-show', meta: { isDark: false, isRaised: true}, component: page('service/Show.vue') },
+  { path: '/pricing', name: 'pricing', meta: { isDark: false, isRaised: false}, component: page('static/Pricing.vue') },
   {
     path: '/settings',
     component: page('settings/Index.vue'),

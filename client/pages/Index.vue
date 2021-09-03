@@ -8,12 +8,12 @@
           <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none r-pt-81">
             <div class="r-mv-48">
               <a-row :gutter="[48,48]" justify="center" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <a-row :gutter="[48,48]" align="middle" justify="end" type="flex">
-                      <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                        <a-card class="r-bg-white">
+                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-card class="r-bg-secondary-light">
                         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                  :sm="{ span: 24 }"
@@ -65,12 +65,16 @@
                         </a-row>
                         </a-card>
                       </a-col>
+                      <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <div class="r-p-48">
+                          <r-avatar data-src="/assets/welcome.svg" :size="300"
+                                    class="r-avatar-block"
+                          ></r-avatar>
+                        </div>
+                      </a-col>
                     </a-row>
-                </a-col>
-                <a-col class="r-text-center" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <nuxt-img width="450" height="450" src="/assets/welcome.svg"></nuxt-img>
                 </a-col>
               </a-row>
             </div>
@@ -165,7 +169,7 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <r-tabs active-key="shopper" theme="white"></r-tabs>
+              <r-tabs active-key="shopper" theme="secondary"></r-tabs>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"

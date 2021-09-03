@@ -1,0 +1,95 @@
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #969696 #F3F6F9;
+}
+
+/* Works on Chrome/Edge/Safari */
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #F3F6F9;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #969696;
+    border-radius: 18px;
+    border: 3px solid #F3F6F9;
+}
+
+.r-animate {
+    -webkit-animation: slide-up-fadeIn .09s ease 0s 1 normal forwards;
+    animation: slide-up-fadeIn .09s ease 0s 1 normal forwards;
+}
+
+@-webkit-keyframes slide-up-fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(45px);
+        transform: translateY(45px)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+@keyframes slide-up-fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(45px);
+        transform: translateY(45px)
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0)
+    }
+}
+
+.page-enter-active,
+.page-leave-active {
+    opacity: 1;
+    transition: opacity .25s;
+    animation-duration: .3s;
+    animation-fill-mode: both;
+}
+
+.page-enter-active {
+    animation-name: pageFadeInUp;
+}
+
+.page-leave-active {
+    animation-name: pageFadeOutDown;
+}
+
+.page-enter, .page-leave-to {
+    opacity: 0;
+}
+
+
+@-webkit-keyframes pageFadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 1.25%, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@-webkit-keyframes pageFadeOutDown {
+    0% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, 1.25%, 0);
+    }
+}

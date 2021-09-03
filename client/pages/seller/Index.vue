@@ -104,19 +104,19 @@
           <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
             <div class="r-mv-48">
               <a-row :gutter="[48,48]" align="middle" class="r-text-left" justify="center" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
-                >
-                  <r-avatar data-src="/assets/rocket-yellow.svg" :size="300"
-                            class="r-avatar-block"
-                  ></r-avatar>
-                </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
                   <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24}"
+                    >
+                      <r-avatar data-src="/products/product-06.svg" :size="300"
+                                class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24}"
                     >
                       <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -171,12 +171,12 @@
         >
           <r-tabs active-key="supplier" theme="white"></r-tabs>
         </a-col>
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <r-seller-benefits></r-seller-benefits>
+        </a-col>
       </a-row>
-    </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <r-seller-benefits></r-seller-benefits>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"

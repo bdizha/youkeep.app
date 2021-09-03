@@ -1,6 +1,5 @@
 <template>
-  <r-steps user-type="customer" :has-more="hasMore" :size="size" :steps="steps" :title="title" :content="content"
-           theme="secondary"
+  <r-steps user-type="customer" :has-more="hasMore" :size="size" :steps="steps" theme="primary"
   ></r-steps>
 </template>
 <script>

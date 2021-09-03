@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48.001" height="44" viewBox="0 0 48.001 44">
+    <defs>
+        <style>.a{fill:#fff;}</style>
+    </defs>
+    <g transform="translate(0 -43.75)">
+        <g transform="translate(0 43.75)">
+            <path class="a"
+                  d="M0,43.75v7.2H42.495v-7.2Zm6.1,3.56H4.04V46.27H6.1Zm6.219,0h-2.06V46.27h2.06Zm6.219,0h-2.06V46.27h2.06Z"
+                  transform="translate(0 -43.75)"/>
+        </g>
+        <g transform="translate(0 49.899)">
+            <path class="a" d="M0,46.824V75.739H22.377v-1.06H1.04V47.884h40.4V75.739h1.06V46.824Z"
+                  transform="translate(0 -46.824)"/>
+        </g>
+        <g transform="translate(8.038 54.612)">
+            <g transform="translate(0.27 10.059)">
+                <g transform="translate(0 8.055)">
+                    <rect class="a" width="5.141" height="3.025"/>
+                </g>
+                <g transform="translate(10.29 4.06)">
+                    <path class="a" d="M14.439,56.24v3.22l-1,.52v3.28H9.3V56.24Z" transform="translate(-9.3 -56.24)"/>
+                </g>
+                <g transform="translate(20.569)">
+                    <path class="a" d="M19.579,54.21v4.06l-2.1-1.12-3.04,1.6V54.21Z"
+                          transform="translate(-14.44 -54.21)"/>
+                    <path class="a" d="M17.48,57.37l2.1,1.12v3.64H14.44V58.99Z" transform="translate(-14.44 -51.049)"/>
+                </g>
+            </g>
+            <g transform="translate(18.66)">
+                <path class="a" d="M17.206,57.916l-.918-.4,2.24-5.178L13.351,50.1l.4-.918,6.095,2.639Z"
+                      transform="translate(-13.351 -49.181)"/>
+            </g>
+            <g transform="translate(0 2.444)">
+                <path class="a" d="M.009.2,26.066.2v1L.009,1.2Z" transform="translate(0 9.393) rotate(-21.553)"/>
+            </g>
+        </g>
+        <g transform="translate(23.731 68.736)">
+            <path class="a"
+                  d="M20.048,57.374l7.181,3.806v8.125l-7.181,3.806-7.181-3.806V61.18l7.181-3.806m0-1.132-8.181,4.336v9.329l8.181,4.336,8.181-4.336V60.578l-8.181-4.336Z"
+                  transform="translate(-11.867 -56.242)"/>
+        </g>
+        <g transform="translate(39.394 81.769)">
+            <g transform="translate(0 0)">
+                <path class="a" d="M.1.011h1V9.525H.1Z" transform="matrix(0.54, -0.841, 0.841, 0.54, 0, 0.915)"/>
+            </g>
+        </g>
+    </g>
+</svg>
