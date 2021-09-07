@@ -11,27 +11,25 @@ class ArticleResourceController extends Controller
      * BLog landing page
      *
      * @param Request $request
-     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $articles = ArticleResource::take(24)->get();
+        $this->appId = env('APP_ID', 2);
+        $articleResources = ArticleResource::where('app_id', $this->appId)
+            ->take(24)
+            ->get();
 
-        if (request()->ajax()) {
-            return response()->json([
-                'articles' => $articles,
-                'status' => 'success'
-            ], 200);
-        }
-
-        return view('index', ['articles' => $articles]);
+        return response()->json([
+            'articles' => $articleResources,
+            'status' => 'success'
+        ], 200);
     }
 
     /**
      * Show article details
      *
-     * @param Request $request
-     * @return \Illuminate\Http\Response
+     * @param $type
+     * @param $slug
      */
     public function show($type, $slug)
     {
@@ -40,14 +38,10 @@ class ArticleResourceController extends Controller
 
         session(['article' => $article]);
 
-        if (request()->ajax()) {
-            return response()->json([
-                'type' => $type,
-                'article' => $article,
-                'status' => 'success'
-            ], 200);
-        }
-
-        return view('index', ['article' => $article]);
+        return response()->json([
+            'type' => $type,
+            'article' => $article,
+            'status' => 'success'
+        ], 200);
     }
 }

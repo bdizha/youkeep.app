@@ -9,18 +9,18 @@ viewBox="0 0 6491.49 4482.58"
    <![CDATA[
     .fil13 {fill:#7adfff}
     .fil5 {fill:#b7ebff}
-    .fil2 {fill:#D4F5FF}
-    .fil8 {fill:#FBD13E}
-    .fil9 {fill:#00C2FF;fill-rule:nonzero}
-    .fil6 {fill:#acebff;fill-rule:nonzero}
-    .fil10 {fill:#FBD13E;fill-rule:nonzero}
+    .fil2 {fill:#e2f8ff}
+    .fil8 {fill:#00C2FF}
+    .fil9 {fill:#FBD13E;fill-rule:nonzero}
+    .fil6 {fill:#b7ebff}
+    .fil10 {fill: #00C2FF;fill-rule:nonzero}
     .fil14 {fill:white;fill-rule:nonzero}
-    .fil3 {fill:#acebff;fill-opacity:0.188235}
-    .fil0 {fill:#acebff;fill-opacity:0.200000}
+    .fil3 {fill:#FFFFFF}
+    .fil0 {fill:#FFFFFF}
     .fil4 {fill:#b7ebff;fill-opacity:0.960784}
-    .fil1 {fill:#D4F5FF;fill-opacity:0.960784}
+    .fil1 {fill:#e2f8ff;fill-opacity:0.960784}
     .fil12 {fill:#00C2FF}
-    .fil7 {fill:#00C2FF}
+    .fil7 {fill: #fef1c5;}
     .fil11 {fill:#FBD13E}
    ]]>
   </style>

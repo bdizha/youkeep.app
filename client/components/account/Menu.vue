@@ -116,7 +116,7 @@ const MENU = [
   },
   {
     heading: 'Addtract Services ',
-    key: 'services',
+    key: 'products',
     links: [
       {
         label: 'Addtract+',

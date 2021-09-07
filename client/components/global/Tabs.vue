@@ -2,11 +2,11 @@
   <a-card class="r-pull-h-24 r-border-none" :class="getCardBg()">
     <div class="r-mv-48 r-text-center">
       <a-tabs v-model="selectedKey" type="card">
-        <a-tab-pane key="customer" tab="For Buyers"
+        <a-tab-pane key="buyer" tab="For Buyers"
         >
           <r-customer-steps :size="16"></r-customer-steps>
         </a-tab-pane>
-        <a-tab-pane key="shopper" tab="Marketplace"
+        <a-tab-pane key="marketplace" tab="Marketplace"
         >
           <r-shopper-steps :size="16"></r-shopper-steps>
         </a-tab-pane>

@@ -12,10 +12,10 @@ viewBox="0 0 6491.49 4482.58"
     .fil4 {fill:#C4E1FF}
     .fil2 {fill:#E5F2FF}
     .fil10 {fill:#3B9CFF;fill-rule:nonzero}
-    .fil5 {fill:#B4DCFF;fill-rule:nonzero}
+    .fil5 {fill:#FFFFFF;fill-rule:nonzero}
     .fil14 {fill:white;fill-rule:nonzero}
-    .fil7 {fill:#B4DCFF;fill-opacity:0.188235}
-    .fil0 {fill:#B4DCFF;fill-opacity:0.200000}
+    .fil7 {fill:#FFFFFF}
+    .fil0 {fill:#FFFFFF}
     .fil8 {fill:#FBD13E;fill-rule:nonzero;fill-opacity:0.278431}
     .fil6 {fill:#FBD13E;fill-opacity:0.470588}
     .fil3 {fill:#C4E1FF;fill-opacity:0.960784}

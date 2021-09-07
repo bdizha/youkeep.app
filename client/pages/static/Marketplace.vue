@@ -1,52 +1,175 @@
 <template>
   <a-row :gutter="[96,96]" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a-card class="r-bg-primary-light r-pull-h-24 r-border-none r-pt-81">
-            <a-row :gutter="[48,48]" justify="center" type="flex">
-              <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24}"
-                  >
-                    <div class="r-mv-48">
+      <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none r-pt-81">
+        <div class="r-mv-48">
+          <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[48,48]" justify="center" type="flex">
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24}"
+                >
+                  <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h3 class="r-heading-light r-text-secondary r-text-uppercase">
-                            Our Marketplace
+                          <h3 class="r-heading-light r-text-uppercase">
+                            <span class="r-text-secondary">For</span>
+                            <span class="r-text-dark">Marketplace</span>
                           </h3>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h1 class="r-heading r-text-uppercase">
-                            Coming soon
+                          <h1 class="r-heading">
+                            An <span class="r-text-secondary">adaptive</span> checkout experience for B2B ecommerce
                           </h1>
                         </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-medium">
+                            Creating a seamless and scalable payment experience for you, your suppliers and your buyers
+                            - while keeping you out of the funds flow.
+                          </p>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-normal">
+                            Balance allows you to offer a breathtaking buyer experience, net terms and payment method
+                            flexibility, instant vendor payouts (fully reconciled) - all while getting full marketplace
+                            compliance and receivables management, hassle free.
+                          </p>
+                        </a-col>
+                        <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
+                               :sm="{ span: 12 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <a-button class="r-btn-secondary"
+                                    @click="onRegister"
+                                    block
+                                    size="large"
+                                    type="blue"
+                          >
+                            Get started
+                          </a-button>
+                        </a-col>
+                        <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
+                               :sm="{ span: 12 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <nuxt-link to="/contact-us">
+                            <a-button class="r-btn-bordered-secondary"
+                                      block
+                                      size="large"
+                                      type="blue"
+                            >
+                              Contact sales
+                            </a-button>
+                          </nuxt-link>
+                        </a-col>
                       </a-row>
-                    </div>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24}"
-                  >
-                    <r-avatar data-src="/assets/welcome.svg" :size="300" class="r-avatar-block"
-                    ></r-avatar>
-                  </a-col>
-                </a-row>
-              </a-col>
-            </a-row>
-          </a-card>
-        </a-col>
-      </a-row>
+                    </a-col>
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                      <r-saucer theme="secondary" image="/assets/welcome.svg" :size="300"></r-saucer>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </div>
+      </a-card>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-metrics></r-metrics>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+           class="r-text-center"
+    >
+      <r-tabs active-key="marketplace" theme="white"></r-tabs>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+        <div class="r-mv-48">
+          <a-row :gutter="[48,48]" align="middle" class="r-text-left" justify="center" type="flex">
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24}"
+                >
+                  <r-avatar data-src="/products/product-06.svg" :size="300"
+                            class="r-avatar-block"
+                  ></r-avatar>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24}"
+                >
+                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h4 class="r-heading-light r-text-uppercase">
+                        Transform your business
+                      </h4>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h3 class="r-heading">
+                        Get <span class="r-text-secondary">discovered</span> by the
+                        world's leading retailers
+                      </h3>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <p class="r-text-medium">
+                        Built for retail businesses, Addtract offers a clear view into product purchase activity with:
+                        automated billing, expensing, and reporting.
+                      </p>
+                    </a-col>
+                    <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                    >
+                      <nuxt-link to="/customer/membership">
+                        <a-button block
+                                  class="r-btn-bordered-primary"
+                                  size="large"
+                                  type="secondary"
+                        >
+                          Contact sales
+                        </a-button>
+                      </nuxt-link>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </div>
+      </a-card>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
       <r-contact-us></r-contact-us>
     </a-col>
   </a-row>
@@ -55,30 +178,23 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  layout: 'default',
+  name: 'r-seller',
   props: {},
-  async asyncData ({ store }) {
-    await store.dispatch('base/onReviews', {})
-  },
   data () {
-    return {
-      banner: 'art-01.png',
-      isProcessing: true,
-      testimonials: [],
-      modal: {
-        current: null,
-        isVisible: false
-      }
-    }
+    return {}
   },
   computed: mapGetters({
-    store: 'base/store',
-    category: 'base/category',
-    categories: 'shop/categories',
-    hasCategories: 'base/hasCategories'
+    modal: 'base/modal'
   }),
-  created () {
-  },
-  methods: {}
+  methods: {
+    onRegister (current) {
+      const modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = current
+
+      this.$store.dispatch('base/onRegister', modal)
+    }
+  }
 }
 </script>

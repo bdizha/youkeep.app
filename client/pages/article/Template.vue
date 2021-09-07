@@ -1,7 +1,7 @@
 <template>
   <a-row align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }" class="r-store-page"
+           :xs="{ span: 24 }" class="r-cover-blog"
     >
       <a-row align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 24 }"

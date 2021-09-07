@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="35mm" height="35mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 338.39 338.39"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil3 {fill:#3B9CFF}
+    .fil1 {fill:#FFFFFF}
+    .fil0 {fill:#FBD13E}
+    .fil2 {fill:#3B9CFF}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="338.39" height="338.39" rx="66.87" ry="66.87"/>
+  <ellipse class="fil1" cx="222.48" cy="142.66" rx="49.84" ry="51.1"/>
+  <polygon class="fil2" points="218.85,120.89 226.11,120.89 226.11,139.03 244.25,139.03 244.25,146.28 226.11,146.28 226.11,164.42 218.85,164.42 218.85,146.28 200.72,146.28 200.72,139.03 218.85,139.03 "/>
+  <path class="fil3" d="M84.78 110.23l76.29 0c-6.59,10.65 -10.57,23.15 -11.02,36.58l-84.46 0 0 -17.4c0,-10.55 8.63,-19.18 19.18,-19.18zm67.85 58.83c8.39,30.84 35.99,53.47 68.75,53.47 20.2,0 38.44,-8.61 51.42,-22.43l0 36.5c0,5.63 -4.6,10.23 -10.23,10.23l-186.74 0c-5.63,0 -10.23,-4.6 -10.23,-10.23l0 -67.54 87.03 0z"/>
+ </g>
+</svg>

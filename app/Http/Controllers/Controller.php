@@ -38,6 +38,8 @@ class Controller extends BaseController
         $categoryParentId = null,
         $productType = null,
         $storeId = null,
+        $appId = null,
+        $app = null,
         $slug = null,
         $storeSlug = null,
         $reviewId = null,

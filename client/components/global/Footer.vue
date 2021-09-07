@@ -66,7 +66,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/help">Help Center</nuxt-link>
+                          <nuxt-link to="/pricing">Pricing</nuxt-link>
                         </div>
                       </a-col>
                     </a-row>
@@ -78,7 +78,7 @@
                           Solutions
                         </h4>
                       </a-col>
-                      <a-col v-for="(service, index) in services"
+                      <a-col v-for="(service, index) in products"
                              :key="index"
                              :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
@@ -103,22 +103,22 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/pricing">Pricing</nuxt-link>
+                          <nuxt-link to="/resources">Resources</nuxt-link>
                         </div>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/brand">Brand</nuxt-link>
+                          <nuxt-link to="/documentation">API Docs</nuxt-link>
                         </div>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/careers">Careers</nuxt-link>
+                          <nuxt-link to="/careers">Work with us</nuxt-link>
                         </div>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/news">Press</nuxt-link>
+                          <nuxt-link to="/help">Help Center</nuxt-link>
                         </div>
                       </a-col>
                     </a-row>
@@ -182,7 +182,7 @@ export default {
     hasDownload: 'base/hasDownload',
     hasSubscribe: 'base/hasSubscribe',
     hasFooter: 'base/hasFooter',
-    services: 'content/services'
+    products: 'content/products'
   }),
   created () {
     this.payload()

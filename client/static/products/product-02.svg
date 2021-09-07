@@ -11,16 +11,16 @@ viewBox="0 0 44698.79 32664.51"
     .str0 {stroke:#3B9CFF;stroke-width:214.9;stroke-miterlimit:22.9256;stroke-opacity:0.3}
     .fil10 {fill:none}
     .fil1 {fill:none}
-    .fil16 {fill:#FEFEFE}
+    .fil16 {fill: #3B9CFF;fill-opacity: 0.12;}
     .fil2 {fill:#3B9CFF;fill-opacity:0.15}
-    .fil0 {fill:#FFFFFF;}
+    .fil0 {fill:none;}
     .fil14 {fill:#00C2FF;fill-opacity:0.15}
     .fil3 {fill:#3B9CFF;fill-opacity:0.3}
     .fil5 {fill:#3B9CFF;fill-opacity:0.3}
     .fil12 {fill:#3B9CFF;fill-opacity:0.3}
     .fil11 {fill:#99E7FF;fill-opacity:0.3}
     .fil13 {fill:#3B9CFF;fill-opacity:0.3}
-    .fil6 {fill:#3B9CFF;fill-opacity:0.45}
+    .fil6 {fill: #3B9CFF;fill-opacity: 0.12;}
     .fil4 {fill:#99D2FF;fill-opacity:0.45}
     .fil8 {fill:#3B9CFF;fill-opacity:0.45}
     .fil7 {fill:#99D2FF;fill-opacity:0.45}

@@ -18,10 +18,10 @@
                        :xs="{ span: 24 }"
                 >
                   <h4 v-if="!isShow" class="r-heading-light r-text-uppercase r-text-secondary">
-                    Addtract Marketplace services
+                    MARKETPLACE SERVICES
                   </h4>
                   <h4  v-if="isShow" class="r-heading-light r-text-uppercase r-text-secondary">
-                    Explore More
+                    More solutions
                   </h4>
                 </a-col>
                 <a-col v-if="!isShow" :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -29,12 +29,12 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading">
-                    Build the future of B2B infrastructure
+                    Built for the B2B infrastructure in Africa
                   </h3>
                 </a-col>
               </a-row>
             </a-col>
-            <a-col v-for="(service, index) in services"
+            <a-col v-for="(service, index) in products"
                    :key="index"
                    v-if="!isHidden(service)"
                    :lg="{ span: isCurrent(service) ? 24 : 8 }" :md="{ span: isCurrent(service) ? 24 : 8 }"
@@ -52,7 +52,7 @@
                              :xs="{ span: 24}"
                       >
                         <a-card class="r-bg-primary-light r-p-0 r-inline-block">
-                        <nuxt-img width="66" height="66" :src="'/services/light/' + service.image"></nuxt-img>
+                        <nuxt-img width="66" height="66" :src="'/services/primary/' + service.image"></nuxt-img>
                         </a-card>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
@@ -73,7 +73,7 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <nuxt-link :to="'/service/' + service.slug">
+                        <nuxt-link class="r-text-link" :to="'/service/' + service.slug">
                           Learn more
                         </nuxt-link>
                       </a-col>
@@ -101,28 +101,21 @@ export default {
     }
   },
   computed: mapGetters({
-    services: 'content/services',
-    service: 'content/service'
+    products: 'content/products',
+    product: 'content/product'
   }),
   methods: {
-    getBgClass (service) {
-      if (!this.isCurrent(service)) {
-        return 'r-bg-primary-light'
-      } else {
-        return 'r-bg-secondary-light r-pull-h-24 r-border-none-sm'
-      }
-    },
     onCloseItem () {
     },
     isCurrent (item) {
-      return item === this.service
+      return item === this.product
     },
     isHidden (item) {
-      if (this.service === null) {
+      if (this.product === null) {
         return false
       }
 
-      return this.service.slug === item.slug
+      return this.product.slug === item.slug
     }
   }
 }

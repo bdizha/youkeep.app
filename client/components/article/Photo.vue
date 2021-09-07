@@ -19,6 +19,6 @@ export default {
   mounted () {
     // console.log('Store photo', this.article);
   },
-  methods: {},
+  methods: {}
 }
 </script>

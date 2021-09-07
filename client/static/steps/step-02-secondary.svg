@@ -10,21 +10,21 @@ viewBox="0 0 21573.56 14859.6"
     .str0 {stroke:white;stroke-width:45.58;stroke-miterlimit:22.9256}
     .fil16 {fill:none}
     .fil3 {fill:#b7ebff}
-    .fil2 {fill:#D4F5FF}
+    .fil2 {fill:#e2f8ff}
     .fil15 {fill:#00C2FF;fill-rule:nonzero}
-    .fil4 {fill:#acebff;fill-rule:nonzero}
+    .fil4 {fill:#b7ebff}
     .fil12 {fill:white;fill-rule:nonzero}
-    .fil0 {fill:#acebff;fill-opacity:0.200000}
+    .fil0 {fill:#FFFFFF}
     .fil11 {fill:#00C2FF;fill-opacity:0.490196}
     .fil14 {fill:#00C2FF;fill-opacity:0.960784}
     .fil13 {fill:#b7ebff;fill-opacity:0.960784}
-    .fil1 {fill:#D4F5FF;fill-opacity:0.960784}
-    .fil7 {fill:#00C2FF}
-    .fil5 {fill:#00C2FF}
+    .fil1 {fill:#e2f8ff;fill-opacity:0.960784}
+    .fil7 {fill: #00C2FF;}
+    .fil5 {fill: #fef1c5;}
     .fil6 {fill:#FBD13E}
-    .fil8 {fill:#FBD13E}
-    .fil9 {fill:#00C2FF;fill-rule:nonzero}
-    .fil10 {fill:#FBD13E;fill-rule:nonzero}
+    .fil8 {fill:#00C2FF}
+    .fil9 {fill:#FBD13E;fill-rule:nonzero}
+    .fil10 {fill: #00C2FF;fill-rule:nonzero}
    ]]>
   </style>
  </defs>

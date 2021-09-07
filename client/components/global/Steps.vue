@@ -1,130 +1,124 @@
 <template>
-  <a-row :gutter="[48,48]" align="top" class="r-text-left" justify="start" type="flex">
+  <a-row :gutter="[48,48]" align="middle" class="r-text-left" justify="start" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-row :gutter="[24,24]" align="top" justify="center" type="flex">
+      <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-row :gutter="[48,48]" align="top" class="r-text-left" justify="start" type="flex">
+          <a-row :gutter="[48,96]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
+                   :xs="{ span: 24}"
             >
-              <a-row :gutter="[48,48]" align="top" justify="center" type="flex">
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
-                >
-                  <a-row :gutter="[48,48]" align="top" justify="start" type="flex">
-                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                    >
-                      <r-avatar :data-src="steps[0].image" :size="300"
-                                class="r-avatar-block"
-                      ></r-avatar>
-                    </a-col>
-                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                    >
-                      <a-card :class="getBgClass()">
-                        <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <h4 class="r-heading-light r-text-uppercase" :class="getTextClass()">
-                              <span>{{ steps[0].title }}</span>
-                            </h4>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <h3 class="r-heading">
-                              {{ steps[0].heading }}
-                            </h3>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <p class="r-text-medium">
-                              {{ steps[0].summary }}
-                            </p>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <p class="r-text-normal" v-html="steps[0].content"></p>
-                          </a-col>
-                        </a-row>
-                      </a-card>
-                    </a-col>
-                  </a-row>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
-                >
-                  <a-row :gutter="[48,48]" align="top" justify="space-between" type="flex">
-                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                    >
-                      <a-card :class="getBgClass()">
-                        <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <h4 class="r-heading-light r-text-uppercase" :class="getTextClass()">
-                              <span>{{ steps[1].title }}</span>
-                            </h4>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <h3 class="r-heading">
-                              {{ steps[1].heading }}
-                            </h3>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <p class="r-text-medium">
-                              {{ steps[1].summary }}
-                            </p>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <p class="r-text-normal" v-html="steps[1].content"></p>
-                          </a-col>
-                        </a-row>
-                      </a-card>
-                    </a-col>
-                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                    >
-                      <r-avatar :data-src="steps[1].image" :size="300"
-                                class="r-avatar-block"
-                      ></r-avatar>
-                    </a-col>
-                  </a-row>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
-                >
-                  <a-row :gutter="[48,48]" align="top" justify="space-between" type="flex">
-                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                    >
-                      <r-avatar :data-src="steps[2].image" :size="300"
-                                class="r-avatar-block"
-                      ></r-avatar>
-                    </a-col>
-                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                    >
-                      <a-card :class="getBgClass()">
-                        <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <h4 class="r-heading-light r-text-uppercase" :class="getTextClass()">
-                              <span>{{ steps[2].title }}</span>
-                            </h4>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <h3 class="r-heading">
-                              {{ steps[2].heading }}
-                            </h3>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <p class="r-text-medium">
-                              {{ steps[2].summary }}
-                            </p>
-                          </a-col>
-                          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                            <p class="r-text-normal" v-html="steps[2].content"></p>
-                          </a-col>
-                        </a-row>
-                      </a-card>
-                    </a-col>
-                  </a-row>
-                </a-col>
-              </a-row>
+              <a-card :class="getBgClass()">
+                <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                  >
+                    <r-avatar :data-src="steps[0].image" :size="300"
+                              class="r-avatar-block"
+                    ></r-avatar>
+                  </a-col>
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                  >
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <h4 class="r-heading-light r-text-uppercase" :class="getTextClass()">
+                          <span>{{ steps[0].title }}</span>
+                        </h4>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <h3 class="r-heading">
+                          {{ steps[0].heading }}
+                        </h3>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <p class="r-text-medium">
+                          {{ steps[0].summary }}
+                        </p>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <p class="r-text-normal" v-html="steps[0].content"></p>
+                      </a-col>
+                    </a-row>
+                  </a-col>
+                </a-row>
+              </a-card>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
+              <a-card :class="getBgClass()">
+                <a-row :gutter="[48,48]" align="middle" justify="space-between" type="flex">
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                  >
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <h4 class="r-heading-light r-text-uppercase" :class="getTextClass()">
+                          <span>{{ steps[1].title }}</span>
+                        </h4>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <h3 class="r-heading">
+                          {{ steps[1].heading }}
+                        </h3>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <p class="r-text-medium">
+                          {{ steps[1].summary }}
+                        </p>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <p class="r-text-normal" v-html="steps[1].content"></p>
+                      </a-col>
+                    </a-row>
+                  </a-col>
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                  >
+                    <r-avatar :data-src="steps[1].image" :size="300"
+                              class="r-avatar-block"
+                    ></r-avatar>
+                  </a-col>
+                </a-row>
+              </a-card>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
+              <a-card :class="getBgClass()">
+                <a-row :gutter="[48,48]" align="middle" justify="space-between" type="flex">
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                  >
+                    <r-avatar :data-src="steps[2].image" :size="300"
+                              class="r-avatar-block"
+                    ></r-avatar>
+                  </a-col>
+                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                  >
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <h4 class="r-heading-light r-text-uppercase" :class="getTextClass()">
+                          <span>{{ steps[2].title }}</span>
+                        </h4>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <h3 class="r-heading">
+                          {{ steps[2].heading }}
+                        </h3>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <p class="r-text-medium">
+                          {{ steps[2].summary }}
+                        </p>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                        <p class="r-text-normal" v-html="steps[2].content"></p>
+                      </a-col>
+                    </a-row>
+                  </a-col>
+                </a-row>
+              </a-card>
             </a-col>
           </a-row>
         </a-col>
@@ -176,7 +170,8 @@ export default {
       return 'r-text-secondary'
     },
     getBgClass () {
-      return `r-bg-${this.theme}-light`
+      return 'r-bg-yellow-light'
+      // return `r-bg-${this.theme}-light`
     },
     setCurrentStep (currentStep) {
       this.currentStep = currentStep

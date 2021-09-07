@@ -4,14 +4,15 @@
     <a-layout-content class="r-layout-content">
       <a-row :gutter="[48,0]" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <a-card class="r-bg-primary-light r-pull-h-24 r-border-none r-pt-81">
           <nuxt/>
+          </a-card>
         </a-col>
         <a-col v-if="hasFooter" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <r-footer :has-locations="true"></r-footer>
+          <r-footer :has-locations="false"></r-footer>
         </a-col>
       </a-row>
     </a-layout-content>
-    <r-spinner :is-absolute="false"></r-spinner>
   </a-layout>
 </template>
 <script>

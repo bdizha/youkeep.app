@@ -18,7 +18,7 @@
           </a-col>
           <a-col :lg="{span: 12}" class="r-p-lg-48" style="position: relative;">
             <div class="r-page-header-photo r-page-art-primary">
-              <img alt="Couple orders online" src="/assets/about-us.jpg">
+              <img alt="Couple orders online" src="/assets/about-us-03.jpg">
             </div>
           </a-col>
         </a-row>

@@ -5,7 +5,7 @@
            :xs="{ span: 24 }"
     >
       <h4 class="r-heading-light">
-        Addtract powers ambitious multichannel brands of all sizes in all industries.
+        Addtract powers ambitious multi-channel brands of all sizes in all industries.
       </h4>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"

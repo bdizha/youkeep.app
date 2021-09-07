@@ -4,16 +4,13 @@
            :key="index"
            :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24}"
     >
-      <a-card :hoverable="true" class="r-bg-primary-light"
-              @click="setCurrentPlan(index)"
-              :class="getBgClass(index)"
-      >
+      <a-card :hoverable="true" @click="setCurrentPlan(plan)" :class="getBgClass(plan)">
         <a-card class="r-bg-white">
-          <a-row class="r-text-center" :gutter="[24,24]" align="middle" justify="start" type="flex">
+          <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="start" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
-              <h3 class="r-heading" :class="getTextClass(index)">
+              <h3 class="r-heading" :class="getTextClass(plan)">
                 {{ plan.title }}
               </h3>
             </a-col>
@@ -27,14 +24,43 @@
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
+              <h4 class="r-heading-light r-text-uppercase" :class="getTextClass(plan)">
+                Products
+              </h4>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
               <a-row class="r-text-left" :gutter="[12,12]" align="middle" justify="start" type="flex">
-                <a-col v-for="(feature, index) in plan.features"
+                <a-col v-for="(product, index) in products"
                        :key="index"
                        :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                 >
                   <div class="r-checked-item r-text-left">
                     <a-icon class="r-checked-item-icon" type="check"></a-icon>
-                    <span class="r-text-normal r-text-dark">{{ feature }}</span>
+                    <span class="r-text-normal r-text-dark">{{ product.title }}</span>
+                  </div>
+                </a-col>
+              </a-row>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
+              <h4 class="r-heading-light r-text-uppercase" :class="getTextClass(plan)">
+                Services
+              </h4>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
+              <a-row class="r-text-left" :gutter="[12,12]" align="middle" justify="start" type="flex">
+                <a-col v-for="(service, index) in services"
+                       :key="index"
+                       :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
+                >
+                  <div class="r-checked-item r-text-left">
+                    <a-icon class="r-checked-item-icon" type="check"></a-icon>
+                    <span class="r-text-normal r-text-dark">{{ service.title }}</span>
                   </div>
                 </a-col>
               </a-row>
@@ -51,8 +77,8 @@
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
-              <a-button :class="getBtnClass(index)"
-                        @click="setCurrentPlan(index)"
+              <a-button :class="getBtnClass(plan)"
+                        @click="setCurrentPlan(plan)"
                         block
                         size="large"
                         type="blue"
@@ -76,24 +102,29 @@ export default {
   },
   data () {
     return {
-      currentPlan: 2
+      currentPlan: null
     }
   },
+  created () {
+    this.currentPlan = this.plans[0]
+  },
   computed: mapGetters({
-    plans: 'content/plans'
+    plans: 'content/plans',
+    products: 'content/products',
+    services: 'content/services'
   }),
   methods: {
     setCurrentPlan (currentPlan) {
       this.currentPlan = currentPlan
     },
-    getBgClass (index) {
-      return index === this.currentPlan ? 'r-bg-primary' : 'r-bg-primary-light'
+    getBgClass (item) {
+      return item === this.currentPlan ? `r-bg-${item.theme}` : `r-bg-${item.theme}-light`
     },
-    getTextClass (index) {
-      return index === this.currentPlan ? 'r-text-primary' : 'r-text-dark'
+    getBtnClass (item) {
+      return item === this.currentPlan ? `r-btn-${item.theme}` : `r-btn-bordered-${item.theme}`
     },
-    getBtnClass (index) {
-      return index === this.currentPlan ? 'r-btn-primary' : 'r-btn-bordered-primary'
+    getTextClass (item) {
+      return item === this.currentPlan ? `r-text-${item.theme}` : `r-text-dark`
     }
   }
 }

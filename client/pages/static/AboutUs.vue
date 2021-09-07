@@ -1,182 +1,103 @@
 <template>
-  <a-row :gutter="[48,96]" align="middle" justify="center" type="flex">
+  <a-row :gutter="[96,96]" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-row :gutter="[48,0]" align="middle" class="r-text-left" justify="center" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-               :sm="{  span: 24 }"
+      <a-row :gutter="[0,0]" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-cover-image r-bg-dark r-pull-24 r-border-none r-pt-81">
-            <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <div class="r-mb-48-lg">
-                      <a-card class="r-bg-dark r-pull-h-24 r-border-none-sm">
-                        <div class="r-mv-48">
-                          <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                       :sm="{ span: 24 }"
-                                       :xs="{ span: 24 }"
-                                >
-                                  <h3 class="r-heading-light r-text-secondary r-text-uppercase">
-                                    It's not about us
-                                  </h3>
-                                </a-col>
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                       :sm="{ span: 24 }"
-                                       :xs="{ span: 24 }"
-                                >
-                                  <h1 class="r-heading">
-                                    How you <span class="r-text-primary">invest</span> is deeply <span
-                                    class="r-text-secondary"
-                                  >individual</span>.
-                                  </h1>
-                                </a-col>
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                       :sm="{ span: 24 }"
-                                       :xs="{ span: 24 }"
-                                >
-                                  <p class="r-text-large">
-                                    We created Addtract to make your unique life better and flexible.
-                                  </p>
-                                </a-col>
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                       :sm="{ span: 24 }"
-                                       :xs="{ span: 24 }"
-                                >
-                                  <p class="r-text-medium">
-                                    We're on the mission to make <span
-                                    class="r-text-secondary"
-                                  >property</span> investments
-                                    <span class="r-text-primary">accessible</span> and
-                                    <span class="r-text-secondary">affordable</span> for all South Africans like you.
-                                  </p>
-                                </a-col>
-                              </a-row>
-                            </a-col>
-                            <a-col class="r-hide-lg" :lg="{ span: 12 }" :md="{ span: 12 }"
-                                   :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <r-avatar data-src="/images/content/home-1.jpg" :size="300" class="r-avatar-block"
-                              ></r-avatar>
-                            </a-col>
-
-                          </a-row>
-                        </div>
-                      </a-card>
-                    </div>
-                  </a-col>
-                </a-row>
-              </a-col>
-            </a-row>
-          </a-card>
-        </a-col>
-        <a-col :lg="{ span: 24 }" :md="{ span: 18 }"
-               :sm="{  span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <r-values></r-values>
-        </a-col>
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-               :sm="{  span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+          <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none r-pt-81">
             <div class="r-mv-48">
-              <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-                <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-                       :sm="{  span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-                    <a-col :lg="{ span: 12 }" :md="{ span: 15 }" :sm="{ span: 24 }"
+              <a-row :gutter="[48,48]" justify="center" type="flex">
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <a-row :gutter="[48,48]" align="middle" justify="end" type="flex">
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="center" type="flex">
+                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
                           <h4 class="r-heading-light r-text-uppercase">
-                            <span class="r-text-blue">Our promise to you</span>
+                            Our mission
                           </h4>
                         </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                        <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h3 class="r-heading">
-                            We help South Africans <span class="r-text-primary">achieve</span> their
-                            <span class="r-text-secondary">investment</span>
-                            <span class="r-text-primary">goals</span>
-                          </h3>
+                          <div style="width: 176px; height: 176px;display: block; background: #FFFFFF; position:relative; overflow: hidden; border-top-right-radius: 50%;">
+                            <div class="r-diamond"></div>
+                            <div class="r-diamond" style="left: 96px;"></div>
+                            <div class="r-diamond" style="top: 96px;"></div>
+                            <div class="diagonal-01"></div>
+                            <div class="diagonal-02"></div>
+                          </div>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <p class="r-text-medium">
-                            To date, we have helped to make property possible for thousands of South Africans and are eager
-                            to
-                            continue this journey!
+                          <h1 class="r-heading r-text-dark">
+                            To empower B2B <span class="r-text-secondary">payments</span> and brands of all sizes in
+                            Africa.
+                          </h1>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-medium r-text-dark">
+                            What was missing was a solution designed specifically for B2B eCommerce business and
+                            marketplaces.
                           </p>
+                        </a-col>
+                        <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-normal">
+                            While at PayPal, we witnessed the struggles of B2B merchants unable to complete the
+                            transition
+                            to the online space, being stuck with offline transaction processing. A fraction of their
+                            trade
+                            is via credit cards, so retrofitted consumer solutions weren't going to cut it.
+                          </p>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <p class="r-text-normal">
+                            Addtract's solutions enable owning the entire B2B checkout experience, end to end - unifying
+                            different
+                            payment methods and terms, providing a self serve experience, while getting full control.
+                          </p>
+                        </a-col>
+                        <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
+                               :sm="{ span: 12 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <nuxt-link to="/careers">
+                            <a-button class="r-btn-secondary"
+                                      block
+                                      size="large"
+                                      type="blue"
+                            >
+                              See open positions
+                            </a-button>
+                          </nuxt-link>
                         </a-col>
                       </a-row>
                     </a-col>
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                           :sm="{  span: 24 }"
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-                        <a-col v-for="(promise, index) in promises"
-                               :key="index"
-                               :lg="{ span: 8 }" :md="{ span: 8 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <a-card :class="getBgClass(promise.theme)">
-                            <a-card-meta>
-                              <template slot="description">
-                                <a-row :gutter="[12,12]" align="middle" class="r-text-left" justify="center"
-                                       type="flex"
-                                >
-                                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                         :sm="{ span: 24 }"
-                                         :xs="{ span: 24 }"
-                                  >
-                                    <h3 class="r-checked-item r-heading-light">
-                                      <a-icon class="r-checked-item-icon" type="check"></a-icon>
-                                      <span :class="'r-text-white'">
-                                    {{ promise.title }}
-                                  </span>
-                                    </h3>
-                                  </a-col>
-                                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                         :sm="{ span: 24 }"
-                                         :xs="{ span: 24 }"
-                                  >
-                                    <p class="r-text-normal r-text-white">
-                                      {{ promise.content }}
-                                    </p>
-                                  </a-col>
-                                </a-row>
-                              </template>
-                            </a-card-meta>
-                          </a-card>
-                        </a-col>
-                      </a-row>
+                      <r-avatar data-src="/assets/home-03.jpg" :size="300"
+                                class="r-avatar-block"
+                      ></r-avatar>
                     </a-col>
                   </a-row>
                 </a-col>
@@ -186,51 +107,163 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <r-contact-us></r-contact-us>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-row :gutter="[48,48]" justify="start" type="flex">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <h4 class="r-heading-light r-text-uppercase">
+                Our story
+              </h4>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <h3 class="r-heading">
+                Making meaningful B2B <span class="r-text-secondary">connections</span>
+              </h3>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <p class="r-text-normal">
+                What started as a way to help small businesses find innovative products has grown into a leading B2B
+                marketplace that connects millions of buyers with brands of all sizes.
+              </p>
+            </a-col>
+          </a-row>
+        </a-col>
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <r-metrics></r-metrics>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-values></r-values>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-contact-us title="Take your mind off B2B payments, for good."></r-contact-us>
     </a-col>
   </a-row>
 </template>
+<style>
+.r-diamond {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  top: auto;
+  background: #00C2FF;
+}
+
+.r-diamond:first-child {
+  background: #FBD13E;
+}
+
+.r-diamond:nth-child(2) {
+  background: #3A9CFF;
+}
+
+.diagonal-01 {
+  background: #FFFFFF;
+  position: absolute;
+  width: 16px;
+  height: 300px;
+  left: 66px;
+  right: auto;
+  bottom: -49px;
+  top: auto;
+  transform: rotate(-45deg);
+}
+
+.diagonal-02 {
+  background: #FFFFFF;
+  position: absolute;
+  width: 16px;
+  height: 300px;
+  left: 91px;
+  right: auto;
+  bottom: auto;
+  top: -74px;
+  transform: rotate(45deg);
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+
+  border-top: 40px solid #00C2FF;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+
+  border-left: 40px solid #FBD13E;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  border-right:40px solid #3A9CFF;
+}
+</style>
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   layout: 'default',
-  name: 'r-about-us',
   props: {},
+  async asyncData ({ store }) {
+    await store.dispatch('base/onReviews', {})
+  },
   data () {
     return {
-      promises: [
-        {
-          title: 'Inclusion',
-          content: 'You’re unique and your businesses should be too. We help match your service to reliable and established property developers that fit your capital return goals . ',
-          theme: 'secondary',
-          textTheme: 'primary'
-        },
-        {
-          title: 'Transparency',
-          content: 'Simplify to make better informed decisions while you accelerate your innovation pace. Technology transformation keeps shifting and we keep re-inventing.',
-          theme: 'primary',
-          textTheme: 'secondary'
-        },
-        {
-          title: 'Trust',
-          content: 'We provide high-quality solutions that are essential to your investment growth trajectory, and the freedom to reach out to our investment advisers more effectively.',
-          theme: 'dark',
-          textTheme: 'primary'
-        }
-      ]
+      isProcessing: true,
+      testimonials: [],
+      modal: {
+        current: null,
+        isVisible: false
+      },
+      hasData: false
     }
   },
-  mounted () {
-    this.modal = this.$store.state.modal
+  computed: mapGetters({
+    store: 'base/store',
+    category: 'base/category',
+    categories: 'shop/categories',
+    hasCategories: 'base/hasCategories'
+  }),
+  created () {
   },
   methods: {
-    getBgClass (theme) {
-      return `r-bg-${theme}`
-    },
-    getTextClass (theme) {
-      return `r-text-${theme}`
+    onModal () {
+      const modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = 'register'
+
+      this.$store.dispatch('base/onModal', modal)
     }
   }
 }

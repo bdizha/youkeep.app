@@ -5,16 +5,16 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-blue r-pull-h-24 r-border-none r-pt-81">
-            <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-row :gutter="[96,48]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <div class="r-mv-48">
+          <div class="r-pull-h-24 r-border-none r-pt-81">
+            <div class="r-mv-48">
+              <a-row :gutter="[48,48]" align="top" justify="center" type="flex">
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row :gutter="[96,48]" align="top" justify="start" type="flex">
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
                       <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
@@ -81,7 +81,7 @@
                                     Email
                                   </h4>
                                   <p class="r-text-medium">
-                                    <a class="r-text-primary" href="mailto:info@Addtract.app" target="_blank">info@Addtract.app</a>
+                                    <a class="r-text-primary" href="mailto:info@addtract.com" target="_blank">info@addtract.com</a>
                                   </p>
                                 </a-col>
                               </a-row>
@@ -89,36 +89,20 @@
                           </a-row>
                         </a-col>
                       </a-row>
-                    </div>
-                  </a-col>
-                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <r-avatar :size="300" class="r-avatar-auto" data-src="/images/content/support-01-white.svg"
-                    ></r-avatar>
-                  </a-col>
-                </a-row>
-              </a-col>
-            </a-row>
-          </a-card>
-        </a-col>
-      </a-row>
-    </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <a-row justify="start" type="flex">
-        <a-col :lg="{span: 12}" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <a-card class="r-bg-secondary-light">
-            <div class="r-mv-48">
-              <a-row :gutter="[24,24]" justify="center" type="flex">
-                <a-col :xs="{ span: 24 }" class="r-text-left">
-                  <r-hello></r-hello>
+                    </a-col>
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <a-card class="r-bg-primary-light">
+                        <r-hello></r-hello>
+                      </a-card>
+                    </a-col>
+                  </a-row>
                 </a-col>
               </a-row>
             </div>
-          </a-card>
+          </div>
         </a-col>
       </a-row>
     </a-col>

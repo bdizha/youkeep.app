@@ -40,9 +40,8 @@
 
 <script>
 
-
 export default {
-  scrollToTop: false,
+  scrollToTop: true,
 
   head () {
     return { title: this.$t('settings') }

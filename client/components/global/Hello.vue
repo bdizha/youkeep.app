@@ -1,16 +1,15 @@
 <template>
   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
     <a-col v-show="hasForm" :xs="{ span: 24 }" class="r-text-left">
-      <h2 class="r-heading">
-        <span class="r-text-yellow">Get</span> in touch today!
+      <h2 class="r-heading-light">
+        {{ title }}
       </h2>
     </a-col>
     <a-col v-show="hasForm" :xs="{ span: 24 }" class="r-text-left">
       <p class="r-text-normal">
         How can we help? Just a quick note: try visiting our
         <nuxt-link to="/help">Help center</nuxt-link>
-        that maybe of help only for general queries that we frequently receive from
-        our buyers.
+        that maybe of help only for general queries that we frequently receive from businesses.
       </p>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -65,8 +64,8 @@
             <a-icon slot="prefix" type="user"/>
           </a-input>
         </a-form-item>
-        <a-form-item label="Notes">
-          <a-input v-decorator="['notes', { rules: [{ required: true, message: 'Please enter your message' }] }]"
+        <a-form-item label="Message">
+          <a-input v-decorator="['message', { rules: [{ required: true, message: 'Please enter your message' }] }]"
                    placeholder="Your message"
                    size="large"
                    type="textarea"
@@ -100,43 +99,27 @@
 <script>
 import { mapGetters } from 'vuex'
 
-const CATEGORIES = [
-  {
-    label: 'I\'m looking to raise capital',
-    key: 1
-  },
-  {
-    label: 'I want to partner with Addtract',
-    key: 2
-  },
-  {
-    label: 'I\'ve questions about cloud technology',
-    key: 3
-  },
-  {
-    label: 'I\'ve a general query',
-    key: 4
-  }
-]
-
 export default {
   name: 'r-hello',
-  props: {},
+  props: {
+    title: { type: String, required: false, default: 'Get in touch today!' },
+    hasPlan: { type: Boolean, required: false, default: false }
+  },
   data () {
     return {
       current: 'contact-us',
-      fields: ['name', 'mobile', 'email', 'notes'],
+      fields: ['name', 'mobile', 'email', 'message'],
       form: this.$form.createForm(this, { name: 'form_contact' }),
       category_id: 1,
       message: 'Thank you for contacting us and we should be responding to your contact request soon.',
-      categories: CATEGORIES,
       hasError: false,
       errors: []
     }
   },
   computed: mapGetters({
     processes: 'base/processes',
-    hasForm: 'base/hasForm'
+    hasForm: 'base/hasForm',
+    categories: 'content/reasons'
   }),
   methods: {
     onSubmit (event) {
@@ -152,7 +135,6 @@ export default {
           params.is_active = true
 
           $this.form = $this.$form.createForm($this, { name: 'form_contact' })
-
           await this.$store.dispatch('base/onNotice', this.message)
 
           const payload = {
@@ -160,8 +142,7 @@ export default {
             route: '/contact-us',
             current: this.current
           }
-
-          this.$store.dispatch('form/onPost', payload)
+          await this.$store.dispatch('form/onPost', payload)
         }
       })
     },

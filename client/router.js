@@ -7,7 +7,7 @@ Vue.use(Router)
 const page = path => () => import(`~/pages/${path}`).then(m => m.default || m)
 
 const routes = [
-  { path: '/', name: 'index', meta: { isDark: true, isRaised: false}, component: page('Index.vue') },
+  { path: '/', name: 'index', meta: { isDark: false, isRaised: false}, component: page('Index.vue') },
 
   { path: '/login', name: 'login', meta: { isDark: false, isRaised: false}, component: page('auth/Login.vue') },
   { path: '/register', name: 'register', meta: { isDark: false, isRaised: false}, component: page('auth/Register.vue') },
@@ -23,19 +23,19 @@ const routes = [
     name: 'store.category.show.level',
     component: page('store/Category.vue')
   },
-  { path: '/store/:slug', name: 'store.show', meta: { isDark: false, isRaised: false}, component: page('store/Show.vue'), },
-  { path: '/category/:slug', name: 'category.show', meta: { isDark: false, isRaised: false}, component: page('category/Show.vue') },
-  { path: '/category/:slug/:level', name: 'category.show.level', meta: { isDark: false, isRaised: false}, component: page('category/Show.vue') },
+  { path: '/store/:slug', name: 'store.show', meta: { isDark: false, isRaised: false}, component: page('store/Item.vue'), },
+  { path: '/category/:slug', name: 'category.show', meta: { isDark: false, isRaised: false}, component: page('category/Item.vue') },
+  { path: '/category/:slug/:level', name: 'category.show.level', meta: { isDark: false, isRaised: false}, component: page('category/Item.vue') },
   { path: '/category/:category/:level/service/:slug', name: 'category.product.show', meta: { isDark: false, isRaised: false}, component: page('store/Invoice.vue'), },
   { path: '/shopper', name: 'shopper', meta: { isDark: false, isRaised: false}, component: page('shopper/Index.vue') },
-  { path: '/buyer', name: 'customer', meta: { isDark: true, isRaised: false}, component: page('customer/Index.vue') },
+  { path: '/buyer', name: 'customer', meta: { isDark: false, isRaised: false}, component: page('customer/Index.vue') },
   { path: '/buyer/membership', name: 'customer-membership', meta: { isDark: false, isRaised: false}, component: page('customer/Membership.vue') },
   { path: '/supplier', name: 'supplier', meta: { isDark: false, isRaised: false}, component: page('seller/Index.vue') },
   { path: '/supplier/resources', name: 'resource', meta: { isDark: false, isRaised: false}, component: page('resource/Index.vue') },
-  { path: '/supplier/resource/:slug', name: 'resource-show', meta: { isDark: false, isRaised: false}, component: page('resource/Show.vue') },
+  { path: '/supplier/resource/:slug', name: 'resource-show', meta: { isDark: false, isRaised: false}, component: page('resource/Item.vue') },
   { path: '/stores/:category', name: 'stores', meta: { isDark: false, isRaised: false}, component: page('store/Index.vue') },
   { path: '/home', name: 'home', meta: { isDark: false, isRaised: false}, component: page('home.vue') },
-  { path: '/about-us', name: 'about-us', meta: { isDark: true, isRaised: false}, component: page('static/AboutUs.vue') },
+  { path: '/about-us', name: 'about-us', meta: { isDark: false, isRaised: false}, component: page('static/AboutUs.vue') },
   { path: '/contact-us', name: 'contact-us', meta: { isDark: false, isRaised: false}, component: page('static/ContactUs.vue') },
   { path: '/terms', name: 'terms', meta: { isDark: false, isRaised: true}, component: page('static/Terms.vue') },
   { path: '/privacy', name: 'privacy', meta: { isDark: false, isRaised: true}, component: page('static/Privacy.vue') },
@@ -43,16 +43,17 @@ const routes = [
   { path: '/marketplace', name: 'marketplace', meta: { isDark: false, isRaised: false}, component: page('static/Marketplace.vue') },
   { path: '/community', name: 'community', meta: { isDark: false, isRaised: false}, component: page('static/Community.vue') },
   { path: '/help', name: 'help', meta: { isDark: false, isRaised: true}, component: page('help/Index.vue') },
-  { path: '/help/:slug', name: 'help.show', meta: { isDark: false, isRaised: true}, component: page('help/Show.vue') },
+  { path: '/help/:slug', name: 'help.show', meta: { isDark: false, isRaised: true}, component: page('help/Item.vue') },
   { path: '/careers', name: 'careers', meta: { isDark: false, isRaised: true}, component: page('career/Index.vue') },
   { path: '/career/openings', name: 'career-list', meta: { isDark: false, isRaised: true}, component: page('career/Index.vue') },
-  { path: '/career/:slug', name: 'career-show', meta: { isDark: false, isRaised: true}, component: page('career/Show.vue') },
+  { path: '/career/:slug', name: 'career-show', meta: { isDark: false, isRaised: true}, component: page('career/Item.vue') },
   { path: '/career/:slug/apply', name: 'career-apply', meta: { isDark: false, isRaised: false}, component: page('career/Apply.vue') },
-  { path: '/articles', name: 'articles', meta: { isDark: false, isRaised: true}, component: page('article/Index.vue') },
-  { path: '/article/:slug', name: 'article-show', meta: { isDark: false, isRaised: true}, component: page('article/Show.vue') },
+  { path: '/resources', name: 'articles', meta: { isDark: true, isRaised: true}, component: page('article/Index.vue') },
+  { path: '/resource/:slug', name: 'article-show', meta: { isDark: false, isRaised: true}, component: page('article/Item.vue') },
   { path: '/service', name: 'services', meta: { isDark: false, isRaised: true}, component: page('service/Index.vue') },
   { path: '/service/:slug', name: 'service-show', meta: { isDark: false, isRaised: true}, component: page('service/Show.vue') },
   { path: '/pricing', name: 'pricing', meta: { isDark: false, isRaised: false}, component: page('static/Pricing.vue') },
+  { path: '/documentation', name: 'pricing', meta: { isDark: false, isRaised: true}, component: page('static/Documentation.vue') },
   {
     path: '/settings',
     component: page('settings/Index.vue'),
@@ -78,7 +79,7 @@ const routes = [
     path: '/account/store/:slug',
     name: 'account.store.show',
     meta: { isDark: false, isRaised: false},
-    component: page('account/store/Show.vue')
+    component: page('account/store/Item.vue')
   },
   {
     path: '/account/seller',

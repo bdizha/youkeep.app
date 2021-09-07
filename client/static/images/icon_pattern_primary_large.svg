@@ -7,8 +7,8 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil1 {fill:#00C2FF}
-    .fil0 {fill:#3A98F7}
+    .fil1 {fill:#00C2FF;opacity: 0.3;}
+    .fil0 {fill:#00C2FF;opacity: 0.15;}
    ]]>
   </style>
  </defs>

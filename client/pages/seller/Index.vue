@@ -7,12 +7,12 @@
         >
           <a-card class="r-bg-primary-light r-pull-h-24 r-border-none r-pt-81">
             <div class="r-mv-48">
-              <a-row :gutter="[48,48]" justify="start" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+              <a-row :gutter="[48,48]" justify="center" type="flex">
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24}"
+                >
                   <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-                           :xs="{ span: 24}"
-                    >
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
@@ -66,22 +66,22 @@
                                :xs="{ span: 24 }"
                         >
                           <nuxt-link to="/contact-us">
-                            <a-button class="r-btn-dark"
+                            <a-button class="r-btn-bordered-secondary"
                                       block
                                       size="large"
                                       type="blue"
                             >
-                              Get started
+                              Contact sales
                             </a-button>
                           </nuxt-link>
                         </a-col>
                       </a-row>
                     </a-col>
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                      <r-avatar data-src="/steps/step-02-primary.svg" :size="300" class="r-avatar-block"
+                      ></r-avatar>
+                    </a-col>
                   </a-row>
-                </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                  <r-avatar data-src="/assets/setup-01.svg" :size="300" class="r-avatar-block"
-                  ></r-avatar>
                 </a-col>
               </a-row>
             </div>
@@ -131,8 +131,8 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h3 class="r-heading r-text-secondary">
-                            Get discovered by the
+                          <h3 class="r-heading">
+                            Get <span class="r-text-secondary">discovered</span> by the
                             world's leading retailers
                           </h3>
                         </a-col>
@@ -149,11 +149,11 @@
                         >
                           <nuxt-link to="/customer/membership">
                             <a-button block
-                                      class="r-btn-primary"
+                                      class="r-btn-bordered-primary"
                                       size="large"
                                       type="secondary"
                             >
-                              Discover More
+                              Contact sales
                             </a-button>
                           </nuxt-link>
                         </a-col>

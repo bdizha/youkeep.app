@@ -15,6 +15,7 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
     'slogan' => env('APP_SLOGAN', 'Not set'),
+    'app_id' => env('APP_ID', 1),
 
     /*
     |--------------------------------------------------------------------------

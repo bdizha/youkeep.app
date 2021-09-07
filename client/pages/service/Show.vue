@@ -1,11 +1,11 @@
 <template>
   <a-row :gutter="[96,96]" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-card class="r-bg-primary-light r-pull-h-24 r-border-none r-pt-81">
+      <a-card class="r-bg-yellow-light r-pull-h-24 r-border-none r-pt-81">
         <div class="r-mv-48">
           <a-row :gutter="[96,48]" justify="center" type="flex">
             <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-              <a-row :gutter="[96,48]" justify="center" type="flex">
+              <a-row :gutter="[96,48]" justify="center" align="middle" type="flex">
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
@@ -14,16 +14,15 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h4 class="r-heading-light r-text-primary r-text-uppercase">
-                        {{ service.title }}
-                      </h4>
+                      <h3 class="r-heading-light r-text-primary r-text-uppercase">
+                        {{ product.title }}
+                      </h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h2 class="r-heading r-text-dark">
-                        {{ service.heading }}
+                      <h2 class="r-heading r-text-dark" v-html="product.heading">
                       </h2>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -31,7 +30,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium r-text-primary r-text-dark">
-                        {{ service.summary }}
+                        {{ product.summary }}
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -39,7 +38,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal r-text-dark">
-                        {{ service.content }}
+                        {{ product.content }}
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
@@ -47,6 +46,19 @@
                            :xs="{ span: 24 }"
                     >
                       <a-button class="r-btn-primary"
+                                @click="onModal"
+                                block
+                                size="large"
+                                type="blue"
+                      >
+                        Get started
+                      </a-button>
+                    </a-col>
+                    <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
+                           :sm="{ span: 12 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <a-button class="r-btn-bordered-secondary"
                                 @click="onModal"
                                 block
                                 size="large"
@@ -60,10 +72,7 @@
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <a-card class="r-bg-primary-light">
-                    <r-avatar :data-src="'/services/light/' + service.image" :size="300" class="r-avatar-block"
-                    ></r-avatar>
-                  </a-card>
+                  <r-saucer theme="yellow" :image="'/services/white/' + product.image" :size="300"></r-saucer>
                 </a-col>
               </a-row>
             </a-col>
@@ -95,35 +104,42 @@
             >
               <div class="r-product-item-content">
                 <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-                  <a-col v-for="(feature, index) in service.features"
+                  <a-col v-for="(feature, index) in product.features"
                          :key="index"
-                         :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }"
+                         :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
                   >
-                    <a-card class="r-bg-primary-light">
+                    <a-card class="r-bg-yellow-light">
                       <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
-                        <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }"
+                        <a-col :lg="{ span: 6 }" :md="{ span: 8 }" :sm="{ span: 24 }"
                                :xs="{ span: 24}"
                         >
-                          <a-card class="r-bg-primary r-p-0 r-inline-block">
-                          <nuxt-img width="60" height="60" :src="'/services/primary/' + feature.image"></nuxt-img>
+                          <a-card class="r-bg-white-light r-p-0 r-inline-block">
+                            <nuxt-img width="111" height="111" :src="'/services/white/' + feature.image"></nuxt-img>
                           </a-card>
                         </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                        <a-col :lg="{ span: 18 }" :md="{ span: 16 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h4 class="r-heading">
-                            {{ feature.title }}
-                          </h4>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <p class="r-text-normal">
-                            {{ feature.content }}
-                          </p>
+                          <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                              <h4 class="r-heading">
+                                {{ feature.title }}
+                              </h4>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                   :sm="{ span: 24 }"
+                                   :xs="{ span: 24 }"
+                            >
+                              <p class="r-text-normal">
+                                {{ feature.content }}
+                              </p>
+                            </a-col>
+                          </a-row>
                         </a-col>
                       </a-row>
                     </a-card>
@@ -153,7 +169,7 @@ export default {
 
     console.log('service params', params)
 
-    await store.dispatch('content.js/onService', slug)
+    await store.dispatch('content/onProduct', slug)
   },
   data () {
     return {
@@ -161,8 +177,8 @@ export default {
     }
   },
   computed: mapGetters({
-    services: 'content/services',
-    service: 'content/service'
+    products: 'content/products',
+    product: 'content/product'
   }),
   created () {
     this.hasData = true

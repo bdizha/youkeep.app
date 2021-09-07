@@ -80,6 +80,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
+  layout: 'page',
   name: 'r-help',
   props: {},
   async fetch () {

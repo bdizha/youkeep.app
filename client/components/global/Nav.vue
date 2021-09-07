@@ -6,12 +6,12 @@
               theme="light"
       >
         <a-sub-menu>
-          <span slot="title" class="r-menu-text">
+          <div slot="title" class="r-menu-text">
             Who we serve
             <a-icon type="down" />
             <div class="r-sub-menu">
               <a-card class="r-bg-white r-pull-h-24 r-border-none">
-                <div class="r-mv-48">
+                <div class="r-mv-24">
                   <a-row align="middle" justify="center" type="flex">
                     <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                            :sm="{ span: 24 }"
@@ -62,15 +62,15 @@
                 </div>
               </a-card>
             </div>
-          </span>
+          </div>
         </a-sub-menu>
         <a-sub-menu>
-          <span slot="title" class="r-menu-text">
+          <div slot="title" class="r-menu-text">
             Solutions
             <a-icon type="down" />
             <div class="r-sub-menu">
               <a-card class="r-bg-white r-pull-h-24 r-border-none">
-                <div class="r-mv-48">
+                <div class="r-mv-24">
                   <a-row align="middle" justify="center" type="flex">
                     <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                            :sm="{ span: 24 }"
@@ -82,14 +82,14 @@
                             Marketplace Solutions
                           </h4>
                         </a-col>
-                        <a-col v-for="(service, index) in services"
+                        <a-col v-for="(service, index) in products"
                                :key="index"
                                :lg="{ span: 8 }" :md="{ span: 8 }"
                                :sm="{ span: 24 }"
                                :xs="{ span: 24}"
                         >
                           <nuxt-link class="r-link-card" :to="'/service/' + service.slug">
-                            <a-card hoverable="" class="r-bg-white">
+                            <a-card hoverable="" class="r-bg-yellow-light">
                               <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
                                 <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 9 }"
                                        :xs="{ span: 9}"
@@ -113,9 +113,7 @@
                                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                            :xs="{ span: 24}"
                                     >
-                                      <p class="r-text-normal r-text-dark">
-                                        {{ service.heading }}
-                                      </p>
+                                      <p class="r-text-normal r-text-dark" v-html="service.heading"></p>
                                     </a-col>
                                   </a-row>
                                 </a-col>
@@ -129,22 +127,29 @@
                 </div>
               </a-card>
             </div>
-          </span>
+          </div>
         </a-sub-menu>
         <a-sub-menu>
-          <span slot="title" class="r-menu-text">
+          <div slot="title" class="r-menu-text">
             <nuxt-link to="/pricing">
-            Pricing
+              Pricing
             </nuxt-link>
-          </span>
+          </div>
         </a-sub-menu>
         <a-sub-menu>
-          <span slot="title" class="r-menu-text">
+          <div slot="title" class="r-menu-text">
+            <nuxt-link to="/documentation">
+              API Docs
+            </nuxt-link>
+          </div>
+        </a-sub-menu>
+        <a-sub-menu>
+          <div slot="title" class="r-menu-text">
             Company
             <a-icon type="down" />
             <div class="r-sub-menu">
               <a-card class="r-bg-white r-pull-h-24 r-border-none">
-                <div class="r-mv-48">
+                <div class="r-mv-24">
                   <a-row align="middle" justify="center" type="flex">
                     <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
                            :sm="{ span: 24 }"
@@ -221,7 +226,7 @@
                                   >
                                     <nuxt-link class="r-link-card" to="/contact-us">
                                       <h4 class="r-heading r-text-dark">
-                                        Contact
+                                        Contact Us
                                         <a-icon type="right" />
                                       </h4>
                                     </nuxt-link>
@@ -244,6 +249,17 @@
                                     </h4>
                                   </a-col>
                                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                         :sm="{ span: 24 }"
+                                         :xs="{ span: 24}"
+                                  >
+                                    <nuxt-link class="r-link-card" to="/resources">
+                                      <h4 class="r-heading r-text-dark">
+                                        Blog
+                                        <a-icon type="right" />
+                                      </h4>
+                                    </nuxt-link>
+                                  </a-col>
+                                  <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }"
                                          :sm="{ span: 24 }"
                                          :xs="{ span: 24}"
                                   >
@@ -298,13 +314,13 @@
                 </div>
               </a-card>
             </div>
-          </span>
+          </div>
         </a-sub-menu>
         <a-sub-menu>
           <div v-if="!isLoggedIn" slot="title" @click="onModal">
             <a-button id="r-user-login"
                       block
-                      class="r-btn-bordered-primary"
+                      :class="{'r-btn-bordered-white': isDark, 'r-btn-bordered-dark': !isDark}"
                       type="secondary"
                       @click="onModal"
             >
@@ -315,6 +331,18 @@
           <div v-if="isLoggedIn" slot="title" @click="onDrawer">
             <a-icon type="user" />
             Account
+          </div>
+        </a-sub-menu>
+        <a-sub-menu v-if="!isLoggedIn">
+          <div slot="title" @click="onModal">
+            <a-button block
+                      :class="{'r-btn-yellow': isDark, 'r-btn-primary': !isDark}"
+                      type="secondary"
+                      @click="onModal('register')"
+            >
+              <a-icon type="user" />
+              Sign Up
+            </a-button>
           </div>
         </a-sub-menu>
       </a-menu>
@@ -358,13 +386,14 @@ export default {
     }
   },
   computed: mapGetters({
-    services: 'content/services',
+    products: 'content/products',
     user: 'auth/user',
     cart: 'cart/cart',
     modal: 'base/modal',
     store: 'base/store',
     drawer: 'base/drawer',
     isRaised: 'base/isRaised',
+    isDark: 'base/isDark',
     isLoggedIn: 'auth/isLoggedIn'
   }),
   created () {
@@ -380,11 +409,11 @@ export default {
 
       this.$store.dispatch('base/onDrawer', drawer)
     },
-    onModal () {
+    onModal (current) {
       const modal = {}
       modal.isVisible = true
       modal.isClosable = true
-      modal.current = 'login'
+      modal.current = current
       this.$store.dispatch('base/onModal', modal)
     }
   }

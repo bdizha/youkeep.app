@@ -136,7 +136,7 @@ export default {
     const slug = params.slug
 
     console.log('service params', params)
-    await store.dispatch('content.js/onService', slug)
+    await store.dispatch('content.js/onProduct', slug)
   },
   data () {
     return {
@@ -144,7 +144,7 @@ export default {
     }
   },
   computed: mapGetters({
-    services: 'content/services',
+    products: 'content/products',
     service: 'content/service'
   }),
   created () {

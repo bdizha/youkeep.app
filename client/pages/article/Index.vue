@@ -1,59 +1,91 @@
 <template>
-  <r-article-template :article="null">
-    <a-row v-if="hasData" :gutter="[24,24]">
-      <a-col v-for="(article, index) in articles"
-             v-if="articles.length > 0"
-             :key="index"
-             :lg="{span:6}" :md="{span:8}" :sm="{span:12}" :xs="{span:24}"
-             class="gutter-row"
-      >
-        <r-article-item :article="article" :size="24"></r-article-item>
-      </a-col>
-    </a-row>
-  </r-article-template>
+  <a-row :gutter="[96,96]" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <a-row :gutter="[24,24]" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <div class="r-cover-blog r-pt-81">
+            <div class="r-p-48">
+              <a-row :gutter="[48,48]" justify="center" type="flex">
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+                    <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <h4 class="r-heading-light r-text-uppercase r-text-yellow">
+                            Our blog
+                          </h4>
+                        </a-col>
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <h2 class="r-heading-light r-text-dark r-text-white">
+                            <span class="r-text-yellow">Addtract</span> insights about the B2B marketplace
+                            infrastructure.
+                          </h2>
+                        </a-col>
+                        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                               :sm="{ span: 12 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <nuxt-link to="/contact-us">
+                            <a-button class="r-btn-white-bordered"
+                                      block
+                                      size="large"
+                                      type="blue"
+                            >
+                              Contact sales
+                            </a-button>
+                          </nuxt-link>
+                        </a-col>
+                      </a-row>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </div>
+          </div>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-articles></r-articles>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-contact-us title="Take your mind off B2B payments, for good."></r-contact-us>
+    </a-col>
+  </a-row>
 </template>
 <script>
-import axios from 'axios'
-
 export default {
-  layout: 'article',
-  components: {},
+  layout: 'default',
   props: {},
+  async asyncData ({ store }) {
+    await store.dispatch('content/onArticles', '/resources')
+  },
   data () {
     return {
-      articles: [],
-      hasData: false,
-      hasSpin: false
+      isProcessing: true,
+      testimonials: [],
+      modal: {
+        current: null,
+        isVisible: false
+      },
+      hasData: false
     }
   },
-  mounted () {
-    this.payload()
+  created () {
   },
   methods: {
-    payload () {
-      this.hasSpin = true
-
-      let params = {}
-      let path = this.$route.path
-      let $this = this
-
-      axios.get(path, params)
-        .then(response => {
-          console.log('setting store data >> before')
-          console.log(response.data)
-
-          $this.articles = response.data.articles
-          $this.hasData = true
-          console.log('setting article data >> after')
-
-          setTimeout(function () {
-            $this.hasSpin = false
-          }, 900)
-        })
-        .catch(e => {
-          console.log(e)
-        })
-    }
   }
 }
 </script>

@@ -83,7 +83,8 @@ export default {
     }
   },
   computed: mapGetters({
-    plans: 'content/plans'
+    plans: 'content/plans',
+    service: 'content/service'
   }),
   created () {
   },
