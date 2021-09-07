@@ -10,16 +10,14 @@
               <a-col :lg="{ span: 24 }"
                      :sm="{ span: 24 }" :xs="{ span:24 }"
               >
-                <div class="r-blog-item-cover">
+                <div class="r-blog-item-cover" :style="'background-image: url(' + article.photo + ');'">
                   &nbsp;
                 </div>
               </a-col>
               <a-col :lg="{ span: 24 }"
                      :sm="{ span: 24 }" :xs="{ span:24 }"
               >
-                <h3 class="r-heading r-text-white">
-                  {{ article.title }}
-                </h3>
+                <h4 class="r-heading r-text-white" v-html="article.heading"></h4>
               </a-col>
             </a-row>
           </div>
@@ -41,6 +39,13 @@
             <div class="r-blog-tag">
               #B2B Payments
             </div>
+          </a-col>
+          <a-col :lg="{ span: 24 }"
+                 :sm="{ span: 24 }" :xs="{ span: 24 }"
+          >
+            <h3 class="r-heading-light">
+              {{ article.title }}
+            </h3>
           </a-col>
           <a-col :lg="{ span: 24 }"
                  :sm="{ span: 24 }" :xs="{ span: 24 }"

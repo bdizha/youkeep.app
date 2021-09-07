@@ -5,6 +5,7 @@ use Illuminate\Database\Seeder;
 class ArticleSeeder extends Seeder
 {
     protected $domain = 'https://www.getbalance.com';
+    protected $app = null;
 
     /**
      * Run the database seeds.
@@ -13,6 +14,8 @@ class ArticleSeeder extends Seeder
      */
     public function run()
     {
+        $this->_setApp();
+
         $crawler = Goutte::request('GET', $this->domain . '/blog');
 
         $crawler->filter('.w-dyn-list .bp-item')->each(function ($node) {
@@ -44,7 +47,8 @@ class ArticleSeeder extends Seeder
                 'title' => $title,
                 'blurb' => $blurb,
                 'content' => $content,
-                'article_type_id' => 4
+                'article_type_id' => 4,
+                'app_id' => $this->app->id
             ];
 
             $articleResource = \App\ArticleResource::updateOrCreate($attributes, $values);
@@ -69,5 +73,25 @@ class ArticleSeeder extends Seeder
                 echo ">>>>> >>>>> Created category article link: " . $category . " :::\n";
             }
         });
+    }
+
+    protected function _setApp(): void
+    {
+        $appName = env('APP_NAME');
+        $appUrl = env('APP_DOMAIN');
+        $slogan = env('app_slogan');
+
+        $attributes = [
+            'name' => $appName,
+            'url' => $appUrl,
+        ];
+
+        $values = [
+            'name' => $appName,
+            'url' => $appUrl,
+            'description' => $slogan
+        ];
+
+        $this->app = \App\App::updateOrCreate($attributes, $values);
     }
 }

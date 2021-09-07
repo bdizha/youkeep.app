@@ -17,12 +17,13 @@ class CreateAppsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name')->index();
             $table->string('slug')->index();
+            $table->text('description')->index()->nullable();
             $table->string('url')->index();
             $table->boolean('is_active')->index()->default(1);
             $table->timestamps();
         });
 
-        Schema::table('category_articles', function (Blueprint $table) {
+        Schema::table('article_resources', function (Blueprint $table) {
             $table->unsignedInteger('app_id')->index();
 //            $table->foreign('app_id')->references('id')->on('apps');
         });

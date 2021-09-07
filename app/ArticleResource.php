@@ -17,6 +17,7 @@ class ArticleResource extends Model
     protected $appends = [
         'route',
         'photo',
+        'heading',
         'categories',
     ];
     /**
@@ -53,8 +54,29 @@ class ArticleResource extends Model
     public function getPhotoAttribute()
     {
         $rand = str_pad(rand(1, 17), 2, "0", STR_PAD_LEFT);
-        $photo = "/patterns/patterns-{$rand}.svg";
-        return $photo;
+        return "/patterns/pattern-{$rand}.svg";
+    }
+
+    /**
+     * @return string
+     */
+    public function getHeadingAttribute(): string
+    {
+        $titleParts = explode(' ', $this->title);
+        $countParts = count($titleParts);
+
+        $counter = floor($countParts / 2);
+
+        if ($counter > 2) {
+            --$counter;
+        }
+
+        foreach ($titleParts as $key => $titlePart) {
+            if ($key < $counter) {
+                $titleParts[$key] = "<span class='r-text-yellow'>{$titlePart}</span>";
+            }
+        }
+        return implode(" ", $titleParts);
     }
 
     /**

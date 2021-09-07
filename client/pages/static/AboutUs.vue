@@ -41,7 +41,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading r-text-dark">
-                            To empower B2B <span class="r-text-secondary">payments</span> and brands of all sizes in
+                            To empower B2B <span class="r-text-secondary">payments</span> for brands in
                             Africa.
                           </h1>
                         </a-col>
@@ -95,7 +95,7 @@
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <r-avatar data-src="/assets/home-03.jpg" :size="300"
+                      <r-avatar data-src="/assets/home-04.jpg" :size="300"
                                 class="r-avatar-block"
                       ></r-avatar>
                     </a-col>
