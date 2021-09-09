@@ -195,7 +195,7 @@ class StoreCategory extends Model
      * @param int $limit
      * @return mixed
      */
-    private function getBreadcrumbs($storeCategory, $breadcrumbs, $limit = 3)
+    private function getBreadcrumbs($storeCategory, $breadcrumbs, int $limit = 3)
     {
         $breadcrumbs[] = [
             'id' => $storeCategory->id,

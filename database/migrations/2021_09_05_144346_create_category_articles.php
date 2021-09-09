@@ -16,10 +16,10 @@ class CreateCategoryArticles extends Migration
         Schema::create('category_articles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('article_category_id')->index();
-            $table->unsignedInteger('article_resource_id')->index();
+            $table->unsignedInteger('article_id')->index();
 
 //            $table->foreign('article_category_id')->references('id')->on('article_categories');
-//            $table->foreign('article_resource_id')->references('id')->on('article_resources');
+//            $table->foreign('article_id')->references('id')->on('article_resources');
             $table->timestamps();
         });
     }

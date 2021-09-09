@@ -105,10 +105,10 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('/search', 'SearchController@search')->name('search');
     Route::get('/search', 'SearchController@index')->name('search.index');
     Route::post('/search/suggest', 'SearchController@suggest')->name('search.suggest');
-    Route::get('/help', 'HelpController@index')->name('help.index');
-    Route::get('/help/{group}/{slug}', 'HelpController@show')->name('help.show');
-    Route::get('/resources', 'ArticleResourceController@index')->name('resources');
-    Route::get('/resource/{slug}', 'ArticleResourceController@show')->name('resource.show');
+    Route::get('/help', 'FaqController@index')->name('help.index');
+    Route::get('/help/{group}/{slug}', 'FaqController@show')->name('help.show');
+    Route::get('/resources', 'ArticleController@index')->name('resources');
+    Route::get('/resource/{slug}', 'ArticleController@show')->name('resource.show');
     Route::get('/shopper/apply', 'ShopperController@apply')->name('shopper.apply');
     Route::post('/shopper/store', 'ShopperController@store')->name('shopper.store');
     Route::get('/account/profile', 'AccountController@show')->name('account.profile');

@@ -43,7 +43,7 @@
                     >
                       <p class="r-text-normal">We combine
                         state-of-the-art technology with in-house expertise to
-                        enable instant B2B marketplace for growing businesses at an affordable SaaS pricing model.
+                        enable instant B2B checkout for growing businesses at an affordable SaaS pricing model.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"

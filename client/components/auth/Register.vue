@@ -102,7 +102,7 @@
                 </p>
               </a-col>
               <a-col :span="12">
-                <a-input v-decorator="[ 'captcha', { rules: [{ required: true, message: 'Please input the captcha you got!' }] }]"
+                <a-input v-decorator="[ 'captcha', { rules: [{ required: true, message: 'Please write the result of 0 + 2:' }] }]"
                          size="large"
                          placeholder="Your answer"
                 />

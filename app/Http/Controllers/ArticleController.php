@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\ArticleResource;
+use App\Article;
+use App\ArticleType;
 use Illuminate\Http\Request;
 
-class ArticleResourceController extends Controller
+class ArticleController extends Controller
 {
     /**
      * BLog landing page
@@ -15,12 +16,21 @@ class ArticleResourceController extends Controller
     public function index()
     {
         $this->appId = env('APP_ID', 2);
-        $articleResources = ArticleResource::where('app_id', $this->appId)
+        $this->categoryArticleType = env('article_type', null);
+
+        $query = Article::where('app_id', $this->appId);
+
+        $articles = $query->where('category_article_type')
             ->take(24)
             ->get();
 
+        $articleTypes = ArticleType::where('app_id', $this->appId)
+            ->take(6)
+            ->get();
+
         return response()->json([
-            'articles' => $articleResources,
+            'articles' => $articles,
+            'article_types' => $articleTypes,
             'status' => 'success'
         ], 200);
     }
@@ -33,7 +43,7 @@ class ArticleResourceController extends Controller
      */
     public function show($type, $slug)
     {
-        $article = ArticleResource::where('slug', $slug)
+        $article = Article::where('slug', $slug)
             ->first();
 
         session(['article' => $article]);

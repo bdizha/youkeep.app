@@ -4,33 +4,29 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card>
-        <a-card-meta>
-          <template slot="description">
-            <a-collapse v-model="activeKey" accordion
-                        class="r-collapse-faqs"
-                        expandIconPosition="left"
-            >
-              <template #expandIcon="props">
-                <a-icon :type="props.isActive ? 'minus' : 'plus'"/>
-              </template>
-              <a-collapse-panel
-                v-for="(faqCategory, index) in faqs"
-                :key="(index + 1).toString()"
-                :header="faqCategory.name"
-                class="r-collapse-panel"
-              >
-                <a-list :data-source="faqCategory.faqs">
-                  <a-list-item slot="renderItem" slot-scope="faq, index"
-                               @click="setFaq(faq, faqCategory)"
-                  >
-                    {{ faq.question }}
-                  </a-list-item>
-                </a-list>
-              </a-collapse-panel>
-            </a-collapse>
+      <a-card class="r-bg-white">
+        <a-collapse v-model="activeKey" accordion
+                    class="r-collapse-faqs"
+                    expandIconPosition="left"
+        >
+          <template #expandIcon="props">
+            <a-icon :type="props.isActive ? 'minus' : 'plus'"/>
           </template>
-        </a-card-meta>
+          <a-collapse-panel
+            v-for="(faqCategory, index) in faqs"
+            :key="(index + 1).toString()"
+            :header="faqCategory.name"
+            class="r-collapse-panel"
+          >
+            <a-list :data-source="faqCategory.faqs">
+              <a-list-item slot="renderItem" slot-scope="faq, index"
+                           @click="setFaq(faq, faqCategory)"
+              >
+                {{ faq.question }}
+              </a-list-item>
+            </a-list>
+          </a-collapse-panel>
+        </a-collapse>
       </a-card>
     </a-col>
     <a-col :lg="{span: 15}" :md="{ span: 15 }" :sm="{ span: 24 }" :xs="{ span: 24 }"

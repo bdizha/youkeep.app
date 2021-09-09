@@ -2,79 +2,96 @@
 
 namespace App\Http\Controllers;
 
-use App\Faq;
+use App\Article;
+use App\ArticleCategory;
+use App\ArticleType;
 use Illuminate\Http\Request;
 
-class HelpController extends Controller
+/**
+ * @property mixed $articleCategoryId
+ */
+class ArticleController extends Controller
 {
     /**
-     * Show the help group
+     * Find categories
      *
-     * @return \Illuminate\Http\Response
-     */
-    public function show($group, $slug)
-    {
-        $faqs = Faq::where('is_active', true)
-            ->where('group', $group)
-            ->orderBy('created_at', 'DESC')
-            ->get();
-
-        $sectionsArray = Faq::$sections;
-        $groupsArrary = Faq::$groups;
-        $sections = [];
-
-        $groupName = !empty($groupsArrary[$group]) ? $groupsArrary[$group] : null;
-
-        foreach ($sectionsArray as $s => $section) {
-            $sections[$s] = ['name' => $section['name']];
-            foreach ($groupsArrary as $g => $group) {
-                if (in_array($g, $section['group_ids'])) {
-                    $sections[$s]['groups'] = [
-                        'name' => $group,
-                        'slug' => str_slug($group)
-                    ];
-                }
-            }
-        }
-
-        if (request()->ajax()) {
-            return response()->json([
-                'group' => $groupName,
-                'faqs' => $faqs,
-                'status' => 'success'
-            ], 200);
-        }
-
-        return view('help.show', ['group' => $groupName, 'faqs' => $faqs]);
-    }
-
-    /**
-     * Show the help center page
-     *
+     * @param Request $request
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
     {
-        $sectionsArray = Faq::$sections;
-        $groupsArrary = Faq::$groups;
-        $sections = [];
+        $response = [];
 
-        foreach ($sectionsArray as $s => $section) {
-            $sections[$s] = ['name' => $section['name']];
-            $sections[$s]['groups'] = [];
-            foreach ($groupsArrary as $g => $group) {
-                if (in_array($g, $section['group_ids'])) {
-                    $sections[$s]['groups'][] = [
-                        'id' => $g,
-                        'name' => $group,
-                        'slug' => str_slug($group)
-                    ];
-                }
-            }
-        }
+        $this->appId = env('APP_ID', $request->get('limit', 24));
+        $this->categoryArticleType = $request->get('article_type', null);
+        $this->articleResourceType = $request->get('resource_type', ArticleCategory::TYPE_HELP);
+
+        $query = ArticleCategory::with('articles')
+            ->where('resource_type', $this->articleResourceType);
+
+        $query->whereHas('article_type', function ($query) {
+            $query->where('app_id', $this->appId);
+        });
+
+        $articleCategories = $query->take(24)
+            ->get();
+        $response['article_categories'] = $articleCategories;
+
+        $articleTypes = ArticleType::where('app_id', $this->appId)
+            ->take(6)
+            ->get();
+
+        $response['article_types'] = $articleTypes;
+
+        return response()->json($response, 200);
+    }
+
+
+    /**
+     * Find categories
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function category(Request $request)
+    {
+        $this->appId = env('APP_ID', $request->get('limit', 24));
+        $this->articleCategoryId = $request->get('article_category_id', null);
+        $this->articleResourceType = $request->get('resource_type', ArticleCategory::TYPE_HELP);
+
+        $articles = Article::orderBy('created_at', 'DESC')
+            ->where('article_category_id', $this->articleCategoryId)
+            ->take(24)
+            ->get();
 
         return response()->json([
-            'sections' => $sections,
+            'articles' => $articles,
+            'status' => 'success'
+        ], 200);
+    }
+
+    /**
+     * Show article details
+     *
+     * @param $type
+     * @param $slug
+     */
+    public function show($type, $slug)
+    {
+        $article = Article::where('slug', $slug)
+            ->first();
+
+        session(['article' => $article]);
+
+        $articles = Article::orderBy('created_at', 'DESC')
+            ->where('article_category_id', $this->articleCategoryId)
+            ->take(24)
+            ->get();
+
+        return response()->json([
+            'type' => $type,
+            'article' => $article,
+            'related_articles' => $articles,
             'status' => 'success'
         ], 200);
     }

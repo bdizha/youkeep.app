@@ -12,7 +12,7 @@ class CategoryArticle extends Model
      */
     public function articles()
     {
-        return $this->hasMany('App\ArticleResource');
+        return $this->hasMany('App\Article');
     }
 
     /**

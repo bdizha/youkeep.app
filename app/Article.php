@@ -5,7 +5,7 @@ namespace App;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
-class ArticleResource extends Model
+class Article extends Model
 {
     use Sluggable;
 
@@ -85,7 +85,7 @@ class ArticleResource extends Model
     public function getCategoriesAttribute(): array
     {
         $categories = [];
-        $categoryArticles = CategoryArticle::where('article_resource_id', $this->id)
+        $categoryArticles = CategoryArticle::where('article_id', $this->id)
             ->with('category')
             ->get();
 

@@ -72,27 +72,23 @@
            :xs="{ span: 24 }"
            class="r-ph-24 r-text-left"
     >
-      <r-help-list></r-help-list>
+      <r-help></r-help>
     </a-col>
   </a-row>
 </template>
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
-  layout: 'page',
-  name: 'r-help',
-  props: {},
-  async fetch () {
-    console.log('loading data')
-    await this.$store.dispatch('base/onFaqs', {})
-    await this.$store.dispatch('base/onIsRaised', true)
+  async asyncData ({ store, params }) {
+    console.log('onHelp params', params)
+    await store.dispatch('article/onHelp', params)
   },
   data () {
-    return {}
+    return {
+      hasData: true
+    }
   },
-  computed: mapGetters({
-    isLoggedIn: 'auth/isLoggedIn'
-  })
+  created () {
+    this.hasData = true
+  }
 }
 </script>
