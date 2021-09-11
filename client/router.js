@@ -43,7 +43,7 @@ const routes = [
   { path: '/marketplace', name: 'marketplace', meta: { isDark: false, isRaised: false}, component: page('static/Marketplace.vue') },
   { path: '/community', name: 'community', meta: { isDark: false, isRaised: false}, component: page('static/Community.vue') },
   { path: '/help', name: 'help', meta: { isDark: false, isRaised: true}, component: page('help/article/Index.vue') },
-  { path: '/help/article/:slug', name: 'help.article.show', meta: { isDark: false, isRaised: true}, component: page('help/article/Show.vue') },
+  { path: '/help/article/:slug', name: 'help.article.show', meta: { true: false, isRaised: true}, component: page('help/article/Show.vue') },
   { path: '/help/category/:slug', name: 'help.category.show', meta: { isDark: false, isRaised: true}, component: page('help/article/Category.vue') },
   { path: '/careers', name: 'careers', meta: { isDark: false, isRaised: true}, component: page('career/Index.vue') },
   { path: '/career/openings', name: 'career-list', meta: { isDark: false, isRaised: true}, component: page('career/Index.vue') },

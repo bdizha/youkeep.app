@@ -35,7 +35,7 @@ class Controller extends BaseController
         $storeCategory = null,
         $product = null,
         $articles = [],
-        $categoryArticleType = null,
+        $articleTypeId = null,
         $articleResourceType = null,
         $productId = null,
         $categoryParentId = null,

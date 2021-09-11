@@ -11,8 +11,14 @@ export default ({ app }) => {
     drawer.isVisible = false
     drawer.current = null
 
+    const modal = {}
+    modal.isVisible = false
+    modal.current = null
+
     app.store.dispatch('base/onIsDark', to.meta.isDark, { root: true })
+    app.store.dispatch('base/onIsRaised', to.meta.isRaised, { root: true })
     app.store.dispatch('base/onDrawer', drawer, { root: true })
+    app.store.dispatch('base/onModal', modal, { root: true })
 
     next()
   })

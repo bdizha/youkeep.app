@@ -10,13 +10,13 @@
         </a-col>
       </a-row>
       <a-row :gutter="[96, 96]" justify="center" type="flex">
-        <a-col v-if="hasLocations" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+        <a-col v-if="hasLocations && !isRaised" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <r-locations></r-locations>
         </a-col>
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <div class="r-footer-center-sm">
             <a-row :gutter="[48,48]" justify="center" type="flex">
-              <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+              <a-col v-if="!isRaised" :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                 <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
                   <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
@@ -182,6 +182,7 @@ export default {
     hasDownload: 'base/hasDownload',
     hasSubscribe: 'base/hasSubscribe',
     hasFooter: 'base/hasFooter',
+    isRaised: 'base/isRaised',
     products: 'content/products'
   }),
   created () {

@@ -4,7 +4,6 @@ namespace App;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ArticleType extends Model
 {
@@ -22,5 +21,43 @@ class ArticleType extends Model
                 'source' => 'name'
             ]
         ];
+    }
+
+    /**
+     * The attributes that should be appended for arrays.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'breadcrumbs'
+    ];
+
+    /**
+     * @return array
+     */
+    public function getBreadcrumbsAttribute()
+    {
+        $breadcrumbs = [];
+        $breadcrumbs[] = [
+            'id' => null,
+            'slug' => null,
+            'route' => '/help',
+            'name' => 'Addtract Help',
+            'has_articles' => true,
+            'has_categories' => true,
+            'categories' => [],
+        ];
+
+        $breadcrumbs[] = [
+            'id' => null,
+            'slug' => null,
+            'route' => null,
+            'name' => $this->name,
+            'has_articles' => true,
+            'has_categories' => true,
+            'categories' => [],
+        ];
+
+        return $breadcrumbs;
     }
 }

@@ -1,6 +1,6 @@
 <template>
   <a-row align="top" justify="center" type="flex">
-    <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+    <a-col class="r-text-left" :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
@@ -10,18 +10,18 @@
       >
         <a-auto-complete
           placeholder="Search keywords, questions and topics..."
-          size="large"
+          :size="size"
           :value="searchText"
           option-label-prop="title"
           style="width: 100%"
-          @search="handleSearch"
+          @search="onSearch"
         >
           <a-input>
             <a-icon slot="prefix" type="search"/>
             <a-button slot="suffix"
-                      class="r-btn-secondary"
-                      size="large"
-                      style="margin-right: -12px"
+                      class="r-btn-primary"
+                      :size="size"
+                      style="margin-right: -11px"
                       type="secondary"
             >
               Find
@@ -37,7 +37,9 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-help-search',
-  props: {},
+  props: {
+    size: { type: String, required: false, default: 'large' }
+  },
   data () {
     return {
       searchText: null,

@@ -1,6 +1,6 @@
 <template>
   <div class="r-notice">
-    <a-card class="r-bg-blue">
+    <a-card class="r-bg-primary">
       <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
         <a-col :xs="{ span: 24 }" class="r-text-center">
           <h4 class="r-heading-light r-text-white">

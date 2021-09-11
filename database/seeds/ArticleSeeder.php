@@ -1,5 +1,6 @@
 <?php
 
+use App\ArticleCategory;
 use App\ArticleType;
 use Illuminate\Database\Seeder;
 
@@ -19,8 +20,10 @@ class ArticleSeeder extends Seeder
     public function run()
     {
         $this->_setApp();
+//        $this->_setHelp();
 //        $this->_setBlog();
-        $this->_setHelp();
+
+        $this->_updateCategories();
     }
 
     protected function _setApp(): void
@@ -41,75 +44,6 @@ class ArticleSeeder extends Seeder
         ];
 
         $this->app = \App\App::updateOrCreate($attributes, $values);
-    }
-
-    /**
-     * @param string $url
-     * @return string
-     */
-    protected function _setCrawler(string $url): string
-    {
-        $encodedUrl = urlencode($url);
-        return "https://api.proxycrawl.com/?token=XedJD-fi9KMpxSZfh_U2JA&url={$encodedUrl}";
-    }
-
-    private function _setBlog()
-    {
-        $crawler = Goutte::request('GET', $this->domain . '/blog');
-        $crawler->filter('.w-dyn-list .bp-item')->each(function ($node) {
-
-            $title = $node->filter('.bp-title')->text();
-            $blurb = $node->filter('.bp-summary')->text();
-
-            $categories = [];
-            $node->filter('.cl-blog-tag')->each(function ($node) use (&$categories) {
-                $category = $node->filter('.blog-pill-link')->text();
-
-                $categories[] = str_replace("#", '', $category);
-            });
-
-            $url = $node->filter('.bp-title')->attr('href');
-            $articleNode = Goutte::request('GET', $this->domain . '/' . $url);
-
-            $content = $articleNode->filter('.s-blog-post .bp-rich-text')->html();
-            $content = str_replace("Balance", 'Addtract', $content);
-            $content = str_replace("balance", 'addtract', $content);
-            $content = str_replace("U.S", 'South Africa', $content);
-
-            $attributes = [
-                'title' => $title,
-                'blurb' => $blurb,
-            ];
-
-            $values = [
-                'title' => $title,
-                'blurb' => $blurb,
-                'content' => $content,
-                'app_id' => $this->app->id
-            ];
-
-            $article = \App\Article::updateOrCreate($attributes, $values);
-
-            echo ">>>>> Created article resource: " . $article->title . " :::\n";
-
-            foreach ($categories as $category) {
-                $values = [
-                    'name' => $category,
-                    'article_type_id' => 4
-                ];
-
-                $articleCategory = \App\ArticleCategory::updateOrCreate($values, $values);
-
-                $values = [
-                    'article_category_id' => $articleCategory->id,
-                    'article_id' => $article->id,
-                ];
-
-                \App\CategoryArticle::updateOrCreate($values, $values);
-
-                echo ">>>>> >>>>> Created category article link: " . $category . " :::\n";
-            }
-        });
     }
 
     private function _setHelp()
@@ -172,65 +106,158 @@ class ArticleSeeder extends Seeder
         });
     }
 
+    /**
+     * @param string $url
+     * @return string
+     */
+    protected function _setCrawler(string $url): string
+    {
+        $encodedUrl = urlencode($url);
+        return "https://api.proxycrawl.com/?token=XedJD-fi9KMpxSZfh_U2JA&url={$encodedUrl}";
+    }
+
     private function _setArticle($articleUrl)
     {
 
-        try{
+        try {
 
-        $encodedUrl = $this->_setCrawler($articleUrl);
+            $encodedUrl = $this->_setCrawler($articleUrl);
 
-        $crawler = Goutte::request('GET', $encodedUrl);
+            $crawler = Goutte::request('GET', $encodedUrl);
 
-        $articleCategories = [];
-        $articleNode = $crawler->filter('.article');
+            $articleCategories = [];
+            $articleNode = $crawler->filter('.article');
 
-        $crawler->filter('.breadcrumbs li')->each(function ($node) use (&$articleCategories) {
-            $name = $node->text();
-            $name =  str_replace("RangeMe", 'Addtract', trim($name));;
-            $articleCategories[] = $name;
-        });
+            $crawler->filter('.breadcrumbs li')->each(function ($node) use (&$articleCategories) {
+                $name = $node->text();
+                $name = str_replace("RangeMe", 'Addtract', trim($name));;
+                $articleCategories[] = $name;
+            });
 
-        array_shift($articleCategories);
+            array_shift($articleCategories);
 
-        $articleCategoryId = null;
-        foreach ($articleCategories as $categoryName) {
+            $articleCategoryId = null;
+            foreach ($articleCategories as $categoryName) {
+                $attributes = [
+                    'name' => $categoryName
+                ];
+
+                $values = [
+                    'name' => $categoryName,
+                    'article_type_id' => $this->articleType->id,
+                    'article_category_id' => $articleCategoryId
+                ];
+
+                $articleCategory = \App\ArticleCategory::updateOrCreate($attributes, $values);
+                $articleCategoryId = $articleCategory->id;
+            }
+
+            $title = $articleNode->filter('.article-title')->text();
+            $blurb = $articleNode->filter('.article-body p')->eq(0)->text();
+            $content = $articleNode->filter('.article-body')->html();
+
             $attributes = [
-                'name' => $categoryName
+                'title' => $title,
+                'blurb' => $blurb,
             ];
 
             $values = [
-                'name' => $categoryName,
-                'article_type_id' => $this->articleType->id,
+                'title' => trim($title),
+                'blurb' => trim($blurb),
+                'content' => $content,
+                'app_id' => $this->app->id,
                 'article_category_id' => $articleCategoryId
             ];
 
-            $articleCategory = \App\ArticleCategory::updateOrCreate($attributes, $values);
-            $articleCategoryId = $articleCategory->id;
-        }
+            $article = \App\Article::updateOrCreate($attributes, $values);
 
-        $title = $articleNode->filter('.article-title')->text();
-        $blurb = $articleNode->filter('.article-body p')->eq(0)->text();
-        $content = $articleNode->filter('.article-body')->text();
-
-        $attributes = [
-            'title' => $title,
-            'blurb' => $blurb,
-        ];
-
-        $values = [
-            'title' => trim($title),
-            'blurb' => trim($blurb),
-            'content' => $content,
-            'app_id' => $this->app->id,
-            'article_category_id' => $articleCategoryId
-        ];
-
-        $article = \App\Article::updateOrCreate($attributes, $values);
-
-        echo ">>>>> Created article resource: " . $article->title . " :::\n";
-        }
-        catch (Exception $e) {
+            echo ">>>>> Created article resource: " . $article->title . " :::\n";
+        } catch (Exception $e) {
             echo ">>>>> Error occurred on article create: " . $e->getMessage() . " :::\n";
+        }
+    }
+
+    private function _setBlog()
+    {
+        $crawler = Goutte::request('GET', $this->domain . '/blog');
+        $crawler->filter('.w-dyn-list .bp-item')->each(function ($node) {
+
+            $title = $node->filter('.bp-title')->text();
+            $blurb = $node->filter('.bp-summary')->text();
+
+            $categories = [];
+            $node->filter('.cl-blog-tag')->each(function ($node) use (&$categories) {
+                $category = $node->filter('.blog-pill-link')->text();
+
+                $categories[] = str_replace("#", '', $category);
+            });
+
+            $url = $node->filter('.bp-title')->attr('href');
+            $articleNode = Goutte::request('GET', $this->domain . '/' . $url);
+
+            $content = $articleNode->filter('.s-blog-post .bp-rich-text')->html();
+            $content = str_replace("Balance", 'Addtract', $content);
+            $content = str_replace("balance", 'addtract', $content);
+            $content = str_replace("U.S", 'South Africa', $content);
+
+            $attributes = [
+                'title' => $title,
+                'blurb' => $blurb,
+            ];
+
+            $values = [
+                'title' => $title,
+                'blurb' => $blurb,
+                'content' => $content,
+                'app_id' => $this->app->id
+            ];
+
+            $article = \App\Article::updateOrCreate($attributes, $values);
+
+            echo ">>>>> Created article resource: " . $article->title . " :::\n";
+
+            foreach ($categories as $category) {
+                $values = [
+                    'name' => $category,
+                    'article_type_id' => 4
+                ];
+
+                $articleCategory = \App\ArticleCategory::updateOrCreate($values, $values);
+
+                $values = [
+                    'article_category_id' => $articleCategory->id,
+                    'article_id' => $article->id,
+                ];
+
+                \App\CategoryArticle::updateOrCreate($values, $values);
+
+                echo ">>>>> >>>>> Created category article link: " . $category . " :::\n";
+            }
+        });
+    }
+
+    private function _updateCategories()
+    {
+        $articleCategories = \App\ArticleCategory::orderBy('created_at', 'DESC')
+            ->where('resource_type', ArticleCategory::TYPE_HELP)
+            ->where('created_at', '>', '2021-09-08 14:00:00')
+            ->get();
+
+        foreach ($articleCategories as $articleCategory) {
+            $articleType = ArticleType::where('slug', $articleCategory->slug)
+                ->first();
+
+            $values = [
+                'app_id' => $this->app->id,
+                'article_category_id' => $articleCategory->id
+            ];
+
+            \App\AppArticleCategory::updateOrCreate($values, $values);
+
+            if(!empty($articleType)) {
+                $articleCategory->content = $articleType->content;
+                $articleCategory->save();
+            }
         }
     }
 }

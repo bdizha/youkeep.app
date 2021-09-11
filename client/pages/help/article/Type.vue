@@ -1,51 +1,44 @@
 <template>
-  <a-row :gutter="[48,48]" align="middle" class="r-help" justify="center" type="flex">
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-           class="r-text-left"
-    >
-      <a-row align="middle" class="r-mv-48" justify="center" type="flex">
-        <a-col :lg="{ span: 15 }" :md="{ span: 16 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-               class="r-text-left"
-        >
-          <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-                   class="r-text-left"
-            >
-              <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-                <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <h2 class="r-heading">
-                    Hi. How can we help?
-                  </h2>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <r-help-search></r-help-search>
-                </a-col>
-              </a-row>
-            </a-col>
-          </a-row>
-        </a-col>
-      </a-row>
+  <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <a-card class="rbg-white">
+        <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                 :xs="{ span: 24 }"
+          >
+            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+              <a-col :lg="{ span: 16 }" :md="{ span: 16 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <h3 class="r-heading r-text-uppercase">
+                  Addtract - {{ help.article_type.name }}
+                </h3>
+              </a-col>
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <p class="r-text-medium">
+                  {{ help.article_type.content }}
+                </p>
+              </a-col>
+            </a-row>
+          </a-col>
+        </a-row>
+      </a-card>
     </a-col>
-    <a-col :lg="{ span: 15 }" :md="{ span: 16 }" :sm="{ span: 24 }"
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
-           class="r-ph-24 r-text-left"
-    >z
-      <a-row>
-        <a-col v-for="(article_type, index) in help.article_categories"
+    >
+      <a-row :gutter="[48,48]" align="top" class="r-help" justify="center" type="flex">
+        <a-col v-for="(articleCategory, index) in help.article_categories"
                :key="index"
-               :lg="{ span:12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+               v-if="articleCategory.articles.length > 0"
+               :lg="{ span:8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                class="gutter-row"
         >
-          <r-help-category></r-help-category>
+          <r-help-category :article-category="articleCategory"></r-help-category>
         </a-col>
       </a-row>
     </a-col>
@@ -56,9 +49,10 @@
 import { mapGetters } from 'vuex'
 
 export default {
+  layout: 'help',
   async asyncData ({ store, params }) {
-    console.log('onHelp params', params)
-    await store.dispatch('article/onHelp', params)
+    console.log('onHelpType params', params)
+    await store.dispatch('article/onHelpType', params)
   },
   data () {
     return {
@@ -66,8 +60,7 @@ export default {
     }
   },
   computed: mapGetters({
-    articleCategories: 'article',
-    article: 'content/article',
+    help: 'article/help',
     isLoggedIn: 'auth/isLoggedIn'
   }),
   created () {

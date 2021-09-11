@@ -16,11 +16,11 @@ class ArticleController extends Controller
     public function index()
     {
         $this->appId = env('APP_ID', 2);
-        $this->categoryArticleType = env('article_type', null);
+        $this->articleTypeId = env('article_type', null);
 
         $query = Article::where('app_id', $this->appId);
 
-        $articles = $query->where('category_article_type')
+        $articles = $query->where('article_type_id', $this->articleTypeId)
             ->take(24)
             ->get();
 

@@ -7,7 +7,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <div class="r-cover-blog r-pt-81">
+          <div class="r-cover-blog">
             <div class="r-p-48">
               <a-row :gutter="[48,48]" justify="center" type="flex">
                 <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

@@ -5,6 +5,7 @@ namespace App;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ArticleCategory extends Model
@@ -34,6 +35,7 @@ class ArticleCategory extends Model
             ]
         ];
     }
+
     /**
      * The attributes that should be appended for arrays.
      *
@@ -49,7 +51,7 @@ class ArticleCategory extends Model
      */
     public function getRouteAttribute()
     {
-        return $this->slug;
+        return '/category/' . $this->slug;
     }
 
     /**
@@ -58,6 +60,15 @@ class ArticleCategory extends Model
     public function getBreadcrumbsAttribute()
     {
         $breadcrumbs = $this->getBreadcrumbs($this, []);
+        $breadcrumbs[] = [
+            'id' => null,
+            'slug' => null,
+            'route' => '/',
+            'name' => 'Addtract Help',
+            'has_articles' => true,
+            'has_categories' => true,
+            'categories' => [],
+        ];
 
         return array_reverse($breadcrumbs);
     }
@@ -74,7 +85,7 @@ class ArticleCategory extends Model
         $breadcrumbs[] = [
             'id' => $articleCategory->id,
             'slug' => $articleCategory->slug,
-            'route' => $articleCategory->slug,
+            'route' => $articleCategory->route,
             'name' => $articleCategory->name,
             'has_articles' => true,
             'has_categories' => true,
@@ -103,6 +114,15 @@ class ArticleCategory extends Model
     {
         return $this->hasMany('App\Article', 'article_category_id', 'id');
     }
+
+    /**
+     * Get attached apps
+     */
+    public function apps(): BelongsToMany
+    {
+        return $this->belongsToMany('App\App', 'app_article_categories', 'article_category_id', 'app_id');
+    }
+
     /**
      * Get the parent
      */

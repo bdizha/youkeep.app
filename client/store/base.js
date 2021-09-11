@@ -73,6 +73,7 @@ const state = () => ({
     isCategories: false,
     isProducts: false
   },
+  isHelp: false,
   isDark: false,
   isRaised: false,
   hasFooter: true,
@@ -127,6 +128,7 @@ const getters = {
   search: state => state.search,
   processes: state => state.processes,
   isDark: state => state.isDark,
+  isHelp: state => state.isHelp,
   isRaised: state => state.isRaised,
   hasFooter: state => state.hasFooter,
   hasDownload: state => state.hasDownload,
@@ -244,6 +246,9 @@ const mutations = {
   },
   setIsDark (state, isDark) {
     state.isDark = isDark
+  },
+  setIsHelp (state, iHelp) {
+    state.iHelp = iHelp
   },
   setHasFooter (state, hasFooter) {
     state.hasFooter = hasFooter
@@ -523,6 +528,9 @@ const actions = {
   },
   onIsDark ({ dispatch, commit }, payload) {
     commit('setIsDark', payload)
+  },
+  onIsHelp ({ dispatch, commit }, payload) {
+    commit('setIsHelp', payload)
   },
   onIsStore ({ dispatch, commit }, payload) {
     commit('setIsStore', payload)

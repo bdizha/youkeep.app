@@ -19,6 +19,7 @@ class Article extends Model
         'photo',
         'heading',
         'categories',
+        'breadcrumbs'
     ];
     /**
      * @var mixed
@@ -40,12 +41,31 @@ class Article extends Model
     }
 
     /**
+     * @return array
+     */
+    public function getBreadcrumbsAttribute(): array
+    {
+        $breadcrumbs = $this->category->breadcrumbs;
+
+        $breadcrumbs[] = [
+            'id' => $this->id,
+            'slug' => $this->slug,
+            'route' => '/help/article/' . $this->slug,
+            'name' => $this->title,
+            'has_articles' => true,
+            'has_categories' => true,
+            'categories' => [],
+        ];
+
+        return $breadcrumbs;
+    }
+
+    /**
      * @return string
      */
-    public function getRouteAttribute()
+    public function getRouteAttribute(): string
     {
-        $route = '/resource/' . $this->slug;
-        return $route;
+        return '/resource/' . $this->slug;
     }
 
     /**
@@ -97,5 +117,13 @@ class Article extends Model
         }
 
         return $categories;
+    }
+
+    /**
+     * Get the article's category
+     */
+    public function category()
+    {
+        return $this->belongsTo('App\ArticleCategory', 'article_category_id', 'id')->withDefault();
     }
 }

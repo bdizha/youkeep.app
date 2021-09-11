@@ -36,7 +36,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'r-help-search',
+  name: 'r-faq-search',
   props: {},
   data () {
     return {

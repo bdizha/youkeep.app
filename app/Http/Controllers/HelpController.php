@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\ArticleCategory;
-use App\ArticleType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 /**
  * @property mixed $articleCategoryId
  */
-class ArticleController extends Controller
+class HelpController extends Controller
 {
     /**
      * Find categories
@@ -21,27 +21,24 @@ class ArticleController extends Controller
     public function index(Request $request)
     {
         $response = [];
+        $this->appId = $request->get('app_id', env('APP_ID'));
 
-        $this->appId = env('APP_ID', $request->get('limit', 24));
-        $this->categoryArticleType = $request->get('article_type', null);
-        $this->articleResourceType = $request->get('resource_type', ArticleCategory::TYPE_HELP);
+        $articleCategories = ArticleCategory::with('articles')
+        ->whereHas('apps', function ($query) {
+            $query->where('app_article_categories.app_id', $this->appId);
+        })
+            ->whereNull('article_category_id')
+            ->take(24)->get();
 
-        $query = ArticleCategory::with('articles')
-            ->where('resource_type', $this->articleResourceType);
-
-        $query->whereHas('article_type', function ($query) {
-            $query->where('app_id', $this->appId);
-        });
-
-        $articleCategories = $query->take(24)
+        $articles = Article::orderBy('created_at', 'DESC')
+            ->with('category')
+            ->where('app_id', $this->appId)
+            ->take(12)
             ->get();
+
+        $response['breadcrumbs'] = [];
+        $response['recent_articles'] = $articles;
         $response['article_categories'] = $articleCategories;
-
-        $articleTypes = ArticleType::where('app_id', $this->appId)
-            ->take(6)
-            ->get();
-
-        $response['article_types'] = $articleTypes;
 
         return response()->json($response, 200);
     }
@@ -55,44 +52,76 @@ class ArticleController extends Controller
      */
     public function category(Request $request)
     {
-        $this->appId = env('APP_ID', $request->get('limit', 24));
-        $this->articleCategoryId = $request->get('article_category_id', null);
-        $this->articleResourceType = $request->get('resource_type', ArticleCategory::TYPE_HELP);
+        $response = [];
+        $this->appId = $request->get('app_id', env('APP_ID'));
+
+        $this->slug = $request->get('slug', null);
+
+        $articleCategory = ArticleCategory::where('slug', $this->slug)
+            ->first();
 
         $articles = Article::orderBy('created_at', 'DESC')
-            ->where('article_category_id', $this->articleCategoryId)
+            ->with('category')
+            ->where('article_category_id', $articleCategory->id)
             ->take(24)
             ->get();
 
-        return response()->json([
-            'articles' => $articles,
-            'status' => 'success'
-        ], 200);
+        $articleCategories = ArticleCategory::with('articles.category')
+            ->where('article_category_id', $articleCategory->id)
+            ->whereHas('apps', function ($query) {
+                $query->where('app_article_categories.app_id', $this->appId);
+            })
+            ->take(24)
+            ->get();
+
+        $response['breadcrumbs'] = $articleCategory->breadcrumbs;
+        $response['article_category'] = $articleCategory;
+        $response['article_categories'] = $articleCategories;
+        $response['articles'] = $articles;
+
+        return response()->json($response, 200);
     }
 
     /**
      * Show article details
      *
-     * @param $type
-     * @param $slug
+     * @param Request $request
+     * @return \Illuminate\Http\Response
      */
-    public function show($type, $slug)
+    public function article(Request $request)
     {
+        $response = [];
+        $slug = $request->get('slug', null);
+
         $article = Article::where('slug', $slug)
             ->first();
 
-        session(['article' => $article]);
+        $this->setSessionArticle($article);
 
-        $articles = Article::orderBy('created_at', 'DESC')
-            ->where('article_category_id', $this->articleCategoryId)
+        $relatedArticles = Article::orderBy('created_at', 'DESC')
+            ->with('category')
+            ->where('article_category_id', $article->article_category_id)
+            ->where('id', '!=', $article->id)
             ->take(24)
             ->get();
 
-        return response()->json([
-            'type' => $type,
-            'article' => $article,
-            'related_articles' => $articles,
-            'status' => 'success'
-        ], 200);
+        $response['breadcrumbs'] = $article->breadcrumbs;
+        $response['article'] = $article;
+        $response['viewed_articles'] = $this->getSessionArticles();
+        $response['related_articles'] = $relatedArticles;
+
+        return response()->json($response, 200);
+    }
+
+    protected function setSessionArticle($article)
+    {
+        $articles = $this->getSessionArticles();
+        $articles[] = $article;
+        Session::put('articles', $articles);
+    }
+
+    protected function getSessionArticles()
+    {
+        return Session::get('articles', []);
     }
 }

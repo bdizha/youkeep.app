@@ -250,7 +250,6 @@ h1.r-text-xlarge-light {
     width: 100%;
     z-index: 1001;
     transition: background 0.25s ease;
-    box-shadow: none;
     line-height: 1 !important;
     background: @white;
     box-shadow: 0 6px 9px -3px rgba(32, 33, 36, 0.1);
@@ -260,7 +259,7 @@ h1.r-text-xlarge-light {
     padding: 0 24px !important;
 
     .r-logo {
-        display: block;
+        display: inline-block;
         margin: 15px 0;
     }
 
@@ -291,10 +290,10 @@ h1.r-text-xlarge-light {
 
         &.ant-select {
             .ant-input {
-                background: #3893f0;
+                background: red;
                 border-color: @primary-color;
                 color: @black;
-                height: 36px;
+                height: 30px;
 
                 &::placeholder {
                     color: @black;
@@ -316,6 +315,13 @@ h1.r-text-xlarge-light {
                     &::placeholder {
                         color: @white;
                     }
+                }
+            }
+
+            &.ant-select-lg {
+                .ant-input {
+                    color: @black;
+                    height: 30px;
                 }
             }
         }
@@ -410,8 +416,15 @@ h1.r-text-xlarge-light {
         }
     }
 
-    &.r-header-dark {
+    &.r-header-dark,
+    &.r-header-secondary,
+    &.r-header-primary{
         background: @black url(/images/icon_pattern_dark_large.svg) no-repeat;
+
+        h4.r-heading {
+            color: @white !important;
+            line-height: 30px;
+        }
 
         .ant-menu-submenu {
             &.ant-menu-submenu-active,
@@ -505,24 +518,24 @@ h1.r-text-xlarge-light {
 
             &.ant-select {
                 .ant-input {
-                    background: #3893f0;
-                    border-color: #3b89d9;
-                    color: @white;
+                    background: rgba(255, 255, 255, 0.9);
+                    border-color: rgba(255, 255, 255, 0.9);
+                    color: @black;
                     height: 36px;
 
                     &::placeholder {
-                        color: @white;
+                        color: @black;
                         font-size: 15px;
                     }
 
                     &:hover,
                     &:focus {
-                        background: rgba(255, 255, 255, 0.9);
+                        background: rgba(255, 255, 255, 0.99);
 
                         &.ant-select {
                             .ant-input {
-                                background: rgba(255, 255, 255, 0.9);
-                                border-color: @blue-color;
+                                background: rgba(255, 255, 255, 0.99);
+                                border-color: rgba(255, 255, 255, 0.9);
                                 color: @black;
                             }
                         }
@@ -540,6 +553,14 @@ h1.r-text-xlarge-light {
             color: @yellow-color;
             background: transparent !important;
         }
+    }
+
+    &.r-header-primary{
+        background: @primary-color url(/images/icon_pattern_primary_large.svg) no-repeat !important;
+    }
+
+    &.r-header-secondary {
+        background: @secondary-color url(/images/icon_pattern_secondary_large.svg) no-repeat !important;
     }
 
     .r-layout-menu {
@@ -3461,15 +3482,39 @@ label {
         margin: 0 3px;
     }
 
-    a {
-        font-width: 500;
-    }
+    .r-breadcrumb-item {
+        .ant-breadcrumb-link {
+            a {
+                font-width: 500;
+                color: @primary-color;
 
-    .ant-breadcrumb-link {
-        &:hover,
-        &.router-link-exact-active,
-        &.nuxt-link-exact-active {
-            color: @secondary-color;
+                &:hover,
+                &.router-link-exact-active,
+                &.nuxt-link-exact-active {
+                    color: @secondary-color;
+                }
+            }
+
+            &:hover {
+                color: @secondary-color;
+            }
+        }
+
+        &:last-child {
+            .ant-breadcrumb-link {
+                cursor: initial !important;
+                a {
+                    color: @black !important;
+
+                    &:hover {
+                        color: @black;
+                    }
+                }
+
+                &:hover {
+                    color: @black;
+                }
+            }
         }
     }
 }
@@ -3796,13 +3841,13 @@ label {
 }
 
 .r-btn-white {
-    border: 1px solid @secondary-color !important;
-    color: @secondary-color !important;
+    border: 1px solid @white !important;
+    color: @primary-color !important;
     background: @white !important;
 
     &:hover {
-        border: 1px solid @secondary-color !important;
-        color: @secondary-color !important;
+        border: 1px solid @white !important;
+        color: @white !important;
         background: @primary-color !important;
     }
 }
@@ -3815,18 +3860,6 @@ label {
     font-weight: 400;
 }
 
-.r-btn-bordered-accent {
-    border: 1px solid @white;
-    color: @white;
-    background: transparent !important;
-
-    &:hover {
-        border: 1px solid @white;
-        color: @secondary-color;
-        background: @white !important;
-    }
-}
-
 .r-btn-bordered-primary {
     border: 1px solid @primary-color;
     color: @primary-color;
@@ -3834,7 +3867,7 @@ label {
 
     &:hover {
         border: 1px solid @primary-color;
-        color: @secondary-color;
+        color: @white !important;
         background: @primary-color !important;
     }
 }
@@ -3852,7 +3885,7 @@ label {
 
     &:hover {
         border: 1px solid @secondary-color;
-        color: @white;
+        color: @white !important;
         background: @secondary-color !important;
     }
 }
@@ -3864,7 +3897,7 @@ label {
 
     &:hover {
         border: 1px solid @secondary-color;
-        color: @white;
+        color: @white !important;
         background: @secondary-color !important;
     }
 }
@@ -3877,7 +3910,7 @@ label {
     &:hover {
         background: @primary-color !important;
         border: 1px solid @secondary-color;
-        color: @secondary-color;
+        color: @secondary-color !important;
     }
 }
 
@@ -3910,7 +3943,7 @@ label {
 
 .ant-btn-sm {
     padding: 0 12px !important;
-    height: 36px !important;
+    height: 36px;
 }
 
 .r-status-update {
@@ -4990,6 +5023,11 @@ label {
     text-transform: uppercase;
 }
 
+.r-text-nowrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .r-text-view-more {
     font-weight: 400;
     font-size: 15px;
@@ -5940,6 +5978,10 @@ label {
 
 .r-p-12 {
     padding: 12px;
+}
+
+.r-pv-15 {
+    padding: 15px 0;
 }
 
 .r-inline-block {
@@ -6922,6 +6964,7 @@ label {
 
 .r-breadcrumbs {
     overflow: hidden;
+    padding: 12px;
 }
 
 .r-bg-white {
@@ -7184,6 +7227,7 @@ h3.r-step-heading {
     background: url(/assets/blog.png) no-repeat;
     background-size: cover;
     position: relative;
+
     &:before {
         background: rgba(61, 72, 82, 0.96) url(/images/icon_pattern_dark_large.svg) no-repeat;
         position: absolute;
@@ -7197,7 +7241,7 @@ h3.r-step-heading {
     }
 }
 
-.r-blog-tag{
+.r-blog-tag {
     display: inline-block;
     padding: 3px 12px;
     line-height: 27px;
@@ -7847,12 +7891,19 @@ h3.r-step-heading {
     }
 }
 
-.r-search.ant-select-auto-complete {
-    .ant-input-affix-wrapper {
-        .ant-input-suffix button {
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-        }
+.ant-input-suffix {
+    .ant-btn {
+        margin: 0;
+        height: 32px;
+    }
+    .ant-btn-lg {
+        height: 43px;
+    }
+}
+
+.ant-select-lg {
+    .ant-input-suffix {
+        height: 45px;
     }
 }
 
@@ -8050,6 +8101,7 @@ a:hover {
 
     &.r-layout-content {
         padding: 0;
+        margin-top: 60px;
         @media (max-width: 768px) {
             padding: 0 24px 0;
 

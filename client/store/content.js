@@ -59,7 +59,7 @@ export const state = () => ({
         },
         {
           title: 'Auto border',
-          content: 'Reduce international barriers and grow your business 10x. Addract is powering easier and seamless methods to process international, once-off and  recurring, payments.',
+          content: 'Reduce international barriers and grow your business 10x. Addtract is powering easier and seamless methods to process international, once-off and  recurring, payments.',
           image: 'service-32.svg'
         }
       ],

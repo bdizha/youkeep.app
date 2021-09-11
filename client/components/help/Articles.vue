@@ -1,5 +1,5 @@
 <template>
-  <a-row :gutter="[24,24]" justify="start" type="flex">
+  <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
     <a-col v-for="(article, index) in articles"
            :key="index"
            :lg="{ span:8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -10,8 +10,6 @@
   </a-row>
 </template>
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
   name: 'r-help-articles',
   props: {
@@ -21,9 +19,6 @@ export default {
   data () {
     return {}
   },
-  computed: mapGetters({
-    help: 'article/help'
-  }),
   mounted () {
   },
   methods: {}
