@@ -46,7 +46,7 @@
             </a-button>
           </a-form-item>
           <a-form-item>
-            <a-row justify="center" type="flex">
+            <a-row :gutter=[24,24] justify="center" type="flex">
               <a-col :lg="{ span: 18 }" :sm="{ span: 24 }">
                 <span class="r-inline-text">Don't have an Account?</span>
                 <a class="r-inline-text r-text-secondary" href="/" @click="onModal('register', $event)">

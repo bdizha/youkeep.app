@@ -1,5 +1,5 @@
 <template>
-  <a-row justify="center" type="flex">
+  <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col v-if="!hasAddresses" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <p class="r-text-normal">
         {{ emptyTitle }}

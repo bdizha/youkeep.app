@@ -3,55 +3,81 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\ArticleCategory;
 use App\ArticleType;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
     /**
-     * BLog landing page
+     * Find categories
      *
      * @param Request $request
+     * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $this->appId = env('APP_ID', 2);
-        $this->articleTypeId = env('article_type', null);
+        $response = [];
+        $this->appId = $request->get('app_id', env('APP_ID'));
+        $this->resourceType = $request->get('resource_type', ArticleCategory::TYPE_BLOG);
 
-        $query = Article::where('app_id', $this->appId);
-
-        $articles = $query->where('article_type_id', $this->articleTypeId)
+        $articles = Article::whereHas('categories', function ($query) {
+                $query->where('article_categories.resource_type', $this->resourceType);
+            })
+            ->where('app_id', $this->appId)
+            ->where('resource_type', $this->resourceType)
             ->take(24)
             ->get();
 
-        $articleTypes = ArticleType::where('app_id', $this->appId)
-            ->take(6)
-            ->get();
+        $response['articles'] = $articles;
 
-        return response()->json([
-            'articles' => $articles,
-            'article_types' => $articleTypes,
-            'status' => 'success'
-        ], 200);
+        return response()->json($response, 200);
     }
 
     /**
-     * Show article details
+     * Find categories
      *
-     * @param $type
-     * @param $slug
+     * @param Request $request
+     * @return \Illuminate\Http\Response
      */
-    public function show($type, $slug)
+    public function article(Request $request)
     {
+        $response = [];
+        $slug = $request->get('slug', null);
+
         $article = Article::where('slug', $slug)
             ->first();
 
-        session(['article' => $article]);
+        session(['blog' => $article]);
+        $response['blog'] = $article;
 
-        return response()->json([
-            'type' => $type,
-            'article' => $article,
-            'status' => 'success'
-        ], 200);
+        return response()->json($response, 200);
+    }
+
+    /**
+     * Find categories
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function category(Request $request)
+    {
+        $response = [];
+        $this->appId = $request->get('app_id', env('APP_ID'));
+        $this->slug = $request->get('slug', null);
+
+        $articleCategory = ArticleCategory::where('slug', $this->slug)
+            ->first();
+
+        $articles = Article::orderBy('created_at', 'DESC')
+            ->with('categories')
+            ->where('article_category_id', $articleCategory->id)
+            ->take(24)
+            ->get();
+
+        $response['article_category'] = $articleCategory;
+        $response['articles'] = $articles;
+
+        return response()->json($response, 200);
     }
 }

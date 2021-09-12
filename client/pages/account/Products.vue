@@ -1,6 +1,6 @@
 <template>
   <r-account>
-    <a-row justify="center" type="flex">
+    <a-row :gutter=[24,24] justify="center" type="flex">
       <a-col :xs="{ span: 24 }" class="r-text-left">
         <h3 class="r-heading">
           Your categories history

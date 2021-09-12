@@ -39,7 +39,7 @@ class FaqSeeder extends Seeder
             $menu = $categoryNode->filter('#menu > li')->each(function ($node) use ($category) {
 
                 $question = $node->filter('a')->eq(0)->text();
-                $answer = $node->filter('article')->html();
+                $answer = $node->filter('blog')->html();
 
                 $question = str_replace('Shipt', 'Addtract', $question);
                 $question = str_replace('SHIPT', 'Addtract', $question);

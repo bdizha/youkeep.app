@@ -103,7 +103,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/resources">Resources</nuxt-link>
+                          <nuxt-link to="/blog">Resources</nuxt-link>
                         </div>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">

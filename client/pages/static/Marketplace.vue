@@ -149,7 +149,7 @@
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                     >
-                      <nuxt-link to="/customer/membership">
+                      <nuxt-link to="/contact-us">
                         <a-button block
                                   class="r-btn-bordered-primary"
                                   size="large"

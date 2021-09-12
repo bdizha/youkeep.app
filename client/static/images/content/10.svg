@@ -21,7 +21,7 @@
      <style type="text/css">
    <![CDATA[
     @font-face { font-family:"Arial";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
-    .str0 {stroke:black;stroke-width:18.63;stroke-miterlimit:22.9256}
+    .str0 {stroke:#3B9CFF;stroke-width:18.63;stroke-miterlimit:22.9256}
     .str4 {stroke:#0069CD;stroke-width:18.63;stroke-miterlimit:22.9256}
     .str3 {stroke:#00AEEF;stroke-width:18.63;stroke-miterlimit:22.9256}
     .str1 {stroke:#00AEEF;stroke-width:18.63;stroke-miterlimit:22.9256}

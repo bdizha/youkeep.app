@@ -77,7 +77,7 @@ class ArticleSeeder extends Seeder
             ];
 
             $this->articleType = ArticleType::updateOrCreate($attributes, $values);
-            echo ">>>>> Created article type: " . $this->articleType->name . " :::\n";
+            echo ">>>>> Created blog type: " . $this->articleType->name . " :::\n";
 
             $categoryTypeUrl = $this->helpDomain . $node->filter('.blocks-item-link')->attr('href');
 
@@ -99,7 +99,7 @@ class ArticleSeeder extends Seeder
             $crawler = Goutte::request('GET', $encodedUrl);
 
             // fetch articles
-            $crawler->filter('a.article-list-link')->each(function ($node) {
+            $crawler->filter('a.blog-list-link')->each(function ($node) {
                 $articleUrl = $this->helpDomain . $node->attr('href');
                 $this->_setArticle($articleUrl);
             });
@@ -126,7 +126,7 @@ class ArticleSeeder extends Seeder
             $crawler = Goutte::request('GET', $encodedUrl);
 
             $articleCategories = [];
-            $articleNode = $crawler->filter('.article');
+            $articleNode = $crawler->filter('.blog');
 
             $crawler->filter('.breadcrumbs li')->each(function ($node) use (&$articleCategories) {
                 $name = $node->text();
@@ -152,9 +152,9 @@ class ArticleSeeder extends Seeder
                 $articleCategoryId = $articleCategory->id;
             }
 
-            $title = $articleNode->filter('.article-title')->text();
-            $blurb = $articleNode->filter('.article-body p')->eq(0)->text();
-            $content = $articleNode->filter('.article-body')->html();
+            $title = $articleNode->filter('.blog-title')->text();
+            $blurb = $articleNode->filter('.blog-body p')->eq(0)->text();
+            $content = $articleNode->filter('.blog-body')->html();
 
             $attributes = [
                 'title' => $title,
@@ -171,9 +171,9 @@ class ArticleSeeder extends Seeder
 
             $article = \App\Article::updateOrCreate($attributes, $values);
 
-            echo ">>>>> Created article resource: " . $article->title . " :::\n";
+            echo ">>>>> Created blog resource: " . $article->title . " :::\n";
         } catch (Exception $e) {
-            echo ">>>>> Error occurred on article create: " . $e->getMessage() . " :::\n";
+            echo ">>>>> Error occurred on blog create: " . $e->getMessage() . " :::\n";
         }
     }
 
@@ -214,7 +214,7 @@ class ArticleSeeder extends Seeder
 
             $article = \App\Article::updateOrCreate($attributes, $values);
 
-            echo ">>>>> Created article resource: " . $article->title . " :::\n";
+            echo ">>>>> Created blog resource: " . $article->title . " :::\n";
 
             foreach ($categories as $category) {
                 $values = [
@@ -231,7 +231,7 @@ class ArticleSeeder extends Seeder
 
                 \App\CategoryArticle::updateOrCreate($values, $values);
 
-                echo ">>>>> >>>>> Created category article link: " . $category . " :::\n";
+                echo ">>>>> >>>>> Created category blog link: " . $category . " :::\n";
             }
         });
     }

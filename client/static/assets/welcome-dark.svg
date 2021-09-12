@@ -8,7 +8,7 @@ viewBox="0 0 10048.51 10048.51"
   <style type="text/css">
    <![CDATA[
     .str1 {stroke:#3B9CFF;stroke-width:34;stroke-miterlimit:22.9256}
-    .str0 {stroke:black;stroke-width:10.04;stroke-miterlimit:22.9256}
+    .str0 {stroke:none;stroke-width:10.04;stroke-miterlimit:22.9256}
     .fil1 {fill:none}
     .fil20 {fill:none}
     .fil4 {fill:#00C2FF}

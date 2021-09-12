@@ -139,7 +139,7 @@
                             </p>
                             <p class="r-checked-item">
                               <a-icon slot="prefix" class="r-checked-item-icon" type="check"/>
-                              New payment options like <nuxt-link to="/customer/membership">Addtract+</nuxt-link>
+                              New payment options like <nuxt-link to="/contact-us">Addtract+</nuxt-link>
                             </p>
                           </a-col>
                         </a-row>

@@ -72,7 +72,7 @@
                         @submit="apply"
                 >
                   <a-form-item>
-                    <a-row justify="center" type="flex">
+                    <a-row :gutter=[24,24] justify="center" type="flex">
                       <a-col :xs="{ span: 24 }" class="r-text-left">
                         <h2 class="r-heading r-text-secondary">
                           Submit your application

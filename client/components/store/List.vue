@@ -1,5 +1,5 @@
 <template>
-  <a-row justify="center" type="flex">
+  <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }">
       <a-row v-if="hasStores && !processes.isTray" :gutter="[12,12]" align="middle" justify="start" type="flex">
         <a-col

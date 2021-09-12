@@ -1,5 +1,5 @@
 <template>
-  <a-row justify="center" type="flex">
+  <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col v-if="category" :span="24" class="r-p-24">
       <a-row :gutter="[24,24]" justify="center" type="flex">
         <a-col :lg="{span: 20}" :md="{span: 18}" :sm="{span: 16}" :xs="{span: 24}">

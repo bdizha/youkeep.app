@@ -1,5 +1,5 @@
 <template>
-  <a-row justify="center" type="flex">
+  <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"

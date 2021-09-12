@@ -25,7 +25,7 @@ export default {
       steps: [
         {
           title: 'Not just a marketplace',
-          heading: 'Gain sales data insights',
+          heading: '<span class="r-text-primary">Gain</span> sales data insights',
           image: '/products/product-01.svg',
           summary: 'Unlock new growth in new ways while defending marketing efficiency.',
           content: 'Create an account and showcase or discover trending, streamlined, and relevant products on Addtract\'s B2B marketplace today. ' +
@@ -33,7 +33,7 @@ export default {
         },
         {
           title: 'Unified checkout experience',
-          heading: 'Earn multi-channel success',
+          heading: '<span class="r-text-primary">Earn</span> multi-channel success',
           image: '/products/product-07.svg',
           summary: 'Increase your online revenue through data-driven cross-channel strategies proven to work.',
           content: 'Boost awareness of your business and reach new audiences organically through our broad network of influencers. ' +
@@ -41,7 +41,7 @@ export default {
         },
         {
           title: 'Flexible payments terms',
-          heading: 'Request credit on checkout',
+          heading: '<span class="r-text-primary">Request</span> credit on checkout',
           image: '/products/product-10.svg',
           summary: 'We know how difficult it can be to secure financing and free up working capital as a growing business. ',
           content: 'Our B2B payment method presents your buyers with the perfect pay-over-time option for them-whether that’s split pay, ' +

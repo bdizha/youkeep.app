@@ -1,9 +1,9 @@
 <template>
   <r-page>
-    <a-row justify="center" type="flex">
+    <a-row :gutter=[24,24] justify="center" type="flex">
       <a-col :span="24" class="gutter-row">
         <div class="r-bg-primary-light">
-          <a-row justify="center" type="flex">
+          <a-row :gutter=[24,24] justify="center" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
               <a-row align="middle" justify="start" type="flex">
                 <a-col :lg="{ offset: 3, span: 9 }" :md="{ offset: 3, span: 9 }" :sm="{ span: 24 }"

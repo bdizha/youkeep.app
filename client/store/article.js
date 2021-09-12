@@ -15,8 +15,15 @@ export const state = () => ({
     breadcrumbs: []
   },
   blog: {
+    article: {},
+    article_category: {},
+    article_type: {},
     articles: [],
-    article: {}
+    article_types: [],
+    article_categories: [],
+    related_articles: [],
+    viewed_articles: [],
+    recent_articles: []
   }
 })
 
@@ -106,9 +113,9 @@ const actions = {
   async onBlogArticle ({ dispatch, commit, state }, payload) {
     try {
       await axios.post('/blog/article', payload).then(({ data }) => {
-        const article = data.article
-        console.log('onBlogArticle data: ', article)
+        console.log('onBlogArticle data: ', data)
 
+        const article = data.article
         const blog = state.blog
         blog.article = article
 
@@ -121,11 +128,14 @@ const actions = {
   async onBlogCategory ({ dispatch, commit, state }, payload) {
     try {
       await axios.post('/blog/category', payload).then(({ data }) => {
-        const article = data.article
-        console.log('onBlogArticle data: ', article)
+        console.log('onBlogCategory data: ', data)
+
+        const articleCategory = data.article_category
+        const articles = data.articles
 
         const blog = state.blog
-        blog.article = article
+        blog.article_category = articleCategory
+        blog.articles = articles
 
         commit('setBlog', blog)
       })
@@ -135,9 +145,12 @@ const actions = {
   },
   async onBlog ({ dispatch, commit, state }, payload) {
     try {
-      await axios.post('/blog/articles', payload).then(({ data }) => {
-        const blog = data
-        console.log('on onBlog data: ', blog)
+      await axios.post('/blog', payload).then(({ data }) => {
+        console.log('onBlog data: ', data)
+        const articles = data.articles
+
+        const blog = state.blog
+        blog.articles = articles
 
         commit('setBlog', blog)
       })

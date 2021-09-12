@@ -1,11 +1,11 @@
 <template>
   <a-row :gutter="[24,24]" justify="start" type="flex">
-    <a-col v-for="(article, index) in articles"
+    <a-col v-for="(article, index) in blog.articles"
            :key="index"
            :lg="{ span:8 }" :md="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
            class="gutter-row"
     >
-      <r-article-item :article="article"></r-article-item>
+      <r-blog-article :article="article"></r-blog-article>
     </a-col>
   </a-row>
 </template>
@@ -13,13 +13,13 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'r-articles',
+  name: 'r-articles-blog',
   components: {},
   data () {
     return {}
   },
   computed: mapGetters({
-    articles: 'content/articles'
+    blog: 'article/blog'
   }),
   mounted () {
   },

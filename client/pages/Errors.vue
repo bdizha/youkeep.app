@@ -1,6 +1,6 @@
 <template>
   <a-form-item v-if="errors.length > 0">
-    <a-row justify="center" type="flex">
+    <a-row :gutter=[24,24] justify="center" type="flex">
       <a-col :xs="{ span: 24 }" class="r-text-left">
         <h4 class="r-heading r-text-secondary">
           Oops! Please correct the following errors:

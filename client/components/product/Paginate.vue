@@ -1,5 +1,5 @@
 <template>
-  <a-row justify="center" type="flex">
+  <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col :span="24">
       <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" justify="center" type="flex">
         <a-col :lg="{span: span}" :md="{span: span}" :sm="{span: 24}" :xs="{span: 24}">

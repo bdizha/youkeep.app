@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link :to="'/resources/' + article.slug">
+  <nuxt-link :to="'/blog/article/' + article.slug">
     <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
       <a-col :lg="{ span: 24 }"
              :sm="{ span: 24 }" :xs="{ span:24 }"
@@ -61,7 +61,7 @@
 </template>
 <script>
 export default {
-  name: 'r-article-item',
+  name: 'r-blog-article',
   props: {
     article: { type: Object, required: true }
   },

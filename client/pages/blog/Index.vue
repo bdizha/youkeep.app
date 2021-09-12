@@ -58,7 +58,7 @@
       </a-row>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-articles></r-articles>
+      <r-blog-articles></r-blog-articles>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-contact-us title="Take your mind off B2B payments, for good."></r-contact-us>
@@ -67,20 +67,13 @@
 </template>
 <script>
 export default {
-  layout: 'default',
+  layout: 'blog',
   props: {},
   async asyncData ({ store }) {
-    await store.dispatch('content/onArticles', '/resources')
+    await store.dispatch('article/onBlog')
   },
   data () {
     return {
-      isProcessing: true,
-      testimonials: [],
-      modal: {
-        current: null,
-        isVisible: false
-      },
-      hasData: false
     }
   },
   created () {

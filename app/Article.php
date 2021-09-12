@@ -4,6 +4,7 @@ namespace App;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Article extends Model
 {
@@ -50,7 +51,7 @@ class Article extends Model
         $breadcrumbs[] = [
             'id' => $this->id,
             'slug' => $this->slug,
-            'route' => '/help/article/' . $this->slug,
+            'route' => '/help/blog/' . $this->slug,
             'name' => $this->title,
             'has_articles' => true,
             'has_categories' => true,
@@ -120,10 +121,18 @@ class Article extends Model
     }
 
     /**
-     * Get the article's category
+     * Get the blog's category
      */
     public function category()
     {
         return $this->belongsTo('App\ArticleCategory', 'article_category_id', 'id')->withDefault();
+    }
+
+    /**
+     * Get attached categories
+     */
+    public function categories(): BelongsToMany
+    {
+        return $this->belongsToMany('App\ArticleCategory', 'category_articles', 'article_category_id', 'article_id');
     }
 }

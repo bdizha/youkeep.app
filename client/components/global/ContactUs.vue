@@ -12,7 +12,7 @@
               {{ title }}
             </h3>
           </a-col>
-          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+          <a-col v-if="hasMore" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
           >
             <p class="r-text-medium r-text-white">
               <span class="r-text-yellow">Discover</span> new buyers. Start selling today!
@@ -24,11 +24,11 @@
              :xs="{ span: 24 }"
       >
         <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+          <a-col v-if="hasMore" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
             <h4 class="r-heading-light r-text-white r-text-uppercase">
-              Ready to join now?
+              {{ heading }}
             </h4>
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -61,7 +61,9 @@ export default {
   name: 'r-contact-us',
   props: {
     hasJobs: { type: Boolean, required: false, default: false },
-    title: { type: String, required: false, default: 'Get your Addtract account today!' }
+    hasMore: { type: Boolean, required: false, default: false },
+    title: { type: String, required: false, default: 'Get your Addtract account today!' },
+    heading: { type: String, required: false, default: 'Are you ready to join Addtract?' }
   },
   data () {
     return {}

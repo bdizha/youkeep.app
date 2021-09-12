@@ -1,19 +1,15 @@
 <template>
-  <a-row justify="center" type="flex">
+  <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col :lg="{span: 16}" :md="{span: 18}" :sm="{span: 24}" :xs="{span: 24}" class="r-page-padding">
-      <a-row justify="center" type="flex">
+      <a-row :gutter=[24,24] justify="center" type="flex">
         <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
-          <h1 class="r-heading">
+          <h2 class="r-heading-light">
             Addtract Privacy Policy
-          </h1>
+          </h2>
         </a-col>
         <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
           <article class="r-article">
-
             <!-- NOTE: this page is a business-critical part of the Addtract service.  Any changes should be reviewed by legal and made with extreme care.  -->
-
-            <h1 id="Addtract-privacy-statement">Addtract Privacy Statement</h1>
-
             <p>This Privacy Statement describes in greater detail the privacy practices of Addtract.com, Inc.</p>
 
             <p>If you have questions or complaints regarding our Privacy Statement or practices, please contact us at
@@ -346,13 +342,14 @@
 <script>
 export default {
   name: 'r-privacy',
+  layout: 'page',
   props: {},
   data () {
     return {
       modal: {
         current: null,
-        message: null,
-      },
+        message: null
+      }
     }
   },
   mounted () {

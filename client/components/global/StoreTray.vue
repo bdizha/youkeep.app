@@ -36,7 +36,7 @@
           </a>
         </a-col>
       </a-row>
-      <a-row justify="center" type="flex">
+      <a-row :gutter=[24,24] justify="center" type="flex">
         <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" class="r-p-24">
           <p class="r-store-text-light">
             Addtract is an independent business service that is not necessarily affiliated with,

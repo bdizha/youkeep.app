@@ -22,11 +22,13 @@ class HelpController extends Controller
     {
         $response = [];
         $this->appId = $request->get('app_id', env('APP_ID'));
+        $this->resourceType = $request->get('resource_type', ArticleCategory::TYPE_HELP);
 
         $articleCategories = ArticleCategory::with('articles')
         ->whereHas('apps', function ($query) {
             $query->where('app_article_categories.app_id', $this->appId);
         })
+            ->where('resource_type', $this->resourceType)
             ->whereNull('article_category_id')
             ->take(24)->get();
 
@@ -83,7 +85,7 @@ class HelpController extends Controller
     }
 
     /**
-     * Show article details
+     * Show blog details
      *
      * @param Request $request
      * @return \Illuminate\Http\Response
@@ -106,7 +108,7 @@ class HelpController extends Controller
             ->get();
 
         $response['breadcrumbs'] = $article->breadcrumbs;
-        $response['article'] = $article;
+        $response['blog'] = $article;
         $response['viewed_articles'] = $this->getSessionArticles();
         $response['related_articles'] = $relatedArticles;
 

@@ -252,7 +252,7 @@
                                          :sm="{ span: 24 }"
                                          :xs="{ span: 24}"
                                   >
-                                    <nuxt-link class="r-link-card" to="/resources">
+                                    <nuxt-link class="r-link-card" to="/blog">
                                       <h4 class="r-heading r-text-dark">
                                         Blog
                                         <a-icon type="right" />

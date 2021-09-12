@@ -1,5 +1,5 @@
 <template>
-  <a-row justify="center" type="flex">
+  <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col v-if="hasProducts" :span="24">
       <div class="r-ph-24">
         <r-product-paginate :filters="filters" :span="columns > 1 ? 16 : 24"></r-product-paginate>

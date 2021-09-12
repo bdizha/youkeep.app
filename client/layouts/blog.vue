@@ -1,12 +1,17 @@
 <template>
   <a-layout class="r-layout__default">
-    <r-header :is-icon="false"></r-header>
+    <r-blog-header></r-blog-header>
     <a-layout-content class="r-layout-content">
       <a-row :gutter="[96,96]" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <a-card class="r-bg-primary-light r-pull-h-24 r-border-none">
-          <nuxt/>
-          </a-card>
+          <a-row :gutter="[24,24]" justify="center" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+              <nuxt/>
+            </a-col>
+          </a-row>
+        </a-col>
+        <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <r-contact-us title="Need more help? "></r-contact-us>
         </a-col>
         <a-col v-if="hasFooter" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <r-footer :has-locations="false"></r-footer>
@@ -22,12 +27,13 @@ export default {
   data: () => ({}),
   async serverPrefetch  () {
     await this.$store.dispatch('base/onIsDark', true)
+    await this.$store.dispatch('base/onIsHelp', true)
   },
   created () {
   },
   computed: mapGetters({
     hasFooter: 'base/hasFooter',
-    processes: 'base/processes'
+    help: 'article/help'
   }),
   methods: {}
 }
