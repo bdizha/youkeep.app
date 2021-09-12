@@ -7,7 +7,7 @@ viewBox="0 0 46319.47 42904.85"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str2 {stroke:#3B9CFF;stroke-width:222.69;stroke-miterlimit:22.9256;stroke-opacity:0.360784}
+    .str2 {stroke:#3B9CFF;stroke-width:222.69;stroke-miterlimit:22.9256;stroke-opacity:0.36}
     .str1 {stroke:#3B9CFF;stroke-width:178.15;stroke-miterlimit:22.9256;stroke-opacity:0.470588}
     .str0 {stroke:#3B9CFF;stroke-width:21.04;stroke-miterlimit:22.9256;stroke-opacity:0.470588}
     .str4 {stroke:#3B9CFF;stroke-width:222.69;stroke-miterlimit:22.9256;stroke-opacity:0.549020}
@@ -17,18 +17,18 @@ viewBox="0 0 46319.47 42904.85"
     .fil5 {fill:none}
     .fil14 {fill:none}
     .fil11 {fill:#3B9CFF;fill-rule:nonzero}
-    .fil3 {fill:#3B9CFF;fill-opacity:0.090196}
+    .fil3 {fill:#3B9CFF;fill-opacity:0.09}
     .fil1 {fill: #FFFFFF;
     fill-opacity: 1;}
     .fil0 {
     fill: none;
     fill-opacity: 0.109804;
 }
-    .fil16 {fill:#00C2FF;fill-opacity:0.301961}
-    .fil15 {fill:#3B9CFF;fill-opacity:0.301961}
-    .fil17 {fill:#CDF4FF;fill-opacity:0.301961}
-    .fil10 {fill:white;fill-opacity:0.341176}
-    .fil7 {fill:#3B9CFF;fill-opacity:0.360784}
+    .fil16 {fill:#00C2FF;fill-opacity:0.30}
+    .fil15 {fill:#3B9CFF;fill-opacity:0.30}
+    .fil17 {fill:#CDF4FF;fill-opacity:0.30}
+    .fil10 {fill:white;fill-opacity:0.33}
+    .fil7 {fill:#3B9CFF;fill-opacity:0.36}
     .fil2 {    fill: #FFF;
     fill-opacity: 0.3;}
     .fil6 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.431373}

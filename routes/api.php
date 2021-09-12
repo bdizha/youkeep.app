@@ -107,7 +107,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('/search/suggest', 'SearchController@suggest')->name('search.suggest');
     Route::post('/help', 'HelpController@index')->name('help.index');
     Route::post('/help/category', 'HelpController@category')->name('help.category');
-    Route::post('/blog;', 'ArticleController@index')->name('blog');
+    Route::post('/blog', 'ArticleController@index')->name('blog');
     Route::post('/blog/article', 'ArticleController@article')->name('blog.article');
     Route::post('/blog/category', 'ArticleController@category')->name('blog.category');
     Route::get('/shopper/apply', 'ShopperController@apply')->name('shopper.apply');

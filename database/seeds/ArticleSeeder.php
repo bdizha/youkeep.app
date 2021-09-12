@@ -1,7 +1,7 @@
 <?php
 
 use App\ArticleCategory;
-use App\ArticleType;
+use App\CategoryArticle;
 use Illuminate\Database\Seeder;
 
 class ArticleSeeder extends Seeder
@@ -21,7 +21,7 @@ class ArticleSeeder extends Seeder
     {
         $this->_setApp();
 //        $this->_setHelp();
-//        $this->_setBlog();
+        $this->_setBlog();
 
         $this->_updateCategories();
     }
@@ -30,7 +30,7 @@ class ArticleSeeder extends Seeder
     {
         $appName = env('APP_NAME');
         $appUrl = env('APP_DOMAIN');
-        $slogan = env('app_slogan');
+        $slogan = env('APP_SLOGAN');
 
         $attributes = [
             'name' => $appName,
@@ -53,34 +53,7 @@ class ArticleSeeder extends Seeder
         $crawler = Goutte::request('GET', 'http://api.shopple.local/feed');
 
         $crawler->filter('.blocks-list .blocks-item')->each(function ($node) {
-
-            $name = $node->filter('.blocks-item-title')->text();
-
-            $name = str_replace("RangeMe", 'Addtract', $name);
-            $name = str_replace("rangeme", 'addtract', $name);
-
-            $content = $node->filter('.blocks-item-description')->text();
-
-            $content = str_replace("RangeMe", 'Addtract', $content);
-            $content = str_replace("rangeme", 'addtract', $content);
-
-            $attributes = [
-                'name' => $name,
-                'content' => $content,
-            ];
-
-            $values = [
-                'name' => $name,
-                'content' => $content,
-                'icon' => 'shop',
-                'app_id' => $this->app->id
-            ];
-
-            $this->articleType = ArticleType::updateOrCreate($attributes, $values);
-            echo ">>>>> Created blog type: " . $this->articleType->name . " :::\n";
-
             $categoryTypeUrl = $this->helpDomain . $node->filter('.blocks-item-link')->attr('href');
-
             $this->_setCategory($categoryTypeUrl);
         });
     }
@@ -118,9 +91,7 @@ class ArticleSeeder extends Seeder
 
     private function _setArticle($articleUrl)
     {
-
         try {
-
             $encodedUrl = $this->_setCrawler($articleUrl);
 
             $crawler = Goutte::request('GET', $encodedUrl);
@@ -144,7 +115,6 @@ class ArticleSeeder extends Seeder
 
                 $values = [
                     'name' => $categoryName,
-                    'article_type_id' => $this->articleType->id,
                     'article_category_id' => $articleCategoryId
                 ];
 
@@ -195,6 +165,21 @@ class ArticleSeeder extends Seeder
             $url = $node->filter('.bp-title')->attr('href');
             $articleNode = Goutte::request('GET', $this->domain . '/' . $url);
 
+            $articlePhoto = null;
+            $photoNode = $articleNode->filter('.blog-post-cover-image');
+
+            if($photoNode->count() > 0) {
+                $photoUrl = $articleNode->filter('.blog-post-cover-image')->attr('src');
+
+                $articlePhoto = sha1($photoUrl) . ".jpg";
+
+                if (!file_exists(public_path('storage/article/' . $articlePhoto))) {
+                    Storage::disk('article')->put($articlePhoto, file_get_contents($photoUrl));
+                } else {
+                    echo "Article photo skipped: " . public_path('storage/article/' . $articlePhoto) . "\n";
+                }
+            }
+
             $content = $articleNode->filter('.s-blog-post .bp-rich-text')->html();
             $content = str_replace("Balance", 'Addtract', $content);
             $content = str_replace("balance", 'addtract', $content);
@@ -209,7 +194,8 @@ class ArticleSeeder extends Seeder
                 'title' => $title,
                 'blurb' => $blurb,
                 'content' => $content,
-                'app_id' => $this->app->id
+                'app_id' => $this->app->id,
+                'photo' => $articlePhoto
             ];
 
             $article = \App\Article::updateOrCreate($attributes, $values);
@@ -219,17 +205,17 @@ class ArticleSeeder extends Seeder
             foreach ($categories as $category) {
                 $values = [
                     'name' => $category,
-                    'article_type_id' => 4
+                    'resource_type' => ArticleCategory::TYPE_BLOG
                 ];
 
-                $articleCategory = \App\ArticleCategory::updateOrCreate($values, $values);
+                $articleCategory = ArticleCategory::updateOrCreate($values, $values);
 
                 $values = [
                     'article_category_id' => $articleCategory->id,
                     'article_id' => $article->id,
                 ];
 
-                \App\CategoryArticle::updateOrCreate($values, $values);
+                CategoryArticle::updateOrCreate($values, $values);
 
                 echo ">>>>> >>>>> Created category blog link: " . $category . " :::\n";
             }
@@ -238,26 +224,6 @@ class ArticleSeeder extends Seeder
 
     private function _updateCategories()
     {
-        $articleCategories = \App\ArticleCategory::orderBy('created_at', 'DESC')
-            ->where('resource_type', ArticleCategory::TYPE_HELP)
-            ->where('created_at', '>', '2021-09-08 14:00:00')
-            ->get();
 
-        foreach ($articleCategories as $articleCategory) {
-            $articleType = ArticleType::where('slug', $articleCategory->slug)
-                ->first();
-
-            $values = [
-                'app_id' => $this->app->id,
-                'article_category_id' => $articleCategory->id
-            ];
-
-            \App\AppArticleCategory::updateOrCreate($values, $values);
-
-            if(!empty($articleType)) {
-                $articleCategory->content = $articleType->content;
-                $articleCategory->save();
-            }
-        }
     }
 }

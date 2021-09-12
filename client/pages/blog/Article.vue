@@ -1,5 +1,63 @@
 <template>
   <a-row :gutter="[24,24]" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <a-card class="r-bg-blog r-border-none" :style="'background-image: url(' + blog.article.photo_url + ')'">
+        <div class="r-mv-96">
+          <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                    <a-col v-if="blog.article.categories.length > 0"
+                           :lg="{ span: 24 }"
+                           :sm="{ span: 24 }" :xs="{ span: 24 }"
+                    >
+                      <r-blog-categories :article="blog.article" theme="white"></r-blog-categories>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h2 class="r-heading-light r-text-white">
+                        {{ blog.article.title }}
+                      </h2>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <p class="r-text-medium r-text-primary r-text-white">
+                        {{ blog.article.blurb }}
+                      </p>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <r-blog-author :article="blog.article" theme="white"></r-blog-author>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </div>
+      </a-card>
+    </a-col>
+    <a-col v-if="blog.breadcrumbs.length > 0"
+           :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+    >
+      <r-breadcrumbs prefix="/blog" :breadcrumbs="blog.breadcrumbs"></r-breadcrumbs>
+    </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
@@ -10,22 +68,6 @@
         >
           <a-card class="r-bg-white">
             <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <h3 class="r-heading">
-                  {{ blog.article.title }}
-                </h3>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <p class="r-text-medium r-text-primary r-text-dark">
-                  {{ blog.article.blurb }}
-                </p>
-              </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
@@ -143,8 +185,7 @@ export default {
     await store.dispatch('article/onBlogArticle', params)
   },
   data () {
-    return {
-    }
+    return {}
   },
   computed: mapGetters({
     blog: 'article/blog'

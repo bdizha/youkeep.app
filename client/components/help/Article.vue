@@ -12,7 +12,7 @@
     <a-col :lg="{ span: 24 }"
            :sm="{ span: 24 }" :xs="{ span: 24 }"
     >
-      <nuxt-link :to="'/help/blog/' + article.slug">
+      <nuxt-link :to="'/help/article/' + article.slug">
         <p class="r-text-normal">
           {{ article.title }}
         </p>

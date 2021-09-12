@@ -23,7 +23,8 @@ export const state = () => ({
     article_categories: [],
     related_articles: [],
     viewed_articles: [],
-    recent_articles: []
+    recent_articles: [],
+    breadcrumbs: []
   }
 })
 
@@ -48,12 +49,12 @@ const actions = {
   async onHelpArticle ({ dispatch, commit, state }, payload) {
     try {
       await axios.post('/help/article', payload).then(({ data }) => {
+        console.log('onHelpArticle: ', data)
+
         const breadcrumbs = data.breadcrumbs
         const article = data.article
         const relatedArticles = data.related_articles
         const viewedArticles = data.viewed_articles
-
-        console.log('onHelpArticle: ', data)
 
         const help = state.help
         help.article = article
@@ -70,12 +71,8 @@ const actions = {
   async onHelpCategory ({ dispatch, commit, state }, payload) {
     try {
       await axios.post('/help/category', payload).then(({ data }) => {
-        const breadcrumbs = data.breadcrumbs
-        const articleCategory = data.article_category
-        const articleCategories = data.article_categories
-        const articles = data.articles
-
         console.log('onHelpCategory: ', data)
+        const { breadcrumbs, article_category: articleCategory, article_categories: articleCategories, articles } = data
 
         const help = state.help
         help.breadcrumbs = breadcrumbs
@@ -92,14 +89,14 @@ const actions = {
   async onHelp ({ dispatch, commit, state }, payload) {
     try {
       await axios.post('/help', payload).then(({ data }) => {
-        const breadcrumbs = data.breadcrumbs
+        console.log('onHelpArticle: ', data)
+
         const recentArticles = data.recent_articles
         const articleCategories = data.article_categories
         const articleTypes = data.article_types
-        console.log('onHelpArticle: ', data)
 
         const help = state.help
-        help.breadcrumbs = breadcrumbs
+        help.breadcrumbs = []
         help.recent_articles = recentArticles
         help.article_categories = articleCategories
         help.article_types = articleTypes
@@ -118,6 +115,7 @@ const actions = {
         const article = data.article
         const blog = state.blog
         blog.article = article
+        blog.breadcrumbs = article.breadcrumbs
 
         commit('setBlog', blog)
       })
@@ -135,6 +133,7 @@ const actions = {
 
         const blog = state.blog
         blog.article_category = articleCategory
+        blog.breadcrumbs = articleCategory.breadcrumbs
         blog.articles = articles
 
         commit('setBlog', blog)
@@ -151,6 +150,7 @@ const actions = {
 
         const blog = state.blog
         blog.articles = articles
+        blog.breadcrumbs = []
 
         commit('setBlog', blog)
       })

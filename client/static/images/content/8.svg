@@ -65,7 +65,7 @@
      <style type="text/css">
    <![CDATA[
     @font-face { font-family:"SofiaProRegular";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
-    .str4 {stroke:#E2E5EA;stroke-width:22.22;stroke-miterlimit:22.9256;stroke-opacity:0.380392}
+    .str4 {stroke:#E2E5EA;stroke-width:22.22;stroke-miterlimit:22.9256;stroke-opacity:0.36}
     .str6 {stroke:#E2E5EA;stroke-width:22.22;stroke-miterlimit:22.9256;stroke-opacity:0.549020}
     .str3 {stroke:#E2E5EA;stroke-width:22.22;stroke-miterlimit:22.9256}
     .str5 {stroke:#E2E5EA;stroke-width:8.46;stroke-miterlimit:22.9256}
@@ -362,7 +362,7 @@
     .fil82 {fill:#FEFEFE}
     .fil238 {fill:white}
     .fil234 {fill:white}
-    .fil242 {fill:#E2E6ED;fill-opacity:0.380392}
+    .fil242 {fill:#E2E6ED;fill-opacity:0.36}
     .fil288 {fill:white;fill-opacity:0.549020}
     .fnt2 {font-weight:normal;font-size:217.31px;font-family:'SofiaProRegular'}
     .fnt0 {font-weight:normal;font-size:255.43px;font-family:'SofiaProRegular'}

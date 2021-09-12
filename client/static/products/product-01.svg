@@ -12,13 +12,13 @@ viewBox="0 0 16692.3 16692.3"
     .fil8 {fill:white}
     .fil9 {fill:#00C2FF;fill-rule:nonzero}
     .fil3 {fill:#3B9CFF;fill-rule:nonzero}
-    .fil7 {fill:#00C2FF;fill-opacity:0.090196}
+    .fil7 {fill:#00C2FF;fill-opacity:0.09}
     .fil0 {fill: none;}
     .fil1 {fill: #3B9CFF;fill-opacity: 0.09;}
-    .fil6 {fill:#3B9CFF;fill-opacity:0.211765}
+    .fil6 {fill:#3B9CFF;fill-opacity:0.18}
     .fil2 {fill:white;fill-opacity:1}
     .fil5 {fill: #3B9CFF;fill-opacity: 0.09;}
-    .fil4 {fill: #00c2ff;fill-opacity: 0.12;}
+    .fil4 {fill: #FFFFFF;fill-opacity: 0.75;}
    ]]>
   </style>
  </defs>

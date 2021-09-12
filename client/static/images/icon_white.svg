@@ -7,16 +7,16 @@ viewBox="0 0 160.18 160.18"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil1 {fill:#00C2FF}
-    .fil0 {fill:#3D4852}
+    .fil1 {fill:#FBD13E}
+    .fil0 {fill:#00C2FF}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
   <g id="_1820308171184">
-   <polygon class="fil0" points="83.05,106.3 6.56,160.18 82.95,0 160.18,159.66 "/>
    <polygon class="fil1" points="63.2,92.56 -0,137.08 63.11,4.73 126.93,136.65 "/>
+   <polygon class="fil0" points="83.05,106.3 6.56,160.18 82.95,0 160.18,159.66 "/>
   </g>
  </g>
 </svg>

@@ -23,8 +23,8 @@ viewBox="0 0 44026.66 32173.34"
     .fil7 {fill:#00C2FF;fill-rule:nonzero}
     .fil8 {fill:#3B9CFF;fill-rule:nonzero}
     .fil0 {fill:#3B9CFF;fill-opacity:0.168627}
-    .fil12 {fill:#3B9CFF;fill-opacity:0.450980}
-    .fil13 {fill:#B4DCFF;fill-opacity:0.450980}
+    .fil12 {fill:#3B9CFF;fill-opacity:0.45}
+    .fil13 {fill:#B4DCFF;fill-opacity:0.45}
     .fil1 {fill:white;fill-opacity:0.721569}
     .fil6 {fill:white;fill-opacity:0.831373}
     .fil10 {fill:url(#id0)}
@@ -33,7 +33,7 @@ viewBox="0 0 44026.66 32173.34"
   <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="3810.43" y1="17251.44" x2="4990.12" y2="15400.68">
    <stop offset="0" style="stop-opacity:1; stop-color:#FEDA75"/>
    <stop offset="0.239216" style="stop-opacity:1; stop-color:#FA7E1E"/>
-   <stop offset="0.490196" style="stop-opacity:1; stop-color:#D62976"/>
+   <stop offset="0.45" style="stop-opacity:1; stop-color:#D62976"/>
    <stop offset="0.760784" style="stop-opacity:1; stop-color:#962FBF"/>
    <stop offset="1" style="stop-opacity:1; stop-color:#4F5BD5"/>
   </linearGradient>

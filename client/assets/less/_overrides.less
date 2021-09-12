@@ -4078,7 +4078,7 @@ label {
     }
 }
 
-.r-border-radius-circle {
+.r-border-circle {
     border-radius: 50%;
     overflow: hidden
 }
@@ -5980,6 +5980,10 @@ label {
     padding: 12px;
 }
 
+.r-p-6 {
+    padding: 6px;
+}
+
 .r-pv-15 {
     padding: 15px 0;
 }
@@ -7237,7 +7241,26 @@ h3.r-step-heading {
     position: relative;
 
     &:before {
-        background: rgba(61, 72, 82, 0.96) url(/images/icon_pattern_dark_large.svg) no-repeat;
+        background: rgba(58, 156, 255, 0.96) url(/images/icon_pattern_dark_large.svg) no-repeat;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        content: ""
+    }
+}
+
+.r-bg-blog {
+    background: url(/images/icon_pattern_primary_light.svg) no-repeat;
+    background-blend-mode: darken;
+    background-size: cover;
+    position: relative;
+
+    &:before {
+        background: rgba(58, 156, 255, 0.75) url(/images/icon_pattern_primary_large.svg) no-repeat;
         position: absolute;
         left: 0;
         top: 0;
@@ -7258,6 +7281,14 @@ h3.r-step-heading {
     color: @white;
     border-radius: @border-radius;
     overflow: hidden;
+
+    &.r-blog-dark {
+        background: @black;
+    }
+
+    &.r-blog-white {
+        background: @white;
+    }
 }
 
 .r-blog-item-cover {
@@ -7266,7 +7297,7 @@ h3.r-step-heading {
     display: block;
     width: 100%;
     background: rgba(61, 72, 82, 0.96) url(/patterns/pattern-01.svg) no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 
 .r-cover-image {

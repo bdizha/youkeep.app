@@ -59,12 +59,11 @@ class ArticleCategory extends Model
      */
     public function getBreadcrumbsAttribute()
     {
-        $breadcrumbs = $this->getBreadcrumbs($this, []);
         $breadcrumbs[] = [
             'id' => null,
             'slug' => null,
             'route' => '/',
-            'name' => 'Addtract Help',
+            'name' => "Addtract Help",
             'has_articles' => true,
             'has_categories' => true,
             'categories' => [],

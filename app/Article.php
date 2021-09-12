@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -17,10 +18,13 @@ class Article extends Model
      */
     protected $appends = [
         'route',
-        'photo',
+        'photo_url',
+        'pattern',
         'heading',
         'categories',
-        'breadcrumbs'
+        'breadcrumbs',
+        'age',
+        'author'
     ];
     /**
      * @var mixed
@@ -46,12 +50,26 @@ class Article extends Model
      */
     public function getBreadcrumbsAttribute(): array
     {
-        $breadcrumbs = $this->category->breadcrumbs;
+        if(!empty($this->article_category_id)){
+            $breadcrumbs = $this->category->breadcrumbs;
+        }
+        else{
+            $breadcrumbs = [];
+            $breadcrumbs[] = [
+                'id' => null,
+                'slug' => null,
+                'route' => '/',
+                'name' => 'Addtract Blog',
+                'has_articles' => true,
+                'has_categories' => true,
+                'categories' => [],
+            ];
+        }
 
         $breadcrumbs[] = [
             'id' => $this->id,
             'slug' => $this->slug,
-            'route' => '/help/blog/' . $this->slug,
+            'route' => '/article/' . $this->slug,
             'name' => $this->title,
             'has_articles' => true,
             'has_categories' => true,
@@ -72,7 +90,35 @@ class Article extends Model
     /**
      * @return string
      */
-    public function getPhotoAttribute()
+    public function getAgeAttribute(): string
+    {
+       return Carbon::parse($this->created_at)->diffForHumans();
+    }
+
+    /**
+     * @return string
+     */
+    public function getAuthorAttribute(): string
+    {
+        return 'Addtract Team';
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhotoUrlAttribute()
+    {
+        $photo = $this->photo;
+        if (file_exists(public_path('storage/article/' . $photo))) {
+            $photo = url('/storage/article/' . $photo);
+        }
+        return $photo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPatternAttribute()
     {
         $rand = str_pad(rand(1, 17), 2, "0", STR_PAD_LEFT);
         return "/patterns/pattern-{$rand}.svg";
@@ -133,6 +179,6 @@ class Article extends Model
      */
     public function categories(): BelongsToMany
     {
-        return $this->belongsToMany('App\ArticleCategory', 'category_articles', 'article_category_id', 'article_id');
+        return $this->belongsToMany('App\ArticleCategory', 'category_articles', 'article_id', 'article_category_id');
     }
 }

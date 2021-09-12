@@ -13,7 +13,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'r-articles-blog',
+  name: 'r-blog-articles',
   components: {},
   data () {
     return {}

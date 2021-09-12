@@ -18,15 +18,15 @@ viewBox="0 0 32421.96 15578.45"
     .fil6 {fill:#D8F6FF}
     .fil5 {fill:#FBD13E}
     .fil7 {fill:#FDCD6C}
-    .fil1 {fill:#00C2FF;fill-opacity:0.149020}
+    .fil1 {fill:#00C2FF;fill-opacity:0.15}
     .fil0 {fill:#00C2FF;fill-opacity:0.258824}
-    .fil19 {fill:#00C2FF;fill-opacity:0.490196}
-    .fil17 {fill:#3B9CFF;fill-opacity:0.490196}
-    .fil16 {fill:#99D2FF;fill-opacity:0.490196}
-    .fil18 {fill:#99E7FF;fill-opacity:0.490196}
-    .fil20 {fill:#D8F6FF;fill-opacity:0.490196}
-    .fil21 {fill:#DDDCDD;fill-opacity:0.490196}
-    .fil15 {fill:#FBD13E;fill-opacity:0.490196}
+    .fil19 {fill:#00C2FF;fill-opacity:0.45}
+    .fil17 {fill:#3B9CFF;fill-opacity:0.45}
+    .fil16 {fill:#99D2FF;fill-opacity:0.45}
+    .fil18 {fill:#99E7FF;fill-opacity:0.45}
+    .fil20 {fill:#D8F6FF;fill-opacity:0.45}
+    .fil21 {fill:#DDDCDD;fill-opacity:0.45}
+    .fil15 {fill:#FBD13E;fill-opacity:0.45}
     .fil12 {fill:#00C2FF;fill-opacity:0.501961}
     .fil11 {fill:#3B9CFF;fill-opacity:0.501961}
     .fil13 {fill:#D8F6FF;fill-opacity:0.501961}

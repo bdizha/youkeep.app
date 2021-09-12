@@ -1,11 +1,11 @@
 <template>
-  <div class="r-border-radius-circle">
+  <div class="r-border-circle">
     <a-card :class="getBgClass()">
       <div class="r-p-24">
-        <div class="r-border-radius-circle">
+        <div class="r-border-circle">
           <a-card :class="getBgClass()">
             <div class="r-p-24">
-              <div class="r-border-radius-circle">
+              <div class="r-border-circle">
                 <a-card class="r-bg-white">
                   <r-avatar :data-src="image" :size="300"
                             class="r-avatar-block"

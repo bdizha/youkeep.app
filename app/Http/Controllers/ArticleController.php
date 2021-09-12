@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\ArticleCategory;
-use App\ArticleType;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    private $articleCategory;
+
     /**
      * Find categories
      *
@@ -22,10 +23,10 @@ class ArticleController extends Controller
         $this->resourceType = $request->get('resource_type', ArticleCategory::TYPE_BLOG);
 
         $articles = Article::whereHas('categories', function ($query) {
-                $query->where('article_categories.resource_type', $this->resourceType);
-            })
+            $query->where('article_categories.resource_type', $this->resourceType);
+        })
+            ->with('categories')
             ->where('app_id', $this->appId)
-            ->where('resource_type', $this->resourceType)
             ->take(24)
             ->get();
 
@@ -46,10 +47,11 @@ class ArticleController extends Controller
         $slug = $request->get('slug', null);
 
         $article = Article::where('slug', $slug)
+            ->with('categories')
             ->first();
 
-        session(['blog' => $article]);
-        $response['blog'] = $article;
+        session(['article' => $article]);
+        $response['article'] = $article;
 
         return response()->json($response, 200);
     }
@@ -65,17 +67,20 @@ class ArticleController extends Controller
         $response = [];
         $this->appId = $request->get('app_id', env('APP_ID'));
         $this->slug = $request->get('slug', null);
+        $this->resourceType = $request->get('resource_type', ArticleCategory::TYPE_BLOG);
 
-        $articleCategory = ArticleCategory::where('slug', $this->slug)
+        $this->articleCategory = ArticleCategory::where('slug', $this->slug)
+            ->where('resource_type', $this->resourceType)
             ->first();
 
-        $articles = Article::orderBy('created_at', 'DESC')
-            ->with('categories')
-            ->where('article_category_id', $articleCategory->id)
+        $articles = Article::whereHas('categories', function ($query) {
+            $query->where('category_articles.article_category_id', $this->articleCategory->id);
+        })
+            ->orderBy('created_at', 'DESC')
             ->take(24)
             ->get();
 
-        $response['article_category'] = $articleCategory;
+        $response['article_category'] = $this->articleCategory;
         $response['articles'] = $articles;
 
         return response()->json($response, 200);

@@ -26,11 +26,11 @@ viewBox="0 0 44026.66 44026.66"
     .fil19 {fill:#99D2FF;fill-rule:nonzero}
     .fil25 {fill:#B9DFFF;fill-rule:nonzero}
     .fil4 {fill:#00C2FF;fill-opacity:0.019608}
-    .fil1 {fill:#3B9CFF;fill-opacity:0.090196}
-    .fil18 {fill:#3B9CFF;fill-opacity:0.188235}
-    .fil17 {fill:#99D2FF;fill-opacity:0.341176}
-    .fil20 {fill:#99D2FF;fill-rule:nonzero;fill-opacity:0.341176}
-    .fil0 {fill:#e2f8ff;fill-opacity:0.490196}
+    .fil1 {fill:#3B9CFF;fill-opacity:0.09}
+    .fil18 {fill:#3B9CFF;fill-opacity:0.15}
+    .fil17 {fill:#99D2FF;fill-opacity:0.33}
+    .fil20 {fill:#99D2FF;fill-rule:nonzero;fill-opacity:0.33}
+    .fil0 {fill:#e2f8ff;fill-opacity:0.45}
     .fil3 {fill:#B9DFFF;fill-opacity:0.509804}
     .fil2 {fill:white;fill-opacity:0.701961}
     .fil16 {fill:white;fill-opacity:0.721569}
@@ -41,7 +41,7 @@ viewBox="0 0 44026.66 44026.66"
   <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="30358.64" y1="7965.36" x2="31794.2" y2="5713.17">
    <stop offset="0" style="stop-opacity:1; stop-color:#FEDA75"/>
    <stop offset="0.239216" style="stop-opacity:1; stop-color:#FA7E1E"/>
-   <stop offset="0.490196" style="stop-opacity:1; stop-color:#D62976"/>
+   <stop offset="0.45" style="stop-opacity:1; stop-color:#D62976"/>
    <stop offset="0.760784" style="stop-opacity:1; stop-color:#962FBF"/>
    <stop offset="1" style="stop-opacity:1; stop-color:#4F5BD5"/>
   </linearGradient>

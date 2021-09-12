@@ -55,6 +55,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'article' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/article'),
+            'url' => env('APP_URL') . '/storage/article',
+            'visibility' => 'public',
+        ],
+
         'testimonial' => [
             'driver' => 'local',
             'root' => storage_path('app/public/testimonial'),
