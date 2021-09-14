@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="11.9062mm" height="11.9062mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 85.58 85.58"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="11.9063mm" height="11.9062mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 88.74 88.74"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil1 {fill:#1D9CD3}
-    .fil0 {fill:#F56F45}
+    .fil0 {fill:none}
+    .fil2 {fill:#006648}
+    .fil1 {fill:#FFC83A}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_2164517181360">
+  <g id="_2286915725568">
+   <rect class="fil0" x="0" y="-0" width="88.74" height="88.74"/>
    <g>
-    <polygon class="fil0" points="46.84,23.07 31.98,41.44 16.01,23.83 31.37,5.09 "/>
-    <polygon class="fil0" points="18.31,64.1 50.05,26.25 63.78,42.76 58.92,48.65 31.41,80.49 "/>
-    <polygon class="fil0" points="12.87,26.98 28.78,44.67 15.23,61.04 -0,42.73 "/>
+    <path class="fil1" d="M51.72 0.96c-21.56,-4.57 -40.34,7.55 -42.73,28.71 20.07,3.3 38.46,-8.75 42.73,-28.71z"/>
+    <path class="fil1" d="M43.3 56.07c-3.11,-17.96 -19.42,-25.81 -34.48,-23.09 4.08,16.21 17.73,26.06 34.48,23.09z"/>
+    <path class="fil2" d="M37.18 87.78c21.56,4.57 40.34,-7.55 42.73,-28.71 -20.07,-3.3 -38.46,8.75 -42.73,28.71z"/>
+    <path class="fil2" d="M45.43 32.79c3.11,17.96 19.42,25.81 34.47,23.09 -4.08,-16.21 -17.73,-26.06 -34.47,-23.09z"/>
    </g>
-   <path class="fil1" d="M37.68 0c21.34,0 47.9,14.37 47.9,42.23 0,30.25 -22.58,43.35 -47.9,43.35l36.07 -42.37 -36.07 -43.2z"/>
   </g>
  </g>
 </svg>

@@ -19,7 +19,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                          For Suppliers
+                          For Farmers
                         </h3>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -36,7 +36,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Get the benefits of the Addtract platform at a price you can afford and enjoy the best return on investment (ROI) on the market.
+                          Get the benefits of the Spazaland platform at a price you can afford and enjoy the best return on investment (ROI) on the market.
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -44,7 +44,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          With an online business platform, millions of buyers, and tons of selling tools on Addtract, it’s the all-in-one
+                          With an online business platform, millions of buyers, and tons of selling tools on Spazaland, it’s the all-in-one
                           marketplace you deserve.
                         </p>
                       </a-col>
@@ -108,7 +108,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                    Why <span class="r-text-white">Sell</span> online at Addtract?
+                    Why <span class="r-text-white">Sell</span> online at Spazaland?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
@@ -116,7 +116,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h2 class="r-heading">
-                    Addtract <span class="r-text-primary">makes</span> Your categories visible to millions of buyers.
+                    Spazaland <span class="r-text-primary">makes</span> Your categories visible to millions of buyers.
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 12 }"
@@ -124,8 +124,8 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    That's because Addtract is seamlessly integrated into your realtime catalog and your money shows up
-                    in your Addtract account with every sale.
+                    That's because Spazaland is seamlessly integrated into your realtime catalog and your money shows up
+                    in your Spazaland account with every sale.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 12 }"

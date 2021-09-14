@@ -5,7 +5,7 @@
            :xs="{ span: 24 }"
     >
       <h2 class="r-heading-light r-text-primary">
-        Why Addtract?
+        Why Spazaland?
       </h2>
     </a-col>
     <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -13,7 +13,7 @@
            :xs="{ span: 24 }"
     >
       <p class="r-text-medium">
-        Addtract is the leading product discovery and sourcing platform where retailers and suppliers discover, connect, and grow their business.
+        Spazaland is the leading product discovery and sourcing platform where retailers and suppliers discover, connect, and grow their business.
       </p>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"

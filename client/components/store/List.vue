@@ -1,18 +1,18 @@
 <template>
   <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }">
-      <a-row v-if="hasStores && !processes.isTray" :gutter="[12,12]" align="middle" justify="start" type="flex">
+      <a-row v-if="hasfarmers && !processes.isTray" :gutter="[12,12]" align="middle" justify="start" type="flex">
         <a-col
-          v-for="(store, index) in stores.data"
+          v-for="(store, index) in farmers.data"
           :key="index"
           :class="{'r-last_item': index == totalCount - 1 }"
-          :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :test="hasStores"
+          :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :test="hasfarmers"
           :xs="{ span: 24 }"
         >
           <r-store-item :size="90" :store="store"></r-store-item>
         </a-col>
-        <a-col v-if="!hasStores" :span="24">
-          <a-empty description="No stores were found! Please try other store categories."
+        <a-col v-if="!hasfarmers" :span="24">
+          <a-empty description="No farmers were found! Please try other store categories."
                    image="/images/icon_pattern_grey.svg"
           />
         </a-col>
@@ -38,16 +38,16 @@ export default {
   computed: {
     totalCount () {
       let totalCount = 0
-      if (this.hasStores) {
-        totalCount = this.stores.data.length
+      if (this.hasfarmers) {
+        totalCount = this.farmers.data.length
       }
       return totalCount
     },
     ...mapGetters({
       store: 'base/store',
-      stores: 'base/stores',
+      farmers: 'base/farmers',
       categories: 'base/storeCategories',
-      hasStores: 'base/hasStores',
+      hasfarmers: 'base/hasfarmers',
       processes: 'base/processes',
       search: 'base/search'
     })
@@ -58,10 +58,10 @@ export default {
   methods: {
     async payload () {
       await this.fetchStoreCategories()
-      await this.fetchStores()
+      await this.fetchfarmers()
     },
-    async fetchStores () {
-      await this.$store.dispatch('base/onStores', this.params)
+    async fetchfarmers () {
+      await this.$store.dispatch('base/onfarmers', this.params)
     },
     async fetchStoreCategories () {
       const params = {
@@ -73,7 +73,7 @@ export default {
     onFilter (option) {
       this.params = this.search.params
       this.params.category_id = option.key
-      this.fetchStores()
+      this.fetchfarmers()
     },
     async onStore (store) {
       await this.$store.dispatch('base/onNotice', 'Enjoy your business at ' + store.name)

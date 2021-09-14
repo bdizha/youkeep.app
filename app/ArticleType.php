@@ -42,7 +42,7 @@ class ArticleType extends Model
             'id' => null,
             'slug' => null,
             'route' => '/help',
-            'name' => 'Addtract Help',
+            'name' => 'Spazaland Help',
             'has_articles' => true,
             'has_categories' => true,
             'categories' => [],

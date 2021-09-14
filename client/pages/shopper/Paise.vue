@@ -9,17 +9,17 @@
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
-                Addtract Marketplace
+                Spazaland Marketplace
               </h4>
               <h1 class="r-heading">
                 <span class="r-text-primary">Shop More,</span><br>
                 <span>Earn more</span>
               </h1>
               <h4 class="r-heading-light">
-                All your earnings are automatically added into your Addtract wallet.
+                All your earnings are automatically added into your Spazaland wallet.
               </h4>
               <p class="r-text-normal">
-                Unlike other buy-now-pay-later plans, Addtract lets shoppers use their existing credit card for
+                Unlike other buy-now-pay-later plans, Spazaland lets shoppers use their existing credit card for
                 the easiest most intuitive checkout.
               </p>
             </template>
@@ -261,7 +261,7 @@
                             Higher average order rate
                           </h4>
                           <p class="r-text-normal">
-                            Addtract is the only buy-now-pay-later plan that lets shoppers set up payment plans with
+                            Spazaland is the only buy-now-pay-later plan that lets shoppers set up payment plans with
                             their
                             existing credit card without interest charges or fees. This keeps their payments small so
                             they
@@ -325,7 +325,7 @@
                             More qualified buyers
                           </h4>
                           <p class="r-text-normal">
-                            Unlike other buy-now-pay-later plans, Addtract isn’t new financing. Addtract lets online
+                            Unlike other buy-now-pay-later plans, Spazaland isn’t new financing. Spazaland lets online
                             shoppers
                             set up monthly payments at checkout with their existing credit so they don’t need to carry
                             new
@@ -392,11 +392,11 @@
                             thousands
                             of
                             buyers
-                            and a monthly expansion to new cities, Addtract was named the fastest growing retail
+                            and a monthly expansion to new cities, Spazaland was named the fastest growing retail
                             platform
                             company in
                             South Africa in 2020.
-                            Addtract thinks it can be done differently: faster, easier and cheaper. The idea is
+                            Spazaland thinks it can be done differently: faster, easier and cheaper. The idea is
                             simple.</p>
                         </a-col>
                       </a-row>

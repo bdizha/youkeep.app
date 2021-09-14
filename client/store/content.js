@@ -4,47 +4,47 @@ import axios from 'axios'
 export const state = () => ({
   products: [
     {
-      title: 'X Checkout',
+      title: 'Spaza Farm',
       slug: 'x-checkout',
-      heading: ' An <span class="r-text-primary">automated</span> B2B checkout experience.',
-      summary: 'The intuitive and flexible checkout experience created for B2B ecommerce. ',
-      content: 'Buyer can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo. We made implementing Addtract easy and smooth with different options for you to choose from. We understand the complexities of your business and make sure our features answer your needs as a B2B merchant or marketplace. Marketplaces get their fee payout immediately as well.',
+      heading: ' An <span class="r-text-primary">automated</span> farming experience.',
+      summary: 'The intuitive and flexible farming experience created for farmers and retailers. ',
+      content: 'Retailer can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo. We made implementing Spazaland easy and smooth with different options for you to choose from. We understand the complexities of your business and make sure our features answer your needs as a B2B merchant or marketplace. Marketplaces get their fee payout immediately as well.',
       image: 'service-23.svg',
       features: [
         {
           title: 'Auto store',
-          content: 'You can start using the platform today with zero integration involved, integrate the checkout within a few hours of work, implement using the API capabilities, or use pre-built Addtract integrations with Magento, BigCommerce, Salesforce, and Quickbooks.',
+          content: 'You can start using the platform today with zero integration involved, integrate the checkout within a few hours of work, implement using the API capabilities, or use pre-built Spazaland integrations with Magento, BigCommerce, Salesforce, and Quickbooks.',
           image: 'service-06.svg'
         },
         {
           title: 'Auto serve',
-          content: 'Built as building blocks for full customization. Using the Addtract API capabilities, you can configure and modify the experience to accommodate your buyers or vendors’ needs. Developers can click here to get access to our API docs.',
+          content: 'Built as building blocks for full customization. Using the Spazaland API capabilities, you can configure and modify the experience to accommodate your buyers or vendors’ needs. Developers can click here to get access to our API docs.',
           image: 'service-13.svg'
         },
         {
           title: 'Auto transact',
-          content: 'Self-served white-label invoicing. Buyers can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo.',
+          content: 'Self-served white-label invoicing. Retailers can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo.',
           image: 'service-01.svg'
         },
         {
           title: 'Auto terminal',
-          content: 'Addtract pre-qualifies buyers, or does so real-time within seconds, at checkout for those who haven’t yet been qualified, covering net 30,60,90 and up to 120 days. Suppliers get paid upfront for issued invoices, while buyers can pay with terms.',
+          content: 'Spazaland pre-qualifies buyers, or does so real-time within seconds, at checkout for those who haven’t yet been qualified, covering net 30,60,90 and up to 120 days. Farmers get paid upfront for issued invoices, while buyers can pay with terms.',
           image: 'service-25.svg'
         }
       ],
       row: 1
     },
     {
-      title: 'X Payment',
+      title: 'Spaza Credit',
       slug: 'x-payment',
       heading: '<span class="r-text-primary">Adaptive</span> and instant supplier payouts.',
       summary: 'Competitive financing options designed for fast-growing ecommerce companies.',
-      content: 'Easily manage and pay out third party vendors globally in local currency. Charge marketplace commission and apply fees to vendors without touching the funds.  We would charge the commission on behalf of the marketplace and transfer it to their Addtract account. Addtract will automatically trigger payment to the vendor after the buyer has paid. ',
+      content: 'Easily manage and pay out third party vendors globally in local currency. Charge marketplace commission and apply fees to vendors without touching the funds.  We would charge the commission on behalf of the marketplace and transfer it to their Spazaland account. Spazaland will automatically trigger payment to the vendor after the buyer has paid. ',
       image: 'service-04.svg',
       features: [
         {
           title: 'Auto connect',
-          content: 'Addtract would take care of collections from the buyers and payouts to the vendors so the marketplace can remain out of the funds flow.',
+          content: 'Spazaland would take care of collections from the buyers and payouts to the vendors so the marketplace can remain out of the funds flow.',
           image: 'service-30.svg'
         },
         {
@@ -59,18 +59,18 @@ export const state = () => ({
         },
         {
           title: 'Auto border',
-          content: 'Reduce international barriers and grow your business 10x. Addtract is powering easier and seamless methods to process international, once-off and  recurring, payments.',
+          content: 'Reduce international barriers and grow your business 10x. Spazaland is powering easier and seamless methods to process international, once-off and  recurring, payments.',
           image: 'service-32.svg'
         }
       ],
       row: 1
     },
     {
-      title: 'X Order',
+      title: 'Spaza Invest',
       slug: 'x-order',
       heading: '<span class="r-text-primary">Faster</span> deliveries with our nationwide fulfillment network',
       summary: 'Manage orders, warehouse, inventory, and deliver to your buyers fast and securely.',
-      content: 'Addtract\'s fulfillment services equip brands of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-consumer and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business while you exceed your customers\' expectations',
+      content: 'Spazaland\'s fulfillment services equip brands of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-consumer and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business while you exceed your customers\' expectations',
       image: 'service-17.svg',
       features: [
         {
@@ -85,16 +85,16 @@ export const state = () => ({
         },
         {
           title: 'Auto pilot',
-          content: 'Analyze aggregate and SKU-level order data, on-hand inventory information, and inbound and outbound shipments all in a single easy-to-navigate dashboard. Addtract automatically pulls in product and order data from all major ecommerce marketplaces and platforms, including our own.',
+          content: 'Analyze aggregate and SKU-level order data, on-hand inventory information, and inbound and outbound shipments all in a single easy-to-navigate dashboard. Spazaland automatically pulls in product and order data from all major ecommerce marketplaces and platforms, including our own.',
           image: 'service-26.svg'
         }
       ],
       row: 1
     },
     {
-      title: 'X Terms',
+      title: 'Spaza Inputs',
       slug: 'x-terms',
-      heading: '<span class="r-text-primary">Buyers</span> set up payment plans while suppliers get paid instantly.',
+      heading: '<span class="r-text-primary">Retailers</span> set up payment plans while suppliers get paid instantly.',
       summary: 'Competitive financing options designed for fast-growing ecommerce companies.',
       content: 'Real-time financing assessment within seconds for each buyer, full collection handling, 100% of the risk on us - 0% on you. The suppliers get paid the full invoice amount instantly, and bear 0% of the credit risk. We handle the collections and 100% of the risk, each time.',
       image: 'service-08.svg',
@@ -118,7 +118,7 @@ export const state = () => ({
       row: 2
     },
     {
-      title: 'X Customer',
+      title: 'Spaza Energy',
       slug: 'x-customer',
       heading: '<span class="r-text-primary">Increase</span> sales with a customer service team',
       summary: 'Keep lifetime connections by giving your customers top-tier multi-channel support.',
@@ -132,23 +132,23 @@ export const state = () => ({
         },
         {
           title: 'Auto promoter',
-          content: 'Engage with customers via live chat, SMS, messenger, phone, email, social messages, and more. With the ability to answer product and order related questions, the Addtract customer service as a service group turns shoppers into loyal fans of your brand.',
+          content: 'Engage with customers via live chat, SMS, messenger, phone, email, social messages, and more. With the ability to answer product and order related questions, the Spazaland customer service as a service group turns shoppers into loyal fans of your brand.',
           image: 'service-19.svg'
         },
         {
           title: 'Auto history',
-          content: 'We made implementing Addtract easy and smooth with different options for you to choose from. You can start using the platform today with zero integration involved, integrate the checkout within a few hours of work, implement using the API capabilities, or use pre-built Addtract integrations with Magento, BigCommerce, Salesforce, and Quickbooks.',
+          content: 'We made implementing Spazaland easy and smooth with different options for you to choose from. You can start using the platform today with zero integration involved, integrate the checkout within a few hours of work, implement using the API capabilities, or use pre-built Spazaland integrations with Magento, BigCommerce, Salesforce, and Quickbooks.',
           image: 'service-11.svg'
         }
       ],
       row: 2
     },
     {
-      title: 'X Finance',
+      title: 'Spaza Finance',
       slug: 'x-finance',
       heading: '<span class="r-text-primary">Accept</span> any payment, any way applicable.',
-      summary: 'Automated bookkeeping, payable and receivables management for businesses.',
-      content: 'Funds-in are tracked and updated in your ERP seamlessly. Develop your brand’s positioning and pricing strategy and optimize your business operations. Reduce overhead and save time with invoice reconciliation and settlement and A/R management. Buyer can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo.',
+      summary: 'Automated bookkeeping, payable and investments management for businesses.',
+      content: 'Funds-in are tracked and updated in your ERP seamlessly. Develop your brand’s positioning and pricing strategy and optimize your business operations. Reduce overhead and save time with invoice reconciliation and settlement and A/R management. Retailer can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo.',
       image: 'service-04.svg',
       features: [
         {
@@ -178,7 +178,7 @@ export const state = () => ({
         },
         {
           title: 'Auto bookkeeper',
-          content: 'After receiving the funds from the customer and making sure they match the invoice, we reimburse your Addtract account, and make the funds available for your withdrawal.',
+          content: 'After receiving the funds from the customer and making sure they match the invoice, we reimburse your Spazaland account, and make the funds available for your withdrawal.',
           image: 'service-08.svg'
         }
       ],
@@ -189,9 +189,9 @@ export const state = () => ({
     {
       title: 'Unlimited access to API docs',
       slug: 'x-checkout',
-      heading: ' An <span class="r-text-primary">automated</span> B2B checkout experience.',
-      summary: 'The intuitive and flexible checkout experience created for B2B ecommerce. ',
-      content: 'Buyer can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo. We made implementing Addtract easy and smooth with different options for you to choose from. We understand the complexities of your business and make sure our features answer your needs as a B2B merchant or marketplace. Marketplaces get their fee payout immediately as well.',
+      heading: ' An <span class="r-text-primary">automated</span> farming experience.',
+      summary: 'The intuitive and flexible farming experience created for farmers and retailers. ',
+      content: 'Retailer can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo. We made implementing Spazaland easy and smooth with different options for you to choose from. We understand the complexities of your business and make sure our features answer your needs as a B2B merchant or marketplace. Marketplaces get their fee payout immediately as well.',
       image: 'service-06.svg',
       row: 1
     },
@@ -200,7 +200,7 @@ export const state = () => ({
       slug: 'x-payment',
       heading: '<span class="r-text-primary">Adaptive</span> and instant supplier payouts.',
       summary: 'Competitive financing options designed for fast-growing ecommerce companies.',
-      content: 'Easily manage and pay out third party vendors globally in local currency. Charge marketplace commission and apply fees to vendors without touching the funds.  We would charge the commission on behalf of the marketplace and transfer it to their Addtract account. Addtract will automatically trigger payment to the vendor after the buyer has paid. ',
+      content: 'Easily manage and pay out third party vendors globally in local currency. Charge marketplace commission and apply fees to vendors without touching the funds.  We would charge the commission on behalf of the marketplace and transfer it to their Spazaland account. Spazaland will automatically trigger payment to the vendor after the buyer has paid. ',
       image: 'service-04.svg',
       row: 1
     },
@@ -209,14 +209,14 @@ export const state = () => ({
       slug: 'x-order',
       heading: '<span class="r-text-primary">Faster</span> deliveries with our nationwide fulfillment network',
       summary: 'Manage orders, warehouse, inventory, and deliver to your buyers fast and securely.',
-      content: 'Addtract\'s fulfillment services equip brands of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-consumer and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business. ',
+      content: 'Spazaland\'s fulfillment services equip brands of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-consumer and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business. ',
       image: 'service-14.svg',
       row: 1
     },
     {
       title: 'Integration assistance',
       slug: 'x-plans',
-      heading: '<span class="r-text-primary">Buyers</span> set up payment plans while suppliers get paid instantly.',
+      heading: '<span class="r-text-primary">Retailers</span> set up payment plans while suppliers get paid instantly.',
       summary: 'Competitive financing options designed for fast-growing ecommerce companies.',
       content: 'Real-time financing assessment within seconds for each buyer, full collection handling, 100% of the risk on us - 0% on you. The suppliers get paid the full invoice amount instantly, and bear 0% of the credit risk. We handle the collections and 100% of the risk, each time.',
       image: 'service-08.svg',
@@ -280,11 +280,11 @@ export const state = () => ({
   industries: [],
   reasons: [
     {
-      label: 'I would like to join Addtract',
+      label: 'I would like to join Spazaland',
       key: 1
     },
     {
-      label: 'I want to partner with Addtract',
+      label: 'I want to partner with Spazaland',
       key: 2
     },
     {

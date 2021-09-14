@@ -5,16 +5,16 @@
     >
       <a-row :gutter="[24,24]" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <a-card style="width: 100%;" title="YOUR STORES">
+          <a-card style="width: 100%;" title="YOUR farmers">
             <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
               <a-col :lg="{ span: 12 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }" class="r-store-page"
               >
                 <div class="r-text-small">
-                  <template v-if="hasStores">
-                    Here you can manage all your stores.
+                  <template v-if="hasfarmers">
+                    Here you can manage all your farmers.
                   </template>
-                  <template v-if="!hasStores">
+                  <template v-if="!hasfarmers">
                     You don't have a store set up yet.
                   </template>
                 </div>
@@ -66,8 +66,8 @@ export default {
   },
   computed: mapGetters({
     modal: 'base/modal',
-    stores: 'account/stores',
-    hasStores: 'account/hasStores'
+    farmers: 'account/farmers',
+    hasfarmers: 'account/hasfarmers'
   }),
   methods: {
     created () {

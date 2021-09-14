@@ -28,10 +28,10 @@
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading">
-                Find the stores that you want
+                Find the farmers that you want
               </h4>
               <p class="r-text-normal">
-                Addtract helps buyers discover stores, purchase products, and more. Whatever your business sells, we
+                Spazaland helps buyers discover farmers, purchase products, and more. Whatever your business sells, we
                 help you grow.
               </p>
             </template>

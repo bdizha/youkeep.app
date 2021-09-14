@@ -8,9 +8,9 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str1 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256}
-    .str0 {stroke:#FBD13E;stroke-width:20;stroke-miterlimit:22.9256}
-    .str2 {stroke:#FBD13E;stroke-width:7.62;stroke-miterlimit:22.9256}
+    .str1 {stroke:#006648;stroke-width:20;stroke-miterlimit:22.9256}
+    .str0 {stroke:#FFC83A;stroke-width:20;stroke-miterlimit:22.9256}
+    .str2 {stroke:#FFC83A;stroke-width:7.62;stroke-miterlimit:22.9256}
     .fil0 {fill:none}
     .fil13 {fill:#FEF8FB}
     .fil11 {fill:#F3FAFE}
@@ -18,13 +18,13 @@
     .fil15 {fill:#C0C6CB}
     .fil18 {fill:#B5ABA7}
     .fil16 {fill:#8BA1BB}
-    .fil7 {fill:#3B9CFF}
+    .fil7 {fill:#006648}
     .fil6 {fill:#E7F2FC}
     .fil10 {fill:none}
     .fil8 {fill:none}
-    .fil12 {fill:#FBD13E}
-    .fil4 {fill:#FBD13E}
-    .fil19 {fill:#FBD13E}
+    .fil12 {fill:#FFC83A}
+    .fil4 {fill:#FFC83A}
+    .fil19 {fill:#FFC83A}
     .fil5 {fill:none}
     .fil9 {fill:none}
     .fil17 {fill:white}

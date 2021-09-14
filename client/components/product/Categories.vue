@@ -1,7 +1,7 @@
 <template>
   <a-row align="middle" justify="start" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-spin-holder r-categories">
-      <a-collapse default-active-key="stores" expandIconPosition="right">
+      <a-collapse default-active-key="farmers" expandIconPosition="right">
         <a-collapse-panel v-for="(category, index) in product.categories"
                           v-if="category.has_products"
                           :key="category.name"
@@ -15,9 +15,9 @@
           >
           </r-product-products>
         </a-collapse-panel>
-        <a-collapse-panel key="stores"
+        <a-collapse-panel key="farmers"
                           class="r-collapse-panel"
-                          header="Explore similar stores"
+                          header="Explore similar farmers"
         >
           <r-store-list></r-store-list>
         </a-collapse-panel>

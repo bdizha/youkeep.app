@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="23.8124mm" height="23.8125mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 959.8 959.8"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="23.8125mm" height="23.8126mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 2640.98 2641"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil0 {fill:white}
+    .fil0 {fill:none}
+    .fil1 {fill:white}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_2164517181776">
+  <g id="_2286915701888">
+   <rect class="fil0" x="-0" y="0.01" width="2640.98" height="2640.98"/>
    <g>
-    <polygon class="fil0" points="525.37,258.73 358.64,464.74 179.61,267.3 351.87,57.1 "/>
-    <polygon class="fil0" points="205.33,718.93 561.3,294.39 715.38,479.56 660.78,545.63 352.32,902.71 "/>
-    <polygon class="fil0" points="144.35,302.55 322.81,500.98 170.87,684.62 -0,479.24 "/>
+    <path class="fil1" d="M1539.15 28.53c-641.62,-135.91 -1200.6,224.67 -1271.83,854.4 597.3,98.15 1144.68,-260.5 1271.83,-854.4z"/>
+    <path class="fil1" d="M1288.79 1668.75c-92.44,-534.65 -578.07,-768.24 -1026.02,-687.12 121.34,482.4 527.71,775.45 1026.02,687.12z"/>
+    <path class="fil1" d="M1106.39 2612.47c641.62,135.91 1200.6,-224.67 1271.83,-854.4 -597.3,-98.15 -1144.68,260.49 -1271.83,854.4z"/>
+    <path class="fil1" d="M1352.05 975.96c92.43,534.65 578.07,768.24 1026.01,687.12 -121.33,-482.4 -527.71,-775.45 -1026.01,-687.12z"/>
    </g>
-   <path class="fil0" d="M422.62 0c239.34,0 537.19,161.22 537.19,473.63 0,339.23 -253.28,486.18 -537.19,486.18l404.51 -475.27 -404.51 -484.54z"/>
   </g>
  </g>
 </svg>

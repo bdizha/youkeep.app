@@ -26,7 +26,7 @@
               <a-row :gutter="[24,24]" align="top" class="r-text-left" justify="center" type="flex">
                 <a-col v-for="(value, index) in values"
                        :key="index"
-                       :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :lg="{ span: 24 }" :md="{ span: 24 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
@@ -66,28 +66,16 @@ export default {
     return {
       values: [
         {
-          title: 'Accessible',
-          content: 'Equal access to high-yield savings rates and affordable credit that grows.'
-        },
-        {
-          title: 'Transparent',
-          content: 'Deliver open and timely communications.'
-        },
-        {
-          title: 'Flexible',
-          content: 'Listen, collaborate, improve. Repeat.'
-        },
-        {
           title: 'Bold',
-          content: 'Ready to take on the day’s challenge.'
+          content: 'It’s about dreaming big and changing the game. We are proud to create an exciting and dynamic services forever. '
         },
         {
-          title: 'Authentic',
-          content: 'Remove fees, fine print, and complex systems.'
+          title: 'Respect',
+          content: 'We respect all individuals and cultures and value their contributions in all aspects of the business with genuine appreciation. '
         },
         {
-          title: 'Supportive',
-          content: 'Connect with buyers and each other.'
+          title: 'Creativity',
+          content: 'Listen, collaborate, improve. Repeat. We always ask why, we challenge the status quo, and we innovate at every turn. '
         }
       ]
     }

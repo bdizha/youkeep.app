@@ -15,7 +15,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                Why 1000s of retailers <span class="r-text-primary">choose</span> Addtract
+                Why 1000s of retailers <span class="r-text-primary">choose</span> Spazaland
               </h2>
             </a-col>
             <a-col :lg="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -36,7 +36,7 @@
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
                           Accept all major credit cards - your buyers don't even need an account to place an
-                          order on the Addtract marketplace.
+                          order on the Spazaland marketplace.
                         </p>
                       </a-col>
                     </a-row>
@@ -61,7 +61,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          When an order is completed, the money shows up in your Addtract account in with every order you receive.
+                          When an order is completed, the money shows up in your Spazaland account in with every order you receive.
                         </p>
                       </a-col>
                     </a-row>
@@ -86,7 +86,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          Automatic fraud screening and our Supplier Protection Policy help keep you and your buyers
+                          Automatic fraud screening and our Farmer Protection Policy help keep you and your buyers
                           safe and insured.
                         </p>
                       </a-col>
@@ -124,7 +124,7 @@
                          :xs="{ span: 24 }"
                   >
                     <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                      Addtract for business
+                      Spazaland for business
                     </h4>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -140,7 +140,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                     Addtract for Business gives you an easy
+                     Spazaland for Business gives you an easy
                       way to
                       manage your selling channel needs.
                     </p>
@@ -150,7 +150,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-normal">
-                      Built for retail businesses, it offers a clear view into
+                      Built for farming businesses, it offers a clear view into
                       product
                       purchase activity with automated billing, expensing, and reporting.
                     </p>
@@ -210,7 +210,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      Get paid for what you sell on Addtract, on your own website, or in online
+                      Get paid for what you sell on Spazaland, on your own website, or in online
                       classifieds and forums.
                     </p>
                   </a-col>
@@ -295,7 +295,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-normal">
-                      Addtract gives you a dedicated e-commerce expert supported by a team of knowledgeable
+                      Spazaland gives you a dedicated e-commerce expert supported by a team of knowledgeable
                       small
                       business
                       experts.
@@ -330,7 +330,7 @@ export default {
   data () {
     return {
       features: [
-        { content: 'Access Addtract via mobile or desktop - we go where you go' },
+        { content: 'Access Spazaland via mobile or desktop - we go where you go' },
         { content: 'Quickly answer categorization requests from your team' },
         { content: 'Contact your team with our simple messaging feature' },
         { content: 'Get operating support at any time within our work ours' }

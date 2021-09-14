@@ -21,11 +21,11 @@
      <style type="text/css">
    <![CDATA[
     @font-face { font-family:"Arial";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
-    .str0 {stroke:#3B9CFF;stroke-width:18.63;stroke-miterlimit:22.9256}
+    .str0 {stroke:#006648;stroke-width:18.63;stroke-miterlimit:22.9256}
     .str4 {stroke:#0069CD;stroke-width:18.63;stroke-miterlimit:22.9256}
     .str3 {stroke:#00AEEF;stroke-width:18.63;stroke-miterlimit:22.9256}
     .str1 {stroke:#00AEEF;stroke-width:18.63;stroke-miterlimit:22.9256}
-    .str2 {stroke:#FBD13E;stroke-width:18.63;stroke-miterlimit:22.9256}
+    .str2 {stroke:#FFC83A;stroke-width:18.63;stroke-miterlimit:22.9256}
     .fil46 {fill:none}
     .fil23 {fill:#0069CD}
     .fil34 {fill:#0069CD}
@@ -54,8 +54,8 @@
     .fil1 {fill:#EA4334}
     .fil0 {fill:#EBF6FE}
     .fil24 {fill:#F0AE7B}
-    .fil42 {fill:#FBD13E}
-    .fil19 {fill:#FBD13E}
+    .fil42 {fill:#FFC83A}
+    .fil19 {fill:#FFC83A}
     .fil28 {fill:#F68374}
     .fil4 {fill:#FABC05}
     .fil22 {fill:#FED6B0}

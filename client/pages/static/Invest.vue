@@ -29,7 +29,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading">
-                            How <span class="r-text-primary">investing</span> with Addtract works
+                            How <span class="r-text-primary">investing</span> with Spazaland works
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -235,7 +235,7 @@ export default {
       hasData: false,
       steps: [
         {
-          title: 'The Addtract Way',
+          title: 'The Spazaland Way',
           image: 'illustration-2-primary',
           theme: 'blue',
           heading: 'We deliver value in five steps:',

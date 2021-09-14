@@ -8,11 +8,11 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str5 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256;stroke-opacity:0.45}
-    .str2 {stroke:#FBD13E;stroke-width:20;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
-    .str1 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256}
+    .str5 {stroke:#006648;stroke-width:20;stroke-miterlimit:22.9256;stroke-opacity:0.45}
+    .str2 {stroke:#FFC83A;stroke-width:20;stroke-miterlimit:22.9256;stroke-opacity:0.501961}
+    .str1 {stroke:#006648;stroke-width:20;stroke-miterlimit:22.9256}
     .str4 {stroke:none;stroke-width:20;stroke-miterlimit:22.9256}
-    .str0 {stroke:#FBD13E;stroke-width:20;stroke-miterlimit:22.9256}
+    .str0 {stroke:#FFC83A;stroke-width:20;stroke-miterlimit:22.9256}
     .str3 {stroke:none;stroke-width:20;stroke-miterlimit:22.9256}
     .fil15 {fill:none}
     .fil5 {fill:none}
@@ -21,21 +21,21 @@
     .fil13 {fill:#C0C6CB}
     .fil14 {fill:#8BA1BB}
     .fil19 {fill:#666364}
-    .fil10 {fill:#3B9CFF}
+    .fil10 {fill:#006648}
     .fil9 {fill:#E7F2FC}
     .fil21 {fill:#E7F2FC}
-    .fil8 {fill:#FBD13E}
-    .fil16 {fill:#FBD13E}
-    .fil20 {fill:#FBD13E}
-    .fil6 {fill:#FBD13E}
-    .fil18 {fill:#FBD13E}
+    .fil8 {fill:#FFC83A}
+    .fil16 {fill:#FFC83A}
+    .fil20 {fill:#FFC83A}
+    .fil6 {fill:#FFC83A}
+    .fil18 {fill:#FFC83A}
     .fil7 {fill:#fbf0c8}
     .fil0 {fill:#fbf0c8}
-    .fil22 {fill:#3B9CFF;fill-opacity:1}
-    .fil12 {fill:#3B9CFF;}
-    .fil1 {fill:#3B9CFF;fill-opacity:1}
+    .fil22 {fill:#006648;fill-opacity:1}
+    .fil12 {fill:#006648;}
+    .fil1 {fill:#006648;fill-opacity:1}
     .fil4 {fill:none;fill-opacity:1}
-    .fil2 {fill:#FBD13E;fill-opacity:1}
+    .fil2 {fill:#FFC83A;fill-opacity:1}
     .fil3 {fill:none;fill-opacity:1}
    ]]>
   </style>

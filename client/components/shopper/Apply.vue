@@ -11,7 +11,7 @@
           <a-row :gutter="[24, 24]" align="middle" justify="start" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
-                Shopper Application at Addtract:
+                Shopper Application at Spazaland:
               </h2>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
@@ -21,26 +21,26 @@
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is Addtract?
+                What is Spazaland?
               </h3>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <p class="r-text-normal">
-                Addtract is a fast growing startup that is improving lives by giving people more time to
+                Spazaland is a fast growing startup that is improving lives by giving people more time to
                 spend
-                with their families! Addtract members order business via the Addtract app and can have
+                with their families! Spazaland members order business via the Spazaland app and can have
                 them
                 delivered on-demand as soon as 1 hour later.
               </p>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is a Addtract shopper?
+                What is a Spazaland shopper?
               </h3>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <p class="r-text-normal">
-                Addtract Shoppers carefully select member's business using the Addtract app and deliver
+                Spazaland Shoppers carefully select member's business using the Spazaland app and deliver
                 them
                 during a specified, delivery window. Our shoppers enjoy an interactive and fun culture
                 all
@@ -79,7 +79,7 @@
             What are your contact details?
           </h2>
           <p class="r-text-normal">
-            By entering your email addrress and mobile number you are opting in to receive automated Addtract
+            By entering your email addrress and mobile number you are opting in to receive automated Spazaland
             Application
             Notifications. Message and data rates may apply.
           </p>

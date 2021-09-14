@@ -6,8 +6,8 @@
       >
       </r-store-window>
       <r-store-categories></r-store-categories>
-      <a-empty v-show="!hasStores"
-               description="This store is coming soon. Please try other available stores."
+      <a-empty v-show="!hasfarmers"
+               description="This store is coming soon. Please try other available farmers."
                image="/images/icon_pattern_grey.svg"
       />
     </a-col>
@@ -26,7 +26,7 @@ export default {
 
     let route = `/store/all/category/${params.category}`
     params.route = route
-    params.with = ['stores']
+    params.with = ['farmers']
     await store.dispatch('base/onCategory', params)
 
     console.log(route, 'route')
@@ -38,7 +38,7 @@ export default {
     categories: 'base/categories',
     category: 'base/category',
     processes: 'base/processes',
-    hasStores: 'base/hasStores'
+    hasfarmers: 'base/hasfarmers'
   }),
   created () {
   },

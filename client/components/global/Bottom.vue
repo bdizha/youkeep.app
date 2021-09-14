@@ -20,7 +20,7 @@
         <div class="r-nav-item r-nav-item__menu" @click="onDrawer('store-right')">
           <a-icon style="font-size: 18px;" type="shop"/>
           <span class="r-icon-text">
-                                Stores
+                                farmers
                             </span>
         </div>
       </a-col>

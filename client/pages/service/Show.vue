@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="[96,96]" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-card class="r-bg-yellow-light r-pull-h-24 r-border-none">
+      <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
         <div class="r-mv-48">
           <a-row :gutter="[96,48]" justify="center" type="flex">
             <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -109,7 +109,7 @@
                          :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
                   >
-                    <a-card class="r-bg-yellow-light">
+                    <a-card class="r-bg-secondary-light">
                       <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
                         <a-col :lg="{ span: 6 }" :md="{ span: 8 }" :sm="{ span: 24 }"
                                :xs="{ span: 24}"

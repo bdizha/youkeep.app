@@ -10,11 +10,9 @@
           <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
             <div class="r-mv-48">
               <a-row :gutter="[48,48]" justify="center" type="flex">
-                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-row :gutter="[48,48]" align="middle" justify="end" type="flex">
-                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
+                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"
@@ -41,7 +39,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading r-text-dark">
-                            To empower B2B <span class="r-text-secondary">payments</span> for brands in
+                            To empower <span class="r-text-secondary">farmers</span> of all sizes in
                             Africa.
                           </h1>
                         </a-col>
@@ -50,7 +48,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium r-text-dark">
-                            What was missing was a solution designed specifically for B2B eCommerce business and
+                            What was missing was a solution designed specifically for local farmers and
                             marketplaces.
                           </p>
                         </a-col>
@@ -71,9 +69,9 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            Addtract's solutions enable owning the entire B2B checkout experience, end to end - unifying
+                            Spazaland's solutions enable owning the entire farming experience, end to end - unifying
                             different
-                            payment methods and terms, providing a self serve experience, while getting full control.
+                            farming inputs and access to market, providing a self serve experience, while getting full control.
                           </p>
                         </a-col>
                         <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
@@ -92,14 +90,14 @@
                         </a-col>
                       </a-row>
                     </a-col>
-                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <r-avatar data-src="/assets/home-04.jpg" :size="300"
-                                class="r-avatar-block"
-                      ></r-avatar>
-                    </a-col>
                   </a-row>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <r-avatar data-src="/assets/asset-05.png" :size="300"
+                            class="r-avatar-block"
+                  ></r-avatar>
                 </a-col>
               </a-row>
             </div>
@@ -122,15 +120,15 @@
                    :xs="{ span: 24 }"
             >
               <h3 class="r-heading">
-                Making meaningful B2B <span class="r-text-secondary">connections</span>
+                <span class="r-text-secondary">Connecting</span> farmers and the marketplace
               </h3>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
               <p class="r-text-normal">
-                What started as a way to help small businesses find innovative products has grown into a leading B2B
-                marketplace that connects millions of buyers with brands of all sizes.
+                What started as a way to help small famers to conveniently sell their products has grown into a leading B2B
+                marketplace that connects millions of buyers with farmers of all sizes.
               </p>
             </a-col>
           </a-row>
@@ -146,7 +144,7 @@
       <r-values></r-values>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-contact-us title="Take your mind off B2B payments, for good."></r-contact-us>
+      <r-contact-us title="Enabling a self propagating food supply chain in the world."></r-contact-us>
     </a-col>
   </a-row>
 </template>
@@ -159,15 +157,15 @@
   right: auto;
   bottom: auto;
   top: auto;
-  background: #00C2FF;
+  background: #FFC83A;
 }
 
 .r-diamond:first-child {
-  background: #FBD13E;
+  background: #FFC83A;
 }
 
 .r-diamond:nth-child(2) {
-  background: #3A9CFF;
+  background: #006648;
 }
 
 .diagonal-01 {
@@ -208,7 +206,7 @@
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
 
-  border-top: 40px solid #00C2FF;
+  border-top: 40px solid #FFC83A;
 }
 
 .arrow-right {
@@ -217,7 +215,7 @@
   border-top: 40px solid transparent;
   border-bottom: 40px solid transparent;
 
-  border-left: 40px solid #FBD13E;
+  border-left: 40px solid #FFC83A;
 }
 
 .arrow-left {
@@ -225,7 +223,7 @@
   height: 0;
   border-top: 40px solid transparent;
   border-bottom: 40px solid transparent;
-  border-right:40px solid #3A9CFF;
+  border-right:40px solid #006648;
 }
 </style>
 <script>

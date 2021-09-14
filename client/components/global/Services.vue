@@ -29,7 +29,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading">
-                    Built for the B2B infrastructure in Africa
+                    Built for the farmers' marketplace in Africa
                   </h3>
                 </a-col>
               </a-row>

@@ -37,7 +37,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Active Addtract shoppers handle all the business and delivery experiences for Addtract buyers at a steady rate.
+                          Active Spazaland shoppers handle all the business and delivery experiences for Spazaland buyers at a steady rate.
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -45,7 +45,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          We partner shoppers and the nearest stores to provide our buyers with the fastest
+                          We partner shoppers and the nearest farmers to provide our buyers with the fastest
                           deliveries on the market.
                         </p>
                       </a-col>
@@ -84,7 +84,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <r-tabs active-key="shopper" theme="shopper" title="Addtract connects shoppers to buyers."></r-tabs>
+      <r-tabs active-key="shopper" theme="shopper" title="Spazaland connects shoppers to buyers."></r-tabs>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
            class="r-text-center"
@@ -106,7 +106,7 @@
                   <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
                     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <h3 class="r-heading-light r-text-uppercase">
-                        Why <span class="r-text-primary">Addtract</span> Marketplace?
+                        Why <span class="r-text-primary">Spazaland</span> Marketplace?
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -116,7 +116,7 @@
                     </a-col>
                     <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <p class="r-text-medium">
-                        Addtract is a membership-based business marketplace, enabling delivery of trendy fashion items,
+                        Spazaland is a membership-based business marketplace, enabling delivery of trendy fashion items,
                         hot food, household essentials and more.
                       </p>
                     </a-col>

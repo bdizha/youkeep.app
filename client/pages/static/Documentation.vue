@@ -81,7 +81,7 @@
                                     Email
                                   </h4>
                                   <p class="r-text-normal">
-                                    <a class="r-text-primary" href="mailto:info@addtract.com" target="_blank">info@addtract.com</a>
+                                    <a class="r-text-primary" href="mailto:info@spazaland.com" target="_blank">info@spazaland.com</a>
                                   </p>
                                 </a-col>
                               </a-row>

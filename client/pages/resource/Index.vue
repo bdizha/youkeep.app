@@ -17,17 +17,17 @@
                            style="text-align: left;"
                     >
                       <h4 class="r-heading">
-                        For Suppliers
+                        For Farmers
                       </h4>
                       <h1 class="r-heading">
-                        <span class="r-text-secondary">Enable more buying buyers and increase recurring orders with Addtract.</span>
+                        <span class="r-text-secondary">Enable more buying buyers and increase recurring orders with Spazaland.</span>
                       </h1>
                       <p class="r-text-normal">
-                        Maximize in-store impact with Addtract signage and online training for
+                        Maximize in-store impact with Spazaland signage and online training for
                         retail associates.
                       </p>
                       <p class="r-text-normal">
-                        We’ll ship you an activation kit to promote Addtract online.
+                        We’ll ship you an activation kit to promote Spazaland online.
                       </p>
                     </a-col>
                   </a-row>
@@ -95,7 +95,7 @@
                 <h4 class="r-heading-light">
                   buyers want to buy more of Your categories. And now they've a more
                   flexible
-                  business option with Addtract
+                  business option with Spazaland
                 </h4>
               </a-col>
             </a-row>
@@ -137,7 +137,7 @@
         </a-row>
       </a-col>
     </a-row>
-    <r-steps :has-title="true" :has-wave="false" heading="Addtract business experience"></r-steps>
+    <r-steps :has-title="true" :has-wave="false" heading="Spazaland business experience"></r-steps>
     <a-row class="r-text-center" justify="center" type="flex">
       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24 }"
              class="r-padding-48"
@@ -148,7 +148,7 @@
               Become a verified seller today
             </h2>
             <p class="r-text-normal">
-              Join the Addtract Supplier Program and start promoting Addtract online today and watch your
+              Join the Spazaland Farmer Program and start promoting Spazaland online today and watch your
               business run wild!
             </p>
           </a-col>
@@ -158,7 +158,7 @@
                  class="r-padding-bottom-48"
           >
             <a-button size="large" type="secondary" @click="onModal('seller')">
-              Become a Supplier
+              Become a Farmer
             </a-button>
           </a-col>
         </a-row>

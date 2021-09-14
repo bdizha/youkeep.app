@@ -7,24 +7,24 @@ viewBox="0 0 17127.66 11797.32"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#3B9CFF;stroke-width:17.1;stroke-miterlimit:22.9256;stroke-opacity:0.45}
+    .str0 {stroke:#006648;stroke-width:17.1;stroke-miterlimit:22.9256;stroke-opacity:0.45}
     .str1 {stroke:#97CBFF;stroke-width:115.82;stroke-miterlimit:22.9256}
     .fil15 {fill:none}
     .fil5 {fill:#C4E1FF}
     .fil4 {fill:#E5F2FF}
     .fil3 {fill:#E5F2FF}
-    .fil9 {fill:#3B9CFF}
+    .fil9 {fill:#006648}
     .fil6 {fill:#C4E1FF;fill-rule:nonzero}
-    .fil11 {fill:#3B9CFF;fill-rule:nonzero}
+    .fil11 {fill:#006648;fill-rule:nonzero}
     .fil7 {fill:white;fill-rule:nonzero}
     .fil12 {fill:#FFFFFF;fill-opacity:0.058824}
     .fil0 {fill:#FFFFFF}
-    .fil1 {fill:#3B9CFF;fill-opacity:0.45}
+    .fil1 {fill:#006648;fill-opacity:0.45}
     .fil2 {fill:#E5F2FF;fill-opacity:0.960784}
-    .fil14 {fill:#3B9CFF}
-    .fil8 {fill:#FBD13E;fill-opacity:0.3}
-    .fil13 {fill:#FBD13E}
-    .fil10 {fill:#FBD13E;fill-rule:nonzero}
+    .fil14 {fill:#006648}
+    .fil8 {fill:#FFC83A;fill-opacity:0.3}
+    .fil13 {fill:#FFC83A}
+    .fil10 {fill:#FFC83A;fill-rule:nonzero}
    ]]>
   </style>
  </defs>

@@ -182,25 +182,25 @@ export default {
       hiddenItem: null,
       portfolio: [
         {
-          title: 'Addtract',
-          slug: 'Addtract',
+          title: 'Spazaland',
+          slug: 'Spazaland',
           content: 'B2B platform connecting retailers and suppliers for better service discovery.',
           problem: 'Retailers didn’t have a good mechanism to contact suppliers, and when they did get proposals, the suppliers often didn’t know what information the retailers needed to make a decision on their service.',
-          solution: 'Empowering suppliers and retailers to be productive and successful. Suppliers can create free service profiles that detail all the key information buyers need to know when considering your service.'
+          solution: 'Empowering suppliers and retailers to be productive and successful. Farmers can create free service profiles that detail all the key information buyers need to know when considering your service.'
         },
         {
-          title: 'Addtract',
-          slug: 'Addtract',
+          title: 'Spazaland',
+          slug: 'Spazaland',
           content: 'A fractional investment platform to make property accessible to everyone.',
           problem: 'Traditionally inventing in real estate hasn’t been available to most ' +
             'low income investors without either meeting high net worth requirements or going through a complex and inefficient process, ' +
             'riddled with high fees and outdated middlemen.',
-          solution: 'Addtract is designed to utilise technology to make high-quality selling tools affordable to everyone. We combine state-of-the-art technology with in-house expertise to reduce fees and maximize your long-term business connectons.\n'
+          solution: 'Spazaland is designed to utilise technology to make high-quality selling tools affordable to everyone. We combine state-of-the-art technology with in-house expertise to reduce fees and maximize your long-term business connectons.\n'
         },
         {
           title: 'Finkipa',
           slug: 'finkipa',
-          content: 'Affordable financial services tools for growing businesses.',
+          content: 'Affordable financial services tools for farming growing businesses.',
           problem: 'A day in the life of a business is a long time. Founders attend to their business daily, and their financial operations deserve the same attention inorder to proactively manage their finance.',
           solution: 'Finkipa leverages a seamless blend of artificial intelligence and human finance experts to perform daily bookkeeping and manage every financial need of a business for a flat monthly fee.'
         },

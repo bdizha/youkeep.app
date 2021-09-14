@@ -66,7 +66,7 @@ export default {
   data () {
     return {
       modal: 'product',
-      message: 'Thank you for successfully signing up with Addtract. Enjoy your business!'
+      message: 'Thank you for successfully signing up with Spazaland. Enjoy your business!'
     }
   },
   computed: {

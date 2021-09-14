@@ -40,7 +40,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          Thousands of small stores trust Addtract with their finances
+                          Thousands of small farmers trust Spazaland with their finances
                         </p>
                       </a-col>
                     </a-row>
@@ -80,7 +80,7 @@ export default {
   data () {
     return {
       features: [
-        { content: 'Access Addtract via desktop or iPhone - we go where you go' },
+        { content: 'Access Spazaland via desktop or iPhone - we go where you go' },
         { content: 'Quickly answer categorization requests from your team' },
         { content: 'Contact your team with our simple messaging feature' },
         { content: 'Contact your team with our simple messaging feature' }

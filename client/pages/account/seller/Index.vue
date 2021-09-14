@@ -55,7 +55,7 @@
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }" class="gutter-row"
         >
-          <a-card title="Supplier Information">
+          <a-card title="Farmer Information">
             <a-row :gutter="[0,12]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 20 }"
                      :sm="{ span: 20 }" :xs="{ span: 20 }"

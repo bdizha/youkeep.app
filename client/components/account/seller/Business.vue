@@ -171,7 +171,7 @@
           <a-row :gutter="[24,0]">
             <a-col :xs="{ span: 24 }">
               <p class="r-text-light">
-                Contact us to learn more About Us and checkout financing options we've got in store For Suppliers
+                Contact us to learn more About Us and checkout financing options we've got in store For Farmers
                 like you.
               </p>
             </a-col>
@@ -459,7 +459,7 @@ export default {
           }
 
           $this.$store.dispatch('form/onResult', message)
-          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Addtract.')
+          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Spazaland.')
         }, 600)
       })
     },

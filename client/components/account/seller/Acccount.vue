@@ -8,7 +8,7 @@
       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }"
              :xs="{ span: 24 }" class="gutter-row"
       >
-        <a-card title="Supplier Information">
+        <a-card title="Farmer Information">
           <a-row :gutter="[24,0]">
             <a-col :xs="{ span: 24 }">
               <p class="r-text-light">
@@ -328,7 +328,7 @@ export default {
           }
 
           $this.$store.dispatch('form/onResult', message)
-          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Addtract.')
+          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Spazaland.')
         }, 600)
       })
     },

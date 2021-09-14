@@ -89,7 +89,7 @@
                                :xs="{ span: 24}"
                         >
                           <nuxt-link class="r-link-card" :to="'/service/' + service.slug">
-                            <a-card hoverable="" class="r-bg-yellow-light">
+                            <a-card hoverable="" class="r-bg-secondary-light">
                               <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
                                 <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 9 }"
                                        :xs="{ span: 9}"
@@ -363,12 +363,12 @@ export default {
           summary: 'Discover and connect with new and innovative product suppliers.'
         },
         {
-          title: 'Suppliers',
+          title: 'Farmers',
           link: '/supplier',
           summary: 'The tools, insights, and services you need to grow your business'
         },
         {
-          title: 'Buyers',
+          title: 'Retailers',
           link: '/buyer',
           summary: 'A single place to discover thousands of innovative products'
         },

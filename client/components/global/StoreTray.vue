@@ -1,5 +1,5 @@
 <template>
-  <a-row :class="{'r-stores-tray-active': hasStoreTray}" :gutter="24" class="r-stores-tray" justify="center"
+  <a-row :class="{'r-farmers-tray-active': hasStoreTray}" :gutter="24" class="r-farmers-tray" justify="center"
          style="padding: 48px 24px;background: #FFFFFF url(/images/art-grey.svg) repeat scroll 0% 0% !important;"
          type="flex"
   >
@@ -26,7 +26,7 @@
         </a-col>
       </a-row>
       <a-row :gutter="[24,48]" align="middle" justify="start" type="flex">
-        <a-col v-for="(store, index) in stores" v-if="stores.length > 0" :key="index" :lg="{ span: 4 }"
+        <a-col v-for="(store, index) in farmers" v-if="farmers.length > 0" :key="index" :lg="{ span: 4 }"
                :md="{ span: 6 }"
                :sm="{ span: 12 }"
                :xs="{ span: 24 }"
@@ -39,8 +39,8 @@
       <a-row :gutter=[24,24] justify="center" type="flex">
         <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" class="r-p-24">
           <p class="r-store-text-light">
-            Addtract is an independent business service that is not necessarily affiliated with,
-            endorsed or sponsored by the stores listed here but it enables you to get the deliveries you
+            Spazaland is an independent business service that is not necessarily affiliated with,
+            endorsed or sponsored by the farmers listed here but it enables you to get the deliveries you
             want.
           </p>
         </a-col>
@@ -83,7 +83,7 @@ export default {
     }
   },
   computed: mapGetters({
-    stores: 'store/stores',
+    farmers: 'store/farmers',
     hasStoreTray: 'app/hasStoreTray',
   }),
   mounted () {

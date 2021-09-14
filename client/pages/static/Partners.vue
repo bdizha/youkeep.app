@@ -38,7 +38,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium">
-                            It's really hard to build a business that lasts for many years. At Addtract we are
+                            It's really hard to build a business that lasts for many years. At Spazaland we are
                             providing our partners an opportunity to re-invent their products and solutions at an
                             accelerated pace.
                           </p>
@@ -245,19 +245,19 @@ export default {
       hasData: false,
       portfolios: [
         {
-          title: 'Addtract',
-          slug: 'Addtract',
+          title: 'Spazaland',
+          slug: 'Spazaland',
           content: 'B2B platform connecting retailers and suppliers for better service discovery.'
         },
         {
-          title: 'Addtract',
-          slug: 'Addtract',
+          title: 'Spazaland',
+          slug: 'Spazaland',
           content: 'A fractional investment platform to make property accessible to everyone.'
         },
         {
           title: 'Finkipa',
           slug: 'finkipa',
-          content: 'Affordable financial services tools for growing businesses.'
+          content: 'Affordable financial services tools for farming growing businesses.'
         },
         {
           title: 'Renkipa',
@@ -272,7 +272,7 @@ export default {
         {
           title: 'Bookipa',
           slug: 'bookipa',
-          content: 'Affordable financial services tools for growing businesses.'
+          content: 'Affordable financial services tools for farming growing businesses.'
         },
         {
           title: 'Artbeam',

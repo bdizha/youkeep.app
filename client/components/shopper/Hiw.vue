@@ -15,7 +15,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                Why millions of shoppers <span class="r-text-secondary">choose</span> Addtract
+                Why millions of shoppers <span class="r-text-secondary">choose</span> Spazaland
               </h2>
             </a-col>
             <a-col :lg="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -112,7 +112,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <h3 class="r-heading">
-                              Addtract <span class="r-text-secondary">gives</span> you the flexibility to <span
+                              Spazaland <span class="r-text-secondary">gives</span> you the flexibility to <span
                               class="r-text-secondary"
                             >shop</span> however you like.
                             </h3>
@@ -139,7 +139,7 @@
                             </p>
                             <p class="r-checked-item">
                               <a-icon slot="prefix" class="r-checked-item-icon" type="check"/>
-                              New payment options like <nuxt-link to="/contact-us">Addtract+</nuxt-link>
+                              New payment options like <nuxt-link to="/contact-us">Spazaland+</nuxt-link>
                             </p>
                           </a-col>
                         </a-row>
@@ -195,7 +195,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                              Buy online at Addtract
+                              Buy online at Spazaland
                             </h4>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -203,7 +203,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <h3 class="r-heading">
-                              Addtract is the best way to <span class="r-text-secondary">find</span> and <span
+                              Spazaland is the best way to <span class="r-text-secondary">find</span> and <span
                               class="r-text-secondary"
                             >purchase</span> whatever your haert desires.
                             </h3>
@@ -213,7 +213,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <p class="r-text-medium">
-                              Addtract partners with trusted and local stores that ensures faster deliveries in less
+                              Spazaland partners with trusted and local farmers that ensures faster deliveries in less
                               than an hour for some lucky shoppers like you.
                             </p>
                           </a-col>
@@ -222,7 +222,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <p class="r-text-normal">
-                              Addtract is created to offer you the best
+                              Spazaland is created to offer you the best
                               business experience on the online market.
                             </p>
                           </a-col>

@@ -197,7 +197,7 @@
             <a-row>
               <a-col :span="24" class="r-checkout-footer">
                 <p class="r-text-normal">
-                  By placing your order, you agree to be bound by the Addtract Terms of
+                  By placing your order, you agree to be bound by the Spazaland Terms of
                   <nuxt-link target="_blank" to="/service">Service</nuxt-link>
                   and
                   <nuxt-link href="/privacy" to="_blank">Privacy Policy</nuxt-link>

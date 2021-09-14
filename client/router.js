@@ -33,7 +33,7 @@ const routes = [
   { path: '/supplier', name: 'supplier', meta: { isDark: false, isRaised: false}, component: page('seller/Index.vue') },
   { path: '/supplier/blog', name: 'resource', meta: { isDark: false, isRaised: false}, component: page('resource/Index.vue') },
   { path: '/supplier/resource/:slug', name: 'resource-show', meta: { isDark: false, isRaised: false}, component: page('resource/Article.vue') },
-  { path: '/stores/:category', name: 'stores', meta: { isDark: false, isRaised: false}, component: page('store/Index.vue') },
+  { path: '/farmers/:category', name: 'farmers', meta: { isDark: false, isRaised: false}, component: page('store/Index.vue') },
   { path: '/home', name: 'home', meta: { isDark: false, isRaised: false}, component: page('home.vue') },
   { path: '/about-us', name: 'about-us', meta: { isDark: false, isRaised: false}, component: page('static/AboutUs.vue') },
   { path: '/contact-us', name: 'contact-us', meta: { isDark: false, isRaised: false}, component: page('static/ContactUs.vue') },

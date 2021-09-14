@@ -57,24 +57,44 @@ export default {
     return {
       locations: [
         {
-          city: 'Cape Town',
-          continent: 'South Africa',
-          email: 'info@addtract.com'
-        },
-        {
           city: 'Johannesburg',
           continent: 'South Africa',
-          email: 'info@addtract.com'
+          email: 'info@spazaland.com'
+        },
+        {
+          city: 'Cape Town',
+          continent: 'South Africa',
+          email: 'info@spazaland.com'
+        },
+        {
+          city: 'Durban',
+          continent: 'South Africa',
+          email: 'info@spazaland.com'
         },
         {
           city: 'Nairobi',
           continent: 'Kenya',
-          email: 'partner@addtract.com'
+          email: 'partner@spazaland.com'
         },
         {
           city: 'Accra',
           continent: 'Ghana',
-          email: 'partner@addtract.com'
+          email: 'partner@spazaland.com'
+        },
+        {
+          city: 'Lagos',
+          continent: 'Nigeria',
+          email: 'partner@spazaland.com'
+        },
+        {
+          city: 'Windhoek',
+          continent: 'Namibia',
+          email: 'partner@spazaland.com'
+        },
+        {
+          city: 'Lusaka',
+          continent: 'Zambia',
+          email: 'partner@spazaland.com'
         }
       ]
     }

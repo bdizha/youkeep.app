@@ -5,7 +5,7 @@
            :xs="{ span: 24 }"
     >
       <h4 class="r-heading-light">
-        Addtract powers ambitious multi-channel brands of all sizes in all industries.
+        Spazaland powers ambitious multi-channel brands of all sizes in all industries.
       </h4>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -61,7 +61,7 @@ export default {
           theme: 'primary'
         },
         {
-          title: 'Buyers discovering new products',
+          title: 'Retailers discovering new products',
           content: '4500+',
           theme: 'secondary'
         },
@@ -71,7 +71,7 @@ export default {
           theme: 'primary'
         },
         {
-          title: 'Suppliers waiting to connect',
+          title: 'Local farmers waiting to connect',
           content: '3000+',
           theme: 'secondary'
         }

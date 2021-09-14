@@ -1,9 +1,9 @@
 <template>
   <a-row align="middle" class="r-store-row" justify="start" type="flex">
     <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
-      <a-pagination v-if="hasStores" v-model="stores.current_page" :page-size="stores.per_page"
+      <a-pagination v-if="hasfarmers" v-model="farmers.current_page" :page-size="farmers.per_page"
                     :show-total="(total, range) => `${range[0]}-${range[1]} of ${total} items`"
-                    :total="stores.total"
+                    :total="farmers.total"
                     class="r-same-height"
                     show-less-items
                     @change="onChange"
@@ -28,10 +28,10 @@ export default {
     return {}
   },
   computed: mapGetters({
-    stores: 'base/stores',
+    farmers: 'base/farmers',
     store: 'base/store',
     search: 'base/search',
-    hasStores: 'base/hasStores',
+    hasfarmers: 'base/hasfarmers',
   }),
   methods: {
     onChange (pageNumber, pageSize) {
@@ -40,10 +40,10 @@ export default {
 
       let params = this.search.params
       params.page = pageNumber
-      this.fetchStores()
+      this.fetchfarmers()
     },
-    async fetchStores () {
-      await this.$store.dispatch('base/onStores', this.params)
+    async fetchfarmers () {
+      await this.$store.dispatch('base/onfarmers', this.params)
     }
   },
 }

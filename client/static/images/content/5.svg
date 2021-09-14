@@ -8,7 +8,7 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256}
+    .str0 {stroke:#006648;stroke-width:20;stroke-miterlimit:22.9256}
     .fil29 {fill:#FEFEFE}
     .fil15 {fill:#EEEEEF}
     .fil12 {fill:#EAEDEE}
@@ -22,28 +22,28 @@
     .fil20 {fill:#C1BDBC}
     .fil11 {fill:#B9DDE0}
     .fil21 {fill:#B6DDE4}
-    .fil25 {fill:#FBD13E}
-    .fil27 {fill:#FBD13E}
+    .fil25 {fill:#FFC83A}
+    .fil27 {fill:#FFC83A}
     .fil28 {fill:#94A29C}
     .fil19 {fill:#73ABAF}
     .fil31 {fill:#6C8D92}
-    .fil22 {fill:#FBD13E}
+    .fil22 {fill:#FFC83A}
     .fil32 {fill:#4E8D95}
     .fil24 {fill:#097C85}
-    .fil30 {fill:#3B9CFF}
-    .fil13 {fill:#3B9CFF}
-    .fil7 {fill:#3B9CFF}
+    .fil30 {fill:#006648}
+    .fil13 {fill:#006648}
+    .fil7 {fill:#006648}
     .fil17 {fill:#E7F2FC}
     .fil3 {fill:#E7F2FC}
     .fil10 {fill:#fcebad}
-    .fil14 {fill:#FBD13E}
+    .fil14 {fill:#FFC83A}
     .fil2 {fill:#fcebad}
-    .fil34 {fill:#FBD13E}
-    .fil8 {fill:#FBD13E}
-    .fil16 {fill:#FBD13E}
+    .fil34 {fill:#FFC83A}
+    .fil8 {fill:#FFC83A}
+    .fil16 {fill:#FFC83A}
     .fil0 {fill:none;fill-opacity:1}
     .fil1 {fill:none;fill-opacity:0.800000}
-    .fil33 {fill:#3B9CFF}
+    .fil33 {fill:#006648}
    ]]>
   </style>
  </defs>

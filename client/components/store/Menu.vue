@@ -19,7 +19,7 @@
         <a-collapse-panel v-if="isHome"
                           key="links"
                           class="r-collapse-panel"
-                          header="Best of Addtract"
+                          header="Best of Spazaland"
         >
         </a-collapse-panel>
         <a-collapse-panel v-if="isStore" key="delivery"
@@ -71,9 +71,9 @@
         >
           <div v-html="item.content"></div>
         </a-collapse-panel>
-        <a-collapse-panel v-if="isStore" key="stores"
+        <a-collapse-panel v-if="isStore" key="farmers"
                           class="r-collapse-panel"
-                          header="Popular Stores"
+                          header="Popular farmers"
         >
           <r-store-list></r-store-list>
         </a-collapse-panel>
@@ -93,8 +93,8 @@
       <a-row v-if="isStore" class="r-mb-48" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
           <h4 class="r-store-text-light">
-            Addtract is an independent business service that is not necessarily affiliated with,
-            endorsed or sponsored by the stores listed here but it enables you to get the deliveries
+            Spazaland is an independent business service that is not necessarily affiliated with,
+            endorsed or sponsored by the farmers listed here but it enables you to get the deliveries
             you
             want.
           </h4>

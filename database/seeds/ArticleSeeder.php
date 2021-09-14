@@ -101,7 +101,7 @@ class ArticleSeeder extends Seeder
 
             $crawler->filter('.breadcrumbs li')->each(function ($node) use (&$articleCategories) {
                 $name = $node->text();
-                $name = str_replace("RangeMe", 'Addtract', trim($name));;
+                $name = str_replace("RangeMe", 'Spazaland', trim($name));;
                 $articleCategories[] = $name;
             });
 
@@ -181,8 +181,8 @@ class ArticleSeeder extends Seeder
             }
 
             $content = $articleNode->filter('.s-blog-post .bp-rich-text')->html();
-            $content = str_replace("Balance", 'Addtract', $content);
-            $content = str_replace("balance", 'addtract', $content);
+            $content = str_replace("Balance", 'Spazaland', $content);
+            $content = str_replace("balance", 'spazaland', $content);
             $content = str_replace("U.S", 'South Africa', $content);
 
             $attributes = [

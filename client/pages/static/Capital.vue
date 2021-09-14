@@ -80,7 +80,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading-light">
-                <span class="r-text-blue">Innovate</span> <span class="r-text-blue">alongside</span> Addtract.
+                <span class="r-text-blue">Innovate</span> <span class="r-text-blue">alongside</span> Spazaland.
               </h2>
             </a-col>
             <a-col :lg="{ span: 15 }" :md="{ span: 16 }"

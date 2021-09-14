@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
     <defs>
         <style>
-            .cls-1{fill:#3B9CFF;}.cls-2,.cls-4{fill:none;stroke-linecap:round;stroke-width:2px;}.cls-2{stroke:#FBD13E;stroke-linejoin:round;}.cls-3{fill:#FBD13E;}.cls-4{stroke:#FBD13E;stroke-miterlimit:10;}
+            .cls-1{fill:#006648;}.cls-2,.cls-4{fill:none;stroke-linecap:round;stroke-width:2px;}.cls-2{stroke:#FFC83A;stroke-linejoin:round;}.cls-3{fill:#FFC83A;}.cls-4{stroke:#FFC83A;stroke-miterlimit:10;}
         </style>
     </defs>
     <title>gain-control-orange</title>

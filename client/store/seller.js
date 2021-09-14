@@ -12,8 +12,8 @@ const state = () => ({
     currentMenuKey: 'account'
   },
   hasMenu: false,
-  stores: { data: [] },
-  hasStores: false,
+  farmers: { data: [] },
+  hasfarmers: false,
   hasAddresses: false,
   addresses: [],
   coupons: [],
@@ -31,8 +31,8 @@ const state = () => ({
 const getters = {
   cards: state => state.cards,
   hasCards: state => state.cards.length > 0,
-  stores: state => state.stores,
-  hasStores: state => state.hasStores > 0,
+  farmers: state => state.farmers,
+  hasfarmers: state => state.hasfarmers > 0,
   address: state => state.address,
   hasAddress: state => state.hasSearched,
   menu: state => state.menu,
@@ -64,9 +64,9 @@ const mutations = {
   setCards (state, data) {
     state.cards = data.cards
   },
-  setStores (state, stores) {
-    state.stores = stores
-    state.hasStores = stores.data !== undefined && stores.data.length > 0
+  setfarmers (state, farmers) {
+    state.farmers = farmers
+    state.hasfarmers = farmers.data !== undefined && farmers.data.length > 0
   },
   setAddresses (state, data) {
     state.addresses = data.addresses
@@ -112,15 +112,15 @@ const actions = {
       commit('setErrors', e)
     }
   },
-  async onStores ({ dispatch, commit, state }, payload) {
+  async onfarmers ({ dispatch, commit, state }, payload) {
     try {
-      commit('setStores', { data: [] })
+      commit('setfarmers', { data: [] })
 
       await axios.post('/account/store', payload).then(({ data }) => {
-        commit('setStores', data)
+        commit('setfarmers', data)
       })
     } catch (e) {
-      console.error('onStores errors')
+      console.error('onfarmers errors')
       console.log(e)
     }
   },

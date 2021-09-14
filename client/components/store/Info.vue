@@ -1,5 +1,5 @@
 <template>
-  <a-row :gutter="24" class="r-stores-tray" justify="center"
+  <a-row :gutter="24" class="r-farmers-tray" justify="center"
          type="flex"
   >
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }">

@@ -5,7 +5,7 @@ import Cookies from 'js-cookie'
 const state = () => ({
   store: {},
   hasStore: false,
-  stores: { data: [] },
+  farmers: { data: [] },
   countries: [],
   hasCountries: false,
   faqs: [],
@@ -23,7 +23,7 @@ const state = () => ({
   positions: [],
   position: {},
   storeCategories: [],
-  hasStores: false,
+  hasfarmers: false,
   hasFaqs: false,
   isStore: false,
   notice: null,
@@ -92,10 +92,10 @@ const getters = {
   hasForm: state => state.hasForm,
   store: state => state.store,
   hasStore: state => state.hasStore,
-  stores: state => state.stores,
+  farmers: state => state.farmers,
   faqs: state => state.faqs,
   countries: state => state.countries,
-  hasStores: state => state.hasStores,
+  hasfarmers: state => state.hasfarmers,
   hasFaqs: state => state.hasFaqs,
   hasCountries: state => state.hasCountries,
   menuCategory: state => state.menuCategory,
@@ -154,9 +154,9 @@ const mutations = {
   setIsValid (state, isValid) {
     state.isValid = isValid
   },
-  setStores (state, stores) {
-    state.stores = stores
-    state.hasStores = stores.data !== undefined && stores.data.length > 0
+  setfarmers (state, farmers) {
+    state.farmers = farmers
+    state.hasfarmers = farmers.data !== undefined && farmers.data.length > 0
   },
   setFaqs (state, faqs) {
     state.faqs = faqs
@@ -313,7 +313,7 @@ const actions = {
       const route = params.route
 
       commit('setCategories', [])
-      commit('setStores', [])
+      commit('setfarmers', [])
       commit('setProducts', { data: [] })
 
       await axios.post(route, params).then(({ data }) => {
@@ -446,12 +446,12 @@ const actions = {
       console.error('on error: ', e)
     }
   },
-  async onStores ({ dispatch, commit }, payload) {
+  async onfarmers ({ dispatch, commit }, payload) {
     commit('setProcess', { key: 'isTray', value: true })
 
     await axios.post('/shops', payload).then(({ data }) => {
-      commit('setStores', data)
-      commit('setFilter', { key: 'stores', value: data })
+      commit('setfarmers', data)
+      commit('setFilter', { key: 'farmers', value: data })
       commit('setProcess', { key: 'isTray', value: false })
     })
   },
@@ -543,9 +543,9 @@ const actions = {
     if (search) {
       commit('setSearch', JSON.parse(search))
     }
-    const stores = Cookies.get('stores')
-    if (stores) {
-      commit('setStores', JSON.parse(stores))
+    const farmers = Cookies.get('farmers')
+    if (farmers) {
+      commit('setfarmers', JSON.parse(farmers))
     }
   }
 }

@@ -11,7 +11,7 @@
         <a-col :span="24">
           <h4 class="r-heading r-text-secondary r-text-center">
             <a-icon type="gift"/>
-            <span>FREE Deliveries For 1 Week with Addtract <br></span>
+            <span>FREE Deliveries For 1 Week with Spazaland <br></span>
           </h4>
         </a-col>
       </a-row>
@@ -73,9 +73,9 @@
     <r-account-modal-products v-if="isCurrent('account-products')"
                               key="account-products" class="r-animate"
     ></r-account-modal-products>
-    <r-account-modal-stores v-if="isCurrent('account-stores')"
-                            key="account-stores" class="r-animate"
-    ></r-account-modal-stores>
+    <r-account-modal-farmers v-if="isCurrent('account-farmers')"
+                            key="account-farmers" class="r-animate"
+    ></r-account-modal-farmers>
     <r-store-gallery v-if="isCurrent('store-gallery')"
                      key="store-gallery"
     ></r-store-gallery>
