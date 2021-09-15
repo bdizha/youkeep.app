@@ -32,7 +32,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          B2B farmers' marketplace for Africa.
+                          A B2B farmers' marketplace for Africa.
                         </p>
                       </a-col>
                     </a-row>

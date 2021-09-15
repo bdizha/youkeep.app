@@ -36,11 +36,11 @@ export default {
           heading: '<span class="r-text-primary">Reach</span> an end-to-end marketplace',
           image: '/assets/asset-06.svg',
           summary: 'We are here for passionate producers so you can focus on product quality of your brand.',
-          content: ' Finding buyers is always not easy as well as transportation. Every single Farmer / Supplier spends a lot of time approaching offline marketplaces as well as arrangement of payment & delivery day by day.'
+          content: ' Finding buyers is always not easy as well as transportation. Every single farmer spends a lot of time approaching offline marketplaces as well as arrangement of payment & delivery day by day.'
         },
         {
           title: 'Flexible payments terms',
-          heading: '<span class="r-text-primary">Access</span> farming inputs credit',
+          heading: '<span class="r-text-primary">Access</span> farming credit lines',
           image: '/assets/asset-12.svg',
           summary: 'We know how difficult it can be to secure financing and free up working capital as a farming growing business. ',
           content: 'Our B2B payment method presents your buyers with the perfect pay-over-time option for them-whether that’s split pay, ' +

@@ -20,7 +20,7 @@
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                 <h3 class="r-heading">
-                  We <span class="r-text-primary">connect</span> African farmers to the marketplace
+                  <span class="r-text-primary">connecting</span> African farmers to the marketplace
                 </h3>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -41,7 +41,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <a-card class="r-bg-white">
+                    <a-card class="r-bg-white-light">
                       <a-row :gutter="[12,12]" align="middle" justify="center" type="flex">
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                :sm="{ span: 24 }"

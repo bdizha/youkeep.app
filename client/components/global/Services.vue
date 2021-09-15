@@ -17,10 +17,10 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <h4 v-if="!isShow" class="r-heading-light r-text-uppercase r-text-secondary">
-                    MARKETPLACE SERVICES
+                  <h4 v-if="!isShow" class="r-heading-light r-text-uppercase">
+                    Marketplace services
                   </h4>
-                  <h4  v-if="isShow" class="r-heading-light r-text-uppercase r-text-secondary">
+                  <h4  v-if="isShow" class="r-heading-light r-text-uppercase">
                     More solutions
                   </h4>
                 </a-col>
@@ -29,7 +29,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading">
-                    Built for the farmers' marketplace in Africa
+                    <span class="r-text-primary">Built</span> for the farmers' marketplace in Africa
                   </h3>
                 </a-col>
               </a-row>

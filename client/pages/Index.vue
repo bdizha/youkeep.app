@@ -34,7 +34,8 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium r-text-dark">
-                        Spazaland offers an end-to-end platform to discover and buy products directly from farmers in Africa.
+                        Spazaland offers an end-to-end platform to discover and buy products directly from farmers in
+                        Africa.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -121,21 +122,80 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-row :gutter="[48,48]" align="middle" class="r-text-left" justify="center" type="flex">
-        <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a-card class="r-bg-secondary-light">
-            <div class="r-mv-48">
-              <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
-                >
-                  <r-avatar data-src="/assets/setup-03.svg" :size="300"
-                            class="r-avatar-block"
-                  ></r-avatar>
-                </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+      <a-card class="r-bg-white-light r-border-none">
+        <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                 :xs="{ span: 24}"
+          >
+            <r-avatar data-src="/assets/asset-03.svg" :size="300"
+                      class="r-avatar-block"
+            ></r-avatar>
+          </a-col>
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                 :xs="{ span: 24}"
+          >
+            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+              <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <h4 class="r-heading-light r-text-uppercase">
+                      Discover new products
+                    </h4>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <h3 class="r-heading">
+                      <span class="r-text-secondary">Accelerate</span> revenue growth with inclusive B2B marketplace
+                    </h3>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <p class="r-text-medium">
+                      Spazaland is the leading product discovery platform enabling retail buyers to efficiently
+                      discover innovative and
+                      emerging products.
+                    </p>
+                  </a-col>
+                  <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                  >
+                    <nuxt-link to="/marketplace">
+                      <a-button block
+                                class="r-btn-bordered-secondary"
+                                size="large"
+                                type="secondary"
+                      >
+                        Learn more
+                      </a-button>
+                    </nuxt-link>
+                  </a-col>
+                </a-row>
+              </a-col>
+            </a-row>
+          </a-col>
+        </a-row>
+      </a-card>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <a-card class="r-bg-secondary-light r-border-none">
+        <div class="r-mv-48">
+          <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
+              <a-row :gutter="[48,48]" align="middle" justify="end" type="flex">
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                        :xs="{ span: 24}"
                 >
                   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
@@ -144,15 +204,15 @@
                            :xs="{ span: 24 }"
                     >
                       <h4 class="r-heading-light r-text-uppercase">
-                        Discover new products
+                        The Spazaland advantage
                       </h4>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h3 class="r-heading">
-                        <span class="r-text-secondary">Accelerate</span> revenue growth with inclusive B2B marketplace
+                      <h3 class="r-heading ">
+                        Spazaland <span class="r-text-primary">connects</span> farmers to retailers and restaurants
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -160,12 +220,22 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium">
-                        Spazaland is the leading product discovery platform enabling retail buyers to efficiently
-                        discover innovative and
-                        emerging products.
+                        Built for farming businesses, it offers a clear view into service purchase activity with
+                        automated billing, expensing, and reporting.
                       </p>
                     </a-col>
-                    <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <p class="r-text-normal">
+                        Spazaland offers farmers likes yours to sell products to our buyers with the most
+                        convenient
+                        business tools on the market. Let your buyers get what they need and want, online and
+                        in-farmers. And you’ll earn long-term business connections.
+                      </p>
+                    </a-col>
+                    <a-col :lg="{ span: 9 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                     >
                       <nuxt-link to="/marketplace">
                         <a-button block
@@ -180,88 +250,13 @@
                   </a-row>
                 </a-col>
               </a-row>
-            </div>
-          </a-card>
-        </a-col>
-      </a-row>
-    </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-           :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
-        <div class="r-mv-48">
-          <a-row align="middle" justify="center" type="flex">
-            <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-              <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <a-row :gutter="[48,48]" align="middle" justify="end" type="flex">
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                           :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <h4 class="r-heading-light r-text-uppercase">
-                            The Spazaland advantage
-                          </h4>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <h3 class="r-heading ">
-                            Spazaland <span class="r-text-primary">connects</span> farmers to retailers and restaurants
-                          </h3>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <p class="r-text-medium">
-                            Built for farming businesses, it offers a clear view into service purchase activity with automated billing, expensing, and reporting.
-                          </p>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <p class="r-text-normal">
-                            Spazaland offers farmers likes yours to sell products to our buyers with the most
-                            convenient
-                            business tools on the market. Let your buyers get what they need and want, online and
-                            in-farmers. And you’ll earn long-term business connections.
-                          </p>
-                        </a-col>
-                        <a-col :lg="{ span: 9 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                        >
-                          <nuxt-link to="/marketplace">
-                            <a-button block
-                                      class="r-btn-bordered-secondary"
-                                      size="large"
-                                      type="secondary"
-                            >
-                              Learn more
-                            </a-button>
-                          </nuxt-link>
-                        </a-col>
-                      </a-row>
-                    </a-col>
-                  </a-row>
-                </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
-                >
-                  <r-avatar data-src="/assets/asset-04.svg" :size="300"
-                            class="r-avatar-block"
-                  ></r-avatar>
-                </a-col>
-              </a-row>
+            </a-col>
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
+              <r-avatar data-src="/assets/asset-03.svg" :size="300"
+                        class="r-avatar-block"
+              ></r-avatar>
             </a-col>
           </a-row>
         </div>
@@ -452,7 +447,8 @@
                                                :xs="{ span: 24 }"
                                         >
                                           <p class="r-text-normal r-text-dark">
-                                            Build visibility with leading retailers and food outlets by highlighting key brand
+                                            Build visibility with leading retailers and food outlets by highlighting key
+                                            brand
                                             information that buyers look for.
                                           </p>
                                         </a-col>
