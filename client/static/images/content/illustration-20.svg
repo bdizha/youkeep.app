@@ -7,9 +7,9 @@
 	.st1{filter:url(#Adobe_OpacityMaskFilter);}
 	.st2{fill:#FFFFFF;}
 	.st3{mask:url(#b_1_);fill:#FFCABC;}
-	.st4{fill:#FFC83A;}
+	.st4{fill:#00C2FF;}
 	.st5{filter:url(#Adobe_OpacityMaskFilter_1_);}
-	.st6{mask:url(#d_1_);fill:#006648;}
+	.st6{mask:url(#d_1_);fill:#3B9CFF;}
 </style>
 <path class="st0" d="M4.8,1.9v2.6h30.3v16.2h2.6c1,0,1.9-0.8,1.9-1.9c0,0,0,0,0,0V2.8c0-1.6-1.3-2.8-2.8-2.8h-30
 	C5.7,0,4.8,0.8,4.8,1.9"/>

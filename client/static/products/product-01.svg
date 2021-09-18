@@ -7,17 +7,17 @@ viewBox="0 0 16692.3 16692.3"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil11 {fill:#FFC83A}
-    .fil10 {fill:#FFC83A}
+    .fil11 {fill:#00C2FF}
+    .fil10 {fill:#00C2FF}
     .fil8 {fill:white}
-    .fil9 {fill:#FFC83A;fill-rule:nonzero}
-    .fil3 {fill:#006648;fill-rule:nonzero}
-    .fil7 {fill:#FFC83A;fill-opacity:0.09}
+    .fil9 {fill:#00C2FF;fill-rule:nonzero}
+    .fil3 {fill:#3B9CFF;fill-rule:nonzero}
+    .fil7 {fill:#00C2FF;fill-opacity:0.09}
     .fil0 {fill: none;}
-    .fil1 {fill: #006648;fill-opacity: 0.09;}
-    .fil6 {fill:#006648;fill-opacity:0.18}
+    .fil1 {fill: #3B9CFF;fill-opacity: 0.09;}
+    .fil6 {fill:#3B9CFF;fill-opacity:0.18}
     .fil2 {fill:white;fill-opacity:1}
-    .fil5 {fill: #006648;fill-opacity: 0.09;}
+    .fil5 {fill: #3B9CFF;fill-opacity: 0.09;}
     .fil4 {fill: #FFFFFF;fill-opacity: 0.75;}
    ]]>
   </style>

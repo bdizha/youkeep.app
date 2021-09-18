@@ -9,17 +9,17 @@
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
-                Spazaland For Retailers
+                Paise For Retailers
               </h4>
               <h1 class="r-heading">
                 <span class="r-text-secondary">Shop More,</span><br>
                 <span>Pay Less</span>
               </h1>
               <h3 class="r-heading-light">
-                Spazaland is a better way to make or receive payments.
+                Paise is a better way to make or receive payments.
               </h3>
               <p class="r-text-normal">
-                Unlike other buy-now-pay-later plans, Spazaland lets shoppers use their existing credit card for
+                Unlike other buy-now-pay-later plans, Paise lets shoppers use their existing credit card for
                 the easiest most intuitive checkout.
               </p>
             </template>
@@ -51,7 +51,7 @@
                          class="gutter-row"
                   >
                     <h3 class="r-heading">
-                      Spazaland is a better way to do payments.
+                      Paise is a better way to do payments.
                     </h3>
                     <p class="r-text-normal">
                       Pay in 3 installments with zero interest
@@ -131,7 +131,7 @@
                             Zero interest payments
                           </h4>
                           <p class="r-text-normal">
-                            Spazaland offers you the the ability to pay in
+                            Paise offers you the the ability to pay in
                             interest-free installment payments. Enroll today and earn rewards for buying
                             from
                             your favourite shops.
@@ -282,10 +282,10 @@
                                style="text-align: left;"
                         >
                           <h4 class="r-heading  r-text-secondary">
-                            Choose Spazaland at checkout
+                            Choose Paise at checkout
                           </h4>
                           <p class="r-text-normal">
-                            Unlike other buy-now-pay-later plans, Spazaland isn’t new financing. Spazaland lets you
+                            Unlike other buy-now-pay-later plans, Paise isn’t new financing. Paise lets you
                             set up monthly payments at checkout with your existing credit so you don’t need to carry
                             new
                             debt.
@@ -340,7 +340,7 @@
                                style="text-align: left;"
                         >
                           <h4 class="r-heading  r-text-secondary">
-                            Shop with Spazaland.
+                            Shop with Paise.
                           </h4>
                           <p class="r-text-normal">
                             Pay later on your terms.
@@ -364,7 +364,7 @@ export default {
   props: {},
   data () {
     return {
-      banner: 'art-07.png',
+      banner: 'art-07.svg',
       modal: {
         current: null,
         message: null,

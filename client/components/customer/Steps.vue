@@ -1,5 +1,5 @@
 <template>
-  <r-steps user-type="customer" :has-more="hasMore" :size="size" :steps="steps" theme="secondary"
+  <r-steps user-type="customer" :has-more="hasMore" :size="size" :steps="steps" theme="primary"
   ></r-steps>
 </template>
 <script>
@@ -12,30 +12,29 @@ export default {
   data () {
     return {
       currentStep: 0,
-      title: 'Spazaland connects buyers to the marketplace.',
-      content: 'Our checkout and payment tools handle all your order placement, collection and delivery experience as well as returns for you at\n' +
-        'a very low cost.',
+      title: 'Shop in the Fast Lane',
+      content: 'We support 50+ of your favorite stores. Look for the Paise logo and start shopping!',
       steps: [
         {
-          title: 'Discover It',
-          heading: '<span class="r-text-secondary">Source</span> without the searching',
-          image: '/assets/asset-10.svg',
-          summary: 'Pick, compare, save products to your favourite list all in a single place.',
-          content: 'Discover brands and products faster with a buyer homepage that highlights trends, collections, and more in a single place. <br /><br />Buying with Spazaland is easy. Filter brand and service discovery by location, certifications, distribution, and more.'
+          title: 'Save time',
+          heading: '<span class="r-text-primary">Always</span> checkout in 3 seconds',
+          image: '/assets/asset-13.svg',
+          summary: 'Complete online purchases from any device in seconds.',
+          content: 'Paise enables consumers to create a universal account and buy from dozens of retailers in a few seconds.'
         },
         {
-          title: 'Order It',
-          heading: '<span class="r-text-secondary">Buy</span> verified products with easy.',
+          title: 'Reduce hassle',
+          heading: '<span class="r-text-primary">Choose</span> to checkout with Paise',
+          image: '/assets/asset-14.svg',
+          summary: 'Easily place and track orders in real-time, anytime.',
+          content: 'With Paise, users no longer need to pull out their credit card or enter long forms to complete online purchases.'
+        },
+        {
+          title: 'Stay secure',
+          heading: '<span class="r-text-primary">Avoid</span> filling out checkout forms',
           image: '/assets/asset-12.svg',
-          summary: 'Add products to folders based on your interests to review later or share with your team.',
-          content: 'Discover brands and products faster with a buyer homepage that highlights trends, collections, and more in a single place. <br /><br />Review curated brands and products in your category with trending collections like diversity and sustainability.'
-        },
-        {
-          title: 'Reconcile It',
-          heading: '<span class="r-text-secondary">One</span> stop farm direct platform',
-          image: '/assets/asset-11.svg',
-          summary: 'Enjoy flexible payment options with Spazaland credit offering at your convenience, anytime. ',
-          content: 'Get your items scheduled for a delivery to your location. Sit back and wait for your delivery to arrive fast, secure and easy. <br /><br />Select the payment schedule that works for you, then confirm your loan. We’ll never charge more than you see up front.'
+          summary: 'Save your information in a wallet with bank-level security',
+          content: 'It eliminates the need for mobile shoppers to fill out cumbersome checkout forms, empowering them to make purchases effortlessly.'
         }
       ]
     }

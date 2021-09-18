@@ -8,27 +8,27 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str20 {stroke:#006648;stroke-width:20;stroke-miterlimit:22.9256}
-    .str18 {stroke:#FFC83A;stroke-width:20;stroke-miterlimit:22.9256}
-    .str19 {stroke:#006648;stroke-width:20;stroke-miterlimit:22.9256}
-    .str0 {stroke:#FFC83A;stroke-width:7.62;stroke-miterlimit:22.9256}
-    .str11 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str12 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str13 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str8 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str4 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str1 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str10 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str3 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str9 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str2 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str5 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str6 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str7 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str14 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str15 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str17 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
-    .str16 {stroke:#FFC83A;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str20 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256}
+    .str18 {stroke:#00C2FF;stroke-width:20;stroke-miterlimit:22.9256}
+    .str19 {stroke:#3B9CFF;stroke-width:20;stroke-miterlimit:22.9256}
+    .str0 {stroke:#00C2FF;stroke-width:7.62;stroke-miterlimit:22.9256}
+    .str11 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str12 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str13 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str8 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str4 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str1 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str10 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str3 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str9 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str2 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str5 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str6 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str7 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str14 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str15 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str17 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
+    .str16 {stroke:#00C2FF;stroke-width:4.17;stroke-miterlimit:22.9256}
     .fil14 {fill:none}
     .fil7 {fill:#E5EEEA}
     .fil10 {fill:#E8D6A9}
@@ -42,23 +42,23 @@
     .fil26 {fill:#CFDBE2}
     .fil20 {fill:#97B4BB}
     .fil23 {fill:#76B3CD}
-    .fil24 {fill:#006648}
+    .fil24 {fill:#3B9CFF}
     .fil12 {fill:#5D9FAD}
     .fil19 {fill:#47858C}
     .fil22 {fill:#2A363C}
     .fil21 {fill:#107984}
-    .fil28 {fill:#006648}
-    .fil3 {fill:#006648}
+    .fil28 {fill:#3B9CFF}
+    .fil3 {fill:#3B9CFF}
     .fil27 {fill:#E7F2FC}
     .fil4 {fill:#E7F2FC}
-    .fil30 {fill:#FFC83A}
-    .fil29 {fill:#FFC83A}
-    .fil25 {fill:#FFC83A}
-    .fil2 {fill:#006648}
-    .fil15 {fill:#FFC83A}
-    .fil1 {fill:#FFC83A}
-    .fil13 {fill:#006648}
-    .fil16 {fill:#FFC83A;fill-rule:nonzero}
+    .fil30 {fill:#00C2FF}
+    .fil29 {fill:#00C2FF}
+    .fil25 {fill:#00C2FF}
+    .fil2 {fill:#3B9CFF}
+    .fil15 {fill:#00C2FF}
+    .fil1 {fill:#00C2FF}
+    .fil13 {fill:#3B9CFF}
+    .fil16 {fill:#00C2FF;fill-rule:nonzero}
     .fil0 {fill:none;fill-opacity:1}
    ]]>
   </style>

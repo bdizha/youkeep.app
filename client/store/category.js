@@ -5,7 +5,7 @@ import Cookies from 'js-cookie'
 const state = () => ({
   store: {},
   hasStore: false,
-  farmers: { data: [] },
+  sellers: { data: [] },
   category: {},
   product: {},
   products: [],
@@ -15,7 +15,7 @@ const state = () => ({
   positions: [],
   position: {},
   storeCategories: [],
-  hasfarmers: false,
+  hassellers: false,
   isStore: false,
   notice: null,
   hasNotice: false,
@@ -85,8 +85,8 @@ const getters = {
   hasForm: state => state.hasForm,
   store: state => state.store,
   hasStore: state => state.hasStore,
-  farmers: state => state.farmers,
-  hasfarmers: state => state.hasfarmers,
+  sellers: state => state.sellers,
+  hassellers: state => state.hassellers,
   category: state => state.category,
   departments: state => state.departments,
   positions: state => state.positions,
@@ -117,7 +117,7 @@ const getters = {
   hasFooter: state => state.hasFooter,
   hasDownload: state => state.hasDownload,
   hasSubscribe: state => state.hasSubscribe,
-  redirectTo: state => farmers.redirectTo,
+  redirectTo: state => sellers.redirectTo,
   errors: state => state.errors,
   popover: state => state.popover,
 }
@@ -138,9 +138,9 @@ const mutations = {
   setIsValid (state, isValid) {
     state.isValid = isValid
   },
-  setfarmers (state, farmers) {
-    state.farmers = farmers
-    state.hasfarmers = farmers.data !== undefined && farmers.data.length > 0
+  setSellers (state, sellers) {
+    state.sellers = sellers
+    state.hassellers = sellers.data !== undefined && sellers.data.length > 0
   },
   setCategory (state, category) {
     state.category = category
@@ -400,18 +400,18 @@ const actions = {
       console.error('on error: ', e)
     }
   },
-  async onfarmers ({ dispatch, commit }, payload) {
+  async onsellers ({ dispatch, commit }, payload) {
     commit('setProcess', { key: 'isTray', value: true })
 
     await axios.post('/shops', payload).then(({ data }) => {
-      let farmers = data
-      // console.log('before onfarmers: ', farmers);
+      let sellers = data
+      // console.log('before onsellers: ', sellers);
 
-      commit('setfarmers', farmers)
-      commit('setFilter', { key: 'farmers', value: farmers })
+      commit('setSellers', sellers)
+      commit('setFilter', { key: 'sellers', value: sellers })
       commit('setProcess', { key: 'isTray', value: false })
 
-      // console.log('after onfarmers: ', farmers);
+      // console.log('after onsellers: ', sellers);
     })
   },
   async onReviews ({ dispatch, commit, state }, payload) {
@@ -487,9 +487,9 @@ const actions = {
     if (search) {
       commit('setSearch', JSON.parse(search))
     }
-    const farmers = Cookies.get('farmers')
-    if (farmers) {
-      commit('setfarmers', JSON.parse(farmers))
+    const sellers = Cookies.get('sellers')
+    if (sellers) {
+      commit('setSellers', JSON.parse(sellers))
     }
   }
 }

@@ -48,7 +48,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            Spazaland empowers the whole startup experience for businesses in Africa. We specialize in
+                            Paise empowers the whole startup experience for businesses in Africa. We specialize in
                             B2B payments, coupled with marketplace services focused on delivering a customer
                             experience of unparalleled quality.
                             No great solution is developed in a vacuum. Experience and domain knowledge is crucial.
@@ -114,7 +114,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-contact-us title="You want to help us transform the B2B farmers' marketplace?"></r-contact-us>
+      <r-contact-us title="You want to help us transform the B2B sellers' marketplace?"></r-contact-us>
     </a-col>
   </a-row>
 </template>
@@ -125,24 +125,24 @@ export default {
   layout: 'default',
   props: {},
   async asyncData ({ store }) {
-    await store.dispatch('base/onReviews', {})
+    await store.dispatch('content/onTestimonials', {})
   },
   data () {
     return {
-      banner: 'art-01.png',
+      banner: 'art-01.svg',
       senses: [
         {
           title: 'Innovative',
           heading: 'Transforming the way business is <span class="r-text-primary">experienced</span> online',
           content: ' If you take innovation passionately, then you\'re in the right place.\n' +
-            '                  Spazaland is a consumer centric platform that transforms\n' +
+            '                  Paise is a consumer centric platform that transforms\n' +
             '                  the way shoppers experience their business.'
         },
         {
           title: 'Dynamic',
           heading: 'Together, we can <span class="r-text-secondary">change</span> the world for the better',
-          content: 'It\'s all about giving back our buyers the control of their business.\n' +
-            '                  At Spazaland, we are building a business experience that helps millions of people be\n' +
+          content: 'It\'s all about giving back our shoppers the control of their business.\n' +
+            '                  At Paise, we are building a business experience that helps millions of people be\n' +
             '                  in control of their business experience.'
         },
         {
@@ -155,7 +155,7 @@ export default {
         },
         {
           title: 'Collaborative',
-          heading: 'Spazaland as a specialist house with a <span class="r-text-blue">diverse</span>\n' +
+          heading: 'Paise as a specialist house with a <span class="r-text-blue">diverse</span>\n' +
             '                  team',
           content: 'Great work mates\n' +
             '                  are at the\n' +

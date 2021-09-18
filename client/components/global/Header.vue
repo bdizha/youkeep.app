@@ -55,8 +55,8 @@ export default {
     address: 'account/address',
     store: 'base/store',
     processes: 'base/processes',
-    farmers: 'base/farmers',
-    hasfarmers: 'base/hasfarmers',
+    sellers: 'base/sellers',
+    hassellers: 'base/hassellers',
     hasStore: 'base/hasStore',
     drawer: 'base/drawer',
     hasStoreTray: 'base/hasStoreTray',
@@ -68,8 +68,8 @@ export default {
     await this.onCountries()
     console.log('Fetching countries >>>> ')
 
-    // await this.onfarmers()
-    console.log('Fetching farmers >>>> ')
+    // await this.onsellers()
+    console.log('Fetching sellers >>>> ')
   },
   methods: {
     onModalClose () {
@@ -98,13 +98,13 @@ export default {
 
       this.$store.dispatch('base/onDrawer', drawer)
     },
-    async onfarmers () {
+    async onsellers () {
       const payload = {
         category_id: null,
         limit: process.env.APP_LIMIT
       }
 
-      await this.$store.dispatch('base/onfarmers', payload)
+      await this.$store.dispatch('base/onsellers', payload)
     },
     async onCountries () {
       const payload = {

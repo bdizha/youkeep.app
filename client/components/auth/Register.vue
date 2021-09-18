@@ -111,7 +111,7 @@
           </a-form-item>
         </a-col>
         <a-col v-if="currentStep === 0" class="r-text-center r-shadow-none" :xs="{ span: 24 }">
-          <div class="r-divider-top r-text-small">
+          <div class="r-divider-top r-text-s">
             <a-form-item v-bind="confirmTerms">
               <a-checkbox v-decorator="['agreement', { valuePropName: 'checked' }]">
                 <span>By continuing, you agree to the</span>
@@ -178,17 +178,17 @@ export default {
         {
           value: 1,
           label: 'shopper',
-          content: 'I would like shop at Spazaland for everyday items. like fashion, gadgets and more.'
+          content: 'I would like shop at Paise for everyday items. like fashion, gadgets and more.'
         },
         {
           value: 3,
           label: 'seller',
-          content: 'I would like to sell products to millions of Spazaland shoppers out there.'
+          content: 'I would like to sell products to millions of Paise shoppers out there.'
         },
         {
           value: 4,
           label: 'business',
-          content: 'We would like to do B2B transactions or partner up with Spazaland.'
+          content: 'We would like to do B2B transactions or partner up with Paise.'
         }
       ],
       nextStep: 1,
@@ -297,7 +297,7 @@ export default {
       }
 
       this.$store.dispatch('form/onResult', message)
-      this.$message.success('Thank you for signing up with us, ' + this.user.name + '. Enjoy your business with Spazaland.')
+      this.$message.success('Thank you for signing up with us, ' + this.user.name + '. Enjoy your business with Paise.')
     },
     onNextStep () {
       if (this.currentStep === 1) {

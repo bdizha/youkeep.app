@@ -4,7 +4,7 @@
            :xs="{ span: 24 }" class="gutter-row"
     >
       <a-card style="width: 100%;" title="YOUR ORDERS">
-                    <span class="r-text-small">
+                    <span class="r-text-s">
                         Here you can manage all your orders.
                     </span>
       </a-card>

@@ -7,10 +7,10 @@
     <a-row :gutter=[24,24] justify="center" type="flex">
       <a-col :xs="{ span: 24 }" class="r-text-left">
         <h3 class="r-heading">
-          Your farmers history
+          Your sellers history
         </h3>
         <p class="r-text-normal">
-          Find your entire farmers history below
+          Find your entire sellers history below
         </p>
       </a-col>
     </a-row>
@@ -20,14 +20,14 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'r-account-modal-farmers',
+  name: 'r-account-modal-sellers',
   props: {
     maskClosable: { type: Boolean, required: false, default: false },
     closable: { type: Boolean, required: false, default: false },
   },
   data () {
     return {
-      current: 'account-farmers'
+      current: 'account-sellers'
     }
   },
   computed: mapGetters({

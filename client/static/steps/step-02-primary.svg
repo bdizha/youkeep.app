@@ -11,20 +11,20 @@ viewBox="0 0 21573.56 14859.6"
     .fil16 {fill:none}
     .fil3 {fill:#C4E1FF}
     .fil2 {fill:#E5F2FF}
-    .fil15 {fill:#006648;fill-rule:nonzero}
+    .fil15 {fill:#3B9CFF;fill-rule:nonzero}
     .fil4 {fill:#C4E1FF;fill-rule:nonzero}
     .fil12 {fill:white;fill-rule:nonzero}
     .fil0 {fill:#FFFFFF}
-    .fil11 {fill:#006648;fill-opacity:0.45}
-    .fil14 {fill:#006648;fill-opacity:0.960784}
-    .fil13 {fill:#C4E1FF;fill-opacity:0.960784}
-    .fil1 {fill:#E5F2FF;fill-opacity:0.960784}
-    .fil7 {fill: #006648;}
-    .fil5 {fill:#FFC83A;fill-opacity:0.3}
-    .fil6 {fill:#FFC83A}
-    .fil8 {fill:#006648}
-    .fil9 {fill:#FFC83A;fill-rule:nonzero}
-    .fil10 {fill: #006648;fill-rule:nonzero}
+    .fil11 {fill:#3B9CFF;fill-opacity:0.45}
+    .fil14 {fill:#3B9CFF;fill-opacity:0.99}
+    .fil13 {fill:#C4E1FF;fill-opacity:0.99}
+    .fil1 {fill:#E5F2FF;fill-opacity:0.99}
+    .fil7 {fill: #3B9CFF;}
+    .fil5 {fill:#00C2FF;fill-opacity:0.3}
+    .fil6 {fill:#00C2FF}
+    .fil8 {fill:#3B9CFF}
+    .fil9 {fill:#00C2FF;fill-rule:nonzero}
+    .fil10 {fill: #3B9CFF;fill-rule:nonzero}
    ]]>
   </style>
  </defs>

@@ -10,7 +10,7 @@
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}" class="r-text-center">
             <p class="r-text-normal">
-              Partner with us to introduce "Delayed Payments" service to your buyers and multiply sales.
+              Partner with us to introduce "Delayed Payments" service to your shoppers and multiply sales.
             </p>
           </a-col>
         </a-row>
@@ -65,31 +65,31 @@ export default {
         {
           heading: 'Fast',
           title: 'Make Delayed Payments',
-          content: 'Online or in-store, Spazaland means more flexibility at checkout.',
+          content: 'Online or in-store, Paise means more flexibility at checkout.',
           icon: 'credit-card'
         },
         {
           heading: 'Transparent',
           title: 'Earn zero risk payments',
-          content: 'You get paid today. Your buyers pay over time.',
+          content: 'You get paid today. Your shoppers pay over time.',
           icon: 'safety'
         },
         {
           heading: 'Simple',
-          title: 'Put your buyers first',
+          title: 'Put your shoppers first',
           content: 'Interest-free installment plans with no hard credit check or impact on credit',
           icon: 'shop'
         },
         {
           heading: 'Inclusive',
           title: 'Process all major cards',
-          content: 'Spazaland is the only Delayed Payments solution that accepts Amex and Discover along with Visa.',
+          content: 'Paise is the only Delayed Payments solution that accepts Amex and Discover along with Visa.',
           icon: 'business-cart'
         },
         {
           heading: 'Robust',
           title: 'Get involved in our community',
-          content: 'Introduce your brand to millions of existing Spazaland buyers in our marketplace.',
+          content: 'Introduce your brand to millions of existing Paise shoppers in our marketplace.',
           icon: 'bank'
         },
         {

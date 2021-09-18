@@ -19,7 +19,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                          For Farmers
+                          For Sellers
                         </h3>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -27,7 +27,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading">
-                          <span class="r-text-primary">Enable</span> more buyers to <span class="r-text-primary">discover</span>
+                          <span class="r-text-primary">Enable</span> more shoppers to <span class="r-text-primary">discover</span>
                           Your categories.
                         </h1>
                       </a-col>
@@ -36,7 +36,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Get the benefits of the Spazaland platform at a price you can afford and enjoy the best return on investment (ROI) on the market.
+                          Get the benefits of the Paise platform at a price you can afford and enjoy the best return on investment (ROI) on the market.
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -44,7 +44,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          With an online business platform, millions of buyers, and tons of selling tools on Spazaland, it’s the all-in-one
+                          With an online business platform, millions of shoppers, and tons of selling tools on Paise, it’s the all-in-one
                           marketplace you deserve.
                         </p>
                       </a-col>
@@ -108,7 +108,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                    Why <span class="r-text-white">Sell</span> online at Spazaland?
+                    Why <span class="r-text-white">Sell</span> online at Paise?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
@@ -116,7 +116,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h2 class="r-heading">
-                    Spazaland <span class="r-text-primary">makes</span> Your categories visible to millions of buyers.
+                    Paise <span class="r-text-primary">makes</span> Your categories visible to millions of shoppers.
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 12 }"
@@ -124,8 +124,8 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    That's because Spazaland is seamlessly integrated into your realtime catalog and your money shows up
-                    in your Spazaland account with every sale.
+                    That's because Paise is seamlessly integrated into your realtime catalog and your money shows up
+                    in your Paise account with every sale.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 18 }" :md="{ span: 12 }"

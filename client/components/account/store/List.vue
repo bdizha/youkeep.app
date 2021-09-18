@@ -1,5 +1,5 @@
 <template>
-  <a-table :columns="columns" :dataSource="farmers.data" bordered class="r-grey-shadow">
+  <a-table :columns="columns" :dataSource="sellers.data" bordered class="r-grey-shadow">
     <template slot="photo" slot-scope="photo">
       <r-avatar :size="90"
                 :src="photo"
@@ -59,18 +59,18 @@ export default {
   },
   computed: mapGetters({
     modal: 'base/modal',
-    farmers: 'account/farmers',
-    hasfarmers: 'account/hasfarmers'
+    sellers: 'account/sellers',
+    hassellers: 'account/hassellers'
   }),
   async fetch () {
-    await this.onfarmers()
+    await this.onsellers()
   },
   methods: {
-    async onfarmers () {
+    async onsellers () {
       const payload = {
         is_active: true
       }
-      await this.$store.dispatch('account/onfarmers', payload)
+      await this.$store.dispatch('account/onsellers', payload)
     },
     onModal (current) {
       const modal = {}

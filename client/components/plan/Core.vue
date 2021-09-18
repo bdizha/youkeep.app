@@ -102,7 +102,7 @@ export default {
   data () {
     return {
       activeKey: 1,
-      title: 'Spazaland connects buyers to sellers.',
+      title: 'Paise connects shoppers to sellers.',
       content: 'Our shoppers handle all your order collection and delivery experience as well as returns for you at\n' +
         'a very low cost.',
       sections: [

@@ -40,7 +40,7 @@
             <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
               <div class="r-ph-24">
                 <h3 class="r-heading r-text-black">
-                  Popular farmers
+                  Popular sellers
                 </h3>
               </div>
             </a-col>

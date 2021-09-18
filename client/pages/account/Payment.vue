@@ -9,7 +9,7 @@
             <a-col :lg="{ span: 12 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }" class="r-store-page"
             >
-              <div class="r-text-small">
+              <div class="r-text-s">
                 <template v-if="hasCards">
                   Here you can manage all your payment cards.
                 </template>

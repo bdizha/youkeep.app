@@ -33,8 +33,8 @@
 
 
           <li class="blocks-item">
-            <a href='/hc/en-us/categories/202082878-Help-for-Buyers' class="blocks-item-link">
-              <h4 class="blocks-item-title">Help for Buyers</h4>
+            <a href='/hc/en-us/categories/202082878-Help-for-shoppers' class="blocks-item-link">
+              <h4 class="blocks-item-title">Help for shoppers</h4>
               <p class="blocks-item-description">Everything you need to know to discover products on RangeMe.</p>
             </a>
           </li>
@@ -95,8 +95,8 @@
           </li>
 
           <li class="promoted-articles-item">
-            <center> <a href="/hc/en-us/articles/229743207-Which-Fields-are-Most-Important-to-Buyers-"></center>
-            <center>Which Fields are Most Important to Buyers?</center>
+            <center> <a href="/hc/en-us/articles/229743207-Which-Fields-are-Most-Important-to-shoppers-"></center>
+            <center>Which Fields are Most Important to shoppers?</center>
             </a>
           </li>
 

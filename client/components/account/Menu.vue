@@ -39,8 +39,8 @@
       <a-row class="r-mb-48" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
           <h4 class="r-store-text-light">
-            Spazaland is an independent business service that is not necessarily affiliated with,
-            endorsed or sponsored by the farmers listed here but it enables you to get the deliveries
+            Paise is an independent business service that is not necessarily affiliated with,
+            endorsed or sponsored by the sellers listed here but it enables you to get the deliveries
             you
             want.
           </h4>
@@ -63,7 +63,7 @@ const MENU = [
         link: '/account/profile'
       },
       {
-        label: 'Your farmers',
+        label: 'Your sellers',
         icon: 'shop',
         link: '/account/store'
       },
@@ -115,11 +115,11 @@ const MENU = [
     ]
   },
   {
-    heading: 'Spazaland Services ',
+    heading: 'Paise Services ',
     key: 'products',
     links: [
       {
-        label: 'Spazaland+',
+        label: 'Paise+',
         icon: 'plus',
         link: '/hiw'
       },
@@ -129,7 +129,7 @@ const MENU = [
         link: '/account/service/waykipa'
       },
       {
-        label: 'Spazaland Credit',
+        label: 'Paise Credit',
         icon: 'credit-card',
         link: '/account/service/paise'
       },

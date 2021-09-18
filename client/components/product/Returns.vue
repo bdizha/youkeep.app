@@ -15,7 +15,7 @@
         methods and keep 1.5m away at all times.
       </p>
       <p class="r-text-normal">
-        Alternatively, choose Click & Collect to collect from 400+ farmers. We'll send you an email when your order is
+        Alternatively, choose Click & Collect to collect from 400+ sellers. We'll send you an email when your order is
         ready for pickup.
       </p>
     </a-col>

@@ -1,14 +1,21 @@
 <template>
-  <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="center" type="flex">
-    <a-col v-if="false" :lg="{ span: 16 }" :md="{ span: 18 }"
+  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <h4 class="r-heading-light">
-        Spazaland powers ambitious multi-channel brands of all sizes in all industries.
-      </h4>
+      <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <h3 class="r-heading-light">
+            Paise powers ambitious multi-channel brands of all sizes in all industries.
+          </h3>
+        </a-col>
+      </a-row>
     </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+    <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
@@ -27,8 +34,8 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <h1 class="r-text-xlarge-light" :class="getTextClass(metric)">
-                      {{  metric.content }}
+                    <h1 class="r-text-slarge-light" :class="getTextClass(metric)">
+                      {{ metric.content }}
                     </h1>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -36,7 +43,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      {{  metric.title }}
+                      {{ metric.title }}
                     </p>
                   </a-col>
                 </a-row>
@@ -61,18 +68,18 @@ export default {
           theme: 'primary'
         },
         {
-          title: 'Retailers discovering new products',
-          content: '4500+',
+          title: 'Shoppers discovering new products',
+          content: '1,5M+',
           theme: 'secondary'
         },
         {
-          title: 'Products ready to be sampled',
-          content: '6000+',
+          title: 'Products ready to be discovered',
+          content: '60K+',
           theme: 'primary'
         },
         {
-          title: 'Local farmers waiting to connect',
-          content: '3000+',
+          title: 'Local shops partnered with Paise',
+          content: '36K+',
           theme: 'secondary'
         }
       ]

@@ -36,14 +36,14 @@ export default {
         this.onSearch(value)
       }
     },
-    async fetchfarmers () {
-      await this.$store.dispatch('base/onfarmers', this.params)
+    async fetchsellers () {
+      await this.$store.dispatch('base/onsellers', this.params)
     },
     async onSearch (term) {
       this.params = this.search.params
       this.params.term = term
 
-      await this.fetchfarmers()
+      await this.fetchsellers()
     }
   },
 }

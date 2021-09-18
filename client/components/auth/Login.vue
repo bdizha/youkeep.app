@@ -10,7 +10,7 @@
         </h2>
       </a-col>
       <a-col :xs="{ span: 24 }" class="r-text-left">
-        <div class="r-text-small">
+        <div class="r-text-s">
           Sign in to your account with your email address.
         </div>
       </a-col>
@@ -84,7 +84,7 @@ export default {
       errors: [],
       process: 'isSuccess',
       redirectTo: '',
-      message: 'Thank you for successfully confirming your credentials! Please wait a little more, and pay less with Spazaland'
+      message: 'Thank you for successfully confirming your credentials! Please wait a little more, and pay less with Paise'
     }
   },
   computed: mapGetters({
@@ -135,7 +135,7 @@ export default {
       }).then((response) => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your business with Spazaland.')
+            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your business with Paise.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

@@ -4,16 +4,16 @@
       <a-row :gutter=[24,24] justify="center" type="flex">
         <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
           <h2 class="r-heading-light">
-            Spazaland Privacy Policy
+            Paise Privacy Policy
           </h2>
         </a-col>
         <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
           <article class="r-article">
-            <!-- NOTE: this page is a business-critical part of the Spazaland service.  Any changes should be reviewed by legal and made with extreme care.  -->
-            <p>This Privacy Statement describes in greater detail the privacy practices of Spazaland.com, Inc.</p>
+            <!-- NOTE: this page is a business-critical part of the Paise service.  Any changes should be reviewed by legal and made with extreme care.  -->
+            <p>This Privacy Statement describes in greater detail the privacy practices of Paise.com, Inc.</p>
 
             <p>If you have questions or complaints regarding our Privacy Statement or practices, please contact us at
-              support@spazaland.com.</p>
+              support@paise.com.</p>
 
             <p><strong>1. WHEN THIS PRIVACY STATEMENT APPLIES.</strong></p>
 
@@ -35,7 +35,7 @@
               call
               us for support, or give us feedback. We may also get information from other companies or third parties,
               such
-              as when you sync a third party account or service with your Spazaland Service, or when we may use service
+              as when you sync a third party account or service with your Paise Service, or when we may use service
               providers to supplement the Personal Information you give us (e.g., validate your mailing address) to help
               us maintain the accuracy of your data and provide you with better service. Finally, we also collect
               content
@@ -73,7 +73,7 @@
               address, how you interact with our Services, and information about your computer configuration to resolve
               questions you may have about our Services and to follow up with you about your experience. We may also
               offer
-              various Internet chat services, for example, to speak with an Spazaland support representative. Internet
+              various Internet chat services, for example, to speak with an Paise support representative. Internet
               Chat
               transmissions are encrypted but you should not supply more Personal Information, including tax data, than
               is
@@ -89,21 +89,21 @@
 
             <p><em>To Improve Services and Develop New Services</em>. We will use your information to personalize or
               customize your experience and the Service, develop new features or services, and to improve the overall
-              quality of Spazaland’s Services.</p>
+              quality of Paise’s Services.</p>
 
             <p><em>Feedback</em>. We may use any information you volunteer in surveys you answer for us and combine them
-              with answers from other buyers in order to better understand our Services and how we may improve them.
+              with answers from other shoppers in order to better understand our Services and how we may improve them.
               Answering any survey is optional.</p>
 
             <p><em>Research, Including Publishing or Sharing Combined Information from Many Users, But Only in a Way
               that
               Would Not Allow You or Any Other Person to be Identified</em>. Only in a way that would not allow you or
               any
-              other person to be identified, we may prepare and share information about our buyers with third
+              other person to be identified, we may prepare and share information about our shoppers with third
               parties,
               such as advertisers or partners, for research, academic, marketing and/or promotional purposes. For
               example,
-              we may share demographic data that describes the percentage of our buyers who use mobile services or
+              we may share demographic data that describes the percentage of our shoppers who use mobile services or
               who
               use a particular operating system. We or our third party partners may publicly report the aggregated
               findings of the research or analysis, but only in a way that would not allow you or any other person to be
@@ -127,16 +127,16 @@
               our company, or to respond to a court order, subpoena, search warrant, or other law enforcement request.
             </p>
 
-            <p><em>Protection of Spazaland and Others</em>. We may share account information, Personal Information and
+            <p><em>Protection of Paise and Others</em>. We may share account information, Personal Information and
               Usage
               Data when we believe it is appropriate to enforce or apply our products’ Terms of Service and other
-              agreements; or protect the rights, property, or safety of Spazaland, our Services, our users, or others.
+              agreements; or protect the rights, property, or safety of Paise, our Services, our users, or others.
               This
               includes exchanging information with other companies and organizations for fraud protection and credit
               risk
               reduction. This does not include selling, renting, sharing, or otherwise disclosing Personal Information
               of
-              our buyers for commercial purposes in violation of the commitments set forth in this Privacy Statement.
+              our shoppers for commercial purposes in violation of the commitments set forth in this Privacy Statement.
             </p>
 
             <p><em>Reporting to Credit Bureaus</em>. We may share your information with credit bureaus, consumer
@@ -156,10 +156,10 @@
               opportunity to choose when your Personal Information may be shared with other third parties.</p>
 
             <p><strong>d) Syncing, Linking, Connecting Your Bank Account or Other Third Party Services with Your
-              Spazaland
+              Paise
               Service.</strong></p>
 
-            <p>You may choose to sync certain Spazaland Services with information from other marketplace accounts. To
+            <p>You may choose to sync certain Paise Services with information from other marketplace accounts. To
               sync
               your
               marketplace account information, we must access your online account with your marketplace institution. We
@@ -170,10 +170,10 @@
               future.</p>
 
             <p>We work with other companies or developers to offer you products and services and you may choose to sync,
-              link or connect other third party services with your Spazaland Service. Sometimes Spazaland may let you
+              link or connect other third party services with your Paise Service. Sometimes Paise may let you
               know
               about
-              the service or product, or another company may let you know about a Spazaland service or product. It will
+              the service or product, or another company may let you know about a Paise service or product. It will
               be
               clear who is referring the service or product, and who is providing the service or product. If you choose
               to
@@ -197,7 +197,7 @@
             </p>
 
             <p><strong>3. WHAT YOU CAN DO TO MANAGE YOUR PRIVACY. You can view and edit information that identifies you
-              online through your Spazaland Service. How you can access and control information that identifies you will
+              online through your Paise Service. How you can access and control information that identifies you will
               depend on which Services you use. You have a choice about the use of information that identifies you,
               marketing communications you receive from us, and our use of cookies and other tracking
               technologies.</strong></p>
@@ -217,13 +217,13 @@
             <p><strong>c) Cookies and Other Tracking Technologies.</strong> The following is a high level summary of our
               practices and your controls for cookies and other tracking technologies.</p>
 
-            <p>In accordance with applicable law, Spazaland and our service providers may use commonly-used tools to
+            <p>In accordance with applicable law, Paise and our service providers may use commonly-used tools to
               recognize
               your visit and track your interactions with our Services such as cookies, web beacons, pixels, local
               shared
               objects, and similar technologies (collectively, “Cookies”). Sometimes this tracking is necessary in order
               for us to provide you the Service you requested. Other times, we combine Usage Data collected from Cookies
-              with that of other buyers to improve your and other buyers’ experience. You have control over some
+              with that of other shoppers to improve your and other shoppers’ experience. You have control over some
               of
               the Usage Data we collect from Cookies and how we use it. Information on changing your browser settings to
               opt out of Cookies can be found in your browser settings. If you opt-out and later delete your Cookies,
@@ -255,7 +255,7 @@
               you, and let you know about products and services that may interest you, unless you have opted out of
               receiving marketing communications. We may also continue to use some of your information for business
               purposes and to improve our offerings or in some cases to develop new ones. We will retain and use your
-              information as required by applicable regulations and Spazaland’s records and information management
+              information as required by applicable regulations and Paise’s records and information management
               policies
               to
               comply with our legal and reporting obligations, resolve disputes, enforce our agreements, complete any
@@ -268,7 +268,7 @@
               you have determined that the Personal Information we collected about you is inaccurate or processed in
               violation of applicable law, you may also request that your Personal Information be corrected, amended, or
               deleted. Requests for access to your Personal Information and to have it corrected, amended, or deleted
-              should be sent to support@spazaland.com.</p>
+              should be sent to support@paise.com.</p>
 
             <p><strong>5. SECURITY OF YOUR INFORMATION. Keeping your Information safe is important to us.</strong></p>
 
@@ -300,9 +300,9 @@
               contact us. We want your feedback and comments.</strong></p>
 
             <p><strong>a) Via Email.</strong> If you have questions or complaints regarding our Privacy Statement or
-              practices, please contact us by email at support@spazaland.com.</p>
+              practices, please contact us by email at support@paise.com.</p>
 
-            <p><strong>b) Via Direct Mail.</strong> Spazaland.com, Inc., PO Box 7775 #86889, South Africa,Johannesburg
+            <p><strong>b) Via Direct Mail.</strong> Paise.com, Inc., PO Box 7775 #86889, South Africa,Johannesburg
              .</p>
 
             <p><strong>8. CHANGES TO OUR PRIVACY STATEMENTS. From time to time we may change or update our Privacy
@@ -322,7 +322,7 @@
             <p><strong>9. COLLECTION AND USE OF CHILDREN’S PERSONAL INFORMATION. We do not knowingly collect information
               from minors.</strong></p>
 
-            <p>Spazaland Services are intended for and directed to adults. Our Services are not directed to minors and
+            <p>Paise Services are intended for and directed to adults. Our Services are not directed to minors and
               we
               do
               not knowingly collect Personal Information from minors<strong>.</strong></p>

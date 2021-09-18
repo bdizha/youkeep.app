@@ -12,7 +12,7 @@
           <a-row class="r-mt-48" justify="center" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
-                Spazaland seller application
+                Paise seller application
               </h2>
               <p class="r-text-normal">
                 Contact us to learn more About Us and checkout financing

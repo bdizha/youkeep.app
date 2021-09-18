@@ -19,32 +19,29 @@ export default {
   data () {
     return {
       currentStep: 0,
-      title: 'Spazaland connects shoppers to buyers.',
-      content: 'We partner with manufactures and the nearest businesses to provide our buyers with fast\n' +
-        'deliveries and better checkout and credit line services.',
+      title: 'Shop in the Fast Lane',
+      content: 'We support 50+ of your favorite stores. Look for the Paise logo and start shopping!',
       steps: [
         {
-          title: 'Not just a marketplace',
+          title: 'Always checkout in 3 seconds or less.',
           heading: '<span class="r-text-primary">Gain</span> sales & marketplace insights',
-          image: '/assets/asset-09.svg',
+          image: '/assets/asset-04.svg',
           summary: 'Unlock new growth in new ways while defending farming efficiency.',
-          content: 'Create an account and showcase or discover trending, streamlined, and relevant products on Spazaland\'s B2B marketplace today. ' +
-            'Expand your customer base with key placements on our high-traffic website.'
+          content: 'Paise enables consumers to create a universal account and buy from dozens of retailers in a few seconds.'
         },
         {
-          title: 'Unified farming experience',
+          title: 'Place and track orders in real-time.',
           heading: '<span class="r-text-primary">Reach</span> an end-to-end marketplace',
           image: '/assets/asset-06.svg',
-          summary: 'We are here for passionate producers so you can focus on product quality of your brand.',
-          content: ' Finding buyers is always not easy as well as transportation. Every single farmer spends a lot of time approaching offline marketplaces as well as arrangement of payment & delivery day by day.'
+          summary: 'With Paise, users no longer need to pull out their credit card or enter long forms to complete online purchases.',
+          content: 'Ultimately, we want to enable impulse mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
         },
         {
-          title: 'Flexible payments terms',
-          heading: '<span class="r-text-primary">Access</span> farming credit lines',
+          title: 'Never bother with checkout forms again.',
+          heading: '<span class="r-text-primary">Pay</span> in 3 installments with paise.',
           image: '/assets/asset-12.svg',
           summary: 'We know how difficult it can be to secure financing and free up working capital as a farming growing business. ',
-          content: 'Our B2B payment method presents your buyers with the perfect pay-over-time option for them-whether that’s split pay, ' +
-            'installments, or both-with terms and rates you can customize per service and per price point to drive the results you’re looking for.'
+          content: 'It eliminates the need for mobile shoppers to fill out lengthy and cumbersome checkout forms, empowering them to make purchases effortlessly.'
         }
       ]
     }

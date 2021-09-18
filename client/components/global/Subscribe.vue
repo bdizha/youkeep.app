@@ -12,7 +12,7 @@
                 Stay in touch
               </h2>
             </div>
-            <p class="r-text-small">
+            <p class="r-text-s">
               By clicking on "Subscribe" you declare your consent to
               the
               advertising

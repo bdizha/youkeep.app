@@ -8,9 +8,9 @@ viewBox="0 0 23739 19930"
   <style type="text/css">
    <![CDATA[
     .str1 {stroke:#373435;stroke-width:19.9384}
-    .str0 {stroke:#FFC83A;stroke-width:19.9384}
+    .str0 {stroke:#00C2FF;stroke-width:19.9384}
     .fil526 {fill:none}
-    .fil6 {fill:#006648}
+    .fil6 {fill:#3B9CFF}
     .fil11 {fill:#00A20F}
     .fil550 {fill:#01A102}
     .fil958 {fill:#070201}
@@ -1396,15 +1396,15 @@ viewBox="0 0 23739 19930"
     .fil235 {fill:#FF8434}
     .fil236 {fill:#FF8B3B}
     .fil264 {fill:#FF8E42}
-    .fil814 {fill:#FFC83A}
+    .fil814 {fill:#00C2FF}
     .fil3 {fill:#FFE08E}
     .fil2 {fill:#FFEBB5}
-    .fil4 {fill:#FFF3D2}
+    .fil4 {fill:#d9f6ff}
     .fil5 {fill:#FFF6DE}
     .fil1 {fill:#FFFAED}
     .fil8 {fill:white}
     .fil7 {fill:white;fill-rule:nonzero}
-    .fil0 {fill:#FFC83A}
+    .fil0 {fill:#00C2FF}
    ]]>
   </style>
  </defs>

@@ -11,7 +11,7 @@
           </a-col>
           <a-col :lg="{span: 12}" :xs="{span: 24}" class="r-p-lg-48" style="position: relative;">
             <div class="r-page-header-photo r-page-art-primary">
-              <img alt="Couple orders online" src="/images/Spazaland/shop-rules-02.png">
+              <img alt="Couple orders online" src="/images/Paise/shop-rules-02.png">
             </div>
           </a-col>
         </a-row>
@@ -27,9 +27,9 @@
               Who we are
             </h2>
             <p class="r-text-normal">
-              Nice to know, we are Spazaland, an online supermakert service. We are the
-              only store in South Africa that is only online, which means that our buyers are at the
-              center of our business, in fact, we focus on our buyers and how best we can serve them.
+              Nice to know, we are Paise, an online supermakert service. We are the
+              only store in South Africa that is only online, which means that our shoppers are at the
+              center of our business, in fact, we focus on our shoppers and how best we can serve them.
 
             </p>
             <p class="r-text-normal">
@@ -40,7 +40,7 @@
               and quality.
             </p>
             <p class="r-text-normal">
-              Our mission is to provide our buyers with the best service on the market.
+              Our mission is to provide our shoppers with the best service on the market.
               Our professional shoppers are waiting to choose you super fresh and high quality
               products, our couriers are waiting to get you the shipment super fast and our customer
               service team is waiting to give you super personal and courteous service across many
@@ -56,7 +56,7 @@
         <a-row align="middle" justify="space-around" type="flex">
           <a-col :lg="{span: 18 , offset: 6}" class="r-page-padding">
             <h2 class="r-heading r-text-secondary">
-              We believe in our buyers
+              We believe in our shoppers
             </h2>
             <p class="r-text-normal">
               online shopping is part of it, but there are more fun things to do. Yet we are often in
@@ -69,10 +69,10 @@
               cash register.
             </p>
             <p class="r-text-normal">
-              Spazaland thinks it can be done differently: faster, easier and cheaper. The idea is
+              Paise thinks it can be done differently: faster, easier and cheaper. The idea is
               simple. We
               arrange
-              the shopping, so that you have more time for fun things. At Spazaland you can order all
+              the shopping, so that you have more time for fun things. At Paise you can order all
               shopping
               within a few minutes. So toilet paper, fresh, chips and ice cream, but also organic
               eggs, tender

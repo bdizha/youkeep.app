@@ -38,8 +38,8 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Earn up to R55/hr or more business for Spazaland members.
-                          Deliver things people love, from the farmers they trust.
+                          Earn up to R55/hr or more business for Paise members.
+                          Deliver things people love, from the sellers they trust.
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -47,8 +47,8 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          Earn up to R55/hr or more business for Spazaland members.
-                          Deliver things people love, from the farmers they trust.
+                          Earn up to R55/hr or more business for Paise members.
+                          Deliver things people love, from the sellers they trust.
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -104,7 +104,7 @@
         </a-col>
         <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <p class="r-text-medium">
-            With Spazaland, you don’t have to worry about which store to go to or where your next ride will take you.
+            With Paise, you don’t have to worry about which store to go to or where your next ride will take you.
           </p>
         </a-col>
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -197,7 +197,7 @@
                   </a-col>
                   <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <p class="r-text-normal">
-                      Spazaland is a membership-based business marketplace, enabling delivery of trendy fashion items,
+                      Paise is a membership-based business marketplace, enabling delivery of trendy fashion items,
                       hot food, household items and more.
                     </p>
                   </a-col>
@@ -249,7 +249,7 @@
                   <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
                     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                        Why shop with Spazaland?
+                        Why shop with Paise?
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -358,13 +358,13 @@ export default {
         {
           heading: 'Deliver',
           title: 'Get fast delivery requests',
-          content: 'Shop your go-to products from your favorite farmers. That’s why we deliver from local and global retailers you love - like Adidas, H & M and 1000 000s more.',
+          content: 'Shop your go-to products from your favorite sellers. That’s why we deliver from local and global retailers you love - like Adidas, H & M and 1000 000s more.',
           image: '/images/content/customer-02.svg'
         },
         {
           heading: 'Get Paid',
           title: 'Earn more as you deliver',
-          content: 'Experienced shoppers make an average of R45/hr. Your weekly earnings are automatically credited to your Spazaland account on your set payment day.',
+          content: 'Experienced shoppers make an average of R45/hr. Your weekly earnings are automatically credited to your Paise account on your set payment day.',
           image: '/images/content/customer-03.svg'
         }
       ]

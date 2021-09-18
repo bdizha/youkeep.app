@@ -29,7 +29,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h2 class="r-heading-light r-text-dark r-text-white">
-                            <span class="r-text-yellow">Spazaland</span> insights about the B2B marketplace
+                            <span class="r-text-yellow">Paise</span> insights about the B2B marketplace
                             infrastructure.
                           </h2>
                         </a-col>

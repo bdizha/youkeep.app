@@ -109,6 +109,16 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.r-icon-stroke {
+    svg {
+        font-size: 60px;
+        stroke-width: 24px;
+        stroke: @primary-color;
+        fill: transparent;
+        color: transparent;
+    }
+}
+
 .r-text-grey-light {
     color: #3D4852AA !important;
     font-size: 15px;
@@ -163,7 +173,7 @@ a.r-text-logo {
     font-weight: 300;
 }
 
-h1.r-text-xlarge {
+h1.r-text-slarge {
     font-weight: 900;
     font-size: 48px;
     line-height: 48px;
@@ -171,7 +181,7 @@ h1.r-text-xlarge {
     margin: 0;
 }
 
-h1.r-text-xlarge-light {
+h1.r-text-slarge-light {
     font-weight: 300;
     font-size: 48px;
     line-height: 48px;
@@ -211,7 +221,14 @@ h1.r-text-xlarge-light {
     }
 }
 
-.r-text-small {
+.r-text-s {
+    font-size: 15px;
+    line-height: 18px;
+    padding: 0;
+    margin: 0;
+}
+
+.r-text-xs {
     font-size: 14px;
     line-height: 18px;
     padding: 0;
@@ -616,7 +633,7 @@ h1.r-text-xlarge-light {
 }
 
 .r-layout-bottom {
-    background: #e2f0cd;
+    background: #e1f0ff;
     height: 63px !important;
     padding: 12px !important;
     margin-bottom: 0;
@@ -777,7 +794,7 @@ x {
         }
     }
 
-    .r-text-small {
+    .r-text-s {
         .ant-checkbox + span {
             font-size: 14px;
         }
@@ -836,7 +853,7 @@ x {
     }
 
     .r-store-active {
-        background: #006648 !important;
+        background: #3B9CFF !important;
         color: @white;
         position: absolute;
         top: -9px;
@@ -868,19 +885,19 @@ x {
 
 .ant-select-focused {
     .ant-select-selection {
-        border-color: #006648 !important;
+        border-color: #3B9CFF !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 }
 
 .ant-select-selection {
     &:focus {
-        border-color: #006648 !important;
+        border-color: #3B9CFF !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 
     &:active {
-        border-color: #006648 !important;
+        border-color: #3B9CFF !important;
         box-shadow: #00800033 0px 1px 3px 0px !important;
     }
 }
@@ -889,7 +906,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #006648 !important;
+            border-right: 3px solid #3B9CFF !important;
         }
 
         font-size: 15px !important;
@@ -907,7 +924,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #006648 !important;
+            border-right: 3px solid #3B9CFF !important;
         }
 
         font-size: 15px !important;
@@ -926,7 +943,7 @@ x {
     .ant-menu-item {
         &::after {
             border-right: 3px solid transparent !important;
-            border-right: 3px solid #006648 !important;
+            border-right: 3px solid #3B9CFF !important;
         }
 
         font-size: 15px !important;
@@ -1092,7 +1109,7 @@ x {
 
 .ant-rate {
     font-size: 21px;
-    color: #FFC83A;
+    color: #00C2FF;
     @media (max-width: 768px) {
         font-size: 18px;
     }
@@ -1273,6 +1290,13 @@ x {
 .r-product-actions {
     background: @white;
     border-radius: @border-radius;
+}
+
+.r-shadow-mobile {
+    box-shadow: rgba(12, 12, 13, 0.09) 0px 12px 24px 0px;
+    display: inline-block;
+    border-radius: 66px;
+    overflow: hidden;
 }
 
 .ant-checkbox-wrapper,
@@ -1782,7 +1806,7 @@ x {
             border-bottom: 1px solid transparent !important;
 
             &.ant-collapse-item-active {
-                background: #e2f0cd;
+                background: #e1f0ff;
             }
         }
     }
@@ -1890,7 +1914,7 @@ xxl	≥1600px, could be a span value or an object containing above props
     cursor: pointer;
 
     &:hover {
-        color: #006648 !important;
+        color: #3B9CFF !important;
     }
 
     .anticon {
@@ -2066,7 +2090,7 @@ xxl	≥1600px, could be a span value or an object containing above props
             color: @black;
             margin-right: 6px;
             background: @white;
-            border: 1px solid #e2f0cd;
+            border: 1px solid #e1f0ff;
 
             .anticon {
                 margin-right: 0;
@@ -2084,7 +2108,7 @@ xxl	≥1600px, could be a span value or an object containing above props
             }
 
             .r-text-link {
-                color: #FFC83A;
+                color: #00C2FF;
                 opacity: 0.96;
             }
         }
@@ -2321,7 +2345,7 @@ h4 {
 
     .r-cart-btn {
         border: 1px solid @white;
-        color: #006648AC;
+        color: #3B9CFFAC;
         width: 100%;
         text-align: center;
 
@@ -2340,7 +2364,7 @@ h4 {
 
         .r-cart-btn {
             background: @white;
-            color: #FFC83AAC;
+            color: #00C2FFAC;
 
             &:hover {
                 background: @secondary-color;
@@ -2417,7 +2441,7 @@ h4 {
 
     .r-cart-btn {
         border: 1px solid @white;
-        color: #FFC83AAC;
+        color: #00C2FFAC;
         width: 100%;
         text-align: center;
 
@@ -2436,7 +2460,7 @@ h4 {
 
         .r-cart-btn {
             background: @white;
-            color: #FFC83AAC;
+            color: #00C2FFAC;
 
             &:hover {
                 background: @secondary-color;
@@ -2908,11 +2932,11 @@ label {
 }
 
 .ant-form-shadow-secondary {
-    box-shadow: 0 12px 15px 6px #00664822, 0 8px 28px 6px #00664833, 0 12px 15px -6px #00664844;
+    box-shadow: 0 12px 15px 6px #3B9CFF22, 0 8px 28px 6px #3B9CFF33, 0 12px 15px -6px #3B9CFF44;
 }
 
 .ant-form-shadow-primary {
-    box-shadow: 0 12px 15px 6px #00664822, 0 8px 28px 6px #00664833, 0 12px 15px -6px #00664844;
+    box-shadow: 0 12px 15px 6px #3B9CFF22, 0 8px 28px 6px #3B9CFF33, 0 12px 15px -6px #3B9CFF44;
 }
 
 .r-inline-text {
@@ -2976,37 +3000,37 @@ label {
     }
 
     > .ant-menu-item-active {
-        color: #006648 !important;
+        color: #3B9CFF !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-submenu-active {
-        color: #006648 !important;
+        color: #3B9CFF !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-item-open {
-        color: #006648 !important;
+        color: #3B9CFF !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-submenu-open {
-        color: #006648 !important;
+        color: #3B9CFF !important;
         border-bottom: 2px solid transparent;
     }
 
     > .ant-menu-item-selected {
-        color: #006648 !important;
+        color: #3B9CFF !important;
         border-bottom: 2px solid transparent;
         border-radius: @border-radius;
 
         > a {
-            color: #006648 !important;
+            color: #3B9CFF !important;
         }
     }
 
     > .ant-menu-submenu-selected {
-        color: #006648 !important;
+        color: #3B9CFF !important;
         border-bottom: 2px solid transparent !important;
     }
 }
@@ -3937,7 +3961,7 @@ label {
     right: 24px;
 
     .ant-btn {
-        background: #006648 !important;
+        background: #3B9CFF !important;
         color: #FFFFFF !important;
     }
 }
@@ -4019,11 +4043,11 @@ label {
 
 .ant-avatar {
     &.r-avatar-primary {
-        border: 1px solid #00664866;
+        border: 1px solid #3B9CFF66;
     }
 
     &.r-avatar-secondary {
-        border: 1px solid #FFC83A66;
+        border: 1px solid #00C2FF66;
     }
 
     &.r-avatar-store {
@@ -4155,7 +4179,7 @@ label {
                 transform: translateY(-50%);
                 color: @black;
                 fill: @secondary-color;
-                background: #e2f0cd;
+                background: #e1f0ff;
 
                 > * {
                     line-height: 1;
@@ -4223,7 +4247,7 @@ label {
                 right: 24px;
                 left: auto;
                 font-size: 15px !important;
-                background: #e2f0cd;
+                background: #e1f0ff;
                 height: 30px;
                 width: 30px;
                 line-height: 36px;
@@ -4359,7 +4383,7 @@ label {
                     right: 0;
                     left: auto;
                     font-size: 15px !important;
-                    background: #e2f0cd;
+                    background: #e1f0ff;
                     height: 30px;
                     width: 30px;
                     line-height: 36px;
@@ -4525,7 +4549,7 @@ label {
             left: 0;
             background-repeat: no-repeat;
             background-position: center;
-            background-color: #e2f0cd;
+            background-color: #e1f0ff;
             height: 30px;
             width: 30px;
             line-height: 36px;
@@ -4576,7 +4600,7 @@ label {
         &:hover,
         &.r-checkout-item__active {
             &:before {
-                background-color: #00664899;
+                background-color: #3B9CFF99;
             }
 
             &.r-checkout-item-address {
@@ -4766,7 +4790,7 @@ label {
     }
 
     .r-page-white {
-        background-color: #00664899;
+        background-color: #3B9CFF99;
     }
 
     .r-page-secondary {
@@ -4941,7 +4965,7 @@ label {
             }
 
             .ant-tabs-nav {
-                background-image: linear-gradient(0deg, rgba(233, 244, 255, 0.15) 36%, @primary-color-light 100%);
+                background-image: linear-gradient(0deg, rgba(59, 156, 255, 0.15) 36%, @primary-color-light 100%);
                 border-radius: @border-radius;
 
                 .ant-tabs-tab {
@@ -4996,7 +5020,7 @@ label {
                 }
 
                 .ant-tabs-nav {
-                    background-image: linear-gradient(0deg, rgba(151, 200, 75, 0.09) 36%, @secondary-color-light 100%);
+                    background-image: linear-gradient(0deg, rgba(59, 156, 255, 0.09) 36%, @secondary-color-light 100%);
                     .ant-tabs-tab {
                         &:hover {
                             background: @secondary-color;
@@ -5037,7 +5061,7 @@ label {
                 }
 
                 .ant-tabs-nav {
-                    background-image: linear-gradient(0deg, rgba(255, 243, 210, 0.15) 36%, @primary-color-light 100%);
+                    background-image: linear-gradient(0deg, rgba(0, 194, 255, 0.15) 36%, @primary-color-light 100%);
                     .ant-tabs-tab {
                         &:hover {
                             background: @primary-color;
@@ -5283,7 +5307,7 @@ label {
     }
 }
 
-.r-farmers-tray {
+.r-sellers-tray {
     .ant-card {
         margin: 6px;
         @media (max-width: 768px) {
@@ -5332,7 +5356,7 @@ label {
 }
 
 .r-search-btn {
-    background-color: #006648E6;
+    background-color: #3B9CFFE6;
     border-color: #FDBAC4;
     color: @white;
 
@@ -5604,7 +5628,7 @@ label {
     background-color: rgba(255, 255, 255, 0.985);
 }
 
-.r-farmers-tray-active {
+.r-sellers-tray-active {
     top: 60px;
     position: fixed;
     bottom: 0;
@@ -5673,7 +5697,7 @@ label {
     border-radius: @border-radius;
     overflow: hidden;
     box-shadow: @shadow-color 0px 1px 3px 0px;
-    background-color: #e2f0cd;
+    background-color: #e1f0ff;
 }
 
 .r-store-cover {
@@ -6160,7 +6184,7 @@ label {
 }
 
 .r-art-grey {
-    background-color: #e2f0cd;
+    background-color: #e1f0ff;
     background-repeat: repeat;
     padding: 0 24px 24px;
     @media (max-width: 768px) {
@@ -6196,7 +6220,7 @@ label {
 
 .r-art-primary {
     background-image: url(/images/art-white.svg);
-    background-color: #006648DD;
+    background-color: #3B9CFFDD;
     background-repeat: repeat;
     padding: 24px;
     background-size: 0.6% !important;
@@ -6215,7 +6239,7 @@ label {
 }
 
 .r-art-primary-light {
-    background: #00664899 url(/images/art-primary.svg) repeat scroll 0% 0% !important;
+    background: #3B9CFF99 url(/images/art-primary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -6224,7 +6248,7 @@ label {
 }
 
 .r-art-primary-secondary {
-    background: #00664899 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
+    background: #3B9CFF99 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -6242,7 +6266,7 @@ label {
 }
 
 .r-art-secondary-light {
-    background: #00664899 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
+    background: #3B9CFF99 url(/images/art-secondary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
     background-size: 0.6% !important;
     @media (max-width: 768px) {
@@ -6362,7 +6386,7 @@ label {
     padding: 12px;
 
     &:hover {
-        background: #e2f0cd;
+        background: #e1f0ff;
         color: @secondary-color;
     }
 }
@@ -6798,7 +6822,7 @@ label {
                 color: @secondary-color;
             }
 
-            background: #00664899;
+            background: #3B9CFF99;
         }
     }
 }
@@ -6839,7 +6863,7 @@ label {
     .ant-card {
         .r-shopper-icon {
             color: @secondary-color;
-            background: #00664899;
+            background: #3B9CFF99;
             height: 168px;
             width: 168px;
             padding: 24px;
@@ -6978,6 +7002,21 @@ label {
             right: 24px;
         }
     }
+
+    &.r-slider-testimonials{
+        position: relative;
+        .slick-prev,
+        .slick-next {
+            display: none !important;
+        }
+
+        .slick-slider {
+            padding-bottom: 24px;
+            .slick-dots {
+                bottom: -12px;
+            }
+        }
+    }
 }
 
 .r-collapse-panel {
@@ -7072,7 +7111,7 @@ label {
 }
 
 .r-bg-primary-light {
-    background-image: linear-gradient(0deg, rgba(151, 200, 75, 0.09) 36%, @primary-color-light 100%);
+    background-image: linear-gradient(0deg, rgba(59, 156, 255, 0.03) 36%, @primary-color-light 100%);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_primary_light.svg) no-repeat !important;
@@ -7080,7 +7119,7 @@ label {
 }
 
 .r-bg-secondary-light {
-    background-image: linear-gradient(0deg, rgba(255, 243, 210, 0.15) 36%, @secondary-color-light 100%);
+    background-image: linear-gradient(0deg, rgba(0, 194, 255, 0.03) 36%, @secondary-color-light 100%);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_secondary_light.svg) no-repeat !important;
@@ -7088,7 +7127,7 @@ label {
 }
 
 .r-bg-dark-light {
-    background-image: linear-gradient(0deg, rgba(61, 72, 82, 0.99) 36%, @black 100%);
+    background-image: linear-gradient(0deg, rgba(61, 72, 82, 0.0) 36%, @black 100%);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_dark_light.svg) no-repeat !important;
@@ -7395,7 +7434,7 @@ h3.r-step-heading {
 }
 
 .r-cover-image-half {
-    background: url(/images/content/happy-1.jpg) no-repeat;
+    background: url(/images/content/happy-1.svg) no-repeat;
     background-size: cover;
     position: absolute;
     left: 50%;
@@ -7837,7 +7876,7 @@ h3.r-step-heading {
     }
 
     .r-slider .slick-prev, .r-slider .slick-next {
-        color: #FFC83A;
+        color: #00C2FF;
         background: @white;
         border: 1px solid transparent;
         top: 50%;
@@ -7961,7 +8000,7 @@ h3.r-step-heading {
     border-radius: 50%;
     overflow: hidden;
     color: @primary-color;
-    background: #00664899 url(/images/icon_pattern_white.svg) repeat;
+    background: #3B9CFF99 url(/images/icon_pattern_white.svg) repeat;
     border-color: @secondary-color;
     text-align: center;
     box-shadow: @shadow-color 0px 1px 3px 0px;
@@ -8093,7 +8132,7 @@ h3.r-step-heading {
         }
 
         .r-search-item-avatar {
-            background: #e2f0cd;
+            background: #e1f0ff;
             border-radius: @border-radius;
             overflow: hidden;
             position: absolute;
@@ -8144,7 +8183,7 @@ h3.r-step-heading {
 .ant-avatar-icon {
     font-size: 15px;
     color: @secondary-color;
-    background: #e2f0cd;
+    background: #e1f0ff;
     box-shadow: @shadow-color 0px 1px 3px 0px;
 }
 
@@ -8199,14 +8238,14 @@ a:hover {
     .ant-avatar-icon {
         color: @black;
         margin-right: 6px;
-        background: #e2f0cd;
+        background: #e1f0ff;
         box-shadow: @shadow-color 0px 1px 3px 0px;
     }
 
     &:hover {
         .ant-avatar-icon {
-            background: #00664899;
-            border-color: #00664833;
+            background: #3B9CFF99;
+            border-color: #3B9CFF33;
             color: @secondary-color;
         }
     }
@@ -8404,7 +8443,7 @@ a:hover {
 
 .slick-dots li.slick-active button:before {
     opacity: .96;
-    color: #006648
+    color: #3B9CFF
 }
 
 .r-slick-thumb {

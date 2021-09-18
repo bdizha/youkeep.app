@@ -32,7 +32,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h1 class="r-heading">
-                          Our buyers stories
+                          Our shoppers stories
                         </h1>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -40,7 +40,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          Thousands of small farmers trust Spazaland with their finances
+                          Thousands of small sellers trust Paise with their finances
                         </p>
                       </a-col>
                     </a-row>
@@ -80,7 +80,7 @@ export default {
   data () {
     return {
       features: [
-        { content: 'Access Spazaland via desktop or iPhone - we go where you go' },
+        { content: 'Access Paise via desktop or iPhone - we go where you go' },
         { content: 'Quickly answer categorization requests from your team' },
         { content: 'Contact your team with our simple messaging feature' },
         { content: 'Contact your team with our simple messaging feature' }

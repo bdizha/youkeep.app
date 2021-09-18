@@ -51,7 +51,7 @@ export default {
           title: 'Business Information'
         },
         {
-          title: 'Farmer Information'
+          title: 'Seller Information'
         },
         {
           title: 'Billing Information'

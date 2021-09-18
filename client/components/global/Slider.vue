@@ -1,14 +1,8 @@
 <template>
   <VueSlickCarousel v-bind="settings">
     <div v-for="(image, index) in images"
-         :key="index + '-image'"
-         class="r-page-header-photo"
-    >
-      <img :src="'/assets/' + image"/>
-      <div :style="{backgroundImage: 'url(' + '/assets/' + image + ')'}"
-           class="r-page-white"
-      >
-      </div>
+         :key="index">
+      <nuxt-img :src="image" height="750px"></nuxt-img>
     </div>
   </VueSlickCarousel>
 </template>
@@ -16,12 +10,12 @@
 export default {
   name: 'r-slider',
   props: {
-    images: { type: Array, required: false, default: [] },
+    images: { type: Array, required: false, default: () => {} }
   },
   data () {
     return {
       settings: {
-        'slidesToShow': this.columns,
+        'slidesToShow': 1,
         'slidesToScroll': 1,
         'arrows': false,
         'dots': true,
@@ -29,7 +23,7 @@ export default {
           {
             'breakpoint': 1024,
             'settings': {
-              'slidesToShow': this.columns,
+              'slidesToShow': 1,
               'slidesToScroll': 1,
               'dots': false
             }
@@ -37,7 +31,7 @@ export default {
           {
             'breakpoint': 700,
             'settings': {
-              'slidesToShow': this.columns > 2 ? 2 : this.columns,
+              'slidesToShow': 1,
               'slidesToScroll': 1,
               'dots': false
             }
@@ -51,7 +45,7 @@ export default {
             }
           }
         ]
-      },
+      }
     }
   },
   methods: {}

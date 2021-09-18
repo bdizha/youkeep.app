@@ -30,7 +30,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading">
-                            An <span class="r-text-secondary">inclusive</span> farmers' marketplace in Africa
+                            An <span class="r-text-secondary">inclusive</span> sellers' marketplace in Africa
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -38,7 +38,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium">
-                            Creating a seamless and scalable payment experience for you, your suppliers and your buyers
+                            Creating a seamless and scalable payment experience for you, your sellers and your shoppers
                             - while keeping you out of the funds flow.
                           </p>
                         </a-col>
@@ -47,7 +47,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            Spazaland allows you to offer a breathtaking farming experience, inputs credit and payment
+                            Paise allows you to offer a breathtaking farming experience, inputs credit and payment
                             method
                             flexibility, instant vendor payouts (fully reconciled) - all while getting full marketplace
                             compliance and investments management, hassle free.
@@ -85,7 +85,7 @@
                   </a-row>
                 </a-col>
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                  <r-avatar data-src="/assets/asset-03.svg" :size="300"
+                  <r-avatar data-src="/assets/asset-02.svg" :size="300"
                             class="r-avatar-block"
                   ></r-avatar>
                 </a-col>
@@ -145,7 +145,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium">
-                            Built for farming businesses, Spazaland offers a clear view into farming activities with:
+                            Built for farming businesses, Paise offers a clear view into farming activities with:
                             automated billing, expensing, and reporting.
                           </p>
                         </a-col>

@@ -39,8 +39,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading r-text-dark">
-                            To empower <span class="r-text-secondary">farmers</span> of all sizes in
-                            Africa.
+                            Our goal is to make online checkout as <span class="r-text-secondary">easy</span> as swiping a credit card.
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -48,20 +47,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium r-text-dark">
-                            What was missing was a solution designed specifically for local farmers and
-                            marketplaces.
-                          </p>
-                        </a-col>
-                        <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <p class="r-text-normal">
-                            While at PayPal, we witnessed the struggles of B2B merchants unable to complete the
-                            transition
-                            to the online space, being stuck with offline transaction processing. A fraction of their
-                            trade
-                            is via credit cards, so retrofitted consumer solutions weren't going to cut it.
+                            We are 100% committed to providing consumers with the absolute best online checkout service.
                           </p>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -69,9 +55,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            Spazaland's solutions enable owning the entire farming experience, end to end - unifying
-                            different
-                            farming inputs and access to market, providing a self serve experience, while getting full control.
+                            We strongly emphasize simplicity and personal security; our team of user interface and payment security experts has worked tirelessly to make Paise as easy and safe as possible
                           </p>
                         </a-col>
                         <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
@@ -120,7 +104,7 @@
                    :xs="{ span: 24 }"
             >
               <h3 class="r-heading">
-                <span class="r-text-secondary">Connecting</span> farmers and the marketplace
+                <span class="r-text-secondary">Connecting</span> sellers and the marketplace
               </h3>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
@@ -128,7 +112,7 @@
             >
               <p class="r-text-normal">
                 What started as a way to help small famers to conveniently sell their products has grown into a leading B2B
-                marketplace that connects millions of buyers with farmers of all sizes.
+                marketplace that connects millions of shoppers with sellers of all sizes.
               </p>
             </a-col>
           </a-row>
@@ -157,15 +141,15 @@
   right: auto;
   bottom: auto;
   top: auto;
-  background: #FFC83A;
+  background: #00C2FF;
 }
 
 .r-diamond:first-child {
-  background: #FFC83A;
+  background: #00C2FF;
 }
 
 .r-diamond:nth-child(2) {
-  background: #006648;
+  background: #3B9CFF;
 }
 
 .diagonal-01 {
@@ -206,7 +190,7 @@
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
 
-  border-top: 40px solid #FFC83A;
+  border-top: 40px solid #00C2FF;
 }
 
 .arrow-right {
@@ -215,7 +199,7 @@
   border-top: 40px solid transparent;
   border-bottom: 40px solid transparent;
 
-  border-left: 40px solid #FFC83A;
+  border-left: 40px solid #00C2FF;
 }
 
 .arrow-left {
@@ -223,7 +207,7 @@
   height: 0;
   border-top: 40px solid transparent;
   border-bottom: 40px solid transparent;
-  border-right:40px solid #006648;
+  border-right:40px solid #3B9CFF;
 }
 </style>
 <script>
@@ -233,7 +217,7 @@ export default {
   layout: 'default',
   props: {},
   async asyncData ({ store }) {
-    await store.dispatch('base/onReviews', {})
+    await store.dispatch('content/onTestimonials', {})
   },
   data () {
     return {

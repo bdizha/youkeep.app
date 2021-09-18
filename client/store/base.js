@@ -5,7 +5,7 @@ import Cookies from 'js-cookie'
 const state = () => ({
   store: {},
   hasStore: false,
-  farmers: { data: [] },
+  sellers: { data: [] },
   countries: [],
   hasCountries: false,
   faqs: [],
@@ -23,7 +23,7 @@ const state = () => ({
   positions: [],
   position: {},
   storeCategories: [],
-  hasfarmers: false,
+  hassellers: false,
   hasFaqs: false,
   isStore: false,
   notice: null,
@@ -49,7 +49,6 @@ const state = () => ({
   hasDrawer: false,
   hasModal: false,
   hasStoreTray: false,
-  reviews: [],
   filters: [],
   sort: null,
   search: {
@@ -92,10 +91,10 @@ const getters = {
   hasForm: state => state.hasForm,
   store: state => state.store,
   hasStore: state => state.hasStore,
-  farmers: state => state.farmers,
+  sellers: state => state.sellers,
   faqs: state => state.faqs,
   countries: state => state.countries,
-  hasfarmers: state => state.hasfarmers,
+  hassellers: state => state.hassellers,
   hasFaqs: state => state.hasFaqs,
   hasCountries: state => state.hasCountries,
   menuCategory: state => state.menuCategory,
@@ -120,8 +119,6 @@ const getters = {
   hasStoreTray: state => state.hasStoreTray,
   product: state => state.product,
   products: state => state.products,
-  reviews: state => state.reviews,
-  hasReviews: state => state.reviews.length > 0,
   filters: state => state.filters,
   sort: state => state.sort,
   isSearching: state => state.isSearching,
@@ -154,9 +151,9 @@ const mutations = {
   setIsValid (state, isValid) {
     state.isValid = isValid
   },
-  setfarmers (state, farmers) {
-    state.farmers = farmers
-    state.hasfarmers = farmers.data !== undefined && farmers.data.length > 0
+  setSellers (state, sellers) {
+    state.sellers = sellers
+    state.hassellers = sellers.data !== undefined && sellers.data.length > 0
   },
   setFaqs (state, faqs) {
     state.faqs = faqs
@@ -223,9 +220,6 @@ const mutations = {
   },
   setFilter (state, filter) {
     state.filters[filter.key] = filter.value
-  },
-  setReviews (state, reviews) {
-    state.reviews = reviews
   },
   setSort (state, sort) {
     state.sort = sort
@@ -313,7 +307,7 @@ const actions = {
       const route = params.route
 
       commit('setCategories', [])
-      commit('setfarmers', [])
+      commit('setSellers', [])
       commit('setProducts', { data: [] })
 
       await axios.post(route, params).then(({ data }) => {
@@ -446,12 +440,12 @@ const actions = {
       console.error('on error: ', e)
     }
   },
-  async onfarmers ({ dispatch, commit }, payload) {
+  async onsellers ({ dispatch, commit }, payload) {
     commit('setProcess', { key: 'isTray', value: true })
 
     await axios.post('/shops', payload).then(({ data }) => {
-      commit('setfarmers', data)
-      commit('setFilter', { key: 'farmers', value: data })
+      commit('setSellers', data)
+      commit('setFilter', { key: 'sellers', value: data })
       commit('setProcess', { key: 'isTray', value: false })
     })
   },
@@ -471,18 +465,6 @@ const actions = {
 
       commit('setCountries', countries)
     })
-  },
-  async onReviews ({ dispatch, commit, state }, payload) {
-    try {
-      commit('setProcess', { key: 'isRunning', value: true })
-
-      await axios.get('/testimonials', payload).then(({ data }) => {
-        commit('setReviews', data.testimonials)
-        commit('setProcess', { key: 'isRunning', value: false })
-      })
-    } catch (e) {
-      console.error('on error: ', e)
-    }
   },
   onIsFixed ({ commit }) {
     commit('setProcess', { key: 'isFixed', value: true })
@@ -543,9 +525,9 @@ const actions = {
     if (search) {
       commit('setSearch', JSON.parse(search))
     }
-    const farmers = Cookies.get('farmers')
-    if (farmers) {
-      commit('setfarmers', JSON.parse(farmers))
+    const sellers = Cookies.get('sellers')
+    if (sellers) {
+      commit('setSellers', JSON.parse(sellers))
     }
   }
 }

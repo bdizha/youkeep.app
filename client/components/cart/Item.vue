@@ -27,7 +27,7 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <span class="r-text-small">
+              <span class="r-text-s">
                 <b>{{ variant.product_type.label }}:</b>
                 <span>{{ variant.name }}</span>
               </span>

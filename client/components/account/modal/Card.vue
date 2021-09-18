@@ -12,7 +12,7 @@
           {{ hasCard ? 'Edit' : 'Add' }}
           payment card
         </h3>
-        <p class="r-text-small">
+        <p class="r-text-s">
           Your card details are always secured by a two-step authentication.
         </p>
       </a-col>

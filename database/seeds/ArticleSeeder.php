@@ -171,7 +171,7 @@ class ArticleSeeder extends Seeder
             if($photoNode->count() > 0) {
                 $photoUrl = $articleNode->filter('.blog-post-cover-image')->attr('src');
 
-                $articlePhoto = sha1($photoUrl) . ".jpg";
+                $articlePhoto = sha1($photoUrl) . ".svg";
 
                 if (!file_exists(public_path('storage/article/' . $articlePhoto))) {
                     Storage::disk('article')->put($articlePhoto, file_get_contents($photoUrl));

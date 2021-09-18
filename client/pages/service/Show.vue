@@ -3,12 +3,12 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
         <div class="r-mv-48">
-          <a-row :gutter="[96,48]" justify="center" type="flex">
-            <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-              <a-row :gutter="[96,48]" justify="center" align="middle" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
+          <a-row :gutter="[96,96]" align="middle" justify="end" type="flex">
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row justify="end" type="flex">
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
@@ -64,17 +64,19 @@
                                 size="large"
                                 type="blue"
                       >
-                        Get in touch
+                        Shop now
                       </a-button>
                     </a-col>
                   </a-row>
                 </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <r-saucer theme="yellow" :image="'/services/white/' + product.image" :size="300"></r-saucer>
-                </a-col>
               </a-row>
+            </a-col>
+            <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
+              <div style="max-width: 50%;">
+                <r-slider :images="product.images"></r-slider>
+              </div>
             </a-col>
           </a-row>
         </div>
@@ -109,8 +111,8 @@
                          :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
                   >
-                    <a-card class="r-bg-secondary-light">
-                      <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
+                    <a-card class="r-bg-primary-light">
+                      <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                         <a-col :lg="{ span: 6 }" :md="{ span: 8 }" :sm="{ span: 24 }"
                                :xs="{ span: 24}"
                         >

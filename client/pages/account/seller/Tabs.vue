@@ -2,7 +2,7 @@
   <a-steps :current="currentStep">
     <a-step title="Business Information">
     </a-step>
-    <a-step title="Farmer Information">
+    <a-step title="Seller Information">
     </a-step>
     <a-step title="Billing Information">
     </a-step>

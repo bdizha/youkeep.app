@@ -15,7 +15,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                Why millions of shoppers <span class="r-text-secondary">choose</span> Spazaland
+                Why millions of shoppers <span class="r-text-secondary">choose</span> Paise
               </h2>
             </a-col>
             <a-col :lg="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -112,7 +112,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <h3 class="r-heading">
-                              Spazaland <span class="r-text-secondary">gives</span> you the flexibility to <span
+                              Paise <span class="r-text-secondary">gives</span> you the flexibility to <span
                               class="r-text-secondary"
                             >shop</span> however you like.
                             </h3>
@@ -139,7 +139,7 @@
                             </p>
                             <p class="r-checked-item">
                               <a-icon slot="prefix" class="r-checked-item-icon" type="check"/>
-                              New payment options like <nuxt-link to="/contact-us">Spazaland+</nuxt-link>
+                              New payment options like <nuxt-link to="/contact-us">Paise+</nuxt-link>
                             </p>
                           </a-col>
                         </a-row>
@@ -195,7 +195,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                              Buy online at Spazaland
+                              Buy online at Paise
                             </h4>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -203,7 +203,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <h3 class="r-heading">
-                              Spazaland is the best way to <span class="r-text-secondary">find</span> and <span
+                              Paise is the best way to <span class="r-text-secondary">find</span> and <span
                               class="r-text-secondary"
                             >purchase</span> whatever your haert desires.
                             </h3>
@@ -213,7 +213,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <p class="r-text-medium">
-                              Spazaland partners with trusted and local farmers that ensures faster deliveries in less
+                              Paise partners with trusted and local sellers that ensures faster deliveries in less
                               than an hour for some lucky shoppers like you.
                             </p>
                           </a-col>
@@ -222,7 +222,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <p class="r-text-normal">
-                              Spazaland is created to offer you the best
+                              Paise is created to offer you the best
                               business experience on the online market.
                             </p>
                           </a-col>

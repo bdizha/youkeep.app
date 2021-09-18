@@ -20,7 +20,7 @@
                              :xs="{ span: 24 }"
                       >
                         <h3 class="r-heading-light r-text-white r-text-uppercase">
-                          Meet Spazaland<span class="r-text-primary">+</span>
+                          Meet Paise<span class="r-text-primary">+</span>
                         </h3>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -46,7 +46,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Get the benefits of Spazaland+ with every purchase you make
+                          Get the benefits of Paise+ with every purchase you make
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -117,7 +117,7 @@
                       >
                         <h3 class="r-heading">
                           Free <span class="r-text-primary">next-day</span> & <span class="r-text-secondary"
-                        >two-day</span> shipping on items from Spazaland.
+                        >two-day</span> shipping on items from Paise.
                         </h3>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -262,7 +262,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-uppercase">
-                    Why <span class="r-text-primary">Spazaland+</span> For Retailers?
+                    Why <span class="r-text-primary">Paise+</span> For Retailers?
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
@@ -312,7 +312,7 @@ export default {
       features: [
         { content: 'No R450 order minimum required' },
         { content: 'Huge assortment of eligible items' },
-        { content: 'Items shipped by Spazaland shoppers for free' }
+        { content: 'Items shipped by Paise shoppers for free' }
       ],
       benefits: [
         { content: 'Up to 180,000 items available' },

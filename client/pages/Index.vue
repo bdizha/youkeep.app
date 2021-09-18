@@ -4,11 +4,11 @@
            :xs="{ span: 24 }"
     >
       <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
-        <a-row :gutter="[48,48]" align="middle" justify="end" type="flex">
-          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                 :xs="{ span: 24 }"
-          >
-            <div class="r-mv-48">
+        <div class="r-mv-48">
+          <a-row :gutter="[48,48]" align="middle" justify="end" type="flex">
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
               <a-row :gutter="[48,48]" justify="end" type="flex">
                 <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
@@ -16,17 +16,17 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h4 class="r-heading-light r-text-uppercase">
-                        Look no further
-                      </h4>
+                      <h3 class="r-heading-light r-text-uppercase">
+                        Shop securely, anytime
+                      </h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
                       <h1 class="r-heading r-text-dark">
-                        <span class="r-text-secondary">Farmers'</span> B2B
-                        <span class="r-text-primary">marketplace</span> for Africa.
+                        <span class="r-text-primary">Instant</span> <span class="r-text-secondary">shopping</span>
+                        assistant
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -34,17 +34,16 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium r-text-dark">
-                        Spazaland offers an end-to-end platform to discover and buy products directly from farmers in
-                        Africa.
+                        Checkout anywhere online in a few seconds.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <p class="r-text-normal">We combine
-                        state-of-the-art technology with in-house expertise to
-                        enable instant B2B payments for farming businesses at an affordable SaaS pricing model.
+                      <p class="r-text-normal">
+                        With Paise, you no longer need to pull out your credit card or enter long forms to complete
+                        online purchases.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
@@ -57,7 +56,7 @@
                                 size="large"
                                 type="blue"
                       >
-                        Get started
+                        Learn more
                       </a-button>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
@@ -70,119 +69,42 @@
                                   size="large"
                                   type="blue"
                         >
-                          Contact sales
+                          Sign up now
                         </a-button>
                       </nuxt-link>
                     </a-col>
                   </a-row>
                 </a-col>
               </a-row>
-            </div>
-          </a-col>
-          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                 :xs="{ span: 24 }"
-          >
-            <r-avatar data-src="/assets/asset-04.svg" :size="300"
-                      class="r-avatar-block"
-            ></r-avatar>
-          </a-col>
-        </a-row>
+            </a-col>
+            <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
+              <div class="r-shadow-mobile">
+                <nuxt-img src="/assets/asset-02.svg" height="750px"></nuxt-img>
+              </div>
+            </a-col>
+          </a-row>
+        </div>
       </a-card>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col v-if="false" :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-metrics></r-metrics>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-row align="middle" justify="center" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-               class="r-text-left"
-        >
-          <a-row align="middle" justify="center" type="flex">
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                   :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <r-tabs active-key="marketplace" theme="white"></r-tabs>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-                   class="r-text-left"
-            >
-              <r-services></r-services>
-            </a-col>
-          </a-row>
-        </a-col>
-      </a-row>
+      <r-tabs active-key="buyer" theme="white"></r-tabs>
     </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-           :sm="{ span: 24 }"
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
+           class="r-text-left"
     >
-      <a-card class="r-bg-white-light r-border-none">
-        <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                 :xs="{ span: 24}"
-          >
-            <r-avatar data-src="/assets/asset-03.svg" :size="300"
-                      class="r-avatar-block"
-            ></r-avatar>
-          </a-col>
-          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                 :xs="{ span: 24}"
-          >
-            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <h4 class="r-heading-light r-text-uppercase">
-                      Discover new products
-                    </h4>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <h3 class="r-heading">
-                      <span class="r-text-secondary">Accelerate</span> revenue growth with inclusive B2B marketplace
-                    </h3>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <p class="r-text-medium">
-                      Spazaland is the leading product discovery platform enabling retail buyers to efficiently
-                      discover innovative and
-                      emerging products.
-                    </p>
-                  </a-col>
-                  <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                  >
-                    <nuxt-link to="/marketplace">
-                      <a-button block
-                                class="r-btn-bordered-secondary"
-                                size="large"
-                                type="secondary"
-                      >
-                        Learn more
-                      </a-button>
-                    </nuxt-link>
-                  </a-col>
-                </a-row>
-              </a-col>
-            </a-row>
-          </a-col>
-        </a-row>
-      </a-card>
+      <r-seller-services></r-seller-services>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-testimonials></r-testimonials>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
@@ -204,7 +126,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h4 class="r-heading-light r-text-uppercase">
-                        The Spazaland advantage
+                        The Paise advantage
                       </h4>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -212,7 +134,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h3 class="r-heading ">
-                        Spazaland <span class="r-text-primary">connects</span> farmers to retailers and restaurants
+                        Paise <span class="r-text-primary">enables</span> shoppers to purchase instantly on product discovery
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -220,8 +142,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium">
-                        Built for farming businesses, it offers a clear view into service purchase activity with
-                        automated billing, expensing, and reporting.
+                        Built for the online marketplaces, Paise brings joy to the product discovery journey and makes it easy to afford the products you care about.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -229,15 +150,14 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Spazaland offers farmers likes yours to sell products to our buyers with the most
+                        Paise offers a shopping assistant with the most
                         convenient
-                        business tools on the market. Let your buyers get what they need and want, online and
-                        in-farmers. And you’ll earn long-term business connections.
+                        shopping tools on the marketplace.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                     >
-                      <nuxt-link to="/marketplace">
+                      <nuxt-link to="/buyer">
                         <a-button block
                                   class="r-btn-bordered-secondary"
                                   size="large"
@@ -251,10 +171,10 @@
                 </a-col>
               </a-row>
             </a-col>
-            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+            <a-col :lg="{ span: 6 }" :md="{ span: 9 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
-              <r-avatar data-src="/assets/asset-03.svg" :size="300"
+              <r-avatar data-src="/assets/asset-16.png" :size="300"
                         class="r-avatar-block"
               ></r-avatar>
             </a-col>
@@ -449,7 +369,7 @@
                                           <p class="r-text-normal r-text-dark">
                                             Build visibility with leading retailers and food outlets by highlighting key
                                             brand
-                                            information that buyers look for.
+                                            information that shoppers look for.
                                           </p>
                                         </a-col>
                                       </a-row>
@@ -474,7 +394,7 @@
                                                :xs="{ span: 24 }"
                                         >
                                           <p class="r-text-normal r-text-dark">
-                                            Customize product pages to show buyers essential product and company details
+                                            Customize product pages to show shoppers essential product and company details
                                             like MSRP, price margins, packaging dimensions, and more.
                                           </p>
                                         </a-col>
@@ -500,7 +420,7 @@
                                                :xs="{ span: 24 }"
                                         >
                                           <p class="r-text-normal r-text-dark">
-                                            Share your farm profile with buyers on and off of AddTract and track
+                                            Share your farm profile with shoppers on and off of AddTract and track
                                             engagement
                                           </p>
                                         </a-col>
@@ -555,7 +475,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium">
-                        Signing up with Spazaland is simple and only takes a few minutes. Discover new products. Start
+                        Signing up with Paise is simple and only takes a few minutes. Discover new products. Start
                         connecting.
                       </p>
                     </a-col>
@@ -579,7 +499,7 @@
                           </a-col>
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <p class="r-text-medium">
-                              Choose to be a Spazaland Farmer today and start achieving your goals.
+                              Choose to be a Paise Seller today and start achieving your goals.
                             </p>
                           </a-col>
                         </a-row>
@@ -598,7 +518,7 @@
                           </a-col>
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <p class="r-text-medium">
-                              Your categories are showcased on our platform to relevant buyers.
+                              Your categories are showcased on our platform to relevant shoppers.
                             </p>
                           </a-col>
                         </a-row>
@@ -631,9 +551,6 @@
         </a-col>
       </a-row>
     </a-col v-if="false">
-    <a-col v-if="false" :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-testimonials></r-testimonials>
-    </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-contact-us title="Take your mind off B2B payments, for good."></r-contact-us>
     </a-col>
@@ -646,7 +563,7 @@ export default {
   layout: 'default',
   props: {},
   async asyncData ({ store }) {
-    await store.dispatch('base/onReviews', {})
+    await store.dispatch('content/onTestimonials', {})
   },
   data () {
     return {

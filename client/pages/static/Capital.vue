@@ -80,7 +80,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading-light">
-                <span class="r-text-blue">Innovate</span> <span class="r-text-blue">alongside</span> Spazaland.
+                <span class="r-text-blue">Innovate</span> <span class="r-text-blue">alongside</span> Paise.
               </h2>
             </a-col>
             <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
@@ -152,11 +152,11 @@ export default {
   layout: 'single',
   props: {},
   async asyncData ({ store }) {
-    await store.dispatch('base/onReviews', {})
+    await store.dispatch('content/onTestimonials', {})
   },
   data () {
     return {
-      banner: 'art-01.png',
+      banner: 'art-01.svg',
       isProcessing: true,
       testimonials: [],
       modal: {

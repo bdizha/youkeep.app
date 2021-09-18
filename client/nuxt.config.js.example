@@ -12,7 +12,7 @@ module.exports = {
   env: {
     apiUrl: process.env.APP_URL + '/api',
     appUrl: process.env.APP_URL,
-    appName: process.env.APP_NAME || 'Spazaland',
+    appName: process.env.APP_NAME || 'Paise',
     appLocale: process.env.APP_LOCALE || 'en',
     githubAuth: !!process.env.GITHUB_CLIENT_ID
   },
@@ -82,7 +82,7 @@ module.exports = {
     '~components/store',
     '~components/cart',
     '~components/account',
-    '~components/supplier',
+    '~components/seller',
     '~components/shopper',
     '~components/customer',
     '~components/plan',

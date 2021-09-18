@@ -58,11 +58,11 @@ export default {
   layout: 'default',
   props: {},
   async asyncData ({ store }) {
-    await store.dispatch('base/onReviews', {})
+    await store.dispatch('content/onTestimonials', {})
   },
   data () {
     return {
-      banner: 'art-01.png',
+      banner: 'art-01.svg',
       isProcessing: true,
       testimonials: [],
       modal: {

@@ -14,14 +14,14 @@
                        class="gutter-row"
                 >
                   <h4 class="r-heading-light r-text-uppercase">
-                    Spazaland For Farmers
+                    Paise For Sellers
                   </h4>
                   <h1 class="r-heading">
                     <span class="r-text-secondary">Sell more,</span><br>
                     <span>Pay Less</span>
                   </h1>
                   <p class="r-text-normal">
-                    Unlike other buy-now-pay-later plans, Spazaland lets shoppers use their existing credit card for
+                    Unlike other buy-now-pay-later plans, Paise lets shoppers use their existing credit card for
                     the easiest most intuitive checkout.
                   </p>
                 </a-col>
@@ -84,7 +84,7 @@
                       We're a better way to achieve better sales.
                     </h3>
                     <p class="r-text-normal">
-                      Spazaland lets your buyers pay for products in 3 installments with existing credit at zero
+                      Paise lets your shoppers pay for products in 3 installments with existing credit at zero
                       interest.
                     </p>
                   </a-col>
@@ -149,7 +149,7 @@
                           </h4>
                           <p class="r-text-normal">
                             50% of shoppers are more likely to make a purchase if offered the ability to pay in
-                            interest-free installment payments. Enroll more buyers and offer them rewards for buying
+                            interest-free installment payments. Enroll more shoppers and offer them rewards for buying
                             from
                             you.
                           </p>
@@ -242,7 +242,7 @@
                             Higher average order rate
                           </h4>
                           <p class="r-text-normal">
-                            Spazaland is the only buy-now-pay-later plan that lets shoppers set up payment plans with
+                            Paise is the only buy-now-pay-later plan that lets shoppers set up payment plans with
                             their
                             existing credit card without interest charges or fees. This keeps their payments small so
                             they
@@ -285,10 +285,10 @@
                                style="text-align: left;"
                         >
                           <h4 class="r-heading r-text-secondary">
-                            More qualified buyers
+                            More qualified shoppers
                           </h4>
                           <p class="r-text-normal">
-                            Unlike other buy-now-pay-later plans, Spazaland isn’t new financing. Spazaland lets online
+                            Unlike other buy-now-pay-later plans, Paise isn’t new financing. Paise lets online
                             shoppers
                             set up monthly payments at checkout with their existing credit so they don’t need to carry
                             new
@@ -336,12 +336,12 @@
                           <p class="r-text-normal">With hundreds of
                             thousands
                             of
-                            buyers
-                            and a monthly expansion to new cities, Spazaland was named the fastest growing retail
+                            shoppers
+                            and a monthly expansion to new cities, Paise was named the fastest growing retail
                             platform
                             company in
                             South Africa in 2020.
-                            Spazaland thinks it can be done differently: faster, easier and cheaper. The idea is
+                            Paise thinks it can be done differently: faster, easier and cheaper. The idea is
                             simple.</p>
                         </a-col>
                       </a-row>
@@ -361,7 +361,7 @@ export default {
   props: {},
   data () {
     return {
-      banner: 'art-03.png',
+      banner: 'art-03.svg',
       modal: {
         current: null,
         message: null

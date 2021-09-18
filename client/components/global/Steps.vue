@@ -1,57 +1,44 @@
 <template>
-  <a-row :gutter="[48,48]" align="middle" class="r-text-left" justify="start" type="flex">
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
+  <a-row class="r-text-left" :gutter="[48,48]" align="middle" justify="center" type="flex">
+    <a-col  :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+            :xs="{ span: 24 }"
     >
-      <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
+      <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
+        <a-col v-for="(step, index) in steps"
+               :key="index"
+               :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+               :xs="{ span: 24}"
         >
-          <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-            <a-col v-for="(step, index) in steps"
-                   :key="index"
-                   :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                   :xs="{ span: 24}"
+          <a-row :gutter="[96,96]" align="middle" :justify="index % 2 === 0 ? 'start' : 'end'" type="flex">
+            <a-col :order="index % 2 === 0 ? 2 : 1" :lg="{ span: 9 }" :md="{ span: 9 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
             >
-              <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-                <a-col :order="index % 2 === 0 ? 1 : 2" :lg="{ span: 12 }" :md="{ span: 12 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <r-avatar :data-src="step.image" :size="300"
-                            class="r-avatar-block"
-                  ></r-avatar>
+              <r-avatar :data-src="step.image" :size="300"
+                        class="r-avatar-block"
+              ></r-avatar>
+            </a-col>
+            <a-col :order="index % 2 === 0 ? 1 : 2" :lg="{ span: 12 }" :md="{ span: 12 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <h4 class="r-heading-light r-text-uppercase">
+                    <span>{{ step.title }}</span>
+                  </h4>
                 </a-col>
-                <a-col :order="index % 2 === 0 ? 2 : 1" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <a-row :gutter="[48,48]" align="middle" :justify="index % 2 === 0 ? 'start' : 'end'" type="flex">
-                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-                           :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                          <h4 class="r-heading-light r-text-uppercase">
-                            <span>{{ step.title }}</span>
-                          </h4>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                          <h3 class="r-heading" v-html="step.heading">
-                          </h3>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                          <p class="r-text-medium">
-                            {{ step.summary }}
-                          </p>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                          <p class="r-text-normal" v-html="step.content"></p>
-                        </a-col>
-                      </a-row>
-                    </a-col>
-                  </a-row>
+                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <h3 class="r-heading" v-html="step.heading">
+                  </h3>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <p class="r-text-medium">
+                    {{ step.summary }}
+                  </p>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <p class="r-text-normal" v-html="step.content"></p>
                 </a-col>
               </a-row>
             </a-col>

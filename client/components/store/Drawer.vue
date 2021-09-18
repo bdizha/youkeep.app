@@ -7,7 +7,7 @@
       <a-collapse-panel header="Catalog">
         <r-store-catalog></r-store-catalog>
       </a-collapse-panel>
-      <a-collapse-panel header="Popular farmers">
+      <a-collapse-panel header="Popular sellers">
         <r-store-list></r-store-list>
       </a-collapse-panel>
       <a-collapse-panel header="About this store">

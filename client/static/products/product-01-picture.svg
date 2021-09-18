@@ -10,26 +10,26 @@ viewBox="0 0 44026.66 44026.66"
     .fil13 {fill:#00335A}
     .fil17 {fill:#007B38}
     .fil19 {fill:#007B38}
-    .fil11 {fill:#FFC83A}
+    .fil11 {fill:#00C2FF}
     .fil21 {fill:#03411A}
     .fil12 {fill:#1546A3}
     .fil16 {fill:#3D170C}
     .fil22 {fill:#7BC76F}
     .fil23 {fill:#ACD263}
     .fil14 {fill:#C4003E}
-    .fil10 {fill:#FFC83A}
+    .fil10 {fill:#00C2FF}
     .fil25 {fill:#FFD600}
     .fil8 {fill:white}
     .fil26 {fill:white}
     .fil24 {fill:white}
     .fil20 {fill:black}
     .fil18 {fill:white}
-    .fil9 {fill:#FFC83A;fill-rule:nonzero}
-    .fil3 {fill:#006648;fill-rule:nonzero}
-    .fil7 {fill:#FFC83A;fill-opacity:0.09}
-    .fil0 {fill:#006648;fill-opacity:0.09}
-    .fil1 {fill:#006648;fill-opacity:0.109804}
-    .fil6 {fill:#006648;fill-opacity:0.18}
+    .fil9 {fill:#00C2FF;fill-rule:nonzero}
+    .fil3 {fill:#3B9CFF;fill-rule:nonzero}
+    .fil7 {fill:#00C2FF;fill-opacity:0.09}
+    .fil0 {fill:#3B9CFF;fill-opacity:0.09}
+    .fil1 {fill:#3B9CFF;fill-opacity:0.109804}
+    .fil6 {fill:#3B9CFF;fill-opacity:0.18}
     .fil2 {fill:white;fill-opacity:0.619608}
     .fil5 {fill:#D8F6FF;fill-opacity:0.788235}
     .fil4 {fill:white;fill-opacity:0.788235}

@@ -11,7 +11,7 @@
         </h2>
       </a-col>
       <a-col :xs="{ span: 24 }" class="r-text-left">
-        <div class="r-text-small">
+        <div class="r-text-s">
           Sign in to your account with your email address.
         </div>
       </a-col>
@@ -119,7 +119,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you. Enjoy your business with Spazaland.')
+            $this.$message.success('Thank you. Enjoy your business with Paise.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

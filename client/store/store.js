@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 
 // state
 export const state = () => ({
-  farmers: [],
+  sellers: [],
   store: {},
   category: { has_categories: false, has_products: false },
   categories: [],
@@ -24,7 +24,7 @@ export const state = () => ({
 
 // getters
 export const getters = {
-  farmers: state => state.farmers,
+  sellers: state => state.sellers,
   store: state => state.store,
   product: state => state.product,
   products: state => state.products,
@@ -37,9 +37,9 @@ export const getters = {
 
 // mutations
 export const mutations = {
-  setfarmers (state, farmers) {
-    console.log('farmers...', farmers)
-    state.farmers = farmers
+  setSellers (state, sellers) {
+    console.log('sellers...', sellers)
+    state.sellers = sellers
   },
   setStore (state, store) {
     console.log('store...', store)
@@ -70,16 +70,16 @@ export const mutations = {
     state.categories = categories
   },
   FETCH_STORE_SUCCESS (state, data) {
-    state.farmers = data.farmers
-    state.store = data.farmers[0]
+    state.sellers = data.sellers
+    state.store = data.sellers[0]
 
-    console.log('farmers', state.farmers)
+    console.log('sellers', state.sellers)
   },
-  FETCH_farmers_SUCCESS (state, data) {
-    state.farmers = data.farmers
-    state.store = data.farmers[0]
+  FETCH_sellers_SUCCESS (state, data) {
+    state.sellers = data.sellers
+    state.store = data.sellers[0]
 
-    console.log('farmers', state.farmers)
+    console.log('sellers', state.sellers)
   },
   FETCH_CATEGORY_SUCCESS (state, data) {
     state.category = data.category
@@ -97,8 +97,8 @@ export const mutations = {
 
 // actions
 export const actions = {
-  onfarmers ({ commit }, payload) {
-    commit('setfarmers', payload)
+  onsellers ({ commit }, payload) {
+    commit('setSellers', payload)
   },
   onProduct ({ commit }, payload) {
     commit('setProduct', payload)
@@ -122,9 +122,9 @@ export const actions = {
     commit('setCategory', payload)
   },
 
-  async fetchfarmers ({ commit }) {
+  async fetchsellers ({ commit }) {
     try {
-      const { data } = await axios.get('/farmers')
+      const { data } = await axios.get('/sellers')
 
       commit('FETCH_STORE_SUCCESS', data)
     } catch (e) {

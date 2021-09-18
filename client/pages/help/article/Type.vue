@@ -12,7 +12,7 @@
                      :xs="{ span: 24 }"
               >
                 <h3 class="r-heading r-text-uppercase">
-                  Spazaland - {{ help.article_type.name }}
+                  Paise - {{ help.article_type.name }}
                 </h3>
               </a-col>
               <a-col :lg="{ span: 12 }" :md="{ span: 12 }"

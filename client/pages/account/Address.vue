@@ -5,7 +5,7 @@
              :xs="{ span: 24 }" class="gutter-row"
       >
         <a-card class="r-mb-24" style="width: 100%;" title="YOUR DELIVERY ADDRESSES">
-          <div class="r-text-small">
+          <div class="r-text-s">
             <template v-if="hasAddresses">
               Here you can manage all your address.
             </template>

@@ -35,9 +35,9 @@ export default {
     return {}
   },
   computed: mapGetters({
-    farmers: 'base/farmers',
+    sellers: 'base/sellers',
     categories: 'base/categories',
-    hasfarmers: 'base/hasfarmers',
+    hassellers: 'base/hassellers',
     processes: 'base/processes',
   }),
   created () {

@@ -11,7 +11,7 @@
           <a-row :gutter="[24, 24]" align="middle" justify="start" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
-                Shopper Application at Spazaland:
+                Shopper Application at Paise:
               </h2>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
@@ -21,26 +21,26 @@
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is Spazaland?
+                What is Paise?
               </h3>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <p class="r-text-normal">
-                Spazaland is a fast growing startup that is improving lives by giving people more time to
+                Paise is a fast growing startup that is improving lives by giving people more time to
                 spend
-                with their families! Spazaland members order business via the Spazaland app and can have
+                with their families! Paise members order business via the Paise app and can have
                 them
                 delivered on-demand as soon as 1 hour later.
               </p>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is a Spazaland shopper?
+                What is a Paise shopper?
               </h3>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <p class="r-text-normal">
-                Spazaland Shoppers carefully select member's business using the Spazaland app and deliver
+                Paise Shoppers carefully select member's business using the Paise app and deliver
                 them
                 during a specified, delivery window. Our shoppers enjoy an interactive and fun culture
                 all
@@ -79,7 +79,7 @@
             What are your contact details?
           </h2>
           <p class="r-text-normal">
-            By entering your email addrress and mobile number you are opting in to receive automated Spazaland
+            By entering your email addrress and mobile number you are opting in to receive automated Paise
             Application
             Notifications. Message and data rates may apply.
           </p>

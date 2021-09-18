@@ -2,46 +2,42 @@
   <a-row :gutter="[24,24]" align="middle" justify="center"
          type="flex"
   >
-    <a-col class="r-text-center" :lg="{ span: 20 }" :md="{ span: 20 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-      <h3 class="r-heading-light">
-        What our partners say...
-      </h3>
+    <a-col class="r-text-center" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+      <h2 class="r-heading">
+        What our customers say...
+      </h2>
     </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col v-if="hasTestimonials" :lg="{ span: 15 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row align="middle" class="r-slider r-slider-testimonials" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <VueSlickCarousel v-if="hasReviews" v-bind="settings">
-            <a-card v-for="(review, index) in reviews" :key="index + '-review'"
-                    class="r-bg-secondary-light"
+          <VueSlickCarousel v-bind="settings">
+            <a-card v-for="(testimonial, index) in testimonials"
+                    :key="index + '-testimonial'"
+                    class="r-bg-white"
             >
               <a-row :gutter="[12,12]" align="middle" justify="center"
                      type="flex"
               >
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                  <h3 class="r-heading-light r-text-yellow">
-                    {{ review.author }}
-                  </h3>
+                  <nuxt-img src="/images/quote.svg" width="45px"></nuxt-img>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                  <p class="r-text-normal">
-                    {{ review.content }}
+                  <h4 class="r-heading r-text-dark">
+                    {{ testimonial.content }}
+                  </h4>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+                  <p class="r-text-s r-text-bold">
+                    {{ testimonial.author }}
                   </p>
-                  <p class="r-text-medium r-text-yellow">
-                    {{ review.company }}
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+                  <p class="r-text-s r-text-bold r-text-primary">
+                    {{ testimonial.company }}
                   </p>
                 </a-col>
               </a-row>
             </a-card>
-            <template #prevArrow="arrowOption">
-              <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-                <a-icon type="left"/>
-              </div>
-            </template>
-            <template #nextArrow="arrowOption">
-              <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-                <a-icon type="right"/>
-              </div>
-            </template>
           </VueSlickCarousel>
         </a-col>
       </a-row>
@@ -54,12 +50,15 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-testimonials',
   props: {},
+  async serverPrefetch () {
+    await this.$store.dispatch('content/onTestimonials', {})
+  },
   data () {
     return {
       settings: {
-        slidesToScroll: 2,
-        slidesToShow: 2,
-        dots: false,
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        dots: true,
         responsive: [
           {
             'breakpoint': 1024,
@@ -98,9 +97,9 @@ export default {
     }
   },
   computed: mapGetters({
-    reviews: 'base/reviews',
+    testimonials: 'content/testimonials',
     processes: 'base/processes',
-    hasReviews: 'base/hasReviews'
+    hasTestimonials: 'content/hasTestimonials'
   }),
   created () {
   },

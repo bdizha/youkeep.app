@@ -25,7 +25,7 @@
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                 <p class="r-text-medium">
-                  Spazaland enables retainers to conveniently discover and buy products directly from the local farmers with an easy to use farmers' marketplace.
+                  Paise enables retainers to conveniently discover and buy products directly from the local sellers with an easy to use sellers' marketplace.
                 </p>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -83,16 +83,16 @@ export default {
       benefits: [
         {
           title: '<span class="r-text-secondary">Find</span> your returning customers seamlessly',
-          content: 'You can reach marketplace by posting your product information on Spazaland. Enable more buying buyers and increase recurring orders with Spazaland.'
+          content: 'You can reach marketplace by posting your product information on Paise. Enable more buying shoppers and increase recurring orders with Paise.'
         },
         {
           title: '<span class="r-text-secondary">Offer</span> fast delivery services for every order',
-          content: 'For each order received, you can send your product to Secai Marche warehouse. You don’t have to worry about transport anymore with Spazaland.'
+          content: 'For each order received, you can send your product to Paise warehouse. You don’t have to worry about transport anymore with Paise.'
         },
 
         {
           title: '<span class="r-text-secondary">Decide</span> and set your selling product price',
-          content: 'Secai Marche Purchase your products according to your credit term. More stable for production planning, nor No more hustle for money collection.'
+          content: 'Paise Purchase your products according to your credit term. More stable for production planning, nor No more hustle for money collection.'
         }
       ]
     }

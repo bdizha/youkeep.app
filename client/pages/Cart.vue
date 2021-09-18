@@ -71,7 +71,7 @@
               <a-empty :image-style="{
                                       height: '60px',
                                     }"
-                       image="/images/Spazaland/icon_black_light.svg"
+                       image="/images/Paise/icon_black_light.svg"
               >
                 <h4 slot="description" class="r-heading r-text-black">
                   Your business cart is

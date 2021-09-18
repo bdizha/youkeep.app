@@ -5,7 +5,7 @@
            :xs="{ span: 24 }"
     >
       <h2 class="r-heading-light r-text-primary">
-        Why Spazaland?
+        Why Paise?
       </h2>
     </a-col>
     <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -13,7 +13,7 @@
            :xs="{ span: 24 }"
     >
       <p class="r-text-medium">
-        Spazaland is the leading product discovery and sourcing platform where retailers and suppliers discover, connect, and grow their business.
+        Paise is the leading product discovery and sourcing platform where retailers and sellers discover, connect, and grow their business.
       </p>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"

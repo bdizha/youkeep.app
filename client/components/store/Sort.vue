@@ -58,11 +58,11 @@ export default {
     },
     onSort (option) {
       this.params.sort = option.key
-      // this.fetchfarmers();
+      // this.fetchsellers();
     },
-    async fetchfarmers () {
+    async fetchsellers () {
       this.params.category_id = this.category.id
-      await this.$store.dispatch('shop/onfarmers', this.params)
+      await this.$store.dispatch('shop/onsellers', this.params)
     }
   }
 }

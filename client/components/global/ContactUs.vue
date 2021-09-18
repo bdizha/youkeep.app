@@ -4,7 +4,7 @@
       <a-col :lg="{ span: 18 }" :md="{ span: 16 }" :sm="{ span: 24 }"
              :xs="{ span: 24 }"
       >
-        <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+        <a-row :gutter="[6,6]" align="middle" justify="center" type="flex">
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
@@ -15,7 +15,7 @@
           <a-col v-if="hasMore" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
           >
             <p class="r-text-medium r-text-white">
-              <span class="r-text-yellow">Discover</span> new buyers. Start selling today!
+              {{ heading }}
             </p>
           </a-col>
         </a-row>
@@ -24,13 +24,6 @@
              :xs="{ span: 24 }"
       >
         <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-          <a-col v-if="hasMore" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                 :xs="{ span: 24 }"
-          >
-            <h4 class="r-heading-light r-text-white r-text-uppercase">
-              {{ heading }}
-            </h4>
-          </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
           >
             <nuxt-link v-if="hasJobs" to="/career/openings">
@@ -62,8 +55,8 @@ export default {
   props: {
     hasJobs: { type: Boolean, required: false, default: false },
     hasMore: { type: Boolean, required: false, default: false },
-    title: { type: String, required: false, default: 'Get your Spazaland account today!' },
-    heading: { type: String, required: false, default: 'Are you ready to join Spazaland?' }
+    title: { type: String, required: false, default: 'Get your Paise account today!' },
+    heading: { type: String, required: false, default: 'Are you ready to join Paise?' }
   },
   data () {
     return {}

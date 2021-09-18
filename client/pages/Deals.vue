@@ -10,7 +10,7 @@ const products = [
   {
     key: 1,
     name: 'Mix Box',
-    photo: '/TJBJks9irshSLe1b7M7GwTBNGKJtZy0XqySO0MN0.png',
+    photo: '/TJBJks9irshSLe1b7M7GwTBNGKJtZy0XqySO0MN0.svg',
     color_name: 'red',
     quantity: 1,
     variant: {
@@ -39,7 +39,7 @@ const products = [
   {
     key: 2,
     name: 'Fruits Only Box ',
-    photo: '/P7MFw6v98zDTiB9MxipxkVnmK8eUJlpc4M6zBOTF.png',
+    photo: '/P7MFw6v98zDTiB9MxipxkVnmK8eUJlpc4M6zBOTF.svg',
     color_name: 'black',
     quantity: 1,
     variant: {
@@ -68,7 +68,7 @@ const products = [
   {
     key: 3,
     name: 'Veggies Only Box ',
-    photo: '/TJBJks9irshSLe1b7M7GwTBNGKJtZy0XqySO0MN0.png',
+    photo: '/TJBJks9irshSLe1b7M7GwTBNGKJtZy0XqySO0MN0.svg',
     color_name: 'red',
     quantity: 1,
     variant: {

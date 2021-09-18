@@ -6,7 +6,7 @@
           <a-row align="middle" justify="space-around" type="flex">
             <a-col :lg="{span: 9 , offset: 3}" class="r-page-padding">
               <h1 class="r-heading">
-                <span class="r-text-secondary">Spazaland Framework</span>
+                <span class="r-text-secondary">Paise Framework</span>
               </h1>
               <h2 class="r-heading r-text-secondary">
                Envision
@@ -14,7 +14,7 @@
             </a-col>
             <a-col :lg="{span: 12}" :xs="{span: 24}" class="r-p-lg-48" style="position: relative;">
               <div class="r-page-header-photo r-page-art-primary">
-                <img alt="Couple orders online" src="/images/Spazaland/about-us.jpg">
+                <img alt="Couple orders online" src="/images/Paise/about-us.jpg">
               </div>
             </a-col>
           </a-row>
@@ -30,10 +30,10 @@
                 Customer Centric
               </h2>
               <p class="r-text-normal">
-                Nice to know, we are Spazaland, an online supermakert service. We are the
-                only store in South Africa that is only online, which means that our buyers are at
+                Nice to know, we are Paise, an online supermakert service. We are the
+                only store in South Africa that is only online, which means that our shoppers are at
                 the
-                center of our business, in fact, we focus on our buyers and how best we can serve
+                center of our business, in fact, we focus on our shoppers and how best we can serve
                 them.
               </p>
               <p class="r-text-normal">
@@ -47,7 +47,7 @@
                 and quality.
               </p>
               <p class="r-text-normal">
-                Our mission is to provide our buyers with the best service on the market.
+                Our mission is to provide our shoppers with the best service on the market.
                 Our professional shoppers are waiting to choose you super fresh and high quality
                 products, our couriers are waiting to get you the shipment super fast and our customer
                 service team is waiting to give you super personal and courteous service across many
@@ -80,10 +80,10 @@
                 cash register.
               </p>
               <p class="r-text-normal">
-                Spazaland thinks it can be done differently: faster, easier and cheaper. The idea is
+                Paise thinks it can be done differently: faster, easier and cheaper. The idea is
                 simple. We
                 arrange
-                the business, so that you have more time for fun things. At Spazaland you can order all
+                the business, so that you have more time for fun things. At Paise you can order all
                 business
                 within a few minutes. So toilet paper, fresh, chips and ice cream, but also organic
                 eggs, tender
