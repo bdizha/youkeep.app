@@ -1,6 +1,6 @@
 <template>
   <a-tabs class=" r-text-center" v-model="selectedKey" type="card">
-    <a-tab-pane key="buyer" tab="Shoppers"
+    <a-tab-pane key="shopper" tab="Shoppers"
     >
       <r-customer-steps :size="16"></r-customer-steps>
     </a-tab-pane>

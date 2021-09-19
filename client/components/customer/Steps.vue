@@ -17,10 +17,10 @@ export default {
       steps: [
         {
           title: 'Save time',
-          heading: '<span class="r-text-primary">Always</span> checkout in 3 seconds',
+          heading: '<span class="r-text-primary">One</span> click checkout in 3 seconds',
           image: '/assets/asset-13.svg',
           summary: 'Complete online purchases from any device in seconds.',
-          content: 'Paise enables consumers to create a universal account and buy from dozens of retailers in a few seconds.'
+          content: 'Paise enables Shoppers to create a universal account and buy from dozens of retailers in a few seconds.'
         },
         {
           title: 'Reduce hassle',

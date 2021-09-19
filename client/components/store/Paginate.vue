@@ -1,7 +1,7 @@
 <template>
   <a-row align="middle" class="r-store-row" justify="start" type="flex">
     <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
-      <a-pagination v-if="hassellers" v-model="sellers.current_page" :page-size="sellers.per_page"
+      <a-pagination v-if="hasSellers" v-model="sellers.current_page" :page-size="sellers.per_page"
                     :show-total="(total, range) => `${range[0]}-${range[1]} of ${total} items`"
                     :total="sellers.total"
                     class="r-same-height"
@@ -31,7 +31,7 @@ export default {
     sellers: 'base/sellers',
     store: 'base/store',
     search: 'base/search',
-    hassellers: 'base/hassellers',
+    hasSellers: 'base/hasSellers',
   }),
   methods: {
     onChange (pageNumber, pageSize) {

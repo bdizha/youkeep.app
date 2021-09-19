@@ -9,9 +9,9 @@ viewBox="0 0 17705 14712"
    <![CDATA[
     .str0 {stroke:#3B9CFF;stroke-width:7.24437}
     .fil4 {fill:none;fill-rule:nonzero}
-    .fil2 {fill:#D9ECFF}
+    .fil2 {fill:#e8f4ff}
     .fil1 {fill:#38D0FF;fill-opacity:0.050980}
-    .fil0 {fill:#F6FBFF;fill-opacity:0.149020}
+    .fil0 {fill:#FFFFFF; opacity: 0.96}
     .fil5 {fill:#00C2FF;fill-rule:nonzero}
     .fil3 {fill:#3B9CFF;fill-rule:nonzero}
     .fil6 {fill:#FBD13E;fill-rule:nonzero}

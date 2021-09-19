@@ -32,7 +32,7 @@ export default {
   },
   data () {
     return {
-      hasSpin: true,
+      hasSpin: true
     }
   },
   created () {
@@ -40,7 +40,6 @@ export default {
   },
   methods: {
     payload () {
-      let $this = this
     },
     onSearch () {
       this.isSearching = true

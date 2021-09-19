@@ -26,7 +26,7 @@ export default {
           title: 'Boost Conversion',
           heading: '<span class="r-text-secondary">Boost</span> visibility with shoppers',
           image: '/assets/asset-14.svg',
-          summary: 'Consumers use Paise to discover new products and checkout in seconds. ',
+          summary: 'Shoppers use Paise to discover new products and checkout in seconds. ',
           content: 'Paise enables instant mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
         },
         {

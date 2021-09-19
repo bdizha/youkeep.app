@@ -85,7 +85,7 @@ export default {
     return {
       benefits: [
         {
-          title: '<span class="r-text-primary">Find</span> your returning customers seamlessly',
+          title: '<span class="r-text-primary">Find</span> more returning customers',
           content: 'You can reach marketplace by posting your product information on Paise. Enable more buying shoppers and increase recurring orders with Paise.'
         },
         {

@@ -27,7 +27,7 @@ export default {
           heading: '<span class="r-text-primary">Gain</span> sales & marketplace insights',
           image: '/assets/asset-04.svg',
           summary: 'Unlock new growth in new ways while defending farming efficiency.',
-          content: 'Paise enables consumers to create a universal account and buy from dozens of retailers in a few seconds.'
+          content: 'Paise enables Shoppers to create a universal account and buy from dozens of retailers in a few seconds.'
         },
         {
           title: 'Place and track orders in real-time.',

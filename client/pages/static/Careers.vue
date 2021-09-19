@@ -145,7 +145,7 @@
                 <span class="r-text-secondary">Paise careers</span>
               </h1>
               <p class="r-text-normal">
-                Paise is a consumer centric business platform that exists to transform
+                Paise is a shopper centric business platform that exists to transform
                 the way shoppers find and make purchases by offering simple and
                 convenient business and payment methods.
               </p>

@@ -15,12 +15,12 @@ viewBox="0 0 12024 21341"
     .fil3 {fill:none}
     .fil14 {fill:none}
     .fil1 {fill:none}
-    .fil11 {fill:#D9ECFF}
+    .fil11 {fill:#e8f4ff}
     .fil15 {fill:#3B9CFF;fill-rule:nonzero}
     .fil13 {fill:#6BB5FF;fill-opacity:0.109804}
     .fil10 {fill:#95C9FF;fill-opacity:0.188235}
-    .fil4 {fill:#E5F2FF;fill-opacity:0.99}
-    .fil0 {fill:#F5FAFF;fill-opacity:0.99}
+    .fil4 {fill:#FFFFFF;fill-opacity:1}
+    .fil0 {fill:#FFFFFF;fill-opacity:0.99}
     .fil6 {fill:#00C2FF;fill-rule:nonzero;fill-opacity:0.980392}
     .fil5 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.980392}
     .fil7 {fill:#95C9FF;fill-rule:nonzero;fill-opacity:0.980392}
@@ -28,7 +28,7 @@ viewBox="0 0 12024 21341"
     .fil17 {fill:#B4DCFF}
     .fil16 {fill:#C4E1FF}
     .fil12 {fill:#D5F6FF}
-    .fil2 {fill:#F5FAFF}
+    .fil2 {fill:none}
     .fil9 {fill:#3B9CFF;fill-rule:nonzero}
    ]]>
   </style>

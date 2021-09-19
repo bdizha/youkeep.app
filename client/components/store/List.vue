@@ -1,17 +1,17 @@
 <template>
   <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }">
-      <a-row v-if="hassellers && !processes.isTray" :gutter="[12,12]" align="middle" justify="start" type="flex">
+      <a-row v-if="hasSellers && !processes.isTray" :gutter="[12,12]" align="middle" justify="start" type="flex">
         <a-col
           v-for="(store, index) in sellers.data"
           :key="index"
           :class="{'r-last_item': index == totalCount - 1 }"
-          :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :test="hassellers"
+          :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :test="hasSellers"
           :xs="{ span: 24 }"
         >
           <r-store-item :size="90" :store="store"></r-store-item>
         </a-col>
-        <a-col v-if="!hassellers" :span="24">
+        <a-col v-if="!hasSellers" :span="24">
           <a-empty description="No sellers were found! Please try other store categories."
                    image="/images/icon_pattern_grey.svg"
           />
@@ -38,7 +38,7 @@ export default {
   computed: {
     totalCount () {
       let totalCount = 0
-      if (this.hassellers) {
+      if (this.hasSellers) {
         totalCount = this.sellers.data.length
       }
       return totalCount
@@ -47,7 +47,7 @@ export default {
       store: 'base/store',
       sellers: 'base/sellers',
       categories: 'base/storeCategories',
-      hassellers: 'base/hassellers',
+      hasSellers: 'base/hasSellers',
       processes: 'base/processes',
       search: 'base/search'
     })

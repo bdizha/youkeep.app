@@ -4,12 +4,38 @@ import axios from 'axios'
 export const state = () => ({
   products: [
     {
-      title: 'Shop now with Paise',
-      slug: 'shop',
-      heading: ' An <span class="r-text-primary">automated</span>, instant and secure shopping experience.',
-      summary: 'The intuitive and flexible farming experience created for sellers and retailers. ',
-      content: 'Retailer can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo. We made implementing Paise easy and smooth with different options for you to choose from. We understand the complexities of your business and make sure our features answer your needs as a B2B merchant or marketplace. Marketplaces get their fee payout immediately as well.',
+      theme: 'primary',
+      title: 'Shop simple with Paise',
+      slug: 'shop-with-paise',
+      heading: 'Adaptive and <span class="r-text-primary">instant</span> checkout.',
+      summary: 'Take your shopping to the next level only when you shop with paise at the participating stores.',
+      content: 'You\'ll enjoy the Paise checkout experience. Track your purchases, upcoming bills and cash earned in one place.',
       image: 'service-24.svg',
+      images: [
+        '/assets/asset-02.svg',
+        '/assets/asset-17.svg',
+        '/assets/asset-18.svg'
+      ],
+      steps: [
+        {
+          title: 'Desire it',
+          heading: 'Checkout simple with Paise.',
+          content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
+          image: '/assets/asset-02-secondary.svg'
+        },
+        {
+          title: 'Shop it',
+          heading: 'Choose to pay with Paise',
+          content: 'Add what you want to your cart and choose to pay with Paise It\'s that simple and instant.',
+          image: '/assets/asset-17-secondary.svg'
+        },
+        {
+          title: 'Enjoy it',
+          heading: 'Pay over time in 3 months',
+          content: 'Settle 25% of the order total today and pay the rest over 3 monthly payments at zero interest.',
+          image: '/assets/asset-18-secondary.svg'
+        }
+      ],
       features: [
         {
           title: 'Auto store',
@@ -35,9 +61,10 @@ export const state = () => ({
       row: 1
     },
     {
+      theme: 'secondary',
       title: 'Pay later with Paise',
-      slug: 'pay',
-      heading: 'The best <span class="r-text-primary">value</span> comes in split payments.',
+      slug: 'pay-with-paise',
+      heading: 'Enjoy best <span class="r-text-primary">value</span> split payments and earn.',
       summary: 'Paise lets you split your purchases into 3 zero interest payments or pay after your purchase within 7 days.',
       content: 'You\'ll never pay extra with Paise when you pay on time.',
       image: 'service-04.svg',
@@ -48,22 +75,22 @@ export const state = () => ({
       ],
       steps: [
         {
-          title: 'Checkout simple with Paise.',
-          heading: 'Desire it',
+          title: 'Find it',
+          heading: '<span class="r-text-secondary">Shop</span> simple with Paise.',
           content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
-          image: '/assets/asset-02.svg'
+          image: '/assets/asset-02-secondary.svg'
         },
         {
-          title: 'Choose to pay with Paise',
-          heading: 'Shop it',
+          title: 'Order it',
+          heading: '<span class="r-text-secondary">Choose</span> to pay with Paise',
           content: 'Add what you want to your cart and choose to pay with Paise It\'s that simple and instant.',
-          image: '/assets/asset-17.svg'
+          image: '/assets/asset-17-secondary.svg'
         },
         {
-          heading: 'Enjoy it',
-          title: 'Pay over time in 3 months',
+          title: 'Enjoy it',
+          heading: '<span class="r-text-secondary">Pay</span> over time in 3 months',
           content: 'Settle 25% of the order total today and pay the rest over 3 monthly payments at zero interest.',
-          image: '/assets/asset-18.svg'
+          image: '/assets/asset-18-secondary.svg'
         }
       ],
       features: [
@@ -83,7 +110,7 @@ export const state = () => ({
           image: 'service-07.svg'
         },
         {
-          title: 'Transact securely with Paise',
+          title: 'Transact simple with Paise',
           content: 'Your financial information is protected when you open an account with Paise.',
           image: 'service-15.svg'
         }
@@ -91,31 +118,52 @@ export const state = () => ({
       row: 1
     },
     {
-      title: 'Earn more with Paise',
-      slug: 'earn',
-      heading: '<span class="r-text-primary">Faster</span> deliveries with our nationwide fulfillment network',
-      summary: 'Manage orders, warehouse, inventory, and deliver to your shoppers fast and securely.',
-      content: 'Paise\'s fulfillment services equip brands of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-consumer and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business while you exceed your customers\' expectations',
+      theme: 'yellow',
+      title: 'Earn cash with Paise',
+      slug: 'earn-with-paise',
+      heading: '<span class="r-text-primary">Shop</span> securely and earn instant credit.',
+      summary: 'Shop at brands you love and earn cash you can withdraw. That\'s real money, not another loyalty program you\'ll never use.',
+      content: 'Start shopping with Paise at partnering cashback stores, we\'ll automatically add cashback into your account. You can earn cash whether you pay with Paise or not.',
       image: 'service-08.svg',
       images: [
-        '/assets/asset-01.svg',
-        '/assets/asset-08.svg'
+        '/assets/asset-16.svg',
+        '/assets/asset-17.svg'
+      ],
+      steps: [
+        {
+          heading: 'Desire it',
+          title: 'Checkout simple with Paise.',
+          content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
+          image: '/assets/asset-02.svg'
+        },
+        {
+          heading: 'Shop it',
+          title: 'Choose to pay with Paise',
+          content: 'Add what you want to your cart and choose to pay with Paise It\'s that simple and instant.',
+          image: '/assets/asset-17.svg'
+        },
+        {
+          heading: 'Enjoy it',
+          title: 'Pay over time in 3 months',
+          content: 'Settle 25% of the order total today and pay the rest over 3 monthly payments at zero interest.',
+          image: '/assets/asset-18.svg'
+        }
       ],
       features: [
         {
-          title: 'Auto carrier',
-          content: 'Deliver to your customers faster by leveraging our fulfillment network for storage, picking, packing, and shipping. Deliver orders in 1 to 2 business days in the continental U.S. while managing shipping costs through our strategically distributed network of fulfillment centers.',
-          image: 'service-31.svg'
+          title: 'Sign up to earn cashback.',
+          content: 'Create a Paise account in few seconds, it\'s completely simple, free and secure.',
+          image: 'service-12.svg'
         },
         {
-          title: 'Auto track',
-          content: 'Whether you\'re an ecommerce startup just getting started or an established brand moving high volume, whether you\'re shipping direct-to-consumer or B2B to retail or distribution partners, our tech-enabled order fulfillment capabilities can accommodate all your needs today.',
-          image: 'service-11.svg'
+          title: 'Shop at brands on Paise.',
+          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Paise or not.',
+          image: 'service-18.svg'
         },
         {
-          title: 'Auto pilot',
-          content: 'Analyze aggregate and SKU-level order data, on-hand inventory information, and inbound and outbound shipments all in a single easy-to-navigate dashboard. Paise automatically pulls in product and order data from all major ecommerce marketplaces and platforms, including our own.',
-          image: 'service-26.svg'
+          title: 'Get cash or pay your next purchase.',
+          content: 'Withdraw real money you\'ve earned or choose to settle an upcoming bill on Paise.',
+          image: 'service-07.svg'
         }
       ],
       row: 1
@@ -149,7 +197,7 @@ export const state = () => ({
       slug: 'x-order',
       heading: '<span class="r-text-primary">Faster</span> deliveries with our nationwide fulfillment network',
       summary: 'Manage orders, warehouse, inventory, and deliver to your shoppers fast and securely.',
-      content: 'Paise\'s fulfillment services equip brands of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-consumer and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business. ',
+      content: 'Paise\'s fulfillment services equip brands of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-shopper and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business. ',
       image: 'service-14.svg',
       row: 1
     },

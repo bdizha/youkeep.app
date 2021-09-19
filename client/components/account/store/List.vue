@@ -60,7 +60,7 @@ export default {
   computed: mapGetters({
     modal: 'base/modal',
     sellers: 'account/sellers',
-    hassellers: 'account/hassellers'
+    hasSellers: 'account/hasSellers'
   }),
   async fetch () {
     await this.onsellers()

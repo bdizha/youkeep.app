@@ -20,7 +20,7 @@
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <h3 class="r-heading">
-                    <span class="r-text-primary">Add</span> value to the marketplace
+                    <span class="r-text-secondary">Add</span> value to the marketplace
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -41,38 +41,38 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <a-row :gutter="[24, 24]" type="flex">
-                        <a-col flex="99px">
-                          <a-card class="r-bg-white-light">
-                            <a-icon class="r-text-primary"
-                                    :style="{ fontSize: '53px' }"
+                      <a-card class="r-bg-white">
+                        <a-row :gutter="[24, 24]" type="flex">
+                          <a-col flex="60px">
+                            <a-icon class="r-text-secondary"
+                                    :style="{ fontSize: '60px' }"
                                     :type="benefit.icon"></a-icon>
-                          </a-card>
-                        </a-col>
-                        <a-col flex="1 1 0">
-                          <a-row :gutter="[6,6]" align="middle" justify="center" type="flex">
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                   :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <h4 class="r-heading-light">
-                                {{ benefit.title }}
-                              </h4>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                   :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <h4 class="r-heading" v-html="benefit.heading"></h4>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <p class="r-text-normal">
-                                {{ benefit.content }}
-                              </p>
-                            </a-col>
-                          </a-row>
-                        </a-col>
-                      </a-row>
+                          </a-col>
+                          <a-col flex="1 1 0">
+                            <a-row :gutter="[6,6]" align="middle" justify="center" type="flex">
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                     :sm="{ span: 24 }"
+                                     :xs="{ span: 24 }"
+                              >
+                                <h4 class="r-heading-light">
+                                  {{ benefit.title }}
+                                </h4>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                     :sm="{ span: 24 }"
+                                     :xs="{ span: 24 }"
+                              >
+                                <h4 class="r-heading" v-html="benefit.heading"></h4>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                                <p class="r-text-normal">
+                                  {{ benefit.content }}
+                                </p>
+                              </a-col>
+                            </a-row>
+                          </a-col>
+                        </a-row>
+                      </a-card>
                     </a-col>
                   </a-row>
                 </a-col>
@@ -101,19 +101,19 @@ export default {
         {
           icon: 'shop',
           title: 'Instant and simple',
-          heading: '<span class="r-text-primary">Enable</span> seamless customer experience',
+          heading: '<span class="r-text-secondary">Enable</span> seamless customer experience',
           content: 'Built to delight your customers while enabling your base line to thrive.'
         },
         {
           icon: 'dollar',
           title: 'Zero fees charged',
-          heading: '<span class="r-text-primary">Offer</span> on demand payment options',
+          heading: '<span class="r-text-secondary">Offer</span> on demand payment options',
           content: 'It\'s never been easier to give your customers flexible payment options.'
         },
         {
           icon: 'sync',
           title: 'No credit impact',
-          heading: '<span class="r-text-primary">Earn</span> your returning customers seamlessly',
+          heading: '<span class="r-text-secondary">Earn</span> more returning customers',
           content: 'Enable more buying shoppers and increase recurring orders with Paise.'
         }
       ]

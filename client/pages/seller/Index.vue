@@ -5,12 +5,10 @@
     >
       <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
         <div class="r-mv-48">
-          <a-row :gutter="[96,96]" align="middle" justify="end" type="flex">
-            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                   :xs="{ span: 24 }"
-            >
-              <a-row justify="end" type="flex">
-                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <a-row align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+              <a-row :gutter="[96,96]" justify="start" align="middle" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
@@ -33,7 +31,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium r-text-dark">
-                        Configure the <span class="r-text-primary">Paise</span> <span class="r-text-secondary">checkout</span> button today and boost sales, customer relationship and repeat purchases.
+                        Configure the Paise checkout button today and boost sales, customer relationships and repeat purchases.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -69,20 +67,19 @@
                                   size="large"
                                   type="blue"
                         >
-                          See pricing <a-icon type="right"></a-icon>
+                          See pricing
+                          <a-icon type="right"></a-icon>
                         </a-button>
                       </nuxt-link>
                     </a-col>
                   </a-row>
                 </a-col>
+                <a-col class="r-text-left" :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24}"
+                >
+                  <r-slider :images="images"></r-slider>
+                </a-col>
               </a-row>
-            </a-col>
-            <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
-                   :xs="{ span: 24}"
-            >
-              <div style="max-width: 50%;">
-              <r-slider :images="images"></r-slider>
-              </div>
             </a-col>
           </a-row>
         </div>
@@ -146,7 +143,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h3 class="r-heading">
-                        <span class="r-text-primary">Delight</span> your customers with on demand payment options.
+                        <span class="r-text-primary">Delight</span> your customers with Paise
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -154,42 +151,65 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium">
-                        Improve sales through higher conversion rates
+                        Improve sales through higher conversion rates, on demand payment options
                         and reduced cart abandonment.
                       </p>
                     </a-col>
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                    <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24}"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Built for growing businesses, Paise offers a clear view into checkout activities with:
-                        automated billing, expensing, and reporting.
+                        Paise offers growing businesses a single and clear view into checkout activities including but not limited to:
+                        instant orders, payment options, customer timeline, financing, and reporting.
                       </p>
                     </a-col>
-                    <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+
                     >
-                      <nuxt-link to="/contact-us">
-                        <a-button block
-                                  class="r-btn-primary"
-                                  size="large"
-                                  type="secondary"
+                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                        <a-col v-for="(benefit, index) in benefits"
+                               :key="index"
+                               :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
                         >
-                          Contact Sales
-                        </a-button>
-                      </nuxt-link>
-                    </a-col>
-                    <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                    >
-                      <nuxt-link to="/pricing">
-                        <a-button block
-                                  class="r-btn-bordered-secondary"
-                                  size="large"
-                                  type="secondary"
-                        >
-                          See pricing
-                        </a-button>
-                      </nuxt-link>
+                          <a-card class="r-bg-white">
+                            <a-row :gutter="[24, 24]" type="flex">
+                              <a-col flex="60px">
+                                <a-icon class="r-text-primary"
+                                        :style="{ fontSize: '60px' }"
+                                        :type="benefit.icon"></a-icon>
+                              </a-col>
+                              <a-col flex="1 1 0">
+                                <a-row :gutter="[6,6]" align="middle" justify="center" type="flex">
+                                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                         :sm="{ span: 24 }"
+                                         :xs="{ span: 24 }"
+                                  >
+                                    <h4 class="r-heading-light">
+                                      {{ benefit.title }}
+                                    </h4>
+                                  </a-col>
+                                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                         :sm="{ span: 24 }"
+                                         :xs="{ span: 24 }"
+                                  >
+                                    <h4 class="r-heading" v-html="benefit.heading"></h4>
+                                  </a-col>
+                                  <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                                    <p class="r-text-normal">
+                                      {{ benefit.content }}
+                                    </p>
+                                  </a-col>
+                                </a-row>
+                              </a-col>
+                            </a-row>
+                          </a-card>
+                        </a-col>
+                      </a-row>
                     </a-col>
                   </a-row>
                 </a-col>
@@ -202,7 +222,9 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-contact-us :has-more="true" title="Ready to sell with Paise?" heading="Increase your average order value and drive conversions. Getting started is easy."></r-contact-us>
+      <r-contact-us :has-more="true" title="Ready to sell with Paise?"
+                    heading="Increase your average order value and drive conversions. Getting started is easy."
+      ></r-contact-us>
     </a-col>
   </a-row>
 </template>
@@ -217,13 +239,32 @@ export default {
       images: [
         '/assets/asset-01.svg',
         '/assets/asset-08.svg'
+      ],
+      benefits: [
+        {
+          icon: 'line-chart',
+          title: 'Boost your business sales',
+          heading: '<span class="r-text-primary">Enable</span> seamless customer experience',
+          content: 'Built to delight your customers while enabling your base line to thrive.'
+        },
+        {
+          icon: 'gift',
+          title: 'Obsess with your customer',
+          heading: '<span class="r-text-primary">Offer</span> on demand payment options',
+          content: 'It\'s never been easier to give your customers flexible payment options.'
+        },
+        {
+          icon: 'dollar',
+          title: 'Earn on demand payments',
+          heading: '<span class="r-text-primary">Earn</span> more returning customers',
+          content: 'Enable more buying shoppers and increase recurring orders with Paise.'
+        }
       ]
     }
   },
   computed: mapGetters({
     modal: 'base/modal'
   }),
-  methods: {
-  }
+  methods: {}
 }
 </script>

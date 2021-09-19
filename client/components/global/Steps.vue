@@ -32,7 +32,7 @@
                   <h3 class="r-heading" v-html="step.heading">
                   </h3>
                 </a-col>
-                <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-col v-if="step.summary" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-medium">
                     {{ step.summary }}
                   </p>

@@ -39,7 +39,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24}"
         >
-          <a-card class="r-bg-secondary-light">
+          <a-card :class="getBgClass()">
             <a-row align="middle" justify="start" type="flex">
               <a-col v-if="!isCurrent(service)" :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
@@ -63,8 +63,7 @@
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
                   >
-                    <p class="r-text-normal">
-                      {{ service.summary }}
+                    <p class="r-text-normal" v-html="service.heading">
                     </p>
                   </a-col>
                   <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -73,6 +72,7 @@
                   >
                     <nuxt-link class="r-text-link" :to="'/service/' + service.slug">
                       Learn more
+                      <a-icon type="right"></a-icon>
                     </nuxt-link>
                   </a-col>
                 </a-row>
@@ -91,7 +91,7 @@ export default {
   name: 'r-services',
   props: {
     isShow: { type: Boolean, required: false, default: false },
-    theme: { type: Boolean, required: false, default: false }
+    theme: { type: String, required: false, default: 'white' }
   },
   data () {
     return {}
@@ -112,6 +112,9 @@ export default {
       }
 
       return this.product.slug === item.slug
+    },
+    getBgClass () {
+      return `r-bg-${this.theme}-light`
     }
   }
 }

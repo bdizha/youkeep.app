@@ -23,7 +23,7 @@ const state = () => ({
   positions: [],
   position: {},
   storeCategories: [],
-  hassellers: false,
+  hasSellers: false,
   hasFaqs: false,
   isStore: false,
   notice: null,
@@ -94,7 +94,7 @@ const getters = {
   sellers: state => state.sellers,
   faqs: state => state.faqs,
   countries: state => state.countries,
-  hassellers: state => state.hassellers,
+  hasSellers: state => state.hasSellers,
   hasFaqs: state => state.hasFaqs,
   hasCountries: state => state.hasCountries,
   menuCategory: state => state.menuCategory,
@@ -153,7 +153,7 @@ const mutations = {
   },
   setSellers (state, sellers) {
     state.sellers = sellers
-    state.hassellers = sellers.data !== undefined && sellers.data.length > 0
+    state.hasSellers = sellers.data !== undefined && sellers.data.length > 0
   },
   setFaqs (state, faqs) {
     state.faqs = faqs

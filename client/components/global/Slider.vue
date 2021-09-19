@@ -2,7 +2,9 @@
   <VueSlickCarousel v-bind="settings">
     <div v-for="(image, index) in images"
          :key="index">
-      <nuxt-img :src="image" height="750px"></nuxt-img>
+      <r-avatar :data-src="image" :size="300"
+                class="r-avatar-block"
+      ></r-avatar>
     </div>
   </VueSlickCarousel>
 </template>

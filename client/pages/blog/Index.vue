@@ -61,7 +61,7 @@
       <r-blog-articles></r-blog-articles>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-contact-us title="Take your mind off B2B payments, for good."></r-contact-us>
+      <r-contact-us title="Take your shopping to the next level."></r-contact-us>
     </a-col>
   </a-row>
 </template>

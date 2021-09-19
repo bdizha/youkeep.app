@@ -6,7 +6,7 @@
           <a-row :gutter="[24,24]" justify="center" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-text-center"
             >
-              <h3 class="r-heading-light r-text-uppercase r-text-secondary">
+              <h3 class="r-heading-light r-text-uppercase r-text-primary">
                 Where we're located
               </h3>
             </a-col>
@@ -28,8 +28,8 @@
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                         >
-                          <h4 class="r-heading r-text-secondary">
-                            {{ location.continent }}
+                          <h4 class="r-heading r-text-primary">
+                            {{ location.country }}
                           </h4>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
@@ -59,44 +59,44 @@ export default {
     return {
       locations: [
         {
-          city: 'Johannesburg',
-          continent: 'South Africa',
+          city: 'Mumbai',
+          country: 'India',
           email: 'info@paise.com'
         },
         {
-          city: 'Cape Town',
-          continent: 'South Africa',
+          city: 'Singapore',
+          country: 'Singapore',
+          email: 'partner@paise.com'
+        },
+        {
+          city: 'Jakarta',
+          country: 'Indonesia',
+          email: 'partner@paise.com'
+        },
+        {
+          city: 'Kuala Lumpur',
+          country: 'Malaysia',
+          email: 'partner@paise.com'
+        },
+        {
+          city: 'Hanoi',
+          country: 'Vietnam',
+          email: 'partner@paise.com'
+        },
+        {
+          city: 'Dhaka',
+          country: 'Bangladesh',
           email: 'info@paise.com'
         },
         {
-          city: 'Durban',
-          continent: 'South Africa',
+          city: 'Manila',
+          country: 'Philippines',
+          email: 'partner@paise.com'
+        },
+        {
+          city: 'Islamabad',
+          country: 'Pakistan',
           email: 'info@paise.com'
-        },
-        {
-          city: 'Nairobi',
-          continent: 'Kenya',
-          email: 'partner@paise.com'
-        },
-        {
-          city: 'Accra',
-          continent: 'Ghana',
-          email: 'partner@paise.com'
-        },
-        {
-          city: 'Lagos',
-          continent: 'Nigeria',
-          email: 'partner@paise.com'
-        },
-        {
-          city: 'Windhoek',
-          continent: 'Namibia',
-          email: 'partner@paise.com'
-        },
-        {
-          city: 'Lusaka',
-          continent: 'Zambia',
-          email: 'partner@paise.com'
         }
       ]
     }

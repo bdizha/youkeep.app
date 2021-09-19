@@ -1,7 +1,7 @@
 <template>
   <a-row align="middle" class="r-store-arrows" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <div v-if="hassellers" :class="padding" class="r-slider">
+      <div v-if="hasSellers" :class="padding" class="r-slider">
         <VueSlickCarousel v-bind="settings">
           <nuxt-link v-for="(store, index) in sellers.data"
                      v-if="store"
@@ -74,7 +74,7 @@ export default {
   },
   computed: mapGetters({
     sellers: 'base/sellers',
-    hassellers: 'base/hassellers',
+    hasSellers: 'base/hasSellers',
   }),
   created () {
     this.payload()

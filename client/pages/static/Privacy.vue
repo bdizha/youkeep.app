@@ -139,10 +139,10 @@
               our shoppers for commercial purposes in violation of the commitments set forth in this Privacy Statement.
             </p>
 
-            <p><em>Reporting to Credit Bureaus</em>. We may share your information with credit bureaus, consumer
+            <p><em>Reporting to Credit Bureaus</em>. We may share your information with credit bureaus, shopper
               reporting
               agencies, and card associations. Late payments, missed payments, or other defaults on your account may be
-              reflected in your credit report and consumer report. We may also share your information with other
+              reflected in your credit report and shopper report. We may also share your information with other
               companies, lawyers, credit bureaus, agents, government agencies, and card associations in connection with
               issues related to fraud, credit, or debt collection.</p>
 

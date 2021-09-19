@@ -14,16 +14,16 @@ viewBox="0 0 10470 18583"
     .fil1 {fill:none}
     .fil10 {fill:#D5F6FF}
     .fil9 {fill:#3B9CFF;fill-rule:nonzero}
-    .fil2 {fill:#B4DCFF;fill-opacity:0.15}
-    .fil6 {fill:#C4E1FF;fill-opacity:0.321569}
+    .fil2 {fill:#FFFFFF;fill-opacity:0.99}
+    .fil6 {fill:#f7fdff;fill-opacity:1}
     .fil7 {fill:#3B9CFF;fill-opacity:0.450980}
     .fil8 {fill:#B4DCFF;fill-opacity:0.450980}
     .fil14 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.0.6}
-    .fil3 {fill:#E5F2FF;fill-opacity:0.99}
+    .fil3 {fill:#FFFFFF;fill-opacity:1}
     .fil12 {fill:#00C2FF;fill-rule:nonzero;fill-opacity:0.980392}
     .fil13 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.980392}
     .fil0 {fill:#D5F6FF}
-    .fil11 {fill:#D9ECFF}
+    .fil11 {fill:#e8f4ff}
    ]]>
   </style>
  </defs>

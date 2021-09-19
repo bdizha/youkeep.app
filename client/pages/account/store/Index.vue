@@ -11,10 +11,10 @@
                      :xs="{ span: 24 }" class="r-store-page"
               >
                 <div class="r-text-s">
-                  <template v-if="hassellers">
+                  <template v-if="hasSellers">
                     Here you can manage all your sellers.
                   </template>
-                  <template v-if="!hassellers">
+                  <template v-if="!hasSellers">
                     You don't have a store set up yet.
                   </template>
                 </div>
@@ -67,7 +67,7 @@ export default {
   computed: mapGetters({
     modal: 'base/modal',
     sellers: 'account/sellers',
-    hassellers: 'account/hassellers'
+    hasSellers: 'account/hasSellers'
   }),
   methods: {
     created () {

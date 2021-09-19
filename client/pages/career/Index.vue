@@ -135,7 +135,7 @@ export default {
           title: 'Innovative',
           heading: 'Transforming the way business is <span class="r-text-primary">experienced</span> online',
           content: ' If you take innovation passionately, then you\'re in the right place.\n' +
-            '                  Paise is a consumer centric platform that transforms\n' +
+            '                  Paise is a shopper centric platform that transforms\n' +
             '                  the way shoppers experience their business.'
         },
         {

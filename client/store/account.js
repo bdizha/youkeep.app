@@ -13,7 +13,7 @@ const state = () => ({
   },
   hasMenu: false,
   sellers: { data: [] },
-  hassellers: false,
+  hasSellers: false,
   hasAddresses: false,
   addresses: [],
   coupons: [],
@@ -32,7 +32,7 @@ const getters = {
   cards: state => state.cards,
   hasCards: state => state.cards.length > 0,
   sellers: state => state.sellers,
-  hassellers: state => state.hassellers > 0,
+  hasSellers: state => state.hasSellers > 0,
   address: state => state.address,
   hasAddress: state => state.hasSearched,
   currentStep: state => state.currentStep,
@@ -67,7 +67,7 @@ const mutations = {
   },
   setSellers (state, sellers) {
     state.sellers = sellers
-    state.hassellers = sellers.data !== undefined && sellers.data.length > 0
+    state.hasSellers = sellers.data !== undefined && sellers.data.length > 0
   },
   setAddresses (state, data) {
     state.addresses = data.addresses

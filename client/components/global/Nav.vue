@@ -7,7 +7,7 @@
       >
         <a-sub-menu>
           <div slot="title" class="r-menu-text">
-            <nuxt-link to="/marketplace">
+            <nuxt-link to="/shop">
               Shop with Paise
             </nuxt-link>
           </div>

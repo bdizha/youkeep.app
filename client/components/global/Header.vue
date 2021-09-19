@@ -56,7 +56,7 @@ export default {
     store: 'base/store',
     processes: 'base/processes',
     sellers: 'base/sellers',
-    hassellers: 'base/hassellers',
+    hasSellers: 'base/hasSellers',
     hasStore: 'base/hasStore',
     drawer: 'base/drawer',
     hasStoreTray: 'base/hasStoreTray',

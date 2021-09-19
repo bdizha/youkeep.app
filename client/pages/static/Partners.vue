@@ -129,12 +129,12 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      Paise's on-demand checkout is revolutionizing marketplaces and how consumers shop online.
+                      Paise's on-demand checkout is revolutionizing marketplaces and how Shoppers shop online.
                     </p>
                   </a-col>
                   <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                   >
-                    <nuxt-link to="/marketplace">
+                    <nuxt-link to="/shop">
                       <a-button block
                                 class="r-btn-bordered-secondary"
                                 size="large"
@@ -202,7 +202,7 @@
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                     >
-                      <nuxt-link to="/marketplace">
+                      <nuxt-link to="/shop">
                         <a-button block
                                   class="r-btn-bordered-secondary"
                                   size="large"
@@ -600,7 +600,7 @@
       <r-testimonials></r-testimonials>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-contact-us title="Take your mind off B2B payments, for good."></r-contact-us>
+      <r-contact-us title="Take your shopping to the next level."></r-contact-us>
     </a-col>
   </a-row>
 </template>

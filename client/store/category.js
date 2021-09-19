@@ -15,7 +15,7 @@ const state = () => ({
   positions: [],
   position: {},
   storeCategories: [],
-  hassellers: false,
+  hasSellers: false,
   isStore: false,
   notice: null,
   hasNotice: false,
@@ -86,7 +86,7 @@ const getters = {
   store: state => state.store,
   hasStore: state => state.hasStore,
   sellers: state => state.sellers,
-  hassellers: state => state.hassellers,
+  hasSellers: state => state.hasSellers,
   category: state => state.category,
   departments: state => state.departments,
   positions: state => state.positions,
@@ -140,7 +140,7 @@ const mutations = {
   },
   setSellers (state, sellers) {
     state.sellers = sellers
-    state.hassellers = sellers.data !== undefined && sellers.data.length > 0
+    state.hasSellers = sellers.data !== undefined && sellers.data.length > 0
   },
   setCategory (state, category) {
     state.category = category

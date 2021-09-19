@@ -32,7 +32,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          A B2B sellers' marketplace for Africa.
+                          Instant, simple, and secure checkout.
                         </p>
                       </a-col>
                     </a-row>
@@ -46,12 +46,12 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/marketplace">Marketplace</nuxt-link>
+                          <nuxt-link to="/shop">Marketplace</nuxt-link>
                         </div>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/buyer">Retailers</nuxt-link>
+                          <nuxt-link to="/shopper">Shoppers</nuxt-link>
                         </div>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
@@ -61,12 +61,12 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/community">Community</nuxt-link>
+                          <nuxt-link to="/partners">Parners</nuxt-link>
                         </div>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <div class="r-footer-link">
-                          <nuxt-link to="/pricing">Pricing</nuxt-link>
+                          <nuxt-link to="/community">Community</nuxt-link>
                         </div>
                       </a-col>
                     </a-row>
@@ -75,7 +75,7 @@
                     <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                         <h4 class="r-heading-light r-text-uppercase">
-                          Solutions
+                          Marketplace
                         </h4>
                       </a-col>
                       <a-col v-for="(service, index) in products"
@@ -85,6 +85,11 @@
                           <nuxt-link :to="'/service/' + service.slug">
                             {{ service.title }}
                           </nuxt-link>
+                        </div>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                        <div class="r-footer-link">
+                          <nuxt-link to="/pricing">Pricing</nuxt-link>
                         </div>
                       </a-col>
                     </a-row>

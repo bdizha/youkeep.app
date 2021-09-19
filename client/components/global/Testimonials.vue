@@ -27,9 +27,9 @@
                   </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                  <p class="r-text-s r-text-bold">
+                  <h4 class="r-heading-light">
                     {{ testimonial.author }}
-                  </p>
+                  </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
                   <p class="r-text-s r-text-bold r-text-primary">
