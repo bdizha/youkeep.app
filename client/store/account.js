@@ -31,7 +31,7 @@ const state = () => ({
 const getters = {
   cards: state => state.cards,
   hasCards: state => state.cards.length > 0,
-  sellers: state => state.sellers,
+  sellers: state => state.stores,
   hasSellers: state => state.hasSellers > 0,
   address: state => state.address,
   hasAddress: state => state.hasSearched,
@@ -66,7 +66,7 @@ const mutations = {
     state.cards = data.cards
   },
   setSellers (state, sellers) {
-    state.sellers = sellers
+    state.stores = sellers
     state.hasSellers = sellers.data !== undefined && sellers.data.length > 0
   },
   setAddresses (state, data) {
@@ -121,7 +121,7 @@ const actions = {
       commit('setErrors', e)
     }
   },
-  async onsellers ({ dispatch, commit, state }, payload) {
+  async onSellers ({ dispatch, commit, state }, payload) {
     try {
       commit('setSellers', { data: [] })
 
@@ -129,7 +129,7 @@ const actions = {
         commit('setSellers', data)
       })
     } catch (e) {
-      console.error('onsellers errors')
+      console.error('onSellers errors')
       console.log(e)
     }
   },

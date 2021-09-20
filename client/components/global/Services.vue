@@ -22,13 +22,28 @@
                 More solutions
               </h4>
             </a-col>
-            <a-col v-if="!isShow" :lg="{ span: 24 }" :md="{ span: 24 }"
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <h3 class="r-heading">
-                <span class="r-text-primary">Built</span> for shoppers and marketplaces to thrive
-              </h3>
+              <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <h3 class="r-heading">
+                    <span class="r-text-primary">Built</span> for shoppers and sellers to thrive
+                  </h3>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <p class="r-text-medium">
+                    Paise powers shoppers to enjoy securely one-click online purchases with on demand payment options.
+                  </p>
+                </a-col>
+              </a-row>
             </a-col>
           </a-row>
         </a-col>

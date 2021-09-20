@@ -131,7 +131,7 @@ class ProductArtSeeder extends DatabaseSeeder
             'name' => $categoryName,
             'order' => 1,
             'description' => $categoryDescription,
-            'type' => Category::TYPE_CATALOG
+            'type' => Category::TYPE_PRODUCT
         ];
 
         $category = \App\Category::updateOrCreate($attributes, $values);

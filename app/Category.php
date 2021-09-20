@@ -15,11 +15,11 @@ class Category extends Model
     use Sluggable;
 
     public const TYPE_STORE = 1;
-    public const TYPE_CATALOG = 2;
+    public const TYPE_PRODUCT = 2;
 
     public static $types = [
         self::TYPE_STORE => 'Store',
-        self::TYPE_CATALOG => 'Category'
+        self::TYPE_PRODUCT => 'Category'
     ];
 
     protected $products = [];
@@ -96,7 +96,7 @@ class Category extends Model
     {
         $this->products = [];
 
-        if ($this->type == self::TYPE_CATALOG) {
+        if ($this->type == self::TYPE_PRODUCT) {
             $this->products = Product::whereHas('categories', function ($query) {
                 $query->where('category_products.category_id', $this->id);
             })
@@ -117,7 +117,7 @@ class Category extends Model
 
         foreach (ProductType::$types as $type => $name) {
             $productTypes = ProductType::whereHas('variants', function ($query) {
-                $query->whereHas('service', function ($query) {
+                $query->whereHas('product', function ($query) {
                     $query->whereHas('categories', function ($query) {
                         $query->where('category_products.category_id', $this->id);
                     });
@@ -216,9 +216,17 @@ class Category extends Model
     /**
      * Get the stores
      */
-    public function stores()
+    public function category_stores()
     {
         return $this->belongsToMany('App\Store', 'store_categories', 'category_id', 'store_id');
+    }
+
+    /**
+     * Get the category stores
+     */
+    public function stores()
+    {
+        return $this->hasMany('App\Store');
     }
 
 }

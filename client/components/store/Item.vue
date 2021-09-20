@@ -25,7 +25,13 @@ export default {
   name: 'r-store-item',
   components: {},
   props: {
-    store: { type: Object, required: false },
+    store: {
+      type: Object,
+      required: true,
+      default: () => {
+
+      }
+    },
     hasActions: { type: Boolean, required: false, default: true },
     size: { type: Number, required: false, default: 90 },
     isShow: { type: Boolean, required: false, default: false }
@@ -45,7 +51,7 @@ export default {
       this.isSearching = true
     },
     getPhotoCoverStyle () {
-      return 'background-image: url(' + (this.store.photo_cover ? this.store.photo_cover_url : '/assets/icon_default.png') + ');background-size: contain;'
+      return 'background-image: url(' + ('/assets/icon_default.png') + ');background-size: contain;'
     }
   }
 }

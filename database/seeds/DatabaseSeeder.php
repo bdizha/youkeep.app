@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
             'name' => $categoryName,
             'order' => 1,
             'description' => $categoryDescription,
-            'type' => Category::TYPE_CATALOG,
+            'type' => Category::TYPE_PRODUCT,
             'randomized_at' => date('Y-m-d'),
         ];
 
@@ -428,5 +428,15 @@ class DatabaseSeeder extends Seeder
 
             Lookup::updateOrCreate($attributes, $values);
         }
+    }
+
+    /**
+     * @param string $url
+     * @return string
+     */
+    protected function _setCrawler(string $url): string
+    {
+        $encodedUrl = urlencode($url);
+        return "https://api.proxycrawl.com/?token=XedJD-fi9KMpxSZfh_U2JA&url={$encodedUrl}";
     }
 }

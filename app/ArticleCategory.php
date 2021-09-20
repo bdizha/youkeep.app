@@ -63,7 +63,7 @@ class ArticleCategory extends Model
             'id' => null,
             'slug' => null,
             'route' => '/',
-            'name' => "Spazaland Help",
+            'name' => "Paise Help",
             'has_articles' => true,
             'has_categories' => true,
             'categories' => [],

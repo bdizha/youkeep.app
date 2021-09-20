@@ -70,7 +70,7 @@ class StoreCategory extends Model
 
         foreach (ProductType::$types as $type => $name) {
             $productTypes = ProductType::whereHas('variants', function ($query) {
-                $query->whereHas('service', function ($query) {
+                $query->whereHas('product', function ($query) {
                     $query->whereHas('categories', function ($query) {
                         $query->where('category_products.category_id', $this->id);
                     });

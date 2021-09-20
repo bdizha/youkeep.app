@@ -62,7 +62,7 @@ export default {
     },
     async fetchsellers () {
       this.params.category_id = this.category.id
-      await this.$store.dispatch('shop/onsellers', this.params)
+      await this.$store.dispatch('shop/onSellers', this.params)
     }
   }
 }

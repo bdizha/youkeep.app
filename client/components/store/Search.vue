@@ -37,7 +37,7 @@ export default {
       }
     },
     async fetchsellers () {
-      await this.$store.dispatch('base/onsellers', this.params)
+      await this.$store.dispatch('base/onSellers', this.params)
     },
     async onSearch (term) {
       this.params = this.search.params

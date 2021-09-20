@@ -39,7 +39,7 @@ const routes = [
   { path: '/terms', name: 'terms', meta: { isDark: false, isRaised: true}, component: page('static/Terms.vue') },
   { path: '/privacy', name: 'privacy', meta: { isDark: false, isRaised: true}, component: page('static/Privacy.vue') },
   { path: '/hiw', name: 'hiw', meta: { isDark: false, isRaised: false}, component: page('static/Auto.vue') },
-  { path: '/shop', name: 'marketplace', meta: { isDark: false, isRaised: false}, component: page('store/Index.vue') },
+  { path: '/shop', name: 'shop', meta: { isDark: false, isRaised: false}, component: page('store/Index.vue') },
   { path: '/partners', name: 'partners', meta: { isDark: false, isRaised: false}, component: page('static/Partners.vue') },
   { path: '/community', name: 'community', meta: { isDark: false, isRaised: false}, component: page('static/Community.vue') },
   { path: '/help', name: 'help', meta: { isDark: false, isRaised: true}, component: page('help/article/Index.vue') },
@@ -85,13 +85,13 @@ const routes = [
   },
   {
     path: '/account/seller',
-    name: 'account.seller',
+    name: 'account.store',
     meta: { isDark: false, isRaised: false},
     component: page('account/seller/Index.vue')
   },
   {
     path: '/account/seller/setup',
-    name: 'account.seller.setup',
+    name: 'account.store.setup',
     meta: { isDark: false, isRaised: false},
     component: page('account/seller/Setup.vue')
   }

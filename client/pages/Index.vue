@@ -15,7 +15,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h3 class="r-heading-light r-text-uppercase">
-                        Shop securely, anytime
+                        It's shopping time!
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -23,8 +23,10 @@
                            :xs="{ span: 24 }"
                     >
                       <h1 class="r-heading r-text-dark">
-                        <span class="r-text-primary">Instant</span> <span class="r-text-secondary">shopping</span>
-                        assistant
+                        <span v-show="step === 1" class="r-text-primary r-text-animate">Instant</span>
+                        <span v-show="step === 2" class="r-text-secondary r-text-animate">Simple</span>
+                        <span v-show="step === 3" class="r-text-yellow r-text-animate">Secure</span>
+                        checkout experience.
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -48,26 +50,26 @@
                            :sm="{ span: 12 }"
                            :xs="{ span: 24 }"
                     >
-                      <a-button class="r-btn-dark"
+                      <a-button class="r-btn-primary"
                                 @click="onModal"
                                 block
                                 size="large"
                                 type="blue"
                       >
-                        Learn more
+                        Shop with Paise
                       </a-button>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
                            :sm="{ span: 12 }"
                            :xs="{ span: 24 }"
                     >
-                      <nuxt-link to="/contact-us">
-                        <a-button class="r-btn-bordered-primary"
+                      <nuxt-link to="/shopper">
+                        <a-button class="r-btn-bordered-secondary"
                                   block
                                   size="large"
-                                  type="blue"
+                                  type="secondary"
                         >
-                          Sign up now
+                          Learn more <a-icon type="right"></a-icon>
                         </a-button>
                       </nuxt-link>
                     </a-col>
@@ -320,7 +322,8 @@
                                                :xs="{ span: 24 }"
                                         >
                                           <p class="r-text-normal r-text-dark">
-                                            Customize product pages to show shoppers essential product and company details
+                                            Customize product pages to show shoppers essential product and company
+                                            details
                                             like MSRP, price margins, packaging dimensions, and more.
                                           </p>
                                         </a-col>
@@ -484,6 +487,7 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
+import { setInterval } from 'timers'
 
 export default {
   layout: 'default',
@@ -499,6 +503,7 @@ export default {
         '/assets/asset-05.svg',
         '/assets/asset-03.svg'
       ],
+      step: 1,
       modal: {
         current: null,
         isVisible: false
@@ -512,7 +517,8 @@ export default {
     categories: 'shop/categories',
     hasCategories: 'base/hasCategories'
   }),
-  created () {
+  async created () {
+    await this.rotate()
   },
   methods: {
     onModal () {
@@ -522,6 +528,15 @@ export default {
       modal.current = 'register'
 
       this.$store.dispatch('base/onModal', modal)
+    },
+    rotate () {
+      setInterval(() => {
+        if (this.step > 2) {
+          this.step = 1
+        } else {
+          this.step += 1
+        }
+      }, 3000)
     }
   }
 }

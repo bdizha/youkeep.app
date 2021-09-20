@@ -23,6 +23,8 @@ const state = () => ({
   positions: [],
   position: {},
   storeCategories: [],
+  hasStoreCategories: false,
+  has: [],
   hasSellers: false,
   hasFaqs: false,
   isStore: false,
@@ -91,7 +93,7 @@ const getters = {
   hasForm: state => state.hasForm,
   store: state => state.store,
   hasStore: state => state.hasStore,
-  sellers: state => state.sellers,
+  sellers: state => state.stores,
   faqs: state => state.faqs,
   countries: state => state.countries,
   hasSellers: state => state.hasSellers,
@@ -106,6 +108,7 @@ const getters = {
   categories: state => state.categories,
   banners: state => state.banners,
   storeCategories: state => state.storeCategories,
+  hasStoreCategories: state => state.hasStoreCategories,
   hasBanners: state => state.hasBanners,
   hasCategories: state => state.hasCategories,
   hasProducts: state => state.hasProducts,
@@ -152,7 +155,7 @@ const mutations = {
     state.isValid = isValid
   },
   setSellers (state, sellers) {
-    state.sellers = sellers
+    state.stores = sellers
     state.hasSellers = sellers.data !== undefined && sellers.data.length > 0
   },
   setFaqs (state, faqs) {
@@ -197,6 +200,7 @@ const mutations = {
     state.departments = departments
   },
   setStoreCategories (state, storeCategories) {
+    state.hasStoreCategories = storeCategories !== undefined && storeCategories.length > 0
     state.storeCategories = storeCategories
   },
   setDrawer (state, drawer) {
@@ -432,18 +436,19 @@ const actions = {
   async onStoreCategories ({ dispatch, commit }, payload) {
     try {
       commit('setProcess', { key: 'isRunning', value: true })
-      const { data } = await axios.post('/categories', payload)
-      commit('setStoreCategories', data.categories)
 
-      commit('setProcess', { key: 'isRunning', value: false })
+      await axios.post('/stores', payload).then(({ data }) => {
+        commit('setStoreCategories', data.categories)
+        commit('setProcess', { key: 'isRunning', value: false })
+      })
     } catch (e) {
       console.error('on error: ', e)
     }
   },
-  async onsellers ({ dispatch, commit }, payload) {
+  async onSellers ({ dispatch, commit }, payload) {
     commit('setProcess', { key: 'isTray', value: true })
 
-    await axios.post('/shops', payload).then(({ data }) => {
+    await axios.post('/store/category', payload).then(({ data }) => {
       commit('setSellers', data)
       commit('setFilter', { key: 'sellers', value: data })
       commit('setProcess', { key: 'isTray', value: false })

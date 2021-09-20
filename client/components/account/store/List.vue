@@ -63,14 +63,14 @@ export default {
     hasSellers: 'account/hasSellers'
   }),
   async fetch () {
-    await this.onsellers()
+    await this.onSellers()
   },
   methods: {
-    async onsellers () {
+    async onSellers () {
       const payload = {
         is_active: true
       }
-      await this.$store.dispatch('account/onsellers', payload)
+      await this.$store.dispatch('account/onSellers', payload)
     },
     onModal (current) {
       const modal = {}

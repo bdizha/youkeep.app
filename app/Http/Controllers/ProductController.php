@@ -78,7 +78,7 @@ class ProductController extends Controller
             $this->_setProduct();
 
             $response['store'] = $this->store;
-            $response['service'] = $this->product;
+            $response['product'] = $this->product;
             $response['category'] = [];
             $response['categories'] = [];
 

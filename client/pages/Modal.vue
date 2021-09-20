@@ -7,7 +7,7 @@
   >
     <template slot="footer">
       <a-row align="middle" justify="center" type="flex">
-        <a-col :span="24" class="gutter-row">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <h4 class="r-heading r-text-secondary r-text-center">
             <a-icon type="gift"/>
             <span>FREE Deliveries For 1 Week with Paise <br></span>

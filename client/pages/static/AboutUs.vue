@@ -60,7 +60,7 @@
                            :xs="{ span: 24 }"
                     >
                       <nuxt-link to="/careers">
-                        <a-button class="r-btn-secondary"
+                        <a-button class="r-btn-dark"
                                   block
                                   size="large"
                                   type="blue"
@@ -74,7 +74,7 @@
                 <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <r-avatar data-src="/assets/asset-16.png" :size="300"
+                  <r-avatar data-src="/images/icon_dark.svg" :size="300"
                             class="r-avatar-block"
                   ></r-avatar>
                 </a-col>

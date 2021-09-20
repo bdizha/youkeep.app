@@ -38,7 +38,13 @@ export default {
   name: 'r-store-face',
   components: {},
   props: {
-    store: { type: Object, required: false },
+    store: {
+      type: Object,
+      required: true,
+      default: () => {
+
+      }
+    },
     isPlain: { type: Boolean, required: false, default: false },
     span: { type: Number, required: false, default: 24 }
   },
@@ -52,7 +58,7 @@ export default {
     onDrawer () {
     },
     getPhotoCoverStyle () {
-      return 'background-image: url(' + (this.store.photo_cover ? this.store.photo_cover_url : '/assets/icon_default.png') + ');background-size: contain;'
+      return 'background-image: url(' + ('/assets/icon_default.png') + ');background-size: contain;'
     }
   }
 }

@@ -24,7 +24,7 @@ export const state = () => ({
 
 // getters
 export const getters = {
-  sellers: state => state.sellers,
+  sellers: state => state.stores,
   store: state => state.store,
   product: state => state.product,
   products: state => state.products,
@@ -39,7 +39,7 @@ export const getters = {
 export const mutations = {
   setSellers (state, sellers) {
     console.log('sellers...', sellers)
-    state.sellers = sellers
+    state.stores = sellers
   },
   setStore (state, store) {
     console.log('store...', store)
@@ -70,16 +70,16 @@ export const mutations = {
     state.categories = categories
   },
   FETCH_STORE_SUCCESS (state, data) {
-    state.sellers = data.sellers
-    state.store = data.sellers[0]
+    state.stores = data.stores
+    state.store = data.stores[0]
 
-    console.log('sellers', state.sellers)
+    console.log('sellers', state.stores)
   },
   FETCH_sellers_SUCCESS (state, data) {
-    state.sellers = data.sellers
-    state.store = data.sellers[0]
+    state.stores = data.stores
+    state.store = data.stores[0]
 
-    console.log('sellers', state.sellers)
+    console.log('sellers', state.stores)
   },
   FETCH_CATEGORY_SUCCESS (state, data) {
     state.category = data.category
@@ -97,7 +97,7 @@ export const mutations = {
 
 // actions
 export const actions = {
-  onsellers ({ commit }, payload) {
+  onSellers ({ commit }, payload) {
     commit('setSellers', payload)
   },
   onProduct ({ commit }, payload) {

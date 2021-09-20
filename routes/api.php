@@ -98,7 +98,8 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('/locations/address', 'LocationController@address')->name('modal.address');
     Route::post('/banners', 'CategoryController@banners')->name('category.banners');
     Route::post('/categories', 'CategoryController@index')->name('category.index');
-    Route::get('/categories', 'CategoryController@index')->name('category.index');
+    Route::post('/stores', 'StoreController@index')->name('store.index');
+    Route::post('/store/category', 'StoreController@category')->name('store.category');
     Route::post('/category', 'CategoryController@flush')->name('category.flush');
     Route::post('/shops', 'StoreController@index')->name('shops');
     Route::post('/products', 'ProductController@index')->name('products.search');

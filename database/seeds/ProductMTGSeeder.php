@@ -184,7 +184,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             'name' => $categoryName,
             'order' => 1,
             'description' => $categoryDescription,
-            'type' => Category::TYPE_CATALOG,
+            'type' => Category::TYPE_PRODUCT,
             'randomized_at' => \Carbon\Carbon::now()->addMinutes(rand(1, 3600))
         ];
 

@@ -132,7 +132,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
             'name' => $categoryName,
             'order' => 1,
             'description' => $categoryDescription,
-            'type' => Category::TYPE_CATALOG,
+            'type' => Category::TYPE_PRODUCT,
             'randomized_at' => date('Y-m-d'),
         ];
 

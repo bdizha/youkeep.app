@@ -1,0 +1,97 @@
+<template>
+  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <h3 class="r-heading-light">
+            Trusted by leading platforms and agencies
+          </h3>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
+        <a-col v-for="(partner, index) in partners"
+               :key="index"
+               :lg="{ span: 6 }" :md="{ span: 6 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-card :class="getBgClass(partner)">
+            <a-card-meta>
+              <template slot="description">
+                <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <h1 class="r-text-slarge-light" :class="getTextClass(partner)">
+                      {{ partner.content }}
+                    </h1>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <p class="r-text-medium">
+                      {{ partner.title }}
+                    </p>
+                  </a-col>
+                </a-row>
+              </template>
+            </a-card-meta>
+          </a-card>
+        </a-col>
+      </a-row>
+    </a-col>
+  </a-row>
+</template>
+<script>
+export default {
+  name: 'r-partners',
+  computed: {},
+  data () {
+    return {
+      partners: [
+        {
+          title: 'Average increase in order value',
+          content: '+75%',
+          theme: 'primary'
+        },
+        {
+          title: 'Shoppers discovering new products',
+          content: '1,5M+',
+          theme: 'secondary'
+        },
+        {
+          title: 'Products ready to be discovered',
+          content: '60K+',
+          theme: 'primary'
+        },
+        {
+          title: 'Local shops partnered with Paise',
+          content: '36K+',
+          theme: 'secondary'
+        }
+      ]
+    }
+  },
+  methods: {
+    getTextClass (partner) {
+      return `r-text-${partner.theme}`
+    },
+    getBgClass (partner) {
+      return `r-bg-${partner.theme}-light`
+    }
+  }
+}
+</script>

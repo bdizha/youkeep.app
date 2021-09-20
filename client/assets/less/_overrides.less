@@ -819,31 +819,49 @@ x {
     border-radius: @border-radius;
     box-shadow: @shadow-color 0px 1px 3px 0px;
     padding: 0 24px;
-    text-transform: uppercase;
-    font-size: 15px;
+    text-transform: initial;
+    font-size: 14px;
+    line-height: 34px;
     text-align: center;
 
     > span {
         & + .anticon {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 
     &.ant-btn-lg {
+        height: 54px;
         padding: 0 24px;
-        font-size: 15px;
+        font-size: 16px;
+        line-height: 52px;
+        border-radius: @border-radius;
+    }
+
+    &.ant-btn-md {
+        height: 45px;
+        padding: 0 24px;
+        font-size: 16px;
+        line-height: 43px;
         border-radius: @border-radius;
         @media (max-width: 768px) {
-            padding: 0 12px;
-            font-size: 15px;
+            font-size: 18px;
         }
     }
 }
 
 .ant-menu-item .anticon,
-.ant-menu-submenu-title .anticon {
-    margin-right: 0;
-    font-size: 12px;
+.ant-menu-submenu-title {
+    .anticon {
+        margin-right: 0;
+        font-size: 12px;
+    }
+    .ant-btn {
+        .anticon {
+            margin-right: 0;
+            font-size: 14px;
+        }
+    }
 }
 
 .ant-menu-item {

@@ -31,7 +31,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium r-text-dark">
-                        Configure the Paise checkout button today and boost sales, customer relationships and repeat purchases.
+                        Install the Paise checkout button today and boost sales, customer relationships and repeat purchases.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -39,9 +39,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Paise powers one-click online purchases for shoppers without requiring a password to log in and
-                        only needs to sign in once on a device, and it will remember account and payment information,
-                        without compromising security.
+                        Join the thousands of businesses that use Paise to give their customers on demand, simple and secure payment options.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"

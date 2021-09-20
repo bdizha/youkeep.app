@@ -68,7 +68,7 @@ export default {
     await this.onCountries()
     console.log('Fetching countries >>>> ')
 
-    // await this.onsellers()
+    // await this.onSellers()
     console.log('Fetching sellers >>>> ')
   },
   methods: {
@@ -98,13 +98,13 @@ export default {
 
       this.$store.dispatch('base/onDrawer', drawer)
     },
-    async onsellers () {
+    async onSellers () {
       const payload = {
         category_id: null,
         limit: process.env.APP_LIMIT
       }
 
-      await this.$store.dispatch('base/onsellers', payload)
+      await this.$store.dispatch('base/onSellers', payload)
     },
     async onCountries () {
       const payload = {

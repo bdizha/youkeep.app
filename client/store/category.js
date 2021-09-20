@@ -85,7 +85,7 @@ const getters = {
   hasForm: state => state.hasForm,
   store: state => state.store,
   hasStore: state => state.hasStore,
-  sellers: state => state.sellers,
+  sellers: state => state.stores,
   hasSellers: state => state.hasSellers,
   category: state => state.category,
   departments: state => state.departments,
@@ -139,7 +139,7 @@ const mutations = {
     state.isValid = isValid
   },
   setSellers (state, sellers) {
-    state.sellers = sellers
+    state.stores = sellers
     state.hasSellers = sellers.data !== undefined && sellers.data.length > 0
   },
   setCategory (state, category) {
@@ -400,18 +400,18 @@ const actions = {
       console.error('on error: ', e)
     }
   },
-  async onsellers ({ dispatch, commit }, payload) {
+  async onSellers ({ dispatch, commit }, payload) {
     commit('setProcess', { key: 'isTray', value: true })
 
     await axios.post('/shops', payload).then(({ data }) => {
       let sellers = data
-      // console.log('before onsellers: ', sellers);
+      // console.log('before onSellers: ', sellers);
 
       commit('setSellers', sellers)
       commit('setFilter', { key: 'sellers', value: sellers })
       commit('setProcess', { key: 'isTray', value: false })
 
-      // console.log('after onsellers: ', sellers);
+      // console.log('after onSellers: ', sellers);
     })
   },
   async onReviews ({ dispatch, commit, state }, payload) {

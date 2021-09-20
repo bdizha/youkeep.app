@@ -41,7 +41,7 @@
       </a-col>
       <a-col :lg="{ span: 16 }" :sm="{ span: 14 }" :xs="{ span: 24 }" class="gutter-row">
         <a-row v-if="departments.length == 0" justify="center" type="flex">
-          <a-col :span="24" class="gutter-row">
+          <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
             <a-card>
               <a-card-meta>
                 <a-empty

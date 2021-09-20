@@ -59,7 +59,7 @@ class Article extends Model
                 'id' => null,
                 'slug' => null,
                 'route' => '/',
-                'name' => 'Spazaland Blog',
+                'name' => 'Paise Blog',
                 'has_articles' => true,
                 'has_categories' => true,
                 'categories' => [],
@@ -100,7 +100,7 @@ class Article extends Model
      */
     public function getAuthorAttribute(): string
     {
-        return 'Spazaland Team';
+        return 'Paise Team';
     }
 
     /**

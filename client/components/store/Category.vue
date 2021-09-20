@@ -21,7 +21,7 @@ export default {
   components: {},
   props: {
     columns: { type: Number, required: false, default: 6 },
-    category: { type: Object, required: false, default: {} }
+    category: { type: Object, required: false, default: () => {} }
   },
   data () {
     return {

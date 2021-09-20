@@ -33,7 +33,7 @@ export default {
           title: 'Maximize Revenue',
           heading: '<span class="r-text-secondary">Sell</span> and maximise revenue',
           image: '/assets/asset-12.svg',
-          summary: 'Configure Paise checkout in a few minutes on your online marketplace.',
+          summary: 'Install the Paise checkout in a few minutes on your online marketplace.',
           content: 'Meet potential customers at the point of discovery abd break out and reach new shoppers beyond the walls of your own marketplace.'
         }
       ]

@@ -1,7 +1,7 @@
 <template>
   <r-page>
     <a-row :gutter=[24,24] justify="center" type="flex">
-      <a-col :span="24" class="gutter-row">
+      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <div class="r-bg-primary-light">
           <a-row :gutter=[24,24] justify="center" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

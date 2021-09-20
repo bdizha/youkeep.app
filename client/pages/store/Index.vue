@@ -1,15 +1,7 @@
 <template>
   <a-row align="middle" justify="center" type="flex">
-    <a-col :span="24" class="gutter-row">
-      <r-store-window :category="category"
-                      :columns="6"
-      >
-      </r-store-window>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-store-categories></r-store-categories>
-      <a-empty v-show="!hasSellers"
-               description="This store is coming soon. Please try other available sellers."
-               image="/images/icon_pattern_grey.svg"
-      />
     </a-col>
   </a-row>
 </template>
@@ -17,17 +9,17 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  layout: 'column',
+  layout: 'default',
   name: 'r-store',
   props: {},
   async asyncData ({ store, params, query }) {
     console.log('>>>> params', params)
     console.log('>>>> query', query)
 
-    const route = `/store/all/category/${params.category}`
+    const route = `/stores`
     params.route = route
-    params.with = ['sellers']
-    await store.dispatch('base/onCategory', params)
+    params.with = ['stores']
+    await store.dispatch('base/onStoreCategories', params)
 
     console.log(route, 'route')
   },
@@ -35,10 +27,6 @@ export default {
     return {}
   },
   computed: mapGetters({
-    categories: 'base/categories',
-    category: 'base/category',
-    processes: 'base/processes',
-    hasSellers: 'base/hasSellers'
   }),
   created () {
   },

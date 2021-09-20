@@ -4,7 +4,7 @@ use App\ArticleCategory;
 use App\CategoryArticle;
 use Illuminate\Database\Seeder;
 
-class ArticleSeeder extends Seeder
+class ArticleSeeder extends DatabaseSeeder
 {
     protected $domain = 'https://www.getbalance.com';
     protected $app = null;
@@ -79,16 +79,6 @@ class ArticleSeeder extends Seeder
         });
     }
 
-    /**
-     * @param string $url
-     * @return string
-     */
-    protected function _setCrawler(string $url): string
-    {
-        $encodedUrl = urlencode($url);
-        return "https://api.proxycrawl.com/?token=XedJD-fi9KMpxSZfh_U2JA&url={$encodedUrl}";
-    }
-
     private function _setArticle($articleUrl)
     {
         try {
@@ -101,7 +91,7 @@ class ArticleSeeder extends Seeder
 
             $crawler->filter('.breadcrumbs li')->each(function ($node) use (&$articleCategories) {
                 $name = $node->text();
-                $name = str_replace("RangeMe", 'Spazaland', trim($name));;
+                $name = str_replace("RangeMe", 'Paise', trim($name));;
                 $articleCategories[] = $name;
             });
 
@@ -181,7 +171,7 @@ class ArticleSeeder extends Seeder
             }
 
             $content = $articleNode->filter('.s-blog-post .bp-rich-text')->html();
-            $content = str_replace("Balance", 'Spazaland', $content);
+            $content = str_replace("Balance", 'Paise', $content);
             $content = str_replace("balance", 'spazaland', $content);
             $content = str_replace("U.S", 'South Africa', $content);
 

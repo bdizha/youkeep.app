@@ -39,7 +39,7 @@ export default {
     totalCount () {
       let totalCount = 0
       if (this.hasSellers) {
-        totalCount = this.sellers.data.length
+        totalCount = this.stores.data.length
       }
       return totalCount
     },
@@ -61,7 +61,7 @@ export default {
       await this.fetchsellers()
     },
     async fetchsellers () {
-      await this.$store.dispatch('base/onsellers', this.params)
+      await this.$store.dispatch('base/onSellers', this.params)
     },
     async fetchStoreCategories () {
       const params = {

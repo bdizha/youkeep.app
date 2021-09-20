@@ -21,6 +21,8 @@ export default {
         'slidesToScroll': 1,
         'arrows': false,
         'dots': true,
+        'autoplay': true,
+        'false': true,
         responsive: [
           {
             'breakpoint': 1024,

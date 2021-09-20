@@ -58,7 +58,7 @@ export default {
       limit: process.env.APP_LIMIT
     }
 
-    await this.$store.dispatch('base/onsellers', payload)
+    await this.$store.dispatch('base/onSellers', payload)
   },
   data () {
     return {

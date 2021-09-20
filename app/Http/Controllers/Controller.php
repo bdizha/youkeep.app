@@ -12,14 +12,12 @@ use App\ProductVariant;
 use App\Review;
 use App\Store;
 use App\StoreCategory;
-use App\UserAddress;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Auth;
-use phpDocumentor\Reflection\Types\Integer;
 
 class Controller extends BaseController
 {
@@ -115,31 +113,6 @@ class Controller extends BaseController
     }
 
     /**
-     * @param $records
-     * @return array
-     */
-    protected function _pruneRelations($records)
-    {
-        $prunedRelations = [];
-        foreach ($records as $key => $record) {
-            foreach ($this->without as $field) {
-                if (!isset($record[$field])) {
-                    continue;
-                }
-                if (!in_array($field, $this->with)) {
-                    $record[$field] = [];
-                } else if (is_array($record[$field])) {
-                    $record[$field] = $this->_pruneRelations($record[$field]);
-                } else if (is_array($record[$field])) {
-                    $record[$field] = $this->_pruneRelations($record[$field]);
-                }
-            }
-            $prunedRelations[$key] = $record;
-        }
-        return $prunedRelations;
-    }
-
-    /**
      * Get categories by criteria
      */
     protected function _setCategories(): void
@@ -147,8 +120,7 @@ class Controller extends BaseController
         if (!empty($this->storeSlug)) {
             $this->store = Store::where('slug', $this->storeSlug)
                 ->first();
-        }
-        else if (!empty($this->storeId)) {
+        } else if (!empty($this->storeId)) {
             $this->store = Store::where('id', $this->storeId)
                 ->first();
         }
@@ -157,7 +129,7 @@ class Controller extends BaseController
             // Check for the existences of the parent category id
             $slugParts = explode('--', $this->slug);
 
-            if(count($slugParts) > 0){
+            if (count($slugParts) > 0) {
                 $this->categoryId = $slugParts[count($slugParts) - 1];
             }
         }
@@ -180,7 +152,7 @@ class Controller extends BaseController
         $storeCategoryQuery->where('level', $this->level)
             ->where('has_products', true);
 
-        if($this->level === 1){
+        if ($this->level === 1) {
             $storeCategoryQuery->where('has_categories', true);
         }
 
@@ -197,11 +169,32 @@ class Controller extends BaseController
             ->get()
             ->toArray();
 
-        if ($this->categoryType === Category::TYPE_STORE) {
-            $this->_setCategoryStores();
-        }
-
         $this->categories = $this->_pruneRelations($this->categories);
+    }
+
+    /**
+     * @param $records
+     * @return array
+     */
+    protected function _pruneRelations($records)
+    {
+        $prunedRelations = [];
+        foreach ($records as $key => $record) {
+            foreach ($this->without as $field) {
+                if (!isset($record[$field])) {
+                    continue;
+                }
+                if (!in_array($field, $this->with)) {
+                    $record[$field] = [];
+                } else if (is_array($record[$field])) {
+                    $record[$field] = $this->_pruneRelations($record[$field]);
+                } else if (is_array($record[$field])) {
+                    $record[$field] = $this->_pruneRelations($record[$field]);
+                }
+            }
+            $prunedRelations[$key] = $record;
+        }
+        return $prunedRelations;
     }
 
     /**
@@ -236,10 +229,9 @@ class Controller extends BaseController
         $storeCategoryQuery = StoreCategory::orderBy($this->orderBy, 'DESC')
             ->where('store_id', 24);
 
-        if(!empty($parent->id)){
+        if (!empty($parent->id)) {
             $storeCategoryQuery->where('parent_id', $parent->id);
-        }
-        else{
+        } else {
             $storeCategoryQuery->where('level', 1);
         }
 
@@ -251,35 +243,6 @@ class Controller extends BaseController
             $this->_processMapCategory($ownerCategory, $parent, $index);
 
             $this->_setCatalogMapFrom($ownerCategory);
-        }
-    }
-
-    /**
-     * Get catalog mapping
-     **/
-    protected function _setCatalogMapTo($parent = null): void
-    {
-        $storeCategoryQuery = StoreCategory::orderBy($this->orderBy, 'DESC')
-            ->where('store_id', $this->storeId);
-
-        if(!empty($parent->id)){
-            $storeCategoryQuery->where('parent_id', $parent->id);
-        }
-        else{
-            $storeCategoryQuery->where('level', 1);
-        }
-
-        $index = 'to';
-        $ownerCategories = $storeCategoryQuery
-            ->get();
-
-        if(!empty($parent->id)){
-            $storeCategoryQuery->where('parent_id', $parent->id);
-        }
-
-        foreach ($ownerCategories as $ownerCategory) {
-            $this->_processMapCategory($ownerCategory, $parent, $index);
-            $this->_setCatalogMapTo($ownerCategory);
         }
     }
 
@@ -299,6 +262,34 @@ class Controller extends BaseController
         ];
 
         $this->catalogMap[$index][] = $category;
+    }
+
+    /**
+     * Get catalog mapping
+     **/
+    protected function _setCatalogMapTo($parent = null): void
+    {
+        $storeCategoryQuery = StoreCategory::orderBy($this->orderBy, 'DESC')
+            ->where('store_id', $this->storeId);
+
+        if (!empty($parent->id)) {
+            $storeCategoryQuery->where('parent_id', $parent->id);
+        } else {
+            $storeCategoryQuery->where('level', 1);
+        }
+
+        $index = 'to';
+        $ownerCategories = $storeCategoryQuery
+            ->get();
+
+        if (!empty($parent->id)) {
+            $storeCategoryQuery->where('parent_id', $parent->id);
+        }
+
+        foreach ($ownerCategories as $ownerCategory) {
+            $this->_processMapCategory($ownerCategory, $parent, $index);
+            $this->_setCatalogMapTo($ownerCategory);
+        }
     }
 
     /**
@@ -355,10 +346,28 @@ class Controller extends BaseController
         }
     }
 
-    protected function _setBreadcrumbs(){
+    /**
+     * @return void
+     */
+    protected function _setProductsRoutes(): void
+    {
+        $products = json_decode($this->products->toJson());
+
+        $products->data = array_map(function ($product) {
+            $route = (!empty($this->category->route) ? $this->category->route : null) . $product->route;
+
+            $product->route = $route;
+            return $product;
+        }, $products->data);
+
+        $this->products = $products;
+    }
+
+    protected function _setBreadcrumbs()
+    {
         $breadcrumbs = [];
 
-        if(!empty($this->category)){
+        if (!empty($this->category)) {
             $breadcrumbs = $this->category->breadcrumbs;
             $breadcrumbs[] = [
                 'id' => $this->product->id,
@@ -377,37 +386,14 @@ class Controller extends BaseController
     /**
      * @return void
      */
-    protected function _setProductsRoutes(): void
-    {
-        $products = json_decode($this->products->toJson());
-
-        $products->data = array_map(function ($product) {
-            $route = (!empty($this->category->route) ? $this->category->route : null) .  $product->route;
-
-            $product->route = $route;
-            return $product;
-        }, $products->data);
-
-        $this->products = $products;
-    }
-
-
-    /**
-     * @return array
-     */
     protected function _setCategoryStores()
     {
-        foreach ($this->categories as $key => $category) {
-            $storeCategory = Category::with('stores')
-                ->where('id', $category['id'])
-                ->first();
+        $this->categories = Category::with('stores')
+        ->whereHas('stores', function ($query) {
+            $query->where('stores.app_id', $this->appId);
+        })
 
-            if (empty($storeCategory)) {
-                continue;
-            }
-
-            $this->categories[$key]['stores'] = $storeCategory->stores;
-        }
+            ->get();
     }
 
     /**
@@ -420,7 +406,7 @@ class Controller extends BaseController
 
         $sort = $sortOptions[$sort];
 
-        $this->reviews = Review::whereHas('service', function ($query) {
+        $this->reviews = Review::whereHas('product', function ($query) {
             $query->where('reviews.product_id', $this->productId);
         })
             ->orderBy($sort['column'], $sort['dir'])
@@ -435,23 +421,6 @@ class Controller extends BaseController
         if (!empty($this->store->id)) {
             $this->route = '/store/' . $this->store->slug . $this->route;
         }
-    }
-
-    /**
-     * @param Request $request
-     * @return string
-     */
-    protected function _setCacheKey(Request $request): string
-    {
-        $fields = $request->all();
-        $value = $request->path();
-
-        foreach ($fields as $field) {
-            $value .= "_" . (is_array($field) ? implode("_", $field) : $field);
-        }
-
-        $key = md5($value);
-        return $key;
     }
 
     /**
@@ -495,7 +464,7 @@ class Controller extends BaseController
     /**
      * @return mixed
      */
-    protected function _setStores()
+    protected function _setSellers()
     {
         $query = Store::where('is_active', true);
 
@@ -526,6 +495,23 @@ class Controller extends BaseController
         $this->storeId = $request->get('store_id', null);
         $this->storeSlug = $request->get('store', null);
         $key = $this->_setCacheKey($request);
+        return $key;
+    }
+
+    /**
+     * @param Request $request
+     * @return string
+     */
+    protected function _setCacheKey(Request $request): string
+    {
+        $fields = $request->all();
+        $value = $request->path();
+
+        foreach ($fields as $field) {
+            $value .= "_" . (is_array($field) ? implode("_", $field) : $field);
+        }
+
+        $key = md5($value);
         return $key;
     }
 

@@ -1,9 +1,9 @@
 <template>
   <a-row align="middle" class="r-slider" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-store-slider ">
-      <VueSlickCarousel v-if="category != null && category.sellers.length > 0" v-bind="settings">
-        <nuxt-link v-for="(store, index) in category.sellers"
-                   :key="store.id"
+      <VueSlickCarousel v-if="category != null && category.stores.length > 0" v-bind="settings">
+        <nuxt-link v-for="(store, index) in category.stores"
+                   :key="index"
                    :to="store.route"
                    class="r-text-view-more"
         >
@@ -31,7 +31,7 @@ export default {
   props: {
     columns: { type: Number, required: false, default: 6 },
     category: { type: Object, required: false, default: null },
-    title: { type: String, required: false, default: null },
+    title: { type: String, required: false, default: null }
   },
   data () {
     return {
