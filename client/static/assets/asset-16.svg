@@ -27,8 +27,6 @@
 
 .fil0 {
     fill: #FFF;
-    stroke: #00C2FF;
-    stroke-width: 45px;
 }
 
 .fil4 {

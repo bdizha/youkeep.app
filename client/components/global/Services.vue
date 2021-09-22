@@ -71,9 +71,7 @@
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
                   >
-                    <h4 class="r-heading">
-                      {{ service.title }}
-                    </h4>
+                    <h4 class="r-heading" v-html="service.title"></h4>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"

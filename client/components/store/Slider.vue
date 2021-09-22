@@ -29,7 +29,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-store-slider',
   props: {
-    columns: { type: Number, required: false, default: 6 },
+    columns: { type: Number, required: false, default: 4 },
     category: { type: Object, required: false, default: null },
     title: { type: String, required: false, default: null }
   },

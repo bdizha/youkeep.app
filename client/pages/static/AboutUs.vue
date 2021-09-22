@@ -34,9 +34,9 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h2 class="r-heading r-text-dark">
+                      <h1 class="r-heading r-text-dark">
                        To deliver convenience and value for consumers
-                      </h2>
+                      </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
@@ -98,9 +98,9 @@
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <h3 class="r-heading">
+              <h2 class="r-heading">
                 To evolve and revolutionize the shopping experience.
-              </h3>
+              </h2>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"

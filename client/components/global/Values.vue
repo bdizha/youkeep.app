@@ -87,7 +87,7 @@ export default {
         },
         {
           title: 'Tenacity',
-          content: 'No one expected this to be easy. We are resilient—we dig in and keep going. We think openly about how to serve brands.'
+          content: 'No one expected this to be easy. We are resilient - we dig in and keep going. We think openly about how to serve brands.'
         },
         {
           title: 'Relentless',

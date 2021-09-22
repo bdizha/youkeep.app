@@ -8,7 +8,7 @@
       >
         <r-avatar
           :size="size"
-          :src="store.photo_url"
+          :data-src="store.photo_url"
           class="r-avatar-store"
           shape="square"
           src-placeholder="/assets/icon_default.png"

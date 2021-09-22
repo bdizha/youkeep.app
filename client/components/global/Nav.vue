@@ -99,7 +99,7 @@
                                            :xs="{ span: 24}"
                                     >
                                       <h4 class="r-heading r-text-dark">
-                                        {{ service.title }}
+                                        <span v-html="service.title"></span>
                                         <a-icon type="right" />
                                       </h4>
                                     </a-col>

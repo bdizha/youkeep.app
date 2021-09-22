@@ -112,8 +112,12 @@ export default {
   data () {
     return {
       images: [
+        '/assets/asset-19.svg',
+        '/assets/asset-20.svg',
+        '/assets/asset-06.svg',
         '/assets/asset-17.svg',
-        '/assets/asset-18.svg'
+        '/assets/asset-21.svg',
+        '/assets/asset-22.svg'
       ]
     }
   },

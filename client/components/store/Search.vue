@@ -1,5 +1,5 @@
 <template>
-  <a-row align="middle" justify="center" type="flex r-store-item-line">
+  <a-row align="middle" justify="center" type="flex">
     <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
       <a-auto-complete
         :placeholder="'Search or switch your store...'"
@@ -28,7 +28,7 @@ export default {
   },
   computed: mapGetters({
     store: 'base/store',
-    search: 'base/search',
+    search: 'base/search'
   }),
   methods: {
     handleSearch (value) {
@@ -45,6 +45,6 @@ export default {
 
       await this.fetchsellers()
     }
-  },
+  }
 }
 </script>

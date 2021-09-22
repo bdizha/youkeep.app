@@ -48,7 +48,7 @@
                       <a-row :gutter="[24, 24]" align="middle" type="flex">
                         <a-col flex="99px">
                           <a-card class="r-bg-white-light">
-                            <a-icon class="r-text-primary"
+                            <a-icon class="r-text-secondary"
                                     :style="{ fontSize: '53px' }"
                                     :type="benefit.icon"></a-icon>
                           </a-card>

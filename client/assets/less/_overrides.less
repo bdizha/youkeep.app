@@ -76,8 +76,8 @@ h3 {
     color: @primary-color !important;
 }
 
-.r-text-blue {
-    color: @blue-color !important;
+.r-text-orange {
+    color: @orange-color !important;
 }
 
 .r-text-yellow {
@@ -422,7 +422,7 @@ h1.r-text-slarge-light {
 
             &:hover {
                 a {
-                    color: @blue-color;
+                    color: @orange-color;
                 }
             }
 
@@ -821,7 +821,8 @@ x {
     padding: 0 24px;
     text-transform: initial;
     font-size: 14px;
-    line-height: 34px;
+    height: 42px;
+    line-height: 40px;
     text-align: center;
 
     > span {
@@ -1657,19 +1658,19 @@ x {
         font-weight: 600;
     }
 
-    background: @blue-color;
+    background: @orange-color;
     color: @white;
-    border-color: @blue-color;
+    border-color: @orange-color;
     opacity: 1;
 
     &:hover {
-        color: @blue-color !important;
+        color: @orange-color !important;
         background: @primary-color !important;
         border-color: @primary-color;
     }
 
     &:focus {
-        color: @blue-color !important;
+        color: @orange-color !important;
         border-color: @primary-color !important;
         background: @primary-color !important;
     }
@@ -1692,7 +1693,7 @@ x {
     }
 
     .ant-card-body {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0) 80%, rgba(0, 0, 0, 0));
 
         .r-store-text {
             font-weight: 700;
@@ -2233,6 +2234,27 @@ h4 {
     }
 }
 
+.r-bg-cover {
+    background-size: cover !important;
+    position: relative;
+    .r-store-tag {
+        position: absolute;
+        padding: 0;
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        width: 100%;
+        font-size: 14px;
+        span {
+            background: @white;
+            padding: 6px 12px;
+            display: inline-block;
+            border-radius: @border-radius;
+            overflow: hidden;
+        }
+    }
+}
+
 .r-bg-primary-light {
     .r-checked-item-icon {
         background: @primary-color-light;
@@ -2274,14 +2296,14 @@ h4 {
     .r-checked-item-icon {
         background: transparent;
         border-color: @primary-color;
-        color: @blue-color;
+        color: @orange-color;
     }
 }
 
 .r-bg-blue-light {
     .r-checked-item-icon {
         background: transparent;
-        border-color: @blue-color;
+        border-color: @orange-color;
         color: @primary-color;
     }
 }
@@ -2524,22 +2546,22 @@ h1.r-heading {
 
     @media (max-width: 768px) {
         font-weight: 700;
-        font-size: 39px;
+        font-size: 45px;
         line-height: 51px;
         margin: 0;
     }
 }
 
 h2.r-heading {
-    font-weight: 800;
-    font-size: 42px;
+    font-weight: 700;
+    font-size: 39px;
     margin: 0;
     line-height: 51px;
 
     @media (max-width: 768px) {
         font-weight: 600;
-        font-size: 36px;
-        line-height: 45px;
+        font-size: 33px;
+        line-height: 42px;
     }
 }
 
@@ -2595,6 +2617,21 @@ h4.r-heading-light {
     line-height: 24px;
     font-weight: 300;
     margin: 0;
+}
+
+.r-text-cursor {
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 15px 0;
+    border-bottom: 3px solid @primary-color-light;
+    color: @gray-dark;
+    &:hover,
+    &.r-active{
+        color: @black;
+        border-color: @primary-color;
+    }
 }
 
 label {
@@ -3074,7 +3111,7 @@ label {
     background: @white;
     border-top: 1px solid rgb(236, 236, 236, 1);
     padding: 0;
-    background-color: @blue-color-light;
+    background-color: @orange-color-light;
     background-image: url("/images/icon_dark_large.svg");
     background-repeat: no-repeat;
     background-position: calc(100% - 24px) calc(100% - 24px);
@@ -3106,7 +3143,7 @@ label {
 
         &.router-link-exact-active,
         &:hover {
-            color: @blue-color !important;
+            color: @orange-color !important;
         }
     }
 
@@ -3876,14 +3913,14 @@ label {
 }
 
 .r-btn-blue-bordered {
-    border: 1px solid @blue-color;
-    color: @blue-color !important;
+    border: 1px solid @orange-color;
+    color: @orange-color !important;
     background: transparent !important;
 
     &:hover {
-        border: 1px solid @blue-color;
+        border: 1px solid @orange-color;
         color: @white !important;
-        background: @blue-color !important;
+        background: @orange-color !important;
     }
 }
 
@@ -4329,8 +4366,8 @@ label {
                 font-size: 21px;
 
                 .ant-collapse-arrow {
-                    color: @blue-color;
-                    fill: @blue-color;
+                    color: @orange-color;
+                    fill: @orange-color;
                     background: transparent;
                     font-size: 24px !important;
                 }
@@ -4360,11 +4397,11 @@ label {
 
             &.r-collapse-panel-blue {
                 > .ant-collapse-header {
-                    color: @blue-color;
+                    color: @orange-color;
 
                     .ant-collapse-arrow {
-                        color: @blue-color;
-                        fill: @blue-color;
+                        color: @orange-color;
+                        fill: @orange-color;
                     }
                 }
             }
@@ -4983,7 +5020,7 @@ label {
             }
 
             .ant-tabs-nav {
-                background-image: linear-gradient(0deg, rgba(59, 156, 255, 0.15) 36%, @primary-color-light 100%);
+                background-image: linear-gradient(90deg, rgba(59, 156, 255, 0.15) 36%, @primary-color-light 100%);
                 border-radius: @border-radius;
 
                 .ant-tabs-tab {
@@ -5038,7 +5075,7 @@ label {
                 }
 
                 .ant-tabs-nav {
-                    background-image: linear-gradient(0deg, rgba(59, 156, 255, 0.09) 36%, @secondary-color-light 100%);
+                    background-image: linear-gradient(90deg, @white 24%, @secondary-color-light 100%);
                     .ant-tabs-tab {
                         &:hover {
                             background: @secondary-color;
@@ -5079,7 +5116,7 @@ label {
                 }
 
                 .ant-tabs-nav {
-                    background-image: linear-gradient(0deg, rgba(0, 194, 255, 0.15) 36%, @primary-color-light 100%);
+                    background-image: linear-gradient(90deg, @white 24%, @primary-color-light 100%);
                     .ant-tabs-tab {
                         &:hover {
                             background: @primary-color;
@@ -5371,6 +5408,14 @@ label {
         min-width: 90px;
         margin: 12px 0;
     }
+}
+
+.r-store-meta {
+    font-size: 14px;
+    font-weight: 600;
+    background: @white;
+    padding: 9px 12px;
+    border-radius: @border-radius;
 }
 
 .r-search-btn {
@@ -7059,11 +7104,12 @@ label {
     position: relative;
     display: block;
 
-    .r-store-card {
+    .ant-card {
         background: transparent;
 
         .ant-card-body {
             background: transparent;
+            padding: 12px;
         }
     }
 }
@@ -7120,7 +7166,7 @@ label {
 }
 
 .r-bg-blue-light {
-    background: @blue-color-light;
+    background: @orange-color-light;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_primary_large.svg) no-repeat;
@@ -7129,7 +7175,7 @@ label {
 }
 
 .r-bg-primary-light {
-    background-image: linear-gradient(0deg, rgba(59, 156, 255, 0.03) 36%, @primary-color-light 100%);
+    background-image: linear-gradient(90deg,@primary-color-light,#ecf6ff 24%,#fcfeff 60%,@white 72%,@white);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_primary_light.svg) no-repeat !important;
@@ -7137,7 +7183,7 @@ label {
 }
 
 .r-bg-secondary-light {
-    background-image: linear-gradient(0deg, rgba(0, 194, 255, 0.03) 36%, @secondary-color-light 100%);
+    background-image: linear-gradient(90deg,@secondary-color-light,#ecfbff 15%,#f6fdff 60%,@white 72%,@white);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_secondary_light.svg) no-repeat !important;
@@ -7145,7 +7191,7 @@ label {
 }
 
 .r-bg-dark-light {
-    background-image: linear-gradient(0deg, rgba(61, 72, 82, 0.0) 36%, @black 100%);
+    background-image: linear-gradient(90deg, @yellow-color-light 36%, @black 100%);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_dark_light.svg) no-repeat !important;
@@ -7153,7 +7199,7 @@ label {
 }
 
 .r-bg-green-light {
-    background: @green-color-light;
+    background-image: linear-gradient(90deg,@green-color-light,#fff8e2 15%,#fffcf1 60%,@white 72%,@white);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_green_light.svg) no-repeat;
@@ -7162,7 +7208,7 @@ label {
 }
 
 .r-bg-yellow-light {
-    background-image: linear-gradient(0deg, rgba(253, 240, 196, 0.15) 36%, @yellow-color-light 100%);
+    background-image: linear-gradient(90deg,@yellow-color-light,#fff8e2 15%,#fffcf1 60%,@white 72%,@white);
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_yellow_light.svg) no-repeat !important;
@@ -7323,7 +7369,7 @@ h3.r-step-heading {
 }
 
 .r-bg-blue {
-    background: @blue-color url(/images/icon_pattern_dark_large.svg) no-repeat;
+    background: @orange-color url(/images/icon_pattern_dark_large.svg) no-repeat;
 
     .ant-card-body {
         background: none;
@@ -8077,7 +8123,7 @@ h3.r-step-heading {
 .ant-input-suffix {
     .ant-btn {
         margin: 0;
-        height: 32px;
+        height: 42px;
     }
 
     .ant-btn-lg {
@@ -8469,6 +8515,12 @@ a:hover {
 
     .slick-dots-bottom {
         bottom: -88px;
+    }
+}
+
+.r-slick-simple {
+    .slick-dots {
+        display: none;
     }
 }
 

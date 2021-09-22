@@ -23,9 +23,10 @@
                            :xs="{ span: 24 }"
                     >
                       <h1 class="r-heading r-text-dark">
-                        <span v-show="step === 1" class="r-text-primary r-text-animate">Instant</span>
-                        <span v-show="step === 2" class="r-text-secondary r-text-animate">Simple</span>
-                        <span v-show="step === 3" class="r-text-yellow r-text-animate">Secure</span>
+                        <span v-show="isActive(1)" class="r-text-primary r-text-animate">Adaptive</span>
+                        <span v-show="isActive(2)" class="r-text-secondary r-text-animate">Instant</span>
+                        <span v-show="isActive(3)" class="r-text-yellow r-text-animate">Simple</span>
+                        <span v-show="isActive(4)" class="r-text-orange r-text-animate">Secure</span>
                         checkout experience.
                       </h1>
                     </a-col>
@@ -498,10 +499,12 @@ export default {
   data () {
     return {
       images: [
-        '/assets/asset-02.svg',
+        '/assets/asset-19.svg',
+        '/assets/asset-20.svg',
+        '/assets/asset-21.svg',
         '/assets/asset-06.svg',
-        '/assets/asset-05.svg',
-        '/assets/asset-03.svg'
+        '/assets/asset-22.svg',
+        '/assets/asset-23.svg'
       ],
       step: 1,
       modal: {
@@ -511,16 +514,15 @@ export default {
       hasData: false
     }
   },
-  computed: mapGetters({
-    store: 'base/store',
-    category: 'base/category',
-    categories: 'shop/categories',
-    hasCategories: 'base/hasCategories'
-  }),
+  computed: {
+  },
   async created () {
     await this.rotate()
   },
   methods: {
+    isActive (step) {
+      return step === this.step
+    },
     onModal () {
       const modal = {}
       modal.isVisible = true
@@ -531,11 +533,7 @@ export default {
     },
     rotate () {
       setInterval(() => {
-        if (this.step > 2) {
-          this.step = 1
-        } else {
-          this.step += 1
-        }
+        this.step = this.step > 3 ? 1 : this.step + 1
       }, 3000)
     }
   }

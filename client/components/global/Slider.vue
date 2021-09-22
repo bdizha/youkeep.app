@@ -12,7 +12,8 @@
 export default {
   name: 'r-slider',
   props: {
-    images: { type: Array, required: false, default: () => {} }
+    images: { type: Array, required: false, default: () => {} },
+    dots: { type: Boolean, required: false, default: () => false }
   },
   data () {
     return {
@@ -20,7 +21,7 @@ export default {
         'slidesToShow': 1,
         'slidesToScroll': 1,
         'arrows': false,
-        'dots': true,
+        'dots': false,
         'autoplay': true,
         'false': true,
         responsive: [

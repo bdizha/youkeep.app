@@ -17,7 +17,7 @@ export default {
   name: 'r-store-categories',
   components: {},
   props: {
-    columns: { type: Number, required: false, default: 6 }
+    columns: { type: Number, required: false, default: 4 }
   },
   data () {
     return {}

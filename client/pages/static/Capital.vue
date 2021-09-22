@@ -80,7 +80,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading-light">
-                <span class="r-text-blue">Innovate</span> <span class="r-text-blue">alongside</span> Paise.
+                <span class="r-text-orange">Innovate</span> <span class="r-text-orange">alongside</span> Paise.
               </h2>
             </a-col>
             <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
@@ -113,7 +113,7 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <h3 class="r-heading-light r-text-blue r-text-uppercase">
+              <h3 class="r-heading-light r-text-orange r-text-uppercase">
                 Unprecedented product discovery.
               </h3>
             </a-col>

@@ -2,14 +2,14 @@
   <a-card class="r-bg-primary-light r-pull-h-24 r-border-none">
     <div class="r-mv-48">
       <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+        <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
-            <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+          <a-row :gutter="[96,96]" align="middle" justify="start" type="flex">
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
@@ -41,16 +41,16 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <a-card class="r-bg-white">
+                      <a-card class="r-bg-primary-light">
                         <a-row :gutter="[24, 24]" type="flex">
-                          <a-col flex="60px">
+                          <a-col flex="75px">
                             <a-icon class="r-text-secondary"
-                                    :style="{ fontSize: '60px' }"
+                                    :style="{ fontSize: '75px' }"
                                     :type="benefit.icon"></a-icon>
                           </a-col>
                           <a-col flex="1 1 0">
                             <a-row :gutter="[6,6]" align="middle" justify="center" type="flex">
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                              <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }"
                                      :sm="{ span: 24 }"
                                      :xs="{ span: 24 }"
                               >
@@ -78,14 +78,14 @@
                 </a-col>
               </a-row>
             </a-col>
+            <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <r-avatar data-src="/assets/asset-25.svg" :size="300" class="r-avatar-block"
+              ></r-avatar>
+            </a-col>
           </a-row>
-        </a-col>
-        <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <r-avatar data-src="/assets/asset-04.svg" :size="300" class="r-avatar-block"
-          ></r-avatar>
         </a-col>
       </a-row>
     </div>

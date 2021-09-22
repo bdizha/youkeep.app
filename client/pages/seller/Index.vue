@@ -31,7 +31,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium r-text-dark">
-                        Install the Paise checkout button today and boost sales, customer relationships and repeat purchases.
+                        Get the Paise checkout button button today and boost sales, customer relationships and repeat purchases.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -106,7 +106,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-testimonials></r-testimonials>
     </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+    <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
@@ -235,7 +235,7 @@ export default {
   data () {
     return {
       images: [
-        '/assets/asset-01.svg',
+        '/assets/asset-24.svg',
         '/assets/asset-08.svg'
       ],
       benefits: [

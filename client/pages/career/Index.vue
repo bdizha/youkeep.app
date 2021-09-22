@@ -155,7 +155,7 @@ export default {
         },
         {
           title: 'Collaborative',
-          heading: 'Paise as a specialist house with a <span class="r-text-blue">diverse</span>\n' +
+          heading: 'Paise as a specialist house with a <span class="r-text-orange">diverse</span>\n' +
             '                  team',
           content: 'Great work mates\n' +
             '                  are at the\n' +

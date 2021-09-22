@@ -9,7 +9,7 @@
             <a-col class="r-text-right" :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
-              <r-avatar data-src="/assets/asset-09.png" :size="300" class="r-avatar-block"
+              <r-avatar data-src="/assets/asset-14.svg" :size="300" class="r-avatar-block"
               ></r-avatar>
             </a-col>
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
@@ -21,7 +21,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h4 class="r-heading-light r-text-uppercase">
-                    Pay with Paise in 3 payments
+                    Convert more sales, faster
                   </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"

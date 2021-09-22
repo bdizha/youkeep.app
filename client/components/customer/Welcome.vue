@@ -71,7 +71,7 @@
             <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
-              <r-avatar data-src="/assets/asset-17.svg" :size="300"
+              <r-avatar data-src="/assets/asset-06.svg" :size="300"
                         class="r-avatar-block"
               ></r-avatar>
             </a-col>

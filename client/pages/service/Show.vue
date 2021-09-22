@@ -2,26 +2,24 @@
   <a-row :gutter="[96,96]" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-card class="r-pull-h-24 r-border-none" :class="getBgClass">
-        <div class="r-mv-48">
-          <a-row align="middle" justify="center" type="flex">
-            <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-              <a-row :gutter="[96,96]" justify="start" align="middle" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+        <a-row align="middle" justify="center" type="flex">
+          <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+            <a-row :gutter="[96,96]" justify="start" align="middle" type="flex">
+              <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <div class="r-mv-48">
                   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                        {{ product.title }}
-                      </h3>
+                      <h3 class="r-heading-light r-text-primary r-text-uppercase" v-html="product.title"></h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h2 class="r-heading r-text-dark" v-html="product.heading">
-                      </h2>
+                      <h1 class="r-heading r-text-dark" v-html="product.heading">
+                      </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
@@ -66,23 +64,23 @@
                       </a-button>
                     </a-col>
                   </a-row>
-                </a-col>
-                <a-col class="r-text-left" :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
-                >
-                  <r-slider :images="product.images"></r-slider>
-                </a-col>
-              </a-row>
-            </a-col>
-          </a-row>
-        </div>
+                </div>
+              </a-col>
+              <a-col class="r-text-left" :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+                     :xs="{ span: 24}"
+              >
+                <r-slider :images="product.images"></r-slider>
+              </a-col>
+            </a-row>
+          </a-col>
+        </a-row>
       </a-card>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-steps user-type="customer" :size="24" :steps="product.steps" theme="secondary"
+      <r-steps user-type="customer" :title="product.title" :size="24" :steps="product.steps" theme="secondary"
       ></r-steps>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -198,7 +196,7 @@ export default {
           title: 'Maximize Revenue',
           heading: '<span class="r-text-secondary">Sell</span> and maximise revenue',
           image: '/assets/asset-12.svg',
-          summary: 'Install the Paise checkout in a few minutes on your online marketplace.',
+          summary: 'Get the Paise checkout button in a few minutes on your online marketplace.',
           content: 'Meet potential customers at the point of discovery abd break out and reach new shoppers beyond the walls of your own marketplace.'
         }
       ]

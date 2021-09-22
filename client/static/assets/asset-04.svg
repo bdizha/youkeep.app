@@ -8,12 +8,12 @@ viewBox="0 0 19890 11529"
   <style type="text/css">
    <![CDATA[
     .str2 {stroke:#D5F6FF;stroke-width:34.3084}
-    .str1 {stroke:#e8f4ff;stroke-width:34.3084}
+    .str1 {stroke:#D9ECFF;stroke-width:34.3084}
     .str0 {stroke:#FEB434;stroke-width:32.3027}
     .fil23 {fill:none}
     .fil26 {fill:none}
     .fil15 {fill:#3B9CFF}
-    .fil0 {fill:#FFFFFF}
+    .fil0 {fill:#E5F2FF}
     .fil1 {fill:white}
     .fil8 {fill:#6BB5FF;fill-rule:nonzero}
     .fil22 {fill:#FBD13E;fill-rule:nonzero}
@@ -25,19 +25,20 @@ viewBox="0 0 19890 11529"
     .fil9 {fill:#FBD13E;fill-opacity:0.431373}
     .fil10 {fill:#FEB434;fill-opacity:0.431373}
     .fil17 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.431373}
-    .fil4 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.45}
+    .fil4 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.501961}
     .fil7 {fill:#00C2FF;fill-opacity:0.509804}
     .fil6 {fill:#3B9CFF;fill-opacity:0.509804}
     .fil18 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.741176}
-    .fil19 {fill:#00C2FF;fill-rule:nonzero;fill-opacity:0.6}
-    .fil20 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.6}
-    .fil21 {fill:#99E7FF;fill-rule:nonzero;fill-opacity:0.6}
+    .fil19 {fill:#00C2FF;fill-rule:nonzero;fill-opacity:0.768627}
+    .fil20 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.768627}
+    .fil21 {fill:#99E7FF;fill-rule:nonzero;fill-opacity:0.768627}
     .fil24 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.811765}
     .fil27 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.831373}
-    .fil3 {fill:#e8f4ff}
+    .fil3 {fill:#D9ECFF}
     .fil2 {fill:#F6FBFF}
     .fil25 {fill:#00C2FF;fill-rule:nonzero}
     .fil5 {fill:#3B9CFF;fill-rule:nonzero}
+    .fil03 {fill:#FFFFFF;fill-rule:nonzero}
    ]]>
   </style>
  </defs>

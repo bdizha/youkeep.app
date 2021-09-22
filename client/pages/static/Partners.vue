@@ -242,100 +242,90 @@
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <div class="r-mv-48">
-            <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-                  <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
+          <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <h2 class="r-heading">
+                    Partner with us
+                  </h2>
+                </a-col>
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <p class="r-text-medium">
+                    Grow your business with unified merchant selling tools, made for modern businesses.
+                  </p>
+                </a-col>
+              </a-row>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                <a-col v-for="(benefit, index) in benefits"
+                       :key="index"
+                       :lg="{ span: 8 }" :md="{ span: 8 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-card class="r-bg-secondary-light">
+                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-icon class="r-text-secondary"
+                                :style="{ fontSize: '60px' }"
+                                :type="benefit.icon"
+                        ></a-icon>
+                      </a-col>
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <a-row :gutter="[6,6]" align="middle" justify="center" type="flex">
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                 :sm="{ span: 24 }"
+                                 :xs="{ span: 24 }"
+                          >
+                            <h4 class="r-heading" v-html="benefit.heading"></h4>
+                          </a-col>
+                          <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                            <p class="r-text-normal">
+                              {{ benefit.content }}
+                            </p>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                    </a-row>
+                  </a-card>
+                </a-col>
+                <a-col :lg="{ span: 6 }" :md="{ span: 6 }"
+                       :sm="{ span: 12 }"
+                       :xs="{ span: 24 }"
+                >
+                  <a-button class="r-btn-bordered-secondary"
+                            @click="onModal"
+                            block
+                            size="large"
+                            type="blue"
                   >
-                    <h2 class="r-heading">
-                      Partner with us
-                    </h2>
-                  </a-col>
-                  <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <p class="r-text-medium">
-                      Grow your business with digital B2B payments, made for modern businesses.
-                    </p>
-                  </a-col>
-                </a-row>
-              </a-col>
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-                  <a-col v-for="(benefit, index) in benefits"
-                         :key="index"
-                         :lg="{ span: 8 }" :md="{ span: 8 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <a-card class="r-bg-white">
-                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <a-icon class="r-text-secondary"
-                                  :style="{ fontSize: '60px' }"
-                                  :type="benefit.icon"
-                          ></a-icon>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <a-row :gutter="[6,6]" align="middle" justify="center" type="flex">
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                   :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <h4 class="r-heading-light">
-                                {{ benefit.title }}
-                              </h4>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                   :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <h4 class="r-heading" v-html="benefit.heading"></h4>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <p class="r-text-normal">
-                                {{ benefit.content }}
-                              </p>
-                            </a-col>
-                          </a-row>
-                        </a-col>
-                      </a-row>
-                    </a-card>
-                  </a-col>
-                  <a-col :lg="{ span: 8 }" :md="{ span: 8 }"
-                         :sm="{ span: 12 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <a-button class="r-btn-primary"
-                              @click="onModal"
-                              block
-                              size="large"
-                              type="blue"
-                    >
-                      Partner with Paise
-                      <a-icon type="right"></a-icon>
-                    </a-button>
-                  </a-col>
-                </a-row>
-              </a-col>
-            </a-row>
-          </div>
+                    Partner with Paise
+                    <a-icon type="right"></a-icon>
+                  </a-button>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
         </a-col>
       </a-row>
     </a-col>
@@ -390,7 +380,7 @@
                         shopping tools on the market.
                       </p>
                     </a-col>
-                    <a-col :lg="{ span: 9 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                    <a-col :lg="{ span: 6 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                     >
                       <nuxt-link to="/shop">
                         <a-button block
@@ -438,19 +428,19 @@ export default {
           icon: 'shop',
           title: 'Sell with Paise',
           heading: '<span class="r-text-secondary">Monetize</span> digital sales',
-          content: 'Drive passive income with endless scale by collecting a % of your client’s digital revenue'
+          content: 'Drive passive income with endless scale by collecting a percentage of your client’s digital revenue.'
         },
         {
           icon: 'dollar',
           title: 'Lend with Paise',
           heading: '<span class="r-text-secondary">Get</span> more clients',
-          content: 'We’re always looking for agencies and system integrators to help manage the growing demand for Balance.'
+          content: 'We’re always looking for agencies and system integrators to help manage the growing demand for Paise.'
         },
         {
           icon: 'sync',
           title: 'Grow with Paise',
           heading: '<span class="r-text-secondary">Exposure</span>  & leadership',
-          content: 'Share your expertise and get exposure to our audience of B2B e-commerce & marketplace leaders'
+          content: 'Share your expertise and get exposure to our audience of B2C, B2B e-commerce and marketplace leaders.'
         }
       ],
       modal: {

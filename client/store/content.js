@@ -5,92 +5,87 @@ export const state = () => ({
   products: [
     {
       theme: 'primary',
-      title: 'Shop simple with Paise',
+      title: '<span class="r-text-primary">Shop</span> simple with Paise',
       slug: 'shop-with-paise',
-      heading: 'Adaptive and <span class="r-text-primary">instant</span> checkout.',
+      heading: 'On-demand, instant and <span class="r-text-primary">secure</span> checkout.',
       summary: 'Take your shopping to the next level only when you shop with paise at the participating stores.',
       content: 'You\'ll enjoy the Paise checkout experience. Track your purchases, upcoming bills and cash earned in one place.',
       image: 'service-24.svg',
       images: [
-        '/assets/asset-02.svg',
-        '/assets/asset-17.svg',
-        '/assets/asset-18.svg'
+        '/assets/asset-13.svg',
+        '/assets/asset-14.svg'
       ],
       steps: [
         {
           title: 'Desire it',
           heading: 'Checkout simple with Paise.',
           content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
-          image: '/assets/asset-02-secondary.svg'
+          image: '/assets/asset-02-white.svg'
         },
         {
           title: 'Shop it',
           heading: 'Choose to pay with Paise',
           content: 'Add what you want to your cart and choose to pay with Paise It\'s that simple and instant.',
-          image: '/assets/asset-17-secondary.svg'
+          image: '/assets/asset-17-white.svg'
         },
         {
           title: 'Enjoy it',
           heading: 'Pay over time in 3 months',
           content: 'Settle 25% of the order total today and pay the rest over 3 monthly payments at zero interest.',
-          image: '/assets/asset-18-secondary.svg'
+          image: '/assets/asset-18.svg'
         }
       ],
       features: [
         {
-          title: 'Auto store',
-          content: 'You can start using the platform today with zero integration involved, integrate the checkout within a few hours of work, implement using the API capabilities, or use pre-built Paise integrations with Magento, BigCommerce, Salesforce, and Quickbooks.',
+          title: 'A better way to shop',
+          content: 'Paise remembers and encrypts your details, so you can speed safely through checkout in one tap. Pay in full at checkout or split your purchase into 3 adaptive installments.',
           image: 'service-06.svg'
         },
         {
-          title: 'Auto serve',
-          content: 'Built as building blocks for full customization. Using the Paise API capabilities, you can configure and modify the experience to accommodate your shoppers or vendors’ needs. Developers can click here to get access to our API docs.',
+          title: 'Discover it. Get it.',
+          content: 'Shop automatically gathers and tracks your orders, so you don’t have to search, copy, or paste. You can also use Shop without auto-tracking.',
           image: 'service-13.svg'
         },
         {
-          title: 'Auto transact',
-          content: 'Self-served white-label invoicing. Retailers can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo.',
+          title: 'Stay in the moment',
+          content: 'Inform Paise with your favorite stores for a customized feed with deals, trending items, and recommendations you’ll love. Your personal details are secure.',
           image: 'service-01.svg'
-        },
-        {
-          title: 'Auto terminal',
-          content: 'Paise pre-qualifies shoppers, or does so real-time within seconds, at checkout for those who haven’t yet been qualified, covering net 30,60,90 and up to 120 days. Sellers get paid upfront for issued invoices, while shoppers can pay with terms.',
-          image: 'service-25.svg'
         }
       ],
       row: 1
     },
     {
       theme: 'secondary',
-      title: 'Pay later with Paise',
+      title: '<span class="r-text-secondary">Pay</span> later with Paise',
       slug: 'pay-with-paise',
-      heading: 'Enjoy best <span class="r-text-primary">value</span> split payments and earn.',
+      heading: 'Enjoy best <span class="r-text-secondary">value</span> split payments and earn.',
       summary: 'Paise lets you split your purchases into 3 zero interest payments or pay after your purchase within 7 days.',
       content: 'You\'ll never pay extra with Paise when you pay on time.',
       image: 'service-04.svg',
       images: [
-        '/assets/asset-02.svg',
-        '/assets/asset-17.svg',
-        '/assets/asset-18.svg'
+        '/assets/asset-27-01.png',
+        '/assets/asset-27-02.png',
+        '/assets/asset-27-03.png',
+        '/assets/asset-27-04.png'
       ],
       steps: [
         {
           title: 'Find it',
           heading: '<span class="r-text-secondary">Shop</span> simple with Paise.',
           content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
-          image: '/assets/asset-02-secondary.svg'
+          image: '/assets/asset-28.svg'
         },
         {
           title: 'Order it',
           heading: '<span class="r-text-secondary">Choose</span> to pay with Paise',
           content: 'Add what you want to your cart and choose to pay with Paise It\'s that simple and instant.',
-          image: '/assets/asset-17-secondary.svg'
+          image: '/assets/asset-17-white.svg'
         },
         {
           title: 'Enjoy it',
           heading: '<span class="r-text-secondary">Pay</span> over time in 3 months',
           content: 'Settle 25% of the order total today and pay the rest over 3 monthly payments at zero interest.',
-          image: '/assets/asset-18-secondary.svg'
+          image: '/assets/asset-18.svg'
         }
       ],
       features: [
@@ -119,40 +114,39 @@ export const state = () => ({
     },
     {
       theme: 'yellow',
-      title: 'Earn cash with Paise',
+      title: '<span class="r-text-yellow">Earn</span> cash with Paise',
       slug: 'earn-with-paise',
-      heading: '<span class="r-text-primary">Shop</span> securely and earn instant credit.',
+      heading: '<span class="r-text-yellow">Shop</span> securely and earn instant credit.',
       summary: 'Shop at brands you love and earn cash you can withdraw. That\'s real money, not another loyalty program you\'ll never use.',
       content: 'Start shopping with Paise at partnering cashback stores, we\'ll automatically add cashback into your account. You can earn cash whether you pay with Paise or not.',
       image: 'service-08.svg',
       images: [
-        '/assets/asset-16.svg',
-        '/assets/asset-17.svg'
+        '/assets/asset-30.png'
       ],
       steps: [
         {
-          heading: 'Desire it',
-          title: 'Checkout simple with Paise.',
-          content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
-          image: '/assets/asset-02.svg'
+          title: 'Get it',
+          heading: 'Sign up to earn cashback.',
+          content: 'Create a Paise account in few seconds, it\'s completely simple, free and secure at your own convenience.',
+          image: '/assets/asset-28.svg'
         },
         {
-          heading: 'Shop it',
-          title: 'Choose to pay with Paise',
-          content: 'Add what you want to your cart and choose to pay with Paise It\'s that simple and instant.',
-          image: '/assets/asset-17.svg'
+          title: 'Shop it',
+          heading: 'Shop at brands on Paise.',
+          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Paise or not. You always earn with Paise.',
+          image: '/assets/asset-22.svg'
         },
         {
-          heading: 'Enjoy it',
-          title: 'Pay over time in 3 months',
-          content: 'Settle 25% of the order total today and pay the rest over 3 monthly payments at zero interest.',
-          image: '/assets/asset-18.svg'
+          title: 'Earn it',
+          heading: 'Get cash or pay your next purchase.',
+          content: 'Withdraw real money you\'ve earned or choose to settle an upcoming bill on Paise in one centralized place.',
+          image: '/assets/asset-23.svg'
         }
       ],
       features: [
         {
           title: 'Sign up to earn cashback.',
-          content: 'Create a Paise account in few seconds, it\'s completely simple, free and secure.',
+          content: 'Create a Paise account in few seconds, it\'s completely simple, free and secure at your convenience.',
           image: 'service-12.svg'
         },
         {

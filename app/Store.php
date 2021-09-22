@@ -10,6 +10,17 @@ class Store extends Model
 {
     use Sluggable;
 
+    public static $tags = [
+       '10% off',
+       'Up to 15%',
+       '15% off',
+       '20% off',
+       'Free shipping',
+       'Buy more save more',
+       'Buy one get one free',
+       'Gift with purchase'
+    ];
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -50,6 +61,7 @@ class Store extends Model
     protected $appends = [
         'content_formatted',
         'photos',
+        'tag',
         'route',
         'rate',
         'photo_url',
@@ -71,6 +83,15 @@ class Store extends Model
     public function getRateAttribute()
     {
         return rand(1, 5);
+    }
+
+    /**
+     * @return string
+     */
+    public function getTagAttribute()
+    {
+        $tags = self::$tags;
+        return $tags[rand(0, count($tags) - 1)];
     }
 
     /**
