@@ -20,9 +20,9 @@ viewBox="0 0 17705 17266"
     .fil1 {fill:#3B9CFF;fill-opacity:0.450980}
     .fil2 {fill:#B4DCFF;fill-opacity:0.450980}
     .fil4 {fill:#FDE89E;fill-opacity:0.470588}
-    .fil6 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.980392}
+    .fil6 {fill:#3d4852;fill-rule:nonzero;fill-opacity:0.9}
     .fil8 {fill:#95C9FF;fill-rule:nonzero;fill-opacity:0.980392}
-    .fil3 {fill:#D5F6FF}
+    .fil3 {fill:none;stroke: #D5F6FF; stroke-width: 30px}
    ]]>
   </style>
  </defs>

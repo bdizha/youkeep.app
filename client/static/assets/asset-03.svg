@@ -22,12 +22,12 @@ viewBox="0 0 12024 21341"
     .fil4 {fill:#FFFFFF;fill-opacity:1}
     .fil0 {fill:#FFFFFF;fill-opacity:0.99}
     .fil6 {fill:#00C2FF;fill-rule:nonzero;fill-opacity:0.980392}
-    .fil5 {fill:#3B9CFF;fill-rule:nonzero;fill-opacity:0.980392}
+    .fil5 {fill:#3d4852;fill-rule:nonzero;fill-opacity:0.9}
     .fil7 {fill:#95C9FF;fill-rule:nonzero;fill-opacity:0.980392}
     .fil18 {fill:#95C9FF}
     .fil17 {fill:#B4DCFF}
     .fil16 {fill:#C4E1FF}
-    .fil12 {fill:#D5F6FF}
+    .fil12 {fill:none;stroke: #D5F6FF; stroke-width: 30px}
     .fil2 {fill:none}
     .fil9 {fill:#3B9CFF;fill-rule:nonzero}
    ]]>
