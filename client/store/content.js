@@ -58,9 +58,9 @@ export const state = () => ({
       theme: 'secondary',
       title: '<span class="r-text-secondary">Pay</span> later with Paise',
       slug: 'pay-with-paise',
-      heading: 'Enjoy best <span class="r-text-secondary">value</span> split payments and earn.',
-      summary: 'Paise lets you split your purchases into 3 zero interest payments or pay after your purchase within 7 days.',
-      content: 'You\'ll never pay extra with Paise when you pay on time.',
+      heading: 'Get <span class="r-text-secondary">more</span> value with split payments',
+      summary: 'You\'ll never pay extra with Paise when you pay on time.',
+      content: 'Paise lets you split your purchases into 3 zero interest payments or pay after your purchase within 7 days.',
       image: 'service-04.svg',
       images: [
         '/assets/asset-27-01.png',

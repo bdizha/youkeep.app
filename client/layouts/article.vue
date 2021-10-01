@@ -19,7 +19,7 @@ import { mapGetters } from 'vuex'
 export default {
   data: () => ({}),
   async serverPrefetch  () {
-    await this.$store.dispatch('base/onIsDark', true)
+
   },
   created () {
   },

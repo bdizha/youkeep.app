@@ -19,24 +19,24 @@ export default {
       currentStep: 0,
       steps: [
         {
-          title: 'Install Paise\n',
+          title: 'Step 01\n',
           heading: '<span class="r-text-secondary">Improve</span> customer satisfaction',
           image: '/assets/asset-26.svg',
-          summary: 'Get the Paise checkout button in a few minutes on your online marketplace.',
+          summary: 'Install checkout button in a few minutes on your online marketplace.',
           content: 'Let your customers get what they want, when they want it, anytime, everywhere. And your business will earn long-term customer relationships.'
         },
         {
-          title: 'Boost Conversion',
+          title: 'Step 02',
           heading: '<span class="r-text-secondary">Boost</span> visibility with shoppers',
           image: '/assets/asset-08.svg',
-          summary: 'Shoppers use Paise to discover new products and checkout in seconds. ',
+          summary: 'Boost Conversion as shoppers use Paise to discover new products and checkout in seconds. ',
           content: 'Paise enables instant mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
         },
         {
-          title: 'Expand Revenue',
+          title: 'Step 03',
           heading: '<span class="r-text-secondary">Sell</span> and maximise revenue',
           image: '/assets/asset-11.svg',
-          summary: 'Build online experiences that meet the expectations of your customers.',
+          summary: 'Expand Revenue by building online experiences that meet the expectations of your customers.',
           content: 'Meet potential customers at the point of discovery abd break out and reach new shoppers beyond the walls of your own marketplace.'
         }
       ]

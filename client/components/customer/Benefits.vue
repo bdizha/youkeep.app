@@ -20,7 +20,7 @@
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                 <h3 class="r-heading">
-                  <span class="r-text-secondary">Choose</span> pay in 3 terms with Paise on checkout
+                  <span class="r-text-secondary">Choose</span> to pay with Paise on checkout
                 </h3>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -47,7 +47,7 @@
                     >
                       <a-row :gutter="[24, 24]" align="middle" type="flex">
                         <a-col flex="99px">
-                          <a-card class="r-bg-white-light">
+                          <a-card class="r-bg-white">
                             <a-icon class="r-text-secondary"
                                     :style="{ fontSize: '53px' }"
                                     :type="benefit.icon"></a-icon>

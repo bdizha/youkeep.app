@@ -4,26 +4,28 @@
            :xs="{ span: 24 }"
     >
       <a-card class="r-bg-yellow-light r-pull-h-24 r-border-none">
-        <a-row :gutter="[48,48]" justify="center" type="flex">
-          <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <h2 class="r-heading">
-                  Start shopping with Paise
-                </h2>
-              </a-col>
-              <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <r-store-search size="large"></r-store-search>
-              </a-col>
-            </a-row>
-          </a-col>
-        </a-row>
+        <div class="r-mv-48">
+          <a-row :gutter="[48,48]" justify="center" type="flex">
+            <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <h2 class="r-heading">
+                    Start shopping with Paise
+                  </h2>
+                </a-col>
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <r-store-search size="large"></r-store-search>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </div>
       </a-card>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

@@ -35,7 +35,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h1 class="r-heading r-text-dark">
-                       To deliver convenience and value for consumers
+                       To deliver <span class="r-text-secondary">value</span> to shopping
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -44,7 +44,7 @@
                     >
                       <p class="r-text-medium r-text-dark">
                         Our goal is to make online checkout as easy as swiping a credit card.
-                        We are 100% committed to providing Shoppers with the absolute best online checkout service.
+                        We are 100% committed to providing Shoppers with a better checkout experience.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -99,7 +99,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                To evolve and revolutionize the shopping experience.
+                To bring freedom to shopping
               </h2>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"

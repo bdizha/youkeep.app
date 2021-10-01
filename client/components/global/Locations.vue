@@ -16,7 +16,7 @@
                        :key="index"
                        :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                 >
-                  <a-card class="r-bg-white">
+                  <a-card class="r-bg-white-secondary">
                     <div class="r-checked-item">
                       <a-icon class="r-checked-item-icon" type="environment"/>
                       <a-row :gutter="[6,6]" align="top" justify="start" type="flex">

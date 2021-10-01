@@ -64,7 +64,7 @@
                            :sm="{ span: 12 }"
                            :xs="{ span: 24 }"
                     >
-                      <nuxt-link to="/shopper">
+                      <nuxt-link to="/consumer">
                         <a-button class="r-btn-bordered-secondary"
                                   block
                                   size="large"
@@ -76,7 +76,7 @@
                     </a-col>
                   </a-row>
                 </a-col>
-                <a-col class="r-text-left" :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+                <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24}"
                 >
                   <r-slider :images="images"></r-slider>
@@ -480,7 +480,7 @@
           </a-card>
         </a-col>
       </a-row>
-    </a-col v-if="false">
+    </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-contact-us title="Take your shopping to the next level."></r-contact-us>
     </a-col>
@@ -499,12 +499,7 @@ export default {
   data () {
     return {
       images: [
-        '/assets/asset-19.svg',
-        '/assets/asset-20.svg',
-        '/assets/asset-21.svg',
-        '/assets/asset-06.svg',
-        '/assets/asset-22.svg',
-        '/assets/asset-23.svg'
+        '/assets/asset-home.svg'
       ],
       step: 1,
       modal: {

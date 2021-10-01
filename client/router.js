@@ -27,7 +27,7 @@ const routes = [
   { path: '/category/:slug', name: 'category.show', meta: { isDark: false, isRaised: false}, component: page('category/Article.vue') },
   { path: '/category/:slug/:level', name: 'category.show.level', meta: { isDark: false, isRaised: false}, component: page('category/Article.vue') },
   { path: '/category/:category/:level/service/:slug', name: 'category.product.show', meta: { isDark: false, isRaised: false}, component: page('store/Invoice.vue'), },
-  { path: '/shopper', name: 'customer', meta: { isDark: false, isRaised: false}, component: page('customer/Index.vue') },
+  { path: '/consumer', name: 'customer', meta: { isDark: false, isRaised: false}, component: page('customer/Index.vue') },
   { path: '/shopper/membership', name: 'customer-membership', meta: { isDark: false, isRaised: false}, component: page('contact-us.vue') },
   { path: '/seller', name: 'seller', meta: { isDark: false, isRaised: false}, component: page('seller/Index.vue') },
   { path: '/seller/blog', name: 'resource', meta: { isDark: false, isRaised: false}, component: page('resource/Index.vue') },

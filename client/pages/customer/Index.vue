@@ -60,7 +60,7 @@
                     </a-col>
                   </a-row>
                 </a-col>
-                <a-col class="r-text-left" :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+                <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24}"
                 >
                   <r-slider :images="images"></r-slider>
@@ -112,12 +112,7 @@ export default {
   data () {
     return {
       images: [
-        '/assets/asset-19.svg',
-        '/assets/asset-20.svg',
-        '/assets/asset-06.svg',
-        '/assets/asset-17.svg',
-        '/assets/asset-21.svg',
-        '/assets/asset-22.svg'
+        '/assets/asset-consumer.svg'
       ]
     }
   },

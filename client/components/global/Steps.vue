@@ -12,11 +12,6 @@
                    :xs="{ span: 24}"
             >
               <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
-                >
-                  <h2 class="r-heading" v-html="title"></h2>
-                </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                        :xs="{ span: 24}"
                 >
@@ -107,7 +102,7 @@ export default {
     size: { type: Number, required: false, default: 16 },
     theme: { type: String, required: false, default: 'secondary' },
     userType: { type: String, required: false, default: 'customer' },
-    learnMore: { type: String, required: false, default: '/shopper' },
+    learnMore: { type: String, required: false, default: '/consumer' },
     title: { type: String, required: false, default: '<span class="r-text-primary">Shop</span> simple with Paise' },
     content: { type: String, required: false, default: null },
     hasMore: { type: Boolean, required: false, default: true },

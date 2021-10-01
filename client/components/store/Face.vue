@@ -11,7 +11,7 @@
                 <r-store-photo slot="cover" :store="store"></r-store-photo>
               </div>
               <div class="r-store-tag">
-                <span>{{ store.tag }}</span>
+                <span :class="getBgClass()">{{ store.tag }}</span>
               </div>
               <div class="r-store-meta">
                 <a-row :gutter="[12, 12]" align="middle" justify="center" type="flex">
@@ -52,14 +52,20 @@ export default {
       type: Object,
       required: true,
       default: () => {
-
       }
     },
     isPlain: { type: Boolean, required: false, default: false },
     span: { type: Number, required: false, default: 24 }
   },
   data () {
-    return {}
+    return {
+      themes: [
+        'primary',
+        'secondary',
+        'orange',
+        'yellow'
+      ]
+    }
   },
   computed: mapGetters({}),
   mounted () {
@@ -69,6 +75,13 @@ export default {
     },
     getPhotoCoverStyle () {
       return `background-image: url(${this.store.photo_cover_url});`
+    },
+    getBgClass () {
+      const random = Math.floor(Math.random() * Math.floor(4))
+
+      const theme = this.themes[random]
+
+      return `r-bg-${theme}-light r-text-${theme}`
     }
   }
 }

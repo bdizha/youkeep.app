@@ -16,24 +16,24 @@ export default {
       content: 'We support 50+ of your favorite stores. Look for the Paise logo and start shopping!',
       steps: [
         {
-          title: 'Save time',
+          title: 'Step 01',
           heading: '<span class="r-text-primary">One</span> click checkout in 3 seconds',
           image: '/assets/asset-13.svg',
-          summary: 'Complete online purchases from any device in seconds.',
+          summary: 'Save time and complete online purchases from any device in seconds.',
           content: 'Paise enables Shoppers to create a universal account and buy from dozens of retailers in a few seconds.'
         },
         {
-          title: 'Reduce hassle',
+          title: 'Step 02',
           heading: '<span class="r-text-primary">Choose</span> to checkout with Paise',
           image: '/assets/asset-14.svg',
-          summary: 'Easily place and track orders in real-time, anytime.',
+          summary: 'Reduce hassle and easily place and track orders in real-time, anytime.',
           content: 'With Paise, users no longer need to pull out their credit card or enter long forms to complete online purchases.'
         },
         {
-          title: 'Stay secure',
+          title: 'Step 03',
           heading: '<span class="r-text-primary">Avoid</span> filling out checkout forms',
           image: '/assets/asset-12.svg',
-          summary: 'Save your information in a wallet with bank-level security',
+          summary: 'Stay secure and save your information in a wallet with bank-level security',
           content: 'It eliminates the need for mobile shoppers to fill out cumbersome checkout forms, empowering them to make purchases effortlessly.'
         }
       ]

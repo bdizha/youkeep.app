@@ -124,13 +124,6 @@
         </a-sub-menu>
         <a-sub-menu>
           <div slot="title" class="r-menu-text">
-            <nuxt-link to="/documentation">
-              Docs
-            </nuxt-link>
-          </div>
-        </a-sub-menu>
-        <a-sub-menu>
-          <div slot="title" class="r-menu-text">
             Company
             <a-icon type="down" />
             <div class="r-sub-menu">
@@ -356,7 +349,7 @@ export default {
       beneficiaries: [
         {
           title: 'Shoppers',
-          link: '/shopper',
+          link: '/consumer',
           summary: 'Secure speedy checkout service available for shoppers'
         },
         {

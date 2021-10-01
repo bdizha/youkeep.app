@@ -66,7 +66,7 @@
                   </a-row>
                 </div>
               </a-col>
-              <a-col class="r-text-left" :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+              <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                      :xs="{ span: 24}"
               >
                 <r-slider :images="product.images"></r-slider>

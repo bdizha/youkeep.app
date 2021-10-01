@@ -46,7 +46,7 @@
                 </a-col>
                 <a-col :lg="{ span: 9 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                 >
-                  <nuxt-link to="/shopper">
+                  <nuxt-link to="/consumer">
                     <a-button block
                               class="r-btn-secondary"
                               size="large"
