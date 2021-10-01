@@ -4,23 +4,44 @@
            :xs="{ span: 24 }"
     >
       <a-card class="r-bg-yellow-light r-pull-h-24 r-border-none">
-        <div class="r-mv-48">
+        <div class="r-mv-96">
           <a-row :gutter="[48,48]" justify="center" type="flex">
             <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <h2 class="r-heading">
-                    Start shopping with Paise
-                  </h2>
+              <a-row :gutter="[96,96]" align="middle" justify="start" type="flex">
+                <a-col :lg="{ span: 15 }" :md="{ span: 15 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h4 class="r-heading-light r-text-uppercase">
+                       Paise stores
+                      </h4>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <h1 class="r-heading r-text-dark">
+                        A <span class="r-text-secondary">better</span> way to shop
+                      </h1>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <p class="r-text-medium r-text-dark">
+                        Online and in real life. Discover all the stores where you can safely shop and pay with Paise.
+                      </p>
+                    </a-col>
+                  </a-row>
                 </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
-                       :sm="{ span: 24 }"
+                <a-col v-if="false" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <r-store-search size="large"></r-store-search>
+                  <r-avatar data-src="/images/icon.svg" :size="300"
+                            class="r-avatar-block"
+                  ></r-avatar>
                 </a-col>
               </a-row>
             </a-col>

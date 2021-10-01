@@ -31,7 +31,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Paise delights your product discovery journey and makes it easy for you to afford the products you care about the most within a few clicks and seconds of your time.
+                    Paise delights your shopping game and gives you the freedom to shop at any store on your own terms while you keep your finances under control.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -41,7 +41,23 @@
                   <p class="r-text-normal">
                     Paise offers a shopping assistant with the most
                     convenient
-                    shopping tools on the marketplace. Just to enable you to do shopping simple.
+                    shopping tools on the marketplace. Just to enable you to shop better.
+                  </p>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <p class="r-text-normal">
+                    Make payments, report a problem, manage returns.
+                  </p>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <p class="r-text-normal">
+                    Chat with support 24/7 - we´re always here for you.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 9 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"

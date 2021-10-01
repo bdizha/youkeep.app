@@ -13,7 +13,7 @@
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <h2 class="r-heading">
-                    <span class="r-text-yellow">Value</span> = <span class="r-text-orange">Shopping</span> + <span class="r-text-white">Paise</span>
+                    <span class="r-text-secondary">Value</span> = Problem + Solution
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -43,7 +43,7 @@
                   <a-card class="r-bg-white-primary">
                     <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                       <a-col>
-                        <div class="r-bg-white-orange r-p-24 r-border-radius-12">
+                        <div class="r-bg-white-primary r-p-24 r-border-radius-12">
                           <a-icon class="r-text-primary"
                                   :style="{ fontSize: '60px' }"
                                   :type="value.icon"

@@ -8,7 +8,7 @@
           <a-row :gutter="[48,48]" justify="center" type="flex">
             <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
               <a-row :gutter="[96,96]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 15 }" :md="{ span: 15 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
@@ -71,10 +71,10 @@
                     </a-col>
                   </a-row>
                 </a-col>
-                <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <r-avatar data-src="/images/icon_dark.svg" :size="300"
+                  <r-avatar data-src="/images/icon_pattern_secondary_light.svg" :size="300"
                             class="r-avatar-block"
                   ></r-avatar>
                 </a-col>
@@ -86,7 +86,7 @@
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row :gutter="[48,48]" justify="start" type="flex">
-        <a-col :lg="{ span: 15 }" :md="{ span: 15 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
@@ -99,16 +99,65 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                To bring freedom to shopping
+                To <span class="r-text-secondary">enable</span> shopping freedom around the world
               </h2>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <p class="r-text-normal">
+              <p class="r-text-medium">
                 What started as a way to help growing brands to conveniently sell their products has grown into a leading online
-                marketplace that connects millions of shoppers with sellers of all sizes. Ultimately, Paise makes shopping more rewarding, by giving consumers the flexibility and freedom to buy what they want, with added benefits.
+                marketplace that connects millions of shoppers with sellers of all sizes.
               </p>
+            </a-col>
+            <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <p class="r-text-normal">
+                Ultimately, Paise makes shopping more rewarding, by giving consumers the flexibility and freedom to buy what they want, with added benefits.
+              </p>
+            </a-col>
+          </a-row>
+        </a-col>
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-row :gutter="[24,24]" align="top" class="r-text-left" justify="center" type="flex">
+            <a-col v-for="(value, index) in values"
+                   :key="index"
+                   :lg="{ span: 8 }" :md="{ span: 8 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-card class="r-bg-white-secondary">
+                <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+                  <a-col>
+                    <div class="r-bg-white-yellow r-p-24 r-border-radius-12">
+                      <a-icon class="r-text-secondary"
+                              :style="{ fontSize: '60px' }"
+                              :type="value.icon"
+                      ></a-icon>
+                    </div>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <h4 class="r-heading r-text-secondary">
+                      {{ value.title }}
+                    </h4>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <p class="r-text-normal r-text-dark">
+                      {{ value.content }}
+                    </p>
+                  </a-col>
+                </a-row>
+              </a-card>
             </a-col>
           </a-row>
         </a-col>
@@ -118,7 +167,7 @@
       <r-values></r-values>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-contact-us title="Get the freedom to buy what you want and earn with Paise."></r-contact-us>
+      <r-contact-us title="Get the shopping freedom and earn with Paise."></r-contact-us>
     </a-col>
   </a-row>
 </template>
@@ -217,6 +266,23 @@ export default {
         current: null,
         isVisible: false
       },
+      values: [
+        {
+          icon: 'shopping',
+          title: 'Flexible checkout',
+          content: 'We partner with retailers all over the world to make it easy to pay how you like, when you like. Or, you can use our shopping app and enjoy flexible payment terms and deals anywhere online.'
+        },
+        {
+          icon: 'eye',
+          title: 'Full transparency',
+          content: 'With an instant credit decision, you can complete your purchase directly with full transparency. You can also get a full overview of your payments online or in our checkout app.'
+        },
+        {
+          icon: 'gift',
+          title: 'Endless rewards',
+          content: 'Earn with Paise on checkout, our free rewards service that rewards all your shopping in realtime. Join in our app and unlock your first reward after just one purchase at our partner stores.'
+        }
+      ],
       hasData: false
     }
   },
