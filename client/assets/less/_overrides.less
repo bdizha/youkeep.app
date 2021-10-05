@@ -372,6 +372,7 @@ h1.r-text-slarge-light {
             .ant-menu-submenu-title {
                 padding: 0;
                 margin: 0;
+
                 a {
                     display: block;
                     padding: 0;
@@ -388,6 +389,7 @@ h1.r-text-slarge-light {
                 bottom: auto;
                 width: 100%;
                 z-index: 1001;
+
                 h4.r-heading {
                     font-size: 18px;
                 }
@@ -2031,7 +2033,7 @@ xxl	≥1600px, could be a span value or an object containing above props
     }
 }
 
-.ant-drawer-title {
+.ant-drawer-heading {
     font-weight: 600;
     font-size: @font-size-base;
     line-height: 36px;
@@ -2052,7 +2054,7 @@ xxl	≥1600px, could be a span value or an object containing above props
         background: @secondary-color;
     }
 
-    .ant-drawer-title {
+    .ant-drawer-heading {
         h4.r-heading {
             color: @white;
         }
@@ -2252,7 +2254,7 @@ h4 {
         font-weight: 700;
 
         &:hover,
-        &.r-text-link__active{
+        &.r-text-link__active {
             color: @primary-color;
         }
     }
@@ -2344,7 +2346,7 @@ h4 {
     }
 
     .r-footer-link,
-    .r-footer-link a{
+    .r-footer-link a {
         color: @white;
 
         &.router-link-exact-active,
@@ -2837,6 +2839,7 @@ label {
                     padding: 0;
                 }
             }
+
             .ant-collapse-header {
                 .ant-collapse-arrow {
                     right: 0;
@@ -2849,6 +2852,7 @@ label {
 
             &.r-collapse-panel {
                 border-top: 1px solid @secondary-color-light;
+
                 &:first-child {
                     border-top: 1px solid @secondary-color-light;
                 }
@@ -5225,7 +5229,6 @@ label {
 }
 
 
-
 .r-spin__active {
     min-height: 180px;
     position: relative;
@@ -6189,6 +6192,11 @@ label {
     margin-top: 24px;
 }
 
+.r-mh-96 {
+    margin-left: 96px;
+    margin-right: 96px;
+}
+
 .r-mh-24 {
     margin-left: 24px;
     margin-right: 24px;
@@ -6251,6 +6259,7 @@ label {
 
 .r-p-0 {
     padding: 0 !important;
+
     > .ant-card-body {
         padding: 0 !important;
     }
@@ -7251,17 +7260,8 @@ label {
     background: @white;
 }
 
-.r-bg-blue-light {
-    background: @orange-color-light;
-
-    .ant-card-body {
-        background: transparent url(/images/icon_pattern_primary_large.svg) no-repeat;
-        background-size: 65%;
-    }
-}
-
 .r-bg-white-primary {
-    background-image: linear-gradient(90deg, @white 15%, @white 36%, @white 72%, @primary-color-light);
+    background: linear-gradient(132deg, @primary-color-light 17.24%, rgba(255, 255, 255, 0.2) 77.64%), @white;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_primary_light.svg) no-repeat !important;
@@ -7269,31 +7269,46 @@ label {
 }
 
 .r-bg-white-secondary {
-    background-image: linear-gradient(90deg, @white 15%, @white 36%, @white 72%, @secondary-color-light);
+    background: linear-gradient(132deg, @secondary-color-light 17.24%, rgba(255, 255, 255, 0.2) 77.64%), @white;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_secondary_light.svg) no-repeat !important;
     }
 }
 
-.r-bg-white-orange {
-    background-image: linear-gradient(90deg, @white 15%, @white 36%, @white 72%, @orange-color-light);
 
-    .ant-card-body {
-        background: transparent url(/images/icon_pattern_orange_light.svg) no-repeat !important;
-    }
+.r-bg-pattern-secondary {
+    background: url(/images/icon_pattern_secondary_light.svg) #edfbff;
+    background-repeat: repeat;
+    background-size: 9%;
 }
 
 .r-bg-white-yellow {
-    background-image: linear-gradient(90deg, @white 15%, @white 36%, @white 72%, @yellow-color-light);
+    background: linear-gradient(132deg, @yellow-color-light 17.24%, rgba(255, 255, 255, 0.2) 77.64%), @white;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_yellow_light.svg) no-repeat !important;
     }
 }
 
+.r-bg-white-green {
+    background: linear-gradient(132deg, @green-color-light 17.24%, rgba(255, 255, 255, 0.2) 77.64%), @white;
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_green_light.svg) no-repeat !important;
+    }
+}
+
+.r-bg-white-orange {
+    background: linear-gradient(132deg, @orange-color-light 17.24%, rgba(255, 255, 255, 0.2) 77.64%), @white;
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_orange_light.svg) no-repeat !important;
+    }
+}
+
 .r-bg-primary-light {
-    background-image: linear-gradient(160deg, rgba(255,243,205,0), @primary-color-light);
+    background: linear-gradient(132deg, rgba(255, 255, 255, 0.2) 17.24%, @primary-color-light 77.64%), @white;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_primary_light.svg) no-repeat !important;
@@ -7301,32 +7316,15 @@ label {
 }
 
 .r-bg-secondary-light {
-    background-image: linear-gradient(160deg, rgba(255,243,205,0), @secondary-color-light);
+    background: linear-gradient(132deg, rgba(255, 255, 255, 0.2) 17.24%, @secondary-color-light 77.64%), @white;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_secondary_light.svg) no-repeat !important;
     }
 }
 
-.r-bg-dark-light {
-    background-image: linear-gradient(90deg, @yellow-color-light 36%, @black 100%);
-
-    .ant-card-body {
-        background: transparent url(/images/icon_pattern_dark_light.svg) no-repeat !important;
-    }
-}
-
-.r-bg-green-light {
-    background-image: linear-gradient(90deg, @green-color-light, #fff8e2 15%, #fffcf1 60%, @white 72%, @white);
-
-    .ant-card-body {
-        background: transparent url(/images/icon_pattern_green_light.svg) no-repeat;
-        background-size: 65%;
-    }
-}
-
 .r-bg-yellow-light {
-    background-image: linear-gradient(160deg, rgba(255,243,205,0), @yellow-color-light);
+    background: linear-gradient(132deg, rgba(255, 255, 255, 0.2) 17.24%, @yellow-color-light 77.64%), @white;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_yellow_light.svg) no-repeat !important;
@@ -7334,10 +7332,27 @@ label {
 }
 
 .r-bg-orange-light {
-    background-image: linear-gradient(160deg, rgba(255,243,205,0), @orange-color-light);
+    background: linear-gradient(132deg, rgba(255, 255, 255, 0.2) 17.24%, @orange-color-light 77.64%), @white;
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_orange_light.svg) no-repeat !important;
+    }
+}
+
+.r-bg-dark-light {
+    background: linear-gradient(132deg, rgba(255, 255, 255, 0.2) 17.24%, @gray 77.64%), @white;
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_dark_light.svg) no-repeat !important;
+    }
+}
+
+.r-bg-green-light {
+    background: linear-gradient(132deg, rgba(255, 255, 255, 0.2) 17.24%, @green-color-light 77.64%), @white;
+
+    .ant-card-body {
+        background: transparent url(/images/icon_pattern_green_light.svg) no-repeat;
+        background-size: 65%;
     }
 }
 
@@ -7914,7 +7929,7 @@ h3.r-step-heading {
     max-width: 360px;
     min-width: 300px;
 
-    .ant-popover-title {
+    .ant-popover-heading {
         color: @secondary-color;
         padding: 12px 24px;
         font-weight: 600;

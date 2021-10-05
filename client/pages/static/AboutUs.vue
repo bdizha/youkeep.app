@@ -114,7 +114,7 @@
                    :xs="{ span: 24 }"
             >
               <p class="r-text-normal">
-                Ultimately, Paise makes shopping more rewarding, by giving consumers the flexibility and freedom to buy what they want, with added benefits.
+                Ultimately, Paise makes shopping more rewarding, by giving shoppers the flexibility and freedom to buy what they want, with added benefits.
               </p>
             </a-col>
           </a-row>

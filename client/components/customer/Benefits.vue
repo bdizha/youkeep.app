@@ -25,7 +25,7 @@
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                 <p class="r-text-medium">
-                  Make easy monthly payments over 3 monthly payments at participating stores. Paise is available only to eligibal products.
+                  Make easy monthly payments over 3 monthly payments at participating stores. Paise is available only to eligible products.
                 </p>
               </a-col>
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -45,38 +45,40 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <a-row :gutter="[24, 24]" align="middle" type="flex">
-                        <a-col flex="99px">
-                          <a-card class="r-bg-white">
-                            <a-icon class="r-text-secondary"
-                                    :style="{ fontSize: '53px' }"
-                                    :type="benefit.icon"></a-icon>
-                          </a-card>
-                        </a-col>
-                        <a-col flex="1 1 0">
-                          <a-row :gutter="[6,6]" align="middle" justify="center" type="flex">
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                   :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <h4 class="r-heading-light">
-                                {{ benefit.title }}
-                              </h4>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                                   :sm="{ span: 24 }"
-                                   :xs="{ span: 24 }"
-                            >
-                              <h4 class="r-heading" v-html="benefit.heading"></h4>
-                            </a-col>
-                            <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                              <p class="r-text-normal">
-                                {{ benefit.content }}
-                              </p>
-                            </a-col>
-                          </a-row>
-                        </a-col>
-                      </a-row>
+                      <a-card class="r-bg-white-secondary">
+                        <a-row :gutter="[24, 24]" align="middle" type="flex">
+                          <a-col flex="99px">
+                            <a-card class="r-bg-secondary-light">
+                              <a-icon class="r-text-secondary"
+                                      :style="{ fontSize: '53px' }"
+                                      :type="benefit.icon"></a-icon>
+                            </a-card>
+                          </a-col>
+                          <a-col flex="1 1 0">
+                            <a-row :gutter="[6,6]" align="middle" justify="center" type="flex">
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                     :sm="{ span: 24 }"
+                                     :xs="{ span: 24 }"
+                              >
+                                <h4 class="r-heading-light">
+                                  {{ benefit.title }}
+                                </h4>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                     :sm="{ span: 24 }"
+                                     :xs="{ span: 24 }"
+                              >
+                                <h4 class="r-heading" v-html="benefit.heading"></h4>
+                              </a-col>
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                                <p class="r-text-normal">
+                                  {{ benefit.content }}
+                                </p>
+                              </a-col>
+                            </a-row>
+                          </a-col>
+                        </a-row>
+                      </a-card>
                     </a-col>
                   </a-row>
                 </a-col>

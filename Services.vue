@@ -16,7 +16,7 @@
                    :xs="{ span: 24 }"
             >
               <h4 v-if="!isShow" class="r-heading-light r-text-uppercase">
-                Paise marketplace
+                Marketplace services
               </h4>
               <h4 v-if="isShow" class="r-heading-light r-text-uppercase">
                 More solutions
@@ -31,14 +31,16 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <h3 class="r-heading" v-html="heading"></h3>
+                  <h3 class="r-heading">
+                    <span class="r-text-primary">Built</span> for shoppers and sellers to thrive
+                  </h3>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    {{ content }}
+                    Paise powers shoppers to enjoy securely one-click online purchases with on demand payment options.
                   </p>
                 </a-col>
               </a-row>
@@ -52,17 +54,19 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24}"
         >
-          <a-card :class="getBgClass(false)">
+          <a-card :class="getBgClass()">
             <a-row align="middle" justify="start" type="flex">
               <a-col v-if="!isCurrent(service)" :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
                 <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
-                  <a-col>
-                    <div :class="getBgClass(true)" class="r-p-6 r-border-radius-12">
-                      <nuxt-img width="90" height="90" :src="'/services/white/' + service.image"></nuxt-img>
-                    </div>
+                  <a-col :lg="{ span: 8 }" :md="{ span: 8 }" :sm="{ span: 24 }"
+                         :xs="{ span: 24}"
+                  >
+                    <a-card class="r-bg-primary-light r-p-0 r-inline-block">
+                      <nuxt-img width="66" height="66" :src="'/services/primary/' + service.image"></nuxt-img>
+                    </a-card>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                          :xs="{ span: 24}"
@@ -100,10 +104,7 @@ export default {
   name: 'r-services',
   props: {
     isShow: { type: Boolean, required: false, default: false },
-    theme: { type: String, required: false, default: 'primary' },
-    accent: { type: String, required: false, default: 'primary' },
-    heading: { type: String, required: false, default: '' },
-    summary: { type: String, required: false, default: '' }
+    theme: { type: String, required: false, default: 'white' }
   },
   data () {
     return {}
@@ -125,20 +126,8 @@ export default {
 
       return this.product.slug === item.slug
     },
-    getBgClass (flip) {
-      if (flip) {
-        if (this.theme === 'white') {
-          return `r-bg-${this.accent}-light`
-        } else {
-          return `r-bg-white-${this.theme}`
-        }
-      } else {
-        if (this.theme === 'white') {
-          return `r-bg-white-${this.accent}`
-        } else {
-          return `r-bg-${this.accent}-light`
-        }
-      }
+    getBgClass () {
+      return `r-bg-${this.theme}-light`
     }
   }
 }

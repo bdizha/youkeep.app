@@ -349,7 +349,7 @@ export default {
       beneficiaries: [
         {
           title: 'Shoppers',
-          link: '/consumer',
+          link: '/shopper',
           summary: 'Secure speedy checkout service available for shoppers'
         },
         {

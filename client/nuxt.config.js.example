@@ -39,7 +39,7 @@ module.exports = {
   generate: {
     interval: 3000,
     fallback: '200.html',
-    routes: ['/help', '/customer', '/consumer', '/'],
+    routes: ['/help', '/customer', '/shopper', '/'],
     cache: {
       ignore: [
         '.nuxt', // buildDir

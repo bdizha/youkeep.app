@@ -102,7 +102,7 @@ export default {
     size: { type: Number, required: false, default: 16 },
     theme: { type: String, required: false, default: 'secondary' },
     userType: { type: String, required: false, default: 'customer' },
-    learnMore: { type: String, required: false, default: '/consumer' },
+    learnMore: { type: String, required: false, default: '/shopper' },
     title: { type: String, required: false, default: '<span class="r-text-primary">Shop</span> simple with Paise' },
     content: { type: String, required: false, default: null },
     hasMore: { type: Boolean, required: false, default: true },

@@ -9,7 +9,7 @@ viewBox="0 0 454.06 454.06"
    <![CDATA[
     .fil2 {fill:#00C2FF}
     .fil1 {fill:#FBD13E}
-    .fil0 {fill:#FFFFFF}
+    .fil0 {fill:none}
    ]]>
   </style>
  </defs>

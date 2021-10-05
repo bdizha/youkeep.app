@@ -12,7 +12,7 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h3 class="r-heading-light r-text-uppercase" v-html="product.title"></h3>
+                      <h3 class="r-heading-light r-text-primary r-text-uppercase" v-html="product.title"></h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
@@ -45,7 +45,7 @@
                                 @click="onModal"
                                 block
                                 size="large"
-                                type="primary"
+                                type="blue"
                       >
                         Get started
                       </a-button>
@@ -54,11 +54,11 @@
                            :sm="{ span: 12 }"
                            :xs="{ span: 24 }"
                     >
-                      <a-button class="r-btn-bordered-primary"
+                      <a-button class="r-btn-bordered-secondary"
                                 @click="onModal"
                                 block
                                 size="large"
-                                type="primary"
+                                type="blue"
                       >
                         Shop now
                       </a-button>
@@ -80,7 +80,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-steps user-type="customer" :title="product.title" :size="24" :steps="product.steps" theme="primary"
+      <r-steps user-type="customer" :title="product.title" :size="24" :steps="product.steps" theme="secondary"
       ></r-steps>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -113,12 +113,12 @@
                            :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                            :xs="{ span: 24}"
                     >
-                      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                        <a-col>
-                          <a-card class="r-bg-primary-light r-text-center">
-                            <a-icon class="r-text-primary"
-                                    style="font-size: 60px"
-                                    :type="feature.icon"></a-icon>
+                      <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+                        <a-col :lg="{ span: 6 }" :md="{ span: 8 }" :sm="{ span: 24 }"
+                               :xs="{ span: 24}"
+                        >
+                          <a-card class="r-bg-white-light r-p-0 r-inline-block">
+                            <nuxt-img width="111" height="111" :src="'/services/white/' + feature.image"></nuxt-img>
                           </a-card>
                         </a-col>
                         <a-col :lg="{ span: 18 }" :md="{ span: 16 }"
@@ -180,23 +180,23 @@ export default {
       steps: [
         {
           title: 'Adaptive checkout\n',
-          heading: '<span class="r-text-primary">Improve</span> customer satisfaction',
+          heading: '<span class="r-text-secondary">Improve</span> customer satisfaction',
           image: '/assets/asset-11.svg',
           summary: 'Build online experiences that meet the expectations of your customers.',
           content: 'Let your shoppers get what they want, when they want it, anytime, everywhere. And your business will earn long-term customer relationships.'
         },
         {
           title: 'Boost Conversion',
-          heading: '<span class="r-text-primary">Boost</span> visibility with shoppers',
-          image: '/assets/asset-05.svg',
-          summary: 'Shoppers use Zerosum to discover new products and checkout in seconds. ',
-          content: 'Zerosum enables instant mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
+          heading: '<span class="r-text-secondary">Boost</span> visibility with shoppers',
+          image: '/assets/asset-14.svg',
+          summary: 'Shoppers use Paise to discover new products and checkout in seconds. ',
+          content: 'Paise enables instant mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
         },
         {
           title: 'Maximize Revenue',
-          heading: '<span class="r-text-primary">Sell</span> and maximise revenue',
+          heading: '<span class="r-text-secondary">Sell</span> and maximise revenue',
           image: '/assets/asset-12.svg',
-          summary: 'Get the Zerosum Capital button in a few minutes on your online marketplace.',
+          summary: 'Get the Paise checkout button in a few minutes on your online marketplace.',
           content: 'Meet potential customers at the point of discovery abd break out and reach new shoppers beyond the walls of your own marketplace.'
         }
       ]

@@ -112,7 +112,7 @@ export default {
   data () {
     return {
       images: [
-        '/assets/asset-consumer.svg'
+        '/assets/asset-25.svg'
       ]
     }
   },

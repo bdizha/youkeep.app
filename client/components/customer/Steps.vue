@@ -1,5 +1,5 @@
 <template>
-  <r-steps user-type="customer" :has-more="hasMore" :size="size" :steps="steps" theme="primary"
+  <r-steps user-type="customer" :has-more="hasMore" :size="size" :steps="steps" theme="white"
   ></r-steps>
 </template>
 <script>

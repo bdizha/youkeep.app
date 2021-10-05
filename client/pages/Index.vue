@@ -64,7 +64,7 @@
                            :sm="{ span: 12 }"
                            :xs="{ span: 24 }"
                     >
-                      <nuxt-link to="/consumer">
+                      <nuxt-link to="/shopper">
                         <a-button class="r-btn-bordered-secondary"
                                   block
                                   size="large"

@@ -19,18 +19,21 @@ export const state = () => ({
         {
           title: 'Desire it',
           heading: 'Checkout simple with Paise.',
+          summary: 'Desire it and get exactly what you want.',
           content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
           image: '/assets/asset-02-white.svg'
         },
         {
           title: 'Shop it',
           heading: 'Choose to pay with Paise',
+          summary: 'Your new source of inspiration to rely on. ',
           content: 'Add what you want to your cart and choose to pay with Paise It\'s that simple and instant.',
           image: '/assets/asset-17-white.svg'
         },
         {
           title: 'Enjoy it',
           heading: 'Pay over time in 3 months',
+          summary: 'Discover thousands of buy now pay later sites',
           content: 'Settle 25% of the order total today and pay the rest over 3 monthly payments at zero interest.',
           image: '/assets/asset-18.svg'
         }
@@ -38,12 +41,12 @@ export const state = () => ({
       features: [
         {
           title: 'A better way to shop',
-          content: 'Paise remembers and encrypts your details, so you can speed safely through checkout in one tap. Pay in full at checkout or split your purchase into 3 adaptive installments.',
+          content: 'Paise remembers and encrypts your details, so you can speed safely through checkout in one tap.',
           image: 'service-06.svg'
         },
         {
           title: 'Discover it. Get it.',
-          content: 'Shop automatically gathers and tracks your orders, so you don’t have to search, copy, or paste. You can also use Shop without auto-tracking.',
+          content: 'Shop automatically gathers and tracks your orders, so you don’t have to search, copy, or paste.',
           image: 'service-13.svg'
         },
         {
@@ -72,18 +75,21 @@ export const state = () => ({
         {
           title: 'Find it',
           heading: '<span class="r-text-secondary">Shop</span> simple with Paise.',
+          summary: 'Desire it and get exactly what you want.',
           content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
           image: '/assets/asset-28.svg'
         },
         {
           title: 'Order it',
           heading: '<span class="r-text-secondary">Choose</span> to pay with Paise',
+          summary: 'Desire it and get exactly what you want.',
           content: 'Add what you want to your cart and choose to pay with Paise It\'s that simple and instant.',
           image: '/assets/asset-17-white.svg'
         },
         {
           title: 'Enjoy it',
           heading: '<span class="r-text-secondary">Pay</span> over time in 3 months',
+          summary: 'Desire it and get exactly what you want.',
           content: 'Settle 25% of the order total today and pay the rest over 3 monthly payments at zero interest.',
           image: '/assets/asset-18.svg'
         }
@@ -92,22 +98,22 @@ export const state = () => ({
         {
           title: 'Get it now, pay later.',
           content: 'Shop for what you love now and split your order total into 3 payments.',
-          image: 'service-12.svg'
+          icon: 'gift'
         },
         {
           title: 'Zero interest or fees.',
           content: 'No hidden fees, no interest, no late fees charged on your credit score.',
-          image: 'service-18.svg'
+          icon: 'gift'
         },
         {
           title: 'Pick a card, any card.',
           content: 'Link any debit or credit card and get instant approval to pay with Paise.',
-          image: 'service-07.svg'
+          icon: 'gift'
         },
         {
           title: 'Transact simple with Paise',
           content: 'Your financial information is protected when you open an account with Paise.',
-          image: 'service-15.svg'
+          icon: 'gift'
         }
       ],
       row: 1
@@ -126,20 +132,23 @@ export const state = () => ({
       steps: [
         {
           title: 'Get it',
-          heading: 'Sign up to earn cashback.',
+          heading: '<span class="r-text-secondary">Join</span> Paise up to earn cashback.',
+          summary: 'Get started and discover great deals, and get rewarded instantly. ',
           content: 'Create a Paise account in few seconds, it\'s completely simple, free and secure at your own convenience.',
           image: '/assets/asset-28.svg'
         },
         {
           title: 'Shop it',
-          heading: 'Shop at brands on Paise.',
+          heading: '<span class="r-text-secondary">Shop</span> at partner stores with Paise.',
+          summary: 'Choose the rewards you love and unlock rewards from partner stores.',
           content: 'Shop your favourites and earn cash. Earn cash whether you pay with Paise or not. You always earn with Paise.',
           image: '/assets/asset-22.svg'
         },
         {
           title: 'Earn it',
-          heading: 'Get cash or pay your next purchase.',
-          content: 'Withdraw real money you\'ve earned or choose to settle an upcoming bill on Paise in one centralized place.',
+          heading: '<span class="r-text-secondary">Unlock</span> value or pay your next purchase.',
+          summary: 'Enjoy exclusive deals and the freedom to shop anywhere and you prefer.',
+          content: 'Shop securely at your favorite stores. No matter what you need, we\'ve got a flexible option to fit your budget. ',
           image: '/assets/asset-23.svg'
         }
       ],
@@ -147,17 +156,20 @@ export const state = () => ({
         {
           title: 'Sign up to earn cashback.',
           content: 'Create a Paise account in few seconds, it\'s completely simple, free and secure at your convenience.',
-          image: 'service-12.svg'
+          image: 'service-12.svg',
+          icon: 'gift'
         },
         {
           title: 'Shop at brands on Paise.',
           content: 'Shop your favourites and earn cash. Earn cash whether you pay with Paise or not.',
-          image: 'service-18.svg'
+          image: 'service-18.svg',
+          icon: 'gift'
         },
         {
           title: 'Get cash or pay your next purchase.',
           content: 'Withdraw real money you\'ve earned or choose to settle an upcoming bill on Paise.',
-          image: 'service-07.svg'
+          image: 'service-07.svg',
+          icon: 'gift'
         }
       ],
       row: 1

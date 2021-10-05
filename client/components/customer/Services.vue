@@ -1,7 +1,7 @@
 <template>
   <a-card class="r-bg-primary-light r-pull-h-24 r-border-none-sm">
     <div class="r-mv-96">
-      <r-services :is-show="isShow" :theme="theme" accent="accent" heading="heading" summary="summary"></r-services>
+      <r-services :is-show="isShow" :theme="theme" :heading="heading" :summary="summary"></r-services>
     </div>
   </a-card>
 </template>
@@ -13,7 +13,7 @@ export default {
   props: {
     isShow: { type: Boolean, required: false, default: false },
     theme: { type: String, required: false, default: 'white' },
-    accent: { type: String, required: false, default: 'primary' }
+    accent: { type: String, required: false, default: 'white' },
   },
   data () {
     return {

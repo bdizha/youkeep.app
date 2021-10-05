@@ -15,16 +15,16 @@
                        :xs="{ span: 24 }"
                 >
                   <h4 class="r-heading-light r-text-uppercase">
-                    It's shopping time!
+                    Better shopping
                   </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <h3 class="r-heading ">
-                    Shop <span class="r-text-primary">simple</span> with Paise checkout
-                  </h3>
+                  <h2 class="r-heading ">
+                    Shop <span class="r-text-secondary">simple</span> with Paise checkout
+                  </h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
                        :sm="{ span: 24 }"
@@ -39,30 +39,31 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-normal">
-                    Paise offers a shopping assistant with the most
+                    Paise offers you a shopping assistant with the most
                     convenient
                     shopping tools on the marketplace. Just to enable you to shop better.
                   </p>
                 </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                <a-col v-for="(item, index) in items"
+                       :key="index"
+                       :lg="{ span: 24 }" :md="{ span: 24}"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <p class="r-text-normal">
-                    Make payments, report a problem, manage returns.
-                  </p>
-                </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                       :sm="{ span: 24 }"
-                       :xs="{ span: 24 }"
-                >
-                  <p class="r-text-normal">
-                    Chat with support 24/7 - we´re always here for you.
-                  </p>
+                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                    <a-col flex="36px">
+                      <a-icon type="check" class="r-text-secondary"></a-icon>
+                    </a-col>
+                    <a-col flex="auto">
+                      <p class="r-text-normal">
+                        {{ item.content }}
+                      </p>
+                    </a-col>
+                  </a-row>
                 </a-col>
                 <a-col :lg="{ span: 9 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                 >
-                  <nuxt-link to="/consumer">
+                  <nuxt-link to="/shopper">
                     <a-button block
                               class="r-btn-secondary"
                               size="large"
@@ -84,10 +85,10 @@
                 </a-col>
               </a-row>
             </a-col>
-            <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
-              <r-avatar data-src="/assets/asset-06.svg" :size="300"
+              <r-avatar data-src="/assets/asset-12.svg" :size="300"
                         class="r-avatar-block"
               ></r-avatar>
             </a-col>
@@ -103,6 +104,17 @@ export default {
   props: {},
   data () {
     return {
+      items: [
+        {
+          content: 'Make payments, report a problem, manage returns.'
+        },
+        {
+          content: 'Pay in full at checkout or split with Paise checkout.'
+        },
+        {
+          content: 'Chat with support 24/7 - we´re always here for you.'
+        }
+      ]
     }
   },
   created () {

@@ -48,7 +48,7 @@
           </a-row>
         </a-form-item>
         <a-form-item v-if="step == 1">
-          <h2 class="r-title">
+          <h2 class="r-heading">
             Start by telling us a little bit about yourself!
           </h2>
         </a-form-item>
@@ -73,7 +73,7 @@
           </a-input>
         </a-form-item>
         <a-form-item v-if="step == 2">
-          <h2 class="r-title">
+          <h2 class="r-heading">
             What are your contact details?
           </h2>
           <p class="r-text-normal">
@@ -103,7 +103,7 @@
           </a-input>
         </a-form-item>
         <a-form-item v-if="step == 3">
-          <h2 class="r-title">
+          <h2 class="r-heading">
             Are you 18 or older?
           </h2>
           <a-radio-group
@@ -120,7 +120,7 @@
           </a-radio-group>
         </a-form-item>
         <a-form-item v-if="step == 4 || step == 5 || step == 6">
-          <h2 class="r-title">
+          <h2 class="r-heading">
             Now, a little address information.
           </h2>
           <p class="r-text-normal">
@@ -178,7 +178,7 @@
           </a-input>
         </a-form-item>
         <a-form-item v-if="step == 7">
-          <h2 class="r-title">
+          <h2 class="r-heading">
             Please select your shirt size.
           </h2>
           <p class="r-text-normal">
@@ -197,12 +197,12 @@
           </a-radio-group>
         </a-form-item>
         <a-form-item v-if="step == 7">
-          <h2 class="r-title">
+          <h2 class="r-heading">
             You're almost there! Just a few more questions.
           </h2>
         </a-form-item>
         <a-form-item v-if="step == 8">
-          <h2 class="r-title">
+          <h2 class="r-heading">
             Two of our peak days are Sunday and Monday. Are you available to regularly shop on Sunday and/or
             Monday?
           </h2>
@@ -220,7 +220,7 @@
           </a-radio-group>
         </a-form-item>
         <a-form-item v-if="step == 9">
-          <h2 class="r-title">
+          <h2 class="r-heading">
             Do you smoke in your vehicle?
           </h2>
           <p class="r-text-light">
@@ -240,7 +240,7 @@
           </a-radio-group>
         </a-form-item>
         <a-form-item v-if="step == 10">
-          <h2 class="r-title">
+          <h2 class="r-heading">
             Do you have at least one year of experience as a licensed driver?
           </h2>
           <a-radio-group>
