@@ -21,7 +21,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                            Paise <span class="r-text-primary">Capital</span>
+                            Spazastop <span class="r-text-primary">Capital</span>
                           </h3>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -80,7 +80,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading-light">
-                <span class="r-text-orange">Innovate</span> <span class="r-text-orange">alongside</span> Paise.
+                <span class="r-text-orange">Innovate</span> <span class="r-text-orange">alongside</span> Spazastop.
               </h2>
             </a-col>
             <a-col :lg="{ span: 15 }" :md="{ span: 16 }"

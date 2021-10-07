@@ -111,7 +111,7 @@ export default {
           rows: [
             {
               title: '<span class="r-text-primary">Grow </span> your clients’ marketing budget',
-              content: 'Paise is an inexpensive way for your D2C eCommerce clients to increase their marketing budgets substantially, resulting in more opportunities for growth on your end.'
+              content: 'Spazastop is an inexpensive way for your D2C eCommerce clients to increase their marketing budgets substantially, resulting in more opportunities for growth on your end.'
             },
             {
               title: '<span class="r-text-primary">Revenue</span>  Share opportunity',
@@ -124,7 +124,7 @@ export default {
           rows: [
             {
               title: '<span class="r-text-primary">Co-marketing</span> opportunities',
-              content: 'Paise serves hundreds of D2C eCommerce brands with the funds they need to grow. Our audience includes founders/CEOs and CFOs.'
+              content: 'Spazastop serves hundreds of D2C eCommerce brands with the funds they need to grow. Our audience includes founders/CEOs and CFOs.'
             },
             {
               title: '<span class="r-text-primary">Revenue</span>  Share opportunity',

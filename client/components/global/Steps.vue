@@ -12,21 +12,15 @@
                    :xs="{ span: 24}"
             >
               <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
+                <a-col v-for="(step, index) in steps"
+                       :key="index"
                 >
-                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                    <a-col v-for="(step, index) in steps"
-                           :key="index"
-                    >
-                      <h4 class="r-text-cursor"
-                          @click="setCurrentStep(index)"
-                          :class="{'r-active': isCurrent(index)}"
-                      >
-                        <span>{{ step.title }}</span>
-                      </h4>
-                    </a-col>
-                  </a-row>
+                  <h4 class="r-text-cursor r-text-uppercase"
+                      @click="setCurrentStep(index)"
+                      :class="{'r-active': isCurrent(index)}"
+                  >
+                    <span>{{ step.title }}</span>
+                  </h4>
                 </a-col>
               </a-row>
             </a-col>
@@ -54,8 +48,7 @@
                     </a-col>
                   </a-row>
                 </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                >
+                <a-col>
                   <a-button block
                             class="r-btn-secondary"
                             size="large"
@@ -64,8 +57,7 @@
                     Get started
                   </a-button>
                 </a-col>
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                >
+                <a-col>
                   <nuxt-link :to="learnMore">
                     <a-button block
                               class="r-btn-bordered-secondary"
@@ -81,15 +73,23 @@
             </a-col>
           </a-row>
         </a-col>
-        <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+        <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                :xs="{ span: 24}"
         >
-          <r-avatar v-for="(step, index) in steps"
-                    v-show="isCurrent(index)"
-                    :key="index"
-                    :data-src="step.image" :size="300"
-                    class="r-avatar-block"
-          ></r-avatar>
+          <a-card class="r-bg-secondary-pattern">
+            <div class="r-mv-96">
+              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
+                  <r-avatar v-for="(step, index) in steps"
+                            v-show="isCurrent(index)"
+                            :key="index"
+                            :data-src="step.image" :size="300"
+                            class="r-avatar-block"
+                  ></r-avatar>
+                </a-col>
+              </a-row>
+            </div>
+          </a-card>
         </a-col>
       </a-row>
     </a-col>
@@ -103,7 +103,7 @@ export default {
     theme: { type: String, required: false, default: 'secondary' },
     userType: { type: String, required: false, default: 'customer' },
     learnMore: { type: String, required: false, default: '/shopper' },
-    title: { type: String, required: false, default: '<span class="r-text-primary">Shop</span> simple with Paise' },
+    title: { type: String, required: false, default: '<span class="r-text-primary">Shop</span> simple with Spazastop' },
     content: { type: String, required: false, default: null },
     hasMore: { type: Boolean, required: false, default: true },
     steps: {

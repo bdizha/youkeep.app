@@ -15,7 +15,7 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                Why 1000s of retailers <span class="r-text-primary">choose</span> Paise
+                Why 1000s of retailers <span class="r-text-primary">choose</span> Spazastop
               </h2>
             </a-col>
             <a-col :lg="{ span: 8 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -36,7 +36,7 @@
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
                           Accept all major credit cards - your shoppers don't even need an account to place an
-                          order on the Paise marketplace.
+                          order on the Spazastop marketplace.
                         </p>
                       </a-col>
                     </a-row>
@@ -61,7 +61,7 @@
                       </a-col>
                       <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                         <p class="r-text-normal">
-                          When an order is completed, the money shows up in your Paise account in with every order you receive.
+                          When an order is completed, the money shows up in your Spazastop account in with every order you receive.
                         </p>
                       </a-col>
                     </a-row>
@@ -124,7 +124,7 @@
                          :xs="{ span: 24 }"
                   >
                     <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                      Paise for business
+                      Spazastop for business
                     </h4>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -140,7 +140,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                     Paise for Business gives you an easy
+                     Spazastop for Business gives you an easy
                       way to
                       manage your selling channel needs.
                     </p>
@@ -210,7 +210,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-medium">
-                      Get paid for what you sell on Paise, on your own website, or in online
+                      Get paid for what you sell on Spazastop, on your own website, or in online
                       classifieds and forums.
                     </p>
                   </a-col>
@@ -295,7 +295,7 @@
                          :xs="{ span: 24 }"
                   >
                     <p class="r-text-normal">
-                      Paise gives you a dedicated e-commerce expert supported by a team of knowledgeable
+                      Spazastop gives you a dedicated e-commerce expert supported by a team of knowledgeable
                       small
                       business
                       experts.
@@ -330,7 +330,7 @@ export default {
   data () {
     return {
       features: [
-        { content: 'Access Paise via mobile or desktop - we go where you go' },
+        { content: 'Access Spazastop via mobile or desktop - we go where you go' },
         { content: 'Quickly answer categorization requests from your team' },
         { content: 'Contact your team with our simple messaging feature' },
         { content: 'Get operating support at any time within our work ours' }

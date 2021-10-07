@@ -99,18 +99,18 @@ export default {
       values: [
         {
           icon: 'tags',
-          title: '<span class="r-text-primary">Integrate</span> Paise',
-          content: 'Set up your clients with a trusted, customizable, and intuitive payment solution to help grow their business. Earn revenue while helping retailers integrate Paise\'s monetization tools.'
+          title: '<span class="r-text-primary">Integrate</span> Spazastop',
+          content: 'Set up your clients with a trusted, customizable, and intuitive payment solution to help grow their business. Earn revenue while helping retailers integrate Spazastop\'s monetization tools.'
         },
         {
           icon: 'diff',
           title: '<span class="r-text-primary">Provide</span> solutions',
-          content: 'Paise retailers seek help from Paise Partners to expand their eCommerce and in-store offerings. Paise relies on our network of experts to help retailers hit their business goals.'
+          content: 'Spazastop retailers seek help from Spazastop Partners to expand their eCommerce and in-store offerings. Spazastop relies on our network of experts to help retailers hit their business goals.'
         },
         {
           icon: 'line-chart',
           title: '<span class="r-text-primary">Accelerate</span> growth',
-          content: 'Take it to the next level. Two is better than one. At Paise, we’re customer obsessed. Let’s work together to drive incremental revenue for retailers and create smooth customer experiences.'
+          content: 'Take it to the next level. Two is better than one. At Spazastop, we’re customer obsessed. Let’s work together to drive incremental revenue for retailers and create smooth customer experiences.'
         }
       ]
     }

@@ -40,7 +40,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Paise powers shoppers to enjoy securely one-click online purchases with on demand payment options.
+                    Spazastop powers shoppers to enjoy securely one-click online purchases with on demand payment options.
                   </p>
                 </a-col>
               </a-row>

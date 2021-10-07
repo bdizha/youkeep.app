@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       heading: '<span class="r-text-primary">Built</span> to help your revenue grow',
-      summary: 'Paise powers growing businesses to securely access equity-free financing with flexible payment terms.'
+      summary: 'Spazastop powers growing businesses to securely access equity-free financing with flexible payment terms.'
     }
   },
   computed: mapGetters({

@@ -5,7 +5,7 @@
         <a-row align="middle" justify="space-around" type="flex">
           <a-col :span="24">
             <h1 class="r-heading r-text-secondary">
-              Current job openings at Paise
+              Current job openings at Spazastop
             </h1>
           </a-col>
         </a-row>

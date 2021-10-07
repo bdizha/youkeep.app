@@ -11,7 +11,7 @@
             </a-col>
             <a-col :lg="{span: 12}" :xs="{span: 24}" class="r-p-lg-48" style="position: relative;">
               <div class="r-page-header-photo r-page-art-primary">
-                <img alt="Couple orders online" src="/images/Paise/about-us.jpg">
+                <img alt="Couple orders online" src="/images/Spazastop/about-us.jpg">
               </div>
             </a-col>
           </a-row>
@@ -27,7 +27,7 @@
                 Who we are
               </h2>
               <p class="r-text-normal">
-                Nice to know, we are Paise, an online supermakert service. We are the
+                Nice to know, we are Spazastop, an online supermakert service. We are the
                 only store in South Africa that is only online, which means that our shoppers are at the
                 center of our business, in fact, we focus on our shoppers and how best we can serve them.
 
@@ -69,10 +69,10 @@
                 cash register.
               </p>
               <p class="r-text-normal">
-                Paise thinks it can be done differently: faster, easier and cheaper. The idea is
+                Spazastop thinks it can be done differently: faster, easier and cheaper. The idea is
                 simple. We
                 arrange
-                the business, so that you have more time for fun things. At Paise you can order all
+                the business, so that you have more time for fun things. At Spazastop you can order all
                 business
                 within a few minutes. So toilet paper, fresh, chips and ice cream, but also organic
                 eggs, tender

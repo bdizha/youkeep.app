@@ -31,19 +31,19 @@
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <h2 class="r-heading">
-                      <span class="r-text-green">Paise</span> makes partners successful
+                      <span class="r-text-green">Spazastop</span> makes partners successful
                     </h2>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <p class="r-text-medium">
-                      Whether your business is big or small, Paise gives you the tools and resources you need. Join
+                      Whether your business is big or small, Spazastop gives you the tools and resources you need. Join
                       our
                       partner community to share insights with the best in the business.
                     </p>
                   </a-col>
                   <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <p class="r-text-normal">
-                      Whether your business is big or small, Paise gives you the tools and resources you need. Join
+                      Whether your business is big or small, Spazastop gives you the tools and resources you need. Join
                       our
                       partner community to share insights with the best in the business.
                     </p>
@@ -113,12 +113,12 @@ export default {
         {
           icon: 'shop',
           title: '<span class="r-text-green">Connect</span> with retailers',
-          content: 'The Paise Partner Directory provides a place to market your product or service directly to people who want to work with you. We’ll connect you with the right people so you can make the magic happen.'
+          content: 'The Spazastop Partner Directory provides a place to market your product or service directly to people who want to work with you. We’ll connect you with the right people so you can make the magic happen.'
         },
         {
           icon: 'area-chart',
           title: '<span class="r-text-green">Evaluate</span> and scale',
-          content: 'The Paise Partner Program offers comprehensive technical documentation, a tight-knit partner community, easily accessible training and resources, and dedicated partner support.'
+          content: 'The Spazastop Partner Program offers comprehensive technical documentation, a tight-knit partner community, easily accessible training and resources, and dedicated partner support.'
         }
       ]
     }

@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="240px" height="240px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-     viewBox="0 0 113.2 113.19"
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="17mm" height="17.0637mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+     viewBox="0 0 1869 1876"
      xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil0 {fill:#3B9CFF; opacity: 0.045}
-    .fil2 {fill:#3B9CFF; opacity: 0.045}
-    .fil1 {fill:#3B9CFF; opacity: 0.024}
-    .fil4 {fill:#3B9CFF; opacity: 0.045}
-    .fil3 {fill:#3B9CFF; opacity: 0.024}
+     .str1 {stroke:#EE1C25;stroke-width:1.81;stroke-miterlimit:22.9256}
+    .str0 {stroke:#FBD13E;stroke-width:1.81;stroke-miterlimit:22.9256}
+    .fil2 {fill:#FBD13E; opacity: 0.045}
+    .fil1 {fill:#EE1C25; opacity: 0.045}
+    .fil0 {fill:none}
    ]]>
   </style>
  </defs>
     <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-        <g id="_1992367409360">
-   <polygon class="fil0" points="53.35,63.88 53.35,113.19 4.45,113.19 "/>
-            <polygon class="fil1" points="-0,59.63 48.58,59.63 -0,108.62 "/>
-            <polygon class="fil2" points="49.024,53.57 -0,53.57 -0,4.12 "/>
-            <polygon class="fil1" points="4.89,0 53.35,0 53.35,48.87 "/>
-            <path class="fil3" d="M98.76 19.19c8.22,9.25 13.52,21.21 14.44,34.38l-48.52 0 34.08 -34.38z"/>
-            <path class="fil4" d="M94.27 14.66l-34.27 34.57 0 -49.1c13.13,0.87 25.05,6.22 34.27,14.53z"/>
+        <rect class="fil0" y="7" width="1869" height="1869"/>
+        <g id="_616773944">
+   <path class="fil1 str0" d="M429 608l733 558 -79 19c-211,53 -431,-4 -585,-160 -110,-111 -171,-260 -172,-417 -1,-392 373,-672 750,-579l78 19 -725 560z"/>
+            <path class="fil1 str0" d="M1395 1138l-725 -559 78 -20c377,-92 752,188 750,580 0,157 -61,305 -171,417 -154,156 -374,213 -586,160l-79 -19 733 -559z"/>
+            <path class="fil1" d="M1422 1430l69 83c78,92 66,230 -26,308l0 0c-92,77 -231,65 -308,-27l-75 -88c150,-48 261,-142 340,-276z"/>
+            <polygon class="fil2" points="1249,1623 1403,1753 1298,1583 "/>
   </g>
  </g>
 </svg>

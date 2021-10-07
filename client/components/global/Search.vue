@@ -36,7 +36,8 @@
           style="margin-right: -12px"
           type="secondary"
         >
-          <a-icon type="search"/>
+          Find food
+          <a-icon type="right"/>
         </a-button>
       </a-input>
     </a-auto-complete>

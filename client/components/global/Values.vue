@@ -13,7 +13,7 @@
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <h2 class="r-heading">
-                    <span class="r-text-yellow">Value</span> = <span class="r-text-orange">Shopping</span> + <span class="r-text-white">Paise</span>
+                    <span class="r-text-yellow">Value</span> = <span class="r-text-orange">Shopping</span> + <span class="r-text-white">Spazastop</span>
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">

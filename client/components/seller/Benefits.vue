@@ -25,7 +25,7 @@
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-medium">
-                    Paise enables sellers to delight their shoppers with on demand, adaptive and secure checkout payment
+                    Spazastop enables sellers to delight their customers with on demand, adaptive and secure checkout payment
                     options.
                   </p>
                 </a-col>
@@ -88,8 +88,6 @@
           </a-row>
         </a-col>
       </a-row>
-      </a-col>
-      </a-row>
     </div>
   </a-card>
 </template>
@@ -116,7 +114,7 @@ export default {
           icon: 'sync',
           title: 'No credit impact',
           heading: '<span class="r-text-primary">Earn</span> more returning customers',
-          content: 'Enable more buying shoppers and increase recurring orders with Paise.'
+          content: 'Enable more buying shoppers and increase recurring orders with Spazastop.'
         }
       ]
     }

@@ -182,20 +182,20 @@ export default {
       hiddenItem: null,
       portfolio: [
         {
-          title: 'Paise',
-          slug: 'Paise',
+          title: 'Spazastop',
+          slug: 'Spazastop',
           content: 'B2B platform connecting retailers and sellers for better service discovery.',
           problem: 'Retailers didn’t have a good mechanism to contact sellers, and when they did get proposals, the sellers often didn’t know what information the retailers needed to make a decision on their service.',
           solution: 'Empowering sellers and retailers to be productive and successful. Sellers can create free service profiles that detail all the key information shoppers need to know when considering your service.'
         },
         {
-          title: 'Paise',
-          slug: 'Paise',
+          title: 'Spazastop',
+          slug: 'Spazastop',
           content: 'A fractional investment platform to make property accessible to everyone.',
           problem: 'Traditionally inventing in real estate hasn’t been available to most ' +
             'low income investors without either meeting high net worth requirements or going through a complex and inefficient process, ' +
             'riddled with high fees and outdated middlemen.',
-          solution: 'Paise is designed to utilise technology to make high-quality selling tools affordable to everyone. We combine state-of-the-art technology with in-house expertise to reduce fees and maximize your long-term business connectons.\n'
+          solution: 'Spazastop is designed to utilise technology to make high-quality selling tools affordable to everyone. We combine state-of-the-art technology with in-house expertise to reduce fees and maximize your long-term business connectons.\n'
         },
         {
           title: 'Finkipa',

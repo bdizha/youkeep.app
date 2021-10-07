@@ -40,9 +40,64 @@ class DatabaseSeeder extends Seeder
             ->where('is_active', true)
             ->get();
 
-       $this->setLookupCategory($storeCategory, $products);
+        $this->setLookupCategory($storeCategory, $products);
 
-       $this->setLookupProducts($products, $storeCategory);
+        $this->setLookupProducts($products, $storeCategory);
+    }
+
+    /**
+     * @param $storeCategory
+     * @param $products
+     * @return void
+     */
+    protected function setLookupCategory($storeCategory, $products): void
+    {
+        $category = $storeCategory->category;
+
+        $attributes = [
+            'route' => $storeCategory->route
+        ];
+
+        $values = [
+            'title' => $category->name,
+            'type' => Lookup::TYPE_CATEGORY,
+            'item_id' => $storeCategory->id,
+            'order' => 1,
+            'store_id' => $storeCategory->store_id,
+            'photo' => $category->photo,
+            'count' => $products->count(),
+        ];
+
+        echo ">>>>>Inserting lookup category :" . $category->name . "\n";
+
+        Lookup::updateOrCreate($attributes, $values);
+    }
+
+    /**
+     * @param $products
+     * @param $storeCategory
+     */
+    protected function setLookupProducts($products, $storeCategory): void
+    {
+        foreach ($products as $product) {
+            $attributes = [
+                'route' => $product->route
+            ];
+
+            $values = [
+                'title' => $product->name,
+                'type' => Lookup::TYPE_PRODUCT,
+                'item_id' => $product->id,
+                'order' => 1,
+                'store_id' => $storeCategory->store_id,
+                'photo' => $product->photo,
+                'count' => 1,
+            ];
+
+            echo ">>>>>Inserting lookup service :" . $product->name . "\n";
+
+            Lookup::updateOrCreate($attributes, $values);
+        }
     }
 
     /**
@@ -50,7 +105,7 @@ class DatabaseSeeder extends Seeder
      * @param $url
      * @return mixed
      */
-    protected function setCategory($categoryName, $url)
+    protected function setCategory($categoryName, $url, $categoryType = Category::TYPE_PRODUCT, $hasStore = true)
     {
         $categoryDescription = 'Not set';
 
@@ -65,7 +120,7 @@ class DatabaseSeeder extends Seeder
             'name' => $categoryName,
             'order' => 1,
             'description' => $categoryDescription,
-            'type' => Category::TYPE_PRODUCT,
+            'type' => $categoryType,
             'randomized_at' => date('Y-m-d'),
         ];
 
@@ -76,28 +131,28 @@ class DatabaseSeeder extends Seeder
 
         echo "{$arrows} Category updated: {$category->slug}\n";
 
-        $attributes = [
-            'store_id' => $this->storeId,
-            'category_id' => $category->id,
-            'level' => $this->level,
-            'parent_id' => $this->parentStoreCategory->id ?? null
-        ];
+        if (!empty($hasStore)) {
+            $attributes = [
+                'store_id' => $this->storeId,
+                'category_id' => $category->id,
+                'level' => $this->level,
+                'parent_id' => $this->parentStoreCategory->id ?? null
+            ];
 
-        /* Add in the store category link */
-        $values = [
-            'store_id' => $this->storeId,
-            'category_id' => $category->id,
-            'url' => $url,
-            'level' => $this->level,
-            'parent_id' => $this->parentStoreCategory->id ?? null,
-            'has_products' => $this->storeId == 24 ? 1 : 0,
-            'has_categories' => $this->storeId == 24 ? 1 : 0,
-            'randomized_at' => date('Y-m-d'),
-        ];
-
-        echo ">>>>>Updating lookup category :" . $category->name . "\n";
-
-        $this->storeCategory = StoreCategory::updateOrCreate($attributes, $values);
+            /* Add in the store category link */
+            $values = [
+                'store_id' => $this->storeId,
+                'category_id' => $category->id,
+                'url' => $url,
+                'level' => $this->level,
+                'parent_id' => $this->parentStoreCategory->id ?? null,
+                'has_products' => $this->storeId == 24 ? 1 : 0,
+                'has_categories' => $this->storeId == 24 ? 1 : 0,
+                'randomized_at' => date('Y-m-d'),
+            ];
+            echo ">>>>>Updating lookup category :" . $category->name . "\n";
+            $this->storeCategory = StoreCategory::updateOrCreate($attributes, $values);
+        }
         return $category;
     }
 
@@ -122,17 +177,16 @@ class DatabaseSeeder extends Seeder
     }
 
     /**
-     * @param $photo
-     * @return string
+     * @param array $values
      */
-    protected function getFileExt($photo)
+    protected function setProductStore(array $values): void
     {
-        $ext = 'jpg';
-        if (strpos($photo, 'png') !== FALSE) {
-            $ext = 'png';
-        }
-        $photoName = sha1($photo) . ".{$ext}";
-        return $photoName;
+        $values = [
+            'store_id' => $this->storeId,
+            'product_id' => $this->product->id
+        ];
+
+        \App\StoreProduct::updateOrCreate($values, $values);
     }
 
     protected function setProductCategory($storeCategory)
@@ -181,7 +235,6 @@ class DatabaseSeeder extends Seeder
         $this->filterBrand = [];
     }
 
-
     /**
      * @param $filterItem
      * @param $productType
@@ -210,7 +263,6 @@ class DatabaseSeeder extends Seeder
 
         ProductVariant::updateOrCreate($attributes, $values);
     }
-
 
     protected function setPrice($price)
     {
@@ -308,31 +360,18 @@ class DatabaseSeeder extends Seeder
         return $values;
     }
 
-    /**
-     * @param array $values
-     */
-    protected function setProductStore(array $values): void
-    {
-        $values = [
-            'store_id' => $this->storeId,
-            'product_id' => $this->product->id
-        ];
-
-        \App\StoreProduct::updateOrCreate($values, $values);
-    }
-
     protected function setCategoryBanner($storeCategory, $photo)
     {
         $photoName = $this->getFileExt($photo);
 
-        try{
+        try {
             $isActive = false;
             $storagePath = storage_path('app/public/category');
             $filePath = "{$storagePath}/{$photoName}";
 
             if (!file_exists($filePath)) {
 
-                if(strpos($filePath, "http") === false){
+                if (strpos($filePath, "http") === false) {
                     $filePath = "https:" . $filePath;
                 }
 
@@ -349,8 +388,7 @@ class DatabaseSeeder extends Seeder
                 if ($dimensionRatio <= 1 && $dimensionRatio >= 0.60 || ($width > 300 && $height > 300)) {
                     $isActive = true;
                     echo ">>>>>> Product photo is suited : " . $photo . "\n";
-                }
-                else{
+                } else {
                     echo ">>>>>> Product photo is not suited : " . $photo . "\n";
                 }
             }
@@ -369,65 +407,23 @@ class DatabaseSeeder extends Seeder
             \App\Banner::updateOrCreate($attributes, $values);
 
             echo ">>>>> Inserting category banner: " . $storeCategory->category->name . " ::: {$photo}\n";
-        }
-        catch (Exception $e){
+        } catch (Exception $e) {
             echo ">>>>> >>>>>> Failed category banner: " . $e->getMessage() . " ::: {$photo}\n";
         }
     }
 
     /**
-     * @param $storeCategory
-     * @param $products
-     * @return void
+     * @param $photo
+     * @return string
      */
-    protected function setLookupCategory($storeCategory, $products): void
+    protected function getFileExt($photo)
     {
-        $category = $storeCategory->category;
-
-        $attributes = [
-            'route' => $storeCategory->route
-        ];
-
-        $values = [
-            'title' => $category->name,
-            'type' => Lookup::TYPE_CATEGORY,
-            'item_id' => $storeCategory->id,
-            'order' => 1,
-            'store_id' => $storeCategory->store_id,
-            'photo' => $category->photo,
-            'count' => $products->count(),
-        ];
-
-        echo ">>>>>Inserting lookup category :" . $category->name . "\n";
-
-        Lookup::updateOrCreate($attributes, $values);
-    }
-
-    /**
-     * @param $products
-     * @param $storeCategory
-     */
-    protected function setLookupProducts($products, $storeCategory): void
-    {
-        foreach ($products as $product) {
-            $attributes = [
-                'route' => $product->route
-            ];
-
-            $values = [
-                'title' => $product->name,
-                'type' => Lookup::TYPE_PRODUCT,
-                'item_id' => $product->id,
-                'order' => 1,
-                'store_id' => $storeCategory->store_id,
-                'photo' => $product->photo,
-                'count' => 1,
-            ];
-
-            echo ">>>>>Inserting lookup service :" . $product->name . "\n";
-
-            Lookup::updateOrCreate($attributes, $values);
+        $ext = 'jpg';
+        if (strpos($photo, 'png') !== FALSE) {
+            $ext = 'png';
         }
+        $photoName = sha1($photo) . ".{$ext}";
+        return $photoName;
     }
 
     /**

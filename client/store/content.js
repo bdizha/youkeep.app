@@ -5,11 +5,11 @@ export const state = () => ({
   products: [
     {
       theme: 'primary',
-      title: '<span class="r-text-primary">Shop</span> simple with Paise',
-      slug: 'shop-with-paise',
+      title: '<span class="r-text-secondary">Treats</span> with Spazastop',
+      slug: 'treat-with-spazastop',
       heading: 'On-demand, instant and <span class="r-text-primary">secure</span> checkout.',
-      summary: 'Take your shopping to the next level only when you shop with paise at the participating stores.',
-      content: 'You\'ll enjoy the Paise checkout experience. Track your purchases, upcoming bills and cash earned in one place.',
+      summary: 'Take your taste to the next level only when you shop with spazastop at the participating stores.',
+      content: 'You\'ll enjoy the Spazastop checkout experience. Track your purchases, upcoming bills and cash earned in one place.',
       image: 'service-24.svg',
       images: [
         '/assets/asset-13.svg',
@@ -18,16 +18,16 @@ export const state = () => ({
       steps: [
         {
           title: 'Desire it',
-          heading: 'Checkout simple with Paise.',
+          heading: 'Checkout simple with Spazastop.',
           summary: 'Desire it and get exactly what you want.',
           content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
           image: '/assets/asset-02-white.svg'
         },
         {
           title: 'Shop it',
-          heading: 'Choose to pay with Paise',
+          heading: 'Choose to pay with Spazastop',
           summary: 'Your new source of inspiration to rely on. ',
-          content: 'Add what you want to your cart and choose to pay with Paise It\'s that simple and instant.',
+          content: 'Add what you want to your cart and choose to pay with Spazastop It\'s that simple and instant.',
           image: '/assets/asset-17-white.svg'
         },
         {
@@ -41,7 +41,7 @@ export const state = () => ({
       features: [
         {
           title: 'A better way to shop',
-          content: 'Paise remembers and encrypts your details, so you can speed safely through checkout in one tap.',
+          content: 'Spazastop remembers and encrypts your details, so you can speed safely through checkout in one tap.',
           image: 'service-06.svg'
         },
         {
@@ -51,7 +51,7 @@ export const state = () => ({
         },
         {
           title: 'Stay in the moment',
-          content: 'Inform Paise with your favorite stores for a customized feed with deals, trending items, and recommendations you’ll love. Your personal details are secure.',
+          content: 'Inform Spazastop with your favorite stores for a customized feed with deals, trending items, and recommendations you’ll love. Your personal details are secure.',
           image: 'service-01.svg'
         }
       ],
@@ -59,11 +59,11 @@ export const state = () => ({
     },
     {
       theme: 'secondary',
-      title: '<span class="r-text-secondary">Pay</span> later with Paise',
-      slug: 'pay-with-paise',
+      title: '<span class="r-text-secondary">Cook</span> with Spazastop',
+      slug: 'pay-with-spazastop',
       heading: 'Get <span class="r-text-secondary">more</span> value with split payments',
-      summary: 'You\'ll never pay extra with Paise when you pay on time.',
-      content: 'Paise lets you split your purchases into 3 zero interest payments or pay after your purchase within 7 days.',
+      summary: 'You\'ll never pay extra with Spazastop when you pay on time.',
+      content: 'Spazastop lets you split your purchases into 3 zero interest payments or pay after your purchase within 7 days.',
       image: 'service-04.svg',
       images: [
         '/assets/asset-27-01.png',
@@ -74,16 +74,16 @@ export const state = () => ({
       steps: [
         {
           title: 'Find it',
-          heading: '<span class="r-text-secondary">Shop</span> simple with Paise.',
+          heading: '<span class="r-text-secondary">Shop</span> simple with Spazastop.',
           summary: 'Desire it and get exactly what you want.',
           content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
           image: '/assets/asset-28.svg'
         },
         {
           title: 'Order it',
-          heading: '<span class="r-text-secondary">Choose</span> to pay with Paise',
+          heading: '<span class="r-text-secondary">Choose</span> to pay with Spazastop',
           summary: 'Desire it and get exactly what you want.',
-          content: 'Add what you want to your cart and choose to pay with Paise It\'s that simple and instant.',
+          content: 'Add what you want to your cart and choose to pay with Spazastop It\'s that simple and instant.',
           image: '/assets/asset-17-white.svg'
         },
         {
@@ -107,12 +107,12 @@ export const state = () => ({
         },
         {
           title: 'Pick a card, any card.',
-          content: 'Link any debit or credit card and get instant approval to pay with Paise.',
+          content: 'Link any debit or credit card and get instant approval to pay with Spazastop.',
           icon: 'gift'
         },
         {
-          title: 'Transact simple with Paise',
-          content: 'Your financial information is protected when you open an account with Paise.',
+          title: 'Transact simple with Spazastop',
+          content: 'Your financial information is protected when you open an account with Spazastop.',
           icon: 'gift'
         }
       ],
@@ -120,11 +120,11 @@ export const state = () => ({
     },
     {
       theme: 'yellow',
-      title: '<span class="r-text-yellow">Earn</span> cash with Paise',
-      slug: 'earn-with-paise',
+      title: '<span class="r-text-yellow">Deliver</span> with Spazastop',
+      slug: 'earn-with-spazastop',
       heading: '<span class="r-text-yellow">Shop</span> securely and earn instant credit.',
       summary: 'Shop at brands you love and earn cash you can withdraw. That\'s real money, not another loyalty program you\'ll never use.',
-      content: 'Start shopping with Paise at partnering cashback stores, we\'ll automatically add cashback into your account. You can earn cash whether you pay with Paise or not.',
+      content: 'Start shopping with Spazastop at partnering cashback stores, we\'ll automatically add cashback into your account. You can earn cash whether you pay with Spazastop or not.',
       image: 'service-08.svg',
       images: [
         '/assets/asset-30.png'
@@ -132,16 +132,16 @@ export const state = () => ({
       steps: [
         {
           title: 'Get it',
-          heading: '<span class="r-text-secondary">Join</span> Paise up to earn cashback.',
+          heading: '<span class="r-text-secondary">Join</span> Spazastop up to earn cashback.',
           summary: 'Get started and discover great deals, and get rewarded instantly. ',
-          content: 'Create a Paise account in few seconds, it\'s completely simple, free and secure at your own convenience.',
+          content: 'Create a Spazastop account in few seconds, it\'s completely simple, free and secure at your own convenience.',
           image: '/assets/asset-28.svg'
         },
         {
           title: 'Shop it',
-          heading: '<span class="r-text-secondary">Shop</span> at partner stores with Paise.',
+          heading: '<span class="r-text-secondary">Shop</span> at partner stores with Spazastop.',
           summary: 'Choose the rewards you love and unlock rewards from partner stores.',
-          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Paise or not. You always earn with Paise.',
+          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Spazastop or not. You always earn with Spazastop.',
           image: '/assets/asset-22.svg'
         },
         {
@@ -155,19 +155,75 @@ export const state = () => ({
       features: [
         {
           title: 'Sign up to earn cashback.',
-          content: 'Create a Paise account in few seconds, it\'s completely simple, free and secure at your convenience.',
+          content: 'Create a Spazastop account in few seconds, it\'s completely simple, free and secure at your convenience.',
           image: 'service-12.svg',
           icon: 'gift'
         },
         {
-          title: 'Shop at brands on Paise.',
-          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Paise or not.',
+          title: 'Shop at brands on Spazastop.',
+          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Spazastop or not.',
           image: 'service-18.svg',
           icon: 'gift'
         },
         {
           title: 'Get cash or pay your next purchase.',
-          content: 'Withdraw real money you\'ve earned or choose to settle an upcoming bill on Paise.',
+          content: 'Withdraw real money you\'ve earned or choose to settle an upcoming bill on Spazastop.',
+          image: 'service-07.svg',
+          icon: 'gift'
+        }
+      ],
+      row: 1
+    },
+    {
+      theme: 'yellow',
+      title: '<span class="r-text-yellow">Sell</span> with Spazastop',
+      slug: 'earn-with-spazastop',
+      heading: '<span class="r-text-yellow">Sell</span> more and grow your business.',
+      summary: 'Shop at brands you love and earn cash you can withdraw. That\'s real money, not another loyalty program you\'ll never use.',
+      content: 'Start shopping with Spazastop at partnering cashback stores, we\'ll automatically add cashback into your account. You can earn cash whether you pay with Spazastop or not.',
+      image: 'service-08.svg',
+      images: [
+        '/assets/asset-30.png'
+      ],
+      steps: [
+        {
+          title: 'Get it',
+          heading: '<span class="r-text-secondary">Join</span> Spazastop up to earn cashback.',
+          summary: 'Get started and discover great deals, and get rewarded instantly. ',
+          content: 'Create a Spazastop account in few seconds, it\'s completely simple, free and secure at your own convenience.',
+          image: '/assets/asset-28.svg'
+        },
+        {
+          title: 'Shop it',
+          heading: '<span class="r-text-secondary">Shop</span> at partner stores with Spazastop.',
+          summary: 'Choose the rewards you love and unlock rewards from partner stores.',
+          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Spazastop or not. You always earn with Spazastop.',
+          image: '/assets/asset-22.svg'
+        },
+        {
+          title: 'Earn it',
+          heading: '<span class="r-text-secondary">Unlock</span> value or pay your next purchase.',
+          summary: 'Enjoy exclusive deals and the freedom to shop anywhere and you prefer.',
+          content: 'Shop securely at your favorite stores. No matter what you need, we\'ve got a flexible option to fit your budget. ',
+          image: '/assets/asset-23.svg'
+        }
+      ],
+      features: [
+        {
+          title: 'Sign up to earn cashback.',
+          content: 'Create a Spazastop account in few seconds, it\'s completely simple, free and secure at your convenience.',
+          image: 'service-12.svg',
+          icon: 'gift'
+        },
+        {
+          title: 'Shop at brands on Spazastop.',
+          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Spazastop or not.',
+          image: 'service-18.svg',
+          icon: 'gift'
+        },
+        {
+          title: 'Get cash or pay your next purchase.',
+          content: 'Withdraw real money you\'ve earned or choose to settle an upcoming bill on Spazastop.',
           image: 'service-07.svg',
           icon: 'gift'
         }
@@ -181,7 +237,7 @@ export const state = () => ({
       slug: 'x-checkout',
       heading: ' An <span class="r-text-primary">automated</span> farming experience.',
       summary: 'The intuitive and flexible farming experience created for sellers and retailers. ',
-      content: 'Retailer can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo. We made implementing Paise easy and smooth with different options for you to choose from. We understand the complexities of your business and make sure our features answer your needs as a B2B merchant or marketplace. Marketplaces get their fee payout immediately as well.',
+      content: 'Retailer can generate an invoice from the checkout, and pay it with a cheque, bank transfer or credit card. You can customize the invoices your customers receive with your own brand colors and logo. We made implementing Spazastop easy and smooth with different options for you to choose from. We understand the complexities of your business and make sure our features answer your needs as a B2B merchant or marketplace. Marketplaces get their fee payout immediately as well.',
       image: 'service-06.svg',
       images: [
         '/assets/asset-01.svg',
@@ -194,7 +250,7 @@ export const state = () => ({
       slug: 'x-payment',
       heading: '<span class="r-text-primary">Adaptive</span> and instant seller payouts.',
       summary: 'Competitive financing options designed for fast-growing ecommerce companies.',
-      content: 'Easily manage and pay out third party vendors globally in local currency. Charge marketplace commission and apply fees to vendors without touching the funds.  We would charge the commission on behalf of the marketplace and transfer it to their Paise account. Paise will automatically trigger payment to the vendor after the buyer has paid. ',
+      content: 'Easily manage and pay out third party vendors globally in local currency. Charge marketplace commission and apply fees to vendors without touching the funds.  We would charge the commission on behalf of the marketplace and transfer it to their Spazastop account. Spazastop will automatically trigger payment to the vendor after the buyer has paid. ',
       image: 'service-04.svg',
       row: 1
     },
@@ -203,7 +259,7 @@ export const state = () => ({
       slug: 'x-order',
       heading: '<span class="r-text-primary">Faster</span> deliveries with our nationwide fulfillment network',
       summary: 'Manage orders, warehouse, inventory, and deliver to your shoppers fast and securely.',
-      content: 'Paise\'s fulfillment services equip brands of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-shopper and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business. ',
+      content: 'Spazastop\'s fulfillment services equip brands of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-shopper and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business. ',
       image: 'service-14.svg',
       row: 1
     },
@@ -275,11 +331,11 @@ export const state = () => ({
   industries: [],
   reasons: [
     {
-      label: 'I would like to join Paise',
+      label: 'I would like to join Spazastop',
       key: 1
     },
     {
-      label: 'I want to partner with Paise',
+      label: 'I want to partner with Spazastop',
       key: 2
     },
     {

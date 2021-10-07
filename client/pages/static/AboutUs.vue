@@ -52,7 +52,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        We strongly emphasize simplicity and personal security; our team of user interface and payment security experts has worked tirelessly to make Paise as easy and safe as possible
+                        We strongly emphasize simplicity and personal security; our team of user interface and payment security experts has worked tirelessly to make Spazastop as easy and safe as possible
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
@@ -114,7 +114,7 @@
                    :xs="{ span: 24 }"
             >
               <p class="r-text-normal">
-                Ultimately, Paise makes shopping more rewarding, by giving shoppers the flexibility and freedom to buy what they want, with added benefits.
+                Ultimately, Spazastop makes shopping more rewarding, by giving shoppers the flexibility and freedom to buy what they want, with added benefits.
               </p>
             </a-col>
           </a-row>
@@ -167,7 +167,7 @@
       <r-values></r-values>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-contact-us title="Get the shopping freedom and earn with Paise."></r-contact-us>
+      <r-contact-us title="Get the shopping freedom and earn with Spazastop."></r-contact-us>
     </a-col>
   </a-row>
 </template>
@@ -280,7 +280,7 @@ export default {
         {
           icon: 'gift',
           title: 'Endless rewards',
-          content: 'Earn with Paise on checkout, our free rewards service that rewards all your shopping in realtime. Join in our app and unlock your first reward after just one purchase at our partner stores.'
+          content: 'Earn with Spazastop on checkout, our free rewards service that rewards all your shopping in realtime. Join in our app and unlock your first reward after just one purchase at our partner stores.'
         }
       ],
       hasData: false

@@ -48,7 +48,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            Paise empowers the whole startup experience for businesses in Africa. We specialize in
+                            Spazastop empowers the whole startup experience for businesses in Africa. We specialize in
                             B2B payments, coupled with marketplace services focused on delivering a customer
                             experience of unparalleled quality.
                             No great solution is developed in a vacuum. Experience and domain knowledge is crucial.
@@ -135,14 +135,14 @@ export default {
           title: 'Innovative',
           heading: 'Transforming the way business is <span class="r-text-primary">experienced</span> online',
           content: ' If you take innovation passionately, then you\'re in the right place.\n' +
-            '                  Paise is a shopper centric platform that transforms\n' +
+            '                  Spazastop is a shopper centric platform that transforms\n' +
             '                  the way shoppers experience their business.'
         },
         {
           title: 'Dynamic',
           heading: 'Together, we can <span class="r-text-secondary">change</span> the world for the better',
           content: 'It\'s all about giving back our shoppers the control of their business.\n' +
-            '                  At Paise, we are building a business experience that helps millions of people be\n' +
+            '                  At Spazastop, we are building a business experience that helps millions of people be\n' +
             '                  in control of their business experience.'
         },
         {
@@ -155,7 +155,7 @@ export default {
         },
         {
           title: 'Collaborative',
-          heading: 'Paise as a specialist house with a <span class="r-text-orange">diverse</span>\n' +
+          heading: 'Spazastop as a specialist house with a <span class="r-text-orange">diverse</span>\n' +
             '                  team',
           content: 'Great work mates\n' +
             '                  are at the\n' +

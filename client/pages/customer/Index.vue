@@ -25,7 +25,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h1 class="r-heading r-text-dark">
-                        <span class="r-text-primary">Shop</span> simple with Paise
+                        <span class="r-text-primary">Shop</span> simple with Spazastop
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -41,7 +41,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        With Paise, you no longer need to pull out your credit card or enter long forms to complete
+                        With Spazastop, you no longer need to pull out your credit card or enter long forms to complete
                         online purchases.
                       </p>
                     </a-col>
@@ -99,7 +99,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-contact-us :has-more="true" title="Don't have a Paise account?" heading="Take shopping to the next level with Paise."></r-contact-us>
+      <r-contact-us :has-more="true" title="Don't have a Spazastop account?" heading="Take shopping to the next level with Spazastop."></r-contact-us>
     </a-col>
   </a-row>
 </template>

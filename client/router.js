@@ -30,6 +30,7 @@ const routes = [
   { path: '/shopper', name: 'customer', meta: { isDark: false, isRaised: false}, component: page('customer/Index.vue') },
   { path: '/shopper/membership', name: 'customer-membership', meta: { isDark: false, isRaised: false}, component: page('contact-us.vue') },
   { path: '/seller', name: 'seller', meta: { isDark: false, isRaised: false}, component: page('seller/Index.vue') },
+  { path: '/chef', name: 'seller', meta: { isDark: false, isRaised: false}, component: page('chef/Index.vue') },
   { path: '/seller/blog', name: 'resource', meta: { isDark: false, isRaised: false}, component: page('resource/Index.vue') },
   { path: '/seller/resource/:slug', name: 'resource-show', meta: { isDark: false, isRaised: false}, component: page('resource/Article.vue') },
   { path: '/sellers/:category', name: 'sellers', meta: { isDark: false, isRaised: false}, component: page('store/Index.vue') },

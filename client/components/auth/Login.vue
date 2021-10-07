@@ -84,7 +84,7 @@ export default {
       errors: [],
       process: 'isSuccess',
       redirectTo: '',
-      message: 'Thank you for successfully confirming your credentials! Please wait a little more, and pay less with Paise'
+      message: 'Thank you for successfully confirming your credentials! Please wait a little more, and pay less with Spazastop'
     }
   },
   computed: mapGetters({
@@ -135,7 +135,7 @@ export default {
       }).then((response) => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your business with Paise.')
+            $this.$message.success('Welcome back, ' + $this.user.name + '. Enjoy your business with Spazastop.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

@@ -3,11 +3,29 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+      <a-card class="r-bg-primary-pattern r-pull-h-24 r-border-none">
         <div class="r-mv-48">
           <a-row align="middle" justify="center" type="flex">
-            <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-              <a-row :gutter="[96,96]" justify="start" align="middle" type="flex">
+            <a-col class="r-text-left" :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
+              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                <a-col v-for="(image, index) in images"
+                       v-if="index < 3"
+                       :key="index"
+                       :lg="{ span: index === 0 ? 24 : 12 }" :md="{ span: index === 0 ? 24 : 12 }" :sm="{ span: 24 }"
+                       :xs="{ span: 24}"
+                >
+                 <a-card class="r-bg-secondary-light r-radius-circle">
+                   <r-avatar :data-src="image" :size="300"
+                             class="r-avatar-block"
+                   ></r-avatar>
+                 </a-card>
+                  </a-col>
+              </a-row>
+            </a-col>
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+              <a-row justify="center" align="middle" type="flex">
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -15,71 +33,55 @@
                            :xs="{ span: 24 }"
                     >
                       <h3 class="r-heading-light r-text-uppercase">
-                        It's shopping time!
+                        Good time, great meals!
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h1 class="r-heading r-text-dark">
-                        <span v-show="isActive(1)" class="r-text-primary r-text-animate">Adaptive</span>
-                        <span v-show="isActive(2)" class="r-text-secondary r-text-animate">Instant</span>
-                        <span v-show="isActive(3)" class="r-text-yellow r-text-animate">Simple</span>
-                        <span v-show="isActive(4)" class="r-text-orange r-text-animate">Secure</span>
-                        checkout experience.
+                      <h1 class="r-heading">
+                        <span v-show="isActive(1)" class="r-text-secondary r-text-animate">Instant</span>
+                        <span v-show="isActive(2)" class="r-text-secondary r-text-animate">Authentic</span>
+                        <span v-show="isActive(3)" class="r-text-secondary r-text-animate">Homemade</span>
+                        <span v-show="isActive(4)" class="r-text-secondary r-text-animate">Flavoured</span>
+                        dishes delivered to your door.
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <p class="r-text-medium r-text-dark">
-                        Checkout anywhere online in a few seconds.
+                      <p class="r-text-medium">
+                        Explore who's cooking in
+                        your neighborhood.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <p class="r-text-normal">
-                        With Paise, you no longer need to pull out your credit card or enter long forms to complete
-                        online purchases.
-                      </p>
-                    </a-col>
-                    <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
-                           :sm="{ span: 12 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <a-button class="r-btn-primary"
-                                @click="onModal"
-                                block
-                                size="large"
-                                type="blue"
-                      >
-                        Shop with Paise
-                      </a-button>
-                    </a-col>
-                    <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
-                           :sm="{ span: 12 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <nuxt-link to="/shopper">
-                        <a-button class="r-btn-bordered-secondary"
-                                  block
-                                  size="large"
-                                  type="secondary"
-                        >
-                          Learn more <a-icon type="right"></a-icon>
-                        </a-button>
-                      </nuxt-link>
+                     <r-delivery-form></r-delivery-form>
                     </a-col>
                   </a-row>
                 </a-col>
-                <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+              </a-row>
+            </a-col>
+            <a-col class="r-text-left" :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
+              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+                <a-col v-for="(image, index) in images"
+                       v-if="index > 2"
+                       :key="index"
+                       :lg="{ span: index === 5 ? 24 : 12 }" :md="{ span: index === 5 ? 24 : 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24}"
                 >
-                  <r-slider :images="images"></r-slider>
+                  <a-card class="r-bg-secondary-light">
+                    <r-avatar :data-src="image" :size="300"
+                              class="r-avatar-block"
+                    ></r-avatar>
+                  </a-card>
                 </a-col>
               </a-row>
             </a-col>
@@ -87,20 +89,15 @@
         </div>
       </a-card>
     </a-col>
-    <a-col v-if="false" :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-metrics></r-metrics>
-    </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-tabs active-key="shopper" theme="white"></r-tabs>
+      <r-customer-steps :size="16"></r-customer-steps>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-           class="r-text-left"
-    >
-      <r-seller-services></r-seller-services>
+           :xs="{ span: 24 }">
+      <r-customer-benefits></r-customer-benefits>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-testimonials></r-testimonials>
@@ -110,6 +107,12 @@
            :xs="{ span: 24 }"
     >
       <r-customer-welcome></r-customer-welcome>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <r-seller-featured></r-seller-featured>
     </a-col>
     <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row align="middle" justify="center" type="flex">
@@ -405,7 +408,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium">
-                        Signing up with Paise is simple and only takes a few minutes. Discover new products. Start
+                        Signing up with Spazastop is simple and only takes a few minutes. Discover new products. Start
                         connecting.
                       </p>
                     </a-col>
@@ -429,7 +432,7 @@
                           </a-col>
                           <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <p class="r-text-medium">
-                              Choose to be a Paise Seller today and start achieving your goals.
+                              Choose to be a Spazastop Seller today and start achieving your goals.
                             </p>
                           </a-col>
                         </a-row>
@@ -482,7 +485,7 @@
       </a-row>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-contact-us title="Take your shopping to the next level."></r-contact-us>
+      <r-contact-us title="Take your taste to the next level."></r-contact-us>
     </a-col>
   </a-row>
 </template>
@@ -499,7 +502,12 @@ export default {
   data () {
     return {
       images: [
-        '/assets/asset-home.svg'
+        '/products/product-01.svg',
+        '/products/product-02.svg',
+        '/products/product-03.svg',
+        '/products/product-04.svg',
+        '/products/product-05.svg',
+        '/products/product-11.svg'
       ],
       step: 1,
       modal: {

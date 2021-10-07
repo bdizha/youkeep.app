@@ -17,7 +17,7 @@
                            style="text-align: left;"
                     >
                       <h4 class="r-heading-light r-text-uppercase">
-                        How does Paise work?
+                        How does Spazastop work?
                       </h4>
                       <h1 class="r-heading r-text-secondary">
                         <span class="r-text-secondary">Shop More,</span><br>
@@ -89,7 +89,7 @@
 </template>
 <script>
 export default {
-  name: 'r-paise',
+  name: 'r-spazastop',
   props: {},
   data () {
     return {

@@ -9,7 +9,7 @@ export default {
   name: 'r-seller-steps',
   props: {
     size: { type: Number, required: false, default: 24 },
-    title: { type: String, required: false, default: '<span class="r-text-secondary">Sell</span> more with Paise' },
+    title: { type: String, required: false, default: '<span class="r-text-secondary">Sell</span> more with Spazastop' },
     hasMore: { type: Boolean, required: false, default: false }
   },
   data () {
@@ -29,8 +29,8 @@ export default {
           title: 'Step 02',
           heading: '<span class="r-text-secondary">Boost</span> visibility with shoppers',
           image: '/assets/asset-08.svg',
-          summary: 'Boost Conversion as shoppers use Paise to discover new products and checkout in seconds. ',
-          content: 'Paise enables instant mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
+          summary: 'Boost Conversion as shoppers use Spazastop to discover new products and checkout in seconds. ',
+          content: 'Spazastop enables instant mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
         },
         {
           title: 'Step 03',

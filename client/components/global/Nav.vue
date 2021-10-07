@@ -8,7 +8,7 @@
         <a-sub-menu>
           <div slot="title" class="r-menu-text">
             <nuxt-link to="/shop">
-              Shop with Paise
+              Order now
             </nuxt-link>
           </div>
         </a-sub-menu>
@@ -343,24 +343,24 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'RNav',
+  name: 'r-nav',
   data () {
     return {
       beneficiaries: [
         {
-          title: 'Shoppers',
-          link: '/shopper',
-          summary: 'Secure speedy checkout service available for shoppers'
+          title: 'Customers',
+          link: '/customer',
+          summary: 'Enjoy on-demand food for your cravings by favourite cooks.'
         },
         {
           title: 'Sellers',
           link: '/seller',
-          summary: 'Instant payment solution to boost conversion rates'
+          summary: 'Sell homemade dishes and feed thousands of people near you.'
         },
         {
-          title: 'Partners',
-          link: '/partners',
-          summary: 'Discover and connect with new and innovative products.'
+          title: 'Chefs',
+          link: '/chef',
+          summary: 'Discover and connect with local customers with your taste.'
         }
       ]
     }

@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 
 class CategorySeeder extends DatabaseSeeder
 {
-    protected $storeId = 24; // Paise store
+    protected $storeId = 24; // Spazastop store
     protected $storeCategories = [4784, 4788, 4789];
     protected $mappedNames = [
         'furniture' => 'household-items',
@@ -131,51 +131,23 @@ class CategorySeeder extends DatabaseSeeder
         $link = url("/api/home/categories");
 
         $categoryNode = Goutte::request('GET', $link);
-        $categoryNodes = $categoryNode->filter('.dropdown');
+        $categoryNodes = $categoryNode->filter('.sc-ksXhwv');
 
         $categoryNodes->each(function ($node) {
             echo __LINE__ . " <> \n";
 
-            if($node->filter('.dropdown-toggle')->count()){
-                $categoryName = $node->filter('.dropdown-toggle')->text();
+            if($node->filter('.jyZRYv')->count()){
+                $categoryName = $node->filter('.jyZRYv')->text();
                 echo __LINE__ . " <> \n";
+
+                dd($categoryName);
 
                 $this->parentStoreCategory = null;
                 $this->level = 1;
 
                 $categoryName = Str::slug($categoryName, " ");
                 $categoryName = ucwords(strtolower($categoryName));
-                $this->setCategory($categoryName, null);
-
-                $parentStoreCategory = $this->storeCategory;
-
-                // 2nd level categories
-                $secondaryCategoryNodes = $node->filter('.displaytablecell');
-                $secondaryCategoryNodes->each(function ($node) use($categoryName, $parentStoreCategory) {
-
-                    if($node->filter('.dropdownsubmenutitle')->count() > 0){
-                        $this->level = 2;
-
-                        $this->parentStoreCategory = $parentStoreCategory;
-                        $categoryName = $node->filter('.dropdownsubmenutitle')->text();
-                        $categoryName = Str::slug($categoryName, " ");
-                        $categoryName = ucwords(strtolower($categoryName));
-
-                        $this->setCategory($categoryName, null);
-
-                        $this->parentStoreCategory = $this->storeCategory;
-
-                        // 3rd level categories
-                        $tertiaryCategoryNodes = $node->filter('a.dropdown-toggle');
-                        $tertiaryCategoryNodes->each(function ($node) {
-                            $this->level = 3;
-                            $categoryName = $node->text();
-                            $categoryName = Str::slug($categoryName, " ");
-                            $categoryName = ucwords(strtolower($categoryName));
-                            $this->setCategory($categoryName, null);
-                        });
-                    }
-                });
+                $this->setCategory($categoryName, null, Category::TYPE_STORE, false);
             }
         });
     }

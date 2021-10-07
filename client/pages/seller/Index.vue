@@ -23,7 +23,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h1 class="r-heading r-text-dark">
-                        <span class="r-text-primary">Sell</span> more with Paise checkout
+                        <span class="r-text-primary">Sell</span> more with Spazastop checkout
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -31,7 +31,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium r-text-dark">
-                        Get the Paise checkout button button today and boost sales, customer relationships and repeat purchases.
+                        Get started today and customers can start ordering from you on Spazastop.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -39,7 +39,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Join the thousands of businesses that use Paise to give their customers on demand, simple and secure payment options.
+                        Join the thousands of businesses that use Spazastop to give their customers on-demand, simple and secure meals.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
@@ -96,7 +96,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-tabs active-key="seller" theme="white"></r-tabs>
+      <r-tabs active-key="merchants" theme="white"></r-tabs>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
@@ -141,7 +141,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h3 class="r-heading">
-                        <span class="r-text-primary">Delight</span> your customers with Paise
+                        <span class="r-text-primary">Delight</span> your customers with Spazastop
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -158,7 +158,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Paise offers growing businesses a single and clear view into checkout activities including but not limited to:
+                        Spazastop offers growing businesses a single and clear view into checkout activities including but not limited to:
                         instant orders, payment options, customer timeline, financing, and reporting.
                       </p>
                     </a-col>
@@ -220,7 +220,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-contact-us :has-more="true" title="Ready to sell with Paise?"
+      <r-contact-us :has-more="true" title="Ready to sell with Spazastop?"
                     heading="Increase your average order value and drive conversions. Getting started is easy."
       ></r-contact-us>
     </a-col>
@@ -255,7 +255,7 @@ export default {
           icon: 'dollar',
           title: 'Earn on demand payments',
           heading: '<span class="r-text-primary">Earn</span> more returning customers',
-          content: 'Enable more buying shoppers and increase recurring orders with Paise.'
+          content: 'Enable more buying shoppers and increase recurring orders with Spazastop.'
         }
       ]
     }

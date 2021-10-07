@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="11.8801mm" height="11.88mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 114.41 114.41"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="11.9062mm" height="12.1059mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 94.65 96.24"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
+    .str0 {stroke:white;stroke-width:1.59;stroke-miterlimit:22.9256}
+    .fil1 {fill:none}
     .fil0 {fill:white}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_1992364740688">
-   <polygon class="fil0" points="53.92,64.56 53.92,114.41 4.5,114.41 "/>
-   <polygon class="fil0" points="-0,60.27 49.1,60.27 -0,109.79 "/>
-   <polygon class="fil0" points="49.55,54.15 -0,54.15 -0,4.17 "/>
-   <polygon class="fil0" points="4.95,0 53.92,0 53.92,49.39 "/>
-   <path class="fil0" d="M99.82 19.4c8.31,9.35 13.67,21.43 14.59,34.75l-49.04 0 34.45 -34.75z"/>
-   <path class="fil0" d="M95.28 14.82l-34.64 34.94 0 -49.63c13.27,0.88 25.32,6.28 34.64,14.69z"/>
+  <g id="_2685601842624">
+   <g>
+    <path class="fil0 str0" d="M20.79 33.56l40.25 30.63 -4.32 1.07c-11.61,2.88 -23.71,-0.23 -32.15,-8.8 -6.04,-6.13 -9.39,-14.29 -9.42,-22.89 -0.09,-21.53 20.47,-36.89 41.17,-31.81l4.3 1.06 -39.83 30.73z"/>
+    <path class="fil0 str0" d="M73.86 62.69l-39.83 -30.73 4.3 -1.06c20.7,-5.08 41.26,10.28 41.17,31.81 -0.03,8.61 -3.38,16.76 -9.42,22.89 -8.44,8.56 -20.53,11.68 -32.15,8.8l-4.32 -1.07 40.25 -30.64z"/>
+   </g>
+   <rect class="fil1" x="-0" y="0.79" width="94.65" height="94.65"/>
   </g>
  </g>
 </svg>

@@ -11,14 +11,14 @@
                     <a-row :gutter="[24,24]" justify="start" type="flex">
                       <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}" class="r-text-left">
                         <h2 class="r-heading">
-                          Join thousands of <span :class="setClass('r-text')">sellers</span> who trust Paise with
+                          Join thousands of <span :class="setClass('r-text')">sellers</span> who trust Spazastop with
                           their
                           marketplaces.
                         </h2>
                       </a-col>
                       <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}" class="r-text-left">
                         <p class="r-text-normal">
-                          See what running a business is like with Paise on your books. Try us for free - we'll do
+                          See what running a business is like with Spazastop on your books. Try us for free - we'll do
                           one
                           month
                           of

@@ -15,7 +15,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h4 class="r-heading-light r-text-uppercase">
-                    The Paise advantage
+                    The Spazastop advantage
                   </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -25,12 +25,12 @@
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-medium">
-                    Paise works with experts in commerce including eCommerce platforms, payment providers, system integrators, marketing agencies, and technology solutions to make success effortless.
+                    Spazastop works with experts in commerce including eCommerce platforms, payment providers, system integrators, marketing agencies, and technology solutions to make success effortless.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-normal">
-                    Paise works with experts in commerce including eCommerce platforms, payment providers, system integrators, marketing agencies, and technology solutions to make success effortless.
+                    Spazastop works with experts in commerce including eCommerce platforms, payment providers, system integrators, marketing agencies, and technology solutions to make success effortless.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"

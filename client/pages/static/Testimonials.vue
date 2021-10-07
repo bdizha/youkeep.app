@@ -40,7 +40,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          Thousands of small sellers trust Paise with their finances
+                          Thousands of small sellers trust Spazastop with their finances
                         </p>
                       </a-col>
                     </a-row>
@@ -80,7 +80,7 @@ export default {
   data () {
     return {
       features: [
-        { content: 'Access Paise via desktop or iPhone - we go where you go' },
+        { content: 'Access Spazastop via desktop or iPhone - we go where you go' },
         { content: 'Quickly answer categorization requests from your team' },
         { content: 'Contact your team with our simple messaging feature' },
         { content: 'Contact your team with our simple messaging feature' }

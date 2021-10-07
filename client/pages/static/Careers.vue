@@ -26,7 +26,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <h4 class="r-heading-light r-text-secondary r-text-uppercase">
-                              Meet Paise
+                              Meet Spazastop
                             </h4>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -34,7 +34,7 @@
                                  :xs="{ span: 24 }"
                           >
                             <h1 class="r-heading">
-                              Partner with Paise for venture catalyst services you can leverage on.
+                              Partner with Spazastop for venture catalyst services you can leverage on.
                             </h1>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -43,7 +43,7 @@
                           >
                             <p class="r-text-normal">
                               Clients in collections with the republic or SARS? Dealing with messy or non-existent
-                              books? Paise can produce years of outstanding businesses quickly, so you can focus
+                              books? Spazastop can produce years of outstanding businesses quickly, so you can focus
                               on getting your clients current and compliant.
                             </p>
                           </a-col>
@@ -111,7 +111,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Paise’s mission is to bring the best marketplace tools directly to the sellers.
+                        Spazastop’s mission is to bring the best marketplace tools directly to the sellers.
                         Finances
                         should always be
                         transparent and easily accessible. Marketplace freedom should be for all of us.
@@ -119,7 +119,7 @@
                       <p class="r-text-normal">
                         Historically, finest services have been known to be complicated, expensive and difficult to
                         access.
-                        Paise is
+                        Spazastop is
                         here to make better venture catalyst services easily accessible to everyone.
                       </p>
                     </a-col>
@@ -142,10 +142,10 @@
                    style="text-align: left;"
             >
               <h1 class="r-heading">
-                <span class="r-text-secondary">Paise careers</span>
+                <span class="r-text-secondary">Spazastop careers</span>
               </h1>
               <p class="r-text-normal">
-                Paise is a shopper centric business platform that exists to transform
+                Spazastop is a shopper centric business platform that exists to transform
                 the way shoppers find and make purchases by offering simple and
                 convenient business and payment methods.
               </p>
@@ -248,23 +248,23 @@
           <a-row :gutter=[24,24] justify="center" type="flex">
             <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }" class="r-p-48">
               <h2 class="r-heading r-text-secondary">
-                Working at Paise
+                Working at Spazastop
               </h2>
               <p class="r-text-normal">
                 Work with people who are tech-savvys, font-fanatics, word-wizards, data enthusiasts and
                 of course, beer experts (yes, we're an online shop with big dreams). We work hard, think
                 big, and play well.
-                And we do it together, because at the Mother Paise, we’re family.
+                And we do it together, because at the Mother Spazastop, we’re family.
               </p>
               <p class="r-text-normal">
                 Nothing great has ever been built in a day, and it definitely wasn’t built in a flash.
-                At Paise, we’re building something great, something unimaginable at this juncture. We
+                At Spazastop, we’re building something great, something unimaginable at this juncture. We
                 provide our service as a token of appreciation to the society that serves us.
               </p>
             </a-col>
             <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }" class="r-p-48">
               <h2 class="r-heading r-text-secondary">
-                Why work with Paise?
+                Why work with Spazastop?
               </h2>
               <a-row align="middle" class="r-mb-48" justify="start" type="flex">
                 <a-col :span="24">

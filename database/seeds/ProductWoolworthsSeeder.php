@@ -96,7 +96,7 @@ class ProductWoolworthsSeeder extends Seeder
 
     public function getProducts($category)
     {
-        $categoryNode = Goutte::request('GET', 'http://Paise.local/import-store-images');
+        $categoryNode = Goutte::request('GET', 'http://Spazastop.local/import-store-images');
         $productNodes = $categoryNode->filter('.service-list__item');
 
         if ($productNodes->count()) {

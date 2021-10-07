@@ -23,7 +23,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h1 class="r-heading r-text-dark">
-                        <span class="r-text-primary">Partner</span> with Paise.
+                        <span class="r-text-primary">Partner</span> with Spazastop.
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -40,7 +40,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Join the thousands of businesses that use Paise to grow their businesses and achieve their
+                        Join the thousands of businesses that use Spazastop to grow their businesses and achieve their
                         goals and objectives.
                       </p>
                     </a-col>

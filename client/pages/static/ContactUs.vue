@@ -81,7 +81,7 @@
                                     Email
                                   </h4>
                                   <p class="r-text-medium">
-                                    <a class="r-text-primary" href="mailto:info@paise.com" target="_blank">info@paise.com</a>
+                                    <a class="r-text-primary" href="mailto:info@spazastop.com" target="_blank">info@spazastop.com</a>
                                   </p>
                                 </a-col>
                               </a-row>

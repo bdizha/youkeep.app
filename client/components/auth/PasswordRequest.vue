@@ -12,7 +12,7 @@
       </a-col>
       <a-col :xs="{ span: 24 }" class="r-text-left">
         <p class="r-text-s">
-          Enter the email address associated with your Paise Account and we will send you
+          Enter the email address associated with your Spazastop Account and we will send you
           instructions to reset your password.
         </p>
       </a-col>
@@ -102,7 +102,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you. Enjoy your business with Paise.')
+            $this.$message.success('Thank you. Enjoy your business with Spazastop.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

@@ -55,8 +55,8 @@ export default {
   props: {
     hasJobs: { type: Boolean, required: false, default: false },
     hasMore: { type: Boolean, required: false, default: false },
-    title: { type: String, required: false, default: 'Get your Paise account today!' },
-    heading: { type: String, required: false, default: 'Are you ready to join Paise?' }
+    title: { type: String, required: false, default: 'Get your Spazastop account today!' },
+    heading: { type: String, required: false, default: 'Are you ready to join Spazastop?' }
   },
   data () {
     return {}

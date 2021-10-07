@@ -1,10 +1,14 @@
 <template>
   <a-tabs class=" r-text-center" v-model="selectedKey" type="card">
-    <a-tab-pane key="shopper" tab="Shoppers"
+    <a-tab-pane key="customer" tab="Customer"
     >
       <r-customer-steps :size="16"></r-customer-steps>
     </a-tab-pane>
-    <a-tab-pane key="seller" tab="Sellers"
+    <a-tab-pane key="chefs" tab="Chefs"
+    >
+      <r-chef-steps :size="16"></r-chef-steps>
+    </a-tab-pane>
+    <a-tab-pane key="merchants" tab="Merchants"
     >
       <r-seller-steps :size="16"></r-seller-steps>
     </a-tab-pane>

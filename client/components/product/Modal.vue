@@ -66,7 +66,7 @@ export default {
   data () {
     return {
       modal: 'product',
-      message: 'Thank you for successfully signing up with Paise. Enjoy your business!'
+      message: 'Thank you for successfully signing up with Spazastop. Enjoy your business!'
     }
   },
   computed: {

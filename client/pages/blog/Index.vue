@@ -29,7 +29,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h2 class="r-heading-light r-text-dark r-text-white">
-                            <span class="r-text-yellow">Paise</span> insights about the B2B marketplace
+                            <span class="r-text-yellow">Spazastop</span> insights about the B2B marketplace
                             infrastructure.
                           </h2>
                         </a-col>
@@ -61,7 +61,7 @@
       <r-blog-articles></r-blog-articles>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-contact-us title="Take your shopping to the next level."></r-contact-us>
+      <r-contact-us title="Take your taste to the next level."></r-contact-us>
     </a-col>
   </a-row>
 </template>

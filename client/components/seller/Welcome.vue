@@ -37,7 +37,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Paise's on-demand checkout is revolutionizing marketplaces and how Shoppers shop online.
+                    Spazastop's on-demand checkout is revolutionizing marketplaces and how Shoppers shop online.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"

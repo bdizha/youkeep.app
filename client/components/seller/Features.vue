@@ -65,7 +65,7 @@ export default {
         {
           heading: 'Fast',
           title: 'Make Delayed Payments',
-          content: 'Online or in-store, Paise means more flexibility at checkout.',
+          content: 'Online or in-store, Spazastop means more flexibility at checkout.',
           icon: 'credit-card'
         },
         {
@@ -83,13 +83,13 @@ export default {
         {
           heading: 'Inclusive',
           title: 'Process all major cards',
-          content: 'Paise is the only Delayed Payments solution that accepts Amex and Discover along with Visa.',
+          content: 'Spazastop is the only Delayed Payments solution that accepts Amex and Discover along with Visa.',
           icon: 'business-cart'
         },
         {
           heading: 'Robust',
           title: 'Get involved in our community',
-          content: 'Introduce your brand to millions of existing Paise shoppers in our marketplace.',
+          content: 'Introduce your brand to millions of existing Spazastop shoppers in our marketplace.',
           icon: 'bank'
         },
         {

@@ -86,16 +86,16 @@ export default {
       benefits: [
         {
           title: '<span class="r-text-primary">Find</span> more returning customers',
-          content: 'You can reach marketplace by posting your product information on Paise. Enable more buying shoppers and increase recurring orders with Paise.'
+          content: 'You can reach marketplace by posting your product information on Spazastop. Enable more buying shoppers and increase recurring orders with Spazastop.'
         },
         {
           title: '<span class="r-text-primary">Offer</span> fast delivery services for every order',
-          content: 'For each order received, you can send your product to Paise warehouse. You don’t have to worry about transport anymore with Paise.'
+          content: 'For each order received, you can send your product to Spazastop warehouse. You don’t have to worry about transport anymore with Spazastop.'
         },
 
         {
           title: '<span class="r-text-primary">Decide</span> and set your selling product price',
-          content: 'Paise Purchase your products according to your credit term. More stable for production planning, nor No more hustle for money collection.'
+          content: 'Spazastop Purchase your products according to your credit term. More stable for production planning, nor No more hustle for money collection.'
         }
       ]
     }

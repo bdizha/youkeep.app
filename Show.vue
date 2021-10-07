@@ -189,14 +189,14 @@ export default {
           title: 'Boost Conversion',
           heading: '<span class="r-text-secondary">Boost</span> visibility with shoppers',
           image: '/assets/asset-14.svg',
-          summary: 'Shoppers use Paise to discover new products and checkout in seconds. ',
-          content: 'Paise enables instant mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
+          summary: 'Shoppers use Spazastop to discover new products and checkout in seconds. ',
+          content: 'Spazastop enables instant mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
         },
         {
           title: 'Maximize Revenue',
           heading: '<span class="r-text-secondary">Sell</span> and maximise revenue',
           image: '/assets/asset-12.svg',
-          summary: 'Get the Paise checkout button in a few minutes on your online marketplace.',
+          summary: 'Get the Spazastop checkout button in a few minutes on your online marketplace.',
           content: 'Meet potential customers at the point of discovery abd break out and reach new shoppers beyond the walls of your own marketplace.'
         }
       ]

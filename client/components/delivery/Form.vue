@@ -27,12 +27,12 @@
                 <a-icon slot="prefix" type="environment"/>
                 <a-button v-if="hasSubmit"
                           slot="suffix"
-                          class="r-btn-secondary"
+                          class="r-btn-primary"
                           size="large"
                           style="margin-right: -12px"
                           type="secondary"
                 >
-                  Let's go
+                  Find food <a-icon type="right"/>
                 </a-button>
               </a-input>
             </a-auto-complete>

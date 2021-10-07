@@ -10,7 +10,7 @@
                :xs="{ span: 24 }"
         >
           <h3 class="r-heading-light">
-            Paise powers ambitious multi-channel brands of all sizes in all industries.
+            Spazastop powers ambitious multi-channel brands of all sizes in all industries.
           </h3>
         </a-col>
       </a-row>
@@ -63,24 +63,19 @@ export default {
     return {
       metrics: [
         {
-          title: 'Average increase in order value',
-          content: '+75%',
+          title: 'Over 1,000,000 authentic homemade dishes served',
+          content: '1M+',
           theme: 'primary'
         },
         {
-          title: 'Shoppers discovering new products',
-          content: '1,5M+',
+          title: 'Average seller rating from thousands of happy customers',
+          content: '4.8/5',
           theme: 'secondary'
         },
         {
-          title: 'Products ready to be discovered',
+          title: 'All food sellers are food safety inspected and certified',
           content: '60K+',
           theme: 'primary'
-        },
-        {
-          title: 'Local shops partnered with Paise',
-          content: '36K+',
-          theme: 'secondary'
         }
       ]
     }

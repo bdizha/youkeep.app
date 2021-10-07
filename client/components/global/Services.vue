@@ -16,7 +16,7 @@
                    :xs="{ span: 24 }"
             >
               <h4 v-if="!isShow" class="r-heading-light r-text-uppercase">
-                Paise marketplace
+                Spazastop marketplace
               </h4>
               <h4 v-if="isShow" class="r-heading-light r-text-uppercase">
                 More solutions
@@ -38,7 +38,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    {{ content }}
+                    {{ summary }}
                   </p>
                 </a-col>
               </a-row>

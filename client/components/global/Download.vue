@@ -5,10 +5,10 @@
         <a-row class="r-m-48" justify="center" type="flex">
           <a-col :span="24">
             <h2 class="r-heading r-text-secondary">
-              Download the Paise app
+              Download the Spazastop app
             </h2>
             <p class="r-text-normal">
-              The free Paise app is available for Android and iOS. Download it soon!
+              The free Spazastop app is available for Android and iOS. Download it soon!
             </p>
           </a-col>
         </a-row>

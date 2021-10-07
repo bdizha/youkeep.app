@@ -37,7 +37,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Active Paise shoppers handle all the business and delivery experiences for Paise shoppers at a steady rate.
+                          Active Spazastop shoppers handle all the business and delivery experiences for Spazastop shoppers at a steady rate.
                         </p>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -84,7 +84,7 @@
            :xs="{ span: 24 }"
            class="r-text-center"
     >
-      <r-tabs active-key="shopper" theme="shopper" title="Paise connects shoppers to shoppers."></r-tabs>
+      <r-tabs active-key="shopper" theme="shopper" title="Spazastop connects shoppers to shoppers."></r-tabs>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
            class="r-text-center"
@@ -106,7 +106,7 @@
                   <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
                     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <h3 class="r-heading-light r-text-uppercase">
-                        Why <span class="r-text-primary">Paise</span> Marketplace?
+                        Why <span class="r-text-primary">Spazastop</span> Marketplace?
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -116,7 +116,7 @@
                     </a-col>
                     <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <p class="r-text-medium">
-                        Paise is a membership-based business marketplace, enabling delivery of trendy fashion items,
+                        Spazastop is a membership-based business marketplace, enabling delivery of trendy fashion items,
                         hot food, household essentials and more.
                       </p>
                     </a-col>

@@ -15,7 +15,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h4 class="r-heading-light r-text-uppercase">
-                       Paise stores
+                       Spazastop favorites
                       </h4>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -31,7 +31,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium r-text-dark">
-                        Online and in real life. Discover all the stores where you can safely shop and pay with Paise.
+                        Online and in real life. Discover all the stores where you can safely shop and pay with Spazastop.
                       </p>
                     </a-col>
                   </a-row>

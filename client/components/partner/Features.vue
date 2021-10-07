@@ -101,12 +101,12 @@ export default {
         {
           icon: 'shopping',
           title: '<span class="r-text-secondary">Instant</span> checkout',
-          content: 'The customer experience is fast and frictionless when buying with Paise. Go from browsing to bought in 25 seconds. That\'s up to 3x faster than competitors.'
+          content: 'The customer experience is fast and frictionless when buying with Spazastop. Go from browsing to bought in 25 seconds. That\'s up to 3x faster than competitors.'
         },
         {
           icon: 'carry-out',
           title: '<span class="r-text-secondary">Personal</span> experience',
-          content: 'Returning Paise shoppers are treated like returning customers for you. Details are pre-filled and preferred shipping and payment options are pre-selected.'
+          content: 'Returning Spazastop shoppers are treated like returning customers for you. Details are pre-filled and preferred shipping and payment options are pre-selected.'
         }
       ]
     }

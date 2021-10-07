@@ -7,7 +7,7 @@
         </h2>
         <VueSlickCarousel v-if="testimonials.length > 0" v-bind="settings">
           <div class="r-testimonial">
-            <img :src="'/images/Paise/testimonials/0' + index + '.jpg'"
+            <img :src="'/images/Spazastop/testimonials/0' + index + '.jpg'"
                  class="r-testimonial-photo"
                  style="opacity: 1;"
             >

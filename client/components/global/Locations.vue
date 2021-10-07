@@ -61,42 +61,42 @@ export default {
         {
           city: 'Mumbai',
           country: 'India',
-          email: 'info@paise.com'
+          email: 'info@spazastop.com'
         },
         {
           city: 'Singapore',
           country: 'Singapore',
-          email: 'partner@paise.com'
+          email: 'partner@spazastop.com'
         },
         {
           city: 'Jakarta',
           country: 'Indonesia',
-          email: 'partner@paise.com'
+          email: 'partner@spazastop.com'
         },
         {
           city: 'Kuala Lumpur',
           country: 'Malaysia',
-          email: 'partner@paise.com'
+          email: 'partner@spazastop.com'
         },
         {
           city: 'Hanoi',
           country: 'Vietnam',
-          email: 'partner@paise.com'
+          email: 'partner@spazastop.com'
         },
         {
           city: 'Dhaka',
           country: 'Bangladesh',
-          email: 'info@paise.com'
+          email: 'info@spazastop.com'
         },
         {
           city: 'Manila',
           country: 'Philippines',
-          email: 'partner@paise.com'
+          email: 'partner@spazastop.com'
         },
         {
           city: 'Islamabad',
           country: 'Pakistan',
-          email: 'info@paise.com'
+          email: 'info@spazastop.com'
         }
       ]
     }

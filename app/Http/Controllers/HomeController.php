@@ -23,7 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        dd('..home');
         return view('home');
     }
 
@@ -35,5 +34,15 @@ class HomeController extends Controller
     public function feed()
     {
         return view('feed');
+    }
+
+    /**
+     * Show categories
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function categories() : string
+    {
+        return view('category');
     }
 }
