@@ -2,7 +2,7 @@
   <a-row :class="{'r-is-empty': false}" align="middle" justify="start" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
       <r-store-category-header :category="category" justify="end"></r-store-category-header>
-      <a-row align="middle" class="r-slider r-product-cards" justify="start" type="flex">
+      <a-row align="middle" class="r-slider" justify="start" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <r-store-slider
             :category="category"

@@ -13,7 +13,7 @@ export default {
     size: { type: Number, required: false, default: null },
     unit: { type: String, required: false, default: 'px' },
     shape: { type: String, required: false, default: 'square' },
-    dataSrc: { type: String, required: false, default: null },
+    dataSrc: { type: String, required: false, default: null }
   },
   data () {
     return {}

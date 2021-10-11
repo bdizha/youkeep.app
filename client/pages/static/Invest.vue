@@ -82,7 +82,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading-light r-text-uppercase">
-                    <span class="r-text-yellow">How it works</span>
+                    <span class="r-text-primary">How it works</span>
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"

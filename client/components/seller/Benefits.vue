@@ -1,6 +1,6 @@
 <template>
   <a-card class="r-bg-primary-light r-pull-h-24 r-border-none">
-    <div class="r-mv-48">
+    <div class="r-mv-96">
       <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
@@ -19,9 +19,9 @@
                   </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                  <h3 class="r-heading">
-                    <span class="r-text-primary">Add</span> value to the marketplace
-                  </h3>
+                  <h2 class="r-heading">
+                    <span class="r-text-primary">Add</span> value to the food marketplace
+                  </h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-medium">
@@ -46,8 +46,8 @@
                   <a-card class="r-bg-white-primary">
                     <a-row :gutter="[24, 24]" type="flex" align="middle">
                       <a-col>
-                        <div class="r-bg-primary-light r-p-12 r-border-radius-12">
-                          <a-icon class="r-text-primary"
+                        <div class="r-bg-primary r-p-12 r-border-radius-12">
+                          <a-icon class="r-text-secondary"
                                   :style="{ fontSize: '45px' }"
                                   :type="benefit.icon"
                           ></a-icon>

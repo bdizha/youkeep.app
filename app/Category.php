@@ -52,7 +52,7 @@ class Category extends Model
         'route',
         'breadcrumbs',
         'photos',
-        'photo',
+        'photo_url',
         'filters',
         'products',
     ];
@@ -172,14 +172,18 @@ class Category extends Model
     /**
      * @return string
      */
-    public function getPhotoAttribute()
+    public function getPhotoUrlAttribute()
     {
-        $photos = $this->getPhotosAttribute();
-
-        if (empty($photos)) {
-            return null;
+        if($this->type === self::TYPE_STORE && !empty($this->photo)){
+            return url('/storage/category/' . $this->photo);
         }
-        return $photos[rand(0, count($photos) - 1)];;
+        else{
+            $photos = $this->getPhotosAttribute();
+            if (empty($photos)) {
+                return null;
+            }
+            return $photos[rand(0, count($photos) - 1)];
+        }
     }
 
     /**
@@ -227,6 +231,14 @@ class Category extends Model
     public function stores()
     {
         return $this->hasMany('App\Store');
+    }
+
+    /**
+     * Get the associated app categories
+     */
+    public function app_categories()
+    {
+        return $this->hasMany('App\AppCategory');
     }
 
 }

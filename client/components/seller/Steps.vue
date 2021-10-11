@@ -20,24 +20,24 @@ export default {
       steps: [
         {
           title: 'Step 01\n',
-          heading: '<span class="r-text-secondary">Improve</span> customer satisfaction',
-          image: '/assets/asset-26.svg',
-          summary: 'Install checkout button in a few minutes on your online marketplace.',
-          content: 'Let your customers get what they want, when they want it, anytime, everywhere. And your business will earn long-term customer relationships.'
+          heading: '<span class="r-text-secondary">Setup</span> your store',
+          image: '/assets/asset-25.svg',
+          summary: 'Start accepting orders today through Spazastop and grow your online sales instantly.',
+          content: 'Customers can order and pay online or through the Spazastop ordering App and enable on-demand food orders to come in.'
         },
         {
           title: 'Step 02',
-          heading: '<span class="r-text-secondary">Boost</span> visibility with shoppers',
-          image: '/assets/asset-08.svg',
-          summary: 'Boost Conversion as shoppers use Spazastop to discover new products and checkout in seconds. ',
-          content: 'Spazastop enables instant mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
+          heading: '<span class="r-text-secondary">Accept</span> incoming orders',
+          image: '/assets/asset-12.svg',
+          summary: 'Boost conversion as customers use Spazastop to discover new dishes and place orders in seconds. ',
+          content: 'Confirm orders on your tablet or point of sale integration, without having to implement anything and save time.'
         },
         {
           title: 'Step 03',
-          heading: '<span class="r-text-secondary">Sell</span> and maximise revenue',
-          image: '/assets/asset-11.svg',
+          heading: '<span class="r-text-secondary">Offer</span> delivery or pickup',
+          image: '/assets/asset-20.svg',
           summary: 'Expand Revenue by building online experiences that meet the expectations of your customers.',
-          content: 'Meet potential customers at the point of discovery abd break out and reach new shoppers beyond the walls of your own marketplace.'
+          content: 'Meet potential customers at the point of discovery and reach new customers beyond the walls of your own restaurant.'
         }
       ]
     }

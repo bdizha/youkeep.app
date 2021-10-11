@@ -125,13 +125,13 @@ const MENU = [
       },
       {
         label: 'Waykipa Couriers',
-        icon: 'business-cart',
+        icon: 'cart-icon',
         link: '/account/service/waykipa'
       },
       {
         label: 'Spazastop Credit',
         icon: 'credit-card',
-        link: '/account/service/spazastop'
+        link: '/account/service/Spazastop'
       },
       {
         label: 'Your help',

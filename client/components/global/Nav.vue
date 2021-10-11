@@ -12,7 +12,7 @@
             </nuxt-link>
           </div>
         </a-sub-menu>
-        <a-sub-menu>
+        <a-sub-menu class="r-menu-submenu-btn" v-if="hasNav">
           <div slot="title" class="r-menu-text">
             Marketplace
             <a-icon type="down" />
@@ -83,17 +83,16 @@
                         >
                           <nuxt-link class="r-link-card" :to="'/service/' + service.slug">
                             <a-card hoverable="" class="r-bg-secondary-light">
-                              <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-                                <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 9 }"
-                                       :xs="{ span: 9}"
-                                >
-                                  <a-card class="r-bg-primary r-p-0 r-inline-block">
-                                    <nuxt-img width="66" height="66" :src="'/services/primary/' + service.image" />
-                                  </a-card>
+                              <a-row align="top" justify="start" type="flex">
+                                <a-col flex="69px">
+                                  <div class="r-bg-secondary r-p-12 r-mr-24 r-border-radius-12">
+                                    <a-icon class="r-text-primary"
+                                            :style="{ fontSize: '45px' }"
+                                            :type="service.icon"
+                                    ></a-icon>
+                                  </div>
                                 </a-col>
-                                <a-col :lg="{ span: 18 }" :md="{ span: 18 }" :sm="{ span: 15 }"
-                                       :xs="{ span: 15}"
-                                >
+                                <a-col flex="1 1 0">
                                   <a-row :gutter="[6,6]" align="top" justify="start" type="flex">
                                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                            :xs="{ span: 24}"
@@ -122,7 +121,7 @@
             </div>
           </div>
         </a-sub-menu>
-        <a-sub-menu>
+        <a-sub-menu v-if="hasNav">
           <div slot="title" class="r-menu-text">
             Company
             <a-icon type="down" />
@@ -306,7 +305,7 @@
             </div>
           </div>
         </a-sub-menu>
-        <a-sub-menu>
+        <a-sub-menu class="r-menu-submenu-btn">
           <div v-if="!isLoggedIn" slot="title" @click="onModal">
             <a-button id="r-user-login"
                       block
@@ -323,16 +322,21 @@
             Account
           </div>
         </a-sub-menu>
-        <a-sub-menu v-if="!isLoggedIn">
+        <a-sub-menu class="r-menu-submenu-btn" v-if="!isLoggedIn">
           <div slot="title" @click="onModal">
             <a-button block
-                      :class="{'r-btn-yellow': isDark, 'r-btn-primary': !isDark}"
+                      :class="{'r-btn-bordered-dark': !hasNav, 'r-btn-bordered-primary': hasNav}"
                       type="secondary"
                       @click="onModal('register')"
             >
               <a-icon type="user" />
               Sign Up
             </a-button>
+          </div>
+        </a-sub-menu>
+        <a-sub-menu class="r-menu-submenu-btn">
+          <div slot="title" class="r-menu-text">
+          <r-cart-count></r-cart-count>
           </div>
         </a-sub-menu>
       </a-menu>
@@ -344,6 +348,9 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-nav',
+  props: {
+    hasNav: { type: Boolean, required: false, default: true }
+  },
   data () {
     return {
       beneficiaries: [
@@ -353,14 +360,14 @@ export default {
           summary: 'Enjoy on-demand food for your cravings by favourite cooks.'
         },
         {
-          title: 'Sellers',
-          link: '/seller',
-          summary: 'Sell homemade dishes and feed thousands of people near you.'
-        },
-        {
           title: 'Chefs',
           link: '/chef',
           summary: 'Discover and connect with local customers with your taste.'
+        },
+        {
+          title: 'Merchants',
+          link: '/seller',
+          summary: 'Sell homemade dishes and feed thousands of people near you.'
         }
       ]
     }

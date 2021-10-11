@@ -4,7 +4,7 @@ use App\CategoryProduct;
 use App\StoreCategory;
 use Illuminate\Database\Seeder;
 use App\Category;
-use App\Store;
+use App\AppCategory;
 use Illuminate\Support\Str;
 
 class CategorySeeder extends DatabaseSeeder
@@ -120,7 +120,14 @@ class CategorySeeder extends DatabaseSeeder
      */
     public function run()
     {
-        $this->level = 1;
+        $this->_setApp();
+
+
+        $categoryTypeUrl = 'https://www.ubereats.com/za/store/1890-house-of-sushi/5NsNtpT8TPu1MLOdWAqXkQ';
+        $encodedUrl = $this->_setCrawler($categoryTypeUrl);
+
+        dd($encodedUrl);
+
         $this->fetchCategories();
 
         die("fetchCategories >>> done");
@@ -140,13 +147,13 @@ class CategorySeeder extends DatabaseSeeder
                 $categoryName = $node->filter('.jyZRYv')->text();
                 echo __LINE__ . " <> \n";
 
-                dd($categoryName);
-
-                $this->parentStoreCategory = null;
-                $this->level = 1;
-
                 $categoryName = Str::slug($categoryName, " ");
                 $categoryName = ucwords(strtolower($categoryName));
+
+                $photoUrl = $node->filter('img')->attr('src');
+
+                $this->categoryPhoto = $this->getSha1File('category', $photoUrl);
+
                 $this->setCategory($categoryName, null, Category::TYPE_STORE, false);
             }
         });

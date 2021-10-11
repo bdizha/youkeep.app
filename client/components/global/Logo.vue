@@ -2,7 +2,7 @@
   <nuxt-link :class="{'r-logo__icon': isIcon}" class="r-logo" to="/">
     <img v-if="isIcon && isDark" :alt="title" src="/images/icon_white.svg"/>
     <img v-if="isIcon && !isDark" :alt="title" src="/images/icon.svg"/>
-    <img v-if="!isIcon && isDark" :alt="title" src="/images/logo_white.svg"/>
+    <img v-if="!isIcon && isDark" :alt="title" src="/images/logo_secondary.svg"/>
     <img v-if="!isIcon && !isDark" :alt="title" src="/images/logo.svg"/>
   </nuxt-link>
 </template>

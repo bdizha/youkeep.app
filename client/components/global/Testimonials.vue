@@ -31,8 +31,8 @@
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
                     <a-row :gutter="[12,12]" align="middle" type="flex">
                       <a-col flex="48px">
-                        <div class="r-bg-secondary r-p-12 r-border-circle">
-                          <nuxt-img src="/images/icon.svg" width="30px"></nuxt-img>
+                        <div class="r-bg-primary r-p-12 r-border-circle">
+                          <nuxt-img src="/images/icon_secondary.svg" width="30px"></nuxt-img>
                         </div>
                       </a-col>
                       <a-col flex="auto">

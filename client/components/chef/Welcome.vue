@@ -69,7 +69,7 @@
 </template>
 <script>
 export default {
-  name: 'r-welcome-welcome',
+  name: 'r-chef-welcome',
   props: {},
   data () {
     return {

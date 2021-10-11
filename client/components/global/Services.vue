@@ -31,7 +31,7 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <h3 class="r-heading" v-html="heading"></h3>
+                  <h2 class="r-heading" v-html="heading"></h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                        :sm="{ span: 24 }"
@@ -58,10 +58,13 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
+                <a-row :gutter="[12, 12]" type="flex" align="middle">
                   <a-col>
-                    <div :class="getBgClass(true)" class="r-p-6 r-border-radius-12">
-                      <nuxt-img width="90" height="90" :src="'/services/white/' + service.image"></nuxt-img>
+                    <div class="r-bg-primary r-p-12 r-border-radius-12">
+                      <a-icon class="r-text-secondary"
+                              :style="{ fontSize: '45px' }"
+                              :type="service.icon"
+                      ></a-icon>
                     </div>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
@@ -102,8 +105,8 @@ export default {
     isShow: { type: Boolean, required: false, default: false },
     theme: { type: String, required: false, default: 'primary' },
     accent: { type: String, required: false, default: 'primary' },
-    heading: { type: String, required: false, default: '' },
-    summary: { type: String, required: false, default: '' }
+    heading: { type: String, required: false, default: '<span class="r-text-primary">Order</span> your favourites or discover new dishes' },
+    summary: { type: String, required: false, default: 'We work hard to help our chefs feel taken care of and supported throughout the entire process.' }
   },
   data () {
     return {}

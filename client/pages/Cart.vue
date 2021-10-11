@@ -128,7 +128,7 @@
           >
             <nuxt-link to="/checkout">
               <a-button block class="r-btn-bordered-white" size="small" type="secondary">
-                <a-icon type="business-cart"/>
+                <a-icon type="cart-icon"/>
                 Checkout
               </a-button>
             </nuxt-link>

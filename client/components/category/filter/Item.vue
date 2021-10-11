@@ -15,8 +15,7 @@
               <template slot="title">
                 <span>Select: {{ item.name }}</span>
               </template>
-              <a-checkbox :style="'background: ' + (filter.type == 2 ?  item.name : 'transparent')"
-                          :value="item.id"
+              <a-checkbox :value="item.id"
               >
                 {{ filter.type == 2 ? null : item.name }}
               </a-checkbox>
@@ -25,7 +24,7 @@
         </a-row>
       </a-checkbox-group>
     </a-col>
-    <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
+    <a-col v-if="hasMore" :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
       <a-row :gutter="[12, 12]" align="middle" justify="start" type="flex">
         <a-col v-if="counter < filter.items.length" :lg="{ span: limit < counter ? 12 : 24 }"
                :sm="{ span: limit < counter ? 12 : 24 }"
@@ -64,7 +63,8 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-category-filter-item',
   props: {
-    filter: { type: Object, required: true, default: {} },
+    hasMore: { type: Boolean, required: true, default: true },
+    filter: { type: Object, required: true, default: () => {} },
     limit: { type: Number, required: false, default: 6 }
   },
   data () {

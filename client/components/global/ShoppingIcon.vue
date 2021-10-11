@@ -1,5 +1,5 @@
 <template>
-  <div class="r-business-cart"></div>
+  <div class="r-cart-icon"></div>
 </template>
 <script>
 export default {

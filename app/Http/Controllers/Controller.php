@@ -388,12 +388,10 @@ class Controller extends BaseController
      */
     protected function _setCategoryStores()
     {
-        $this->categories = Category::with('stores')
-        ->whereHas('stores', function ($query) {
-            $query->where('stores.app_id', $this->appId);
+        $this->categories = Category::whereHas('app_categories', function ($query) {
+            $query->where('app_categories.app_id', $this->appId);
         })
-
-            ->get();
+        ->get();
     }
 
     /**

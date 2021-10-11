@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+      <a-card class="r-bg-dark r-pull-h-24 r-border-none">
         <div class="r-mv-48">
           <a-row :gutter="[48,48]" justify="center" type="flex">
             <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -34,16 +34,16 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h1 class="r-heading r-text-dark">
-                       To deliver <span class="r-text-secondary">value</span> to shopping
+                      <h1 class="r-heading">
+                       To <span class="r-text-primary">deliver</span> <span class="r-text-secondary">possibilities</span> to the world
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <p class="r-text-medium r-text-dark">
-                        Our goal is to make online checkout as easy as swiping a credit card.
+                      <p class="r-text-medium">
+                        Our goal is to empower local businesses and in turn, generate new ways for people to earn, work and live.
                         We are 100% committed to providing Shoppers with a better checkout experience.
                       </p>
                     </a-col>
@@ -52,29 +52,15 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        We strongly emphasize simplicity and personal security; our team of user interface and payment security experts has worked tirelessly to make Spazastop as easy and safe as possible
+                        We started by facilitating door-to-door delivery, but we see this as just the beginning of connecting people with possibility - easier evenings, happier days, bigger savings accounts, wider nets and stronger communities.
                       </p>
-                    </a-col>
-                    <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
-                           :sm="{ span: 12 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <nuxt-link to="/careers">
-                        <a-button class="r-btn-dark"
-                                  block
-                                  size="large"
-                                  type="blue"
-                        >
-                          See open positions
-                        </a-button>
-                      </nuxt-link>
                     </a-col>
                   </a-row>
                 </a-col>
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <r-avatar data-src="/images/icon_pattern_secondary_light.svg" :size="300"
+                  <r-avatar data-src="/assets/asset-11.svg" :size="300"
                             class="r-avatar-block"
                   ></r-avatar>
                 </a-col>
@@ -99,22 +85,22 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                To <span class="r-text-secondary">enable</span> shopping freedom around the world
+                To <span class="r-text-primary">tackle</span> challenges of hunger and starvation
               </h2>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
               <p class="r-text-medium">
-                What started as a way to help growing brands to conveniently sell their products has grown into a leading online
-                marketplace that connects millions of shoppers with sellers of all sizes.
+                What started as a way to help growing chefs to conveniently sell their best dishes has grown into a leading online
+                marketplace that connects millions of consumers with cooks and restaurants of all sizes.
               </p>
             </a-col>
-            <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
               <p class="r-text-normal">
-                Ultimately, Spazastop makes shopping more rewarding, by giving shoppers the flexibility and freedom to buy what they want, with added benefits.
+                We are doing this by taking a revolutionary approach, including addressing the systemic causes of hunger and leveraging appropriate technology, while simultaneously tackling the immediate food security crisis through rescuing nutritious food and delivering it where it’s needed most.
               </p>
             </a-col>
           </a-row>
@@ -130,12 +116,12 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-card class="r-bg-white-secondary">
+              <a-card class="r-bg-primary-light">
                 <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                   <a-col>
-                    <div class="r-bg-white-yellow r-p-24 r-border-radius-12">
+                    <div class="r-bg-primary r-p-24 r-border-radius-12">
                       <a-icon class="r-text-secondary"
-                              :style="{ fontSize: '60px' }"
+                              :style="{ fontSize: '45px' }"
                               :type="value.icon"
                       ></a-icon>
                     </div>
@@ -144,9 +130,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <h4 class="r-heading r-text-secondary">
-                      {{ value.title }}
-                    </h4>
+                    <h4 class="r-heading" v-html="value.title"></h4>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                          :sm="{ span: 24 }"
@@ -154,6 +138,9 @@
                   >
                     <p class="r-text-normal r-text-dark">
                       {{ value.content }}
+                      <nuxt-link class="r-text-primary" :to="value.route">
+                        Learn more
+                        <a-icon class="r-text-primary" type="right"></a-icon></nuxt-link>
                     </p>
                   </a-col>
                 </a-row>
@@ -167,7 +154,7 @@
       <r-values></r-values>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-contact-us title="Get the shopping freedom and earn with Spazastop."></r-contact-us>
+      <r-contact-us title="Enjoy your favourite dishes or discover new chefs."></r-contact-us>
     </a-col>
   </a-row>
 </template>
@@ -268,19 +255,22 @@ export default {
       },
       values: [
         {
-          icon: 'shopping',
-          title: 'Flexible checkout',
-          content: 'We partner with retailers all over the world to make it easy to pay how you like, when you like. Or, you can use our shopping app and enjoy flexible payment terms and deals anywhere online.'
-        },
-        {
-          icon: 'eye',
-          title: 'Full transparency',
-          content: 'With an instant credit decision, you can complete your purchase directly with full transparency. You can also get a full overview of your payments online or in our checkout app.'
-        },
-        {
+          route: '/customer',
           icon: 'gift',
-          title: 'Endless rewards',
-          content: 'Earn with Spazastop on checkout, our free rewards service that rewards all your shopping in realtime. Join in our app and unlock your first reward after just one purchase at our partner stores.'
+          title: 'For <span class="r-text-primary">customers</span>',
+          content: 'With your favorite restaurants at your fingertips, Spazastop satisfies your cravings and connects you with possibilities - more time and energy for yourself and those you love.'
+        },
+        {
+          route: '/chef',
+          icon: 'fire',
+          title: 'For <span class="r-text-primary">chefs</span>',
+          content: 'Delivering with Spazastop, you get flexibility and financial stability that you deserve. Spazastop for a living or for a goal, all on your controllable schedule and on your own terms.'
+        },
+        {
+          route: '/seller',
+          icon: 'hourglass',
+          title: 'For <span class="r-text-primary">restaurants</span>',
+          content: 'Spazastop’s innovative merchant-focused solutions enhance your success by transforming your business. Open your doors to an entire city and see your reach and revenue grow.'
         }
       ],
       hasData: false

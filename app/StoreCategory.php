@@ -146,7 +146,7 @@ class StoreCategory extends Model
         if (empty($photos)) {
             return null;
         }
-        return $photos[rand(0, count($photos) - 1)];;
+        return $photos[rand(0, count($photos) - 1)];
     }
 
     /**

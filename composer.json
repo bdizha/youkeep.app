@@ -1,73 +1,716 @@
 {
-  "name": "cretueusebiu/laravel-nuxt",
-  "description": "A Laravel-Nuxt starter project template.",
-  "keywords": [
-    "laravel",
-    "nuxt",
-    "vue",
-    "spa"
+  '@context': 'https:%5C%5Cu002F%5C%5Cu002Fschema.org',
+  '@type': 'Restaurant',
+  '@id': 'https:%5C%5Cu002F%5C%5Cu002Fwww.ubereats.com%5C%5Cu002Fza%5C%5Cu002Fstore%5C%5Cu002Fohmi-gin-bar%5C%5Cu002FT_WYmpDgTOmhS8ZQgFRXKA',
+  'name': 'OHmi Gin Bar',
+  'servesCuisine': [
+    'Soul Food',
+    'South African',
+    'African',
+    'Family friendly'
   ],
-  "license": "MIT",
-  "type": "project",
-  "require": {
-    "php": "^7.2",
-    "fideloper/proxy": "^4.0",
-    "laravel/framework": "^6.4",
-    "laravel/socialite": "^4.0",
-    "laravel/tinker": "~1.0",
-    "league/flysystem-aws-s3-v3": "~1.0",
-    "predis/predis": "^1.1",
-    "spatie/laravel-cors": "1.6.*",
-    "tymon/jwt-auth": "^1.0.0-rc.5",
-    "weidner/goutte": "^1.1"
-  },
-  "require-dev": {
-    "beyondcode/laravel-dump-server": "^1.0",
-    "cviebrock/eloquent-sluggable": "^6.0",
-    "filp/whoops": "^2.0",
-    "fzaninotto/faker": "^1.4",
-    "laravel/ui": "^1.2",
-    "mockery/mockery": "^1.0",
-    "nunomaduro/collision": "^3.0",
-    "phpunit/phpunit": "^7.5"
-  },
-  "config": {
-    "optimize-autoloader": true,
-    "preferred-install": "dist",
-    "sort-packages": true
-  },
-  "extra": {
-    "laravel": {
-      "dont-discover": []
-    }
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "app/"
+  'priceRange': 'RR',
+  'image': [
+    'https:%5C%5Cu002F%5C%5Cu002Fd1ralsognjng37.cloudfront.net%5C%5Cu002Fe9ec98eb-055f-43b3-a165-280cfc71ca4d.jpeg',
+    'https:%5C%5Cu002F%5C%5Cu002Fd1ralsognjng37.cloudfront.net%5C%5Cu002F7fe6e980-9880-4e94-bf60-8fd32c4fd8f4.jpeg',
+    'https:%5C%5Cu002F%5C%5Cu002Fd1ralsognjng37.cloudfront.net%5C%5Cu002F08cdcc11-5b0d-4fff-8ccc-54b152c3cfda.jpeg',
+    'https:%5C%5Cu002F%5C%5Cu002Fd1ralsognjng37.cloudfront.net%5C%5Cu002F48902120-11ee-4ff0-874d-e2bcfb3c0043.jpeg',
+    'https:%5C%5Cu002F%5C%5Cu002Fd1ralsognjng37.cloudfront.net%5C%5Cu002Fc75c6c17-cf4a-4369-9cfd-1d3585e3fb3c.jpeg',
+    'https:%5C%5Cu002F%5C%5Cu002Fd1ralsognjng37.cloudfront.net%5C%5Cu002F4e0b5e9e-c7e2-4832-8e64-b62579f12675.jpeg'
+  ],
+  'potentialAction': {
+    '@type': 'OrderAction',
+    'target': {
+      '@type': 'EntryPoint',
+      'urlTemplate': 'https:%5C%5Cu002F%5C%5Cu002Fwww.ubereats.com%5C%5Cu002Fza%5C%5Cu002Fstore%5C%5Cu002Fohmi-gin-bar%5C%5Cu002FT_WYmpDgTOmhS8ZQgFRXKA?utm_campaign=order-action&amp;utm_medium=organic',
+      'inLanguage': 'English',
+      'actionPlatform': [
+        'https:%5C%5Cu002F%5C%5Cu002Fschema.org%5C%5Cu002FDesktopWebPlatform',
+        'https:%5C%5Cu002F%5C%5Cu002Fschema.org%5C%5Cu002FMobileWebPlatform'
+      ]
     },
-    "classmap": [
-      "database/seeds",
-      "database/factories"
+    'deliveryMethod': [
+      'http:%5C%5Cu002F%5C%5Cu002Fpurl.org%5C%5Cu002Fgoodrelations%5C%5Cu002Fv1#DeliveryModeOwnFleet',
+      'http:%5C%5Cu002F%5C%5Cu002Fpurl.org%5C%5Cu002Fgoodrelations%5C%5Cu002Fv1#DeliveryModePickUp'
     ]
   },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/"
+  'address': {
+    '@type': 'PostalAddress',
+    'addressLocality': 'East London',
+    'addressRegion': 'EC',
+    'postalCode': '5247',
+    'addressCountry': 'ZA',
+    'streetAddress': 'Hemingways Mall Shop UG01'
+  },
+  'geo': {
+    '@type': 'GeoCoordinates',
+    'latitude': -32.97079967163932,
+    'longitude': 27.900202461740466
+  },
+  'telephone': '+27789775193',
+  'aggregateRating': {
+    '@type': 'AggregateRating',
+    'ratingValue': 4.6,
+    'reviewCount': '82'
+  },
+  'openingHoursSpecification': [
+    {
+      '@type': 'OpeningHoursSpecification',
+      'dayOfWeek': 'Sunday',
+      'opens': '10:0',
+      'closes': '20:30'
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      'dayOfWeek': 'Monday',
+      'opens': '10:0',
+      'closes': '21:30'
+    },
+    {
+      '@type': 'OpeningHoursSpecification',
+      'dayOfWeek': [
+        'Tuesday',
+        'Wednesday',
+        'Thursday',
+        'Friday',
+        'Saturday'
+      ],
+      'opens': '10:0',
+      'closes': '20:30'
     }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "scripts": {
-    "post-autoload-dump": [
-      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-      "@php artisan package:discover --ansi"
-    ],
-    "post-root-package-install": [
-      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
-    "post-create-project-cmd": [
-      "@php artisan key:generate --ansi",
-      "@php artisan jwt:secret --force"
-    ]
-  }
-}
+  ],
+  'hasMenu': {
+    '@type': 'Menu',
+    'hasMenuSection': [
+      {
+        'name': 'Picked for you',
+        'hasMenuItem': [
+          {
+            '@type': 'MenuItem',
+            'name': 'Umleqwa - Xhosa Tradtional Chicken',
+            'description': 'Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 11500,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Beef Stew',
+            'description': 'Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 14000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Oxtail',
+            'description': 'Slowly cooked in red wine sauce and bouquet garni served with soft mash potatoes and vegetables stir fry. Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 19500,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Mutton Curry',
+            'description': 'Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 15500,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Isifuba Senkomo - Ugheme',
+            'description': 'Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 19000,
+              'priceCurrency': 'ZAR'
+            }
+          }
+        ]
+      },
+      {
+        'name': 'Bistro Menu',
+        'hasMenuItem': [
+          {
+            '@type': 'MenuItem',
+            'name': 'Rosemary Lamb Shank',
+            'description': 'Braised in marinara sauce and red wine wine, served with soft mash potatoes or wedges and stir fry. Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 19000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Oxtail',
+            'description': 'Slowly cooked in red wine sauce and bouquet garni served with soft mash potatoes and vegetables stir fry. Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 19500,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Chicken Fillet',
+            'description': 'Stuffed chicken fillet with spinach and cream cheese topped with white sauce. Served with vegetables. Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 14000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Lamb Chops',
+            'description': 'Prime lamb chops marinated with herbs and basting sauce, served with potato wedges or side salad. Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 18000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Chicken Salad',
+            'description': 'Crispy Lettuce,Cherry tomatoes,Cucumber,Red onion,Peppers,Grilled chicken strips and Feta cheese',
+            'offers': {
+              '@type': 'Offer',
+              'price': 10500,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Gourmet Steak',
+            'description': '250g Grilled Rump%5C%5Cu002FSirlon Steak topped with Avo,Feta and bacon.Served with chips or seasonal Vegetables',
+            'offers': {
+              '@type': 'Offer',
+              'price': 17000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Eisbein',
+            'description': 'Germs Culinary Dish of Pickled Ham Served with mash potatoes or Wedges and Vegetable of the day',
+            'offers': {
+              '@type': 'Offer',
+              'price': 15000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Sirloin%5C%5Cu002FRump steak',
+            'description': '200g of Tender,juicy and flavourful Grilled steak served with chips%5C%5Cu002FWedges',
+            'offers': {
+              '@type': 'Offer',
+              'price': 16000,
+              'priceCurrency': 'ZAR'
+            }
+          }
+        ]
+      },
+      {
+        'name': 'Traditional Menu',
+        'hasMenuItem': [
+          {
+            '@type': 'MenuItem',
+            'name': 'Beef Stew',
+            'description': 'Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 14000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Mutton Curry',
+            'description': 'Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 15500,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Isifuba Senkomo - Ugheme',
+            'description': 'Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 19000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Umleqwa - Xhosa Tradtional Chicken',
+            'description': 'Comes with starch of your choice.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 11500,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Hot and Spicy Wings ',
+            'description': 'served with our home made peri peri sauce served w8ith chips or salad',
+            'offers': {
+              '@type': 'Offer',
+              'price': 8000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Rib and Wing  Basket',
+            'description': 'Flame grilled bbq ribs and wings served with chips',
+            'offers': {
+              '@type': 'Offer',
+              'price': 18000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Short Rib',
+            'description': 'Served with your own choice of starch and Veggies',
+            'offers': {
+              '@type': 'Offer',
+              'price': 15500,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'ox tongue',
+            'description': 'served with our homemade steam bread',
+            'offers': {
+              '@type': 'Offer',
+              'price': 9000,
+              'priceCurrency': 'ZAR'
+            }
+          }
+        ]
+      },
+      {
+        'name': 'Spaza Pizza Menu 30cm',
+        'hasMenuItem': [
+          {
+            '@type': 'MenuItem',
+            'name': 'Meat Lover',
+            'description': 'Cheese griller, chicken, bacon, mushroom, basil, pesto, mozzarella cheese, and paprika sauce.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 13000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'The Township Italian',
+            'description': 'Mushroom, pepparoni, chicken, mozzarella cheese, and mint mayo.',
+            'offers': {
+              '@type': 'Offer',
+              'price': 12000,
+              'priceCurrency': 'ZAR'
+            }
+          },
+          {
+            '@type': 'MenuItem',
+            'name': 'Dlamini, Jama, Kas'
+            jadu,
+            Fakade
+            ','
+            description
+            ':'
+            Spare
+            rib,
+            chicken,
+            bacon,
+            ham,
+            jalapeno,
+            and
+            Mexican
+            sauce.
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':14000,'
+            priceCurrency
+            ':'
+            ZAR
+            '}},{'
+            @type
+            ':'
+            MenuItem
+            ','
+            name
+            ':'
+            Fab
+            ','
+            description
+            ':'
+            Bacon,
+            feta,
+            avocado,
+            mozzarella
+            cheese,
+            and
+            spaza
+            pizza
+            secret
+            sauce.
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':12000,'
+            priceCurrency
+            ':'
+            ZAR
+            '}},{'
+            @type
+            ':'
+            MenuItem
+            ','
+            name
+            ':'
+            Hawaiian
+            Pizza
+            ','
+            description
+            ':'
+            Ham,
+            mushroom,
+            pineapple,
+            and
+            mozzarella
+            cheese.
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':10000,'
+            priceCurrency
+            ':'
+            ZAR
+            '}},{'
+            @type
+            ':'
+            MenuItem
+            ','
+            name
+            ':'
+            Captain
+            Universe
+            ','
+            description
+            ':'
+            Chicken,
+            feta,
+            avocado
+            rocket,
+            mushroom,
+            and
+            spaza
+            pizza
+            secret
+            sauce.
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':13000,'
+            priceCurrency
+            ':'
+            ZAR
+            '}},{'
+            @type
+            ':'
+            MenuItem
+            ','
+            name
+            ':'
+            Vegetarian
+            ','
+            description
+            ':'
+            Green
+            or
+            yellow
+            or
+            red
+            peppers,
+            avocado,
+            olives,
+            feta,
+            rocket,
+            and
+            cauliflower.
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':12000,'
+            priceCurrency
+            ':'
+            ZAR
+            '}},{'
+            @type
+            ':'
+            MenuItem
+            ','
+            name
+            ':'
+            Open
+            Sub
+            Rolls
+            ','
+            description
+            ':'
+            all
+            our
+            open
+            subs
+            come
+            with
+            garlic
+            butter,
+            basil
+            pesto,
+            peppers,
+            mozzarella
+            cheese
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':8500,'
+            priceCurrency
+            ':'
+            ZAR
+            '}},{'
+            @type
+            ':'
+            MenuItem
+            ','
+            name
+            ':'
+            The
+            Big
+            Five
+            ','
+            description
+            ':'
+            Spare
+            Rib,
+            Bacon,
+            Ham,
+            Pepperoni,
+            Chicken,
+            Mozarella
+            and
+            Spaza
+            Pizza
+            Secret
+            sauce
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':15500,'
+            priceCurrency
+            ':'
+            ZAR
+            '}},{'
+            @type
+            ':'
+            MenuItem
+            ','
+            name
+            ':'
+            Prawn
+            Meat
+            Pizza
+            ','
+            description
+            ':'
+            Mushrooms,
+            Prawn
+            Meat
+            with
+            basil
+            pesto,
+            Lemon
+            Zest,
+            Parmesan,
+            Avocado,
+            Mozzarella
+            and
+            Minty
+            Mayo
+            sauce..
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':13000,'
+            priceCurrency
+            ':'
+            ZAR
+            '}},{'
+            @type
+            ':'
+            MenuItem
+            ','
+            name
+            ':'
+            KING
+            DON
+            ','
+            description
+            ':'
+            a
+            grade
+            beef
+            sirlon
+            fillet9grilled)
+            mushrooms,
+            beef
+            fillet
+            strips,
+            avo,
+            drizzled
+            with
+            steak
+            secret
+            sauce,
+            mozzarella
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':17000,'
+            priceCurrency
+            ':'
+            ZAR
+            '}},{'
+            @type
+            ':'
+            MenuItem
+            ','
+            name
+            ':'
+            WILD
+            COAST
+            ','
+            description
+            ':'
+            cream
+            cheese,
+            mushrooms,
+            calamari,
+            meat
+            mussels,
+            parmesan,
+            lemon
+            zest
+            mozzarella
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':16000,'
+            priceCurrency
+            ':'
+            ZAR
+            '}},{'
+            @type
+            ':'
+            MenuItem
+            ','
+            name
+            ':'
+            THE
+            IN
+            LAWS
+            ','
+            description
+            ':'
+            mushrooms,
+            salami,
+            bacon,
+            feta,
+            mozzarella,
+            mexican
+            mayo
+            sauce
+            ','
+            offers
+            ':{'
+            @type
+            ':'
+            Offer
+            ','
+            price
+            ':11500,'
+            priceCurrency
+            ':'
+            ZAR
+            '}}]}]}}

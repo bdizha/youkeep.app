@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="180px" height="180px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="240px" height="240px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
      viewBox="0 0 107.47 109.27"
      xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
@@ -10,8 +10,8 @@
     .str1 {stroke:#FBD13E;stroke-width:1.81;stroke-miterlimit:22.9256}
     .str0 {stroke:#FBD13E;stroke-width:1.81;stroke-miterlimit:22.9256}
     .fil2 {fill:none}
-    .fil1 {fill:#FBD13E; opacity: 0.09}
-    .fil0 {fill:#FBD13E; opacity: 0.12}
+    .fil1 {fill:#FBD13E; opacity: 0.12}
+    .fil0 {fill:#FBD13E; opacity: 0.15}
    ]]>
   </style>
  </defs>

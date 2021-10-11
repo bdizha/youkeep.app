@@ -1,33 +1,28 @@
 <template>
   <a-layout class="r-layout__default">
     <r-header :is-icon="false"></r-header>
-    <a-layout-content class="r-layout-content">
-      <a-row :gutter="[96,96]" justify="center" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <nuxt/>
-        </a-col>
-        <a-col v-if="hasFooter" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <r-footer :has-locations="true"></r-footer>
-        </a-col>
-      </a-row>
+    <a-layout-content>
+      <nuxt/>
     </a-layout-content>
-    <r-spinner :is-absolute="false"></r-spinner>
+    <a-layout-footer>
+      <r-footer :has-locations="true"></r-footer>
+    </a-layout-footer>
   </a-layout>
 </template>
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
-  data: () => ({}),
-  async serverPrefetch  () {
-
+  data () {
+    return {
+      collapsed: false,
+    }
   },
-  created () {
-  },
-  computed: mapGetters({
-    hasFooter: 'base/hasFooter',
-    processes: 'base/processes'
-  }),
-  methods: {}
 }
 </script>
+
+<style>
+#components-layout-demo-side .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
+</style>

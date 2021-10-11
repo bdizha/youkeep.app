@@ -11,32 +11,27 @@
           </h3>
         </a-col>
         <a-col :xs="{ span: 24 }" class="r-text-left">
-          <a-form :form="form"
-                  class="ant-form"
-                  @submit="onModal"
+          <a-auto-complete
+            :placeholder="'Enter your delivery address...'"
+            :size="size"
+            :value="hasAddress ? address.address_line : ''"
+            option-label-prop="title"
+            style="width: 100%"
+            @search="handleSearch"
           >
-            <a-auto-complete
-              :placeholder="'Enter your delivery address...'"
-              :size="size"
-              :value="hasAddress ? address.address_line : ''"
-              option-label-prop="title"
-              style="width: 100%"
-              @search="handleSearch"
-            >
-              <a-input>
-                <a-icon slot="prefix" type="environment"/>
-                <a-button v-if="hasSubmit"
-                          slot="suffix"
-                          class="r-btn-primary"
-                          size="large"
-                          style="margin-right: -12px"
-                          type="secondary"
-                >
-                  Find food <a-icon type="right"/>
-                </a-button>
-              </a-input>
-            </a-auto-complete>
-          </a-form>
+            <a-input>
+              <a-icon slot="prefix" type="environment"/>
+              <a-button v-if="hasButton"
+                        slot="suffix"
+                        class="r-btn-primary"
+                        size="large"
+                        style="margin-right: -12px"
+                        type="secondary"
+              >
+                Find food <a-icon type="right"/>
+              </a-button>
+            </a-input>
+          </a-auto-complete>
         </a-col>
       </a-row>
     </a-col>
@@ -46,13 +41,13 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'r-delivery-form',
+  name: 'r-delivery-search',
   components: {},
   props: {
     hasModal: { type: Boolean, required: false, default: false },
     isStore: { type: Boolean, required: false, default: false },
-    hasSubmit: { type: Boolean, required: false, default: true },
-    size: { type: String, required: false, default: 'large' },
+    hasButton: { type: Boolean, required: false, default: true },
+    size: { type: String, required: false, default: 'large' }
   },
   data () {
     return {

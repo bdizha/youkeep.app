@@ -1,23 +1,15 @@
 <template>
-  <div class="r-border-circle">
-    <a-card :class="getBgClass()">
-      <div class="r-p-24">
-        <div class="r-border-circle">
-          <a-card :class="getBgClass()">
-            <div class="r-p-24">
-              <div class="r-border-circle">
-                <a-card class="r-bg-white">
-                  <r-avatar :data-src="image" :size="300"
-                            class="r-avatar-block"
-                  ></r-avatar>
-                </a-card>
-              </div>
-            </div>
-          </a-card>
-        </div>
-      </div>
-    </a-card>
-  </div>
+  <a-card class="r-bg-secondary-pattern">
+    <div class="r-mv-48">
+      <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
+          <r-avatar :data-src="image" :size="300"
+                    class="r-avatar-block"
+          ></r-avatar>
+        </a-col>
+      </a-row>
+    </div>
+  </a-card>
 </template>
 <script>
 export default {

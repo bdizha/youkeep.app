@@ -107,18 +107,18 @@ export default {
         {
           icon: 'heart',
           heading: '<span class="r-text-primary">Support</span> local cooks',
-          content: 'Unlike other food outlets, you know exactly who is preparing your food. Let them fill you up with treats and more.'
+          content: 'Unlike other food outlets, you know exactly who is preparing your food. Let\'s fill you up with yummy meals and more.'
         },
         {
           icon: 'appstore',
           heading: '<span class="r-text-primary">Discover</span> new dishes',
-          content: 'Reconnect with your heritage or discover new cultures through great homemade dishes.'
+          content: 'Reconnect with your local faves or discover and choose delicious meals and we\'ll deliver to you as per your schedule.'
         },
 
         {
           icon: 'fire',
           heading: '<span class="r-text-primary">Embrace</span> your desires',
-          content: 'Enjoy real homemade food at affordable prices, and endless deals, without sacrificing time.'
+          content: 'Enjoy on-demand homemade food by local cooks fast and easy, with endless deals, without sacrificing time.'
         }
       ]
     }

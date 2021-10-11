@@ -35,7 +35,7 @@
                    :xs="{ span: 24 }"
             >
               <p class="r-text-normal">
-                Spazastop offers the widest range of chefs, restaurants, take your time to discover cooks in your
+                Spazastop offers the widest range of chefs, restaurants, and let's you discover cooks in your
                 neighbourhood.
               </p>
             </a-col>

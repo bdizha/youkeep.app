@@ -99,7 +99,7 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h4 class="r-heading-light r-text-uppercase r-text-yellow">
+                          <h4 class="r-heading-light r-text-uppercase r-text-primary">
                             Vision:
                           </h4>
                         </a-col>

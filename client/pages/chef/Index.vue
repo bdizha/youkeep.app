@@ -4,7 +4,7 @@
            :xs="{ span: 24 }"
     >
       <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
-        <div class="r-mv-48">
+        <div class="r-mv-96">
           <a-row align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
               <a-row :gutter="[96,96]" justify="start" align="middle" type="flex">
@@ -14,16 +14,16 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h3 class="r-heading-light r-text-uppercase">
+                      <h4 class="r-heading-light r-text-uppercase">
                         For <span class="r-text-primary">Chefs</span>
-                      </h3>
+                      </h4>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
                       <h1 class="r-heading r-text-dark">
-                        <span class="r-text-primary">Sell</span> more with Spazastop checkout
+                        <span class="r-text-primary">Earn</span> money doing what you love
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -39,21 +39,14 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Join the thousands of businesses that use Spazastop to give their customers on-demand, simple and secure meals.
+                        Join the thousands of chefs that use Spazastop selling tools to give their customers on-demand, easy and better meals.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
                            :sm="{ span: 12 }"
                            :xs="{ span: 24 }"
                     >
-                      <a-button class="r-btn-secondary"
-                                @click="onModal"
-                                block
-                                size="large"
-                                type="blue"
-                      >
-                        Get started
-                      </a-button>
+                      <r-button title="Get started" size="large" action="register" theme="primary"></r-button>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
                            :sm="{ span: 12 }"
@@ -72,7 +65,7 @@
                     </a-col>
                   </a-row>
                 </a-col>
-                <a-col class="r-text-left" :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+                <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24}"
                 >
                   <r-slider :images="images"></r-slider>
@@ -90,13 +83,13 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-chef-welcome></r-chef-welcome>
+      <r-chef-features></r-chef-features>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-tabs active-key="chef" theme="white"></r-tabs>
+      <r-chef-steps></r-chef-steps>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
@@ -235,7 +228,6 @@ export default {
   data () {
     return {
       images: [
-        '/assets/asset-24.svg',
         '/assets/asset-08.svg'
       ],
       benefits: [

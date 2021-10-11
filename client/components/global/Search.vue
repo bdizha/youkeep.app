@@ -4,7 +4,7 @@
       :placeholder="placeholder"
       class="r-search"
       option-label-prop="title"
-      size="large"
+      :size="size"
       style="width: 100%"
       @search="handleSearch"
     >
@@ -29,7 +29,9 @@
         </a-select-option>
       </template>
       <a-input>
+        <a-icon slot="prefix" type="search"/>
         <a-button
+          v-if="hasButton"
           slot="suffix"
           :size="size"
           class="r-btn-primary"
@@ -49,7 +51,8 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-search',
   props: {
-    size: { type: String, required: false, default: 'large' }
+    size: { type: String, required: false, default: 'large' },
+    hasButton: { type: Boolean, required: false, default: true }
   },
   data () {
     return {
@@ -61,7 +64,7 @@ export default {
   },
   computed: {
     placeholder () {
-      return 'Search products ' + (this.hasStore ? ' at ' + this.store.name : '') + '...'
+      return 'Search chefs, cuisines, dishes...'
     },
     ...mapGetters({
       store: 'base/store',

@@ -5,226 +5,163 @@ export const state = () => ({
   products: [
     {
       theme: 'primary',
-      title: '<span class="r-text-secondary">Treats</span> with Spazastop',
-      slug: 'treat-with-spazastop',
-      heading: 'On-demand, instant and <span class="r-text-primary">secure</span> checkout.',
-      summary: 'Take your taste to the next level only when you shop with spazastop at the participating stores.',
-      content: 'You\'ll enjoy the Spazastop checkout experience. Track your purchases, upcoming bills and cash earned in one place.',
-      image: 'service-24.svg',
+      title: '<span class="r-text-primary">Enjoy</span> with Spazapass',
+      slug: 'enjoy-with-spazastop',
+      heading: '<span class="r-text-primary">Find</span> on-demand homemade dishes.',
+      summary: 'Take your taste to the next level only when you eat with spazastop with the participating chefs.',
+      content: 'You\'ll enjoy the Spazastop checkout experience. Track your orders in real-time, upcoming deals and cash earned in one place.',
+      icon: 'coffee',
       images: [
-        '/assets/asset-13.svg',
-        '/assets/asset-14.svg'
+        '/assets/asset-03.svg'
       ],
       steps: [
         {
-          title: 'Desire it',
-          heading: 'Checkout simple with Spazastop.',
-          summary: 'Desire it and get exactly what you want.',
+          title: 'Step 01',
+          heading: '<span class="r-text-primary">Order</span> fast with Spazastop.',
+          summary: 'Desire it and get exactly what you want from thousands of chefs and restaurants.',
           content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
-          image: '/assets/asset-02-white.svg'
+          image: '/assets/asset-23.svg'
         },
         {
-          title: 'Shop it',
-          heading: 'Choose to pay with Spazastop',
-          summary: 'Your new source of inspiration to rely on. ',
-          content: 'Add what you want to your cart and choose to pay with Spazastop It\'s that simple and instant.',
-          image: '/assets/asset-17-white.svg'
+          title: 'Step 02',
+          heading: '<span class="r-text-primary">Choose</span> to pay with Spazapass',
+          summary: 'Discover dishes served by nearby locals and set your full meal schedule with ease.',
+          content: 'Add what you want to your cart and choose to pay with Spazapass. It\'s that simple and easy.',
+          image: '/assets/asset-19.svg'
         },
         {
-          title: 'Enjoy it',
-          heading: 'Pay over time in 3 months',
-          summary: 'Discover thousands of buy now pay later sites',
-          content: 'Settle 25% of the order total today and pay the rest over 3 monthly payments at zero interest.',
-          image: '/assets/asset-18.svg'
+          title: 'Step 03',
+          heading: '<span class="r-text-primary">Enjoy</span> your chef\'s best dishes',
+          summary: 'Discover dishes served by nearby locals and set your full meal schedule with ease.',
+          content: 'Settle 25% of the order total today and pay the rest overtime at giveaway interest.',
+          image: '/assets/asset-24.svg'
         }
       ],
       features: [
         {
-          title: 'A better way to shop',
-          content: 'Spazastop remembers and encrypts your details, so you can speed safely through checkout in one tap.',
-          image: 'service-06.svg'
+          title: '<span class="r-text-primary">Find</span> a better way to find food',
+          content: 'Spazastop remembers and encrypts your meal history, so you can speed safely through checkout in one tap.',
+          icon: 'bank'
         },
         {
-          title: 'Discover it. Get it.',
-          content: 'Shop automatically gathers and tracks your orders, so you don’t have to search, copy, or paste.',
-          image: 'service-13.svg'
+          title: '<span class="r-text-primary">Crave</span> it now and get it.',
+          content: 'Spazastop automatically gathers and tracks your orders, so you don’t have to miss your favourite meals.',
+          icon: 'bank'
         },
         {
-          title: 'Stay in the moment',
-          content: 'Inform Spazastop with your favorite stores for a customized feed with deals, trending items, and recommendations you’ll love. Your personal details are secure.',
-          image: 'service-01.svg'
+          title: '<span class="r-text-primary">Stay</span> happy and be satisfied',
+          content: 'Inform Spazastop with your favorite chefs for a customized feed with deals, and suggestions you’ll love.',
+          icon: 'bank'
         }
       ],
       row: 1
     },
     {
       theme: 'secondary',
-      title: '<span class="r-text-secondary">Cook</span> with Spazastop',
-      slug: 'pay-with-spazastop',
-      heading: 'Get <span class="r-text-secondary">more</span> value with split payments',
-      summary: 'You\'ll never pay extra with Spazastop when you pay on time.',
-      content: 'Spazastop lets you split your purchases into 3 zero interest payments or pay after your purchase within 7 days.',
-      image: 'service-04.svg',
+      title: '<span class="r-text-primary">Cook</span> with Spazastop',
+      slug: 'cook-with-spazastop',
+      heading: '<span class="r-text-primary">Serve</span> great dishes in your location',
+      summary: 'Design your own menu, set your own prices and work when you want. We’ll help you with payments, logistics and customer support.',
+      content: 'Spazastop lets you make meaningful income by doing what they love! It’s completely free to apply. Many chefs make around R10,000 / week.',
+      icon: 'fire',
       images: [
-        '/assets/asset-27-01.png',
-        '/assets/asset-27-02.png',
-        '/assets/asset-27-03.png',
-        '/assets/asset-27-04.png'
+        '/assets/asset-04.svg'
       ],
       steps: [
         {
-          title: 'Find it',
-          heading: '<span class="r-text-secondary">Shop</span> simple with Spazastop.',
-          summary: 'Desire it and get exactly what you want.',
-          content: 'Find your favourites or discover new brands that let you get the most out of shopping.',
-          image: '/assets/asset-28.svg'
+          title: 'Step 01',
+          heading: '<span class="r-text-primary">Get</span> started with Spazastop',
+          summary: 'Get started and allow customers to discover your dishes easily. We’ll help you with payments, logistics and customer support.',
+          content: 'Customers can order and pay online or through the Spazastop ordering App without any costs charged.',
+          image: '/assets/asset-26.svg'
         },
         {
-          title: 'Order it',
-          heading: '<span class="r-text-secondary">Choose</span> to pay with Spazastop',
-          summary: 'Desire it and get exactly what you want.',
-          content: 'Add what you want to your cart and choose to pay with Spazastop It\'s that simple and instant.',
-          image: '/assets/asset-17-white.svg'
+          title: 'Step 02',
+          heading: '<span class="r-text-primary">Prepare</span> to cook with Spazastop',
+          summary: 'Start accepting incoming orders and enable every person to have access to a wholesome, homemade meal at an affordable price.',
+          content: 'Confirm orders on your tablet or phone and deliver happiness to your customers with homemade meals.',
+          image: '/assets/asset-21.svg'
         },
         {
-          title: 'Enjoy it',
-          heading: '<span class="r-text-secondary">Pay</span> over time in 3 months',
-          summary: 'Desire it and get exactly what you want.',
-          content: 'Settle 25% of the order total today and pay the rest over 3 monthly payments at zero interest.',
-          image: '/assets/asset-18.svg'
+          title: 'Step 03',
+          heading: '<span class="r-text-primary">Serve</span> dishes to loyal customers',
+          summary: 'Update an order ready for delivery and a rider or the customer will pick up the order.',
+          content: 'Complete more on-demand orders and earn smart. Because there\'s no place like kitchen.',
+          image: '/assets/asset-27.svg'
         }
       ],
       features: [
         {
-          title: 'Get it now, pay later.',
-          content: 'Shop for what you love now and split your order total into 3 payments.',
+          title: 'Promote your dishes',
+          content: 'You can run marketing promotions anytime to improve your in-app placement, attract first-time customers, and earn more repeat customers.',
+          icon: 'tags'
+        },
+        {
+          title: 'Get a SpazaPass account',
+          content: 'With DashPass, high-value customers see your business first and pay lower fees when they order from you - at no added cost to you.',
           icon: 'gift'
         },
         {
-          title: 'Zero interest or fees.',
-          content: 'No hidden fees, no interest, no late fees charged on your credit score.',
-          icon: 'gift'
+          title: 'Pick a card to connect',
+          content: 'Link any debit or credit card and get instant approval to earn as you sell with Spazastop orders. It only takes 48 hours to get paid after each delivery.',
+          icon: 'credit-card'
         },
         {
-          title: 'Pick a card, any card.',
-          content: 'Link any debit or credit card and get instant approval to pay with Spazastop.',
-          icon: 'gift'
-        },
-        {
-          title: 'Transact simple with Spazastop',
-          content: 'Your financial information is protected when you open an account with Spazastop.',
-          icon: 'gift'
+          title: 'Get paid in every 48 hours',
+          content: 'Your financial information is protected when you open a <b>Merchant Account</b> with Spazastop and it will always be centralized for your convenience.',
+          icon: 'dollar'
         }
       ],
       row: 1
     },
     {
       theme: 'yellow',
-      title: '<span class="r-text-yellow">Deliver</span> with Spazastop',
-      slug: 'earn-with-spazastop',
-      heading: '<span class="r-text-yellow">Shop</span> securely and earn instant credit.',
+      title: '<span class="r-text-primary">Sell</span> with Spazastop',
+      slug: 'sell-with-spazastop',
+      heading: '<span class="r-text-primary">Sell</span> more and grow your business.',
       summary: 'Shop at brands you love and earn cash you can withdraw. That\'s real money, not another loyalty program you\'ll never use.',
       content: 'Start shopping with Spazastop at partnering cashback stores, we\'ll automatically add cashback into your account. You can earn cash whether you pay with Spazastop or not.',
-      image: 'service-08.svg',
+      icon: 'shop',
       images: [
-        '/assets/asset-30.png'
+        '/assets/asset-15.svg'
       ],
       steps: [
         {
-          title: 'Get it',
-          heading: '<span class="r-text-secondary">Join</span> Spazastop up to earn cashback.',
-          summary: 'Get started and discover great deals, and get rewarded instantly. ',
-          content: 'Create a Spazastop account in few seconds, it\'s completely simple, free and secure at your own convenience.',
-          image: '/assets/asset-28.svg'
+          title: 'Step 01',
+          heading: '<span class="r-text-primary">Join</span> Spazastop up to earn cashback.',
+          summary: 'Get started and discover great deals, and get rewarded instantly, it\'s completely simple. ',
+          content: 'Create a Spazastop account in a few seconds, free and secure at your own convenience.',
+          image: '/assets/asset-26.svg'
         },
         {
-          title: 'Shop it',
-          heading: '<span class="r-text-secondary">Shop</span> at partner stores with Spazastop.',
-          summary: 'Choose the rewards you love and unlock rewards from partner stores.',
-          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Spazastop or not. You always earn with Spazastop.',
-          image: '/assets/asset-22.svg'
+          title: 'Step 02',
+          heading: '<span class="r-text-primary">Shop</span> at partner stores with Spazastop.',
+          summary: 'Choose the rewards you love and unlock rewards from partner stores. You always earn with Spazastop.',
+          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Spazapass or not.',
+          image: '/assets/asset-25.svg'
         },
         {
-          title: 'Earn it',
-          heading: '<span class="r-text-secondary">Unlock</span> value or pay your next purchase.',
+          title: 'Step 03',
+          heading: '<span class="r-text-primary">Unlock</span> value or pay your next purchase.',
           summary: 'Enjoy exclusive deals and the freedom to shop anywhere and you prefer.',
           content: 'Shop securely at your favorite stores. No matter what you need, we\'ve got a flexible option to fit your budget. ',
-          image: '/assets/asset-23.svg'
+          image: '/assets/asset-27.svg'
         }
       ],
       features: [
         {
           title: 'Sign up to earn cashback.',
-          content: 'Create a Spazastop account in few seconds, it\'s completely simple, free and secure at your convenience.',
-          image: 'service-12.svg',
+          content: 'Create a Spazastop account in few seconds, it\'s completely simple, free and secure.',
           icon: 'gift'
         },
         {
           title: 'Shop at brands on Spazastop.',
           content: 'Shop your favourites and earn cash. Earn cash whether you pay with Spazastop or not.',
-          image: 'service-18.svg',
           icon: 'gift'
         },
         {
           title: 'Get cash or pay your next purchase.',
           content: 'Withdraw real money you\'ve earned or choose to settle an upcoming bill on Spazastop.',
-          image: 'service-07.svg',
-          icon: 'gift'
-        }
-      ],
-      row: 1
-    },
-    {
-      theme: 'yellow',
-      title: '<span class="r-text-yellow">Sell</span> with Spazastop',
-      slug: 'earn-with-spazastop',
-      heading: '<span class="r-text-yellow">Sell</span> more and grow your business.',
-      summary: 'Shop at brands you love and earn cash you can withdraw. That\'s real money, not another loyalty program you\'ll never use.',
-      content: 'Start shopping with Spazastop at partnering cashback stores, we\'ll automatically add cashback into your account. You can earn cash whether you pay with Spazastop or not.',
-      image: 'service-08.svg',
-      images: [
-        '/assets/asset-30.png'
-      ],
-      steps: [
-        {
-          title: 'Get it',
-          heading: '<span class="r-text-secondary">Join</span> Spazastop up to earn cashback.',
-          summary: 'Get started and discover great deals, and get rewarded instantly. ',
-          content: 'Create a Spazastop account in few seconds, it\'s completely simple, free and secure at your own convenience.',
-          image: '/assets/asset-28.svg'
-        },
-        {
-          title: 'Shop it',
-          heading: '<span class="r-text-secondary">Shop</span> at partner stores with Spazastop.',
-          summary: 'Choose the rewards you love and unlock rewards from partner stores.',
-          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Spazastop or not. You always earn with Spazastop.',
-          image: '/assets/asset-22.svg'
-        },
-        {
-          title: 'Earn it',
-          heading: '<span class="r-text-secondary">Unlock</span> value or pay your next purchase.',
-          summary: 'Enjoy exclusive deals and the freedom to shop anywhere and you prefer.',
-          content: 'Shop securely at your favorite stores. No matter what you need, we\'ve got a flexible option to fit your budget. ',
-          image: '/assets/asset-23.svg'
-        }
-      ],
-      features: [
-        {
-          title: 'Sign up to earn cashback.',
-          content: 'Create a Spazastop account in few seconds, it\'s completely simple, free and secure at your convenience.',
-          image: 'service-12.svg',
-          icon: 'gift'
-        },
-        {
-          title: 'Shop at brands on Spazastop.',
-          content: 'Shop your favourites and earn cash. Earn cash whether you pay with Spazastop or not.',
-          image: 'service-18.svg',
-          icon: 'gift'
-        },
-        {
-          title: 'Get cash or pay your next purchase.',
-          content: 'Withdraw real money you\'ve earned or choose to settle an upcoming bill on Spazastop.',
-          image: 'service-07.svg',
           icon: 'gift'
         }
       ],
@@ -259,7 +196,7 @@ export const state = () => ({
       slug: 'x-order',
       heading: '<span class="r-text-primary">Faster</span> deliveries with our nationwide fulfillment network',
       summary: 'Manage orders, warehouse, inventory, and deliver to your shoppers fast and securely.',
-      content: 'Spazastop\'s fulfillment services equip brands of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-shopper and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business. ',
+      content: 'Spazastop\'s fulfillment services equip brands and chefs of all sizes with the ecommerce infrastructure and national footprint as the world\'s largest retailers. Our owned and operated fulfillment centers pick, pack, and ship for direct-to-shopper and B2B use cases and can achieve 1-2 day delivery across the continental U.S. We offer flexible pick, pack, and shipping pricing that scales with your business. ',
       image: 'service-14.svg',
       row: 1
     },

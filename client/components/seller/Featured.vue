@@ -35,7 +35,7 @@
                    :xs="{ span: 24 }"
             >
               <p class="r-text-normal">
-                Spazastop offers the widest range of chefs, restaurants, take your time to discover cooks in your
+                Spazastop offers the widest range of chefs, restaurants, and let's you discover cooks in your
                 neighbourhood.
               </p>
             </a-col>
@@ -120,7 +120,9 @@
                             >
                               <a-row :gutter="[12,12]" align="middle" type="flex">
                                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                                  <r-avatar :data-src="dish.photo" :size="300"
+                                  <r-avatar :data-src="dish.photo"
+                                            shape="circle"
+                                            :size="300"
                                             class="r-avatar-block"
                                   ></r-avatar>
                                 </a-col>

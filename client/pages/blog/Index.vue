@@ -20,7 +20,7 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <h4 class="r-heading-light r-text-uppercase r-text-yellow">
+                          <h4 class="r-heading-light r-text-uppercase r-text-primary">
                             Our blog
                           </h4>
                         </a-col>
@@ -29,7 +29,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h2 class="r-heading-light r-text-dark r-text-white">
-                            <span class="r-text-yellow">Spazastop</span> insights about the B2B marketplace
+                            <span class="r-text-primary">Spazastop</span> insights about the B2B marketplace
                             infrastructure.
                           </h2>
                         </a-col>

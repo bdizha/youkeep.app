@@ -76,33 +76,26 @@
         <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                :xs="{ span: 24}"
         >
-          <a-card class="r-bg-secondary-pattern">
-            <div class="r-mv-96">
-              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-                <a-col :lg="{ span: 12 }" :sm="{ span: 12 }" :xs="{ span: 24 }">
-                  <r-avatar v-for="(step, index) in steps"
-                            v-show="isCurrent(index)"
-                            :key="index"
-                            :data-src="step.image" :size="300"
-                            class="r-avatar-block"
-                  ></r-avatar>
-                </a-col>
-              </a-row>
-            </div>
-          </a-card>
+          <r-saucer v-for="(step, index) in steps"
+                    v-show="isCurrent(index)"
+                    :key="index"
+                    :image="step.image" :size="300"
+          ></r-saucer>
         </a-col>
       </a-row>
     </a-col>
   </a-row>
 </template>
 <script>
+import RSaucer from './Saucer'
 export default {
   name: 'r-steps',
+  components: { RSaucer },
   props: {
     size: { type: Number, required: false, default: 16 },
     theme: { type: String, required: false, default: 'secondary' },
     userType: { type: String, required: false, default: 'customer' },
-    learnMore: { type: String, required: false, default: '/shopper' },
+    learnMore: { type: String, required: false, default: '/customer' },
     title: { type: String, required: false, default: '<span class="r-text-primary">Shop</span> simple with Spazastop' },
     content: { type: String, required: false, default: null },
     hasMore: { type: Boolean, required: false, default: true },

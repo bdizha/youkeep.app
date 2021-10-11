@@ -1,6 +1,6 @@
 <template>
   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+    <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
@@ -10,7 +10,7 @@
                :xs="{ span: 24 }"
         >
           <h3 class="r-heading-light">
-            Spazastop powers ambitious multi-channel brands of all sizes in all industries.
+            Spazastop powers ambitious multi-channel brands and chefs of all sizes in all industries.
           </h3>
         </a-col>
       </a-row>
@@ -22,7 +22,7 @@
       <a-row :gutter="[24,24]" align="middle" class="r-text-center" justify="start" type="flex">
         <a-col v-for="(metric, index) in metrics"
                :key="index"
-               :lg="{ span: 6 }" :md="{ span: 6 }"
+               :lg="{ span: 8 }" :md="{ span: 8 }"
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
@@ -34,7 +34,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <h1 class="r-text-slarge-light" :class="getTextClass(metric)">
+                    <h1 class="r-text-xl" :class="getTextClass(metric)">
                       {{ metric.content }}
                     </h1>
                   </a-col>

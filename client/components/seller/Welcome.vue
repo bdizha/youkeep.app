@@ -1,15 +1,15 @@
 <template>
-  <a-card class="r-bg-primary-light r-pull-h-24 r-border-none">
+  <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
     <div class="r-mv-96">
       <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
           <a-row :gutter="[96,96]" align="middle" justify="end" type="flex">
-            <a-col class="r-text-right" :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }"
+            <a-col class="r-text-right" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
-              <r-avatar data-src="/assets/asset-14.svg" :size="300" class="r-avatar-block"
+              <r-avatar data-src="/assets/asset-10-primary.svg" :size="300" class="r-avatar-block"
               ></r-avatar>
             </a-col>
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
@@ -29,7 +29,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading">
-                    <span class="r-text-secondary">Accelerate</span> sells with on demand credit options
+                    <span class="r-text-secondary">Accelerate</span> sells with Spazastop's on-demand food marketplace
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -37,7 +37,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Spazastop's on-demand checkout is revolutionizing marketplaces and how Shoppers shop online.
+                    Advertise your restaurant on Spazastop and connect with thousands of new customers in your neighborhood.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -45,19 +45,12 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-normal">
-                    Let your customers shop now and split their purchases into 3 zero interest terms while you get paid in full on order placement.
+                    Plus, add marketing programs any time, like SpazaPass, where high-value customers see your business first.
                   </p>
                 </a-col>
-                <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                 >
-                  <a-button block
-                            @click="onRegister"
-                            class="r-btn-bordered-primary"
-                            size="large"
-                            type="secondary"
-                  >
-                    Get started
-                  </a-button>
+                  <r-button title="Get started" size="large" action="register" theme="primary"></r-button>
                 </a-col>
               </a-row>
             </a-col>

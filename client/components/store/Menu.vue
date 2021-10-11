@@ -2,102 +2,119 @@
   <a-row align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-store-notice v-if="hasNotice"></r-store-notice>
-      <a-collapse :default-active-key="activeKey"
-                  accordion
-                  expandIconPosition="right"
-      >
-        <a-collapse-panel v-if="isStore && hasStore"
-                          key="store"
-                          :header="'Welcome to ' + store.name"
-                          class="r-collapse-panel"
-        >
-          <r-store-face v-if="isStore && !isHome"
-                        :is-plain="true"
-                        :store="store"
-          ></r-store-face>
-        </a-collapse-panel>
-        <a-collapse-panel v-if="isHome"
-                          key="links"
-                          class="r-collapse-panel"
-                          header="Best of Spazastop"
-        >
-        </a-collapse-panel>
-        <a-collapse-panel v-if="isStore" key="delivery"
-                          class="r-collapse-panel"
-                          header="Delivery Address"
-        >
-          <r-delivery-form :has-submit="false"
-                           :is-store="true"
-          ></r-delivery-form>
-        </a-collapse-panel>
-        <a-collapse-panel v-if="isCategory"
-                          key="category"
-                          class="r-collapse-panel"
-                          header="By Category"
-        >
-          <r-category-filter-category></r-category-filter-category>
-        </a-collapse-panel>
-        <a-collapse-panel v-if="isCategory"
-                          key="price"
-                          class="r-collapse-panel" header="By Price"
-        >
-          <r-category-filter-price></r-category-filter-price>
-        </a-collapse-panel>
-        <a-collapse-panel v-for="(filter) in category.filters"
-                          v-if="isCategory && filter.items.length > 1"
-                          :key="filter.name"
-                          :header="'By ' + filter.name"
-                          class="r-collapse-panel"
-        >
-          <r-category-filter-item :filter="filter"></r-category-filter-item>
-        </a-collapse-panel>
-        <a-collapse-panel v-if="!isCategory" key="category"
-                          class="r-collapse-panel"
-                          header="Shop by Category"
-        >
-          <r-category-links></r-category-links>
-        </a-collapse-panel>
-        <a-collapse-panel v-if="isStore && hasCategories"
-                          key="catalog"
-                          class="r-collapse-panel"
-                          header="Catalog"
-        >
-          <r-store-catalog></r-store-catalog>
-        </a-collapse-panel>
-        <a-collapse-panel v-for="(item, index) in list" v-if="isStore && hasStore"
-                          :key="index + '-item'"
-                          :header="item.title"
-                          class="r-collapse-panel"
-        >
-          <div v-html="item.content"></div>
-        </a-collapse-panel>
-        <a-collapse-panel v-if="isStore" key="sellers"
-                          class="r-collapse-panel"
-                          header="Popular sellers"
-        >
-          <r-store-list></r-store-list>
-        </a-collapse-panel>
-        <a-collapse-panel v-if="hasStore && isProduct"
-                          key="products"
-                          class="r-collapse-panel"
-                          header="Related Products"
-        >
-          <div class="r-margin-out">
-            <r-product-list :columns="1"
-                            :filters="filters"
-                            :span="24" :vertical="false"
-            ></r-product-list>
+      <a-row :gutter="[24,24]" justify="start" type="flex">
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <div class="r-ph-24 r-pt-24">
+            <a-row :gutter="[24,24]" justify="space-between" type="flex">
+              <a-col>
+                <h4 class="r-heading" style="line-height: 45px">
+                  All deals
+                </h4>
+              </a-col>
+              <a-col>
+                <a-button class="r-btn-bordered-dark"
+                          size="default"
+                          type="secondary"
+                >
+                  Reset <a-icon type="close"/>
+                </a-button>
+              </a-col>
+            </a-row>
           </div>
-        </a-collapse-panel>
-      </a-collapse>
-      <a-row v-if="isStore" class="r-mb-48" justify="center" type="flex">
-        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
-          <h4 class="r-store-text-light">
-            Spazastop is an independent business service that is not necessarily affiliated with,
-            endorsed or sponsored by the sellers listed here but it enables you to get the deliveries
-            you
-            want.
-          </h4>
+        </a-col>
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <a-collapse :default-active-key="activeKey"
+                      expandIconPosition="right"
+          >
+            <a-collapse-panel key="delivery"
+                              class="r-collapse-panel r-hide-lg"
+                              header="Delivery address"
+            >
+              <r-delivery-search :has-submit="false"
+                                 :is-store="true"
+              ></r-delivery-search>
+            </a-collapse-panel>
+            <a-collapse-panel v-for="(filter, index) in filters"
+                              :key="filter.id.toString()"
+                              class="r-collapse-panel"
+                              :header="filter.title"
+            >
+              <r-category-filter-item :filter="filter"></r-category-filter-item>
+            </a-collapse-panel>
+            <a-collapse-panel v-if="isStore && hasStore"
+                              key="store"
+                              :header="'Welcome to ' + store.name"
+                              class="r-collapse-panel"
+            >
+              <r-store-face v-if="isStore && !isHome"
+                            :is-plain="true"
+                            :store="store"
+              ></r-store-face>
+            </a-collapse-panel>
+            <a-collapse-panel v-if="isHome"
+                              key="links"
+                              class="r-collapse-panel"
+                              header="Best of Spazastop"
+            >
+            </a-collapse-panel>
+            <a-collapse-panel v-if="isCategory"
+                              key="category"
+                              class="r-collapse-panel"
+                              header="By Category"
+            >
+              <r-category-filter-category></r-category-filter-category>
+            </a-collapse-panel>
+            <a-collapse-panel v-for="(filter) in category.filters"
+                              v-if="isCategory && filter.items.length > 1"
+                              :key="filter.name"
+                              :header="'By ' + filter.name"
+                              class="r-collapse-panel"
+            >
+              <r-category-filter-item :filter="filter"></r-category-filter-item>
+            </a-collapse-panel>
+            <a-collapse-panel v-if="isStore && hasCategories"
+                              key="catalog"
+                              class="r-collapse-panel"
+                              header="Catalog"
+            >
+              <r-store-catalog></r-store-catalog>
+            </a-collapse-panel>
+            <a-collapse-panel v-for="(item, index) in list" v-if="isStore && hasStore"
+                              :key="index + '-item'"
+                              :header="item.title"
+                              class="r-collapse-panel"
+            >
+              <div v-html="item.content"></div>
+            </a-collapse-panel>
+            <a-collapse-panel v-if="isStore && hasStore" key="sellers"
+                              class="r-collapse-panel"
+                              header="Popular sellers"
+            >
+              <r-store-list></r-store-list>
+            </a-collapse-panel>
+            <a-collapse-panel v-if="hasStore && isProduct"
+                              key="products"
+                              class="r-collapse-panel"
+                              header="Related Products"
+            >
+              <div class="r-margin-out">
+                <r-product-list :columns="1"
+                                :filters="filters"
+                                :span="24" :vertical="false"
+                ></r-product-list>
+              </div>
+            </a-collapse-panel>
+          </a-collapse>
+        </a-col>
+        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <div class="r-p-24 r-mb-48">
+            <h4 class="r-store-text-light">
+              Spazastop is an independent business service that is not necessarily affiliated with,
+              endorsed or sponsored by the sellers listed here but it enables you to get the deliveries
+              you
+              want.
+            </h4>
+          </div>
         </a-col>
       </a-row>
     </a-col>
@@ -116,14 +133,118 @@ export default {
   },
   data () {
     return {
-      filters: {
-        limit: process.env.APP_LIMIT,
-        store_id: this.hasStore ? this.store.id : null,
-        category_id: null,
-        sort: 0,
-        page: 1
-      },
-      list: []
+      filters: [
+        {
+          title: 'Sort',
+          id: 1,
+          type: 1,
+          items: [
+            {
+              name: 'Picked for you',
+              id: 1
+            },
+            {
+              name: 'Most popular',
+              id: 2
+            },
+            {
+              name: 'Rating',
+              id: 3
+            },
+            {
+              name: 'Delivery time',
+              id: 4
+            }
+          ],
+          per_row: 1
+        },
+        {
+          title: 'Dietary',
+          id: 2,
+          type: 1,
+          items: [
+            {
+              name: 'Vegetarian',
+              id: 1
+            },
+            {
+              name: 'Vegan',
+              id: 2
+            },
+            {
+              name: 'Gluten-free',
+              id: 3
+            },
+            {
+              name: 'Halal',
+              id: 4
+            },
+            {
+              name: 'Allergy friendly',
+              id: 5
+            }
+          ],
+          per_row: 1
+        },
+        {
+          title: 'Price range',
+          id: 3,
+          type: 1,
+          items: [
+            {
+              name: '< R99',
+              id: 1
+            },
+            {
+              name: 'R100 - R499',
+              id: 2
+            },
+            {
+              name: 'R500 - R999',
+              id: 3
+            },
+            {
+              name: 'R1000 - R4999',
+              id: 4
+            },
+            {
+              name: '> R5000',
+              id: 5
+            }
+          ],
+          per_row: 1
+        },
+        {
+          title: 'Max delivery fee',
+          id: 4,
+          type: 1,
+          items: [
+            {
+              name: '< R15',
+              id: 1
+            },
+            {
+              name: '< R30',
+              id: 2
+            },
+            {
+              name: '< R60',
+              id: 3
+            },
+            {
+              name: '< R90',
+              id: 4
+            },
+            {
+              name: '> R90',
+              id: 5
+            }
+          ],
+          per_row: 1
+        }
+      ],
+      list: [],
+      sortItems: null
     }
   },
   async fetch () {
@@ -133,14 +254,14 @@ export default {
   },
   computed: {
     activeKey () {
-      let activeKey = 'links'
+      let activeKey = 1
 
       if (this.isStore) {
-        activeKey = 'store'
+        activeKey = '1'
       } else if (this.isCategory) {
-        activeKey = 'category'
+        activeKey = '1'
       } else if (this.isProduct) {
-        activeKey = 'products'
+        activeKey = '1'
       }
 
       return activeKey

@@ -26,30 +26,8 @@ class ArticleSeeder extends DatabaseSeeder
         $this->_updateCategories();
     }
 
-    protected function _setApp(): void
-    {
-        $appName = env('APP_NAME');
-        $appUrl = env('APP_DOMAIN');
-        $slogan = env('APP_SLOGAN');
-
-        $attributes = [
-            'name' => $appName,
-            'url' => $appUrl,
-        ];
-
-        $values = [
-            'name' => $appName,
-            'url' => $appUrl,
-            'description' => $slogan
-        ];
-
-        $this->app = \App\App::updateOrCreate($attributes, $values);
-    }
-
     private function _setHelp()
     {
-        // $crawler = Goutte::request('GET', $this->helpDomain);
-
         $crawler = Goutte::request('GET', 'http://api.shopple.local/feed');
 
         $crawler->filter('.blocks-list .blocks-item')->each(function ($node) {

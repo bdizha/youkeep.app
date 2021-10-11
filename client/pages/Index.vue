@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-primary-pattern r-pull-h-24 r-border-none">
+      <a-card class="r-bg-primary r-pull-h-24 r-border-none">
         <div class="r-mv-48">
           <a-row align="middle" justify="center" type="flex">
             <a-col class="r-text-left" :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }"
@@ -88,6 +88,12 @@
           </a-row>
         </div>
       </a-card>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <r-metrics></r-metrics>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
@@ -492,8 +498,10 @@
 <script>
 import { mapGetters } from 'vuex'
 import { setInterval } from 'timers'
+import RMetrics from '../components/global/Metrics'
 
 export default {
+  components: { RMetrics },
   layout: 'default',
   props: {},
   async asyncData ({ store }) {

@@ -1,5 +1,6 @@
 <?php
 
+use App\AppCategory;
 use App\Category;
 use App\CategoryProduct;
 use App\Lookup;
@@ -12,8 +13,10 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     protected $storeId = null;
+    protected $app = null;
     protected $categories = [];
     protected $parentStoreCategory = null;
+    protected $categoryPhoto = null;
     protected $storeCategory = null;
     protected $filterBrand = null;
     protected $product = null;
@@ -105,10 +108,9 @@ class DatabaseSeeder extends Seeder
      * @param $url
      * @return mixed
      */
-    protected function setCategory($categoryName, $url, $categoryType = Category::TYPE_PRODUCT, $hasStore = true)
+    protected function setCategory($categoryName, $url = null, $categoryType = Category::TYPE_PRODUCT, $hasStore = true)
     {
         $categoryDescription = 'Not set';
-
         $this->categories = [];
 
         /* Update or create this category */
@@ -118,18 +120,28 @@ class DatabaseSeeder extends Seeder
 
         $values = [
             'name' => $categoryName,
+            'photo' => $this->categoryPhoto,
             'order' => 1,
             'description' => $categoryDescription,
             'type' => $categoryType,
-            'randomized_at' => date('Y-m-d'),
+            'randomized_at' => date('Y-m-d')
         ];
 
-        $category = \App\Category::updateOrCreate($attributes, $values);
+        $category = Category::updateOrCreate($attributes, $values);
         $this->categories[] = $category->id;
 
         $arrows = str_pad("", 6 * $this->level, ">");
 
         echo "{$arrows} Category updated: {$category->slug}\n";
+
+        if (!empty($this->app->id)) {
+            $values = [
+                'app_id' => $this->app->id,
+                'category_id' => $category->id
+            ];
+
+            AppCategory::updateOrCreate($values, $values);
+        }
 
         if (!empty($hasStore)) {
             $attributes = [
@@ -370,7 +382,6 @@ class DatabaseSeeder extends Seeder
             $filePath = "{$storagePath}/{$photoName}";
 
             if (!file_exists($filePath)) {
-
                 if (strpos($filePath, "http") === false) {
                     $filePath = "https:" . $filePath;
                 }
@@ -418,12 +429,31 @@ class DatabaseSeeder extends Seeder
      */
     protected function getFileExt($photo)
     {
-        $ext = 'jpg';
-        if (strpos($photo, 'png') !== FALSE) {
-            $ext = 'png';
+        $photoParts = explode(".", $photo);
+        $ext = $photoParts[count($photoParts) - 1];
+
+        return sha1($photo) . ".{$ext}";
+    }
+
+    protected function getSha1File($affix, $photoUrl)
+    {
+        $photoName = $this->getFileExt($photoUrl);
+
+        try {
+            $storagePath = storage_path('app/public/' . $affix);
+            $filePath = "{$storagePath}/{$photoName}";
+
+            if (!file_exists($filePath)) {
+                echo "<<<<<< Photo downloaded: " . $filePath . "\n";
+                exec("wget {$photoUrl} -O {$filePath}");
+            } else {
+                echo "<<<<<< Photo skipped: " . $filePath . "\n";
+            }
+
+            return $photoName;
+        } catch (Exception $e) {
+            echo ">>>>> >>>>>> Failed to download file: " . $e->getMessage() . " ::: {$photoUrl}\n";
         }
-        $photoName = sha1($photo) . ".{$ext}";
-        return $photoName;
     }
 
     /**
@@ -433,6 +463,26 @@ class DatabaseSeeder extends Seeder
     protected function _setCrawler(string $url): string
     {
         $encodedUrl = urlencode($url);
-        return "https://api.proxycrawl.com/?token=XedJD-fi9KMpxSZfh_U2JA&url={$encodedUrl}";
+        return "https://api.proxycrawl.com/?token=L52BYM2A3UCUx5dA8HfVDw&url={$encodedUrl}";
+    }
+
+    protected function _setApp(): void
+    {
+        $appName = env('APP_NAME');
+        $appUrl = env('APP_DOMAIN');
+        $slogan = env('APP_SLOGAN');
+
+        $attributes = [
+            'name' => $appName,
+            'url' => $appUrl,
+        ];
+
+        $values = [
+            'name' => $appName,
+            'url' => $appUrl,
+            'description' => $slogan
+        ];
+
+        $this->app = \App\App::updateOrCreate($attributes, $values);
     }
 }

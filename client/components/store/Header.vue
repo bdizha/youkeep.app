@@ -1,47 +1,61 @@
 <template>
-  <a-layout-header class="r-header r-store-header">
+  <div class="r-header" :class="{'r-header-dark': false}">
     <a-row align="middle" justify="start" style="width: 100%;" type="flex">
       <a-col :span="24" type="flex">
-        <a-row align="middle" justify="center" type="flex">
-          <a-col :lg="{ span: 6 }" :md="{ span: 6 }"
-                 :sm="{ span: 12 }"
-                 :xs="{ span: 12 }"
-          >
+        <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+          <a-col>
             <div class="r-nav-item r-nav-item__logo">
               <r-logo :is-icon="true"></r-logo>
             </div>
           </a-col>
-          <a-col :lg="{ span: 18 }" :md="{ span: 18 }"
-                 :sm="{ span: 12 }"
-                 :xs="{ span: 12 }"
-          >
-            <div class="r-layout-menu">
-              <div v-if="hasStore" class="r-nav-item">
-                <nuxt-link :to="'/store/' + store.slug">
-                  <a-button block
-                            class="r-btn-dark"
-                            type="secondary"
-                  >
-                    {{ store.name }}
-                  </a-button>
-                </nuxt-link>
-              </div>
-              <div class="r-hide-sm r-nav-item r-nav-item__search">
-                <r-search></r-search>
-              </div>
-              <div class="r-hide-sm r-nav-item">
-                <r-nav></r-nav>
-              </div>
-              <div class="r-nav-item">
-                <r-cart-count></r-cart-count>
+          <a-col>
+            <div class="r-nav-item">
+              <div style="padding: 3px;" class="r-bg-primary-secondary r-border-radius-12">
+                <a-row align="middle" justify="center" type="flex">
+                  <a-col>
+                    <p class="r-text-normal r-ph-18 r-pv-9">
+                      Delivery
+                    </p>
+                  </a-col>
+                  <a-col>
+                    <p class="r-text-normal r-ph-18 r-pv-9 r-bg-white r-border-radius-12">
+                      Pickup
+                    </p>
+                  </a-col>
+                </a-row>
               </div>
             </div>
+          </a-col>
+          <a-col>
+            <div class="r-nav-item">
+              <r-delivery-search size="default" :has-button="false"></r-delivery-search>
+            </div>
+          </a-col>
+          <a-col v-if="hasStore">
+            <div class="r-nav-item">
+              <nuxt-link :to="'/store/' + store.slug">
+                <a-button block
+                          class="r-btn-dark"
+                          type="secondary"
+                >
+                  {{ store.name }}
+                </a-button>
+              </nuxt-link>
+            </div>
+          </a-col>
+          <a-col flex="auto">
+            <div class="r-nav-item">
+              <r-search size="default" :has-button="false"></r-search>
+            </div>
+          </a-col>
+          <a-col>
+            <r-nav :has-nav="false"></r-nav>
           </a-col>
         </a-row>
       </a-col>
     </a-row>
     <r-drawer v-if="hasStore"></r-drawer>
-  </a-layout-header>
+  </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -53,7 +67,7 @@ export default {
     isShow: { type: Boolean, required: false },
   },
   async fetch () {
-    let payload = {
+    const payload = {
       category_id: null,
       limit: process.env.APP_LIMIT
     }
@@ -62,6 +76,7 @@ export default {
   },
   data () {
     return {
+      deliveryType: 1,
       hasData: false
     }
   },

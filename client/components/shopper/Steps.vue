@@ -38,7 +38,7 @@ export default {
         },
         {
           title: 'Never bother with checkout forms again.',
-          heading: '<span class="r-text-primary">Pay</span> in 3 installments with spazastop.',
+          heading: '<span class="r-text-primary">Pay</span> in 3 installments with Spazastop.',
           image: '/assets/asset-12.svg',
           summary: 'We know how difficult it can be to secure financing and free up working capital as a farming growing business. ',
           content: 'It eliminates the need for mobile shoppers to fill out lengthy and cumbersome checkout forms, empowering them to make purchases effortlessly.'

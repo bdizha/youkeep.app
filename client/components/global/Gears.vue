@@ -44,7 +44,7 @@
           <a-row :gutter="[24,24]" align="middle" justify="space-between" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
             >
-              <h3 class="r-heading-light  r-text-yellow">
+              <h3 class="r-heading-light  r-text-primary">
                 We can start anywhere
               </h3>
             </a-col>
@@ -52,7 +52,7 @@
             >
               <p class="r-text-medium">
                 But for the best results, both client and project team need to believe in the value of
-                <span class="r-text-yellow">iterative development</span> and be continually looking for opportunities to
+                <span class="r-text-primary">iterative development</span> and be continually looking for opportunities to
                 create greater impact.
               </p>
             </a-col>

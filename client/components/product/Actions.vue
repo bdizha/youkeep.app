@@ -24,7 +24,7 @@
         >
           <div class="r-text-center r-action-height">
             <div :class="{'r-cart__active': productItem.quantity > 0}" class="r-cart">
-              <div class="r-business-cart"></div>
+              <div class="r-cart-icon"></div>
               <span class="r-cart-count">{{ productItem.quantity }}</span>
             </div>
           </div>
