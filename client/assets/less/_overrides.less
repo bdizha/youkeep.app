@@ -3167,14 +3167,8 @@ label {
 }
 
 .ant-layout-footer {
-    background: @white;
-    border-top: 1px solid rgb(236, 236, 236, 1);
+    margin-top: 96px;
     padding: 0;
-    background-color: @orange-color-light;
-    background-image: url("/images/icon_dark_large.svg");
-    background-repeat: no-repeat;
-    background-position: calc(100% - 24px) calc(100% - 24px);
-
     .ant-card-head {
         font-weight: 600;
         border: none;
@@ -6569,8 +6563,7 @@ label {
             }
         }
 
-        .r-layout-content__store,
-        .r-layout-content__default {
+        .r-layout-content__store{
             @media (min-width: 768px) {
                 margin-left: 360px;
             }
@@ -6588,9 +6581,6 @@ label {
     }
 
     &.r-layout__default {
-        overflow-y: auto;
-        overflow-x: hidden;
-
         .ant-layout-sider {
             background: @white;
             box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
@@ -8565,30 +8555,33 @@ a:hover {
 }
 
 .ant-layout-content {
+
     opacity: 0;
     -webkit-animation: slide-up-fadeIn .09s ease 0s 1 normal forwards;
     animation: slide-up-fadeIn .09s ease 0s 1 normal forwards;
 
-    margin-top: 60px;
-    @media (max-width: 768px) {
-        padding: 0 24px 0;
+    &.r-layout-content {
 
-        .r-pull-t-24 {
-            margin-top: -24px;
-        }
+        @media (max-width: 768px) {
+            padding: 0 24px 0;
 
-        .r-pull-h-24 {
-            margin-left: -24px;
-            margin-right: -24px;
-        }
+            .r-pull-t-24 {
+                margin-top: -24px;
+            }
 
-        .r-pull-v-24 {
-            margin-top: -24px;
-            margin-bottom: -24px;
-        }
+            .r-pull-h-24 {
+                margin-left: -24px;
+                margin-right: -24px;
+            }
 
-        .r-pull-b-24 {
-            margin-bottom: -24px;
+            .r-pull-v-24 {
+                margin-top: -24px;
+                margin-bottom: -24px;
+            }
+
+            .r-pull-b-24 {
+                margin-bottom: -24px;
+            }
         }
     }
 

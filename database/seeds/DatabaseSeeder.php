@@ -13,6 +13,7 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     protected $storeId = null;
+    protected $store = null;
     protected $app = null;
     protected $categories = [];
     protected $parentStoreCategory = null;
@@ -227,7 +228,7 @@ class DatabaseSeeder extends Seeder
 
             $type = $productTypeKeys[$typeName];
 
-            echo ">>>>>>Inserting service type: {$name} with type: {$typeName} \n";
+            echo ">>>>>>Inserting product type: {$name} with type: {$typeName} \n";
 
             $attributes = [
                 'name' => $name
@@ -239,7 +240,7 @@ class DatabaseSeeder extends Seeder
             ];
 
             $productType = \App\ProductType::updateOrCreate($attributes, $values);
-            echo ">>>>>>Inserting {$productType->name} service variant: {$name} \n";
+            echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
 
             $this->setProductVariant($filterItem, $productType);
         }
@@ -269,6 +270,11 @@ class DatabaseSeeder extends Seeder
         $values = [
             'product_type_id' => $productType->id,
             'product_id' => $this->product->id,
+            'product_variant_id' => @$filterItem['product_variant_id'],
+            'product_id' => $this->product->id,
+            'is_available' => !empty($filterItem['is_available']),
+            'required_max' => !empty($filterItem['required_max']) ? $filterItem['required_max'] : 0,
+            'required_min' => !empty($filterItem['required_min']) ? $filterItem['required_min'] : 0,
             'price' => $this->setPrice($filterItem['price']),
             'discount' => $this->setPrice($filterItem['discount']),
         ];

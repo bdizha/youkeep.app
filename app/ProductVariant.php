@@ -20,7 +20,7 @@ class ProductVariant extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'price', 'discount', 'is_active', 'product_type_id', 'product_id'
+        'name', 'price', 'discount', 'is_active', 'required_min', 'required_max', 'is_available', 'product_variant_id', 'product_type_id', 'product_id'
     ];
 
     /**
@@ -41,7 +41,7 @@ class ProductVariant extends Model
     }
 
     /**
-     * Get all of the service types for the service variant.
+     * Get all of the service types for the product variant.
      */
     public function product_type()
     {

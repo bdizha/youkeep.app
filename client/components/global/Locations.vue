@@ -1,54 +1,54 @@
 <template>
-  <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
-    <div class="r-mv-96">
-      <a-row justify="center" type="flex">
-        <a-col :lg="{span: 16}" :md="{span: 18}" :sm="{span: 24}" :xs="{span: 24}">
-          <a-row :gutter="[24,24]" justify="center" type="flex">
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-text-center"
-            >
-              <h3 class="r-heading-light r-text-uppercase r-text-primary">
-                Where we're located
-              </h3>
+  <a-row justify="center" type="flex">
+    <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
+      <a-row :gutter="[24,24]" justify="center" type="flex">
+        <a-col :lg="{span: 12}" :md="{span: 12}" :sm="{span: 24}" :xs="{span: 24}">
+          <a-row :gutter="[12,12]" justify="start" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+              <h4 class="r-heading-light r-text-uppercase">
+                Top Locations
+              </h4>
             </a-col>
             <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
-              <a-row :gutter="[24,24]" justify="start" type="flex">
-                <a-col v-for="(location, index) in locations"
+              <a-row :gutter="[6,6]" justify="start" type="flex">
+                <a-col v-for="(city, index) in cities"
                        :key="index"
-                       :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                       v-if="index < 14"
+                       :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
                 >
-                  <a-card class="r-bg-white-secondary">
-                    <div class="r-checked-item">
-                      <a-icon class="r-checked-item-icon" type="environment"/>
-                      <a-row :gutter="[6,6]" align="top" justify="start" type="flex">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                        >
-                          <h4 class="r-heading-light r-text-uppercase">
-                            {{ location.city }}
-                          </h4>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                        >
-                          <h4 class="r-heading r-text-primary">
-                            {{ location.country }}
-                          </h4>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
-                        >
-                          <p class="r-text-normal">
-                            {{ location.email }}
-                          </p>
-                        </a-col>
-                      </a-row>
-                    </div>
-                  </a-card>
+                  <nuxt-link class="r-text-medium" :to="`/location/${city.slug}`">
+                    {{ city.name }}
+                  </nuxt-link>
+                </a-col>
+              </a-row>
+            </a-col>
+          </a-row>
+        </a-col>
+        <a-col :lg="{span: 12}" :md="{span: 12}" :sm="{span: 24}" :xs="{span: 24}">
+          <a-row :gutter="[12,12]" justify="start" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+              <h4 class="r-heading-light r-text-uppercase">
+                Top Cuisines
+              </h4>
+            </a-col>
+            <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
+              <a-row :gutter="[6,6]" justify="start" type="flex">
+                <a-col v-for="(serve, index) in cuisines"
+                       :key="index"
+                       v-if="index < 14"
+                       :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+                >
+                  <nuxt-link class="r-text-medium r-text-capitalize" :to="`/cuisine/${serve.toLowerCase()}`">
+                    {{ serve }} near me
+                  </nuxt-link>
                 </a-col>
               </a-row>
             </a-col>
           </a-row>
         </a-col>
       </a-row>
-    </div>
-  </a-card>
+    </a-col>
+  </a-row>
 </template>
 <script>
 export default {
@@ -57,53 +57,94 @@ export default {
   props: {},
   data () {
     return {
-      locations: [
+      cities: [
         {
-          city: 'Mumbai',
-          country: 'India',
-          email: 'info@Spazastop.com'
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
         },
         {
-          city: 'Singapore',
-          country: 'Singapore',
-          email: 'partner@Spazastop.com'
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
         },
         {
-          city: 'Jakarta',
-          country: 'Indonesia',
-          email: 'partner@Spazastop.com'
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
         },
         {
-          city: 'Kuala Lumpur',
-          country: 'Malaysia',
-          email: 'partner@Spazastop.com'
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
         },
         {
-          city: 'Hanoi',
-          country: 'Vietnam',
-          email: 'partner@Spazastop.com'
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
         },
         {
-          city: 'Dhaka',
-          country: 'Bangladesh',
-          email: 'info@Spazastop.com'
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
         },
         {
-          city: 'Manila',
-          country: 'Philippines',
-          email: 'partner@Spazastop.com'
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
         },
         {
-          city: 'Islamabad',
-          country: 'Pakistan',
-          email: 'info@Spazastop.com'
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
+        },
+        {
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
+        },
+        {
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
+        },
+        {
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
+        },
+        {
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
+        },
+        {
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
+        },
+        {
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
+        },
+        {
+          name: 'Buffalo City',
+          slug: 'buffalo-city'
         }
+      ],
+      cuisines: [
+        'African',
+        'All',
+        'American',
+        'Caribbean',
+        'Chinese',
+        'Healthy',
+        'Indian',
+        'Italian',
+        'Japanese',
+        'Korean',
+        'Latin American',
+        'Mediterranean',
+        'Mexican',
+        'Middle Eastern',
+        'Nepalese',
+        'Pakistani',
+        'Southeast Asian',
+        'Southern',
+        'Specialty'
       ]
     }
   },
   mounted () {
     this.modal = this.$store.state.modal
   },
-  methods: {},
+  methods: {}
 }
 </script>

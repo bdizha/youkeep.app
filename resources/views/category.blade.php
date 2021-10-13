@@ -119,27 +119,6 @@
   <h1 class="c9 ca ei cc ej">All cities in South Africa</h1>
   <div>
     <div>
-      <div class="ag c0 e7"><h2 class="ek el ei cc"><a href="/za/region/ec">Eastern Cape</a></h2></div>
-      <div class="em en eo ep eq er es et">
-        <div class="eu ev"><a href="/za/city/buffalo-city-ec"><span class="cd ce cf cg">Buffalo City</span></a></div>
-        <div class="eu ev"><a href="/za/city/nelson-mandela-bay-ec"><span class="cd ce cf cg">Nelson Mandela Bay</span></a>
-        </div>
-      </div>
-    </div>
-    <div class="d3"></div>
-  </div>
-  <div>
-    <div>
-      <div class="ag c0 e7"><h2 class="ek el ei cc"><a href="/za/region/fs">Free State</a></h2></div>
-      <div class="em en eo ep eq er es et">
-        <div class="eu ev"><a href="/za/city/bloemfontein-fs"><span class="cd ce cf cg">Bloemfontein</span></a></div>
-        <div class="eu ev"><a href="/za/city/metsimaholo-fs"><span class="cd ce cf cg">Metsimaholo</span></a></div>
-      </div>
-    </div>
-    <div class="d3"></div>
-  </div>
-  <div>
-    <div>
       <div class="ag c0 e7"><h2 class="ek el ei cc"><a href="/za/region/gp">Gauteng</a></h2></div>
       <div class="em en eo ew eq er es et">
         <div class="eu ev"><a href="/za/city/city-of-tshwane-gp"><span class="cd ce cf cg">City of Tshwane</span></a>
@@ -179,6 +158,27 @@
         <div class="eu ev"><a href="/za/city/emalahleni-mp"><span class="cd ce cf cg">Emalahleni</span></a></div>
         <div class="eu ev"><a href="/za/city/govan-mbeki-mp"><span class="cd ce cf cg">Govan Mbeki</span></a></div>
         <div class="eu ev"><a href="/za/city/steve-tshwete-mp"><span class="cd ce cf cg">Steve Tshwete</span></a></div>
+      </div>
+    </div>
+    <div class="d3"></div>
+  </div>
+  <div>
+    <div>
+      <div class="ag c0 e7"><h2 class="ek el ei cc"><a href="/za/region/ec">Eastern Cape</a></h2></div>
+      <div class="em en eo ep eq er es et">
+        <div class="eu ev"><a href="/za/city/buffalo-city-ec"><span class="cd ce cf cg">Buffalo City</span></a></div>
+        <div class="eu ev"><a href="/za/city/nelson-mandela-bay-ec"><span class="cd ce cf cg">Nelson Mandela Bay</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="d3"></div>
+  </div>
+  <div>
+    <div>
+      <div class="ag c0 e7"><h2 class="ek el ei cc"><a href="/za/region/fs">Free State</a></h2></div>
+      <div class="em en eo ep eq er es et">
+        <div class="eu ev"><a href="/za/city/bloemfontein-fs"><span class="cd ce cf cg">Bloemfontein</span></a></div>
+        <div class="eu ev"><a href="/za/city/metsimaholo-fs"><span class="cd ce cf cg">Metsimaholo</span></a></div>
       </div>
     </div>
     <div class="d3"></div>

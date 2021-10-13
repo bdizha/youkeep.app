@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class HomeController extends Controller
 {
     /**
@@ -41,8 +39,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function categories() : string
+    public function categories(): string
     {
         return view('category');
+    }
+
+    /**
+     * Show raw json
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function json(): string
+    {
+        return view('json');
     }
 }

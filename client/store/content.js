@@ -285,7 +285,11 @@ export const state = () => ({
     }
   ],
   articles: [],
-  article: {}
+  article: {},
+  serves: [],
+  hasServes: false,
+  stores: [],
+  hasStores: false
 })
 
 // getters
@@ -298,7 +302,11 @@ export const getters = {
   plans: state => state.plans,
   reasons: state => state.reasons,
   article: state => state.article,
-  articles: state => state.articles
+  articles: state => state.articles,
+  serves: state => state.serves,
+  stores: state => state.stores,
+  hasServes: state => state.hasServes,
+  hasStores: state => state.hasStores
 }
 
 // mutations
@@ -314,11 +322,48 @@ const mutations = {
   },
   setArticles (state, articles) {
     state.articles = articles
+  },
+  setServes (state, serves) {
+    state.serves = serves
+    state.hasServes = serves !== undefined && serves.length > 0
+  },
+  setStores (state, stores) {
+    state.stores = stores
+    state.hasStores = stores !== undefined && stores.length > 0
   }
 }
 
 // actions
 const actions = {
+  async onStores ({ dispatch, commit, state }, payload) {
+    try {
+      dispatch('onProcess', { key: 'isFixed', value: true }, { root: true })
+      commit('setStores', [])
+
+      await axios.post('/stores', payload).then(({ data }) => {
+        commit('setStores', data.stores)
+
+        dispatch('onProcess', { key: 'isFixed', value: false }, { root: true })
+      })
+    } catch (e) {
+      console.error('onStores errors')
+      console.log(e)
+    }
+  },
+  async onServes ({ dispatch, commit, state }, payload) {
+    try {
+      dispatch('onProcess', { key: 'isFixed', value: true }, { root: true })
+      commit('setServes', [])
+
+      await axios.post('/serves', payload).then(({ data }) => {
+        commit('setServes', data.serves)
+        dispatch('onProcess', { key: 'isFixed', value: false }, { root: true })
+      })
+    } catch (e) {
+      console.error('onServes errors')
+      console.log(e)
+    }
+  },
   onProduct ({ dispatch, commit, state }, slug) {
     const product = state.products.find((product) => {
       return product.slug === slug

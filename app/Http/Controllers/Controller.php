@@ -10,6 +10,7 @@ use App\Product;
 use App\ProductType;
 use App\ProductVariant;
 use App\Review;
+use App\Serve;
 use App\Store;
 use App\StoreCategory;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -47,6 +48,7 @@ class Controller extends BaseController
         $products = [],
         $reviews = [],
         $categories = [],
+        $serves = [],
         $productTypes = [],
         $categoryType = null,
         $filters = [],
@@ -386,12 +388,19 @@ class Controller extends BaseController
     /**
      * @return void
      */
-    protected function _setCategoryStores()
+    protected function _setStores()
     {
-        $this->categories = Category::whereHas('app_categories', function ($query) {
-            $query->where('app_categories.app_id', $this->appId);
-        })
-        ->get();
+        $this->stores = Store::where('app_id', $this->appId)
+            ->get();
+    }
+
+    /**
+     * @return void
+     */
+    protected function _setServes()
+    {
+        $this->serves = Serve::where('app_id', $this->appId)
+            ->get();
     }
 
     /**

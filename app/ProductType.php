@@ -17,6 +17,7 @@ class ProductType extends Model
     const TYPE_BRAND = 5;
     const TYPE_COLLECTION = 6;
     const TYPE_STORE = 7;
+    const TYPE_CUSTOMIZATION = 8;
 
     public static $types = [
         self::TYPE_DEFAULT => 'Default',
@@ -26,7 +27,8 @@ class ProductType extends Model
         self::TYPE_MASS => 'Mass',
         self::TYPE_BRAND => 'Brand',
         self::TYPE_COLLECTION => 'Collection',
-        self::TYPE_STORE => 'Store'
+        self::TYPE_STORE => 'Store',
+        self::TYPE_CUSTOMIZATION => 'Customization'
     ];
 
     public static $lengths = [
@@ -38,6 +40,7 @@ class ProductType extends Model
         self::TYPE_BRAND => 1,
         self::TYPE_COLLECTION => 1,
         self::TYPE_STORE => 1,
+        self::TYPE_CUSTOMIZATION => 1,
     ];
 
 

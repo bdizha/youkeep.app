@@ -238,7 +238,7 @@ class ProductMTGSeeder extends DatabaseSeeder
                 $productTypeKey = Str::plural($productTypeKey);
 
                 if (empty($productData[$productTypeKey])) {
-//                    echo __LINE__ . " Skipping service variant: {$productTypeKey} \n";
+//                    echo __LINE__ . " Skipping product variant: {$productTypeKey} \n";
                     continue;
                 }
 

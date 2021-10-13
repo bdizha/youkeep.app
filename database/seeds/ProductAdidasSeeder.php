@@ -390,7 +390,7 @@ class ProductAdidasSeeder extends DatabaseSeeder
             $values = $filterItem;
 
             $productType = ProductType::updateOrCreate($attributes, $values);
-//            echo ">>>>>>Inserting {$productType->name} service variant: {$name} \n";
+//            echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
 
             $this->setProductVariant($filterItem, $productType);
         }

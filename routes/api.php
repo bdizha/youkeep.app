@@ -17,6 +17,7 @@ Route::get('/', 'HomeController@index')->name('welcome');
 Route::get('/art', 'HomeController@art')->name('art');
 Route::get('/welcome', 'HomeController@home')->name('home');
 Route::get('/home/categories', 'HomeController@categories')->name('categories');
+Route::get('/home/json', 'HomeController@json')->name('json');
 Route::get('/home/stores', 'HomeController@stores')->name('stores');
 
 Route::group(['middleware' => 'auth:api'], function () {
@@ -99,6 +100,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('/banners', 'CategoryController@banners')->name('category.banners');
     Route::post('/categories', 'CategoryController@index')->name('category.index');
     Route::post('/stores', 'StoreController@index')->name('store.index');
+    Route::post('/serves', 'ServeController@serves')->name('serve.index');
     Route::post('/store/category', 'StoreController@category')->name('store.category');
     Route::post('/category', 'CategoryController@flush')->name('category.flush');
     Route::post('/shops', 'StoreController@index')->name('shops');

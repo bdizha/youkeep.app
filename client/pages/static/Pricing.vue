@@ -29,7 +29,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading">
-                            <span class="r-text-secondary">Pricing</span>
+                            <span class="r-text-primary">Pricing</span>
                             <span class="r-text-dark">built for businesses of all sizes.</span>
                           </h1>
                         </a-col>

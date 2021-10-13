@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
 use App\Store;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -28,16 +27,17 @@ class StoreController extends Controller
         $this->appId = $request->get('app_id', env('APP_ID'));
         $this->limit = $request->get('limit', 120);
         $this->term = $request->get('term', null);
+        $this->categoryId = $request->get('category_id', null);
 
         $key = $this->_setCacheKey($request);
 
         if (Cache::has($key) && false) {
             $response = Cache::get($key, []);
         } else {
-            $this->_setCategoryStores();
-            $response['categories'] = $this->categories;
+            $this->_setStores();
+            $response['stores'] = $this->stores;
 
-             Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
+            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
         }
 
         return response()->json($response, 200);

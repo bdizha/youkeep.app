@@ -1,12 +1,17 @@
 <?php
 
-use App\Category;
+use App\Address;
+use App\City;
 use App\Product;
 use App\ProductPhoto;
 use App\ProductType;
+use App\ProductVariant;
+use App\Province;
+use App\Serve;
 use App\Store;
-use App\StoreCategory;
+use App\StoreAddress;
 use App\StoreServe;
+use GuzzleHttp\Client;
 
 class RestaurantSeeder extends DatabaseSeeder
 {
@@ -19,6 +24,7 @@ class RestaurantSeeder extends DatabaseSeeder
     protected $filterBrand = [];
     protected $parentCategory = null;
     protected $productItems = [];
+    protected $productVariantId = null;
 
     /**
      * Run the database seeds.
@@ -27,42 +33,9 @@ class RestaurantSeeder extends DatabaseSeeder
      */
     public function run()
     {
-        $storeIds = [];
+        $this->_setApp();
 
         $this->getFetchStores();
-
-        $this->stores = Store::whereIn('id', $storeIds)
-            ->get();
-
-        foreach ($this->stores as $store) {
-            $this->storeId = $store->id;
-            $this->domain = $store->url;
-
-            echo ">>>>>> Fetching store > categories: " . $store->name . "\n";
-            $this->setCategories($store->url);
-
-            $this->storeCategories = StoreCategory::where('store_id', $this->storeId)
-                ->with('category')
-                ->orderBy('level', 'ASC')
-                ->orderBy('store_categories.updated_at', "ASC")
-//                ->where('id', 18844)
-                ->limit(1000)
-                ->get();
-
-            echo ">>>>>> Setting category to parent relations categories: " . $store->name . "\n";
-            $this->setParentCategories();
-
-            // Get all the category products
-            foreach ($this->storeCategories as $storeCategory) {
-                $category = $storeCategory->category;
-                echo ">>>>>> Fetching store > categories > products: " . $store->name . ' >> ' . $category->name . "\n";
-                $this->processCategory($storeCategory);
-
-                $storeCategory->updated_at = date('Y-m-d H:i:s');
-                $storeCategory->save();
-            }
-
-        }
         die("Well done.");
     }
 
@@ -71,154 +44,362 @@ class RestaurantSeeder extends DatabaseSeeder
         $link = url("/api/home/categories");
 
         $crawler = Goutte::request('GET', $link);
-        $locationNodes = $crawler->filter('.ev');
+        $regionNodes = $crawler->filter('.cj > div > div');
 
-        $locationNodes->each(function ($node) {
+        $regionNodes->each(function ($node) {
             echo __LINE__ . " <> \n";
 
-            $locationLink = $this->domain . $node->filter('a')->attr('href');
+            if ($node->filter('.cc')->count()) {
+                $regionName = $node->filter('.cc')->text();
+                $locationNodes = $node->filter('.ev');
 
-            $crawler = Goutte::request('GET', $locationLink);
-            $categoryNodes = $crawler->filter('#main-content section');
+                $values = ['name' => str_replace("-", " ", $regionName)];
+                $province = Province::updateOrCreate($values, $values);
 
-            $categoryNodes->each(function ($node) {
+                echo ">>>>>> Province inserted : " . $province->name . "\n";
 
-                $categoryName = $node->filter('.dc')->count() > 0 ? $node->filter('.dc')->text() : null;
-                $categoryDescription = $node->filter('.by')->count() > 0 ? $node->filter('.by')->text() : null;
+                $locationNodes->each(function ($node) use ($province) {
+                    echo __LINE__ . " <> \n";
+                    $cityNode = $node->filter('a');
+                    $cityName = $cityNode->text();
 
-                $storeNodes = $node->filter('.af a');
+                    $attributes = [
+                        'name' => $cityName,
+                        'province_id' => $province->id
+                    ];
 
-                $storeNodes->each(function ($node) {
-                    if ($node->filter('a')->count() > 0) {
-                        $storeLink = $this->domain . $node->filter('a')->attr('href');
+                    $values = [
+                        'name' => $cityName,
+                        'province_id' => $province->id,
+                        'is_main' => true,
+                        'is_featured' => true
+                    ];
 
-                        $crawler = Goutte::request('GET', $storeLink);
+                    $city = City::updateOrCreate($attributes, $values);
 
-                        $storeNode = $crawler->filter('body');
+                    echo ">>>>>>>>> City inserted : " . $city->name . "\n";
 
-                        $storeHtml = $storeNode->html();
+                    if (true) {
+                        $storeLink = url("/api/home/json");
 
-                        $storeParts = explode('</script>', $storeHtml);
-                        $storeParts2 = explode('<script type="application/json" id="__REDUX_STATE__">', $storeHtml);
+                        $storeJson = file_get_contents($storeLink);
+                        $storesData = json_decode($storeJson, true);
 
-                        if(!empty($storeParts2[1])){
-                            $storeParts2 =  explode('<script type="application/json" id="__XPS__">', $storeParts2[1]);
+                        foreach ($storesData['data']['feedItems'] as $feedItem) {
+                            if(!empty($feedItem['type']) && $feedItem['type'] == 'REGULAR_STORE') {
+                                // fetch the store data
+                                $storeLink = 'https://www.ubereats.com/api/getStoreV1?localeCode=za';
+                                $client = new Client();
 
-                            if (count($storeParts2) > 0) {
-                                $storeJson2 = str_replace('</script>', '', $storeParts2[0]);
-                                $storeJson2 = trim($storeJson2);
-
-                                $storeJson2 = $this->unicode_decode($storeJson2);
-                                $storeJson2 = str_replace('%5C"', "'", $storeJson2);
-
-                                $storeData2 = json_decode($storeJson2, true);
-
-
-                                $decode2 = $storeData2['stores']['4ff5989a-90e0-4ce9-a14b-c65080545728']['data']['metaJson'];
-
-                                dd(json_decode($decode2));
-                            }
-                        }
-
-
-                        if (count($storeParts) > 0) {
-                            $storeJson = str_replace('<script type="application/ld+json">', '', $storeParts[0]);
-
-
-                            $storeData = json_decode($storeJson, true);
-                            $store = [];
-                            $store['name'] = $storeData['name'];
-                            $store['phone'] = $storeData['telephone'];
-                            $store['rating'] = @$storeData['aggregateRating']['ratingValue'];
-                            $tradingData = $store['openingHoursSpecification'];
-
-                            $storePhotoData = $storeData['image'];
-
-                            if (!empty($tradingData[0])) {
-                                $tradingData = array_shift($tradingData);
-
-                                $tradingHours = [
-                                    'days' => @$tradingData['dayOfWeek'],
-                                    'opens' => @$tradingData['opens'],
-                                    'closes' => @$tradingData['closes']
+                                $fields = [
+                                    'form_params' => [
+                                        'sfNuggetCount' => 37,
+                                        'storeUuid' => $feedItem['uuid']
+                                    ],
+                                    'headers' => [
+                                        'x-csrf-token' => 'x',
+                                        'x-uber-xps' => 'nothing',
+                                    ]
                                 ];
 
-                                $store['trading_hours'] = serialize($tradingHours);
+                                $response = $client->request('POST', $storeLink, $fields);
 
-                            }
+                                echo $response->getStatusCode();
 
-                            $addressData = $store['address'];
-                            $geoData = $store['geo'];
+                                $storeData = json_decode($response->getBody(), true)['data'];
 
-                            $addressData = [
-                                'suburb' => null,
-                                'address_line' => $addressData['streetAddress'],
-                                'address_line_2' => $addressData[''],
-                                'postal_code' => $addressData['postalCode'],
-                                'city' => $addressData['addressLocality'],
-                                'province' => $addressData['addressRegion'],
-                                'country_id' => 206,
-                                'latitude' => $geoData['latitude'],
-                                'longitude' => $geoData['longitude'],
-                            ];
-
-                            $servesData = $storeData['servesCuisine'];
-                            $menuData = @$storeData['hasMenu']['hasMenuSection'];
-
-                            foreach ($menuData as $section) {
-                                $categoryName = $section['name'];
-
-                                $this->storeId = $store->id;
-                                $this->level = 1;
-
-                                $this->setCategory($categoryName);
-
-                                foreach ($section['fdafda'] as $productData) {
-                                    $productItem = [
-                                        'name' => $productData['name'],
-                                        'external_url' => null,
-                                        'price' => $productData['price'],
-                                        'discount' => $productData['price'],
-                                        'summary' => $productData['description'],
-                                        'description' => $productData['description'],
-                                    ];
-
-                                    $this->setProduct($productItem, $this->storeCategory);
+                                if (count($storeData) > 0) {
+                                    $this->setStore($storeData);
+                                    $this->setAddress($storeData);
+                                    $this->setServes($storeData);
+                                    $this->setCatalog($storeData);
                                 }
                             }
-
-                            // set the serves cuisine
-                            foreach ($servesData as $serveName) {
-                                $values = [
-                                    'name' => $serveName
-                                ];
-
-                                $serve = Serve::updateOrCreate($values, $values);
-
-                                $values = [
-                                    'store_id' => $store->id,
-                                    'serve_id' => $serve->id,
-                                ];
-
-                                StoreServe::updateOrCreate($values, $values);
-                            }
-
-                            dd($store);
-                        }
+                        };
                     }
                 });
-            });
+            }
         });
     }
 
-    function replace_unicode_escape_sequence($match) {
-        return mb_convert_encoding(pack('H*', $match[1]), 'UTF-8', 'UCS-2BE');
+    /**
+     * @param $data
+     */
+    private function setStore($data)
+    {
+        $attributes = [
+            'name' => $data['title'],
+            'url' => $data['uuid'],
+        ];
+
+        $photoData = array_pop($data['heroImageUrls']);
+
+        $photoUrl = null;
+        if (!empty($photoData['url'])) {
+            $photoUrl = $photoData['url'];
+        }
+
+        $data['photo'] = $this->getSha1File('store', $photoUrl);
+
+        $tradingHours = [];
+        foreach ($data['hours'] as $hours) {
+            $tradingHours[] = [
+                'day' => $hours['dayRange'],
+                'hours' => $hours['sectionHours']
+            ];
+        }
+
+        $rating = @$data['storeInfoMetadata']['rawRatingStats']['storeRatingScore'];
+        $ratingCount = @$data['storeInfoMetadata']['rawRatingStats']['ratingCount'];
+
+        $values = [
+            'name' => $data['title'],
+            'description' => 'Not set',
+            'content' => 'Not set',
+            'photo' => $data['photo'],
+            'trading_hours' => serialize($tradingHours),
+            'phone' => $data['phoneNumber'],
+            'order' => 1,
+            'can_deliver' => true,
+            'can_pickup' => true,
+            'rating' => (int)$rating,
+            'rating_count' => (int)$ratingCount,
+            'app_id' => $this->app->id,
+            'is_active' => true
+        ];
+
+        $this->store = Store::updateOrCreate($attributes, $values);
+
+        echo ">>>>>>Inserting store: {$this->store->name} \n";
     }
 
-    function unicode_decode($str) {
-        return preg_replace_callback('/\\\\u([0-9a-f]{4})/i',  function ($match) {
-            return mb_convert_encoding(pack('H*', $match[1]), 'UTF-8', 'UCS-2BE');
-        }, $str);
+    /**
+     * @param $storeData
+     */
+    private function setAddress($storeData)
+    {
+        $location = $storeData['location'];
+
+        $attributes = [
+            'address_line' => $location['address'],
+        ];
+
+        $values = [
+            'suburb' => null,
+            'address_line' => $location['address'],
+            'address_line_2' => $location['streetAddress'],
+            'postal_code' => $location['postalCode'],
+            'city' => $location['city'],
+            'province' => $location['region'],
+            'country_id' => 206,
+            'latitude' => $location['latitude'],
+            'longitude' => $location['longitude'],
+            'user_id' => 1
+        ];
+
+        $address = Address::updateOrCreate($attributes, $values);
+        $values = [
+            'store_id' => $this->store->id,
+            'address_id' => $address->id
+        ];
+
+        StoreAddress::updateOrCreate($values, $values);
+    }
+
+    /**
+     * @param $storeData
+     */
+    private function setServes($storeData): void
+    {
+        // set the serves cuisine
+        foreach ($storeData['cuisineList'] as $serveName) {
+            $values = [
+                'name' => $serveName,
+                'description' => 'Not set',
+                'app_id' => $this->app->id,
+            ];
+
+            $serve = Serve::updateOrCreate($values, $values);
+
+            $values = [
+                'store_id' => $this->store->id,
+                'serve_id' => $serve->id,
+            ];
+
+            StoreServe::updateOrCreate($values, $values);
+        }
+    }
+
+    /**
+     * @param $filterSets
+     */
+    protected function setProductTypes($filterSets): void
+    {
+        $productTypes = ProductType::$types;
+        $productTypeKeys = array_flip($productTypes);
+
+        foreach ($filterSets as $filterItem) {
+            $name = $filterItem['name'];
+            $name = trim($name);
+
+            $typeName = $filterItem['type'];
+
+            $type = $productTypeKeys[$typeName];
+
+            echo ">>>>>>Inserting service type: {$name} with type: {$typeName} \n";
+
+            $attributes = [
+                'name' => $name
+            ];
+
+            $values = [
+                'name' => $name,
+                'type' => $type,
+            ];
+
+            $productType = ProductType::updateOrCreate($attributes, $values);
+            echo ">>>>>>Inserting {$productType->name} product variant: {$name} \n";
+
+            $this->setProductVariant($filterItem, $productType);
+        }
+
+        $this->filterBrand = [];
+    }
+
+    protected function testResponse($productLink)
+    {
+        $productNode = Goutte::request('GET', $productLink)
+            ->filter('meta[itemprop=description]')->eq(0);
+
+        $productNode = Goutte::request('GET', $productLink);
+
+        $description = $this->getProductDescription($productNode->html());
+
+        dd($description);
+    }
+
+    /**
+     * @param $storeData
+     */
+    private function setCatalog($storeData): void
+    {
+        $sectionEntitiesMap = @$storeData['sectionEntitiesMap'];
+        $subsectionUuids = @$storeData['sections'][0]['subsectionUuids'];
+        $uuid = @$storeData['sections'][0]['uuid'];
+
+        foreach ($subsectionUuids as $subSectionUid) {
+            $itemUuids = @$storeData['subsectionsMap'][$subSectionUid]['itemUuids'];
+            $categoryName = @$storeData['subsectionsMap'][$subSectionUid]['title'];
+
+            foreach ($itemUuids as $itemUuid) {
+                $itemData = $sectionEntitiesMap[$uuid][$itemUuid];
+
+                $photo = null;
+
+                if (!empty($itemData['imageUrl'])) {
+                    $photo = $this->getSha1File('product', $itemData['imageUrl']);
+                }
+
+                $this->storeId = $this->store->id;
+                $this->level = 1;
+
+                $this->setCategory($categoryName);
+
+                $productItem = [
+                    'name' => $itemData['title'],
+                    'external_url' => $itemData['uuid'],
+                    'price' => $itemData['price'] / 100,
+                    'discount' => $itemData['price'] / 100,
+                    'summary' => $itemData['title'],
+                    'description' => 'Not set',
+                    'photo' => $photo
+                ];
+
+                $this->setProduct($productItem, $this->storeCategory);
+
+                // fetch the store data
+                $storeLink = 'https://www.ubereats.com/api/getMenuItemV1?localeCode=za';
+                $client = new Client();
+
+                $fields = [
+                    'form_params' => [
+                        'sfNuggetCount' => 37,
+                        'storeUuid' => $storeData['uuid'],
+                        'sectionUuid' => $uuid,
+                        'menuItemUuid' => $itemUuid,
+                        'subsectionUuid' => $subSectionUid,
+                    ],
+                    'headers' => [
+                        'x-csrf-token' => 'x',
+                        'x-uber-xps' => 'some host',
+                    ]
+                ];
+                $response = $client->request('POST', $storeLink, $fields);
+
+                echo $response->getStatusCode();
+
+                $menuData = json_decode($response->getBody(), true)['data'];
+                $customizations = !empty($menuData['customizationsList']) ? $menuData['customizationsList'] : [];
+
+                $this->setCustomizations($customizations);
+            }
+        }
+    }
+
+    /**
+     * @param $customizations
+     */
+    private function setCustomizations($customizations): void
+    {
+        $variantType = ProductType::TYPE_CUSTOMIZATION;
+
+        foreach ($customizations as $customization) {
+            $typeName = $customization['title'];
+
+            echo ">>>>>>Inserting product type: {$typeName} \n";
+
+            $attributes = [
+                'name' => $typeName
+            ];
+
+            $values = [
+                'name' => $typeName,
+                'type' => $variantType,
+                'is_active' => $variantType,
+            ];
+
+            $productType = ProductType::updateOrCreate($attributes, $values);
+
+            $attributes = [
+                'product_variant_id' => $this->productVariantId,
+                'product_type_id' => $productType->id,
+                'product_id' => $this->product->id,
+            ];
+
+            $values = [
+                'price' => (float)@$customization['price'] / 100,
+                'discount' => (float)@$customization['price'] / 100,
+                'is_available' => !empty(@$customization['isSoldOut']),
+                'is_active' => true,
+                'product_variant_id' => $this->productVariantId,
+                'product_type_id' => $productType->id,
+                'product_id' => $this->product->id,
+                'required_max' => $customization['maxPermitted'],
+                'required_min' => $customization['minPermitted']
+            ];
+
+            $this->productVariantId = ProductVariant::updateOrCreate($attributes, $values)['id'];
+
+            if (!empty($customization['childCustomizationList'])) {
+                $this->setCustomizations($customization['childCustomizationList']);
+            }
+
+            if (!empty($customization['options'])) {
+                $this->setCustomizations($customization['options']);
+            }
+
+            $this->productVariantId = null;
+        }
     }
 
     /**
@@ -253,42 +434,6 @@ class RestaurantSeeder extends DatabaseSeeder
             }
         }
         return $filterSets;
-    }
-
-    /**
-     * @param $filterSets
-     */
-    protected function setProductTypes($filterSets): void
-    {
-        $productTypes = ProductType::$types;
-        $productTypeKeys = array_flip($productTypes);
-
-        foreach ($filterSets as $filterItem) {
-            $name = $filterItem['name'];
-            $name = trim($name);
-
-            $typeName = $filterItem['type'];
-
-            $type = $productTypeKeys[$typeName];
-
-            echo ">>>>>>Inserting service type: {$name} with type: {$typeName} \n";
-
-            $attributes = [
-                'name' => $name
-            ];
-
-            $values = [
-                'name' => $name,
-                'type' => $type,
-            ];
-
-            $productType = \App\ProductType::updateOrCreate($attributes, $values);
-            echo ">>>>>>Inserting {$productType->name} service variant: {$name} \n";
-
-            $this->setProductVariant($filterItem, $productType);
-        }
-
-        $this->filterBrand = [];
     }
 
     /**
@@ -345,17 +490,5 @@ class RestaurantSeeder extends DatabaseSeeder
 
             ProductPhoto::updateOrCreate($values, $values);
         }
-    }
-
-    protected function testResponse($productLink)
-    {
-        $productNode = Goutte::request('GET', $productLink)
-            ->filter('meta[itemprop=description]')->eq(0);
-
-        $productNode = Goutte::request('GET', $productLink);
-
-        $description = $this->getProductDescription($productNode->html());
-
-        dd($description);
     }
 }

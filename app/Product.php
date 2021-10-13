@@ -375,7 +375,7 @@ class Product extends KModel
     }
 
     /**
-     * Get all service variants
+     * Get all product variants
      */
     public function variants()
     {
