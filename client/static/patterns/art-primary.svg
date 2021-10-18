@@ -7,10 +7,10 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#f4676e;stroke-width:102.626}
+    .str0 {stroke:#EE1C25;opacity: 0.96;stroke-width:102.626}
     .fil2 {fill:none}
-    .fil1 {fill:#f9a6aa}
-    .fil0 {fill:#fddadc}
+    .fil1 {fill:#EE1C25;opacity: 0.6;}
+    .fil0 {fill:#EE1C25;opacity: 0.93;}
    ]]>
   </style>
  </defs>

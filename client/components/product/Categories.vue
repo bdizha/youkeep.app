@@ -1,6 +1,6 @@
 <template>
   <a-row align="middle" justify="start" type="flex">
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-spin-holder r-categories">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-spin-holder">
       <a-collapse default-active-key="sellers" expandIconPosition="right">
         <a-collapse-panel v-for="(category, index) in product.categories"
                           v-if="category.has_products"

@@ -417,12 +417,12 @@ class ProductAdidasSeeder extends DatabaseSeeder
             $productPhoto = sha1($productPhotoUrl) . ".jpeg";
             $productThumb = sha1($productThumbUrl) . ".jpeg";
 
-            if (!file_exists(public_path('storage/service/' . $productPhoto))) {
+            if (!file_exists(public_path('storage/product/' . $productPhoto))) {
                 Storage::disk('service')->put($productPhoto, file_get_contents($productPhotoUrl));
                 Storage::disk('service')->put($productThumb, file_get_contents($productThumbUrl));
-                echo "Product photo inserted: " . public_path('storage/service/' . $productPhoto) . "\n";
+                echo "Product photo inserted: " . public_path('storage/product/' . $productPhoto) . "\n";
             } else {
-                echo "Product photo skipped: " . public_path('storage/service/' . $productPhoto) . "\n";
+                echo "Product photo skipped: " . public_path('storage/product/' . $productPhoto) . "\n";
             }
 
             if (empty($key)) {

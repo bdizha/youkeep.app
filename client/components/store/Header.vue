@@ -1,25 +1,27 @@
 <template>
   <div class="r-header" :class="{'r-header-dark': false}">
-    <a-row align="middle" justify="start" style="width: 100%;" type="flex">
+    <a-row v-if="!modal.isVisible" align="middle" justify="start" type="flex">
       <a-col :span="24" type="flex">
         <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
           <a-col>
-            <div class="r-nav-item r-nav-item__logo">
+            <r-nav-item class="r-nav-item__logo r-p-r-0">
               <r-logo :is-icon="true"></r-logo>
-            </div>
+            </r-nav-item>
           </a-col>
-          <a-col>
+          <a-col flex="299px">
             <div class="r-nav-item">
               <div style="padding: 3px;" class="r-bg-primary-secondary r-border-radius-12">
-                <a-row align="middle" justify="center" type="flex">
-                  <a-col>
-                    <p class="r-text-normal r-ph-18 r-pv-9">
-                      Delivery
-                    </p>
-                  </a-col>
-                  <a-col>
-                    <p class="r-text-normal r-ph-18 r-pv-9 r-bg-white r-border-radius-12">
-                      Pickup
+                <a-row style="width: 100%" align="middle" justify="center" type="flex">
+                  <a-col v-for="(deliveryType, index) in deliveryTypes"
+                         :key="index"
+                         :lg="{ span: 12 }" :md="{ span: 12 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <p class="r-delivery-type"
+                       :class="isCurrent(deliveryType)"
+                       @click="setDeliveryType(deliveryType)">
+                      {{ deliveryType.name }}
                     </p>
                   </a-col>
                 </a-row>
@@ -29,18 +31,6 @@
           <a-col>
             <div class="r-nav-item">
               <r-delivery-search size="default" :has-button="false"></r-delivery-search>
-            </div>
-          </a-col>
-          <a-col v-if="hasStore">
-            <div class="r-nav-item">
-              <nuxt-link :to="'/store/' + store.slug">
-                <a-button block
-                          class="r-btn-dark"
-                          type="secondary"
-                >
-                  {{ store.name }}
-                </a-button>
-              </nuxt-link>
             </div>
           </a-col>
           <a-col flex="auto">
@@ -54,7 +44,23 @@
         </a-row>
       </a-col>
     </a-row>
-    <r-drawer v-if="hasStore"></r-drawer>
+    <r-layout-menu v-if="modal.isVisible" class="r-layout-menu r-layout-menu-modal">
+      <r-nav-item class="r-nav-item__text">
+        <a-button class="r-btn-bordered-primary"
+                  type="secondary"
+                  @click="onModalClose"
+        >
+          <a-icon type="left"/>
+          Back
+        </a-button>
+      </r-nav-item>
+      <r-nav-item @click="onModalClose"
+                  class="r-nav-item__logo">
+        <r-logo :is-icon="true"></r-logo>
+      </r-nav-item>
+    </r-layout-menu>
+    <r-drawer></r-drawer>
+    <r-modal></r-modal>
   </div>
 </template>
 <script>
@@ -64,20 +70,22 @@ export default {
   name: 'r-store-header',
   components: {},
   props: {
-    isShow: { type: Boolean, required: false },
-  },
-  async fetch () {
-    const payload = {
-      category_id: null,
-      limit: process.env.APP_LIMIT
-    }
-
-    await this.$store.dispatch('base/onSellers', payload)
+    isShow: { type: Boolean, required: false }
   },
   data () {
     return {
       deliveryType: 1,
-      hasData: false
+      hasData: false,
+      deliveryTypes: [
+        {
+          name: 'Delivery',
+          key: 1
+        },
+        {
+          name: 'Pickup',
+          key: 2
+        }
+      ]
     }
   },
   computed: mapGetters({
@@ -88,11 +96,24 @@ export default {
   }),
   created () {
     this.hasData = true
+    this.deliveryType = this.deliveryTypes[0]
   },
   methods: {
-    payload () {
+    setDeliveryType (deliveryType) {
+      this.deliveryType = deliveryType
     },
+    isCurrent (deliveryType) {
+      return this.deliveryType === deliveryType ? `r-bg-white` : ``
+    },
+    onModalClose () {
+      const modal = {}
+      modal.isVisible = false
+      modal.isClosable = false
+      modal.current = null
+
+      this.$store.dispatch('base/onModal', modal)
+    }
   },
-  watch: {},
+  watch: {}
 }
 </script>

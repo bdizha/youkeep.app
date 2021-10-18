@@ -8,7 +8,7 @@
         <a-sub-menu>
           <div slot="title" class="r-menu-text">
             <nuxt-link to="/shop">
-              Order now
+              Explore
             </nuxt-link>
           </div>
         </a-sub-menu>
@@ -322,7 +322,7 @@
             Account
           </div>
         </a-sub-menu>
-        <a-sub-menu class="r-menu-submenu-btn" v-if="!isLoggedIn">
+        <a-sub-menu class="r-menu-submenu-btn" v-if="!isLoggedIn && hasNav">
           <div slot="title" @click="onModal">
             <a-button block
                       :class="{'r-btn-bordered-dark': !hasNav, 'r-btn-bordered-primary': hasNav}"

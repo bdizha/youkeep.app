@@ -72,7 +72,7 @@ return [
         'service' => [
             'driver' => 'local',
             'root' => storage_path('app/public/service'),
-            'url' => env('APP_URL') . '/storage/service',
+            'url' => env('APP_URL') . '/storage/product',
             'visibility' => 'public',
         ],
 

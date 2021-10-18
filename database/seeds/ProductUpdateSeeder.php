@@ -30,15 +30,15 @@ class ProductUpdateSeeder extends DatabaseSeeder
             $photos = ProductPhoto::where('product_id', $product->id)
                 ->get();
 
-            if (file_exists(public_path('storage/service/' . $product->photo))) {
-                if (empty($product->thumbnail) || !file_exists(public_path('storage/service/' . $product->thumbnail))) {
+            if (file_exists(public_path('storage/product/' . $product->photo))) {
+                if (empty($product->thumbnail) || !file_exists(public_path('storage/product/' . $product->thumbnail))) {
                     $product->thumbnail = $product->photo;
                     $product->save();
                 }
             }
 
-            if (file_exists(public_path('storage/service/' . $product->thumbnail))) {
-                if (empty($product->photo) || !file_exists(public_path('storage/service/' . $product->photo))) {
+            if (file_exists(public_path('storage/product/' . $product->thumbnail))) {
+                if (empty($product->photo) || !file_exists(public_path('storage/product/' . $product->photo))) {
                     $product->photo = $product->thumbnail;
                     $product->save();
                 }
@@ -46,20 +46,20 @@ class ProductUpdateSeeder extends DatabaseSeeder
 
             if (!empty($photos[0])) {
                 foreach ($photos as $photo) {
-                    if (!file_exists(public_path('storage/service/' . $photo['image'])) ||
-                        !file_exists(public_path('storage/service/' . $photo['thumb']))) {
+                    if (!file_exists(public_path('storage/product/' . $photo['image'])) ||
+                        !file_exists(public_path('storage/product/' . $photo['thumb']))) {
                         \App\ProductPhoto::where('id', $photo['id'])
                             ->delete();
 
-                        echo "Deleted Product Photo >>>> " . public_path('storage/service/' . $photo['thumb']) . " \n";
+                        echo "Deleted Product Photo >>>> " . public_path('storage/product/' . $photo['thumb']) . " \n";
                     } else {
                         echo "Skipped Product Photo >>>> {$photo['image']} \n";
 
-                        if (empty($product->photo) || !file_exists(public_path('storage/service/' . $product->photo))) {
+                        if (empty($product->photo) || !file_exists(public_path('storage/product/' . $product->photo))) {
                             echo "Updating Product Photo >>>> {$product->name} \n";
                             $product->photo = $photo['image'];
                         }
-                        if (empty($product->thumbnail) || !file_exists(public_path('storage/service/' . $product->thumbnail))) {
+                        if (empty($product->thumbnail) || !file_exists(public_path('storage/product/' . $product->thumbnail))) {
                             echo "Updating Product Thumb >>>> {$product->name} \n";
                             $product->thumbnail = $photo['thumb'];
                         }
@@ -68,8 +68,8 @@ class ProductUpdateSeeder extends DatabaseSeeder
                     }
                 }
             } else {
-                if (empty($product->photo) || !file_exists(public_path('storage/service/' . $product->photo)) ||
-                    empty($product->thumbnail) || !file_exists(public_path('storage/service/' . $product->thumbnail))) {
+                if (empty($product->photo) || !file_exists(public_path('storage/product/' . $product->photo)) ||
+                    empty($product->thumbnail) || !file_exists(public_path('storage/product/' . $product->thumbnail))) {
 
                     $attributes = ['product_id' => $product->id];
                     $values = ['is_active', false];

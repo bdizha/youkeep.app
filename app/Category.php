@@ -52,6 +52,7 @@ class Category extends Model
         'route',
         'breadcrumbs',
         'photos',
+        'has_photo',
         'photo_url',
         'filters',
         'products',
@@ -87,6 +88,11 @@ class Category extends Model
     public function getBreadcrumbsAttribute()
     {
         return $this->getBreadcrumbs($this, []);
+    }
+
+    public function getHasPhotoAttribute()
+    {
+        return !empty($this->photo);
     }
 
     /**
@@ -157,8 +163,8 @@ class Category extends Model
             $photo = $product->thumbnail;
 
             if (!in_array($photo, $this->ignoredPhotos) && !empty($photo)) {
-                if (file_exists(public_path('storage/service/' . $photo))) {
-                    $photos[] = url('/storage/service/' . $photo);
+                if (file_exists(public_path('storage/product/' . $photo))) {
+                    $photos[] = url('/storage/product/' . $photo);
                 }
             }
         }

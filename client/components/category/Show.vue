@@ -5,20 +5,6 @@
            :xs="{ span: 24 }"
            class="r-spin-holder r-categories"
     >
-      <a-row v-if="hasCategories" align="middle" justify="start" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-               class="r-hide-lg"
-        >
-          <r-search :class="{'r-pb-12': hasCategories}" class="r-p-24 r-pv-12"></r-search>
-        </a-col>
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <r-category-breadcrumbs :breadcrumbs="category.breadcrumbs"></r-category-breadcrumbs>
-        </a-col>
-      </a-row>
       <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
         <a-col v-if="!hasCategories && !processes.isCategories && !hasProducts" :lg="{ span: 24 }" :md="{ span: 24 }"
                :sm="{ span: 24 }"
@@ -83,7 +69,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <r-category-slider></r-category-slider>
+          <r-category-arrows :has-photo="false"></r-category-arrows>
         </a-col>
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                :sm="{ span: 24 }"
@@ -101,7 +87,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <r-category-list :columns="6"></r-category-list>
+          <r-category-list :columns="2" :is-vertical="false"></r-category-list>
         </a-col>
       </a-row>
     </a-col>
@@ -109,11 +95,9 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-import RCategoryBanners from './Banners'
 
 export default {
   name: 'r-category-show',
-  components: { RCategoryBanners },
   props: {
     columns: { type: Number, required: false, default: 6 }
   },

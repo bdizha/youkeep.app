@@ -45,7 +45,9 @@ const state = () => ({
     isVisible: false,
     isClosable: false,
     message: null,
-    redirectTo: null
+    redirectTo: null,
+    title: null,
+    hasTitle: false
   },
   hasOverlay: false,
   hasDrawer: false,
@@ -210,6 +212,7 @@ const mutations = {
     state.modal.isVisible = false
   },
   setModal (state, modal) {
+    modal.hasTitle = modal.title !== undefined
     state.modal = modal
     state.hasDrawer = false
     state.hasModal = state.modal.isVisible
@@ -380,12 +383,6 @@ const actions = {
         commit('setCategory', data.category)
 
         dispatch('onProcess', { key: 'isFixed', value: false })
-
-        const defaultVariant = data.product.default_variant
-        const productType = defaultVariant.product_type
-
-        dispatch('product/onVariant', defaultVariant, { root: true })
-        dispatch('product/onProductType', productType, { root: true })
         dispatch('onProcess', { key: 'isProduct', value: false })
       })
     } catch (e) {

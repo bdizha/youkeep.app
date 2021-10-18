@@ -12,6 +12,7 @@ class ProductVariant extends Model
      * @var array
      */
     protected $appends = [
+        'options'
     ];
 
     /**
@@ -32,6 +33,13 @@ class ProductVariant extends Model
         'created_at', 'updated_at', 'is_active', 'product_id', 'product_type_id'
     ];
 
+    public function getOptionsAttribute()
+    {
+        return Self::with('product_type')
+            ->where('product_variant_id', $this->id)
+            ->get();
+    }
+
     /**
      * The service of this variant
      */
@@ -46,5 +54,21 @@ class ProductVariant extends Model
     public function product_type()
     {
         return $this->belongsTo('App\ProductType');
+    }
+
+    /**
+     * Get the associated parent variant
+     */
+    public function parent()
+    {
+        return $this->belongsTo('App\ProductVariant');
+    }
+
+    /**
+     * Get the associated parent variant
+     */
+    public function variants()
+    {
+        return $this->hasMany('App\ProductVariant');
     }
 }

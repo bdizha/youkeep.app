@@ -23,6 +23,33 @@ class Serve extends Model
     }
 
     /**
+     * The attributes that should be appended for arrays.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'route',
+        'photo_url'
+    ];
+
+    /**
+     * @return string
+     */
+    public function getRouteAttribute()
+    {
+        $route = '/serve/' . $this->slug;
+        return $route;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhotoUrlAttribute()
+    {
+        return url('/storage/category/' . $this->photo);
+    }
+
+    /**
      * Get the associated stores
      */
     public function stores()

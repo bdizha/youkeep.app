@@ -1,5 +1,5 @@
 <template>
-  <a-row :gutter="[24, 24]" align="middle" class="r-mb-24" justify="start" type="flex">
+  <a-row :gutter="[24, 24]" align="middle" justify="start" type="flex">
     <a-col :class="{'r-spin__active': $fetchState.pending}" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
@@ -16,24 +16,22 @@
                :sm="{ span: 8 }"
                :xs="{ span: 12 }"
         >
-          <nuxt-link :to="category.route"
-                     class="r-slider-item r-slider-item-36 r-text-view-more"
+          <r-avatar :size="36"
+                    v-if="category.has_photo"
+                    :src="category.photo"
+                    :style="'background-image: url(' + category.photo + ');'"
+                    shape="circle"
           >
-            <r-avatar :size="36"
-                      :src="category.photo"
-                      :style="'background-image: url(' + category.photo + ');'"
-                      shape="circle"
-            >
-            </r-avatar>
-            <div class="r-text-slider">
-              {{ category.name }}
-            </div>
-          </nuxt-link>
+          </r-avatar>
+          <div class="r-text-slider">
+            {{ category.name }}
+          </div>
         </a-col>
       </a-row>
-      <r-spinner :is-absolute="true"></r-spinner>
+      <r-spinner v-if="$fetchState.pending && false" :is-absolute="true"></r-spinner>
     </a-col>
-    <a-col v-if="!$fetchState.pending" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+    <a-col v-if="!$fetchState.pending && false"
+           :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
       <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]"

@@ -164,7 +164,7 @@ export default {
   name: 'r-chef-featured',
   props: {},
   async serverPrefetch () {
-    await this.$store.dispatch('content/onChefs', {})
+    // await this.$store.dispatch('content/onChefs', {})
   },
   data () {
     return {

@@ -1,7 +1,8 @@
 <template>
   <a-row :class="{'r-is-empty': false}" align="middle" justify="start" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-category-header :category="category"
+      <r-category-header v-if="false"
+                         :category="category"
                          :columns="columns"
                          :has-product="hasProduct"
                          :is-showing="isShowing"
@@ -32,14 +33,14 @@ export default {
     isFlush: { type: Boolean, required: false, default: false },
     isShowing: { type: Boolean, required: false, default: false },
     category: { type: Object, required: false, default: {} },
-    hasProduct: { type: Boolean, required: false, default: false },
+    hasProduct: { type: Boolean, required: false, default: false }
   },
   data () {
     return {}
   },
   computed: mapGetters({
     store: 'base/store',
-    processes: 'base/processes',
+    processes: 'base/processes'
   }),
   mounted () {
     this.payload()

@@ -87,10 +87,9 @@
   </a-row>
 </template>
 <script>
-import RSaucer from './Saucer'
+
 export default {
   name: 'r-steps',
-  components: { RSaucer },
   props: {
     size: { type: Number, required: false, default: 16 },
     theme: { type: String, required: false, default: 'secondary' },

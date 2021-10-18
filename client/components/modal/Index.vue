@@ -6,10 +6,16 @@
            :mask-closable="false"
            :width="width"
   >
+    <template v-if="modal.hasTitle" slot="title">
+      <h4 class="r-heading">
+        <a-icon type="left"></a-icon>
+        {{ modal.title }}
+      </h4>
+    </template>
     <template slot="footer">
       <a-row align="middle" justify="center" type="flex">
         <a-col :span="24">
-          <h4 class="r-heading r-text-secondary r-text-center">
+          <h4 class="r-heading r-text-primary r-text-center">
             <a-icon type="gift"/>
             <span>FREE Deliveries For 1 Week with Spazastop <br></span>
           </h4>
@@ -94,7 +100,7 @@ export default {
     maskClosable: { type: Boolean, required: false, default: true },
     closable: { type: Boolean, required: false, default: false },
     current: { type: String, required: false, default: null },
-    width: { type: Number, required: false, default: 360 },
+    width: { type: Number, required: false, default: 520 },
     cssClass: { type: String, required: false, default: null },
     redirectTo: { type: String, required: false, default: null }
   },

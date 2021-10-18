@@ -3,11 +3,7 @@
     <a-row align="middle" class="r-text-center" justify="center" type="flex">
       <a-col v-if="hasCard" :span="24">
         <a-card class="r-card-category r-spin-holder" hoverable>
-          <a-card-meta>
-            <template slot="description">
-              <r-category-photos :category="category" :size="81"></r-category-photos>
-            </template>
-          </a-card-meta>
+          <r-category-photos :category="category" :size="81"></r-category-photos>
         </a-card>
       </a-col>
       <a-col v-if="!hasCard" :span="24">

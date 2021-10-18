@@ -56,7 +56,7 @@ export default {
       popover: 'base/popover'
     }),
     isSelected () {
-      return this.productItem !== undefined && this.productItem.productTypes.includes(this.productType.type)
+      return this.productItem !== undefined && this.productItem.productOptions.includes(this.productType.type)
     },
     variant () {
       if (this.productItem === undefined) {

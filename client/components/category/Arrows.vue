@@ -1,22 +1,25 @@
 <template>
   <a-row align="middle" class="r-slider" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-">
-      <VueSlickCarousel v-show="hasCategories" v-bind="settings">
-        <nuxt-link v-for="(category, index) in categories" :key="category.id"
-                   :class="'r-slider-item-' + size"
-                   :prefetch="true"
+      <VueSlickCarousel v-if="hasCategories" v-bind="settings">
+        <nuxt-link v-for="(category, index) in categories"
+                   :key="index"
                    :to="category.route"
-                   class="r-slider-item r-text-view-more"
+                   class="r-text-view-more"
+                   :class="{'r-slider-item': hasPhoto}"
         >
-          <r-avatar :size="size"
-                    :src="category.photo"
-                    :style="'background-image: url(' + category.photo + ');'"
-                    shape="circle"
-          >
-          </r-avatar>
-          <div class="r-text-slider">
-            {{ category.name }}
-          </div>
+          <a-card class="r-bg-white">
+            <r-avatar v-if="hasPhoto"
+                      :size="size"
+                      :src="category.photo"
+                      :style="'background-image: url(' + category.photo + ');'"
+                      shape="circle"
+            >
+            </r-avatar>
+            <h4 class="r-text-slider">
+              {{ category.name }}
+            </h4>
+          </a-card>
         </nuxt-link>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
@@ -40,6 +43,7 @@ export default {
   props: {
     columns: { type: Number, required: false, default: 8 },
     size: { type: Number, required: false, default: 72 },
+    hasPhoto: { type: Boolean, required: false, default: true }
   },
   data () {
     return {
@@ -48,13 +52,15 @@ export default {
         infinite: true,
         dots: false,
         variableWidth: true,
+        'gap': 12,
         responsive: [
           {
             'breakpoint': 1024,
             'settings': {
               'slidesToShow': this.columns,
               'slidesToScroll': 1,
-              'dots': false
+              'dots': false,
+              'gap': 12
             }
           },
           {
@@ -62,7 +68,8 @@ export default {
             'settings': {
               'slidesToShow': 5,
               'slidesToScroll': 1,
-              'dots': false
+              'dots': false,
+              'gap': 12
             }
           },
           {
@@ -70,7 +77,8 @@ export default {
             'settings': {
               'slidesToShow': 4,
               'slidesToScroll': 1,
-              'dots': false
+              'dots': false,
+              'gap': 12
             }
           },
           {
@@ -78,23 +86,24 @@ export default {
             'settings': {
               'slidesToShow': 1,
               'slidesToScroll': 1,
-              'dots': false
+              'dots': false,
+              'gap': 12
             }
           }
         ]
-      },
+      }
     }
   },
   computed: mapGetters({
     categories: 'base/categories',
-    hasCategories: 'base/hasCategories',
+    hasCategories: 'base/hasCategories'
   }),
   mounted () {
     this.payload()
   },
   methods: {
     payload () {
-    },
+    }
   }
 }
 </script>

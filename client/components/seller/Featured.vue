@@ -166,7 +166,7 @@ export default {
   name: 'r-seller-featured',
   props: {},
   async serverPrefetch () {
-    await this.$store.dispatch('content/onChefs', {})
+    // await this.$store.dispatch('content/onChefs', {})
   },
   data () {
     return {

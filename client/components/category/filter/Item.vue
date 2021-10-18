@@ -63,7 +63,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-category-filter-item',
   props: {
-    hasMore: { type: Boolean, required: true, default: true },
+    hasMore: { type: Boolean, required: false, default: true },
     filter: { type: Object, required: true, default: () => {} },
     limit: { type: Number, required: false, default: 6 }
   },

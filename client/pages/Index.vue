@@ -3,90 +3,88 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-primary r-pull-h-24 r-border-none">
-        <div class="r-mv-48">
-          <a-row align="middle" justify="center" type="flex">
-            <a-col class="r-text-left" :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }"
-                   :xs="{ span: 24}"
-            >
-              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-                <a-col v-for="(image, index) in images"
-                       v-if="index < 3"
-                       :key="index"
-                       :lg="{ span: index === 0 ? 24 : 12 }" :md="{ span: index === 0 ? 24 : 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
-                >
-                 <a-card class="r-bg-secondary-light r-radius-circle">
-                   <r-avatar :data-src="image" :size="300"
-                             class="r-avatar-block"
-                   ></r-avatar>
-                 </a-card>
+      <a-card class="r-art-primary r-pull-h-24 r-border-none">
+        <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+          <a-col class="r-text-left" :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }"
+                 :xs="{ span: 24}"
+          >
+            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+              <a-col v-for="(image, index) in images"
+                     v-if="index < 3"
+                     :key="index"
+                     :lg="{ span: index === 0 ? 24 : 12 }" :md="{ span: index === 0 ? 24 : 12 }" :sm="{ span: 24 }"
+                     :xs="{ span: 24}"
+              >
+                <a-card class="r-bg-secondary-pattern r-radius-circle">
+                  <r-avatar :data-src="image" :size="300"
+                            class="r-avatar-block"
+                  ></r-avatar>
+                </a-card>
+              </a-col>
+            </a-row>
+          </a-col>
+          <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+            <a-row justify="center" align="middle" type="flex">
+              <a-col class="r-text-white" :lg="{ span: 15 }" :md="{ span: 15 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <h3 class="r-heading-light r-text-uppercase r-text-white">
+                      It's all about taste <a-icon class="r-text-secondary" type="fire"></a-icon>
+                    </h3>
                   </a-col>
-              </a-row>
-            </a-col>
-            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-              <a-row justify="center" align="middle" type="flex">
-                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                           :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <h3 class="r-heading-light r-text-uppercase">
-                        Good time, great meals!
-                      </h3>
-                    </a-col>
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                           :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <h1 class="r-heading">
-                        <span v-show="isActive(1)" class="r-text-secondary r-text-animate">Instant</span>
-                        <span v-show="isActive(2)" class="r-text-secondary r-text-animate">Authentic</span>
-                        <span v-show="isActive(3)" class="r-text-secondary r-text-animate">Homemade</span>
-                        <span v-show="isActive(4)" class="r-text-secondary r-text-animate">Flavoured</span>
-                        dishes delivered to your door.
-                      </h1>
-                    </a-col>
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                           :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <p class="r-text-medium">
-                        Explore who's cooking in
-                        your neighborhood.
-                      </p>
-                    </a-col>
-                    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                           :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
-                     <r-delivery-form></r-delivery-form>
-                    </a-col>
-                  </a-row>
-                </a-col>
-              </a-row>
-            </a-col>
-            <a-col class="r-text-left" :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }"
-                   :xs="{ span: 24}"
-            >
-              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-                <a-col v-for="(image, index) in images"
-                       v-if="index > 2"
-                       :key="index"
-                       :lg="{ span: index === 5 ? 24 : 12 }" :md="{ span: index === 5 ? 24 : 12 }" :sm="{ span: 24 }"
-                       :xs="{ span: 24}"
-                >
-                  <a-card class="r-bg-secondary-light">
-                    <r-avatar :data-src="image" :size="300"
-                              class="r-avatar-block"
-                    ></r-avatar>
-                  </a-card>
-                </a-col>
-              </a-row>
-            </a-col>
-          </a-row>
-        </div>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <h1 class="r-heading r-text-white">
+                      <span v-show="isActive(1)" class="r-text-secondary r-text-animate">Instant</span>
+                      <span v-show="isActive(2)" class="r-text-secondary r-text-animate">Authentic</span>
+                      <span v-show="isActive(3)" class="r-text-secondary r-text-animate">Homemade</span>
+                      <span v-show="isActive(4)" class="r-text-secondary r-text-animate">Flavoured</span>
+                      dishes delivered to your door.
+                    </h1>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <p class="r-text-medium r-text-white">
+                      Explore who's cooking in
+                      your neighborhood.
+                    </p>
+                  </a-col>
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <r-delivery-search></r-delivery-search>
+                  </a-col>
+                </a-row>
+              </a-col>
+            </a-row>
+          </a-col>
+          <a-col class="r-text-left" :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }"
+                 :xs="{ span: 24}"
+          >
+            <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+              <a-col v-for="(image, index) in images"
+                     v-if="index > 2"
+                     :key="index"
+                     :lg="{ span: index === 5 ? 24 : 12 }" :md="{ span: index === 5 ? 24 : 12 }" :sm="{ span: 24 }"
+                     :xs="{ span: 24}"
+              >
+                <a-card class="r-bg-secondary-pattern">
+                  <r-avatar :data-src="image" :size="300"
+                            class="r-avatar-block"
+                  ></r-avatar>
+                </a-card>
+              </a-col>
+            </a-row>
+          </a-col>
+        </a-row>
       </a-card>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }"

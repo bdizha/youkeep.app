@@ -23,7 +23,7 @@ const routes = [
     name: 'store.category.show.level',
     component: page('store/Category.vue')
   },
-  { path: '/store/:slug', name: 'store.show', meta: { isDark: false, isRaised: false}, component: page('store/Article.vue'), },
+  { path: '/store/:slug', name: 'store.show', meta: { isDark: false, isRaised: false}, component: page('store/Show.vue'), },
   { path: '/category/:slug', name: 'category.show', meta: { isDark: false, isRaised: false}, component: page('category/Article.vue') },
   { path: '/category/:slug/:level', name: 'category.show.level', meta: { isDark: false, isRaised: false}, component: page('category/Article.vue') },
   { path: '/category/:category/:level/service/:slug', name: 'category.product.show', meta: { isDark: false, isRaised: false}, component: page('store/Invoice.vue'), },

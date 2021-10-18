@@ -1,35 +1,33 @@
 <template>
-  <r-avatar :size="size"
-            :src="product.thumbnail_url"
-            shape="square"
-  />
+  <a-card class="r-pull-24">
+    <div slot="cover">
+      <r-avatar :size="size"
+                :data-src="product.thumbnail_url"
+                shape="square"
+      />
+    </div>
+  </a-card>
 </template>
 <script>
 export default {
   name: 'r-product-photo',
   props: {
     product: { type: Object, required: false, default: null },
-    size: { type: Number, required: false, default: 180 },
+    size: { type: Number, required: false, default: 240 }
   },
   data () {
     return {
       quantity: 1,
-      styles: null,
+      styles: null
     }
   },
   created () {
 
   },
   methods: {
-    onProduct () {
-      const modal = {}
-      modal.isVisible = true
-      modal.isClosable = true
-      modal.current = 'product'
-      this.$store.dispatch('base/onModal', modal)
-
-      this.$store.dispatch('base/onProduct', this.product)
+    getPhotoCoverStyle () {
+      return `background-image: url(${this.product.photo_url});`
     }
-  },
+  }
 }
 </script>

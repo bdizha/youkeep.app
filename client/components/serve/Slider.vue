@@ -2,11 +2,11 @@
   <a-row align="middle" class="r-slider" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-store-slider ">
       <VueSlickCarousel v-if="hasServes" v-bind="settings">
-        <r-store-serve-item v-for="(serve, index) in serves"
-                               :key="index"
-                               :serve="serve"
+        <r-serve-item v-for="(serve, index) in serves"
+                            :key="index"
+                            :serve="serve"
         >
-        </r-store-serve-item>
+        </r-serve-item>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
             <a-icon type="left"/>
@@ -29,7 +29,20 @@ export default {
   props: {
     columns: { type: Number, required: false, default: 12 },
     serve: { type: Object, required: false, default: null },
-    title: { type: String, required: false, default: null }
+    title: { type: String, required: false, default: null },
+    filters: {
+      type: Object,
+      required: false,
+      default: () => {
+        return {
+          is_active: true,
+          order_by: 'updated_at'
+        }
+      }
+    }
+  },
+  async fetch () {
+    await this.onServes()
   },
   data () {
     return {
@@ -76,6 +89,10 @@ export default {
   }),
   created () {
   },
-  methods: {}
+  methods: {
+    async onServes () {
+      await this.$store.dispatch('content/onServes', this.filters)
+    }
+  }
 }
 </script>

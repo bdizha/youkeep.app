@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Address;
 use App\Banner;
-use App\Category;
 use App\Country;
 use App\Product;
 use App\ProductType;
@@ -391,7 +390,11 @@ class Controller extends BaseController
     protected function _setStores()
     {
         $this->stores = Store::where('app_id', $this->appId)
-            ->get();
+            ->where('photo', 'like', '%.%')
+            ->where('photo', 'not like', '%.net%')
+            ->where('id', '>', 762)
+            ->orderBy('updated_at', 'DESC')
+            ->paginate($this->limit);
     }
 
     /**
@@ -400,6 +403,7 @@ class Controller extends BaseController
     protected function _setServes()
     {
         $this->serves = Serve::where('app_id', $this->appId)
+            ->where('photo', '!=', null)
             ->get();
     }
 

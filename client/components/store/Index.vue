@@ -1,14 +1,13 @@
 <template>
   <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }">
-      <a-row v-if="hasStores" :gutter="[12,12]" align="middle" justify="start" type="flex">
+      <a-row v-if="hasStores" :gutter="[24,24]" align="middle" justify="start" type="flex">
         <a-col
           v-for="(store, index) in stores.data"
           :key="index"
-          :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :test="hasStores"
-          :xs="{ span: 24 }"
+          :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 6 }" :xs="{ span: 12 }"
         >
-          <r-store-item :size="90" :store="store"></r-store-item>
+          <r-store-face :store="store"></r-store-face>
         </a-col>
         <a-col v-if="!hasStores" :span="24">
           <a-empty description="No stores were found! Please try a different search criteria."

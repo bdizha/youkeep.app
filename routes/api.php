@@ -100,7 +100,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('/banners', 'CategoryController@banners')->name('category.banners');
     Route::post('/categories', 'CategoryController@index')->name('category.index');
     Route::post('/stores', 'StoreController@index')->name('store.index');
-    Route::post('/serves', 'ServeController@serves')->name('serve.index');
+    Route::post('/serves', 'ServeController@index')->name('serve.index');
     Route::post('/store/category', 'StoreController@category')->name('store.category');
     Route::post('/category', 'CategoryController@flush')->name('category.flush');
     Route::post('/shops', 'StoreController@index')->name('shops');
@@ -128,15 +128,6 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('/account/address/delete', 'AccountAddressController@delete')->name('account.address.delete');
     Route::post('/account/store/store', 'StoreController@store')->name('account.store.store');
     Route::post('/account/store/delete', 'StoreController@delete')->name('account.store.delete');
-    Route::get('/account/notifications', 'AccountController@notifications')->name('account.notifications');
-    Route::get('/account/orders', 'OrderController@index')->name('account.orders');
-    Route::post('/account/order/store', 'AccountController@store')->name('account.order.store');
-    Route::get('/account/order/{slug}', 'OrderController@show')->name('order.show');
-    Route::get('/account/credit', 'AccountController@credit')->name('account.credit');
-    Route::post('/account/credit/store', 'AccountCreditController@store')->name('account.credit.store');
-    Route::post('/account/credit/delete', 'AccountCreditController@store')->name('account.credit.delete');
-    Route::get('/account/invite', 'AccountController@invite')->name('account.invite');
-    Route::post('/account/invite/store', 'AccountInviteController@store')->name('account.invite.store');
     Route::get('/stores', 'StoreController@index')->name('stores');
     Route::get('/store/{slug}', 'StoreController@show')->name('store.show');
     Route::post('/store/{slug}', 'StoreController@show')->name('store.show');
@@ -148,6 +139,6 @@ Route::group(['middleware' => 'guest:api'], function () {
 
     Route::get('/category/{slug}/{level}', 'CategoryController@show')->name('category.show.level');
     Route::post('/category/{slug}/{level}', 'CategoryController@show')->name('category.show.level.post');
-    Route::get('/service/{slug}', 'ProductController@show')->name('service.get');
-    Route::post('/service/{slug}', 'ProductController@show')->name('service.show');
+    Route::get('/product/{slug}', 'ProductController@show')->name('product');
+    Route::post('/product/{slug}', 'ProductController@show')->name('product.show');
 });

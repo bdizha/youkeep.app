@@ -1,58 +1,46 @@
 <template>
-  <a-card class="r-product" hoverable>
-    <div v-if="isVertical" slot="cover">
-      <nuxt-link :to="product.route"
-                 style="display: block; width: 100%;"
+  <a-card class="r-product" hoverable @click="onProduct">
+    <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+      <a-col :lg="{ span:  isVertical ? 15 : 15 }" :md="{ span:  isVertical ? 15 : 15 }"
+             :sm="{ span:  isVertical ? 12 : 12 }" :xs="{ span: isVertical ? 24 : 24 }"
+      >
+        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+          <a-col v-if="false" :lg="{ span: 24 }"
+                 :sm="{ span: 24 }" :xs="{ span: 24 }"
+          >
+            <r-product-credit :product="product"></r-product-credit>
+            <r-rate :rating="product.rating"></r-rate>
+          </a-col>
+          <a-col :lg="{ span: 24 }"
+                 :sm="{ span: 24 }" :xs="{ span: 24 }"
+          >
+            <r-product-header :product="product"></r-product-header>
+          </a-col>
+          <a-col :lg="{ span: 24 }"
+                 :sm="{ span: 24 }" :xs="{ span: 24 }"
+          >
+            <r-product-price :product="product"></r-product-price>
+          </a-col>
+          <a-col v-if="false" :lg="{ span: 24 }"
+                 :sm="{ span: 24 }" :xs="{ span: 24 }"
+          >
+            <r-product-store :store="product.store"></r-product-store>
+          </a-col>
+          <a-col :lg="{ span: 24 }"
+                 :sm="{ span: 24 }" :xs="{ span: 24 }"
+          >
+            <r-product-actions :product="product"></r-product-actions>
+          </a-col>
+        </a-row>
+      </a-col>
+      <a-col v-if="product.has_photo" :lg="{ span:  isVertical ? 9 : 9 }" :md="{ span:  isVertical ? 9 : 9 }"
+             :sm="{ span:  isVertical ? 12 : 12 }" :xs="{ span: isVertical ? 24 : 24 }"
       >
         <r-product-photo :product="product">
         </r-product-photo>
-      </nuxt-link>
-    </div>
-    <a-card-meta>
-      <template slot="description">
-        <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
-          <a-col v-if="!isVertical" :lg="{ span:  isVertical ? 24 : 12 }"
-                 :sm="{ span:  isVertical ? 24 : 12 }" :xs="{ span: isVertical ? 24 : 12 }"
-          >
-            <nuxt-link :to="product.route">
-              <r-product-photo :product="product">
-              </r-product-photo>
-            </nuxt-link>
-          </a-col>
-          <a-col :lg="{ span:  isVertical ? 24 : 12 }"
-                 :sm="{ span:  isVertical ? 24 : 12 }" :xs="{ span: isVertical ? 24 : 12 }"
-          >
-            <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
-              <a-col :lg="{ span: 24 }"
-                     :sm="{ span: 24 }" :xs="{ span: 24 }"
-              >
-                <r-product-credit :product="product"></r-product-credit>
-                <r-rate :rating="product.rating"></r-rate>
-              </a-col>
-              <a-col :lg="{ span: 24 }"
-                     :sm="{ span: 24 }" :xs="{ span: 24 }"
-              >
-                <nuxt-link :to="product.route">
-                  <r-product-header :product="product"></r-product-header>
-                  <r-product-price :product="product"></r-product-price>
-                </nuxt-link>
-              </a-col>
-              <a-col :lg="{ span: 24 }"
-                     :sm="{ span: 24 }" :xs="{ span: 24 }"
-              >
-                <r-product-store :store="product.store"></r-product-store>
-              </a-col>
-              <a-col :lg="{ span: 24 }"
-                     :sm="{ span: 24 }" :xs="{ span: 24 }"
-              >
-                <r-product-actions :product="product"></r-product-actions>
-              </a-col>
-            </a-row>
-          </a-col>
-        </a-row>
-        <r-spinner :is-absolute="true"></r-spinner>
-      </template>
-    </a-card-meta>
+      </a-col>
+    </a-row>
+    <r-spinner :is-absolute="true"></r-spinner>
   </a-card>
 </template>
 <script>
@@ -67,11 +55,23 @@ export default {
     return {}
   },
   created () {
-    this.onProduct()
   },
   methods: {
-    onProduct () {
-    },
-  },
+    async onProduct () {
+      const modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.title = this.product.name
+      modal.current = 'product'
+
+      await this.$store.dispatch('base/onModal', modal)
+
+      const params = {}
+      params.route = '/product/' + this.product.slug
+      params.slug = this.product.slug
+
+      await this.$store.dispatch('base/onProduct', params)
+    }
+  }
 }
 </script>

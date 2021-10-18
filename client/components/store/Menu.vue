@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-store-notice v-if="hasNotice"></r-store-notice>
       <a-row :gutter="[24,24]" justify="start" type="flex">
-        <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+        <a-col v-if="!hasStore" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <div class="r-ph-24 r-pt-24">
             <a-row :gutter="[24,24]" justify="space-between" type="flex">
               <a-col>
@@ -26,7 +26,7 @@
           <a-collapse :default-active-key="activeKey"
                       expandIconPosition="right"
           >
-            <a-collapse-panel key="delivery"
+            <a-collapse-panel v-if="!hasStore" key="delivery"
                               class="r-collapse-panel r-hide-lg"
                               header="Delivery address"
             >
@@ -34,28 +34,22 @@
                                  :is-store="true"
               ></r-delivery-search>
             </a-collapse-panel>
-            <a-collapse-panel v-for="(filter, index) in filters"
+            <a-collapse-panel v-if="!hasStore"
+                              v-for="(filter, index) in filters"
                               :key="filter.id.toString()"
                               class="r-collapse-panel"
                               :header="filter.title"
             >
               <r-category-filter-item :filter="filter"></r-category-filter-item>
             </a-collapse-panel>
-            <a-collapse-panel v-if="isStore && hasStore"
+            <a-collapse-panel v-if="hasStore"
                               key="store"
-                              :header="'Welcome to ' + store.name"
+                              :header="store.name"
                               class="r-collapse-panel"
             >
-              <r-store-face v-if="isStore && !isHome"
-                            :is-plain="true"
+              <r-store-face :is-plain="true"
                             :store="store"
               ></r-store-face>
-            </a-collapse-panel>
-            <a-collapse-panel v-if="isHome"
-                              key="links"
-                              class="r-collapse-panel"
-                              header="Best of Spazastop"
-            >
             </a-collapse-panel>
             <a-collapse-panel v-if="isCategory"
                               key="category"
@@ -72,21 +66,22 @@
             >
               <r-category-filter-item :filter="filter"></r-category-filter-item>
             </a-collapse-panel>
-            <a-collapse-panel v-if="isStore && hasCategories"
+            <a-collapse-panel v-if="hasStore && hasCategories"
                               key="catalog"
                               class="r-collapse-panel"
                               header="Catalog"
             >
               <r-store-catalog></r-store-catalog>
             </a-collapse-panel>
-            <a-collapse-panel v-for="(item, index) in list" v-if="isStore && hasStore"
+            <a-collapse-panel v-for="(item, index) in list"
+                              v-if="hasStore"
                               :key="index + '-item'"
                               :header="item.title"
                               class="r-collapse-panel"
             >
               <div v-html="item.content"></div>
             </a-collapse-panel>
-            <a-collapse-panel v-if="isStore && hasStore" key="sellers"
+            <a-collapse-panel v-if="!hasStore" key="sellers"
                               class="r-collapse-panel"
                               header="Popular sellers"
             >
@@ -256,7 +251,7 @@ export default {
     activeKey () {
       let activeKey = 1
 
-      if (this.isStore) {
+      if (this.hasStore) {
         activeKey = '1'
       } else if (this.isCategory) {
         activeKey = '1'
@@ -276,7 +271,7 @@ export default {
     })
   },
   created () {
-    if (this.isStore) {
+    if (this.hasStore) {
       this.payload()
     }
   },

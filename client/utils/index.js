@@ -25,3 +25,15 @@ export function cookieFromRequest (req, key) {
 export function scrollBehavior (to, from, savedPosition) {
   return { x: 0, y: 0 }
 }
+
+export function isBoolean (val) {
+  return typeof val === 'boolean'
+}
+
+export function isString (val) {
+  return typeof val === 'string'
+}
+
+export function isNull (val) {
+  return val === null || val === undefined
+}

@@ -3,8 +3,7 @@
     <a-col :span="24">
       <div class="gutter-box">
         <h4 class="r-product-price">
-          <span class="r-text-secondary r-text-strike">{{ 'R' + discounted }}</span>
-          <span class="r-text-dark">{{ 'R' + product.price }}</span>
+          {{ 'R' + product.price }}
         </h4>
         <h3 v-if="false"
             class="r-product-price"

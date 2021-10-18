@@ -1,19 +1,22 @@
 <template>
-  <r-category-show></r-category-show>
+  <r-category-show />
 </template>
 <script>
 import { mapGetters } from 'vuex'
 
 export default {
-  layout: 'shop',
+  layout: 'store',
   components: {},
   props: {},
-  async asyncData ({ store, params, query }) {
+  data () {
+    return {}
+  },
+  async asyncData ({ store, params }) {
     try {
-      let route = `/store/${params.slug}`
+      const route = `/store/${params.slug}`
       await store.dispatch('shop/onStore', route)
 
-      let payload = {
+      const payload = {
         store: params.slug,
         level: 1,
         order_by: 'randomized_at',
@@ -21,14 +24,10 @@ export default {
         with: ['breadcrumbs', 'photos', 'products']
       }
       await store.dispatch('base/onCategories', payload)
-
     } catch (e) {
       console.error('onStore errors')
       console.log(e)
     }
-  },
-  data () {
-    return {}
   },
   created () {
     this.payload()

@@ -24,7 +24,7 @@
                   <div class="gutter-box">
                     <a-avatar
                       slot="avatar"
-                      :src="'/storage/service/' + item.thumbnail"
+                      :src="'/storage/product/' + item.thumbnail"
                       shape="square"
                       size="large"
                     >

@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'r-spin__active': $fetchState.pending}" class="r-product-cards">
+  <div :class="{'r-spin__active': $fetchState.pending}">
     <a-row
       v-if="hasProducts"
       :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]" align="middle" justify="start"
@@ -25,7 +25,7 @@ export default {
   name: 'r-category-products',
   components: {},
   props: {
-    columns: { type: Number, required: false, default: 3 },
+    columns: { type: Number, required: false, default: 8 },
     isVertical: { type: Boolean, required: false, default: true },
     category: { type: Object, required: false }
   },
@@ -49,7 +49,7 @@ export default {
   },
   computed: {
     hasProducts () {
-      return false
+      return this.products.data.length > 0
     }
   },
   methods: {

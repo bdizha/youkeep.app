@@ -7,7 +7,7 @@
     <r-notice process="isSuccess"></r-notice>
     <r-spinner :is-absolute="true" process="isRunning"></r-spinner>
     <template v-if="hasForm">
-      <r-delivery-form :has-modal="true" :has-submit="false"></r-delivery-form>
+      <r-delivery-search :has-modal="true" :has-submit="false"></r-delivery-search>
       <r-delivery-addresses></r-delivery-addresses>
       <r-account-address-list></r-account-address-list>
     </template>

@@ -28,15 +28,15 @@ const mutations = {
     let items = cart.items
     let subTotal = 0
     let grandTotal = 0
-    let serviceRate = 0.024
+    const serviceRate = 0.024
     let count = 0
 
     let discountTotal = 0.00
-    let tempItems = []
+    const tempItems = []
 
     items.forEach(function (item) {
-      let price = item.variant.price
-      let discount = item.variant.discount
+      const price = item.variant.price
+      const discount = item.variant.discount
       if (item.quantity > 0) {
         tempItems.push(item)
 
@@ -52,7 +52,7 @@ const mutations = {
     cart.items = items
 
     cart.count = count
-    let amounts = {}
+    const amounts = {}
     cart.summary = []
     amounts.subTotal = {
       key: 1,
@@ -74,7 +74,7 @@ const mutations = {
     }
     cart.summary.push(amounts.serviceFee)
 
-    let deliveryFee = 25.00
+    const deliveryFee = 25.00
     amounts.deliveryFee = {
       key: 3,
       name: 'Delivery Fee',
@@ -118,12 +118,11 @@ const actions = {
     // await axios.post('/cart', { cart: payload })
   },
   async onItem ({ dispatch, commit, state }, payload) {
-
     // console.log(state.cart, 'current cart')
 
-    let productItem = payload
-    let cart = JSON.parse(JSON.stringify(state.cart))
-    let items = cart.items
+    const productItem = payload
+    const cart = JSON.parse(JSON.stringify(state.cart))
+    const items = cart.items
 
     // console.log(cart, 'current cart after')
     // console.log(productItem, 'current productItem')
@@ -160,9 +159,9 @@ const actions = {
 
     cart.items = items
     cart.isVisible = false
-    dispatch('onCart', cart)
+    await dispatch('onCart', cart)
 
-    return { status: status }
+    return { status }
   },
   onCard ({ commit }, payload) {
     commit('setCard', payload)

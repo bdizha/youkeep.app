@@ -107,7 +107,7 @@ export default {
       this.productItem.variant = this.product.default_variant
       this.productItem.variantIds = [this.productItem.variant.id]
       this.productItem.productType = null
-      this.productItem.productTypes = [this.productItem.variant.type]
+      this.productItem.productOptions = [this.productItem.variant.type]
       this.productItem.variants = [this.productItem.variant]
 
       await this.$store.dispatch('product/onItem', this.productItem)

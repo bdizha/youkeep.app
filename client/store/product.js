@@ -67,16 +67,15 @@ const mutations = {
     state.hasProductType = productType !== null
   },
   setItem (state, item) {
-
     state.item = item
 
-    let items = state.items.filter((productItem, index) => {
-      return productItem.key != item.key
+    const items = state.items.filter((productItem, index) => {
+      return productItem.key !== item.key
     })
 
     items.push(item)
 
-    state.hasItem = item != undefined
+    state.hasItem = item !== undefined
     state.items = items
   }
 }

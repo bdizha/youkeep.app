@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Cache;
 
 class ServeController extends Controller
 {
+    /**
+     * @var mixed
+     */
+    private $term;
 
     /**
      * Find stores
@@ -27,7 +31,7 @@ class ServeController extends Controller
             $response = Cache::get($key, []);
         } else {
             $this->_setServes();
-            $response['serves'] = $this->categories;
+            $response['serves'] = $this->serves;
 
             Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
         }

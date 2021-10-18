@@ -329,7 +329,7 @@ const mutations = {
   },
   setStores (state, stores) {
     state.stores = stores
-    state.hasStores = stores !== undefined && stores.length > 0
+    state.hasStores = stores.data !== undefined && stores.data.length > 0
   }
 }
 
@@ -337,13 +337,13 @@ const mutations = {
 const actions = {
   async onStores ({ dispatch, commit, state }, payload) {
     try {
-      dispatch('onProcess', { key: 'isFixed', value: true }, { root: true })
+      dispatch('base/onProcess', { key: 'isFixed', value: true }, { root: true })
       commit('setStores', [])
 
       await axios.post('/stores', payload).then(({ data }) => {
         commit('setStores', data.stores)
 
-        dispatch('onProcess', { key: 'isFixed', value: false }, { root: true })
+        dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
       })
     } catch (e) {
       console.error('onStores errors')
@@ -352,12 +352,12 @@ const actions = {
   },
   async onServes ({ dispatch, commit, state }, payload) {
     try {
-      dispatch('onProcess', { key: 'isFixed', value: true }, { root: true })
+      dispatch('base/onProcess', { key: 'isFixed', value: true }, { root: true })
       commit('setServes', [])
 
       await axios.post('/serves', payload).then(({ data }) => {
         commit('setServes', data.serves)
-        dispatch('onProcess', { key: 'isFixed', value: false }, { root: true })
+        dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
       })
     } catch (e) {
       console.error('onServes errors')

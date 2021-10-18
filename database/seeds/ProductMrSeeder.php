@@ -212,12 +212,12 @@ class ProductMrSeeder extends DatabaseSeeder
             $productPhoto = sha1($productPhotoUrl) . ".jpeg";
             $productThumb = sha1($productThumbUrl) . ".jpeg";
 
-            if (!file_exists(public_path('storage/service/' . $productPhoto))) {
-                echo ">>>>>> Product photo inserted : " . public_path('storage/service/' . $productPhoto) . "\n";
+            if (!file_exists(public_path('storage/product/' . $productPhoto))) {
+                echo ">>>>>> Product photo inserted : " . public_path('storage/product/' . $productPhoto) . "\n";
                 Storage::disk('service')->put($productPhoto, file_get_contents($productPhotoUrl));
                 Storage::disk('service')->put($productThumb, file_get_contents($productThumbUrl));
             } else {
-                echo "<<<<<< Product photo skipped: " . public_path('storage/service/' . $productPhoto) . "\n";
+                echo "<<<<<< Product photo skipped: " . public_path('storage/product/' . $productPhoto) . "\n";
             }
 
             if (empty($key)) {

@@ -45,8 +45,8 @@ class ProductSeeder extends Seeder
                 $totalPurges++;
             } else {
                 foreach ($photos as $photo) {
-                    $image = public_path('storage/service/' . $photo->image);
-                    $thumbnail = public_path('storage/service/' . $photo->thumb);
+                    $image = public_path('storage/product/' . $photo->image);
+                    $thumbnail = public_path('storage/product/' . $photo->thumb);
 
                     if (!file_exists($image) || !file_exists($thumbnail)) {
                         echo "Deleted photo {$photo->image}" . "\n";

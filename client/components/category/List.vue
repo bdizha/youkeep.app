@@ -1,27 +1,24 @@
 <template>
-  <a-row align="middle" justify="start" type="flex">
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-spin-holder r-categories">
-      <a-collapse v-if="hasCategories"
-                  :defaultActiveKey="1"
-                  accordion
-                  expandIconPosition="right"
-      >
-        <a-collapse-panel v-for="(category, index) in categories"
-                          v-if="index < limit"
-                          :key="index.toString()"
-                          :columns="columns"
-                          :header="category.name"
-                          class="r-collapse-panel"
-        >
-          <r-category-item :category="category"
-                           :columns="columns"
-                           :is-flush="isFlush"
-                           :isVertical="isVertical"
-          ></r-category-item>
-        </a-collapse-panel>
-      </a-collapse>
-    </a-col>
-  </a-row>
+  <a-collapse class="r-pull-24"
+              v-if="hasCategories"
+              :defaultActiveKey="1"
+              accordion
+              expandIconPosition="right"
+  >
+    <a-collapse-panel v-for="(category, index) in categories"
+                      v-if="index < limit"
+                      :key="index.toString()"
+                      :columns="columns"
+                      :header="category.name"
+                      class="r-collapse-panel"
+    >
+      <r-category-item :category="category"
+                       :columns="columns"
+                       :is-flush="isFlush"
+                       :isVertical="isVertical"
+      ></r-category-item>
+    </a-collapse-panel>
+  </a-collapse>
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -43,7 +40,7 @@ export default {
   computed: mapGetters({
     categories: 'base/categories',
     hasCategories: 'base/hasCategories',
-    processes: 'base/processes',
+    processes: 'base/processes'
   }),
   created () {
   },

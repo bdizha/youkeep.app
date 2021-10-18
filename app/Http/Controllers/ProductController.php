@@ -6,6 +6,7 @@ use App\Category;
 use App\CategoryProduct;
 use App\Product;
 use App\ProductLink;
+use App\Saleable;
 use App\StoreCategory;
 use App\StoreProduct;
 use Illuminate\Http\Request;
@@ -90,7 +91,7 @@ class ProductController extends Controller
 
     protected function _setProduct(): void
     {
-        $this->product = Product::where('is_active', true)
+        $this->product = Saleable::where('is_active', true)
             ->where('slug', $this->slug)
             ->first();
 

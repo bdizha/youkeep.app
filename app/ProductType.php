@@ -50,6 +50,7 @@ class ProductType extends Model
      * @var array
      */
     protected $appends = [
+        'columns'
     ];
 
     /**
@@ -73,6 +74,11 @@ class ProductType extends Model
                 'source' => 'name'
             ]
         ];
+    }
+
+    public function getColumnsAttribute()
+    {
+        return self::$lengths[$this->type];
     }
 
     /**

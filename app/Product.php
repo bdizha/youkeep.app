@@ -3,7 +3,6 @@
 namespace App;
 
 use Cviebrock\EloquentSluggable\Sluggable;
-use Illuminate\Support\Arr;
 
 class Product extends KModel
 {
@@ -65,10 +64,11 @@ class Product extends KModel
         'color_code',
         'quantity',
         'default_variant',
-        'types',
         'photos',
+        'types',
         'category_id',
         'is_great_value',
+        'has_photo',
         'price_whole',
         'price_formatted',
         'price_super',
@@ -125,12 +125,17 @@ class Product extends KModel
 
     public function getThumbnailUrlAttribute()
     {
-        return url('/storage/service/' . $this->thumbnail);
+        return url('/storage/product/' . (!empty($this->thumbnail) ? $this->thumbnail : $this->photo));
     }
 
     public function getPhotoUrlAttribute()
     {
-        return url('/storage/service/' . $this->photo);
+        return url('/storage/product/' . $this->photo);
+    }
+
+    public function getHasPhotoAttribute()
+    {
+        return !empty($this->photo);
     }
 
     public function getPhotosAttribute()
@@ -142,8 +147,8 @@ class Product extends KModel
         foreach ($photos as $photo) {
             $productPhotos[] = [
                 'id' => $photo->id,
-                'image' => url('/storage/service/' . $photo->image),
-                'thumb' => url('/storage/service/' . $photo->thumb),
+                'image' => url('/storage/product/' . $photo->image),
+                'thumb' => url('/storage/product/' . $photo->thumb),
             ];
         }
 
@@ -170,16 +175,10 @@ class Product extends KModel
         return number_format($this->price, 0);
     }
 
-    /**
-     * @return Bool
-     */
-    private function hasDefaultType()
+    public function getDefaultVariantAttribute()
     {
-        $this->defaultType = $this->product_types()
-            ->where('type', 9)
-            ->first();
-
-        return !empty($this->defaultType);
+        $this->setDefaultVariant();
+        return $this->defaultVariant;
     }
 
     public function setDefaultVariant()
@@ -214,10 +213,24 @@ class Product extends KModel
         }
     }
 
-    public function getDefaultVariantAttribute()
+    /**
+     * @return Bool
+     */
+    private function hasDefaultType()
     {
-        $this->setDefaultVariant();
-        return $this->defaultVariant;
+        $this->defaultType = $this->product_types()
+            ->where('type', 9)
+            ->first();
+
+        return !empty($this->defaultType);
+    }
+
+    /**
+     * Get all the types for this service.
+     */
+    public function product_types()
+    {
+        return $this->belongsToMany('App\ProductType', 'product_variants', 'product_id', 'product_type_id');
     }
 
     public function getTypesAttribute()
@@ -234,6 +247,7 @@ class Product extends KModel
                 'product_type' => function ($query) use ($type) {
                     $query->where('product_types.type', $type);
                 }])
+                ->whereNull('product_variant_id')
                 ->where('product_id', $this->id)
                 ->get();
 
@@ -258,7 +272,7 @@ class Product extends KModel
                 $productTypes[] = [
                     'name' => $name,
                     'type' => $type,
-                    'variants' => $productVariants,
+                    'variants' => [],
                     'is_saleable' => $isSaleable,
                     'is_required' => $hasVariants && !in_array($type, $notRequired),
                     'has_variants' => $hasVariants
@@ -314,6 +328,9 @@ class Product extends KModel
         return $discountPercent;
     }
 
+    /*  * @return string
+     */
+
     /**
      * @return string
      */
@@ -323,8 +340,6 @@ class Product extends KModel
         return $route;
     }
 
-    /*  * @return string
-     */
     public function getStoreAttribute()
     {
         $stores = Store::where('id', $this->store_id)->get();
@@ -340,14 +355,6 @@ class Product extends KModel
             }
         }
         return $store;
-    }
-
-    /**
-     * Get all the types for this service.
-     */
-    public function product_types()
-    {
-        return $this->belongsToMany('App\ProductType', 'product_variants', 'product_id', 'product_type_id');
     }
 
     /**
@@ -372,14 +379,6 @@ class Product extends KModel
     public function tags()
     {
         return $this->belongsToMany('App\Tag', 'tag_products', 'product_id', 'tag_id');
-    }
-
-    /**
-     * Get all product variants
-     */
-    public function variants()
-    {
-        return $this->hasMany('App\ProductVariant');
     }
 
     /**

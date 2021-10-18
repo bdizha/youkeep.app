@@ -349,6 +349,7 @@ h1.r-text-slarge-light {
 
             &.r-menu-submenu-btn {
                 &.ant-menu-submenu {
+                    border-color: transparent;
                     &:hover {
                         border-color: transparent;
                     }
@@ -836,7 +837,7 @@ x {
     box-shadow: @shadow-color 0px 1px 3px 0px;
     padding: 0 24px;
     text-transform: initial;
-    font-size: 16px;
+    font-size: 18px;
     height: 45px;
     line-height: 43px;
     text-align: center;
@@ -877,15 +878,17 @@ x {
 
 .ant-menu-item .anticon,
 .ant-menu-submenu-title {
+    font-weight: 600;
     .anticon {
         margin-right: 0;
         font-size: 12px;
     }
 
     .ant-btn {
+        font-size: 16px;
         .anticon {
             margin-right: 0;
-            font-size: 14px;
+            font-size: 18px;
         }
     }
 }
@@ -1779,7 +1782,7 @@ x {
     }
 
     .r-product-price {
-        font-size: 18px;
+        font-size: 16px;
         text-align: right;
         font-weight: 700;
         display: inline-block;
@@ -2260,15 +2263,16 @@ h4 {
         position: absolute;
         padding: 0;
         top: 12px;
-        left: 12px;
+        left: auto;
         right: 12px;
-        width: 100%;
+        width: auto;
         font-size: 14px;
+        font-weight: 600;
 
         span {
-            padding: 6px 12px;
+            padding: 3px 12px;
             display: inline-block;
-            border-radius: @border-radius;
+            border-radius: @border-radius 0 @border-radius 0;
             overflow: hidden;
         }
     }
@@ -2721,6 +2725,10 @@ label {
     padding: 24px !important;
     border-top: 1px solid @secondary-color !important;
     background: @primary-color-light;
+
+    h4.r-heading {
+        font-size: 18px;
+    }
 }
 
 .ant-modal {
@@ -2734,17 +2742,6 @@ label {
 
         .ant-collapse {
             .ant-collapse-item {
-                .ant-collapse-header {
-                    padding: 12px 4px;
-
-                    .ant-collapse-arrow {
-                        right: 0;
-                    }
-                }
-
-                .ant-collapse-content {
-                    padding: 0 4px;
-                }
             }
         }
     }
@@ -2790,7 +2787,7 @@ label {
         .ant-collapse-item {
             &.ant-collapse-item-active {
                 .ant-collapse-header {
-                    margin-bottom: 24px;
+                    margin-bottom: 0;
                 }
             }
         }
@@ -2841,7 +2838,7 @@ label {
     background-color: @secondary-color;
 }
 
-.r-product-show {
+.ant-modal {
     .ant-rate {
         font-size: 24px;
     }
@@ -2893,14 +2890,14 @@ label {
     }
 
     .r-product-text {
-        font-size: 18px;
-        line-height: 21px;
+        font-size: 33px;
+        line-height: 39px;
         height: auto;
         font-weight: 600;
 
         @media (max-width: 768px) {
-            font-size: 18px;
-            line-height: 21px;
+            font-size: 24px;
+            line-height: 30px;
         }
     }
 
@@ -3325,18 +3322,16 @@ label {
 
 .r-product-text {
     font-weight: 400;
-    line-height: 18px;
-    font-size: @font-size-base;
+    line-height: 21px;
+    font-size: 18px;
     display: block;
-    height: 36px;
     overflow: hidden;
-    margin-bottom: 12px;
+    white-space: nowrap;
     text-overflow: ellipsis;
+    margin: 0;
 
     @media (max-width: 768px) {
-        margin-bottom: 12px;
         font-size: @font-size-base;
-        margin-top: 6px;
     }
 }
 
@@ -4009,10 +4004,11 @@ label {
     color: @black;
     background: transparent !important;
 
-    &:hover {
-        border: 1px solid @black;
+    &:hover,
+    &:focus {
+        border: 1px solid @secondary-color;
         color: @primary-color !important;
-        background: @black !important;
+        background: @secondary-color !important;
     }
 }
 
@@ -4334,7 +4330,7 @@ label {
                 font-size: 16px !important;
                 background: transparent;
                 height: 36px;
-                width: 36px;
+                width: 16px;
                 line-height: 39px;
                 border-radius: @border-radius;
                 overflow: hidden;
@@ -4475,7 +4471,7 @@ label {
                     font-size: 30px !important;
                     background: transparent;
                     height: 36px;
-                    width: 36px;
+                    width: 16px;
                     line-height: 39px;
                     border-radius: @border-radius;
                     overflow: hidden;
@@ -4605,21 +4601,26 @@ label {
     }
 }
 
-.r-product-modal {
+.ant-modal {
     .ant-collapse {
         > .ant-collapse-item {
-            border-bottom: 1px solid transparent;
+            > .ant-collapse-header {
+                background: @grey-color;
 
-            &:last-child {
-                border-radius: 0 0 4px 4px;
-
-                > .ant-collapse-header {
-                    border-radius: 0 0 4px 4px;
+                .ant-collapse-arrow {
+                    width: 36px;
+                    background: @white;
+                }
+                &:hover {
+                    .ant-collapse-arrow {
+                        background: @white;
+                    }
                 }
             }
 
-            &.r-collapse-panel {
-                padding: 6px 0 !important;
+            .ant-collapse-content {
+                padding: 24px 0;
+                background: @white;
             }
         }
     }
@@ -5381,10 +5382,6 @@ label {
     }
 
     .ant-card {
-        .ant-btn {
-            padding: 0;
-        }
-
         .ant-card-body {
             color: #FFF !important;
             @media (max-width: 768px) {
@@ -5457,9 +5454,11 @@ label {
 .r-store-meta {
     font-size: 14px;
     font-weight: 600;
-    background: @white;
     padding: 9px 12px;
     border-radius: @border-radius;
+    background: linear-gradient(180deg, transparent 3%, #3D4852 97%);
+    margin: 0 -12px -12px;
+    color: @white;
 }
 
 .r-search-btn {
@@ -6318,6 +6317,17 @@ label {
     margin-bottom: 12px;
 }
 
+.r-delivery-type {
+    padding: 9px 18px;
+    text-align: center;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    cursor: pointer;
+    line-height: 21px;
+}
+
 .r-art-grey {
     background-color: @secondary-color-light;
     background-repeat: repeat;
@@ -6354,13 +6364,10 @@ label {
 }
 
 .r-art-primary {
-    background-image: url(/images/art-white.svg);
-    background-color: #d9af57DD;
-    background-repeat: repeat;
+    background: @black url(/patterns/art-primary.svg) repeat scroll 0% 0% !important;
     padding: 24px;
-    background-size: 0.6% !important;
     @media (max-width: 768px) {
-        background-size: 24% !important;
+        background-size: 24%;
     }
 }
 
@@ -6537,7 +6544,6 @@ label {
 
 .ant-layout {
     &.r-layout__store {
-        padding-top: 68px;
         overflow-y: auto;
         overflow-x: hidden;
 
@@ -7078,7 +7084,6 @@ label {
     text-align: center;
     font-size: @font-size-base;
     box-shadow: @shadow-color 0px 1px 3px 0px;
-    box-shadow: @shadow-color 0px 1px 3px 0px;
     margin-top: 0px;
     top: 50%;
 
@@ -7200,6 +7205,17 @@ label {
         .ant-card-body {
             background: transparent;
             padding: 12px;
+
+            .r-store-name {
+                font-weight: 700;
+                font-size: 18px;
+                width: 100%;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                color: @white;
+            }
         }
     }
 }
@@ -7762,6 +7778,7 @@ h3.r-step-heading {
     text-overflow: ellipsis;
     overflow: hidden;
     color: @black;
+    margin: 0;
 }
 
 .r-text-wrap-63 {
@@ -7794,8 +7811,8 @@ h3.r-step-heading {
 }
 
 .r-slider {
-    .r-text-slider {
-        line-height: 72px;
+    .ant-card-body {
+        padding: 12px 24px;
     }
 }
 
@@ -8555,8 +8572,8 @@ a:hover {
 }
 
 .ant-layout-content {
-
     opacity: 0;
+    padding-top: 60px;
     -webkit-animation: slide-up-fadeIn .09s ease 0s 1 normal forwards;
     animation: slide-up-fadeIn .09s ease 0s 1 normal forwards;
 
@@ -8611,7 +8628,7 @@ a:hover {
 }
 
 .r-pull-24 {
-    margin: -24px;
+    margin: -24px !important;
 }
 
 .r-filter-item {

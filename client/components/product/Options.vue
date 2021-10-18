@@ -3,65 +3,57 @@
                  @change="onSelect"
   >
     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-      <a-col v-for="(variant, index) in productType.variants"
-             :key="variant.id"
-             :lg="{span: 8}" :md="{span: 8 }" :sm="{span: 12}" :xs="{span: 12}"
+      <a-col v-for="(option, index) in option.options"
+             :key="index"
+             :lg="{span: 24 }"
+             :md="{span: 24 }"
+             :sm="{span: 24 }"
+             :xs="{span: 24 }"
       >
         <a-tooltip placement="top">
           <template slot="title">
-            <span>Select: {{ productType.name }}</span>
+            <span>Select: {{ option.product_type.name }}</span>
           </template>
           <a-radio :checked="true"
-                   :value="variant.id"
+                   :value="option"
           >
-            {{ variant.name }}
+            {{ option.product_type.name }}
           </a-radio>
         </a-tooltip>
       </a-col>
     </a-row>
   </a-radio-group>
 </template>
-
 <script>
-import { mapGetters } from 'vuex'
+import { mapGetters, mapState } from 'vuex'
 
 export default {
   name: 'r-product-options',
   props: {
     product: { type: Object, required: false, default: { name: null, types: [] } },
-    productItem: { type: Object, required: true, default: null },
-    productType: { type: Object, required: true, default: { name: null, variants: [] } },
+    itemKey: { type: Number, required: false, default: null },
+    item: { type: Object, required: false, default: null },
+    option: { type: Object, required: true, default: { name: null, options: [] } }
   },
   data () {
     return {
       selected: null,
-      isVisible: false,
-      variant: { name: '' },
-      type: {
-        name: this.productType.name,
-        type: this.productType.type,
-        is_saleable: this.productType.is_saleable
-      },
-      defaultVariant: null,
+      isVisible: false
     }
   },
   created () {
-    this.selected = this.variantId
   },
   computed: {
-    variantId () {
-      let variant = this.productItem.variants.find((variant, index) => {
-        if (this.productType.type === variant.product_type.type) {
-          return true
-        }
-      })
+    ...mapState({
+      productItem (state) {
+        const productItem = state.product.items.find(item => item.key === this.itemKey)
 
-      if (variant !== undefined) {
-        return variant.id
-      } else {
-        return null
+        if (productItem === undefined) {
+          return this.item
+        }
+        return productItem
       }
-    },
+    }),
     ...mapGetters({
       popover: 'base/popover'
     })
@@ -73,37 +65,43 @@ export default {
       this.isVisible = true
       this.$store.dispatch('base/onPopover', { name: this.productType.name })
     },
-    async onVariant () {
-      let productItem = JSON.parse(JSON.stringify(this.productItem))
+    async onOption (option) {
+      const productItem = JSON.parse(JSON.stringify(this.productItem))
 
       console.log('productItem', productItem)
+      console.log('this.selected', this.selected)
+      console.log('this.option', option)
 
-      let variant = this.productType.variants.find(item => item.id === this.selected)
-
-      productItem.variants = productItem.variants.filter((item, index) => {
-        if (item.product_type.type !== variant.product_type.type) {
+      productItem.options = productItem.options.filter((item) => {
+        if (item.product_type.type !== option.product_type.type) {
           return true
         }
       })
 
-      if (!productItem.productTypes.includes(this.productType.type)) {
-        productItem.productTypes.push(this.productType.type)
-      }
+      productItem.currentOption = option
+      productItem.optionIds.push(option.id)
+      productItem.options.push(option)
 
-      productItem.productType = this.productType
-      productItem.variantIds.push(variant.id)
-      if (this.productType.is_saleable) {
-        productItem.variant = variant
+      if (option.options.length > 0) {
+        productItem.hasProduct = true
+        const modal = {}
+        modal.isVisible = true
+        modal.isClosable = true
+        modal.title = option.product_type.name
+        modal.current = 'product'
+
+        await this.$store.dispatch('base/onModal', modal)
+      } else {
+        productItem.hasProduct = false
       }
-      productItem.variants.push(variant)
 
       await this.$store.dispatch('product/onItem', productItem)
     },
     async onSelect () {
-      await this.onVariant()
-      this.$store.dispatch('base/onPopover', { name: null })
+      await this.onOption()
+      await this.$store.dispatch('base/onPopover', { name: null })
       this.isVisible = false
-    },
-  },
+    }
+  }
 }
 </script>
