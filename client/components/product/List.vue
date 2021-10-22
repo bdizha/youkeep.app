@@ -8,8 +8,8 @@
             <a-col v-for="(product, index) in products.data"
                    :key="index"
                    :class="{'r-spin__active' :processes.isProduct}"
-                   :lg="{span: 24 / columns}"
-                   :md="{span: 24 / columns}" :sm="{span: columns > 1 ? 12 : 24}" :xs="{span: columns > 1 ? 12 : 24}"
+                   :lg="{span: columns}"
+                   :md="{span: columns}" :sm="{span: columns > 1 ? 12 : 24}" :xs="{span: columns > 1 ? 12 : 24}"
             >
               <r-product-item :isVertical="isVertical" :product="product"></r-product-item>
             </a-col>
@@ -28,9 +28,9 @@ export default {
   name: 'r-product-list',
   components: {},
   props: {
-    columns: { type: Number, required: false, default: 6 },
+    columns: { type: Number, required: false, default: 8 },
     filters: { type: Object, required: true, default: null },
-    isVertical: { type: Boolean, required: false, default: true },
+    isVertical: { type: Boolean, required: false, default: false }
   },
   data () {
     return {}

@@ -260,6 +260,10 @@ const mutations = {
   setHasSubscribe (state, hasSubscribe) {
     state.hasSubscribe = hasSubscribe
   },
+  setModalTitle (state, title) {
+    state.modal.title = title
+    state.modal.hasTitle = title !== null
+  },
   setIsRaised (state, isRaised) {
     state.isRaised = isRaised
   },
@@ -368,11 +372,23 @@ const actions = {
       console.log(e)
     }
   },
+  onModalTitle ({ dispatch, commit, state }, payload) {
+    try {
+      commit('setModalTitle', payload)
+    } catch (e) {
+      console.error('onModalTitle errors')
+      console.log(e)
+    }
+  },
   async onProduct ({ dispatch, commit, state }, params) {
     dispatch('onProcess', { key: 'isProduct', value: true })
     dispatch('onProcess', { key: 'isFixed', value: true })
 
     try {
+      const modal = {}
+      modal.isVisible = true
+      modal.isClosable = true
+      modal.current = 'product'
       const route = params.route
 
       await axios.post(route, params).then(({ data }) => {
@@ -382,8 +398,14 @@ const actions = {
         // console.log('setProduct', data);
         commit('setCategory', data.category)
 
+        dispatch('onModal', modal)
+
+        commit('setModalTitle', data.product.name)
+
         dispatch('onProcess', { key: 'isFixed', value: false })
         dispatch('onProcess', { key: 'isProduct', value: false })
+
+        dispatch('product/onOptions', data.product.options, { root: true })
       })
     } catch (e) {
       console.error('onProduct errors', e)
@@ -486,6 +508,9 @@ const actions = {
   },
   onSubscribe ({ dispatch, commit, state }, payload) {
     commit('setHasSubscribe', payload)
+  },
+  onTitle ({ dispatch, commit, state }, payload) {
+    commit('setTitle', payload)
   },
   onModal ({ dispatch, commit, state }, payload) {
     commit('setProcess', { key: 'isRunning', value: true })

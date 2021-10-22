@@ -12,7 +12,9 @@ class ProductVariant extends Model
      * @var array
      */
     protected $appends = [
-        'options'
+        'options',
+        'is_choice',
+        'selected'
     ];
 
     /**
@@ -21,7 +23,12 @@ class ProductVariant extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'price', 'discount', 'is_active', 'required_min', 'required_max', 'is_available', 'product_variant_id', 'product_type_id', 'product_id'
+        'name',
+        'price',
+        'discount',
+        'is_active',
+        'required_min',
+        'required_max', 'is_available', 'product_variant_id', 'product_type_id', 'product_id'
     ];
 
     /**
@@ -38,6 +45,16 @@ class ProductVariant extends Model
         return Self::with('product_type')
             ->where('product_variant_id', $this->id)
             ->get();
+    }
+
+    public function getIsChoiceAttribute()
+    {
+        return $this->required_max > $this->required_min;
+    }
+
+    public function getSelectedAttribute()
+    {
+        return $this->required_max > $this->required_min ? [] : null;
     }
 
     /**

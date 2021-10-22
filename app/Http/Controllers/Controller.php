@@ -522,8 +522,7 @@ class Controller extends BaseController
             $value .= "_" . (is_array($field) ? implode("_", $field) : $field);
         }
 
-        $key = md5($value);
-        return $key;
+        return md5($value);
     }
 
     /**

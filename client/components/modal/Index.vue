@@ -6,7 +6,7 @@
            :mask-closable="false"
            :width="width"
   >
-    <template v-if="modal.hasTitle" slot="title">
+    <template v-if="modal.hasTitle && false" slot="title">
       <h4 class="r-heading">
         <a-icon type="left"></a-icon>
         {{ modal.title }}

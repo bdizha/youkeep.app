@@ -114,20 +114,16 @@ const actions = {
       dispatch('base/onProcess', { key: 'isCategories', value: true }, { root: true })
 
       // console.log('route: ', route);
-      let params = {}
+      const params = {}
 
       await axios.post(route, params).then(({ data }) => {
-        let store = data.store
+        const store = data.store
         commit('setStore', store)
 
-        if (store.categories != undefined) {
-          let categories = store.categories
-          dispatch('base/onProcess', { key: 'isCategories', value: false }, { root: true })
-        }
+        dispatch('base/onProducts', { store_id: store.id }, { root: true })
 
         console.log('onStore', store)
       })
-
     } catch (e) {
       console.error('onStore errors')
       console.log(e)

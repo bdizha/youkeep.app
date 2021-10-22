@@ -199,6 +199,8 @@ class Product extends KModel
                     'product_id' => $this->id,
                     'price' => $this->price,
                     'discount' => $this->discount,
+                    'required_min' => 1,
+                    'required_max' => 1
                 ];
 
                 $this->defaultVariant = ProductVariant::updateOrCreate($attributes, $values);
@@ -219,7 +221,7 @@ class Product extends KModel
     private function hasDefaultType()
     {
         $this->defaultType = $this->product_types()
-            ->where('type', 9)
+            ->where('type', ProductType::TYPE_DEFAULT)
             ->first();
 
         return !empty($this->defaultType);
@@ -245,14 +247,14 @@ class Product extends KModel
 
             $variants = ProductVariant::with([
                 'product_type' => function ($query) use ($type) {
-                    $query->where('product_types.type', $type);
+                    $query->where('product_types.type', $type)
+                        ->where('product_types.type', '!=', ProductType::TYPE_DEFAULT);
                 }])
                 ->whereNull('product_variant_id')
                 ->where('product_id', $this->id)
                 ->get();
 
             if (!empty($variants) && $variants->count() > 0) {
-                $productVariants = [];
                 $hasVariants = false;
                 foreach ($variants as $variant) {
                     if (!empty($variant->product_type)) {

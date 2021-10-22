@@ -73,20 +73,31 @@ class StoreController extends Controller
     /**
      * Show store details
      *
+     * @param String $slug
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show(string $slug, Request $request)
     {
-        $store = Store::where('slug', $slug)
-            ->first();
+        $key = $this->_setCacheKey($request);
+        if (Cache::has($key)) {
+            $response = Cache::get($key, []);
+        } else {
+            $store = Store::where('slug', $slug)
+                ->first();
 
-        session(['store' => $store]);
+            session(['store' => $store]);
 
-        return response()->json([
-            'store' => $store,
-            'status' => 'success'
-        ], 200);
+            $this->storeId = $store->id;
+
+            $response = [
+                'store' => $store
+            ];
+
+            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
+        }
+
+        return response()->json($response, 200);
     }
 
     /**

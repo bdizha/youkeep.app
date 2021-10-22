@@ -81,13 +81,13 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <r-product-list :columns="columns" :filters="payload"></r-product-list>
+          <r-category-list :columns="2" :is-vertical="false"></r-category-list>
         </a-col>
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <r-category-list :columns="2" :is-vertical="false"></r-category-list>
+          <r-product-list :columns="columns" :filters="payload"></r-product-list>
         </a-col>
       </a-row>
     </a-col>
@@ -99,7 +99,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-category-show',
   props: {
-    columns: { type: Number, required: false, default: 6 }
+    columns: { type: Number, required: false, default: 12 }
   },
   data () {
     return {

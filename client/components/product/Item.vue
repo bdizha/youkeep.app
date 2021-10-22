@@ -1,8 +1,8 @@
 <template>
   <a-card class="r-product" hoverable @click="onProduct">
     <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-      <a-col :lg="{ span:  isVertical ? 15 : 15 }" :md="{ span:  isVertical ? 15 : 15 }"
-             :sm="{ span:  isVertical ? 12 : 12 }" :xs="{ span: isVertical ? 24 : 24 }"
+      <a-col :lg="{ span:  isVertical ? 24 : 12 }" :md="{ span:  isVertical ? 24 : 12 }"
+             :sm="{ span:  24 }" :xs="{ span: 24 }"
       >
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
           <a-col v-if="false" :lg="{ span: 24 }"
@@ -33,8 +33,8 @@
           </a-col>
         </a-row>
       </a-col>
-      <a-col v-if="product.has_photo" :lg="{ span:  isVertical ? 9 : 9 }" :md="{ span:  isVertical ? 9 : 9 }"
-             :sm="{ span:  isVertical ? 12 : 12 }" :xs="{ span: isVertical ? 24 : 24 }"
+      <a-col v-if="product.has_photo" :lg="{ span:  isVertical ? 24 : 12 }" :md="{ span:  isVertical ? 24 : 12 }"
+             :sm="{ span:  24 }" :xs="{ span: 24 }"
       >
         <r-product-photo :product="product">
         </r-product-photo>
@@ -58,14 +58,6 @@ export default {
   },
   methods: {
     async onProduct () {
-      const modal = {}
-      modal.isVisible = true
-      modal.isClosable = true
-      modal.title = this.product.name
-      modal.current = 'product'
-
-      await this.$store.dispatch('base/onModal', modal)
-
       const params = {}
       params.route = '/product/' + this.product.slug
       params.slug = this.product.slug

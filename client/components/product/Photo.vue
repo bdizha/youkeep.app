@@ -1,12 +1,7 @@
 <template>
-  <a-card class="r-pull-24">
-    <div slot="cover">
-      <r-avatar :size="size"
-                :data-src="product.thumbnail_url"
-                shape="square"
-      />
-    </div>
-  </a-card>
+  <div class="ant-card-cover r-pull-r-24 r-product-photo">
+    <img :src="product.thumbnail_url" :alt="product.name"/>
+  </div>
 </template>
 <script>
 export default {

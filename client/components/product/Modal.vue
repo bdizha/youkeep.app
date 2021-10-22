@@ -1,9 +1,27 @@
 <template>
   <r-modal-template :closable="closable"
-                    :current="modal"
+                    :current="currentModal"
                     :mask-closable="maskClosable"
   >
     <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+      <a-col v-if="modal.hasTitle" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+          <a-col>
+            <a-button block
+                      class="r-btn-bordered-dark"
+                      type="secondary"
+                      @click="onBack"
+            >
+              <a-icon type="left"></a-icon>
+            </a-button>
+          </a-col>
+          <a-col flex="auto">
+            <h4 class="r-heading">
+              {{ modal.title }}
+            </h4>
+          </a-col>
+        </a-row>
+      </a-col>
       <a-col v-if="productItem.hasProduct" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <r-product-photo :product="product"></r-product-photo>
       </a-col>
@@ -19,7 +37,7 @@
             >
               <template slot="header">
                 <h4 class="r-heading">
-                  {{ option.product_type.name + ': ' }}
+                  {{ option.product_type.name + ': ' }} {{ option.required_min }} vs {{ option.required_max }}
                 </h4>
                 <p class="r-text-normal">
               <span v-if="isRequired(option)">
@@ -30,11 +48,16 @@
               </span>
                 </p>
               </template>
-              <r-product-options :product="product"
+              <r-product-choice v-if="option.is_choice" :product="product"
                                  :option="option"
                                  :item-key="itemKey"
                                  :item="productItem"
-              ></r-product-options>
+              ></r-product-choice>
+              <r-product-radio v-if="!option.is_choice" :product="product"
+                                :option="option"
+                                :item-key="itemKey"
+                                :item="productItem"
+              ></r-product-radio>
             </a-collapse-panel>
           </a-collapse>
         </div>
@@ -64,10 +87,9 @@ export default {
   data () {
     return {
       itemKey: null,
-      options: [],
       item: {
         hasProduct: true,
-        currentOption: null,
+        option: null,
         product: null,
         variant: null,
         options: [],
@@ -75,7 +97,7 @@ export default {
         quantity: 0,
         key: null
       },
-      modal: 'product',
+      currentModal: 'product',
       message: 'Thank you for successfully signing up with Spazastop. Enjoy your business!'
     }
   },
@@ -91,32 +113,49 @@ export default {
       }
     }),
     ...mapGetters({
+      choices: 'product/choices',
+      options: 'product/options',
+      isVisible: 'product/isVisible',
+      parentOptions: 'product/parentOptions',
       category: 'base/category',
       product: 'base/product',
+      modal: 'base/modal',
       hasItem: 'product/hasItem',
       processes: 'base/processes'
     })
   },
-  async created () {
+  async mounted () {
     await this.onInit()
   },
   methods: {
+    async onBack () {
+      console.log('onBack this.parentOptions', this.parentOptions)
+      const option = this.parentOptions[this.parentOptions.length - 1]
+
+      await this.$store.dispatch('base/onModalTitle', null)
+
+      if (option.options !== undefined) {
+        await this.$store.dispatch('product/onOptions', option.options)
+        console.log('onBack options', option.options)
+      }
+    },
     async onInit () {
+      const choices = []
       const productItem = {}
       const current = new Date()
       this.itemKey = current.getMilliseconds() * this.product.id
-
-      this.options = this.product.options
       productItem.key = this.itemKey
       productItem.product = this.product
-      productItem.currentOption = {
-        options: []
-      }
+      productItem.hasProduct = true
+      productItem.option = null
       productItem.quantity = 0
       productItem.optionIds = []
-      productItem.options = this.options
+      productItem.options = []
+      const option = null
+      const options = this.product.options
+      const params = { productItem, option, options, choices }
 
-      await this.$store.dispatch('product/onItem', productItem)
+      await this.$store.dispatch('product/onOption', params)
     },
     isRequired (option) {
       return option.required_min > 0

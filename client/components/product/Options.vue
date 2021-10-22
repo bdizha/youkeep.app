@@ -1,28 +1,88 @@
 <template>
-  <a-radio-group v-model="selected"
-                 @change="onSelect"
-  >
-    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-      <a-col v-for="(option, index) in option.options"
-             :key="index"
-             :lg="{span: 24 }"
-             :md="{span: 24 }"
-             :sm="{span: 24 }"
-             :xs="{span: 24 }"
+  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+    <a-col v-if="!isChoice"
+           :lg="{span: 24 }"
+           :md="{span: 24 }"
+           :sm="{span: 24 }"
+           :xs="{span: 24 }"
+    >
+
+       <pre>
+         {{ selected }} vs {{ option.selected }} option id >>> {{ option.id }} {{ choice }}
+       </pre>
+      <a-radio-group :default-value="selected"
+                     @change="onSelect"
       >
-        <a-tooltip placement="top">
-          <template slot="title">
-            <span>Select: {{ option.product_type.name }}</span>
-          </template>
-          <a-radio :checked="true"
-                   :value="option"
+        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+          <a-col v-for="(option, index) in option.options"
+                 :key="index"
+                 :lg="{span: 24 }"
+                 :md="{span: 24 }"
+                 :sm="{span: 24 }"
+                 :xs="{span: 24 }"
           >
-            {{ option.product_type.name }}
-          </a-radio>
-        </a-tooltip>
-      </a-col>
-    </a-row>
-  </a-radio-group>
+            <a-tooltip placement="top">
+              <template slot="title">
+                <span>Select: {{ option.product_type.name }}</span>
+              </template>
+              <a-radio :default-checked="isChecked(option)" :value="option.id">
+                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                  <a-col flex="auto">
+                    {{ option.product_type.name }} >>> {{ option.id }} >>> {{ selected }}
+                  </a-col>
+                  <a-col class="r-text-right">
+                    {{ (option.price > 0 ? '+' : '-') + option.price }} {{ option.required_min }} vs
+                    {{ option.required_max }}
+                  </a-col>
+                </a-row>
+              </a-radio>
+            </a-tooltip>
+          </a-col>
+        </a-row>
+      </a-radio-group>
+    </a-col>
+    <a-col v-if="isChoice" :lg="{span: 24 }"
+           :md="{span: 24 }"
+           :sm="{span: 24 }"
+           :xs="{span: 24 }"
+    >
+
+       <pre>
+         {{ selected }} vs {{ option.selected }} option id >>> {{ option.id }}
+       </pre>
+      <a-checkbox-group v-model="selected"
+                        @change="onSelect"
+      >
+        <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+          <a-col v-for="(option, index) in option.options"
+                 :key="index"
+                 :lg="{span: 24 }"
+                 :md="{span: 24 }"
+                 :sm="{span: 24 }"
+                 :xs="{span: 24 }"
+          >
+            <a-tooltip placement="top">
+              <template slot="title">
+                <span>Select: {{ option.product_type.name }}</span>
+              </template>
+              <a-checkbox :value="option.id"
+              >
+                <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                  <a-col flex="auto">
+                    {{ option.product_type.name }}
+                  </a-col>
+                  <a-col v-if="option.price > 0" class="r-text-right">
+                    {{ (option.price > 0 ? '+' : '-') + option.price }} {{ option.required_min }} vs
+                    {{ option.required_max }}
+                  </a-col>
+                </a-row>
+              </a-checkbox>
+            </a-tooltip>
+          </a-col>
+        </a-row>
+      </a-checkbox-group>
+    </a-col>
+  </a-row>
 </template>
 <script>
 import { mapGetters, mapState } from 'vuex'
@@ -37,13 +97,20 @@ export default {
   },
   data () {
     return {
-      selected: null,
-      isVisible: false
+      selected: this.option.selected,
+      isVisible: false,
+      isChoice: this.option.is_choice
     }
   },
-  created () {
-  },
   computed: {
+    choice () {
+      this.selected = this.option.selected
+
+      if (this.option.selected) {
+        return ''
+      }
+      return null
+    },
     ...mapState({
       productItem (state) {
         const productItem = state.product.items.find(item => item.key === this.itemKey)
@@ -55,50 +122,93 @@ export default {
       }
     }),
     ...mapGetters({
+      choices: 'product/choices',
+      options: 'product/options',
       popover: 'base/popover'
     })
   },
   mounted () {
   },
   methods: {
-    onShow () {
-      this.isVisible = true
-      this.$store.dispatch('base/onPopover', { name: this.productType.name })
+    isChecked (option) {
+      if (this.option.is_choice) {
+        return this.option.selected.includes(option.id)
+      } else {
+        return this.option.selected === option.id
+      }
     },
-    async onOption (option) {
-      const productItem = JSON.parse(JSON.stringify(this.productItem))
+    async onOption (selected) {
+      const productItem = this.productItem
+      const options = this.options
+      let option = null
+      const _choices = []
+      let choices = []
 
-      console.log('productItem', productItem)
-      console.log('this.selected', this.selected)
-      console.log('this.option', option)
+      console.log('this option', this.option)
 
-      productItem.options = productItem.options.filter((item) => {
-        if (item.product_type.type !== option.product_type.type) {
+      choices = this.choices.filter((choice) => {
+        if (choice.id !== this.option.id) {
           return true
         }
       })
 
-      productItem.currentOption = option
-      productItem.optionIds.push(option.id)
-      productItem.options.push(option)
+      if (this.option.is_choice) {
+        selected.forEach((choice) => {
+          _choices.push(choice.id)
+        })
 
-      if (option.options.length > 0) {
-        productItem.hasProduct = true
-        const modal = {}
-        modal.isVisible = true
-        modal.isClosable = true
-        modal.title = option.product_type.name
-        modal.current = 'product'
-
-        await this.$store.dispatch('base/onModal', modal)
+        choices.push({
+          id: this.option.id,
+          selected: _choices
+        })
+        option = selected.pop()
       } else {
-        productItem.hasProduct = false
+        option = selected
+        choices.push({
+          id: this.option.id,
+          selected: option.id
+        })
       }
+      const params = { productItem, option, options, choices }
 
-      await this.$store.dispatch('product/onItem', productItem)
+      console.log('option option', option)
+      await this.$store.dispatch('product/onOption', params)
     },
-    async onSelect () {
-      await this.onOption()
+    async onSelect (e) {
+      console.log('selected >>>> selected', e.target.value)
+
+      let selected = null
+
+      this.selected = e.target.value
+
+      selected = this.option.options.find((option) => {
+        return option.id === this.selected
+      })
+
+      console.log('this.selected', this.selected)
+      console.log('selected', selected)
+      console.log('this.option.options', this.option.options)
+
+      await this.onOption(selected)
+      await this.$store.dispatch('base/onPopover', { name: null })
+      this.isVisible = false
+    },
+    async onChoice (e) {
+      console.log('selected >>>> selected', e.target.value)
+
+      let selected = null
+
+      this.selected = e.target.value
+
+      selected = this.option.options.find((option) => {
+        return option.id === this.selected
+      })
+
+      console.log('this.selected', this.selected)
+      console.log('selected', selected)
+      console.log('this.option.options', this.option.options)
+
+      await this.onOption(selected)
       await this.$store.dispatch('base/onPopover', { name: null })
       this.isVisible = false
     }

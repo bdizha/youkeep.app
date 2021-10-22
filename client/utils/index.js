@@ -26,6 +26,10 @@ export function scrollBehavior (to, from, savedPosition) {
   return { x: 0, y: 0 }
 }
 
+export function isObject (val) {
+  return typeof val === 'boolean'
+}
+
 export function isBoolean (val) {
   return typeof val === 'boolean'
 }
