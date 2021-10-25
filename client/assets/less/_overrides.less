@@ -167,8 +167,10 @@ a.r-text-logo {
 
 .r-text-label {
     display: block;
-    padding-bottom: 6px;
-    font-weight: 300;
+    padding: 0;
+    font-weight: 400;
+    color: #666666;
+    line-height: 21px;
 }
 
 h1.r-text-xl {
@@ -247,9 +249,8 @@ h1.r-text-slarge-light {
 }
 
 .r-text-light {
-    font-family: 'Avenir', 'Avenir Book', Inter, 'Calibre', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    color: #3D4852BD;
+    font-weight: 500;
+    color: #AAAAAA;
 }
 
 .r-bg-white {
@@ -1879,6 +1880,41 @@ xxl	≥1600px, could be a span value or an object containing above props
     margin: 0px -11px;
 }
 
+.r-cart-actions {
+    .ant-btn {
+        padding: 0 12px;
+    }
+}
+
+h3.r-cart-btn-text {
+    font-weight: 600;
+    font-size: 18px;
+    color: #AAAAAA;
+    margin: 0;
+}
+
+h4.r-cart-btn-total {
+    font-weight: 400;
+    font-size: 18px;
+    color: #AAAAAA;
+    margin: 0;
+}
+
+.r-btn-secondary {
+    h3.r-cart-btn-text,
+    h4.r-cart-btn-total {
+        color: @primary-color;
+    }
+
+    &:hover,
+    &:focus {
+        h3.r-cart-btn-text,
+        h4.r-cart-btn-total {
+            color: @secondary-color;
+        }
+    }
+}
+
 .ant-drawer-close {
     background: @white;
     color: @black;
@@ -2982,6 +3018,16 @@ label {
 
 .r-text-left {
     text-align: left;
+}
+
+.r-text-link {
+    color: @black;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    &:hover {
+        color: @primary-color;
+    }
 }
 
 .r-text-right {
@@ -6105,6 +6151,10 @@ label {
 
 .r-p-12 {
     padding: 12px;
+}
+
+.r-pl-12 {
+    padding-left: 12px;
 }
 
 .r-p-6 {

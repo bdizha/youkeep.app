@@ -15,16 +15,18 @@
         >
           <a-tooltip placement="top">
             <template slot="title">
-              <span>Select: {{ option.product_type.name }}</span>
+              <span>Select: {{ option.title }}</span>
             </template>
-            <a-checkbox :checked="isChecked(option)" :value="option.id" @change="onChoice"
+            <a-checkbox :checked="isChecked(option)"
+                        :disabled="isDisabled(option)"
+                        :value="option.id" @change="onChoice"
             >
               <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                 <a-col flex="auto">
-                  {{ option.product_type.name }}
+                  {{ option.title }}
                 </a-col>
                 <a-col v-if="option.price > 0" class="r-text-right r-text-light">
-                  {{ (option.price > 0 ? '+' : '-') + option.price }}
+                  {{ (option.price > 0 ? '+R' : '-R') + option.price }}
                 </a-col>
               </a-row>
             </a-checkbox>
@@ -74,6 +76,9 @@ export default {
     isChecked (option) {
       return this.option.selected.includes(option.id)
     },
+    isDisabled (option) {
+      return !this.option.selected.includes(option.id) && this.option.selected.length === this.option.required_max
+    },
     async onChoice (e) {
       console.log('onChoice >>>> checked', e.target.checked)
       console.log('onChoice >>>> value', e.target.value)
@@ -81,8 +86,6 @@ export default {
       let option = null
       const isChecked = e.target.checked
       const selected = e.target.value
-
-      // console.log('onChoice >>> this.option.selected', this.option.selected)
 
       const choices = this.option.selected.filter((choice) => {
         return choice !== selected
@@ -100,10 +103,10 @@ export default {
 
       console.log('onChoice >>> choices', choices)
 
-      await this.onOption(option, choices)
+      await this.onOption(option, choices, isChecked)
       await this.$store.dispatch('base/onPopover', { name: null })
     },
-    async onOption (option, _choices) {
+    async onOption (option, _choices, isChecked) {
       const productItem = this.productItem
       const options = this.options
       const choices = this.choices.filter((choice) => {
@@ -116,9 +119,7 @@ export default {
         id: this.option.id,
         selected: _choices
       })
-      const params = { productItem, option, options, choices }
-
-      console.log('option >>> option', option)
+      const params = { productItem, option, options, choices, isChecked }
       await this.$store.dispatch('product/onOption', params)
     }
   }

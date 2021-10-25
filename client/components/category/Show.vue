@@ -6,7 +6,7 @@
            class="r-spin-holder r-categories"
     >
       <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-        <a-col v-if="!hasCategories && !processes.isCategories && !hasProducts" :lg="{ span: 24 }" :md="{ span: 24 }"
+        <a-col v-if="!hasProducts" :lg="{ span: 24 }" :md="{ span: 24 }"
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >

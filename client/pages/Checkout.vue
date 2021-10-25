@@ -250,7 +250,7 @@ export default {
       formNote: this.$form.createForm(this, { name: 'form_notes' }),
       formMobile: this.$form.createForm(this, { name: 'form_mobile' }),
       formContact: this.$form.createForm(this, { name: 'form_contact' }),
-      formCart: this.$form.createForm(this, { name: 'form_cart' }),
+      formCart: this.$form.createForm(this, { name: 'form_cart' })
     }
   },
   mounted () {
@@ -273,6 +273,6 @@ export default {
     saveContact () {
 
     }
-  },
+  }
 }
 </script>

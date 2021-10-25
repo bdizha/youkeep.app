@@ -4,11 +4,13 @@ import axios from 'axios'
 const state = () => ({
   products: [],
   items: [],
+  total: [],
   choices: [],
   options: [],
   parentOptions: [],
   hasOptions: false,
   isVisible: true,
+  instructions: null,
   payload: {
     limit: 24,
     category_id: null,
@@ -22,9 +24,19 @@ const state = () => ({
   hasProducts: false,
   hasItems: false,
   option: null,
-  hasOption: null,
+  hasOption: false,
   productType: null,
-  item: null,
+  item: {
+    hasProduct: true,
+    option: null,
+    total: null,
+    product: null,
+    variant: null,
+    options: [],
+    optionIds: [],
+    quantity: 0,
+    key: null
+  },
   hasProductType: null,
   hasItem: null
 })
@@ -39,6 +51,7 @@ const getters = {
   hasParentOptions: state => state.parentOptions.length > 0,
   hasOptions: state => state.options.length > 0,
   isVisible: state => state.isVisible,
+  instructions: state => state.instructions,
   payload: state => state.payload,
   hasProducts: state => state.hasProducts,
   hasItems: state => state.hasItems,
@@ -77,6 +90,9 @@ const mutations = {
   },
   setParentOptions (state, parentOptions) {
     state.parentOptions = parentOptions
+  },
+  setInstructions (state, instructions) {
+    state.instructions = instructions
   },
   setOption (state, option) {
     state.option = option
@@ -127,7 +143,10 @@ const actions = {
   async onProductType ({ dispatch, commit }, payload) {
     commit('setProductType', payload)
   },
-  async onOption ({ dispatch, commit, state }, { productItem, option, options, choices }) {
+  async onBack ({ dispatch, commit }, payload) {
+    commit('setOption', payload)
+  },
+  async onOption ({ dispatch, commit, state }, { productItem, option, options, choices, isChecked }) {
     console.log('onOption productItem', productItem)
 
     // console.trace()
@@ -139,43 +158,45 @@ const actions = {
     console.log('onOption choices', choices)
 
     productItem.options = productItem.options.filter((item) => {
-      if (item.id !== option.id && item.product_variant_id !== option.product_variant_id) {
+      if ((option.is_choice && item.id !== option.id) ||
+        (item.product_variant_id !== option.product_variant_id && !option.is_choice)) {
         return true
       }
     })
 
     commit('setChoices', choices)
-    commit('setIsVisible', false)
 
     // set the current option
     if (option !== null) {
-      if (option.options.length > 0) {
-        productItem.hasProduct = false
-      }
+      productItem.hasProduct = !(option.options.length > 0)
 
       const parentOptions = state.parentOptions.filter((item) => {
         if (item.id !== option.product_variant_id) {
           return true
         }
       })
-
       productItem.option = option
-      productItem.optionIds.push(option.id)
-      productItem.options.push(option)
+
+      if (isChecked) {
+        productItem.optionIds.push(option.id)
+        productItem.options.push(option)
+      }
 
       if (option.options.length > 0) {
-        dispatch('base/onModalTitle', option.product_type.name, { root: true })
-
         parentOptions.push({
           id: option.product_variant_id,
-          options: state.options
+          options: state.options,
+          option: state.option
         })
+        commit('setOption', option)
 
         commit('setOptions', option.options)
       }
 
       console.log('onOption parentOptions', parentOptions)
       commit('setParentOptions', parentOptions)
+    } else {
+      commit('setOption', option)
     }
     commit('setIsVisible', true)
 

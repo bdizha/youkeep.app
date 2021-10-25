@@ -12,6 +12,7 @@ class ProductVariant extends Model
      * @var array
      */
     protected $appends = [
+        'title',
         'options',
         'is_choice',
         'selected'
@@ -39,6 +40,13 @@ class ProductVariant extends Model
     protected $hidden = [
         'created_at', 'updated_at', 'is_active', 'product_id', 'product_type_id'
     ];
+
+    public function getTitleAttribute()
+    {
+        $productType = ProductType::where('id', $this->product_type_id)
+            ->first();
+        return !empty($productType->name) ? $productType->name : null;
+    }
 
     public function getOptionsAttribute()
     {

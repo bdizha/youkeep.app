@@ -15,18 +15,36 @@
         >
           <a-tooltip placement="top">
             <template slot="title">
-              <span>Select: {{ option.product_type.name }}</span>
+              <span>Select: {{ option.title }}</span>
             </template>
-            <a-radio @change="onRadio" :checked="isChecked(option)" :value="option.id">
-              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                <a-col flex="auto">
-                  {{ option.product_type.name }}
-                </a-col>
-                <a-col v-if="option.price > 0" class="r-text-right r-text-light">
-                  {{ (option.price > 0 ? '+' : '-') + option.price }}
-                </a-col>
-              </a-row>
-            </a-radio>
+
+            <a-row align="middle" justify="start" type="flex">
+              <a-col :lg="{span: 24 }"
+                     :md="{span: 24 }"
+                     :sm="{span: 24 }"
+                     :xs="{span: 24 }"
+              >
+                <a-radio @change="onRadio" :checked="isChecked(option)" :value="option.id">
+                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                    <a-col flex="auto">
+                      {{ option.title }}
+                    </a-col>
+                    <a-col v-if="option.price > 0" class="r-text-right r-text-light">
+                      {{ (option.price > 0 ? '+R' : '-R') + option.price }}
+                    </a-col>
+                  </a-row>
+                </a-radio>
+              </a-col>
+              <a-col v-if="hasOptions(option)" :lg="{span: 24 }"
+                     :md="{span: 24 }"
+                     :sm="{span: 24 }"
+                     :xs="{span: 24 }"
+              >
+                <r-product-options :selection="getOptions(option)"
+                                   :option="option"
+                ></r-product-options>
+              </a-col>
+            </a-row>
           </a-tooltip>
         </a-col>
       </a-row>
@@ -40,29 +58,22 @@ export default {
   name: 'r-product-radio',
   props: {
     product: { type: Object, required: false, default: { name: null, types: [] } },
-    itemKey: { type: Number, required: false, default: null },
-    item: { type: Object, required: false, default: null },
     option: { type: Object, required: true, default: { name: null, options: [] } }
   },
   data () {
     return {
-      selected: this.option.selected,
-      isVisible: false,
+      selection: {
+        currentOptions: [],
+        hasOptions: false,
+        content: null
+      },
       isChoice: false
     }
   },
   computed: {
-    ...mapState({
-      productItem (state) {
-        const productItem = state.product.items.find(item => item.key === this.itemKey)
-
-        if (productItem === undefined) {
-          return this.item
-        }
-        return productItem
-      }
-    }),
+    ...mapState({}),
     ...mapGetters({
+      productItem: 'product/item',
       choices: 'product/choices',
       options: 'product/options',
       popover: 'base/popover'
@@ -94,10 +105,9 @@ export default {
 
       console.log('onRadio >>> selected', option)
 
-      await this.onOption(option)
-      await this.$store.dispatch('base/onPopover', { name: null })
+      await this.onOption(option, true)
     },
-    async onOption (option) {
+    async onOption (option, isChecked) {
       const productItem = this.productItem
       const options = this.options
       let choices = []
@@ -114,10 +124,62 @@ export default {
         id: this.option.id,
         selected: option.id
       })
-      const params = { productItem, option, options, choices }
+      const params = { productItem, option, options, choices, isChecked }
 
       console.log('onOption >>> option', option)
       await this.$store.dispatch('product/onOption', params)
+    },
+    hasOptions (option) {
+      let selection = {
+        currentOptions: [],
+        hasOptions: false,
+        content: ''
+      }
+
+      selection = this.setOptions(option, selection)
+      if (selection.currentOptions.length > 0) {
+        return true
+      }
+      return selection.hasOptions
+    },
+    getOptions (option) {
+      const selection = {
+        currentOptions: [],
+        hasOptions: false,
+        content: ''
+      }
+      return this.setOptions(option, selection)
+    },
+    setOptions (option, selection) {
+      console.log('setOptions dddddd >>>>>>> ' + option.title, option.title)
+      console.log('setOptions option >>>>>>> ' + option.title, option)
+      console.log('setOptions selection >>>>>>> ' + option.title, selection)
+      selection.content += `<div class="r-text-xs">`
+
+      option.options.forEach((item) => {
+        console.log('setOptions item >>>>>>> ' + item.title, item)
+        const choice = this.choices.find((choice) => {
+          return choice.id === item.id || choice.selected === item.id
+        })
+
+        if (choice !== undefined) {
+          const postFix = (choice.id === item.id) ? ':' : ''
+          const textClass = (choice.id === item.id) ? 'r-text-label' : 'r-text-light'
+
+          selection.content += `<span class="${textClass}">`
+          selection.content += item.title + postFix
+          selection.currentOptions.push(item)
+          selection.content += `</span>`
+          selection.hasOptions = true
+
+          if (item.options.length > 0) {
+            selection = this.setOptions(item, selection)
+          }
+        }
+      })
+
+      selection.content += `</div>`
+      return selection
     }
   }
 }
