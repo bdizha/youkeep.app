@@ -3,9 +3,8 @@
     <a-col v-if="!hasOption">
       <a-row :gutter="[12, 12]" align="middle" justify="start" type="flex">
         <a-col class="r-cart-actions" v-if="hasActions">
-          <a-button :class="{'r-btn-bordered-secondary': canContinue}"
-                    :disabled="!canContinue && !hasActions"
-                    :size="size"
+          <a-button class="r-btn-dark"
+                    size="default"
                     block
                     type="secondary"
                     @click="onMinus"
@@ -22,9 +21,8 @@
           </div>
         </a-col>
         <a-col class="r-cart-actions">
-          <a-button :class="{'r-btn-dark': canContinue}"
-                    :disabled="!canContinue && !hasActions"
-                    :size="size"
+          <a-button class="r-btn-dark"
+                    size="default"
                     block
                     type="secondary"
                     @click="onPlus"
@@ -37,10 +35,10 @@
     <a-col flex="auto" v-if="!hasOption && isShowing">
       <a-row :gutter="[12, 12]" align="middle" justify="start" type="flex">
         <a-col :span="24">
-          <a-button :disabled="!canContinue"
+          <a-button :disabled="!isValid"
                     :size="size"
                     block
-                    :class="{'r-btn-secondary': canContinue}"
+                    :class="{'r-btn-secondary': isValid}"
                     type="secondary"
                     @click="onClose"
           >
@@ -63,10 +61,10 @@
     <a-col v-if="isShowing && hasOption" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row>
         <a-col :span="24">
-          <a-button :disabled="!canContinue"
+          <a-button :disabled="isRequired(option)"
                     :size="size"
                     block
-                    :class="{'r-btn-secondary': canContinue}"
+                    :class="{'r-btn-secondary': !isRequired(option)}"
                     type="secondary"
                     @click="onClose"
           >
@@ -110,29 +108,38 @@ export default {
         isVisible: false,
         isClosable: false,
         current: 'product'
-      },
-      canContinue: false
+      }
     }
   },
   created () {
     this.payload()
   },
   computed: {
-    ...mapState({
-      productItem (state) {
-        const productItem = state.product.items.find(item => item.key === this.itemKey)
+    isValid () {
+      if (!this.hasProduct || this.productItem === null) {
+        return false
+      }
 
-        if (productItem === undefined) {
-          return this.item
-        }
-        return productItem
-      },
+      console.log('isValid this.productItem >>>> ', this.productItem)
+
+      const requiredItems = this.product.options.filter((option) => {
+        return !this.isRequired(option)
+      })
+
+      console.log('isValid requiredItem >>>> ', requiredItems)
+
+      if (requiredItems.length > 0) {
+        return false
+      }
+      return true
+    },
+    ...mapState({
       total (state) {
         let total = 0.00
         const product = state.product
         console.log('on total product >>>> 111', product)
 
-        if (product !== undefined && product.item.product !== undefined && product.item.product !== null) {
+        if (this.hasProduct) {
           total = parseFloat(product.item.product.price)
           console.log('on total product >>>> 222', product)
 
@@ -146,12 +153,24 @@ export default {
         }
 
         return parseFloat(total) * this.quantity
+      },
+      productItem (state) {
+        let productItem = null
+        if (this.hasProduct) {
+          productItem = state.product.items.find(item => item.key === this.itemKey)
+        }
+
+        if (productItem === undefined) {
+          return this.item
+        }
+        return productItem
       }
     }),
     ...mapGetters({
       store: 'base/store',
       cart: 'cart/cart',
-      productItem: 'product/item',
+      hasProduct: 'base/hasProduct',
+      option: 'product/option',
       hasOption: 'product/hasOption',
       items: 'product/items'
     })
@@ -166,24 +185,50 @@ export default {
       }
     },
     async onPlus () {
-      if (this.isValid()) {
+      if (this.isShowing) {
         this.quantity = this.productItem.quantity
 
         console.log('onPlus quantity >>>>>', this.quantity)
         this.quantity++
         console.log('quantity >>>>>', this.quantity)
 
-        await this.onItem()
+        if (this.isValid) {
+          // await this.onItem()
+        }
       }
     },
     async onMinus () {
-      if (this.isValid()) {
-        this.quantity = this.productItem.quantity
+      this.quantity = this.productItem.quantity
 
-        if (this.quantity > 0) {
-          this.quantity--
+      if (this.quantity > 0) {
+        this.quantity--
+      }
+
+      if (this.isValid) {
+        // await this.onItem()
+      }
+    },
+    isRequired (option) {
+      console.log('isRequired option >>>>>', option.title + ' <<>> ' + option.id)
+      if ((option.required_min > 0 &&
+        (this.productItem.optionIds.includes(option.id) ||
+          this.productItem.optionIds.includes(option.selected))) ||
+        (option.required_min === 0 && option.options.length > 0)) {
+        if (option.options.length > 0) {
+          const required = option.options.filter((item) => {
+            return !this.isRequired(item)
+          })
+          const isRequired = (required.length > 0)
+          console.log('isRequired >>>>>', option.title + ' <<>> 1 ' + ' <<>> ' + option.id + isRequired)
+
+          return isRequired
+        } else {
+          console.log('isRequired >>>>>', option.title + ' <<>> 11 ' + ' <<>> ' + option.id + true)
+          return true
         }
-        await this.onItem()
+      } else {
+        console.log('isRequired >>>>>', option.title + ' <<>> 111 ' + ' <<>> ' + option.id + false)
+        return false
       }
     },
     async onItem () {
@@ -207,22 +252,10 @@ export default {
       }
     },
     onClose () {
-      if (this.isValid()) {
+      if (this.isValid) {
         this.modal.isVisible = false
         this.$store.dispatch('base/onModal', this.modal)
       }
-    },
-    isValid () {
-      const requiredItem = this.product.options.find((option) => {
-        if (option.required_min > 0 && !this.productItem.options.includes(option.id)) {
-          return true
-        }
-      })
-
-      console.log('isValid requiredItem >>>> ', requiredItem)
-
-      this.canContinue = (requiredItem === undefined)
-      return this.canContinue
     }
   }
 }

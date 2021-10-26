@@ -17,7 +17,8 @@
             <template slot="title">
               <span>Select: {{ option.title }}</span>
             </template>
-            <a-checkbox :checked="isChecked(option)"
+            <a-checkbox class="r-checkbox"
+                        :checked="isChecked(option)"
                         :disabled="isDisabled(option)"
                         :value="option.id" @change="onChoice"
             >

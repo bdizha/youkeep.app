@@ -3,7 +3,10 @@
                     :current="currentModal"
                     :mask-closable="maskClosable"
   >
-    <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+    <pre>
+    {{ productItem.optionIds }}
+      </pre>
+    <a-row v-if="hasProduct" :gutter="[48,48]" align="middle" justify="center" type="flex">
       <a-col v-if="hasOption" :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
           <a-col>
@@ -41,12 +44,12 @@
                   {{ option.title + ': ' }}
                 </h4>
                 <p class="r-text-normal">
-              <span v-if="isRequired(option)">
-                Required
-              </span>
+                  <span v-if="isRequired(option)">
+                    Required
+                  </span>
                   <span v-if="hasChoices(option) && !isRequired(option)">
-                Choose up to {{ option.required_max }}
-              </span>
+                    Choose up to {{ option.required_max }}
+                  </span>
                 </p>
               </template>
               <r-product-choice v-if="option.is_choice" :product="product"
@@ -134,13 +137,14 @@ export default {
       isVisible: 'product/isVisible',
       parentOptions: 'product/parentOptions',
       category: 'base/category',
+      hasProduct: 'base/hasProduct',
       product: 'base/product',
       modal: 'base/modal',
       hasItem: 'product/hasItem',
       processes: 'base/processes'
     })
   },
-  async mounted () {
+  async created () {
     await this.onInit()
   },
   methods: {
@@ -156,6 +160,7 @@ export default {
     },
     async onInit () {
       const choices = []
+      const isChecked = true
       const productItem = {}
       const current = new Date()
       this.itemKey = current.getMilliseconds() * this.product.id
@@ -168,7 +173,7 @@ export default {
       productItem.options = []
       const option = this.product.default_variant
       const options = this.product.options
-      const params = { productItem, option, options, choices }
+      const params = { productItem, option, options, choices, isChecked }
 
       await this.$store.dispatch('product/onOption', params)
     },

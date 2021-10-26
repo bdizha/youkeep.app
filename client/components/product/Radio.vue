@@ -27,7 +27,7 @@
                 <a-radio @change="onRadio" :checked="isChecked(option)" :value="option.id">
                   <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                     <a-col flex="auto">
-                      {{ option.title }}
+                      {{ option.title }} {{ option.id }}
                     </a-col>
                     <a-col v-if="option.price > 0" class="r-text-right r-text-light">
                       {{ (option.price > 0 ? '+R' : '-R') + option.price }}
@@ -154,8 +154,17 @@ export default {
       console.log('setOptions dddddd >>>>>>> ' + option.title, option.title)
       console.log('setOptions option >>>>>>> ' + option.title, option)
       console.log('setOptions selection >>>>>>> ' + option.title, selection)
-      selection.content += `<div class="r-text-xs">`
 
+      const optionChoice = this.choices.find((choice) => {
+        return choice.selected === option.id ||
+          choice.id === option.id
+      })
+
+      if (optionChoice !== undefined && option.options.length > 0) {
+        selection.hasOptions = true
+      }
+
+      selection.content += `<div class="r-text-xs">`
       option.options.forEach((item) => {
         console.log('setOptions item >>>>>>> ' + item.title, item)
         const choice = this.choices.find((choice) => {

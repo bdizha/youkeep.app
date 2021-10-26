@@ -9,7 +9,7 @@
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
           <a-col :span="24">
             <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
-              <a-col :span="24" v-html="selection.content"></a-col>
+              <a-col v-if="selection.hasOptions" :span="24" v-html="selection.content"></a-col>
               <a-col :span="24">
                 <a-row class="r-text-left" :gutter="[24,24]" align="middle" justify="end" type="flex">
                   <a-col>

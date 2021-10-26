@@ -143,7 +143,18 @@ const actions = {
   async onProductType ({ dispatch, commit }, payload) {
     commit('setProductType', payload)
   },
-  async onBack ({ dispatch, commit }, payload) {
+  async onBack ({ dispatch, commit, state }, payload) {
+
+    console.log('onBack this.parentOptions', this.parentOptions)
+    const option = state.parentOptions[this.parentOptions.length - 1]
+
+    if (option.options !== undefined) {
+      await this.$store.dispatch('product/onOptions', option.options)
+      await this.$store.dispatch('product/onBack', option.option)
+      console.log('onBack options', option.options)
+    }
+
+
     commit('setOption', payload)
   },
   async onOption ({ dispatch, commit, state }, { productItem, option, options, choices, isChecked }) {
@@ -179,6 +190,10 @@ const actions = {
 
       if (isChecked) {
         productItem.optionIds.push(option.id)
+
+        if (option.product_variant_id !== null) {
+          productItem.optionIds.push(option.product_variant_id)
+        }
         productItem.options.push(option)
       }
 
