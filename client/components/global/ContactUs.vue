@@ -27,7 +27,7 @@
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
           >
             <nuxt-link v-if="hasJobs" to="/career/openings">
-              <a-button class="r-btn-yellow"
+              <a-button class="r-btn-secondary"
                         block
                         size="large"
                         type="secondary"
@@ -35,7 +35,7 @@
                 See job openings
               </a-button>
             </nuxt-link>
-            <a-button v-if="!hasJobs" class="r-btn-yellow"
+            <a-button v-if="!hasJobs" class="r-btn-secondary"
                       @click="onModal"
                       block
                       size="large"
@@ -55,8 +55,8 @@ export default {
   props: {
     hasJobs: { type: Boolean, required: false, default: false },
     hasMore: { type: Boolean, required: false, default: false },
-    title: { type: String, required: false, default: 'Get your Spazastop account today!' },
-    heading: { type: String, required: false, default: 'Are you ready to join Spazastop?' }
+    title: { type: String, required: false, default: 'Get your Youkeep account today!' },
+    heading: { type: String, required: false, default: 'Are you ready to join Youkeep?' }
   },
   data () {
     return {}

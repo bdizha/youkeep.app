@@ -178,17 +178,17 @@ export default {
         {
           value: 1,
           label: 'shopper',
-          content: 'I would like shop at Spazastop for everyday items. like fashion, gadgets and more.'
+          content: 'I would like shop at Youkeep for everyday items. like fashion, gadgets and more.'
         },
         {
           value: 3,
           label: 'seller',
-          content: 'I would like to sell products to millions of Spazastop shoppers out there.'
+          content: 'I would like to sell products to millions of Youkeep shoppers out there.'
         },
         {
           value: 4,
           label: 'business',
-          content: 'We would like to do B2B transactions or partner up with Spazastop.'
+          content: 'We would like to do B2B transactions or partner up with Youkeep.'
         }
       ],
       nextStep: 1,
@@ -297,7 +297,7 @@ export default {
       }
 
       this.$store.dispatch('form/onResult', message)
-      this.$message.success('Thank you for signing up with us, ' + this.user.name + '. Enjoy your business with Spazastop.')
+      this.$message.success('Thank you for signing up with us, ' + this.user.name + '. Enjoy your business with Youkeep.')
     },
     onNextStep () {
       if (this.currentStep === 1) {

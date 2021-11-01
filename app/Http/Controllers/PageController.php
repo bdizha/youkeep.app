@@ -107,7 +107,7 @@ class PageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function spazastop()
+    public function youkeep()
     {
         return view('page.index', ['component' => 'shopple']);
     }

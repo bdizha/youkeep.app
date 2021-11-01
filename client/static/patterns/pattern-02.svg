@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="200mm" height="200mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+     viewBox="0 0 19815 19815"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:none;}
+    .fil2 {fill:#13ECAB; opacity: 0.6}
+    .fil3 {fill:#4C57FF; opacity: 0.75}
+    .fil4 {fill:#C834F7; opacity: 0.6}
+    .fil1 {fill:#4C57FF; opacity: 0.45}
+   ]]>
+  </style>
+ </defs>
+    <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+        <line class="fil0" x1="0" y1="0" x2="3963" y2= "3963" />
+        <line class="fil0" x1="3963" y1="0" x2="0" y2= "3963" />
+        <polygon class="fil1" points="1981,1981 0,0 3963,0 "/>
+        <polygon class="fil2" points="0,0 0,3963 1981,1981 "/>
+        <polygon class="fil3" points="1981,1981 3963,3963 0,3963 "/>
+        <polygon class="fil4" points="1981,1981 3963,0 3963,3963 "/>
+        <line class="fil0" x1="3963" y1="0" x2="7926" y2= "3963" />
+        <line class="fil0" x1="7926" y1="0" x2="3963" y2= "3963" />
+        <polygon class="fil1" points="5944,1981 3963,0 7926,0 "/>
+        <polygon class="fil2" points="3963,0 3963,3963 5944,1981 "/>
+        <polygon class="fil3" points="5944,1981 7926,3963 3963,3963 "/>
+        <polygon class="fil4" points="5944,1981 7926,0 7926,3963 "/>
+        <line class="fil0" x1="7926" y1="0" x2="11889" y2= "3963" />
+        <line class="fil0" x1="11889" y1="0" x2="7926" y2= "3963" />
+        <polygon class="fil1" points="9907,1981 7926,0 11889,0 "/>
+        <polygon class="fil2" points="7926,0 7926,3963 9907,1981 "/>
+        <polygon class="fil3" points="9907,1981 11889,3963 7926,3963 "/>
+        <polygon class="fil4" points="9907,1981 11889,0 11889,3963 "/>
+        <line class="fil0" x1="11889" y1="0" x2="15852" y2= "3963" />
+        <line class="fil0" x1="15852" y1="0" x2="11889" y2= "3963" />
+        <polygon class="fil1" points="13870,1981 11889,0 15852,0 "/>
+        <polygon class="fil2" points="11889,0 11889,3963 13870,1981 "/>
+        <polygon class="fil3" points="13870,1981 15852,3963 11889,3963 "/>
+        <polygon class="fil4" points="13870,1981 15852,0 15852,3963 "/>
+        <line class="fil0" x1="15852" y1="0" x2="19815" y2= "3963" />
+        <line class="fil0" x1="19815" y1="0" x2="15852" y2= "3963" />
+        <polygon class="fil1" points="17833,1981 15852,0 19815,0 "/>
+        <polygon class="fil2" points="15852,0 15852,3963 17833,1981 "/>
+        <polygon class="fil3" points="17833,1981 19815,3963 15852,3963 "/>
+        <polygon class="fil4" points="17833,1981 19815,0 19815,3963 "/>
+        <line class="fil0" x1="0" y1="3963" x2="3963" y2= "7926" />
+        <line class="fil0" x1="3963" y1="3963" x2="0" y2= "7926" />
+        <polygon class="fil1" points="1981,5944 0,3963 3963,3963 "/>
+        <polygon class="fil2" points="0,3963 0,7926 1981,5944 "/>
+        <polygon class="fil3" points="1981,5944 3963,7926 0,7926 "/>
+        <polygon class="fil4" points="1981,5944 3963,3963 3963,7926 "/>
+        <line class="fil0" x1="3963" y1="3963" x2="7926" y2= "7926" />
+        <line class="fil0" x1="7926" y1="3963" x2="3963" y2= "7926" />
+        <polygon class="fil1" points="5944,5944 3963,3963 7926,3963 "/>
+        <polygon class="fil2" points="3963,3963 3963,7926 5944,5944 "/>
+        <polygon class="fil3" points="5944,5944 7926,7926 3963,7926 "/>
+        <polygon class="fil4" points="5944,5944 7926,3963 7926,7926 "/>
+        <line class="fil0" x1="7926" y1="3963" x2="11889" y2= "7926" />
+        <line class="fil0" x1="11889" y1="3963" x2="7926" y2= "7926" />
+        <polygon class="fil1" points="9907,5944 7926,3963 11889,3963 "/>
+        <polygon class="fil2" points="7926,3963 7926,7926 9907,5944 "/>
+        <polygon class="fil3" points="9907,5944 11889,7926 7926,7926 "/>
+        <polygon class="fil4" points="9907,5944 11889,3963 11889,7926 "/>
+        <line class="fil0" x1="11889" y1="3963" x2="15852" y2= "7926" />
+        <line class="fil0" x1="15852" y1="3963" x2="11889" y2= "7926" />
+        <polygon class="fil1" points="13870,5944 11889,3963 15852,3963 "/>
+        <polygon class="fil2" points="11889,3963 11889,7926 13870,5944 "/>
+        <polygon class="fil3" points="13870,5944 15852,7926 11889,7926 "/>
+        <polygon class="fil4" points="13870,5944 15852,3963 15852,7926 "/>
+        <line class="fil0" x1="15852" y1="3963" x2="19815" y2= "7926" />
+        <line class="fil0" x1="19815" y1="3963" x2="15852" y2= "7926" />
+        <polygon class="fil1" points="17833,5944 15852,3963 19815,3963 "/>
+        <polygon class="fil2" points="15852,3963 15852,7926 17833,5944 "/>
+        <polygon class="fil3" points="17833,5944 19815,7926 15852,7926 "/>
+        <polygon class="fil4" points="17833,5944 19815,3963 19815,7926 "/>
+        <line class="fil0" x1="0" y1="7926" x2="3963" y2= "11889" />
+        <line class="fil0" x1="3963" y1="7926" x2="0" y2= "11889" />
+        <polygon class="fil1" points="1981,9907 0,7926 3963,7926 "/>
+        <polygon class="fil2" points="0,7926 0,11889 1981,9907 "/>
+        <polygon class="fil3" points="1981,9907 3963,11889 0,11889 "/>
+        <polygon class="fil4" points="1981,9907 3963,7926 3963,11889 "/>
+        <line class="fil0" x1="3963" y1="7926" x2="7926" y2= "11889" />
+        <line class="fil0" x1="7926" y1="7926" x2="3963" y2= "11889" />
+        <polygon class="fil1" points="5944,9907 3963,7926 7926,7926 "/>
+        <polygon class="fil2" points="3963,7926 3963,11889 5944,9907 "/>
+        <polygon class="fil3" points="5944,9907 7926,11889 3963,11889 "/>
+        <polygon class="fil4" points="5944,9907 7926,7926 7926,11889 "/>
+        <line class="fil0" x1="7926" y1="7926" x2="11889" y2= "11889" />
+        <line class="fil0" x1="11889" y1="7926" x2="7926" y2= "11889" />
+        <polygon class="fil1" points="9907,9907 7926,7926 11889,7926 "/>
+        <polygon class="fil2" points="7926,7926 7926,11889 9907,9907 "/>
+        <polygon class="fil3" points="9907,9907 11889,11889 7926,11889 "/>
+        <polygon class="fil4" points="9907,9907 11889,7926 11889,11889 "/>
+        <line class="fil0" x1="11889" y1="7926" x2="15852" y2= "11889" />
+        <line class="fil0" x1="15852" y1="7926" x2="11889" y2= "11889" />
+        <polygon class="fil1" points="13870,9907 11889,7926 15852,7926 "/>
+        <polygon class="fil2" points="11889,7926 11889,11889 13870,9907 "/>
+        <polygon class="fil3" points="13870,9907 15852,11889 11889,11889 "/>
+        <polygon class="fil4" points="13870,9907 15852,7926 15852,11889 "/>
+        <line class="fil0" x1="15852" y1="7926" x2="19815" y2= "11889" />
+        <line class="fil0" x1="19815" y1="7926" x2="15852" y2= "11889" />
+        <polygon class="fil1" points="17833,9907 15852,7926 19815,7926 "/>
+        <polygon class="fil2" points="15852,7926 15852,11889 17833,9907 "/>
+        <polygon class="fil3" points="17833,9907 19815,11889 15852,11889 "/>
+        <polygon class="fil4" points="17833,9907 19815,7926 19815,11889 "/>
+        <line class="fil0" x1="0" y1="11889" x2="3963" y2= "15852" />
+        <line class="fil0" x1="3963" y1="11889" x2="0" y2= "15852" />
+        <polygon class="fil1" points="1981,13870 0,11889 3963,11889 "/>
+        <polygon class="fil2" points="0,11889 0,15852 1981,13870 "/>
+        <polygon class="fil3" points="1981,13870 3963,15852 0,15852 "/>
+        <polygon class="fil4" points="1981,13870 3963,11889 3963,15852 "/>
+        <line class="fil0" x1="3963" y1="11889" x2="7926" y2= "15852" />
+        <line class="fil0" x1="7926" y1="11889" x2="3963" y2= "15852" />
+        <polygon class="fil1" points="5944,13870 3963,11889 7926,11889 "/>
+        <polygon class="fil2" points="3963,11889 3963,15852 5944,13870 "/>
+        <polygon class="fil3" points="5944,13870 7926,15852 3963,15852 "/>
+        <polygon class="fil4" points="5944,13870 7926,11889 7926,15852 "/>
+        <line class="fil0" x1="7926" y1="11889" x2="11889" y2= "15852" />
+        <line class="fil0" x1="11889" y1="11889" x2="7926" y2= "15852" />
+        <polygon class="fil1" points="9907,13870 7926,11889 11889,11889 "/>
+        <polygon class="fil2" points="7926,11889 7926,15852 9907,13870 "/>
+        <polygon class="fil3" points="9907,13870 11889,15852 7926,15852 "/>
+        <polygon class="fil4" points="9907,13870 11889,11889 11889,15852 "/>
+        <line class="fil0" x1="11889" y1="11889" x2="15852" y2= "15852" />
+        <line class="fil0" x1="15852" y1="11889" x2="11889" y2= "15852" />
+        <polygon class="fil1" points="13870,13870 11889,11889 15852,11889 "/>
+        <polygon class="fil2" points="11889,11889 11889,15852 13870,13870 "/>
+        <polygon class="fil3" points="13870,13870 15852,15852 11889,15852 "/>
+        <polygon class="fil4" points="13870,13870 15852,11889 15852,15852 "/>
+        <line class="fil0" x1="15852" y1="11889" x2="19815" y2= "15852" />
+        <line class="fil0" x1="19815" y1="11889" x2="15852" y2= "15852" />
+        <polygon class="fil1" points="17833,13870 15852,11889 19815,11889 "/>
+        <polygon class="fil2" points="15852,11889 15852,15852 17833,13870 "/>
+        <polygon class="fil3" points="17833,13870 19815,15852 15852,15852 "/>
+        <polygon class="fil4" points="17833,13870 19815,11889 19815,15852 "/>
+        <line class="fil0" x1="0" y1="15852" x2="3963" y2= "19815" />
+        <line class="fil0" x1="3963" y1="15852" x2="0" y2= "19815" />
+        <polygon class="fil1" points="1981,17833 0,15852 3963,15852 "/>
+        <polygon class="fil2" points="0,15852 0,19815 1981,17833 "/>
+        <polygon class="fil3" points="1981,17833 3963,19815 0,19815 "/>
+        <polygon class="fil4" points="1981,17833 3963,15852 3963,19815 "/>
+        <line class="fil0" x1="3963" y1="15852" x2="7926" y2= "19815" />
+        <line class="fil0" x1="7926" y1="15852" x2="3963" y2= "19815" />
+        <polygon class="fil1" points="5944,17833 3963,15852 7926,15852 "/>
+        <polygon class="fil2" points="3963,15852 3963,19815 5944,17833 "/>
+        <polygon class="fil3" points="5944,17833 7926,19815 3963,19815 "/>
+        <polygon class="fil4" points="5944,17833 7926,15852 7926,19815 "/>
+        <line class="fil0" x1="7926" y1="15852" x2="11889" y2= "19815" />
+        <line class="fil0" x1="11889" y1="15852" x2="7926" y2= "19815" />
+        <polygon class="fil1" points="9907,17833 7926,15852 11889,15852 "/>
+        <polygon class="fil2" points="7926,15852 7926,19815 9907,17833 "/>
+        <polygon class="fil3" points="9907,17833 11889,19815 7926,19815 "/>
+        <polygon class="fil4" points="9907,17833 11889,15852 11889,19815 "/>
+        <line class="fil0" x1="11889" y1="15852" x2="15852" y2= "19815" />
+        <line class="fil0" x1="15852" y1="15852" x2="11889" y2= "19815" />
+        <polygon class="fil1" points="13870,17833 11889,15852 15852,15852 "/>
+        <polygon class="fil2" points="11889,15852 11889,19815 13870,17833 "/>
+        <polygon class="fil3" points="13870,17833 15852,19815 11889,19815 "/>
+        <polygon class="fil4" points="13870,17833 15852,15852 15852,19815 "/>
+        <line class="fil0" x1="15852" y1="15852" x2="19815" y2= "19815" />
+        <line class="fil0" x1="19815" y1="15852" x2="15852" y2= "19815" />
+        <polygon class="fil1" points="17833,17833 15852,15852 19815,15852 "/>
+        <polygon class="fil2" points="15852,15852 15852,19815 17833,17833 "/>
+        <polygon class="fil3" points="17833,17833 19815,19815 15852,19815 "/>
+        <polygon class="fil4" points="17833,17833 19815,15852 19815,19815 "/>
+ </g>
+</svg>

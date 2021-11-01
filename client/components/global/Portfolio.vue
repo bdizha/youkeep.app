@@ -182,20 +182,20 @@ export default {
       hiddenItem: null,
       portfolio: [
         {
-          title: 'Spazastop',
-          slug: 'Spazastop',
+          title: 'Youkeep',
+          slug: 'Youkeep',
           content: 'B2B platform connecting retailers and sellers for better service discovery.',
           problem: 'Retailers didn’t have a good mechanism to contact sellers, and when they did get proposals, the sellers often didn’t know what information the retailers needed to make a decision on their service.',
           solution: 'Empowering sellers and retailers to be productive and successful. Sellers can create free service profiles that detail all the key information shoppers need to know when considering your service.'
         },
         {
-          title: 'Spazastop',
-          slug: 'Spazastop',
+          title: 'Youkeep',
+          slug: 'Youkeep',
           content: 'A fractional investment platform to make property accessible to everyone.',
           problem: 'Traditionally inventing in real estate hasn’t been available to most ' +
             'low income investors without either meeting high net worth requirements or going through a complex and inefficient process, ' +
             'riddled with high fees and outdated middlemen.',
-          solution: 'Spazastop is designed to utilise technology to make high-quality selling tools affordable to everyone. We combine state-of-the-art technology with in-house expertise to reduce fees and maximize your long-term business connectons.\n'
+          solution: 'Youkeep is designed to utilise technology to make high-quality selling tools affordable to everyone. We combine state-of-the-art technology with in-house expertise to reduce fees and maximize your long-term business connectons.\n'
         },
         {
           title: 'Finkipa',
@@ -214,8 +214,8 @@ export default {
         {
           title: 'Waykipa',
           slug: 'waykipa',
-          content: 'Waykipa provides a logistics delivery experience platform for e-commerce merchants and their customers.',
-          problem: 'Most of the ecommerce tools have not been developed with customers in mind and not optimized nor targeted enough to meet all retail and enterprise demands.',
+          content: 'Waykipa provides a logistics delivery experience platform for e-commerce sellers and their collectors.',
+          problem: 'Most of the ecommerce tools have not been developed with collectors in mind and not optimized nor targeted enough to meet all retail and enterprise demands.',
           solution: 'Powering up e-commerce businesses with all their logistics data in one platform. Retailers select the right modules and let their customer data perform for them.'
         },
         {
@@ -223,7 +223,7 @@ export default {
           slug: 'bookipa',
           content: 'Bookipa gives people access to pay and side hustle directly from their smartphones, whenever they need it.',
           problem: 'Bookipa was born out of a clear need to change a financial system that leaves millions of people behind and unsupported.',
-          solution: 'Access your earnings while you earn-no need to wait for payday. Customers can get up to R6,000 of their paycheck per pay period.'
+          solution: 'Access your earnings while you earn-no need to wait for payday. collectors can get up to R6,000 of their paycheck per pay period.'
         },
         {
           title: 'Artbeam',

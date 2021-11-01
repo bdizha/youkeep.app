@@ -2,7 +2,7 @@
   <a-row align="middle" justify="start" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-button :size="size" block
-                class="r-btn-bordered-grey"
+                class="r-btn-dark"
                 type="secondary"
                 @click="onModal"
       >
@@ -19,7 +19,7 @@ export default {
   name: 'r-category-filters',
   props: {
     justify: { type: String, required: false, default: 'start' },
-    size: { type: String, required: false, default: 'large' },
+    size: { type: String, required: false, default: 'default' }
   },
   data () {
     return {}

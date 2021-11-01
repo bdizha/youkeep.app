@@ -8,8 +8,9 @@
         >
           <div class="r-product-description">
             <r-product-description v-if="link.key == 'description'" :product="product"></r-product-description>
-            <r-product-reviews v-if="link.key == 'reviews'" :product="product"></r-product-reviews>
-            <r-product-returns v-if="link.key == 'returns'" :product="product"></r-product-returns>
+            <r-product-attributes v-if="link.key == 'attributes'" :product="product"></r-product-attributes>
+            <r-store-about v-if="link.key == 'about'" :store="product.store"></r-store-about>
+            <r-product-details v-if="link.key == 'details'" :product="product"></r-product-details>
           </div>
         </a-collapse-panel>
       </a-collapse>
@@ -21,15 +22,16 @@ export default {
   name: 'r-product-info',
   props: {
     isShowing: { type: Boolean, required: false, default: false },
-    product: { type: Object, required: false, default: null },
+    product: { type: Object, required: false, default: null }
   },
   data () {
     return {
       currentLink: 'description',
       links: [
-        { label: 'Product Description', key: 'description' },
-        { label: 'Reviews', key: 'reviews' },
-        { label: 'Delivery & Returns', key: 'returns' }
+        { label: 'Asset Description', key: 'description' },
+        { label: 'Attributes', key: 'attributes' },
+        { label: 'About The ' + this.product.store.name, key: 'about' },
+        { label: 'Details', key: 'details' }
       ]
     }
   },
@@ -40,6 +42,6 @@ export default {
     setTab (link) {
       this.currentLink = link.key
     }
-  },
+  }
 }
 </script>

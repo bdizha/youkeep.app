@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-primary-light r-border-none">
+  <a-card class="r-bg-dark r-border-none">
     <div class="r-mv-48">
       <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
@@ -15,7 +15,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h4 class="r-heading-light r-text-uppercase">
-                    Today's famous dishes
+                    Today's Top NFTs
                   </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -23,7 +23,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h2 class="r-heading">
-                    Your <span class="r-text-primary">favourite</span> meals delivered to you
+                    Discover <span class="r-text-secondary">favourite</span> collectibles, so you keep
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -31,8 +31,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Sweeten up your morning, afternoon or night! Treat yourself to our new, delicious Spazastop dishes.
-                    any time of day.
+                    Explore our unique crypto assets and collect on-demand and stackable NFTs, anytime, anywhere.
                   </p>
                 </a-col>
               </a-row>
@@ -46,66 +45,46 @@
                   :sm="{ span: 24 }"
                   :xs="{ span: 24 }"
                 >
-                  <div class="r-slider r-slider-dots">
+                  <div class="r-slider">
                     <VueSlickCarousel v-bind="settings">
-                      <a-card v-for="(dish, index) in dishes"
-                              :key="index"
-                              class="r-bg-white-primary"
-                      >
-                        <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-                          <a-col :order="index === 1 ? 2 : 1" :lg="{ span: 15 }" :md="{ span: 15}"
-                                 :sm="{ span: 24 }"
-                                 :xs="{ span: 24 }"
-                          >
-                            <div class="r-bg-white r-pull-24">
-                            <r-avatar :data-src="dish.images[0].src" :size="300"
-                                      class="r-avatar-block"
-                            ></r-avatar>
-                            </div>
-                          </a-col>
-                          <a-col :order="index === 1 ? 1 : 2" :lg="{ span: 9 }" :md="{ span: 9}"
-                                 :sm="{ span: 24 }"
-                                 :xs="{ span: 24 }"
-                          >
-                            <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                              <a-col v-for="(image, index) in dish.images"
-                                     v-if="index > 0"
-                                     :key="index"
-                                     :lg="{ span: 12 }" :md="{ span: 12 }"
+                      <a-row v-for="(item, index) in items"
+                             :key="index" :gutter="[24,24]" align="middle" justify="start" type="flex">
+                        <a-col v-for="(image, index) in item.images"
+                               :key="index"
+                               :lg="{ span: 8 }" :md="{ span: 8 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24}"
+                        >
+                          <a-card :class="getCardClass(image)" class="r-p-0 r-seller-item" :hoverable="true">
+                            <a-row align="middle" justify="start" type="flex">
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24}"
                                      :sm="{ span: 24 }"
-                                     :xs="{ span: 24}"
+                                     :xs="{ span: 24 }"
                               >
                                 <r-avatar :data-src="image.src" :size="300"
                                           class="r-avatar-block"
                                 ></r-avatar>
                               </a-col>
-                              <a-col :lg="{ span: 12 }" :md="{ span: 12}"
+                              <a-col :lg="{ span: 24 }" :md="{ span: 24}"
                                      :sm="{ span: 24 }"
                                      :xs="{ span: 24 }"
                               >
-                                <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
-                                  <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                                         :sm="{ span: 24 }"
-                                         :xs="{ span: 24 }"
-                                  >
-                                    <h4 class="r-heading">
-                                      {{ dish.title }}
-                                    </h4>
-                                  </a-col>
-                                  <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                                         :sm="{ span: 24 }"
-                                         :xs="{ span: 24 }"
-                                  >
-                                    <h4 class="r-heading-light r-text-primary">
-                                      Made by Chef {{ dish.seller }}
-                                    </h4>
-                                  </a-col>
-                                </a-row>
+                                <r-seller-item :item="item"></r-seller-item>
                               </a-col>
                             </a-row>
-                          </a-col>
-                        </a-row>
-                      </a-card>
+                          </a-card>
+                        </a-col>
+                      </a-row>
+                      <template #prevArrow="arrowOption">
+                        <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
+                          <a-icon type="left"/>
+                        </div>
+                      </template>
+                      <template #nextArrow="arrowOption">
+                        <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
+                          <a-icon type="right"/>
+                        </div>
+                      </template>
                     </VueSlickCarousel>
                   </div>
                 </a-col>
@@ -123,69 +102,66 @@ export default {
   props: {},
   data () {
     return {
-      dishes: [
+      items: [
         {
           title: 'Stuffed Paneer Kofta',
-          seller: 'Monika',
+          content: 'Monika',
           images: [
             {
-              src: '/products/product-01.jpeg',
+              src: '/patterns/pattern-02-secondary.svg',
+              theme: 'tertiary',
               span: 12
             },
             {
-              src: '/products/product-02.jpeg',
+              src: '/patterns/pattern-07.svg',
+              theme: 'secondary',
               span: 12
             },
             {
-              src: '/products/product-03.jpeg',
-              span: 12
-            },
-            {
-              src: '/products/product-04.jpeg',
+              src: '/patterns/pattern-08.svg',
+              theme: 'primary',
               span: 12
             }
           ]
         },
         {
           title: 'Stuffed Paneer Kofta',
-          seller: 'Monika',
+          content: 'Monika',
           images: [
             {
-              src: '/products/product-05.jpeg',
+              src: '/patterns/pattern-15.svg',
+              theme: 'secondary',
               span: 16
             },
             {
-              src: '/products/product-06.jpeg',
-              span: 8
-            },
-            {
-              src: '/products/product-07.jpeg',
+              src: '/patterns/pattern-17.svg',
+              theme: 'tertiary',
               span: 12
             },
             {
-              src: '/products/product-08.jpeg',
+              src: '/patterns/pattern-28.svg',
+              theme: 'secondary',
               span: 12
             }
           ]
         },
         {
           title: 'Penne with a Slow-Cooked Sausage Sauce',
-          seller: 'Ming',
+          content: 'Ming',
           images: [
             {
-              src: '/products/product-09.jpeg',
+              src: '/patterns/pattern-09.svg',
+              theme: 'secondary',
               span: 16
             },
             {
-              src: '/products/product-10.jpeg',
-              span: 8
-            },
-            {
-              src: '/products/product-11.jpeg',
+              src: '/patterns/pattern-17.svg',
+              theme: 'tertiary',
               span: 12
             },
             {
-              src: '/products/product-12.jpeg',
+              src: '/patterns/pattern-25-tertiary.svg',
+              theme: 'primary',
               span: 12
             }
           ]
@@ -194,7 +170,7 @@ export default {
       settings: {
         slidesToScroll: 1,
         slidesToShow: 1,
-        dots: true,
+        dots: false,
         responsive: [
           {
             'breakpoint': 1024,
@@ -236,6 +212,9 @@ export default {
   },
   computed: {},
   methods: {
+    getCardClass (item) {
+      return `r-bg-${item.theme}-light r-radius-${item.shape}`
+    },
     onRegister () {
       const modal = {}
       modal.isVisible = true

@@ -3,19 +3,13 @@
 </template>
 <script>
 export default {
-  layout: 'product',
-  name: 'r-store-product',
+  layout: 'default',
   components: {},
   props: {},
   async asyncData ({ store, params }) {
     const route = `/product/${params.slug}`
-
-    const categoryParts = params.category.split('--')
-
-    console.log('category paths', categoryParts)
-
     params.route = route
-    params.category_id = categoryParts[1]
+    params.category_id = null
     params.with = ['category', 'breadcrumbs']
     await store.dispatch('base/onProduct', params)
   },
@@ -23,7 +17,7 @@ export default {
     return {}
   },
   created () {
-    this.payload()
+    // this.payload()
   },
   methods: {
     async payload () {

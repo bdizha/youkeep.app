@@ -2,8 +2,8 @@
   <a-row align="middle" justify="start" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-spin-holder">
       <a-collapse default-active-key="sellers" expandIconPosition="right">
-        <a-collapse-panel v-for="(category, index) in product.categories"
-                          v-if="category.has_products"
+        <a-collapse-panel v-for="(category, index) in categories"
+                          v-if="index"
                           :key="category.name"
                           :header="category.name"
                           class="r-collapse-panel"
@@ -19,7 +19,7 @@
                           class="r-collapse-panel"
                           header="Explore similar sellers"
         >
-          <r-store-list></r-store-list>
+          <r-stores></r-stores>
         </a-collapse-panel>
       </a-collapse>
     </a-col>
@@ -44,6 +44,7 @@ export default {
   computed: mapGetters({
     processes: 'base/processes',
     hasProduct: 'base/hasProduct',
+    categories: 'product/categories'
   }),
   created () {
   },

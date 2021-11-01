@@ -26,7 +26,7 @@
                      :xs="{ span: 24 }"
               >
                 <p class="r-text-medium">
-                  Automatically build credit history. Spazastop helps investors save money in line with the property
+                  Automatically build credit history. Youkeep helps investors save money in line with the property
                   market and it only takes minutes to
                   invest.
                 </p>

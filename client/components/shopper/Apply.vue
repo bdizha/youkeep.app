@@ -11,7 +11,7 @@
           <a-row :gutter="[24, 24]" align="middle" justify="start" type="flex">
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h2 class="r-heading r-text-secondary">
-                Shopper Application at Spazastop:
+                Shopper Application at Youkeep:
               </h2>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
@@ -21,26 +21,26 @@
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is Spazastop?
+                What is Youkeep?
               </h3>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <p class="r-text-normal">
-                Spazastop is a fast growing startup that is improving lives by giving people more time to
+                Youkeep is a fast growing startup that is improving lives by giving people more time to
                 spend
-                with their families! Spazastop members order business via the Spazastop app and can have
+                with their families! Youkeep members order business via the Youkeep app and can have
                 them
                 delivered on-demand as soon as 1 hour later.
               </p>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <h3 class="r-heading">
-                What is a Spazastop shopper?
+                What is a Youkeep shopper?
               </h3>
             </a-col>
             <a-col :xs="{ span: 24 }" class="r-text-left">
               <p class="r-text-normal">
-                Spazastop Shoppers carefully select member's business using the Spazastop app and deliver
+                Youkeep Shoppers carefully select member's business using the Youkeep app and deliver
                 them
                 during a specified, delivery window. Our shoppers enjoy an interactive and fun culture
                 all
@@ -79,7 +79,7 @@
             What are your contact details?
           </h2>
           <p class="r-text-normal">
-            By entering your email addrress and mobile number you are opting in to receive automated Spazastop
+            By entering your email addrress and mobile number you are opting in to receive automated Youkeep
             Application
             Notifications. Message and data rates may apply.
           </p>

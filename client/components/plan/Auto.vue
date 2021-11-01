@@ -100,7 +100,7 @@ export default {
   data () {
     return {
       activeKey: 1,
-      title: 'Spazastop connects shoppers to sellers.',
+      title: 'Youkeep connects shoppers to sellers.',
       content: 'Our shoppers handle all your order collection and delivery experience as well as returns for you at\n' +
         'a very low cost.',
       sections: [

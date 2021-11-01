@@ -26,9 +26,6 @@ class ProductArtSeeder extends DatabaseSeeder
      */
     public function run()
     {
-//        $this->testResponse('http://api.knuxt.local/api/art');
-//        die('done');
-
         $categoryLink = public_path('/api/art');
 
         $storeIds = [];

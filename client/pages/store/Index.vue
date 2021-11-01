@@ -10,7 +10,7 @@
                :xs="{ span: 24 }"
         >
           <h3 class="r-heading">
-            Top Deals
+            Top liquidity
           </h3>
         </a-col>
         <a-col>

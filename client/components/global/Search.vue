@@ -38,7 +38,7 @@
           style="margin-right: -12px"
           type="secondary"
         >
-          Find food
+          Discover
           <a-icon type="right"/>
         </a-button>
       </a-input>
@@ -64,7 +64,7 @@ export default {
   },
   computed: {
     placeholder () {
-      return 'Search chefs, cuisines, dishes...'
+      return 'Search collectibles, artists, markets...'
     },
     ...mapGetters({
       store: 'base/store',

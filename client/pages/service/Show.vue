@@ -85,7 +85,7 @@
                        :sm="{ span: 12 }"
                        :xs="{ span: 24 }"
                 >
-                  <h4 class="r-heading-light r-text-uppercase" :class="getTextClass()">
+                  <h4 class="r-heading-light r-text-uppercase" :class="getTextClass(false)">
                     Product Features
                   </h4>
                 </a-col>
@@ -102,7 +102,7 @@
                         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                           <a-col>
                             <a-card class="r-text-center" :class="getBgClass(false)">
-                              <a-icon :class="getTextClass()"
+                              <a-icon :class="getTextClass(false)"
                                       style="font-size: 60px"
                                       :type="feature.icon"
                               ></a-icon>
@@ -167,7 +167,7 @@ export default {
           title: 'Adaptive checkout\n',
           heading: '<span class="r-text-primary">Improve</span> customer satisfaction',
           image: '/assets/asset-11.svg',
-          summary: 'Build online experiences that meet the expectations of your customers.',
+          summary: 'Build online experiences that meet the expectations of your collectors.',
           content: 'Let your shoppers get what they want, when they want it, anytime, everywhere. And your business will earn long-term customer relationships.'
         },
         {
@@ -182,7 +182,7 @@ export default {
           heading: '<span class="r-text-primary">Sell</span> and maximise revenue',
           image: '/assets/asset-12.svg',
           summary: 'Get the Zerosum Capital button in a few minutes on your online marketplace.',
-          content: 'Meet potential customers at the point of discovery abd break out and reach new shoppers beyond the walls of your own marketplace.'
+          content: 'Meet potential collectors at the point of discovery abd break out and reach new shoppers beyond the walls of your own marketplace.'
         }
       ]
     }
@@ -198,12 +198,13 @@ export default {
   },
   methods: {
     getBgClass (isToggled) {
-      const theme = isToggled ? `${this.product.theme}-light` : `white-${this.product.theme}`
+      const theme = isToggled ? this.product.theme : this.product.accent
 
-      return `r-bg-${theme}`
+      return `r-bg-${theme}-light`
     },
-    getTextClass () {
-      return `r-text-${this.product.theme}`
+    getTextClass (isToggled) {
+      const theme = isToggled ? this.product.theme : this.product.accent
+      return `r-text-${theme}`
     },
     onModal () {
       const modal = {}

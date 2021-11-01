@@ -29,7 +29,7 @@
                                :xs="{ span: 24 }"
                         >
                           <h1 class="r-heading">
-                            How <span class="r-text-primary">investing</span> with Spazastop works
+                            How <span class="r-text-primary">investing</span> with Youkeep works
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -235,7 +235,7 @@ export default {
       hasData: false,
       steps: [
         {
-          title: 'The Spazastop Way',
+          title: 'The Youkeep Way',
           image: 'illustration-2-primary',
           theme: 'blue',
           heading: 'We deliver value in five steps:',

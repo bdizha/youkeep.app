@@ -398,7 +398,7 @@ const actions = {
         // console.log('setProduct', data);
         commit('setCategory', data.category)
 
-        dispatch('onModal', modal)
+        // dispatch('onModal', modal)
 
         commit('setModalTitle', data.product.name)
 

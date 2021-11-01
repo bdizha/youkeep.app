@@ -4,11 +4,11 @@
     >
       <r-customer-steps :size="16"></r-customer-steps>
     </a-tab-pane>
-    <a-tab-pane key="chefs" tab="Chefs"
+    <a-tab-pane key="artists" tab="Artists"
     >
-      <r-chef-steps :size="16"></r-chef-steps>
+      <r-artist-steps :size="16"></r-artist-steps>
     </a-tab-pane>
-    <a-tab-pane key="merchants" tab="Merchants"
+    <a-tab-pane key="sellers" tab="Sellers"
     >
       <r-seller-steps :size="16"></r-seller-steps>
     </a-tab-pane>

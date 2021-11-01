@@ -39,7 +39,7 @@
       <a-row :gutter=[24,24] justify="center" type="flex">
         <a-col :lg="{ span: 18 }" :sm="{ span: 24 }" class="r-p-24">
           <p class="r-store-text-light">
-            Spazastop is an independent business service that is not necessarily affiliated with,
+            Youkeep is an independent business service that is not necessarily affiliated with,
             endorsed or sponsored by the sellers listed here but it enables you to get the deliveries you
             want.
           </p>
@@ -72,7 +72,7 @@ export default {
           key: 2
         },
         {
-          label: 'Prepared Meals',
+          label: 'Prepared NFTs',
           key: 3
         },
         {

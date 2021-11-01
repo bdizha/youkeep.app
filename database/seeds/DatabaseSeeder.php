@@ -8,6 +8,7 @@ use App\Product;
 use App\ProductType;
 use App\ProductVariant;
 use App\StoreCategory;
+use App\StoreProduct;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -190,16 +191,15 @@ class DatabaseSeeder extends Seeder
     }
 
     /**
-     * @param array $values
      */
-    protected function setProductStore(array $values): void
+    protected function setProductStore(): void
     {
         $values = [
             'store_id' => $this->storeId,
             'product_id' => $this->product->id
         ];
 
-        \App\StoreProduct::updateOrCreate($values, $values);
+        StoreProduct::updateOrCreate($values, $values);
     }
 
     protected function setProductCategory($storeCategory)
@@ -433,23 +433,41 @@ class DatabaseSeeder extends Seeder
      * @param $photo
      * @return string
      */
-    protected function getFileExt($photo)
+    protected function getFileExt($filepath, &$hasFile)
     {
-        $photoParts = explode(".", $photo);
-        $ext = $photoParts[count($photoParts) - 1];
+        $photoParts = explode(".", $filepath);
 
-        return sha1($photo) . ".{$ext}";
+        if (count($photoParts) > 1) {
+            $ext = $photoParts[count($photoParts) - 1];
+            if (!empty($ext) && strlen($ext) < 5) {
+                $hasFile = true;
+                $filepath = sha1($filepath) . ".{$ext}";
+            }else{
+                $hasFile = false;
+            }
+        }
+
+        return $filepath;
     }
 
     protected function getSha1File($affix, $photoUrl)
     {
-        $photoName = $this->getFileExt($photoUrl);
+        if(empty($photoUrl)) {
+            return null;
+        }
+
+        $hasFile = false;
+        $photoName = $this->getFileExt($photoUrl, $hasFile);
+
+        if(empty($hasFile)) {
+            return $photoUrl;
+        }
 
         try {
             $storagePath = storage_path('app/public/' . $affix);
             $filePath = "{$storagePath}/{$photoName}";
 
-            if (!file_exists($filePath)) {
+            if (!file_exists($filePath) || true) {
                 echo "<<<<<< Photo downloaded: " . $filePath . "\n";
                 exec("wget {$photoUrl} -O {$filePath}");
             } else {

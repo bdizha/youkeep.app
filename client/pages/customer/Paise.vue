@@ -9,17 +9,17 @@
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
-                Spazastop For Retailers
+                Youkeep For Retailers
               </h4>
               <h1 class="r-heading">
                 <span class="r-text-secondary">Shop More,</span><br>
                 <span>Pay Less</span>
               </h1>
               <h3 class="r-heading-light">
-                Spazastop is a better way to make or receive payments.
+                Youkeep is a better way to make or receive payments.
               </h3>
               <p class="r-text-normal">
-                Unlike other buy-now-pay-later plans, Spazastop lets shoppers use their existing credit card for
+                Unlike other buy-now-pay-later plans, Youkeep lets shoppers use their existing credit card for
                 the easiest most intuitive checkout.
               </p>
             </template>
@@ -51,7 +51,7 @@
                          class="gutter-row"
                   >
                     <h3 class="r-heading">
-                      Spazastop is a better way to do payments.
+                      Youkeep is a better way to do payments.
                     </h3>
                     <p class="r-text-normal">
                       Pay in 3 installments with zero interest
@@ -131,7 +131,7 @@
                             Zero interest payments
                           </h4>
                           <p class="r-text-normal">
-                            Spazastop offers you the the ability to pay in
+                            Youkeep offers you the the ability to pay in
                             interest-free installment payments. Enroll today and earn rewards for buying
                             from
                             your favourite shops.
@@ -282,10 +282,10 @@
                                style="text-align: left;"
                         >
                           <h4 class="r-heading  r-text-secondary">
-                            Choose Spazastop at checkout
+                            Choose Youkeep at checkout
                           </h4>
                           <p class="r-text-normal">
-                            Unlike other buy-now-pay-later plans, Spazastop isn’t new financing. Spazastop lets you
+                            Unlike other buy-now-pay-later plans, Youkeep isn’t new financing. Youkeep lets you
                             set up monthly payments at checkout with your existing credit so you don’t need to carry
                             new
                             debt.
@@ -340,7 +340,7 @@
                                style="text-align: left;"
                         >
                           <h4 class="r-heading  r-text-secondary">
-                            Shop with Spazastop.
+                            Shop with Youkeep.
                           </h4>
                           <p class="r-text-normal">
                             Pay later on your terms.
@@ -360,7 +360,7 @@
 </template>
 <script>
 export default {
-  name: 'r-customer-spazastop',
+  name: 'r-customer-youkeep',
   props: {},
   data () {
     return {

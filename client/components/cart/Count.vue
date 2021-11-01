@@ -1,11 +1,13 @@
 <template>
-  <div :class="{'r-cart__active': cart.count > 0}"
-       class="r-cart"
-       @click="onDrawer('cart')"
+  <a-button block
+            size="small"
+            :class="{'r-btn-secondary': hasItems, 'r-btn-primary': !hasItems}"
+            type="primary"
+            @click="onDrawer()"
   >
-    <div class="r-cart-icon"></div>
-    <span class="r-cart-count">{{ cart.count }}</span>
-  </div>
+    <a-icon type="wallet"/>
+    <span class="r-cart-text">{{ cart.count }}</span>
+  </a-button>
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -16,9 +18,14 @@ export default {
   data () {
     return {}
   },
-  computed: mapGetters({
-    cart: 'cart/cart'
-  }),
+  computed: {
+    hasItems () {
+      return this.cart.count > 0
+    },
+    ...mapGetters({
+      cart: 'cart/cart'
+    })
+  },
   created () {
   },
   methods: {
@@ -28,7 +35,7 @@ export default {
       drawer.current = current
 
       this.$store.dispatch('base/onDrawer', drawer)
-    },
-  },
+    }
+  }
 }
 </script>

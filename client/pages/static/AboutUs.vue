@@ -92,15 +92,15 @@
                    :xs="{ span: 24 }"
             >
               <p class="r-text-medium">
-                What started as a way to help growing chefs to conveniently sell their best dishes has grown into a leading online
-                marketplace that connects millions of consumers with cooks and restaurants of all sizes.
+                What started as a way to help growing artists to conveniently sell their best NFTs has grown into a leading online
+                marketplace that connects millions of consumers with rare assets and marketplaces of all sizes.
               </p>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
               <p class="r-text-normal">
-                We are doing this by taking a revolutionary approach, including addressing the systemic causes of hunger and leveraging appropriate technology, while simultaneously tackling the immediate food security crisis through rescuing nutritious food and delivering it where it’s needed most.
+                We are doing this by taking a revolutionary approach, including addressing the systemic causes of hunger and leveraging appropriate technology, while simultaneously tackling the immediate NFTs security crisis through rescuing nutritious NFTs and delivering it where it’s needed most.
               </p>
             </a-col>
           </a-row>
@@ -154,7 +154,7 @@
       <r-values></r-values>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-contact-us title="Enjoy your favourite dishes or discover new chefs."></r-contact-us>
+      <r-contact-us title="Enjoy your favourite NFTs or discover new artists."></r-contact-us>
     </a-col>
   </a-row>
 </template>
@@ -257,20 +257,20 @@ export default {
         {
           route: '/customer',
           icon: 'gift',
-          title: 'For <span class="r-text-primary">customers</span>',
-          content: 'With your favorite restaurants at your fingertips, Spazastop satisfies your cravings and connects you with possibilities - more time and energy for yourself and those you love.'
+          title: 'For <span class="r-text-primary">collectors</span>',
+          content: 'With your favorite marketplaces at your fingertips, Youkeep makes you unleash your dreams and connects you with possibilities - more time and energy for yourself and your direct or indirect beneficiaries.'
         },
         {
-          route: '/chef',
+          route: '/artist',
           icon: 'fire',
-          title: 'For <span class="r-text-primary">chefs</span>',
-          content: 'Delivering with Spazastop, you get flexibility and financial stability that you deserve. Spazastop for a living or for a goal, all on your controllable schedule and on your own terms.'
+          title: 'For <span class="r-text-primary">artists</span>',
+          content: 'Delivering with Youkeep, you get flexibility and financial stability that you deserve. Youkeep for a living or for a goal, all on your controllable schedule and on your own terms.'
         },
         {
           route: '/seller',
           icon: 'hourglass',
-          title: 'For <span class="r-text-primary">restaurants</span>',
-          content: 'Spazastop’s innovative merchant-focused solutions enhance your success by transforming your business. Open your doors to an entire city and see your reach and revenue grow.'
+          title: 'For <span class="r-text-primary">marketplaces</span>',
+          content: 'Youkeep’s innovative seller-focused solutions enhance your success by transforming your business. Open your doors to an entire city and see your reach and revenue grow.'
         }
       ],
       hasData: false

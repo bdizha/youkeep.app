@@ -1,21 +1,16 @@
 <template>
   <a-row align="middle" justify="center" type="flex">
     <a-col :span="24">
-      <div class="gutter-box">
-        <h4 class="r-product-price">
-          {{ 'R' + product.price }}
-        </h4>
-        <h3 v-if="false"
-            class="r-product-price"
-        >
-                <span class="r-price-discount text-strike">
-                  {{ 'R' + product.price }}
-                </span>
-          <span class="r-text-primary">
-                  {{ 'R' + product.price }}
-                </span>
-        </h3>
-      </div>
+      <p v-if="isShowing" class="r-text-xs r-text-light">
+        Current price
+      </p>
+      <p class="r-item-text r-text-white">
+        <nuxt-img v-if="product.currency_url"
+                  :src="product.currency_url"
+                  width="18px"
+        ></nuxt-img>
+        {{ product.currency }} {{ product.price }}
+      </p>
     </a-col>
   </a-row>
 </template>
@@ -23,29 +18,21 @@
 export default {
   name: 'r-product-price',
   props: {
-    product: { type: Object, required: false, default: null },
-    isShowing: { type: Boolean, required: false, default: false },
+    product: {
+      type: Object,
+      required: true,
+      default: () => {
+        return { currency: null, price: 0, currency_url: null }
+      }
+    },
+    isShowing: { type: Boolean, required: false, default: false }
   },
   data () {
-    return {
-      quantity: 1,
-      modal: {
-        isVisible: true,
-        current: 'product',
-        product: null
-      }
-    }
+    return {}
   },
   created () {
   },
-  computed: {
-    discounted () {
-      return (parseFloat(this.product.price) + parseFloat(this.product.price / 9)).toFixed(2)
-    },
-    cart () {
-      return this.$store.state.cart
-    }
-  },
+  computed: {},
   methods: {}
 }
 </script>

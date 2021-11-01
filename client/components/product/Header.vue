@@ -3,14 +3,12 @@
     <a-col :span="24">
       <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
         <a-col :span="24">
-          <h4 class="r-product-text">
+          <h4 class="r-heading r-text-white">
             {{ product.name }}
           </h4>
         </a-col>
         <a-col :span="24">
-          <p class="r-text-normal r-product-summary">
-            {{ product.summary }}
-          </p>
+          <p class="r-text-normal r-text-light" v-html="product.summary"></p>
         </a-col>
       </a-row>
     </a-col>

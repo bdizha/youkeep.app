@@ -1,5 +1,5 @@
 <template>
-  <a-card title="Welcome to Spazastop!">
+  <a-card title="Welcome to Youkeep!">
     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
       <a-col :xs="{ span: 24 }">
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
@@ -116,7 +116,7 @@ export default {
           }
 
           $this.$store.dispatch('form/onResult', message)
-          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Spazastop.')
+          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Youkeep.')
         }, 600)
       })
     },

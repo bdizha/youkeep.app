@@ -6,6 +6,7 @@ const state = () => ({
   items: [],
   total: [],
   choices: [],
+  categories: [],
   options: [],
   parentOptions: [],
   hasOptions: false,
@@ -43,6 +44,7 @@ const state = () => ({
 
 // getters
 const getters = {
+  categories: state => state.categories,
   choices: state => state.choices,
   products: state => state.products,
   items: state => state.items,

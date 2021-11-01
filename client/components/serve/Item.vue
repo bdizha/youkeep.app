@@ -1,8 +1,8 @@
 <template>
   <nuxt-link :to="serve.route" class="r-block">
-    <a-card class="r-bg-white" :hoverable="true">
+    <a-card class="r-bg-dark" :hoverable="true">
       <div :style="{width: '120px'}">
-        <a-row class="r-text-center" align="middle" justify="start" type="flex">
+        <a-row :gutter="[12,12]" class="r-text-center" align="middle" justify="start" type="flex">
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
@@ -11,7 +11,7 @@
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-            <p class="r-text-xs r-text-bold">
+            <p class="r-text-bold r-text-normal r-text-white">
               {{ serve.name }}
             </p>
           </a-col>

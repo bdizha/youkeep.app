@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="23.8126mm" height="23.9794mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 1047.59 1054.93"
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="23.803mm" height="23.8126mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 880 881"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:white;stroke-width:8.8;stroke-miterlimit:22.9256}
-    .fil1 {fill:none}
-    .fil0 {fill:white}
+    .fil0 {fill:none}
+    .fil1 {fill:white}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_2685601844736">
-   <path class="fil0 str0" d="M230.56 366.55l444.86 338.61 -47.75 11.85c-128.35,31.86 -262.04,-2.59 -355.33,-97.23 -66.78,-67.75 -103.76,-157.9 -104.14,-253.01 -0.95,-237.98 226.25,-407.78 455.08,-351.58l47.53 11.67 -440.26 339.69z"/>
-   <rect class="fil1" x="0" y="3.67" width="1047.59" height="1047.59"/>
-   <path class="fil0 str0" d="M817.03 688.52l-440.26 -339.69 47.53 -11.67c228.83,-56.2 456.03,113.6 455.08,351.58 -0.38,95.11 -37.37,185.27 -104.15,253.01 -93.29,94.64 -226.97,129.08 -355.31,97.23l-47.75 -11.85 444.86 -338.61z"/>
+  <g id="_532658848">
+   <circle class="fil0" cx="440" cy="440" r="440"/>
+   <path class="fil1" d="M391 881c-205,-23 -368,-186 -391,-391l391 0 0 391z"/>
+   <path class="fil1" d="M880 490c-23,205 -186,368 -391,391l0 -391 391 0z"/>
+   <path class="fil1" d="M391 391l-391 0c11,-103 58,-195 127,-264l264 264 0 0 0 0z"/>
+   <path class="fil1" d="M754 128c69,69 115,161 126,263l-390 0 263 -263z"/>
   </g>
  </g>
 </svg>

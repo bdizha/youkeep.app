@@ -40,7 +40,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Spazastop powers shoppers to enjoy securely one-click online purchases with on demand payment options.
+                    Youkeep powers shoppers to enjoy securely one-click online purchases with on demand payment options.
                   </p>
                 </a-col>
               </a-row>

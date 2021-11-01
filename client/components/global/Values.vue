@@ -8,7 +8,7 @@
               <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <h4 class="r-heading-light r-text-uppercase">
-                    Spazastop values
+                    Youkeep values
                   </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -18,7 +18,7 @@
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-medium">
-                    Our core values represent more than ideals we strive in providing brands and chefs of all sizes with on-demand meal options for their customers.
+                    Our core values represent more than iliquidity we strive in providing brands and artists of all sizes with on-demand NFT options for their collectors.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -62,7 +62,7 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <p class="r-text-normal r-text-dark">
+                        <p class="r-text-normal  ">
                           {{ value.content }}
                         </p>
                       </a-col>
@@ -98,17 +98,17 @@ export default {
         {
           icon: 'rocket',
           title: 'Innovation',
-          content: 'It’s about dreaming big and changing the game. We are proud to create an exciting and dynamic financial solution for customers. '
+          content: 'It’s about dreaming big and changing the game. We are proud to create an exciting and dynamic financial solution for collectors. '
         },
         {
           icon: 'bulb',
           title: 'Sustainability',
-          content: 'We live for merchants of all sizes and are fanatical about their success. We explore new ideas and discover creative solutions as a unit.'
+          content: 'We live for sellers of all sizes and are fanatical about their success. We explore new ideas and discover creative solutions as a unit.'
         },
         {
           icon: 'eye',
           title: 'Possibility',
-          content: 'We pursue the highest utility value for both our customers and our people who work with us. We make value but simply adding sub value parts.'
+          content: 'We pursue the highest utility value for both our collectors and our people who work with us. We make value but simply adding sub value parts.'
         },
         {
           icon: 'team',

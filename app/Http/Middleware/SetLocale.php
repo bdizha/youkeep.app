@@ -30,7 +30,7 @@ class SetLocale
     {
         $locales = config('app.locales');
 
-        // if (array_key_exists($locale = $request->cookie('locale'), $locales)) {
+        // if (array_key_exists($locale = $request->artistie('locale'), $locales)) {
         //     return $locale;
         // }
 

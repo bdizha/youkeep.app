@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+  <a-card class="r-bg-dark r-pull-h-24 r-border-none">
     <div class="r-mv-96">
       <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
@@ -29,7 +29,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h3 class="r-heading">
-                    <span class="r-text-secondary">Accelerate</span> sells with Spazastop's on-demand food marketplace
+                    <span class="r-text-secondary">Accelerate</span> sells with Youkeep's on-demand NFTs marketplace
                   </h3>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -37,7 +37,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Advertise your restaurant on Spazastop and connect with thousands of new customers in your neighborhood.
+                    Advertise your marketplace on Youkeep and connect with thousands of new collectors on the $keep marketplace.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -45,7 +45,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-normal">
-                    Plus, add marketing programs any time, like SpazaPass, where high-value customers see your business first.
+                    Plus, add marketing programs any time, like SpazaPass, where high-value collectors see your business first.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }"

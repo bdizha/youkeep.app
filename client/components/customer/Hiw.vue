@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+  <a-card class="r-bg-dark r-pull-h-24 r-border-none">
     <div class="r-mv-48">
       <a-row align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
@@ -27,13 +27,13 @@
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-medium">
-                    Provide your merchants with a solution that offers a smoooth shopper experience, and enable them
-                    to reach millions of customers worldwide.
+                    Provide your sellers with a solution that offers a smoooth shopper experience, and enable them
+                    to reach millions of collectors worldwide.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-normal">
-                    With no added cost and instant payments, shopping is just as easy as making any regular card purchase. More freedom means happy, returning customers.
+                    With no added cost and instant payments, shopping is just as easy as making any regular card purchase. More freedom means happy, returning collectors.
                   </p>
                 </a-col>
               </a-row>
@@ -50,10 +50,10 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <a-card class="r-bg-white-secondary">
+                  <a-card class="r-bg-secondary-light">
                     <a-row :gutter="[24, 24]" align="middle" type="flex">
                       <a-col>
-                        <div class="r-bg-white-secondary r-p-12 r-border-radius-12">
+                        <div class="r-bg-secondary-light r-p-12 r-border-radius-12">
                           <a-icon class="r-text-secondary"
                                   :style="{ fontSize: '45px' }"
                                   :type="benefit.icon"
@@ -96,17 +96,17 @@ export default {
         {
           icon: 'credit-card',
           title: '<span class="r-text-secondary">Flexible</span> payments',
-          content: 'When using 4 interest-free payments, customers make their first payment upfront and their remaining 3 payments are collected automatically every 2 weeks.'
+          content: 'When using 4 interest-free payments, collectors make their first payment upfront and their remaining 3 payments are collected automatically every 2 weeks.'
         },
         {
           icon: 'shopping',
           title: '<span class="r-text-secondary">Instant</span> checkout',
-          content: 'The customer experience is fast and frictionless when buying with Spazastop. Go from browsing to bought in 25 seconds. That\'s up to 3x faster than competitors.'
+          content: 'The customer experience is fast and frictionless when buying with Youkeep. Go from browsing to bought in 25 seconds. That\'s up to 3x faster than competitors.'
         },
         {
           icon: 'carry-out',
           title: '<span class="r-text-secondary">Personal</span> experience',
-          content: 'Returning Spazastop shoppers are treated like returning customers for you. Details are pre-filled and preferred shipping and payment options are pre-selected.'
+          content: 'Returning Youkeep shoppers are treated like returning collectors for you. Details are pre-filled and preferred shipping and NFT collectibles are pre-selected.'
         }
       ]
     }

@@ -11,7 +11,7 @@
       </a-col>
       <a-col :xs="{ span: 24 }" class="r-text-left">
         <p class="r-text-medium">
-          Since Spazastop is a closed network, we need to review all accounts to ensure the integrity of the platform.
+          Since Youkeep is a closed network, we need to review all accounts to ensure the integrity of the platform.
         </p>
       </a-col>
       <a-col :xs="{ span: 24 }">

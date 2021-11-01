@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 
 class CategorySeeder extends DatabaseSeeder
 {
-    protected $storeId = 24; // Spazastop store
+    protected $domain = 'https://www.opensea.io';
     protected $storeCategories = [4784, 4788, 4789];
     protected $mappedNames = [
         'furniture' => 'household-items',
@@ -122,12 +122,6 @@ class CategorySeeder extends DatabaseSeeder
     {
         $this->_setApp();
 
-
-        $categoryTypeUrl = 'https://www.ubereats.com/za/store/1890-house-of-sushi/5NsNtpT8TPu1MLOdWAqXkQ';
-        $encodedUrl = $this->_setCrawler($categoryTypeUrl);
-
-        dd($encodedUrl);
-
         $this->fetchCategories();
 
         die("fetchCategories >>> done");
@@ -138,19 +132,19 @@ class CategorySeeder extends DatabaseSeeder
         $link = url("/api/home/categories");
 
         $categoryNode = Goutte::request('GET', $link);
-        $categoryNodes = $categoryNode->filter('.sc-ksXhwv');
+        $categoryNodes = $categoryNode->filter('.QbTKh');
 
         $categoryNodes->each(function ($node) {
             echo __LINE__ . " <> \n";
 
-            if($node->filter('.jyZRYv')->count()){
-                $categoryName = $node->filter('.jyZRYv')->text();
+            if($node->filter('.kCOfJW')->count()){
+                $categoryName = $node->filter('.kCOfJW')->text();
                 echo __LINE__ . " <> \n";
 
                 $categoryName = Str::slug($categoryName, " ");
                 $categoryName = ucwords(strtolower($categoryName));
 
-                $photoUrl = $node->filter('img')->attr('src');
+                $photoUrl = $this->domain . $node->filter('img')->attr('src');
 
                 $this->categoryPhoto = $this->getSha1File('category', $photoUrl);
 

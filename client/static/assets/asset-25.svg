@@ -8,18 +8,18 @@ viewBox="0 0 9868 20117"
   <style type="text/css">
    <![CDATA[
     .str0 {stroke:#D1D0C9;stroke-width:20}
-    .str1 {stroke:#EE1C25;stroke-width:20}
+    .str1 {stroke:#C834F7;stroke-width:20}
     .fil10 {fill:#D1D0C9}
-    .fil4 {fill:#EE1C25}
-    .fil9 {fill:#FBD13E}
-    .fil8 {fill:#FCE38B}
+    .fil4 {fill:#C834F7}
+    .fil9 {fill:#13ECAB}
+    .fil8 {fill:#4C57FF}
     .fil1 {fill:#FDE89E}
     .fil0 {fill:white}
     .fil6 {fill:#4C565D;fill-rule:nonzero}
     .fil7 {fill:#D1D0C9;fill-rule:nonzero}
-    .fil3 {fill:#EE1C25;fill-rule:nonzero}
+    .fil3 {fill:#C834F7;fill-rule:nonzero}
     .fil5 {fill:#FDE89E;fill-rule:nonzero}
-    .fil2 {fill:#FBD13E;fill-opacity:0.501961}
+    .fil2 {fill:#13ECAB;fill-opacity:0.6}
    ]]>
   </style>
      <clipPath id="id0">
@@ -112,7 +112,7 @@ viewBox="0 0 9868 20117"
   <g>
    <g>
     <g style="clip-path:url(#id0)">
-     <image x="180" y="16753" width="9628" height="2940" xlink:href="spazastop illustration version 2 nr 7_Images\spazastop illustration version 2 nr 7_ImgID1.png"/>
+     <image x="180" y="16753" width="9628" height="2940" xlink:href="youkeep illustration version 2 nr 7_Images\youkeep illustration version 2 nr 7_ImgID1.png"/>
     </g>
    </g>
    <rect class="fil0" x="382" y="16844" width="9193" height="2657" rx="880" ry="964"/>

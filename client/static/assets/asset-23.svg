@@ -7,19 +7,19 @@ viewBox="0 0 9868 20117"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str1 {stroke:#EE1C25;stroke-width:20}
-    .str0 {stroke:#EE1C25;stroke-width:42.33}
+    .str1 {stroke:#C834F7;stroke-width:20}
+    .str0 {stroke:#C834F7;stroke-width:42.33}
     .fil8 {fill:none}
     .fil13 {fill:#DFC07E}
-    .fil1 {fill:#EE1C25}
-    .fil7 {fill:#FBD13E}
+    .fil1 {fill:#C834F7}
+    .fil7 {fill:#13ECAB}
     .fil2 {fill:#FDE89E}
     .fil3 {fill:#FEF1C5}
     .fil0 {fill:white}
     .fil5 {fill:#4C565D;fill-rule:nonzero}
-    .fil4 {fill:#EE1C25;fill-rule:nonzero}
-    .fil9 {fill:#FBD13E;fill-rule:nonzero}
-    .fil6 {fill:#FBD13E;fill-opacity:0.501961}
+    .fil4 {fill:#C834F7;fill-rule:nonzero}
+    .fil9 {fill:#13ECAB;fill-rule:nonzero}
+    .fil6 {fill:#13ECAB;fill-opacity:0.6}
     .fil14 {fill:url(#id0)}
     .fil16 {fill:url(#id1)}
     .fil10 {fill:url(#id2)}
@@ -32,22 +32,22 @@ viewBox="0 0 9868 20117"
    ]]>
   </style>
   <linearGradient id="id0" gradientUnits="objectBoundingBox" x1="101.946%" y1="0.92288%" x2="0%" y2="99.0728%">
-   <stop offset="0" style="stop-color:#FBD13E"/>
-   <stop offset="1" style="stop-color:#FCE38B"/>
+   <stop offset="0" style="stop-color:#13ECAB"/>
+   <stop offset="1" style="stop-color:#4C57FF"/>
   </linearGradient>
   <linearGradient id="id1" gradientUnits="objectBoundingBox" x1="47.4787%" y1="0%" x2="52.5082%" y2="100.248%">
-   <stop offset="0" style="stop-color:#FCE38B"/>
-   <stop offset="1" style="stop-color:#FBD13E"/>
+   <stop offset="0" style="stop-color:#4C57FF"/>
+   <stop offset="1" style="stop-color:#13ECAB"/>
   </linearGradient>
   <linearGradient id="id2" gradientUnits="objectBoundingBox" xlink:href="#id0" x1="0%" y1="1.18693%" x2="102.607%" y2="98.8131%">
   </linearGradient>
   <linearGradient id="id3" gradientUnits="objectBoundingBox" x1="0%" y1="75.4161%" x2="100.675%" y2="24.5755%">
-   <stop offset="0" style="stop-color:#FBD13E"/>
-   <stop offset="1" style="stop-color:#FCE38B"/>
+   <stop offset="0" style="stop-color:#13ECAB"/>
+   <stop offset="1" style="stop-color:#4C57FF"/>
   </linearGradient>
   <linearGradient id="id4" gradientUnits="objectBoundingBox" x1="0%" y1="94.7404%" x2="104.46%" y2="5.25529%">
-   <stop offset="0" style="stop-color:#FBD13E"/>
-   <stop offset="1" style="stop-color:#FCE38B"/>
+   <stop offset="0" style="stop-color:#13ECAB"/>
+   <stop offset="1" style="stop-color:#4C57FF"/>
   </linearGradient>
   <linearGradient id="id5" gradientUnits="objectBoundingBox" xlink:href="#id0" x1="100.461%" y1="81.3506%" x2="0%" y2="18.6494%">
   </linearGradient>

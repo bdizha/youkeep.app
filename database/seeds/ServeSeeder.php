@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 
 class ServeSeeder extends DatabaseSeeder
 {
+    protected $domain = 'https://opensea.io';
     /**
      * Run the database seeds.
      *
@@ -26,19 +27,23 @@ class ServeSeeder extends DatabaseSeeder
         $link = url("/api/home/categories");
 
         $serveNode = Goutte::request('GET', $link);
-        $serveNodes = $serveNode->filter('.sc-ksXhwv');
+        $serveNodes = $serveNode->filter('.QbTKh');
 
         $serveNodes->each(function ($node) {
             echo __LINE__ . " <> \n";
 
-            if($node->filter('.jyZRYv')->count()){
-                $serveName = $node->filter('.jyZRYv')->text();
+            if($node->filter('.kCOfJW')->count()){
+                $serveName = $node->filter('.kCOfJW')->text();
                 echo __LINE__ . " <> \n";
 
                 $serveName = Str::slug($serveName, " ");
                 $serveName = ucwords(strtolower($serveName));
 
-                $photoUrl = $node->filter('img')->attr('src');
+                $originalUrl = $node->filter('img')->attr('src');
+
+                $originalUrl = str_replace('/static/images/icons/', '', $originalUrl);
+
+                $photoUrl = "http://api.shopple.local/serves/{$originalUrl}";
 
                 $this->servePhoto = $this->getSha1File('category', $photoUrl);
 

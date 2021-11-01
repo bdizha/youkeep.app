@@ -12,7 +12,7 @@
 export default {
   name: 'r-product-description',
   props: {
-    product: { type: Object, required: false, default: null },
+    product: { type: Object, required: false, default: null }
   },
   data () {
     return {}
@@ -20,6 +20,6 @@ export default {
   created () {
   },
   computed: {},
-  methods: {},
+  methods: {}
 }
 </script>

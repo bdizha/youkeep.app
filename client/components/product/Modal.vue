@@ -124,7 +124,7 @@ export default {
       },
       form: this.$form.createForm(this, { name: 'notes' }),
       currentModal: 'product',
-      message: 'Thank you for successfully signing up with Spazastop. Enjoy your business!'
+      message: 'Thank you for successfully signing up with Youkeep. Enjoy your business!'
     }
   },
   computed: {

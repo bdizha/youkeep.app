@@ -7,9 +7,13 @@
       >
         <a-sub-menu>
           <div slot="title" class="r-menu-text">
-            <nuxt-link to="/shop">
-              Explore
-            </nuxt-link>
+            Explore
+            <a-icon type="down" />
+            <div class="r-sub-menu">
+              <a-card class="r-bg-dark r-pull-h-24 r-border-none">
+                <r-serve-slider></r-serve-slider>
+              </a-card>
+            </div>
           </div>
         </a-sub-menu>
         <a-sub-menu class="r-menu-submenu-btn" v-if="hasNav">
@@ -17,7 +21,7 @@
             Marketplace
             <a-icon type="down" />
             <div class="r-sub-menu">
-              <a-card class="r-bg-white r-pull-h-24 r-border-none">
+              <a-card class="r-bg-dark r-pull-h-24 r-border-none">
                 <div class="r-mv-24">
                   <a-row align="middle" justify="center" type="flex">
                     <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
@@ -34,7 +38,7 @@
                                    :sm="{ span: 24 }"
                                    :xs="{ span: 24}"
                             >
-                              <h4 class="r-heading-light r-text-uppercase r-text-dark">
+                              <h4 class="r-heading-light r-text-uppercase  ">
                                 Use cases
                               </h4>
                             </a-col>
@@ -45,13 +49,13 @@
                                    :xs="{ span: 24}"
                             >
                               <nuxt-link class="r-link-card" :to="beneficiary.link">
-                                <a-card hoverable class="r-bg-primary-light">
+                                <a-card hoverable class="r-bg-dark">
                                   <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
                                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                            :sm="{ span: 24 }"
                                            :xs="{ span: 24}"
                                     >
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading r-text-primary">
                                         {{ beneficiary.title }}
                                         <a-icon type="right" />
                                       </h4>
@@ -60,7 +64,7 @@
                                            :sm="{ span: 24 }"
                                            :xs="{ span: 24}"
                                     >
-                                      <p class="r-text-normal r-text-dark">
+                                      <p class="r-text-normal r-text-white">
                                         {{ beneficiary.summary }}
                                       </p>
                                     </a-col>
@@ -71,7 +75,7 @@
                           </a-row>
                         </a-col>
                         <a-col :lg="{span: 24}" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                          <h4 class="r-heading-light r-text-uppercase r-text-dark">
+                          <h4 class="r-heading-light r-text-uppercase  ">
                             Solutions
                           </h4>
                         </a-col>
@@ -82,12 +86,12 @@
                                :xs="{ span: 24}"
                         >
                           <nuxt-link class="r-link-card" :to="'/service/' + service.slug">
-                            <a-card hoverable="" class="r-bg-secondary-light">
-                              <a-row align="top" justify="start" type="flex">
-                                <a-col flex="69px">
-                                  <div class="r-bg-secondary r-p-12 r-mr-24 r-border-radius-12">
+                            <a-card hoverable="" class="r-bg-dark">
+                              <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
+                                <a-col flex="60px">
+                                  <div class="r-bg-secondary-light r-p-12 r-border-radius-12">
                                     <a-icon class="r-text-primary"
-                                            :style="{ fontSize: '45px' }"
+                                            :style="{ fontSize: '36px' }"
                                             :type="service.icon"
                                     ></a-icon>
                                   </div>
@@ -97,7 +101,7 @@
                                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                            :xs="{ span: 24}"
                                     >
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading">
                                         <span v-html="service.title"></span>
                                         <a-icon type="right" />
                                       </h4>
@@ -105,7 +109,7 @@
                                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                            :xs="{ span: 24}"
                                     >
-                                      <p class="r-text-normal r-text-dark" v-html="service.heading"></p>
+                                      <p class="r-text-normal" v-html="service.heading"></p>
                                     </a-col>
                                   </a-row>
                                 </a-col>
@@ -126,7 +130,7 @@
             Company
             <a-icon type="down" />
             <div class="r-sub-menu">
-              <a-card class="r-bg-white r-pull-h-24 r-border-none">
+              <a-card class="r-bg-dark r-pull-h-24 r-border-none">
                 <div class="r-mv-24">
                   <a-row align="middle" justify="center" type="flex">
                     <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
@@ -166,7 +170,7 @@
                                    :sm="{ span: 24 }"
                                    :xs="{ span: 24}"
                             >
-                              <a-card class="r-bg-primary-light">
+                              <a-card class="r-bg-dark">
                                 <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
                                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                          :sm="{ span: 24 }"
@@ -181,7 +185,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/about-us">
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading r-text-primary">
                                         Our story
                                         <a-icon type="right" />
                                       </h4>
@@ -192,7 +196,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/careers">
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading r-text-primary">
                                         Careers
                                         <a-icon type="right" />
                                       </h4>
@@ -203,7 +207,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/contact-us">
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading r-text-primary">
                                         Contact Us
                                         <a-icon type="right" />
                                       </h4>
@@ -214,7 +218,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/pricing">
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading r-text-primary">
                                         Pricing
                                         <a-icon type="right" />
                                       </h4>
@@ -227,7 +231,7 @@
                                    :sm="{ span: 24 }"
                                    :xs="{ span: 24}"
                             >
-                              <a-card class="r-bg-secondary-light">
+                              <a-card class="r-bg-dark">
                                 <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
                                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                          :sm="{ span: 24 }"
@@ -242,7 +246,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/blog">
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading r-text-secondary">
                                         Blog
                                         <a-icon type="right" />
                                       </h4>
@@ -253,7 +257,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/help">
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading r-text-secondary">
                                         Documentation
                                         <a-icon type="right" />
                                       </h4>
@@ -264,7 +268,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/help">
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading r-text-secondary">
                                         Help Center
                                         <a-icon type="right" />
                                       </h4>
@@ -275,7 +279,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/privacy">
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading r-text-secondary">
                                         Data Privacy
                                         <a-icon type="right" />
                                       </h4>
@@ -286,7 +290,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/terms">
-                                      <h4 class="r-heading r-text-dark">
+                                      <h4 class="r-heading r-text-secondary">
                                         Terms of Use
                                         <a-icon type="right" />
                                       </h4>
@@ -309,24 +313,22 @@
           <div v-if="!isLoggedIn" slot="title" @click="onModal">
             <a-button id="r-user-login"
                       block
+                      size="small"
                       :class="{'r-btn-bordered-white': isDark, 'r-btn-bordered-dark': !isDark}"
                       type="secondary"
-                      @click="onModal"
+                      @click="onDrawer('menu')"
             >
               <a-icon type="user" />
-              Sign in
+              Account
             </a-button>
           </div>
-          <div v-if="isLoggedIn" slot="title" @click="onDrawer">
-            <a-icon type="user" />
-            Account
-          </div>
         </a-sub-menu>
-        <a-sub-menu class="r-menu-submenu-btn" v-if="!isLoggedIn && hasNav">
+        <a-sub-menu class="r-menu-submenu-btn" v-if="!isLoggedIn && hasNav && false">
           <div slot="title" @click="onModal">
             <a-button block
-                      :class="{'r-btn-bordered-dark': !hasNav, 'r-btn-bordered-primary': hasNav}"
-                      type="secondary"
+                      size="small"
+                      :class="{'r-btn-bordered-primary': !hasNav, 'r-btn-bordered-primary': hasNav}"
+                      type="primary"
                       @click="onModal('register')"
             >
               <a-icon type="user" />
@@ -355,19 +357,19 @@ export default {
     return {
       beneficiaries: [
         {
-          title: 'Customers',
+          title: 'Collectors',
           link: '/customer',
-          summary: 'Enjoy on-demand food for your cravings by favourite cooks.'
+          summary: 'Enjoy on-demand NFTs for your artistic taste by favourite creators.'
         },
         {
-          title: 'Chefs',
-          link: '/chef',
-          summary: 'Discover and connect with local customers with your taste.'
+          title: 'Artists',
+          link: '/artist',
+          summary: 'Discover and connect with collectors who love your authentic NFTs.'
         },
         {
-          title: 'Merchants',
+          title: 'Sellers',
           link: '/seller',
-          summary: 'Sell homemade dishes and feed thousands of people near you.'
+          summary: 'Sell original NFTs and inspire millions of collectors on the $keep marketplace.'
         }
       ]
     }

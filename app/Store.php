@@ -99,7 +99,8 @@ class Store extends Model
      */
     public function getPhotoUrlAttribute()
     {
-        return url('/storage/store/' . $this->photo);
+        $isUrl = strpos($this->photo, 'http') !== false;
+        return $isUrl ? $this->photo : url('/storage/product/' . $this->photo);
     }
 
     /**

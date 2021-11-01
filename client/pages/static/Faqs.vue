@@ -40,7 +40,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          Spazastop aims for accuracy and transparency in both our books and how our service works. If
+                          Youkeep aims for accuracy and transparency in both our books and how our service works. If
                           anything remains unclear or if you have a question not covered in this FAQ, please send us a
                           message and we will happily get you the answers you need.
                         </p>
@@ -89,7 +89,7 @@ export default {
   data () {
     return {
       features: [
-        { content: 'Access Spazastop via desktop or iPhone - we go where you go' },
+        { content: 'Access Youkeep via desktop or iPhone - we go where you go' },
         { content: 'Quickly answer categorization requests from your team' },
         { content: 'Contact your team with our simple messaging feature' },
         { content: 'Contact your team with our simple messaging feature' }

@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-primary-light r-pull-h-24 r-border-none">
+  <a-card class="r-bg-dark r-pull-h-24 r-border-none">
     <div class="r-mv-48">
       <a-row class="r-text-center" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
@@ -24,7 +24,7 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Grow your business with unified merchant financing tools, made for modern businesses.
+                    Grow your business with unified seller financing tools, made for modern businesses.
                   </p>
                 </a-col>
               </a-row>
@@ -111,7 +111,7 @@ export default {
           rows: [
             {
               title: '<span class="r-text-primary">Grow </span> your clients’ marketing budget',
-              content: 'Spazastop is an inexpensive way for your D2C eCommerce clients to increase their marketing budgets substantially, resulting in more opportunities for growth on your end.'
+              content: 'Youkeep is an inexpensive way for your D2C eCommerce clients to increase their marketing budgets substantially, resulting in more opportunities for growth on your end.'
             },
             {
               title: '<span class="r-text-primary">Revenue</span>  Share opportunity',
@@ -124,7 +124,7 @@ export default {
           rows: [
             {
               title: '<span class="r-text-primary">Co-marketing</span> opportunities',
-              content: 'Spazastop serves hundreds of D2C eCommerce brands with the funds they need to grow. Our audience includes founders/CEOs and CFOs.'
+              content: 'Youkeep serves hundreds of D2C eCommerce brands with the funds they need to grow. Our audience includes founders/CEOs and CFOs.'
             },
             {
               title: '<span class="r-text-primary">Revenue</span>  Share opportunity',

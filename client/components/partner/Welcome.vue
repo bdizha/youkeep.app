@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-primary-light r-pull-h-24 r-border-none">
+  <a-card class="r-bg-dark r-pull-h-24 r-border-none">
     <div class="r-mv-96">
       <a-row align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
@@ -30,7 +30,7 @@
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <p class="r-text-medium">
                         Play a pivotal role in introducing new retailers to Klarna, and offer solutions that help bring a
-                        uniquely smoooth shopping experience online and offline to millions of customers worldwide.
+                        uniquely smoooth shopping experience online and offline to millions of collectors worldwide.
                       </p>
                     </a-col>
                   </a-row>
@@ -55,10 +55,10 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <a-card class="r-bg-white-primary">
+                  <a-card class="r-bg-tertiary-light">
                     <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                       <a-col>
-                        <div class="r-bg-white-primary r-p-12 r-border-radius-12">
+                        <div class="r-bg-tertiary-light r-p-12 r-border-radius-12">
                           <a-icon class="r-text-primary"
                                   :style="{ fontSize: '45px' }"
                                   :type="value.icon"
@@ -75,7 +75,7 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <p class="r-text-normal r-text-dark">
+                        <p class="r-text-normal  ">
                           {{ value.content }}
                         </p>
                       </a-col>
@@ -99,18 +99,18 @@ export default {
       values: [
         {
           icon: 'tags',
-          title: '<span class="r-text-primary">Integrate</span> Spazastop',
-          content: 'Set up your clients with a trusted, customizable, and intuitive payment solution to help grow their business. Earn revenue while helping retailers integrate Spazastop\'s monetization tools.'
+          title: '<span class="r-text-primary">Integrate</span> Youkeep',
+          content: 'Set up your clients with a trusted, customizable, and intuitive payment solution to help grow their business. Earn revenue while helping retailers integrate Youkeep\'s monetization tools.'
         },
         {
           icon: 'diff',
           title: '<span class="r-text-primary">Provide</span> solutions',
-          content: 'Spazastop retailers seek help from Spazastop Partners to expand their eCommerce and in-store offerings. Spazastop relies on our network of experts to help retailers hit their business goals.'
+          content: 'Youkeep retailers seek help from Youkeep Partners to expand their eCommerce and in-store offerings. Youkeep relies on our network of experts to help retailers hit their business goals.'
         },
         {
           icon: 'line-chart',
           title: '<span class="r-text-primary">Accelerate</span> growth',
-          content: 'Take it to the next level. Two is better than one. At Spazastop, we’re customer obsessed. Let’s work together to drive incremental revenue for retailers and create smooth customer experiences.'
+          content: 'Take it to the next level. Two is better than one. At Youkeep, we’re customer obsessed. Let’s work together to drive incremental revenue for retailers and create smooth customer experiences.'
         }
       ]
     }

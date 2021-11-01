@@ -7,13 +7,13 @@ viewBox="0 0 9916 20118"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str4 {stroke:#EE1C25;stroke-width:7.62001}
-    .str3 {stroke:#FBD13E;stroke-width:7.62001}
+    .str4 {stroke:#C834F7;stroke-width:7.62001}
+    .str3 {stroke:#13ECAB;stroke-width:7.62001}
     .str1 {stroke:#FDE89E;stroke-width:7.62001}
     .str2 {stroke:#FEF1C5;stroke-width:7.62001}
     .str0 {stroke:#D1D0C9;stroke-width:20}
-    .str5 {stroke:#EE1C25;stroke-width:20}
-    .str6 {stroke:#EE1C25;stroke-width:42.33}
+    .str5 {stroke:#C834F7;stroke-width:20}
+    .str6 {stroke:#C834F7;stroke-width:42.33}
     .fil54 {fill:none}
     .fil15 {fill:#3D4751}
     .fil38 {fill:#423E4B}
@@ -38,7 +38,7 @@ viewBox="0 0 9916 20118"
     .fil45 {fill:#E9A89D}
     .fil27 {fill:#E9CEB0}
     .fil20 {fill:#EDECE4}
-    .fil5 {fill:#fbd13e}
+    .fil5 {fill:#13ECAB}
     .fil13 {fill:#F04448}
     .fil21 {fill:#F3A03D}
     .fil24 {fill:#F54230}
@@ -51,9 +51,9 @@ viewBox="0 0 9916 20118"
     .fil17 {fill:#F9BB40}
     .fil53 {fill:#FAB978}
     .fil25 {fill:#FAE589}
-    .fil6 {fill:#EE1C25}
+    .fil6 {fill:#C834F7}
     .fil30 {fill:#FCD483}
-    .fil4 {fill:#FCE38B}
+    .fil4 {fill:#4C57FF}
     .fil34 {fill:#FDE2B9}
     .fil11 {fill:#FDE89E}
     .fil16 {fill:#FDF78D}
@@ -64,11 +64,11 @@ viewBox="0 0 9916 20118"
     .fil0 {fill:white}
     .fil8 {fill:#4C565D;fill-rule:nonzero}
     .fil3 {fill:#D1D0C9;fill-rule:nonzero}
-    .fil2 {fill:#EE1C25;fill-rule:nonzero}
-    .fil19 {fill:#FBD13E;fill-rule:nonzero}
+    .fil2 {fill:#C834F7;fill-rule:nonzero}
+    .fil19 {fill:#13ECAB;fill-rule:nonzero}
     .fil1 {fill:#FDE89E;fill-opacity:0.290196}
-    .fil44 {fill:#EDECE4;fill-opacity:0.501961}
-    .fil12 {fill:#FCE38B;fill-opacity:0.501961}
+    .fil44 {fill:#EDECE4;fill-opacity:0.6}
+    .fil12 {fill:#4C57FF;fill-opacity:0.6}
    ]]>
   </style>
      <clipPath id="id0">
@@ -240,7 +240,7 @@ viewBox="0 0 9916 20118"
   <g id="_693875056">
    <g>
     <g style="clip-path:url(#id0)">
-     <image x="204" y="16754" width="9628" height="2940" xlink:href="spazastop illustration version 2 nr 2_Images\spazastop illustration version 2 nr 2_ImgID1.png"/>
+     <image x="204" y="16754" width="9628" height="2940" xlink:href="youkeep illustration version 2 nr 2_Images\youkeep illustration version 2 nr 2_ImgID1.png"/>
     </g>
    </g>
    <rect class="fil0" x="406" y="16845" width="9193" height="2657" rx="880" ry="964"/>

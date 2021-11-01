@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-primary-light r-pull-h-24 r-border-none">
+  <a-card class="r-bg-dark r-pull-h-24 r-border-none">
     <div class="r-mv-48">
       <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
@@ -85,17 +85,17 @@ export default {
     return {
       benefits: [
         {
-          title: '<span class="r-text-primary">Find</span> more returning customers',
-          content: 'You can reach marketplace by posting your product information on Spazastop. Enable more buying shoppers and increase recurring orders with Spazastop.'
+          title: '<span class="r-text-primary">Find</span> more returning collectors',
+          content: 'You can reach marketplace by posting your product information on Youkeep. Enable more buying shoppers and increase recurring orders with Youkeep.'
         },
         {
           title: '<span class="r-text-primary">Offer</span> fast delivery services for every order',
-          content: 'For each order received, you can send your product to Spazastop warehouse. You don’t have to worry about transport anymore with Spazastop.'
+          content: 'For each order received, you can send your product to Youkeep warehouse. You don’t have to worry about transport anymore with Youkeep.'
         },
 
         {
           title: '<span class="r-text-primary">Decide</span> and set your selling product price',
-          content: 'Spazastop Purchase your products according to your credit term. More stable for production planning, nor No more hustle for money collection.'
+          content: 'Youkeep Purchase your products according to your credit term. More stable for production planning, nor No more hustle for money collection.'
         }
       ]
     }

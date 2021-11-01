@@ -9,15 +9,17 @@
         >
           <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-              <a-row :gutter="[12,12]" align="middle" type="flex">
-                <a-col flex="48px">
-                  <div class="r-bg-secondary r-p-12 r-border-circle">
-                    <nuxt-img src="/images/chef.svg" width="45px"></nuxt-img>
-                  </div>
+              <a-row :gutter="[24,24]" align="middle" type="flex">
+                <a-col>
+                  <a-card class="r-bg-secondary-light r-p-0 r-border-circle">
+                    <div class="r-p-12">
+                      <nuxt-img src="/images/icon_primary.svg" width="36px"></nuxt-img>
+                    </div>
+                  </a-card>
                 </a-col>
                 <a-col flex="auto">
-                  <h4 class="r-heading-bold r-text-uppercase">
-                    Spaza chefs of the week
+                  <h4 class="r-heading-light r-text-uppercase">
+                    Collections of the week of the week
                   </h4>
                 </a-col>
               </a-row>
@@ -27,34 +29,33 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                <span class="r-text-primary">Nothing</span> beats a Spaza chef, right?
+                <span class="r-text-primary">Nothing</span> is much like a Youkeep artist?
               </h2>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24}"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <p class="r-text-normal">
-                Spazastop offers the widest range of chefs, restaurants, and let's you discover cooks in your
-                neighbourhood.
+              <p class="r-text-normal r-text-white">
+                Youkeep offers the widest range of artists, marketplaces, and let's you discover rare assets on the $keep marketplace.
               </p>
             </a-col>
           </a-row>
         </a-col>
-        <a-col v-if="hasChefs" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <a-row align="middle" class="r-slider r-slider-chefs" justify="center" type="flex">
+        <a-col v-if="hasArtists" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <a-row align="middle" class="r-slider r-slider-artists" justify="center" type="flex">
             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
               <VueSlickCarousel v-bind="settings">
-                <a-card v-for="(chef, index) in chefs"
+                <a-card v-for="(artist, index) in artists"
                         :key="index"
-                        class="r-bg-secondary-light"
+                        class="r-bg-dark"
                 >
                   <a-row :gutter="[48,48]" align="middle" type="flex">
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                      <div class="r-bg-white r-p-24 r-pull-24">
+                      <a-card class="r-bg-dark r-pull-24">
                         <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
                           <a-col :lg="{ span: 15 }" :md="{ span: 15 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                            <r-avatar :data-src="chef.photo" :size="300"
+                            <r-avatar :data-src="artist.photo" :size="300"
                                       class="r-avatar-block"
                             ></r-avatar>
                           </a-col>
@@ -63,13 +64,13 @@
                           >
                             <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                                <h4 class="r-heading-bold r-text-uppercase">
-                                  {{ chef.name }}
+                                <h4 class="r-heading-light r-text-uppercase">
+                                  {{ artist.name }}
                                 </h4>
                               </a-col>
                               <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
                                 <p class="r-text-normal">
-                                  "{{ chef.slogan }}"
+                                  "{{ artist.slogan }}"
                                 </p>
                               </a-col>
                               <a-col>
@@ -78,14 +79,15 @@
                                             block
                                             type="primary"
                                   >
-                                    Learn more <a-icon type="right"/>
+                                    Learn more
+                                    <a-icon type="right"/>
                                   </a-button>
                                 </nuxt-link>
                               </a-col>
                             </a-row>
                           </a-col>
                         </a-row>
-                      </div>
+                      </a-card>
                     </a-col>
                     <a-col :lg="{ span: 15 }" :md="{ span: 15 }" :sm="{ span: 24 }" :xs="{ span: 24}">
                       <a-row :gutter="[24,24]" align="middle" type="flex">
@@ -93,7 +95,7 @@
                           <a-row :gutter="[12,12]" align="middle" type="flex">
                             <a-col :lg="{ span: 18 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24}">
                               <h4 class="r-heading">
-                                {{ chef.name }}'s popular dishes
+                                {{ artist.name }}'s popular NFTs
                               </h4>
                             </a-col>
                             <a-col class="r-text-right" :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 24 }"
@@ -104,7 +106,8 @@
                                           block
                                           type="primary"
                                 >
-                                  See all <a-icon type="right"/>
+                                  See all
+                                  <a-icon type="right"/>
                                 </a-button>
                               </nuxt-link>
                             </a-col>
@@ -112,28 +115,28 @@
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
                           <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                            <a-col v-for="(dish, index) in chef.dishes"
+                            <a-col v-for="(item, index) in artist.items"
                                    :key="index"
                                    :lg="{ span: 8 }" :md="{ span: 8 }"
                                    :sm="{ span: 24 }"
                                    :xs="{ span: 24 }"
                             >
-                              <a-row :gutter="[12,12]" align="middle" type="flex">
-                                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                                  <r-avatar :data-src="dish.photo"
-                                            shape="circle"
-                                            :size="300"
-                                            class="r-avatar-block"
-                                  ></r-avatar>
-                                </a-col>
-                                <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                                       :xs="{ span: 24}"
-                                >
-                                  <p class="r-text-normal">
-                                    {{ dish.name }}
-                                  </p>
-                                </a-col>
-                              </a-row>
+                              <a-card class="r-bg-primary-light r-p-0">
+                                <a-row align="middle" type="flex">
+                                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+                                    <r-avatar :data-src="item.photo"
+                                              shape="square"
+                                              :size="300"
+                                              class="r-avatar-block"
+                                    ></r-avatar>
+                                  </a-col>
+                                  <a-col class="r-text-center" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
+                                         :xs="{ span: 24}"
+                                  >
+                                    <r-seller-item :has-icon="false" :item="{title: item.name, content: artist.name}"></r-seller-item>
+                                  </a-col>
+                                </a-row>
+                              </a-card>
                             </a-col>
                           </a-row>
                         </a-col>
@@ -166,123 +169,123 @@ export default {
   name: 'r-seller-featured',
   props: {},
   async serverPrefetch () {
-    // await this.$store.dispatch('content/onChefs', {})
+    // await this.$store.dispatch('content/onArtists', {})
   },
   data () {
     return {
-      hasChefs: true,
-      chefs: [
+      hasArtists: true,
+      artists: [
         {
           name: 'Patrick Do',
-          photo: '/chefs/chef-01.jpg',
+          photo: '/images/icon_primary.svg',
           slogan: 'Love what you do and you’ll never work a day in your life.',
-          dishes: [
+          items: [
             {
               name: 'Garlic Herb Baked Chicken',
-              photo: '/dishes/dish-01.jpeg'
+              photo: '/patterns/pattern-11.svg'
             },
             {
               name: 'Garlic Herb Baked Chicken',
-              photo: '/dishes/dish-02.jpeg'
+              photo: '/patterns/pattern-02.svg'
             },
             {
               name: 'Garlic Herb Baked Chicken',
-              photo: '/dishes/dish-03.jpeg'
+              photo: '/patterns/pattern-04.svg'
             }
           ]
         },
         {
           name: 'Lorna Maseko',
-          photo: '/chefs/chef-02.jpg',
+          photo: '/images/icon_secondary.svg',
           slogan: 'Seeing people fed and smiling brings such joy to my heart.',
-          dishes: [
+          items: [
             {
               name: 'Garlic Herb Baked Chicken',
-              photo: '/dishes/dish-04.jpeg'
+              photo: '/patterns/pattern-04.svg'
             },
             {
               name: 'Roasted Pork Shoulder',
-              photo: '/dishes/dish-05.jpeg'
+              photo: '/patterns/pattern-17.svg'
             },
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-06.jpeg'
+              photo: '/patterns/pattern-06.svg'
             }
           ]
         },
         {
           name: 'Les Da',
-          photo: '/chefs/chef-03.jpg',
+          photo: '/images/icon_tertiary.svg',
           slogan: 'Food that is effortless to make but absolutely delicious.',
-          dishes: [
+          items: [
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-07.jpeg'
+              photo: '/patterns/pattern-07.svg'
             },
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-08.jpeg'
+              photo: '/patterns/pattern-08.svg'
             },
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-09.jpeg'
+              photo: '/patterns/pattern-09.svg'
             }
           ]
         },
         {
           name: 'Themba Gwejela',
-          photo: '/chefs/chef-04.jpg',
+          photo: '/images/icon_primary.svg',
           slogan: 'I hope I\'m not too late. Enjoy your favourite taste!',
-          dishes: [
+          items: [
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-10.jpeg'
+              photo: '/patterns/pattern-10.svg'
             },
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-11.jpeg'
+              photo: '/patterns/pattern-11.svg'
             },
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-12.jpeg'
+              photo: '/patterns/pattern-12.svg'
             }
           ]
         },
         {
           name: 'Themba Gwejela',
-          photo: '/chefs/chef-05.jpg',
+          photo: '/images/icon_secondary.svg',
           slogan: 'I hope I\'m not too late. Enjoy your favourite taste!',
-          dishes: [
+          items: [
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-13.jpeg'
+              photo: '/patterns/pattern-13.svg'
             },
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-14.jpeg'
+              photo: '/patterns/pattern-14.svg'
             },
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-15.jpeg'
+              photo: '/patterns/pattern-15.svg'
             }
           ]
         },
         {
           name: 'Jenny Morris',
-          photo: '/chefs/chef-06.jpg',
+          photo: '/images/icon_tertiary.svg',
           slogan: '"Dinner\'s ready" is just another way of me saying I love you.',
-          dishes: [
+          items: [
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-07.jpeg'
+              photo: '/patterns/pattern-07.svg'
             },
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-08.jpeg'
+              photo: '/patterns/pattern-08.svg'
             },
             {
               name: 'Candied Yams',
-              photo: '/dishes/dish-18.jpeg'
+              photo: '/patterns/pattern-18.svg'
             }
           ]
         }

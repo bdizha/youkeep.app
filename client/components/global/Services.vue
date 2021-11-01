@@ -16,7 +16,7 @@
                    :xs="{ span: 24 }"
             >
               <h4 v-if="!isShow" class="r-heading-light r-text-uppercase">
-                Spazastop marketplace
+                Youkeep marketplace dsfdaf
               </h4>
               <h4 v-if="isShow" class="r-heading-light r-text-uppercase">
                 More solutions
@@ -37,7 +37,7 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <p class="r-text-medium">
+                  <p class="r-text-medium r-text-white">
                     {{ summary }}
                   </p>
                 </a-col>
@@ -60,8 +60,8 @@
               >
                 <a-row :gutter="[12, 12]" type="flex" align="middle">
                   <a-col>
-                    <div class="r-bg-primary r-p-12 r-border-radius-12">
-                      <a-icon class="r-text-secondary"
+                    <div class="r-bg-tertiary-light r-p-12 r-border-radius-12">
+                      <a-icon class="r-text-primary"
                               :style="{ fontSize: '45px' }"
                               :type="service.icon"
                       ></a-icon>
@@ -82,7 +82,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <nuxt-link class="r-text-link" :to="'/service/' + service.slug">
+                    <nuxt-link class="r-text-link r-text-tertiary" :to="'/service/' + service.slug">
                       Learn more
                       <a-icon type="right"></a-icon>
                     </nuxt-link>
@@ -105,8 +105,8 @@ export default {
     isShow: { type: Boolean, required: false, default: false },
     theme: { type: String, required: false, default: 'primary' },
     accent: { type: String, required: false, default: 'primary' },
-    heading: { type: String, required: false, default: '<span class="r-text-primary">Order</span> your favourites or discover new dishes' },
-    summary: { type: String, required: false, default: 'We work hard to help our chefs feel taken care of and supported throughout the entire process.' }
+    heading: { type: String, required: false, default: '<span class="r-text-primary">Order</span> your favourites or discover new NFTs' },
+    summary: { type: String, required: false, default: 'We work hard to help our artists feel taken care of and supported throughout the entire process.' }
   },
   data () {
     return {}
@@ -130,17 +130,9 @@ export default {
     },
     getBgClass (flip) {
       if (flip) {
-        if (this.theme === 'white') {
-          return `r-bg-${this.accent}-light`
-        } else {
-          return `r-bg-white-${this.theme}`
-        }
+        return `r-bg-${this.accent}-light`
       } else {
-        if (this.theme === 'white') {
-          return `r-bg-white-${this.accent}`
-        } else {
-          return `r-bg-${this.accent}-light`
-        }
+        return `r-bg-${this.theme}-light`
       }
     }
   }

@@ -4,7 +4,7 @@
   >
     <a-col class="r-text-center" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24}">
       <h2 class="r-heading">
-        What our customers say...
+        What our collectors say...
       </h2>
     </a-col>
     <a-col v-if="hasTestimonials" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -13,7 +13,7 @@
           <VueSlickCarousel v-bind="settings">
             <a-card v-for="(testimonial, index) in testimonials"
                     :key="index"
-                    class="r-bg-primary-secondary"
+                    class="r-bg-secondary-light"
             >
                 <a-row :gutter="[12,12]" align="middle" justify="space-between"
                        type="flex"
@@ -23,20 +23,22 @@
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
                     <div :style="{height: '240px'}">
-                    <h4 class="r-heading-light r-text-dark">
+                    <h4 class="r-heading-light  ">
                       {{ testimonial.content }}
                     </h4>
                     </div>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                    <a-row :gutter="[12,12]" align="middle" type="flex">
-                      <a-col flex="48px">
-                        <div class="r-bg-primary r-p-12 r-border-circle">
-                          <nuxt-img src="/images/icon_secondary.svg" width="30px"></nuxt-img>
-                        </div>
+                    <a-row :gutter="[24,24]" align="middle" type="flex">
+                      <a-col flex="60px">
+                        <a-card class="r-bg-tertiary-light r-p-0 r-border-circle">
+                          <div class="r-p-12">
+                            <nuxt-img src="/images/icon_secondary.svg" width="36px"></nuxt-img>
+                          </div>
+                        </a-card>
                       </a-col>
-                      <a-col flex="auto">
-                        <h4 class="r-heading-bold r-text-uppercase">
+                      <a-col flex="1 1 0">
+                        <h4 class="r-heading-light r-text-uppercase">
                           {{ testimonial.author }}
                         </h4>
                       </a-col>

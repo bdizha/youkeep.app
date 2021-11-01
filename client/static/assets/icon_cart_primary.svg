@@ -2,19 +2,19 @@
     <defs>
         <style>
             .cls-1 {
-            clip-path: url(#clip-Spazastop);
+            clip-path: url(#clip-Youkeep);
             }
 
             .cls-2 {
-            fill: #EE1C25;
+            fill: #C834F7;
             }
 
             .cls-3 {
-            fill: #EE1C25;
+            fill: #C834F7;
             }
 
             .cls-4 {
-            fill: #EE1C25;
+            fill: #C834F7;
             }
 
             .cls-5 {
@@ -26,18 +26,18 @@
             }
 
             .cls-7 {
-            fill: #EE1C25;
+            fill: #C834F7;
             }
 
             .cls-8 {
             fill: none;
             }
         </style>
-        <clipPath id="clip-Spazastop">
+        <clipPath id="clip-Youkeep">
             <rect width="1000" height="1000"/>
         </clipPath>
     </defs>
-    <g id="Spazastop" class="cls-1">
+    <g id="Youkeep" class="cls-1">
         <rect class="cls-8" width="1000" height="1000"/>
         <g id="Group_1925" data-name="Group 1925">
             <g id="Group_1924" data-name="Group 1924" transform="translate(6 3.21)">

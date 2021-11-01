@@ -16,7 +16,7 @@ const COLUMNS = [
     key: 'from',
     scopedSlots: {}
   },
-  { title: 'Spazastop Category', dataIndex: 'to', key: 'to' }
+  { title: 'Youkeep Category', dataIndex: 'to', key: 'to' }
 ]
 
 const CATEGORY_MAPS = [

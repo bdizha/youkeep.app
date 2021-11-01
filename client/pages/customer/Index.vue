@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-primary-light r-pull-h-24 r-border-none">
+      <a-card class="r-bg-dark r-pull-h-24 r-border-none">
         <div class="r-mv-96">
           <a-row align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -17,24 +17,24 @@
                            :xs="{ span: 24 }"
                     >
                       <h4 class="r-heading-light r-text-uppercase">
-                        For <span class="r-text-primary">food</span> enthusiasts
+                        For <span class="r-text-primary">NFTs</span> enthusiasts
                       </h4>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h1 class="r-heading r-text-dark">
-                        <span class="r-text-primary">Order</span> food with Spazastop
+                      <h1 class="r-heading">
+                        <span class="r-text-primary">Order</span> NFTs with Youkeep
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <p class="r-text-medium r-text-dark">
+                      <p class="r-text-medium">
                         Get FREE delivery on your first app order.
-                        Order your favourites or discover new dishes that you love to taste.
+                        Order your favourites or discover new NFTs that you love to taste.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -42,7 +42,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        With over 2500 restaurants on the app we've got whatever you feel like.
+                        With over 2500 marketplaces on the app we've got whatever you feel like.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
@@ -104,7 +104,7 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-contact-us :has-more="true" title="Don't have a Spazastop account?" heading="Take food deliveries to the next level with Spazastop."></r-contact-us>
+      <r-contact-us :has-more="true" title="Don't have a Youkeep account?" heading="Take NFTs deliveries to the next level with Youkeep."></r-contact-us>
     </a-col>
   </a-row>
 </template>

@@ -7,10 +7,10 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-     .str1 {stroke:#EE1C25;stroke-width:1.81;stroke-miterlimit:22.9256}
-    .str0 {stroke:#FBD13E;stroke-width:1.81;stroke-miterlimit:22.9256}
-    .fil2 {fill:#FBD13E; opacity: 0.045}
-    .fil1 {fill:#EE1C25; opacity: 0.045}
+     .str1 {stroke:#C834F7;stroke-width:1.81;stroke-miterlimit:22.9256}
+    .str0 {stroke:#13ECAB;stroke-width:1.81;stroke-miterlimit:22.9256}
+    .fil2 {fill:#13ECAB; opacity: 0.045}
+    .fil1 {fill:#C834F7; opacity: 0.045}
     .fil0 {fill:none}
    ]]>
   </style>

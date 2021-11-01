@@ -3,7 +3,7 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+      <a-card class="r-bg-dark r-pull-h-24 r-border-none">
         <div class="r-mv-48">
           <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -22,16 +22,16 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h1 class="r-heading r-text-dark">
-                        <span class="r-text-primary">Partner</span> with Spazastop.
+                      <h1 class="r-heading">
+                        <span class="r-text-primary">Partner</span> with Youkeep.
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <p class="r-text-medium r-text-dark">
-                        Join the thousands of businesses that use Spazastop to grow their businesses and achieve their
+                      <p class="r-text-medium">
+                        Join the thousands of businesses that use Youkeep to grow their businesses and achieve their
                         goals and objectives.
                       </p>
                     </a-col>
@@ -40,8 +40,8 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        We work with leading e-commerce merchants, agencies, platforms and tech solutions to
-                        elevate your Spazastop's retail partners today.
+                        We work with leading e-commerce sellers, agencies, platforms and tech solutions to
+                        elevate your Youkeep's retail partners today.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }"

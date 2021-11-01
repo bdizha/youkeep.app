@@ -28,7 +28,7 @@
                         style="margin-right: -12px"
                         type="secondary"
               >
-                Find food <a-icon type="right"/>
+                Discover <a-icon type="right"/>
               </a-button>
             </a-input>
           </a-auto-complete>

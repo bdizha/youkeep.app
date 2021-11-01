@@ -17,7 +17,7 @@
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
-              <p class="r-text-medium r-text-dark">
+              <p class="r-text-medium">
                 {{ plan.heading }}
               </p>
             </a-col>
@@ -38,7 +38,7 @@
                 >
                   <div class="r-checked-item r-text-left">
                     <a-icon class="r-checked-item-icon" type="check"></a-icon>
-                    <span class="r-text-normal r-text-dark">{{ product.title }}</span>
+                    <span class="r-text-normal  ">{{ product.title }}</span>
                   </div>
                 </a-col>
               </a-row>
@@ -60,14 +60,14 @@
                 >
                   <div class="r-checked-item r-text-left">
                     <a-icon class="r-checked-item-icon" type="check"></a-icon>
-                    <span class="r-text-normal r-text-dark">{{ service.title }}</span>
+                    <span class="r-text-normal  ">{{ service.title }}</span>
                   </div>
                 </a-col>
               </a-row>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
             >
-              <h4 class="r-heading r-text-dark">
+              <h4 class="r-heading">
                 {{ plan.price }}
                 <span class="r-text-light">
                          {{ plan.frequency }}

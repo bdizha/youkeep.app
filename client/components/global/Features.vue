@@ -31,7 +31,7 @@
                 Find the sellers that you want
               </h4>
               <p class="r-text-normal">
-                Spazastop helps shoppers discover sellers, purchase products, and more. Whatever your business sells, we
+                Youkeep helps shoppers discover sellers, purchase products, and more. Whatever your business sells, we
                 help you grow.
               </p>
             </template>

@@ -7,12 +7,12 @@ viewBox="0 0 9868 20117"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str1 {stroke:#EE1C25;stroke-width:7.62001}
-    .str3 {stroke:#FBD13E;stroke-width:7.62001}
+    .str1 {stroke:#C834F7;stroke-width:7.62001}
+    .str3 {stroke:#13ECAB;stroke-width:7.62001}
     .str4 {stroke:#FDE89E;stroke-width:7.62001}
     .str5 {stroke:#FEF1C5;stroke-width:7.62001}
     .str0 {stroke:#D1D0C9;stroke-width:20}
-    .str2 {stroke:#EE1C25;stroke-width:20}
+    .str2 {stroke:#C834F7;stroke-width:20}
     .fil9 {fill:none;fill-rule:nonzero}
     .fil28 {fill:#423E4B}
     .fil32 {fill:#58924C}
@@ -32,7 +32,7 @@ viewBox="0 0 9868 20117"
     .fil29 {fill:#E9414C}
     .fil11 {fill:#E9A89D}
     .fil40 {fill:#E9CEB0}
-    .fil3 {fill:#EE1C25}
+    .fil3 {fill:#C834F7}
     .fil34 {fill:#F3A03D}
     .fil37 {fill:#F54230}
     .fil22 {fill:#F57E5D}
@@ -43,9 +43,9 @@ viewBox="0 0 9868 20117"
     .fil21 {fill:#F9AF58}
     .fil19 {fill:#FAB978}
     .fil38 {fill:#FAE589}
-    .fil1 {fill:#FBD13E}
+    .fil1 {fill:#13ECAB}
     .fil20 {fill:#FCD483}
-    .fil7 {fill:#FCE38B}
+    .fil7 {fill:#4C57FF}
     .fil24 {fill:#FDE2B9}
     .fil2 {fill:#FDE89E}
     .fil14 {fill:#FE7611}
@@ -55,7 +55,7 @@ viewBox="0 0 9868 20117"
     .fil0 {fill:white}
     .fil4 {fill:#4C565D;fill-rule:nonzero}
     .fil6 {fill:#D1D0C9;fill-rule:nonzero}
-    .fil5 {fill:#EE1C25;fill-rule:nonzero}
+    .fil5 {fill:#C834F7;fill-rule:nonzero}
    ]]>
   </style>
      <clipPath id="id0">
@@ -120,7 +120,7 @@ viewBox="0 0 9868 20117"
   <g id="_633749392">
    <g>
     <g style="clip-path:url(#id0)">
-     <image x="180" y="16753" width="9628" height="2940" xlink:href="spazastop illustration version 2 nr 4_Images\spazastop illustration version 2 nr 4_ImgID1.png"/>
+     <image x="180" y="16753" width="9628" height="2940" xlink:href="youkeep illustration version 2 nr 4_Images\youkeep illustration version 2 nr 4_ImgID1.png"/>
     </g>
    </g>
    <rect class="fil0" x="382" y="16844" width="9193" height="2657" rx="880" ry="964"/>

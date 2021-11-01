@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-primary-light r-pull-h-24 r-border-none-sm">
+  <a-card class="r-bg-dark r-pull-h-24 r-border-none-sm">
     <div class="r-mv-96">
       <r-services :is-show="isShow" :theme="theme" accent="accent" heading="heading" summary="summary"></r-services>
     </div>
@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       heading: '<span class="r-text-primary">Built</span> to help your revenue grow',
-      summary: 'Spazastop powers growing businesses to securely access equity-free financing with flexible payment terms.'
+      summary: 'Youkeep powers growing businesses to securely access equity-free financing with flexible payment terms.'
     }
   },
   computed: mapGetters({

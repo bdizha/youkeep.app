@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter=[24,24] justify="center" type="flex">
     <a-col :span="24">
-      <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" justify="center" type="flex">
+      <a-row v-if="hasProducts" :gutter="[24,24]" class="r-mb-24" justify="space-between" type="flex">
         <a-col :lg="{span: span}" :md="{span: span}" :sm="{span: 24}" :xs="{span: 24}">
           <a-pagination v-model="products.current_page"
                         :page-size="parseInt(products.per_page)"
@@ -18,9 +18,8 @@
             </template>
           </a-pagination>
         </a-col>
-        <a-col :lg="{span: span === 24 ? span : (24-span) / 2}" :md="{span: span === 24 ? span : (24-span) / 2}"
+        <a-col class="r-hide-lg" :lg="{span: span === 24 ? span : (24-span) / 2}" :md="{span: span === 24 ? span : (24-span) / 2}"
                :sm="{span: 24}" :xs="{span: 24}"
-               class="r-text-center"
         >
           <r-category-filters></r-category-filters>
         </a-col>

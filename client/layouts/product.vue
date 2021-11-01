@@ -18,7 +18,7 @@ import { mapGetters } from 'vuex'
 
 export default {
   data: () => ({
-    collapsed: false,
+    collapsed: false
   }),
   computed: mapGetters({
     processes: 'base/processes'

@@ -6,7 +6,7 @@
           <a-row :gutter="[12,12]" justify="start" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
               <h4 class="r-heading-light r-text-uppercase">
-                Top Locations
+                Top collections
               </h4>
             </a-col>
             <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">
@@ -28,7 +28,7 @@
           <a-row :gutter="[12,12]" justify="start" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
               <h4 class="r-heading-light r-text-uppercase">
-                Top Cuisines
+                Top Marketplaces
               </h4>
             </a-col>
             <a-col :lg="{span: 24}" :md="{span: 24}" :sm="{span: 24}" :xs="{span: 24}">

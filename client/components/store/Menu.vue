@@ -7,17 +7,14 @@
           <div class="r-ph-24 r-pt-24">
             <a-row :gutter="[24,24]" justify="space-between" type="flex">
               <a-col>
-                <h4 class="r-heading" style="line-height: 45px">
-                  All deals
+                <h4 class="r-heading-light" style="line-height: 36px">
+                  <a-icon type="control"></a-icon> Filters
                 </h4>
               </a-col>
               <a-col>
-                <a-button class="r-btn-bordered-dark"
-                          size="default"
-                          type="secondary"
-                >
-                  Reset <a-icon type="close"/>
-                </a-button>
+                <h4 class="r-heading-light" style="line-height: 36px">
+                  <a-icon type="left"/>
+                </h4>
               </a-col>
             </a-row>
           </div>
@@ -104,7 +101,7 @@
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <div class="r-p-24 r-mb-48">
             <h4 class="r-store-text-light">
-              Spazastop is an independent business service that is not necessarily affiliated with,
+              Youkeep is an independent business service that is not necessarily affiliated with,
               endorsed or sponsored by the sellers listed here but it enables you to get the deliveries
               you
               want.
@@ -279,9 +276,9 @@ export default {
     async onProducts () {
       console.log('filters', this.filters)
 
-      const categoryParts = this.$route.params.category.split('--')
+      // const categoryParts = this.$route.params.category.split('--')
 
-      this.filters.category_id = (categoryParts[1] !== undefined) ? categoryParts[1] : null
+      this.filters.category_id = null
       await this.$store.dispatch('base/onProducts', this.filters)
     },
     payload () {

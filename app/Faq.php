@@ -9,7 +9,7 @@ class Faq extends Model
     protected $table = 'faqs';
 
     public static $groups = [
-        0 => 'How Spazastop Works',
+        0 => 'How Youkeep Works',
         1 => 'Pricing',
         2 => 'Payments',
         3 => 'Ordering',
@@ -25,11 +25,11 @@ class Faq extends Model
             'group_ids' => [0, 5]
         ],
         1 => [
-            'name' => 'Spazastop Shopper Applicant FAQ',
+            'name' => 'Youkeep Shopper Applicant FAQ',
             'group_ids' => [6, 7]
         ],
         2 => [
-            'name' => 'FAQs about Spazastop',
+            'name' => 'FAQs about Youkeep',
             'group_ids' => [0, 1, 2, 3, 4]
         ]
     ];

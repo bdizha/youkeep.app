@@ -79,7 +79,9 @@ class Product extends KModel
         'photo_url',
         'rating',
         'store',
-        'route'
+        'route',
+        'currency',
+        'currency_url'
     ];
 
     protected $defaultType = null;
@@ -125,12 +127,32 @@ class Product extends KModel
 
     public function getThumbnailUrlAttribute()
     {
-        return url('/storage/product/' . (!empty($this->thumbnail) ? $this->thumbnail : $this->photo));
+        $thumbnail = (!empty($this->thumbnail) ? $this->thumbnail : $this->photo);
+
+        $isUrl = strpos($thumbnail, 'http') !== false;
+        return $isUrl ? $thumbnail : url('/storage/product/' . $thumbnail);
     }
 
     public function getPhotoUrlAttribute()
     {
-        return url('/storage/product/' . $this->photo);
+        $isUrl = strpos($this->photo, 'http') !== false;
+        return $isUrl ? $this->photo : url('/storage/product/' . $this->photo);
+    }
+
+    public function getCurrencyAttribute()
+    {
+        $productCurrency = ProductCurrency::where('product_id', $this->id)
+            ->first();
+
+        return !empty($productCurrency->currency) ? $productCurrency->currency->code : null;
+    }
+
+    public function getCurrencyUrlAttribute()
+    {
+        $productCurrency = ProductCurrency::where('product_id', $this->id)
+            ->first();
+
+        return !empty($productCurrency->currency) ? '/currencies/' . $productCurrency->currency->code . '.svg' : null;
     }
 
     public function getHasPhotoAttribute()
@@ -338,25 +360,12 @@ class Product extends KModel
      */
     public function getRouteAttribute()
     {
-        $route = '/service/' . $this->slug;
-        return $route;
+        return '/asset/' . md5(time() . $this->slug) . '/' . $this->slug;
     }
 
     public function getStoreAttribute()
     {
-        $stores = Store::where('id', $this->store_id)->get();
-
-        $store = ['name' => null, 'route' => null, 'photo_url' => null];
-        if (!empty($stores)) {
-            $stores = array_map(function ($store) {
-                return ['name' => $store['name'], 'route' => $store['route'], 'photo_url' => $store['photo_url']];
-            }, $stores->toArray());
-
-            if (!empty($stores[0])) {
-                $store = $stores[0];
-            }
-        }
-        return $store;
+        return Store::where('id', $this->store_id)->first();
     }
 
     /**
@@ -373,6 +382,14 @@ class Product extends KModel
     public function categories()
     {
         return $this->belongsToMany('App\StoreCategory', 'category_products', 'product_id', 'category_id');
+    }
+
+    /**
+     * Get the associated store
+     */
+    public function store()
+    {
+        return $this->belongsTo('App\Store');
     }
 
     /**

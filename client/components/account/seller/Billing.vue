@@ -176,7 +176,7 @@ export default {
           }
 
           $this.$store.dispatch('form/onResult', message)
-          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Spazastop.')
+          $this.$message.success('Thank you for signing up with us, ' + $this.user.name + '. Enjoy your business with Youkeep.')
         }, 600)
       })
     },

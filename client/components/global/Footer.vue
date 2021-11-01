@@ -29,7 +29,7 @@
                           <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                               <nuxt-link to="/">
-                                <img alt="Spazastop - B2B marketplace for sellers and shoppers in Africa."
+                                <img alt="Youkeep - B2B marketplace for sellers and shoppers in Africa."
                                      class="r-footer-logo /"
                                      src="/images/logo_white.svg"
                                 >
@@ -37,7 +37,7 @@
                             </a-col>
                             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                               <p class="r-text-normal">
-                                On-demand food experience.
+                                On-demand NFTs experience.
                               </p>
                             </a-col>
                           </a-row>
@@ -51,17 +51,17 @@
                             </a-col>
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                               <div class="r-footer-link">
-                                <nuxt-link to="/customer">Customers</nuxt-link>
+                                <nuxt-link to="/customer">Collectors</nuxt-link>
                               </div>
                             </a-col>
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                               <div class="r-footer-link">
-                                <nuxt-link to="/chef">Chefs</nuxt-link>
+                                <nuxt-link to="/artist">Artists</nuxt-link>
                               </div>
                             </a-col>
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                               <div class="r-footer-link">
-                                <nuxt-link to="/seller">Merchants</nuxt-link>
+                                <nuxt-link to="/seller">Sellers</nuxt-link>
                               </div>
                             </a-col>
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
@@ -93,7 +93,7 @@
                             </a-col>
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                               <div class="r-footer-link">
-                                <nuxt-link to="/help">Help Center</nuxt-link>
+                                <nuxt-link to="/help">How can we help?</nuxt-link>
                               </div>
                             </a-col>
                           </a-row>
@@ -142,7 +142,7 @@
                       <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
                         <a-col :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }" :xs="{ span: 12 }">
                           <p class="r-footer-text">
-                            &copy; Spazastop 2021
+                            &copy; Youkeep 2021
                           </p>
                         </a-col>
                         <a-col class="r-text-left" :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 12 }"

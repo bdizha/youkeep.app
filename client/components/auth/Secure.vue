@@ -18,7 +18,7 @@
                   <span class="r-text-secondary">Welcome, </span>{{ user.name }}!
                 </h3>
                 <p class="r-text-s">
-                  Enter and confirm new credentials to secure your Spazastop account.
+                  Enter and confirm new credentials to secure your Youkeep account.
                 </p>
               </a-col>
             </a-row>
@@ -72,7 +72,7 @@ export default {
       formName: 'secure',
       fields: ['password', 'password_confirmation'],
       form: this.$form.createForm(this, { name: 'form_secure' }),
-      message: 'Thank you for successfully securing your Spazastop account! Please wait while we setup your account.',
+      message: 'Thank you for successfully securing your Youkeep account! Please wait while we setup your account.',
       userType: 1,
     }
   },
@@ -131,7 +131,7 @@ export default {
       }).then(response => {
         setTimeout(() => {
           if ($this.isValid) {
-            $this.$message.success('Thank you, your account is now secured. Enjoy your business with Spazastop.')
+            $this.$message.success('Thank you, your account is now secured. Enjoy your business with Youkeep.')
           } else {
             $this.$message.error('Oops, the submitted form was invalid.')
           }

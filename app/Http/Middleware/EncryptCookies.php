@@ -2,12 +2,12 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;
+use Illuminate\artistie\Middleware\Encryptartisties as Middleware;
 
-class EncryptCookies extends Middleware
+class Encryptartisties extends Middleware
 {
     /**
-     * The names of the cookies that should not be encrypted.
+     * The names of the artisties that should not be encrypted.
      *
      * @var array
      */

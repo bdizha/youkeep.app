@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="[96,96]" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+      <a-card class="r-bg-dark r-pull-h-24 r-border-none">
         <div class="r-mv-48">
           <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
@@ -47,7 +47,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-normal">
-                            Spazastop allows you to offer a breathtaking farming experience, inputs credit and payment
+                            Youkeep allows you to offer a breathtaking farming experience, inputs credit and payment
                             method
                             flexibility, instant vendor payouts (fully reconciled) - all while getting full marketplace
                             compliance and investments management, hassle free.
@@ -112,7 +112,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
+          <a-card class="r-bg-dark r-pull-h-24 r-border-none">
             <div class="r-mv-48">
               <a-row :gutter="[48,48]" align="middle" class="r-text-left" justify="center" type="flex">
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
@@ -137,7 +137,7 @@
                         >
                           <h3 class="r-heading">
                             Get <span class="r-text-secondary">discovered</span> by the
-                            world's leading retailers and food outlets
+                            world's leading retailers and NFTs outlets
                           </h3>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -145,7 +145,7 @@
                                :xs="{ span: 24 }"
                         >
                           <p class="r-text-medium">
-                            Built for farming businesses, Spazastop offers a clear view into farming activities with:
+                            Built for farming businesses, Youkeep offers a clear view into farming activities with:
                             automated billing, expensing, and reporting.
                           </p>
                         </a-col>

@@ -1,7 +1,7 @@
 <template>
-  <div class="ant-card-cover r-pull-r-24 r-product-photo">
-    <img :src="product.thumbnail_url" :alt="product.name"/>
-  </div>
+  <r-avatar :data-src="product.photo" :size="900"
+            class="r-avatar-block"
+  ></r-avatar>
 </template>
 <script>
 export default {

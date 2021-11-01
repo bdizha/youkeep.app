@@ -14,7 +14,7 @@ class CategoryBaseSeeder extends Seeder
         $storeId = 0;
         $order = 1;
 
-        $crawler = Goutte::request('GET', 'http://Spazastop.local/import-base-categories');
+        $crawler = Goutte::request('GET', 'http://Youkeep.local/import-base-categories');
         $crawler->filter('.esg-filterbutton')->each(function ($node) use ($order, $storeId) {
 
             if ($node->filter('span')->eq(1)->count()) {

@@ -7,23 +7,23 @@ viewBox="0 0 19860 10970"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str2 {stroke:#FBD13E;stroke-width:7.43666}
-    .str1 {stroke:#EE1C25;stroke-width:19.5188}
-    .str0 {stroke:#FBD13E;stroke-width:19.5188}
+    .str2 {stroke:#13ECAB;stroke-width:7.43666}
+    .str1 {stroke:#C834F7;stroke-width:19.5188}
+    .str0 {stroke:#13ECAB;stroke-width:19.5188}
     .fil22 {fill:none;fill-rule:nonzero}
     .fil15 {fill:#DFC07E}
-    .fil4 {fill:#EE1C25}
+    .fil4 {fill:#C834F7}
     .fil1 {fill:#F5A9AC}
     .fil8 {fill:#F79436}
     .fil3 {fill:#F8B5B8}
-    .fil11 {fill:#FBD13E}
+    .fil11 {fill:#13ECAB}
     .fil7 {fill:#FEF1C5}
     .fil0 {fill:white}
     .fil5 {fill:#4C565D;fill-rule:nonzero}
-    .fil9 {fill:#EE1C25;fill-rule:nonzero}
-    .fil10 {fill:#FBD13E;fill-rule:nonzero}
-    .fil2 {fill:#FBD13E;fill-opacity:0.180392}
-    .fil6 {fill:#FBD13E;fill-opacity:0.501961}
+    .fil9 {fill:#C834F7;fill-rule:nonzero}
+    .fil10 {fill:#13ECAB;fill-rule:nonzero}
+    .fil2 {fill:#13ECAB;fill-opacity:0.180392}
+    .fil6 {fill:#13ECAB;fill-opacity:0.6}
     .fil21 {fill:url(#id0)}
     .fil18 {fill:url(#id1)}
     .fil12 {fill:url(#id2)}
@@ -36,12 +36,12 @@ viewBox="0 0 19860 10970"
    ]]>
   </style>
   <linearGradient id="id0" gradientUnits="objectBoundingBox" x1="1.0599%" y1="14.4394%" x2="98.9401%" y2="85.5606%">
-   <stop offset="0" style="stop-color:#FBD13E"/>
-   <stop offset="1" style="stop-color:#FCE38B"/>
+   <stop offset="0" style="stop-color:#13ECAB"/>
+   <stop offset="1" style="stop-color:#4C57FF"/>
   </linearGradient>
   <linearGradient id="id1" gradientUnits="objectBoundingBox" x1="47.6344%" y1="2.76084%" x2="52.3656%" y2="97.2392%">
-   <stop offset="0" style="stop-color:#FCE38B"/>
-   <stop offset="1" style="stop-color:#FBD13E"/>
+   <stop offset="0" style="stop-color:#4C57FF"/>
+   <stop offset="1" style="stop-color:#13ECAB"/>
   </linearGradient>
   <linearGradient id="id2" gradientUnits="objectBoundingBox" xlink:href="#id0" x1="14.2243%" y1="16.8035%" x2="85.7757%" y2="83.1965%">
   </linearGradient>

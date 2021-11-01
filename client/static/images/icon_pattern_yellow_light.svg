@@ -7,11 +7,11 @@
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil0 {fill:#FBD13E; opacity: 0.09}
-    .fil2 {fill:#FBD13E; opacity: 0.09}
-    .fil1 {fill:#FBD13E; opacity: 0.045}
-    .fil4 {fill:#FBD13E; opacity: 0.09}
-    .fil3 {fill:#FBD13E; opacity: 0.045}
+    .fil0 {fill:#13ECAB; opacity: 0.09}
+    .fil2 {fill:#13ECAB; opacity: 0.09}
+    .fil1 {fill:#13ECAB; opacity: 0.045}
+    .fil4 {fill:#13ECAB; opacity: 0.09}
+    .fil3 {fill:#13ECAB; opacity: 0.045}
    ]]>
   </style>
  </defs>

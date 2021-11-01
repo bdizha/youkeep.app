@@ -39,7 +39,7 @@
       <a-row class="r-mb-48" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-p-24">
           <h4 class="r-store-text-light">
-            Spazastop is an independent business service that is not necessarily affiliated with,
+            Youkeep is an independent business service that is not necessarily affiliated with,
             endorsed or sponsored by the sellers listed here but it enables you to get the deliveries
             you
             want.
@@ -115,11 +115,11 @@ const MENU = [
     ]
   },
   {
-    heading: 'Spazastop Services ',
+    heading: 'Youkeep Services ',
     key: 'products',
     links: [
       {
-        label: 'Spazastop+',
+        label: 'Youkeep+',
         icon: 'plus',
         link: '/hiw'
       },
@@ -129,9 +129,9 @@ const MENU = [
         link: '/account/service/waykipa'
       },
       {
-        label: 'Spazastop Credit',
+        label: 'Youkeep Credit',
         icon: 'credit-card',
-        link: '/account/service/Spazastop'
+        link: '/account/service/Youkeep'
       },
       {
         label: 'Your help',

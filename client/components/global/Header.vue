@@ -19,6 +19,7 @@
           <a-button class="r-btn-bordered-primary"
                     html-type="button"
                     type="secondary"
+                    size="small"
                     v-on:click="onModalClose"
           >
             <a-icon type="left"/>

@@ -9,17 +9,17 @@
           <a-card-meta>
             <template slot="description">
               <h4 class="r-heading-light r-text-uppercase">
-                Spazastop Marketplace
+                Youkeep Marketplace
               </h4>
               <h1 class="r-heading">
                 <span class="r-text-primary">Shop More,</span><br>
                 <span>Earn more</span>
               </h1>
               <h4 class="r-heading-light">
-                All your earnings are automatically added into your Spazastop wallet.
+                All your earnings are automatically added into your Youkeep wallet.
               </h4>
               <p class="r-text-normal">
-                Unlike other buy-now-pay-later plans, Spazastop lets shoppers use their existing credit card for
+                Unlike other buy-now-pay-later plans, Youkeep lets shoppers use their existing credit card for
                 the easiest most intuitive checkout.
               </p>
             </template>
@@ -261,7 +261,7 @@
                             Higher average order rate
                           </h4>
                           <p class="r-text-normal">
-                            Spazastop is the only buy-now-pay-later plan that lets shoppers set up payment plans with
+                            Youkeep is the only buy-now-pay-later plan that lets shoppers set up payment plans with
                             their
                             existing credit card without interest charges or fees. This keeps their payments small so
                             they
@@ -325,7 +325,7 @@
                             More qualified shoppers
                           </h4>
                           <p class="r-text-normal">
-                            Unlike other buy-now-pay-later plans, Spazastop isn’t new financing. Spazastop lets online
+                            Unlike other buy-now-pay-later plans, Youkeep isn’t new financing. Youkeep lets online
                             shoppers
                             set up monthly payments at checkout with their existing credit so they don’t need to carry
                             new
@@ -392,11 +392,11 @@
                             thousands
                             of
                             shoppers
-                            and a monthly expansion to new cities, Spazastop was named the fastest growing retail
+                            and a monthly expansion to new cities, Youkeep was named the fastest growing retail
                             platform
                             company in
                             South Africa in 2020.
-                            Spazastop thinks it can be done differently: faster, easier and cheaper. The idea is
+                            Youkeep thinks it can be done differently: faster, easier and cheaper. The idea is
                             simple.</p>
                         </a-col>
                       </a-row>
@@ -413,7 +413,7 @@
 </template>
 <script>
 export default {
-  name: 'r-shopper-spazastop',
+  name: 'r-shopper-youkeep',
   props: {},
   data () {
     return {

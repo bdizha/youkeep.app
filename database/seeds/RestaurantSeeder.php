@@ -288,7 +288,7 @@ class RestaurantSeeder extends DatabaseSeeder
             $values = [
                 'name' => $typeName,
                 'type' => $variantType,
-                'is_active' => $variantType,
+                'is_active' => 1,
             ];
 
             $productType = ProductType::updateOrCreate($attributes, $values);

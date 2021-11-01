@@ -10,7 +10,7 @@
                :xs="{ span: 24 }"
         >
           <h3 class="r-heading-light">
-            Spazastop powers ambitious multi-channel brands and chefs of all sizes in all industries.
+            Youkeep powers ambitious multi-channel brands and artists of all sizes in all industries.
           </h3>
         </a-col>
       </a-row>
@@ -34,7 +34,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <h1 class="r-text-xl" :class="getTextClass(metric)">
+                    <h1 class="r-text-xl" :class="getTextClass(metric.accent)">
                       {{ metric.content }}
                     </h1>
                   </a-col>
@@ -42,7 +42,7 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <p class="r-text-medium">
+                    <p class="r-text-medium r-text-white">
                       {{ metric.title }}
                     </p>
                   </a-col>
@@ -63,26 +63,32 @@ export default {
     return {
       metrics: [
         {
-          title: 'Over 1,000,000 authentic homemade dishes served',
+          title: 'Over 1,000,000 authentic NFTs showcased and collected',
           content: '1M+',
-          theme: 'primary'
+          theme: 'primary',
+          accent: 'secondary',
+          text: 'white'
         },
         {
-          title: 'Average seller rating from thousands of happy customers',
-          content: '4.8/5',
-          theme: 'secondary'
+          title: 'Average seller rating from millions of happy collectors',
+          content: '4.8',
+          theme: 'secondary',
+          accent: 'tertiary',
+          text: 'white'
         },
         {
-          title: 'All food sellers are food safety inspected and certified',
+          title: 'All collectible creators are verified and certified by AI',
           content: '60K+',
-          theme: 'primary'
+          theme: 'tertiary',
+          accent: 'primary',
+          text: 'white'
         }
       ]
     }
   },
   methods: {
-    getTextClass (metric) {
-      return `r-text-${metric.theme}`
+    getTextClass (theme) {
+      return `r-text-${theme}`
     },
     getBgClass (metric) {
       return `r-bg-${metric.theme}-light`

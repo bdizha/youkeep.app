@@ -32,6 +32,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
+        $this->appId = $request->get('app_id', env('APP_ID'));
         $this->productType = $request->get('type', 1);
         $this->limit = $request->get('limit', 12);
         $this->categoryId = $request->get('category_id', null);
@@ -62,6 +63,7 @@ class ProductController extends Controller
     public function show($slug = null, Request $request)
     {
         $response = [];
+        $this->appId = $request->get('app_id', env('APP_ID'));
         $this->slug = $request->get('slug', $slug);
         $this->categoryId = $request->get('category_id', null);
         $this->limit = $request->get('limit', 3);

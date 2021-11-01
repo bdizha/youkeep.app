@@ -8,15 +8,15 @@ viewBox="0 0 19328 6759"
   <style type="text/css">
    <![CDATA[
     .fil9 {fill:none;fill-rule:nonzero}
-    .fil7 {fill:#4C565D}
-    .fil6 {fill:#EE1C25}
-    .fil2 {fill:#FBD13E}
+    .fil7 {fill:#4C57FF}
+    .fil6 {fill:#C834F7}
+    .fil2 {fill:#13ECAB}
     .fil1 {fill:white}
-    .fil3 {fill:black;fill-rule:nonzero}
-    .fil4 {fill:#4C565D;fill-rule:nonzero}
-    .fil8 {fill:#FBD13E;fill-rule:nonzero}
-    .fil0 {fill:#FBD13E;fill-opacity:0.180392}
-    .fil5 {fill:#FBD13E;fill-opacity:0.501961}
+    .fil3 {fill:#4C57FF;fill-rule:nonzero}
+    .fil4 {fill:#4C57FF;fill-rule:nonzero}
+    .fil8 {fill:#13ECAB;fill-rule:nonzero}
+    .fil0 {fill:none;fill-opacity:0.6}
+    .fil5 {fill:#4C57FF;fill-opacity:0.6}
    ]]>
   </style>
  </defs>

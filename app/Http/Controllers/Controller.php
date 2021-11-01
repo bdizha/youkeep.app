@@ -323,6 +323,12 @@ class Controller extends BaseController
                 ->first();
         }
 
+        if (!empty($this->appId)) {
+            $query->whereHas('store', function ($query) {
+                $query->where('stores.app_id', $this->appId);
+            });
+        }
+
         if (!empty($this->categoryId)) {
             $query->whereHas('categories', function ($query) {
                 $query->where('category_products.category_id', $this->categoryId);
@@ -336,7 +342,7 @@ class Controller extends BaseController
         }
 
         if (!empty($this->store->id)) {
-//            $query->where('store_id', $this->store->id);
+            $query->where('store_id', $this->store->id);
         }
 
         if (!empty($query)) {
@@ -518,11 +524,19 @@ class Controller extends BaseController
         $fields = $request->all();
         $value = $request->path();
 
-        foreach ($fields as $field) {
-            $value .= "_" . (is_array($field) ? implode("_", $field) : $field);
-        }
+        $value .= "_" . json_encode($fields);
 
         return md5($value);
+    }
+
+    protected function arrayToString($field) {
+        if(is_array($field)) {
+
+        }
+        else {
+
+        }
+        return null;
     }
 
     /**

@@ -17,7 +17,7 @@
         <a-col :span="24">
           <h4 class="r-heading r-text-primary r-text-center">
             <a-icon type="gift"/>
-            <span>FREE Deliveries For 1 Week with Spazastop <br></span>
+            <span>FREE Deliveries For 1 Week with Youkeep <br></span>
           </h4>
         </a-col>
       </a-row>

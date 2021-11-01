@@ -34,7 +34,8 @@ class Saleable extends Product
         'photo_url',
         'rating',
         'store',
-        'route'
+        'route',
+        'currency'
 
     ];
 

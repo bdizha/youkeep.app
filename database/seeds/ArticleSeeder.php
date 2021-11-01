@@ -69,7 +69,7 @@ class ArticleSeeder extends DatabaseSeeder
 
             $crawler->filter('.breadcrumbs li')->each(function ($node) use (&$articleCategories) {
                 $name = $node->text();
-                $name = str_replace("RangeMe", 'Spazastop', trim($name));;
+                $name = str_replace("RangeMe", 'Youkeep', trim($name));;
                 $articleCategories[] = $name;
             });
 
@@ -149,7 +149,7 @@ class ArticleSeeder extends DatabaseSeeder
             }
 
             $content = $articleNode->filter('.s-blog-post .bp-rich-text')->html();
-            $content = str_replace("Balance", 'Spazastop', $content);
+            $content = str_replace("Balance", 'Youkeep', $content);
             $content = str_replace("balance", 'spazaland', $content);
             $content = str_replace("U.S", 'South Africa', $content);
 

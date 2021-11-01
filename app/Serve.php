@@ -37,7 +37,7 @@ class Serve extends Model
      */
     public function getRouteAttribute()
     {
-        $route = '/serve/' . $this->slug;
+        $route = '/asset/' . $this->slug;
         return $route;
     }
 

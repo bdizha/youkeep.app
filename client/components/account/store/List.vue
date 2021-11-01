@@ -2,7 +2,7 @@
   <a-table :columns="columns" :dataSource="sellers.data" bordered class="r-grey-shadow">
     <template slot="photo" slot-scope="photo">
       <r-avatar :size="90"
-                :src="photo"
+                :data-src="photo"
                 class="r-avatar-store"
                 shape="square"
                 src-placeholder="/assets/icon_default.png"

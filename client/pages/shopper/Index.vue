@@ -38,7 +38,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-medium">
-                          Earn up to R55/hr or more business for Spazastop members.
+                          Earn up to R55/hr or more business for Youkeep members.
                           Deliver things people love, from the sellers they trust.
                         </p>
                       </a-col>
@@ -47,7 +47,7 @@
                              :xs="{ span: 24 }"
                       >
                         <p class="r-text-normal">
-                          Earn up to R55/hr or more business for Spazastop members.
+                          Earn up to R55/hr or more business for Youkeep members.
                           Deliver things people love, from the sellers they trust.
                         </p>
                       </a-col>
@@ -104,7 +104,7 @@
         </a-col>
         <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <p class="r-text-medium">
-            With Spazastop, you don’t have to worry about which store to go to or where your next ride will take you.
+            With Youkeep, you don’t have to worry about which store to go to or where your next ride will take you.
           </p>
         </a-col>
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -197,8 +197,8 @@
                   </a-col>
                   <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                     <p class="r-text-normal">
-                      Spazastop is a membership-based business marketplace, enabling delivery of trendy fashion items,
-                      hot food, household items and more.
+                      Youkeep is a membership-based business marketplace, enabling delivery of trendy fashion items,
+                      hot NFTs, household items and more.
                     </p>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -249,7 +249,7 @@
                   <a-row :gutter="[24,24]" class="r-text-center" justify="center" type="flex">
                     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <h3 class="r-heading-light r-text-primary r-text-uppercase">
-                        Why shop with Spazastop?
+                        Why shop with Youkeep?
                       </h3>
                     </a-col>
                     <a-col :lg="{ span: 16 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -364,7 +364,7 @@ export default {
         {
           heading: 'Get Paid',
           title: 'Earn more as you deliver',
-          content: 'Experienced shoppers make an average of R45/hr. Your weekly earnings are automatically credited to your Spazastop account on your set payment day.',
+          content: 'Experienced shoppers make an average of R45/hr. Your weekly earnings are automatically credited to your Youkeep account on your set payment day.',
           image: '/images/content/customer-03.svg'
         }
       ]

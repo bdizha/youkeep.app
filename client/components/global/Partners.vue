@@ -13,12 +13,12 @@
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <h2 class="r-heading">
-                    <span class="r-text-primary">Value</span> = <span class="r-text-orange">Shopping</span> + <span class="r-text-white">Spazastop</span>
+                    <span class="r-text-primary">Value</span> = <span class="r-text-orange">Shopping</span> + <span class="r-text-white">Youkeep</span>
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-medium">
-                    Our partnerships represent more than ideals we strive in providing brands and chefs of all sizes with on-demand meal options for their customers.
+                    Our partnerships represent more than iliquidity we strive in providing brands and artists of all sizes with on-demand NFT options for their collectors.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -40,7 +40,7 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <a-card class="r-bg-white-primary">
+                  <a-card class="r-bg-tertiary-light">
                     <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                              :sm="{ span: 24 }"
@@ -60,7 +60,7 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <p class="r-text-normal r-text-dark">
+                        <p class="r-text-normal  ">
                           {{ partner.content }}
                         </p>
                       </a-col>

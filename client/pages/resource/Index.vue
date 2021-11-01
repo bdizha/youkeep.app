@@ -20,14 +20,14 @@
                         For Sellers
                       </h4>
                       <h1 class="r-heading">
-                        <span class="r-text-secondary">Enable more buying shoppers and increase recurring orders with Spazastop.</span>
+                        <span class="r-text-secondary">Enable more buying shoppers and increase recurring orders with Youkeep.</span>
                       </h1>
                       <p class="r-text-normal">
-                        Maximize in-store impact with Spazastop signage and online training for
+                        Maximize in-store impact with Youkeep signage and online training for
                         retail associates.
                       </p>
                       <p class="r-text-normal">
-                        We’ll ship you an activation kit to promote Spazastop online.
+                        We’ll ship you an activation kit to promote Youkeep online.
                       </p>
                     </a-col>
                   </a-row>
@@ -95,7 +95,7 @@
                 <h4 class="r-heading-light">
                   shoppers want to buy more of Your categories. And now they've a more
                   flexible
-                  business option with Spazastop
+                  business option with Youkeep
                 </h4>
               </a-col>
             </a-row>
@@ -137,7 +137,7 @@
         </a-row>
       </a-col>
     </a-row>
-    <r-steps :has-title="true" :has-wave="false" heading="Spazastop business experience"></r-steps>
+    <r-steps :has-title="true" :has-wave="false" heading="Youkeep business experience"></r-steps>
     <a-row class="r-text-center" justify="center" type="flex">
       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24 }"
              class="r-padding-48"
@@ -148,7 +148,7 @@
               Become a verified seller today
             </h2>
             <p class="r-text-normal">
-              Join the Spazastop Seller Program and start promoting Spazastop online today and watch your
+              Join the Youkeep Seller Program and start promoting Youkeep online today and watch your
               business run wild!
             </p>
           </a-col>
