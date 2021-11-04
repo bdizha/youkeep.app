@@ -9,13 +9,18 @@
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
+              <r-avatar class="r-avatar-block" data-src="/assets/asset-18.svg" :size="300"></r-avatar>
+            </a-col>
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
+                   :xs="{ span: 24}"
+            >
               <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
                   <h4 class="r-heading-light r-text-uppercase">
-                    Today's Top NFTs
+                    Unique assets
                   </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -23,7 +28,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h2 class="r-heading">
-                    Discover <span class="r-text-secondary">favourite</span> collectibles, so you keep
+                    Discover <span class="r-text-secondary">rare</span> collectibles with Youkeep
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -31,62 +36,9 @@
                        :xs="{ span: 24 }"
                 >
                   <p class="r-text-medium">
-                    Explore our unique crypto assets and collect on-demand and stackable NFTs, anytime, anywhere.
+                    Youkeep's customizable alerts can be set to hint of trending air drops, pre-series auctions, you
+                    name it. Explore our unique crypto assets and collect on-demand and stackable NFTs, anytime, anywhere.
                   </p>
-                </a-col>
-              </a-row>
-            </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                   :xs="{ span: 24}"
-            >
-              <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-                <a-col
-                  :lg="{ span: 24 }" :md="{ span: 24}"
-                  :sm="{ span: 24 }"
-                  :xs="{ span: 24 }"
-                >
-                  <div class="r-slider">
-                    <VueSlickCarousel v-bind="settings">
-                      <a-row v-for="(item, index) in items"
-                             :key="index" :gutter="[24,24]" align="middle" justify="start" type="flex">
-                        <a-col v-for="(image, index) in item.images"
-                               :key="index"
-                               :lg="{ span: 8 }" :md="{ span: 8 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24}"
-                        >
-                          <a-card :class="getCardClass(image)" class="r-p-0 r-seller-item" :hoverable="true">
-                            <a-row align="middle" justify="start" type="flex">
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                                     :sm="{ span: 24 }"
-                                     :xs="{ span: 24 }"
-                              >
-                                <r-avatar :data-src="image.src" :size="300"
-                                          class="r-avatar-block"
-                                ></r-avatar>
-                              </a-col>
-                              <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                                     :sm="{ span: 24 }"
-                                     :xs="{ span: 24 }"
-                              >
-                                <r-seller-item :item="item"></r-seller-item>
-                              </a-col>
-                            </a-row>
-                          </a-card>
-                        </a-col>
-                      </a-row>
-                      <template #prevArrow="arrowOption">
-                        <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-                          <a-icon type="left"/>
-                        </div>
-                      </template>
-                      <template #nextArrow="arrowOption">
-                        <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-                          <a-icon type="right"/>
-                        </div>
-                      </template>
-                    </VueSlickCarousel>
-                  </div>
                 </a-col>
               </a-row>
             </a-col>

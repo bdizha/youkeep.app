@@ -1,8 +1,8 @@
 <template>
   <a-row align="middle" class="r-slider" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-store-slider ">
-      <VueSlickCarousel v-if="category.stores !== undefined && category.stores.length > 0" v-bind="settings">
-        <nuxt-link v-for="(store, index) in category.stores"
+      <VueSlickCarousel v-if="hasStores" v-bind="settings">
+        <nuxt-link v-for="(store, index) in stores.data"
                    :key="index"
                    :to="store.route"
                    class="r-text-view-more"
@@ -72,7 +72,12 @@ export default {
       }
     }
   },
-  computed: mapGetters({}),
+  computed: mapGetters({
+    stores: 'content/stores',
+    hasStores: 'content/hasStores',
+    processes: 'base/processes',
+    search: 'base/search'
+  }),
   created () {
   },
   methods: {}

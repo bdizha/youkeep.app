@@ -1,30 +1,65 @@
 <template>
-  <a-card class="r-bg-primary r-pull-h-24 r-border-none">
+  <a-card class="r-bg-dark r-pull-h-24 r-border-none">
     <div class="r-mv-48">
       <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-            <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-              <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <h4 class="r-heading-light r-text-uppercase">
-                    Youkeep values
+                    Our craft
                   </h4>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                  <h2 class="r-heading">
-                   <span class="r-text-secondary">Food</span>  <span class="r-text-white">+</span> <span class="r-text-secondary">Community</span>
-                  </h2>
+                  <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
+                    <a-col>
+                      <a-card class="r-bg-primary-light r-p-0">
+                        <div class="r-p-12">
+                          <h4 class="r-heading r-text-secondary">Value</h4>
+                        </div>
+                      </a-card>
+                    </a-col>
+                    <a-col>
+                      <a-card class="r-bg-dark r-p-0">
+                        <div class="r-p-12">
+                          <h4 class="r-heading r-text-white">=</h4>
+                        </div>
+                      </a-card>
+                    </a-col>
+                    <a-col>
+                      <a-card class="r-bg-secondary-light r-p-0">
+                        <div class="r-p-12">
+                          <h4 class="r-heading r-text-tertiary">Network</h4>
+                        </div>
+                      </a-card>
+                    </a-col>
+                    <a-col>
+                      <a-card class="r-bg-dark r-p-0">
+                        <div class="r-p-12">
+                          <h4 class="r-heading r-text-white">+</h4>
+                        </div>
+                      </a-card>
+                    </a-col>
+                    <a-col>
+                      <a-card class="r-bg-tertiary-light r-p-0">
+                        <div class="r-p-12">
+                          <h4 class="r-heading r-text-primary">Trust</h4>
+                        </div>
+                      </a-card>
+                    </a-col>
+                  </a-row>
                 </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-medium">
-                    Our core values represent more than iliquidity we strive in providing brands and artists of all sizes with on-demand NFT options for their collectors.
+                    Our core values rest primarily provide artists, collectors,  and network partners
+                    of all sizes with our on-demand NFT marketplace services.
                   </p>
                 </a-col>
-                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-                  <p class="r-text-normal">
-                    They depict who we are, and how we structure our team's operations to empower the businesses we
-                    serve.
+                <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                  <p class="r-text-medium">
+                    They depict who we are, and how we structure our team's operations to empower the participants we
+                    serve every day by the tick of the clock.
                   </p>
                 </a-col>
               </a-row>
@@ -40,12 +75,13 @@
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <a-card class="r-bg-primary-light">
+                  <a-card class="r-bg-primary-light r-rotatable">
                     <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                       <a-col>
-                        <div class="r-bg-primary r-p-24 r-border-radius-12">
-                          <a-icon class="r-text-secondary"
-                                  :style="{ fontSize: '60px' }"
+                        <div class="r-bg-dark r-p-12 r-border-radius-square">
+                          <a-icon class="r-text-tertiary"
+                                  theme="filled"
+                                  :style="{ fontSize: '45px' }"
                                   :type="value.icon"
                           ></a-icon>
                         </div>
@@ -54,7 +90,7 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <h4 class="r-heading r-text-primary">
+                        <h4 class="r-heading r-text-secondary">
                           {{ value.title }}
                         </h4>
                       </a-col>
@@ -88,32 +124,32 @@ export default {
         {
           icon: 'build',
           title: 'Contribution',
-          content: 'Build, collaborate, improve. Repeat. We always ask, what, why, how, we challenge the status quo, and we apply and evaluate at every turn of the clock. '
+          content: 'Build, evaluate, repeat. We always seek ways to challenge the status quo as we apply and evaluate at every turn of the clock. '
         },
         {
-          icon: 'heart',
-          title: 'Gratitude',
-          content: 'We respect all individuals and cultures and value their contributions in all aspects of the business with genuine appreciation of their unique contributions.'
+          icon: 'bank',
+          title: 'Mutuality',
+          content: 'We encourage reciprocity and networks of trust and  value their respective contributions with corresponding value tokens in each transaction.'
         },
         {
           icon: 'rocket',
           title: 'Innovation',
-          content: 'It’s about dreaming big and changing the game. We are proud to create an exciting and dynamic financial solution for collectors. '
+          content: 'It’s about dreaming big and changing the game. We are proud to create an exciting and dynamic financial solution for everyone. '
         },
         {
           icon: 'bulb',
           title: 'Sustainability',
-          content: 'We live for sellers of all sizes and are fanatical about their success. We explore new ideas and discover creative solutions as a unit.'
+          content: 'We live for collectors and artists of all sizes and are fanatical about their success. We explore new ideas and discover creative solutions as a unit.'
         },
         {
           icon: 'eye',
-          title: 'Possibility',
-          content: 'We pursue the highest utility value for both our collectors and our people who work with us. We make value but simply adding sub value parts.'
+          title: 'Difference',
+          content: 'We pursue the highest utility value for both our collectors and our artists who trade with us. We make value by enabling high yield on asset appreciation.'
         },
         {
-          icon: 'team',
-          title: 'Humanity',
-          content: 'Our people are our greatest treasure. Appreciation for one another and with the brands we serve give us the best economical wheels we all deserve.'
+          icon: 'golden',
+          title: 'Network',
+          content: 'Our partners are the greatest treasure to us. Working together with the market players we serve give us the best economical wings we need.'
         }
       ]
     }

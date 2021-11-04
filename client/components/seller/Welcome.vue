@@ -9,7 +9,7 @@
             <a-col class="r-text-right" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
-              <r-avatar data-src="/assets/asset-10-primary.svg" :size="300" class="r-avatar-block"
+              <r-avatar data-src="/assets/asset-03.svg" :size="300" class="r-avatar-block"
               ></r-avatar>
             </a-col>
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"

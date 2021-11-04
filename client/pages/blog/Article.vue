@@ -72,7 +72,7 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <div class="r-text-normal r-text-dark" v-html="blog.article.content">
+                <div class="r-text-normal" v-html="blog.article.content">
                 </div>
               </a-col>
               <a-col :lg="{ span: 6 }" :md="{ span: 6 }"

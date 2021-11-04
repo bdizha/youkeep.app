@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-primary">
+  <a-card :class="getBgClass()">
     <a-row :gutter="[24,24]" align="middle" class="r-text-left" justify="center" type="flex">
       <a-col :lg="{ span: 18 }" :md="{ span: 16 }" :sm="{ span: 24 }"
              :xs="{ span: 24 }"
@@ -27,7 +27,7 @@
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
           >
             <nuxt-link v-if="hasJobs" to="/career/openings">
-              <a-button class="r-btn-secondary"
+              <a-button :class="getBtnClass()"
                         block
                         size="large"
                         type="secondary"
@@ -35,7 +35,7 @@
                 See job openings
               </a-button>
             </nuxt-link>
-            <a-button v-if="!hasJobs" class="r-btn-secondary"
+            <a-button v-if="!hasJobs" :class="getBtnClass()"
                       @click="onModal"
                       block
                       size="large"
@@ -56,16 +56,21 @@ export default {
     hasJobs: { type: Boolean, required: false, default: false },
     hasMore: { type: Boolean, required: false, default: false },
     title: { type: String, required: false, default: 'Get your Youkeep account today!' },
+    theme: { type: String, required: false, default: 'tertiary' },
+    accent: { type: String, required: false, default: 'secondary' },
     heading: { type: String, required: false, default: 'Are you ready to join Youkeep?' }
   },
   data () {
     return {}
   },
   created () {
-    this.payload()
   },
   methods: {
-    payload () {
+    getBgClass () {
+      return `r-bg-${this.theme}-light`
+    },
+    getBtnClass () {
+      return `r-btn-${this.accent}`
     },
     onModal () {
       const modal = {}

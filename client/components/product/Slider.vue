@@ -1,14 +1,14 @@
 <template>
-  <a-row class="r-slider" justify="start" style="margin-bottom: 24px;" type="flex">
+  <a-row class="r-slider" justify="start" type="flex">
     <a-col :span="24" class="r-spin-holder">
       <VueSlickCarousel
-        v-if="products.length > 0"
+        v-if="hasData > 0"
         v-bind="settings"
       >
-        <r-product-item v-for="(product, index) in products"
+        <r-product-item :is-drop="isDrop" v-for="(product, index) in products"
                         :key="index"
                         :product="product"
-        ></r-product-item>
+        />
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
             <a-icon type="left"/>
@@ -20,7 +20,7 @@
           </div>
         </template>
       </VueSlickCarousel>
-      <r-spinner v-if="processes.isCategory" :is-absolute="true" process="isCategories"></r-spinner>
+      <r-spinner v-if="isProcessing" :is-absolute="true" process="isCategories"/>
     </a-col>
   </a-row>
 </template>
@@ -32,8 +32,20 @@ export default {
   name: 'r-product-slider',
   components: {},
   props: {
+    isDrop: { type: Boolean, required: false, default: false },
     columns: { type: Number, required: false, default: 3 },
-    category: { type: Object, required: false },
+    filters: {
+      type: Object,
+      required: false,
+      default: () => {
+        return {
+          metric_type_id: null,
+          store_id: null,
+          is_active: true,
+          order_by: 'updated_at'
+        }
+      }
+    }
   },
   data () {
     return {
@@ -81,28 +93,23 @@ export default {
     this.hasData = false
     this.isProcessing = true
 
-    let params = {
-      category_id: this.category.id,
-      limit: 24,
-      filters: this.filters
-    }
-
-    let path = `/products`
-    let $this = this
+    const path = `/products`
+    const $this = this
 
     console.log('service path: ', path)
 
-    await axios.post(path, params)
+    await axios.post(path, this.filters)
       .then(({ data }) => {
         $this.products = data.data
         $this.hasData = true
+        $this.isProcessing = false
       })
-      .catch(e => {
+      .catch((e) => {
         console.log(e)
       })
   },
   computed: mapGetters({
-    processes: 'base/processes',
+    processes: 'base/processes'
   }),
   methods: {}
 }

@@ -125,11 +125,11 @@
                        class="r-text-left"
                 >
                   <a-form-item
-                    label="Average Order Value"
+                    label="Average asset value"
                   >
                     <a-input
-                      v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your Average Order Value' }] }]"
-                      placeholder="Your Order Value Value"
+                      v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your Average asset value' }] }]"
+                      placeholder="Your asset value Value"
                       size="default"
                       type="text"
                     >

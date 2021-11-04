@@ -1,13 +1,47 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="40" height="40" rx="6" fill="none"/>
-<rect width="20" height="16" transform="matrix(1 0 0 -1 10 28)" fill="url(#paint0_linear)"/>
-<rect x="10" y="15" width="20" height="3" fill="#13ECAB"/>
-<rect x="25" y="24" width="3" height="2" fill="#13ECAB"/>
-<rect x="12" y="24" width="11" height="2" fill="#13ECAB"/>
-<defs>
-<linearGradient id="paint0_linear" x1="10" y1="0" x2="10" y2="16" gradientUnits="userSpaceOnUse">
-<stop stop-color="#4C57FF"/>
-<stop offset="1" stop-color="#4C57FF"/>
-</linearGradient>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="188.114mm" height="188.218mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 18812 18822"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#13ECAB}
+    .fil0 {fill:#4C57FF}
+    .fil2 {fill:url(#id0)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="9225.93" y1="1375.09" x2="9585.43" y2="9975.18">
+   <stop offset="0" style="stop-color:#C834F7"/>
+   <stop offset="1" style="stop-color:#4C57FF"/>
+  </linearGradient>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <rect class="fil0" width="18811" height="11350" rx="682" ry="409"/>
+  <rect class="fil1" x="156" y="13808" width="6521" height="1270" rx="340" ry="420"/>
+  <rect class="fil1" x="156" y="15676" width="6521" height="1270" rx="340" ry="420"/>
+  <rect class="fil1" x="7318" y="13808" width="11338" height="1270" rx="591" ry="420"/>
+  <rect class="fil1" x="7318" y="15676" width="11338" height="1270" rx="591" ry="420"/>
+  <rect class="fil1" x="2043" y="11940" width="4638" height="1270" rx="242" ry="420"/>
+  <rect class="fil1" x="7289" y="11940" width="9556" height="1270" rx="498" ry="420"/>
+  <rect class="fil1" x="156" y="15676" width="1292" height="1270" rx="67" ry="420"/>
+  <rect class="fil1" y="13808" width="6521" height="1270" rx="340" ry="420"/>
+  <rect class="fil1" y="15676" width="6521" height="1270" rx="340" ry="420"/>
+  <rect class="fil1" x="7276" y="13808" width="11536" height="1270" rx="601" ry="420"/>
+  <rect class="fil1" x="7276" y="15676" width="11536" height="1270" rx="601" ry="420"/>
+  <path class="fil1" d="M420 17515l453 0c231,0 420,189 420,420l0 430c0,231 -189,420 -420,420l-453 0c-231,0 -420,-189 -420,-420l0 -430c0,-231 189,-420 420,-420zm-36 490l125 0c6,-103 55,-157 135,-156 87,2 137,49 144,156l121 0 0 445 -525 0 0 -445zm177 0l169 0c4,-139 -179,-119 -169,0z"/>
+  <path class="fil1" d="M17939 17552l453 0c231,0 420,189 420,420l0 430c0,231 -189,420 -420,420l-453 0c-231,0 -420,-189 -420,-420l0 -430c0,-231 189,-420 420,-420zm224 337l-98 198 -216 25 154 155 -31 217 192 -99 193 100 -39 -218 163 -153 -222 -31 -96 -194z"/>
+  <path class="fil1" d="M420 11940l453 0c231,0 420,189 420,420l0 430c0,231 -189,420 -420,420l-453 0c-231,0 -420,-189 -420,-420l0 -430c0,-231 189,-420 420,-420zm189 920c-155,-17 -279,-140 -296,-296l296 0 0 296zm370 -296c-17,156 -140,279 -295,296l0 -296 295 0zm-370 -74l-296 0c9,-78 44,-148 97,-200l199 200 0 0 0 0zm275 -199c52,52 87,122 95,199l-294 0 199 -199z"/>
+  <path class="fil1" d="M7696 17533l452 0c231,0 420,189 420,420l0 430c0,231 -189,420 -420,420l-452 0c-231,0 -420,-189 -420,-420l0 -430c0,-231 189,-420 420,-420zm222 427c-35,-93 -198,-86 -261,27 -76,237 186,362 264,455 107,-111 271,-178 280,-394 -28,-159 -206,-205 -283,-88z"/>
+  <g id="_419790824">
+   <rect class="fil2" x="5337" y="1425" width="8138" height="8500" rx="602" ry="555"/>
+   <g>
+    <polygon class="fil1" points="6236,7694 7964,5703 8891,6831 10440,5029 12715,7716 "/>
+    <polygon class="fil1" points="7350,4213 7954,3635 8558,4213 7954,4792 "/>
+   </g>
+  </g>
+  <path class="fil1" d="M17939 11948l453 0c231,0 420,189 420,420l0 430c0,231 -189,420 -420,420l-453 0c-231,0 -420,-189 -420,-420l0 -430c0,-231 189,-420 420,-420zm-228 918l242 -279 130 158 218 -253 319 377 -909 -3zm156 -489l85 -81 85 81 -85 82 -85 -82z"/>
+ </g>
 </svg>

@@ -43,7 +43,7 @@
                    :xs="{ span: 24 }"
 
             >
-              <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
+              <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
                 <a-col v-for="(benefit, index) in benefits"
                        :key="index"
                        :lg="{ span: 8 }" :md="{ span: 8 }"
@@ -53,9 +53,9 @@
                   <a-card class="r-bg-secondary-light">
                     <a-row :gutter="[24, 24]" align="middle" type="flex">
                       <a-col>
-                        <div class="r-bg-secondary-light r-p-12 r-border-radius-12">
-                          <a-icon class="r-text-secondary"
-                                  :style="{ fontSize: '45px' }"
+                        <div class="r-bg-dark r-p-12 r-border-radius-square">
+                          <a-icon class="r-text-primary"
+                                  :style="{ fontSize: '36px' }"
                                   :type="benefit.icon"
                           ></a-icon>
                         </div>
@@ -66,7 +66,7 @@
                                  :sm="{ span: 24 }"
                                  :xs="{ span: 24 }"
                           >
-                            <h4 class="r-heading" v-html="benefit.title"></h4>
+                            <h4 class="r-heading r-text-tertiary" v-html="benefit.title"></h4>
                           </a-col>
                           <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                             <p class="r-text-normal">
@@ -95,18 +95,18 @@ export default {
       benefits: [
         {
           icon: 'credit-card',
-          title: '<span class="r-text-secondary">Flexible</span> payments',
-          content: 'When using 4 interest-free payments, collectors make their first payment upfront and their remaining 3 payments are collected automatically every 2 weeks.'
+          title: '<span class="r-text-secondary">High</span> liquidity',
+          content: 'Youkeep is powered by Solana, the world\'s fastest and ernergy serving blockchain technology. We leverage it\'s low processing fees and trickle down to the buyer plus 9% charge fee.'
         },
         {
           icon: 'shopping',
           title: '<span class="r-text-secondary">Instant</span> checkout',
-          content: 'The customer experience is fast and frictionless when buying with Youkeep. Go from browsing to bought in 25 seconds. That\'s up to 3x faster than competitors.'
+          content: 'The collector\'s experience is fast and frictionless when buying with Youkeep. Go from browsing to collected in 25 seconds. That\'s up to 3x faster than other marketplace players.'
         },
         {
           icon: 'carry-out',
           title: '<span class="r-text-secondary">Personal</span> experience',
-          content: 'Returning Youkeep shoppers are treated like returning collectors for you. Details are pre-filled and preferred shipping and NFT collectibles are pre-selected.'
+          content: 'With over thousands of users and followers, we can help you reach a large audience of collectors. With our multiple blockchains support, create, buy, and sell NFTs without paying any gas fee'
         }
       ]
     }

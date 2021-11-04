@@ -73,7 +73,7 @@ class Store extends Model
      */
     public function getRouteAttribute()
     {
-        $route = '/store/' . $this->slug;
+        $route = '/collection/' . $this->slug;
         return $route;
     }
 

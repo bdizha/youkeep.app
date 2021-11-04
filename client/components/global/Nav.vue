@@ -55,7 +55,7 @@
                                            :sm="{ span: 24 }"
                                            :xs="{ span: 24}"
                                     >
-                                      <h4 class="r-heading r-text-primary">
+                                      <h4 class="r-heading r-text-secondary">
                                         {{ beneficiary.title }}
                                         <a-icon type="right" />
                                       </h4>
@@ -89,8 +89,8 @@
                             <a-card hoverable="" class="r-bg-dark">
                               <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
                                 <a-col flex="60px">
-                                  <div class="r-bg-secondary-light r-p-12 r-border-radius-12">
-                                    <a-icon class="r-text-primary"
+                                  <div class="r-bg-primary-light r-p-12 r-border-radius-square">
+                                    <a-icon class="r-text-secondary"
                                             :style="{ fontSize: '36px' }"
                                             :type="service.icon"
                                     ></a-icon>
@@ -147,7 +147,7 @@
                                    :sm="{ span: 24 }"
                                    :xs="{ span: 24}"
                             >
-                              <h3 class="r-heading">
+                              <h3 class="r-heading r-text-tertiary">
                                 About us
                               </h3>
                             </a-col>
@@ -185,7 +185,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/about-us">
-                                      <h4 class="r-heading r-text-primary">
+                                      <h4 class="r-heading">
                                         Our story
                                         <a-icon type="right" />
                                       </h4>
@@ -196,7 +196,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/careers">
-                                      <h4 class="r-heading r-text-primary">
+                                      <h4 class="r-heading">
                                         Careers
                                         <a-icon type="right" />
                                       </h4>
@@ -206,8 +206,19 @@
                                          :sm="{ span: 24 }"
                                          :xs="{ span: 24}"
                                   >
+                                    <nuxt-link class="r-link-card" to="/partners">
+                                      <h4 class="r-heading">
+                                        Partners
+                                        <a-icon type="right" />
+                                      </h4>
+                                    </nuxt-link>
+                                  </a-col>
+                                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                                         :sm="{ span: 24 }"
+                                         :xs="{ span: 24}"
+                                  >
                                     <nuxt-link class="r-link-card" to="/contact-us">
-                                      <h4 class="r-heading r-text-primary">
+                                      <h4 class="r-heading">
                                         Contact Us
                                         <a-icon type="right" />
                                       </h4>
@@ -218,7 +229,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/pricing">
-                                      <h4 class="r-heading r-text-primary">
+                                      <h4 class="r-heading">
                                         Pricing
                                         <a-icon type="right" />
                                       </h4>
@@ -246,19 +257,19 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/blog">
-                                      <h4 class="r-heading r-text-secondary">
+                                      <h4 class="r-heading">
                                         Blog
                                         <a-icon type="right" />
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
-                                  <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }"
+                                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                          :sm="{ span: 24 }"
                                          :xs="{ span: 24}"
                                   >
-                                    <nuxt-link class="r-link-card" to="/help">
-                                      <h4 class="r-heading r-text-secondary">
-                                        Documentation
+                                    <nuxt-link class="r-link-card" to="/meta">
+                                      <h4 class="r-heading">
+                                        Get to know YouKeep
                                         <a-icon type="right" />
                                       </h4>
                                     </nuxt-link>
@@ -268,7 +279,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/help">
-                                      <h4 class="r-heading r-text-secondary">
+                                      <h4 class="r-heading">
                                         Help Center
                                         <a-icon type="right" />
                                       </h4>
@@ -279,7 +290,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/privacy">
-                                      <h4 class="r-heading r-text-secondary">
+                                      <h4 class="r-heading">
                                         Data Privacy
                                         <a-icon type="right" />
                                       </h4>
@@ -290,7 +301,7 @@
                                          :xs="{ span: 24}"
                                   >
                                     <nuxt-link class="r-link-card" to="/terms">
-                                      <h4 class="r-heading r-text-secondary">
+                                      <h4 class="r-heading">
                                         Terms of Use
                                         <a-icon type="right" />
                                       </h4>

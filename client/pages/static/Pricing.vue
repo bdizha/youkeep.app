@@ -30,7 +30,7 @@
                         >
                           <h1 class="r-heading">
                             <span class="r-text-primary">Pricing</span>
-                            <span class="r-text-dark">built for businesses of all sizes.</span>
+                            <span class="r-text-dark">built for businesses of all sizes around the world.</span>
                           </h1>
                         </a-col>
                         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"

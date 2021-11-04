@@ -93,7 +93,12 @@
                             </a-col>
                             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
                               <div class="r-footer-link">
-                                <nuxt-link to="/help">How can we help?</nuxt-link>
+                                <nuxt-link to="/help"><span class="r-text-primary">Learn</span> with Youkeep</nuxt-link>
+                              </div>
+                            </a-col>
+                            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :xs="{ span: 24}">
+                              <div class="r-footer-link">
+                                <nuxt-link to="/welcome">Get to know Youkeep?</nuxt-link>
                               </div>
                             </a-col>
                           </a-row>

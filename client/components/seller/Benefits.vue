@@ -46,7 +46,7 @@
                   <a-card class="r-bg-tertiary-light">
                     <a-row :gutter="[24, 24]" type="flex" align="middle">
                       <a-col>
-                        <div class="r-bg-primary r-p-12 r-border-radius-12">
+                        <div class="r-bg-primary-light r-p-12 r-border-radius-square">
                           <a-icon class="r-text-secondary"
                                   :style="{ fontSize: '45px' }"
                                   :type="benefit.icon"
@@ -107,13 +107,13 @@ export default {
         {
           icon: 'dollar',
           title: 'Zero fees charged',
-          heading: '<span class="r-text-primary">Offer</span> on demand NFT assets',
+          heading: '<span class="r-text-primary">Offer</span> rare NFT assets',
           content: 'It\'s never been easier to give your audiences the freedom to choose.'
         },
         {
           icon: 'sync',
           title: 'No credit impact',
-          heading: '<span class="r-text-primary">Earn</span> more returning collectors',
+          heading: '<span class="r-text-primary">Earn</span> returning collectors',
           content: 'Enable more buying collectors and unleash your goals with Youkeep.'
         }
       ]

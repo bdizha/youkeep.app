@@ -1,6 +1,6 @@
 <template>
   <a-card class="r-bg-dark r-pull-h-24 r-border-none">
-    <div class="r-mv-96">
+    <div class="r-mv-48">
       <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
@@ -22,22 +22,31 @@
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <h2 class="r-heading">
-                    <span class="r-text-tertiary">Enjoy</span> the finest and largest NFT marketplace
+                    <span class="r-text-tertiary">Enjoy</span> the finest NFT marketplace
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-medium">
-                    With your favorite marketplaces at your fingertips, NFTs discovery is made easy for your buying
+                    With your favorite marketplaces at your fingertips, NFTs discovery is made easy for the finest
                     experience.
                   </p>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                   <p class="r-text-normal">
                     Youkeep makes you unleash your dreams and connects you with possibilities - more time and energy for
-                    yourself and your direct or indirect beneficiaries.
+                    yourself and your beneficiaries.
                   </p>
                 </a-col>
               </a-row>
+            </a-col>
+            <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+
+            >
+              <r-avatar data-src="/assets/asset-05.svg" :size="300"
+                        class="r-avatar-block"
+              ></r-avatar>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                    :sm="{ span: 24 }"
@@ -54,9 +63,10 @@
                   <a-card class="r-bg-primary-light">
                     <a-row :gutter="[24, 24]" align="middle" type="flex">
                       <a-col>
-                          <a-card class="r-bg-secondary-light r-p-0 r-border-circle">
+                          <a-card class="r-bg-dark r-p-0 r-border-circle">
                           <div class="r-p-12">
                             <a-icon class="r-text-tertiary"
+                                    theme="filled"
                                     :style="{ fontSize: '45px' }"
                                     :type="benefit.icon"
                             ></a-icon>
@@ -108,14 +118,14 @@ export default {
     return {
       benefits: [
         {
-          icon: 'heart',
+          icon: 'picture',
           heading: '<span class="r-text-secondary">Support</span> network artists',
           content: 'Unlike other NFTs outlets, you know exactly who\'s owned NFT asset you collect. Discover form with top collections and more.'
         },
         {
           icon: 'appstore',
           heading: '<span class="r-text-secondary">Discover</span> authentic NFTs',
-          content: 'Connect with your favourite crypto wallet and and start collecting stackable crypto assets while you earn as you transact on the $keep marketplace.'
+          content: 'Connect with your favourite crypto wallet and and start collecting assets while you earn as you transact on the $keep marketplace.'
         },
 
         {

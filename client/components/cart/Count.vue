@@ -5,8 +5,8 @@
             type="primary"
             @click="onDrawer()"
   >
-    <a-icon type="wallet"/>
-    <span class="r-cart-text">{{ cart.count }}</span>
+    <a-icon type="shopping" theme="filled"/>
+    {{ cart.count }}
   </a-button>
 </template>
 <script>

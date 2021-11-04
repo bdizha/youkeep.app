@@ -15,8 +15,7 @@
               <template slot="title">
                 <span>Select: {{ item.name }}</span>
               </template>
-              <a-checkbox :value="item.id"
-              >
+              <a-checkbox :value="item.id">
                 {{ filter.type == 2 ? null : item.name }}
               </a-checkbox>
             </a-tooltip>

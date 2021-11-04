@@ -64,9 +64,9 @@
                  :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
-            <p class="r-text-normal r-text-white">
-              {{ product.store.name }}
-            </p>
+            <nuxt-link :to="product.store.route">
+              <r-store-head :store="product.store"></r-store-head>
+            </nuxt-link>
           </a-col>
         </a-row>
       </a-col>

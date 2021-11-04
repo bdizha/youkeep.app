@@ -20,9 +20,7 @@
           </div>
         </a-col>
         <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <a-collapse :default-active-key="activeKey"
-                      expandIconPosition="right"
-          >
+          <a-collapse :default-active-key="activeKey" expandIconPosition="right">
             <a-collapse-panel v-if="!hasStore" key="delivery"
                               class="r-collapse-panel r-hide-lg"
                               header="Delivery address"
@@ -44,7 +42,7 @@
                               :header="store.name"
                               class="r-collapse-panel"
             >
-              <r-store-face :is-plain="true"
+              <r-store-face :has-title="false"
                             :store="store"
               ></r-store-face>
             </a-collapse-panel>
@@ -80,7 +78,7 @@
             </a-collapse-panel>
             <a-collapse-panel v-if="!hasStore" key="sellers"
                               class="r-collapse-panel"
-                              header="Popular sellers"
+                              header="Popular artists"
             >
               <r-store-list></r-store-list>
             </a-collapse-panel>
@@ -127,8 +125,9 @@ export default {
     return {
       filters: [
         {
-          title: 'Sort',
+          title: 'Metrics',
           id: 1,
+          key: 'metrics',
           type: 1,
           items: [
             {
@@ -140,39 +139,40 @@ export default {
               id: 2
             },
             {
-              name: 'Rating',
+              name: 'Trending collections',
               id: 3
             },
             {
-              name: 'Delivery time',
+              name: 'Limited editions',
               id: 4
             }
           ],
           per_row: 1
         },
         {
-          title: 'Dietary',
+          title: 'Collections',
           id: 2,
+          key: 'collections',
           type: 1,
           items: [
             {
-              name: 'Vegetarian',
+              name: 'Cryptopunks',
               id: 1
             },
             {
-              name: 'Vegan',
+              name: 'TheShiboshis',
               id: 2
             },
             {
-              name: 'Gluten-free',
+              name: 'Parallelalpha',
               id: 3
             },
             {
-              name: 'Halal',
+              name: 'BoonjiProject',
               id: 4
             },
             {
-              name: 'Allergy friendly',
+              name: 'TheSandbox',
               id: 5
             }
           ],
@@ -180,6 +180,7 @@ export default {
         },
         {
           title: 'Price range',
+          key: 'price',
           id: 3,
           type: 1,
           items: [
@@ -207,29 +208,34 @@ export default {
           per_row: 1
         },
         {
-          title: 'Max delivery fee',
+          title: 'Categories',
           id: 4,
+          key: 'categories',
           type: 1,
           items: [
             {
-              name: '< R15',
+              name: 'Sport',
               id: 1
             },
             {
-              name: '< R30',
+              name: 'Virtual worlds',
               id: 2
             },
             {
-              name: '< R60',
+              name: 'Gaming',
               id: 3
             },
             {
-              name: '< R90',
+              name: 'Drop ins',
               id: 4
             },
             {
-              name: '> R90',
+              name: 'Music',
               id: 5
+            },
+            {
+              name: 'Collectibles',
+              id: 6
             }
           ],
           per_row: 1

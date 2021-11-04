@@ -37,7 +37,7 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <p class="r-text-normal r-text-dark">
+                      <p class="r-text-normal">
                         {{ product.content }}
                       </p>
                     </a-col>

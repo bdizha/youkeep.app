@@ -14,25 +14,26 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h3 class="r-heading-light r-text-uppercase">
+                      <h4 class="r-heading-light r-text-uppercase">
                         For <span class="r-text-primary">Partners</span>
-                      </h3>
+                      </h4>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h1 class="r-heading">
-                        <span class="r-text-primary">Partner</span> with Youkeep.
-                      </h1>
+                      <h2 class="r-heading">
+                        Welcome to the world's most authentic NFT marketplace.
+                      </h2>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium">
-                        Join the thousands of businesses that use Youkeep to grow their businesses and achieve their
-                        goals and objectives.
+                        At Youkeep, we're excited about a brand new type of digital good often referred to as a
+                        non-fungible token, or NFT. NFTs have exciting new properties: they’re unique, provably scarce,
+                        liquid, and usable across multiple applications.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -40,8 +41,8 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        We work with leading e-commerce sellers, agencies, platforms and tech solutions to
-                        elevate your Youkeep's retail partners today.
+                        We’re proud to be the first and largest marketplace for user-owned digital goods, with
+                        everything you need to buy and sell them in one place. Learn more about us
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
@@ -64,7 +65,7 @@
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <r-avatar data-src="/assets/asset-16.svg" :size="300"
+                  <r-avatar data-src="/assets/asset-02.svg" :size="300"
                             class="r-avatar-block"
                   ></r-avatar>
                 </a-col>
@@ -112,7 +113,7 @@
       <r-partner-advantage></r-partner-advantage>
     </a-col>
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-contact-us title="Take your business to the next level."></r-contact-us>
+      <r-contact-us title="Interested in partnering with us today?" theme="tertiary"></r-contact-us>
     </a-col>
   </a-row>
 </template>

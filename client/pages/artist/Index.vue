@@ -126,7 +126,7 @@
                            :xs="{ span: 24 }"
                     >
                       <h4 class="r-heading-light r-text-uppercase">
-                        Transform your business
+                        Transform your life
                       </h4>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -151,8 +151,8 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        Youkeep offers growing businesses a single and clear view into checkout activities including but not limited to:
-                        instant orders, NFT collectibles, customer timeline, financing, and reporting.
+                        Youkeep offers growing artists a unified marketplace including but not limited to:
+                        instant offers, NFT collectibles, air drops, purchase history, asset analytics, and on demand liquidity.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -213,8 +213,8 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-contact-us :has-more="true" title="Ready to cook with Youkeep?"
-                    heading="Increase your average order value and drive conversions. Getting started is easy."
+      <r-contact-us :has-more="true" title="Ready to collect with Youkeep?"
+                    heading="Increase your average asset value and unleash your dreams. Getting started is easy."
       ></r-contact-us>
     </a-col>
   </a-row>
@@ -227,7 +227,7 @@ export default {
   data () {
     return {
       images: [
-        '/assets/asset-08.svg'
+        '/assets/asset-19.svg'
       ],
       benefits: [
         {

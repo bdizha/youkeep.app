@@ -3,6 +3,8 @@
 namespace App;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Config;
 
 class Product extends KModel
 {
@@ -81,6 +83,7 @@ class Product extends KModel
         'store',
         'route',
         'currency',
+        'activity',
         'currency_url'
     ];
 
@@ -123,6 +126,11 @@ class Product extends KModel
             ->first();
 
         return !empty($categoryProduct->category_id) ? $categoryProduct->category_id : null;
+    }
+
+    public function getActivityAttribute()
+    {
+        return Carbon::now()->addMinutes(- rand(0, 1000000))->diffForHumans();
     }
 
     public function getThumbnailUrlAttribute()

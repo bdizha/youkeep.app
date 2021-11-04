@@ -162,11 +162,11 @@
                  class="r-text-left"
           >
             <a-form-item
-              label="Average order value"
+              label="Average asset value"
             >
               <a-input
                 v-decorator="['order_value', { rules: [{ required: true, message: 'Please enter your company email' }] }]"
-                placeholder="Your average order value"
+                placeholder="Your average asset value"
                 size="large"
                 type="text"
               >

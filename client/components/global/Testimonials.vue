@@ -29,11 +29,11 @@
                     </div>
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                    <a-row :gutter="[24,24]" align="middle" type="flex">
+                    <a-row :gutter="[12,12]" align="middle" type="flex">
                       <a-col flex="60px">
-                        <a-card class="r-bg-tertiary-light r-p-0 r-border-circle">
+                        <a-card class="r-bg-dark r-p-0 r-border-circle">
                           <div class="r-p-12">
-                            <nuxt-img src="/images/icon_secondary.svg" width="36px"></nuxt-img>
+                            <nuxt-img src="/images/icon_tertiary.svg" width="36px"></nuxt-img>
                           </div>
                         </a-card>
                       </a-col>

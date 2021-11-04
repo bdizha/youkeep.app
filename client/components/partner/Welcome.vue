@@ -9,7 +9,7 @@
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-row :gutter="[24,24]" align="middle" justify="end" type="flex">
+              <a-row :gutter="[48,48]" align="middle" justify="end" type="flex">
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
@@ -24,13 +24,19 @@
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <h2 class="r-heading">
-                        <span class="r-text-primary">Help</span> retailers succeed
+                        <span class="r-text-primary">Enabling</span> partners to succeed
                       </h2>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
                       <p class="r-text-medium">
-                        Play a pivotal role in introducing new retailers to Klarna, and offer solutions that help bring a
-                        uniquely smoooth shopping experience online and offline to millions of collectors worldwide.
+                        With over thousands of collections, we are proud to host the widest range of categories, ranging
+                        from digital to physical NFTs
+                      </p>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24}" :sm="{ span: 24 }" :xs="{ span: 24 }">
+                      <p class="r-text-normal">
+                        While we take pride in being the first and largest marketplace and in our robust feature set, we
+                        also help our partners succeed with the following...
                       </p>
                     </a-col>
                   </a-row>
@@ -38,7 +44,7 @@
                 <a-col class="r-text-right" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24}"
                 >
-                  <r-avatar data-src="/assets/asset-consumer.svg" :size="300" class="r-avatar-block"
+                  <r-avatar data-src="/assets/asset-04.svg" :size="300" class="r-avatar-block"
                   ></r-avatar>
                 </a-col>
               </a-row>
@@ -58,9 +64,10 @@
                   <a-card class="r-bg-tertiary-light">
                     <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                       <a-col>
-                        <div class="r-bg-tertiary-light r-p-12 r-border-radius-12">
-                          <a-icon class="r-text-primary"
-                                  :style="{ fontSize: '45px' }"
+                        <div class="r-bg-dark r-p-12 r-border-radius-square">
+                          <a-icon class="r-text-secondary"
+                                  theme="filled"
+                                  :style="{ fontSize: '36px' }"
                                   :type="value.icon"
                           ></a-icon>
                         </div>
@@ -108,7 +115,7 @@ export default {
           content: 'Youkeep retailers seek help from Youkeep Partners to expand their eCommerce and in-store offerings. Youkeep relies on our network of experts to help retailers hit their business goals.'
         },
         {
-          icon: 'line-chart',
+          icon: 'pie-chart',
           title: '<span class="r-text-primary">Accelerate</span> growth',
           content: 'Take it to the next level. Two is better than one. At Youkeep, we’re customer obsessed. Let’s work together to drive incremental revenue for retailers and create smooth customer experiences.'
         }

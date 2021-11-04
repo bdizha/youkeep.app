@@ -1,7 +1,56 @@
 .ant-table-thead > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td, .ant-table-tbody > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td, .ant-table-thead > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td, .ant-table-tbody > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected) > td {
-    background: #F56F4599;
+    background: rgba(0, 0, 0, 0.0075)
 }
 
 .ant-table-thead > tr > th{
-    background: #fbf0c8;
+    background: rgba(0, 0, 0, 0.09);
+    color: @white;
+    font-size: 16px;
+    font-weight: 600;
 }
+
+.ant-table-tbody > tr > td {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.ant-table-bordered .ant-table-thead > tr > th,
+.ant-table-bordered .ant-table-tbody > tr > td {
+     border-color: rgba(255, 255, 255, 0.075);
+    color: @white;
+    a {
+        color: @white;
+    }
+}
+
+.ant-table-bordered .ant-table-header > table,
+.ant-table-bordered .ant-table-body > table,
+.ant-table-bordered .ant-table-fixed-left table,
+.ant-table-bordered .ant-table-fixed-right table {
+    border-color: rgba(255, 255, 255, 0.075);
+    border-right: 0;
+    border-bottom: 0;
+}
+.ant-table-bordered.ant-table-empty .ant-table-placeholder {
+     border-color: rgba(255, 255, 255, 0.075);
+    border-color: rgba(255, 255, 255, 0.075);
+}
+.ant-table-bordered.ant-table-fixed-header .ant-table-header > table {
+    border-bottom: 0;
+}
+.ant-table-bordered.ant-table-fixed-header .ant-table-body > table {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.ant-table-bordered.ant-table-fixed-header .ant-table-header + .ant-table-body > table,
+.ant-table-bordered.ant-table-fixed-header .ant-table-body-inner > table {
+    border-top: 0;
+}
+.ant-table-bordered .ant-table-thead > tr:not(:last-child) > th {
+     border-color: rgba(255, 255, 255, 0.075);
+}
+.ant-table-bordered .ant-table-thead > tr > th,
+.ant-table-bordered .ant-table-tbody > tr > td {
+    border-color: rgba(255, 255, 255, 0.075);
+}
+

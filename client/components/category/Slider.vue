@@ -1,32 +1,23 @@
 <template>
-  <a-row :class="{'r-spin__active': processes.isProducts}" justify="center" type="flex">
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-           :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <a-row v-if="hasCategories" class="r-slider">
-        <a-col :span="24">
-          <VueSlickCarousel v-bind="settings">
-            <r-category-bundle
-              v-for="(c, index) in categories"
-              v-if="c.id != category.id"
-              :key="index"
-              :category="c"
-              :has-card="hasCard"
-            ></r-category-bundle>
-            <template #prevArrow="arrowOption">
-              <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-                <a-icon type="left"/>
-              </div>
-            </template>
-            <template #nextArrow="arrowOption">
-              <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-                <a-icon type="right"/>
-              </div>
-            </template>
-          </VueSlickCarousel>
-        </a-col>
-      </a-row>
+  <a-row align="middle" class="r-slider" justify="center" type="flex">
+    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-store-slider ">
+      <VueSlickCarousel v-if="hasServes" v-bind="settings">
+        <r-category-head v-for="(serve, index) in serves"
+                      :key="index"
+                      :category="serve"
+        >
+        </r-category-head>
+        <template #prevArrow="arrowOption">
+          <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
+            <a-icon type="left"/>
+          </div>
+        </template>
+        <template #nextArrow="arrowOption">
+          <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
+            <a-icon type="right"/>
+          </div>
+        </template>
+      </VueSlickCarousel>
     </a-col>
   </a-row>
 </template>
@@ -36,64 +27,71 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-category-slider',
   props: {
-    size: { type: Number, required: false, default: 150 },
-    columns: { type: Number, required: false, default: 3 },
-    hasCard: { type: Boolean, required: false, default: true }
+    columns: { type: Number, required: false, default: 12 },
+    serve: { type: Object, required: false, default: null },
+    title: { type: String, required: false, default: null },
+    filters: {
+      type: Object,
+      required: false,
+      default: () => {
+        return {
+          is_active: true,
+          order_by: 'updated_at'
+        }
+      }
+    }
+  },
+  async fetch () {
+    await this.onServes()
   },
   data () {
     return {
-      hasData: false,
-      process: 'categories',
       settings: {
-        'slidesToShow': this.columns,
-        'slidesToScroll': 1,
-        'dots': false,
+        'infinite': true,
+        'slidesToShow': 1,
+        'slidesToScroll': 3,
+        'variableWidth': true,
         responsive: [
           {
             'breakpoint': 1024,
             'settings': {
-              'slidesToShow': this.columns,
-              'slidesToScroll': 1,
-              'dots': false
+              'slidesToShow': 1,
+              'slidesToScroll': 3,
+              'infinite': true,
+              'dots': false,
+              'gap': 24
             }
           },
           {
-            'breakpoint': 700,
-            'settings': {
-              'slidesToShow': this.columns > 2 ? 2 : this.columns,
-              'slidesToScroll': 1,
-              'dots': false
-            }
-          },
-          {
-            'breakpoint': 560,
+            'breakpoint': 600,
             'settings': {
               'slidesToShow': 1,
               'slidesToScroll': 1,
-              'dots': false
+              'initialSlide': 1,
+              'gap': 12
+            }
+          },
+          {
+            'breakpoint': 480,
+            'settings': {
+              'slidesToShow': 1,
+              'slidesToScroll': 1,
+              'gap': 12
             }
           }
         ]
       }
     }
   },
-  computed: {
-    ...mapGetters({
-      categories: 'base/categories',
-      category: 'shop/category',
-      store: 'shop/store',
-      hasProducts: 'base/hasProducts',
-      hasCategories: 'base/hasCategories',
-      processes: 'base/processes'
-    })
-  },
+  computed: mapGetters({
+    serves: 'content/serves',
+    hasServes: 'content/hasServes'
+  }),
   created () {
-    this.payload()
-  },
-  mounted () {
   },
   methods: {
-    async payload () {
+    async onServes () {
+      await this.$store.dispatch('content/onServes', this.filters)
     }
   }
 }

@@ -49,9 +49,10 @@
                   <a-card class="r-bg-primary-light">
                     <a-row :gutter="[24, 24]" type="flex" align="middle">
                       <a-col>
-                        <a-card class="r-bg-secondary-light r-p-0 r-border-radius-12">
+                        <a-card class="r-bg-secondary-light r-p-0 r-border-radius-square">
                           <div class="r-p-12">
                             <a-icon class="r-text-tertiary"
+                                    theme="filled"
                                     :style="{ fontSize: '45px' }"
                                     :type="feature.icon"
                             ></a-icon>
@@ -103,20 +104,20 @@ export default {
       features: [
         {
           title: '<span class="r-text-secondary">Earn</span> real money',
-          icon: 'gold',
-          summary: 'It’s completely free to apply. Many artists make around R10,000 / week.',
+          icon: 'golden',
+          summary: 'It’s completely free to apply. Many artists make around $1,000 / week.',
           content: 'Expand revenue by building experiences that meet your customer\'s expectations.'
         },
         {
           title: '<span class="r-text-secondary">Be</span> your own boss',
           icon: 'compass',
-          summary: 'Design your  own collection, set your own prices and work when you\'re inspired.',
+          summary: 'Design your  own collection, set your own prices and work when you do.',
           content: 'We’ll help you get more orders, payments, order tracking and customer support.'
         },
         {
           title: '<span class="r-text-secondary">Serve</span> happy collectors',
-          icon: 'history',
-          summary: 'Youkeep connects local NFTs makers with online collectors.',
+          icon: 'clock',
+          summary: 'Youkeep connects unique NFT collections with curios collectors.',
           content: 'We\'ll provide you with marketing support you need to grow your business.'
         }
       ]

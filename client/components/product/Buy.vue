@@ -6,6 +6,7 @@
                 class="r-btn-primary"
                 type="secondary"
       >
+        <a-icon type="shopping" theme="filled"></a-icon>
         Buy now
       </a-button>
     </a-col>
@@ -15,6 +16,7 @@
                 class="r-btn-bordered-secondary"
                 type="secondary"
       >
+        <a-icon type="thunderbolt" theme="filled"></a-icon>
         Make offer
       </a-button>
     </a-col>

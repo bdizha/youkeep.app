@@ -15,13 +15,14 @@
                 <a-col v-for="(step, index) in steps"
                        :key="index"
                 >
-                  <div :class="getTextClass(index)" class="r-text-step">
-                    <h4 :class="`r-step-${theme}`" class="r-text-uppercase"
-                        @click="setCurrentStep(index)"
-                    >
-                      {{ step.title }}
-                    </h4>
-                  </div>
+                  <a-button :class="getStepClass(index)"
+                            @click="setCurrentStep(index)"
+                            block
+                            size="small"
+                            type="blue"
+                  >
+                    {{ step.title }}
+                  </a-button>
                 </a-col>
               </a-row>
             </a-col>
@@ -65,8 +66,10 @@
           <r-saucer v-for="(step, index) in steps"
                     v-show="isCurrent(index)"
                     :theme="theme"
+                    :accent="accent"
                     :key="index"
-                    :image="step.image" :size="300"
+                    :step="step"
+                    :size="300"
           ></r-saucer>
         </a-col>
       </a-row>
@@ -80,6 +83,7 @@ export default {
   props: {
     size: { type: Number, required: false, default: 16 },
     theme: { type: String, required: false, default: 'secondary' },
+    accent: { type: String, required: false, default: 'secondary' },
     userType: { type: String, required: false, default: 'customer' },
     learnMore: { type: String, required: false, default: '/customer' },
     title: { type: String, required: false, default: '<span class="r-text-primary">Shop</span> simple with Youkeep' },
@@ -123,6 +127,12 @@ export default {
         return 'r-text-primary'
       }
       return 'r-text-secondary'
+    },
+    getStepClass (index) {
+      if (this.isCurrent(index)) {
+        return `r-btn-${this.theme}`
+      }
+      return 'r-btn-bordered-white'
     },
     getBgClass () {
       return `r-bg-${this.theme}-light`

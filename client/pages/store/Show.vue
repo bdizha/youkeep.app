@@ -1,11 +1,129 @@
 <template>
-  <r-category-show />
+  <a-row :gutter="[48, 48]" align="middle" justify="start" type="flex">
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <a-row class="r-store-meta" align="middle" justify="start" type="flex">
+        <a-col
+          :lg="{ span: 24 }"
+          :md="{ span: 24 }"
+          :sm="{ span: 24 }"
+          :xs="{ span: 24 }"
+        >
+          <a-card class="r-bg-dark r-p-0 r-border-none">
+            <a-row :gutter="[24, 24]" align="middle" justify="start" type="flex">
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <div :style="getPhotoCoverStyle()" class="r-pull">
+                  <div class="r-block" style="height: 300px;">&nbsp;</div>
+                </div>
+              </a-col>
+            </a-row>
+          </a-card>
+        </a-col>
+        <a-col class="r-store-meta"
+               :lg="{ span: 24 }"
+               :md="{ span: 24 }"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <a-card class="r-bg-dark r-p-0 r-border-none">
+            <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <a-row :gutter="[12,12]" align="middle" justify="center" type="flex">
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <div class="r-ph-24" style="min-height: 111px;">
+                      <a-row :gutter="[24, 24]" align="middle" justify="end" type="flex">
+                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                               :sm="{ span: 24 }"
+                               :xs="{ span: 24 }"
+                        >
+                          <div class="r-store-photo">
+                            <r-store-head :size="150" :has-title="false" :store="store"></r-store-head>
+                          </div>
+                        </a-col>
+                        <a-col>
+                          <a-row :gutter="[12,12]" justify="start" align="middle" type="flex">
+                            <a-col class="r-asset-actions">
+                              <a-button block
+                                        class="r-btn-dark"
+                                        size="large"
+                                        type="secondary"
+                              >
+                                <a-icon type="heart" theme="filled"></a-icon>
+                                <span class="r-text-action">
+                        {{ 24 }}
+                        </span>
+                              </a-button>
+                            </a-col>
+                            <a-col class="r-asset-actions">
+                              <a-button block
+                                        class="r-btn-dark"
+                                        size="large"
+                                        type="secondary"
+                              >
+                                <a-icon type="star" theme="filled"></a-icon>
+                                <span class="r-text-action">
+                        {{ 4.8 }}
+                        </span>
+                              </a-button>
+                            </a-col>
+                            <a-col class="r-asset-actions">
+                              <a-button block
+                                        class="r-btn-dark"
+                                        size="large"
+                                        type="secondary"
+                              >
+                                <a-icon type="share-alt"></a-icon>
+                                <span class="r-text-action">
+                          Share
+                        </span>
+                              </a-button>
+                            </a-col>
+                          </a-row>
+                        </a-col>
+                      </a-row>
+                    </div>
+                  </a-col>
+                  <a-col>
+                    <p class="r-text-medium">
+                      {{ store.name }}
+                    </p>
+                  </a-col>
+                  <a-col>
+                    <p class="r-text-medium">
+                      {{ store.created_at }}
+                    </p>
+                  </a-col>
+                </a-row>
+              </a-col>
+              <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                     :sm="{ span: 24 }"
+                     :xs="{ span: 24 }"
+              >
+                <r-store-tabs></r-store-tabs>
+              </a-col>
+            </a-row>
+          </a-card>
+        </a-col>
+      </a-row>
+    </a-col>
+  </a-row>
 </template>
 <script>
 import { mapGetters } from 'vuex'
 
 export default {
-  layout: 'store',
+  layout: 'default',
   components: {},
   props: {},
   data () {
@@ -30,17 +148,8 @@ export default {
     }
   },
   created () {
-    this.payload()
   },
   computed: {
-    filters () {
-      return {
-        limit: process.env.APP_LIMIT,
-        store_id: this.hasStore ? this.store.id : null,
-        sort: 0,
-        page: 1
-      }
-    },
     ...mapGetters({
       store: 'base/store',
       hasStore: 'base/hasStore',
@@ -49,8 +158,8 @@ export default {
     })
   },
   methods: {
-    async payload () {
-      await this.$store.dispatch('base/onIsStore', true)
+    getPhotoCoverStyle () {
+      return `background-image: url(/patterns/pattern-06.svg);`
     }
   }
 }

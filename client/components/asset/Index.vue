@@ -25,7 +25,19 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-stores',
   components: {},
-  props: {},
+  props: {
+    filters: {
+      type: Object,
+      required: false,
+      default: () => {
+        return {
+          metric_id: null,
+          is_active: true,
+          order_by: 'updated_at'
+        }
+      }
+    }
+  },
   data () {
     return {
       params: null
@@ -46,7 +58,7 @@ export default {
     async payload () {
     },
     async fetchStores () {
-      await this.$store.dispatch('content/onStores', this.params)
+      await this.$store.dispatch('content/onStores', this.filters)
     },
     onFilter (option) {
       this.params = this.search.params

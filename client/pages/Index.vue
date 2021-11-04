@@ -15,7 +15,7 @@
                          :xs="{ span: 24 }"
                   >
                     <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                      <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }"
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
@@ -89,42 +89,7 @@
               <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                      :xs="{ span: 24}"
               >
-                <div class="r-slider">
-                  <VueSlickCarousel v-bind="settings">
-                    <a-card v-for="(image, index) in images"
-                            :key="index"
-                            :class="getCardClass(image)" class="r-p-0 r-seller-item" :hoverable="true"
-                    >
-                      <a-row align="middle" justify="start" type="flex">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <r-avatar :data-src="image.src" :size="300"
-                                    class="r-avatar-block"
-                          ></r-avatar>
-                        </a-col>
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <r-seller-item :item="{ title: 'Gem' + (parseInt(index) + 1), content: 'softspace' }"
-                          ></r-seller-item>
-                        </a-col>
-                      </a-row>
-                    </a-card>
-                    <template #prevArrow="arrowOption">
-                      <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-                        <a-icon type="left"/>
-                      </div>
-                    </template>
-                    <template #nextArrow="arrowOption">
-                      <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-                        <a-icon type="right"/>
-                      </div>
-                    </template>
-                  </VueSlickCarousel>
-                </div>
+                <r-slider :images="images"></r-slider>
               </a-col>
             </a-row>
           </a-col>
@@ -141,21 +106,34 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
+      <a-row align="middle" justify="center" type="flex">
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <r-product-metric :is-drop="true" :filters="{}"></r-product-metric>
+        </a-col>
+        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+          <r-product-metric :filters="{}" :has-categories="true" title="To collections in "></r-product-metric>
+        </a-col>
+      </a-row>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
       <r-customer-steps :size="16"></r-customer-steps>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-customer-benefits></r-customer-benefits>
-    </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <r-testimonials></r-testimonials>
+      <r-product-benefits></r-product-benefits>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
       <r-customer-welcome></r-customer-welcome>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-testimonials></r-testimonials>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
@@ -347,7 +325,7 @@
                                                :sm="{ span: 24 }"
                                                :xs="{ span: 24 }"
                                         >
-                                          <p class="r-text-normal r-text-dark">
+                                          <p class="r-text-normal">
                                             Build visibility with leading retailers and NFTs outlets by highlighting key
                                             brand
                                             information that shoppers look for.
@@ -374,7 +352,7 @@
                                                :sm="{ span: 24 }"
                                                :xs="{ span: 24 }"
                                         >
-                                          <p class="r-text-normal r-text-dark">
+                                          <p class="r-text-normal">
                                             Customize product pages to show shoppers essential product and company
                                             details
                                             like MSRP, price margins, packaging dimensions, and more.
@@ -401,7 +379,7 @@
                                                :sm="{ span: 24 }"
                                                :xs="{ span: 24 }"
                                         >
-                                          <p class="r-text-normal r-text-dark">
+                                          <p class="r-text-normal">
                                             Share your farm profile with shoppers on and off of AddTract and track
                                             engagement
                                           </p>
@@ -552,36 +530,18 @@ export default {
   data () {
     return {
       images: [
-        {
-          shape: 'circle',
-          theme: 'primary',
-          src: '/patterns/pattern-17.svg'
-        },
-        {
-          shape: 'square',
-          theme: 'secondary',
-          src: '/patterns/pattern-16-secondary.svg'
-        },
-        {
-          shape: 'square',
-          theme: 'tertiary',
-          src: '/patterns/pattern-07.svg'
-        },
-        {
-          shape: 'circle',
-          theme: 'primary',
-          src: '/patterns/pattern-28.svg'
-        },
-        {
-          shape: 'circle',
-          theme: 'secondary',
-          src: '/patterns/pattern-16.svg'
-        },
-        {
-          shape: 'square',
-          theme: 'tertiary',
-          src: '/patterns/pattern-15.svg'
-        }
+        '/assets/asset-06.svg',
+        '/assets/asset-07.svg',
+        '/assets/asset-08.svg',
+        '/assets/asset-09.svg',
+        '/assets/asset-10.svg',
+        '/assets/asset-11.svg',
+        '/assets/asset-12.svg',
+        '/assets/asset-13.svg',
+        '/assets/asset-14.svg',
+        '/assets/asset-15.svg',
+        '/assets/asset-16.svg',
+        '/assets/asset-17.svg'
       ],
       step: 1,
       settings: {

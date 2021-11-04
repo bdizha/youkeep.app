@@ -5,7 +5,7 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-secondary r-pull-h-24 r-border-none">
+          <a-card class="r-bg-secondary-light r-pull-h-24 r-border-none">
             <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
               <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
@@ -119,7 +119,7 @@
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                   >
-                    <p class="r-text-normal r-text-dark">
+                    <p class="r-text-normal">
                       We hand-pick quality properties and divide them into 10,000 Bricks
                     </p>
                   </a-col>
@@ -143,7 +143,7 @@
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                   >
-                    <p class="r-text-normal r-text-dark">
+                    <p class="r-text-normal">
                       Choose the Bricks you want to buy or let us choose for you with Auto Invest
                     </p>
                   </a-col>
@@ -167,7 +167,7 @@
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                   >
-                    <p class="r-text-normal r-text-dark">
+                    <p class="r-text-normal">
                       Invest and monitor your portfolio over time either manually or automatically.
                     </p>
                   </a-col>
@@ -191,7 +191,7 @@
                   </a-col>
                   <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}"
                   >
-                    <p class="r-text-normal r-text-dark">
+                    <p class="r-text-normal">
                       Earn returns in line with property price changes when you sell your Bricks.
                     </p>
                   </a-col>

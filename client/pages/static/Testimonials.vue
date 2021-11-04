@@ -1,7 +1,7 @@
 <template>
   <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-relative"
-           style="background: #fbf0c8;"
+           style="background: rgba(255, 255, 255, 0.06)"
     >
       <div class="r-mv-48" style="padding-bottom: 240px">
         <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">

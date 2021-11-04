@@ -9,10 +9,10 @@
   <style type="text/css">
    <![CDATA[
     .fil0 {fill:none}
-    .fil4 {fill:#13ECAB}
-    .fil3 {fill:#8F50FF}
-    .fil1 {fill:#8F50FF}
-    .fil2 {fill:#8F50FF}
+    .fil4 {fill:#C834F7}
+    .fil3 {fill:#C834F7}
+    .fil1 {fill:#C834F7}
+    .fil2 {fill:#C834F7}
    ]]>
   </style>
  </defs>
@@ -20,24 +20,24 @@
 <linearGradient id="fil0">
 <stop stop-color="#4C57FF"/>
     <stop stop-color="#4C57FF"/>
-    <stop offset="0.384725" stop-color="#13ECAB"/>
-    <stop offset="0.848958" stop-color="#13ECAB"/>
+    <stop offset="0.384725" stop-color="#C834F7"/>
+    <stop offset="0.848958" stop-color="#C834F7"/>
 </linearGradient>
         <linearGradient id="fil1">
-  <stop stop-color="#13ECAB"/>
-            <stop offset="0.384725" stop-color="#13ECAB"/>
+  <stop stop-color="#C834F7"/>
+            <stop offset="0.384725" stop-color="#C834F7"/>
             <stop offset="0.848958" stop-color="#4C57FF"/>
 </linearGradient>
         <linearGradient id="fil2">
 <stop stop-color="#4C57FF"/>
             <stop stop-color="#4C57FF"/>
-            <stop offset="0.384725" stop-color="#13ECAB"/>
-            <stop offset="0.848958" stop-color="#13ECAB"/>
+            <stop offset="0.384725" stop-color="#C834F7"/>
+            <stop offset="0.848958" stop-color="#C834F7"/>
 </linearGradient>
         <linearGradient id="fil3">
 <stop stop-color="#4C57FF"/>
-            <stop stop-color="#13ECAB"/>
-            <stop offset="0.384725" stop-color="#13ECAB"/>
+            <stop stop-color="#C834F7"/>
+            <stop offset="0.384725" stop-color="#C834F7"/>
             <stop offset="0.848958" stop-color="#4C57FF"/>
 </linearGradient>
 </defs>

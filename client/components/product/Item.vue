@@ -1,43 +1,69 @@
 <template>
-  <nuxt-link :to="product.route">
-    <a-card class="r-bg-dark r-p-0 r-seller-item" :hoverable="true">
-      <a-row align="middle" justify="start" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <div :style="getPhotoCoverStyle()" class="r-bg-cover r-bg-primary-light">
+  <a-card class="r-p-0 r-text-left" :class="getBgClass()">
+    <a-row align="middle" justify="start" type="flex">
+      <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+             :sm="{ span: 24 }"
+             :xs="{ span: 24 }"
+      >
+        <nuxt-link :to="product.route">
+          <a-card :style="getPhotoCoverStyle()" class="r-bg-cover r-bg-primary-light">
             <r-avatar data-src="/patters/pattern_dark.svg" :size="300"
                       class="r-avatar-block"
             ></r-avatar>
-          </div>
-        </a-col>
-        <a-col :lg="{ span: 24 }" :md="{ span: 24}"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <r-product-footer :product="product"></r-product-footer>
-        </a-col>
-      </a-row>
-    </a-card>
-  </nuxt-link>
+          </a-card>
+        </nuxt-link>
+      </a-col>
+      <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+             :sm="{ span: 24 }"
+             :xs="{ span: 24 }"
+      >
+        <div class="r-p-24">
+          <r-product-foot :product="product" :is-drop="isDrop"></r-product-foot>
+        </div>
+      </a-col>
+    </a-row>
+  </a-card>
 </template>
 <script>
+
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-product-item',
   props: {
+    isDrop: { type: Boolean, required: false, default: false },
     isVertical: { type: Boolean, required: false, default: true },
     product: { type: Object, required: false }
   },
   data () {
-    return {}
+    return {
+      theme: 'dark'
+    }
+  },
+  computed: {
+    ...mapGetters({})
   },
   created () {
+    this.onTheme()
   },
   methods: {
     getPhotoCoverStyle () {
       return `background-image: url(${this.product.photo_url});`
+    },
+    getBgClass () {
+      let theme = 'dark'
+      if (this.isDrop) {
+        theme = this.theme + '-light'
+      }
+      return `r-bg-${theme}`
+    },
+    onTheme () {
+      if (this.isDrop) {
+        const $this = this
+        this.$store.dispatch('content/onTheme').then((theme) => {
+          $this.theme = theme
+        })
+      }
     }
   }
 }

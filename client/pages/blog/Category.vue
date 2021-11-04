@@ -4,7 +4,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-card class="r-bg-primary r-border-none">
+      <a-card class="r-bg-primary-light r-border-none">
         <div class="r-mv-96">
           <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 16 }" :md="{ span: 18 }"

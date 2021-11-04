@@ -101,8 +101,8 @@
     <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-contact-us :has-more="true" title="Ready to cook with Youkeep?"
-                    heading="Increase your average order value and drive conversions. Getting started is easy."
+      <r-contact-us :has-more="true" title="Ready to collect with Youkeep?"
+                    heading="Increase your average asset value and appreciate your transactional velocity. Getting started is easy."
       ></r-contact-us>
     </a-col>
   </a-row>
@@ -116,7 +116,7 @@ export default {
   data () {
     return {
       images: [
-        '/assets/asset-09.svg'
+        '/assets/asset-17.svg'
       ]
     }
   },

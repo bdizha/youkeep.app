@@ -11,7 +11,7 @@
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
               <a-row :gutter="[12,12]" align="middle" type="flex">
                 <a-col flex="48px">
-                  <div class="r-bg-secondary r-p-12 r-border-circle">
+                  <div class="r-bg-secondary-light r-p-12 r-border-circle">
                     <nuxt-img src="/images/artist.svg" width="45px"></nuxt-img>
                   </div>
                 </a-col>

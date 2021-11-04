@@ -6,11 +6,11 @@ export const state = () => ({
     {
       theme: 'primary',
       accent: 'tertiary',
-      title: '<span class="r-text-tertiary">Collect</span> with Youkeep',
+      title: '<span class="r-text-primary">Collect</span> with Youkeep',
       slug: 'collect-with-youkeep',
-      heading: '<span class="r-text-tertiary">Find</span> on-demand original NFTs.',
+      heading: '<span class="r-text-primary">Find</span> on-demand original NFTs.',
       summary: 'Take your taste to the next level only when you eat with youkeep with the participating artists.',
-      content: 'You\'ll enjoy the Youkeep checkout experience. Track your orders in real-time, upcoming liquidity and cash earned in one place.',
+      content: 'You\'ll enjoy the Youkeep digital asset experience. Track your orders in real-time, upcoming liquidity and cash earned in one place.',
       icon: 'coffee',
       images: [
         '/assets/asset-03.svg'
@@ -60,11 +60,11 @@ export const state = () => ({
     {
       theme: 'secondary',
       accent: 'primary',
-      title: '<span class="r-text-tertiary">Create</span> with Youkeep',
-      slug: 'cook-with-youkeep',
-      heading: '<span class="r-text-tertiary">Serve</span> great NFTs in your network',
+      title: '<span class="r-text-primary">Create</span> with Youkeep',
+      slug: 'create-with-youkeep',
+      heading: '<span class="r-text-primary">Serve</span> great NFTs in your network',
       summary: 'Design your  own collection, set your own prices and work when you want. We’ll help you with payments, logistics and customer support.',
-      content: 'Youkeep lets you make meaningful income by doing what they love! It’s completely free to apply. Many artists make around R10,000 / week.',
+      content: 'Youkeep lets you make meaningful income by doing what they love! It’s completely free to apply. Many artists make around $1,000 / week.',
       icon: 'fire',
       images: [
         '/assets/asset-04.svg'
@@ -79,7 +79,7 @@ export const state = () => ({
         },
         {
           title: '02',
-          heading: '<span class="r-text-tertiary">Prepare</span> to cook with Youkeep',
+          heading: '<span class="r-text-tertiary">Prepare</span> to collect with Youkeep',
           summary: 'Start accepting incoming orders and enable every person to have access to a wholesome, original collectibles at an affordable price.',
           content: 'Confirm orders on your tablet or phone and deliver happiness to your collectors with original collectibles.',
           image: '/assets/asset-06.svg'
@@ -117,11 +117,11 @@ export const state = () => ({
       row: 1
     },
     {
-      theme: 'tertiary',
-      accent: 'secondary',
-      title: '<span class="r-text-tertiary">Sell</span> with Youkeep',
-      slug: 'sell-with-youkeep',
-      heading: '<span class="r-text-tertiary">Sell</span> more and grow revenue.',
+      theme: 'secondary',
+      accent: 'tertiary',
+      title: '<span class="r-text-primary">Buy/sell</span> with Youkeep',
+      slug: 'trade-with-youkeep',
+      heading: '<span class="r-text-primary">Buy/sell</span> more and grow revenue.',
       summary: 'Shop at brands you love and earn cash you can withdraw. That\'s real money, not another loyalty program you\'ll never use.',
       content: 'Start shopping with Youkeep at partnering cashback stores, we\'ll automatically add cashback into your account. You can earn cash whether you pay with Youkeep or not.',
       icon: 'shop',
@@ -292,7 +292,9 @@ export const state = () => ({
   serves: [],
   hasServes: false,
   stores: [],
-  hasStores: false
+  hasStores: false,
+  theme: 'primary',
+  themes: ['primary', 'secondary', 'tertiary']
 })
 
 // getters
@@ -300,6 +302,7 @@ export const getters = {
   products: state => state.products,
   services: state => state.services,
   product: state => state.product,
+  theme: state => state.theme,
   testimonials: state => state.testimonials,
   hasTestimonials: state => state.testimonials.length > 0,
   plans: state => state.plans,
@@ -309,7 +312,8 @@ export const getters = {
   serves: state => state.serves,
   stores: state => state.stores,
   hasServes: state => state.hasServes,
-  hasStores: state => state.hasStores
+  hasStores: state => state.hasStores,
+  themes: state => state.themes
 }
 
 // mutations
@@ -333,6 +337,9 @@ const mutations = {
   setStores (state, stores) {
     state.stores = stores
     state.hasStores = stores.data !== undefined && stores.data.length > 0
+  },
+  setTheme (state, theme) {
+    state.theme = theme
   }
 }
 
@@ -351,6 +358,17 @@ const actions = {
     } catch (e) {
       console.error('onStores errors')
       console.log(e)
+    }
+  },
+  onTheme ({ commit, state }) {
+    try {
+      const random = Math.floor(Math.random() * Math.floor(3))
+      const theme = state.themes[random]
+      return theme
+    } catch (e) {
+      console.error('onTheme errors')
+      console.log(e)
+      return null
     }
   },
   async onServes ({ dispatch, commit, state }, payload) {

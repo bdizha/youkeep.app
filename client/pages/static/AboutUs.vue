@@ -18,24 +18,12 @@
                         Our mission
                       </h4>
                     </a-col>
-                    <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }"
-                           :sm="{ span: 24 }"
-                           :xs="{ span: 24 }"
-                    >
-                      <div style="width: 176px; height: 176px;display: block; background: #FFFFFF; position:relative; overflow: hidden; border-top-right-radius: 50%;">
-                        <div class="r-diamond"></div>
-                        <div class="r-diamond" style="left: 96px;"></div>
-                        <div class="r-diamond" style="top: 96px;"></div>
-                        <div class="diagonal-01"></div>
-                        <div class="diagonal-02"></div>
-                      </div>
-                    </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
                       <h1 class="r-heading">
-                       To <span class="r-text-primary">deliver</span> <span class="r-text-secondary">possibilities</span> to the world
+                       To <span class="r-text-primary">further</span> human potential
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -43,16 +31,16 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium">
-                        Our goal is to empower local businesses and in turn, generate new ways for people to earn, work and live.
-                        We are 100% committed to providing Shoppers with a better checkout experience.
-                      </p>
+                        Our aim is to provide the largest NFT trading platform in the world with the best minting, buying and exchanging experience, by leveraging the fastest and cheapest solutions powered by Solana's fastest blockchain infrastructure and community.
+                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-normal">
-                        We started by facilitating door-to-door delivery, but we see this as just the beginning of connecting people with possibility - easier evenings, happier days, bigger savings accounts, wider nets and stronger communities.
+                        Our NFT Marketplace brings together artists, creators, and crypto enthusiasts on a single platform to create and trade top NFTs.
+                        A non-fungible token (NFT) is a cryptographic token that represents a unique asset. They function as verifiable proofs of authenticity and ownership within a blockchain network. NFTs are not interchangeable with each other and introduce scarcity to the digital world.
                       </p>
                     </a-col>
                   </a-row>
@@ -60,7 +48,7 @@
                 <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >
-                  <r-avatar data-src="/assets/asset-11.svg" :size="300"
+                  <r-avatar data-src="/assets/asset-01.svg" :size="300"
                             class="r-avatar-block"
                   ></r-avatar>
                 </a-col>
@@ -85,22 +73,22 @@
                    :xs="{ span: 24 }"
             >
               <h2 class="r-heading">
-                To <span class="r-text-primary">tackle</span> challenges of hunger and starvation
+                To <span class="r-text-secondary">enable</span> financial freedom
               </h2>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <p class="r-text-medium">
-                What started as a way to help growing artists to conveniently sell their best NFTs has grown into a leading online
-                marketplace that connects millions of consumers with rare assets and marketplaces of all sizes.
+              <p class="r-text-medium r-text-white">
+                What started as a way to help growing artists to conveniently sell their best NFTs has grown into a leading and trustable
+                marketplace that connects millions of collectors with rare assets and collections of all sizes around the world.
               </p>
             </a-col>
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <p class="r-text-normal">
-                We are doing this by taking a revolutionary approach, including addressing the systemic causes of hunger and leveraging appropriate technology, while simultaneously tackling the immediate NFTs security crisis through rescuing nutritious NFTs and delivering it where it’s needed most.
+              <p class="r-text-normal r-text-white">
+                We are doing this by taking a revolutionary approach, that understands the impact creators bring to the growing NFT ecosystem and plan to maximize value for creators of all stripes. That’s why our creator-first platform that offers some of the lowest transaction fees in the industry.
               </p>
             </a-col>
           </a-row>
@@ -116,11 +104,12 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-card class="r-bg-primary-light">
+              <a-card class="r-bg-secondary-light r-rotatable">
                 <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
                   <a-col>
-                    <div class="r-bg-primary r-p-24 r-border-radius-12">
-                      <a-icon class="r-text-secondary"
+                    <div class="r-bg-dark r-p-12 r-border-radius-square" :class="value.class">
+                      <a-icon class="r-text-primary"
+                              theme="filled"
                               :style="{ fontSize: '45px' }"
                               :type="value.icon"
                       ></a-icon>
@@ -136,12 +125,12 @@
                          :sm="{ span: 24 }"
                          :xs="{ span: 24 }"
                   >
-                    <p class="r-text-normal r-text-dark">
+                    <h4 class="r-text-normal">
                       {{ value.content }}
-                      <nuxt-link class="r-text-primary" :to="value.route">
+                      <nuxt-link class="r-text-tertiary" :to="value.route">
                         Learn more
-                        <a-icon class="r-text-primary" type="right"></a-icon></nuxt-link>
-                    </p>
+                      </nuxt-link>
+                    </h4>
                   </a-col>
                 </a-row>
               </a-card>
@@ -255,22 +244,25 @@ export default {
       },
       values: [
         {
+          class: 'r-radius-square r-rotatable',
           route: '/customer',
           icon: 'gift',
-          title: 'For <span class="r-text-primary">collectors</span>',
-          content: 'With your favorite marketplaces at your fingertips, Youkeep makes you unleash your dreams and connects you with possibilities - more time and energy for yourself and your direct or indirect beneficiaries.'
+          title: 'For <span class="r-text-tertiary">collectors</span>',
+          content: 'With your favorite marketplaces at your fingertips, Youkeep makes you unleash your dreams and possibilities - more time and energy for yourself and your beneficiaries.'
         },
         {
+          class: 'r-radius-circle r-rotatable',
           route: '/artist',
           icon: 'fire',
-          title: 'For <span class="r-text-primary">artists</span>',
-          content: 'Delivering with Youkeep, you get flexibility and financial stability that you deserve. Youkeep for a living or for a goal, all on your controllable schedule and on your own terms.'
+          title: 'For <span class="r-text-tertiary">artists</span>',
+          content: 'Make NFT collections that afford you flexibility and financial stability that you deserve. Youkeep for a living or for a goal, all on your controllable schedule and on your own terms.'
         },
         {
+          class: 'r-radius-square r-rotatable',
           route: '/seller',
           icon: 'hourglass',
-          title: 'For <span class="r-text-primary">marketplaces</span>',
-          content: 'Youkeep’s innovative seller-focused solutions enhance your success by transforming your business. Open your doors to an entire city and see your reach and revenue grow.'
+          title: 'For <span class="r-text-tertiary">sellers</span>',
+          content: 'Youkeep’s innovative digital economy solutions enhance your chances of success by leveraging our creator-first platform that offers some of the lowest fees in the industry.'
         }
       ],
       hasData: false

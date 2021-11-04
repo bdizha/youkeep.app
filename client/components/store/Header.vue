@@ -10,7 +10,7 @@
           </a-col>
           <a-col flex="299px">
             <div class="r-nav-item">
-              <div style="padding: 3px;" class="r-bg-primary-light r-border-radius-12">
+              <div style="padding: 3px;" class="r-bg-primary-light r-border-radius-square">
                 <a-row style="width: 100%" align="middle" justify="center" type="flex">
                   <a-col v-for="(deliveryType, index) in deliveryTypes"
                          :key="index"

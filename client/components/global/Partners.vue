@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-primary r-pull-h-24 r-border-none">
+  <a-card class="r-bg-primary-light r-pull-h-24 r-border-none">
     <div class="r-mv-48">
       <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -86,7 +86,7 @@ export default {
         {
           logo: '/partners/paise/logo.svg',
           title: 'Paise',
-          content: 'On-demand checkout experience '
+          content: 'On-demand digital asset experience '
         },
         {
           logo: '/partners/opslect/logo.svg',

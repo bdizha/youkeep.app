@@ -1,18 +1,22 @@
 <template>
   <VueSlickCarousel v-bind="settings">
-    <div v-for="(image, index) in images"
-         :key="index">
+    <a-card class="r-bg-primary-light" v-for="(image, index) in images"
+            :key="index"
+    >
       <r-avatar :data-src="image" :size="300"
                 class="r-avatar-block"
       ></r-avatar>
-    </div>
+    </a-card>
   </VueSlickCarousel>
 </template>
 <script>
 export default {
   name: 'r-slider',
   props: {
-    images: { type: Array, required: false, default: () => {} },
+    images: {
+      type: Array, required: false, default: () => {
+      }
+    },
     dots: { type: Boolean, required: false, default: () => false }
   },
   data () {

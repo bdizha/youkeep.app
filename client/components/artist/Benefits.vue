@@ -45,7 +45,7 @@
                   <a-card class="r-bg-tertiary-light">
                     <a-row :gutter="[24, 24]" type="flex" align="middle">
                       <a-col>
-                        <div class="r-bg-primary r-p-12 r-border-radius-12">
+                        <div class="r-bg-primary-light r-p-12 r-border-radius-square">
                           <a-icon class="r-text-secondary"
                                   :style="{ fontSize: '45px' }"
                                   :type="benefit.icon"

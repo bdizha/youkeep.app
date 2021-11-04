@@ -47,7 +47,7 @@
                               :header="store.name"
                               class="r-collapse-panel"
             >
-              <r-store-face :is-plain="true"
+              <r-store-face :has-title="false"
                             :store="store"
               ></r-store-face>
             </a-collapse-panel>
@@ -83,7 +83,7 @@
             </a-collapse-panel>
             <a-collapse-panel v-if="!hasStore" key="sellers"
                               class="r-collapse-panel"
-                              header="Popular sellers"
+                              header="Popular artists"
             >
               <r-store-list></r-store-list>
             </a-collapse-panel>

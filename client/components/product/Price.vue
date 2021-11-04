@@ -9,7 +9,8 @@
                   :src="product.currency_url"
                   width="18px"
         ></nuxt-img>
-        {{ product.currency }} {{ product.price }}
+        <span>{{ product.price }}</span>
+        <span>{{ product.currency }}</span>
       </p>
     </a-col>
   </a-row>

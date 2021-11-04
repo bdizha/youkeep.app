@@ -23,7 +23,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h2 class="r-heading">
-                    <span class="r-text-primary">Delight</span> your collectors with Youkeep
+                    <span class="r-text-tertiary">Delight</span> your collectors with Youkeep
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"
@@ -59,10 +59,10 @@
                 >
                   <a-card class="r-bg-secondary-light">
                     <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                      <a-col flex="69px">
-                        <div class="r-bg-secondary r-p-12 r-border-radius-12">
+                      <a-col flex="78px">
+                        <div class="r-bg-secondary-light r-p-12 r-border-radius-square">
                           <a-icon class="r-text-primary"
-                                  :style="{ fontSize: '45px' }"
+                                  :style="{ fontSize: '54px' }"
                                   :type="feature.icon"
                           ></a-icon>
                         </div>
@@ -109,18 +109,18 @@ export default {
       features: [
         {
           icon: 'line-chart',
-          heading: '<span class="r-text-primary">Market</span>  your work',
-          content: 'Built to delight your collectors while enabling your base line to thrive.'
+          heading: '<span class="r-text-tertiary">Create</span> rare assets',
+          content: 'Create to delight your collectors while enabling your base line to thrive.'
         },
         {
           icon: 'gift',
-          heading: '<span class="r-text-primary">Obsess</span> with collectors',
+          heading: '<span class="r-text-tertiary">Market</span> your work',
           content: 'It\'s never been easier to give your collectors flexible NFT options.'
         },
         {
           icon: 'dollar',
-          heading: '<span class="r-text-primary">Unleash</span> real value',
-          content: 'Enable more buying shoppers and increase recurring orders with Youkeep.'
+          heading: '<span class="r-text-tertiary">Unleash</span> real value',
+          content: 'Get discovered by collectors and increase sales volume with Youkeep.'
         }
       ]
     }

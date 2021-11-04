@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Address;
 use App\Banner;
 use App\Country;
+use App\MetricType;
 use App\Product;
 use App\ProductType;
 use App\ProductVariant;
@@ -58,7 +59,8 @@ class Controller extends BaseController
         $items = [],
         $item = null,
         $catalogMap = null,
-        $countries = [];
+        $countries = [],
+        $metricTypes = null;
 
 
     /**
@@ -370,6 +372,31 @@ class Controller extends BaseController
         $this->products = $products;
     }
 
+    /**
+     * @return void
+     */
+    protected function setMetrics()
+    {
+        $sort = request()->get('sort', 0);
+        $sortOptions = Product::$sortOptions;
+        $sort = $sortOptions[$sort];
+
+        $query = MetricType::orderBy($sort['column'], $sort['dir']);
+
+        if (!empty($this->metricType)) {
+            $query = MetricType::where('slug', $this->metricType);
+        }
+
+        $query->whereHas('metrics', function ($query) {
+            $query->whereIn('metrics.app_id', $this->appId);
+        });
+
+        if (!empty($query)) {
+            $this->metricTypes = $query->orderBy($sort['column'], $sort['dir'])
+                ->get();
+        }
+    }
+
     protected function _setBreadcrumbs()
     {
         $breadcrumbs = [];
@@ -529,11 +556,11 @@ class Controller extends BaseController
         return md5($value);
     }
 
-    protected function arrayToString($field) {
-        if(is_array($field)) {
+    protected function arrayToString($field)
+    {
+        if (is_array($field)) {
 
-        }
-        else {
+        } else {
 
         }
         return null;
