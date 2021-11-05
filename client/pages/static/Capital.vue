@@ -68,7 +68,7 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
                :sm="{ span: 24 }"
@@ -102,7 +102,7 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row class="r-text-center" :gutter="[48,48]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 15 }" :md="{ span: 16 }"
                :sm="{ span: 24 }"
@@ -137,10 +137,10 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-testimonials></r-testimonials>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-contact-us></r-contact-us>
     </a-col>
   </a-row>

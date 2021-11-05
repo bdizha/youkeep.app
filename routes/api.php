@@ -18,6 +18,7 @@ Route::get('/art', 'HomeController@art')->name('art');
 Route::get('/welcome', 'HomeController@home')->name('home');
 Route::get('/home/categories', 'HomeController@categories')->name('categories');
 Route::get('/home/feed', 'HomeController@feed')->name('feed');
+Route::get('/home/leaderboard', 'HomeController@leaderboard')->name('feed');
 Route::get('/home/json', 'HomeController@json')->name('json');
 Route::get('/home/stores', 'HomeController@stores')->name('stores');
 
@@ -130,6 +131,7 @@ Route::group(['middleware' => 'guest:api'], function () {
     Route::post('/account/store/store', 'StoreController@store')->name('account.store.store');
     Route::post('/account/store/delete', 'StoreController@delete')->name('account.store.delete');
     Route::get('/stores', 'StoreController@index')->name('stores');
+    Route::post('/rankings', 'RankingController@index')->name('rankings');
     Route::get('/store/{slug}', 'StoreController@show')->name('store.show');
     Route::post('/store/{slug}', 'StoreController@show')->name('store.show');
     Route::post('/stores/{slug}', 'CategoryController@stores')->name('stores.show');

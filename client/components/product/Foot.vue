@@ -17,7 +17,7 @@
             </a-col>
             <a-col class="r-asset-actions">
               <a-button block
-                        class="r-btn-dark"
+                        :class="getBtnClass()"
                         size="small"
                         type="secondary"
               >
@@ -131,18 +131,20 @@
             {{ product.summary }}
           </p>
         </a-col>
-        <a-col class="r-asset-actions">
+        <a-col v-if="isDrop" class="r-asset-actions">
           <a-button block
-                    class="r-btn-dark"
+                    :class="getBtnClass()"
                     size="large"
                     type="secondary"
           >
-           <h4 class="r-heading">
-             <a-icon style="font-size: 24px" type="eye" theme="filled"></a-icon>
-             <span class="r-text-action">
-                  Track
-            </span>
-           </h4>
+            <a-row :gutter="[6,6]" justify="start" align="middle" type="flex">
+              <a-col flex="24">
+                <a-icon style="font-size: 24px;" type="eye" theme="filled"></a-icon>
+              </a-col>
+              <a-col class="r-text-action" flex="1 1 0">
+                Track
+              </a-col>
+            </a-row>
           </a-button>
         </a-col>
       </a-row>
@@ -154,6 +156,7 @@ export default {
   name: 'r-product-foot',
   props: {
     isDrop: { type: Boolean, required: false, default: false },
+    theme: { type: String, required: false, default: 'tertiary' },
     product: {
       type: Object,
       required: true,
@@ -169,11 +172,28 @@ export default {
     }
   },
   data () {
-    return {}
+    return {
+      accents: {
+        primary: 'secondary',
+        secondary: 'tertiary',
+        tertiary: 'primary',
+        dark: 'dark'
+      }
+    }
   },
   created () {
   },
   computed: {},
-  methods: {}
+  methods: {
+    getBgClass () {
+      return `r-bg-${this.theme}-light`
+    },
+    getTextClass () {
+      return `r-text-${this.theme}`
+    },
+    getBtnClass () {
+      return `r-btn-${this.accents[this.theme]}`
+    }
+  }
 }
 </script>

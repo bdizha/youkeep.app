@@ -4,7 +4,7 @@
       <r-avatar :size="size"
                 :class="{'ant-avatar-sm': size < 45}"
                 :data-src="store.photo_url"
-                shape="square"
+                shape="circle"
                 src-placeholder="/assets/icon_default.png"
       />
     </a-col>

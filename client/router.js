@@ -23,6 +23,7 @@ const routes = [
     name: 'store.category.show.level',
     component: page('store/Category.vue')
   },
+  { path: '/ranking', name: 'store.show', meta: { isDark: true, isRaised: true}, component: page('ranking/Index.vue'), },
   { path: '/collection', name: 'store.show', meta: { isDark: true, isRaised: false}, component: page('store/Index.vue'), },
   { path: '/collection/:slug', name: 'store.show', meta: { isDark: true, isRaised: false}, component: page('store/Show.vue'), },
   { path: '/category/:slug', name: 'category.show', meta: { isDark: true, isRaised: false}, component: page('category/Article.vue') },

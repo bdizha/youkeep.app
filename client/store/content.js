@@ -294,7 +294,9 @@ export const state = () => ({
   stores: [],
   hasStores: false,
   theme: 'primary',
-  themes: ['primary', 'secondary', 'tertiary']
+  themes: ['primary', 'secondary', 'tertiary'],
+  rankings: [],
+  hasRankings: false
 })
 
 // getters
@@ -313,7 +315,9 @@ export const getters = {
   stores: state => state.stores,
   hasServes: state => state.hasServes,
   hasStores: state => state.hasStores,
-  themes: state => state.themes
+  themes: state => state.themes,
+  hasRankings: state => state.hasRankings,
+  rankings: state => state.rankings
 }
 
 // mutations
@@ -340,6 +344,10 @@ const mutations = {
   },
   setTheme (state, theme) {
     state.theme = theme
+  },
+  setRankings (state, rankings) {
+    state.rankings = rankings
+    state.haRankings = rankings.data !== undefined && rankings.data.length > 0
   }
 }
 
@@ -374,14 +382,29 @@ const actions = {
   async onServes ({ dispatch, commit, state }, payload) {
     try {
       dispatch('base/onProcess', { key: 'isFixed', value: true }, { root: true })
-      commit('setServes', [])
-
       await axios.post('/serves', payload).then(({ data }) => {
         commit('setServes', data.serves)
         dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
       })
     } catch (e) {
       console.error('onServes errors')
+      console.log(e)
+    }
+  },
+  async onRankings ({ dispatch, commit, state }, payload) {
+    try {
+      dispatch('base/onProcess', { key: 'isFixed', value: true }, { root: true })
+      await axios.post('/rankings', payload).then(({ data }) => {
+        const rankings = data.rankings
+        commit('setRankings', rankings)
+        dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
+
+        console.log('data found', rankings)
+
+        return Promise.resolve(rankings)
+      })
+    } catch (e) {
+      console.error('onRankings errors')
       console.log(e)
     }
   },

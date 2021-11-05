@@ -31,7 +31,7 @@ export default {
         },
         {
           title: '02',
-          heading: '<span class="r-text-primary">Pick</span> your favourite NFTs',
+          heading: '<span class="r-text-primary">Keep</span> your favourite NFTs',
           image: '/assets/asset-13.svg',
           summary: 'Reduce hassle and easily collect, keep, and sell digital assets in real-time, anytime, anywhere.',
           content: 'With Youkeep, users no longer need to pull out their credit card or enter long forms to complete online purchases.',
@@ -44,7 +44,7 @@ export default {
         },
         {
           title: '03',
-          heading: '<span class="r-text-primary">Enjoy</span> high asset yields',
+          heading: '<span class="r-text-primary">Enjoy</span> your asset yields',
           image: '/assets/asset-11.svg',
           summary: 'Make offers for the assets you like and leverage free financial advice tailored to you you can access anytime!',
           content: 'Download our free app and get more choices, exclusive liquidity and the freedom to trade NFTs anywhere however you like.',

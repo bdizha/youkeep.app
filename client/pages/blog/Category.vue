@@ -26,11 +26,11 @@
       </a-card>
     </a-col>
     <a-col v-if="blog.breadcrumbs.length > 0"
-           :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+           :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
     >
       <r-breadcrumbs prefix="/blog" :breadcrumbs="blog.breadcrumbs"></r-breadcrumbs>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-card class="rbg-white">
         <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
           <a-col v-if="blog.article_category.content"

@@ -110,10 +110,19 @@
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <r-product-metric :is-drop="true" :filters="{}"></r-product-metric>
         </a-col>
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <r-product-metric :filters="{}" :has-categories="true" title="To collections in "></r-product-metric>
-        </a-col>
       </a-row>
+    </a-col>
+    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <r-category-tabs></r-category-tabs>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <r-rankings></r-rankings>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
@@ -121,18 +130,13 @@
     >
       <r-customer-steps :size="16"></r-customer-steps>
     </a-col>
-    <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <r-product-benefits></r-product-benefits>
-    </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
       <r-customer-welcome></r-customer-welcome>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-testimonials></r-testimonials>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -511,7 +515,7 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-contact-us title="Take your artistic taste to the next level."></r-contact-us>
     </a-col>
   </a-row>

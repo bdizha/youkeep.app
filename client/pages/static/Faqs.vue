@@ -75,7 +75,7 @@
       </div>
       <r-wave></r-wave>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
            class="r-text-center"
     >
     </a-col>

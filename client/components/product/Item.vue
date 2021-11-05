@@ -6,8 +6,11 @@
              :xs="{ span: 24 }"
       >
         <nuxt-link :to="product.route">
-          <a-card :style="getPhotoCoverStyle()" class="r-bg-cover r-bg-primary-light">
-            <r-avatar data-src="/patters/pattern_dark.svg" :size="300"
+          <a-card :style="getPhotoCoverStyle()"
+                  class="r-bg-cover r-dark"
+          >
+            <r-avatar shape="circle"
+                      data-src="/patters/pattern_dark.svg" :size="300"
                       class="r-avatar-block"
             ></r-avatar>
           </a-card>
@@ -18,7 +21,7 @@
              :xs="{ span: 24 }"
       >
         <div class="r-p-24">
-          <r-product-foot :product="product" :is-drop="isDrop"></r-product-foot>
+          <r-product-foot :product="product" :is-drop="isDrop" :theme="theme"></r-product-foot>
         </div>
       </a-col>
     </a-row>

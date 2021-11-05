@@ -1,23 +1,11 @@
 <template>
   <a-row align="middle" class="r-slider" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-store-slider ">
-      <VueSlickCarousel v-if="hasServes" v-bind="settings">
-        <r-category-head v-for="(serve, index) in serves"
-                      :key="index"
-                      :category="serve"
-        >
-        </r-category-head>
-        <template #prevArrow="arrowOption">
-          <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
-            <a-icon type="left"/>
-          </div>
-        </template>
-        <template #nextArrow="arrowOption">
-          <div class="r-slick-arrow r-slick-arrow-next r-arrow-next">
-            <a-icon type="right"/>
-          </div>
-        </template>
-      </VueSlickCarousel>
+      <r-category-head v-for="(serve, index) in serves"
+                       :key="index"
+                       :category="serve"
+      >
+      </r-category-head>
     </a-col>
   </a-row>
 </template>

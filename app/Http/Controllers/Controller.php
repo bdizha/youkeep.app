@@ -9,6 +9,7 @@ use App\MetricType;
 use App\Product;
 use App\ProductType;
 use App\ProductVariant;
+use App\Ranking;
 use App\Review;
 use App\Serve;
 use App\Store;
@@ -60,7 +61,8 @@ class Controller extends BaseController
         $item = null,
         $catalogMap = null,
         $countries = [],
-        $metricTypes = null;
+        $metricTypes = null,
+        $sort = ['column' => 'created_at', 'dir' => 'DESC'];
 
 
     /**
@@ -427,6 +429,16 @@ class Controller extends BaseController
             ->where('photo', 'not like', '%.net%')
             ->where('id', '>', 762)
             ->orderBy('updated_at', 'DESC')
+            ->paginate($this->limit);
+    }
+
+    /**
+     * @return void
+     */
+    protected function _setRankings()
+    {
+        $this->rankings = Ranking::with(['store', 'currency'])
+            ->orderBy($this->sort['column'], $this->sort['dir'])
             ->paginate($this->limit);
     }
 

@@ -5,11 +5,11 @@
         Current price
       </p>
       <p class="r-item-text r-text-white">
-        <nuxt-img v-if="product.currency_url"
+        <nuxt-img v-if="!isDollar() && product.currency_url"
                   :src="product.currency_url"
                   width="18px"
         ></nuxt-img>
-        <span>{{ product.price }}</span>
+        <span>{{ (isDollar() ? '$' : '') +  product.price }}</span>
         <span>{{ product.currency }}</span>
       </p>
     </a-col>
@@ -34,6 +34,10 @@ export default {
   created () {
   },
   computed: {},
-  methods: {}
+  methods: {
+    isDollar () {
+      return this.product.currency_url === 'USD'
+    }
+  }
 }
 </script>

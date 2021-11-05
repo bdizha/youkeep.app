@@ -54,7 +54,7 @@
       </a-card>
     </a-col>
     <a-col v-if="blog.breadcrumbs.length > 0"
-           :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
+           :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }"
     >
       <r-breadcrumbs prefix="/blog" :breadcrumbs="blog.breadcrumbs"></r-breadcrumbs>
     </a-col>

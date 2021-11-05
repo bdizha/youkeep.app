@@ -6,13 +6,11 @@
     >
       <a-card class="r-bg-dark r-p-0" :hoverable="true">
        <div class="r-p-12">
-         <a-row :gutter="[12,12]" class="r-text-center" align="middle" justify="start" type="flex">
-           <a-col>
+         <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+           <a-col flex="36px">
              <img :style="{width: '36px', height: '36px'}" :src="category.photo_url"/>
            </a-col>
-           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                  :xs="{ span: 24 }"
-           >
+           <a-col flex="1 1 0">
              <p class="r-text-bold r-text-normal r-text-white">
                {{ category.name }}
              </p>

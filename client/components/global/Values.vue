@@ -2,7 +2,7 @@
   <a-card class="r-bg-dark r-pull-h-24 r-border-none">
     <div class="r-mv-48">
       <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-        <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+        <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
           <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
             <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
               <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
@@ -23,7 +23,11 @@
                     <a-col>
                       <a-card class="r-bg-dark r-p-0">
                         <div class="r-p-12">
-                          <h4 class="r-heading r-text-white">=</h4>
+                          <a-icon class="r-text-tertiary"
+                                  theme="filled"
+                                  :style="{ fontSize: '24px' }"
+                                  type="pause-circle"
+                          ></a-icon>
                         </div>
                       </a-card>
                     </a-col>
@@ -37,7 +41,11 @@
                     <a-col>
                       <a-card class="r-bg-dark r-p-0">
                         <div class="r-p-12">
-                          <h4 class="r-heading r-text-white">+</h4>
+                          <a-icon class="r-text-tertiary"
+                                  theme="filled"
+                                  :style="{ fontSize: '24px' }"
+                                  type="plus-circle"
+                          ></a-icon>
                         </div>
                       </a-card>
                     </a-col>
@@ -144,7 +152,7 @@ export default {
         {
           icon: 'eye',
           title: 'Difference',
-          content: 'We pursue the highest utility value for both our collectors and our artists who trade with us. We make value by enabling high yield on asset appreciation.'
+          content: 'We pursue the highest utility value for both our collectors and our artists and make value by enabling high yield on their asset appreciation.'
         },
         {
           icon: 'golden',

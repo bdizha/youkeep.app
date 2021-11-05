@@ -53,4 +53,14 @@ class HomeController extends Controller
     {
         return view('json');
     }
+
+    /**
+     * Show raw leaderboard
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function leaderboard(): string
+    {
+        return view('leaderboard');
+    }
 }

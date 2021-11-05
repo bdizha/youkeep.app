@@ -65,7 +65,7 @@
         </a-col>
       </a-row>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
         <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                :sm="{ span: 24 }"
@@ -208,7 +208,7 @@
     >
       <r-tabs active-key="auto"></r-tabs>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-contact-us></r-contact-us>
     </a-col>
   </a-row>
