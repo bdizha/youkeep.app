@@ -47,7 +47,7 @@
                                :sm="{ span: 24 }"
                                :xs="{ span: 24 }"
                         >
-                          <div class="r-store-photo">
+                          <div class="r-store-photo" :class="getBgClass()">
                             <r-store-head :size="150" :has-title="false" :store="store"></r-store-head>
                           </div>
                         </a-col>
@@ -106,7 +106,7 @@
                   </a-col>
                 </a-row>
               </a-col>
-              <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+              <a-col :lg="{ span: 18 }" :md="{ span: 21 }"
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
@@ -158,6 +158,9 @@ export default {
     })
   },
   methods: {
+    getBgClass () {
+      return `r-bg-primary-light`
+    },
     getPhotoCoverStyle () {
       return `background-image: url(/patterns/pattern-06.svg);`
     }

@@ -5,7 +5,7 @@
     >
       <a-card class="r-bg-dark r-pull-h-24 r-border-none">
         <a-row align="middle" justify="center" type="flex">
-          <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+          <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }"
                  :xs="{ span: 24 }"
           >
             <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
@@ -89,14 +89,16 @@
               <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                      :xs="{ span: 24}"
               >
-                <r-slider :images="images"></r-slider>
+                <div class="r-mv-48">
+                  <r-slider :images="images"></r-slider>
+                </div>
               </a-col>
             </a-row>
           </a-col>
         </a-row>
       </a-card>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
@@ -106,23 +108,19 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-row align="middle" justify="center" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-          <r-product-metric :is-drop="true" :filters="{}"></r-product-metric>
-        </a-col>
-      </a-row>
-    </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
-           :sm="{ span: 24 }"
-           :xs="{ span: 24 }"
-    >
-      <r-category-tabs></r-category-tabs>
+      <r-product-metric :is-drop="true" :filters="{}"></r-product-metric>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
       <r-rankings></r-rankings>
+    </a-col>
+    <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+           :sm="{ span: 24 }"
+           :xs="{ span: 24 }"
+    >
+      <r-category-tabs></r-category-tabs>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
@@ -143,7 +141,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-seller-featured></r-seller-featured>
+      <r-customer-benefits></r-customer-benefits>
     </a-col>
     <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row align="middle" justify="center" type="flex">
@@ -155,7 +153,7 @@
               <a-card class="r-bg-dark r-pull-h-24 r-border-none">
                 <div class="r-mv-48">
                   <a-row align="middle" justify="center" type="flex">
-                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+                    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
                       <a-row :gutter="[96,48]" align="middle" justify="center" type="flex">
@@ -282,7 +280,7 @@
               <a-card class="r-bg-dark r-pull-h-24 r-border-none">
                 <div class="r-mv-48">
                   <a-row :gutter="[48,24]" align="middle" justify="center" type="flex">
-                    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+                    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
                       <a-row :gutter="[96,48]" align="middle" justify="center" type="flex">
@@ -298,7 +296,7 @@
                         >
                           <div class="r-mv-48">
                             <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">
-                              <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                              <a-col :lg="{ span: 18 }" :md="{ span: 21 }"
                                      :sm="{ span: 24 }"
                                      :xs="{ span: 24 }"
                               >
@@ -445,7 +443,7 @@
                     </a-col>
                   </a-row>
                 </a-col>
-                <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                <a-col :lg="{ span: 18 }" :md="{ span: 21 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >

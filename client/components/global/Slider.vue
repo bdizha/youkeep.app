@@ -1,12 +1,10 @@
 <template>
   <VueSlickCarousel v-bind="settings">
-    <a-card class="r-bg-primary-light" v-for="(image, index) in images"
-            :key="index"
-    >
-      <r-avatar :data-src="image" :size="300"
-                class="r-avatar-block"
-      ></r-avatar>
-    </a-card>
+    <r-avatar v-for="(image, index) in images"
+              :key="index"
+              :data-src="image" :size="300"
+              class="r-avatar-block"
+    ></r-avatar>
   </VueSlickCarousel>
 </template>
 <script>

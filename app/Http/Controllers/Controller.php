@@ -7,10 +7,12 @@ use App\Banner;
 use App\Country;
 use App\MetricType;
 use App\Product;
+use App\ProductLink;
 use App\ProductType;
 use App\ProductVariant;
 use App\Ranking;
 use App\Review;
+use App\Saleable;
 use App\Serve;
 use App\Store;
 use App\StoreCategory;
@@ -20,13 +22,16 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    protected $without = [],
+    protected $response = [],
+        $without = [],
         $relations = [],
+        $cacheKey = [],
         $with = [],
         $orderBy = null,
         $banners = [],
@@ -59,10 +64,12 @@ class Controller extends BaseController
         $level = 1,
         $items = [],
         $item = null,
+        $method = null,
         $catalogMap = null,
         $countries = [],
         $metricTypes = null,
-        $sort = ['column' => 'created_at', 'dir' => 'DESC'];
+        $sort = ['column' => 'randomized_at', 'dir' => 'DESC'],
+        $hasBanners = false;
 
 
     /**
@@ -302,15 +309,9 @@ class Controller extends BaseController
      */
     protected function _setProducts()
     {
-        $sort = request()->get('sort', 0);
-        $sortOptions = Product::$sortOptions;
-        $sort = $sortOptions[$sort];
-
         if (!empty($this->productId)) {
             $query = Product::find($this->productId)->links()
                 ->where('type', $this->productType);
-        } else {
-            $query = Product::orderBy($sort['column'], $sort['dir']);
         }
 
         if (!empty($this->storeId)) {
@@ -350,7 +351,7 @@ class Controller extends BaseController
         }
 
         if (!empty($query)) {
-            $this->products = $query->orderBy($sort['column'], $sort['dir'])
+            $this->products = $query->orderBy($this->sort['column'], $this->sort['dir'])
                 ->paginate($this->limit);
 
             $this->_setProductsRoutes();
@@ -379,11 +380,7 @@ class Controller extends BaseController
      */
     protected function setMetrics()
     {
-        $sort = request()->get('sort', 0);
-        $sortOptions = Product::$sortOptions;
-        $sort = $sortOptions[$sort];
-
-        $query = MetricType::orderBy($sort['column'], $sort['dir']);
+        $query = MetricType::orderBy($this->sdrt['column'], $this->sort['dir']);
 
         if (!empty($this->metricType)) {
             $query = MetricType::where('slug', $this->metricType);
@@ -393,10 +390,7 @@ class Controller extends BaseController
             $query->whereIn('metrics.app_id', $this->appId);
         });
 
-        if (!empty($query)) {
-            $this->metricTypes = $query->orderBy($sort['column'], $sort['dir'])
-                ->get();
-        }
+        $this->metricTypes = $query->get();
     }
 
     protected function _setBreadcrumbs()
@@ -428,8 +422,54 @@ class Controller extends BaseController
             ->where('photo', 'like', '%.%')
             ->where('photo', 'not like', '%.net%')
             ->where('id', '>', 762)
-            ->orderBy('updated_at', 'DESC')
+            ->orderBy($this->sort['column'], $this->sort['dir'])
             ->paginate($this->limit);
+
+        $this->response['stores'] = $this->stores;
+    }
+
+    protected function _setProduct(): void
+    {
+        $this->product = Saleable::where('is_active', true)
+            ->where('slug', $this->slug)
+            ->first();
+
+        if (!empty($this->categoryId)) {
+            $this->category = StoreCategory::where('id', $this->categoryId)
+                ->first();
+
+            $this->store = $this->category->store;
+        }
+
+        $this->_setBreadcrumbs();
+        $this->_setProductCategories();
+
+        $this->response['store'] = $this->store;
+        $this->response['product'] = $this->product;
+        $this->response['category'] = [];
+        $this->response['categories'] = [];
+    }
+
+    protected function _setProductCategories(): void
+    {
+        $categories = [];
+
+        $productTypes = ProductLink::$types;
+        foreach ($productTypes as $productType => $name) {
+            $this->productType = $productType;
+            $this->productId = $this->product->id;
+            $this->_setProducts();
+
+            if (!empty($this->products)) {
+                $categories[] = [
+                    'type' => $productType,
+                    'name' => $name,
+                    'has_products' => false
+                ];
+            }
+        }
+
+        $this->product->categories = $categories;
     }
 
     /**
@@ -457,15 +497,10 @@ class Controller extends BaseController
      */
     protected function setReviews()
     {
-        $sort = request()->get('sort', 0);
-        $sortOptions = Review::$sortOptions;
-
-        $sort = $sortOptions[$sort];
-
         $this->reviews = Review::whereHas('product', function ($query) {
             $query->where('reviews.product_id', $this->productId);
         })
-            ->orderBy($sort['column'], $sort['dir'])
+            ->orderBy($this->sort['column'], $this->sort['dir'])
             ->paginate($this->limit);
     }
 
@@ -539,19 +574,37 @@ class Controller extends BaseController
 
     /**
      * @param Request $request
-     * @return string
      */
-    protected function _setParams(Request $request): string
+    protected function _setParams(Request $request): \Illuminate\Http\JsonResponse
     {
         $this->orderBy = $request->get('order_by', 'randomized_at');
+        $this->sort = $request->get('sort', $this->sort);
         $this->with = $request->get('with', []);
         $this->hasBanners = $request->get('has_banners', false);
         $this->categoryType = $request->get('type', 2);
         $this->categoryId = $request->get('category_id', null);
         $this->storeId = $request->get('store_id', null);
         $this->storeSlug = $request->get('store', null);
-        $key = $this->_setCacheKey($request);
-        return $key;
+        $this->appId = $request->get('app_id', env('APP_ID'));
+        $this->productType = $request->get('type', 1);
+        $this->limit = $request->get('limit', 12);
+        $this->categoryId = $request->get('category_id', null);
+        $this->storeId = $request->get('store_id', null);
+        $this->productId = $request->get('product_id', null);
+        $this->filters = $request->get('filters', []);
+
+        $this->cacheKey = $this->_setCacheKey($request);
+
+        if (Cache::has($this->cacheKey) && false) {
+            $this->response = Cache::get($this->cacheKey, []);
+        } else {
+            $this->{$this->method}();
+
+            $this->response = $this->products;
+            Cache::put($this->cacheKey, $this->response, now()->addMinutes(60 * 9)); // 9 hours
+        }
+
+        return response()->json($this->response, 200);
     }
 
     /**

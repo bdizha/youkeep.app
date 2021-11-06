@@ -2,7 +2,7 @@
   <a-card class="r-bg-dark r-pull-h-24 r-border-none">
     <div class="r-mv-48">
       <a-row class="r-text-center" align="middle" justify="center" type="flex">
-        <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+        <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
           <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
@@ -19,7 +19,7 @@
                     Partner with us
                   </h2>
                 </a-col>
-                <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                <a-col :lg="{ span: 18 }" :md="{ span: 21 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >

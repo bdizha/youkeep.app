@@ -36,7 +36,7 @@ export default {
   computed: {},
   methods: {
     isDollar () {
-      return this.product.currency_url === 'USD'
+      return this.product.currency === 'USD'
     }
   }
 }

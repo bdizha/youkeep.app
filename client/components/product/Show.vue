@@ -47,7 +47,7 @@
         </a-row>
       </a-col>
       <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-        <r-store-products></r-store-products>
+        <r-product-slider :columns="6" :filters="{}"></r-product-slider>
       </a-col>
     </a-row>
   </a-card>

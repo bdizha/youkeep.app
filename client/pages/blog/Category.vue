@@ -7,7 +7,7 @@
       <a-card class="r-bg-primary-light r-border-none">
         <div class="r-mv-96">
           <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-            <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+            <a-col :lg="{ span: 18 }" :md="{ span: 21 }"
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
@@ -50,7 +50,7 @@
       </a-card>
     </a-col>
     <a-col v-if="blog.article_categories.length > 0"
-           :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+           :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
       <a-row :gutter="[24,24]" align="top" justify="start" type="flex">

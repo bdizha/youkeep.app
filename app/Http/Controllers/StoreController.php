@@ -23,24 +23,8 @@ class StoreController extends Controller
      */
     public function index(Request $request)
     {
-        $response = [];
-        $this->appId = $request->get('app_id', env('APP_ID'));
-        $this->limit = $request->get('limit', 120);
-        $this->term = $request->get('term', null);
-        $this->categoryId = $request->get('category_id', null);
-
-        $key = $this->_setCacheKey($request);
-
-        if (Cache::has($key) && false) {
-            $response = Cache::get($key, []);
-        } else {
-            $this->_setStores();
-            $response['stores'] = $this->stores;
-
-            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
-        }
-
-        return response()->json($response, 200);
+        $this->method = '_setStores';
+        $this->_setParams($request);
     }
 
     /**
@@ -51,23 +35,20 @@ class StoreController extends Controller
      */
     public function category(Request $request)
     {
-        $this->limit = $request->get('limit', 120);
-        $this->term = $request->get('term', null);
-
         $this->categoryId = $request->get('category_id', null);
 
         $key = $this->_setCacheKey($request);
 
         if (Cache::has($key)) {
-            $response = Cache::get($key, []);
+            $this->response = Cache::get($key, []);
         } else {
             $this->_setSellers();
-            $response = $this->stores;
+            $this->response = $this->stores;
 
-            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
+            Cache::put($key, $this->response, now()->addMinutes(60 * 9)); // 9 hours
         }
 
-        return response()->json($response, 200);
+        return response()->json($this->response, 200);
     }
 
     /**
@@ -81,7 +62,7 @@ class StoreController extends Controller
     {
         $key = $this->_setCacheKey($request);
         if (Cache::has($key)) {
-            $response = Cache::get($key, []);
+            $this->response = Cache::get($key, []);
         } else {
             $store = Store::where('slug', $slug)
                 ->first();
@@ -90,14 +71,14 @@ class StoreController extends Controller
 
             $this->storeId = $store->id;
 
-            $response = [
+            $this->response = [
                 'store' => $store
             ];
 
-            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
+            Cache::put($key, $this->response, now()->addMinutes(60 * 9)); // 9 hours
         }
 
-        return response()->json($response, 200);
+        return response()->json($this->response, 200);
     }
 
     /**
@@ -108,21 +89,20 @@ class StoreController extends Controller
      */
     public function catalogMap(Request $request)
     {
-        $response = [];
         $this->limit = $request->get('limit', 24);
 
         $key = $this->_setParams($request);
 
         if (Cache::has($key)) {
-            $response = Cache::get($key, []);
+            $this->response = Cache::get($key, []);
         } else {
             $this->_setCatalogMap();
-            $response['catalog_map'] = $this->catalogMap;
+            $this->response['catalog_map'] = $this->catalogMap;
 
-            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
+            Cache::put($key, $this->response, now()->addMinutes(60 * 9)); // 9 hours
         }
 
-        return response()->json($response, 200);
+        return response()->json($this->response, 200);
     }
 
     public function search(Request $request)

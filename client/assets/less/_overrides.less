@@ -308,7 +308,7 @@ h1.r-text-slarge-light {
     z-index: 1001;
     transition: background 0.25s ease;
     line-height: 1 !important;
-    background: @white;
+    background: linear-gradient(132deg, #222222 18%, @black 84%), @white;
     box-shadow: 0 6px 9px -3px rgba(32, 33, 36, 0.1);
     margin: auto;
     display: block;
@@ -402,7 +402,7 @@ h1.r-text-slarge-light {
         }
 
         .ant-menu-submenu-title {
-            color: @black;
+            color: @white;
             border: none;
             border-radius: @border-radius;
             overflow: hidden;
@@ -431,9 +431,9 @@ h1.r-text-slarge-light {
         }
     }
 
-    &.r-header-dark,
-    &.r-header-secondary,
-    &.r-header-secondary {
+    .r-header-dark,
+    .r-header-secondary,
+    .r-header-secondary {
         background: transparent url(/patterns/art-dark.svg) no-repeat !important;
         background-size: cover !important;
 
@@ -2243,35 +2243,6 @@ h4 {
     overflow: hidden;
 }
 
-.r-bg-center {
-    background-size: 100% !important;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.r-bg-cover {
-    background-size: cover !important;
-    position: relative;
-
-    .r-store-tag {
-        position: absolute;
-        padding: 0;
-        top: 12px;
-        left: auto;
-        right: 12px;
-        width: auto;
-        font-size: 14px;
-        font-weight: 600;
-
-        span {
-            padding: 3px 12px;
-            display: inline-block;
-            border-radius: @border-radius 0 @border-radius 0;
-            overflow: hidden;
-        }
-    }
-}
-
 .r-bg-primary-light {
     .r-checked-item-icon {
         background: @secondary-color-light;
@@ -2576,7 +2547,7 @@ h4 {
     }
 }
 
-.r-rotatable{
+.r-rotatable {
     .anticon {
         transition: all .1s cubic-bezier(.71, -.46, .88, .6), opacity .1s;
     }
@@ -3705,8 +3676,8 @@ label {
 .ant-modal-mask,
 .ant-drawer-mask {
     filter: alpha(opacity=95);
-    opacity: 0.957;
-    background-color: rgba(255, 255, 255, 0.957);
+    opacity: 0.96;
+    background-color: rgba(255, 255, 255, 0.96);
     position: fixed;
 }
 
@@ -3736,6 +3707,18 @@ label {
     animation-iteration-count: infinite;
     animation-duration: 0.75s;
     display: flex;
+}
+
+.ant-spin-container {
+    .ant-spin-blur {
+        background-color: rgba(0, 0, 0, 0.75);
+        opacity: 1;
+
+        &:after {
+            background-color: rgba(0, 0, 0, 0.75);
+            opacity: 0.9;
+        }
+    }
 }
 
 .r-no-spinner {
@@ -5337,9 +5320,18 @@ label {
         top: -81px;
         margin-left: -81px;
         width: 162px;
-        border: 6px solid;
+        padding: 6px;
         border-radius: 100%;
         overflow: hidden;
+    }
+
+    &.r-store-meta__drop {
+        .r-store-photo {
+            top: -48px;
+            margin-left: -33px;
+            width: 66px;
+            padding: 3px;
+        }
     }
 }
 
@@ -6485,6 +6477,7 @@ label {
 
 #__layout {
     background: linear-gradient(132deg, #222222 18%, @black 84%), @white;
+
     .ant-layout {
         &.r-layout__store {
             overflow-y: auto;
@@ -7459,6 +7452,36 @@ label {
 
     .ant-card-body {
         background: transparent url(/images/icon_pattern_light_large.svg) no-repeat;
+    }
+}
+
+.r-bg-center {
+    background-size: 100% !important;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.r-bg-cover {
+    background-size: cover !important;
+    background-color: @black !important;
+    position: relative;
+
+    .r-store-tag {
+        position: absolute;
+        padding: 0;
+        top: 12px;
+        left: auto;
+        right: 12px;
+        width: auto;
+        font-size: 14px;
+        font-weight: 600;
+
+        span {
+            padding: 3px 12px;
+            display: inline-block;
+            border-radius: @border-radius 0 @border-radius 0;
+            overflow: hidden;
+        }
     }
 }
 
@@ -8847,7 +8870,7 @@ a:hover {
     }
 }
 
- // #262b2f
+// #262b2f
 
 .r-modal-store-catalog-map {
     .ant-modal {
@@ -8873,4 +8896,9 @@ a:hover {
 
 .rotate-plus {
     animation: rotate-plus 6s infinite linear;
+}
+
+.r-gem-block {
+    background: transparent url(/patterns/beam.png) repeat;
+    background-size: 100%;
 }

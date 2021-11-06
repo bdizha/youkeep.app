@@ -5,7 +5,7 @@
            :xs="{ span: 24 }"
     >
       <a-row :gutter="[24,24]" justify="center" align="middle" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+        <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24}"
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
@@ -28,6 +28,14 @@
               </a-button>
             </a-col>
           </a-row>
+        </a-col>
+        <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+               :sm="{ span: 24 }"
+               :xs="{ span: 24 }"
+        >
+          <div class="r-store-photo" :class="getBgClass()">
+            <r-store-head :size="60" :has-title="false" :store="product.store"></r-store-head>
+          </div>
         </a-col>
         <a-col v-if="!isDrop" :lg="{ span: 24 }" :md="{ span: 24}"
                :sm="{ span: 24 }"
@@ -186,7 +194,11 @@ export default {
   computed: {},
   methods: {
     getBgClass () {
-      return `r-bg-${this.theme}-light`
+      let theme = 'dark'
+      if (this.isDrop) {
+        theme = this.theme + '-light'
+      }
+      return `r-bg-${theme}`
     },
     getTextClass () {
       return `r-text-${this.theme}`

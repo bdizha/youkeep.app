@@ -2,7 +2,7 @@
     background: rgba(0, 0, 0, 0.0075)
 }
 
-.ant-table-thead > tr > th{
+.ant-table-thead > tr > th {
     background: rgba(0, 0, 0, 0.09);
     color: @white;
     font-size: 16px;
@@ -14,10 +14,23 @@
     font-weight: 400;
 }
 
+.ant-table-thead > tr > th.ant-table-column-sort {
+    background: rgba(0, 0, 0, 0.09);
+}
+
+.ant-table-thead > tr > th.ant-table-column-has-actions {
+    &.ant-table-column-has-sorters:hover,
+    &.ant-table-column-sort {
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+
 .ant-table-bordered .ant-table-thead > tr > th,
 .ant-table-bordered .ant-table-tbody > tr > td {
-     border-color: rgba(255, 255, 255, 0.075);
+    border-color: rgba(255, 255, 255, 0.075);
     color: @white;
+
     a {
         color: @white;
     }
@@ -31,24 +44,30 @@
     border-right: 0;
     border-bottom: 0;
 }
+
 .ant-table-bordered.ant-table-empty .ant-table-placeholder {
-     border-color: rgba(255, 255, 255, 0.075);
+    border-color: rgba(255, 255, 255, 0.075);
     border-color: rgba(255, 255, 255, 0.075);
 }
+
 .ant-table-bordered.ant-table-fixed-header .ant-table-header > table {
     border-bottom: 0;
 }
+
 .ant-table-bordered.ant-table-fixed-header .ant-table-body > table {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
 .ant-table-bordered.ant-table-fixed-header .ant-table-header + .ant-table-body > table,
 .ant-table-bordered.ant-table-fixed-header .ant-table-body-inner > table {
     border-top: 0;
 }
+
 .ant-table-bordered .ant-table-thead > tr:not(:last-child) > th {
-     border-color: rgba(255, 255, 255, 0.075);
+    border-color: rgba(255, 255, 255, 0.075);
 }
+
 .ant-table-bordered .ant-table-thead > tr > th,
 .ant-table-bordered .ant-table-tbody > tr > td {
     border-color: rgba(255, 255, 255, 0.075);

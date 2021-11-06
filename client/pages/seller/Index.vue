@@ -98,7 +98,7 @@
     >
       <r-seller-features></r-seller-features>
     </a-col>
-    <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+    <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
       <r-contact-us :has-more="true" title="Ready to collect with Youkeep?"

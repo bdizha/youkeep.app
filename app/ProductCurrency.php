@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class ProductCurrency extends Model
 {
     /**
-     * Get the associated products
+     * Get the associated product
      */
-    public function products()
+    public function product()
     {
-        return $this->hasMany('App\Product');
+        return $this->belongsTo('App\Product');
     }
 
     /**

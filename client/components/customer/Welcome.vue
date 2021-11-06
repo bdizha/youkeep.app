@@ -2,7 +2,7 @@
   <a-card class="r-bg-dark r-border-none">
     <div class="r-mv-48">
       <a-row :gutter="[96,96]" align="middle" justify="center" type="flex">
-        <a-col :lg="{ span: 16 }" :md="{ span: 18 }" :sm="{ span: 24 }"
+        <a-col :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }"
                :xs="{ span: 24}"
         >
           <a-row :gutter="[48,48]" align="middle" justify="start" type="flex">

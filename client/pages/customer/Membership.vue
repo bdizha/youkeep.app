@@ -265,7 +265,7 @@
                     Why <span class="r-text-primary">Youkeep+</span> For Retailers?
                   </h3>
                 </a-col>
-                <a-col :lg="{ span: 16 }" :md="{ span: 18 }"
+                <a-col :lg="{ span: 18 }" :md="{ span: 21 }"
                        :sm="{ span: 24 }"
                        :xs="{ span: 24 }"
                 >

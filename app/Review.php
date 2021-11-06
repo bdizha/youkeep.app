@@ -31,7 +31,7 @@ class Review extends Model
         4 => [
             'column' => 'created_at',
             'dir' => 'DESC',
-            'Most Recent',
+            'Most Recent'
 
 
 }

@@ -1,6 +1,7 @@
 <template>
   <a-card class="r-p-0 r-text-left" :class="getBgClass()">
-    <a-row align="middle" justify="start" type="flex">
+    <a-row class="r-store-meta r-store-meta__drop"
+           align="middle" justify="start" type="flex">
       <a-col :lg="{ span: 24 }" :md="{ span: 24}"
              :sm="{ span: 24 }"
              :xs="{ span: 24 }"
