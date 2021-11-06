@@ -73,7 +73,7 @@ export default {
       }
     }),
     ...mapGetters({
-      store: 'base/store',
+      store: 'shop/store',
       cart: 'cart/cart',
       hasProduct: 'base/hasProduct',
       option: 'product/option',

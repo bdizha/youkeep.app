@@ -390,7 +390,7 @@ export default {
     user: 'auth/user',
     cart: 'cart/cart',
     modal: 'base/modal',
-    store: 'base/store',
+    store: 'shop/store',
     drawer: 'base/drawer',
     isRaised: 'base/isRaised',
     isDark: 'base/isDark',

@@ -2,15 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
-use App\CategoryProduct;
-use App\Product;
-use App\ProductLink;
-use App\Saleable;
-use App\StoreCategory;
-use App\StoreProduct;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
 
 class ProductController extends Controller
 {
@@ -32,8 +24,8 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        $this->method = '_setProduct';
-        $this->_setParams($request);
+        $this->method = '_setProducts';
+        return $this->_setParams($request);
     }
 
     /**
@@ -44,7 +36,8 @@ class ProductController extends Controller
      */
     public function show($slug = null, Request $request)
     {
-        $this->method = '_setProducts';
-        $this->_setParams($request);
+        $this->slug = $slug;
+        $this->method = '_setProduct';
+        return $this->_setParams($request);
     }
 }

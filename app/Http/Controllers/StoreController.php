@@ -10,10 +10,6 @@ class StoreController extends Controller
 {
     protected $relations = ['categories', 'products', 'category', 'store'],
         $without = ['categories', 'products', 'category', 'breadcrumbs', 'store'];
-    /**
-     * @var mixed
-     */
-    private $term;
 
     /**
      * Find stores
@@ -24,7 +20,7 @@ class StoreController extends Controller
     public function index(Request $request)
     {
         $this->method = '_setStores';
-        $this->_setParams($request);
+        return $this->_setParams($request);
     }
 
     /**
@@ -35,20 +31,8 @@ class StoreController extends Controller
      */
     public function category(Request $request)
     {
-        $this->categoryId = $request->get('category_id', null);
-
-        $key = $this->_setCacheKey($request);
-
-        if (Cache::has($key)) {
-            $this->response = Cache::get($key, []);
-        } else {
-            $this->_setSellers();
-            $this->response = $this->stores;
-
-            Cache::put($key, $this->response, now()->addMinutes(60 * 9)); // 9 hours
-        }
-
-        return response()->json($this->response, 200);
+        $this->method = '_setSellers';
+        return $this->_setParams($request);
     }
 
     /**
@@ -60,25 +44,9 @@ class StoreController extends Controller
      */
     public function show(string $slug, Request $request)
     {
-        $key = $this->_setCacheKey($request);
-        if (Cache::has($key)) {
-            $this->response = Cache::get($key, []);
-        } else {
-            $store = Store::where('slug', $slug)
-                ->first();
-
-            session(['store' => $store]);
-
-            $this->storeId = $store->id;
-
-            $this->response = [
-                'store' => $store
-            ];
-
-            Cache::put($key, $this->response, now()->addMinutes(60 * 9)); // 9 hours
-        }
-
-        return response()->json($this->response, 200);
+        $this->slug = $slug;
+        $this->method = '_setStore';
+        return $this->_setParams($request);
     }
 
     /**

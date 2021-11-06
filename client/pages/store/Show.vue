@@ -151,10 +151,9 @@ export default {
   },
   computed: {
     ...mapGetters({
-      store: 'base/store',
-      hasStore: 'base/hasStore',
-      processes: 'base/processes',
-      hasCategories: 'base/hasCategories'
+      store: 'shop/store',
+      hasStore: 'shop/hasStore',
+      processes: 'base/processes'
     })
   },
   methods: {

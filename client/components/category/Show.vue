@@ -121,8 +121,8 @@ export default {
     },
     ...mapGetters({
       category: 'base/category',
-      store: 'base/store',
-      hasStore: 'base/hasStore',
+      store: 'shop/store',
+      hasStore: 'shop/hasStore',
       isStore: 'base/isStore',
       hasCategories: 'base/hasCategories',
       hasProducts: 'base/hasProducts',

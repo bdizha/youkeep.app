@@ -23,10 +23,10 @@ export default {
     }
   },
   computed: mapGetters({
-    store: 'base/store',
+    store: 'shop/store',
     menuCategory: 'base/menuCategory',
     hasMenuCategory: 'base/hasMenuCategory',
-    hasStore: 'base/hasStore',
+    hasStore: 'shop/hasStore',
     category: 'base/category',
     hasCategory: 'base/hasCategory',
     filters: 'base/filters',

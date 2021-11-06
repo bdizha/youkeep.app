@@ -21,7 +21,7 @@ export default {
       }
     },
     ...mapGetters({
-      store: 'base/store',
+      store: 'shop/store',
       hasStore: 'base/hasStore'
     })
   },

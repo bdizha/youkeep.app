@@ -15,13 +15,13 @@ export default {
       return {
         limit: process.env.APP_LIMIT,
         store_id: this.hasStore ? this.store.id : null,
-        sort: 0,
+        sort: null,
         page: 1
       }
     },
     ...mapGetters({
-      store: 'base/store',
-      hasStore: 'base/hasStore',
+      store: 'shop/store',
+      hasStore: 'shop/hasStore',
       processes: 'base/processes',
       hasCategories: 'base/hasCategories'
     })

@@ -63,8 +63,7 @@ export default {
         return {
           metric_type_id: null,
           store_id: null,
-          is_active: true,
-          order_by: 'updated_at'
+          is_active: true
         }
       }
     },

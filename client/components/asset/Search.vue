@@ -27,7 +27,7 @@ export default {
     }
   },
   computed: mapGetters({
-    store: 'base/store',
+    store: 'shop/store',
     search: 'base/search'
   }),
   methods: {

@@ -30,7 +30,7 @@ export default {
     return {}
   },
   computed: mapGetters({
-    store: 'base/store',
+    store: 'shop/store',
   }),
   created () {
     this.payload()

@@ -25,7 +25,7 @@ export default {
     return {}
   },
   computed: mapGetters({
-    store: 'base/store',
+    store: 'shop/store',
     processes: 'base/processes',
   }),
   created () {

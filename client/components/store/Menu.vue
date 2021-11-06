@@ -269,7 +269,7 @@ export default {
       category: 'base/category',
       hasCategories: 'base/hasCategories',
       hasNotice: 'base/hasNotice',
-      store: 'base/store',
+      store: 'shop/store',
       hasStore: 'base/hasStore'
     })
   },

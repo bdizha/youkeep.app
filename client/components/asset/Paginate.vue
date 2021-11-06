@@ -29,7 +29,7 @@ export default {
   },
   computed: mapGetters({
     sellers: 'base/sellers',
-    store: 'base/store',
+    store: 'shop/store',
     search: 'base/search',
     hasSellers: 'base/hasSellers',
   }),

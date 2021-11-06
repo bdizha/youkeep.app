@@ -170,7 +170,7 @@ export default {
       this.loading = true
 
       await axios.post('/rankings', params).then(({ data }) => {
-        const rankings = data.rankings
+        const rankings = data
 
         console.log('data found', rankings)
 

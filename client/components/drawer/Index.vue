@@ -58,7 +58,7 @@ export default {
     drawer: 'base/drawer',
     user: 'auth/user',
     isLoggedIn: 'auth/isLoggedIn',
-    store: 'base/store',
+    store: 'shop/store',
   }),
   methods: {
     isCurrent (current) {

@@ -24,24 +24,10 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $level = 1;
-        $response = [];
-        $this->limit = $request->get('limit', 24);
-
         $this->_setLevel($request, $level);
 
-        $key = $this->_setParams($request);
-
-        if (Cache::has($key) && false) {
-            $response = Cache::get($key, []);
-        } else {
-            $this->_setCategories();
-            $response['categories'] = $this->categories;
-            $response['store'] = $this->store;
-
-            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
-        }
-
-        return response()->json($response, 200);
+        $this->method = '_setCategories';
+        $this->_setParams($request);
     }
 
     /**
@@ -52,21 +38,8 @@ class CategoryController extends Controller
      */
     public function banners(Request $request)
     {
-        $response = [];
-        $this->limit = $request->get('limit', 24);
-
-        $key = $this->_setParams($request);
-
-        if (Cache::has($key) && false) {
-            $response = Cache::get($key, []);
-        } else {
-            $this->_setBanners();
-            $response['banners'] = $this->banners;
-
-            Cache::put($key, $response, now()->addMinutes(60 * 9)); // 9 hours
-        }
-
-        return response()->json($response, 200);
+        $this->method = '_setBanners';
+        $this->_setParams($request);
     }
 
     /**

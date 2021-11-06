@@ -30,7 +30,7 @@ export default {
     columns: { type: Number, required: false, default: 3 },
   },
   computed: mapGetters({
-    store: 'base/store',
+    store: 'shop/store',
     filters: 'shop/filters',
     processes: 'base/processes',
   }),

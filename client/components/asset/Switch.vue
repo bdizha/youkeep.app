@@ -22,8 +22,8 @@ export default {
     return {}
   },
   computed: mapGetters({
-    hasStore: 'base/hasStore',
-    store: 'base/store',
+    hasStore: 'shop/hasStore',
+    store: 'shop/store',
     hasStoreTray: 'base/hasStoreTray',
     isDark: 'base/isDark'
   }),

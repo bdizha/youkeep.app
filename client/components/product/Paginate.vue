@@ -18,7 +18,8 @@
             </template>
           </a-pagination>
         </a-col>
-        <a-col class="r-hide-lg" :lg="{span: span === 24 ? span : (24-span) / 2}" :md="{span: span === 24 ? span : (24-span) / 2}"
+        <a-col class="r-hide-lg" :lg="{span: span === 24 ? span : (24-span) / 2}"
+               :md="{span: span === 24 ? span : (24-span) / 2}"
                :sm="{span: 24}" :xs="{span: 24}"
         >
           <r-category-filters></r-category-filters>
@@ -35,11 +36,11 @@
               style="min-width: 100%;"
               @change="onSort"
             >
-              <a-select-option v-for="(s, index) in sortOptions"
+              <a-select-option v-for="(option, index) in sortOptions"
                                :key="index"
-                               :value="s.key"
+                               :value="option"
               >
-                <span class="r-sort-value">{{ s.label }}</span>
+                <span class="r-sort-value">{{ option.label }}</span>
               </a-select-option>
             </a-select>
           </div>
@@ -54,23 +55,45 @@ import { mapGetters } from 'vuex'
 const SORTS = [
   {
     label: 'Name: A to Z',
+    column: 'name',
+    dir: 'ASC',
     key: 0
   },
   {
     label: 'Name: Z to A',
+    column: 'name',
+    dir: 'DESC',
     key: 1
   },
   {
     label: 'Price: Low to High',
+    column: 'price',
+    dir: 'ASC',
     key: 2
   },
   {
     label: 'Price: High to Low',
+    column: 'price',
+    dir: 'DESC',
     key: 3
   },
   {
     label: 'Most Recent',
+    column: 'created_at',
+    dir: 'ASC',
     key: 4
+  },
+  {
+    label: 'Most Relevant',
+    column: 'randomized_at',
+    dir: 'ASC',
+    key: 5
+  },
+  {
+    label: 'Most Random',
+    column: 'randomized_at',
+    dir: 'DESC',
+    key: 6
   }
 ]
 export default {
@@ -87,7 +110,7 @@ export default {
     }
   },
   computed: mapGetters({
-    store: 'base/store',
+    store: 'shop/store',
     payload: 'product/payload',
     hasProducts: 'base/hasProducts',
     products: 'base/products',
@@ -104,7 +127,7 @@ export default {
     },
     async onSort (option) {
       const payload = this.payload
-      payload.sort = option.key
+      payload.sort = option
 
       await this.onProducts(payload)
     },

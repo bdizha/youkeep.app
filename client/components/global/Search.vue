@@ -67,9 +67,9 @@ export default {
       return 'Search collectibles, artists, markets...'
     },
     ...mapGetters({
-      store: 'base/store',
+      store: 'shop/store',
       search: 'shop/search',
-      hasStore: 'base/hasStore',
+      hasStore: 'shop/hasStore',
       hasSearched: 'shop/hasSearched',
       processes: 'base/processes'
     })

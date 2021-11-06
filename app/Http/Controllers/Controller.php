@@ -19,6 +19,7 @@ use App\StoreCategory;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;
@@ -61,6 +62,7 @@ class Controller extends BaseController
         $store = null,
         $stores = [],
         $limit = 24,
+        $term = null,
         $level = 1,
         $items = [],
         $item = null,
@@ -182,6 +184,10 @@ class Controller extends BaseController
             ->toArray();
 
         $this->categories = $this->_pruneRelations($this->categories);
+
+
+        $this->response['categories'] = $this->categories;
+        $this->response['store'] = $this->store;
     }
 
     /**
@@ -221,6 +227,8 @@ class Controller extends BaseController
         $this->banners = $categoryBannerQuery
             ->get()
             ->toArray();
+
+        $this->response['banners'] = $this->banners;
     }
 
     /**
@@ -307,8 +315,110 @@ class Controller extends BaseController
     /**
      * @return void
      */
+    protected function setMetrics()
+    {
+        $query = MetricType::orderBy($this->sdrt['column'], $this->sort['dir']);
+
+        if (!empty($this->metricType)) {
+            $query = MetricType::where('slug', $this->metricType);
+        }
+
+        $query->whereHas('metrics', function ($query) {
+            $query->whereIn('metrics.app_id', $this->appId);
+        });
+
+        $this->metricTypes = $query->get();
+    }
+
+    /**
+     * @return void
+     */
+    protected function _setStores()
+    {
+        $this->stores = Store::where('app_id', $this->appId)
+            ->where('photo', 'like', '%.%')
+            ->where('photo', 'not like', '%.net%')
+            ->where('id', '>', 762)
+            ->orderBy($this->sort['column'], $this->sort['dir'])
+            ->paginate($this->limit);
+
+        $this->response['stores'] = $this->stores;
+    }
+
+    protected function _setProduct(): void
+    {
+        $this->response = [];
+        $this->product = Saleable::with('store')
+            ->where('is_active', true)
+            ->where('slug', $this->slug)
+            ->first();
+
+        if (!empty($this->categoryId)) {
+            $this->category = StoreCategory::where('id', $this->categoryId)
+                ->first();
+
+            $this->store = $this->category->store;
+        }
+
+        $this->_setBreadcrumbs();
+
+        $this->response['store'] = $this->product->store;
+        $this->response['product'] = $this->product;
+        $this->response['category'] = [];
+        $this->response['categories'] = [];
+    }
+
+    protected function _setBreadcrumbs()
+    {
+        $breadcrumbs = [];
+
+        if (!empty($this->category)) {
+            $breadcrumbs = $this->category->breadcrumbs;
+            $breadcrumbs[] = [
+                'id' => $this->product->id,
+                'slug' => $this->product->slug,
+                'route' => $this->category->route . $this->product->route,
+                'name' => $this->product->name,
+                'has_products' => false,
+                'has_categories' => false,
+                'categories' => [],
+            ];
+        }
+
+        if (!empty($this->product)) {
+            $this->product->breadcrumbs = $breadcrumbs;
+        }
+    }
+
+    protected function _setProductCategories(): void
+    {
+        $categories = [];
+
+        $productTypes = ProductLink::$types;
+        foreach ($productTypes as $productType => $name) {
+            $this->productType = $productType;
+            $this->productId = $this->product->id;
+            $this->_setProducts();
+
+            if (!empty($this->products)) {
+                $categories[] = [
+                    'type' => $productType,
+                    'name' => $name,
+                    'has_products' => false
+                ];
+            }
+        }
+
+        $this->product->categories = $categories;
+    }
+
+    /**
+     * @return void
+     */
     protected function _setProducts()
     {
+        $query = Product::orderBy('created_at', 'DESC');
+
         if (!empty($this->productId)) {
             $query = Product::find($this->productId)->links()
                 ->where('type', $this->productType);
@@ -356,6 +466,8 @@ class Controller extends BaseController
 
             $this->_setProductsRoutes();
         }
+
+        $this->response = $this->products;
     }
 
     /**
@@ -378,108 +490,13 @@ class Controller extends BaseController
     /**
      * @return void
      */
-    protected function setMetrics()
-    {
-        $query = MetricType::orderBy($this->sdrt['column'], $this->sort['dir']);
-
-        if (!empty($this->metricType)) {
-            $query = MetricType::where('slug', $this->metricType);
-        }
-
-        $query->whereHas('metrics', function ($query) {
-            $query->whereIn('metrics.app_id', $this->appId);
-        });
-
-        $this->metricTypes = $query->get();
-    }
-
-    protected function _setBreadcrumbs()
-    {
-        $breadcrumbs = [];
-
-        if (!empty($this->category)) {
-            $breadcrumbs = $this->category->breadcrumbs;
-            $breadcrumbs[] = [
-                'id' => $this->product->id,
-                'slug' => $this->product->slug,
-                'route' => $this->category->route . $this->product->route,
-                'name' => $this->product->name,
-                'has_products' => false,
-                'has_categories' => false,
-                'categories' => [],
-            ];
-        }
-
-        $this->product->breadcrumbs = $breadcrumbs;
-    }
-
-    /**
-     * @return void
-     */
-    protected function _setStores()
-    {
-        $this->stores = Store::where('app_id', $this->appId)
-            ->where('photo', 'like', '%.%')
-            ->where('photo', 'not like', '%.net%')
-            ->where('id', '>', 762)
-            ->orderBy($this->sort['column'], $this->sort['dir'])
-            ->paginate($this->limit);
-
-        $this->response['stores'] = $this->stores;
-    }
-
-    protected function _setProduct(): void
-    {
-        $this->product = Saleable::where('is_active', true)
-            ->where('slug', $this->slug)
-            ->first();
-
-        if (!empty($this->categoryId)) {
-            $this->category = StoreCategory::where('id', $this->categoryId)
-                ->first();
-
-            $this->store = $this->category->store;
-        }
-
-        $this->_setBreadcrumbs();
-        $this->_setProductCategories();
-
-        $this->response['store'] = $this->store;
-        $this->response['product'] = $this->product;
-        $this->response['category'] = [];
-        $this->response['categories'] = [];
-    }
-
-    protected function _setProductCategories(): void
-    {
-        $categories = [];
-
-        $productTypes = ProductLink::$types;
-        foreach ($productTypes as $productType => $name) {
-            $this->productType = $productType;
-            $this->productId = $this->product->id;
-            $this->_setProducts();
-
-            if (!empty($this->products)) {
-                $categories[] = [
-                    'type' => $productType,
-                    'name' => $name,
-                    'has_products' => false
-                ];
-            }
-        }
-
-        $this->product->categories = $categories;
-    }
-
-    /**
-     * @return void
-     */
     protected function _setRankings()
     {
         $this->rankings = Ranking::with(['store', 'currency'])
             ->orderBy($this->sort['column'], $this->sort['dir'])
             ->paginate($this->limit);
+
+        $this->response = $this->rankings;
     }
 
     /**
@@ -490,6 +507,8 @@ class Controller extends BaseController
         $this->serves = Serve::where('app_id', $this->appId)
             ->where('photo', '!=', null)
             ->get();
+
+        $this->response = $this->serves;
     }
 
     /**
@@ -502,6 +521,8 @@ class Controller extends BaseController
         })
             ->orderBy($this->sort['column'], $this->sort['dir'])
             ->paginate($this->limit);
+
+        $this->response = $this->reviews;
     }
 
     /**
@@ -512,6 +533,22 @@ class Controller extends BaseController
         if (!empty($this->store->id)) {
             $this->route = '/store/' . $this->store->slug . $this->route;
         }
+    }
+
+    /**
+     */
+    protected function _setStore(): void
+    {
+        $store = Store::where('slug', $this->slug)
+            ->first();
+
+        session(['store' => $store]);
+
+        $this->storeId = $store->id;
+
+        $this->response = [
+            'store' => $store
+        ];
     }
 
     /**
@@ -575,10 +612,16 @@ class Controller extends BaseController
     /**
      * @param Request $request
      */
-    protected function _setParams(Request $request): \Illuminate\Http\JsonResponse
+    protected function _setParams(Request $request): JsonResponse
     {
-        $this->orderBy = $request->get('order_by', 'randomized_at');
+        $_sort = $this->sort;
         $this->sort = $request->get('sort', $this->sort);
+
+        if (empty($this->sort)) {
+            $this->sort = $_sort;
+        }
+
+        $this->orderBy = $request->get('order_by', 'randomized_at');
         $this->with = $request->get('with', []);
         $this->hasBanners = $request->get('has_banners', false);
         $this->categoryType = $request->get('type', 2);
@@ -599,8 +642,6 @@ class Controller extends BaseController
             $this->response = Cache::get($this->cacheKey, []);
         } else {
             $this->{$this->method}();
-
-            $this->response = $this->products;
             Cache::put($this->cacheKey, $this->response, now()->addMinutes(60 * 9)); // 9 hours
         }
 
