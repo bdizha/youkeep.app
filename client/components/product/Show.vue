@@ -1,5 +1,5 @@
 <template>
-  <a-card class="r-bg-dark">
+  <div class="r-p-24">
     <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
       <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
@@ -50,7 +50,7 @@
         <r-product-slider :columns="6" :filters="{}"></r-product-slider>
       </a-col>
     </a-row>
-  </a-card>
+  </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'

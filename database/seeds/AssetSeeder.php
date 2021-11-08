@@ -44,8 +44,6 @@ class AssetSeeder extends DatabaseSeeder
             $store->save();
         }
 
-        dd('done');
-
         $this->fetchProducts();
         die("fetchProducts >>> done");
     }
@@ -127,9 +125,6 @@ class AssetSeeder extends DatabaseSeeder
             $storeData['description'] = trim(!empty($asset['description']) ? $asset['description'] : 'Coming soon');
             $storeData['photo'] = !empty($asset['thumbnailUrl']) ? $asset['thumbnailUrl'] : $asset['imageUrl'];
             $storeData['photo_cover'] = $asset['imageUrl'];
-
-
-            dd($storeData);
         }
 
         $this->setStore($storeData);
@@ -198,6 +193,7 @@ class AssetSeeder extends DatabaseSeeder
     private function setAttributes($asset): void
     {
         if (!empty($asset['attributesList'])) {
+
             foreach ($asset['attributesList'] as $attribute) {
                 $assetAttribute = $attribute['trait_type'];
                 $assetValue = $attribute['value'];
@@ -226,6 +222,8 @@ class AssetSeeder extends DatabaseSeeder
                 ];
 
                 $productValue = ProductValue::updateOrCreate($attributes, $values);
+
+                echo ">>>>>> Inserting product value: {$productValue->content} \n";
             }
         }
     }

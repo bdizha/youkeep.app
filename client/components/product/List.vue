@@ -8,8 +8,8 @@
             <a-col v-for="(product, index) in products.data"
                    :key="index"
                    :class="{'r-spin__active' :processes.isProduct}"
-                   :lg="{span: columns}"
-                   :md="{span: columns}" :sm="{span: columns > 1 ? 12 : 24}" :xs="{span: columns > 1 ? 12 : 24}"
+                   :lg="{span: 12}"
+                   :md="{span: 12}" :sm="{span: columns > 1 ? 12 : 24}" :xs="{span: columns > 1 ? 12 : 24}"
             >
               <r-product-item :isVertical="isVertical" :product="product"></r-product-item>
             </a-col>

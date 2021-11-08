@@ -1,5 +1,5 @@
 <template>
-  <r-products :columns="4" :filters="filters"></r-products>
+  <r-products :columns="6" :filters="filters"></r-products>
 </template>
 <script>
 import { mapGetters } from 'vuex'

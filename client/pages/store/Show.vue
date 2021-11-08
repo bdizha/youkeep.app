@@ -1,10 +1,10 @@
 <template>
-  <a-row :gutter="[48, 48]" align="middle" justify="start" type="flex">
+  <a-row :gutter="[96, 96]" align="middle" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <a-row class="r-store-meta" align="middle" justify="start" type="flex">
+      <a-row align="middle" justify="start" type="flex">
         <a-col
           :lg="{ span: 24 }"
           :md="{ span: 24 }"
@@ -17,105 +17,114 @@
                      :sm="{ span: 24 }"
                      :xs="{ span: 24 }"
               >
-                <div :style="getPhotoCoverStyle()" class="r-pull">
-                  <div class="r-block" style="height: 300px;">&nbsp;</div>
-                </div>
+                <a-card :style="getPhotoCoverStyle" class="r-pull r-bg-dark r-border-none">
+                  <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+                    <a-col :lg="{ span: 12 }" :md="{ span: 12 }"
+                           :sm="{ span: 18 }"
+                           :xs="{ span: 21 }"
+                    >
+                      <div class="r-block" style="min-height: 300px;">
+                      </div>
+                    </a-col>
+                  </a-row>
+                </a-card>
               </a-col>
             </a-row>
           </a-card>
         </a-col>
-        <a-col class="r-store-meta"
-               :lg="{ span: 24 }"
+        <a-col :lg="{ span: 24 }"
                :md="{ span: 24 }"
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-dark r-p-0 r-border-none">
-            <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
-              <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <a-row :gutter="[12,12]" align="middle" justify="center" type="flex">
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                         :sm="{ span: 24 }"
-                         :xs="{ span: 24 }"
-                  >
-                    <div class="r-ph-24" style="min-height: 111px;">
-                      <a-row :gutter="[24, 24]" align="middle" justify="end" type="flex">
-                        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-                               :sm="{ span: 24 }"
-                               :xs="{ span: 24 }"
-                        >
-                          <div class="r-store-photo" :class="getBgClass()">
-                            <r-store-head :size="150" :has-title="false" :store="store"></r-store-head>
-                          </div>
-                        </a-col>
-                        <a-col>
-                          <a-row :gutter="[12,12]" justify="start" align="middle" type="flex">
-                            <a-col class="r-asset-actions">
-                              <a-button block
-                                        class="r-btn-dark"
-                                        size="large"
-                                        type="secondary"
-                              >
-                                <a-icon type="heart" theme="filled"></a-icon>
-                                <span class="r-text-action">
+          <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+            <a-col class="r-store-meta"
+                   :lg="{ span: 24 }" :md="{ span: 24 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <a-row :gutter="[12,12]" align="middle" justify="center" type="flex">
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
+                >
+                  <div class="r-ph-24">
+                    <a-row :gutter="[24, 24]" align="middle" justify="end" type="flex">
+                      <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                             :sm="{ span: 24 }"
+                             :xs="{ span: 24 }"
+                      >
+                        <div class="r-store-photo" :class="getBgClass()">
+                          <r-store-head :size="150" :has-title="false" :store="store"></r-store-head>
+                        </div>
+                      </a-col>
+                      <a-col>
+                        <a-row :gutter="[12,12]" justify="start" align="middle" type="flex">
+                          <a-col class="r-asset-actions">
+                            <a-button block
+                                      class="r-btn-dark"
+                                      size="large"
+                                      type="secondary"
+                            >
+                              <a-icon type="heart" theme="filled"></a-icon>
+                              <span class="r-text-action">
                         {{ 24 }}
                         </span>
-                              </a-button>
-                            </a-col>
-                            <a-col class="r-asset-actions">
-                              <a-button block
-                                        class="r-btn-dark"
-                                        size="large"
-                                        type="secondary"
-                              >
-                                <a-icon type="star" theme="filled"></a-icon>
-                                <span class="r-text-action">
+                            </a-button>
+                          </a-col>
+                          <a-col class="r-asset-actions">
+                            <a-button block
+                                      class="r-btn-dark"
+                                      size="large"
+                                      type="secondary"
+                            >
+                              <a-icon type="star" theme="filled"></a-icon>
+                              <span class="r-text-action">
                         {{ 4.8 }}
                         </span>
-                              </a-button>
-                            </a-col>
-                            <a-col class="r-asset-actions">
-                              <a-button block
-                                        class="r-btn-dark"
-                                        size="large"
-                                        type="secondary"
-                              >
-                                <a-icon type="share-alt"></a-icon>
-                                <span class="r-text-action">
+                            </a-button>
+                          </a-col>
+                          <a-col class="r-asset-actions">
+                            <a-button block
+                                      class="r-btn-dark"
+                                      size="large"
+                                      type="secondary"
+                            >
+                              <a-icon type="share-alt"></a-icon>
+                              <span class="r-text-action">
                           Share
                         </span>
-                              </a-button>
-                            </a-col>
-                          </a-row>
-                        </a-col>
-                      </a-row>
-                    </div>
-                  </a-col>
-                  <a-col>
-                    <p class="r-text-medium">
-                      {{ store.name }}
-                    </p>
-                  </a-col>
-                  <a-col>
-                    <p class="r-text-medium">
-                      {{ store.created_at }}
-                    </p>
-                  </a-col>
-                </a-row>
-              </a-col>
-              <a-col :lg="{ span: 18 }" :md="{ span: 21 }"
-                     :sm="{ span: 24 }"
-                     :xs="{ span: 24 }"
-              >
-                <r-store-tabs></r-store-tabs>
-              </a-col>
-            </a-row>
-          </a-card>
+                            </a-button>
+                          </a-col>
+                        </a-row>
+                      </a-col>
+                    </a-row>
+                  </div>
+                </a-col>
+                <a-col>
+                  <p class="r-text-medium r-text-white">
+                    {{ store.name }}
+                  </p>
+                </a-col>
+                <a-col>
+                  <p class="r-text-medium r-text-white">
+                    Joined on {{ store.joined_at }}
+                  </p>
+                </a-col>
+              </a-row>
+            </a-col>
+            <a-col :lg="{ span: 18 }" :md="{ span: 21 }"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <r-store-tabs></r-store-tabs>
+            </a-col>
+          </a-row>
         </a-col>
       </a-row>
+    </a-col>
+    <a-col v-if="false" :lg="{ span: 18 }" :md="{ span: 21 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
+      <r-contact-us title="Take your artistic taste to the next level."></r-contact-us>
     </a-col>
   </a-row>
 </template>
@@ -150,9 +159,18 @@ export default {
   created () {
   },
   computed: {
+    getPhotoCoverStyle () {
+      let coverUrl = null
+      if (this.store.photo_cover_url) {
+        coverUrl = `url(${this.store.photo_cover_url})`
+      }
+      return `background-image: ${coverUrl};`
+    },
     ...mapGetters({
       store: 'shop/store',
       hasStore: 'shop/hasStore',
+      products: 'shop/products',
+      hasProducts: 'shop/hasProducts',
       processes: 'base/processes'
     })
   },
@@ -161,7 +179,7 @@ export default {
       return `r-bg-primary-light`
     },
     getPhotoCoverStyle () {
-      return `background-image: url(/patterns/pattern-06.svg);`
+      return `background-image: url(${this.store.photo_cover_url});`
     }
   }
 }

@@ -383,7 +383,7 @@ const actions = {
     try {
       dispatch('base/onProcess', { key: 'isFixed', value: true }, { root: true })
       await axios.post('/serves', payload).then(({ data }) => {
-        commit('setServes', data.serves)
+        commit('setServes', data)
         dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
       })
     } catch (e) {

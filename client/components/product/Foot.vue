@@ -33,9 +33,16 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <div class="r-store-photo" :class="getBgClass()">
-            <r-store-head :size="60" :has-title="false" :store="product.store"></r-store-head>
-          </div>
+          <a-row justify="start" align="middle" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <div class="r-store-photo" :class="getBgClass()">
+                <r-store-head :size="60" :has-title="false" :store="store"></r-store-head>
+              </div>
+            </a-col>
+          </a-row>
         </a-col>
         <a-col v-if="!isDrop" :lg="{ span: 24 }" :md="{ span: 24}"
                :sm="{ span: 24 }"
@@ -46,20 +53,22 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-row :gutter="[12,12]" justify="start" align="middle" type="flex">
-                <a-col :lg="{ span: 9 }" :md="{ span: 9}"
-                       :sm="{ span: 9 }"
-                       :xs="{ span: 9 }"
+              <a-row justify="start" align="top" type="flex">
+                <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
-                  <div class="r-text-xs r-text-light">
-                    Price
-                  </div>
+                  <p class="r-text-xs r-text-light r-ellipsis">
+                    {{ store.name }}
+                  </p>
                 </a-col>
-                <a-col class="r-text-right" :lg="{ span: 15 }" :md="{ span: 15}"
-                       :sm="{ span: 15 }"
-                       :xs="{ span: 15 }"
+                <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
-                  <r-product-price :product="product"></r-product-price>
+                  <p class="r-text-xs r-text-white r-ellipsis">
+                    {{ product.name }}
+                  </p>
                 </a-col>
               </a-row>
             </a-col>
@@ -67,22 +76,50 @@
                    :sm="{ span: 24 }"
                    :xs="{ span: 24 }"
             >
-              <a-row :gutter="[12,12]" justify="start" align="middle" type="flex">
-                <a-col :lg="{ span: 9 }" :md="{ span: 9}"
-                       :sm="{ span: 9 }"
-                       :xs="{ span: 9 }"
+              <a-row :gutter="[12,12]" justify="start" align="top" type="flex">
+                <a-col :lg="{ span: 12 }" :md="{ span: 12}"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
-                  <p class="r-text-xs r-text-light">
-                    Activity
-                  </p>
+                  <a-row :gutter="[6,6]" justify="start" align="middle" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <div class="r-text-xs r-text-light">
+                        Price
+                      </div>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <r-product-price :product="product"></r-product-price>
+                    </a-col>
+                  </a-row>
                 </a-col>
-                <a-col class="r-text-right" :lg="{ span: 15 }" :md="{ span: 15}"
-                       :sm="{ span: 15 }"
-                       :xs="{ span: 15 }"
+                <a-col class="r-text-right" :lg="{ span: 12 }" :md="{ span: 12}"
+                       :sm="{ span: 24 }"
+                       :xs="{ span: 24 }"
                 >
-                  <div class="r-text-xs r-text-light">
-                    {{ product.activity }}
-                  </div>
+                  <a-row :gutter="[6,6]" justify="start" align="middle" type="flex">
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <div class="r-text-xs r-text-light">
+                        Status
+                      </div>
+                    </a-col>
+                    <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                           :sm="{ span: 24 }"
+                           :xs="{ span: 24 }"
+                    >
+                      <div class="r-text-xs r-text-white">
+                        Auction
+                      </div>
+                    </a-col>
+                  </a-row>
                 </a-col>
               </a-row>
             </a-col>
@@ -109,7 +146,7 @@
                             size="small"
                             type="secondary"
                   >
-                    <a-icon type="heart" theme="filled"></a-icon>
+                    <a-icon type="eye" theme="filled"></a-icon>
                     <span class="r-text-action">
                         {{ 24 }}
                         </span>
@@ -191,7 +228,11 @@ export default {
   },
   created () {
   },
-  computed: {},
+  computed: {
+    store () {
+      return this.product.store
+    }
+  },
   methods: {
     getBgClass () {
       let theme = 'dark'

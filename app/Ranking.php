@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Ranking extends Model
 {
+    protected $fillable = [
+        'hash', 'volume', 'diff_week', 'diff_month', 'floor', 'owners', 'assets', 'currency_id', 'randomized_at', 'store_id'
+    ];
+
     /**
      * Get the associated store
      */

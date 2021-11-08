@@ -8,10 +8,10 @@
   <style type="text/css">
    <![CDATA[
     .fil0 {fill:none;}
-    .fil2 {fill:#13ECAB; opacity: 0.6}
-    .fil3 {fill:#4C57FF; opacity: 0.75}
-    .fil4 {fill:#C834F7; opacity: 0.6}
-    .fil1 {fill:#4C57FF; opacity: 0.45}
+    .fil2 {fill:#8DB4B3; opacity: 0.6}
+    .fil3 {fill:#A4C7C1; opacity: 0.6}
+    .fil4 {fill:#8DB4B3; opacity: 0.69}
+    .fil1 {fill:#A4C7C1; opacity: 0.69}
    ]]>
   </style>
  </defs>

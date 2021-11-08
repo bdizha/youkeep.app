@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="840" height="840">
+<path style="fill:#ed1c24;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 420,220 593.21,320 693.21,146.79 520,46.79 z"/>
+<path style="fill:#ed1c24;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 593.21,320 593.21,520 793.21,520 793.21,320 z"/>
+<path style="fill:#ed1c24;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 593.21,520 420,620 520,793.21 693.21,693.21 z"/>
+<path style="fill:#ed1c24;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 420,620 246.79,520 146.79,693.21 320,793.21 z"/>
+<path style="fill:#ed1c24;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 246.79,520 246.79,320 46.79,320 46.79,520 z"/>
+<path style="fill:#ed1c24;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 246.79,320 420,220 320,46.79 146.79,146.79 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 593.21,320 693.21,146.79 793.21,320 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 593.21,520 793.21,520 693.21,693.21 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 420,620 520,793.21 320,793.21 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 246.79,520 146.79,693.21 46.79,520 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 246.79,320 46.79,320 146.79,146.79 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 420,220 320,46.79 520,46.79 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 420,420 420,220 593.21,320 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 420,420 593.21,320 593.21,520 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 420,420 593.21,520 420,620 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 420,420 420,620 246.79,520 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 420,420 246.79,520 246.79,320 z"/>
+<path style="fill:#fff200;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;" d="M 420,420 246.79,320 420,220 z"/>
+</svg>

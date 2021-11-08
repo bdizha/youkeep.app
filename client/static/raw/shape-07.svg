@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="600" height="600" 
+ viewBox="0 0 600 600"
+ >
+    <defs>
+      <pattern id="pat" x="0" y="0" width="150" height="150" patternUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="150" height="150" fill="#FF0000" stroke="none"/>
+		<path fill="none"
+		      style="stroke:#0000FF;stroke-width:3"
+              d="M0,75 L75,0 150,75 75,150 Z"/>
+        <circle cx="0"   cy="75"  r="1.5" fill="#FFFFFF" stroke="no"/>
+        <circle cx="75"  cy="0"   r="1.5" fill="#FFFFFF" stroke="no"/>
+        <circle cx="150" cy="75"  r="1.5" fill="#FFFFFF" stroke="no"/>
+        <circle cx="75"  cy="150" r="1.5" fill="#FFFFFF" stroke="no"/>
+      </pattern>
+    </defs>
+    
+    <rect x="0" y="0" width="600" height="600" stroke= "none" fill="url(#pat)" />
+
+</svg>

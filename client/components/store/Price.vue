@@ -5,12 +5,12 @@
         Current price
       </p>
       <p class="r-item-text r-text-white">
-        <nuxt-img v-if="store.currency_url"
-                  :src="store.currency_url"
-                  width="18px"
+        <nuxt-img v-if="currency.currency_url"
+                  :src="currency.currency_url"
+                  height="18px"
         ></nuxt-img>
-        <span>{{ store.price }}</span>
-        <span>{{ store.currency }}</span>
+        <span>{{ price }}</span>
+        <span>{{ currency.code }}</span>
       </p>
     </a-col>
   </a-row>
@@ -19,13 +19,14 @@
 export default {
   name: 'r-store-price',
   props: {
-    store: {
+    currency: {
       type: Object,
       required: true,
       default: () => {
-        return { currency: null, price: 0, currency_url: null }
+        return { code: null, currency_url: null }
       }
     },
+    price: { type: String, required: false, default: '0.00' },
     isShowing: { type: Boolean, required: false, default: false }
   },
   data () {

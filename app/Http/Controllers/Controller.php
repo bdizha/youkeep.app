@@ -348,7 +348,7 @@ class Controller extends BaseController
     protected function _setProduct(): void
     {
         $this->response = [];
-        $this->product = Saleable::with('store')
+        $this->product = Product::with(['store', 'values.attribute'])
             ->where('is_active', true)
             ->where('slug', $this->slug)
             ->first();
@@ -417,7 +417,7 @@ class Controller extends BaseController
      */
     protected function _setProducts()
     {
-        $query = Product::orderBy('created_at', 'DESC');
+        $query = Product::orderBy($this->sort['column'], $this->sort['dir']);
 
         if (!empty($this->productId)) {
             $query = Product::find($this->productId)->links()
@@ -461,8 +461,7 @@ class Controller extends BaseController
         }
 
         if (!empty($query)) {
-            $this->products = $query->orderBy($this->sort['column'], $this->sort['dir'])
-                ->paginate($this->limit);
+            $this->products = $query->paginate($this->limit);
 
             $this->_setProductsRoutes();
         }
@@ -546,8 +545,10 @@ class Controller extends BaseController
 
         $this->storeId = $store->id;
 
+        $store->ranking = $store->setRanking();
+
         $this->response = [
-            'store' => $store
+            'store' => $store,
         ];
     }
 

@@ -35,8 +35,7 @@ export default {
       required: false,
       default: () => {
         return {
-          is_active: true,
-          order_by: 'updated_at'
+          is_active: true
         }
       }
     }

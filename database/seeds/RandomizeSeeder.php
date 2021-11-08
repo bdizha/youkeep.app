@@ -42,7 +42,7 @@ class RandomizeSeeder extends DatabaseSeeder
 
         foreach ($products as $product) {
             $product->randomized_at = Carbon::now()->subMinutes(rand(1, 10000000));
-            echo ">>>> Ranking {$product->slug} randomized at{$product->randomized_at}\n";
+            echo ">>>> Product {$product->slug} randomized at{$product->randomized_at}\n";
             $product->save();
         }
     }

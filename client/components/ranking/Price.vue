@@ -1,32 +1,28 @@
 <template>
   <a-row align="middle" justify="center" type="flex">
     <a-col :span="24">
-      <p v-if="isShowing" class="r-text-xs r-text-light">
-        Current price
-      </p>
       <p class="r-item-text r-text-white">
-        <nuxt-img v-if="!isDollar() && product.currency_url"
-                  :src="product.currency_url"
+        <nuxt-img v-if="!isDollar() && item.currency_url"
+                  :src="item.currency_url"
                   height="18px"
         ></nuxt-img>
-        <span>{{ (isDollar() ? '$' : '') +  product.price }}</span>
-        <span>{{ product.currency }}</span>
+        <span>{{ (isDollar() ? '$' : '') +  item.price }}</span>
+        <span>{{ item.currency }}</span>
       </p>
     </a-col>
   </a-row>
 </template>
 <script>
 export default {
-  name: 'r-product-price',
+  name: 'r-ranking-price',
   props: {
-    product: {
+    item: {
       type: Object,
       required: true,
       default: () => {
         return { currency: null, price: 0, currency_url: null }
       }
-    },
-    isShowing: { type: Boolean, required: false, default: false }
+    }
   },
   data () {
     return {}
@@ -36,7 +32,7 @@ export default {
   computed: {},
   methods: {
     isDollar () {
-      return this.product.currency === 'USD'
+      return this.item.currency === 'USD'
     }
   }
 }

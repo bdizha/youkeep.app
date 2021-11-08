@@ -416,6 +416,14 @@ class Product extends KModel
         return $this->hasMany('App\ProductPhoto');
     }
 
+    /**
+     * Get the related values
+     */
+    public function values()
+    {
+        return $this->hasMany('App\ProductValue')->take(24);
+    }
+
     public function updateAncestryIds($storeCategory)
     {
         return;

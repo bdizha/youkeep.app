@@ -9,7 +9,7 @@
       />
     </a-col>
     <a-col v-if="hasTitle" flex="1 1 0">
-      <p class="r-text-xs r-text-bold">
+      <p class="r-text-xs r-text-white">
         {{ store.name }}
       </p>
     </a-col>

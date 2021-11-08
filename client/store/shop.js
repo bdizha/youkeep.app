@@ -10,10 +10,12 @@ const state = () => ({
   category: {},
   product: {},
   products: [],
+  hasProducts: [],
   hasNotice: false,
   notice: null,
   hasCategories: false,
   hasSearched: false,
+  productCount: 0,
   filters: [
     {
       selected: [],
@@ -39,6 +41,7 @@ const state = () => ({
 const getters = {
   store: state => state.store,
   hasStore: state => state.hasStore,
+  productCount: state => state.productCount,
   catalogMap: state => state.catalogMap,
   hasCatalogMap: state => state.hasCatalogMap,
   notice: state => state.notice,
@@ -52,7 +55,7 @@ const getters = {
   filters: state => state.filters,
   sort: state => state.sort,
   search: state => state.search,
-  hasSearched: state => state.hasSearched,
+  hasProducts: state => state.hasProducts,
   processes: state => state.processes
 }
 
@@ -71,6 +74,16 @@ const mutations = {
     console.log('response: store data: ', state.store)
 
     Cookies.set('store', store, { expires: 365 })
+  },
+  setProducts (state, products) {
+    state.products = products
+    state.hasProducts = products.data !== undefined && products.data.length > 0
+
+    if (state.hasProducts) {
+      state.productCount = products.data.length
+    } else {
+      state.productCount = 0
+    }
   },
   setCatalogMap (state, catalogMap) {
     state.catalogMap = catalogMap
@@ -120,12 +133,31 @@ const actions = {
         const store = data.store
         commit('setStore', store)
 
-        dispatch('base/onProducts', { store_id: store.id }, { root: true })
+        dispatch('onProducts', { store_id: store.id })
 
         console.log('onStore', store)
       })
     } catch (e) {
       console.error('onStore errors')
+      console.log(e)
+    }
+  },
+  async onProducts ({ dispatch, commit, state }, payload) {
+    dispatch('base/onProcess', { key: 'isProduct', value: true }, { root: true })
+    dispatch('base/onProcess', { key: 'isFixed', value: true }, { root: true })
+
+    dispatch('product/onPayload', payload, { root: true })
+
+    try {
+      await axios.post('/products', payload).then(({ data }) => {
+        commit('setProducts', data)
+        dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
+        dispatch('base/onProcess', { key: 'isProduct', value: false }, { root: true })
+
+        return data
+      })
+    } catch (e) {
+      console.error('onProducts errors', e)
       console.log(e)
     }
   },
@@ -161,21 +193,6 @@ const actions = {
       })
     } catch (e) {
       console.error('onCategories errors')
-      console.log(e)
-    }
-  },
-  async onProducts ({ dispatch, commit }, payload) {
-    try {
-      return await axios.post('/products', payload).then(({ data }) => {
-        console.log('response: onProducts data: ', data)
-        const products = data
-
-        dispatch('base/onProcess', { key: 'isFixed', value: false }, { root: true })
-
-        return products
-      })
-    } catch (e) {
-      console.error('onProducts errors')
       console.log(e)
     }
   },

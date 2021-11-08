@@ -1,8 +1,6 @@
 <?php
 
 use App\AppServe;
-use App\ProductCurrency;
-use App\Ranking;
 use App\Store;
 
 class RankingSeeder extends DatabaseSeeder
@@ -36,41 +34,6 @@ class RankingSeeder extends DatabaseSeeder
      */
     private function setRanking($store): void
     {
-        $aggregate = DB::table('products')
-            ->select('store_id', DB::raw('SUM(price) as volume'), DB::raw('count(id) as assets'), DB::raw('min(price) as floor'), DB::raw('max(price) as roof'))
-            ->groupBy('store_id')
-            ->where('store_id', $store->id)
-            ->first();
-
-        if (!empty($aggregate)) {
-            $rankingData = (array)$aggregate;
-
-            $rankingData['diff_day'] = rand(-150, 96);
-            $rankingData['diff_week'] = rand(-150, 96);
-            $rankingData['diff_month'] = rand(-150, 96);
-            $rankingData['owners'] = rand(1, 3000);
-
-            $rankingData['diff_month'] = rand(-150, 96);
-
-            $hash = md5(json_encode($rankingData));
-
-            $attributes = [
-                'hash' => $hash
-            ];
-
-            $productCurrency = ProductCurrency::whereHas('product', function ($query) use ($store) {
-                $query->whereHas('store', function ($query) use ($store) {
-                    $query->where('stores.id', $store->id);
-                });
-            })
-                ->first();
-
-            $rankingData['currency_id'] = $productCurrency->currency_id;
-
-            $ranking = Ranking::updateOrCreate($attributes, $rankingData);
-            echo ">>>>>Inserting ranking: {$ranking->hash}\n";
-        } else {
-            echo "<<<<<Skipping raking store: {$store->name}\n";
-        }
+       $store->setRanking();
     }
 }

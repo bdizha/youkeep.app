@@ -1,38 +1,62 @@
 <template>
   <a-tabs v-model="selectedKey" type="card">
-    <a-tab-pane key="collected" tab="Collected"
-    >
+    <a-tab-pane key="created">
+      <span slot="tab">
+        <a-icon theme="filled" type="appstore" />
+        Created (13)
+      </span>
       <r-store-products></r-store-products>
     </a-tab-pane>
-    <a-tab-pane key="" tab="Air Drops"
-    >
-      <r-store-drops></r-store-drops>
-    </a-tab-pane>
-    <a-tab-pane key="created" tab="Created"
-    >
-      <r-store-products></r-store-products>
-    </a-tab-pane>
-    <a-tab-pane key="inspired" tab="Inspired"
-    >
-      <r-store-inspired></r-store-inspired>
-    </a-tab-pane>
-    <a-tab-pane key="timeline" tab="Timeline"
-    >
-      <r-store-timeline></r-store-timeline>
-    </a-tab-pane>
-    <a-tab-pane key="offers" tab="Offers"
-    >
-      <r-store-offers></r-store-offers>
-    </a-tab-pane>
-    <a-tab-pane key="series" tab="Series"
-    >
-      <r-store-series></r-store-series>
-    </a-tab-pane>
-    <a-tab-pane key="about" tab="About"
-    >
+    <a-tab-pane key="about">
+      <span slot="tab">
+        <a-icon theme="filled" type="idcard" />
+        About
+      </span>
       <a-card class="r-bg-dark r-text-left">
         <r-store-about :store="store"></r-store-about>
       </a-card>
+    </a-tab-pane>
+    <a-tab-pane key="timeline">
+      <span slot="tab">
+        <a-icon theme="filled" type="clock-circle" />
+        Timeline
+      </span>
+      <r-store-timeline></r-store-timeline>
+    </a-tab-pane>
+    <a-tab-pane key="offers">
+      <span slot="tab">
+        <a-icon theme="filled" type="thunderbolt" />
+        Offers (17)
+      </span>
+      <r-store-offers></r-store-offers>
+    </a-tab-pane>
+    <a-tab-pane key="collected">
+      <span slot="tab">
+        <a-icon theme="filled" type="pushpin" />
+        Collected
+      </span>
+      <r-store-products></r-store-products>
+    </a-tab-pane>
+    <a-tab-pane key="air-drops">
+      <span slot="tab">
+        <a-icon theme="filled" type="rocket" />
+        Air drops
+      </span>
+      <r-store-drops></r-store-drops>
+    </a-tab-pane>
+    <a-tab-pane key="starred">
+      <span slot="tab">
+        <a-icon theme="filled" type="star" />
+        Starred (0)
+      </span>
+      <r-store-inspired></r-store-inspired>
+    </a-tab-pane>
+    <a-tab-pane v-if="false" key="series">
+      <span slot="tab">
+        <a-icon theme="filled" type="tags" />
+        Series (3)
+      </span>
+      <r-store-series></r-store-series>
     </a-tab-pane>
   </a-tabs>
 </template>
@@ -43,7 +67,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'r-store-tabs',
   props: {
-    activeKey: { type: String, required: false, default: 'artists' }
+    activeKey: { type: String, required: false, default: 'created ' }
   },
   data () {
     return {

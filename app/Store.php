@@ -4,21 +4,21 @@ namespace App;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 
 class Store extends Model
 {
     use Sluggable;
 
     public static $tags = [
-       '10% off',
-       'Up to 15%',
-       '15% off',
-       '20% off',
-       'Free shipping',
-       'Buy more save more',
-       'Buy one get one free',
-       'Gift with purchase'
+        '10% off',
+        'Up to 15%',
+        '15% off',
+        '20% off',
+        'Free shipping',
+        'Buy more save more',
+        'Buy one get one free',
+        'Gift with purchase'
     ];
 
     /**
@@ -31,12 +31,25 @@ class Store extends Model
         'updated_at',
         'content',
     ];
-
+    /**
+     * The attributes that should be appended for arrays.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'content_formatted',
+        'photos',
+        'tag',
+        'route',
+        'rate',
+        'photo_url',
+        'photo_cover_url',
+        'joined_at',
+    ];
     /**
      * @var string[]
      */
     private $ignoredPhotos = ['d2fda6827655f4795e9f288f7404358a069fe1ce'];
-
 
     /**
      * Return the sluggable configuration array for this model.
@@ -54,27 +67,20 @@ class Store extends Model
     }
 
     /**
-     * The attributes that should be appended for arrays.
-     *
-     * @var array
-     */
-    protected $appends = [
-        'content_formatted',
-        'photos',
-        'tag',
-        'route',
-        'rate',
-        'photo_url',
-        'photo_cover_url',
-    ];
-
-    /**
      * @return string
      */
     public function getRouteAttribute()
     {
         $route = '/collection/' . $this->slug;
         return $route;
+    }
+
+    /**
+     * @return string
+     */
+    public function getJoinedAtAttribute()
+    {
+        return \Carbon\Carbon::parse($this->created_at)->format('n M Y');
     }
 
     /**
@@ -99,8 +105,15 @@ class Store extends Model
      */
     public function getPhotoUrlAttribute()
     {
-        $isUrl = strpos($this->photo, 'http') !== false;
-        return $isUrl ? $this->photo : url('/storage/product/' . $this->photo);
+        $photo_url = null;
+
+        if (!empty($this->photo)) {
+            $isUrl = strpos($this->photo, 'http') !== false;
+            $photo_url = $isUrl ? $this->photo : url('/storage/product/' . $this->photo);
+        }
+
+        return $photo_url;
+
     }
 
     /**
@@ -108,7 +121,56 @@ class Store extends Model
      */
     public function getPhotoCoverUrlAttribute()
     {
-        return url('/storage/store/' . $this->photo_cover);
+        $photo_cover_url = null;
+        if (!empty($this->photo_cover)) {
+            $isUrl = strpos($this->photo_cover, 'http') !== false;
+            $photo_cover_url = $isUrl ? $this->photo_cover : url('/storage/product/' . $this->photo_cover);
+        }
+        return $photo_cover_url;
+    }
+
+    /**
+     * @return object
+     */
+    public function setRanking(): object
+    {
+        $ranking = [];
+        $aggregate = DB::table('products')
+            ->select('store_id', DB::raw('SUM(price) as volume'), DB::raw('count(id) as assets'), DB::raw('min(price) as floor'), DB::raw('max(price) as roof'))
+            ->groupBy('store_id')
+            ->where('store_id', $this->id)
+            ->first();
+
+        if (!empty($aggregate)) {
+            $rankingData = (array)$aggregate;
+
+            $rankingData['diff_day'] = rand(-150, 96);
+            $rankingData['diff_week'] = rand(-150, 96);
+            $rankingData['diff_month'] = rand(-150, 96);
+            $rankingData['owners'] = rand(1, 3000);
+
+            $rankingData['diff_month'] = rand(-150, 96);
+
+            $hash = md5(json_encode($rankingData));
+
+            $attributes = [
+                'hash' => $hash
+            ];
+
+            $productCurrency = ProductCurrency::whereHas('product', function ($query) {
+                $query->whereHas('store', function ($query) {
+                    $query->where('stores.id', $this->id);
+                });
+            })
+                ->first();
+
+            if (!empty($productCurrency)) {
+                $rankingData['currency_id'] = $productCurrency->currency_id;
+                $ranking = Ranking::updateOrCreate($attributes, $rankingData);
+                $ranking->currency = Currency::find($productCurrency->currency_id)->first();
+            }
+        }
+        return $ranking;
     }
 
     /**
@@ -131,7 +193,7 @@ class Store extends Model
     public function getContentFormattedAttribute()
     {
         $content = 'Coming soon!';
-        if(!empty($this->content)){
+        if (!empty($this->content)) {
             $content = $this->content;
         }
 
@@ -141,7 +203,8 @@ class Store extends Model
     /**
      * Get the store photos
      */
-    public function store_photos(){
+    public function store_photos()
+    {
         return $this->hasMany('App\StorePhoto');
     }
 
@@ -164,7 +227,16 @@ class Store extends Model
     /**
      * Get the related serves
      */
-    public function serves(){
+    public function serves()
+    {
         return $this->belongsToMany('App\Serve', 'store_serves', 'store_id', 'serve_id')->take(24);
+    }
+
+    /**
+     * Get the related events
+     */
+    public function events()
+    {
+        return $this->hasMany('App\Event', 'actor_id', 'id');
     }
 }

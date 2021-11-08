@@ -43,11 +43,17 @@
                 <r-store-head :store="store"></r-store-head>
               </nuxt-link>
             </template>
+            <template slot="floor" slot-scope="floor, record">
+              <r-store-price :currency="record.currency" :price="floor"></r-store-price>
+            </template>
+            <template slot="roof" slot-scope="roof, record">
+              <r-store-price :currency="record.currency" :price="roof"></r-store-price>
+            </template>
             <template slot="diff_day" slot-scope="diff_day">
-              <span :class="getTextColor(diff_day)">{{ diff_day }}</span>
+              <r-ranking-change :value="diff_day"></r-ranking-change>
             </template>
             <template slot="diff_week" slot-scope="diff_week">
-              <span :class="getTextColor(diff_week)">{{ diff_week }}</span>
+              <r-ranking-change :value="diff_week"></r-ranking-change>
             </template>
           </a-table>
         </a-col>
@@ -95,12 +101,14 @@ const columns = [
   {
     sorter: true,
     title: 'Floor price',
-    dataIndex: 'floor'
+    dataIndex: 'floor',
+    scopedSlots: { customRender: 'floor' }
   },
   {
     sorter: true,
     title: 'Roof price',
-    dataIndex: 'roof'
+    dataIndex: 'roof',
+    scopedSlots: { customRender: 'roof' }
   },
   {
     sorter: true,
@@ -165,6 +173,14 @@ export default {
         },
         ...filters
       })
+    },
+    getPrice (value, item) {
+      const price = {
+        price: value,
+        currency: item.currency.code,
+        currency_url: item.currency.currency_url
+      }
+      return price
     },
     async onRankings (params = {}) {
       this.loading = true
