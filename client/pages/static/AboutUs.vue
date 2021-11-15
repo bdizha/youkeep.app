@@ -110,7 +110,7 @@
                     <div class="r-bg-dark r-p-12 r-border-radius-square" :class="value.class">
                       <a-icon class="r-text-primary"
                               theme="filled"
-                              :style="{ fontSize: '45px' }"
+                              :style="{ fontSize: '36px' }"
                               :type="value.icon"
                       ></a-icon>
                     </div>

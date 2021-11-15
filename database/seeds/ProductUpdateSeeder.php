@@ -18,7 +18,7 @@ class ProductUpdateSeeder extends DatabaseSeeder
     public function run()
     {
         // set service default type
-        \App\ProductType::setDefaultType();
+        \App\ProductType::getDefaultType();
 
         $products = Product::with('photos')
             ->get();

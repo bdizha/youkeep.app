@@ -5,6 +5,8 @@ use App\Category;
 use App\CategoryProduct;
 use App\Lookup;
 use App\Product;
+use App\Serve;
+use App\StoreServe;
 use App\ProductType;
 use App\ProductVariant;
 use App\StoreCategory;
@@ -14,6 +16,7 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     protected $storeId = null;
+    protected $serveId = null;
     protected $store = null;
     protected $app = null;
     protected $categories = [];
@@ -508,5 +511,22 @@ class DatabaseSeeder extends Seeder
         ];
 
         $this->app = \App\App::updateOrCreate($attributes, $values);
+    }
+
+    /**
+     * @param $storeData
+     */
+    protected function setServes(): void
+    {
+        foreach ($this->serves as $serve) {
+            if (rand(0, 360) > rand(0, 3000)) {
+                $values = [
+                    'store_id' => $this->store->id,
+                    'serve_id' => $serve->id,
+                ];
+
+                StoreServe::updateOrCreate($values, $values);
+            }
+        }
     }
 }

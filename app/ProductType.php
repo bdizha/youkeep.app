@@ -103,11 +103,9 @@ class ProductType extends Model
         return !empty($type);
     }
 
-    static function setDefaultType()
+    static function getDefaultType()
     {
         $hasDefaultType = self::hasDefaultType();
-
-        $defaultType = null;
 
         if (empty($hasDefaultType)) {
             $attributes = [

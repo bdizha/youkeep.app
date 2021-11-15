@@ -1,57 +1,94 @@
 <template>
-  <nuxt-link :to="store.route"
-             class="r-item-shadow"
-  >
-    <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
-      <a-col :lg="{span: 10}"
-             :md="{span: 10}" :sm="{span: 24}" :style="getPhotoCoverStyle()" :xs="{span: 24}"
+  <a-card class="r-p-0 r-store-meta r-store-meta__66" :class="getBgClass()">
+    <a-row :gutter="[12, 12]"
+           align="middle" justify="start" type="flex"
+    >
+      <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+             :sm="{ span: 24 }"
+             :xs="{ span: 24 }"
       >
-        <r-avatar
-          :size="size"
-          :data-src="store.photo_url"
-          class="r-avatar-store"
-          shape="square"
-          src-placeholder="/assets/icon_default.png"
-        />
+        <r-asset-head :product="product"></r-asset-head>
       </a-col>
-      <a-col :lg="{span: 14}" :md="{span: 14}" :sm="{span:24}" :xs="{span: 24}">
-        <r-store-meta :store="store"></r-store-meta>
+      <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+             :sm="{ span: 24 }"
+             :xs="{ span: 24 }"
+      >
+        <r-store-head :size="60"
+                      :has-title="false"
+                      :store="product.store"
+        ></r-store-head>
+      </a-col>
+      <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+             :sm="{ span: 24 }"
+             :xs="{ span: 24 }"
+      >
+        <div class="r-p-24">
+          <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
+            <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <r-asset-body :is-featured="isFeatured"
+                            :product="product"
+              ></r-asset-body>
+            </a-col>
+            <a-col :lg="{ span: 24 }" :md="{ span: 24}"
+                   :sm="{ span: 24 }"
+                   :xs="{ span: 24 }"
+            >
+              <r-asset-foot :is-featured="isFeatured"
+                            :product="product"
+                            :is-drop="isDrop"
+                            :theme="theme"
+              ></r-asset-foot>
+            </a-col>
+          </a-row>
+        </div>
       </a-col>
     </a-row>
-  </nuxt-link>
+  </a-card>
 </template>
 <script>
-export default {
-  name: 'r-store-item',
-  components: {},
-  props: {
-    store: {
-      type: Object,
-      required: true,
-      default: () => {
 
-      }
-    },
-    hasActions: { type: Boolean, required: false, default: true },
-    size: { type: Number, required: false, default: 90 },
-    isShow: { type: Boolean, required: false, default: false }
+import { mapGetters } from 'vuex'
+
+export default {
+  name: 'r-asset-item',
+  props: {
+    isFeatured: { type: Boolean, required: false, default: false },
+    isDrop: { type: Boolean, required: false, default: false },
+    isVertical: { type: Boolean, required: false, default: true },
+    product: { type: Object, required: false }
   },
   data () {
     return {
-      hasSpin: true
+      theme: 'dark'
     }
   },
+  computed: {
+    ...mapGetters({})
+  },
   created () {
-    this.payload()
+    this.onTheme()
   },
   methods: {
-    payload () {
-    },
-    onSearch () {
-      this.isSearching = true
-    },
     getPhotoCoverStyle () {
-      return 'background-image: url(' + ('/assets/icon_default.png') + ');background-size: contain;'
+      return `background-image: url(${this.product.photo_url});`
+    },
+    getBgClass () {
+      let theme = 'dark'
+      if (this.isDrop) {
+        theme = this.theme + '-light'
+      }
+      return `r-bg-${theme}`
+    },
+    onTheme () {
+      if (this.isDrop) {
+        const $this = this
+        this.$store.dispatch('content/onTheme').then((theme) => {
+          $this.theme = theme
+        })
+      }
     }
   }
 }

@@ -31,7 +31,7 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium">
-                        Get started today and collectors can start ordering from you on Youkeep.
+                        Get started today and collectors can start minting from you on Youkeep.
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -143,7 +143,7 @@
                     >
                       <p class="r-text-medium">
                         Improve sales through higher conversion rates, on demand NFT collectibles
-                        and reduced cart abandonment.
+                        and reduced inconverted asset views.
                       </p>
                     </a-col>
                     <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24}"

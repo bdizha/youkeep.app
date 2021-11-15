@@ -1,54 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW X6 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="11.9014mm" height="11.9062mm" version="1.1"
-     style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-     viewBox="0 0 235 235"
->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="11.9062mm" height="11.9062mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+     viewBox="0 0 81 81"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil0 {fill:none}
-    .fil4 {fill:#C834F7}
-    .fil3 {fill:#C834F7}
+    .fil0 {fill:none;fill-rule:nonzero}
     .fil1 {fill:#C834F7}
+    .fil3 {fill:#C834F7}
     .fil2 {fill:#C834F7}
    ]]>
   </style>
  </defs>
-    <defs xmlns="http://www.w3.org/2000/svg">
-<linearGradient id="fil0">
-<stop stop-color="#4C57FF"/>
-    <stop stop-color="#4C57FF"/>
-    <stop offset="0.384725" stop-color="#C834F7"/>
-    <stop offset="0.848958" stop-color="#C834F7"/>
-</linearGradient>
-        <linearGradient id="fil1">
-  <stop stop-color="#C834F7"/>
-            <stop offset="0.384725" stop-color="#C834F7"/>
-            <stop offset="0.848958" stop-color="#4C57FF"/>
-</linearGradient>
-        <linearGradient id="fil2">
-<stop stop-color="#4C57FF"/>
-            <stop stop-color="#4C57FF"/>
-            <stop offset="0.384725" stop-color="#C834F7"/>
-            <stop offset="0.848958" stop-color="#C834F7"/>
-</linearGradient>
-        <linearGradient id="fil3">
-<stop stop-color="#4C57FF"/>
-            <stop stop-color="#C834F7"/>
-            <stop offset="0.384725" stop-color="#C834F7"/>
-            <stop offset="0.848958" stop-color="#4C57FF"/>
-</linearGradient>
-</defs>
     <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-        <g id="_531686288">
-   <circle class="fil0" cx="117" cy="117" r="117"/>
-            <path fill="url(#fil0)" d="M104 235c-55,-6 -98,-50 -104,-104l104 0 0 104z"/>
-            <path fill="url(#fil1)" d="M235 131c-6,55 -50,98 -104,104l0 -104 104 0z"/>
-            <path fill="url(#fil2)" d="M104 104l-104 0c3,-27 15,-52 34,-70l70 70 0 0 0 0z"/>
-            <path fill="url(#fil3)" d="M201 34c18,18 31,43 34,70l-104 0 70 -70z"/>
+        <g id="_2100775232">
+   <circle class="fil0" cx="41" cy="41" r="41"/>
+            <path class="fil1" d="M25 79c-11,-5 -20,-14 -23,-25 -2,-7 2,-9 5,-9l29 0 0 26c0,8 -6,9 -11,8z"/>
+            <path class="fil2" d="M56 79c11,-5 20,-14 24,-25 2,-8 -3,-9 -6,-9l-29 0 0 26c0,8 7,9 11,8z"/>
+            <path class="fil3" d="M36 36l-30 0c-3,0 -5,-3 -5,-6 1,-5 3,-9 6,-12 2,-3 5,-5 9,-2l20 20 0 0 0 0 0 0z"/>
+            <path class="fil3" d="M45 36l30 0c4,0 6,-3 5,-6 0,-5 -3,-9 -5,-13 -2,-2 -6,-5 -10,-1l-20 20 0 0 0 0 0 0z"/>
   </g>
  </g>
 </svg>

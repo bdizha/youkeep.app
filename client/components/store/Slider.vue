@@ -1,14 +1,14 @@
 <template>
-  <a-row align="middle" class="r-slider" justify="center" type="flex">
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-store-slider ">
-      <VueSlickCarousel v-if="hasStores" v-bind="settings">
-        <nuxt-link v-for="(store, index) in stores.data"
-                   :key="index"
-                   :to="store.route"
-                   class="r-text-view-more"
-        >
-          <r-store-face :store="store"></r-store-face>
-        </nuxt-link>
+  <a-row class="r-slider" justify="start" type="flex">
+    <a-col :span="24" class="r-spin-holder">
+      <VueSlickCarousel
+        v-if="hasStores > 0"
+        v-bind="settings"
+      >
+        <r-store-item v-for="(store, index) in stores.data"
+                        :key="index"
+                        :store="store"
+        ></r-store-item>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
             <a-icon type="left"/>
@@ -20,21 +20,37 @@
           </div>
         </template>
       </VueSlickCarousel>
+      <r-spinner v-if="isProcessing" :is-absolute="true" process="isFixed"/>
     </a-col>
   </a-row>
 </template>
 <script>
+import axios from 'axios'
 import { mapGetters } from 'vuex'
 
 export default {
   name: 'r-store-slider',
+  components: {},
   props: {
-    columns: { type: Number, required: false, default: 4 },
-    category: { type: Object, required: false, default: null },
-    title: { type: String, required: false, default: null }
+    columns: { type: Number, required: false, default: 3 },
+    filters: {
+      type: Object,
+      required: false,
+      default: () => {
+        return {
+          serve_id: null,
+          store_id: null,
+          is_active: true,
+          order_by: 'updated_at'
+        }
+      }
+    }
   },
   data () {
     return {
+      hasStores: false,
+      isProcessing: false,
+      stores: [],
       settings: {
         'slidesToShow': this.columns,
         'slidesToScroll': 1,
@@ -72,14 +88,28 @@ export default {
       }
     }
   },
-  computed: mapGetters({
-    stores: 'content/stores',
-    hasStores: 'content/hasStores',
-    processes: 'base/processes',
-    search: 'base/search'
-  }),
-  created () {
+  async fetch () {
+    this.hasStores = false
+    this.isProcessing = true
+
+    const path = `/stores`
+    const $this = this
+
+    console.log('service path: ', path)
+
+    await axios.post(path, this.filters)
+      .then(({ data }) => {
+        $this.stores = data.stores
+        $this.hasStores = true
+        $this.isProcessing = false
+      })
+      .catch((e) => {
+        console.log(e)
+      })
   },
+  computed: mapGetters({
+    processes: 'base/processes'
+  }),
   methods: {}
 }
 </script>

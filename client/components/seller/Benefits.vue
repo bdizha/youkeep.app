@@ -46,12 +46,11 @@
                   <a-card class="r-bg-tertiary-light">
                     <a-row :gutter="[24, 24]" type="flex" align="middle">
                       <a-col>
-                        <div class="r-bg-primary-light r-p-12 r-border-radius-square">
-                          <a-icon class="r-text-secondary"
-                                  :style="{ fontSize: '45px' }"
-                                  :type="benefit.icon"
-                          ></a-icon>
-                        </div>
+                        <a-icon class="r-text-primary"
+                                theme="filled"
+                                :style="{ fontSize: '60px' }"
+                                :type="benefit.icon"
+                        ></a-icon>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                              :sm="{ span: 24 }"
@@ -105,15 +104,15 @@ export default {
           content: 'Built to delight your collectors while enabling your base line to thrive.'
         },
         {
-          icon: 'dollar',
+          icon: 'picture',
           title: 'Zero fees charged',
           heading: '<span class="r-text-primary">Offer</span> rare NFT assets',
           content: 'It\'s never been easier to give your audiences the freedom to choose.'
         },
         {
-          icon: 'sync',
-          title: 'No credit impact',
-          heading: '<span class="r-text-primary">Earn</span> returning collectors',
+          icon: 'pie-chart',
+          title: 'Minimal gas fee',
+          heading: '<span class="r-text-primary">Earn</span> more transactions',
           content: 'Enable more buying collectors and unleash your goals with Youkeep.'
         }
       ]

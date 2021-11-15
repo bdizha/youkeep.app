@@ -12,13 +12,13 @@
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h4 class="r-heading-light r-text-uppercase" v-html="product.title"></h4>
+                      <h4 class="r-heading-light r-text-uppercase" v-html="service.title"></h4>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <h1 class="r-heading" v-html="product.heading">
+                      <h1 class="r-heading" v-html="service.heading">
                       </h1>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -26,14 +26,14 @@
                            :xs="{ span: 24 }"
                     >
                       <p class="r-text-medium">
-                        {{ product.summary }}
+                        {{ service.summary }}
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                            :sm="{ span: 24 }"
                            :xs="{ span: 24 }"
                     >
-                      <p class="r-text-normal" v-html="product.content">
+                      <p class="r-text-normal" v-html="service.content">
                       </p>
                     </a-col>
                     <a-col :lg="{ span: 9 }" :md="{ span: 9 }"
@@ -54,7 +54,7 @@
               <a-col class="r-text-left" :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                      :xs="{ span: 24}"
               >
-                <r-slider :images="product.images"></r-slider>
+                <r-slider :images="service.images"></r-slider>
               </a-col>
             </a-row>
           </a-col>
@@ -65,7 +65,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-steps user-type="customer" :title="product.title" :size="24" :steps="product.steps" theme="primary"
+      <r-steps user-type="customer" :title="service.title" :size="24" :steps="service.steps" theme="primary"
       ></r-steps>
     </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
@@ -93,7 +93,7 @@
                        :xs="{ span: 24}"
                 >
                   <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
-                    <a-col v-for="(feature, index) in product.features"
+                    <a-col v-for="(feature, index) in service.features"
                            :key="index"
                            :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                            :xs="{ span: 24}"
@@ -157,7 +157,7 @@ export default {
 
     console.log('service params', params)
 
-    await store.dispatch('content/onProduct', slug)
+    await store.dispatch('content/onService', slug)
   },
   data () {
     return {
@@ -174,7 +174,7 @@ export default {
           title: 'Boost Conversion',
           heading: '<span class="r-text-primary">Boost</span> visibility with shoppers',
           image: '/assets/asset-05.svg',
-          summary: 'Shoppers use Zerosum to discover new products and checkout in seconds. ',
+          summary: 'Shoppers use Zerosum to discover new services and checkout in seconds. ',
           content: 'Zerosum enables instant mobile shopping by making the online checkout as simple and fast as the offline one, without requiring retailers to implement anything.'
         },
         {
@@ -189,8 +189,8 @@ export default {
   },
   computed: {
     ...mapGetters({
-      products: 'content/products',
-      product: 'content/product'
+      services: 'content/services',
+      service: 'content/service'
     })
   },
   created () {
@@ -198,12 +198,12 @@ export default {
   },
   methods: {
     getBgClass (isToggled) {
-      const theme = isToggled ? this.product.theme : this.product.accent
+      const theme = isToggled ? this.service.theme : this.service.accent
 
       return `r-bg-${theme}-light`
     },
     getTextClass (isToggled) {
-      const theme = isToggled ? this.product.theme : this.product.accent
+      const theme = isToggled ? this.service.theme : this.service.accent
       return `r-text-${theme}`
     },
     onModal () {

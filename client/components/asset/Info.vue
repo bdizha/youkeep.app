@@ -1,100 +1,52 @@
 <template>
-  <a-row :gutter="24" class="r-sellers-tray" justify="center"
-         type="flex"
-  >
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }">
-      <a-row :gutter="24" align="middle" class="r-mt-24" justify="start" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
+  <a-row align="middle" class="r-tabs" justify="start" type="flex">
+    <a-col :xs="{ span: 24 }" class="r-text-left">
+      <a-collapse default-active-key="0" expandIconPosition="right">
+        <a-collapse-panel v-for="(tab) in tabs"
+                          :key="tab.key"
+                          :header="tab.title"
         >
-          <strong>Trading hours:</strong>
-        </a-col>
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <p class="r-text-normal" v-html="store.trading_hours"></p>
-        </a-col>
-      </a-row>
-      <a-row :gutter="24" align="middle" justify="start" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <strong>Contact:</strong>
-        </a-col>
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <p class="r-text-normal">{{ store.phone }}</p>
-        </a-col>
-      </a-row>
-      <a-row :gutter="24" align="middle" justify="start" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <strong>Description:</strong>
-        </a-col>
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <p class="r-text-normal" v-html="store.description"></p>
-          <p class="r-text-normal" v-html="store.content_formatted"></p>
-        </a-col>
-      </a-row>
-      <a-row :gutter="24" align="middle" justify="start" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <strong>Website:</strong>
-        </a-col>
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <a :href="store.url" class="r-text-link" target="_blank">
-            {{ store.url }}
-          </a>
-        </a-col>
-      </a-row>
+          <div class="r-product-description">
+            <r-asset-description v-if="tab.key == 'description'" :product="product"></r-asset-description>
+            <r-asset-attributes v-if="tab.key == 'attributes'" :product="product"></r-asset-attributes>
+            <r-store-about v-if="tab.key == 'about'" :store="product.store"></r-store-about>
+            <r-asset-details v-if="tab.key == 'details'" :product="product"></r-asset-details>
+            <r-asset-slider v-if="tab.key == 'assets'" :columns="3" :filters="{event_type: eventType}"></r-asset-slider>
+          </div>
+        </a-collapse-panel>
+      </a-collapse>
     </a-col>
   </a-row>
 </template>
 <script>
-import { mapGetters } from 'vuex'
 
+const EVENT_TYPE_SUGGESTED = 5
 export default {
-  name: 'r-store-info',
-  components: {},
-  props: {},
+  name: 'r-asset-info',
+  props: {
+    isShowing: { type: Boolean, required: false, default: false },
+    product: { type: Object, required: false, default: null }
+  },
   data () {
     return {
-      list: [
-        {
-          title: 'Trading Hours',
-          content: this.store.trading_hours
-        },
-        {
-          title: 'Contact',
-          content: this.store.phone
-        },
-        {
-          title: 'Description',
-          content: this.store.content_formatted
-        },
-        {
-          title: 'Website',
-          content: this.store.url
-        }
+      eventType: EVENT_TYPE_SUGGESTED,
+      currentLink: 'description',
+      tabs: [
+        { title: 'Asset Description', key: 'description' },
+        { title: 'Attributes', key: 'attributes' },
+        { title: 'About The ' + this.product.store.name, key: 'about' },
+        { title: 'Details', key: 'details' },
+        { title: 'You may also like', key: 'assets' }
       ]
     }
   },
-  computed: mapGetters({
-    store: 'base/store'
-  }),
   created () {
-    this.payload()
   },
+  computed: {},
   methods: {
-    async payload () {
-    },
+    setTab (tab) {
+      this.currentLink = tab.key
+    }
   }
 }
 </script>

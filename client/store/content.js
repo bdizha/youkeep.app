@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 export const state = () => ({
-  products: [
+  services: [
     {
       theme: 'primary',
       accent: 'tertiary',
@@ -11,7 +11,7 @@ export const state = () => ({
       heading: '<span class="r-text-primary">Find</span> on-demand original NFTs.',
       summary: 'Take your taste to the next level only when you eat with youkeep with the participating artists.',
       content: 'You\'ll enjoy the Youkeep digital asset experience. Track your orders in real-time, upcoming liquidity and cash earned in one place.',
-      icon: 'coffee',
+      icon: 'compass',
       images: [
         '/assets/asset-03.svg'
       ],
@@ -171,7 +171,7 @@ export const state = () => ({
       row: 1
     }
   ],
-  services: [
+  products: [
     {
       title: 'Unlimited access to API docs',
       slug: 'x-checkout',
@@ -213,7 +213,7 @@ export const state = () => ({
       row: 2
     }
   ],
-  product: null,
+  service: {},
   testimonials: [],
   plans: [
     {
@@ -259,7 +259,7 @@ export const state = () => ({
       action: 'Contact Sales',
       features: [
         'Everything included in the Seller plan, plus... ',
-        'Available for businesses with large product catalog',
+        'Available for businesses with large service catalog',
         'Country-specific rates (delivery, processing fees)',
         'Elastic multi-store AI powered capabilities',
         'Elastic action calls / month based on demand',
@@ -294,16 +294,16 @@ export const state = () => ({
   stores: [],
   hasStores: false,
   theme: 'primary',
-  themes: ['primary', 'secondary', 'tertiary'],
+  themes: ['primary', 'secondary', 'tertiary', 'dark'],
   rankings: [],
   hasRankings: false
 })
 
 // getters
 export const getters = {
-  products: state => state.products,
   services: state => state.services,
-  product: state => state.product,
+  service: state => state.service,
+  products: state => state.products,
   theme: state => state.theme,
   testimonials: state => state.testimonials,
   hasTestimonials: state => state.testimonials.length > 0,
@@ -322,8 +322,8 @@ export const getters = {
 
 // mutations
 const mutations = {
-  setProduct (state, product) {
-    state.product = product
+  setService (state, service) {
+    state.service = service
   },
   setArticle (state, article) {
     state.article = article
@@ -408,12 +408,12 @@ const actions = {
       console.log(e)
     }
   },
-  onProduct ({ dispatch, commit, state }, slug) {
-    const product = state.products.find((product) => {
-      return product.slug === slug
+  onService ({ dispatch, commit, state }, slug) {
+    const service = state.services.find((service) => {
+      return service.slug === slug
     })
 
-    commit('setProduct', product)
+    commit('setService', service)
   },
   async onArticles ({ dispatch, commit, state }, route) {
     try {

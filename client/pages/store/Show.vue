@@ -54,49 +54,13 @@
                              :sm="{ span: 24 }"
                              :xs="{ span: 24 }"
                       >
-                        <div class="r-store-photo" :class="getBgClass()">
-                          <r-store-head :size="150" :has-title="false" :store="store"></r-store-head>
-                        </div>
+                        <r-store-head :size="60"
+                                      :has-title="false"
+                                      :store="store"
+                        ></r-store-head>
                       </a-col>
                       <a-col>
-                        <a-row :gutter="[12,12]" justify="start" align="middle" type="flex">
-                          <a-col class="r-asset-actions">
-                            <a-button block
-                                      class="r-btn-dark"
-                                      size="large"
-                                      type="secondary"
-                            >
-                              <a-icon type="heart" theme="filled"></a-icon>
-                              <span class="r-text-action">
-                        {{ 24 }}
-                        </span>
-                            </a-button>
-                          </a-col>
-                          <a-col class="r-asset-actions">
-                            <a-button block
-                                      class="r-btn-dark"
-                                      size="large"
-                                      type="secondary"
-                            >
-                              <a-icon type="star" theme="filled"></a-icon>
-                              <span class="r-text-action">
-                        {{ 4.8 }}
-                        </span>
-                            </a-button>
-                          </a-col>
-                          <a-col class="r-asset-actions">
-                            <a-button block
-                                      class="r-btn-dark"
-                                      size="large"
-                                      type="secondary"
-                            >
-                              <a-icon type="share-alt"></a-icon>
-                              <span class="r-text-action">
-                          Share
-                        </span>
-                            </a-button>
-                          </a-col>
-                        </a-row>
+                        <r-store-actions :is-featured="true" :store="store" size="large"></r-store-actions>
                       </a-col>
                     </a-row>
                   </div>

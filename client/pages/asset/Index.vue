@@ -4,7 +4,7 @@
            :sm="{ span: 24 }"
            :xs="{ span: 24 }"
     >
-      <r-product-list :columns="6" :filters="payload"></r-product-list>
+      <r-asset-list :columns="6" :filters="payload"></r-asset-list>
     </a-col>
   </a-row>
 </template>

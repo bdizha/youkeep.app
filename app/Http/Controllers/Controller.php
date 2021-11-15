@@ -12,7 +12,6 @@ use App\ProductType;
 use App\ProductVariant;
 use App\Ranking;
 use App\Review;
-use App\Saleable;
 use App\Serve;
 use App\Store;
 use App\StoreCategory;
@@ -48,6 +47,7 @@ class Controller extends BaseController
         $productType = null,
         $storeId = null,
         $appId = null,
+        $eventType = null,
         $app = null,
         $slug = null,
         $storeSlug = null,
@@ -64,12 +64,15 @@ class Controller extends BaseController
         $limit = 24,
         $term = null,
         $level = 1,
+        $serveId = null,
+        $serveIds = [],
         $items = [],
         $item = null,
         $method = null,
         $catalogMap = null,
         $countries = [],
         $metricTypes = null,
+        $metricType = null,
         $sort = ['column' => 'randomized_at', 'dir' => 'DESC'],
         $hasBanners = false;
 
@@ -335,20 +338,23 @@ class Controller extends BaseController
      */
     protected function _setStores()
     {
-        $this->stores = Store::where('app_id', $this->appId)
-            ->where('photo', 'like', '%.%')
-            ->where('photo', 'not like', '%.net%')
-            ->where('id', '>', 762)
-            ->orderBy($this->sort['column'], $this->sort['dir'])
-            ->paginate($this->limit);
+        $query = Store::where('stores.app_id', $this->appId);
 
+        if (!empty($this->serveId)) {
+            $query->join('store_serves', 'store_serves.store_id', '=', 'stores.id')
+                ->where('store_serves.serve_id', $this->serveId);
+        }
+
+        $query->orderBy($this->sort['column'], $this->sort['dir']);
+
+        $this->stores = $query->paginate($this->limit);
         $this->response['stores'] = $this->stores;
     }
 
     protected function _setProduct(): void
     {
         $this->response = [];
-        $this->product = Product::with(['store', 'values.attribute'])
+        $this->product = Product::with(['store', 'product_values.product_attribute'])
             ->where('is_active', true)
             ->where('slug', $this->slug)
             ->first();
@@ -417,6 +423,10 @@ class Controller extends BaseController
      */
     protected function _setProducts()
     {
+        if (!empty($this->eventType)) {
+            $this->sort['column'] = 'events.created_at';
+        }
+
         $query = Product::orderBy($this->sort['column'], $this->sort['dir']);
 
         if (!empty($this->productId)) {
@@ -444,6 +454,11 @@ class Controller extends BaseController
             });
         }
 
+        if (!empty($this->eventType)) {
+            $query->join('events', 'events.item_id', '=', 'products.id')
+                ->where('events.type', $this->eventType);
+        }
+
         if (!empty($this->categoryId)) {
             $query->whereHas('categories', function ($query) {
                 $query->where('category_products.category_id', $this->categoryId);
@@ -466,6 +481,7 @@ class Controller extends BaseController
             $this->_setProductsRoutes();
         }
 
+//        $this->products->event_type = $this->eventType;
         $this->response = $this->products;
     }
 
@@ -636,6 +652,8 @@ class Controller extends BaseController
         $this->storeId = $request->get('store_id', null);
         $this->productId = $request->get('product_id', null);
         $this->filters = $request->get('filters', []);
+        $this->eventType = $request->get('event_type', null);
+        $this->serveId = $request->get('serve_id', null);
 
         $this->cacheKey = $this->_setCacheKey($request);
 

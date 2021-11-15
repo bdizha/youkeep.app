@@ -9,8 +9,8 @@ class ProductValue extends Model
     /**
      * Get the related values
      */
-    public function attribute()
+    public function product_attribute()
     {
-        return $this->belongsTo('App\ProductAttribute')->take(24);
+        return $this->belongsTo('App\ProductAttribute');
     }
 }

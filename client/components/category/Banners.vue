@@ -15,7 +15,7 @@
                 :size="size" :src="banner.photo_url"
                 class="r-avatar-block"
                 shape="square"
-                src-placeholder="/assets/icon_default.png"
+                src-placeholder="/patterns/pattern-dark.svg"
                 unit="px"
               />
             </nuxt-link>

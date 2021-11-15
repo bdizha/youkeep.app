@@ -5,7 +5,7 @@
                 :data-src="photo"
                 class="r-avatar-store"
                 shape="square"
-                src-placeholder="/assets/icon_default.png"
+                src-placeholder="/patterns/pattern-dark.svg"
       />
     </template>
     <template slot="action" slot-scope="slug, store">

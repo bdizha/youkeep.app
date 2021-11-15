@@ -7,14 +7,22 @@ viewBox="0 0 18812 18822"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil1 {fill:#13ECAB}
-    .fil0 {fill:#4C57FF}
+    .fil1 {fill:url(#id2)}
+    .fil0 {fill:url(#id1)}
     .fil2 {fill:url(#id0)}
    ]]>
   </style>
   <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="9225.93" y1="1375.09" x2="9585.43" y2="9975.18">
-   <stop offset="0" style="stop-color:#C834F7"/>
-   <stop offset="1" style="stop-color:#4C57FF"/>
+   <stop offset="0" style="stop-color:#4C57FF"/>
+   <stop offset="1" style="stop-color:#13ECAB"/>
+  </linearGradient>
+     <linearGradient id="id1" gradientUnits="userSpaceOnUse" x1="9405.68" y1="0" x2="9405.68" y2="11350.3">
+   <stop offset="0" style="stop-color:#13ECAB"/>
+         <stop offset="1" style="stop-color:#C834F7"/>
+  </linearGradient>
+     <linearGradient id="id2" gradientUnits="userSpaceOnUse" x1="7637.41" y1="1981.41" x2="7637.41" y2="7532.65">
+   <stop offset="0" style="stop-color:#13ECAB"/>
+         <stop offset="1" style="stop-color:#C834F7"/>
   </linearGradient>
  </defs>
  <g id="Layer_x0020_1">

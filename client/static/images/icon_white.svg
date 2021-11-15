@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW X6 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="23.803mm" height="23.8126mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-     viewBox="0 0 880 881"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="11.9062mm" height="11.9062mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+     viewBox="0 0 81 81"
      xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil0 {fill:none}
-    .fil1 {fill:white}
+    .fil0 {fill:none;fill-rule:nonzero}
+    .fil1 {fill:#13ECAB}
+    .fil3 {fill:#4C57FF}
+    .fil2 {fill:#C834F7}
    ]]>
   </style>
  </defs>
     <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-        <g id="_532658848">
-   <circle class="fil0" cx="440" cy="440" r="440"/>
-            <path class="fil1" d="M391 881c-205,-23 -368,-186 -391,-391l391 0 0 391z"/>
-            <path class="fil1" d="M880 490c-23,205 -186,368 -391,391l0 -391 391 0z"/>
-            <path class="fil1" d="M391 391l-391 0c11,-103 58,-195 127,-264l264 264 0 0 0 0z"/>
-            <path class="fil1" d="M754 128c69,69 115,161 126,263l-390 0 263 -263z"/>
+        <g id="_2100775232">
+   <circle class="fil0" cx="41" cy="41" r="41"/>
+            <path class="fil1" d="M25 79c-11,-5 -20,-14 -23,-25 -2,-7 2,-9 5,-9l29 0 0 26c0,8 -6,9 -11,8z"/>
+            <path class="fil2" d="M56 79c11,-5 20,-14 24,-25 2,-8 -3,-9 -6,-9l-29 0 0 26c0,8 7,9 11,8z"/>
+            <path class="fil3" d="M36 36l-30 0c-3,0 -5,-3 -5,-6 1,-5 3,-9 6,-12 2,-3 5,-5 9,-2l20 20 0 0 0 0 0 0z"/>
+            <path class="fil3" d="M45 36l30 0c4,0 6,-3 5,-6 0,-5 -3,-9 -5,-13 -2,-2 -6,-5 -10,-1l-20 20 0 0 0 0 0 0z"/>
   </g>
  </g>
 </svg>

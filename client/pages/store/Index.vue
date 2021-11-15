@@ -3,45 +3,6 @@
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-serve-slider></r-serve-slider>
     </a-col>
-    <a-col v-if="false" v :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-      <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-        <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
-               :sm="{ span: 24 }"
-               :xs="{ span: 24 }"
-        >
-          <h3 class="r-heading">
-            Top liquidity
-          </h3>
-        </a-col>
-        <a-col>
-          <a-button block
-                    class="r-btn-bordered-secondary"
-                    size="default"
-                    type="secondary"
-          >
-            Offers
-          </a-button>
-        </a-col>
-        <a-col>
-          <a-button block
-                    class="r-btn-bordered-secondary"
-                    size="default"
-                    type="secondary"
-          >
-            In-store
-          </a-button>
-        </a-col>
-        <a-col>
-          <a-button block
-                    class="r-btn-bordered-secondary"
-                    size="default"
-                    type="secondary"
-          >
-            Sort by: Relevancy
-          </a-button>
-        </a-col>
-      </a-row>
-    </a-col>
     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <r-stores></r-stores>
     </a-col>

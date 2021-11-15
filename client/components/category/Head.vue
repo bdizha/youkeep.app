@@ -31,7 +31,7 @@ export default {
       default: () => {
         return {
           name: 'Not set',
-          photo_url: '/assets/icon_default.png'
+          photo_url: '/patterns/pattern-dark.svg'
         }
       }
     }

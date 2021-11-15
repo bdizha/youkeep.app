@@ -1,6 +1,7 @@
 <?php
 
 use App\ProductType;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
 use App\Category;
 use App\Store;
@@ -185,7 +186,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             'order' => 1,
             'description' => $categoryDescription,
             'type' => Category::TYPE_PRODUCT,
-            'randomized_at' => \Carbon\Carbon::now()->addMinutes(rand(1, 3600))
+            'randomized_at' => Carbon::now()->addMinutes(rand(1, 3600))
         ];
 
         $category = \App\Category::updateOrCreate($attributes, $values);
@@ -206,7 +207,7 @@ class ProductMTGSeeder extends DatabaseSeeder
             'parent_id' => $parentId,
             'url' => $url,
             'level' => $level,
-            'randomized_at' => \Carbon\Carbon::now()->addMinutes(rand(1, 3600))
+            'randomized_at' => Carbon::now()->addMinutes(rand(1, 3600))
         ];
 
         $this->parentStoreCategory = \App\StoreCategory::updateOrCreate($values, $values);

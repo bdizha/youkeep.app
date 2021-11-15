@@ -32,7 +32,7 @@
                 >
                   <p class="r-text-medium">
                     Improve sales through higher conversion rates, on demand NFT collectibles
-                    and reduced cart abandonment.
+                    and reduced inconverted asset views.
                   </p>
                 </a-col>
                 <a-col v-if="false" :lg="{ span: 24 }" :md="{ span: 24}"
@@ -58,14 +58,13 @@
                        :xs="{ span: 24 }"
                 >
                   <a-card class="r-bg-secondary-light">
-                    <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
-                      <a-col flex="78px">
-                        <div class="r-bg-secondary-light r-p-12 r-border-radius-square">
-                          <a-icon class="r-text-primary"
-                                  :style="{ fontSize: '54px' }"
-                                  :type="feature.icon"
-                          ></a-icon>
-                        </div>
+                    <a-row :gutter="[12, 12]" align="middle" justify="start" type="flex">
+                      <a-col flex="90px">
+                        <a-icon class="r-text-tertiary"
+                                theme="filled"
+                                :style="{ fontSize: '90px' }"
+                                :type="feature.icon"
+                        ></a-icon>
                       </a-col>
                       <a-col flex="1 1 0">
                         <a-row :gutter="[6,6]" align="middle" justify="center" type="flex">
@@ -87,13 +86,6 @@
                 </a-col>
               </a-row>
             </a-col>
-            <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
-                   :xs="{ span: 24}"
-            >
-              <r-avatar data-src="/assets/asset-16.svg" :size="300"
-                        class="r-avatar-block"
-              ></r-avatar>
-            </a-col>
           </a-row>
         </a-col>
       </a-row>
@@ -108,7 +100,7 @@ export default {
     return {
       features: [
         {
-          icon: 'line-chart',
+          icon: 'fire',
           heading: '<span class="r-text-tertiary">Create</span> rare assets',
           content: 'Create to delight your collectors while enabling your base line to thrive.'
         },
@@ -118,7 +110,7 @@ export default {
           content: 'It\'s never been easier to give your collectors flexible NFT options.'
         },
         {
-          icon: 'dollar',
+          icon: 'golden',
           heading: '<span class="r-text-tertiary">Unleash</span> real value',
           content: 'Get discovered by collectors and increase sales volume with Youkeep.'
         }

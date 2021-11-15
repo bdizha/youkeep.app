@@ -1,18 +1,19 @@
 <template>
-  <r-avatar :size="size"
-            :src="store.photo_url"
-            class="r-avatar-store"
-            shape="square"
-            src-placeholder="/assets/icon_default.png"
-  />
+  <a-card :style="getPhotoCoverStyle()"
+          class="r-bg-cover r-dark r-card-animate"
+  >
+    <r-avatar shape="circle"
+              data-src="/patterns/pattern-dark.svg" :size="size"
+              class="r-avatar-block"
+    ></r-avatar>
+  </a-card>
 </template>
 <script>
 export default {
-  name: 'r-store-photo',
+  name: 'r-asset-photo',
   props: {
-    store: { type: Object, required: false, default: null },
-    size: { type: Number, required: false, default: 150 },
-    isShowing: { type: Boolean, required: false, default: false }
+    product: { type: Object, required: false, default: null },
+    size: { type: Number, required: false, default: 300 }
   },
   data () {
     return {
@@ -23,6 +24,10 @@ export default {
   created () {
 
   },
-  methods: {}
+  methods: {
+    getPhotoCoverStyle () {
+      return `background-image: url(${this.product.photo_url});`
+    }
+  }
 }
 </script>

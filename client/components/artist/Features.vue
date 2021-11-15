@@ -49,15 +49,11 @@
                   <a-card class="r-bg-primary-light">
                     <a-row :gutter="[24, 24]" type="flex" align="middle">
                       <a-col>
-                        <a-card class="r-bg-secondary-light r-p-0 r-border-radius-square">
-                          <div class="r-p-12">
-                            <a-icon class="r-text-tertiary"
-                                    theme="filled"
-                                    :style="{ fontSize: '45px' }"
-                                    :type="feature.icon"
-                            ></a-icon>
-                          </div>
-                        </a-card>
+                        <a-icon class="r-text-tertiary"
+                                theme="filled"
+                                :style="{ fontSize: '60px' }"
+                                :type="feature.icon"
+                        ></a-icon>
                       </a-col>
                       <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                              :sm="{ span: 24 }"

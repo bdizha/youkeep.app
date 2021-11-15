@@ -1,69 +1,115 @@
 <template>
   <a-row :gutter=[24,24] justify="center" type="flex">
-    <a-col :lg="{ span: 24 }" :sm="{ span: 24 }">
-      <a-row v-if="hasStores" :gutter="[24,24]" align="middle" justify="start" type="flex">
-        <a-col
-          v-for="(store, index) in stores.data"
-          :key="index"
-          :lg="{ span: 6 }" :md="{ span: 6 }" :sm="{ span: 6 }" :xs="{ span: 12 }"
+    <a-col v-if="hasProducts" :span="24">
+      <div class="r-ph-24">
+        <a-pagination v-model="products.current_page"
+                      :page-size="parseInt(products.per_page)"
+                      :total="products.total"
+                      show-less-items
+                      @change="onChange"
         >
-          <r-store-face :store="store"></r-store-face>
-        </a-col>
-        <a-col v-if="!hasStores" :span="24">
-          <a-empty description="No stores were found! Please try a different search criteria."
-                   image="/images/icon_pattern_grey.svg"
-          />
-        </a-col>
-      </a-row>
-      <r-spinner v-if="processes.isFixed" :is-absolute="true" process="isFixed"></r-spinner>
+          <template slot="buildOptionText" slot-scope="props">
+            <a-button class="r-btn-bordered-grey"
+                      size="large" type="secondary"
+            >
+              {{ props.value }}
+            </a-button>
+          </template>
+        </a-pagination>
+        <div class="r-mv-24">
+          <a-row :gutter="[{ xs: 12, sm: 12, md: 24, lg: 24 }, { xs: 12, sm: 12, md: 24, lg: 24 }]" type="flex">
+            <a-col v-for="(product, index) in products.data"
+                   :key="index"
+                   :class="{'r-spin__active':isProcessing}"
+                   :lg="{span: columns}"
+                   :md="{span: columns}" :sm="{span: columns > 1 ? 12 : 24}" :xs="{span: columns > 1 ? 12 : 24}"
+            >
+              <r-asset-item :isDrop="isDrop" :product="product"></r-asset-item>
+            </a-col>
+          </a-row>
+        </div>
+        <a-pagination v-model="products.current_page"
+                      :page-size="parseInt(products.per_page)"
+                      :total="products.total"
+                      show-less-items
+                      @change="onChange"
+        >
+          <template slot="buildOptionText" slot-scope="props">
+            <a-button class="r-btn-bordered-grey"
+                      size="large" type="secondary"
+            >
+              {{ props.value }}
+            </a-button>
+          </template>
+        </a-pagination>
+      </div>
     </a-col>
   </a-row>
 </template>
 <script>
 import { mapGetters } from 'vuex'
+import axios from 'axios'
 
 export default {
-  name: 'r-stores',
+  name: 'r-assets',
   components: {},
   props: {
+    isDrop: { type: Boolean, required: false, default: false },
+    columns: { type: Number, required: false, default: 8 },
     filters: {
       type: Object,
       required: false,
       default: () => {
         return {
-          metric_id: null,
-          is_active: true,
-          order_by: 'updated_at'
+          metric_type_id: null,
+          store_id: null,
+          is_active: true
         }
       }
-    }
+    },
+    isVertical: { type: Boolean, required: false, default: false }
   },
   data () {
     return {
-      params: null
+      hasProducts: false,
+      isProcessing: false,
+      products: {
+        data: []
+      }
     }
   },
-  computed: {
-    ...mapGetters({
-      stores: 'content/stores',
-      hasStores: 'content/hasStores',
-      processes: 'base/processes',
-      search: 'base/search'
-    })
+  async fetch () {
+    this.hasProducts = false
+    await this.onProducts()
   },
+  computed: mapGetters({
+    processes: 'base/processes'
+  }),
   created () {
-    this.payload()
   },
   methods: {
-    async payload () {
+    async onProducts () {
+      this.isProcessing = true
+
+      const path = `/products`
+      const $this = this
+
+      await axios.post(path, this.filters)
+        .then(({ data }) => {
+          $this.products = data
+          $this.hasProducts = true
+          $this.isProcessing = false
+        })
+        .catch((e) => {
+          console.log(e)
+        })
     },
-    async fetchStores () {
-      await this.$store.dispatch('content/onStores', this.filters)
-    },
-    onFilter (option) {
-      this.params = this.search.params
-      this.params.category_id = option.key
-      this.fetchStores()
+    async onChange (page, limit) {
+      const payload = this.filters
+      payload.page = page
+      payload.limit = limit
+
+      await this.onProducts(payload)
     }
   }
 }

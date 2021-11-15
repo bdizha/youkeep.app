@@ -2,11 +2,12 @@
   <a-row align="middle" class="r-slider" justify="center" type="flex">
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }" class="r-store-slider ">
       <VueSlickCarousel v-if="hasServes" v-bind="settings">
-        <r-serve-item v-for="(serve, index) in serves"
-                            :key="index"
-                            :serve="serve"
+        <nuxt-link v-for="(serve, index) in serves"
+                   :key="index"
+                   :to="serve.route"
         >
-        </r-serve-item>
+          <r-serve-item :serve="serve"></r-serve-item>
+        </nuxt-link>
         <template #prevArrow="arrowOption">
           <div class="r-slick-arrow r-slick-arrow-prev r-arrow-prev">
             <a-icon type="left"/>

@@ -15,36 +15,36 @@
                     :key="index"
                     class="r-bg-secondary-light"
             >
-                <a-row :gutter="[12,12]" align="middle" justify="space-between"
-                       type="flex"
-                >
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                    <nuxt-img src="/images/quote.svg" width="45px"></nuxt-img>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                    <div :style="{height: '240px'}">
+              <a-row :gutter="[12,12]" align="middle" justify="space-between"
+                     type="flex"
+              >
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+                  <nuxt-img src="/images/quote.svg" width="45px"></nuxt-img>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+                  <div :style="{height: '240px'}">
                     <h4 class="r-heading-light  ">
                       {{ testimonial.content }}
                     </h4>
-                    </div>
-                  </a-col>
-                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
-                    <a-row :gutter="[12,12]" align="middle" type="flex">
-                      <a-col flex="60px">
-                        <a-card class="r-bg-dark r-p-0 r-border-circle">
-                          <div class="r-p-12">
-                            <nuxt-img src="/images/icon_tertiary.svg" width="36px"></nuxt-img>
-                          </div>
-                        </a-card>
-                      </a-col>
-                      <a-col flex="1 1 0">
-                        <h4 class="r-heading-light r-text-uppercase">
-                          {{ testimonial.author }}
-                        </h4>
-                      </a-col>
-                    </a-row>
-                  </a-col>
-                </a-row>
+                  </div>
+                </a-col>
+                <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24}">
+                  <a-row :gutter="[12,12]" align="middle" type="flex">
+                    <a-col flex="60px">
+                      <a-card class="r-bg-secondary-light r-p-0 r-radius-circle">
+                        <div class="r-p-12">
+                          <nuxt-img src="/images/icon_tertiary.svg" width="36px"></nuxt-img>
+                        </div>
+                      </a-card>
+                    </a-col>
+                    <a-col flex="1 1 0">
+                      <h4 class="r-heading-light r-text-uppercase">
+                        {{ testimonial.author }}
+                      </h4>
+                    </a-col>
+                  </a-row>
+                </a-col>
+              </a-row>
             </a-card>
           </VueSlickCarousel>
         </a-col>

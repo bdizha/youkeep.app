@@ -17,7 +17,7 @@
             <div class="r-search-item-avatar">
               <a-avatar :size="36" :src="item.photo" class="r-lazy"
                         shape="circle"
-                        src-placeholder="/assets/icon_default.png"
+                        src-placeholder="/patterns/pattern-dark.svg"
               />
             </div>
             {{ item.title }}

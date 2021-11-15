@@ -1,7 +1,9 @@
 <template>
   <r-steps user-type="customer" :has-more="hasMore" :size="size" :title="title"
            learn-more="/artist"
-           :steps="steps" :theme="theme"
+           :steps="steps"
+           :accent="accent"
+           :theme="theme"
   ></r-steps>
 </template>
 <script>
@@ -15,17 +17,18 @@ export default {
   data () {
     return {
       theme: 'secondary',
+      accent: 'tertiary',
       userType: 'artist',
       currentStep: 0,
       steps: [
         {
           title: '01\n',
           heading: '<span class="r-text-secondary">Get</span> started as an NFT artist',
-          image: '/assets/asset-20.svg',
+          image: '/assets/asset-14.svg',
           summary: 'Submit a sample of your favorite NFTs for approval and get paid to do what you love every day.',
           content: 'Add your wallet, social links, a little background, profile content, and set a secondary sales fee (a.k.a <span class="r-text-primary">base price</span>).',
           icons: {
-            left: 'profile',
+            left: 'picture',
             top: 'rocket',
             right: 'setting',
             bottom: 'safety-certificate'

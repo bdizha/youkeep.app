@@ -55,7 +55,7 @@
                       <a-col>
                         <div class="r-bg-secondary-light r-p-12 r-border-radius-square">
                           <a-icon class="r-text-secondary"
-                                  :style="{ fontSize: '45px' }"
+                                  :style="{ fontSize: '36px' }"
                                   :type="benefit.icon"
                           ></a-icon>
                         </div>

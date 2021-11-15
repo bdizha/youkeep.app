@@ -9,7 +9,7 @@
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
             >
-              <r-avatar class="r-avatar-block" data-src="/assets/asset-18.svg" :size="300"></r-avatar>
+              <r-avatar class="r-avatar-block" data-src="/assets/asset-03.svg" :size="300"></r-avatar>
             </a-col>
             <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }"
                    :xs="{ span: 24}"
@@ -28,7 +28,7 @@
                        :xs="{ span: 24 }"
                 >
                   <h2 class="r-heading">
-                    Discover <span class="r-text-secondary">rare</span> collectibles with Youkeep
+                    Let <span class="r-text-secondary">curious</span> things happen with Youkeep
                   </h2>
                 </a-col>
                 <a-col :lg="{ span: 24 }" :md="{ span: 24}"

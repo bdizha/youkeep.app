@@ -7,7 +7,6 @@ use App\ProductCurrency;
 use App\ProductValue;
 use App\Serve;
 use App\Store;
-use App\StoreServe;
 
 class AssetSeeder extends DatabaseSeeder
 {
@@ -44,7 +43,7 @@ class AssetSeeder extends DatabaseSeeder
             $store->save();
         }
 
-        $this->fetchProducts();
+//        $this->fetchProducts();
         die("fetchProducts >>> done");
     }
 
@@ -148,25 +147,6 @@ class AssetSeeder extends DatabaseSeeder
         $this->setServes();
 
         echo ">>>>>>Inserting store: {$this->store->name} \n";
-    }
-
-    /**
-     * @param $storeData
-     */
-    private function setServes(): void
-    {
-        $serves = Serve::where('app_id', $this->app->id)->get();
-
-        foreach ($serves as $serve) {
-            if (rand(0, 1)) {
-                $values = [
-                    'store_id' => $this->store->id,
-                    'serve_id' => $serve->id,
-                ];
-
-                StoreServe::updateOrCreate($values, $values);
-            }
-        }
     }
 
     /**

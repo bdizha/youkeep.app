@@ -1,5 +1,4 @@
 import axios from 'axios'
-
 // state
 const state = () => ({
   products: [],
@@ -7,6 +6,38 @@ const state = () => ({
   total: [],
   choices: [],
   categories: [],
+  eventTypes: [
+    {
+      name: 'Air drops to keep',
+      route: '/asset/event/dropped',
+      event_type: 1
+    },
+    {
+      name: 'Trending NFTs',
+      route: '/asset/event/trending',
+      event_type: 2
+    },
+    {
+      name: 'Just been collected',
+      route: '/asset/event/collected',
+      event_type: 3
+    },
+    {
+      name: 'Recently viewed',
+      route: '/asset/event/viewed',
+      event_type: 4
+    },
+    {
+      name: 'You may also like',
+      route: '/asset/event/suggested',
+      event_type: 5
+    },
+    {
+      name: 'Recently pinned',
+      route: '/asset/event/pinned',
+      event_type: 6
+    }
+  ],
   options: [],
   parentOptions: [],
   hasOptions: false,
@@ -26,6 +57,7 @@ const state = () => ({
   hasItems: false,
   option: null,
   hasOption: false,
+  hasEventTypes: false,
   productType: null,
   item: {
     hasProduct: true,
@@ -45,6 +77,8 @@ const state = () => ({
 // getters
 const getters = {
   categories: state => state.categories,
+  eventTypes: state => state.eventTypes,
+  hasEventTypes: state => state.eventTypes.length > 0,
   choices: state => state.choices,
   products: state => state.products,
   items: state => state.items,
@@ -69,6 +103,9 @@ const getters = {
 const mutations = {
   setChoices (state, choices) {
     state.choices = choices
+  },
+  seteventTypes (state, eventTypes) {
+    state.eventTypes = eventTypes
   },
   setIsVisible (state, isVisible) {
     state.isVisible = isVisible
@@ -136,6 +173,9 @@ const actions = {
   async onOptions ({ dispatch, commit }, payload) {
     commit('setOptions', payload)
   },
+  oneventTypes ({ dispatch, commit }, payload) {
+    commit('seteventTypes', payload)
+  },
   async onPayload ({ dispatch, commit }, payload) {
     commit('setPayload', payload)
   },
@@ -155,7 +195,6 @@ const actions = {
       await this.$store.dispatch('product/onBack', option.option)
       console.log('onBack options', option.options)
     }
-
 
     commit('setOption', payload)
   },
@@ -241,7 +280,7 @@ const actions = {
   },
   async onItems ({ dispatch, commit }, payload) {
     commit('setItems', payload)
-  },
+  }
 }
 
 export default {

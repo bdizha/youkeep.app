@@ -8,7 +8,7 @@
       <r-avatar :size="size"
                 :src="photo"
                 shape="square"
-                src-placeholder="/assets/icon_default.png"
+                src-placeholder="/patterns/pattern-dark.svg"
       />
     </a-col>
   </a-row>

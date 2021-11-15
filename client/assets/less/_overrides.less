@@ -88,6 +88,7 @@ h3 {
 
 .r-text-bold {
     font-weight: 600 !important;
+    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -375,8 +376,8 @@ h1.r-text-slarge-light {
                 z-index: 1001;
 
                 h4.r-heading {
-                    font-size: 16px;
-                    font-weight: 400;
+                    //font-size: 16px;
+                    //font-weight: 400;
                 }
             }
 
@@ -2642,16 +2643,9 @@ h4.r-heading {
 }
 
 h4.r-heading-light {
-    font-size: 21px;
+    font-size: 18px;
     line-height: 30px;
     font-weight: 300;
-    margin: 0;
-}
-
-h4.r-heading-light {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 600;
     margin: 0;
 }
 
@@ -4278,7 +4272,7 @@ label {
             line-height: 22px;
             cursor: pointer;
             transition: all .3s;
-            color: @secondary-color;
+            color: @tertiary-color;
 
             .ant-collapse-arrow {
                 font-style: normal;
@@ -4358,8 +4352,8 @@ label {
             border: none;
             padding: 24px;
             font-weight: 600;
-            color: @black;
-            font-size: 18px;
+            color: @tertiary-color;
+            font-size: 16px;
 
             .ant-collapse-arrow {
                 right: 24px;
@@ -4424,13 +4418,13 @@ label {
             }
 
             > .ant-collapse-header {
+                color: @secondary-color;
                 position: relative;
                 padding: 24px 45px 24px 24px;
                 line-height: 24px;
                 cursor: pointer;
                 transition: all .3s;
-                color: @secondary-color;
-                font-size: 18px;
+                font-size: 16px;
             }
 
             &.r-collapse-panel-secondary {
@@ -5200,12 +5194,12 @@ label {
         .slick-prev,
         .slick-next {
             &.r-slick-arrow-prev {
-                margin-top: -18px;
+                margin-top: -24px;
                 left: -6px;
             }
 
             &.r-slick-arrow-next {
-                margin-top: -18px;
+                margin-top: -27px;
                 right: -6px;
             }
         }
@@ -5323,9 +5317,13 @@ label {
         overflow: hidden;
     }
 
-    &.r-store-meta__drop {
+    &.r-store-meta__66 {
         .r-store-photo {
-            top: -48px;
+            .ant-card {
+                border-radius: 50%;
+            }
+
+            top: -33px;
             margin-left: -33px;
             width: 66px;
             padding: 3px;
@@ -5341,6 +5339,34 @@ label {
             height: auto;
             text-align: center;
 
+            .ant-tabs-tab-arrow-show {
+                overflow: hidden;
+                color: @white;
+                height: 78px;
+                background: linear-gradient(132deg, #222222 18%, @black 84%), @white;
+
+                &.ant-tabs-tab-next {
+                    border-radius: 0 12px 12px 0;
+                }
+
+                &.ant-tabs-tab-prev {
+                    border-radius: 12px 0 0 12px;
+                }
+
+                &:hover {
+                    background: linear-gradient(132deg, @tertiary-color 18%, @primary-color 84%), @white;
+                }
+            }
+
+            .ant-tabs-tab-btn-disabled {
+                background: linear-gradient(132deg, @black 18%, @black 84%), @white;
+
+                &:hover {
+                    color: @light;
+                    background: linear-gradient(132deg, #222222 18%, @black 84%), @white;
+                }
+            }
+
             .ant-tabs-nav {
                 background: linear-gradient(132deg, #222222 18%, @black 84%), @white;
                 padding: 12px;
@@ -5350,15 +5376,15 @@ label {
 
                 .ant-tabs-tab {
                     color: @light;
-                    height: auto;
+                    height: 54px;
                     margin: 0 12px 0 0;
-                    padding: 15px 24px;
-                    line-height: 21px;
+                    padding: 12px 24px;
+                    line-height: 30px;
                     background: transparent;
                     border: none;
-                    border-radius: @border-radius;
-                    font-size: 15px;
+                    font-size: 16px;
                     font-weight: 600;
+                    border-radius: @border-radius;
 
                     &:last-child {
                         margin-right: 0;
@@ -6130,6 +6156,10 @@ label {
     padding: 12px;
 }
 
+.r-p-9 {
+    padding: 12px;
+}
+
 .r-pl-12 {
     padding-left: 12px;
 }
@@ -6505,7 +6535,6 @@ label {
             }
 
             .r-layout-content__store {
-                padding-top: 60px;
                 @media (min-width: 768px) {
                     margin-left: 360px;
                 }
@@ -7183,12 +7212,12 @@ label {
         }
 
         &.r-slick-arrow-prev {
-            margin-top: -18px;
+            margin-top: -24px;
             left: -6px;
         }
 
         &.r-slick-arrow-next {
-            margin-top: -18px;
+            margin-top: -27px;
             right: -6px;
         }
     }
@@ -7497,7 +7526,7 @@ label {
         background-size: 25% !important;
     }
 
-    &.r-bg-cover__repeat-12{
+    &.r-bg-cover__repeat-12 {
         background-repeat: repeat;
         background-size: 12% !important;
     }
@@ -7517,6 +7546,12 @@ label {
             display: inline-block;
             border-radius: @border-radius 0 @border-radius 0;
             overflow: hidden;
+        }
+    }
+
+    &.r-card-animate {
+        img {
+            visibility: hidden;
         }
     }
 }
@@ -7709,6 +7744,14 @@ h3.r-step-heading {
     width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    &.r-ellipsis__36 {
+        height: 36px;
+    }
+
+    &.r-ellipsis__42 {
+        height: 42px;
+    }
 }
 
 .r-bg-grey {
@@ -8946,4 +8989,13 @@ a:hover {
 .r-gem-block {
     background: transparent url(/patterns/beam.png) repeat;
     background-size: 100%;
+}
+
+.r-flash-card {
+    filter: grayscale(45%);
+    animation: all 3s infinite linear;
+
+    &:hover {
+        filter: grayscale(0);
+    }
 }

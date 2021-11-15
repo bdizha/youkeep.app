@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Creator: CorelDRAW 2018 (64-Bit Evaluation Version) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="11.9062mm" height="12.1059mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 94.65 96.24"
- xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="11.9062mm" height="11.9062mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+     viewBox="0 0 81 81"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:white;stroke-width:1.59;stroke-miterlimit:22.9256}
-    .fil1 {fill:none}
-    .fil0 {fill:white}
+    .fil0 {fill:none;fill-rule:nonzero}
+    .fil1 {fill:#13ECAB}
+    .fil3 {fill:#4C57FF}
+    .fil2 {fill:#C834F7}
    ]]>
   </style>
  </defs>
- <g id="Layer_x0020_1">
+    <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_2685601842624">
-   <g>
-    <path class="fil0 str0" d="M20.79 33.56l40.25 30.63 -4.32 1.07c-11.61,2.88 -23.71,-0.23 -32.15,-8.8 -6.04,-6.13 -9.39,-14.29 -9.42,-22.89 -0.09,-21.53 20.47,-36.89 41.17,-31.81l4.3 1.06 -39.83 30.73z"/>
-    <path class="fil0 str0" d="M73.86 62.69l-39.83 -30.73 4.3 -1.06c20.7,-5.08 41.26,10.28 41.17,31.81 -0.03,8.61 -3.38,16.76 -9.42,22.89 -8.44,8.56 -20.53,11.68 -32.15,8.8l-4.32 -1.07 40.25 -30.64z"/>
-   </g>
-   <rect class="fil1" x="-0" y="0.79" width="94.65" height="94.65"/>
+        <g id="_2100775232">
+   <circle class="fil0" cx="41" cy="41" r="41"/>
+            <path class="fil1" d="M25 79c-11,-5 -20,-14 -23,-25 -2,-7 2,-9 5,-9l29 0 0 26c0,8 -6,9 -11,8z"/>
+            <path class="fil2" d="M56 79c11,-5 20,-14 24,-25 2,-8 -3,-9 -6,-9l-29 0 0 26c0,8 7,9 11,8z"/>
+            <path class="fil3" d="M36 36l-30 0c-3,0 -5,-3 -5,-6 1,-5 3,-9 6,-12 2,-3 5,-5 9,-2l20 20 0 0 0 0 0 0z"/>
+            <path class="fil3" d="M45 36l30 0c4,0 6,-3 5,-6 0,-5 -3,-9 -5,-13 -2,-2 -6,-5 -10,-1l-20 20 0 0 0 0 0 0z"/>
   </g>
  </g>
 </svg>

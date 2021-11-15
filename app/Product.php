@@ -4,7 +4,7 @@ namespace App;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Config;
+use Mockery\Exception;
 
 class Product extends KModel
 {
@@ -130,7 +130,7 @@ class Product extends KModel
 
     public function getActivityAttribute()
     {
-        return Carbon::now()->addMinutes(- rand(0, 1000000))->diffForHumans();
+        return Carbon::now()->addMinutes(-rand(0, 1000000))->diffForHumans();
     }
 
     public function getThumbnailUrlAttribute()
@@ -207,8 +207,7 @@ class Product extends KModel
 
     public function getDefaultVariantAttribute()
     {
-        $this->setDefaultVariant();
-        return $this->defaultVariant;
+        return null;
     }
 
     public function setDefaultVariant()
@@ -216,7 +215,7 @@ class Product extends KModel
         $this->hasDefaultType = $this->hasDefaultType();
 
         if (empty($this->defaultVariant)) {
-            $this->defaultType = ProductType::setDefaultType();
+            $this->defaultType = ProductType::getDefaultType();
 
             if (!empty($this->defaultType)) {
                 $attributes = [
@@ -227,8 +226,8 @@ class Product extends KModel
                 $values = [
                     'product_type_id' => $this->defaultType->id,
                     'product_id' => $this->id,
-                    'price' => $this->price,
-                    'discount' => $this->discount,
+                    'price' => (int)$this->price,
+                    'discount' => (int)$this->discount,
                     'required_min' => 1,
                     'required_max' => 1
                 ];
@@ -270,7 +269,7 @@ class Product extends KModel
         $types = ProductType::$types;
         $productTypes = [];
 
-        $this->setDefaultVariant();
+//        $this->setDefaultVariant();
 
         foreach ($types as $type => $name) {
             $isSaleable = false;
@@ -317,9 +316,16 @@ class Product extends KModel
 
     public function getPriceFormattedAttribute()
     {
-        $priceParts = $this->splitPrice($this->price);
+        $price = 0;
+        try {
+            $priceParts = $this->splitPrice($this->price);
+            $price = number_format((float)$priceParts['price'], 0);
+        } catch (Exception $e) {
+            dd($e->getMessage());
+        }
 
-        return number_format($priceParts['price'], 0);
+        return $price;
+
     }
 
     public function getPriceSuperAttribute()
@@ -419,12 +425,20 @@ class Product extends KModel
     /**
      * Get the related values
      */
-    public function values()
+    public function product_values()
     {
         return $this->hasMany('App\ProductValue')->take(24);
     }
 
-    public function updateAncestryIds($storeCategory)
+    /**
+     * Get the related events
+     */
+    public function events()
+    {
+        return $this->hasMany('App\Event', 'item_id', 'id')->take(24);
+    }
+
+    public function updateAncestryIds()
     {
         return;
         $values = [

@@ -62,7 +62,7 @@
                   <a-col>
                     <div class="r-bg-tertiary-light r-p-12 r-border-radius-square">
                       <a-icon class="r-text-primary"
-                              :style="{ fontSize: '45px' }"
+                              :style="{ fontSize: '36px' }"
                               :type="service.icon"
                       ></a-icon>
                     </div>

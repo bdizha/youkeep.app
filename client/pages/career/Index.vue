@@ -82,7 +82,7 @@
                :sm="{ span: 24 }"
                :xs="{ span: 24 }"
         >
-          <a-card class="r-bg-secondary-light">
+          <a-card class="r-bg-dark">
             <a-row :gutter="[12,12]" align="middle" justify="start" type="flex">
               <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                      :sm="{ span: 24 }"

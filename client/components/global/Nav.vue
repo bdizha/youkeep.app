@@ -8,10 +8,17 @@
         <a-sub-menu>
           <div slot="title" class="r-menu-text">
             Explore
-            <a-icon type="down" />
+            <a-icon type="down"/>
             <div class="r-sub-menu">
               <a-card class="r-bg-dark r-pull-h-24 r-border-none">
-                <r-serve-slider></r-serve-slider>
+                <a-row :gutter="[48, 48]" align="middle" justify="start" type="flex">
+                  <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
+                         :sm="{ span: 24 }"
+                         :xs="{ span: 24 }"
+                  >
+                    <r-serve-slider></r-serve-slider>
+                  </a-col>
+                </a-row>
               </a-card>
             </div>
           </div>
@@ -19,7 +26,7 @@
         <a-sub-menu class="r-menu-submenu-btn" v-if="hasNav">
           <div slot="title" class="r-menu-text">
             Marketplace
-            <a-icon type="down" />
+            <a-icon type="down"/>
             <div class="r-sub-menu">
               <a-card class="r-bg-dark r-pull-h-24 r-border-none">
                 <div class="r-mv-24">
@@ -55,10 +62,10 @@
                                            :sm="{ span: 24 }"
                                            :xs="{ span: 24}"
                                     >
-                                      <h4 class="r-heading r-text-secondary">
+                                      <p class="r-text-medium" :class="getTxtColor(beneficiary.theme)">
                                         {{ beneficiary.title }}
-                                        <a-icon type="right" />
-                                      </h4>
+                                        <a-icon type="right"/>
+                                      </p>
                                     </a-col>
                                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }"
                                            :sm="{ span: 24 }"
@@ -79,7 +86,7 @@
                             Solutions
                           </h4>
                         </a-col>
-                        <a-col v-for="(service, index) in products"
+                        <a-col v-for="(service, index) in services"
                                :key="index"
                                :lg="{ span: 8 }" :md="{ span: 8 }"
                                :sm="{ span: 24 }"
@@ -88,12 +95,15 @@
                           <nuxt-link class="r-link-card" :to="'/service/' + service.slug">
                             <a-card hoverable="" class="r-bg-dark">
                               <a-row :gutter="[12,12]" align="top" justify="start" type="flex">
-                                <a-col flex="60px">
-                                  <div class="r-bg-primary-light r-p-12 r-border-radius-square">
-                                    <a-icon class="r-text-secondary"
-                                            :style="{ fontSize: '36px' }"
-                                            :type="service.icon"
-                                    ></a-icon>
+                                <a-col flex="48px">
+                                  <div class="r-bg-primary-light r-p-0 r-border-radius-square">
+                                    <div class="r-p-12">
+                                      <a-icon class="r-text-secondary"
+                                              theme="filled"
+                                              :style="{ fontSize: '24px' }"
+                                              :type="service.icon"
+                                      ></a-icon>
+                                    </div>
                                   </div>
                                 </a-col>
                                 <a-col flex="1 1 0">
@@ -101,10 +111,10 @@
                                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                            :xs="{ span: 24}"
                                     >
-                                      <h4 class="r-heading">
+                                      <p class="r-text-medium">
                                         <span v-html="service.title"></span>
-                                        <a-icon type="right" />
-                                      </h4>
+                                        <a-icon type="right"/>
+                                      </p>
                                     </a-col>
                                     <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }"
                                            :xs="{ span: 24}"
@@ -128,7 +138,7 @@
         <a-sub-menu v-if="hasNav">
           <div slot="title" class="r-menu-text">
             Company
-            <a-icon type="down" />
+            <a-icon type="down"/>
             <div class="r-sub-menu">
               <a-card class="r-bg-dark r-pull-h-24 r-border-none">
                 <div class="r-mv-24">
@@ -187,7 +197,7 @@
                                     <nuxt-link class="r-link-card" to="/about-us">
                                       <h4 class="r-heading">
                                         Our story
-                                        <a-icon type="right" />
+                                        <a-icon type="right"/>
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
@@ -198,7 +208,7 @@
                                     <nuxt-link class="r-link-card" to="/careers">
                                       <h4 class="r-heading">
                                         Careers
-                                        <a-icon type="right" />
+                                        <a-icon type="right"/>
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
@@ -209,7 +219,7 @@
                                     <nuxt-link class="r-link-card" to="/partners">
                                       <h4 class="r-heading">
                                         Partners
-                                        <a-icon type="right" />
+                                        <a-icon type="right"/>
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
@@ -220,7 +230,7 @@
                                     <nuxt-link class="r-link-card" to="/contact-us">
                                       <h4 class="r-heading">
                                         Contact Us
-                                        <a-icon type="right" />
+                                        <a-icon type="right"/>
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
@@ -231,7 +241,7 @@
                                     <nuxt-link class="r-link-card" to="/pricing">
                                       <h4 class="r-heading">
                                         Pricing
-                                        <a-icon type="right" />
+                                        <a-icon type="right"/>
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
@@ -259,7 +269,7 @@
                                     <nuxt-link class="r-link-card" to="/blog">
                                       <h4 class="r-heading">
                                         Blog
-                                        <a-icon type="right" />
+                                        <a-icon type="right"/>
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
@@ -270,7 +280,7 @@
                                     <nuxt-link class="r-link-card" to="/meta">
                                       <h4 class="r-heading">
                                         Get to know YouKeep
-                                        <a-icon type="right" />
+                                        <a-icon type="right"/>
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
@@ -281,7 +291,7 @@
                                     <nuxt-link class="r-link-card" to="/help">
                                       <h4 class="r-heading">
                                         Help Center
-                                        <a-icon type="right" />
+                                        <a-icon type="right"/>
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
@@ -292,7 +302,7 @@
                                     <nuxt-link class="r-link-card" to="/privacy">
                                       <h4 class="r-heading">
                                         Data Privacy
-                                        <a-icon type="right" />
+                                        <a-icon type="right"/>
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
@@ -303,7 +313,7 @@
                                     <nuxt-link class="r-link-card" to="/terms">
                                       <h4 class="r-heading">
                                         Terms of Use
-                                        <a-icon type="right" />
+                                        <a-icon type="right"/>
                                       </h4>
                                     </nuxt-link>
                                   </a-col>
@@ -322,14 +332,13 @@
         </a-sub-menu>
         <a-sub-menu class="r-menu-submenu-btn">
           <div v-if="!isLoggedIn" slot="title" @click="onModal">
-            <a-button id="r-user-login"
-                      block
+            <a-button block
                       size="small"
-                      :class="{'r-btn-bordered-white': isDark, 'r-btn-bordered-dark': !isDark}"
+                      class="r-btn-dark"
                       type="secondary"
                       @click="onDrawer('menu')"
             >
-              <a-icon type="user" />
+              <a-icon type="user"/>
               Account
             </a-button>
           </div>
@@ -342,14 +351,14 @@
                       type="primary"
                       @click="onModal('register')"
             >
-              <a-icon type="user" />
+              <a-icon type="user"/>
               Sign Up
             </a-button>
           </div>
         </a-sub-menu>
         <a-sub-menu class="r-menu-submenu-btn">
           <div slot="title" class="r-menu-text">
-          <r-cart-count></r-cart-count>
+            <r-cart-count></r-cart-count>
           </div>
         </a-sub-menu>
       </a-menu>
@@ -366,18 +375,35 @@ export default {
   },
   data () {
     return {
+      metrics: [
+        {
+          name: 'Just dropped in',
+          metric_id: 1
+        },
+        {
+          name: 'Trending NFTs',
+          metric_id: 1
+        },
+        {
+          name: 'Recently added',
+          metric_id: 1
+        }
+      ],
       beneficiaries: [
         {
+          theme: 'primary',
           title: 'Collectors',
           link: '/customer',
           summary: 'Enjoy on-demand NFTs for your artistic taste by favourite creators.'
         },
         {
+          theme: 'secondary',
           title: 'Artists',
           link: '/artist',
           summary: 'Discover and connect with collectors who love your authentic NFTs.'
         },
         {
+          theme: 'tertiary',
           title: 'Sellers',
           link: '/seller',
           summary: 'Sell original NFTs and inspire millions of collectors on the $keep marketplace.'
@@ -386,7 +412,7 @@ export default {
     }
   },
   computed: mapGetters({
-    products: 'content/products',
+    services: 'content/services',
     user: 'auth/user',
     cart: 'cart/cart',
     modal: 'base/modal',
@@ -401,6 +427,9 @@ export default {
   },
   methods: {
     payload () {
+    },
+    getTxtColor (theme) {
+      return `r-text-${theme}`
     },
     onDrawer () {
       const drawer = {}

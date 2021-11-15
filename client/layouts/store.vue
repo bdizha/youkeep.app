@@ -8,7 +8,9 @@
       <r-store-menu></r-store-menu>
     </a-layout-sider>
     <a-layout-content class="r-layout-content__store" :class="{'r-has-data': true}">
-      <nuxt/>
+      <div class="r-p-24">
+        <nuxt/>
+      </div>
     </a-layout-content>
     <r-bottom></r-bottom>
   </a-layout>

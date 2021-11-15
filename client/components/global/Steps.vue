@@ -85,7 +85,7 @@ export default {
     theme: { type: String, required: false, default: 'secondary' },
     accent: { type: String, required: false, default: 'secondary' },
     userType: { type: String, required: false, default: 'customer' },
-    learnMore: { type: String, required: false, default: '/customer' },
+    learnMore: { type: String, required: false, default: '/blog' },
     title: { type: String, required: false, default: '<span class="r-text-primary">Shop</span> simple with Youkeep' },
     content: { type: String, required: false, default: null },
     hasMore: { type: Boolean, required: false, default: true },
@@ -132,7 +132,7 @@ export default {
       if (this.isCurrent(index)) {
         return `r-btn-${this.theme}`
       }
-      return 'r-btn-bordered-white'
+      return 'r-btn-dark'
     },
     getBgClass () {
       return `r-bg-${this.theme}-light`

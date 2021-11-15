@@ -20,7 +20,7 @@
           <r-avatar :size="24"
                     :src="_category.photo"
                     shape="circle"
-                    src-placeholder="/assets/icon_default.png"
+                    src-placeholder="/patterns/pattern-dark.svg"
           />
           {{ _category.name }}
         </nuxt-link>

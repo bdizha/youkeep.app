@@ -47,7 +47,8 @@
                       <a-col>
                         <div class="r-bg-primary-light r-p-12 r-border-radius-square">
                           <a-icon class="r-text-secondary"
-                                  :style="{ fontSize: '45px' }"
+                                  theme="filled"
+                                  :style="{ fontSize: '36px' }"
                                   :type="benefit.icon"
                           ></a-icon>
                         </div>
@@ -98,22 +99,22 @@ export default {
     return {
       benefits: [
         {
-          icon: 'shop',
+          icon: 'thunderbolt',
           title: 'On-demand NFT options',
           heading: '<span class="r-text-primary">Enable</span> seamless customer experience',
-          content: 'Built to delight your collectors while enabling your base line to thrive.'
+          content: 'Built to delight your collectors while enabling your base line to thrive and unleash new depths.'
         },
         {
           icon: 'safety-certificate',
           title: 'Food safety training',
           heading: '<span class="r-text-primary">Earn</span> an accredited NFTs safety certification',
-          content: 'It\'s never been easier to give your collectors flexible NFT options.'
+          content: 'It\'s never been easier to give your collectors flexible and trustable NFT options for keeping or reselling.'
         },
         {
-          icon: 'history',
+          icon: 'pie-chart',
           title: 'Trusted by thousands of collectors',
-          heading: '<span class="r-text-primary">Serve</span> more returning collectors',
-          content: 'Satisfy more buying collectors and increase recurring orders with Youkeep.'
+          heading: '<span class="r-text-primary">Play</span> to earn returning audiences',
+          content: 'Satisfy more attuned audience spaces and multiple your income streams with Youkeep\'s Play to Earn service.'
         }
       ]
     }

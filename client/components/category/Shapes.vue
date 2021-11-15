@@ -11,7 +11,7 @@
                     :style="'background-image: url(/' + category.photo + ');'"
                     shape="circle"
                     size="36"
-                    src="/assets/icon_default.png"
+                    src="/patterns/pattern-dark.svg"
           >
           </r-avatar>
           <div class="r-text-slider">

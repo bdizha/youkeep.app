@@ -1,19 +1,9 @@
 <template>
-  <a-row class="r-text-left" :gutter="[12,12]" align="middle" justify="start" type="flex">
-    <a-col :flex="`${size}px`">
-      <r-avatar :size="size"
-                :class="{'ant-avatar-sm': size < 45}"
-                :data-src="store.photo_url"
-                shape="circle"
-                src-placeholder="/assets/icon_default.png"
-      />
-    </a-col>
-    <a-col v-if="hasTitle" flex="1 1 0">
-      <p class="r-text-xs r-text-white">
-        {{ store.name }}
-      </p>
-    </a-col>
-  </a-row>
+  <div :class="getBgClass()">
+    <nuxt-link :to="store.route">
+      <r-store-photo :size="size" :store="store"></r-store-photo>
+    </nuxt-link>
+  </div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
@@ -28,33 +18,33 @@ export default {
       default: () => {
       }
     },
+    photoUrl: { type: String, required: false, default: null },
+    hasOverlay: { type: Boolean, required: false, default: true },
     hasTitle: { type: Boolean, required: false, default: true },
-    size: { type: Number, required: false, default: 36 }
+    size: { type: Number, required: false, default: 60 }
   },
   data () {
     return {
-      themes: [
-        'primary',
-        'secondary',
-        'dark'
-      ]
+
     }
   },
-  computed: mapGetters({}),
+  computed: mapGetters({
+    'themes': 'content/themes'
+  }),
   mounted () {
   },
   methods: {
     onDrawer () {
     },
     getPhotoCoverStyle () {
-      return `background-image: url(${this.store.photo_url});`
+      return `background-image: url(${this.photoUrl});`
     },
     getBgClass () {
-      const random = Math.floor(Math.random() * Math.floor(3))
-
-      const theme = this.themes[random]
-
-      return `r-bg-${theme} r-text-white`
+      if (this.hasOverlay) {
+        return 'r-store-photo'
+      } else {
+        return null
+      }
     }
   }
 }

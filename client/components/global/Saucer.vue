@@ -3,20 +3,18 @@
     <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
       <a-row :gutter="[24,24]" align="middle" justify="start" type="flex">
         <a-col flex="60px">
-          <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <a-card :class="getBgClass()" class="r-text-center r-p-0 r-radius-circle">
-              <div class="r-p-12">
-                <a-icon :class="getAccentClass()"
-                        :style="{ fontSize: '36px' }"
-                        theme="filled"
-                        :type="step.icons.left"
-                ></a-icon>
-              </div>
-            </a-card>
-          </a-col>
+          <a-card :class="getBgClass()" class="r-text-center r-p-0 r-radius-circle">
+            <div class="r-p-12">
+              <a-icon :class="getAccentClass()"
+                      :style="{ fontSize: '36px' }"
+                      theme="filled"
+                      :type="step.icons.left"
+              ></a-icon>
+            </div>
+          </a-card>
         </a-col>
         <a-col flex="1 1 0">
-          <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+          <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
             <a-col>
               <a-card :class="getBgClass()" class="r-text-center r-p-0 r-radius-circle">
                 <div class="r-p-12">
@@ -48,7 +46,7 @@
           </a-row>
         </a-col>
         <a-col flex="60px">
-          <a-row :gutter="[48,48]" align="middle" justify="center" type="flex">
+          <a-row :gutter="[24,24]" align="middle" justify="center" type="flex">
             <a-col :lg="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
               <a-card :class="getBgClass()" class="r-text-center r-p-0 r-radius-circle">
                 <div class="r-p-12">

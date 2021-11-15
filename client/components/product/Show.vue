@@ -4,8 +4,12 @@
       <a-col :lg="{ span: 12 }" :md="{ span: 12 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
         <a-row :gutter="[24,24]" align="top" justify="start" type="flex">
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-            <a-card v-if="product" class="r-bg-dark">
-              <r-product-photo :product="product"></r-product-photo>
+            <a-card v-if="hasProduct" class="r-bg-dark">
+              <a-card class="r-bg-dark">
+                <a-card class="r-bg-dark">
+                  <r-product-photo :product="product"></r-product-photo>
+                </a-card>
+              </a-card>
             </a-card>
           </a-col>
           <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
@@ -45,9 +49,6 @@
             <r-product-events :product="product"></r-product-events>
           </a-col>
         </a-row>
-      </a-col>
-      <a-col :lg="{ span: 24 }" :md="{ span: 24 }" :sm="{ span: 24 }" :xs="{ span: 24 }">
-        <r-product-slider :columns="6" :filters="{}"></r-product-slider>
       </a-col>
     </a-row>
   </div>

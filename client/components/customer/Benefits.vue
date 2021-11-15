@@ -63,11 +63,11 @@
                   <a-card class="r-bg-primary-light">
                     <a-row :gutter="[24, 24]" align="middle" type="flex">
                       <a-col>
-                          <a-card class="r-bg-dark r-p-0 r-border-circle">
+                          <a-card class="r-bg-secondary-light r-p-0 r-border-circle">
                           <div class="r-p-12">
                             <a-icon class="r-text-tertiary"
                                     theme="filled"
-                                    :style="{ fontSize: '45px' }"
+                                    :style="{ fontSize: '36px' }"
                                     :type="benefit.icon"
                             ></a-icon>
                           </div>
